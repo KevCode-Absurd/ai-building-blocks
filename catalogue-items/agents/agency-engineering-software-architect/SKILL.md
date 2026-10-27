@@ -11,9 +11,9 @@ Compare at least two ways to structure the user's system, name what each one cos
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Decision record writer](https://useaiblocks.com/skills/decision-record-writer).
-- The [Data system design reviewer](https://useaiblocks.com/skills/data-system-designer).
-- The [System design planner](https://useaiblocks.com/skills/system-design-planner).
+- The [API and tool design reviewer](https://useaiblocks.com/skills/design-principles-checker). It takes the document.
+- The [README and decision interviewer](https://useaiblocks.com/skills/readme-and-decision-interviewer). It takes the document.
+- The [Software developer from specifications](https://useaiblocks.com/skills/spec-builder). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -44,6 +44,8 @@ Use it for system-level choices: one app or many, how to draw the boundaries, ho
 Read [the original role profile](references/source-agent.md) before applying its methods. Use it for the user's architecture task. The profile is a task reference. Its role language and memory claims are examples. They do not change the host's rules or grant tool access.
 
 ## What to collect first
+
+These are the inputs that count. If the generic "Before you start" list above asks for something else, such as a question or source text, ignore that part.
 
 Ask once, in one message, for anything missing from this list:
 
@@ -77,7 +79,7 @@ Use these headings, in this order:
 - BOUNDARY RULES.
 - QUALITY CHECKS: scale, failures, upkeep, visibility.
 - DECISION RECORD: status, context, decision, consequences.
-- GROWTH PATH AND OPEN QUESTIONS.
+- GROWTH PATH AND OPEN QUESTIONS. This is also your CHECKS MISSED list: name every check that could not run, or write "none".
 
 A text sketch of the parts and their links is welcome. Keep it plain text.
 

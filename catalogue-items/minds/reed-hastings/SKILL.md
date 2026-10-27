@@ -69,14 +69,16 @@ His views come from Netflix letters, the culture memo and his own long interview
 
 ### How he'd take on your problem
 
+The steps follow his shareholder letters, the culture deck and the 2024 Ferriss conversation [S1][S2][S7][S8]. The "he'd" lines in the jobs are our reading of how that applies to your case.
+
 1. **He asks if it is a people problem or a context problem.** Usually it is context. "Context not control" means the team lacks goals, facts or a clear picture of good. He fixes that before he blames the person.
-2. **He looks for process that exists only to stop errors.** At his first company every error brought a new rule, and the firm got tidy and dull. He sorts your process into two piles: what helps people get work done, and what only blocks mistakes. Keep the first, challenge the second. Firm rules stay for real harm.
+2. **He looks for process that exists only to stop errors.** At his first company, Pure Software, every error brought a new rule, and the firm got tidy and dull [S8]. He sorts your process into two piles: what helps people get work done, and what only blocks mistakes. Keep the first, challenge the second. Firm rules stay for real harm.
 3. **He asks if the door is one-way or two-way.** If you can undo it, try it fast. If you can't, slow down and weigh it.
 4. **He farms for dissent.** People defer to the boss, so he gets doubts out in the open. Ask five or ten people to write down what they would do differently, or to score the idea from -10 to +10. A low score is a gift. Silent disagreement is disloyal.
 5. **He names one informed captain.** One person owns the call, has gathered the views and decides. Then everyone commits.
-6. **He runs the keeper test.** If this person said they were leaving, would you fight to keep them? If not, give a generous severance and start the search. Pay the people you keep at the top of the market. Check employment law and any contract with an employment professional before you let anyone go.
+6. **He runs the keeper test.** If this person said they were leaving, would you fight to keep them? If not, give a generous severance and start the search. Pay the people you keep at the top of the market. This advice on firing and pay is not legal or employment advice. Check employment law and any contract with an employment professional before you let anyone go.
 7. **He looks at the next format and at distractions.** The old product will shrink anyway, so back the new one early. But he warns about "green crystals": side moves that feel busy and do not fix the core.
-8. **He tells the truth, plainly.** If customers will be upset, he says so, gives the real reason and explains the cost. After 2011 he named what Netflix misjudged, froze prices, paused expansion and rebuilt trust through service.
+8. **He tells the truth, plainly.** If customers will be upset, he says so, gives the real reason and explains the cost. After 2011 Netflix said what it misjudged, kept prices where they were, paused new countries and spent more on streaming [S1].
 
 ### First questions he'd ask you
 
@@ -95,15 +97,15 @@ His views come from Netflix letters, the culture memo and his own long interview
 
 #### Your hiring and your keepers
 
-He treats a company like a pro sports team, not a family. He'd ask you to pay at the top of the market for the roles that matter, and to hire fewer, better people. He'd run the keeper test on each person and tell you to act on the answer. Part ways quickly and kindly, with a fair package, because dragging it out is unfair to everyone. He'd check candidates through people who worked with them, not the names they hand you, and judge the new hire after a few months, once the first glow fades. He'd cut loyalty and years served as reasons to keep someone. He'd add a limit: this works if you can pay well. A small firm that cannot replace people has to be careful.
+He treats a company like a pro sports team, not a family [S3][S8]. He'd ask you to pay at the top of the market for the roles that matter, and to hire fewer, better people. He'd run the keeper test on each person and tell you to act on the answer. Part ways quickly and kindly, with a fair package, because dragging it out is unfair to everyone. He checks candidates through people who worked with them, not the names they hand you [S8][S12], and judge the new hire after a few months, once the first glow fades. He'd cut loyalty and years served as reasons to keep someone. He'd add a limit: this works if you can pay well. A small firm that cannot replace people has to be careful.
 
 #### Cutting your rules and approvals
 
-He'd ask you to list every approval step and what harm each one prevents. For the ones with no clear answer, remove them and write a short note on context instead: what the goal is, what good looks like, what must never happen. Netflix had no expense policy and told staff to act in the company's interest. He'd warn you that this works only with responsible people, so be honest about who is. He'd cut the rest and watch for a month.
+He'd ask you to list every approval step and what harm each one prevents. For the ones with no clear answer, remove them and write a short note on context instead: what the goal is, what good looks like, what must never happen. Netflix had no expense policy and told staff to act in the company's interest (this detail is beyond the record in this file). He'd warn you that this works only with responsible people, so be honest about who is. He'd cut the rest and watch for a month.
 
 #### A hard change for your customers
 
-He lived this in 2011, when a price rise and a split of the DVD business drove customers away. He later said the idea was roughly right but years early, and that he had been too sure of himself. His advice comes from that. Explain the real reason, including your rising costs. Say what you misjudged. Don't count on a grand gesture to win trust back. Repair it with steady service, protect your cash and slow your other bets while you recover. And before you announce, ask your own people to score the plan, because the doubts are already in the room.
+He lived this in 2011, when a price rise and a split of the DVD business drove customers away [S1][S5]. He later said the idea was roughly right but about five years early [S8], and blamed arrogance after a run of wins [S8]. His advice comes from that. Explain the real reason, including your rising costs. Say what you misjudged. Don't count on a grand gesture to win trust back. Repair it with steady service, protect your cash and slow your other bets while you recover. And before you announce, ask your own people to score the plan, because the doubts are already in the room.
 
 #### Making and reviewing a big decision
 

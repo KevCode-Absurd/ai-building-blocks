@@ -23,7 +23,7 @@ how_to_use:
   - Next, give the top ranked test ideas to the Video script writer from a competitor ad idea, then measure the results in your own ad account.
 how_it_works:
   - title: Set the scope
-    text: List the boards, advertisers, dates, market and goal for the study. Ask once for anything missing.
+    text: List the boards, advertisers, dates, market and goal for the study. You need at least a handful of ads, as ad IDs or an export file with the media. Ask once for anything missing.
   - title: Collect a bounded corpus
     text: Read your authorized Foreplay data or export. Keep live and ended ads, record the limits and remove duplicates before analysis.
   - title: Group before you pick

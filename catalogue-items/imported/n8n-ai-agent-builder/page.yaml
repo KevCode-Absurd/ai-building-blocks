@@ -10,6 +10,12 @@ explain: |
   An n8n AI agent that does one job well, instead of an over-built mess of nodes. The skill starts by asking if you need an agent at all, since a simple text chain or classifier is often easier to run and debug.
 
   If an agent fits, it guides you through the parts: the chat model, memory, the tools the agent can call, and an output parser for structured answers. It covers retrieval from your documents, classifiers and extractors too. It checks each node against your live n8n setup and keeps keys in n8n credentials. Any step that sends messages, writes data or spends money is shown to you for approval before it runs.
+
+  You finish with an n8n AI Agent plan and wiring steps you can build and test on a copy that is not live.
+
+  This is a copy of a skill by Romuald Czlonkowski (github.com/czlonkowski/n8n-skills), shared through sickn33's collection. It was not written for this catalogue.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header says MIT. Credit goes to Romuald Czlonkowski and sickn33.
 when:
   - You want an n8n agent that can search your docs and answer questions.
   - You are not sure whether to use an agent or a simple AI chain.

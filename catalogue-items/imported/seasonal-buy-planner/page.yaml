@@ -35,8 +35,8 @@ how_to_use:
   - Paste the skill text from this page into the chat.
   - Add last season's weekly sales sheet. Use one row per style per week, with units sold, price, stock on hand and markdowns.
   - Answer its questions about your category, season length, budget, margin targets and supplier lead times.
-  - "Check the plan. The code's defaults are placeholders, not your data: 30% demand variation, a 50% markdown rate and a 1.5x cost for running out of stock. Replace each with your own figures before you use any buy quantity, and ask it to run again."
-  - Tell it your real season length. The code assumes 16 weeks and the phase guide assumes about 12, so it needs yours.
+  - "Check the plan. The example numbers in the code (30% demand variation, a 50% markdown rate, a 1.5x cost for running out of stock, and the random sample products) are made-up demo values. The skill should ask you for your own figures first. Do not use any buy quantity that came from the demo values."
+  - Tell it your real season length. It is set once and used for the phases and the sales curve. The skill stops and asks if the markdown rate, stockout cost, demand variation or season length is missing.
   - Use the reorder and cut triggers at week 4 and the markdown plan at week 8.
   - Next, enter the buy quantities as order quantities in your buy sheet. Check the total against your open-to-buy budget.
 output_sample:

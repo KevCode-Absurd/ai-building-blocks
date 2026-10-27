@@ -2,14 +2,30 @@
 
 > Free AI skills, workflows, prompts and minds for real work. Each skill is a reusable SKILL.md for an AI assistant that can read files.
 
+## Connect your AI
+
+- MCP server (public, no sign-in): https://useaiblocks.com/mcp
+- Server card: [https://useaiblocks.com/mcp/server-card](https://useaiblocks.com/mcp/server-card), listed in [/.well-known/ai-catalog.json](https://useaiblocks.com/.well-known/ai-catalog.json)
+- REST API: [OpenAPI description](https://useaiblocks.com/api/v1/openapi.json). Search with https://useaiblocks.com/api/v1/search?q=ad+angles, read one item with https://useaiblocks.com/api/v1/items/ad-angle-planner
+- Setup guide for ChatGPT, Claude, Claude Code and Codex: [Connect your AI](https://useaiblocks.com/api-and-mcp)
+- Every item page has a Markdown version and a JSON version: [/skills/ad-angle-planner.md](https://useaiblocks.com/skills/ad-angle-planner.md) and [.json](https://useaiblocks.com/skills/ad-angle-planner.json), linked from each page's head.
+- New and changed items: [JSON Feed](https://useaiblocks.com/feed.json) and [RSS](https://useaiblocks.com/feed.xml), plus lastmod dates in the [sitemap](https://useaiblocks.com/sitemap.xml)
+
+Once connected, ask in plain words:
+
+- "Use AI Blocks to get ad-angle-planner."
+- "Use AI Blocks to find a skill that writes ad angles."
+- "Use AI Blocks to plan a workflow for my weekly report."
+- "Use AI Blocks to show what's new this week."
+
 ## Key facts
 
 - Free to use, no account needed.
-- 4802 skills, workflows and prompts in 70 jobs, 505 minds and 68 mini tools.
+- 4808 skills, workflows and prompts in 70 jobs, 505 minds and 68 mini tools.
 - Imported skills keep their open-licence sources and credits (MIT, Apache 2.0, BSD, CC BY, CC BY-SA). Local changes are identified on the page and in the skill file.
 - Minds are AIs built from a person's public work, with their sources listed. They are not the person. Minds that invest teach frameworks only, never buy or sell advice.
 - Skills that scrape websites or need a paid outside account say so on their page.
-- Last built 2026-10-27.
+- Last changed 2026-10-27. See the [JSON Feed](https://useaiblocks.com/feed.json) or [RSS](https://useaiblocks.com/feed.xml) for what changed.
 
 ## How to use a skill
 
@@ -42,16 +58,16 @@
 - [Hire and look after your people](https://useaiblocks.com/llms/hire-people.txt): 108 skills and workflows, such as Candidate comparison table builder and Candidate reply drafter
 - [Write and tell stories](https://useaiblocks.com/llms/write-and-tell-stories.txt): 106 skills and workflows, such as Case study story planner and Closed story setting planner
 - [Track your numbers](https://useaiblocks.com/llms/track-numbers.txt): 100 skills and workflows, such as Raw material price impact calculator and Revenue growth currency checker
-- [Check contracts and rules](https://useaiblocks.com/llms/check-contracts.txt): 98 skills and workflows, such as Ad claim sorter and Business insurance needs checker
+- [Check contracts and rules](https://useaiblocks.com/llms/check-contracts.txt): 99 skills and workflows, such as Ad claim sorter and Business insurance needs checker
 - [Understand your customers](https://useaiblocks.com/llms/understand-customers.txt): 98 skills and workflows, such as Customer community finder and Best customer finder
 - [Get found in search and AI answers](https://useaiblocks.com/llms/get-found-in-search.txt): 98 skills and workflows, such as Customer question keyword finder and Customer FAQ writer
-- [Keep your code secure](https://useaiblocks.com/llms/secure-code.txt): 94 skills and workflows, such as Code change security reviewer and Security alert rule builder
+- [Keep your code secure](https://useaiblocks.com/llms/secure-code.txt): 93 skills and workflows, such as Code change security reviewer and Security alert rule builder
 - [Ship and host your app](https://useaiblocks.com/llms/ship-and-host.txt): 93 skills and workflows, such as Domain and redirect layout planner and Release day rollback planner
+- [Set up AI to work for you](https://useaiblocks.com/llms/set-up-ai.txt): 92 skills and workflows, such as AI coding agent rules writer and AI model training debugger
 - [Lead and manage people](https://useaiblocks.com/llms/lead-people.txt): 89 skills and workflows, such as Difficult conversation repair planner and Feedback notes writer
 - [Make documents, sheets and slides](https://useaiblocks.com/llms/work-with-files.txt): 87 skills and workflows, such as Document proofreader and Excel workbook handover writer
 - [Plan stock, shipping and suppliers](https://useaiblocks.com/llms/plan-supply-chain.txt): 87 skills and workflows, such as Supplier quote comparison planner and Warehouse bid and agreement terms builder
 - [Make video ads](https://useaiblocks.com/llms/make-video-ads.txt): 86 skills and workflows, such as 3D how-it-works video prompt writer and 3D explainer ad script writer
-- [Set up AI to work for you](https://useaiblocks.com/llms/set-up-ai.txt): 86 skills and workflows, such as AI coding agent rules writer and AI model training debugger
 - [Make an offer people want](https://useaiblocks.com/llms/make-offer.txt): 74 skills and workflows, such as After-sale offer planner and Offer bonus planner
 - [Write ad copy](https://useaiblocks.com/llms/write-ad-copy.txt): 72 skills and workflows, such as Ad angle planner and Ad call to action writer
 - [Plan budgets, costs and cash flow](https://useaiblocks.com/llms/plan-budgets-and-cash.txt): 72 skills and workflows, such as Bad-year break-even tester and Budget stress tester

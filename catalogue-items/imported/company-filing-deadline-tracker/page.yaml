@@ -10,7 +10,7 @@ subhead: Share each entity type and filing place; get confirmed annual deadlines
 explain: |
   Share each entity type and place of registration. The skill checks official filing sources and records confirmed dates, sources and unknowns.
 
-  Give your AI tool a list of entities with their states or countries. It builds a tracker file, then shows confirmed dates and unknowns. You can update statuses, review unknown items, run a health check, or export a table. It splits entity types because filing rules can differ. Confirm dates with the official filing office or registered agent.
+  Give your AI tool a list of entities with their states or countries. It builds a tracker file, then shows confirmed dates and unknowns. You can update statuses, review unknown items, run a health check, or export a table. It splits entity types because filing rules can differ. This is a tracking aid, not legal advice. Confirm every date with the official state or country filing site or your registered agent before you file.
 when:
   - You run several companies and lose track of annual report dates.
   - You want to know what is overdue before a lawyer or investor asks.

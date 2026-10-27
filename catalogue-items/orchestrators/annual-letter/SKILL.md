@@ -18,10 +18,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **What you need** (use your own material or the linked skill):
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Financial statements** (yours): the income statement, balance sheet and cash flow statement, for the periods you have.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, your results. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, your results, financial statements. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -30,6 +31,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+The generic "Before you start" block above does not apply here. This workflow needs your reported yearly figures and share counts, not ad or store exports:
+
 - **Your business, who the letter is for (staff, partners or owners) and the hard trade-offs you face** (required). Step 1 turns the trade-offs into promises. Step 5 sets the tone and detail by reader.
 - **Your reported numbers by year, for three or more years: earnings, depreciation, change in working capital and capital spending** (required). Steps 2 and 3 use them. Step 3 needs the trend.
 - **Share or owner counts for the same years** (required if owners were diluted). Step 3 uses them for the owners' share.
@@ -59,10 +62,20 @@ Five step files and the summary, in this shape:
 - **Input metrics** (step 2): each input with owner, target, review date and proxy guard, and the output kept as a check.
 - **Cash view** (step 3): free cash flow by year, the four tests, what growth costs and the score out of 100.
 - **Value tally** (step 4): each group with its measure, figure and assumption, and the group served least well.
-- **The letter** (step 5): 700 to 1,200 words with the result and bad news first, the promises, what moved, cash and value, the mistakes, next year and a close. The last file holds the draft.
+- **The letter** (step 5): 700 to 1,200 words with the result and bad news first, the promises, what moved, cash and value, the mistakes, next year and a close. The last file holds the draft. Next, send the draft to two readers you trust and have your accountant check the cash and value figures.
 - **HAND-BACK SUMMARY:** each step's file and every `MISSING:` line in one list.
 
 The cash and value figures are working estimates, not audited accounts. Have your accountant check them before the letter goes to owners or backers.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Polite request editor](https://useaiblocks.com/skills/order-to-request-rewriter). It takes the draft.
+- The [Problem root cause tracer](https://useaiblocks.com/skills/problem-root-cause-tracer). It takes the draft.
+- The [Change rollout planner](https://useaiblocks.com/skills/change-rollout-planner). It takes the draft.
+- The [Job post writer](https://useaiblocks.com/skills/job-post-writer). It takes the draft.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.

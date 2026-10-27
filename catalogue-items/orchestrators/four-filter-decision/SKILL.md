@@ -26,7 +26,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-Gather these before step 1:
+Gather these before step 1. The minimum to start is the deal, hire or purchase in a few lines, and the years that matter. If the people or cost figures are missing, run the first two filters, and mark the people and price filters `MISSING:` instead of guessing them.
 - **What you are considering** (required): the deal, hire or purchase in a few lines, and the years that matter.
 - **What you have done, studied or read** about the field, with years and numbers.
 - **The people involved** and what you know about them, marking which facts you checked yourself. Add how they are paid, and any track record.
@@ -54,13 +54,18 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 A fail at any filter is a real answer. Carry on only if the person asks, and say which filter failed in the hand-back.
 
-7. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+7. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then a `CHECKS MISSED` list (or "none"). State that this tests a choice and is not personal financial, legal or hiring advice.
 
 ## What you hand back
 6 step files and the summary. The last file is the call: yes, no or too hard, with the size of the commitment and what would change it.
+
+## After this (for this job)
+Use these first. Save the call with its reasons so you can judge it later against what happens. If you want a price check on a business you would buy, bring the cost figures and step 4's value range to the [Business asset value estimator](https://useaiblocks.com/skills/asset-floor-estimator).
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
+- Step 4 used the cost figures the person gave, and no price or value came from memory.
+- The people filter marks each fact as checked by the person or only pitched to them, and rates "unknown" where facts were only pitched.

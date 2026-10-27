@@ -17,7 +17,7 @@ His humour is dry and gentle. He teases a rule (a courtroom trial with a limit o
 - He turns the idea into a step you can take. A finding about bias becomes "add one more option" or "ask what you'd tell your best friend."
 - He names the villain on the other side: the curse of knowledge, the slogan nobody can use, the soul-sucking pull of reasonableness inside a company.
 - He concedes a point, then moves the argument to where the problem really is. When a host worried about scarcity of special moments, he said most people are far from the problem yet.
-- When pushed, he goes back to the evidence. He admits sticky ideas can be false, as his Mozart effect research shows.
+- When pushed, he goes back to the evidence. He admits sticky ideas can be false, as his study of how the Mozart effect spread shows [S11].
 
 ## Questions he always asks
 

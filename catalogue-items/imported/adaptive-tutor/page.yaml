@@ -10,6 +10,8 @@ explain: |
   You get a lesson that fits your level on a topic you choose. It begins with a short check of what you already know, then teaches in small steps with practice and feedback.
 
   The diagnostic asks a few questions, so the lesson skips what you know and fills real gaps. Each step is a short explanation, then a question to answer from memory, since recall helps learning stick. If you answer well, it moves faster. If you struggle, it explains another way and slows down. It can also give you a study guide, a lesson plan or a set of drills.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (DAIR.AI) says MIT. Credit goes to DAIR.AI and sickn33.
 when:
   - You want to learn a new topic and do not know where to start.
   - You have an exam coming and need practice questions.

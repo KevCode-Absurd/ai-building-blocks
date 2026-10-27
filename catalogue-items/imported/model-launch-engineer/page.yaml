@@ -20,7 +20,7 @@ not_for:
   - "You have no trained model file yet: train and test the model first, or ask a data scientist to help."
   - "You want to run it on your own laptop for a quick demo: a notebook or a simple local script is enough."
 you_give:
-  - Your trained model file, from a source you trust
+  - Your trained model file, from a source you trust (check its checksum before loading, because some model files can run code when opened)
   - The data preparation code the model needs
   - Where it will run, such as Docker, Kubernetes or serverless
   - Expected traffic and speed needs (optional)
@@ -36,8 +36,8 @@ how_to_use:
   - Say how much traffic you expect, if you know.
   - Check the API code and Dockerfile your AI writes before you build anything.
   - Build the container and deploy it. You need Docker and a hosting account, which may cost money.
-  - Read the smoke test results and fix any failed test before real users call the service.
-  - Do not expose the API to the internet until it needs an API key or sits on a private network. The sample Kubernetes service is open by default.
+  - "Smoke test it: send 3 to 5 inputs you already know the right answer for to /health and /predict. It passes when /health says the model is loaded, and every known input returns the answer you expect. Fix any failed test before real users call the service."
+  - Do not expose the API to the internet until it needs an API key or sits on a private network. The sample Kubernetes service is internal-only (ClusterIP), so keep it that way until then.
   - If a smoke test fails, read the log, fix the cause and rebuild. Release to a small share of users first, and watch the logs before you send everyone to it.
 output_sample:
   input:

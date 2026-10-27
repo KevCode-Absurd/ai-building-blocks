@@ -21,12 +21,12 @@ best_for:
   - Fact checks and quick market scans.
   - People who would otherwise open ten browser tabs.
 not_for:
-  - Long creative writing or brand copy.
+  - "Long creative writing or brand copy. Use a general chat assistant such as ChatGPT or Claude instead."
   - Anything that rests on stale or thin sources, so open the links.
 pricing:
   model: freemium
   from: US$20 per month
-  note: Free plan with limits. Pro costs US$20 per month. Max costs US$200 per month, and business plans are priced per user.
+  note: These prices come from third-party sites, not from Perplexity, so check perplexity.ai before you pay. Free plan with limits. Pro costs US$20 per month. Max costs US$200 per month, and business plans are priced per user.
 works_with: []
 runs_in: [web, desktop, mobile, api]
 blocks:
@@ -40,9 +40,9 @@ first_result:
   - "Go to perplexity.ai and sign up for the free plan."
   - "Ask a question with a clear scope, such as the top three competitors for one product and their prices."
   - "Open the numbered sources. Check the key facts on those pages."
-  - "Ask follow-up questions to narrow it. Use a longer research run when you want a report."
+  - "Ask follow-up questions to narrow it. Use a longer research run when you want a report. Whether the free plan includes the longer run is not verified; it may need Pro (US$20 a month), so check before you start."
   - "Save the work in a space for that topic."
-  - "You end with an answer with numbered sources, or a longer report to check."
+  - "You end with a short answer followed by a numbered source list, one line per source. A longer research run gives a report. Its length was not verified. Open the sources before you rely on any fact."
   - "Next: to see how AI search describes your brand, use the AI search platform checker."
 needs:
   - "A Perplexity account. Free works to start."

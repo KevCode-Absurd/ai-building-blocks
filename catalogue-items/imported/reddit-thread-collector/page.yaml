@@ -10,6 +10,8 @@ explain: |
   Reddit posts and comments in a table you can sort and study, without needing a Reddit API key. Ask for a topic, a subreddit or a user, and get structured rows back.
 
   The skill turns your request into a single Apify run. You can search by keyword, set a date window, pull every comment in a thread, or get the newest posts from several subreddits. This helps with brand watching, finding what people ask for, or tracking mentions since a date. The Apify run is a paid service charged per result, built by the skill author, and it needs an Apify account. Scraping Reddit may break Reddit's terms, so check them first and collect public data only.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (harshmaur) says MIT. Credit goes to harshmaur and sickn33.
 when:
   - You want every post where someone asks for an alternative to a rival tool.
   - You want to see who mentioned your brand since last month.
@@ -33,10 +35,12 @@ how_to_use:
   - Make an Apify account and copy your token. The free plan covers small runs.
   - Open your AI and paste the skill. It works best in a tool that can run code or connect to Apify.
   - Say what you want, like newest posts in a subreddit or mentions of a brand since a date.
-  - Check the cost estimate and terms it shows. The Apify actor charges per result.
+  - Check the cost estimate and terms it shows. The Apify actor charges per result. Confirm Reddit's terms allow your use before you approve the run.
   - Approve the run, then look over the tables. Check for any note about cut-off results.
   - Respect Reddit's terms and rate limits. It reads public data only.
+  - Next, load the tables into a sheet, group the posts by subreddit, and quote the most relevant rows in your notes. Hand the tables to social-listening-brief-writer or customer-research-analyst for a written brief.
   - Usernames, bios and comment authors are personal data. Collect only the fields your analysis needs, and delete the export when the project ends.
+next: [social-listening-brief-writer, customer-research-analyst]
 output_sample:
   input:
     - A topic, subreddit, user or thread link

@@ -12,8 +12,10 @@ inputs:
     required: true
   - type: source_text
     required: false
+  - type: code_change
+    required: false
 outputs:
-  - type: brief
+  - type: document
 uses: []
 steps: []
 origin: imported

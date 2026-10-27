@@ -73,7 +73,7 @@ how_it_works:
   - title: Reads flows
     text: Checks traffic, recipient mix, order value, comparable periods and data limits. A change below 5 percent is not automatically noise or too small to matter.
   - title: Reads deliverability
-    text: Uses the source’s delivery benchmarks as rough screens, then checks the store’s history and provider data. These figures alone do not confirm an inbox problem.
+    text: Uses delivery benchmarks from the credited courses as rough screens (unverified rules of thumb), then checks the store’s history and provider data. These figures alone do not confirm an inbox problem.
   - title: Reads SMS
     text: Reads SMS clicks, opt-outs and delivery rates. The source’s ranges are rough comparisons, with proposed changes framed as tests.
   - title: Ranks tests and shows coverage
@@ -90,6 +90,7 @@ output_shape: |-
   TESTS TO RUN FIRST <test, decision and volume>
   SCORE <earned>/<judged> x 100, or NOT SCORED | not judged: <areas>
   MISSING <data and live checks>
+  CHECKS MISSED <none | checks that failed or could not run>
 tweaks:
   - what: Export range
     how: Use 90 days or more for campaigns and daily detail for flows, with test variants included, so patterns show up over several sends.
@@ -119,9 +120,9 @@ improve:
 works_best_with:
   tools:
     - name: Klaviyo
-      why: Its export of campaign and flow analytics, by-provider report and test results give the figures this skill reads.
+      why: Paid service with an account. Any email tool that exports the same columns works too. Its export of campaign and flow analytics, by-provider report and test results give the figures this skill reads.
     - name: Shopify
-      why: Traffic, orders and average order value show whether a drop is a site problem.
+      why: Paid store plan with an account. Traffic, orders and average order value show whether a drop is a site problem.
     - name: Any good chat AI
       why: Any current chat AI can read an exported file and apply the steps.
   inputs:

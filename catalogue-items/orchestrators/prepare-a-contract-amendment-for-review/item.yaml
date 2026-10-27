@@ -8,9 +8,9 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: document
+  - type: contract
     required: true
-  - type: brief
+  - type: question
     required: false
 outputs:
   - type: audit_report

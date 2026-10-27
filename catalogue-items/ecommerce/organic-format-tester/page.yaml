@@ -19,8 +19,8 @@ when:
   - You are about to change your plan and want data behind the change.
 not_for:
   - "You have fewer than 20 posts or no numbers yet: keep posting for a few more weeks, then come back."
-  - "You want to judge paid ad campaigns: use the Meta Ads Manager or Google Ads reports, or write new paid copy with the Story image ad writer."
-  - "You only want new hook lines: use a hook writing step in your AI chat, then bring the best ones back here as your test."
+  - "You want to judge paid ad campaigns: use the Six-pattern ad performance diagnoser."
+  - "You only want new hook lines: use the Short video hook writer, then bring the best ones back here as your test."
 
 you_give:
   - Your last 20 or more posts, each with format, hook, topic and date

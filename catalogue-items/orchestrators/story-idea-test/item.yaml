@@ -13,6 +13,7 @@ inputs:
 outputs:
   - {type: feedback_notes}
   - {type: script}
+  - {type: story_outline, required: true}
 uses: [story-premise-tester, scene-turn-checker, voice-over-stripping-test]
 steps:
   - {uses: story-premise-tester, note: "The controlling idea, the idea that argues back, and a verdict on its strength"}

@@ -17,10 +17,10 @@ A wizard is ephemeral by default: built for one run, saved to a scratch or `scri
 
 Work out every manual step the human must take and every value that gets captured along the way. Read the repo first, don't ask cold:
 
-- For setup: `.env`, `.env.example`, `.env.*`, `README`, `docker-compose*`, framework config, and `.github/workflows/*` (every `secrets.*` / `vars.*` reference is a value the wizard must produce).
+- For setup: `.env.example`, `README`, the names (not the values) of any `.env` files, `docker-compose*`, framework config, and `.github/workflows/*` (every `secrets.*` / `vars.*` reference is a value the wizard must produce).
 - For a migration or transition: the current state, the target state, and the irreversible actions between them.
 
-Then show the user the ordered list of stages and the values each produces, and confirm: they may add, drop, or reorder.
+Do not open or print the values in real `.env` files. If you must read one, first ask the user to confirm it holds no live keys. Then show the user the ordered list of stages and the values each produces, and confirm: they may add, drop, or reorder.
 
 **Done when:** every stage is named in order, and for each captured value you know (a) where the human gets it, (b) where it's written (`.env`, a GitHub secret, both, or nowhere; some stages are pure actions), and (c) whether it's secret (hidden entry) or public.
 

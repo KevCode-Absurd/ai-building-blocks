@@ -9,6 +9,7 @@ level: beginner
 inputs:
   - {type: voc_reviews, required: true}
   - {type: store_capture, required: false}
+  - {type: policy, required: false}
 outputs:
   - {type: audit_report}
 uses: []

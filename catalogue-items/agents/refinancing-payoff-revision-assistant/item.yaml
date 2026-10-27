@@ -11,7 +11,13 @@ inputs:
     required: true
   - type: spreadsheet
     required: false
-outputs: []
+  - type: deal_terms
+    required: false
+  - type: question
+    required: true
+outputs:
+  - type: audit_report
+  - type: spreadsheet
 needs_mode: manual
 uses:
   - check-acquisition-refinancing-funds

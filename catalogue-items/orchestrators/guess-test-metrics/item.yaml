@@ -7,10 +7,11 @@ role: orchestrate
 job: analysis
 level: intermediate
 inputs:
-  - {type: question, required: true}
+  - {type: idea, required: true}
   - {type: performance_sheet, required: true}
   - {type: plan, required: false}
   - {type: feedback_notes, required: false}
+  - {type: question, required: true}
 outputs:
   - {type: audit_report}
 uses: [mvp-experiment-planner, vanity-metric-fixer, root-cause-finder]

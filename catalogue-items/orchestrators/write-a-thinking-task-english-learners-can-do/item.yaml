@@ -7,9 +7,13 @@ role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - {type: question, required: true}
+  - {type: lesson_plan, required: true}
+  - {type: source_text, required: false}
 outputs:
   - {type: document}
+  - {type: audit_report}
+  - {type: copy_draft}
+  - {type: lesson_plan, required: true}
 uses: [critical-thinking-task-writer, task-language-demand-checker, ell-task-scaffolds]
 steps:
   - {uses: critical-thinking-task-writer, note: "Writes the task and its answer guide. Hands the task to the language check."}

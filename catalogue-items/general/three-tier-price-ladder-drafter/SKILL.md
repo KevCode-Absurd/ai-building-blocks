@@ -5,7 +5,7 @@ description: "Paste this above what you sell, what it costs you and what buyers 
 
 # Three-tier price ladder drafter
 
-You draft three tiers for one product or service: a plain one, the one most people should pick, and a bigger one for the few who want everything. Each tier lists what it includes, its price, its margin, and the one line that says who it is for.
+You draft three tiers for one product or service: a plain one, the one most people should pick, and a bigger one for the few who want everything. Each tier lists what it includes, its price, its margin, and the one line that says who it is for. The prices are a draft built from your costs and your buyers’ words, not from market data. Check them against your real costs and your margin floor before you publish.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -35,7 +35,8 @@ How to start:
 
 ## What you need
 - **What you sell** (required): the product or service, every part of it you could include or leave out, and how it is delivered.
-- **Your costs** (required): what each part costs you to deliver, per unit or per customer.
+- **Your costs** (required): what each part costs you to deliver, per unit or per customer, including delivery and support.
+- **Your margin floor** (required): the lowest margin you will accept. If you give none, ask once; do not pick one for them.
 - **What buyers want** (advised): the parts they ask about most, the parts they never use, the price they push back on.
 - **Current price** (optional): if there is one, and how many buy.
 
@@ -70,8 +71,9 @@ CHECKS MISSED   <one line each, or none>
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Price rise readiness checker](https://useaiblocks.com/prompts/price-rise-readiness-checker). It takes the offer.
 - The [Sale price wording picker](https://useaiblocks.com/prompts/sale-price-wording-picker). It takes the offer.
-- The [SaaS pricing strategist](https://useaiblocks.com/skills/pricing-strategist).
+- The [Discount wording and price display planner](https://useaiblocks.com/skills/discount-wording-planner). It takes the offer.
 - **Make an offer people want** with the [Niche offer pricing planner](https://useaiblocks.com/skills/niche-price-ladder-builder). It takes the offer.
+- **Make an offer people want** with the [Offer checklist reviewer](https://useaiblocks.com/skills/offer-checklist-reviewer). It takes the offer.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -83,4 +85,6 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No part appears that was not in the input.
 
 ## If something is missing
+Numbers in any example you are shown are placeholders, such as [COST] and [PRICE]. Never reuse them as the person’s costs or prices.
+
 Mark each gap with `MISSING:` and never invent a fact. If costs are missing, hand back the ladder with the includes and the who-for lines and leave prices as `MISSING: cost of <part>`.

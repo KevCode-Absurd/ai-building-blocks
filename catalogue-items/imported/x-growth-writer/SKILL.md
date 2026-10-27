@@ -162,7 +162,7 @@ Run: `python3 scripts/tweet_composer.py --type thread --topic "your topic" --aud
 | Likes | Low-medium | Easy agreement, relatable content |
 | Link clicks | Low (penalized) | Never put links in tweet body — use reply |
 
-### What kills reach
+### What kills reach (the author's estimates, not X rules)
 - Links in tweet body (put in first reply instead)
 - Editing tweets within 30 min of posting
 - Posting and immediately going offline (no early engagement)
@@ -227,7 +227,7 @@ Generates a 2-week posting plan with:
 | `scripts/content_planner.py` | Generate weekly/monthly content calendars |
 | `scripts/growth_tracker.py` | Track follower growth and engagement trends |
 
-## Common Pitfalls
+## Common Pitfalls (the author's estimates, not X rules; test them on your own account)
 
 1. **Posting links directly** — Always put links in the first reply, never in the tweet body
 2. **Thread tweet 1 is weak** — If the hook doesn't stop scrolling, nothing else matters

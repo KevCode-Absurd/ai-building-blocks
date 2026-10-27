@@ -12,6 +12,8 @@ explain: |
   It follows the design engineering guide by Emil Kowalski. For each moving part it asks four things. Should it animate at all? What is the purpose? Which easing fits? How fast should it be? It flags known slips, such as transition: all, a start from scale(0), ease-in on interface parts, and hover effects on touch screens.
 
   Its advice is judgement, not law. Your brand system and platform rules come first, and a still image cannot show motion, so test on real devices. It leaves out spacing and layout slips, which the Interface polish checker covers.
+
+  Licence: the written text is shared under CC BY-4.0 (the LICENSE-CONTENT file). The "MIT" line in the SKILL.md header is the original author's own note. Keep the credit to Emil Kowalski.
 when:
   - Your interface works but feels stiff or flat.
   - Your animations feel too slow, too fast or too bouncy.
@@ -34,7 +36,7 @@ you_get:
   - The top 3 to 5 changes, in order
   - A line on what already works
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Paste the skill, then paste the detailed guide (references/detailed-guide.md) straight after it. It needs both.
+  - Open Claude, ChatGPT or Gemini. Paste the skill, then paste the detailed guide (references/detailed-guide.md) straight after it. The guide is a separate file. The skill works poorly without it, so it needs both.
   - Paste your component code, or describe the screen and how it moves. Add your framework and the feeling you want.
   - Read the table first. Each row shows what to change and why.
   - Skip any rule that clashes with your brand system, and keep the rest. Then apply the top changes.

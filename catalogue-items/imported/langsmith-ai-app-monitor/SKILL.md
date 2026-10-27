@@ -12,6 +12,8 @@ dependencies: [langsmith>=0.2.0]
 
 Development platform for debugging, evaluating, and monitoring language models and AI applications.
 
+If you have a monitoring plan from an earlier step, use it to decide what to trace, what to score and what to alert on.
+
 ## When to use LangSmith
 
 **Use LangSmith when:**

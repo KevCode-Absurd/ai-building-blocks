@@ -10,6 +10,8 @@ explain: |
   Scan files from DICOM, NIfTI or NRRD loaded into MATLAB as clean volumes with the right voxel size, orientation and patient coordinates. It saves you from hand-rolling the reading code and getting the geometry wrong.
 
   It starts by checking which MATLAB toolboxes you have, then picks the newer Medical Imaging Toolbox calls when they exist and falls back to the Image Processing Toolbox when they do not. A quick-reference table maps each task, such as reading a folder, listing series, pulling an oriented slice or reading RT contours, to the right function. It also covers anonymising DICOM files. Showing the volumes is left to other skills.
+
+  This is MathWorks' skill. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE.md file.
 when:
   - You have a folder of CT or MR slices and need one 3D array in MATLAB.
   - You need to list the series inside a DICOM study.
@@ -36,7 +38,8 @@ how_to_use:
   - Give your AI the file path, your toolbox list and what you want out, such as a volume, a slice or contours.
   - Run the MATLAB code it writes. Check the size, spacing and orientation it prints against what you expect.
   - If you share DICOM files, ask for anonymising. It removes common patient details but may miss some, so open the copy and check it before you share.
-  - You get a block of MATLAB code, then a printout of the voxel size and orientation. To view the volume, use a MATLAB viewer skill, once the library has one.
+  - You get a block of MATLAB code, then a printout of the voxel size and orientation. The library has no volume viewer skill yet. To view the volume now, ask your AI to use MATLAB's own viewers, volumeViewer or volshow.
+  - This reads scan data for work, research and learning. It does not diagnose anything. Scans hold patient details, so only use files you are allowed to use, and keep them on your own computer.
 output_sample:
   input:
     - The path to your DICOM folder, NIfTI file or NRRD file

@@ -48,8 +48,7 @@ Install from sources:
 go install github.com/AlmogBaku/debug-skill/cmd/dap@latest
 ```
 
-This tool is open-sourced and available on [GitHub](https://github.com/AlmogBaku/debug-skill), maintained and follows
-best practices.
+This tool is open source and available on [GitHub](https://github.com/AlmogBaku/debug-skill). It is a third-party tool that AI Blocks has not reviewed, so read its page before you install it. `go install ...@latest` fetches the newest version, so pin a version you have checked if you can.
 
 Supports natively Python, Go, Node.js/TypeScript, Rust, C/C++, and any other language that supports DAP.
 
@@ -73,8 +72,7 @@ Choose your starting strategy based on what you know:
 - **Remote process** — `dap debug --attach host:port --backend <name>`
 - **Process already running (stuck server, live issue)** — attach without restarting:
   `dap debug --pid <PID> --backend <name>`
-  > **macOS + Go gotcha:** `dlv --pid` requires SIP disabled (`csrutil disable`).
-  > Prefer starting the program under the debugger instead or attaching to a remote debugger!
+  > **macOS + Go gotcha:** attaching with `dlv --pid` needs macOS system protection (SIP) turned off. **Do not turn SIP off.** It weakens the security of the whole computer. Start the program under the debugger instead, or attach to a remote debugger.
 
 **Session isolation:** `--session <name>` keeps concurrent agents from interfering.
 Tip: You might want to use your session id(${CLAUDE_SESSION_ID}) if available.
@@ -136,7 +134,7 @@ Program terminated · Exit code: 1
 
 Before setting a breakpoint: *"I believe the bug is in X because Y."* A good hypothesis is falsifiable — your next
 observation will confirm or disprove it. No hypothesis yet? Bisect with two breakpoints to narrow the search space, or
-see starting strategies above.
+see starting strategies above. If an earlier step gave you a ranked list of likely causes (an audit report), start from its top suspect and set the first breakpoint there.
 
 ## Setting Breakpoints Strategically
 

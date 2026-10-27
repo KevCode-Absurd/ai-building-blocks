@@ -10,9 +10,9 @@ Give it a site, a product and a goal in China. It returns a Baidu SEO plan with 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [SEO reviewer](https://useaiblocks.com/skills/agency-marketing-seo-specialist).
-- The [Technical SEO auditor](https://useaiblocks.com/skills/technical-seo-auditor). It takes the audit report.
-- The [Collection page SEO builder](https://useaiblocks.com/skills/collection-page-seo-builder). It takes the plan and audit report.
+- The [Collection page planner](https://useaiblocks.com/skills/collection-page-planner). It takes the keyword list and audit report.
+- The [Store keyword validator](https://useaiblocks.com/skills/store-keyword-validator). It takes the keyword list.
+- The [Keyword to post outline writer](https://useaiblocks.com/prompts/keyword-to-post-outline-writer). It takes the keyword list and plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -42,6 +42,8 @@ How to start:
 
 ## What you need
 
+These are the inputs that count. If the generic "Before you start" list above asks for something else, such as source text, ignore that part.
+
 - Site link, or the name of the planned site (required)
 - What is sold and who in China should find it (required)
 - Goal, such as visits, sign-ups or brand searches (required)
@@ -56,7 +58,7 @@ Ask once for anything required that is missing. If the user cannot say, mark it 
 2. Run the setup check from the profile: ICP filing, hosting location, Google services that load on the site and their China replacements, Baidu webmaster tools and sitemap. Mark each Confirmed, Not confirmed or Not supplied, and name the evidence.
 3. Run the technical and mobile check: what Baiduspider can reach, mobile layout type, speed, structured data. Where it needs live data, such as indexed pages from a site: search on Baidu, say so and give the step for the user to run.
 4. Build the keyword groups: core, long-tail, brand, competitor and question terms, in Chinese with an English meaning and the intent for each. Name where to check demand, such as Baidu Index, Baidu autocomplete and related searches. State no search volume or difficulty unless the user supplied it.
-5. Plan the content: original pages, update rhythm, and what to publish on Baidu Baike, Zhidao, Tieba, Wenku and Jingyan. Title and description limits in the profile are the profile's figures; tell the user to check current Baidu guidance.
+5. Plan the content: original pages, update rhythm, and what to publish on Baidu Baike, Zhidao, Tieba, Wenku and Jingyan. For title and description length, use the profile's figures (title tags about 30 characters, meta descriptions about 78 for Baidu, in the Meta Optimization line of references/source-agent.md) and tell the user to check current Baidu guidance.
 6. Finish with first actions, ordered: setup problems, then technical fixes, then content. List every check left for the user.
 
 ## Deliverable
@@ -70,6 +72,8 @@ Return these sections in order.
 5. Content plan: page or post, keyword group, what makes it original, timing.
 6. First actions and open checks: action, why first, check left for the user.
 7. Assumptions and MISSING items.
+
+Heading 6 (open checks) and heading 7 are also your CHECKS MISSED list: name every check that could not run, or write "none".
 
 ## Review rules
 

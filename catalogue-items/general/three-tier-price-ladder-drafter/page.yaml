@@ -24,7 +24,8 @@ not_for:
 
 you_give:
   - "What you sell and every part you could include"
-  - "The cost of each part to you"
+  - "The cost of each part to you, including delivery and support"
+  - "The lowest margin you will accept"
   - "What buyers ask for and push back on (advised)"
   - "Current price and how many buy (optional)"
 you_get:

@@ -1,4 +1,4 @@
-type Metadata = { title: string; description: string; canonical: string; robots: string; graph: unknown; markdown?: string | null; image?: string };
+type Metadata = { title: string; description: string; canonical: string; robots: string; graph: unknown; markdown?: string | null; json?: string | null; image?: string };
 const SITE = 'https://useaiblocks.com';
 const cache = new Map<string, Metadata>();
 let active: { data: Metadata; path: string } | null = null;
@@ -9,7 +9,7 @@ if (canonical === SITE + initialPath) {
   const get = (s: string) => document.querySelector<HTMLMetaElement>(s)?.content || '';
   let graph: unknown = null;
   try { graph = JSON.parse(document.querySelector('script[type="application/ld+json"]')?.textContent || 'null'); } catch { /* Replaced on navigation. */ }
-  cache.set(initialPath, { title: document.title, description: get('meta[name="description"]'), canonical, robots: get('meta[name="robots"]') || 'max-image-preview:large, max-snippet:-1', graph, image: get('meta[property="og:image"]'), markdown: document.querySelector<HTMLLinkElement>('link[rel="alternate"][type="text/markdown"]')?.getAttribute('href') });
+  cache.set(initialPath, { title: document.title, description: get('meta[name="description"]'), canonical, robots: get('meta[name="robots"]') || 'max-image-preview:large, max-snippet:-1', graph, image: get('meta[property="og:image"]'), markdown: document.querySelector<HTMLLinkElement>('link[rel="alternate"][type="text/markdown"]')?.getAttribute('href'), json: document.querySelector<HTMLLinkElement>('link[rel="alternate"][type="application/json"]')?.getAttribute('href') });
 }
 function setMeta(attribute: 'name' | 'property', key: string, content: string) {
   let el = document.querySelector<HTMLMetaElement>(`meta[${attribute}="${key}"]`);
@@ -26,9 +26,11 @@ function apply(data: Metadata, path: string) {
   let link = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
   if (!link) { link = document.createElement('link'); link.rel = 'canonical'; document.head.append(link); }
   link.href = data.canonical;
-  document.querySelectorAll('script[type="application/ld+json"],link[rel="alternate"][type="text/markdown"]').forEach(el => el.remove());
+  document.querySelectorAll('script[type="application/ld+json"],link[rel="alternate"][type="text/markdown"],link[rel="alternate"][type="application/json"]').forEach(el => el.remove());
   if (data.graph && !data.robots.includes('noindex')) { const el = document.createElement('script'); el.type = 'application/ld+json'; el.textContent = JSON.stringify(data.graph); document.head.append(el); }
-  if (data.markdown) { const el = document.createElement('link'); el.rel = 'alternate'; el.type = 'text/markdown'; el.href = data.markdown; el.title = 'The skill file'; document.head.append(el); }
+  // Item pages link their Markdown and JSON twins (src/server/twins.ts); older records link the skill file.
+  if (data.markdown) { const el = document.createElement('link'); el.rel = 'alternate'; el.type = 'text/markdown'; el.href = data.markdown; el.title = data.json ? 'Markdown version' : 'The skill file'; document.head.append(el); }
+  if (data.json) { const el = document.createElement('link'); el.rel = 'alternate'; el.type = 'application/json'; el.href = data.json; el.title = 'JSON version'; document.head.append(el); }
   document.documentElement.dataset.metadataPath = path;
 }
 // Some independently loaded pages still set their title after fetching data.

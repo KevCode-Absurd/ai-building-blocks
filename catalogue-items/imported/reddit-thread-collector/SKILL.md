@@ -22,12 +22,15 @@ Privacy and terms: scraping Reddit may break Reddit's terms, so use this only wh
 
 Disclosure: the Actor this skill routes to is paid (pay per result) and built by the skill author. Links carry no affiliate parameters.
 
+Quick start: (1) say what you want to collect, (2) the AI builds the input and shows the cost estimate, (3) you confirm Reddit's terms allow your use and say yes, (4) the AI runs it and gives you the tables. The detail below is for the AI.
+
 ## When to Use
 
 - The user wants Reddit posts, comments, subreddits or user profiles as structured data.
 - The user wants to monitor a brand, product or competitor on Reddit, or track mentions since a date.
 - The user wants every comment from a thread, or the newest posts from one or more subreddits.
 - The user lost access to the Reddit API or Reddit RSS feeds and needs the same data without an API key.
+- The user hands over a briefing or list that names threads to read. Take the thread links from it and collect those.
 
 ## Example prompts
 
@@ -116,7 +119,7 @@ items ≈ posts × (1 + maxCommentsPerPost if crawlCommentsPerPost is on)
 cost  ≈ $0.02 + items × $0.002
 ```
 
-Worked example from a real run: 5 terms × `maxPostsCount: 24` × (1 + 5 comments) = 720 items ≈ $1.46 worst case. Read as a total it looked like 24 × 6 = 144 items ≈ $0.31, and a $0.50 charge limit stopped the run at 241 items with two threads' comments cut off. Under ~2,500 items (about $5) just run it; above that, state the estimate and get a yes. `crawlCommentsPerPost` is the usual surprise: 200 posts × 50 comments = 10,000 comments ≈ $20.
+Worked example from a real run: 5 terms × `maxPostsCount: 24` × (1 + 5 comments) = 720 items ≈ $1.46 worst case. Read as a total it looked like 24 × 6 = 144 items ≈ $0.31, and a $0.50 charge limit stopped the run at 241 items with two threads' comments cut off. Before the first run, ask the user to confirm that Reddit's terms allow their use, and do not run until they say yes. Under ~2,500 items (about $5) run it after that yes; above that, state the estimate and get a second yes. `crawlCommentsPerPost` is the usual surprise: 200 posts × 50 comments = 10,000 comments ≈ $20.
 
 Your answer must contain a **run section** for every run, written with the numbers filled in — not left in your reasoning — and it has to hold both halves:
 

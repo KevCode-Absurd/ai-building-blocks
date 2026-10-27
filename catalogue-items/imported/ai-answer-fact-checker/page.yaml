@@ -10,6 +10,8 @@ explain: |
   A list of the claims in an AI answer, each checked against current public sources, with links and a short verdict. It also compares answers from several AIs and shows where they agree, clash or leave out proof.
 
   It keeps three questions apart: did the AI gather evidence, does the cited source actually say that, and is the claim true. Paste the answer text, the original question and any date or country that matters. Every web page and file is treated as untrusted. Links are screened before they open. It does not log in for you or touch private chats. Using the web tools your AI already has, it writes a report with one row per claim.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (ASI2030) says Apache-2.0. Credit goes to ASI2030 and sickn33.
 when:
   - An AI gave you facts and you need to know which ones hold up.
   - You asked two or three AIs the same question and the answers differ.
@@ -23,7 +25,7 @@ you_give:
   - The question you asked the AI
   - The AI answer text, or a public link to it
   - Which AI gave each answer
-  - A date or country that matters (optional)
+  - A date or country that matters (your AI asks before it browses if this is missing)
 you_get:
   - Each claim from the answer, listed one by one
   - "A verdict for each claim: supported, contradicted or insufficient"
@@ -36,7 +38,8 @@ how_to_use:
   - Paste your question, then the AI answer. Label each answer with the AI that wrote it.
   - Add the date or country that matters, if there is one.
   - Read the claim matrix first. Open the links for any claim that matters to you.
-  - For contradicted claims, fix them before you use the answer. For insufficient claims, find better proof or ask an expert. Drop or fix every claim that fails before you send the answer on, and re-run the check on the new text.
+  - The check opens public web pages and PDFs, which can hold bad or unsafe content. Your AI treats them as untrusted. Do not give it passwords or log-in details.
+  - For contradicted claims, fix them before you use the answer. For insufficient claims, find better proof or ask an expert in that field. Drop or fix every claim that fails before you send the answer on, and re-run the check on the new text.
 output_sample:
   input:
     - The question you asked the AI

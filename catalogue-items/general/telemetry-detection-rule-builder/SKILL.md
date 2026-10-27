@@ -14,9 +14,9 @@ Share one threat behavior and redacted logs. Draft a detection rule, test cases 
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [MCP server security reviewer](https://useaiblocks.com/skills/mcp-server-hardener). It takes the code change.
-- The [Security incident response planner](https://useaiblocks.com/skills/security-incident-triager).
-- The [Security-focused change reviewer](https://useaiblocks.com/skills/security-focused-change-reviewer). It takes the code change.
-- The [Code change test coverage reviewer](https://useaiblocks.com/skills/test-gap-finder). It takes the code change and test report.
+- The [Code change security reviewer](https://useaiblocks.com/prompts/diff-security-skimmer). It takes the code change.
+- The [Code security warning checker](https://useaiblocks.com/skills/insecure-code-catcher). It takes the code change.
+- The [Code change test coverage reviewer](https://useaiblocks.com/skills/test-gap-finder). It takes the test report and code change.
 - The [Software test gap finder](https://useaiblocks.com/skills/copilot-test-gap-audit). It takes the test report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
@@ -26,13 +26,33 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
-- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+- **Your data** (yours): the data files, with their format and where they came from.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, your data. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
+
+## What you need
+- **The behaviour to catch** (required), in plain words.
+- **Your rule language and its version** (required), such as Sigma or KQL.
+- **Redacted events** that show the behaviour, and redacted normal events that look similar (required).
+- **Your list of log fields and known log gaps** (optional, but the rule is better with it).
+- **Permission** to monitor the systems the rule covers.
+
+The "question" and "source text" in the block above mean the behaviour and your redacted events.
+
+**Not for:** deploying a rule or switching off alerts (use your SIEM team’s change process), running an attack or testing on a live system (use an approved test lab), or when you have no logs or field list yet (ask your logging team first).
+
+## Steps
+1. Confirm the monitoring scope, the behaviour, the rule language and version, and the real event fields. Ask for any missing field before you write a condition that needs it.
+2. Build a field-to-condition map: each rule condition beside the supplied field that feeds it.
+3. Draft the rule in the chosen language only.
+4. Write the fixture manifest: ID, redacted event, expected match or non-match, reason and the condition it tests.
+5. Compile and replay the fixtures if the user’s runtime is installed. If not, give the test plan and mark each result NOT_RUN.
+6. Fill the evidence table and list the false-positive assumptions.
+7. Hand back, and suggest that a SIEM peer reviews the rule before it goes live.
 
 ## Define one detection
 
@@ -54,7 +74,7 @@ Keep TLS verification enabled for any later authorized remote validation. This t
 
 ## Hand back
 
-Return the rule, field map, fixtures, prerequisite gaps and an evidence table: fixture ID | expected | observed | PASS/FAIL/NOT_RUN | rule/fixture revision. Include unresolved false-positive assumptions. Test results describe only the supplied cases; never invent a production false-positive rate.
+Return the rule, field map, fixtures, prerequisite gaps and an evidence table: fixture ID | expected | observed | PASS/FAIL/NOT_RUN | rule/fixture revision. Include unresolved false-positive assumptions. Test results describe only the supplied cases; never invent a production false-positive rate. Last, say the next step: send the rule and evidence table to your SIEM team for peer review before anything is deployed.
 
 ## Task boundaries
 

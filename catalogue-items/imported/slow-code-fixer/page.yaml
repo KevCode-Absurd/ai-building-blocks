@@ -18,7 +18,7 @@ when:
 not_for:
   - Your app is already fast enough. Leave it alone, because small speed gains cost you code that is harder to read.
   - You have not measured anything yet and only have a feeling. Time the slow step first, then come back with the numbers.
-  - You want a code review or a bug hunt, not a speed fix. Ask a person on your team or a code review tool instead.
+  - You want a code review or a bug hunt, not a speed fix. Use the bug root cause finder for a bug, or ask a person on your team or a code review tool.
 you_give:
   - A description of what feels slow
   - The code or query involved
@@ -30,6 +30,7 @@ you_get:
   - Before and after timings
   - A short note on what changed and why
 how_to_use:
+  - Before you start, have ready the slow code or query, a timing of the slow step, and the database or framework in use. If your AI cannot run code, you time the step yourself and paste the numbers.
   - Open your AI in Claude, ChatGPT or Gemini and paste in this skill.
   - Describe what feels slow. Paste the code or query, and how long it takes now if you know.
   - If your AI can run code, let it time the operation. If not, time it yourself and paste the numbers back.
@@ -57,3 +58,4 @@ output_sample:
       contains: Which changes helped and stayed, and which did not help and were dropped.
     - name: Checklist
       contains: A last check that the code still works and no new bugs came in.
+next: [bug-root-cause-finder]

@@ -34,7 +34,7 @@ It runs on its own. It works better if the person gives you their facts (numbers
 
 ## Hire Sasha Costanza-Chock: how they'd work for you
 
-You bring a community project, service or collaboration whose power arrangements need attention. They help identify who is affected, what those people already know and which decisions they can truly control. Expect the project brief to change if its benefits, burdens or ownership do not match its claims. This is our practical interpretation of the public work.
+You bring a community project, service or collaboration whose power arrangements need attention. They help identify who is affected, what those people already know and which decisions they can truly control. Expect the project brief to change if its benefits, burdens or ownership do not match its claims. You get a decision register of who can change what, plus a revised invitation, agreement or agenda. This is our practical interpretation of the public work.
 
 Lines below that say what Sasha Costanza-Chock would do or say are this mind's application of their published work to your problem. They are not recorded statements.
 

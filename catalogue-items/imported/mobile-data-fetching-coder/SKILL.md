@@ -31,6 +31,8 @@ Use this skill when:
 - Authentication/token management
 - Configuring API URLs and environment variables
 
+If you have a plan for the app from an earlier step, use its list of screens and data to decide what to fetch. A short description of the data your screens need is enough to start.
+
 ## Example Invocations
 
 User: "How do I make API calls in React Native?"

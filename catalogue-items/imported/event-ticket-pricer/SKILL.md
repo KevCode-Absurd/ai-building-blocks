@@ -34,11 +34,13 @@ Only the rules that change for dated, capacity-limited events.
 4. **Pre-sales: gift, not early-bird discount, when the event is 3+ weeks out.** A bonus session, materials, or the recording at no cost. Within about a week, either works. Hedonic events tolerate long windows; functional ones should keep them short.
 5. **Human-labeled recommendations** for experiences ("others also booked").
 
-Shared, unchanged: discount ≤ 40% and amount-vs-% by the 100 threshold; invented relevant special days; video and gaze-away on the ticket page; price below the image.
+Not covered here: general discount rules (the usual rule of thumb is to keep any discount at 40% or below), special-day offers, and ticket-page layout. Ask your AI to check those separately.
+
+**Rules of thumb, not tested laws.** The 30% sold-out limit, the 3-week gift rule and the 40% discount cap are rules of thumb with no strong source. Say so next to each one in your answer, and tell the user to check them against their own sales.
 
 ## Worked example
 
-Pottery studio, 8-week wheel class, plan: $149, 25% early-bird, "Only 12 seats left", sold-out Saturday hidden, algorithm "recommended" row.
+Illustration only, with made-up numbers. Pottery studio, 8-week wheel class, plan: $149, 25% early-bird, "Only 12 seats left", sold-out Saturday hidden, algorithm "recommended" row.
 
 - **$150**, rounded.
 - Early-bird 8 weeks out → **glazing-masterclass recording at no cost**, dated deadline, no seat-count banner.

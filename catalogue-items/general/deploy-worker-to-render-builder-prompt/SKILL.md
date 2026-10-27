@@ -145,7 +145,9 @@ The assistant returns these, in this order: setup gaps and anything it could not
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Redis BullMQ job queue code planner](https://useaiblocks.com/prompts/set-up-redis-bullmq-job-queue-builder-prompt).
+- The [Simple code coach](https://useaiblocks.com/skills/simple-code-coach). It takes the code change.
+- The [Pull request writer](https://useaiblocks.com/skills/pull-request-writer). It takes the code change.
+- The [Session to script exporter](https://useaiblocks.com/skills/session-to-script-exporter). It takes the code change.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

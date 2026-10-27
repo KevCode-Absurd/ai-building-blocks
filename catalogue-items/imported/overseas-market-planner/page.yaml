@@ -5,7 +5,7 @@ name: Overseas market planner
 summary: Plan how to sell abroad. Give it your store and goals. You get ranked countries, shipping and tax costs, and a phased plan for your next market.
 job: run-your-store
 headline: Overseas market planner
-subhead: Name your store and goals. Get ranked countries, shipping and tax costs, and a phased plan to sell abroad. Bring your store and platform. Use the result to plan your next step.
+subhead: Name your store and goals. Get ranked countries, shipping and tax costs, and a phased plan to sell abroad. Bring your store, platform and monthly sales. Check every tax and shipping figure before you act.
 explain: |
   A ranked list of countries to sell in next, what shipping and tax will cost, and a phased plan to get there.
 
@@ -37,6 +37,8 @@ how_to_use:
   - Turn on web search if your AI has it. This helps it check current tax and shipping facts.
   - Read the country scores first. Check every tax and duty figure with your tax adviser or the official tax office before you act.
   - Start with the Next Steps list, then work through the roadmap one phase at a time.
+  - The tax, shipping and payment figures in the skill are the author's rough numbers, with no date. Ask your AI to mark any figure it could not check, and check those first.
+  - Next, work out the full cost per order with the Landed cost calculator. Then rewrite your listings for each country with the Overseas listing localizer.
 output_sample:
   input:
     - Your store, products and platform
@@ -66,3 +68,4 @@ output_sample:
       contains: Setup costs and monthly running costs for each country.
     - name: Next Steps
       contains: What to do this week.
+next: [landed-cost-calculator, overseas-listing-localizer]

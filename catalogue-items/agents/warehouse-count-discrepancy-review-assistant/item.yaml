@@ -7,11 +7,9 @@ role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: question
     required: true
   - type: spreadsheet
-    required: false
-  - type: question
     required: false
   - type: meeting_notes
     required: false

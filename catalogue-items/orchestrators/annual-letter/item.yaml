@@ -9,6 +9,7 @@ level: advanced
 inputs:
   - {type: question, required: true}
   - {type: performance_sheet, required: true}
+  - {type: financial_statements, required: true}
 outputs:
   - {type: copy_draft}
 uses: [long-term-principles-writer, input-metric-picker, cash-versus-earnings-checker, value-created-tally-builder, annual-letter-writer]

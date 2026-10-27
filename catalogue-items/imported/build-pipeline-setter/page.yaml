@@ -24,18 +24,18 @@ you_give:
   - How you ship code today
   - Your hosting or deploy target
   - Your existing CI files (optional)
-  - A Vercel token or other host account, only if you want deploy steps (optional)
+  - The name of your host, such as Vercel, only if you want deploy steps (optional). Never paste a token or password into the chat.
 you_get:
   - A set of quality gates in the right order
   - A deploy pipeline plan
   - Security and size checks
   - Guidance on fixing CI failures
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in this skill. The deploy examples assume Vercel hosting. If you use another host, ask your AI to swap in your host's commands. The skill is an MIT-licensed copy of Addy Osmani's.
+  - Open Claude, ChatGPT or Gemini and paste in this skill. The deploy examples assume Vercel hosting. If you use another host, ask your AI to swap in your host's commands. This is an MIT-licensed copy of Addy Osmani's ci-cd-and-automation skill, not original AI Blocks text.
   - Tell it your language, tools, host and how you ship today. Paste your CI files if you have them (optional).
   - Ask for the gates in order, a draft workflow file and a deploy plan.
   - Check that every gate has a command and a reason. Fix any command that does not match your project. Run each gate command on your own computer once before you commit the workflow file.
-  - Add the workflow file to your repository. Store secrets in GitHub Secrets, not in the file.
+  - Add the workflow file to your repository. Store secrets in GitHub Secrets, not in the file or in your chat with the AI. Give your AI only the secret names, such as VERCEL_TOKEN, never the values.
   - If a run fails, paste the error back to your AI and ask for a fix. Your AI does not need to run code, but it helps if it can read your files.
 output_sample:
   input:
@@ -46,14 +46,14 @@ output_sample:
   prerequisites:
     - An AI that can read your project files works best
     - A GitHub repository for the sample workflow files
-    - A Vercel token or another host account if you want deploy steps
+    - A host account such as Vercel if you want deploy steps. Its token goes in GitHub Secrets, never in the chat.
   output:
     - name: Quality gate pipeline
       contains: "The checks in order: lint, type check, unit tests, build, integration tests, optional browser tests, security audit, bundle size."
     - name: CI workflow file
       contains: A draft GitHub Actions file that runs the gates on every pull request and every push to main.
     - name: Deploy plan
-      contains: Preview deploys, staged rollout, feature flags and a rollback workflow, matched to your host.
+      contains: Preview deploys, staged rollout, feature flags and a rollback workflow, matched to your host. The rollback command is a placeholder you must check in your host's docs and try on a staging copy first.
     - name: Secrets and environment rules
       contains: Which files to commit, and where CI and production secrets should be stored.
     - name: Speed-up options

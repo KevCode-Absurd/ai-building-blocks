@@ -11,7 +11,7 @@ compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ---
 
 ## Purpose
-Calculates the store's total outstanding gift card liability — the sum of unredeemed gift card balances that represent a future obligation to deliver goods. Breaks the liability down by **issue-month cohort** and **remaining-balance band** so finance can size the obligation, age it, and forecast breakage. This is the bookkeeping companion to `gift-card-balance-report` (which lists individual cards). Read-only — no mutations.
+Calculates the store's total outstanding gift card liability — the sum of unredeemed gift card balances that represent a future obligation to deliver goods. Breaks the liability down by **issue-month cohort** and **remaining-balance band** so finance can size the obligation, age it, and forecast breakage. The CSV lists each card, so no separate card-by-card report is needed. Read-only — no mutations.
 
 ## Prerequisites
 - Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_gift_cards`
@@ -30,7 +30,7 @@ Calculates the store's total outstanding gift card liability — the sum of unre
 
 ## Safety
 
-> ℹ️ Read-only skill — no mutations are executed. The dollar figure produced is the deferred-revenue liability for accounting purposes; review with your accountant before booking journal entries.
+> ℹ️ Read-only skill — no mutations are executed. The dollar figure produced is the deferred-revenue liability for accounting purposes; review with your accountant before booking journal entries. Present the figure as a draft total to review, never as a booking-ready number. The CSV holds customer email addresses, so tell the user to keep it private and share only the totals unless their accountant needs the rows.
 
 ## Liability Model
 
@@ -173,8 +173,8 @@ CSV file `gift_card_liability_<YYYY-MM-DD>.csv` with columns:
 | Error | Cause | Recovery |
 |-------|-------|----------|
 | `THROTTLED` | API rate limit exceeded | Wait 2 seconds, retry up to 3 times |
-| No gift cards with positive balance | Store hasn't issued any, or all redeemed | Exit with $0 liability |
-| Multi-currency cards | Cards issued in different presentment currencies | Group totals by currency code; do not sum across currencies |
+| No gift cards with positive balance | Store hasn't issued any, or all redeemed, or the status filter or login scope excluded them | Exit with $0 liability, and tell the user to check the status filter and that the login includes `read_gift_cards` |
+| Multi-currency cards | Cards issued in different presentment currencies | Group totals by currency code; do not sum across currencies. Tell the user the store has more than one currency and that each total is separate |
 | Card with `null` `expiresOn` | No expiry policy | Treat as non-expiring; do not include in expiry-based breakage |
 
 ## Best Practices
@@ -182,4 +182,4 @@ CSV file `gift_card_liability_<YYYY-MM-DD>.csv` with columns:
 - The total outstanding amount is the **deferred-revenue liability** — book it in your accounting system, do not treat issued gift cards as revenue.
 - Breakage policy varies by jurisdiction; consult your accountant before recognizing breakage candidates as revenue. The `stale_days` and `expiresOn` flags here are inputs to that policy, not a substitute for it.
 - Track the redemption-rate trend month over month — declining redemption can indicate a customer-experience issue (recipients can't find / remember their cards).
-- Pair with `gift-card-issuance` to monitor flow: liability should increase by issuance and decrease by redemption + breakage.
+- Pair with the Gift card issuer (`gift-card-issuer`) to monitor flow: liability should increase by issuance and decrease by redemption + breakage.

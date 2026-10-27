@@ -39,15 +39,17 @@ disable-model-invocation: true
 
 ## Check menu (pick what's relevant)
 
+In the commands below, replace `<FOLDERS>` with the folders the user named. If they named none, ask. Do not search the whole home folder unless the user agrees. The other checks read fixed system places (installed tools, startup items, shell settings, extensions), as written.
+
 The commands below are written for macOS (Homebrew paths, LaunchAgents, `lsof`). On Linux, swap in the matching paths and tools. On Windows there are no ready checks here, so mark each one "not checked (no ready check for this system)" in the table.
 
 ```bash
 # --- Node / npm ecosystem (supply-chain advisories) ---
 which npm pnpm yarn; npm root -g; pnpm root -g 2>/dev/null
 ls /opt/homebrew/lib/node_modules                                  # global npm
-find ~ -maxdepth 8 -type d -name "<pkg>" 2>/dev/null \
+find <FOLDERS> -maxdepth 8 -type d -name "<pkg>" 2>/dev/null \
   | grep -v -E "(Library/Caches|\.Trash)"                          # installed copies
-find ~/Documents ~/Desktop ~/Downloads -maxdepth 8 -type f \
+find <FOLDERS> -maxdepth 8 -type f \
   \( -name "package.json" -o -name "package-lock.json" \
      -o -name "pnpm-lock.yaml" -o -name "yarn.lock" \) 2>/dev/null \
   | xargs grep -l "<pkg>" 2>/dev/null                              # direct + transitive
@@ -55,7 +57,7 @@ find ~/Documents ~/Desktop ~/Downloads -maxdepth 8 -type f \
 # --- Python ecosystem ---
 which python3 pip pipx uv
 pip list 2>/dev/null | grep -i "<pkg>"
-find ~/Documents -maxdepth 6 \( -name "requirements*.txt" -o -name "pyproject.toml" \
+find <FOLDERS> -maxdepth 6 \( -name "requirements*.txt" -o -name "pyproject.toml" \
   -o -name "poetry.lock" -o -name "uv.lock" \) 2>/dev/null | xargs grep -l "<pkg>" 2>/dev/null
 
 # --- Homebrew / system binaries ---

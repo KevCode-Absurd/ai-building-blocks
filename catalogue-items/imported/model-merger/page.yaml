@@ -7,7 +7,7 @@ job: build-software
 headline: Model merger
 subhead: Give it two or more tuned models that share the same base. It picks a merge method, writes the settings and gives you the command. You get one model that blends their skills, plus a way to test it.
 explain: |
-  One model that blends the strengths of two or more tuned models, built without any new training. Merge a math model with a coding model and a chat model, and test the result in minutes.
+  One model that blends the strengths of two or more tuned models, built without any new training. Merge a math model with a coding model and a chat model, then test the result against its parents. A merge can blend skills but does not always keep all of them, so the test matters.
 
   The skill uses mergekit and a short config file. You choose a method: a plain weighted average, SLERP for two models, or TIES and DARE for several, which trim clashing changes first. You set the weights, run one command, and test the new model on a few benchmarks against its parents. It runs on a CPU, though a GPU is faster. The models must share the same base design.
 when:
@@ -32,12 +32,14 @@ you_get:
   - Advice on which merge method to use and how to tune it
 how_to_use:
   - This is for ML engineers and developers. If you are not one, hand the merge to one.
+  - Check each model's licence first. It must allow merging and your intended use. Keep the licence files with the merged model.
   - Open Claude, ChatGPT or Gemini and paste this skill. Then list your models and the skills you want to keep.
-  - Check that all your models share the same base design. Your AI will flag any that do not.
-  - Ask for a merge config and the mergekit command. This step needs a computer or AI tool that can run Python code.
-  - Run the command. A CPU works, though a GPU is faster. The result is a folder of model files.
+  - Check that all your models share the same base design. Your AI can help you read each model card, but it cannot inspect the model files from a chat window, so confirm the base yourself.
+  - Ask for a merge config and the mergekit command. Your AI writes both. It does not run them in a chat.
+  - Run the command yourself, or hand it to someone with Python and mergekit installed. A CPU works, though a GPU is faster. The result is a folder of model files.
   - Load the merged model and test it on your test set. Compare the scores with each parent model.
   - If a skill got weaker, ask your AI to change the weights or density and run the merge again.
+next: [language-model-benchmark-runner, model-size-reducer]
 output_sample:
   input:
     - Two or more tuned models built on the same base model

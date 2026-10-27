@@ -8,10 +8,12 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: question
     required: true
+  - type: brand_brain
+    required: false
 outputs:
-  - type: page_layout_spec
+  - type: document
 uses: []
 origin: imported
 source:

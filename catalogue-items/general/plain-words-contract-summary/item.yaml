@@ -7,7 +7,7 @@ role: compress
 job: ops
 level: beginner
 inputs:
-  - type: document
+  - type: contract
     required: true
   - type: audit_report
     required: false

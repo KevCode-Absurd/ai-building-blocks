@@ -8,12 +8,14 @@ role: make
 job: ops
 level: beginner
 inputs:
-  - type: brief
+  - type: question
     required: true
+  - type: shortlist
+    required: false
   - type: plan
     required: false
 outputs:
-  - type: spreadsheet
+  - type: keyword_list
   - type: plan
 uses: []
 origin: imported

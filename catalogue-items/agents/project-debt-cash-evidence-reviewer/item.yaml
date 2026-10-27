@@ -9,9 +9,13 @@ level: advanced
 inputs:
   - type: spreadsheet
     required: true
+  - type: contract
+    required: true
   - type: document
     required: true
-outputs: []
+outputs:
+  - type: audit_report
+  - type: spreadsheet
 needs_mode: manual
 uses:
   - build-a-project-debt-service-cash-pack

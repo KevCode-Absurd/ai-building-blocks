@@ -100,7 +100,8 @@ This workflow analyzes Infrastructure-as-Code (IaC) files and Azure resources to
 
 4. **VALIDATE CURRENT COSTS**: 
    - Using the SKU/tier configurations discovered in Step 2
-   - Look up current Azure pricing at https://azure.microsoft.com/pricing/ or use `az billing` commands
+   - Look up current Azure pricing in the Azure Pricing Calculator (azure.microsoft.com/pricing/calculator/), in a Cost Management export the user provides, or with `az billing` commands. Name the source and date for each figure
+   - Any cost or saving figure without a named source must be marked "estimate, unverified" in the summary and in every issue. Never present it as fact
    - Document: Resource → Current SKU → Estimated monthly cost
    - Calculate realistic current monthly total before proceeding to recommendations
 
@@ -135,7 +136,7 @@ This workflow analyzes Infrastructure-as-Code (IaC) files and Azure resources to
    - Current validated cost → Target cost = Savings
    - Document pricing source for both current and target configurations
 
-3. **Calculate Priority Score** for each recommendation:
+3. **Calculate Priority Score** for each recommendation. Score Value and Risk from 1 to 10. Value: 1 = a small saving that barely matters, 5 = a noticeable saving, 10 = a large share of the bill. Risk: 1 = easy to undo with no user impact, 5 = some chance of a short disruption, 10 = hard to undo or likely to affect users. Write both scores and the days of work in each issue so the score can be reproduced:
    ```
    Priority Score = (Value Score × Monthly Savings) / (Risk Score × Implementation Days)
    
@@ -205,6 +206,7 @@ This workflow analyzes Infrastructure-as-Code (IaC) files and Azure resources to
    # File: infrastructure/bicep/modules/app-service.bicep
    # Change: sku.name: 'S3' → 'B2'
    # Before deploying, note the current SKU and settings so the change can be rolled back.
+   # Do not run this until the rollback values are written in the Validation Steps below and the user has approved.
    az deployment group create --resource-group [rg] --template-file infrastructure/bicep/main.bicep
    ```
    
@@ -215,6 +217,7 @@ This workflow analyzes Infrastructure-as-Code (IaC) files and Azure resources to
    - Best Practice Alignment: [reference to Azure best practices if applicable]
    
    ### ✅ Validation Steps
+   - [ ] Write down the current SKU and settings (rollback values) before any change
    - [ ] Test in non-production environment
    - [ ] Verify no performance degradation
    - [ ] Confirm cost reduction in Azure Cost Management
@@ -288,6 +291,7 @@ This workflow analyzes Infrastructure-as-Code (IaC) files and Azure resources to
    ```
 
 ## Error Handling
+- **Unverified figures**: Label any cost or saving without a named pricing source "estimate, unverified" everywhere it appears
 - **Cost Validation**: If savings estimates lack supporting evidence or seem inconsistent with Azure pricing, re-verify configurations and pricing sources before proceeding
 - **Azure Authentication Failure**: Provide manual Azure CLI setup steps
 - **No Resources Found**: Stop and tell the user there is nothing to review

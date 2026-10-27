@@ -9,7 +9,7 @@ subhead: Give it your stage, traction, team and market. It values the company wi
 explain: |
   A pre-money value range for a young company, with the working shown. Give it the stage, traction, team and market, and you get a range built from several methods, not a single guess.
 
-  It first asks a few questions: pre-seed, seed or Series A, whether there is a working product, growth rate, founder track record and market size. Then it scores the company with the Berkus method, which gives up to $500k per risk area, and with a scorecard. It adds the VC method, which works backwards from a target exit value and the return investors need. It compares the similar deals you supply and combines everything into one range with reasons. Treat it as a starting point, not a verdict.
+  It first asks a few questions: pre-seed, seed or Series A, whether there is a working product, growth rate, founder track record and market size. Then it scores the company with the Berkus method, which gives up to $500k for each of five risk areas. It adds the VC method, which works backwards from a target exit value and the return investors need. It compares the similar deals you supply and combines everything into one range with reasons. Treat it as a starting point, not a verdict.
 when:
   - You are raising a seed round and need a sensible ask.
   - You are an angel deciding what to offer a founder.
@@ -31,10 +31,10 @@ you_get:
   - A suggested equity stake and post-money value
   - A final pre-money range with reasons
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Add this skill to Claude, ChatGPT or Gemini, or copy the skill text and paste it in. The calculate.py script and the two reference files need a tool that can run code and open files, such as Claude with code running on. In a plain chat, the AI does the same sums by hand, so check them.
   - "Paste your company facts: stage, traction, team, market and the amount you want to raise."
   - Add similar deals if you have them, and say where they came from. The AI uses only the deals you give it. Any exit value or comparison it assumes is marked as an assumption.
-  - Read the memo. Check each assumption, especially the exit value and target return.
+  - Read the memo. Check each assumption, especially the exit value and target return. The $500k per area in the Berkus method comes from the original method and is dated, so check it against what deals in your region and stage look like today.
   - Change any input you disagree with and ask for the memo again.
   - Use the range as a starting point for talks, not as a final price. Take the memo into your term-sheet talks, and check cash needs with Startup runway forecaster.
 output_sample:

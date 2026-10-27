@@ -8,7 +8,13 @@ role: make
 job: ops
 level: intermediate
 inputs:
+  - type: question
+    required: true
   - type: tool_connection
+    required: false
+  - type: source_text
+    required: false
+  - type: plan
     required: false
 outputs:
   - type: plan

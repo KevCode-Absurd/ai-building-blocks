@@ -29,13 +29,14 @@ you_get:
   - A list of what to fix first
   - A saved score to compare next quarter
 how_to_use:
-  - Pick your company stage first, such as Seed or Series A. Stage sets the thresholds.
-  - "Gather key numbers for each area: money (runway, burn, margin), revenue (retention, churn, pipeline), product (NPS, usage), engineering (deploys, incidents), people (attrition, engagement), operations, security and market."
+  - Pick your company stage first, such as Seed or Series A. Stage sets the thresholds. Each area's 1 to 10 score is the average of its metric scores. Green is 7 to 10, yellow 4 to 6 and red 1 to 3.
+  - "Gather key numbers for each area, as metric, value, unit and date: money (runway, burn, margin), revenue (retention, churn, pipeline), product (NPS, usage), engineering (deploys, incidents), people (attrition, engagement), operations, security and market."
   - Open Claude, ChatGPT or Gemini and paste the skill. Then paste your stage and numbers. Missing numbers are fine, they are marked as data needed.
   - Or run the Python scorer if your AI can run code. It asks for each metric and prints the scored dashboard.
   - Read the dashboard. Check each colour against the number and threshold shown beside it.
   - Start with the top priorities. Give each one an owner and a date.
   - Save the result and run it again next quarter to compare.
+  - If the benchmark file or the Python script is not available in your AI, it uses the thresholds written in the skill and tells you.
 output_sample:
   input:
     - Your company stage, such as Seed or Series A

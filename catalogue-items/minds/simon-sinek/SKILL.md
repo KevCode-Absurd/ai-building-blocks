@@ -54,10 +54,12 @@ Lines below that say what Simon Sinek would do or say are this mind's applicatio
 
 ### How he'd take on your problem
 
+The steps follow his TED talks, website and 2020 keynote [S1][S2][S3][S6]. The "he'd" lines in the jobs are our reading of how that applies to your case. His stories are examples, not tests of the theory.
+
 1. **He asks why.** Every group knows what it does, and some know how. Very few can say why: their purpose, cause or belief. Profit is a result, not a why.
 2. **He draws the Golden Circle.** Why in the centre, then how, then what. Most people talk from the outside in, starting with the product. He wants you to talk from the inside out, starting with the belief.
 3. **He turns it into a fingerprint.** Your how is what you do when you live your why at your best. Together they are like a group's fingerprint.
-4. **He aims at the people who already share the belief.** Innovators and early adopters, about 16% of a market, buy because a product fits what they believe. The mass market follows later.
+4. **He aims at the people who already share the belief.** Innovators and early adopters, about 16% of a market, buy because a product fits what they believe [S1][S3]. The mass market follows later.
 5. **He checks the circle of safety.** Leaders can't control the economy or rivals, but they do control whether people inside the group feel safe. Trust and cooperation are feelings, and you can't order them into being.
 6. **He asks who goes first.** Leadership is a choice, not a rank. We call them leaders because they go first: they take the risk before asking others to.
 7. **He asks if you are playing a finite or an infinite game.** Business has no final whistle, so you are only ahead or behind. The aim is to keep playing.
@@ -84,11 +86,11 @@ Lines below that say what Simon Sinek would do or say are this mind's applicatio
 
 #### Your pitch, site or sales page
 
-He'd tell you not to lead with a feature list. A normal ad lists features. He says Apple opens with a belief in challenging the status quo, and only then shows the product. So write the belief in one line, then show the product as proof. He'd point to TiVo as a warning: strong technology, but it led with features like pausing live TV, and never became profitable. It should have led with a belief about control over your own viewing. Then he'd aim your first push at the people who already share the belief and let the mass market follow.
+He'd tell you not to lead with a feature list. A normal ad lists features. He says Apple opens with a belief in challenging the status quo, and only then shows the product [S1]. So write the belief in one line, then show the product as proof. He'd point to TiVo as a warning, in his telling: strong technology and money, but it led with features like pausing live TV and never became profitable. He suggests it should have led with a belief about control over your own viewing [S1]. Then he'd aim your first push at the people who already share the belief and let the mass market follow.
 
 #### A downturn and a cost problem
 
-He'd ask what a leader who put people first would do. He praised Bob Chapman of Barry-Wehmiller, who avoided layoffs in the 2008 recession by asking everyone, from the top down, to take four weeks of unpaid leave. Staff began trading leave to help colleagues who could least afford it. He'd tell you the anger at some bank bosses came less from their pay than from breaking the deal that leaders protect their people. He'd not tell you layoffs are never right. He'd tell you to try every other path first, and to start with yourself.
+He'd ask what a leader who put people first would do. He praised Bob Chapman of Barry-Wehmiller, who after losing 30 percent of orders in 2008 refused layoffs and asked everyone, from the top down, to take four weeks of unpaid leave. Staff began trading leave to help colleagues who could least afford it [S2]. He argued that public anger at some bank bosses came less from their pay than from breaking the deal that leaders protect their people [S2]. He'd not tell you layoffs are never right. He'd tell you to try every other path first, and to start with yourself.
 
 #### Building a team people trust
 
@@ -104,7 +106,7 @@ Say you make videos for clients. He'd ask why you do this work, and what you bel
 
 #### Your life and career
 
-He'd ask what you believe and where your work serves it. If the answer is only money or a title, he'd say that is a result, not a reason, and ask again. He'd tell you to find people who share your belief and care for them, since in his 2020 keynote his one tip was to take better care of each other. He'd ask whether you are trying to win at a career, which has no finish line, or to keep playing in a way you can live with. He gives you a question, not a rule.
+He'd ask what you believe and where your work serves it. If the answer is only money or a title, he'd say that is a result, not a reason, and ask again. He'd tell you to find people who share your belief and care for them, since when asked for one tip in his 2020 keynote he said to take better care of each other [S6]. He'd ask whether you are trying to win at a career, which has no finish line, or to keep playing in a way you can live with. He gives you a question, not a rule.
 
 ### What he'd push back on
 

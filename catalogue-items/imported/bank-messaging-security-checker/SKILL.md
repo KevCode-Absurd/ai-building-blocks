@@ -33,8 +33,8 @@ You are an expert advisor on the **SWIFT Customer Security Programme (CSP)** and
 | **v2026 attestation window** | July 1 – December 31, 2026 |
 | **Assessment type** | Community-standard independent assessment (formerly self-attestation for smaller users) |
 | **Applies to** | All SWIFT users: banks, brokers, custodians, corporates, service bureaux |
-| **Consequence of non-compliance** | Counterparty notifications; potential suspension; regulatory escalation |
-| **Next version** | CSCF v2027 expected to be published July 2026 |
+| **Consequence of non-compliance** | Counterparties can see your status and Swift reports non-compliant users to their supervisor. This is the author's reading of Swift's public position. Disconnection is not the published lever. Check the current rules. |
+| **Next version** | CSCF v2027 is usually released around July. There was no public confirmation at 2026-09-14. |
 
 ---
 
@@ -83,7 +83,7 @@ Detect anomalies, protect data integrity, and respond effectively to cyber incid
 | **2.1** | Internal Data Flow Security | Mandatory | 1 |
 | **2.2** | Security Updates | Mandatory | 1 |
 | **2.3** | System Hardening | Mandatory | 1 |
-| **2.4** | Back-Office Data Flow Security | **Mandatory** *(NEW in v2026 — was Advisory in v2025)* | 1 |
+| **2.4** | Back-Office Data Flow Security | **Mandatory** *(NEW in v2026 — was Advisory in v2025; not applicable to architecture B)* | 1 |
 | **2.5A** | External Transmission Data Protection | Advisory | 1 |
 | **2.6** | Operator Session Confidentiality and Integrity | Mandatory | 1 |
 | **2.7** | Vulnerability Scanning | Mandatory | 1 |
@@ -114,7 +114,7 @@ Detect anomalies, protect data integrity, and respond effectively to cyber incid
 
 ## Control 2.4 — Back-Office Data Flow Security (Now Mandatory)
 
-This is the most significant change in CSCF v2026. Organizations that skipped 2.4 as advisory must now implement it.
+This is the most significant change in CSCF v2026. Organizations that skipped 2.4 as advisory must now implement it. It applies to architectures A1, A2, A3 and A4 that have back-office connections. It is not applicable to architecture B.
 
 **What Control 2.4 requires:**
 - All data flows between the SWIFT secure zone and back-office systems must be protected
@@ -169,7 +169,7 @@ The following controls are the **highest-risk** and most commonly cited in SWIFT
 2. **2.4 — Back-Office Data Flow Security**: Now mandatory in v2026; encrypt and authenticate all back-office connections
 3. **1.1 — SWIFT Environment Protection**: Dedicated secure zone; no browsing from SWIFT servers; network segregation with firewall rules
 4. **6.4 — Log and Monitoring**: All SWIFT system events and transactions logged; anomaly alerts; minimum 1-year retention
-5. **2.2 — Security Updates**: Patches applied within 90 days for critical; emergency patches within 3 days
+5. **2.2 — Security Updates**: Patches applied on a set schedule. The author gives 90 days as the outer limit for critical patches and 3 days for emergency patches. Confirm the exact limits in the CSCF document.
 6. **6.2 — Software Integrity**: Verify integrity of SWIFT software before installation and after updates
 7. **2.3 — System Hardening**: CIS Benchmark hardening or equivalent; remove all unnecessary services
 8. **1.4 — Internet Restriction**: SWIFT infrastructure must not have direct internet access; jump servers required
@@ -187,7 +187,7 @@ The following controls are the **highest-risk** and most commonly cited in SWIFT
 | Non-attesting user flagged to counterparties | After deadline |
 | CSCF v2027 publication expected | July 2026 |
 
-> **Note**: The traditional annual deadline of July 31 applied under prior cycles. For v2026, SWIFT has opened an extended attestation window (July 1 – December 31, 2026). Verify current PMO guidance at swift.com/myswift.
+> **Note**: Use one deadline for v2026: the attestation window is July 1 – December 31, 2026, and the last day is December 31, 2026. Earlier cycles used a July 31 deadline, and it does not apply to v2026. Verify current guidance at swift.com/myswift.
 
 ---
 
@@ -198,7 +198,7 @@ The following controls are the **highest-risk** and most commonly cited in SWIFT
 | 2.4 | Back-office connections unencrypted or unauthenticated *(now mandatory)* | Implement mutual TLS 1.2+ on all back-office data flows; segment with dedicated firewall rules |
 | 4.2 | Software-based OTP rather than hardware token | Deploy hardware authentication tokens for all SWIFT operators |
 | 1.1 | SWIFT servers on shared network segment | Create dedicated VLAN/zone with stateful firewall rules; no dual-homing |
-| 2.2 | Critical patches >90 days overdue | Establish patch management process: critical=3 days, high=90 days |
+| 2.2 | Critical patches overdue against the CSCF timeframe or your own policy | Set up a patch process with fixed timeframes: emergency patches fastest, then critical, then high. Confirm the exact limits in the CSCF document |
 | 6.4 | Logs not reviewed; no SIEM coverage of SWIFT events | Configure SIEM to ingest Alliance Access/Gateway logs; set alert rules |
 | 5.1 | Shared operator accounts; no least privilege | Enforce individual accounts; audit roles quarterly; remove stale access |
 | 2.7 | Vulnerability scans not covering all SWIFT components | Include all SWIFT-connected systems in quarterly credentialed scan scope |

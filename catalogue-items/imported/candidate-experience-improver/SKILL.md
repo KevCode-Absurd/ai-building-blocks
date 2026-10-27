@@ -25,6 +25,16 @@ Design and optimize the end-to-end candidate experience — from first impressio
 - Building candidate experience standards and training for hiring teams
 - Analyzing candidate drop-off rates and conversion patterns
 
+## Order of work (added by AI Blocks)
+
+1. Ask for the hiring steps, the roles, the time each stage takes and any drop-off numbers. Ask once for what is missing. Never invent a drop-off number or wait time. Candidate feedback or survey comments, if you have them, show where the friction is.
+2. Map the candidate path as a table, one row per stage.
+3. Score friction at each stage and pick the top three.
+4. Draft one message per stage.
+5. Write a short survey for each stage, then say how to check the map again after a month.
+
+The prompts below are the questions to use at each step.
+
 ## Key prompts
 
 ### Candidate journey mapping

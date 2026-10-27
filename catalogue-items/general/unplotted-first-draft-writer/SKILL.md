@@ -12,14 +12,14 @@ The best way to write a first draft is fast and in order, without an outline, wh
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+- **A story outline** (yours): the premise, the characters and the scenes in order.
 
 **Makes it better (optional):**
 - **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a brief, plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a story outline, plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -45,7 +45,7 @@ How to start:
 7. **Keep the facts sheet.** While you write, note every name, age, job, place and promise the page states, and every object a later scene might need. Write only what is on the page.
 8. **Stop at the count.** End the pages near the daily count, at the next clean beat, mid-story. Do not wrap up. Count the words roughly and say it is approximate.
 9. **Set up tomorrow.** Write the first question the next scene must answer. Write one line saying where it stopped.
-10. **Check it.** Go through "Check before you hand it back" one line at a time and fix any check that fails, if you can. Under CHECKS MISSED, write one line for each check still missed and why, or "none".
+10. **Check it.** Go through "Check before you hand it back" one line at a time. If a check fails on today’s pages, fix only today’s pages. Never touch an earlier day. Under CHECKS MISSED, write one line for each check you could not judge (for example the word count, which is approximate, or a facts sheet you were not given) and why, or "none". A draft has no test to run, so "none" is normal.
 
 ## What you hand back
 
@@ -54,9 +54,9 @@ The day's pages. The facts sheet. Where it stopped. Tomorrow's first question. A
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Fresh draft reviewer](https://useaiblocks.com/skills/cold-reread-marker). It takes the draft.
 - The [Usability test audience planner](https://useaiblocks.com/skills/expert-and-newcomer-test-planner). It takes the draft.
-- The [Reader feedback question writer](https://useaiblocks.com/skills/first-reader-question-writer). It takes the draft.
-- The [Draft shortening editor](https://useaiblocks.com/skills/ten-percent-cutter). It takes the draft.
+- The [Long-form draft reviewer](https://useaiblocks.com/skills/honest-draft-feedback-giver). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

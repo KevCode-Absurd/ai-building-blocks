@@ -11,7 +11,9 @@ explain: |-
 
   This workflow follows the money through three roll-forwards. The first covers customer advances: how much was added and how much was released to revenue. The second covers unbilled work: how it became invoices and then collections. The third covers the credit loss allowance, so write-offs and recoveries do not pass for cash.
 
-  Each roll-forward must tie to the source note. Revenue released from one balance is never counted again in another. What cannot be explained stays visible as a gap. Nothing is forced to tie with a plug.
+  Each roll-forward must tie to the source note. Revenue released from one balance is never counted again in another. What cannot be explained stays visible as a gap. Nothing is forced to tie with a plug. This is arithmetic on your records, not accounting or audit advice.
+
+  Licence: MIT. The licence text is in the download.
 when:
   - Cash collected looks different from what revenue and invoices suggest.
   - You have contract liability and contract asset notes and want to see how they link to cash.
@@ -66,7 +68,7 @@ tweaks:
 judge:
   - Contract and receivable roll-forwards tie to source notes; revenue, invoices and collections remain distinct; allowance write-offs/FX do not become collections and all unexplained residuals remain visible.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
-  - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
+  - If a workbook is built, keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
 test:
   - Try a small sourced case and inspect every component handoff.
   - Remove one required source and confirm the affected step stops.

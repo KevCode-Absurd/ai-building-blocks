@@ -16,6 +16,8 @@ audit_signals:
 ## Purpose
 An AI shopping agent reads image **alt text** to understand a product's appearance — color, material, style, use. Blank or filename-style alt text ("IMG_2931.jpg") tells the agent nothing, so it can't match the product to a visual query ("red linen midi dress") or describe it to a shopper. This skill finds product images with missing or low-value alt text and writes concise, descriptive alt text derived from the product's title, options, type, and tags. Fixes the agentiq.report finding `listing-image-alt-text`.
 
+If you have a product data gap report from an earlier step, use it to choose which images to cover first.
+
 ## Prerequisites
 - Authenticated Shopify CLI session (`shopify auth login --store <domain>`)
 - Required API scopes: `read_products`, `write_products`, `write_files`

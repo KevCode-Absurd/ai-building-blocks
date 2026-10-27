@@ -19,10 +19,14 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
+- **Your prompt** (yours): the full prompt or instructions you give the AI.
+
+**Makes it better (optional):**
+- **A test set** (yours): test cases for the AI, each with the answer that counts as a pass.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, your prompt, a test set. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
@@ -61,6 +65,15 @@ Pause here: Pick the version with the best scores and save it as version 1 in a 
 - Version 1 save: the person's chosen version in a file, with its test cases beside it.
 - Step 3, version rules: where prompts live, how versions are named, a check before each change, a small trial and rollback steps.
 - The hand-back summary: each step's file, any step not run, and every `MISSING:` line in one list.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Prompt change tester](https://useaiblocks.com/skills/prompt-change-tester). It takes the prompt and test set.
+- The [Marketing prompt tester](https://useaiblocks.com/skills/marketing-prompt-tester). It takes the prompt and test set and audit report.
+- The [Ad prompt comparison reviewer](https://useaiblocks.com/skills/old-vs-new-ad-prompt-scorer). It takes the prompt.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.

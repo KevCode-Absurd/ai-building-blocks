@@ -5,6 +5,8 @@ description: "Plan a viral marketing acquisition experiment from a product URL o
 
 # Viral growth experiment planner
 
+Needs no account, API key or paid tool, and no scraping. If your AI can browse, it reads the public pages you point to. If not, paste your page text.
+
 Not for a product with no natural moment to invite others: pick a different channel. Not for a sales-led product where invites do not create buying accounts: use the Find your SaaS growth channel workflow (or, for a shop or service, Find your business growth channel) to compare all 19 channels. Not for a ready campaign sent for you: this plan sends, spends and publishes nothing.
 
 How it differs from the Partnership experiment planner (traction-business-development): growth here comes from your own users inviting others as part of normal use, not from a deal with another company.
@@ -17,11 +19,9 @@ Plain terms: activation is the first useful thing a new person does in the produ
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Community growth experiment planner](https://useaiblocks.com/skills/traction-community-building).
-- **Say it to the room** with the [Press outreach experiment planner](https://useaiblocks.com/skills/traction-public-relations).
-- The [Lifecycle email experiment planner](https://useaiblocks.com/skills/traction-email-marketing).
-- The [Social and display ad experiment planner](https://useaiblocks.com/skills/traction-social-and-display-ads).
+- **Plan your strategy** with the [Customer acquisition experiment reviewer](https://useaiblocks.com/skills/traction-experiment-reviewer). It takes the channel experiment.
 - **Plan your strategy** with the [Growth channel shortlist planner](https://useaiblocks.com/skills/traction-channel-ranker).
+- **Say it to the room** with the [Press outreach experiment planner](https://useaiblocks.com/skills/traction-public-relations).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -59,7 +59,7 @@ Decision to resolve: Does sharing deliver value to the inviter and recipient as 
 
 1. Map the trigger, invitation, recipient value, activation event and next invitation. Compare collaboration, shared outputs, embedded attribution and rewarded referrals.
 2. Separate team invitations inside one paying account from new buying accounts. Find where a user naturally needs another person to finish a useful job.
-3. Estimate invites per eligible active user, invitation-to-activation rate and cycle time for the same cohort. Use their product as the loop, without copying another company's creative.
+3. Estimate invites per eligible active user, invitation-to-activation rate and cycle time for the same cohort. Pick one cohort window (for example, the first 30 days after a user joins) and one denominator (eligible active users in that window), and state both before counting. Use their product as the loop, without copying another company's creative.
 
 Cheap pilot: Prototype one voluntary invite or share moment for a small eligible cohort, alongside the current experience. Measure recipient activation before building rewards.
 
@@ -78,11 +78,13 @@ Evidence: <source URL, access date, fact, implication>
 Buyer and useful action: <...>
 Channel mechanism: <how the buyer reaches value>
 Pilot: <hypothesis, audience, offer, deliverable, owner>
+Produces: <a loop diagram, trigger and invitation copy, event names and an eligibility rule>
 Limits: <cash, hours, date, proposed or approved>
 Measurement: <events, cohort, denominators, attribution>
 Decision: <continue / revise / stop rule>
 Risks and next action: <...>
 MISSING: <unknowns>
+CHECKS MISSED: <one line each, or none>
 
 ## Check the answer
 

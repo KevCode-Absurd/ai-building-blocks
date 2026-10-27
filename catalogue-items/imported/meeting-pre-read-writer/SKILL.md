@@ -32,6 +32,7 @@ After successful login, the user will have to restart codex. You should finish y
 ### 1) Gather inputs
 - Ask for objective, desired outcomes/decisions, attendees, duration, date/time, and prior materials.
 - Search Notion for relevant docs, past notes, specs, and action items (`Notion:notion-search`), then fetch key pages (`Notion:notion-fetch`).
+- If a research document from an earlier step is in the chat, use it as background and link it in the pre-read.
 - Capture blockers/risks and open questions up front.
 
 ### 2) Choose format

@@ -10,6 +10,8 @@ explain: |
   A visual effect, described in words, turned into working vertex and fragment shaders. Say what you want to see, such as a ripple, a glow or a blur, and you get GLSL code made to run fast on the GPU.
 
   The code follows the standard pipeline: the vertex shader moves points into screen space, and the fragment shader colours each pixel. It uses uniforms for values you control, varyings to pass data between stages, and vector tricks like swizzling to keep maths short. It suits WebGL, Three.js and game engines, including post-processing effects and procedural textures. You need a way to run shaders to see results.
+
+  This is a renamed copy of a public skill, shared under CC BY 4.0 (see the LICENSE-CONTENT file). It has not been rewritten for this catalogue.
 when:
   - You want a custom effect in a Three.js scene.
   - Your shader runs slowly and needs tuning.
@@ -33,6 +35,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text.
   - Say what effect you want to see, such as a ripple, glow or blur.
   - Name your engine, such as WebGL or Three.js, and list any values you want to control. Say if you want a Shadertoy-style effect, which needs a full-screen quad and a resolution value from your code.
+  - You get back four parts, a vertex shader block, a fragment shader block, a list of uniform names, and a short speed note. Check that all four are there.
   - Copy the vertex and fragment shaders into your project and set the uniforms from your code.
   - If the screen is black, check that your uniforms are set and your UV values run from 0 to 1, then ask your AI to fix it.
   - Test the speed on the devices you care about before you publish.

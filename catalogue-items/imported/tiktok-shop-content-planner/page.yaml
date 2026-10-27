@@ -10,6 +10,8 @@ explain: |
   A month of TikTok Shop videos planned before you open the camera: formats, opening lines, hashtags and a calendar that mixes product demos, trends and proof from customers.
 
   You tell the skill about your products and brand. It picks content pillars and matches them to formats that tend to sell, such as demos, before and after, and unboxing. It writes hook ideas for the first seconds, shows how to work in customer clips, and reuses one video across other platforms. If your videos get views but no sales, it reads the results you paste, such as views, clicks and sales, and suggests simple tests on the call to action and the hook. It cannot see your TikTok account, so check product tagging and where viewers drop off in your own TikTok analytics and tell your AI what you find.
+
+  Licence: MIT, as the LICENSE file in this item says. Credit goes to Nexscope AI.
 when:
   - You post but have no plan for what comes next.
   - Your videos get views and nobody buys.
@@ -32,7 +34,7 @@ you_get:
   - Tests to improve sales
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste in the skill instructions. No code or paid tool is needed.
-  - List your products with prices. Add your brand tone and how many videos you can post each week.
+  - First paste your product list with prices and your brand tone, and say how many videos you can post each week. Then ask for the calendar in stages: pillars first, then hooks, then the 30 day calendar.
   - Add your last 30 days of video results if you have them (optional). Say if you get views but no sales.
   - Ask for a 30 day content calendar with hooks and hashtags.
   - Check the targets in the result against your own TikTok analytics. Treat them as starting guesses, not benchmarks.

@@ -39,7 +39,7 @@ Aggregates abandoned checkout data broken down by cart value bucket and hour of 
 ## GraphQL Operations
 
 ```graphql
-# abandonedCheckouts:query — the original author validated this against api_version 2025-04; the header says 2025-01. Use one version for the run: 2025-01, or 2025-04 if the store rejects it.
+# abandonedCheckouts:query — use the api_version in the header (2025-01). If your store rejects it, use 2025-04.
 query AbandonedCheckoutsReport($first: Int!, $after: String, $query: String) {
   abandonedCheckouts(first: $first, after: $after, query: $query) {
     edges {
@@ -161,4 +161,4 @@ Note: Device type and geographic location are not available in the `abandonedChe
 2. The default `cart_value_buckets` of `[0,25,50,100,250]` works for most stores — adjust thresholds to match your AOV distribution.
 3. Hours are reported in UTC — convert to your store's local timezone before drawing conclusions about peak abandonment times.
 4. Run this report weekly and compare the by-hour pattern to your promotional send times to find timing opportunities.
-5. `email` is included in the query result — combine with the `abandoned-cart-recovery` skill to act on the customers most likely to convert based on their cart value tier.
+5. This report does not pull customer emails. To act on the shoppers, use the abandoned cart code maker, which pulls them in its own query.

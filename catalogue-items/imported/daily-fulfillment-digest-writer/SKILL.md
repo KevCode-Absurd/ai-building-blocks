@@ -15,8 +15,8 @@ compatibility: Claude Code, Cursor, Codex, Gemini CLI
 Produces a daily ops triage digest of all unfulfilled and partially-fulfilled orders, segmented by how long they've been waiting. Flags orders with active holds. Replaces the manual process of scrolling through the Shopify admin Orders page to find aging orders and exceptions — this skill fetches every open order, computes its age, buckets it into configurable time segments, and surfaces any orders currently on a fulfillment hold, giving the ops team a complete exception queue in a single read-only operation.
 
 ## Prerequisites
-- Authenticated Shopify CLI session: `shopify auth login --store <domain>`
-- API scopes: `read_orders`
+- Authenticated Shopify CLI session: `shopify auth login --store <domain>`. If that command is not found, check the Shopify CLI docs for the current sign-in.
+- API scopes: `read_orders`. Shopify returns only the last 60 days of orders unless the app also has `read_all_orders`. Tell the user if open orders older than that may be missing.
 
 ## Parameters
 
@@ -37,6 +37,7 @@ Produces a daily ops triage digest of all unfulfilled and partially-fulfilled or
 
 2. **OPERATION:** `fulfillmentOrders` — query (via nested `order.fulfillmentOrders`)
    **Inputs:** For each order from Step 1: `fulfillmentOrders(first: 5)` to check `status` and `requestStatus`; flag any with `status: ON_HOLD`
+   If an order shows exactly five fulfillment orders, it may have more. Query that order's `fulfillmentOrders` again with a cursor until `hasNextPage` is false, so a hold on a later one is not missed.
    **Expected output:** Hold status per order. The query returns no hold start date, so show the order's age (days since `createdAt`) in the Holds section instead, and never invent a hold date
 
 ## GraphQL Operations

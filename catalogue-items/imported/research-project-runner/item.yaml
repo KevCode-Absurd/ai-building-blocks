@@ -10,6 +10,10 @@ level: advanced
 inputs:
   - type: question
     required: true
+  - type: document
+    required: false
+  - type: codebase
+    required: false
 outputs:
   - type: document
     required: true

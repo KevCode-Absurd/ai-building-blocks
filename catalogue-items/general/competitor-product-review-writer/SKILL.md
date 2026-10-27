@@ -65,8 +65,8 @@ The survey of the range. Strengths and weak points, each with its evidence. Clev
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Rival weakness message finder](https://useaiblocks.com/skills/rival-weakness-message-finder). It takes the audit report.
+- The [Market opportunity finder](https://useaiblocks.com/skills/competitor-white-space-mapper). It takes the audit report.
 - The [Competitive disruption risk reviewer](https://useaiblocks.com/skills/disruption-risk-checker). It takes the audit report.
-- The [Competitor profile writer](https://useaiblocks.com/skills/competitor-profile-writer).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

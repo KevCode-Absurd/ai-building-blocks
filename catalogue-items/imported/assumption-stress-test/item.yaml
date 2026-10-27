@@ -11,6 +11,8 @@ level: intermediate
 inputs:
   - type: plan
     required: true
+  - type: feedback_notes
+    required: false
 outputs:
   - type: audit_report
 uses: []

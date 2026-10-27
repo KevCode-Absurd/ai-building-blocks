@@ -108,7 +108,7 @@ cd commercial/skills/channel-economics && python3 scripts/cost_to_serve_calculat
 - **Ignoring enablement time as a cost.** Every hour your AE spends co-selling with a partner is a direct cost charged to the partner channel — most teams forget to load it.
 - **MDF without ROI tracking.** Market Development Funds disbursed without an attributable pipeline ROI are just a partner-discount extension. The skill flags MDF with no return.
 - **Channel-mix dogma.** "We're a partner-first company" / "we don't sell direct" blocks profitable segments. Mix should follow the math, not the slogan.
-- **Computing channel ROI without retention differential.** If partner-sourced customers churn 5 points higher than direct, ignoring it overstates partner LTV by 30-50%. Per-channel retention is mandatory input.
+- **Computing channel ROI without retention differential.** If partner-sourced customers churn 5 points higher than direct, ignoring it overstates partner LTV (the author says by 30-50%; a rule of thumb, unchecked). Per-channel retention is mandatory input.
 - **No cost-attribution for channel-manager headcount.** A $200k channel manager managing $4M of partner ARR is $50 of channel-manager cost per $1k ARR — material to the verdict.
 - **Confusing this skill with partnerships-architect.** That skill designs the partner program. This skill tells you whether the program pays for itself.
 
@@ -125,14 +125,14 @@ cd commercial/skills/channel-economics && python3 scripts/cost_to_serve_calculat
 
 The percentages and ratios in this list (and in the Anti-patterns above) are the author's rules of thumb, not checked figures. Give them as rough guides only, never as facts about the user's business.
 
-Walked one at a time by `/cs:grill-commercial` or the orchestrator. Recommended answer + canon citation per question. Never bundled.
+Walked one at a time by the author's `/cs:grill-commercial` command (not in this library) or by your AI. Recommended answer + canon citation per question. Never bundled.
 
 1. **"What's your fully-loaded cost-to-serve per channel — including channel-manager headcount, MDF, partner enablement time, and overhead allocation?"**
-   Recommended: load all four. Most teams load partner discount but forget the channel-manager headcount and the enablement time, inflating partner margin by 8-15 points.
+   Recommended: load all four. Most teams load partner discount but forget the channel-manager headcount and the enablement time, inflating partner margin (the author says by 8-15 points; a rule of thumb, unchecked).
    Canon: Kaplan & Cooper (HBR 1988) — *Measure Costs Right: Make the Right Decisions*. Activity-Based Costing was invented precisely because channel costs hide in overhead and distort margin comparisons.
 
 2. **"What is the retention differential between direct-sourced and partner-sourced customers?"**
-   Recommended: instrument per-channel retention BEFORE running channel ROI. A 5-point retention gap moves LTV by 30-50%.
+   Recommended: instrument per-channel retention BEFORE running channel ROI. A retention gap changes LTV a lot (the author says 30-50% for 5 points; a rule of thumb, unchecked).
    Canon: David Skok (*For Entrepreneurs* — SaaS Metrics 2.0). LTV = (ARPA × Gross Margin) / Churn. Channel-blind churn is the most common source of false channel ROI.
 
 3. **"What share of 'channel-sourced' pipeline did your team actually originate?"**
@@ -140,16 +140,16 @@ Walked one at a time by `/cs:grill-commercial` or the orchestrator. Recommended 
    Canon: SiriusDecisions / Forrester channel attribution research — confused source vs. influence is the #1 reason partner ROI is overstated industry-wide.
 
 4. **"What is the marginal ROI of the next dollar invested in partner program vs. direct sales?"**
-   Recommended: compute the diminishing-returns curve on both. Average ROI hides the fact that the next dollar might earn 0.3x while the average earns 2.1x.
+   Recommended: compute the diminishing-returns curve on both. Average ROI hides the fact that the next dollar might earn much less than the average (illustrative, not real figures).
    Canon: Tomasz Tunguz (*Tomasz Tunguz blog* — channel CAC analyses). Average ROI is a vanity metric; marginal ROI drives investment decisions.
 
 5. **"What's your MDF-to-attributable-pipeline ratio in the last 4 quarters?"**
-   Recommended: < 5:1 (every $1 of MDF should generate ≥ $5 of attributable pipeline within 2 quarters). Anything looser is partner-discount theatre.
+   Recommended: the author suggests about $5 of attributable pipeline for every $1 of MDF within 2 quarters (a rule of thumb, unchecked; set your own bar). Anything looser is partner-discount theatre.
    Canon: Jay McBain (Canalys) — *State of the Channel* research. MDF without attribution discipline is the most expensive form of channel subsidy.
 
 6. **"Is your channel-mix dogma blocking a profitable segment?"**
    Recommended: surface the dogma ("we're partner-first", "we don't sell direct in SMB") explicitly. Mix should follow the segment math.
-   Canon: MIT Sloan Management Review — *When Channel Conflict Means Growth*. Dogmatic single-channel strategies forfeit 15-25% of TAM in mid-market specifically.
+   Canon: MIT Sloan Management Review — *When Channel Conflict Means Growth*. Dogmatic single-channel strategies forfeit part of the market (the author says 15-25% in mid-market; unchecked).
 
 7. **"What overhead-allocation methodology are you applying — and is it consistent across direct and partner?"**
    Recommended: same methodology, same denominator, both channels. Inconsistent allocation is the silent killer of channel-economics analysis.

@@ -7,12 +7,14 @@ role: orchestrate
 job: organic
 level: intermediate
 inputs:
-  - {type: brief, required: true}
+  - {type: question, required: true}
   - {type: web_page, required: true}
   - {type: spreadsheet, required: false}
+  - {type: brief, required: true}
 outputs:
   - {type: plan}
   - {type: brief}
+  - {type: keyword_list, required: true}
 uses: [keyword-researcher, search-intent-keyword-mapper, topic-cluster-mapper, content-brief-writer, internal-link-mapper]
 steps:
   - {uses: keyword-researcher, note: "The searches around your topic, how often they are made and how hard they are, grouped so the pattern shows. Hands the keyword list to the intent mapper."}

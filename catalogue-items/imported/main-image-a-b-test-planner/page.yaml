@@ -9,7 +9,7 @@ subhead: A product image test you can learn from, not just a pile of extra pictu
 explain: |
   A product image test you can learn from, not just a pile of extra pictures. Each version differs from the control in one thing only, and you write down which one you expect to win and why before you run it.
 
-  Choose one variable per round: background, shot distance, with or without a model, text on the image, model look or color tone. The skill makes the control and test images, and checks each against marketplace rules so a rejected image does not ruin your data. It gives you a results sheet to fill in with clicks and sales. It does not connect to your store. It also warns you not to call a winner on too little traffic.
+  Choose one variable per round: background, shot distance, with or without a model, text on the image, model look or color tone. The skill makes the control and test images, and runs a bundled check on each one for size, background and other rules a program can measure, so a rejected image does not ruin your data. The rules are a snapshot, so also read your marketplace's own image help page before you upload. It gives you a results sheet to fill in with clicks and sales. It does not connect to your store. It also warns you not to call a winner on too little traffic.
 when:
   - You want to know whether a lifestyle photo beats a plain white one.
   - You are tempted to change three things at once and need to stop.
@@ -32,11 +32,13 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text. The skill file is mostly in Chinese and starts with an English summary, so your AI can follow it in English. This skill makes images by running code, so use an AI that can run code and has files.
   - Add an image API key from OpenAI, Gemini, fal or Replicate. Each image may cost money.
-  - Add your product photo and your selling points. Say which metric you care about, clicks or sales.
+  - Add your product photo and your selling points. Say which metric you care about, clicks or sales. The commands in the skill use sample file names and a sample product. Your AI should swap in yours. The brand file is optional.
   - Pick one thing to test. If you want to change three, ask for three rounds.
   - Read and confirm the hypothesis for each version before any image is made.
-  - Check the images and the compliance result. Then run the test in your store.
+  - Check the images and the compliance result (it needs Python with the Pillow library). Then run the test in your store.
   - Fill in the review sheet after about two weeks. Do not call a winner on low traffic.
+next:
+  - marketplace-photo-rule-checker
 output_sample:
   input:
     - Your product photo
@@ -45,7 +47,7 @@ output_sample:
     - A pose reference photo, for clothing (optional)
     - The marketplace you sell on (optional)
   prerequisites:
-    - An AI that can run code, with Node and Python installed
+    - An AI that can run code, with Node and Python (and the Pillow library) installed
     - An image API key from OpenAI, Gemini, fal or Replicate, which may cost money per image
   output:
     - name: Control image (A)
@@ -55,7 +57,7 @@ output_sample:
     - name: Hypothesis
       contains: Which version you expect to win and why, written before the test runs.
     - name: Compliance check
-      contains: A pass or fail on marketplace image rules for each image, so a rejection does not spoil your data.
+      contains: A pass or fail on the image rules a program can measure, for each image. It does not replace the marketplace's own rules page.
     - name: Review sheet
       contains: A table with the SKU, dates, variable, images and hypotheses, with blank spots for views, clicks, add-to-carts and sales.
     - name: Conclusion and next step

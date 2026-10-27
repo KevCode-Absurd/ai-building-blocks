@@ -12,6 +12,8 @@ explain: |
   For each site it picks a ready-made data collector on Apify, called an Actor. Sources include Google Maps, Booking.com, TripAdvisor, Facebook, Instagram, YouTube and TikTok. It reads what the Actor needs, asks how you want the results saved, runs it and then summarises the signals.
 
   It is a one-time pull, not live monitoring. It needs an Apify account, which charges per run, plus Node.js and a command line tool. Check each site's terms before you collect, and keep customer names out of anything you share.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. Credit goes to sickn33, who collected it.
 when:
   - You want your reviews from several sites gathered in one file.
   - You manage a hotel, venue or shop and track ratings across Google Maps, TripAdvisor and Booking.com.
@@ -38,7 +40,8 @@ you_get:
 how_to_use:
   - Choose the sites and the exact page or place on each. Write down the brand or business name as it appears there.
   - Create an Apify account and an API token. Save the token in a file called .env as APIFY_TOKEN=your token. Do not paste it into chat. Apify charges for runs, so check each Actor's price first.
-  - Use an AI that can run commands, such as Claude Code. Install Node.js 20.6 or newer, the jq tool and the mcpc tool with npm install -g @apify/mcpc.
+  - Use an AI that can run commands, such as Claude Code. Install Node.js 20.6 or newer and the jq tool. The mcpc tool (npm install -g @apify/mcpc) is optional. It reads an Actor's settings but puts your token on the command line, so use it only on a computer that only you use.
+  - Before the first run, check each site's terms. Your AI will ask you to confirm that collecting public reviews is allowed, and it will not run until you say yes.
   - Paste the skill, then your brand, sites, links and a small cap such as 100 results per site. Ask for the quick answer first, which shows 5 results, to check it is the right page.
   - Run the full export. Read the summary, then open the file and spot-check five or six reviews against what the summary says.
   - Save the file with its date. Run the same pull next month to compare.
@@ -62,6 +65,7 @@ output_shape: |
   LIMITS       <sample size, sites with no ratings, what is missing>
   NEXT         <filter, sentiment check or reply plan>
   MISSING      <inputs not given, or none>
+next: [review-insight-finder]
 output_sample:
   input:
     - Your brand or business name
@@ -72,7 +76,7 @@ output_sample:
   prerequisites:
     - An Apify account, which charges per run
     - An AI that can run commands
-    - Node.js 20.6 or newer, jq and the mcpc tool
+    - Node.js 20.6 or newer and jq. The mcpc tool is optional
   output:
     - name: Data file
       contains: The public reviews, ratings and comments collected, as CSV or JSON, saved with a dated file name.

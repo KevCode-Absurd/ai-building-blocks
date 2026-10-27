@@ -32,11 +32,12 @@ you_get:
   - Notes on adoption
 how_to_use:
   - Start a chat in Claude, ChatGPT or Gemini and paste in the skill text. No code running or paid tool is needed.
-  - Tell your AI what you ship, where from, and which systems hold your orders, shipments and stock.
+  - "Start here: name the first thing you want to see, such as your order export with its status and dates. Then tell your AI what you ship, where from, and which systems hold your orders, shipments and stock."
   - "If you have them, paste an order export, a shipment export and a stock list. Add the column names for each: order ID, dates, status, location and quantity."
   - Say which problems you want to catch, such as late orders or low stock, and who will use the screen.
   - Check the dashboard panels and exception list against how your team works. Ask for changes to the alerts if there are too many.
   - Use the rollout plan to start small. Pick one view and one team first.
+  - After the pilot, review the alert counts each week. Cut any alert that nobody acts on.
 output_sample:
   input:
     - What you ship and where it ships from

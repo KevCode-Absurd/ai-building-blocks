@@ -7,13 +7,11 @@ role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: question
     required: true
   - type: spreadsheet
     required: false
-  - type: document
-    required: false
-  - type: question
+  - type: contract
     required: false
 outputs:
   - type: audit_report

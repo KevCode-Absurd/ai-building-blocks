@@ -31,12 +31,13 @@ you_get:
   - Written insights and trends
   - Check that every figure matches the data
 how_to_use:
+  - Gather the raw export for the period, the names of the report owners, and any targets or earlier-period figures you want compared.
   - Open your AI tool. Paste your data, or attach the file if your AI can read files.
   - Say which report you want, such as a sprint retro, financial summary, analytics report or incident postmortem.
   - "Add the time period and the format you want: Markdown, HTML or PDF. PDF and HTML files need an AI that can run code."
   - Read the data gaps note first. Fill in any missing figures yourself and ask for a new version.
   - Check each number in the report against your data before you share it.
-  - If the data gaps note lists missing fields, add them and run the report again. Then send it to the owners named in it, or keep it as your record for the period.
+  - If the data gaps note lists missing fields, add them and run the report again. Then send it to the owners named in it, or keep it as your record for the period. Paste the Recommendations section into your sprint planning or review meeting so someone owns each action.
 output_sample:
   input:
     - Your data as a table, JSON, CSV or an export

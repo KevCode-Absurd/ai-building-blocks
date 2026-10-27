@@ -13,8 +13,8 @@ inputs:
   - type: source_text
     required: false
 outputs:
-  - type: brief
-  - type: audit_report
+  - type: document
+  - type: plan
 uses: []
 steps: []
 origin: imported

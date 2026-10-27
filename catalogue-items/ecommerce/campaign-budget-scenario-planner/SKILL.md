@@ -17,15 +17,11 @@ If they pick one and that skill is added here, carry straight on with what you j
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
-
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-2. This one.
+- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your results. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
@@ -97,7 +93,7 @@ Put each campaign in exactly one tier. Check the tiers in this order and stop at
 Headroom:
 ```
 Incremental daily budget = Current budget x Lost IS (Budget) %   (Google Ads)
-On Meta, with no lost share figure: use 20% of the current budget as the starting headroom, and say it is an assumption.
+On Meta, with no lost share figure: use 20% of the current budget as the starting headroom. Say it is an assumption and tell the user to check it against the account's own history.
 ```
 
 ### Tier 3: REDUCE (decrease budget)
@@ -131,6 +127,7 @@ Risk: LOW
 ```
 
 ### Moderate (75% of max headroom) - DEFAULT
+On Meta, the 20% learning-phase rule in Step 4 wins over this default. Cap each step at 20% of the current budget and phase larger moves. The 50% limit is for Google Ads and for phasing only.
 ```
 Budget increase: (headroom x 0.75)
 Risk: MEDIUM, monitor 72 hours

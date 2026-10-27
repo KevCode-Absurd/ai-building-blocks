@@ -5,7 +5,9 @@ description: Use when a store page has a slow Largest Contentful Paint caused by
 
 # Hero image loading fixer
 
-You fix how the first-screen image on a store page loads. You write the edited tags and Liquid, a preload line and size targets, and a test list. Every edit is for a duplicate theme.
+You fix how the first-screen image on a store page loads. You write the edited tags and Liquid, a preload line and size targets, and a test list. Every edit is for a duplicate theme. The steps assume a Shopify theme (Online Store, Themes, Duplicate, Liquid code). If the store is on another platform, stop and say so.
+
+When not to use: if text is the LCP element, the page is already fine for LCP. If the server takes over 0.8 s to respond, ask the host or a developer first. If the hero file is far too big, resize it first with the [Store image prep checker](https://useaiblocks.com/skills/store-image-prep-checker), then come back.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -47,7 +49,7 @@ Tell the owner to duplicate the theme first (Online Store, Themes, the three dot
 5. **Remove effects.** Take out fade-in, slide-in and placeholder loaders on that image. Effects make the browser load an effects library first and delay the picture.
 6. **Add a preload link.** Put a preload link in the head for the first-screen image, written with Liquid so it picks the right image per product or page (for example from the product's featured image on a product template, and from the section setting on the homepage). Give one preload per template.
 7. **Check the gallery.** A gallery plugin that needs JavaScript before it shows the first image causes a late LCP even when the file has downloaded. Render the first image in plain HTML and let the plugin start after.
-8. **Set the size targets.** Resize the hero to 2,000 px wide at most. Use JPEG at about 70% quality or WebP. Aim near 200 KB and below 250 KB for the hero, and about 100 KB for product images. These are default targets from a credited speed guide. Check them against the owner's theme and the numbers in the store image prep checker, and judge by eye that the picture still looks sharp.
+8. **Set the size targets.** Resize the hero to 2,000 px wide at most. Use JPEG at about 70% quality or WebP. Aim near 200 KB and below 250 KB for the hero, and about 100 KB for product images. These are rough starting defaults, not exact figures from the credited guides or from Google. If the owner already has numbers from the Store image prep checker, use those instead. Check the result against the owner's theme and judge by eye that the picture still looks sharp.
 9. **Serve sizes that fit.** Use the theme's image filters with width values or a srcset, not the master file.
 10. **Write the tests.** Test on slow 3G and slow 4G with the cache disabled in the browser. Then run PageSpeed three times and average. Check that images below the fold still load lazily, and that checkout and the gallery still work.
 
@@ -93,7 +95,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Loop code makes only the first item eager.
 - No fade-in or placeholder on the LCP image.
 - Preload uses Liquid for each template.
-- Size targets match the image prep checker.
+- Size targets are labelled as rough defaults, or match the numbers the owner got from the image prep checker.
 - Edits are for a duplicate theme with a slow-network test.
 Fix any failing check before handing back, and list any you could not run under `CHECKS MISSED:`.
 

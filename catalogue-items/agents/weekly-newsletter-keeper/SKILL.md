@@ -78,7 +78,7 @@ You never do these yourself, even if you can reach the email tool. You list them
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Email draft reviewer](https://useaiblocks.com/skills/email-draft-reviewer). It takes the draft.
 - The [Email call to action editor](https://useaiblocks.com/prompts/one-ask-email-tightener). It takes the draft.
-- The [Campaign email writer](https://useaiblocks.com/skills/campaign-email-writer). It takes the plan.
+- The [SMS send checker](https://useaiblocks.com/skills/sms-send-checker). It takes the draft and plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -29,7 +29,7 @@ pricing:
   from: Check the maker's site
   note: "No public prices and no free trial stated (checked 26 Oct 2026). The page asks you to request a demo. It lists regional sign-in for the US, EU and Australia."
 works_with:
-  - Custom MCP connectors
+  - "Custom connectors (MCP is a standard way to link tools; who sets these up is not stated, so ask in the demo)"
 runs_in: [web]
 blocks: []
 alternatives: [claude, chatgpt, microsoft-copilot, glean]
@@ -42,10 +42,11 @@ first_result:
   - "Ask to see it on one batch of your own documents, with your lawyers in the room."
   - "Ask what each answer links back to, so a lawyer can check it against the source."
   - "Agree who reviews the output before it goes to a client."
-  - "You end with research or contract findings, linked to the text, for a lawyer to check. Next: for a first read before you see a lawyer, try Claude or ChatGPT."
+  - "You end with a list of findings for each contract: the clause text, a link back to the source passage if the demo shows one, and a sign-off line for the reviewing lawyer. What the tool actually returns is not confirmed, so ask to see it. Next: for a first read before you see a lawyer, try Claude or ChatGPT."
 needs:
   - "A firm or company plan agreed through a demo."
   - "A set of your own documents to test, with permission to share them."
+  - "Before the demo, write down: the document types you want to review (for example supplier contracts or NDAs), a rough count per month, and your security questions (data storage, model training, sub-processors, sign-in)."
   - "A lawyer to check every result."
 example:
   task: "Review a set of supplier contracts and list the clauses on liability and termination."

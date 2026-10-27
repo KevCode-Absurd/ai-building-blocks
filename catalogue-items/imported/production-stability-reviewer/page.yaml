@@ -35,7 +35,9 @@ how_to_use:
   - Add how you deploy and how you watch it, plus your expected peak traffic.
   - Paste any past outage notes or crash reports if you have them (optional).
   - Read the score and the failing checks first. Then ask your AI to explain any fix you do not follow.
-  - "Make the fixes in the rollout order it gives you. Start with the fix for the first failing check, and read the matching file in the references folder for how to do it. Timeouts: add connect and read timeouts on every outside call. Breakers: add a circuit breaker on each key dependency. Deploys: use a rolling, blue-green or canary release."
+  - "A yes on each check means this. Every outside call has a timeout. Key dependencies have circuit breakers. Each dependency has its own pool. You can deploy without downtime. Health checks test the database, cache and queue. Logs, metrics and traces are linked. You have load tested at 2 to 3 times peak. You practise failure testing."
+  - "Plan the fixes in the rollout order it gives you. Start with the first failing check. The skill's references folder holds a longer guide for each area. It is not part of the pasted text, so paste or upload the file you need if you want it. Timeouts: add connect and read timeouts on every outside call. Breakers: add a circuit breaker on each key dependency. Deploys: use a rolling, blue-green or canary release."
+  - Before any change reaches your live system, have an engineer review it, test it in a staging copy first, and have a rollback plan ready.
   - Some terms in the skill file are advanced, for example Universal Scalability Law, expand-contract and SLI to SLO to SLA. Ask your AI to explain any you do not know.
 output_sample:
   input:

@@ -34,7 +34,7 @@ how_to_use:
   - Install the test tool by running pip install lm-eval on that computer.
   - Paste the skill into your AI and tell it your model and benchmarks. Ask for the run command first.
   - "Run the command. Your AI must run code, or you run it yourself and paste the results back. Plan for time: MMLU takes about 2 hours for a 7B model on one A100 GPU."
-  - For HumanEval, turn on code execution, or the test will not run.
+  - For HumanEval, turn on code execution, or the test will not run. It runs code the model wrote, so do it only in an isolated sandbox or container, not on a machine with private files or keys.
   - Ask your AI to build the results table and flag any score that looks far from published numbers.
   - Next, compare your scores with the published leaderboard numbers. After each training change, run the same command again and compare with your last run.
 output_sample:

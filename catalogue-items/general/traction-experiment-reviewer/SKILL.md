@@ -11,7 +11,7 @@ description: "Share your test results. Get a checked comparison and a focus, rev
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Growth channel experiment tracker](https://useaiblocks.com/skills/traction-experiment-keeper).
 - The [Go or no-go launch checker](https://useaiblocks.com/skills/go-or-no-go-launch-checker). It takes the plan and audit report.
-- The [Growth channel shortlist planner](https://useaiblocks.com/skills/traction-channel-ranker).
+- The [Product outcome roadmap planner](https://useaiblocks.com/skills/outcome-based-roadmap). It takes the plan and audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

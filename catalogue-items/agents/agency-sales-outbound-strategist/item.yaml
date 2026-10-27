@@ -14,6 +14,10 @@ inputs:
     required: false
   - type: competitor_set
     required: false
+  - type: plan
+    required: false
+  - type: lead_list
+    required: false
 outputs:
   - type: plan
   - type: copy_draft

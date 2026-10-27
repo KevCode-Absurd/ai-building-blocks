@@ -9,7 +9,9 @@ subhead: A cleaned training set where duplicates, junk and personal details are 
 explain: |
   A cleaned training set where duplicates, junk and personal details are gone, ready to feed a language model. Messy web scrapes make models worse, and this fixes that before you spend on training.
 
-  The skill uses NVIDIA's NeMo Curator. It removes exact and near-duplicate documents, filters low-quality or toxic text using over 30 checks, and can remove similar meaning with embeddings. It redacts names, emails and other personal details. It also covers images, video and audio. It is built for large data on GPUs, with a slower CPU mode. It needs Python, a CUDA setup for full speed, and a lot of disk and memory for big sets.
+  The skill uses NVIDIA's NeMo Curator. It removes exact and near-duplicate documents, filters low-quality or toxic text using over 30 checks, and can remove similar meaning with embeddings. It redacts names, emails and other personal details. It also covers images, video and audio. It is built for large data on GPUs, with a slower CPU mode. It needs Python, a CUDA setup for full speed, and a lot of disk and memory for big sets. The code in the skill was written for NeMo Curator 0.4 and is untested against current releases, so pin a version before you run it.
+
+  Licence: MIT, as the LICENSE file in this item says. The NeMo Curator library has its own licence, Apache 2.0. Credit goes to Orchestra Research.
 when:
   - You scraped a large pile of web text and need it cleaned for training.
   - You suspect your dataset has many copies of the same documents.
@@ -31,12 +33,12 @@ you_get:
   - A report of what was removed
 how_to_use:
   - Open an AI that can run Python code, on a computer with an NVIDIA GPU if you have one.
-  - Paste the skill text. Tell your AI where your files are and which format they use.
+  - Paste the skill text. Tell your AI where your files are and which format they use: Parquet, JSONL or CSV, with a text column that holds the document text.
   - Say which quality rules to use and which personal details to remove.
   - Ask your AI to run the steps one at a time and show how many documents each step removes.
   - Check a sample of removed and kept documents before you train. Check the personal detail redaction against your own legal duties.
   - Treat the speed and cost figures in the skill as vendor claims. Cloud machines cost money.
-  - Hand the cleaned set to your training pipeline. Run the removal report again on each new scrape before every training run.
+  - Hand the cleaned set to your training pipeline (for a small first model, see the tiny GPT trainer). Run the removal report again on each new scrape before every training run.
 output_sample:
   input:
     - Your raw text, image, video or audio files, as Parquet, JSONL or CSV

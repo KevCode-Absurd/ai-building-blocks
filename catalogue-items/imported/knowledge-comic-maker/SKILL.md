@@ -69,7 +69,7 @@ Rules:
 
 ## Reference Images
 
-Users may supply reference images to guide art style, palette, scene composition, or subject. This is **separate from** the auto-generated character sheet (Step 7.1) — both can coexist: user refs guide the look, the character sheet anchors recurring character identity.
+Users may supply reference images to guide art style, palette, scene composition, or subject. This is **separate from** the auto-generated character sheet (Step 7.1) — both can coexist: user refs guide the look, the character sheet anchors recurring character identity. A finished picture from an earlier step, such as an infographic, can be used as a reference image in the same way.
 
 **Intake**: Accept via `--ref <files...>` or when the user provides file paths / pastes images in conversation.
 - File path(s) → copy to `refs/NN-ref-{slug}.{ext}` alongside the comic output

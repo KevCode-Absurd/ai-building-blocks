@@ -13,8 +13,10 @@ inputs:
   - type: document
     required: false
 outputs:
-  - type: audit_report
+  - type: shortlist
     required: true
+  - type: plan
+    required: false
 uses: []
 origin: imported
 source:

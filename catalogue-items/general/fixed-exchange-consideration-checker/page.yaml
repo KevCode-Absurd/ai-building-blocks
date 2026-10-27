@@ -55,12 +55,14 @@ output_sample:
     - name: MISSING and CHECKS MISSED
       contains: Inputs that were not supplied and checks that failed or could not run.
 how_it_works:
-  - title: 1. Confirm a fixed rather than floating or collared ratio and identify excluded target shares
-    text: Confirm a fixed rather than floating or collared ratio and identify excluded target shares.
-  - title: 2. Multiply target shares by ratio; calculate cash per target share separately
-    text: Multiply target shares by ratio; calculate cash per target share separately.
-  - title: 3. Value the same issued shares at the dated acquirer price and reconcile stock plus cash without resetting the ratio
-    text: Value the same issued shares at the dated acquirer price and reconcile stock plus cash without resetting the ratio.
+  - title: Confirm the ratio is fixed
+    text: Checks the signed terms for a fixed ratio, not a floating or collared one, and notes which target shares are excluded.
+  - title: Count the shares and cash
+    text: Shares issued are eligible target shares times the ratio. The cash leg is cash per target share times eligible target shares.
+  - title: Value at the dated price
+    text: Values the issued shares at the acquirer price on the stated date. The ratio is never reset to keep an announced dollar value.
+  - title: Tie it out
+    text: Adds stock and cash, reconciles to the total and lists missing inputs and any check that did not run.
 output_shape: |-
   Shares issued, cash leg and total consideration at the supplied price.
   Scope and dated sources

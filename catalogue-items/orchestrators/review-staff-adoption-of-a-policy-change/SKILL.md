@@ -12,23 +12,24 @@ Check whether staff are following a policy that has already started. Two compone
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+- **The policy** (yours): the written policy or rules, with the date they start.
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a brief, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for the policy, your question, spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **A chat AI that reads files:** It reads the policy and the feedback together. Nothing is sent or changed for you.
 <!-- /needs -->
 
-## Before you start
+## What you need
 
-Use what is attached or pasted first. Ask once, in one short message, for only what you cannot work without.
+This list replaces the general one above for this workflow. The "brief" is the approved policy change and its effective date. Use what is attached or pasted first. Ask once, in one short message, for only what you cannot work without.
 
 **You need:**
 - The approved policy change and its effective date.
@@ -41,7 +42,7 @@ Use what is attached or pasted first. Ask once, in one short message, for only w
 - Policy not approved or no effective date: stop and say so.
 - Feedback shows names or detail that points to one person: stop. Ask the user to remove it. Do not repeat it.
 - No smallest group size: use 5, label it `ASSUMPTION: smallest group 5`, and tell the user they can change it.
-- No usage records: carry on, and in the brief say that adoption cannot be shown, only opinion and awareness.
+- No usage records: carry on, and in the brief say that adoption cannot be shown, only opinion and awareness. If all you have is attendance or satisfaction numbers, label them exposure or opinion in step 1 and do not stop.
 
 ## Rules
 
@@ -85,10 +86,10 @@ Add a HAND-BACK SUMMARY: each saved file, each step run or skipped and why, and 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Hard feedback message writer](https://useaiblocks.com/skills/hard-feedback-message-writer). It takes the plan.
-- The [Feedback conversation planner](https://useaiblocks.com/skills/feedback-conversation-planner). It takes the plan.
-- The [Work expectations agreement writer](https://useaiblocks.com/skills/results-agreement-writer). It takes the plan.
-- The [Shift schedule planner](https://useaiblocks.com/skills/shift-schedule-planner). It takes the plan.
+- The [One-on-one meeting planner](https://useaiblocks.com/skills/one-on-one-meeting-planner). It takes the plan.
+- The [Sales pay plan checker](https://useaiblocks.com/skills/sales-pay-plan-checker). It takes the plan.
+- The [Long-term partner screener](https://useaiblocks.com/skills/long-term-partner-screener). It takes the plan.
+- The [Workplace policy and handbook writer](https://useaiblocks.com/skills/policy-handbook-writer). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -101,9 +102,9 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every fact and date traces to the user's sources or is labelled an assumption.
 - End with `CHECKS MISSED:` and the checks that failed or could not run, or `none`.
 
-## After this
+## Next steps to offer
 
-Offer one next step in a short question, and say the user can type their own:
+Use these instead of the general "After this" list above. Offer one next step in a short question, and say the user can type their own:
 - **Explain the policy better** with the [Make a new policy understandable to staff](https://useaiblocks.com/workflows/make-a-new-policy-understandable-to-staff) workflow, if awareness is the biggest barrier.
 - **Turn broader feedback into actions** with the [Turn employee feedback into owned actions](https://useaiblocks.com/workflows/turn-employee-feedback-into-owned-actions) workflow.
 - **Run a follow-up pulse** with the [Employee survey designer](https://useaiblocks.com/skills/employee-survey-designer) after the support actions have run.

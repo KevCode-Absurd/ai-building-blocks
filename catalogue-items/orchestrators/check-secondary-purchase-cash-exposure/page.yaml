@@ -21,6 +21,7 @@ not_for:
   - "You run the fund and need to split a new capital call between investors: use the Reconcile a private fund capital call workflow."
   - "You only need the unfunded balance of your own commitment: use the Unfunded commitment checker."
   - "You want to know if the price is good: this checks the arithmetic and cash, not the value of the fund."
+  - "The transfer cutoff date or the signed price quote is missing, or the package does not authorise the transfer. The run stops there. Get them first, or use the Unfunded commitment checker on its own."
 you_give:
   - The transfer package, with the consent and assumption terms (from the seller or the fund)
   - "The commitment ledger: amounts called, returned and recallable (from the fund administrator)"

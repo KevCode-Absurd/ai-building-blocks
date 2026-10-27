@@ -7,7 +7,7 @@ job: build-software
 headline: Model training builder
 subhead: Training code for your data and goal that loads the data, checks it, trains and saves progress as it goes, so a crash does not cost you the whole run.
 explain: |
-  Training code for your data and goal that loads the data, checks it, trains and saves progress as it goes, so a crash does not cost you the whole run.
+  For people who have a labelled dataset and a technical colleague (or Python skills) to run the code. You hand over your data and your goal. The code that comes back can be run as is.
 
   The skill profiles your data first: class balance, missing values, odd types. It splits into training, validation and test sets, keeping class ratios when they are skewed. It builds preprocessing you can reuse at prediction time, chooses a model that fits the task, such as gradient boosting for tables or a pretrained network for images, and sets the optimizer, loss and learning rate schedule. It works with PyTorch, TensorFlow or scikit-learn and adds mixed precision on GPUs.
 when:

@@ -139,7 +139,7 @@ trainer.save_model()
 
 **Step 3: PPO reinforcement learning**
 
-Optimize policy using reward model:
+Optimize policy using reward model. The script path and option names below change between TRL versions, so check them against your installed TRL docs before you run this:
 
 ```bash
 python -m trl.scripts.ppo \

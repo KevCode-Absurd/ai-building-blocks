@@ -9,7 +9,7 @@ headline: "Subscription page take-rate checker"
 subhead: Attach your product page on desktop and phone, plus your welcome pop-up and cart. It checks seven rules for getting first-time buyers to pick subscription. You get a score out of 100, the conflicts between pop-up, page and cart, and a test plan for the top two fixes.
 
 explain: |
-  Customers who start on a subscription are worth more over time. One brand in the source saw month-6 value of $195 for subscription-first buyers against $130 for the rest. That is one store's figure, so check your own. The catch is that many stores sell subscription badly. One-time is pre-selected, the pop-up gives 10% off one-time while the page offers 20% for subscribing, and the savings hide behind a tooltip.
+  Customers who start on a subscription are worth more over time. One brand in the source saw subscription-first buyers worth clearly more by month 6 than the rest. That is one store's report, so check your own numbers. The catch is that many stores sell subscription badly. One-time is pre-selected, the pop-up gives 10% off one-time while the page offers 20% for subscribing, and the savings hide behind a tooltip.
 
   This skill reads your page the way a buyer meets it, on a phone first. It checks seven rules: which option is selected, where the best discount sits, how many choices there are, whether pop-up and page agree, whether the value is shown, whether the delivery gaps fit how fast the product is used, and whether the cart can upgrade a one-time item. Each rule earns points. The weights are our own and you can change them.
 
@@ -137,8 +137,8 @@ improve:
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Any current chat AI that reads images can score the screens. Attach phone and desktop views."}
-    - {name: "Shopify", why: "Your theme editor or a split-testing app shows which version of the page each buyer saw."}
-    - {name: "Skio or Recharge", why: "Your subscription app sets the default selection, the plans shown and the cart upgrade, so the fixes land there."}
+    - {name: "Shopify", why: "Paid plan needed. Your theme editor or a split-testing app shows which version of the page each buyer saw."}
+    - {name: "Skio or Recharge", why: "Paid subscription apps; the fixes land in the one you already use. Your subscription app sets the default selection, the plans shown and the cart upgrade, so the fixes land there."}
   inputs:
     - "A screen recording of the buying path on a phone, from ad to cart"
     - "Your first-order subscription take rate for the last 60 days"

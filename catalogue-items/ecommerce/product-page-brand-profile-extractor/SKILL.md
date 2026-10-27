@@ -9,9 +9,9 @@ description: Read a product page and build a sourced brand profile with product 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). It takes the brand brain.
 - The [Brand mood board planner](https://useaiblocks.com/skills/brand-stylescape-planner). It takes the brand brain.
-- The [Draft brand voice checker](https://useaiblocks.com/skills/draft-brand-voice-checker). It takes the brand brain.
+- The [Premium product positioning planner](https://useaiblocks.com/skills/premium-positioning-mapper). It takes the brand brain.
+- The [Brand guide builder](https://useaiblocks.com/skills/brand-guide-builder). It takes the brand brain.
 - **Understand your buyers** with the [Buyer profile reviewer](https://useaiblocks.com/skills/avatar-fit-checker). It takes the brand brain.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
@@ -20,6 +20,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
+- **Your website** (yours): the link to your site or the page.
+
+**Makes it better (optional):**
+- **Brand guide** (yours): a printable brand guide: voice, look, do and don't, with examples.
 - **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
@@ -28,7 +32,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your website, brand guide, a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
@@ -47,12 +51,12 @@ These working rules control the procedure below. If an example assumes a client,
 
 # Brand DNA Extraction
 
-You are a senior brand strategist extracting the complete DNA of a brand from its product page. You will scrape the URL, extract product data, analyze marketing intelligence, identify the color palette, and build a visual vocabulary that drives all downstream creative generation.
+You are a senior brand strategist extracting the complete DNA of a brand from its product page. You will read the page the user links or pastes, extract product data, analyze marketing intelligence, identify the color palette, and build a visual vocabulary that drives all downstream creative generation.
 
 ## How This Works
 
 1. User provides a product URL (Shopify or any ecommerce product page)
-2. You scrape and parse the page for structured data
+2. You read the page (or the pasted text) and pull out structured data
 3. You extract marketing intelligence via AI analysis
 4. You build the color palette and visual vocabulary
 5. You deliver a complete brand DNA profile
@@ -65,6 +69,7 @@ Ask for:
 - **Product URL** (required) - Shopify, WooCommerce, BigCommerce, or any product page. If your AI cannot open links, ask for the page text pasted in.
 - **Approved facts** (strongly advised) - the claims, ingredients, numbers and proof the brand is allowed to use. Without them, mark every claim "from the page only".
 - **Brand assets** (advised) - a brand guide, logo files or exact hex codes, if the brand has them.
+- **A buyer brief** is optional. The product page alone is enough to start.
 - **Brand name** (if not obvious from URL)
 - **Category** (if not obvious from page) - helps calibrate visual vocabulary
 
@@ -207,9 +212,8 @@ Next step: use this profile as the base for ad briefs, copy and images. Check ev
 
 ## Notes
 
-- If the URL is inaccessible, ask the user to paste the product page content directly
-- For Shopify stores, check for `/products/[handle].json` endpoint for structured data
-- Caching: in the system, scrapes are cached for 30 days with force-refresh available
+- If the URL is inaccessible or the store blocks automated reading, ask the user to paste the product page content directly. Only read pages the user owns or may read, and respect the store's terms. Do not try to get around a block.
+- For Shopify stores, a public `/products/[handle].json` page may list structured data. Use it only if your AI can open it and the store allows it. Otherwise use the pasted text.
 - This profile becomes the foundation for all downstream creative generation (briefs, layouts, copy, images)
 
 ## When not to use

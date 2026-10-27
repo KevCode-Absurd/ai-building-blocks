@@ -18,10 +18,12 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
 - **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 - **Shortlist** (yours): a ranked short list chosen from a larger set, with reasons.
+- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+- **Your idea** (yours): the product, app, business or project idea, in a line or a short paragraph.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **Shortlist** with the [Amazon product opportunity finder](https://useaiblocks.com/skills/amazon-search-gap-finder). Bring your question, spreadsheet (optional), store capture (optional).
+2. **Shortlist** with the [Amazon product opportunity finder](https://useaiblocks.com/skills/amazon-search-gap-finder). Bring your question, a keyword list (optional), store capture (optional).
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `proof-and-claims.md`, `offers.md`, `voice-and-look.md`. Take the claims list with each claim's status, the offer terms word for word, and the voice rules. Source notes and rejected ideas never go into the result.
@@ -42,6 +44,7 @@ This skill runs on its own. All it needs to start is the product idea and a plan
 
 - **The product, planned price and category** (required).
 - **The idea you picked** (optional): a shortlist from an earlier step, such as the Amazon search gap finder. Take the product idea and its page 1 evidence from the idea you chose.
+- **A fee and margin report** (optional): the report from the Amazon fee and margin checker. Use its net margin for test 2 instead of working it out again.
 - **Landed cost per unit** (product, freight, duties, taxes) and **size and weight** (strongly advised).
 - **Page 1 results** for the main search phrase: prices, review counts and ratings (strongly advised). Research tool figures help: monthly revenue, review count, listing age, image count.
 - **Monthly search volume** and the number of different phrases that describe the product (helpful).

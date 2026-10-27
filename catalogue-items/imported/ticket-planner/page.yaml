@@ -10,6 +10,8 @@ explain: |
   A big plan becomes a set of small tickets, each one a thin slice that works from start to finish and says which other tickets must be done first. Your team can then see what to start today and what has to wait.
 
   The skill reads your spec, the conversation or an issue you point it to. It drafts slices that each cut through every layer, such as data, interface and tests, and are small enough to finish in one sitting. It shows you the list with titles, blockers and results, and asks if they are too big, too small or wrongly linked. Once you agree, it posts them to your tracker in dependency order.
+
+  Licence: MIT, as the LICENSE file in this item says. Credit goes to the original author.
 when:
   - You have a spec and need to split it into tasks for the team.
   - Your tickets are too big and keep getting stuck.
@@ -30,8 +32,9 @@ you_get:
   - A review round with you before posting
   - Tickets posted to your tracker in order
 how_to_use:
+  - Have ready: your spec file or issue link, the name of your tracker, your repo or project key, and how small each ticket should be.
   - Paste your plan or spec into your AI, or give it a link to the issue. Paste the skill text first.
-  - Say if you want tickets posted to a tracker. It needs access to the tracker and the setup step the skill names, /setup-matt-pocock-skills, which is not in this folder. If you do not have it, tell your AI to skip it. It then saves one file per ticket and you copy them into your tracker by hand.
+  - Say if you want tickets posted to a tracker. It needs access to the tracker and the setup step the skill names, /setup-matt-pocock-skills, which is not in this folder. If you do not have it, tell your AI to skip it. It then saves one file per ticket and you copy them into your tracker by hand. For a real tracker, the setup step needs to supply two things: the tracker type and the triage labels you use. The skill adds a ready-for-agent label by default. Remove it if your tracker has no such label.
   - Let your AI read your codebase if it can. This helps titles match your own words.
   - Read the numbered list. Say if tickets are too big, too small or wrongly linked.
   - Repeat until the list feels right, then approve it.

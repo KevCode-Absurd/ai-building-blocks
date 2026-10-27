@@ -5,6 +5,8 @@ description: 跨境一套素材多区域本地化。一套素材 → 多语言�
 
 # cross-border-localize — 跨境本地化
 
+> **English summary (added by AI Blocks).** This skill turns one product listing into versions for several countries. It rewrites the copy in each market's style, converts clothing sizes (CN, US, UK, EU, JP) and always adds centimetres, makes a text-free main image first, then regional images, and checks each image against the platform's picture rules. It lists labels each region often requires as hints only. The body below is the author's original Chinese text. Section 6 has the steps in English. The size table and the picture rules are rough guides. Check them against the brand's own size chart and each platform's current seller help page before you publish.
+
 同一件商品卖去不同国家，**不是把中文文案翻译一遍就完事**。
 
 尺码体系不同、合规标识不同、审美偏好不同、平台规格也不同。
@@ -54,6 +56,8 @@ description: 跨境一套素材多区域本地化。一套素材 → 多语言�
 | M / 160-165 | 6-8 | 10-12 | 38-40 | 11-13 |
 | L / 165-170 | 10-12 | 14-16 | 42-44 | 15-17 |
 | XL / 170-175 | 14-16 | 18-20 | 46-48 | 19-21 |
+
+> **Size table: check before you publish.** This table is a generic, rough conversion. Replace it with the brand's own size chart before you publish, and always give measurements in centimetres.
 
 **永远同时给具体厘米数。** 各品牌版型差异大，字母码不可靠，
 胸围/肩宽/衣长的厘米数才是买家真正要的，也是降低退货率最有效的一项。
@@ -112,7 +116,7 @@ node scripts/gen.mjs --task cross-border-localize --brand examples/brand.yaml \
 ## 六、执行流程
 
 > **English version of the steps.**
-> 1. Ask which countries and platforms the user sells on. Never assume "worldwide".
+> 1. Ask which countries and platforms the user sells on. Never assume "worldwide". If the user has a market plan, take the countries and platforms from it.
 > 2. Make the text-free version first. A main image with no text is accepted by most platforms.
 > 3. Make a version per region. Where text is needed, make it separately and have a native speaker check it.
 > 4. Check each region's images against its own platform rules. Do not reuse one set of rules for all.

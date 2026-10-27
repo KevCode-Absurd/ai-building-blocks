@@ -15,9 +15,11 @@ If you only want a review of your own numbers, not software, use the Google Ads 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Google search term code planner](https://useaiblocks.com/prompts/google-search-term-code-prompt).
-- The [Meta and Google comparison code planner](https://useaiblocks.com/prompts/build-the-cross-channel-analyzer-meta-google-builder-prompt).
-- The [Keyword grouping coding brief writer](https://useaiblocks.com/prompts/build-the-keyword-tier-classifier-builder-prompt).
+- The [Simple code coach](https://useaiblocks.com/skills/simple-code-coach). It takes the code change.
+- The [Breaking change reviewer](https://useaiblocks.com/skills/breaking-change-reviewer). It takes the code change.
+- The [Pull request writer](https://useaiblocks.com/skills/pull-request-writer). It takes the code change.
+- The [Code change reviewer](https://useaiblocks.com/skills/code-change-reviewer). It takes the code change.
+- The [Bug root cause finder](https://useaiblocks.com/skills/bug-root-cause-finder). It takes the code change.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

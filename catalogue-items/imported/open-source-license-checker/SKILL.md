@@ -68,7 +68,7 @@ _Illustration only. Every package count and result below is made up to show the 
 | *libvips* (sharp native) | 8.15.1 | LGPL-2.1 | Weak Copyleft | Medium |
 | *canvas* (jsdom optional) | 2.11.2 | MIT | Permissive | None |
 
-**Transitive Dependency Summary:** 347 total packages scanned. 331 MIT, 8 Apache-2.0, 4 BSD-2-Clause, 2 ISC, 1 LGPL-2.1, 1 unlicensed.
+**Transitive Dependency Summary:** [TOTAL] packages scanned. [COUNT] MIT, [COUNT] Apache-2.0, [COUNT] BSD-2-Clause, [COUNT] ISC, [COUNT] LGPL-2.1, [COUNT] unlicensed.
 
 **Risk Flags:**
 
@@ -76,7 +76,7 @@ _Illustration only. Every package count and result below is made up to show the 
 
 - **Unlicensed package: colors@1.0.3 (transitive via debug), Severity: High** — No license file or SPDX identifier found. Without a license, no permission to use is granted. Action: verify if this is an outdated version (colors@1.4.0 is MIT-licensed) and pin to the licensed version, or find an alternative.
 
-**Required Attributions:** Include LICENSE files or notices for all 347 packages. Use `license-checker` or `legally` npm packages to auto-generate a THIRD-PARTY-NOTICES file.
+**Required Attributions:** Include LICENSE files or notices for all [TOTAL] packages. Use `license-checker` or `legally` npm packages to auto-generate a THIRD-PARTY-NOTICES file.
 
 ### Example 2: Mixed License Compatibility Analysis
 
@@ -111,7 +111,7 @@ _Illustration only. Every package count and result below is made up to show the 
 - Scan the full transitive dependency tree, not just direct dependencies — copyleft risks often hide several levels deep in the dependency graph.
 - Treat "no license" as "all rights reserved" — the absence of a license does not mean permissive; it means you have no legal permission to use, copy, or distribute.
 - Distinguish between distribution models: SaaS (AGPL triggers, but GPL usually doesn't), npm package (GPL triggers for downstream users), internal tool (most copyleft obligations don't apply to internal use).
-- Automate license scanning in CI/CD using tools like FOSSA, Snyk, WhiteSource, or license-checker to catch new issues as dependencies are added.
+- Automate license scanning in CI/CD using tools like license-checker (free) or FOSSA, Snyk and WhiteSource (paid services that need an account) to catch new issues as dependencies are added.
 - Keep a pre-approved license allowlist (e.g., MIT, BSD, Apache-2.0, ISC) and require manual review for anything outside the list.
 - Document all license obligations in a THIRD-PARTY-NOTICES file shipped with your distribution.
 

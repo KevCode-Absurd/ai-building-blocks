@@ -1,15 +1,15 @@
 thinking: medium
-thinking_why: Splits cannot be undone, so it checks stock first.
+thinking_why: Splits are hard to undo, so it checks stock first.
 new_slug: split-shipment-planner
 name: Split shipment planner
-summary: Split one Shopify order into separate shipments, each with its own tracking number. Preview the groups first. A confirmed split cannot be undone.
+summary: Split one Shopify order into separate shipments, each with its own tracking number. Preview the groups first. A confirmed split is hard to undo.
 job: run-your-store
 headline: Split shipment planner
 subhead: Give it your store, one open order and which items ship together. It checks the order and shows a preview of the shipments. After you say yes, it splits the order.
 explain: |
   One Shopify order split into separate shipments, each with its own tracking number. You say which items ship together, for example from different locations, dates or carriers.
 
-  The skill checks that the order is open and that every item you list belongs to it. It runs a dry run by default, showing the groups it would create. Only after you confirm does it run the split. The split changes a live order and cannot be undone, and the original fulfilment order is replaced by new ones. It needs the Shopify command line, a signed-in session and order and fulfilment permissions.
+  The skill checks that the order is open and that every item you list belongs to it. It runs a dry run by default, showing the groups it would create. Only after you confirm does it run the split. The split changes a live order and is hard to undo, and the original fulfilment order is replaced by new ones. It needs the Shopify command line, a signed-in session and order and fulfilment permissions.
 when:
   - One order has items stored in two warehouses.
   - Part of an order is ready now and the rest ships next week.
@@ -33,7 +33,7 @@ how_to_use:
   - Sign in to your store with the Shopify command line. Give it permission to read orders and write fulfilments.
   - Paste the skill into your AI. Add your store domain, the fulfilment order ID and the items in each group.
   - Read the dry-run preview. Check every item and quantity is in the right group.
-  - Tell your AI to run it for real only if the preview is right. A split cannot be undone.
+  - Tell your AI to run it for real only if the preview is right. A split is hard to undo, so treat it as final.
   - Check the new shipments in the order's fulfilment tab in Shopify Admin. Items you did not put in a group stay in the original fulfilment order. To move a group to another warehouse, change its location by hand in Shopify Admin, or use fulfillment-location-rerouter.
 output_sample:
   input:

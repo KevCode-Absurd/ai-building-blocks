@@ -9,7 +9,9 @@ job: ops
 level: advanced
 inputs:
   - type: tool_connection
-    required: true
+    required: false
+  - type: customer_list
+    required: false
 outputs:
   - type: audit_report
 uses: []

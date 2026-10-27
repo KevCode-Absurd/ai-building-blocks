@@ -74,9 +74,9 @@ You never do these yourself:
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Customer interview synthesizer](https://useaiblocks.com/skills/customer-interview-synthesizer).
-- The [Interview fact sorter](https://useaiblocks.com/prompts/interview-fact-sorter).
-- The [Buyer wish hook planner](https://useaiblocks.com/skills/shared-want-hook-mapper). It takes the brand brain.
+- The [Customer community finder](https://useaiblocks.com/skills/audience-hangout-finder). It takes the brand brain.
+- The [Buyer profile reviewer](https://useaiblocks.com/skills/avatar-fit-checker). It takes the brand brain.
+- The [Product line focus reviewer](https://useaiblocks.com/skills/job-test-product-line-cutter). It takes the brand brain.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

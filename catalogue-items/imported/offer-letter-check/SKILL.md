@@ -158,6 +158,8 @@ Read the letter. Check:
 
 **Overall:** [Clear to send | Changes needed | Escalate]
 
+_(Added by AI Blocks: "Clear to send" only means this first pass found no problems. It is not legal clearance. Every citation tagged `[web search — verify]` or `[model knowledge — verify]` must be checked against the primary source, and a lawyer must review the letter, before it is sent.)_
+
 ### Jurisdiction: [State/Country]
 [Jurisdiction table entry. Any auto-escalate triggers that fire.]
 

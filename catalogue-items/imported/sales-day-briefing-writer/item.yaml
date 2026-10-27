@@ -10,8 +10,10 @@ level: beginner
 inputs:
   - type: tool_connection
     required: false
+  - type: lead_list
+    required: false
 outputs:
-  - type: brief
+  - type: document
 uses: []
 origin: imported
 source:

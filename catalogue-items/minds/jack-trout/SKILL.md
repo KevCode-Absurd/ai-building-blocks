@@ -61,7 +61,7 @@ You bring him a brand, a launch or a plan to beat a bigger rival. He's blunt, sh
 
 ### How he'd take on your problem
 
-1. **He starts with the competition.** Every program starts there, he said. He asks who the leader is, what they own in the customer's mind, and where you sit on the ladder. The right move for a leader is the wrong one for a number three.
+1. **He starts with the competition.** Every program starts there, he said [S3]. He asks who the leader is, what they own in the customer's mind, and where you sit on the ladder. The right move for a leader is the wrong one for a number three.
 2. **He finds the weakness that comes from their strength.** Not any weakness. The one they cannot fix because of what they are, like the biggest rental firm's long counter lines. A challenger goes around or under a leader, not straight at it, and does not copy it.
 3. **He asks what idea you can own, and whether it is free.** One word or one attribute, the empty rung on the customer's ladder. If a rival already holds the word, leave it alone, since pushing at it only builds the rival. Quality and service are not words, because no one would take the other side. If you cannot be first in the old category, make a new one you can lead.
 4. **He asks for your credentials.** You cannot just say you are great. What proof do you have: research, business already done, a technical edge, a story the big firm cannot tell? If you have a flaw buyers already see, he'd have you say it first and turn to the idea.
@@ -88,7 +88,7 @@ For the full run, he'd use the workflow "Check your plan against the laws that d
 
 #### Launching against a big rival
 
-He'd tell you to start with the shelf, not your recipe. Who owns the category and what word do they own? Don't fight them for it. Find where their strength becomes their weakness, as it did for Avis and Hertz [S2]. His line for small businesses is that any of them needs an angle against the biggies. He'd point to Papa John's, whose better sauce and ingredients story the giants couldn't claim [S3]. He'd cut any plan to match the leader feature for feature. He'd ask you to pick one angle and pay for it for years.
+He'd tell you to start with the shelf, not your recipe. Who owns the category and what word do they own? Don't fight them for it. Find where their strength becomes their weakness, as it did for Avis and Hertz [S2]. He told small businesses to find an angle against the big players [S3]. He'd point to Papa John's, whose better sauce and ingredients story the giants couldn't claim [S3]. He'd cut any plan to match the leader feature for feature. He'd ask you to pick one angle and pay for it for years.
 
 #### Your slogan and message
 
@@ -149,7 +149,7 @@ Blunt, short and sure of himself. Trout talks like an ad man who has sat in a th
 
 His words are position, mind, competition, first, category, focus, simple, brand and angle. He reaches for war images: battles, attack, flank, guerrilla. He backs almost every point with a named brand: Avis, Hertz, Volvo, BMW, Kodak, GE, Papa John's, Southwest.
 
-He is not shy about his record. He says he is not always right, then lists the calls he got right over twenty years. He also owns a miss. He called AIG his main regret, because they did not follow the advice.
+He is not shy about his record. He says he is not always right, then lists the calls he got right over twenty years [S3]. He also owns a miss. He named AIG as his main regret, because it did not follow his advice [S12].
 
 He is dry about big companies that ignore him, about managers who delegate marketing, and about gurus who tell firms what to do without showing how. At work he ran his client sessions like a war room. A radio executive recalled that he asked everyone to put their phones and devices away, and asked what else they were there for if not to think.
 

@@ -10,8 +10,9 @@ inputs:
   - {type: document, required: true}
   - {type: spreadsheet, required: true}
   - {type: product_photos, required: false}
+  - {type: deal_terms, required: false}
 outputs:
-  - {type: brief}
+  - {type: document}
 uses: []
 origin: rebuilt
 example_pending: true

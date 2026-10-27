@@ -18,7 +18,7 @@ when:
   - You want one driver, such as an SPI or Bluetooth routine, reviewed against safe-firmware rules.
 not_for:
   - You need circuit board layout, a schematic or radio and safety certification. That takes a hardware engineer and a test lab.
-  - You are updating many devices already in the field. Use the IoT fleet rollout planner.
+  - You are updating many devices already in the field. Use the IoT Fleet Engineer agent.
   - You are building the phone or web app that talks to the device. Use the Mobile app builder or the Full stack developer.
 you_give:
   - Your chip or board, such as ESP32-S3, STM32F4 or nRF52840, and your toolchain, such as ESP-IDF, PlatformIO or Zephyr
@@ -40,6 +40,7 @@ how_to_use:
   - Say "Plan the firmware. Ask once if anything is missing. Do not say anything was tested."
   - Read the failure list first. For each failure, check that the recovery matches what your device must do.
   - Compile the code drafts yourself, then measure stack use and timing on your board. Your AI cannot run your hardware.
+  - Before a device ships, have a hardware engineer review it. If a fault could hurt someone or cause damage, such as in a medical, vehicle, mains power or battery charging device, it also needs the required certification and a test lab.
 how_it_works:
   - title: Read the hardware
     text: It notes your chip family, peripherals, memory and power limits, and marks anything missing.

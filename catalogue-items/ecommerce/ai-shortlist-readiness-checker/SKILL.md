@@ -58,13 +58,13 @@ AI shopping features and claims about how assistants pick brands change quickly.
 ### Found (40 points)
 1. **Crawler access (10).** Open yourstore.com/robots.txt. Look for Disallow next to GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, PerplexityBot and Google-Extended. One source reported that many sites block OpenAI's crawler by accident, often through inherited rules. Check the store's own file. If a CDN such as Cloudflare is used, check its setting that adds AI bot rules to robots.txt. One source says it is on by default.
 2. **Training bots versus search bots.** Block training bots (GPTBot, Google-Extended) if the person wants, and still allow search and citation bots (OAI-SearchBot, ChatGPT-User) so the store is found. Blocking everything makes the store invisible. On Shopify, robots.txt edits go through the theme file. Back up the theme and review first. Write the line list.
-3. **Readable (10).** Turn JavaScript off and reload. If reviews, price or FAQs vanish, most AI crawlers cannot see them. Sources say ChatGPT's crawler does not run JavaScript and Gemini and Copilot do. Put key content in the page itself.
+3. **Readable (10).** Turn JavaScript off and reload. If reviews, price or FAQs vanish, most AI crawlers cannot see them. Reported by one source: ChatGPT's crawler does not run JavaScript, and Gemini and Copilot do. Test this with JavaScript off on your own pages. Put key content in the page itself.
 4. **Indexed (8).** Submit the sitemap in Search Console and Bing Webmaster Tools. One source says a plain store gets crawled without this. Others treat it as a step because ChatGPT draws on Bing and Google. Check with a site: search. Being indexed is a precondition.
 5. **Product data (6).** Check product schema (name, price, availability) with a free validator. Evidence that schema helps AI citations is mixed. Keep it for shopping results. Check eligibility for Shopify's global product catalog: agentic storefront on, and each product has a title, an image and a price above zero. Catalog data comes only from backend fields, so clean metafields left by removed apps. This rests on one video. Tell the person to verify it in current Shopify help.
 6. **Speed and freshness (6).** Slow pages can be dropped when AI fetches them live. Look for old years such as 2022 or 2023 in page source files, and update dates and facts. One source says to confirm CCBot (Common Crawl) can reach the page. That is the source's claim.
 
 ### Matched (30 points)
-7. **Hard facts (15).** AI builds a shortlist of 5 to 100 products from millions by matching words. Replace "perfect for life on the go" with item type, colour, size, material and use. Write a fact line for each weak page.
+7. **Hard facts (15).** Reported by one source (a talk, not named here): AI builds a shortlist of products from a very large catalogue by matching words. Treat the size of the shortlist as unverified. Replace "perfect for life on the go" with item type, colour, size, material and use. Write a fact line for each weak page.
 8. **Narrow collections (8).** Make collections for narrow uses, such as mineral sunscreen for sensitive skin, not one big sunscreen collection.
 9. **Titles and headings (7).** Titles and H1s say what the product is, in the words a shopper would use.
 
@@ -113,7 +113,7 @@ MISSING: <what was not given>
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [AI recommendation mention tracker](https://useaiblocks.com/skills/ai-answer-visibility-tracker).
 - The [Product page editor for AI search](https://useaiblocks.com/skills/ai-ready-product-page-editor). It takes the audit report.
-- The [AI search auditor](https://useaiblocks.com/skills/ai-search-audit).
+- The [AI search recommendation gap finder](https://useaiblocks.com/skills/ai-recommendation-gap-finder). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -121,7 +121,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No tool shows how many visits come from AI chat, and Search Console cannot see them. See the AI traffic tracking set-up.
 - Big brands start ahead on reputation. Small stores win on narrow specifics.
 - One source claims most searches will be done by agents. That is its own unproven view.
-- Changing a live theme needs a backup and review. The check takes about 1 to 2 hours.
+- Changing a live theme needs a backup and review. The check takes about 1 to 2 hours (our rough guess, not a measured time).
 
 ## Checks
 - Every check names its evidence.

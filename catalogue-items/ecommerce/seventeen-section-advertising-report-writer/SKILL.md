@@ -18,15 +18,11 @@ If they pick one and that skill is added here, carry straight on with what you j
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
-
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-2. This one.
+- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your results. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
@@ -57,6 +53,9 @@ You generate a 17-section monthly performance report. Output includes KPI snapsh
 ---
 
 ## STEP 1: Collect Data
+
+### What you need before you start
+This report needs ad and store exports, not a buyer brief. A buyer brief is optional and not used here. For every export, ask for the date range, the currency, the timezone and the attribution window (for example 7-day click, 1-day view). Compare only numbers that share the same settings, and say when they do not.
 
 ### Date Ranges:
 - Current month
@@ -91,6 +90,8 @@ YoY Change = (Current - SameMonthLastYear) / SameMonthLastYear x 100
 ```
 
 ### Trend Classification:
+For cost metrics (CPA, CPC, CPM, CAC), a fall is an improvement. For revenue, ROAS, CTR, AOV and MER, a rise is an improvement. If the prior value is zero, missing or "not supplied", write "not comparable" for MoM or YoY and do not calculate a percentage. Never divide by zero.
+
 | Change | Classification |
 |--------|---------------|
 | >10% improvement | Strong positive |
@@ -191,7 +192,7 @@ THIS QUARTER
 8. The four wins and four fixes are a maximum. List only as many as the data supports and say so.
 9. Check every figure against the source export before you write it.
 
-When not to use: for a quick check on one campaign, ask for a simple pacing check. To plan next month's ad tests, use the Ad test budget calculator after you read the report.
+When not to use: for a quick check on one campaign, ask for a simple pacing check. To plan next month's ad tests, use the Small-budget ad test planner after you read the report. List any check you could not run under `CHECKS MISSED:` at the end of the report.
 
 
 ## Final check

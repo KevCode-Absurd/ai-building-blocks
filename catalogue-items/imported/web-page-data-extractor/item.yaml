@@ -8,8 +8,12 @@ role: source
 job: ops
 level: intermediate
 inputs:
-  - type: question
+  - type: web_page
     required: true
+  - type: question
+    required: false
+  - type: spreadsheet
+    required: false
 outputs:
   - type: spreadsheet
 uses: []

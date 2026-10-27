@@ -319,6 +319,8 @@ python scripts/bicep_generator.py --arch-type microservices --output main.bicep
 
 ## Quick Start
 
+Every price range and budget band below is a rough guess, not a quote. Check real prices in the Azure pricing calculator before you use them.
+
 ### Web App Architecture (< $100/month)
 
 ```
@@ -328,9 +330,9 @@ Result:
 - App Service (B1 Linux) for the application
 - Azure SQL Serverless for relational data
 - Azure Blob Storage for static assets
-- Front Door (free tier) for CDN and routing
+- Front Door (Standard) for CDN and routing. It has no free tier, so add its cost to the estimate
 - Key Vault for secrets
-- Estimated: $40-80/month
+- Estimated: [MONTHLY COST RANGE, check in the pricing calculator]
 ```
 
 ### Microservices on AKS ($500-2000/month)
@@ -358,7 +360,7 @@ Result:
 - Service Bus for reliable messaging
 - Cosmos DB for order data
 - Application Insights for monitoring
-- Estimated: $30-150/month depending on volume
+- Estimated: [MONTHLY COST RANGE, depends on volume]
 ```
 
 ### Data Pipeline ($300-1500/month)

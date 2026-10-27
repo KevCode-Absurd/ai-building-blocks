@@ -9,7 +9,7 @@ subhead: Open and save 3D lidar files without guessing which function fits which
 explain: |
   Open and save 3D lidar files without guessing which function fits which format. The skill routes by file type and keeps the extra point details such as class, time and scan angle.
 
-  Ply and PCD files go through the basic reader, LAS and LAZ need the dedicated reader that can filter by area, class or time, and sensor recordings from Velodyne, Ouster or Hesai are read frame by frame. E57 files with several scans use indexed access, and Ibeo recordings are read by message. It also converts between formats, such as LAS to PLY. It needs MATLAB with the Lidar Toolbox, which is paid. This is a MathWorks skill, copied under a licence that lets you use it only with MathWorks products.
+  Ply and PCD files go through the basic reader, LAS and LAZ need the dedicated reader that can filter by area, class or time, and sensor recordings from Velodyne, Ouster or Hesai are read frame by frame. E57 files with several scans use indexed access, and Ibeo recordings are read by message. It also converts between formats, such as LAS to PLY. It needs MATLAB with the Lidar Toolbox, which is paid. Licence: BSD 2-Clause plus one MathWorks term (clause 3 in LICENSE.md). You may use this skill only with MathWorks products and services, so you need MATLAB and the paid Lidar Toolbox.
 when:
   - You have a LAS file and only want points in one area.
   - A sensor recording must be read frame by frame.
@@ -24,9 +24,9 @@ you_give:
   - The format you want back
   - A region or class filter (optional)
 you_get:
-  - A loaded point cloud
-  - Point attributes kept
-  - A saved file in the new format
+  - MATLAB code that loads the point cloud and prints the point count
+  - Point details such as class and time kept when you ask for them
+  - A saved file in the new format, with a check that the point details survived
   - The right reader for your format
 how_to_use:
   - Check that you have MATLAB with the Lidar Toolbox, which is paid. Your AI can write the code, but MATLAB must run it. Some formats need more, such as a sensor calibration file for a PCAP recording.

@@ -7,7 +7,6 @@ description: Share room receipts, channel fees, food batches and separate costs.
 
 Room contribution and food contribution for one property and period, in one summary that leaves shared overhead out.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -16,6 +15,13 @@ When you've handed it back, suggest what they could do next in one short questio
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
+## When not to use
+- For full property profit, use your accounts and add shared costs. This stops at department contribution.
+- For room revenue after channel fees only, run step 1 alone: the Hotel room revenue and cost checker (`hotel-channel-revenue-reconciler`).
+- For dish cost only, use the Restaurant portion cost calculator (`restaurant-portion-cost-builder`).
+- To share costs between departments, use Reconcile service capacity and shared cost (`reconcile-service-capacity-and-shared-cost`).
+
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -35,6 +41,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+
+These items replace the generic article and spreadsheet inputs above. They are room-night records by channel, kitchen batches, actual receipts, the cost split between rooms and kitchen, and the property and dates.
 
 - Room-night records by booking channel, with rates and commissions.
 - Restaurant service batches with observed portion yields and servings.
@@ -58,21 +66,23 @@ If an item is missing, ask once. If it cannot be supplied, write MISSING: with w
 
 ## Steps
 
-Read each step's own SKILL.md if it is attached. If it is not, follow the step as written here and say so in the hand-back. Build a short input map first: each source, its date, units, period and what is missing.
+Read each step's own SKILL.md if it is attached. If it is not, follow the step as written here, use the formulas listed under it, mark anything you cannot compute `MISSING:`, and say so in the hand-back. Build a short input map first: each source, its date, units, period and what is missing.
 
 1. **Hotel room revenue and cost checker** (`hotel-channel-revenue-reconciler`). Reconcile actual room-night channel receipts, commissions and occupied-room service costs. Pass the property period, cost boundaries and room contribution as one departmental subtotal.
+   - Formulas: room contribution = receipts - channel commission - occupied-room service cost, by channel.
    - Check before moving on: Commission matches the channel statements. No kitchen cost is in room cost.
    - Hands to step 2: the property period, the cost boundaries and the room contribution as one subtotal.
    - Save `outputs/step-1-hotel-channel-revenue-reconciler.md` and any real file. With no file access, give it as a labelled section. If a needed input is missing, stop this step and write MISSING:.
 
 2. **Restaurant portion cost calculator** (`restaurant-portion-cost-builder`). Build food service batch contributions across that period using actual yield, servings and receipts. Reconcile room and food subtotals in a clearly bounded management summary; exclude shared overhead from both unless separately allocated with source evidence.
+   - Formulas: portions = observed yield, never a typical recipe. Food contribution for a batch = receipts - cash cost of that batch. Combined = room subtotal + food subtotal, with shared costs left out.
    - Check before moving on: Room and food cover the same dates. No shared cost is in both departments.
    - Goes into the result: the management summary with open cost gaps.
    - Save `outputs/step-2-restaurant-portion-cost-builder.md` and any real file. With no file access, give it as a labelled section. If a needed input is missing, stop this step and write MISSING:.
 
-## Workbook
+## Workbook (only if asked)
 
-If they ask for a workbook and you can make files, build one linked workbook: inputs, calculations, checks and a summary on separate sheets. Mark inputs in blue, same-sheet formulas in black and cross-sheet links in green. Show units and put negatives in parentheses. Recalculate, look for errors, change one input to test the links, put the case back, and reopen the saved file. If you cannot make files, give each schedule as a table and say no workbook was built. Report any check that could not run.
+Only if they ask for a workbook and you can make files, build one linked workbook: inputs, calculations, checks and a summary on separate sheets. Mark inputs in blue, same-sheet formulas in black and cross-sheet links in green. Show units and put negatives in parentheses. Recalculate, look for errors, change one input to test the links, put the case back, and reopen the saved file. If you cannot make files, give each schedule as a table and say no workbook was built. Report any check that could not run.
 
 ## Acceptance
 

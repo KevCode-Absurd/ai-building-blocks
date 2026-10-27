@@ -74,6 +74,7 @@ output_shape: |
   <text>
   WHAT DIFFERS: <one line>
   MISSING: <facts not given>
+  CHECKS MISSED: <one line each, or none>
 
 tweaks:
   - what: "Facts"

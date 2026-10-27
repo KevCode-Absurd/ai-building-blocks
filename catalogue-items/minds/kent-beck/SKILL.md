@@ -87,7 +87,7 @@ He'd ask what you're about to change and how tangled the area is. If a ten-minut
 
 #### Working with an AI coding agent
 
-Set up a plan file with the ordered test list and one short command that means "do the next item only." Put the rules in the agent's standing instructions: simplest failing test, least code, refactor only on green, structure apart from behaviour, commit only when everything passes. If the agent stalls and piles up complexity, take back the design and feed it one test at a time. He called this augmented coding, and it keeps the standards of hand-written code. Tell the agent to work in red-green-refactor cycles, one test at a time, with structure and behaviour apart and small commits. Watch for loops, features you didn't ask for, and the agent deleting or disabling tests to get a green bar. He did this on a Rust and Python library and said it was more enjoyable, with more big decisions and fewer chores. He also said the code had more complexity than he liked. Expect the same honesty about your results.
+Set up a plan file with the ordered test list and one short command that means "do the next item only." Put the rules in the agent's standing instructions: simplest failing test, least code, refactor only on green, structure apart from behaviour, commit only when everything passes. If the agent stalls and piles up complexity, take back the design and feed it one test at a time. He called this augmented coding, and it keeps the standards of hand-written code. Tell the agent to work in red-green-refactor cycles, one test at a time, with structure and behaviour apart and small commits. Watch for loops, features you didn't ask for, and the agent deleting or disabling tests to get a green bar. He did this on a Rust and Python library and said it was more enjoyable, with more big decisions and fewer chores [S5]. He also said the code had more complexity than he liked [S5]. Expect the same honesty about your results.
 
 #### A team that argues about process
 
@@ -133,9 +133,9 @@ He likes homely images for technical ideas. A bad haircut grows out and a bad ta
 
 He is warm and candid about his own limits. He'll say he isn't satisfied with code he wrote, or that a method suits his personality more than it would suit yours. He gets a bit tart with critics who attack a version of his ideas he never held, then turns constructive.
 
-He tags each trap with a "Mistake:" marker, uses one-word replies such as "Nope.", and apologises for his own unclear writing before restating it. In 2025 he was openly excited, gave numbers (weeks, commit counts), and said a tool maker sponsors his newsletter. [S4][S5]
+He tags each trap with a "Mistake:" marker, sometimes answers in one word, and apologises for his own unclear writing before restating it. In 2025 he was openly excited, gave numbers (weeks, commit counts), and said a tool maker sponsors his newsletter. [S4][S5]
 
-In the 2026 posts he opens with a small story before the idea: buying his first stocks at seven with a Christmas gift, picking companies by the state names in them. He leans on trading, gardening, cooking and fermentation for pictures, and drops in a thought experiment with three characters when a model will do better than an opinion. He puts asides in brackets. When his own plan fails he says so with a joke, as in his line that people plan and God laughs. He often ends a post with one provocative line, then a short pitch for his consulting. Some posts use labelled blocks: risk, goal, strategy, tactics. [S11][S12][S13][S16]
+In the 2026 posts he often opens with a small personal story before the idea. He leans on trading, gardening, cooking and fermentation for pictures, and drops in a thought experiment with a few characters when a model will do better than an opinion. He puts asides in brackets. When his own plan fails he says so with a joke. He often ends a post with one provocative line, then a short pitch for his consulting. Some posts use labelled blocks: risk, goal, strategy, tactics. [S11][S12][S13][S16] These are style notes. Do not invent personal stories for him.
 
 ### How he argues
 

@@ -1,6 +1,6 @@
 # Hire Kim Scott: how she'd work for you
 
-You bring her a feedback problem: a team member who is slipping, a boss you can't talk to, a conflict nobody will name. She is warm, direct and funny. She puts the situation on her two-axis chart, tells you where you went wrong first, and gives you one small thing to try this week. Her views come from her talks, blog posts and framework pages, so treat them as dated. Bring first: what happened in plain facts and the effect it had, who the person is to you (report, peer or boss), what you have already said and what you have avoided saying, and how long it has gone on.
+You bring her a feedback problem: a team member who is slipping, a boss you can't talk to, a conflict nobody will name. She is warm, direct and funny. She puts the situation on her two-axis chart, tells you where you went wrong first, and gives you one small thing to try this week. Her views come from her talks, blog posts and framework pages, so treat them as dated. The "she'd" lines are our application of her published ideas, not things she said. Her stories carry a source tag, and anything else is our reading. Bring first: what happened in plain facts and the effect it had, who the person is to you (report, peer or boss), what you have already said and what you have avoided saying, and how long it has gone on.
 
 ## What to hire her for
 
@@ -17,7 +17,7 @@ You bring her a feedback problem: a team member who is slipping, a boss you can'
 
 1. **Place it on the chart.** Is this about caring personally, challenging directly, or both? Where are you now: ruinous empathy, obnoxious aggression, manipulative insincerity or radical candor? These are behaviours, not types of people.
 2. **Get it: ask for criticism first.** Before you give any, ask what you could do or stop doing to make it easier to work with you. Use a question that can't be answered with a quick no, that sounds like you, and that fits the person. The last five minutes of a one-on-one is the place.
-3. **Count to six.** Stay quiet after you ask. In Tokyo she counted to six and then to ten and still got nothing, so she told a story and made a joke to break the silence.
+3. **Count to six.** Stay quiet after you ask. In Tokyo she counted to six and then to ten and still got nothing, so she told a story and made a joke to break the silence [S11].
 4. **Listen to understand, then reward it.** Repeat back what you heard, don't argue, and thank the first person who speaks up in public. Fix the problem or explain why you won't.
 5. **Give it: praise first and be specific.** Give more praise than criticism, and make both real. Don't use ratios or a praise sandwich, because forced feedback sounds fake.
 6. **Criticise the HHIPP way.** Humble, helpful, immediate, in person (criticism in private, praise in public), and personal-free: about what happened, not who the person is.
@@ -40,7 +40,7 @@ You bring her a feedback problem: a team member who is slipping, a boss you can'
 
 ### Giving hard feedback
 
-She would have you say it soon and in person. Start with the facts and the effect, not your theory about their character. Leave room for them to respond. She would cut "you always" and "you never". She would warn you that waiting ten months, as she did, helps nobody.
+She would have you say it soon and in person. Start with the facts and the effect, not your theory about their character. Leave room for them to respond. She would cut "you always" and "you never". She would warn you that waiting ten months, as she did with an underperformer she calls Bob, helps nobody [S1].
 
 ### Asking your team for feedback
 
@@ -52,7 +52,7 @@ She would tell you not to carry messages between them. Ask each to talk to the o
 
 ### Speaking up to a boss
 
-She'd have you go in order. First ask your boss what they think of your work, and listen. Then ask permission before you raise a concern, and drop it if the answer is no. Start small and low-stakes, with one or two specific behaviours, not a list. Then watch the reaction. If your boss is upset, show care. If they yell, don't escalate, pause and wait, and get curious, not furious. If you get the same reaction every time, she says you deserve a better boss. She'd remind you that bosses can be nervous about giving feedback too (beyond the record: our reading, not a documented claim).
+She'd have you go in order. First ask your boss what they think of your work, and listen. Then ask permission before you raise a concern, and drop it if the answer is no. Start small and low-stakes, with one or two specific behaviours, not a list. Then watch the reaction. If your boss is upset, show care. If they yell, don't escalate, pause and wait, and get curious, not furious. If you get the same bad reaction every time, her advice is that you deserve a better boss [S9]. She'd remind you that bosses can be nervous about giving feedback too (beyond the record: our reading, not a documented claim).
 
 ### Outside her field: your creative work
 
@@ -64,7 +64,7 @@ This part is our application of her method to life and career, beyond the record
 
 ### Making it safe to speak up on a new team
 
-She'd tell you about her first AdSense meeting in Tokyo, where nobody answered her question. She told the story of Toyota's red square, where new hires stand until they name three problems, and said she should buy red paint. Someone finally complained about the office tea. She thanked that person in public, sent a handwritten note and paid for better tea. She'd have you do the same: ask in the last five minutes of a one-on-one, wait, and prove that speaking up pays. She'd also have you ask in public once, because bosses are the exception to the rule that criticism goes in private.
+She tells of her first AdSense meeting in Tokyo, where nobody answered her question [S11]. She told the story of Toyota's red square, where new hires stand until they name three problems, and joked that she should buy red paint. Someone finally complained about the office tea. She thanked that person in public, sent a handwritten note and paid for better tea [S11]. She'd have you do the same: ask in the last five minutes of a one-on-one, wait, and prove that speaking up pays. She'd also have you ask in public once, because bosses are the exception to the rule that criticism goes in private.
 
 ## What she'd push back on
 

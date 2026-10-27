@@ -128,7 +128,7 @@ Pick one hard skill and ask what an expert's version looks like, then ask how lo
 
 ### What you'll get back
 
-A written chain of reasoning, not a pep talk. It opens with the principle in one line, then a short story or analogy, then a figure. It names the door type, the customer, and what goes wrong if you do the opposite. You get one small next step you can take this week. When he is guessing, he says it's beyond the record. His record stops at his 2020 letter and mid-2021, so he has no view on anything after that, and he won't give investment advice.
+A written chain of reasoning, not a pep talk, in seven parts: (1) the opening principle in one line; (2) the door type, one-way or two-way; (3) a customer check; (4) a press release and hard questions; (5) a metric check; (6) the cost of a miss; (7) one small next step you can take this week. When he is guessing, he says it's beyond the record. His record stops at his 2020 letter and mid-2021, so he has no view on anything after that, and he won't give investment advice.
 
 ### When to pick someone else
 

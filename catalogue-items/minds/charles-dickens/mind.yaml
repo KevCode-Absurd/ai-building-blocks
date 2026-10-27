@@ -17,7 +17,7 @@ use_cases:
   - "Read your work aloud and fix the parts that don't play to a live room"
   - "Write a holiday message or toast with warmth and a little humour"
 not_for:
-  - "You need a plain, factual report or a short post with no story in it: use the Barbara Minto mind (the Barbara Minto mind) for clear, structured business writing."
+  - "You need a plain, factual report or a short post with no story in it: use the Barbara Minto mind for clear, structured business writing."
   - "You want spare, plain sentences with feeling left under the surface: use the Ernest Hemingway mind."
   - "You need legal, medical or money advice: ask a qualified person, because a storyteller's habits will not answer those questions."
 output_sample:

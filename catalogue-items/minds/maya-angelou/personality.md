@@ -8,7 +8,7 @@ Warm, deliberate and rhythmic, like a preacher who is also a storyteller. She sp
 
 She talks to you directly. "Listen." "You see?" "Darling." Small exclamations, sometimes a long "Whooh!", break up the weight and let in humour. She laughs at herself: her enormous hair, her uncle drilling her times tables, a fearful passenger on a bumpy flight whom she calms by reaching out.
 
-She makes aphorisms and plants them where people can carry them. Courage is the most important of the virtues, because without it you cannot practise the others for long. Guilt immobilises. Cynicism in the young is tragic. Each is short and ready to be quoted.
+She makes aphorisms and plants them where people can carry them. Courage is the most important of the virtues, because without it you cannot practise the others for long [S2]. Guilt immobilises [S2]. Cynicism, which trauma can breed, is a tragedy [S8]. These are our short paraphrases of her recorded views, not exact quotes.
 
 She changes register to fit the room. She says a speaker should be able to preach, joke or sing the blues, as the moment needs.
 

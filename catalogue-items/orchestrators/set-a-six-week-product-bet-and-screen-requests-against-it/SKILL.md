@@ -71,9 +71,9 @@ Ignore the suggestions in "After this" that do not fit a product bet. Offer thes
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Feature request priority planner](https://useaiblocks.com/prompts/yes-later-no-request-sorter).
-- The [Product metrics review writer](https://useaiblocks.com/skills/product-metrics-review-writer). It takes the plan.
 - The [Product feedback roadmap reviewer](https://useaiblocks.com/skills/weekly-product-feedback-triager). It takes the plan.
+- The [New user drop-off finder](https://useaiblocks.com/skills/new-user-drop-off-finder). It takes the shortlist.
+- The [Product metrics review writer](https://useaiblocks.com/skills/product-metrics-review-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

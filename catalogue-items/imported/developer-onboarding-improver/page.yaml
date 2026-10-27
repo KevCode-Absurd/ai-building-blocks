@@ -12,6 +12,8 @@ explain: |
   It splits the path into six stages: finding the start page, signing up, getting keys, setting up the SDK, running a request and seeing success. Each stage gets a time estimate and a rating from "excellent" to "failing". The ratings are rules of thumb from the skill's author, not industry data.
 
   Then it works on the weak spots. Typical fixes are simpler sign-up, keys shown up front, a test sandbox, try-it docs and error messages that tell people what to do next. It starts by asking who your developers are and what tools they use, so the fixes match them.
+
+  The licence that applies to this copy is the one in the LICENSE-CONTENT file in this item, CC BY 4.0. The skill file's header also names the author jonathimer's own MIT licence. Both allow reuse with credit.
 when:
   - Developers sign up for your API and never make a call.
   - Getting an API key takes many steps or an approval wait.
@@ -33,7 +35,7 @@ you_get:
   - Ideas for keys, sandbox and error messages that fit your API
   - A list of what to measure next
 how_to_use:
-  - Write down your path from landing page to first successful call, one line per step. Add your drop-off numbers and quickstart link if you have them.
+  - Write down your path from landing page to first successful call, one line per step. Add your drop-off numbers and quickstart link if you have them. With no numbers, sign up as a new user in a private window, time each stage, and paste the times in.
   - Open Claude, ChatGPT or Gemini and paste the skill instructions. No code, files or paid tools are needed.
   - Paste your path. Say who your developers are and which tools they use.
   - Answer any question your AI asks. Any input you skip is marked MISSING, not guessed.
@@ -72,7 +74,7 @@ how_it_works:
 works_best_with:
   - Any chat AI. No tools or files are needed.
   - Pair it with your drop-off numbers from product analytics. They make the ranking stronger.
-  - Run the Developer quickstart writer after it to rewrite the first-call guide.
+  - Run the Developer quickstart writer after it to rewrite the first-call guide. The other skills the original author names (SDK design, a developer sandbox, developer metrics) are not in this library yet.
 terms:
   - TTFAC: time to first API call. The time from first visit to your first working request.
   - Sandbox: a test mode where developers try your API without real data or charges.

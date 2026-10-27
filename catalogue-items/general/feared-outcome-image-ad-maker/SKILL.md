@@ -9,7 +9,7 @@ You write the brief and image prompt for one calm, ordinary object that would ar
 
 **Good for:** a feared next step buyers name in their own words: a price that jumps, a repair that grows, a bill, a lost deposit, a wasted year.
 
-**Not for:** fears about illness, injury or the body. Use Empty room image ad maker to show how daily life changed instead.
+**Not for:** fears about illness, injury or the body. Use [Empty room image ad maker](https://useaiblocks.com/skills/empty-room-image-ad-maker) to show how daily life changed instead. For one visible flaw rather than a feared next step, use the [Circled flaw image ad maker](https://useaiblocks.com/skills/circled-flaw-image-ad-maker).
 
 ## House rules for post-like pictures
 - Square 1:1, or 4:5 if it runs only in the Feed. It looks captured on a phone by a person: everyday light, the room's normal mess, nothing retouched.
@@ -43,6 +43,7 @@ How to start:
 - **GPT Image:** Follows detailed placement of small objects on a table, and keeps print soft when you ask.
 - **Nano Banana:** Follows named light such as 'overhead kitchen light, early evening' for a calm, ordinary scene.
 - **Any good chat AI:** The gate and the brief work the same in any strong chat AI.
+- **Cost note:** Making the picture in ChatGPT, Gemini or through an API key may hit daily limits on free plans, or bill each picture. The prompt is free.
 <!-- /needs -->
 
 ## What you need
@@ -109,9 +110,6 @@ CHECKS MISSED       <one line each, or none>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Product photo ad prompt set writer](https://useaiblocks.com/skills/six-image-ad-prompt-set).
-- The [Leftover mess image ad maker](https://useaiblocks.com/skills/leftover-mess-image-ad-maker).
-- The [Fact caption image ad maker](https://useaiblocks.com/skills/fact-caption-image-ad-maker).
 - **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image prompt.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

@@ -32,7 +32,8 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
   - Add your subject and topic, the thinking skill, your students' year level and how they think now.
-  - Add the time you have and your preferred format, such as written or discussion (optional).
+  - Add the time you have and your preferred format, such as written or discussion (optional). Confirm the level and the time with your class before you start.
+  - Pick the stimulus for the task from a named textbook or primary source, and keep the reference. The worked example's figures are placeholders, so fill each from a source.
   - Read the task and the answer guide. Check the guide matches what you want students to show.
   - Change the task wording or level if it feels too easy or too hard, then ask your AI to revise it.
   - Use the follow-up prompts in class and the assessment indicators when you mark the work.

@@ -82,6 +82,7 @@ output_shape: |
   INCENTIVES      <...>
   VERDICT         <go | go with guards | do not go> <reason>
   MISSING         <...>
+  CHECKS MISSED   <one line each, or none>
 
 example:
   business: sprout

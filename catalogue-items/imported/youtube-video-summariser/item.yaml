@@ -8,7 +8,7 @@ role: compress
 job: ops
 level: beginner
 inputs:
-  - type: web_page
+  - type: video_link
     required: true
   - type: transcript
     required: false

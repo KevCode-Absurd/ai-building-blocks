@@ -24,6 +24,7 @@ you_give:
   - What looks wrong
   - Vendor and staff lists (optional)
   - Time period
+  - For the Benford's Law test, a few hundred amounts that run from small to large. With fewer, the test cannot say much.
 you_get:
   - A list of red flags
   - Benford's Law results
@@ -31,7 +32,7 @@ you_get:
   - Money flow traces
   - A forensic report outline with next steps
 how_to_use:
-  - Export your records as files, such as a CSV or PDF. Keep only the columns you need, and get permission before sharing personal data.
+  - Export your records as files, such as a CSV or PDF. Keep only the columns you need. Before you share staff addresses, phone numbers or bank details, replace them with codes (such as Staff 1) or check with a lawyer that you may share them. Staff privacy and employment law differ by country.
   - Open Claude, ChatGPT or Gemini and paste in the skill text. Attach your files. Say what looks wrong and the time period.
   - Say whether this is for a legal case and who may see the results. Add vendor and staff lists if you have them.
   - Read the red flags first. Treat every name as provisional until a qualified examiner confirms it.

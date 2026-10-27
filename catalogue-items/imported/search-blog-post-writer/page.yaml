@@ -30,10 +30,11 @@ you_get:
   - FAQ section
   - Internal links in the text
 how_to_use:
+  - Have ready a list of sources you have checked, the titles of your own pages to link to, and a real product page address if you want a product next step. The skill can only use what you give it. It needs no paid tool or API key.
   - Open Claude, ChatGPT or Gemini and paste the skill instructions into a new chat.
   - Add your topic, exact keyword, audience, tone and word count. Add other keywords and page titles to link to if you have them.
   - Ask your AI to write the post.
-  - Check the answer box, the five FAQs and the link spots. Your AI cannot check live search results, so rankings are not promised.
+  - Check the answer box, the five FAQs and the link spots. Your AI cannot see live search results unless you paste them in as search evidence, so rankings are not promised. If the keyword has no clear intent, pick a clearer keyword or paste in what the top results look like before it drafts.
   - Replace every suggested external link or statistic with a real source you have checked yourself. Anything marked UNVERIFIED must be sourced or cut.
   - Next, run the draft through the Page SEO optimizer and map its internal links with the Internal link mapper. Check every claim before you publish.
 output_sample:

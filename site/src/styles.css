@@ -124,6 +124,9 @@ code { font: 400 0.88em var(--mono); background: var(--raise); border-radius: 4p
 .ghost { visibility: hidden; }
 @media (prefers-reduced-motion: reduce) { .cursor { animation: none; } }
 .hero-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+/* Sits above the dithered band at the foot of the hero (.hero::after is 64px; the hero pads 24px). */
+.hero-connect { margin: 16px auto 44px; max-width: 48em; color: var(--text-2); text-wrap: balance; }
+.hero-connect a { color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
 
 /* Sections */
 .section { padding-top: var(--section); }
@@ -778,6 +781,8 @@ body.globe-dragging, body.globe-dragging * { user-select: none !important; -webk
 .hiw-terms code { font: 500 13px var(--mono); }
 .hiw-now { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin: 20px 0 0; color: var(--muted); font-size: 14.5px; }
 .hiw-now .hiw-status { margin-top: 0; }
+.hiw-connect { margin: 14px 0 0; max-width: 44em; }
+.hiw-connect a { text-decoration: underline; text-underline-offset: 3px; }
 .hiw-choose { border: 1px solid var(--line-2); border-radius: 10px; overflow: hidden; background: var(--panel); }
 .hiw-choose > div { display: grid; grid-template-columns: minmax(0, 1fr) 140px; gap: 16px; padding: 13px 18px; border-top: 1px solid var(--line); font-size: 15px; color: var(--text-2); }
 .hiw-choose > div:first-child { border-top: 0; }

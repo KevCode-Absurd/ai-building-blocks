@@ -12,6 +12,10 @@ metadata:
 Estimate parameters from data using `fitproblem`, fit population models
 with NLME, generate virtual patients, and compute NCA metrics.
 
+## What you need
+
+The SimBiology model and the measured data. If the model came from the model builder, give its code as the model.
+
 ## When to Use
 
 - "fit", "estimate", "calibrate" model parameters

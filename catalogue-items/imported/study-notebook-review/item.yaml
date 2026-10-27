@@ -10,11 +10,10 @@ level: beginner
 inputs:
   - type: source_text
     required: true
-  - type: brief
-    required: false
 outputs:
   - type: document
   - type: plan
+  - type: feedback_notes
 uses: []
 origin: imported
 source:

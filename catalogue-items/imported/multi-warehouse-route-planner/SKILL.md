@@ -393,7 +393,7 @@ def solve_mdvrp_ortools(customer_coords, depot_coords, demands,
                         depot_assignments[customer_id] = depot_id
 
         return {
-            'status': 'Optimal',
+            'status': 'Solution found (best within the time limit, not proven optimal)',
             'routes': routes,
             'depot_assignments': depot_assignments,
             'total_distance': total_distance,

@@ -76,7 +76,7 @@ how_it_works:
     text: Scores matched claims among those evaluated. It shows coverage and unknowns separately; the score does not establish legal or platform clearance.
 output_shape: |
   SCORE
-  <0 to 100> | Worked out as: <claims matched ÷ claims counted>
+  <0 to 100, or NOT SCORED> | Worked out as: <claims matched ÷ claims evaluated> (evaluated/total shown; NOT CHECKED claims listed apart)
 
   CLAIMS AND PROOF
   1. Claim: "<line>" | Type: <stated / implied>

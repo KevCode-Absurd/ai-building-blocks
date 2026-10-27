@@ -50,6 +50,17 @@ Use an available image-generation tool that supports image references and real t
 
 Generate and inspect one scene first, then use it as the identity anchor for the rest. When the user asked for a full set, continue after your own inspection; do not add an approval checkpoint unless requested.
 
+Prompt structure (an AI Blocks summary of the rules in this file, so you do not need the external recipe to start). Fill the brackets from the user's brand and the scene's one-sentence plot:
+
+```text
+Image 1 is the original logo: keep its recognisable structure.
+Image 2 is the first approved sticker: keep the face, proportions, palette and line quality.
+Scene: [WHO] [DOES WHAT], [SMALL UNEXPECTED CONSEQUENCE], [READABLE REACTION].
+Keep: [BRAND COLOURS] and [ONE LOCAL SHAPE OR BRAND MARK].
+Style: matte printed illustration, subtle paper grain, a narrow continuous white die-cut border around the whole scene (about 1-2% of canvas width).
+Front-facing, flat, scene centred with usable margins. True transparent background outside the sticker: no card, scenery, tabletop or drawn checkerboard. No captions or watermarks.
+```
+
 Assign each reference an explicit role and match the prompt's image numbers to the actual upload order:
 
 - Original logo / IP: recognisable brand structure.

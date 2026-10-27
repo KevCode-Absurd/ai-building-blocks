@@ -6,11 +6,11 @@ job: write-and-tell-stories
 thinking: high
 thinking_why: The task compares evidence and alternatives. Its output still needs the stated checks.
 explain: |-
-  Turn a show idea and target listener into a production-ready pilot episode brief, including the opening hook, narrative beats, guest questions, CTA and clip plan.
+  A first episode goes wrong when the host has not decided who it is for or what the listener should take away. This skill makes you decide that first. Then it plans one pilot episode: the opening hook, a timed run sheet that adds up to your length, guest questions or solo beats, and the clip moments to look for.
 
-  An episode brief is one bounded production artifact. A reusable skill is sufficient; a second prompt or four-phase launch workflow would duplicate the same task and expand into publishing and monetization unnecessarily.
+  It does not invent a guest's story, quotes or credentials. Anything you did not supply stays on a list of things to check before you record. It plans one episode only. It does not book guests, publish the show or forecast income.
 
-  This task uses selected methods from Global Podcast Strategist. It is a focused adaptation. The original agents remain available: [Global Podcast Strategist agent](https://useaiblocks.com/agents/agency-marketing-global-podcast-strategist).
+  This is a focused adaptation of the Global Podcast Strategist (MIT licence, credited on this page). The original agent is here: [Global Podcast Strategist agent](https://useaiblocks.com/agents/agency-marketing-global-podcast-strategist).
 when:
   - You have a show idea and need a plan for the first episode.
   - You are about to record and want a timed run sheet that adds up.
@@ -78,8 +78,19 @@ test:
   - Try a small supplied case whose facts and result you can check.
   - Omit one required fact and check that the affected work stays unresolved.
 tweaks:
-  - what: Task scope
-    how: State the intended result, available evidence and actual tools before starting.
+  - what: Format
+    how: Say interview or solo. Interviews get open questions with follow-ups. Solo gets an ordered argument with examples you can back up.
+  - what: Length
+    how: Give the total minutes. Every segment and transition is cut to add up to it.
+  - what: Sponsor slot
+    how: Add a real sponsor or call to action if you have one. Its time comes out of the same total.
 improve:
-  - Keep useful corrections with the task evidence for the next run.
+  - Fill the fact-check list before you record, then paste it back in for a second pass.
+  - After you record, take the clip moments to the Podcast show notes writer.
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all handle a timed plan. It needs no paid tool, file access or API key."}
+  inputs:
+    - "A booked guest's real bio and what they agreed to talk about"
+    - "Your own proof points as host, so the pitch is true"
 terms: []

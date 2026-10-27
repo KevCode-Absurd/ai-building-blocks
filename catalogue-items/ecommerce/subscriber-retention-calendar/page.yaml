@@ -9,7 +9,7 @@ headline: "Subscriber retention calendar"
 subhead: Give it your churn by order number, your gift options and your campaign calendar. It places gifts on the months where subscribers leave, sets rules for what subscribers receive, and builds a month-by-month calendar with a subscriber-only offer for your next sale.
 
 explain: |
-  Active subscribers are easy to lose by accident. Every sale email, discount code or generic newsletter is a prompt to reconsider. In one brand's data, campaigns sent to active subscribers caused more cancels than new starts. When those subscribers were left out of the sends, the brand added about 24,000 a month net, and with other changes churn went from about 19 percent to 13 to 14 percent. That is one brand and several changes, so read it as a direction.
+  Active subscribers are easy to lose by accident. Every sale email, discount code or generic newsletter is a prompt to reconsider. In one brand's data, campaigns sent to active subscribers caused more cancels than new starts. When those subscribers were left out of the sends, its net subscriber count rose and, with other changes, churn fell. That is one brand and several changes, so read it as a direction.
 
   This skill gives you a plan for the other side: what to send, and when to give a gift. It finds the order numbers where your subscribers leave, puts a low-cost gift there, and makes sure the billing reminder and confirmation announce it. It caps subscriber messages to three kinds, leaves them out of sales, and plans one to three thoughtful campaigns a month.
 
@@ -133,8 +133,8 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Klaviyo", why: "It lets you leave active subscribers out of segments and shows cancels after each send when you connect your subscription app."}
-    - {name: "Skio or Recharge", why: "Your subscription app holds churn by order number and the add-on to a next order."}
+    - {name: "Klaviyo", why: "Paid email service that needs an account and a connected subscription app. It lets you leave active subscribers out of segments and shows cancels after each send when you connect your subscription app."}
+    - {name: "Skio or Recharge", why: "Paid subscription apps; use the one you already have. Your subscription app holds churn by order number and the add-on to a next order."}
     - {name: "Any good chat AI", why: "Any current chat AI can turn your numbers into the plan."}
   inputs:
     - "Your cancel reasons, to match gifts to them"

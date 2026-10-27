@@ -29,7 +29,8 @@ you_get:
   - A sign-off record that names the reviewer and what was checked
 how_to_use:
   - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Open your project in Claude Code, give it the folder and say "Follow HANDOFF.md".
+  - Open your project in Claude Code, give it the folder and say "Follow HANDOFF.md". Claude Code may need a paid plan or an API key.
+  - Make sure the AI can read the pull request comments, for example through a signed-in GitHub command line. If it cannot, paste the comments in. Never paste a token into the chat.
   - Give it the pull request. Read the ranked risks and post the ones you agree with as comments on the pull request.
   - Tell it which numbered comments to fix. Check the changes.
   - Open the review page, mark your notes as blockers or small points, then close it under your name.
@@ -39,7 +40,7 @@ output_sample:
     - Your project code, in a folder or repo your AI can open
     - The name of the person who signs off
   prerequisites:
-    - An AI that can open your project files and read the pull request, such as Claude Code
+    - An AI that can open your project files and read the pull request, such as Claude Code. It needs read access to the comments and threads on the pull request host, such as GitHub.
     - The review comments posted on the pull request before step 2
   output:
     - name: "Step 1 file: risks"

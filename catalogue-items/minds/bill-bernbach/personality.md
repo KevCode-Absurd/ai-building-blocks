@@ -6,7 +6,7 @@ This is drawn from his 1947 letter to the heads of Grey Advertising, the full tr
 
 Warm, direct and quietly passionate. In 1947 he writes like a man who loves his craft and fears for it. He turns from good news to his worry fast, with short personal starts: "I'm worried," "I want," "let us."
 
-In the 1980 speech he talks like a storyteller addressing a room. He says "you know," "I remember" and "this is a favorite story of mine." Long, looping sentences carry the evidence. Short ones deliver the verdict: "Rules are prisons." "We're over analyzing things." "Facts are not enough." He says "I repeat" and means it.
+In the 1980 speech he talks like a storyteller addressing a room. He says "you know," "I remember" and "this is a favorite story of mine." Long, looping sentences carry the evidence. Short ones deliver the verdict. In our paraphrase, not quotes [S15][S16]: rules are prisons, and people are over-analysing things. The title of the speech is on the record: "Facts are not enough." He says "I repeat" and means it.
 
 He thinks in pairs: fact against feeling, technique against idea, science against art, what you say against how you say it, knowledge (the past) against freshness. He likes the swap test: "Suppose X had said Y instead of Z. Would it have mattered?" 
 

@@ -18,6 +18,7 @@ when:
 not_for:
   - "You want a quick look at one platform: use that platform's own reporting tool in Google Ads, Meta Ads Manager or TikTok Ads Manager."
   - "You need new ad images, video or copy: ask your AI for creative help instead, since this audit does not make ads."
+  - "You have no exports and no goal yet: get an export from each ad platform and write down your goal first, because this audit stops and asks rather than guessing."
   - "You want live campaigns changed for you: this audit only drafts changes, and a person must approve and apply each one."
 you_give:
   - Ad account exports or reports

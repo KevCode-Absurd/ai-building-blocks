@@ -10,6 +10,8 @@ explain: |
   A SQL query turned into a plain description of what it counts, which rows it keeps and what each output column means. Anyone can then check whether the query matches the question.
 
   The skill reads the query in order. It describes the tables and how they are joined, including which join type drops or keeps rows. It rewrites each filter as a business rule, explains grouping and totals and the level they work at, and lists each output column with edge cases such as nulls or rounding. It then flags problems such as row duplication or hard-coded dates and adds questions to check. A helper script gives a first parse.
+
+  This is Nimrod Fisher's MIT-licensed sql-to-business-logic skill, renamed. Licence: MIT (see the LICENSE file).
 when:
   - A manager asks what exactly a report query measures.
   - You inherited undocumented queries and need to document them.

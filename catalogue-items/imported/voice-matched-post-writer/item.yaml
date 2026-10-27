@@ -12,6 +12,8 @@ inputs:
     required: true
   - type: brief
     required: true
+  - type: copy_draft
+    required: false
 outputs:
   - type: copy_draft
 uses: []

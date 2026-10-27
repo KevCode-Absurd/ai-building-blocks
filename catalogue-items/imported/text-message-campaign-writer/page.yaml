@@ -5,11 +5,13 @@ name: Text message campaign writer
 summary: Plan text message campaigns for welcome, cart, win-back and promo sends. Get message copy, timing and a consent check for SMS or WhatsApp.
 job: write-emails
 headline: Text message campaign writer
-subhead: Say your goal. Get SMS or WhatsApp flows for welcome, cart, win-back and promos, with consent rules. Bring your business type and list size. Use the result to plan your next step.
+subhead: Say your goal. Get SMS or WhatsApp flows for welcome, cart, win-back and promos, with consent rules. Bring your business type and list size. You get the plan and copy to load into your SMS tool.
 explain: |
   A set of text message flows you can load into your SMS tool: welcome, abandoned cart, post-purchase, win-back and promo sends, each with message copy and timing. It also covers WhatsApp and the plain account texts like order updates.
 
-  The skill first asks about your business, list size, phone number type and where you stand on consent. Then it decides which jobs belong in SMS and which belong in email, since texts only earn their place when speed matters. It writes short messages with clear opt-out lines and checks them against consent rules, including US registration and EU differences. You get a plan for what to send, when, and how to measure it.
+  The skill first asks about your business, list size, phone number type and where you stand on consent. Then it decides which jobs belong in SMS and which belong in email, since texts only earn their place when speed matters. It writes short messages with clear opt-out lines and checks them against consent rules, including US registration and EU differences. You get a plan for what to send, when, and how to measure it. The open rates, costs and settlement sizes in the skill are rough industry figures, not measured for your business. Check them with your SMS provider. This is not legal advice.
+
+  Licence: MIT, as the LICENSE file in this item says. Credit goes to the original author.
 when:
   - You want to start texting customers and need a first set of flows.
   - Your abandoned cart emails are slow and you want a faster nudge.
@@ -34,7 +36,7 @@ how_to_use:
   - Tell your AI your business type, list size, phone number type and how people opt in.
   - "Say your goal: revenue, signups or order updates. Add your country if you sell outside the US."
   - Read the compliance check first and fix any blockers before you build a flow. It is a guide, not legal advice, so confirm the rules with a lawyer or your SMS provider before you send.
-  - Load the message copy and timing into your SMS tool.
+  - Load the message copy and timing into your SMS tool. For jobs the plan sends to email instead, use the email sequence writer.
   - "Know the costs first: you need a paid SMS or WhatsApp account, and US senders must register for 10DLC. Check your provider for current prices."
 output_sample:
   input:

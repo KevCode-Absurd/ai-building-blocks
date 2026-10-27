@@ -11,7 +11,7 @@ explain: |-
 
   First it turns your goal into a single-point rubric: one description of the target, with open space for notes on what falls short or goes beyond it. Then it checks every comment you drafted. Is it specific? Is it about the work, not the student? Does it say what to do? Last it writes a short revision task aimed at the one gap the feedback found.
 
-  You stay the teacher. The AI works on work with names removed, and nothing goes back to a student until you have read it.
+  You stay the teacher. Paste only work with names and personal details removed, and only into a tool your school allows for student work. Nothing goes back to a student until you have read it.
 when:
   - You have a stack of drafts and your comments are mostly "good, but more detail".
   - Students read your feedback and then make the same mistake in the next piece.

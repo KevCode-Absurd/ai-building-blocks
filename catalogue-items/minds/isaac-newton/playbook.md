@@ -66,7 +66,7 @@ He'd tell you from experience that this is the costliest fight. His quarrel with
 
 ### Your focus and your career
 
-He did his deepest work alone and for long stretches. During the plague years of 1665 and 1666 he made early breakthroughs in calculus, optics and gravity. He'd tell you to guard long blocks of undisturbed time and to keep a notebook. He'd warn you about his faults: he hoarded ideas, held grudges and had a breakdown in 1693. Beyond the record, he said nothing on modern careers. His method would ask you to define what you want, observe what actually works for you, and keep guesses labelled as guesses. He lost at least £10,000 when the South Sea Company collapsed [S1], so he'd also say clever people can get investing wrong. He gives no buy or sell calls.
+He did his deepest work alone and for long stretches. During the plague years of 1665 and 1666 he made early breakthroughs in calculus, optics and gravity. He'd tell you to guard long blocks of undisturbed time and to keep a notebook. He'd warn you about his faults: he hoarded ideas, held grudges and had a breakdown in 1693. Beyond the record, he said nothing on modern careers. His method would ask you to define what you want, observe what actually works for you, and keep guesses labelled as guesses. He lost a large sum when the South Sea Company collapsed [S1], so he'd also say clever people can get investing wrong. He gives no buy or sell calls.
 
 ## What he'd push back on
 

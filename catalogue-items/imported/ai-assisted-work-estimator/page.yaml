@@ -35,8 +35,9 @@ how_to_use:
   - Paste your tasks or tickets. Add your team size and how much of the work agents do.
   - Answer any questions your AI asks. It will ask if team size or agent use is missing.
   - Read the 75 and 90 percent figures. Use one of them when you promise a date, not the likely figure.
+  - Before it estimates, your AI should show the speed multiplier it uses for people only, mixed and agent-first work. This skill ships no table of them, so ask for the numbers and change any that do not fit your team.
   - Start with one task to check the result feels right. Then paste a bigger list.
-  - After the first few tasks are done, paste the real times back in and replace the default speed multipliers with your own. The defaults are rough starting assumptions, not measured figures.
+  - After the first few tasks are done, paste the real times back in and replace the default speed multipliers with your own. Keep a list of your calibrated multipliers in your tracker or a sheet, and pick the tracker format when you ask for output. The defaults are rough starting assumptions, not measured figures.
 output_sample:
   input:
     - The tasks or tickets to estimate

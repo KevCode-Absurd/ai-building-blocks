@@ -84,6 +84,8 @@ output_shape: |
   1. <question>
   MISSING
   <lines>
+  CHECKS MISSED
+  <one line per check missed, or none>
 
 tweaks:
   - what: "Full text"

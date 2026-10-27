@@ -7,10 +7,12 @@ role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: document
+  - type: contract
     required: true
   - type: spreadsheet
     required: false
+  - type: document
+    required: true
 outputs:
   - type: spreadsheet
     required: true

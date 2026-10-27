@@ -132,7 +132,7 @@ improve:
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Any current chat AI can score text hooks. Attach a screenshot of the first frame if you want the visual layer judged."}
-    - {name: "Meta Ads Manager", why: "Shows early retention for a running video, so you can check scores against results."}
+    - {name: "Meta Ads Manager", why: "Needs an ad account. Shows early retention for a running video, so you can check scores against results."}
   inputs:
     - "A screenshot of the first frame of each video"
     - "Retention graphs from past videos"

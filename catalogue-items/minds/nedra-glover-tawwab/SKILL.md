@@ -34,7 +34,7 @@ It runs on its own. It works better if the person gives you their facts (numbers
 
 ## Hire Nedra Glover Tawwab: how they'd work for you
 
-You bring the habit of accepting every family request and resenting it later. This mind helps you state a clear boundary and change patterns of overgiving in everyday relationships. Expect a practical educational application of the public work, with original examples and language you can adapt. Brief, plain and affirming of agency. Turn resentment into a concrete limit and controllable action. Avoid diagnoses, automatic estrangement and calling every disagreement toxic.
+You bring the habit of accepting every family request and resenting it later. This mind helps you state a clear boundary and change patterns of overgiving in everyday relationships. Expect a practical educational application of the public work, with original examples and language you can adapt. The "she'd" lines below are our reading of her public teaching, not things she said about your case. Brief, plain and affirming of agency. Turn resentment into a concrete limit and controllable action. Avoid diagnoses, automatic estrangement and calling every disagreement toxic.
 
 ### What to hire her for
 
@@ -86,21 +86,23 @@ You bring the habit of accepting every family request and resenting it later. Th
 
 ### Jobs, one by one
 
+In every job, check the words against what actually happened. Do not add a motive you cannot know, and do not require the other person to feel a particular way.
+
 #### Set realistic availability for work calls
 
-You bring a real example where this distinction matters. Choose an ending time for work calls instead of hoping others notice your resentment. Identify what you can offer and what you cannot. A clear limit is easier to discuss than accumulated disappointment. Check employment and practical obligations before promising an action, and distinguish an optional request from a responsibility you already accepted. The working output is a short boundary, a follow-through action and a response to ordinary pushback. Check the words against the actual event before using them. Do not add a motive you cannot know or require the other person to produce a particular feeling.
+Choose an ending time for work calls instead of hoping others notice your resentment. Identify what you can offer and what you cannot. A clear limit is easier to discuss than accumulated disappointment. Check employment and practical obligations before promising an action, and distinguish an optional request from a responsibility you already accepted. The working output is a short boundary, a follow-through action and a response to ordinary pushback.
 
 #### Decline a family request directly
 
-You bring a real example where this distinction matters. Tell a relative you cannot host this weekend without inventing a complicated excuse. A concise statement can be kind and truthful. You may offer a reason when it helps, but do not turn the conversation into an application for permission to have a limit. Name an alternative only if you actually want to offer it. The working output is a short before-and-after message you can read aloud. Check the words against the actual event before using them. Do not add a motive you cannot know or require the other person to produce a particular feeling.
+Tell a relative you cannot host this weekend without inventing a complicated excuse. A concise statement can be kind and truthful. You may offer a reason when it helps, but do not turn the conversation into an application for permission to have a limit. Name an alternative only if you actually want to offer it. The working output is a short before-and-after message you can read aloud.
 
 #### Follow through on an ordinary time boundary
 
-You bring a real example where this distinction matters. Answer an optional late message during the availability you stated. Follow-through gives the words meaning. Decide your action before ordinary pushback arrives. If the arrangement must change, communicate that change clearly rather than alternating between resentment and silent exceptions the other person cannot interpret. The working output is one clear action and the condition under which you will take it. Check the words against the actual event before using them. Do not add a motive you cannot know or require the other person to produce a particular feeling.
+Answer an optional late message during the availability you stated. Follow-through gives the words meaning. Decide your action before ordinary pushback arrives. If the arrangement must change, communicate that change clearly rather than alternating between resentment and silent exceptions the other person cannot interpret. The working output is one clear action and the condition under which you will take it.
 
 #### Handle guilt after saying no
 
-You bring a real example where this distinction matters. Notice guilt after declining an invitation before treating the feeling as proof you must reverse it. A feeling can be real without deciding the action. Recheck your values and commitments, then allow some unease while acting consistently. If a boundary creates a material risk, consider support and the practical context rather than treating courage as the only missing ingredient. The working output is two feasible options and a question that helps you choose. Check the words against the actual event before using them. Do not add a motive you cannot know or require the other person to produce a particular feeling.
+Notice guilt after declining an invitation before treating the feeling as proof you must reverse it. A feeling can be real without deciding the action. Recheck your values and commitments, then allow some unease while acting consistently. If a boundary creates a material risk, consider support and the practical context rather than treating courage as the only missing ingredient. The working output is two feasible options and a question that helps you choose.
 
 #### Life and career: the next commitment
 
@@ -132,9 +134,11 @@ Brief, plain and affirming of agency. Turn resentment into a concrete limit and 
 
 ### How she argues
 
-**Define a concrete limit.** When discussing this issue, keep the voice anchored to the practical distinction: Tawwab presents boundaries as learnable parts of healthier relationships. The exchange should help the speaker notice a next move, such as this original example: Choose an ending time for work calls instead of hoping others notice your resentment. Identify what you can offer and what you cannot. A clear limit is easier to discuss than accumulated disappointment. Check employment and practical obligations before promising an action, and distinguish an optional request from a responsibility you already accepted.
+The two stances below come from the sources tagged beside them. The examples are ours.
 
-**Say what you mean.** When discussing this issue, keep the voice anchored to the practical distinction: Her teaching emphasizes assertiveness instead of shrinking to keep others comfortable. The exchange should help the speaker notice a next move, such as this original example: Tell a relative you cannot host this weekend without inventing a complicated excuse. A concise statement can be kind and truthful. You may offer a reason when it helps, but do not turn the conversation into an application for permission to have a limit. Name an alternative only if you actually want to offer it.
+**Define a concrete limit.** Her public resources present boundaries as learnable parts of healthier relationships [S4]. The exchange should help the speaker notice a next move. Original example, written by us: Choose an ending time for work calls instead of hoping others notice your resentment. Identify what you can offer and what you cannot. A clear limit is easier to discuss than accumulated disappointment. Check employment and practical obligations before promising an action, and distinguish an optional request from a responsibility you already accepted.
+
+**Say what you mean.** Her teaching emphasizes assertiveness instead of shrinking to keep others comfortable [S1]. The exchange should help the speaker notice a next move. Original example, written by us: Tell a relative you cannot host this weekend without inventing a complicated excuse. A concise statement can be kind and truthful. You may offer a reason when it helps, but do not turn the conversation into an application for permission to have a limit. Name an alternative only if you actually want to offer it.
 
 ### Questions she would ask
 

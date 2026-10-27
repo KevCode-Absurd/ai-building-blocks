@@ -126,7 +126,7 @@ If missing, ask once, then infer reasonable defaults and continue:
 - **ICP description** — pull from `product-marketing.md` if present
 - **Target count** — default 25 for SaaS / B2B, 15 for Local SMB
 - **Geography** (essential for Local SMB; useful for B2B; less critical for SaaS)
-- **Tools the user has access to** — Apollo? Clay? ZoomInfo? Hunter? Truelist? Defaults to what's free + browser
+- **Tools the user has access to** — Apollo? Clay? ZoomInfo? Hunter? Truelist? Defaults to what's free + browser. Email verification needs a verifier such as Truelist or Hunter (an account or API key, which may cost money). Without one, set `email_status` to `unverified` for every email and say so at the top of the lead sheet. Never call a contact verified when no verifier was run.
 - **Output format** — chat table (default) or CSV
 - **Buying signal preference** — what triggers should they prioritize? (funding rounds, hiring, recent move, etc.)
 
@@ -142,21 +142,21 @@ For multi-provider lookups, cache reuse, and per-credit budgets, load [the enric
 
 Full breakdown in [references/data-sources.md](references/data-sources.md). Quick picks:
 
-| If the user has access to... | Use it for |
-|------------------------------|------------|
-| **Apollo** | B2B / SaaS firmographic + contact discovery |
-| **Clay** | Multi-source enrichment, waterfall lookups, custom scoring |
-| **FullEnrich or LeadMagic** | Waterfall email and phone enrichment through one API |
-| **TheirStack** | Hiring signals and tech stacks from job posts |
-| **ZoomInfo** | Enterprise B2B contact + intent data |
-| **Hunter or Snov** | Email pattern guessing and verification |
-| **Truelist** | Email deliverability validation (before adding to outreach list) |
-| **LinkedIn Sales Navigator** | Decision-maker mapping (manual, no scraping) |
-| **BuiltWith / Wappalyzer** | Tech stack qualification (SaaS branch) |
-| **Crunchbase** | Funding signals (SaaS branch) |
-| **GitHub** | Stargazers / forks of competitor or adjacent repos (dev-tool SaaS branch) |
-| **Google Maps + browser** | Local SMB discovery |
-| **Firecrawl / Browserbase** | Programmatic extraction from individual prospect websites — never from platforms |
+| If the user has access to... | Use it for | Cost |
+|------------------------------|------------|------|
+| **Apollo** | B2B / SaaS firmographic + contact discovery | account needed; may cost money |
+| **Clay** | Multi-source enrichment, waterfall lookups, custom scoring | paid account |
+| **FullEnrich or LeadMagic** | Waterfall email and phone enrichment through one API | paid API key |
+| **TheirStack** | Hiring signals and tech stacks from job posts | account or API key; may cost money |
+| **ZoomInfo** | Enterprise B2B contact + intent data | paid account |
+| **Hunter or Snov** | Email pattern guessing and verification | account or API key; may cost money |
+| **Truelist** | Email deliverability validation (before adding to outreach list) | account or API key; may cost money |
+| **LinkedIn Sales Navigator** | Decision-maker mapping (manual, no scraping) | paid account |
+| **BuiltWith / Wappalyzer** | Tech stack qualification (SaaS branch) | free lookups are limited; full use may cost money |
+| **Crunchbase** | Funding signals (SaaS branch) | free lookups are limited; full use may cost money |
+| **GitHub** | Stargazers / forks of competitor or adjacent repos (dev-tool SaaS branch) | free |
+| **Google Maps + browser** | Local SMB discovery | free, browser only; follow Google Maps terms |
+| **Firecrawl / Browserbase** | Programmatic extraction from individual prospect websites — never from platforms | account or API key; may cost money |
 
 **If the user has no enrichment tools**: lean on browser-assisted research with public sources — company website, About page, LinkedIn company page, news mentions. Slower but works.
 
@@ -199,6 +199,7 @@ score,business,category,area,distance_km,website_status,website_url,social_urls,
 - **Top outreach targets**: top 3–5 hot leads with one-sentence outreach rationale each
 - **Search parameters**: branch, ICP, location/radius, target count, date generated
 - **Open questions**: anything you couldn't verify and the user should look at
+- **Next step**: the list goes to the cold-email skill for outreach. Before anything is sent, check that every email is verified (or removed), that each contact has a source URL and date, and that the sender can meet GDPR, CAN-SPAM or CASL rules.
 
 ---
 

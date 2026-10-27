@@ -64,9 +64,9 @@ The claim line. The demonstration, what it needs, and any stand-in with its labe
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Ad script read-aloud editor](https://useaiblocks.com/skills/ad-script-read-aloud-editor). It takes the script.
+- The [Video ad script line checker](https://useaiblocks.com/skills/video-ad-script-line-checker). It takes the script.
 - **Check it before it goes live** with the [Ad distraction checker](https://useaiblocks.com/skills/ad-distraction-checker). It takes the script.
 - The [Silent video story reviewer](https://useaiblocks.com/skills/voice-over-stripping-test). It takes the script.
-- The [Ad script video format picker](https://useaiblocks.com/skills/video-ad-format-picker). It takes the script.
 - **Check it before it goes live** with the [Sound-off commercial checker](https://useaiblocks.com/skills/sound-off-commercial-checker). It takes the script.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

@@ -9,7 +9,7 @@ subhead: See which of your products sell more or less when price changes, and wh
 explain: |
   See which of your products sell more or less when price changes, and which price points are worth testing. It reads your Shopify store data and changes nothing.
 
-  You connect an authenticated Shopify CLI session with permission to read orders and products. The skill pulls products, variants and orders for a lookback window, 90 days by default. It compares price against sales speed and groups the results by product type, vendor or collection. The output flags price-sensitive items and suggests price points to try. It is read-only, so no price in your shop is edited.
+  You connect an authenticated Shopify CLI session with permission to read orders and products. The skill pulls products, variants and orders for a lookback window, 90 days by default. It compares price against sales speed and groups the results by product type, vendor or collection. The output flags price-sensitive items and suggests price points to try. It is read-only, so no price in your shop is edited. It reads order line items and prices, not customer details. The results are patterns in past sales, not proof that a price change caused a sales change.
 when:
   - You suspect some products are priced too low.
   - You want to know which items drop in sales when raised.
@@ -56,4 +56,4 @@ output_sample:
       contains: How many products are on sale, the average discount and how sale items sell against full-price peers.
     - name: price_elasticity CSV file
       contains: One row per product with price, sales speed, revenue per day, rank in group, a sensitivity flag and a recommendation.
-next: []
+next: [price-test-planner]

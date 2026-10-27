@@ -9,18 +9,19 @@ explain: |-
 
   An uncanny hook is the one odd detail that changes what the scene means, such as a figure far too large for the room, a watcher who should not be there, or a calm person in the middle of chaos.
 when:
-  - You need cinematic uncanny manga/OVA image prompts.
-  - You want a clear draft and checks from the material you already have.
+  - You have a strange scene in mind and want a prompt for a cinematic anime still.
+  - You want a visual hook that makes people look twice.
 not_for:
   - "You want a photo-style image: write a plain photo prompt, or ask a photographer or stock library."
   - "You want a video clip or motion: use a video tool and write a separate motion and timing brief."
   - "You need a logo, a poster with exact text or a named living artist's style: hire a designer."
 you_give:
-  - brief
-  - "Optional: reference set"
+  - Your strange scene idea, in a sentence or two
+  - Reference notes or a style you like (optional)
 you_get:
-  - image prompt
-  - Missing inputs and steps that still need to run
+  - One image prompt you can paste into an image tool
+  - Two or three variation ideas
+  - Anything missing, and the checks that did not run
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text.
   - Type your scene idea. Add reference notes or a style if you have them (optional).
@@ -43,10 +44,10 @@ output_sample:
       contains: Changes to camera, mood or setting you can try for new versions.
 how_it_works:
   - title: Read the brief
-    text: Use the user idea immediately. Offer a small set of visual lanes only if they need direction; do not require artist selection before drafting.
+    text: Starts from your scene idea straight away. It offers a few visual lanes only if you want direction.
   - title: Build the result
-    text: "Create one uncanny visual hook that changes the scene meaning: scale mismatch, impossible observer position, ordinary behavior amid strange events, or uneasy empty space. Preserve the main user concept."
+    text: "Adds one odd detail that changes what the scene means, such as a figure too big for the room or a watcher who should not be there. Your main idea stays."
   - title: Check and hand off
-    text: Return one copy-ready image prompt plus optional variation axes. A video clip requires a separate motion/timing handoff rather than pretending a still prompt is a complete film.
+    text: Gives you one prompt to paste into an image tool, plus variation ideas. Claude cannot draw the picture. ChatGPT, Gemini or Higgsfield (a paid account) can.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

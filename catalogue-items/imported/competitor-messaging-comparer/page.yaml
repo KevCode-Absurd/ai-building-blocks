@@ -9,7 +9,7 @@ subhead: A side by side look at how your rivals describe themselves, what conten
 explain: |
   A side by side look at how your rivals describe themselves, what content they publish and where they have gone quiet. You can see which claims are crowded and which message nobody owns.
 
-  You name the competitors and, if you wish, say what you sell and what makes you different. Claude reads their home pages, product and pricing pages, blogs, social profiles, recent news and review themes. It can add job postings as a hint of direction. It compares positioning, messaging, content mix, recent launches and pricing where public. The brief ends with gaps you can use. It reads only public web pages and needs web search to run. Paid SEO, social listening or alert tools are optional extras. This is Anthropic's competitive-brief skill with a plainer name.
+  You name the competitors and, if you wish, say what you sell and what makes you different. Claude reads their home pages, product and pricing pages, blogs, social profiles, recent news and review themes. It can add job postings as a hint of direction. It compares positioning, messaging, content mix, recent launches and pricing where public. The brief ends with gaps you can use. It reads only public web pages and needs web search to run. Paid SEO, social listening or alert tools are optional extras. Before it reads any page, it checks the site's terms and does not log in or get past a paywall. This is Anthropic's competitive-brief skill with a plainer name, used under the Apache 2.0 licence.
 when:
   - You are rewriting your homepage and want to stand out from rivals.
   - A competitor just launched and you need to know how they pitch it.
@@ -31,7 +31,7 @@ you_get:
   - A list of gaps to use
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Pick a chat that can search the web, as the skill needs it to read rival pages.
-  - Paste the skill text into the chat.
+  - Paste the skill text into the chat. Check each rival site's terms first. Do not give the AI logins and do not ask it to get past a paywall.
   - Type the names of your competitors. Add what you sell and how you differ if you like (optional).
   - Say which areas matter most, such as messaging or pricing (optional). If you skip this, it covers all areas.
   - Check the sources for any claim you plan to act on. Treat figures without a source as unconfirmed.

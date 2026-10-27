@@ -205,7 +205,6 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          persist-credentials: false
 
       - uses: actions/setup-node@v4
         with:
@@ -249,12 +248,12 @@ npm install --save-dev standard-version
     "commit": false,
     "tag": false
   },
-  "commitUrlFormat": "https://github.com/owner/repo/commit/{{hash}}",
-  "compareUrlFormat": "https://github.com/owner/repo/compare/{{previousTag}}...{{currentTag}}"
+  "commitUrlFormat": "https://github.com/[OWNER]/[REPO]/commit/{{hash}}",
+  "compareUrlFormat": "https://github.com/[OWNER]/[REPO]/compare/{{previousTag}}...{{currentTag}}"
 }
 ```
 
-Replace `owner/repo` in the two links above, and in the git-cliff config below, with your own GitHub owner and repo name.
+Replace `[OWNER]/[REPO]` in the two links above, and in the git-cliff config below, with your own GitHub owner and repo name.
 
 ### Usage
 
@@ -339,7 +338,7 @@ trim = true
 conventional_commits = true
 filter_unconventional = true
 commit_preprocessors = [
-    { pattern = '\((\w+)\s#([0-9]+)\)', replace = "([#${2}](https://github.com/owner/repo/issues/${2}))" },
+    { pattern = '\((\w+)\s#([0-9]+)\)', replace = "([#${2}](https://github.com/[OWNER]/[REPO]/issues/${2}))" },
 ]
 commit_parsers = [
     { message = "^feat", group = "Features" },

@@ -8,11 +8,12 @@ role: make
 job: ops
 level: expert
 inputs:
-  - type: brief
+  - type: question
     required: true
 outputs:
   - type: document
   - type: image
+  - type: code_change
 uses: []
 origin: imported
 source:

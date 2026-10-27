@@ -36,7 +36,10 @@ how_to_use:
   - Add your expected savings, fees and close date. If you skip something, your AI should ask or mark it missing.
   - Check that all amounts are in rupees, in lakh or crore, and that years run April to March.
   - Read the year one result and the breakeven savings first. Then look at the sensitivity tables.
-  - Use the one-page summary in your pitch book or deal discussion.
+  - Use the one-page summary in your pitch book or deal discussion. First check the numbers and tax and legal points with your deal lawyer or chartered accountant. This is a model, not financial or legal advice. To value the target on its own, use the DCF model builder for India.
+next:
+  - dcf-model-builder-for-india
+  - valuation-method-comparer
 output_sample:
   input:
     - "Buyer details: share price, share count, earnings, debt and cash"

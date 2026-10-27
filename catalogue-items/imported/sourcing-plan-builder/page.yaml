@@ -10,6 +10,15 @@ explain: |
   A full sourcing plan for one spend category, with supplier list, quote request, scoring rules and negotiation tactics. Name the category, its yearly spend, how important it is and who supplies it today.
 
   The skill follows seven steps: profile the category, study the supply market, set the strategy, find suppliers, pick one, negotiate, then roll out. It places the category on the Kraljic grid to decide how hard to push suppliers. It lists ways to save such as bundling volume, changing specs and adding competition, and it covers should-cost thinking.
+terms:
+  - term: Kraljic grid
+    meaning: A four-box chart that sorts what you buy by how much it costs you and how risky the supply is.
+  - term: RFx
+    meaning: A request to suppliers for a quote or a proposal.
+  - term: should-cost
+    meaning: What a product ought to cost if you add up the supplier's materials, labor and profit.
+  - term: value levers
+    meaning: Ways to lower what you pay, such as bundling volume or changing the spec.
 when:
   - You are about to re-bid a big category such as packaging or software.
   - You want to know how much pull you have with your suppliers.
@@ -32,7 +41,7 @@ you_get:
   - Negotiation tactics
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions. You do not need code running or any files. The Python blocks in the skill are optional reference code.
-  - Tell your AI the spend category, yearly spend and volume, current suppliers and contract terms.
+  - "Gather first: spend per supplier for the category, units bought per year, and contract end dates. Then tell your AI the spend category, yearly spend and volume, current suppliers and contract terms."
   - Add your goals, such as cost, risk or quality (optional).
   - Read the Kraljic position first. It sets how hard to push, so check it fits what you know.
   - Replace any sample numbers or rates in the plan with your own figures before you share it. The percentages and prices in the skill's code are placeholders, not benchmarks.

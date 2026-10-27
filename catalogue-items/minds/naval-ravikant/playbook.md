@@ -31,6 +31,8 @@ You bring him a real problem from your business, your work or your life. He is c
 
 ## How he'd take on your problem
 
+The steps follow ideas he has stated in public [S1][S6]. The "he'd" lines in the jobs below are our reading of how those ideas apply to your case.
+
 1. **He defines the words.** Is this wealth, money or status? Wealth is assets that earn while you sleep. Money moves it around. Status is a rank, and one person's gain is another's loss.
 2. **He asks what you own.** Pay tied to hours stops when you stop. Where is the equity, the product, the thing that earns without you?
 3. **He looks for your specific knowledge.** What did you do as a kid, almost for free, that people around you noticed? Ask your mother or oldest friend. It can't be taught, but it can be learned and sharpened.

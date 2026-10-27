@@ -10,6 +10,8 @@ explain: |
   One clear MATLAB path for working with files too big for memory, not a menu of options. Describe your data: CSV, Parquet, text or spreadsheet files, how many and how big, and what you want to do with them.
 
   The AI runs a pre-flight check and follows a decision flowchart. Continuous data across files points to a datastore with tall arrays. Files to process one at a time point to a datastore with transform. Parquet can be handled per row group. It also covers running reads in parallel, when mapreduce is actually needed, formats with no built-in datastore, and how to write a custom datastore. You need MATLAB.
+
+  Licence: this is a copy of MathWorks' public skill matlab-choose-big-data-solution, under BSD 2-Clause (see LICENSE.md). The skill file also links MathWorks' own reuse licence, which means you may use it only with MathWorks products such as MATLAB.
 when:
   - readtable crashes with an out-of-memory error.
   - You have a folder of two hundred CSV files to treat as one dataset.
@@ -34,6 +36,7 @@ how_to_use:
   - Ask your AI to follow this skill. Include the files and details listed on this page.
   - It works best when your AI can run MATLAB.
   - Run the code in MATLAB on a small slice of your files first and check the result. Then run it on everything. For reading and writing files, pair it with the Data file reader and writer or the DuckDB big file query helper.
+next: [data-file-reader-and-writer, duckdb-big-file-query-helper]
 output_sample:
   input:
     - File type, such as CSV, Parquet, text or spreadsheet
@@ -42,7 +45,10 @@ output_sample:
     - Your MATLAB setup and memory (optional)
   prerequisites:
     - MATLAB, ideally with an AI that can run it
-    - Parallel Computing Toolbox, only if you want parallel reads
+    - Parallel Computing Toolbox (paid add-on), only if you want parallel reads
+    - Database Toolbox (paid add-on), only for the DuckDB path
+    - Vehicle Network Toolbox (paid add-on), only for MDF files
+    - MATLAB Parallel Server and a Hadoop or Spark cluster, only for the mapreduce path
     - MATLAB is a paid MathWorks product, so you need a licence
     - Use it only with MathWorks products such as MATLAB, as the licence says (BSD 2-Clause plus MathWorks reuse terms)
   output:

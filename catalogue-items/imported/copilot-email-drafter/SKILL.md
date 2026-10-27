@@ -26,7 +26,7 @@ Before drafting, collect:
 3. **Key points** — what needs to be communicated?
 4. **Relationship context** — use WorkIQ to check prior email history with the recipient if available
 
-If the user provides all of these upfront, proceed directly. Otherwise, ask clarifying questions (max 3).
+If the user pastes a document the email is about (such as a finished review), take the key points from it. If the user pastes sample emails, use them for the tone check. If the user provides all of these upfront, proceed directly. Otherwise, ask clarifying questions (max 3).
 
 ### Step 2 — Analyze Tone
 

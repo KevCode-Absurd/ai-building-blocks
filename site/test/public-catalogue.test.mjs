@@ -42,13 +42,13 @@ const rejects = (run, code, status) => assert.rejects(run, e => e instanceof Pub
 
 test('public catalogue discovery and retrieval preserve exact instructions, resources and governance', async () => {
   const { service, requests } = fixture();
-  const search = await service.callTool('search_library', { query: 'writer', limit: 1 });
+  const search = await service.callTool('search_library', { query: 'writer', limit: 1, response_format: 'detailed' });
   assert.equal(search.items[0].slug, 'sample');
   assert.equal(search.items[0].capabilities.status, 'NOT_REVIEWED');
   assert.equal(search.items[0].type, 'skill'); assert.equal(search.items[0].inputs[1].required, false);
-  const skill = await service.callTool('get_skill', { slug: 'sample', revision_sha256: revision });
+  const skill = await service.callTool('get_skill', { slug: 'sample', revision_sha256: revision, response_format: 'detailed' });
   assert.match(skill.instructions, /Read \[guide\]/); assert.equal(skill.resources[0].path, 'references/guide.md');
-  const flow = await service.callTool('get_workflow', { slug: 'sample-flow' });
+  const flow = await service.callTool('get_workflow', { slug: 'sample-flow', response_format: 'detailed' });
   assert.equal(flow.governing_skill.slug, 'sample-flow'); assert.deepEqual(flow.steps[1].depends_on, ['s1']);
   assert.equal(flow.steps[1].notes, 'Full checker step note'); assert.equal(flow.provenance.source.commit, 'source-commit');
   await rejects(() => service.callTool('get_skill', { slug: 'sample-flow' }), 'workflow_requires_governance');
@@ -63,7 +63,7 @@ test('resources are revision bound, safe, Unicode chunked and hash checked', asy
   assert.match(second.content, /^ guide/);
   await rejects(() => service.callTool('get_resource', { slug: 'sample', path: '../checker/SKILL.md', revision_sha256: revision }), 'invalid_resource_path');
   await rejects(() => service.callTool('get_resource', { slug: 'sample', path: 'SKILL.md', revision_sha256: 'b'.repeat(64) }), 'stale_revision', 409);
-  await rejects(() => fixture({ corrupt: true }).service.callTool('get_skill', { slug: 'sample' }), 'integrity_mismatch', 503);
+  await rejects(() => fixture({ corrupt: true }).service.callTool('get_skill', { slug: 'sample', response_format: 'detailed' }), 'integrity_mismatch', 503);
 });
 
 test('large resources and archives return complete host-download descriptors without loading oversized bytes', async () => {

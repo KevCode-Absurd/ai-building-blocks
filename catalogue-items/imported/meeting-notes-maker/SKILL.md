@@ -93,6 +93,8 @@ No UI changes needed.
 
 ### Example 2: Structured Summary with Action Items
 
+AI Blocks note: this shows the layout only. The transcript above is cut short, so later topics (the mobile onboarding item) and the dates, figures and sprint names in this summary stand for details that would come from the rest of a real recording. They are shown here as [bracketed placeholders]. Write only what the transcript says. If a date, number or owner was not said, write [unassigned] or [TBD].
+
 **Output (summary for the same meeting):**
 
 ~~~markdown
@@ -105,33 +107,28 @@ onboarding experiment. The team agreed to split the checkout work across two
 sprints and prioritize the analytics instrumentation for immediate deployment.
 
 ### Key Discussion Points
-- **Checkout flow redesign:** Beta feedback indicates 35% drop-off at step 2.
+- **Checkout flow redesign:** Beta feedback shows drop-off at step 2.
   Dana presented a single-page layout. The team agreed on a phased rollout:
   frontend this sprint, backend validation next sprint.
 - **Analytics event tracking:** Conversion events are missing on the pricing
-  page. No design changes required. Estimated at 3 story points.
-- **Mobile onboarding experiment:** A/B test results not yet significant.
-  The team will extend the experiment by one week.
+  page. No design changes required.
+- **[Later topic from the full recording]:** [What was said about it, in the speakers' own terms.]
 
 ### Decisions
-1. Checkout redesign split: frontend in Sprint 14, backend in Sprint 15.
+1. Checkout redesign split: frontend this sprint, backend validation in the next one.
 2. Client-side validation will serve as a temporary stopgap.
-3. Analytics instrumentation ships this sprint with no design dependency.
-4. Mobile onboarding experiment extended by one week.
+3. Analytics instrumentation: no design changes needed.
+4. [Any further decision, only if it was said.]
 
 ### Action Items
 | Owner | Task                                              | Deadline  |
 |-------|---------------------------------------------------|-----------|
-| Priya | Create Jira tickets for checkout frontend work    | Feb 10    |
-| Dana  | Share Figma link for single-page checkout mockup  | Feb 10    |
-| Priya | Estimate backend validation effort for Sprint 15  | Feb 12    |
-| James | Write analytics event spec for pricing page       | Feb 11    |
-| James | Schedule decision review for mobile onboarding    | Feb 17    |
+| Priya | Create tickets for the checkout work              | [DATE or TBD] |
+| Dana  | Share Figma link for single-page checkout mockup  | [DATE or TBD] |
+| [owner] | [Any further task, only if it was said]         | [DATE or TBD] |
 
 ### Follow-ups
-- Priya to sync with the backend team on API contract changes.
-- Dana to run a usability test on the single-page layout with 3 users.
-- James to share the A/B test dashboard link in Slack for monitoring.
+- [Follow-up and who owns it, only if it was said in the meeting.]
 ~~~
 
 ## Best Practices

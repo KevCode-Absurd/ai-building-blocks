@@ -13,9 +13,9 @@ when:
   - You want minutes sent within the hour.
 not_for:
   - "You need formal board minutes: use the Board minutes drafter."
-  - "You want a full set of minutes with every check, or a running list of open actions: use the Meeting minutes, open actions and next agenda."
+  - "You want a running list of open actions across meetings: use the Weekly meeting actions keeper."
   - "You need a word-for-word record of the meeting: keep the transcript itself, because minutes leave out most remarks."
-  - "You have a transcript and want the point of the meeting first, then the detail: use the Meeting minutes writer."
+  - "You want the full checklist version of minutes: use the Meeting minutes writer."
 you_give:
   - Rough notes or a transcript
   - Date and who attended (optional)
@@ -28,7 +28,8 @@ how_to_use:
   - Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it.
   - Under it, paste your rough notes.
   - Send it and read the result.
-  - Send the minutes the same day, while people remember.
+  - Check every name and date against your own memory, then send the minutes to the attendees the same day.
+  - Put the actions in your tracker so someone checks them at the next meeting.
 output_sample:
   input:
     - Your rough notes or a transcript of the meeting

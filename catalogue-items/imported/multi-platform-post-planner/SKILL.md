@@ -11,6 +11,8 @@ metadata:
 
 This skill enables an AI agent to create and manage social media content across major platforms — Twitter/X, LinkedIn, Instagram, and Facebook. The agent adapts messaging to each platform's unique format constraints, audience expectations, and algorithmic preferences. It handles copy writing, hashtag strategy, scheduling, and content calendar creation to maintain a consistent and engaging social media presence.
 
+If you have a content plan from an earlier step (such as a give-before-ask sequence), use it to decide what each post must do. If you have a brand brain, use it for the voice.
+
 ## Workflow
 
 1. **Define the campaign objective and audience.** Clarify the goal for the social content: brand awareness, engagement, lead generation, event promotion, or product launch. Identify the target audience segment and which platforms they are most active on. A B2B product launch prioritizes LinkedIn and Twitter/X, while a D2C brand focuses on Instagram and Facebook.
@@ -19,9 +21,9 @@ This skill enables an AI agent to create and manage social media content across 
 
 3. **Craft engagement hooks and CTAs.** Open every post with an attention-grabbing first line — a surprising statistic, a bold claim, or a direct question. The first line is the only part visible before "see more" on most platforms. End with a clear call-to-action: comment, share, click link, or tag someone. Use line breaks and whitespace to improve readability on mobile.
 
-4. **Build a hashtag and mention strategy.** Research trending and niche hashtags relevant to the content topic. On Twitter/X, use 1–3 targeted hashtags inline. On LinkedIn, place 3–5 hashtags at the end of the post. On Instagram, use a mix of high-volume, medium and niche hashtags (rough guides, not fixed thresholds) for maximum reach. Tag relevant accounts, partners, or influencers to extend organic visibility.
+4. **Build a hashtag and mention strategy.** Suggest trending and niche hashtags relevant to the content topic. A plain chat cannot see live trends, so check every hashtag on the platform yourself before you use it. On Twitter/X, use 1–3 targeted hashtags inline. On LinkedIn, place 3–5 hashtags at the end of the post. On Instagram, use a mix of high-volume, medium and niche hashtags (rough guides, not fixed thresholds) for maximum reach. Tag relevant accounts, partners, or influencers to extend organic visibility.
 
-5. **Schedule posts at optimal times.** Use platform engagement data to determine the best posting windows. General starting guesses, not measured for your audience. Check them against your own analytics before you schedule. Twitter/X peaks at 8–10 AM and 12–1 PM weekdays; LinkedIn performs best Tuesday–Thursday 7–9 AM; Instagram engagement peaks Wednesday and Friday 11 AM–1 PM; Facebook sees highest reach Tuesday–Friday 9 AM–12 PM. Adjust for the target audience's timezone and test alternative windows quarterly.
+5. **Schedule posts at optimal times.** Use platform engagement data to determine the best posting windows. General starting guesses, not measured for your audience. Check them against your own analytics before you schedule. Twitter/X peaks at 8–10 AM and 12–1 PM weekdays; LinkedIn performs best Tuesday–Thursday 7–9 AM; Instagram engagement peaks Wednesday and Friday 11 AM–1 PM; Facebook sees highest reach Tuesday–Friday 9 AM–12 PM. Adjust for the target audience's timezone and test alternative windows quarterly. Platform timing advice and hashtag limits change often, so treat the numbers in steps 2, 4 and 5 as a rough guide (last reviewed October 2026) and re-check them every few months.
 
 6. **Create a weekly content calendar.** Plan 5–7 days of posts in advance, balancing content types: educational (40%), engaging/entertaining (30%), promotional (20%), and community/UGC (10%). Assign each post a platform, publish time, copy, media asset requirements, and campaign tag for tracking.
 
@@ -33,21 +35,21 @@ Provide the agent with the campaign goal, key message, target platforms, and any
 
 ## Examples
 
-> Both examples are made-up samples that show the layout. The offers, numbers and results in them are not real. Use only your own facts.
+> Both examples are made-up samples that show the layout. The product, features, offers, numbers and results in them are not real. Replace every bracketed item and every number, client, feature and result with your own verified facts before you post.
 
 ### Example 1: Multi-Platform Product Launch Campaign
 
-**Request:** Announce the launch of "FocusFlow," a productivity app for remote workers, across Twitter/X, LinkedIn, and Instagram.
+**Request:** Announce the launch of [PRODUCT NAME], a [type of product] for [your audience], across Twitter/X, LinkedIn, and Instagram.
 
 **Twitter/X (278 characters):**
 ```
 Remote work is amazing — until your focus disappears by 10 AM.
 
-We built FocusFlow to fix that.
+We built [PRODUCT NAME] to fix that.
 
-🎯 Smart time blocking
-📊 Distraction tracking
-⚡ Deep work streaks
+🎯 [Feature 1]
+📊 [Feature 2]
+⚡ [Feature 3]
 
 [Your offer] → [your link]
 
@@ -56,43 +58,41 @@ We built FocusFlow to fix that.
 
 **LinkedIn (642 characters):**
 ```
-After 2 years of remote work, our team noticed a pattern: the hardest part isn't collaboration — it's protecting deep focus time.
+After [NUMBER OF YEARS] of [your real experience], our team noticed a pattern: the hardest part isn't collaboration — it's protecting deep focus time.
 
-So we built FocusFlow.
+So we built [PRODUCT NAME].
 
-It's a lightweight productivity app that helps remote workers:
-→ Block time for deep work automatically
-→ Track and reduce digital distractions
-→ Build streaks that reinforce daily focus habits
+It's [what it is, in your words] that helps [your audience]:
+→ [Real benefit 1]
+→ [Real benefit 2]
+→ [Real benefit 3]
 
 We're opening it up to [your offer].
 
 If you lead a distributed team or struggle with context switching, I'd love your feedback.
 
-Try it here: focusflow.app
+Try it here: [your link]
 
-#ProductLaunch #RemoteWork #Productivity #DeepWork #FocusFlow
+#ProductLaunch #RemoteWork #Productivity
 ```
 
 **Instagram Caption (with image post):**
 ```
 Your focus is your superpower. 🎯
 
-Meet FocusFlow — the app that helps remote workers protect their deep work time and eliminate distractions.
+Meet [PRODUCT NAME] — [one line on what it does for your audience].
 
 ✨ What you get:
-→ Smart time blocking that adapts to your schedule
-→ Real-time distraction tracking
-→ Focus streaks to keep you motivated
+→ [Real benefit 1]
+→ [Real benefit 2]
+→ [Real benefit 3]
 
 Link in bio to get early access ([your offer])
 
 .
 .
 .
-#focusflow #productivitytips #remotework #deepwork #focustime
-#workfromhome #timemanagement #productivityhacks #remoteworklife
-#startuplife #techlaunches #newapp #wfhlife #digitalwellbeing
+[your hashtags, checked on the platform first]
 ```
 
 ### Example 2: Weekly Social Media Content Calendar
@@ -101,13 +101,13 @@ Link in bio to get early access ([your offer])
 
 | Day | Platform | Type | Topic | Post Summary | Time |
 |-----|----------|------|-------|-------------|------|
-| Mon | LinkedIn | Educational | SEO tip | "3 on-page SEO fixes that take 10 minutes and move the needle" | 8:00 AM ET |
-| Mon | Twitter/X | Engagement | Industry poll | "What's the #1 channel driving leads for your B2B in 2025?" (poll) | 12:00 PM ET |
+| Mon | LinkedIn | Educational | SEO tip | "[NUMBER] on-page SEO fixes [your real result]" | 8:00 AM ET |
+| Mon | Twitter/X | Engagement | Industry poll | "What's the #1 channel driving leads for your B2B this year?" (poll) | 12:00 PM ET |
 | Tue | LinkedIn | Case study | Client win | "How we helped [client] [your real result]" | 7:30 AM ET |
-| Tue | Twitter/X | Educational | Thread | "5 LinkedIn ad mistakes we see in every audit (thread)" | 9:00 AM ET |
+| Tue | Twitter/X | Educational | Thread | "[NUMBER] LinkedIn ad mistakes you have seen in real audits (thread)" | 9:00 AM ET |
 | Wed | LinkedIn | Thought leadership | Industry trend | "AI won't replace marketers. Marketers who use AI will." | 8:00 AM ET |
 | Wed | Twitter/X | Engaging | Meme/humor | Relatable marketing meme with commentary | 1:00 PM ET |
-| Thu | LinkedIn | Promotional | Service highlight | "Our Q2 content strategy sprint is open for 3 clients" | 7:30 AM ET |
+| Thu | LinkedIn | Promotional | Service highlight | "Our [QUARTER] content strategy sprint is open for [NUMBER] clients" | 7:30 AM ET |
 | Thu | Twitter/X | Community | Retweet + comment | Amplify a client's post with added insight | 10:00 AM ET |
 | Fri | LinkedIn | Educational | Carousel | "The anatomy of a LinkedIn post that [your real result]" | 8:00 AM ET |
 | Fri | Twitter/X | Engagement | Question | "What's one marketing tool you can't live without? I'll go first:" | 11:00 AM ET |

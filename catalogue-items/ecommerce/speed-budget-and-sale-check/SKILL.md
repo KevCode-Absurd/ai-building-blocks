@@ -21,7 +21,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Plan** with the [WooCommerce speed repair planner](https://useaiblocks.com/skills/self-hosted-store-speed-fixer). Bring audit report, your question.
+1. **Plan** with the [WooCommerce speed repair planner](https://useaiblocks.com/skills/self-hosted-store-speed-fixer). Bring your question, a page speed report (optional), audit report (optional).
 2. This one.
 
 How to start:

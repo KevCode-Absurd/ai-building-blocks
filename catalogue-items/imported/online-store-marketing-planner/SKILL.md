@@ -136,7 +136,7 @@ Create automated customer lifecycle marketing:
 - **Branded campaign:** Target brand keywords, $[X]/day budget
 - **Product campaigns:** Target product keywords, $[Y]/day budget  
 - **Competitor campaigns:** Target competitor keywords, $[Z]/day budget
-- **Smart Shopping campaigns:** Product feed optimization, $[W]/day budget
+- **Shopping and Performance Max campaigns:** Product feed optimization, $[W]/day budget
 
 **Meta Ads Campaign Structure:**
 - **Awareness campaigns:** Video creative, lookalike audiences, $[X]/day
@@ -224,7 +224,7 @@ Create automated customer lifecycle marketing:
 
 **Essential Tracking Implementation:**
 - **Google Analytics 4:** Enhanced ecommerce, custom events, audiences
-- **Facebook Pixel:** Conversion tracking, custom audiences, lookalikes
+- **Meta Pixel and Conversions API:** Conversion tracking, custom audiences, lookalikes
 - **Google Tag Manager:** Centralized tag management and tracking
 - **Shopify Analytics:** Built-in reporting and customer insights
 - **Email platform integration:** Klaviyo/Mailchimp tracking and attribution
@@ -270,6 +270,8 @@ Create automated customer lifecycle marketing:
 - [ ] Optimize for customer lifetime value
 
 ### Projected Results & ROI
+
+Leave every figure in this section blank, or write "not enough data", unless the person gave you real figures to base it on. Never invent a growth rate or a target.
 
 **3-Month Growth Projections:**
 - **Traffic growth:** [X]% increase in monthly sessions

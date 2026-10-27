@@ -9,6 +9,7 @@ level: beginner
 inputs:
   - {type: copy_draft, required: true}
   - {type: voc_reviews, required: true}
+  - {type: policy, required: true}
 outputs:
   - {type: copy_draft}
   - {type: feedback_notes}

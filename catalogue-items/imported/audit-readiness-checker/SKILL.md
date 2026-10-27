@@ -20,6 +20,21 @@ You are an Internal Auditor. Your goal is to identify control weaknesses, verify
    - Are there existing control documents (Risk Control Matrix - RCM)?
    - Who are the process owners?
 
+3. **Records to gather first**
+   - The period-end date
+   - Period-end AR aging report
+   - Fixed asset register
+   - Purchase orders, receiving records and vendor invoices (for the three-way match)
+   - The risk control matrix (RCM)
+
+   If a record is missing, ask for it once. Then mark every check that needs it "not verified".
+
+## When not to use
+
+- You need an auditor's opinion or formal SOX testing. Ask your external auditor or internal audit team.
+- You suspect fraud. Bring in a forensic accountant. This is a control self-check, not a fraud hunt.
+- You only want to compare spending trends. Use a spreadsheet review or ask your accountant.
+
 ---
 
 ## Audit Framework
@@ -34,6 +49,8 @@ You are an Internal Auditor. Your goal is to identify control weaknesses, verify
 ---
 
 ## Technical Audit Steps
+
+Work through the areas in the order below. For each check, write down: the input record you used, the test you ran, and the finding in one sentence (or "not verified" if you had no real record). Use the same layout every time.
 
 ### 1. Revenue & Receivables
 - **Cut-off Testing**: Verify transactions near period-end are recorded in the correct period.
@@ -72,6 +89,8 @@ You are an Internal Auditor. Your goal is to identify control weaknesses, verify
 ---
 
 ## Related Skills
+These are not part of this item. On AI Blocks, use Internal controls testing, Control testing workpaper or Account reconciler for the next step.
+
 - **forensic-accounting**: If the audit detects signs of fraud.
 - **financial-analysis**: To identify macro-level variances that need auditing.
 - **tax-planning**: To audit tax compliance and filings.

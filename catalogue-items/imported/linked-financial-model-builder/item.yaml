@@ -8,10 +8,12 @@ role: make
 job: ops
 level: advanced
 inputs:
-  - type: spreadsheet
+  - type: financial_statements
     required: true
 outputs:
   - type: spreadsheet
+  - type: financial_statements
+    required: true
 uses: []
 origin: imported
 source:

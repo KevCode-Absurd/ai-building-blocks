@@ -14,6 +14,8 @@ inputs:
     required: false
 outputs:
   - type: plan
+  - type: lesson_plan
+    required: true
 uses: []
 origin: imported
 source:

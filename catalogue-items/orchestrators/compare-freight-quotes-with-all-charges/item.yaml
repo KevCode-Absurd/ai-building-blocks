@@ -10,8 +10,6 @@ level: intermediate
 inputs:
   - type: document
     required: true
-  - type: brief
-    required: false
   - type: question
     required: false
 outputs:

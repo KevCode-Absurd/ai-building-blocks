@@ -39,6 +39,7 @@ how_to_use:
   - "Check that every hook is true for your offer. Numbers and proof points in the hook examples are placeholders: use only results you can prove. Treat the fatigue numbers as rules of thumb and compare them to your own account."
   - Make the first batch of ads and follow the test calendar.
   - Log each ad's hook, body, call to action and format in one sheet, so you can read results against the naming scheme. Bring the results to your ad platform's reports or an analyst.
+  - After one refresh cycle, review the fatigue watch against your own numbers, retire tired ads and ship the next batch of variations.
 output_sample:
   input:
     - Your offer, in a few lines

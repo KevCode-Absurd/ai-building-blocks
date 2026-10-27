@@ -160,7 +160,7 @@ This is the core positioning challenge of crossing the chasm. Your positioning m
 "The future of software development. Our AI fundamentally reimagines code review, eliminating bottlenecks and enabling 10x developer velocity. Leading engineering teams at innovative companies are already transforming their development workflows."
 
 **Pragmatist positioning (for early majority):**
-"For engineering teams spending 15+ hours per week on code review, our tool is an automated code review assistant that catches 80% of common issues before human review. Unlike manual-only code review, our tool reduces review cycle time by 40% and is used by 150 engineering teams including three Fortune 500 companies."
+"For engineering teams spending [HOURS] hours per week on code review, our tool is an automated code review assistant that catches [PERCENT]% of common issues before human review. Unlike manual-only code review, our tool reduces review cycle time by [PERCENT]% and is used by [N] engineering teams including [N] [KIND OF NAMED CUSTOMER]." (Placeholders: use only numbers you can verify from your own customers.)
 
 Same product. Completely different positioning. The visionary version excites early adopters and terrifies pragmatists. The pragmatist version bores early adopters and reassures pragmatists.
 

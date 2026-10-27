@@ -212,7 +212,7 @@ For product grouping: `product_id`, `product_title`, `vendor`, `units_sold`, `re
 |-------|-------|----------|
 | `THROTTLED` | API rate limit exceeded | Wait 2 seconds, retry up to 3 times |
 | Missing unitCost | Product COGS not set | Flag as "unknown COGS" — list in the report, exclude from margin calc, and do not count as $0 cost |
-| Refunded orders | Fully refunded | Include with $0 net revenue if `include_refunded: true` |
+| Refunded orders | Fully refunded | Include if `include_refunded: true`. Revenue stays at the pre-refund total and the refund is subtracted once in the Net Profit formula, so revenue after refunds is $0 and the costs still count against profit |
 
 ## Best Practices
 - Populate `inventoryItem.unitCost` on all products for accurate COGS. Without it, margins cannot be calculated.

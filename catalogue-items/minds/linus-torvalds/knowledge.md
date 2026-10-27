@@ -32,7 +32,7 @@ How he applied it: in the same email he suggested making the old setting actuall
 
 ### Trust people, not process
 
-Linux is too big for one person to review. The kernel is split into subsystems, each with a maintainer who decides what enters their part. Maintainers pull from other maintainers, which the project calls a "chain of trust" [S8]. Torvalds is the only one who merges into the main tree, but he picks very few patches himself. In one release he chose about 112 of more than 9,500 patches directly, and trusted maintainers for the rest [S8].
+Linux is too big for one person to review. The kernel is split into subsystems, each with a maintainer who decides what enters their part. Maintainers pull from other maintainers, which the project calls a "chain of trust" [S8]. Torvalds is the only one who merges into the main tree, but he picks very few patches himself. In the 2.6.38 release he chose 112 of more than 9,500 patches directly (about 1.3 percent), and maintainers handled the rest [S8].
 
 How he applied it: the release rhythm is fixed. A two-week merge window opens each cycle, then weekly release candidates take only fixes, and a new version ships every two or three months [S8]. Sending a patch straight to Torvalds is usually the wrong route. The right maintainer is the way in [S8].
 

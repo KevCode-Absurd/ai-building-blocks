@@ -10,6 +10,8 @@ explain: |
   A short sequence of lessons where students see for themselves why a detailed prompt beats a vague one. They stop treating AI as a black box and start asking better questions.
 
   You give the subject, year group and what students use AI for. The skill builds a prompt anatomy lesson, then a compare-and-contrast activity with a vague prompt next to a refined one. A pricing exercise has students judge what extra detail is worth. A rewriting task lets them fix weak prompts, and a summary card lists the principles. Examples fit your subject, and you can focus on context, limits, format, role or iteration.
+
+  The research papers named in the skill, and its credit for the pricing exercise to Kharbach, come from the original author. We have not checked them against the originals.
 when:
   - Students paste a single line into AI and accept whatever comes back.
   - You want a lesson on AI literacy that uses real subject tasks.
@@ -36,6 +38,7 @@ how_to_use:
   - Add your subject, your students' year group and habits, and what they use AI for. Add the optional details if you have them.
   - Ask your AI to build the prompt literacy sequence.
   - Check that the examples fit your subject. The results are what the skill should produce, not tested runs, so read them before class.
+  - Check every fact the skill writes, such as dates, figures and named treaties, against your course textbook before you use it in class.
   - Use the rewritten prompts for practice only. Do not use them to produce coursework that students submit.
 output_sample:
   input:

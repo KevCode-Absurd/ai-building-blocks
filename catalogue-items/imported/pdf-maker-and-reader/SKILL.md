@@ -10,6 +10,7 @@ description: "Use when tasks involve reading, creating, or reviewing PDF files w
 - Read or review PDF content where layout and visuals matter.
 - Create PDFs programmatically with reliable formatting.
 - Validate final rendering before delivery.
+- Turn a plan or an audit report into a PDF.
 
 ## Workflow
 1. Prefer visual review: render PDF pages to PNGs and inspect them.

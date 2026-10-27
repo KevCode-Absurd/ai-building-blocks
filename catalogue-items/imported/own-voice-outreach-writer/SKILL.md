@@ -40,7 +40,7 @@ Then extract the specific, imitable traits: sentence length, greeting and sign-o
 
 A personalized email is not one with the company name merged into a template. It is one that could only have been sent to that person.
 
-For each prospect, find the specific hook. In order of strength:
+For each prospect, find the specific hook. Use only the prospect's own website, press releases, public posts they made, and details they shared with the owner. Do not scrape profile pages or collect private contact details. Check a site's terms before copying from it. In order of strength:
 
 1. The buying signal from `lead-finder` — a permit filed, a location opened, a role posted
 2. A shared connection or customer

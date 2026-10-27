@@ -31,7 +31,7 @@ How to start:
 
 - Each vendor's written proposal with its date. A vendor with no written proposal is listed but not scored.
 - The criteria and weights approved before the proposals were seen. If they are missing, stop and ask. Never create criteria from the proposals.
-- The existing approval checklist, in order, with its stop rules. If none exists, stop and point to the Decision checklist builder.
+- The existing approval checklist, in order, with its stop rules. If none exists, stop and point to the Decision checklist builder (`decision-checklist-builder`). If the criteria are missing, point to the Vendor scorecard builder (`vendor-scorecard-builder`).
 - Evaluator notes with names and dates, and any declared conflicts. A missing note is MISSING: evaluator note.
 
 Ask once, in one short message, for only what you cannot work without. Use what is attached or pasted first.
@@ -65,8 +65,8 @@ Lead with the blockers, then the checklist result, then the comparison and the d
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Vendor bid evidence reviewer](https://useaiblocks.com/skills/procurement-evidence-gap-review-assistant). It takes the document.
-- The [AI vendor terms checker](https://useaiblocks.com/skills/ai-vendor-terms-checker). It takes the document.
 - The [Vendor agreement status checker](https://useaiblocks.com/skills/vendor-agreement-status-checker). It takes the audit report.
+- The [Lab and device standards evidence planner](https://useaiblocks.com/skills/lab-and-device-standards-checker). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -90,13 +90,14 @@ Write MISSING: <what> next to the affected result. Keep going with the work that
 - A vendor with no written proposal: list it, do not score it, and mark MISSING: proposal.
 - A missing evaluator note: continue, and mark that decision MISSING: basis.
 
-## After this
+## What to do with the result
 
 Ask one short question about what to do next, and say they can type their own. Offer:
 
 - Give the trace and blockers to the approver. Answer each blocker before approval.
 - File the proposals, notes and trace together, using your own record-keeping rule.
-- Use the Software vendor chooser next time, if you also want a weighted scorecard before this record.
+- Use the Software vendor chooser (`software-vendor-chooser`) next time, if you also want a weighted scorecard before this record.
+- Once a contract is signed with the winner, check it with the Vendor agreement status checker (`vendor-agreement-status-checker`).
 
 Nothing here sends, signs or changes anything outside the working files. If they pick a next step that is not in this pack, give them its link on useaiblocks.com and say what to bring to it.
 

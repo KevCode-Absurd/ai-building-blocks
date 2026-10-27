@@ -12,7 +12,6 @@ inputs:
     required: true
 outputs:
   - type: code_change
-  - type: spreadsheet
 uses: []
 origin: imported
 source:

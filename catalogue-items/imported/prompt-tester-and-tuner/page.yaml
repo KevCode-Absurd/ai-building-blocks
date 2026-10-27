@@ -34,8 +34,8 @@ how_to_use:
   - Paste your current prompt and your test cases. If you have no test cases, ask your AI to help you write 10 to 20 first.
   - Ask your AI to follow the skill. It will score your current prompt before it changes anything.
   - Ask your AI to run each revised prompt on every test case and record pass or fail for each in eval_results.json. Accept only results from those real runs, not guesses.
-  - Add your provider's price per million tokens if you want cost figures in dollars.
-  - Read the comparison. Ship a new version only if it keeps every case that passed before.
+  - Add your provider's price per million tokens if you want cost figures in dollars. Running the test cases needs access to the model you are testing, and API calls may cost money. A rough cost is test cases times tokens per call times your provider's price.
+  - Read the comparison. The script's check covers only clarity and token count, so compare the pass or fail results in eval_results.json with the baseline's by hand. Ship a new version only if it keeps every case that passed before.
   - Save the version you ship as your new baseline.json, so the next change is tested against it.
 output_sample:
   input:

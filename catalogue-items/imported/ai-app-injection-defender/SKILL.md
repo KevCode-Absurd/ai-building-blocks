@@ -473,11 +473,14 @@ groups:
 - Apply guidance only within authorized scope; test destructive steps in non-production first.
 - Docs-only import: upstream scripts and templates not bundled.
 
-### Example
+### First step
 
-```bash
-# Read-only first: inventory before any active step.
-which <tool> && <tool> --help | head -n 20
+Read-only first. List every place untrusted text can enter the app, before you change anything. Write one row for each:
+
+```text
+Entry point | Who controls the text | What the model can do next
 ```
+
+For example: chat box, retrieved documents, web pages, tool results, shared memory, displayed markup.
 
 > Adapted from [BagelHole/DevOps-Security-Agent-Skills](https://github.com/BagelHole/DevOps-Security-Agent-Skills) (MIT); frontmatter, When to Use/Limitations, and safety boundaries added for upstream compliance. Docs-only import: helper scripts and templates not bundled.

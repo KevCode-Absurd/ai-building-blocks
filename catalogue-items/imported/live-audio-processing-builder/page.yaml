@@ -10,6 +10,8 @@ explain: |
   A chain of audio processing that runs on sound as it plays, with filters, equaliser and level meters you can tweak while it runs. Describe the effect you want and get MATLAB code that does it.
 
   The steps are fixed. Create a source, such as a file reader or live input. Set up Audio Toolbox objects for your sample rate. Look at the filter responses. Open a tuning panel so you can change settings by ear. Then process in a loop, one frame at a time, and release the objects when done. Patterns cover multiband processing, parametric equaliser, metering and per-frequency work. You need MATLAB with Audio Toolbox.
+
+  Licence: this copy is under the BSD 2-Clause licence in its LICENSE.md file, with MathWorks reuse terms. Use it only with MathWorks products such as MATLAB. The skill file links MathWorks' own reuse licence, which says the same.
 when:
   - You want to hear an equaliser change as you adjust it.
   - You need a compressor or filter that works on live input.
@@ -24,7 +26,7 @@ you_give:
   - The effect or chain you want
   - "Audio source: file or live input"
   - Sample rate
-  - "Your MATLAB release and Audio Toolbox licence: some patterns need R2023b or R2024b"
+  - "Your MATLAB release and Audio Toolbox licence: sample rate conversion (audioresample, designAudioResampler) needs R2023b, and octaveSpectrumEstimator needs R2024b"
 you_get:
   - A frame-by-frame MATLAB script
   - Filter and equaliser setup
@@ -38,6 +40,7 @@ how_to_use:
   - Run it and use the tuning panel to change settings while the audio plays.
   - Check that the sample rate matches your source and that your computer keeps up with each frame.
   - If you need live input or output, pair it with the matlab-play-record-audio skill.
+  - After you tune by ear in the tuning panel, copy the final property values back into your script (or your Simulink model), so the settings stay.
 output_sample:
   input:
     - The effect or chain you want, such as a compressor or equaliser
@@ -47,7 +50,7 @@ output_sample:
   prerequisites:
     - MATLAB with Audio Toolbox, which is paid licensed software
     - An AI that can write MATLAB code, ideally one that can also run it
-    - Use it only with MathWorks products such as MATLAB. The licence (BSD 2-Clause plus MathWorks reuse terms) says so
+    - Use it only with MathWorks products such as MATLAB. The licence (BSD 2-Clause plus MathWorks reuse terms, see the LICENSE.md file) says so
   output:
     - name: Source setup
       contains: Code that reads a file or live input one frame at a time.

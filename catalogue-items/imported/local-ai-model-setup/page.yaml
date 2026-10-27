@@ -12,6 +12,8 @@ explain: |
   This skill starts from your hardware. Memory decides which model will run well, so it matches your graphics card or Mac chip to a model and says why. Then it gives the install and test commands for your system, a Docker file for the browser chat screen, and an optional proxy so apps can reach several models at one address.
 
   It keeps everything private by default: the services listen on your machine only, and passwords are placeholders you set yourself. It also tells you how to back up, stop and remove the setup.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header says MIT. Credit goes to the original author and sickn33.
 when:
   - You want a private AI chat that never leaves your computer.
   - You have a gaming graphics card and do not know which model fits it.
@@ -28,6 +30,7 @@ you_give:
   - What you want the model for, such as chat, coding or searching your documents
   - Whether Docker is installed (optional)
   - Whether anyone else needs to reach it (optional)
+  - For the Docker file, an NVIDIA graphics card (Mac and AMD users drop that block before they start)
 you_get:
   - A starter model matched to your memory, with the reason
   - Install and test commands for your system
@@ -41,6 +44,7 @@ how_to_use:
   - If it asks for something you do not know, say so. It will mark the gap and not guess your hardware.
   - Read the model choice first. Then run the commands yourself, one block at a time, in your terminal.
   - Back up anything important before you start. Make up your own passwords for the secrets it lists.
+  - Next, try a second model, or for a production server use the vLLM model server setup.
 how_it_works:
   - title: Read your hardware
     text: It matches your memory to a model size and picks one starter model, with the reason.

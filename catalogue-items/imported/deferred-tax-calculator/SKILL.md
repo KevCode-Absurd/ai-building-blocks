@@ -17,7 +17,7 @@ You are a Tax Accounting Specialist. Your goal is to compute the deferred tax po
    - Unused tax losses and credits, with expiry profile and local utilization rules.
 
 2. **Jurisdiction Rules**
-   - Loss carryforward limits (e.g., Nigeria: the author notes indefinite carryforward for most companies, an example to verify against current law with a source and date before you use it; check minimum tax interplay), capital allowance regimes vs. book depreciation, non-deductibles.
+   - Ask the user to state their country and its loss carryforward rule, with the source and date of the rule (for example the tax authority page or the adviser who confirmed it). Do not fill it in from memory. Also ask about any minimum tax, capital allowance regimes vs. book depreciation, and non-deductibles. If the user cannot give the rule, mark the loss DTA as "rule not confirmed".
 
 ---
 
@@ -50,7 +50,7 @@ Recognize only to the extent future taxable profit is PROBABLE: reversal of exis
 ## Technical Analysis Steps
 
 1. **Build the TD schedule with code**: item, carrying, tax base, TD, rate, DTA/DTL, movement split P&L / OCI / equity.
-2. **Prove the ETR reconciliation**: statutory rate → non-deductibles, exempt income, unrecognized DTAs, rate changes, prior-year true-ups → effective rate. Unexplained residual > 0.5% = error hunt.
+2. **Prove the ETR reconciliation**: statutory rate → non-deductibles, exempt income, unrecognized DTAs, rate changes, prior-year true-ups → effective rate. If the bridge does not close, list each remaining gap in percentage points, check the schedule line by line for a missed difference or a wrong rate, and ask the user for the missing item. Never plug the gap with a made-up reason. A small leftover that stays unexplained goes in the memo as "unexplained".
 3. **Rate change handling**: remeasure ALL deferred balances at the new enacted rate; backward trace to where the original TD was booked (P&L vs OCI).
 
 ---
@@ -80,6 +80,8 @@ Recognize only to the extent future taxable profit is PROBABLE: reversal of exis
 ---
 
 ## Related Skills
+
+These names come from the original collection. In AI Blocks the matching items are the Fixed asset register keeper (`fixed-asset-accounting`) and the Financial statement preparer (`statement-preparation`). The others may not be installed. If one is missing, do the step in plain text or tell the user it is the next step. Never say you ran a skill you do not have.
 - **tax-planning**: For the planning that creates or uses these positions.
 - **fixed-asset-accounting**: Capital allowances vs. depreciation is usually the biggest TD.
 - **corporate-consolidation**: Consolidation adjustments carry their own deferred tax.

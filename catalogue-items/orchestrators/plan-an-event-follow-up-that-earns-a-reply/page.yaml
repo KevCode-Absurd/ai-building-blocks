@@ -11,7 +11,7 @@ explain: |-
 
   This workflow starts with your notes, not a template. It groups attendees by what they asked for and the goal of the event. It pulls out every promise you made, such as a deck, an introduction or a call, and gives each a date and an owner. Then it drafts one email per group or promise. Each draft says where its facts came from.
 
-  It drafts only. It does not send. And attendance alone is not permission to market to someone. People who did not ask for anything, or did not agree to be contacted, go on a hold list.
+  It drafts only. It does not send. And attendance alone is not permission to market to someone. People who did not ask for anything, or did not agree to be contacted, go on a hold list. A promise you made to someone who never asked does not count as consent. Email consent rules differ by country, so check yours before you send.
 when:
   - You came back from a trade show or conference with a pile of cards and notes and promised to send things
   - You hosted a webinar or workshop and want replies from the people who asked questions

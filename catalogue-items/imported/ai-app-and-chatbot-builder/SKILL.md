@@ -36,7 +36,9 @@ The most popular framework for building LLM-powered applications.
 
 ## Quick start
 
-**Version check:** this code was written for LangChain 0.3. Parts of it (LLMChain, ConversationBufferMemory, RetrievalQA, langchain_core.pydantic_v1, and passing a plain string as the agent prompt) are old or removed in newer releases. Test each example against the current LangChain docs before you rely on it, and replace any call that fails.
+**Version check:** AI Blocks replaced the removed calls (LLMChain, ConversationBufferMemory, RetrievalQA, ConversationalRetrievalChain, langchain_core.pydantic_v1, the plain-string agent prompt and the URL passed to loader.load) with current patterns. The code has not been run here. Test each example against the current LangChain docs before you rely on it, and run it once in a test folder before you point it at real documents.
+
+**Keys:** each provider reads its own environment variable, for example ANTHROPIC_API_KEY, OPENAI_API_KEY or GOOGLE_API_KEY. Never paste a key into the code or into a chat. The weather and search functions below are placeholders. They return a marker, not real data, and you must replace them with a real lookup.
 
 ### Installation
 
@@ -77,11 +79,11 @@ from langchain_anthropic import ChatAnthropic
 # Define tools
 def get_weather(city: str) -> str:
     """Get current weather for a city."""
-    return f"It's sunny in {city}, 72°F"
+    return f"[PLACEHOLDER: replace with a real weather lookup for {city}]"
 
 def search_web(query: str) -> str:
     """Search the web for information."""
-    return f"Search results for: {query}"
+    return f"[PLACEHOLDER: replace with a real search for: {query}]"
 
 # Create agent (<10 lines!)
 agent = create_agent(
@@ -117,20 +119,17 @@ for chunk in llm.stream("Write a poem"):
 ### 2. Chains - Sequential operations
 
 ```python
-from langchain.chains import LLMChain
-from langchain.prompts import PromptTemplate
+from langchain_core.prompts import PromptTemplate
 
 # Define prompt template
-prompt = PromptTemplate(
-    input_variables=["topic"],
-    template="Write a 3-sentence summary about {topic}"
-)
+prompt = PromptTemplate.from_template("Write a 3-sentence summary about {topic}")
 
-# Create chain
-chain = LLMChain(llm=llm, prompt=prompt)
+# Create chain: pipe the prompt into the model
+chain = prompt | llm
 
 # Run chain
-result = chain.run(topic="machine learning")
+result = chain.invoke({"topic": "machine learning"})
+print(result.content)
 ```
 
 ### 3. Agents - Tool-using reasoning
@@ -138,8 +137,7 @@ result = chain.run(topic="machine learning")
 **ReAct (Reasoning + Acting) pattern:**
 
 ```python
-from langchain.agents import create_tool_calling_agent, AgentExecutor
-from langchain.tools import Tool
+from langchain.agents import create_agent
 
 # Define custom tool. Never call eval() on text a model gives you: it can run any code.
 # This parser only allows plain arithmetic.
@@ -159,44 +157,37 @@ def safe_calc(expression: str) -> float:
         raise ValueError("Only plain arithmetic is allowed")
     return walk(ast.parse(expression, mode="eval").body)
 
-calculator = Tool(
-    name="Calculator",
-    func=lambda x: str(safe_calc(x)),
-    description="Useful for math calculations. Input: an arithmetic expression such as 25 * 17 + 142."
-)
+def calculator(expression: str) -> str:
+    """Do plain arithmetic, for example 25 * 17 + 142."""
+    return str(safe_calc(expression))
 
-# Create agent with tools
-agent = create_tool_calling_agent(
-    llm=llm,
+# Create agent with tools (search_web is the placeholder defined above)
+agent = create_agent(
+    model=llm,
     tools=[calculator, search_web],
-    prompt="Answer questions using available tools"
+    system_prompt="Answer questions using available tools"
 )
-
-# Create executor
-agent_executor = AgentExecutor(agent=agent, tools=[calculator], verbose=True)
 
 # Run with reasoning
-result = agent_executor.invoke({"input": "What is 25 * 17 + 142?"})
+result = agent.invoke({"messages": [{"role": "user", "content": "What is 25 * 17 + 142?"}]})
+print(result["messages"][-1].content)
 ```
 
 ### 4. Memory - Conversation history
 
 ```python
-from langchain.memory import ConversationBufferMemory
-from langchain.chains import ConversationChain
+# Keep the chat history yourself and send all of it with each call
+history = []
 
-# Add memory to track conversation
-memory = ConversationBufferMemory()
-
-conversation = ConversationChain(
-    llm=llm,
-    memory=memory,
-    verbose=True
-)
+def chat(user_text):
+    history.append({"role": "user", "content": user_text})
+    reply = llm.invoke(history)
+    history.append({"role": "assistant", "content": reply.content})
+    return reply.content
 
 # Multi-turn conversation
-conversation.predict(input="Hi, I'm Alice")
-conversation.predict(input="What's my name?")  # Remembers "Alice"
+chat("Hi, I'm Alice")
+print(chat("What's my name?"))  # Remembers "Alice"
 ```
 
 ## RAG (Retrieval-Augmented Generation)
@@ -208,7 +199,7 @@ from langchain_community.document_loaders import WebBaseLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_openai import OpenAIEmbeddings
 from langchain_chroma import Chroma
-from langchain.chains import RetrievalQA
+from langchain_core.prompts import ChatPromptTemplate
 
 # 1. Load documents
 loader = WebBaseLoader("https://docs.python.org/3/tutorial/")
@@ -230,37 +221,37 @@ vectorstore = Chroma.from_documents(
 # 4. Create retriever
 retriever = vectorstore.as_retriever(search_kwargs={"k": 4})
 
-# 5. Create QA chain
-qa_chain = RetrievalQA.from_chain_type(
-    llm=llm,
-    retriever=retriever,
-    return_source_documents=True
+# 5. Create the answer prompt
+prompt = ChatPromptTemplate.from_template(
+    "Answer using only this context. If the answer is not in it, say so.\n\n{context}\n\nQuestion: {question}"
 )
 
 # 6. Query
-result = qa_chain({"query": "What are Python decorators?"})
-print(result["result"])
-print(f"Sources: {result['source_documents']}")
+question = "What are Python decorators?"
+found = retriever.invoke(question)
+context = "\n\n".join(d.page_content for d in found)
+answer = (prompt | llm).invoke({"context": context, "question": question})
+print(answer.content)
+print("Sources:", [d.metadata.get("source") for d in found])
 ```
 
 ### Conversational RAG with memory
 
 ```python
-from langchain.chains import ConversationalRetrievalChain
+# RAG with conversation memory: keep the history yourself, as in the memory example
+rag_history = []
 
-# RAG with conversation memory
-qa = ConversationalRetrievalChain.from_llm(
-    llm=llm,
-    retriever=retriever,
-    memory=ConversationBufferMemory(
-        memory_key="chat_history",
-        return_messages=True
-    )
-)
+def ask(question):
+    found = retriever.invoke(question)
+    context = "\n\n".join(d.page_content for d in found)
+    rag_history.append({"role": "user", "content": f"Context:\n{context}\n\nQuestion: {question}"})
+    reply = llm.invoke(rag_history)
+    rag_history.append({"role": "assistant", "content": reply.content})
+    return reply.content
 
 # Multi-turn RAG
-qa({"question": "What is Python used for?"})
-qa({"question": "Can you elaborate on web development?"})  # Remembers context
+ask("What is Python used for?")
+ask("Can you elaborate on web development?")  # Remembers context
 ```
 
 ## Advanced agent patterns
@@ -268,7 +259,7 @@ qa({"question": "Can you elaborate on web development?"})  # Remembers context
 ### Structured output
 
 ```python
-from langchain_core.pydantic_v1 import BaseModel, Field
+from pydantic import BaseModel, Field
 
 # Define schema
 class WeatherReport(BaseModel):
@@ -285,11 +276,11 @@ print(result.city, result.temperature, result.condition)
 ### Parallel tool execution
 
 ```python
-from langchain.agents import create_tool_calling_agent
+from langchain.agents import create_agent
 
-# Agent automatically parallelizes independent tool calls
-agent = create_tool_calling_agent(
-    llm=llm,
+# The model can ask for independent tool calls in one step
+agent = create_agent(
+    model=llm,
     tools=[get_weather, search_web, calculator]
 )
 
@@ -303,11 +294,11 @@ result = agent.invoke({
 
 ```python
 # Stream agent steps
-for step in agent_executor.stream({"input": "Research AI trends"}):
-    if "actions" in step:
-        print(f"Tool: {step['actions'][0].tool}")
-    if "output" in step:
-        print(f"Output: {step['output']}")
+for step in agent.stream(
+    {"messages": [{"role": "user", "content": "Research AI trends"}]},
+    stream_mode="values",
+):
+    step["messages"][-1].pretty_print()
 ```
 
 ## Common patterns
@@ -315,18 +306,19 @@ for step in agent_executor.stream({"input": "Research AI trends"}):
 ### Multi-document QA
 
 ```python
-from langchain.chains.qa_with_sources import load_qa_with_sources_chain
+from langchain_community.document_loaders import WebBaseLoader
 
-# Load multiple documents
-docs = [
-    loader.load("https://docs.python.org"),
-    loader.load("https://docs.numpy.org")
-]
+# Load multiple documents (one loader per address)
+urls = ["https://docs.python.org", "https://numpy.org/doc/"]
+docs = [d for url in urls for d in WebBaseLoader(url).load()]
 
-# QA with source citations
-chain = load_qa_with_sources_chain(llm, chain_type="stuff")
-result = chain({"input_documents": docs, "question": "How to use numpy arrays?"})
-print(result["output_text"])  # Includes source citations
+# QA with source citations: label each piece with its source
+context = "\n\n".join(f"[{d.metadata.get('source')}] {d.page_content[:2000]}" for d in docs)
+answer = llm.invoke(
+    "Answer using only the sources below. Name the source in brackets after each claim.\n\n"
+    f"{context}\n\nQuestion: How to use numpy arrays?"
+)
+print(answer.content)  # Includes source citations
 ```
 
 ### Custom tools with error handling
@@ -355,12 +347,12 @@ import os
 
 # Enable tracing
 os.environ["LANGCHAIN_TRACING_V2"] = "true"
-os.environ["LANGCHAIN_API_KEY"] = "your-api-key"
+os.environ["LANGCHAIN_API_KEY"] = "<YOUR LANGSMITH KEY: set it in your environment, do not type it here>"
 os.environ["LANGCHAIN_PROJECT"] = "my-project"
 
 # All chains/agents automatically traced
 agent = create_agent(model=llm, tools=[calculator])
-result = agent.invoke({"input": "Calculate 123 * 456"})
+result = agent.invoke({"messages": [{"role": "user", "content": "Calculate 123 * 456"}]})
 
 # View traces at smith.langchain.com
 ```

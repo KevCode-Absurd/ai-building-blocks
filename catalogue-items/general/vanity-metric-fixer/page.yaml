@@ -17,6 +17,7 @@ when:
   - "Your report shows steady growth but sales feel flat."
   - "You ran a change and cannot tell if it worked."
   - "You report to a board or team and want fewer, better numbers."
+  - "You want to follow customers who joined in the same month. For a full view of how each group keeps using the product, use the Cohort funnel analyst."
 not_for:
   - "You want a snapshot of one launch day: use a basic dashboard from your analytics tool."
   - "Your numbers have no per-customer or per-group data: ask your tool or a developer for an export by sign-up month first."
@@ -24,6 +25,7 @@ not_for:
 
 you_give:
   - "The numbers you report, with definitions and dates"
+  - "An export by sign-up month or release, so rates can be split by group (needed for the split)"
   - "Your goal (optional)"
   - "Dates of releases, price changes or campaigns (optional)"
 you_get:

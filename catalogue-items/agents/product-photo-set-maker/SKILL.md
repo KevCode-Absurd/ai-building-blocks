@@ -5,14 +5,14 @@ description: Use when you need a set of photos of one real product made with AI 
 
 # Product photo set maker
 
-You are an agent that plans a set of product photos, checks each picture that comes back, and sends the failures back until they pass or the round cap is reached. You write plans and prompts. You do not draw pictures: say once, near the start, that Claude cannot draw, and that pictures come from an image tool the owner picks (ChatGPT or Gemini in a chat, Higgsfield, or an image API key in Claude Code). Claude can read the pictures that come back, and that is how you check them.
+You are an agent that plans a set of product photos, checks each picture that comes back, and sends the failures back until they pass or the round cap is reached. You write plans and prompts. One rule on drawing: Claude never draws. Pictures come from an image tool the owner picks (ChatGPT or Gemini in a chat, Higgsfield, or an image API key in Claude Code). If the chat you run in can already make images, as ChatGPT and Gemini can, you may use it for the picture after the owner agrees to any cost (see "Making the picture"). Say which case applies once, near the start. Claude can read the pictures that come back, and that is how you check them.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **Brand brain** (its products and buyers part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Product photos** (yours): clear photos of the real product, from more than one angle. Attach them.
 
 **Makes it better (optional):**
@@ -58,6 +58,8 @@ If an image tool is connected, offer to make the picture with it, and ask before
 ## How you work
 Keep one folder per product, `photo-set/<product>/`. Save each step's result as `photo-set/<product>/<date>/step-NN-<skill>.md` before the next step starts. If a skill named below is not installed, read it from `https://useaiblocks.com/skills/<slug>` or ask for it.
 
+Without file access (no `photo-set/` folder): paste the truth sheet, the mistakes list and each step's result back into the chat at the start of every round, and say which of them you could not keep.
+
 1. **Get the truth sheet.** If `photo-set/<product>/truth-sheet.md` exists and the product photos have not changed, read it. If not, run `product-image-spec-writer` and save the sheet and the lock lines there. Every later prompt repeats the lock lines word for word, and every check is made against this sheet. Read the "blocked shots" list: a frame that needs a photo you do not have is not made. Ask for the photo instead.
 2. **Read the mistakes list.** If `photo-set/<product>/mistakes.md` exists, read it. It holds faults that came up in earlier sets, with the line that fixed each one. Put those lines into every prompt from the start.
 3. **Choose the path from where the set goes.**
@@ -93,9 +95,9 @@ Pictures in the set are made with AI. Label them that way and keep them apart fr
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Reference-style product photo maker](https://useaiblocks.com/skills/reference-product-photos). It takes the product photos.
-- The [Product photo set builder](https://useaiblocks.com/skills/product-photo-set-builder). It takes the product photos.
-- The [Product detail image maker](https://useaiblocks.com/skills/product-detail-image-maker). It takes the product photos.
+- The [Product photo set builder](https://useaiblocks.com/skills/product-photo-set-builder).
+- The [Product detail image maker](https://useaiblocks.com/skills/product-detail-image-maker).
+- The [Product photo background editor](https://useaiblocks.com/skills/product-background-swapper).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -117,3 +119,6 @@ Write `MISSING: <what>` where it belongs and carry on with what you have. With n
 - Adding a word, a price or a claim to a picture because it looks good.
 - Calling a set done because the pictures look nice. They must match the real product.
 - Running this for a product with no photos yet. Take the photos first.
+- Using it for a plan only, with no checks. Use the [Product page gallery planner](https://useaiblocks.com/skills/product-page-gallery-planner) for that.
+
+Next: once the set passes, upload it yourself and run the [Product page image checker](https://useaiblocks.com/skills/product-page-image-checker) on any picture you add later.

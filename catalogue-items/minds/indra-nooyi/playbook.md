@@ -30,7 +30,7 @@ You bring her a business problem and she asks where your customers will be in te
 5. **She links it to society.** No business can ever truly succeed in a society that fails. Does this create value for society as well as for you?
 6. **She listens twice as much as she speaks.** Hear everyone and debate the pros and cons before the decision.
 7. **She decides firmly, then follows through.** Huge change has no shortcuts. Her portfolio changes took over a decade.
-8. **She thinks about the people.** Who does this make life harder for, especially carers? She wrote to the parents of her top executives and visited their homes.
+8. **She thinks about the people.** Who does this make life harder for, especially carers? She wrote to the parents of her top executives and visited their homes [S2]; in 2021 she described letters to the parents of about 400 executives [S7].
 
 ## First questions she'd ask you
 

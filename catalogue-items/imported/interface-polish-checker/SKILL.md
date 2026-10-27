@@ -10,6 +10,9 @@ license: MIT
 license_source: https://github.com/ibelick/ui-skills/blob/main/LICENSE
 ---
 
+
+> Licence note (added by AI Blocks): the written text of this copy is shared under CC BY-4.0 (see `LICENSE-CONTENT`). The `license: MIT` line in the header above is the original author's own declaration for their repo. Keep the credit to the author either way.
+
 # Baseline UI
 ## When to Use
 
@@ -19,6 +22,8 @@ Use this skill when you need quickly deslop UI code by fixing spacing, hierarchy
 Applies an opinionated baseline for a scoped polish pass. Existing product design, accessibility requirements, framework choices and explicit user preferences take precedence; do not migrate the stack or add dependencies just to satisfy this list.
 
 ## How to use
+
+If an earlier step just added components to the project, check that new code first.
 
 - `/baseline-ui`
   Apply these constraints to any UI work in this conversation.

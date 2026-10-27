@@ -9,7 +9,9 @@ subhead: A radar or sonar waveform chosen for your needs, with its settings and 
 explain: |
   A radar or sonar waveform chosen for your needs, with its settings and plots showing how well it works. You see range resolution, sidelobes and how it copes with moving targets.
 
-  You state what you need: range, resolution, speed, and whether it is radar, sonar or a combined sensor. The skill walks a decision tree to pick the waveform type, such as linear chirp, nonlinear chirp, FMCW, or phase-coded. It uses the matching MATLAB Phased Array object and avoids the usual mismatches between functions and objects. Then it plots the ambiguity function and measures sidelobe level so you can compare options side by side. MATLAB with the toolbox is required.
+  You state what you need: range, resolution, speed, and whether it is radar, sonar or a combined sensor. The skill walks a decision tree to pick the waveform type, such as linear chirp, nonlinear chirp, FMCW, or phase-coded. It uses the matching MATLAB Phased Array object and avoids the usual mismatches between functions and objects. Then it plots the ambiguity function and measures sidelobe level so you can compare options side by side. MATLAB with the toolbox is required. The result comes in this order: waveform choice, derived parameters, waveform settings, spectrum plot, ambiguity plots and a sidelobe check.
+
+  Licence: BSD 2-Clause plus one MathWorks term (clause 3 in LICENSE.md). You may use this skill only with MathWorks products and services, so you need your own paid MATLAB licence and the Phased Array System Toolbox.
 when:
   - You must pick between a chirp and a phase code for a new sensor.
   - Sidelobes hide weak targets and you need to lower them.
@@ -30,7 +32,7 @@ you_get:
   - Ambiguity function plots
   - Sidelobe and resolution figures
 how_to_use:
-  - Gather first: your range, range resolution, target speed, radar or sonar, and your MATLAB release. You need paid MATLAB with the Phased Array System Toolbox. Some functions need R2023a or later, and radarWaveformGenerator needs R2026a. The skill's licence lets you use it only with MathWorks products.
+  - Gather first: your range, range resolution, target speed, radar or sonar, and your MATLAB release. You need paid MATLAB with the Phased Array System Toolbox. Versions. nlfmspec2freq needs R2023a. legendreseq, mlseq, apaseq and pnkcode need R2024a. shapespectrum and sidelobelevel need R2024b. radarWaveformGenerator needs R2026a. The skill's licence lets you use it only with MathWorks products.
   - Open your AI and paste the skill, or upload the skill folder.
   - Tell it your range, resolution and speed needs, and whether it is radar or sonar.
   - Answer any questions it asks about your use. It may ask about range scale, target speed and limits.

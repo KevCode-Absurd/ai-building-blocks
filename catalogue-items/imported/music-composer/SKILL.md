@@ -10,7 +10,9 @@ metadata: {"openclaw": {"requires": {"env": ["ELEVENLABS_API_KEY"]}, "primaryEnv
 
 Generate music from text prompts - supports instrumental tracks, songs with lyrics, and fine-grained control via composition plans.
 
-> **Setup, before writing any code:** if `ELEVENLABS_API_KEY` isn't set for this project, run `npx -y @elevenlabs/cli@latest onboard init` from the app's folder first and follow what it prints: it signs the user in and stores a key for the project, so nobody copies one by hand. Otherwise see the [Installation Guide](references/installation.md). For JavaScript, use `@elevenlabs/*` packages only.
+> **Before you share a track (added by AI Blocks):** tell the user that commercial use of ElevenLabs music depends on their plan. Before a track goes in an ad or is sold, they must read their plan's terms. Do not tell them a track is free to use for any purpose.
+>
+> **Setup, before writing any code:** if `ELEVENLABS_API_KEY` isn't set for this project, show the user the command below and ask them to confirm before you run it (`@latest` downloads and runs the newest version of the ElevenLabs CLI, so they should check the package on npm first or pin a version they trust). Then run `npx -y @elevenlabs/cli@latest onboard init` from the app's folder first and follow what it prints: it signs the user in and stores a key for the project, so nobody copies one by hand. Otherwise see the [Installation Guide](references/installation.md). For JavaScript, use `@elevenlabs/*` packages only.
 
 All examples below use `music_v2_5`, the most advanced generation model. Pass `music_v2` or
 `music_v1` only when an older model is explicitly requested.

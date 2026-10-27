@@ -58,10 +58,9 @@ The question. The places and keys. The table to record. What stays apart. The ca
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Small test and rollout planner](https://useaiblocks.com/skills/small-test-and-rollout-planner).
-- The [Ad variant change auditor](https://useaiblocks.com/skills/ad-variant-change-auditor). It takes the plan.
 - The [Ad response incentive planner](https://useaiblocks.com/skills/test-reply-offer-planner). It takes the plan.
-- **Read your ad results** with the [Cost per customer calculator](https://useaiblocks.com/skills/cost-per-customer-calculator).
+- The [Ad variant change auditor](https://useaiblocks.com/skills/ad-variant-change-auditor). It takes the plan.
+- The [Meta test campaign planner](https://useaiblocks.com/skills/meta-test-campaign-planner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

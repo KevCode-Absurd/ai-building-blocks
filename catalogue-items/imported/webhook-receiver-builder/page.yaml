@@ -2,12 +2,12 @@ thinking: medium
 thinking_why: It follows a known safe pattern with a few choices.
 new_slug: webhook-receiver-builder
 name: Webhook receiver builder
-summary: Build a webhook receiver that checks signatures, skips repeat events and queues slow work. Works for Stripe, GitHub and Shopify.
+summary: Build a webhook receiver that checks signatures, skips repeat events and queues slow work. Has Stripe and GitHub examples.
 job: connect-tools
 headline: Webhook receiver builder
-subhead: A webhook receiver that checks each message really came from the sender, handles repeats safely and does not lose events. It is the piece that lets Stripe, GitHub or Shopify tell your app that something happened.
+subhead: A webhook receiver that checks each message really came from the sender, handles repeats safely and does not lose events. It is the piece that lets a service such as Stripe or GitHub tell your app that something happened. The skill has full worked examples for Stripe and GitHub, and the Shopify signature check.
 explain: |
-  A webhook receiver that checks each message really came from the sender, handles repeats safely and does not lose events. It is the piece that lets Stripe, GitHub or Shopify tell your app that something happened.
+  A webhook receiver that checks each message really came from the sender, handles repeats safely and does not lose events. It is the piece that lets a service such as Stripe or GitHub tell your app that something happened.
 
   You name the provider, the events you care about and your server framework. The skill builds a hidden endpoint, checks the signature before reading the body, and routes each event type to its own handler. It records event IDs so a retry does not charge or email twice. Slow work goes to a queue, and failed events go to a dead letter queue for review. It also covers registering the URL with the provider and testing locally.
 when:

@@ -7,10 +7,11 @@ role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - {type: brief, required: true}
+  - {type: idea, required: true}
   - {type: transcript, required: true}
 outputs:
   - {type: document}
+  - {type: customer_needs, required: true}
 uses: [customer-interview-coach, customer-research-analyst, customer-job-mapper, customer-path-blueprint-maker]
 steps:
   - {uses: customer-interview-coach, note: "Turns your idea into questions that draw honest answers and a plan for finding the people to ask. You take these into your talks and write down what was said."}

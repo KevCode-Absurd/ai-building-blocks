@@ -9,7 +9,7 @@ level: advanced
 inputs:
   - type: plan
     required: true
-  - type: brief
+  - type: customer_needs
     required: false
 outputs:
   - type: plan

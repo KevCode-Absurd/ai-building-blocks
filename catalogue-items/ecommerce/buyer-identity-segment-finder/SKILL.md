@@ -86,9 +86,9 @@ CHECKS MISSED: <none | list>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Market size and survey planner](https://useaiblocks.com/skills/market-size-and-survey-planner).
+- The [Market size and survey planner](https://useaiblocks.com/skills/market-size-and-survey-planner). It takes the document.
 - The [Customer feedback and brand reviewer](https://useaiblocks.com/skills/monthly-customer-voice-keeper).
-- The [Trust barrier and proof checker](https://useaiblocks.com/skills/trust-barrier-fixer).
+- The [Research theme synthesizer](https://useaiblocks.com/skills/research-theme-synthesizer). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

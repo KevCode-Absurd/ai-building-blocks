@@ -8,10 +8,14 @@ role: make
 job: ops
 level: advanced
 inputs:
-  - type: meeting_notes
+  - type: question
     required: true
-outputs:
+  - type: source_text
+    required: false
   - type: document
+    required: false
+outputs:
+  - type: copy_draft
 uses: []
 origin: imported
 source:

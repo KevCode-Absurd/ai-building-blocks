@@ -30,12 +30,13 @@ you_get:
   - Links between spec, plan and tasks
   - Status updates as work moves
 how_to_use:
-  - "You need a tool that can connect to Notion (the setup below uses the Codex CLI), and a Notion login. The Codex commands are optional: in other tools, add a Notion connection in the tool's settings instead."
-  - Check first that your AI can reach Notion. The setup in this skill uses the Codex CLI and the Notion MCP connection. In other AI tools, look for a Notion connection in the tool's settings.
-  - If you use Codex, add the Notion connection and log in with OAuth when asked. Then restart Codex.
+  - "Gather first: the link to your spec, the name of your task database, and any due dates or owners you want on the tasks."
+  - You need an AI tool that can connect to Notion, and a Notion login. In your tool's settings, add a Notion connection and log in when asked. Check that your AI can reach Notion before you go on.
+  - "Optional, for Codex only: the skill lists the Codex commands to add the Notion connection and log in. Restart Codex after you log in."
   - Give your AI the skill and the name or link of your spec. If several pages match, pick the right one when asked.
   - Read the gaps and assumptions it lists. Answer them or fix the spec before you accept the plan.
   - Check the plan page and the new tasks in Notion. Edit anything that looks wrong.
+  - Share the plan page with your team so they can see the tasks.
   - As work moves, ask your AI to update statuses and post progress notes. The plan page and the task links are where you hand work to your team. When a phase closes, ask your AI to update its status and note what is left.
 output_sample:
   input:

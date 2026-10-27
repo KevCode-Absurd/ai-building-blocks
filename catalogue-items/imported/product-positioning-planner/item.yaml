@@ -12,6 +12,8 @@ inputs:
     required: true
   - type: competitor_set
     required: false
+  - type: voc_reviews
+    required: false
 outputs:
   - type: document
 uses: []

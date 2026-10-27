@@ -74,8 +74,8 @@ CHECKS MISSED: <one line each, or none>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Bold store experiment planner](https://useaiblocks.com/skills/big-swing-test-picker). It takes the shortlist.
-- The [Store test evidence reviewer](https://useaiblocks.com/skills/store-test-verdict-maker).
 - The [Store experiment results reviewer](https://useaiblocks.com/skills/store-test-program-runner).
+- The [Shopify test setup picker](https://useaiblocks.com/skills/shopify-test-setup-picker). It takes the shortlist.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -13,6 +13,8 @@ inputs:
 outputs:
   - type: code_change
   - type: spreadsheet
+  - type: dataset
+    required: true
 uses: []
 origin: imported
 warnings:

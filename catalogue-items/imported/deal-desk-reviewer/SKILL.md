@@ -33,6 +33,8 @@ Invoke this skill when:
 - A renewal expansion is bundled with a discount and you need to verify policy fit.
 - You're building a deal-desk approval queue and need consistent routing.
 
+**The sibling skills named in this file (`commercial-policy`, `contract-and-proposal-writer`, `general-counsel-advisor`, `pricing-strategist`, `cfo-advisor`) come from the original collection and are not in this folder.** In AI Blocks, use the Contract and proposal drafter, the Contract risk reviewer or the Discount policy designer instead, or ask a person. Never say you ran a skill you do not have.
+
 **Do NOT use this skill to**: author the proposal (use `business-growth/contract-and-proposal-writer`), redesign the discount matrix (use the `commercial-policy` sibling skill), or do deep legal redline of full contract text (use `c-level-advisor/skills/general-counsel-advisor`).
 
 ## Workflow
@@ -101,11 +103,11 @@ python3 scripts/terms_redliner.py --sample
 python3 scripts/terms_redliner.py --input my_deal_terms.json --output json
 ```
 
-The sample (a 28%-discount enterprise SaaS deal with uncapped indemnity + MFN) correctly DECLINEs at 52.7 / 100 composite — the 28% discount destroys 35.9% of the deal's margin dollars under fixed COGS — and routes to AE → Deal Desk → VP Sales → CFO → CRO → General Counsel.
+The built-in sample data (a made-up 28%-discount enterprise SaaS deal with uncapped indemnity + MFN, not a real deal) DECLINEs at 52.7 / 100 composite — the 28% discount destroys 35.9% of the deal's margin dollars under fixed COGS — and routes to AE → Deal Desk → VP Sales → CFO → CRO → General Counsel.
 
 ## Forcing-question library (Matt Pocock grill discipline)
 
-Walked one at a time by `/cs:grill-commercial` or the Commercial orchestrator. Recommended answer + canon citation per question. Never bundled.
+Walk these one at a time. The `/cs:grill-commercial` command from the original collection is not available here, so ask them yourself. Give a recommended answer per question. Never bundle them. The author names the sources in "Canon" lines as background reading. They come from the original reference files and have not been checked here, so do not quote them to the user as proven facts.
 
 1. **"What's the gross margin at full discount, AND what does next quarter's pipeline look like at the same terms?"**
    Recommended: model both. Refuse to approve until the AE can articulate the precedent risk.
@@ -132,7 +134,7 @@ Walked one at a time by `/cs:grill-commercial` or the Commercial orchestrator. R
    Canon: Salesforce Deal Desk best practices, OpenView NRR studies.
 
 7. **"Who is the named human approver at each hop of the discount chain?"**
-   Recommended: surface the name, not just the role. "VP Sales" is not an approver; "Maria Singh, VP Sales" is.
+   Recommended: surface the name, not just the role. "VP Sales" is not an approver; "[Full Name], VP Sales" is.
    Why it matters: a named person is accountable for each approval, which keeps discounts from drifting from deal to deal.
 
 Walk depth-first. Lock 1-4 before opening 5-7. After all 7 are answered, invoke `deal_scorer.py` → `discount_approval_router.py` → `terms_redliner.py` in sequence.

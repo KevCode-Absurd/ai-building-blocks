@@ -18,6 +18,8 @@ Make agent behavior explainable from request entry through model, retrieval, too
 
 Collect the workflow graph, runtime boundaries, incident questions, traffic and failure expectations, telemetry stack, data classification, retention policy, sampling limits, and owners. State what cannot be observed.
 
+If you have a plan for the agent's workflow, give it as the plan and use it as the workflow graph.
+
 ## Output contract
 
 Produce:

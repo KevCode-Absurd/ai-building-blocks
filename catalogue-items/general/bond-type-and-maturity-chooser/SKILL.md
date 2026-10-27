@@ -59,7 +59,7 @@ The tax sum with the pick, the length sums with the pick, the ranked list with r
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Investing policy page writer](https://useaiblocks.com/skills/investing-policy-page-writer). It takes the audit report.
 - The [Price against value checker](https://useaiblocks.com/skills/price-against-value-checker). It takes the audit report.
-- The [Stock and bond split planner](https://useaiblocks.com/skills/stock-and-bond-split-planner). It takes the audit report.
+- The [Investment business change reviewer](https://useaiblocks.com/skills/holding-value-change-checker). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

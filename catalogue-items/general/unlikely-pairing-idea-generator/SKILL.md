@@ -48,8 +48,7 @@ The audience and anything dropped. The sources. All pairings with verdicts. The 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Creative style brief writer](https://useaiblocks.com/skills/aesthetic-direction-brief-writer).
-- The [Design rule consistency reviewer](https://useaiblocks.com/skills/monthly-design-system-keeper).
+- The [XR interface architect agent](https://useaiblocks.com/skills/agency-xr-interface-architect). It takes the idea.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

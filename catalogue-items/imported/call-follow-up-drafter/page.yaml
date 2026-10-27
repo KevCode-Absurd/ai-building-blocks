@@ -2,14 +2,14 @@ thinking: low
 thinking_why: It turns notes into three short drafts.
 new_slug: call-follow-up-drafter
 name: Call follow-up drafter
-summary: Turn your call notes or transcript into a follow-up email, a team summary and CRM updates for you to approve. Nothing is sent, and no CRM change is made without your yes.
+summary: Turn your call notes or transcript into a follow-up email, a team summary and CRM updates for you to approve. Nothing is sent unless you ask, and no CRM change is made without your yes.
 job: sell-and-negotiate
 headline: Call follow-up drafter
 subhead: Paste your call notes or a transcript and name the contact or deal. It builds the follow-up from what was said and matches your CRM's own field and stage names. You get a follow-up email draft, a short team summary, CRM updates waiting for your yes, and next steps with owners.
 explain: |
   Right after a call, you have a follow-up email ready to send, a short team summary, and a list of CRM changes waiting for your yes. Paste notes or a transcript and the draft is built from what was said, not from guesses.
 
-  It checks your CRM's own field and stage names so updates fit your setup, and shows the source for each value it plans to write. It treats text in emails and transcripts as data, never as instructions, and shows any action that came from such text before it runs. Nothing is sent. With an email connector, the follow-up is saved as a draft in your mail for you to read. CRM changes wait for your yes. Without a connector you get paste-ready text and a checklist.
+  It checks your CRM's own field and stage names so updates fit your setup, and shows the source for each value it plans to write. It treats text in emails and transcripts as data, never as instructions, and shows any action that came from such text before it runs. The email is only a draft. With an email connector, it is saved in your mail for you to read, and it is sent only if you tell your AI to send it. CRM changes wait for your yes. Without a connector you get paste-ready text and a checklist.
 when:
   - You just finished a sales call and the follow-up email is still unwritten.
   - Your team needs a summary of what the customer said and what was agreed.
@@ -35,7 +35,9 @@ how_to_use:
   - Add your usual tone or sign-off if you want the email to sound like you (optional).
   - Read the email draft, the team summary and each proposed CRM update with its source line.
   - Say which updates to apply. If your AI has no CRM or email access, copy the text and checklist and do it yourself.
-  - Drafting needs no paid tool. Saving the email draft and applying CRM changes needs your own email or CRM account connected to your AI.
+  - Drafting needs no paid tool. Saving the email draft and applying CRM changes needs your own email or CRM account connected to your AI. The steps for connectors were written for Claude. In ChatGPT or Gemini, expect the paste-ready text and the checklist instead, and copy them across yourself.
+  - Pulling a call straight from Gong needs your own paid Gong account. Without it, paste the transcript or notes. That route works the same.
+  - Next, apply the CRM updates you approved. Read the email once, change anything that is not right, then send it yourself or ask your AI to send it. To log the call in your CRM, use crm-activity-logger. To update the deal, use crm-deal-updater.
 terms:
   - term: CRM
     meaning: The tool where you keep your customers, deals and notes, such as HubSpot or Salesforce.

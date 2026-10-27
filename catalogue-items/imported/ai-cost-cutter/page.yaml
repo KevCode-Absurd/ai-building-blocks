@@ -31,7 +31,7 @@ you_get:
   - A caching plan with target hit rates
   - A way to track cost per request
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page. You do not need your code. You need the model list, your monthly spend, and sample prompts with token counts.
   - Tell it which models you use, your monthly spend and which features cost most.
   - Paste a few sample prompts with rough token counts. If you have no logs, say so. You will get a logging plan first.
   - Set your quality floor, such as answers that must stay as good as today.

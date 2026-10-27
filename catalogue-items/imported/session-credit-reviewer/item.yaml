@@ -8,10 +8,10 @@ role: check
 job: ops
 level: beginner
 inputs:
-  - type: question
-    required: true
+  - type: codebase
+    required: false
 outputs:
-  - type: audit_report
+  - type: document
 uses: []
 origin: imported
 source:

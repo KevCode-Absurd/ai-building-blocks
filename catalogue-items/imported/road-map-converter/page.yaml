@@ -5,9 +5,9 @@ name: Road map converter
 summary: Convert a Lanelet2 map to a RoadRunner HD map file. Give it your .osm file and get an .rrhd scene with lanes, junctions and signs.
 job: build-software
 headline: Road map converter
-subhead: A Lanelet2 map turned into a RoadRunner HD map file you can open and simulate. The whole pipeline runs, so you get a finished scene and not half a road.
+subhead: A Lanelet2 map turned into a RoadRunner HD map file you can open and simulate. This copy needs eight supporting files from the roadrunner-rrhd-authoring skill to finish the whole scene. Without them it stops partway and tells you which steps are left.
 explain: |
-  A Lanelet2 map turned into a RoadRunner HD map file you can open and simulate. The whole pipeline runs, so you get a finished scene and not half a road.
+  A Lanelet2 map turned into a RoadRunner HD map file you can open and simulate. With the eight supporting files in place, the whole pipeline runs, so you get a finished scene and not half a road. Without them, it stops before the centre line, closed-road, snapping, height and duplicate-boundary steps.
 
   It reads the .osm file and its lanelet relations, then builds boundaries, lanes, centre lines, junctions, barriers, signs, markings and speed limits. Boundary points are never changed, and each boundary is built once. Lane direction is worked out for every lane, never assumed. Before saving, checks run on alignment, position, extensions and completeness. It works through MATLAB script files and needs MATLAB with RoadRunner. Plain OpenStreetMap roads or OpenDRIVE files need a different route.
 when:
@@ -23,6 +23,7 @@ you_give:
   - Your Lanelet2 map file (.osm)
   - Your map_projector_info.yaml file, if you have one (optional)
   - A RoadRunner project folder
+  - "The eight supporting files from roadrunner-rrhd-authoring: references/splitClosedGeometry.md, synthesizeCenterLine.md, alignmentRules.md, orthogonalSplit.md, apiReference.md, deduplicateBoundaries.md, and scripts/snapConnectedEndpoints.m, resolveHeightConflicts.m"
   - Where to save the result (optional)
 you_get:
   - A RoadRunner HD map (.rrhd) file
@@ -30,10 +31,10 @@ you_get:
   - Check results before saving
   - Conversion scripts you can rerun
 how_to_use:
-  - Check you have MATLAB and RoadRunner. Both are paid and must be installed and licensed before you start.
+  - Check you have MATLAB and RoadRunner. Both are paid and must be installed and licensed before you start. The licence (BSD 2-Clause plus MathWorks terms, see LICENSE.md) lets you use this only with MathWorks products such as MATLAB.
   - Use an AI that can run MATLAB code and write files, through the MATLAB MCP tool. A plain chat window or any other code runner cannot finish this job. This copy leaves out eight supporting files from the original roadrunner-rrhd-authoring skill. Your AI should stop and ask you for them before it does the steps that need them.
   - Paste this skill into your AI and give it your .osm file, your project folder and where to save the result.
-  - Let your AI run every step. It must not stop after lanes and boundaries.
+  - Let your AI run the steps it can. When it reaches a step that needs one of the eight missing files, it must stop and ask you for them, not guess the geometry. Once you supply them, it carries on to the end.
   - Check that the results list shows all checks passed before the file is saved.
   - Open the new .rrhd file in RoadRunner and look over lanes, junctions and signs.
   - Next, compare the junction, sign and speed-limit counts in the new .rrhd with the source .osm. Rerun the saved .m scripts after any edit.

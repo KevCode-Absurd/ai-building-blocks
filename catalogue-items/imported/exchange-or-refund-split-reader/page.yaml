@@ -52,7 +52,7 @@ output_sample:
     - name: Step log
       contains: One line per step with what was asked and how many results came back.
     - name: Resolution breakdown
-      contains: Count and percentage of returns that ended as exchange, store credit or refund.
+      contains: Count and percentage of returns that ended as exchange, store credit or refund, plus how many unclear cases were counted as refunds.
     - name: Revenue recovery rate
       contains: Exchanges plus store credit as a share of all returns in the period, counted by return, not by money.
     - name: Period comparison

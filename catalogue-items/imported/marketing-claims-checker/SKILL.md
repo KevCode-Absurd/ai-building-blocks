@@ -23,6 +23,19 @@ argument-hint: "[paste copy, or file path]"
 
 ---
 
+## AI Blocks note: plain chat (read this first)
+
+The steps below were written for a lawyer's plugin that has saved settings, matter folders and a paid legal research tool (Westlaw or similar). In a plain chat you have none of these. So:
+
+- If there is no saved `CLAUDE.md` standards file, use the claims standards the user pastes. If they paste none, say so and use the claim taxonomy below with every call marked as unverified.
+- Skip "Matter context", "Load standards" and any step that reads a plugin file or writes to a matter folder.
+- Skip the legal research tool steps. Do not search a database you do not have. If your AI can search the web, tag results `[web search — verify]`.
+- Without a research tool, name only the kind of rule that may apply (for example "FTC rules on endorsements"). Do not give section numbers, case names or dates from memory. Tag each rule `[verify]` and tell the user to check it at the issuing authority before relying on it.
+- Always end the result with: "This is a risk check, not legal advice. Have a lawyer confirm anything high-stakes before it runs." This applies to every result, not only the ones marked "Ready to ship".
+- Never state a claim is substantiated unless the user gave you the proof.
+
+---
+
 ## Matter context
 
 **Matter context.** Check `## Matter workspaces` in the practice-level CLAUDE.md. If `Enabled` is `✗` (the default for in-house users), skip the rest of this paragraph — skills use practice-level context and the matter machinery is invisible. If enabled and there is no active matter, ask: "Which matter is this for? Run `/product-legal:matter-workspace switch <slug>` or say `practice-level`." Load the active matter's `matter.md` for matter-specific context and overrides. Write outputs to the matter folder at `~/.claude/plugins/config/claude-for-legal/product-legal/matters/<matter-slug>/`. Never read another matter's files unless `Cross-matter context` is `on`.

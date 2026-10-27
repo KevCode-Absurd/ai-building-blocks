@@ -31,7 +31,7 @@ morphology, segmentation, measurement, geometric transforms, color, texture,
 quality metrics, deep learning on images, and image apps.
 Non-medical microscopy — cell and particle counting on plain IPT — is in scope.
 
-Hand off (and co-load) instead of answering alone: see the handoff table under `## Routing`.
+Hand off (and co-load) instead of answering alone: see the handoff table under `## Routing`. The sibling skills named there are not included in this library. If one is needed, say so, and do the part you can with plain Image Processing Toolbox code.
 
 ## When NOT to Use
 

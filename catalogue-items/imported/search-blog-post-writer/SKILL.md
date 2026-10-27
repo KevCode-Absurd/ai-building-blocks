@@ -33,6 +33,8 @@ long-form content piece for SEO and AEO purposes. Trigger phrases include:
 
 Write to the dominant search intent, not merely the keyword. The article should solve a recognizable problem and make the next product action clear without turning an informational article into an unsupported sales pitch.
 
+If you already have a ranked keyword shortlist from an earlier step, give it too: it supplies the secondary keywords and the FAQ questions.
+
 ## Output Structure
 
 The skill must always produce a blog post in this exact section order:
@@ -149,7 +151,7 @@ Every blog post produced by this skill MUST contain:
 
 1. Read `cluster_context` if provided — use it to decide which sub-topics
    to cover and which to leave for linked cluster articles
-2. Review `search_intent_evidence` if provided and state the problem the article solves
+2. Review `search_intent_evidence` if provided and state the problem the article solves. If the keyword has no clear intent and no evidence was given, stop and ask the user to pick a clearer keyword or paste in what the top results look like. Do not draft until the intent is clear.
 3. Write the TL;DR block first — this anchors the whole article's direction
 4. Build the heading skeleton before writing body content
 5. Write the definition block in the "What Is" section as a single sentence

@@ -31,7 +31,7 @@ output_sample:
     - name: Summary
       contains: A count of how many of the 10 risks look covered.
     - name: Risk table
-      contains: One row per risk, ASI-01 to ASI-10, with a pass or fail and a short finding.
+      contains: One row per risk, ASI-01 to ASI-10, marked pass, not confirmed or fail, with a short finding. A keyword match alone is only ever not confirmed.
     - name: Evidence
       contains: The files and code patterns that led to each pass or fail.
     - name: Critical Gaps

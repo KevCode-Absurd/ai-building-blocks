@@ -11,7 +11,8 @@ inputs:
   - type: source_text
     required: true
 outputs:
-  - type: feedback_notes
+  - type: customer_needs
+  - type: voc_reviews
 uses: []
 origin: imported
 source:

@@ -5,7 +5,7 @@ name: Faster model reply setup
 summary: Name your self-hosted model and GPU. Get the best speed-up method, install steps, code to check and a before and after speed test.
 job: build-software
 headline: Faster model reply setup
-subhead: Tell it which language model you run and on what GPU. It picks a speed-up method, gives install steps and starter code, and tells you how to measure tokens per second before and after. Your answers should stay the same.
+subhead: Tell it which language model you run and on what GPU. It picks a speed-up method, gives install steps and starter code, and tells you how to measure tokens per second before and after. It also checks that your answers stay the same.
 explain: |
   If a chatbot or code helper you host yourself feels slow, this faster model reply setup shows you how to speed it up. It uses a method called speculative decoding. A small helper model guesses the next few words, and the big model checks all the guesses at once and keeps the right ones.
 
@@ -38,7 +38,7 @@ you_get:
   - A speed test plan with before and after tokens per second
 how_to_use:
   - Open an AI that can run Python on a computer with a CUDA GPU, such as Claude Code, and paste in this skill. Add the whole folder so it can read the Medusa and lookahead notes.
-  - Tell it your model, your GPU and your main goal. Check that you can download the model. Some Llama models need you to accept a licence on Hugging Face first.
+  - Tell it your model, your GPU and your main goal. Check that you can download the model. Some Llama models need you to accept a licence on Hugging Face first. The skill's big example pairs a 70B model with a 7B helper, which needs a very large multi-GPU setup, so ask for a model that fits your GPU.
   - Read the method it picks and why. Ask it to check the code against the current README of the library before it runs anything.
   - Run the before test, then the after test, on the same prompts. Compare tokens per second.
   - Compare the answers from both runs. If they differ, lower the settings or switch method.

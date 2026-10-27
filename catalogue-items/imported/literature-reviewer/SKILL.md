@@ -69,26 +69,23 @@ The counts, scores and findings in these examples are illustrative placeholders 
 
 **PRISMA-Style Flow:**
 ```
-Records identified through search: 847
-After duplicate removal:           612
-After title/abstract screening:    148
-After full-text assessment:         42
-Final papers included:              42
+Records identified through search: [N]
+After duplicate removal:           [N]
+After title/abstract screening:    [N]
+After full-text assessment:        [N]
+Final papers included:             [N]
 ```
 
-**Synthesis Table (excerpt):**
+**Synthesis Table (excerpt, placeholder rows that show the layout; fill them only from papers you have read):**
 
-| Benchmark | Year | Focus Area | Key Metric | Limitations |
+| Study | Year | Focus Area | Key Metric | Limitations |
 |---|---|---|---|---|
-| MMLU | 2023 | Knowledge & reasoning | Accuracy across 57 tasks | Static; no multi-step reasoning |
-| HumanEval+ | 2023 | Code generation | pass@k | Narrow scope (Python functions) |
-| AgentBench | 2023 | Real-world task completion | Success rate across 8 environments | High cost to run; environment-specific |
-| TrustLLM | 2024 | Safety & trustworthiness | 6 dimensions including fairness | Self-reported; needs human validation |
-| GPQA | 2024 | Graduate-level reasoning | Accuracy on expert-written questions | Small dataset; domain-specific |
-| SWE-bench | 2024 | Software engineering tasks | Resolved rate on real GitHub issues | Requires execution infrastructure |
+| [STUDY A] | [YEAR] | [FOCUS AREA] | [HOW IT MEASURES] | [LIMITATION FROM THE PAPER] |
+| [STUDY B] | [YEAR] | [FOCUS AREA] | [HOW IT MEASURES] | [LIMITATION FROM THE PAPER] |
+| [STUDY C] | [YEAR] | [FOCUS AREA] | [HOW IT MEASURES] | [LIMITATION FROM THE PAPER] |
 
-**Synthesized Finding (excerpt):**
-> The literature reveals a clear trajectory from static knowledge tests (MMLU) toward dynamic, agentic evaluations (AgentBench, SWE-bench) that measure an LLM's ability to act in realistic environments. However, a significant gap persists: no single benchmark suite comprehensively evaluates reasoning, safety, and task completion together. Most benchmarks optimize for one dimension, creating a fragmented evaluation landscape where models can appear strong on reasoning benchmarks while performing poorly on safety metrics.
+**Synthesized Finding (excerpt, layout only):**
+> The literature shows [TREND ACROSS THE STUDIES YOU READ], moving from [EARLIER APPROACH] toward [LATER APPROACH]. However, a gap persists: [GAP YOU FOUND, WITH THE STUDIES THAT SHOW IT]. Most studies [COMMON PATTERN], so [WHAT THAT MEANS FOR THE FIELD]. Check every claim against the papers before you use it.
 
 ---
 
@@ -136,12 +133,12 @@ Phase 2 — Full-Text Review:
 | Result | Percentage change in hallucination rate |
 | Domain | General knowledge, medical, legal, etc. |
 
-**Expected PRISMA Diagram:**
+**Expected PRISMA Diagram (layout only; the counts come from your own search):**
 ```
-Identification:  ~1,200 records from 4 databases
-Screening:       ~400 after title/abstract review
-Eligibility:     ~80 after full-text assessment
-Included:        ~35 meeting all criteria
+Identification:  [N] records from [N] databases
+Screening:       [N] after title/abstract review
+Eligibility:     [N] after full-text assessment
+Included:        [N] meeting all criteria
 ```
 
 ## Best Practices

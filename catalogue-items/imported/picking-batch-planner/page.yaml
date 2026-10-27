@@ -32,9 +32,11 @@ you_get:
 how_to_use:
   - Export the day's orders to a spreadsheet, with one row per order line and columns for order number, item and pick location.
   - Open your AI, paste in the skill text, then paste or upload the file. Add your cart size and any urgent cut-off times.
+  - The distance saved is only real when the pick locations and walking distances come from your own layout. The code in the skill uses mock data to show the method, so replace it with your orders and layout before you quote any figure. Without a layout, your AI marks the saving MISSING.
   - Ask for the batch table, the walking distance saved and the sort steps. It works best when your AI can run code (Python), but a chat can do small lists.
   - Check two or three batches by hand against your floor layout. Then try one batch on a real shift before you change how you pick for the whole day.
   - The distance saved is an estimate. Measure it on your own orders.
+  - Then take the batch table to your warehouse system, or to the Warehouse picker route planner, to set the walking order inside each batch.
 output_sample:
   input:
     - Your day's orders, with the items on each line

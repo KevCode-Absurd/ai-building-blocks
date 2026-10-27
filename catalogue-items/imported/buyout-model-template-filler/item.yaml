@@ -10,6 +10,8 @@ level: expert
 inputs:
   - type: spreadsheet
     required: true
+  - type: deal_terms
+    required: true
 outputs:
   - type: spreadsheet
 uses: []

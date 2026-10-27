@@ -91,9 +91,6 @@ If an image tool is connected, offer to make the picture with it, and ask before
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Fact caption image ad maker](https://useaiblocks.com/skills/fact-caption-image-ad-maker).
-- The [Phone note image ad maker](https://useaiblocks.com/skills/phone-note-image-ad).
-- The [Exact-text image ad prompt writer](https://useaiblocks.com/skills/image-ad-maker-with-exact-text).
 - **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image prompt.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

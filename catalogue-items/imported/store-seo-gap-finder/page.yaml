@@ -30,7 +30,7 @@ you_get:
   - Results grouped by type
 how_to_use:
   - Install the Shopify CLI. Open an AI that can run code, such as Claude Code. A plain chat window cannot reach your store, and tools like Claude Code may need a paid plan.
-  - "Sign in to your store with read access to products and content. The skill lists the exact command: shopify store auth with the read_products and read_content scopes."
+  - "Sign in to your store with read access to products and content. The command is: shopify store auth --store <your store domain> --scopes read_products,read_content."
   - Paste the skill and give your store domain. Add what to scan and your minimum lengths if you want to change the defaults.
   - Let it scan. It only reads and changes nothing in your store.
   - Open the CSV file and fix the flagged rows in your Shopify admin, starting with products. For pages, a blank row can mean Shopify uses the page title as the search title, so open the page in your admin before you decide it is a gap.

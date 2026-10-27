@@ -12,6 +12,8 @@ inputs:
     required: true
   - type: question
     required: false
+  - type: contract
+    required: true
 outputs:
   - type: audit_report
   - type: document

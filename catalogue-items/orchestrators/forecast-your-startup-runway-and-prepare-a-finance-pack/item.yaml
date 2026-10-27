@@ -7,9 +7,12 @@ role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - {type: brief, required: true}
+  - {type: business_plan, required: true}
+  - {type: spreadsheet, required: false}
+  - {type: question, required: true}
 outputs:
   - {type: plan}
+  - {type: spreadsheet}
 uses: [startup-financial-model-builder, startup-runway-forecaster, startup-finance-advisor]
 steps:
   - {uses: startup-financial-model-builder, note: "Builds the monthly cash picture from your plan, with three cases to carry forward."}

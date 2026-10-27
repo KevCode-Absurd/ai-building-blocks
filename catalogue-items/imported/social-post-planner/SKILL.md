@@ -37,6 +37,7 @@ Gather this context (ask if not provided):
 - How much time can you dedicate to social?
 - Do you have existing content to repurpose?
 - Can you create video content?
+- Do you have a results report on your past posts from an earlier step? If so, use its top and bottom posts to choose topics, formats and timing.
 
 ---
 

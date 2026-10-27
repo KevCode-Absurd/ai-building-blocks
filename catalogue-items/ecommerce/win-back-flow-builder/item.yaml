@@ -7,7 +7,7 @@ role: make
 job: email
 level: intermediate
 inputs:
-  - {type: performance_sheet, required: true}
+  - {type: customer_list, required: true}
   - {type: offer, required: false}
   - {type: product_data, required: false}
   - {type: audit_report, required: false}

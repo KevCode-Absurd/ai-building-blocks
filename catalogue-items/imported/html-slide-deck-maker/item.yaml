@@ -10,6 +10,8 @@ level: intermediate
 inputs:
   - type: brief
     required: true
+  - type: slide_deck
+    required: false
 outputs:
   - type: slide_deck
 uses: []

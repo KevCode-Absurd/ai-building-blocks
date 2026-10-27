@@ -32,7 +32,8 @@ you_get:
 how_to_use:
   - "Open an AI that can run code and save files, such as Claude or ChatGPT with code tools on. If you run Python yourself, install the tools first with: pip install pandas matplotlib seaborn plotly."
   - Paste in the chart maker instructions, or upload the skill file.
-  - Upload your data file and say what question the chart should answer. Add chart type, colours or size if you care.
+  - Before you upload, scan your file for blank cells, text in number columns and mixed date formats. Fix them or tell your AI about them.
+  - Upload your data file and say what question the chart should answer. Add chart type, colours or size if you care. The examples in the skill use columns named date, revenue, region and units_sold. Your columns can have any names, so ask your AI to match them first.
   - Check the chart. Look at the title, the axis labels and whether the chart type fits your question. Ask for changes in plain words.
   - Check the chart's numbers against your source spreadsheet before you share it.
   - Download the PNG, SVG or HTML file. Paste the picture into your slide deck, or ask your AI to write a short caption for it.

@@ -14,7 +14,7 @@ how_to_use:
   - Before you start, gather the time range, your git author email and the list of pull requests you merged. No paid service or API key is needed.
   - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat.
   - Say the time range and what it is for, such as a self-review or a weekly update.
-  - To scan git, GitHub pull requests or Copilot logs, use an AI that can run commands on your computer. Otherwise say you want the interview.
+  - To scan git, GitHub pull requests or Copilot logs, use an AI that can run commands on your computer. The pull request scan uses the gh command line tool, which must be installed and signed in to your GitHub account. If you do not want that, say you want the interview instead.
   - Answer its questions about who benefited and what proof you have. Give real numbers only.
   - Check each draft entry. Fix anything that overstates your work, then fill in the places marked evidence needed.
   - Copy the final markdown into your review document.

@@ -7,7 +7,7 @@ job: make-offer
 headline: Offer designer
 subhead: A stronger offer for the thing you sell, so people say yes before you touch the sales page. Better copy on a weak offer helps slowly.
 explain: |
-  A stronger offer for the thing you sell, so people say yes before you touch the sales page. Better copy on a weak offer helps slowly. A better offer works at once.
+  A stronger offer for the thing you sell, so people say yes before you touch the sales page. Better copy on a weak offer helps slowly. A better offer can change how buyers react, so test the change before you rely on it.
 
   The skill starts from the value equation: how big the result is, how likely it feels, how fast it comes, and how much effort and waiting it takes. It then shapes your offer around those four levers. You get ideas for bonuses that remove a buyer's biggest worry, a guarantee that fits your business, honest reasons to act now, a name that says the result, and payment terms. It works for services, courses, coaching, templates and high-ticket sales.
 when:
@@ -30,11 +30,12 @@ you_get:
   - A clear offer name
   - Payment term choices
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. Also give it the files in the references folder (value-equation.md, offer-anatomy.md, guarantee-design.md and bonus-stacking.md matter most). If you can only paste a little, paste the value-equation and offer-anatomy files with SKILL.md.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. Also give it the files in the references folder (value-equation.md, offer-anatomy.md, guarantee-design.md and bonus-stacking.md matter most). The method needs these reference files, so do not skip them. If you can only paste a little, paste the value-equation and offer-anatomy files with SKILL.md.
   - Tell your AI what you sell, who buys it, your price and what is included.
   - Add the reasons people say no. Add your costs and margin if you want a guarantee that protects your profit.
   - Read the value scores first. Fix the weakest lever before you change anything else.
   - Pick one change, such as a bonus or guarantee. Treat any lift the AI predicts as a rough guess. Use the change for a while, then compare your own results before you change more.
+next: [offer-test-planner]
 output_sample:
   input:
     - What you sell and who buys it
@@ -51,4 +52,4 @@ output_sample:
     - name: Changed component
       contains: A new bonus, guarantee, urgency reason, name or payment plan that fixes the weakest lever.
     - name: Honest lift estimate
-      contains: A rough guess of the gain from the change, framed as an assumption to test, not a promise.
+      contains: A note that the gain is unknown until you test it. A range appears only if you give one from your own past tests.

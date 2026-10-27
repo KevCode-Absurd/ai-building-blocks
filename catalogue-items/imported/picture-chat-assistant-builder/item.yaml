@@ -9,7 +9,9 @@ job: ops
 level: advanced
 inputs:
   - type: image
-    required: true
+    required: false
+  - type: question
+    required: false
 outputs:
   - type: code_change
 uses: []

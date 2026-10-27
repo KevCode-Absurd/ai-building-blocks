@@ -42,6 +42,8 @@ npm install @paperjsx/json-to-pdf
 3. Run the script to generate the output file
 4. Validate the output file exists and is non-zero bytes
 
+If you have a plan or an audit report to put in the file, use it as the content.
+
 Do not hand-draw documents with low-level PaperJSX calls. Build a JSON spec and pass it to the package's render function, as the examples below do. The execution model is always: JSON spec in, document file out.
 
 ## Example: PPTX generation

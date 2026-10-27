@@ -14,7 +14,6 @@ Read [the original role profile](references/source-agent.md) before you start. I
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Skin realism image prompt checker](https://useaiblocks.com/skills/skin-realism-image-prompt-checker).
 - The [Multi-provider image maker](https://useaiblocks.com/skills/multi-provider-image-maker). It takes the image prompt.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
@@ -51,6 +50,8 @@ If a video tool is connected, offer to make the clips with it, and ask before yo
 
 ## What to collect first
 
+These are the inputs that count. If the generic "Before you start" list above asks for something else, such as a question or source text, ignore that part.
+
 Ask once for anything missing. Never invent it. Mark each gap `MISSING:` in the answer, or label a stand-in `ASSUMED:` and say what to replace it with.
 
 1. The story or message, and where the picture will appear.
@@ -80,6 +81,8 @@ Use these headings, in this order:
 5. Video motion (video only)
 6. Review checklist
 7. Open questions
+
+The open questions are also your CHECKS MISSED list: name every check you could not run, or write "none". Finish with one line: show the finished picture to a reviewer from the community before you publish.
 
 ## Rules
 

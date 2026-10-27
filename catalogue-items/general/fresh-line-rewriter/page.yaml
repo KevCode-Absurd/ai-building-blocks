@@ -11,7 +11,7 @@ subhead: Give it your ad copy and, if you have them, your rivals' ads. It keeps 
 explain: |
   A true claim said the way everyone says it disappears. Buyers see "fast", "easy" and "trusted" on every page, so none of them stick. The fix is a new way to say the same claim, not a bigger claim.
 
-  This skill writes your claim in its flat form, collects how rivals say it, and writes fresh versions that keep the claim unchanged. It prefers a detail, a picture or a surprise that proves the claim over a word that names it. Each version gets a swap test: could a rival put the flat line in its ad and sound the same. It then picks one and trims it.
+  This skill writes your claim in its flat form, collects how rivals say it, and writes fresh versions that keep the claim unchanged. It prefers a detail, a picture or a surprise that proves the claim over a word that names it. Each version gets a swap test: could a rival print it unchanged in their own ad. It then picks one and trims it.
 
 when:
   - Your ad says what every rival's says, in the same words.
@@ -69,7 +69,7 @@ how_it_works:
   - title: Proves instead of naming
     text: Uses a picture, a detail or a surprise that shows the claim in place of a word that names it.
   - title: Runs the swap test
-    text: Tests whether a rival could put the flat line in its ad and sound the same.
+    text: Tests whether a rival could print the version unchanged in their own ad. If they could, it fails.
   - title: Reads the feeling
     text: Checks the feeling each version leaves, not only the facts.
   - title: Picks and trims
@@ -143,6 +143,6 @@ works_best_with:
 
 terms:
   - term: Swap test
-    meaning: Put the plain version of your claim into a rival's ad. If it fits just as well, your line is not yours.
+    meaning: Imagine a rival printing your line unchanged in their ad. If it fits just as well, your line is not yet yours.
   - term: Flat claim
     meaning: The true statement with no style, used to check that the fresh versions say the same thing.

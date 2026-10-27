@@ -20,6 +20,8 @@ Design, analyze, and visualize electrically large antenna structures — reflect
 reflectarrays/RIS, platform-installed antennas, and radar cross section — using MATLAB
 Antenna Toolbox with appropriate EM solvers for each problem class.
 
+If an antenna was designed in an earlier step, use that MATLAB code as the exciter, or as the antenna to install on a platform or test for RCS. A platform file (STL, STEP or IGES) can be loaded as the platform.
+
 ## When to Use
 
 **Reflector antennas**

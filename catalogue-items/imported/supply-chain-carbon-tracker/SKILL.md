@@ -116,10 +116,11 @@ class CarbonFootprintCalculator:
         }
 
     def _load_emission_factors(self):
-        """Load standard emission factors database"""
-        # Example values only, loosely based on public EPA and DEFRA factor tables.
-        # No year, version or unit check is recorded here. Replace any factor you cannot cite
-        # with one from a published source, and write down its source, year and unit.
+        """Load example emission factors (placeholders, not a standard database)"""
+        # PLACEHOLDER VALUES, not defaults. They are not a trusted source.
+        # Before you report any total, every factor you use must carry a cited source,
+        # a year and a unit. Replace each one you cannot cite with a published figure
+        # and write down its source, year and unit.
         return {
             # Energy (kgCO2e per kWh)
             'electricity_us_grid': 0.417,
@@ -565,7 +566,7 @@ class SupplierEmissionsTracker:
             # Spend-based estimation
             spend = supplier['annual_spend']
 
-            # Average emission factor: tCO2e per $1000 spend
+            # PLACEHOLDER: tCO2e per $1000 spend. Replace with a cited industry figure (source, year, unit).
             spend_emission_factor = 0.5
 
             emissions = (spend / 1000) * spend_emission_factor

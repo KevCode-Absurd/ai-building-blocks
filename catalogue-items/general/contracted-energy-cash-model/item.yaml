@@ -11,6 +11,8 @@ inputs:
     required: true
   - type: document
     required: false
+  - type: contract
+    required: false
 outputs:
   - type: spreadsheet
     required: true

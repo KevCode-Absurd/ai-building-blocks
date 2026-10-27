@@ -107,6 +107,8 @@ Agent:
 
 ## What changes when VoiceMoat is connected
 
+Optional, and it needs a paid VoiceMoat plan (Pro or Enterprise). Skip this section unless the user has that plan and has connected it. The skill works fully without it.
+
 Step 2 is only as good as the fifteen posts someone chose to paste, and people
 paste the ones they liked, which quietly skews the whole thing.
 

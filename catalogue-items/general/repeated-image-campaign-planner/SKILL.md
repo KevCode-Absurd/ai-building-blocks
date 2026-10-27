@@ -97,7 +97,6 @@ CHECKS MISSED
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Exact-text image ad prompt writer](https://useaiblocks.com/skills/image-ad-maker-with-exact-text). It takes the image plan.
-- The [Image enlargement quality checker](https://useaiblocks.com/skills/image-upscale-checker).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

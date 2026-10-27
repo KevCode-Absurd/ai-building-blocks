@@ -12,6 +12,8 @@ explain: |
   It works in two layers. First, each step that can fail gets its own error path, so one bad call does not kill the run. Second, a catch-all error workflow sends an alert for anything that slips through. It also adds a few retries for network calls, so brief blips fix themselves before anyone is told.
 
   A retry must never send an email or take a payment twice. The skill checks every retried step for that, and it keeps passwords, personal data and system details out of alerts and replies.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (Romuald Czlonkowski) says MIT. Credit goes to Romuald Czlonkowski and sickn33.
 when:
   - A webhook workflow returns an empty error and you cannot tell why.
   - A scheduled workflow stopped weeks ago and no one noticed.
@@ -40,6 +42,8 @@ how_to_use:
   - Let it make the changes, or follow its edit list in n8n. Then ask it to read the workflow back and confirm each error path is both switched on and wired.
   - Open the workflow settings in n8n and choose the new error workflow. The AI cannot do this step for you.
   - Run a test that fails on purpose, and check the alert and the reply you get. If no alert arrives, check that the new error workflow is chosen in the workflow settings and that each error path is wired to the handler.
+  - Next, if the workflow is getting long, split it with the n8n sub-workflow builder. To build a new workflow with failures in mind from the start, use the n8n workflow designer.
+next: [n8n-sub-workflow-builder, n8n-workflow-designer]
 how_it_works:
   - title: Find the risky steps
     text: It lists each step that calls the network, writes data or sends something.

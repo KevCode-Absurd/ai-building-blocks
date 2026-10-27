@@ -9,6 +9,8 @@ You are an expert in warehouse order batching and picking optimization. Your goa
 
 ## Initial Assessment
 
+If you have a slot plan that shows where each product sits, use it for the pick face locations.
+
 Before optimizing order batching, understand:
 
 1. **Picking Method**
@@ -889,71 +891,63 @@ import matplotlib.pyplot as plt
 
 ### Order Batching Report
 
-**Batch Optimization Summary - January 15, 2024**
+_Layout only. Every value below in [brackets] is a placeholder. Take real values from the user's own orders and floor layout. If you do not have a value, write `MISSING:` and do not estimate it. Never quote a distance or time saving that was not worked out from the user's layout._
+
+**Batch Optimization Summary - [DATE]**
 
 **Performance Comparison:**
 
-| Metric | Discrete Picking | Current Batching | Optimized Batching |
-|--------|------------------|------------------|-------------------|
-| Avg Orders per Batch | 1.0 | 4.2 | 5.8 |
-| Avg Travel per Order (ft) | 425 | 185 | 142 |
-| Travel Reduction | 0% | 56% | 67% |
-| Picks per Hour | 65 | 145 | 175 |
-| Sort Time per Order (min) | 0 | 2.5 | 2.1 |
-| Total Cycle Time (min) | 24 | 14 | 12 |
+| Metric | Discrete Picking | Current Batching | Planned Batching |
+|--------|------------------|------------------|------------------|
+| Avg Orders per Batch | [N] | [N] | [N] |
+| Avg Travel per Order | [distance] | [distance] | [distance] |
+| Travel Reduction | 0% | [N]% | [N]% |
+| Picks per Hour | [N] | [N] | [N] |
+| Sort Time per Order (min) | 0 | [N] | [N] |
+| Total Cycle Time (min) | [N] | [N] | [N] |
 
 **Batch Details:**
 
 ```
-Batch 001:
-  Orders: 6
-  Total Lines: 42
-  SKU Overlap: 68%
-  Estimated Travel: 620 ft
-  Estimated Pick Time: 24 min
-  Estimated Sort Time: 12 min
-  Priority Orders: 1 (ORD0045)
+Batch [ID]:
+  Orders: [N]
+  Total Lines: [N]
+  SKU Overlap: [N]%
+  Estimated Travel: [distance]
+  Estimated Pick Time: [N] min
+  Estimated Sort Time: [N] min
+  Priority Orders: [N] ([order number])
 
   Order Breakdown:
-    ORD0042: 8 lines, Zone A (4), Zone B (3), Zone C (1)
-    ORD0043: 6 lines, Zone A (3), Zone B (2), Zone C (1)
-    ORD0045: 9 lines [PRIORITY], Zone A (5), Zone B (3), Zone C (1)
-    ORD0047: 5 lines, Zone A (2), Zone B (2), Zone C (1)
-    ORD0048: 7 lines, Zone A (4), Zone B (2), Zone C (1)
-    ORD0050: 7 lines, Zone A (3), Zone B (3), Zone C (1)
+    [order number]: [N] lines, Zone [A] ([N]), Zone [B] ([N])
 
-  Shared SKUs: SKU_A (6 orders), SKU_B (5 orders), SKU_D (4 orders)
+  Shared SKUs: [SKU] ([N] orders), [SKU] ([N] orders)
 ```
 
 **Batching Statistics:**
 
-- Total Orders: 120
-- Total Batches: 21
-- Avg Batch Size: 5.7 orders
-- Batch Size Distribution:
-  - 3 orders: 2 batches
-  - 4 orders: 4 batches
-  - 5 orders: 6 batches
-  - 6 orders: 7 batches
-  - 7 orders: 2 batches
+- Total Orders: [N]
+- Total Batches: [N]
+- Avg Batch Size: [N] orders
+- Batch Size Distribution: [N] batches of each size
 
 **Travel Savings:**
 
-- Total Travel (Discrete): 51,000 ft
-- Total Travel (Batched): 16,850 ft
-- **Savings: 34,150 ft (67% reduction)**
+- Total Travel (Discrete): [distance]
+- Total Travel (Batched): [distance]
+- **Savings: [distance] ([N]% reduction), from the user's own layout**
 
 **Productivity Impact:**
 
-- Picker Hours (Discrete): 30.8 hours
-- Picker Hours (Batched): 17.6 hours
-- **Labor Savings: 13.2 hours (43% reduction)**
+- Picker Hours (Discrete): [N] hours
+- Picker Hours (Batched): [N] hours
+- **Labor Savings: [N] hours ([N]% reduction)**
 
 **Recommendations:**
-1. Implement optimized batching strategy
-2. Add 2 sort stations for peak capacity
-3. Separate priority orders into express batches
-4. Consider 8-tote carts for larger batches
+1. [Next step based on the user's own results]
+2. [Extra sort stations, only if sort time is the bottleneck]
+3. [Separate priority orders into express batches, if there are any]
+4. [Cart size change, if the cart limits batch size]
 
 ---
 

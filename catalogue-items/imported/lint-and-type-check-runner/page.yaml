@@ -30,11 +30,14 @@ you_get:
   - A list of checks that did not run
   - The commands used and their exit results
 how_to_use:
+  - Commit or stash your work first, so you can undo any automatic fix.
   - Open your AI tool in your project folder. It needs to run commands, so use a tool that can, such as Claude Code.
   - Paste this skill, or add it to your tool's skills.
   - Tell your AI which files you changed. Say it may run your project's own lint and type check scripts.
-  - Ask it to read your scripts first. A script named lint can change files or use the network. Your AI should show you what each script does and wait for your yes before it runs anything that could change files or reach the network.
-  - Read the report. Look at the checks that did not run before you trust a pass. This skill is rated critical risk because it runs your project's own commands, which can change files, so run it only on projects you trust.
+  - Ask it to read your scripts first, and to list each script it plans to run.
+  - For each script, read what it may change or fetch. A script named lint can change files or use the network. Your AI must wait for your yes before it runs any script that could change files or reach the network.
+  - Read the report. Look at the checks that did not run before you trust a pass.
+  - Run this only on projects you trust. It runs your project's own commands, and those can change your files or reach the network.
   - After a pass, commit your change. After a fail, ask your AI to fix the listed errors and run the checks again.
 output_sample:
   input:

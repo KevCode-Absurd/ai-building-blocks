@@ -69,6 +69,14 @@ Parse:
 
 If neither is provided, ask the user to specify a data source or describe the identification problem.
 
+Before estimating, make sure you know:
+
+* **Data format**: file type or workspace variable names, with one column per input and one per output
+* **Units**: the unit of every column
+* **Sample time**: the sample time in seconds, or the time vector
+* **Estimation and validation split**: which part of the data is used to fit and which part is held back to check the fit. Ask the user if the split is not obvious.
+* **Purpose**: simulation, prediction or control design
+
 ---
 
 ## Design Principles
@@ -395,6 +403,8 @@ resid(zv, model);
 2. **Model MAT file** — `identified_model.mat` with the final model object
 3. **Figures** — PNG files for comparison, Bode, residuals
 4. **Results summary** — printed to console
+
+**Next step:** use the identified model in the Control System Toolbox or a PID tuner (for example `pidtune`) for control design, or simulate it against new data with `sim`. This skill stops once the model is validated and saved.
 
 ---
 

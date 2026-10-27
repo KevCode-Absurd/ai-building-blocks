@@ -92,8 +92,8 @@ CHECKS MISSED: <none, or the checks you could not run>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Store go-live checker](https://useaiblocks.com/skills/store-go-live-checker). It takes the plan.
-- The [WooCommerce store setup planner](https://useaiblocks.com/skills/woocommerce-store-setup-planner).
-- The [Shopify Markets setup planner](https://useaiblocks.com/skills/shopify-markets-setup-planner).
+- The [Store tax setup planner](https://useaiblocks.com/skills/store-tax-setup-planner). It takes the plan.
+- The [Product page section planner](https://useaiblocks.com/skills/product-page-section-planner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -31,6 +31,7 @@ you_get:
   - Suggested threads to read
 how_to_use:
   - Before you start: Reddit's terms may limit automated access, so keep it light and never work around a block. X results need an export file or a paid X API key.
+  - Have ready your topic in one sentence, what you want to learn (trends, opinions, problems or a comparison), the time window, which sources to use, and an X export file if you have one.
   - Open Claude, ChatGPT or Gemini with web search turned on. Paste in the skill instructions.
   - Say "pulse on" and then your topic. For example, "pulse on your product category".
   - "Answer the 2 to 4 short questions it asks: topic detail, angle, time window and sources."

@@ -10,6 +10,7 @@ inputs:
   - { type: product_data, required: true }
   - { type: persona, required: true }
   - { type: voc_reviews, required: false }
+  - { type: competitor_set, required: false }
 outputs:
   - { type: angle_library }
 uses: []

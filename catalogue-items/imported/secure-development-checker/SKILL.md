@@ -64,6 +64,8 @@ python scripts/vulnerability_assessor.py /path/to/project --json --output vulns.
 - `requirements.txt` and `pyproject.toml` (Python)
 - `go.mod` (Go)
 
+The tool checks packages against a small list built into the script. It makes no network calls, so it will miss flaws that are not on that list. Treat a clean result as "nothing found in the built-in list", not "no known flaws".
+
 **Output:**
 - CVE IDs with CVSS scores
 - Affected package versions
@@ -415,7 +417,7 @@ app.use((req, res, next) => {
 
 ## OWASP Top 10 Quick-Check
 
-Rapid 15-minute assessment — run through each category and note pass/fail. For deep-dive testing, hand off to the **security-pen-testing** skill.
+Rapid 15-minute assessment — run through each category and note pass/fail. For deep-dive testing of a running app, use the **live-app-security-tester** item in the AI Blocks library (the original refers to a separate security-pen-testing skill that is not in this copy).
 
 | # | Category | One-Line Check |
 |---|----------|----------------|
@@ -430,7 +432,7 @@ Rapid 15-minute assessment — run through each category and note pass/fail. For
 | A09 | Logging & Monitoring | Validate audit logs capture auth events; alerts configured |
 | A10 | SSRF | Test internal URL filters; block metadata endpoints (169.254.169.254) |
 
-> **Deep dive needed?** Hand off to `security-pen-testing` for full OWASP Testing Guide coverage.
+> **Deep dive needed?** Use the live-app-security-tester item for testing a running app.
 
 ---
 
@@ -443,6 +445,8 @@ Choose the right scanner for each stage of your workflow:
 | **gitleaks** | CI pipelines, full-repo scans | Go | Yes | Yes | TOML regexes |
 | **detect-secrets** | Pre-commit hooks, incremental | Python | Yes | Partial | Plugin-based |
 | **truffleHog** | Deep history scans, entropy | Go | No | Yes | Regex + entropy |
+
+Note: `gitleaks-action` may need a paid licence key (`GITLEAKS_LICENSE`) when used for an organisation's repositories. Check its terms before you add it. Check the terms of each tool you pick.
 
 **Recommended setup:** Use `detect-secrets` as a pre-commit hook (catches secrets before they enter history) and `gitleaks` in CI (catches anything that slips through).
 
@@ -492,7 +496,7 @@ cosign verify ghcr.io/org/app:latest --certificate-identity=ci@org.com --certifi
 | 3 | Hardened build platform, non-falsifiable provenance | Tamper-proof build |
 | 4 | Two-party review, hermetic builds | Maximum supply-chain assurance |
 
-> **Cross-references:** `security-pen-testing` (vulnerability exploitation testing), `dependency-auditor` (license and CVE audit for dependencies).
+> **Cross-references:** use the live-app-security-tester item for testing a running app, and the dependency-risk-auditor item for a full licence and known-flaw check on your packages. The original names (security-pen-testing, dependency-auditor) are not in this copy.
 
 ---
 

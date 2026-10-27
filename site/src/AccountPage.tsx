@@ -77,7 +77,7 @@ function Settings() {
         const a = document.createElement("a"); a.href = url; a.download = "ai-blocks-saving-diagnostics.json"; a.click(); setTimeout(() => URL.revokeObjectURL(url), 1000);
       }}>Download saving diagnostics</button>
     </section>
-    <section className="account-setting"><div><h2>Your details</h2><p className="small">Edit the facts and preferences included with your prompts and downloads.</p></div><button className="btn btn-line btn-sm" onClick={openBusiness}>Edit your details</button></section>
+    <section className="account-setting"><div><h2>Your me.md</h2><p className="small">Edit the private file about you that is added to your prompts and downloads.</p></div><button className="btn btn-line btn-sm" onClick={openBusiness}>Edit your me.md</button></section>
     <section className="account-setting"><div><h2>Team access</h2><p className="small">Manage your space, invited email addresses and company domain access.</p></div><Link to="/space" className="btn btn-line btn-sm">Manage my space</Link></section>
     {notice && <p className="account-notice" role="status">{notice}</p>}
   </div>;

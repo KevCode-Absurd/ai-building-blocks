@@ -17,9 +17,10 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 - **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **The policy** (yours): the written policy or rules, with the date they start.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Audit report** with the [Handbook change and cross-reference checker](https://useaiblocks.com/skills/handbook-change-checker). Bring document, a draft (optional).
+1. **Audit report** with the [Handbook change and cross-reference checker](https://useaiblocks.com/skills/handbook-change-checker). Bring the policy, a draft (optional).
 2. This one.
 
 How to start:
@@ -61,10 +62,9 @@ The policy and the problem it solved. Your fear. The law and safety check. The t
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Long-term partner screener](https://useaiblocks.com/skills/long-term-partner-screener). It takes the plan.
+- The [Sales pay plan checker](https://useaiblocks.com/skills/sales-pay-plan-checker). It takes the plan.
 - The [Process and meeting cleanup planner](https://useaiblocks.com/skills/process-and-meeting-cull-planner). It takes the plan.
-- The [Internal change announcement writer](https://useaiblocks.com/skills/change-announcement).
-- The [Employee performance review writer](https://useaiblocks.com/skills/quarterly-performance-review-keeper). It takes the plan.
-- The [Workplace policy and handbook writer](https://useaiblocks.com/skills/policy-handbook-writer).
 - The [Company handbook change reviewer](https://useaiblocks.com/skills/handbook-change-desk).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

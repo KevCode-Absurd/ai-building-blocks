@@ -6,7 +6,14 @@ argument-hint: "[slug] [--format=working|sof|witness-[name]]"
 
 # /chronology
 
-**Plain-chat use (AI Blocks note).** The paths below belong to a saved plugin setup. If the person has no matter folder, matter log or saved configuration, do not stop. Run in `--documents` mode on the files they upload, ask for the main issue in one or two lines, and say the result is pre-matter work. Treat the matter-file steps as skipped.
+**Plain-chat use (AI Blocks note).** The paths below belong to a saved plugin setup. If the person has no matter folder, matter log or saved configuration, do not stop. Use this short procedure instead and skip the numbered list that follows:
+
+- A. Ask for the main issue in one or two lines, and whether any papers came from legal disclosure (see the restrictions below). Say the result is pre-matter work.
+- B. Ask which privilege posture applies (Step 0), then read only the files the person uploaded. Skip steps 1, 2 and the conflicts gate.
+- C. Extract dated events, merge duplicates, and tag each red, yellow or grey for how much it matters to the main issue (Steps 3 to 5).
+- D. Show the timeline as a table in the chat: date, event, tag, sources. Do not write to a saved folder. Offer a file the person can save.
+- E. Ask: "Scan the red entries. Anything I miscalled?"
+- F. Tag any date or rule that did not come from an uploaded file as `[model knowledge — verify]`. Never fill a gap from memory without saying so. This is a first working draft for a person to check, not legal advice.
 
 1. Load `~/.claude/plugins/config/claude-for-legal/litigation-legal/matters/[slug]/matter.md` → theory, pivot fact, key facts.
 2. Load `~/.claude/plugins/config/claude-for-legal/litigation-legal/CLAUDE.md` → Document storage sources, default matter folder pattern.

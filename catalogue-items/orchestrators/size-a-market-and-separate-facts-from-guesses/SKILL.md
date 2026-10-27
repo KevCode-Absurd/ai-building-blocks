@@ -19,6 +19,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 - **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+- **Your idea** (yours): the product, app, business or project idea, in a line or a short paragraph.
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 
 How to start:
@@ -78,8 +79,8 @@ The estimate is not a forecast, and the report is not investment advice. Say so 
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Scholarly work reviewer](https://useaiblocks.com/skills/scholarly-work-reviewer). It takes the document.
-- The [Cited research report writer](https://useaiblocks.com/skills/cited-research-report-writer). It takes the plan.
-- The [Item-by-item researcher](https://useaiblocks.com/skills/item-by-item-researcher). It takes the plan.
+- The [Study and claim evidence reviewer](https://useaiblocks.com/skills/study-claim-checker). It takes the document.
+- The [Unsupported claim spotter](https://useaiblocks.com/skills/unsupported-claim-spotter). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

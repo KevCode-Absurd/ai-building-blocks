@@ -8,14 +8,14 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: copy_draft
+  - type: prompt
     required: true
   - type: test_report
     required: false
   - type: audit_report
     required: false
 outputs:
-  - type: copy_draft
+  - type: prompt
 uses: []
 origin: imported
 source:

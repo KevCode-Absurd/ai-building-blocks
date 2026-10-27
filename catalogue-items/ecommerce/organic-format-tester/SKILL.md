@@ -34,6 +34,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+In this skill, "your results" means your own post analytics from Instagram Insights, TikTok analytics or a table you typed. It does not need a Meta Ads Manager or Google Ads export.
+
 - **A list of the last 20 or more posts** (required): format, hook, topic and date for each.
 - **Numbers per post** (required): views, and where possible 3-second hold or watch rate, shares, saves, comments, follows, and link or DM clicks.
 - **The goal this month** (required): growth or sales.
@@ -57,7 +59,7 @@ If there are fewer than 20 posts or no analytics, stop: say "Keep posting; there
 8. **Refine a winner.** Shorten it, strengthen the hook, tweak the call to action, then post it again.
 9. **Extend a winner.** Post it again with a different opening, a new voice-over or a carousel version. Test how many times a winner can come back in a new form before views fall.
 10. **Turn the winner into a series.** Give it a name, its own look and a clear promise. Keep several formats in rotation so one does not tire.
-11. **Give the time rule.** Do not stop at a few weeks. The sources suggest a month of the same plan before judging, and 6 to 12 months of commitment for an account to grow.
+11. **Give the time rule.** Do not stop at a few weeks. Individual coaches suggest a month of the same plan before judging, and 6 to 12 months of commitment for an account to grow. These are their opinions, not study results, so treat them as a rough guide.
 12. **Say the limits.** The advice here comes from individual coaches, not studies. AI can draft hook variants, but posting ten versions takes real time.
 
 ## Score it
@@ -72,7 +74,7 @@ The score measures how sound the person's testing is, not how good the posts are
 - T8 A winner has been refined or reposted in a new form.
 - T9 Winning formats are named as a series and several formats are in rotation.
 - T10 The same plan has run for at least a month before judging.
-A check you could not run is listed under not run and earns nothing. Write the sum on the score line: `10 x <passes> = <n>`. State "on the checks run" if any were not run.
+A check you could not run is listed under CHECKS MISSED and earns nothing. Write the sum on the score line: `10 x <passes> = <n>`. State "on the checks run" if any were not run.
 
 ## When not to use
 To judge paid ads, use the six-pattern ad performance diagnoser. For new hook lines, use the short video hook writer, then bring the best ones back here as your test. With fewer than 20 posts, keep posting first.
@@ -117,7 +119,7 @@ MISSING: <format | hook | numbers | goal>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Weekly social post writer](https://useaiblocks.com/skills/weekly-social-content-planner).
-- The [Social post ad reviewer](https://useaiblocks.com/skills/organic-post-to-ad-promoter).
+- The [Social content calendar maker](https://useaiblocks.com/skills/standing-social-calendar-maker). It takes the plan.
 - The [Brand social account checker](https://useaiblocks.com/skills/brand-social-account-checker). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

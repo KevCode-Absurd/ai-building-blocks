@@ -37,7 +37,7 @@ Invoke this skill when:
 
 1. **Write the brief** — Fill `assets/market_research_brief_template.md` (objective, the decision this informs, sizing approach, sampling plan, assumptions register).
 2. **Size the market** — Run `market_sizer.py --input market.json --method both --profile {b2b-saas|consumer|enterprise|marketplace|hardware|services}`. Reconcile the top-down/bottoms-up delta before quoting anything.
-3. **Plan the survey** — Run `sample_size_planner.py --input survey.json`. Fund the per-segment floors, not just the overall n.
+3. **Plan the survey** — Run `sample_size_planner.py --input survey.json`. Fund the per-segment floors, not just the overall n. If a survey draft or plan from an earlier step is in the chat, take its groups from it and set the per-segment minimums for those groups.
 4. **Score the segments** — Run `segmentation_scorer.py --input segments.json --profile <same>`. Drop segments failing the substantiality/accessibility gate.
 5. **Assemble the evidence pack** — Combine into a brief. Every number carries its method + assumptions + confidence.
 
@@ -78,6 +78,8 @@ This skill ships an **isolated, opt-in** bridge to `engineering/autoresearch-age
 
 Isolated: no hard dependency — autoresearch runs only on demand, and the loop edits `market.json`, never the evaluator.
 
+AI Blocks caution: a loop that only lowers `tam_divergence` can "fix" the gap by nudging inputs until the two numbers agree. That proves nothing. Change a market input only when the user has a cited source for the new value, and log every change and its source in the assumptions list. If the gap stays wide, report that the sizing failed and which input is weakest. Never tune inputs just to make the methods agree.
+
 ## References
 
 - `references/market_sizing_canon.md` — TAM/SAM/SOM frameworks (Bessemer, a16z); top-down vs bottoms-up; Fermi estimation; market-model conventions; common sizing fallacies.
@@ -117,7 +119,7 @@ python3 scripts/sample_size_planner.py --population 62000 --confidence 0.95 --mo
 python3 scripts/segmentation_scorer.py --sample --output json
 ```
 
-The sample market triangulates a ~$1.47B top-down SAM against the bottoms-up figure and flags the divergence; the segmentation sample drops the "solopreneurs who might want analytics" slice for failing the substantiality and accessibility gates.
+The built-in sample (made-up numbers for a demo, not real market data) triangulates a ~$1.47B top-down SAM against the bottoms-up figure and flags the divergence; the segmentation sample drops the "solopreneurs who might want analytics" slice for failing the substantiality and accessibility gates.
 
 ## Forcing-question library (Matt Pocock grill discipline)
 

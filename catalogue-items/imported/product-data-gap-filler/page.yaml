@@ -30,7 +30,7 @@ you_get:
   - Variant-level barcode and SKU updates
   - A list of gaps only you can fill
 how_to_use:
-  - Open your AI in a tool that can run Shopify CLI commands, and sign in to your store first.
+  - Open your AI in a tool that can run Shopify CLI commands, such as Claude Code. Install the Shopify CLI, then sign in to your store yourself with `shopify store auth --store your-store.myshopify.com --scopes read_products,write_products`. Check the command against the current Shopify CLI help, because it can change.
   - Paste the skill and give your store domain. Add your SKU and barcode file and any vendor or product type to apply.
   - Ask for a dry run first. Nothing is written in a dry run.
   - Read the change preview CSV. Check that each barcode matches the right product.
@@ -61,3 +61,10 @@ output_sample:
     - name: Still-missing list
       contains: Variants with no match in your file, left blank so you can find the data.
 next: [ai-shopping-readiness-checker, product-field-bulk-editor]
+terms:
+  - term: GTIN
+    meaning: The number under a product's barcode. Shopping tools use it to tell products apart.
+  - term: SKU
+    meaning: Your own code for a product or variant, such as a size and colour.
+  - term: JSON-LD
+    meaning: Hidden product facts in your page that search and AI tools read.

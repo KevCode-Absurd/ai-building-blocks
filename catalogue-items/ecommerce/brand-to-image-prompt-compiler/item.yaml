@@ -7,8 +7,14 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: brand_brain
     required: true
+  - type: brief
+    required: false
+  - type: design_direction
+    required: false
+  - type: ad_copy
+    required: false
 outputs:
   - type: image_prompt
     required: true

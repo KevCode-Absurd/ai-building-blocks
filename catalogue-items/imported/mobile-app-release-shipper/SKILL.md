@@ -65,6 +65,8 @@ npx eas-cli@latest build --profile production
 
 ### Submit to Stores
 
+**Before you submit (AI Blocks):** a `--submit` command sends a real build to App Store Connect or Google Play, and it can start a review that is hard to undo. Show the user the exact command and which store it sends to, and wait for a clear yes before you run it. Start with TestFlight or the Google Play internal track. Never put a service account key or an Apple password into the chat or into a file you commit. This skill is for Expo projects only. For a bare React Native project or a website, use that project's own build and hosting steps instead.
+
 ```bash
 # iOS: Build and submit to App Store Connect
 npx eas-cli@latest build -p ios --profile production --submit
@@ -116,8 +118,8 @@ Standard `eas.json` for production deployments:
   "submit": {
     "production": {
       "ios": {
-        "appleId": "your@email.com",
-        "ascAppId": "1234567890"
+        "appleId": "[YOUR APPLE ID EMAIL]",
+        "ascAppId": "[YOUR APP STORE CONNECT APP ID]"
       },
       "android": {
         "serviceAccountKeyPath": "./google-service-account.json",

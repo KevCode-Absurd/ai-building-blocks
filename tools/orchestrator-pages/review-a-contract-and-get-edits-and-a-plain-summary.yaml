@@ -11,7 +11,7 @@ explain: |
 
   The workflow reads the contract clause by clause against your rules and suggests edits with a fallback for each. Then it checks the ownership, licence and indemnity clauses on their own, because they are the hardest to fix once signed. Last it writes a plain summary for the person who has to say yes. A pause comes at the end: take the summary, the edits and the flagged clauses to a qualified lawyer before you sign.
 when:
-  - You were sent a contract and the deadline is close.
+  - You were sent a contract and the deadline is a week or more away. If it is only days away, go to a lawyer now and use this to prepare your questions.
   - You want to know which clauses to push back on before you talk to the other side.
   - Someone else must approve the deal and needs a short summary, not 30 pages.
 not_for:
@@ -30,7 +30,7 @@ you_get:
   - A list of questions and flagged clauses for your lawyer
 how_to_use:
   - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md". Claude Code and Claude Projects may need a paid Claude plan, so check yours. Another AI that reads files works too.
   - Paste the contract and say which side you are on. Add any rules you always use.
   - When it finishes, take the summary and the flagged clauses to a qualified lawyer before you sign.
 output_sample:
@@ -40,7 +40,7 @@ output_sample:
     - Your deadline and the points that worry you
     - Your usual contract rules (optional)
   prerequisites:
-    - An AI that can read files, such as Claude in Claude Code or a Claude Project
+    - An AI that can read files, such as Claude in Claude Code or a Claude Project. These may need a paid Claude plan, so check yours.
     - The handoff pack with HANDOFF.md and the skill files
   output:
     - name: "Step 1: Contract review"

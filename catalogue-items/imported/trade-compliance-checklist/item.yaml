@@ -9,7 +9,11 @@ role: check
 job: ops
 level: intermediate
 inputs:
-  - type: document
+  - type: question
+    required: true
+  - type: spreadsheet
+    required: false
+  - type: audit_report
     required: false
 outputs:
   - type: audit_report

@@ -9,9 +9,9 @@ job: ops
 level: intermediate
 inputs:
   - type: question
-    required: true
+    required: false
 outputs:
-  - type: plan
+  - type: document
 uses: []
 origin: imported
 source:

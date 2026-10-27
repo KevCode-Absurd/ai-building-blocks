@@ -10,6 +10,8 @@ explain: |
   A MATLAB robot arm model you can trust, so later moves and reach checks do not quietly go wrong. Name the arm, such as a UR5e, KUKA iiwa or Panda, and it builds the model.
 
   It picks the best source it can find: the built-in robot library first, then your URDF file, then DH parameters. Collision shapes matter, because a model without them lets a planner call a path clear when it is not. It also helps you attach a gripper, choose between the two inverse kinematics solvers, and checks each solution for exit flags, position error and smooth joint changes. You need MATLAB with the robotics toolbox.
+
+  Licence: this copy is under BSD 2-Clause (see the LICENSE.md file in this item). The skill file also links MathWorks' own reuse licence, which means you may use it only with MathWorks products such as MATLAB. Follow the LICENSE.md file. Credit goes to MathWorks.
 when:
   - You need a MATLAB model of a named arm like a UR5e or Panda for a simulation.
   - You have a URDF file and want it loaded with meshes kept.
@@ -32,7 +34,7 @@ you_get:
   - A note on any gaps in the model
 how_to_use:
   - Open an AI that can run MATLAB. You need paid MATLAB with Robotics System Toolbox. The skill's licence lets you use it only with MathWorks products.
-  - Paste the skill text into the chat.
+  - Paste the skill text into the chat, then send your first request, for example: "Load a UR5e with loadrobot, attach a gripper and check the home pose."
   - Give the arm name, or attach your URDF file or DH parameters.
   - Add target poses and gripper details if you have them (optional).
   - Say what you plan to do next, such as animate or pick and place.
@@ -47,7 +49,7 @@ output_sample:
     - What you plan to do next, such as animate or pick and place (optional)
   prerequisites:
     - An AI that can run MATLAB
-    - MATLAB with Robotics System Toolbox
+    - MATLAB with Robotics System Toolbox (the loadrobot call needs release R2019b or later)
   output:
     - name: Robot model
       contains: A MATLAB rigidBodyTree for your arm, loaded from the library, a URDF file or DH parameters.

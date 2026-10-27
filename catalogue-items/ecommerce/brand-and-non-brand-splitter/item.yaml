@@ -11,6 +11,7 @@ inputs:
   - { type: brand_brain, required: false }
   - type: audit_report
     required: false
+  - { type: search_query_report, required: true }
 outputs:
   - { type: audit_report }
   - { type: plan }

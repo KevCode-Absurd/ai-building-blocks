@@ -144,7 +144,7 @@ improve:
 works_best_with:
   tools:
     - name: Claude Code
-      why: It can keep the plan, chart and fixes files between weeks and run every Monday.
+      why: It can keep the plan, chart and fixes files between weeks. You start the run each Monday. It does not run on a timer.
     - name: Your email or product tool
       why: Export counts per sign-up week at each step. Most tools can group by sign-up date.
   inputs:

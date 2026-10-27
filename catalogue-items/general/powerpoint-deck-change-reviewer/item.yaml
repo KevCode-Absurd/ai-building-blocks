@@ -7,8 +7,8 @@ role: check
 job: ops
 level: intermediate
 inputs:
-  - type: brief
-    required: true
+  - type: question
+    required: false
   - type: slide_deck
     required: true
 outputs:

@@ -16,6 +16,10 @@ inputs:
     required: false
   - type: objection_map
     required: false
+  - type: ad_copy
+    required: false
+  - type: performance_sheet
+    required: false
 outputs:
   - type: audit_report
     required: true

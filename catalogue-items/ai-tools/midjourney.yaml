@@ -25,7 +25,7 @@ not_for:
 pricing:
   model: subscription
   from: US$10 per month
-  note: Basic gives about 3.3 hours of fast image time. There is no free plan. Standard, Pro and Mega cost more and add more hours. Unused hours expire each month.
+  note: These prices come from a third-party site (eesel.ai), not from Midjourney, so check the current plans on midjourney.com before you pay. Basic gives about 3.3 hours of fast image time. There is no free plan. Standard, Pro and Mega cost more and add more hours. Unused hours expire each month.
 works_with:
   - stable-diffusion
   - ideogram
@@ -41,8 +41,8 @@ first_result:
   - "Pick one. Vary it, zoom out, or redraw it."
   - "To match a look, upload a reference image or save a personal style."
   - "Check any words in the image. Expect them to be wrong."
-  - "You end with image files in your gallery."
-  - "Next: for ad images use the Marketing image maker. When words must be exact, use Ideogram."
+  - "You end with four image options for each prompt, saved in your gallery as image files. File format and size were not verified."
+  - "Next: for ad images use the Marketing image maker, but first confirm the commercial-use terms for your plan before you use generated images in paid ads. When words must be exact, use Ideogram."
 needs:
   - "A paid Midjourney plan."
   - "One sentence on subject, mood and style."

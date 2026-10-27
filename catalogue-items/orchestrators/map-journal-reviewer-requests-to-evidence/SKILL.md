@@ -28,7 +28,7 @@ How to start:
 - **A spreadsheet:** Holds the matrix and task list so co-authors can update status and owners.
 <!-- /needs -->
 
-## Before you start
+## What you need
 
 Use what is attached or pasted first. Ask once, in one short message, for only what you cannot work without.
 
@@ -78,8 +78,8 @@ State plainly that nothing was sent to the journal and that no comment is marked
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Journal revision and response tracker](https://useaiblocks.com/skills/reviewer-response-progress-assistant).
-- The [Source note summariser](https://useaiblocks.com/prompts/source-note-summariser). It takes the document.
 - The [Manuscript peer review drafter](https://useaiblocks.com/skills/manuscript-peer-review-drafter). It takes the document.
+- The [Source note summariser](https://useaiblocks.com/prompts/source-note-summariser). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -97,7 +97,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 Write `MISSING: <what>` next to the affected line. Carry on with the comments that do not depend on it. Without the manuscript, build the matrix from the comments alone with section as `MISSING`, and say so. Without the journal's letter, ask for it. Never replace an unknown decision with a guess.
 
-## After this
+## Next steps
 
 Suggest one next step as a short question, and say the user can type their own:
 - **Keep track while you revise.** Use the [Reviewer response progress assistant](https://useaiblocks.com/agents/reviewer-response-progress-assistant), which keeps the matrix and updates status as you change the manuscript.

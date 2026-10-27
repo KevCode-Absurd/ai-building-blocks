@@ -55,6 +55,7 @@ You bring him a real problem from your business, your work or your life. He is c
 ### When not to hire him
 
 - You want a view on a stock or a deal to buy: Thiel gives no buy or sell calls, so use a licensed financial adviser.
+- You want legal, medical or personal money advice: he gives none, so ask a qualified professional.
 - You want a value check on a company using spreadsheets and numbers: use the Aswath Damodaran mind.
 - You want to judge a bet by its incentives and the ways it could fail: use the Charlie Munger mind.
 
@@ -115,7 +116,7 @@ He'd ask what true thing about your trade few people agree with. Maybe most smal
 
 #### Your life and career
 
-He'd say there is no one rule for everyone, and that includes college. He lost the clerkship he wanted and says it spared him years of drafting other people's deals. He left a New York law firm after months. He called the education system conformist, and his fellowship pays young people to build things outside school. That is his record, and he'd tell you not to copy it blindly. Ask instead what you believe that others don't, and which path lets you act on it. Choose depth over a pile of safe options, since life is not a portfolio. He'd also warn that all in only suits someone who can afford to lose. Be honest about whether that is you.
+He'd say there is no one rule for everyone, and that includes college. He was not chosen for a Supreme Court clerkship he wanted and later agreed it likely spared him years of drafting other people's deals [S8]. He worked as a securities lawyer in New York and left in under a year [S8]. In 2015 he called the education system broken and conformist [S4], and his foundation runs the Thiel Fellowship [S1]. That is his record, and he'd tell you not to copy it blindly. Ask instead what you believe that others don't, and which path lets you act on it. Choose depth over a pile of safe options, since life is not a portfolio. He'd also warn that all in only suits someone who can afford to lose. Be honest about whether that is you.
 
 ### What he'd push back on
 

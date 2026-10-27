@@ -13,15 +13,16 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+- **The policy** (yours): the written policy or rules, with the date they start.
 - **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 
 **Makes it better (optional):**
-- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
 - **Your website** (yours): the link to your site or the page.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for source text, document, a brief. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for source text, the policy, document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -73,13 +74,17 @@ If the person says yes to a specific step in clear words, do only that step and 
 - **Deadlines:** the dates that matter, marked verified or unverified.
 - **Who decides:** the policy owner for each draft, from the index.
 - **Files:** each step's file. Then every `MISSING:` line from all steps in one list.
+- **Checks missed:** one line for each check that failed or could not run, or the word "none".
 - **The reminder:** this is a first check, not legal advice. Check with a qualified lawyer before you apply any of it.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [NDA risk reviewer](https://useaiblocks.com/prompts/nda-traffic-light-checker).
-- The [Privacy policy drafter](https://useaiblocks.com/skills/privacy-policy-drafter).
+- The [Marketing claims checker](https://useaiblocks.com/skills/marketing-claims-checker). It takes the draft.
+- The [Ad claim sorter](https://useaiblocks.com/prompts/ad-claim-sorter). It takes the draft.
+- The [Trade compliance checklist builder](https://useaiblocks.com/skills/trade-compliance-checklist). It takes the audit report.
+- The [Refund request reply writer](https://useaiblocks.com/prompts/refund-request-reply-writer). It takes the the policy.
+- **Lead the team** with the [Policy removal test planner](https://useaiblocks.com/skills/policy-removal-test-planner). It takes the the policy and audit report and plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -95,10 +100,12 @@ If they pick one and that skill is added here, carry straight on with what you j
 Write `MISSING: <what>` where it belongs and carry on with what you have. Without the approved version of a policy, ask for it: a redraft of an out-of-date policy creates a second version. Without the rule text, ask for it and do not fill it from memory. Without the date it takes effect, set no deadline. Never invent a citation, a threshold or a date.
 
 ## When it is not worth running
-It is not worth running for a rule that plainly does not apply to you, or where you have no written policies. In that case, start by drafting them with a lawyer. It is also only as good as the rule text you give it. A summary from a news article can miss the clause that matters. For anything with a fine, a licence or a claim at stake, a lawyer should read the rule itself.
+It is not worth running for a rule that plainly does not apply to you, or where you have no written policies. In that case, start by drafting them with a lawyer. If the change is about personal data and your privacy policy needs rewriting, use the [Privacy policy drafter](https://useaiblocks.com/skills/privacy-policy-drafter). To have a lawyer-ready read of a contract, use the [Contract reviewer](https://useaiblocks.com/skills/contract-reviewer). It is also only as good as the rule text you give it. A summary from a news article can miss the clause that matters. For anything with a fine, a licence or a claim at stake, a lawyer should read the rule itself.
 
 ## Avoid
 - Treating a draft as approved, or a gap as closed.
 - Rewriting a whole policy for one changed requirement. Make the smallest edit.
 - Looping more than three rounds on one gap.
 - Filling in a missing rule from memory.
+
+Next: take the drafts and this hand-back to the policy owner and a lawyer, apply only what they approve, then record the date applied in `policies/rule-log.md` yourself.

@@ -14,6 +14,7 @@ An audit that lists twenty problems is a way of avoiding the one that matters. T
 
 - Required: a channel link, or three of the user's own videos. Also the last ten titles, in order, and the thumbnails.
 - Optional: a retention export from YouTube Studio, a voice profile, past scripts.
+- If an earlier step gave a shortlist of the channel's recent uploads, use it for the last ten titles and their dates.
 - If the channel has fewer than three public videos, stop and say there is not enough to audit yet. Do not guess.
 - If something required is missing, ask for it once. If the user cannot supply it, write MISSING next to that check and carry on with the rest. Never invent a number, a title or a result.
 

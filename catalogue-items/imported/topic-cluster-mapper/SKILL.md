@@ -31,6 +31,8 @@ Trigger phrases include: "build a content cluster", "create a topic map",
 }
 ```
 
+If you already have a ranked shortlist of customer-question keywords, use it as `target_keywords` and as the first candidates for cluster articles.
+
 For a new website, produce 5–10 foundational pages, defaulting to 10 only when there are at least 10 distinct, defensible search intents. Do not create near-duplicate pages to hit the default. Every page must solve a problem, own a query, and lead to a relevant product or next step.
 
 ---

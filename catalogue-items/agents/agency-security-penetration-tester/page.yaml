@@ -24,6 +24,7 @@ not_for:
   - You don't have written authorization and a named scope yet. Get that first. This agent will ask for it before planning anything.
   - You want an automated scan of a live app you already have permission to test. Use the Live app security tester.
   - You want the system's design reviewed instead of attacked. Use the Security Architect agent.
+  - You want to fix the findings. Use the Application Security Engineer agent or the Cloud Security Architect agent.
 you_give:
   - Confirmation that you have written authorization for this engagement, from the system's actual owner.
   - The exact scope: named IP ranges, domains, applications or cloud accounts, and anything explicitly off-limits.

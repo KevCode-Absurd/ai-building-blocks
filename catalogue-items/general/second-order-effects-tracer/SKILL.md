@@ -58,9 +58,9 @@ The change and expected result. The first effects. The groups, their rewards and
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Rule origin tracer](https://useaiblocks.com/skills/rule-origin-tracer).
 - The [Plan objection writer](https://useaiblocks.com/skills/case-against-writer). It takes the plan.
 - The [Second-opinion reviewer](https://useaiblocks.com/skills/second-opinion-reviewer). It takes the plan.
+- The [Decision evidence planner](https://useaiblocks.com/skills/decision-evidence-bar-setter). It takes the plan.
 - **Plan your strategy** with the [Plan failure reviewer](https://useaiblocks.com/skills/failure-first-plan-check). It takes the plan.
 - **Plan your strategy** with the [Long-shot bet planner](https://useaiblocks.com/skills/long-shot-bet-planner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.

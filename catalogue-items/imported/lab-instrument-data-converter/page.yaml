@@ -5,7 +5,7 @@ name: Lab instrument data converter
 summary: Convert lab instrument data files to Allotrope JSON or flat CSV for your LIMS. Give it plate reader or cell counter output. You get files ready to load.
 job: work-with-files
 headline: Lab instrument data converter
-subhead: Give it instrument output files. Get them converted to Allotrope JSON or flat CSV for your lab systems. Bring instrument output files. Use the result to plan your next step.
+subhead: Give it instrument output files from a plate reader, cell counter or similar device. You get Allotrope JSON or flat CSV back, ready to load into your lab systems.
 explain: |
   Instrument output files turned into a format your lab systems accept. Give it files from a plate reader, cell counter or similar device. The skill detects the instrument type, reads the file with the allotropy library, and writes Allotrope Simple Model JSON, a flat CSV with one row per measurement, or both.
 

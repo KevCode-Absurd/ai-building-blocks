@@ -7,7 +7,7 @@ role: check
 job: analysis
 level: advanced
 inputs:
-  - {type: brief, required: true}
+  - {type: idea, required: true}
   - {type: audit_report, required: true}
   - {type: plan, required: false}
   - {type: lessons_register, required: false}

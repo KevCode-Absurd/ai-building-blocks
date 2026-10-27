@@ -1,7 +1,7 @@
 ---
 name: shopify-admin-inventory-aging-report
 role: merchandising
-description: "Read-only: categorizes inventory into aging buckets (0-30, 31-60, 61-90, 90+ days) based on time since last sale or receipt."
+description: "Read-only: categorizes inventory into aging buckets (0-30, 31-60, 61-90, 91-180, 181+ days) based on time since last sale or receipt."
 toolkit: shopify-admin, shopify-admin-execution
 api_version: "2025-01"
 graphql_operations:
@@ -31,7 +31,7 @@ Categorizes all inventory into aging buckets based on how long items have been s
 
 ## Safety
 
-> ℹ️ Read-only skill — no mutations are executed. Safe to run at any time.
+> ℹ️ Read-only skill — no mutations are executed. Safe to run at any time. Any price change you make afterwards with another tool is a separate step that does write to your store.
 
 ## Workflow Steps
 
@@ -177,6 +177,6 @@ CSV file `inventory_aging_<YYYY-MM-DD>.csv` with columns:
 
 ## Best Practices
 - Use `carrying_cost_pct: 25` as default (includes storage, insurance, opportunity cost, shrinkage).
-- Items in 90+ day buckets are strong candidates for markdowns — use `bulk-price-adjustment`.
-- Cross-reference with `dead-stock-identifier` and `stock-velocity-report` for a complete inventory health picture.
+- Items in the 91-180 and 181+ day buckets are strong candidates for markdowns. This report changes no prices. If you then change prices with a separate tool (for example Bulk price changer), that step writes to your store, so review it first.
+- Cross-reference with `dead-stock-finder`, then plan the sale with `clearance-discount-planner`.
 - Run monthly to track aging trends and measure liquidation effectiveness.

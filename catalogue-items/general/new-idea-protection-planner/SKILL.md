@@ -15,7 +15,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 **Makes it better (optional):**
-- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+- **Your idea** (yours): the product, app, business or project idea, in a line or a short paragraph.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Audit report** with the [Early project progress reviewer](https://useaiblocks.com/skills/early-or-broken-checker). Bring your question, audit report (optional).
@@ -23,7 +23,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for audit report, your question. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for audit report, your idea. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -48,7 +48,7 @@ If the verdict is "change the lead" or "stop", say so at the top and tell the ow
    - Does the team believe it can solve the problems?
    - What is not working yet?
    List the questions that are off the table until later, such as return on investment, comparison to finished products, and forecasts of sales. Write one line to say to anyone who asks them: "It is too early for that, here is when we will answer it."
-5. **Ring-fence time and money.** Say how much time and how many people, for how long. Name who pays. Pay from a shared or central source and not from the budget of a team that sees the idea as a cost. If the budget holder pays out of their own pocket, the idea becomes their enemy. State the date the funding is reviewed.
+5. **Ring-fence time and money.** Say how much time and how many people, for how long. Name who pays. Pay from a shared or central source and not from the budget of a team that sees the idea as a cost. If the budget holder pays out of their own pocket, the idea becomes their enemy. State the date the funding is reviewed. On or before that date, whoever pays or watches the money (the finance lead or the payer) sees what has been spent and the main risks. Protection never hides money or risk from them, even while forecasts are off the table.
 6. **Answer each pressure group.** For every group in the pressure map, write one line: what they will get from the idea, when, and what they may not do in the meantime. A rule applies to all: the schedule of another group does not decide what the idea becomes.
 7. **Split goals from intentions.** List the intentions that will not move, such as the quality bar and values. List the goals that can change as the team learns. Hold goals lightly and intentions firmly.
 8. **Set the hand-off.** Say when protection ends and engagement begins: a date, plus the three signs from step 1. Name the first outside group to meet the idea and who prepares them. Warn that meeting the wider business will be messy, since a new thing always creates work for others. Say how protection will taper: for example, the shared fund pays for the first term, then costs move into normal budgets once the idea has shown its value.
@@ -56,7 +56,7 @@ If the verdict is "change the lead" or "stop", say so at the top and tell the ow
 
 ## A fresh example
 
-A founder's new subscription box is rough and the sales team wants a launch date. Protectors: two former customers and a supplier who likes new things. Kept out for six weeks: the finance lead, who will ask for a forecast. Off the table: forecasts and comparison to the main product. Funded from the founder's growth budget for ten weeks. Hand-off: launch to existing customers when three signs are met, with sales prepared a month early.
+A founder's new subscription box is rough and the sales team wants a launch date. Protectors: two former customers and a supplier who likes new things. Kept away from forecast talks for six weeks: the finance lead, who still sees spend and risks at the funding review. Off the table: forecasts and comparison to the main product. Funded from the founder's growth budget for ten weeks. Hand-off: launch to existing customers when three signs are met, with sales prepared a month early.
 
 ## What you hand back
 
@@ -65,8 +65,9 @@ What is protected and the three signs. Who sees it, who does not and why. The rh
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Long-term partner screener](https://useaiblocks.com/skills/long-term-partner-screener). It takes the plan.
+- The [Sales pay plan checker](https://useaiblocks.com/skills/sales-pay-plan-checker). It takes the plan.
 - The [Feedback conversation planner](https://useaiblocks.com/skills/feedback-conversation-planner). It takes the plan.
-- The [Hard feedback message writer](https://useaiblocks.com/skills/hard-feedback-message-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -75,7 +76,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Each protector has a reason, and each excluded group has a reason about the idea's state.
 - Someone sees the work on a set rhythm.
 - The forbidden questions come with a line to say and a date.
-- A named person or fund pays.
+- A named person or fund pays, and the finance lead has a fixed date to see spend and risks.
 - Every pressure group has a line.
 - The hand-off has a date, a test and a first group.
 

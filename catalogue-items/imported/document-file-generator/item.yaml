@@ -8,9 +8,13 @@ role: render
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: question
     required: true
   - type: copy_draft
+    required: false
+  - type: plan
+    required: false
+  - type: audit_report
     required: false
 outputs:
   - type: document

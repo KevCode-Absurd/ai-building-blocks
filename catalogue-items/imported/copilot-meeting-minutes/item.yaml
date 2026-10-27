@@ -10,6 +10,8 @@ level: advanced
 inputs:
   - type: meeting_notes
     required: true
+  - type: transcript
+    required: false
 outputs:
   - type: document
 uses: []

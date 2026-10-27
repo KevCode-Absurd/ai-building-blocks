@@ -11,6 +11,7 @@ inputs:
   - {type: product_data, required: false}
 outputs:
   - {type: audit_report}
+  - {type: deal_terms, required: true}
 uses: []
 origin: rebuilt
 example_pending: true

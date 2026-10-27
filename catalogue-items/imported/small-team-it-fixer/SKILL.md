@@ -65,6 +65,8 @@ You are the "accidental IT person." Nobody has IT in their title, but laptops fr
 
 ### Google Workspace via GAM
 
+Needs: a Google Workspace admin account (paid) and the GAM tool.
+
 ```bash
 # AI Blocks: install GAM from the official GAM project on GitHub (GAM-team/GAM) by following its install guide.
 # Do not run a script from the web without reading it first.
@@ -79,6 +81,8 @@ gam user jane@company.com turnoff2sv                 # disable 2SV. AI Blocks: o
 ```
 
 ### Okta API
+
+Needs: an Okta tenant (paid) and an admin API token. Treat the token like a password.
 
 ```bash
 OKTA="company.okta.com"; T="your-api-token"; UID="00u1abcdef"
@@ -307,15 +311,15 @@ dig TXT _dmarc.company.com                       # DMARC
 ## Onboarding Checklist
 
 ```bash
-# 1. Google Workspace account
-gam create user newhire@company.com firstname "Jane" lastname "Smith" \
+# 1. Google Workspace account (needs Google Workspace admin)
+gam create user newhire@company.com firstname "[FIRST NAME]" lastname "[LAST NAME]" \
   password "$(openssl rand -base64 16)" changepassword on org "/Engineering"  # AI Blocks: random password, forced change at first sign-in
 gam update group engineering@company.com add member newhire@company.com
 
 # 2. 1Password
-op user provision --email newhire@company.com --name "Jane Smith"
+op user provision --email newhire@company.com --name "[FULL NAME]"   # needs a 1Password business plan with admin rights
 
-# 3. Slack
+# 3. Slack (needs Slack admin rights and a paid plan that offers the admin API; check Slack's docs)
 curl -X POST "https://slack.com/api/admin.users.invite" \
   -H "Authorization: Bearer xoxp-your-admin-token" \
   -d "email=newhire@company.com&channel_ids=C01GENERAL,C02ENGINEERING&team_id=T01YOURTEAM"
@@ -330,16 +334,21 @@ tailscale up --authkey tskey-auth-abc123
 
 ### First-Day Setup Script (macOS)
 
-Give new hires this script. It installs Homebrew, your standard tools from a hosted Brewfile, configures Git, authenticates GitHub CLI, clones core repos, and enables FileVault.
+AI Blocks: do not give this to a new hire until the owner has read it. Install Homebrew first by hand, from the official page at brew.sh, and read its install command before you run it. Do not pipe a downloaded script straight into bash. The script below sets up Git, GitHub CLI and your tools. FileVault (disk encryption) is a separate step that needs the owner's yes.
 
 ```bash
 #!/bin/bash
 set -e
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# Replace the address below with your own Brewfile. Read the file before you run it.
 curl -sL https://internal.company.com/setup/Brewfile -o /tmp/Brewfile && brew bundle install --file=/tmp/Brewfile
 read -p "Full name: " N; read -p "Email: " E
 git config --global user.name "$N" && git config --global user.email "$E" && git config --global pull.rebase true
 gh auth login && mkdir -p ~/src && cd ~/src && gh repo clone your-company/main-app
+```
+
+Separate step, only with the owner's yes. This turns on disk encryption and shows a recovery key. Save that key in your password manager first:
+
+```bash
 sudo fdesetup enable
 ```
 
@@ -357,7 +366,7 @@ curl -X POST "https://slack.com/api/admin.users.remove" \
   -d "user_id=U01DEPARTED&team_id=T01YOURTEAM"               # 5. remove Slack
 gh api orgs/your-company/members/departed-username -X DELETE   # 6. remove GitHub
 op user suspend departed@company.com                           # 7. revoke 1Password
-aws iam delete-login-profile --user-name departed              # 8. revoke AWS console
+aws iam delete-login-profile --user-name departed              # 8. revoke AWS console (needs AWS IAM permissions)
 aws iam list-access-keys --user-name departed                  #    then delete each key
 echo "$(date -u +%Y-%m-%dT%H:%M:%SZ) Offboarded departed@company.com" >> ~/offboarding-log.txt
 ```
@@ -432,7 +441,8 @@ Get-NetFirewallProfile | Select Name, Enabled
 ```bash
 gam update user compromised@company.com password "$(openssl rand -base64 16)" changepassword on
 gam user compromised@company.com signout             # kill sessions
-gam user compromised@company.com turnoff2sv          # reset MFA. AI Blocks: only with the owner's approval, then make the user re-enrol at once
+# AI Blocks: the next line turns off two-step sign-in for this account. Run it only after you have verified the person and the owner has said yes, then make the user re-enrol at once.
+gam user compromised@company.com turnoff2sv          # reset MFA
 gam user compromised@company.com show tokens         # check rogue OAuth apps
 gam user compromised@company.com show forwarding     # check attacker persistence
 ```

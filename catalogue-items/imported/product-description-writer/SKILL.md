@@ -30,28 +30,30 @@ Collect, or state your assumption:
 
 ## Procedure
 
-1. **Pick three claims.** Rank the benefits; keep the top three (three claims were 10.4% more persuasive than four; skepticism starts at the fourth). Move the rest to a spec table. The effect sizes in this skill (10.4%, up to 40%, up to 30%) come from the studies listed in reference.md. Figures marked † are practitioner tips with no study behind them. Treat all of them as a guide, not a promise.
+1. **Pick three claims.** Rank the benefits; keep the top three (three claims were 10.4% more persuasive than four; skepticism starts at the fourth. Source: Shu & Carlson, 2014). Move the rest to a spec table. Only the 10.4% figure comes from a study listed in reference.md. The "up to 40%" and "up to 30%" figures are practitioner tips with no study on file, and they are marked †. Treat every figure as a guide, not a promise, and never quote them as your own results.
 2. **Best features only.** Don't pad with merely good features — the impression sinks to the weakest claim.
-3. **Units people use.** Uses or pieces (30 washes, 8 cans), not standardized measures (750 g, 96 oz). Raises product evaluations and willingness to pay.
-4. **Smaller units for precision.** Drop to the next unit down: 180 seconds, not 3 minutes; 180 minutes, not 3 hours; 32 oz, not a quarter gallon. Reads more precise and credible; strongest for time.
-5. **Evocative color names.** "Midday sky blue", not "light blue".
+3. **Units people use.** Uses or pieces (30 washes, 8 cans), not standardized measures (750 g, 96 oz). Raises product evaluations and willingness to pay (Lembregts & Van den Bergh, 2019; Lembregts & Pandelaere, 2013).
+4. **Smaller units for precision.** Drop to the next unit down: 180 seconds, not 3 minutes; 180 minutes, not 3 hours; 32 oz, not a quarter gallon. Reads more precise and credible; strongest for time (Zhang & Schwarz, 2011).
+5. **Evocative color names.** "Midday sky blue", not "light blue" (Miller & Kahn, 2005).
 6. **Feature branded components.** A branded ingredient or part (Gore-Tex, a licensed enzyme blend) goes up front; demand up to 40% higher. † Only name a component or make a claim such as "lab-tested" if you can document it. Remove any claim you cannot back up.
 7. **Register by product type.** Utilitarian → science and effectiveness language works. Hedonic → avoid it ("lab-formulated" on a treat: up to 30% less likely to be chosen). †
 8. **Plain language.** Unknown terms make the product seem worse and pricier; define or drop. †
-9. **Describe touch** where feel matters (textiles, skincare) — the top online clothing pain point.
-10. **Rational up, emotional down** in vertical layouts.
+9. **Describe touch** where feel matters (textiles, skincare) — the top online clothing pain point (see reference.md).
+10. **Rational up, emotional down** in vertical layouts (Cian et al., 2015).
 11. **Frame as an experience** (coffee with friends, not bean origin) when you want reviews. †
 
 ## Output
+
+For food, supplements, cosmetics, baby products or anything with a health or safety claim, flag every such claim ("lab-tested", "clinically proven", "safe for children") for a person or legal reviewer to check before the copy is published.
 
 1. Headline and body within the length limit.
 2. Rules table:
 
 | Rule | Where |
 |---|---|
-| Three claims | stain removal, cold water, gentle on skin |
-| Intuitive units | "30 washes" for "750 g" |
-| Branded ingredient | licensed enzyme blend, first sentence |
+| Three claims | [CLAIM 1], [CLAIM 2], [CLAIM 3] |
+| Intuitive units | "[N] [USES]" for "[WEIGHT OR VOLUME]" |
+| Branded ingredient | [BRANDED COMPONENT, only if documented], first sentence |
 
 3. What was cut and where it can go.
 

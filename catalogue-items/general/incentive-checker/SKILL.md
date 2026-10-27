@@ -56,8 +56,8 @@ The goal in one line, and a note on pay fairness. Then one table, one row per bo
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Plan your strategy** with the [Plan failure reviewer](https://useaiblocks.com/skills/failure-first-plan-check). It takes the audit report.
-- The [Decision consequence planner](https://useaiblocks.com/skills/second-order-effects-tracer). It takes the audit report.
 - The [Campaign lessons reviewer](https://useaiblocks.com/skills/copy-or-skip-lesson-writer). It takes the audit report.
+- The [Decision consequence planner](https://useaiblocks.com/skills/second-order-effects-tracer). It takes the audit report.
 - The [Working relationship trust reviewer](https://useaiblocks.com/skills/people-trust-checker). It takes the audit report.
 - **Check the money** with the [Business plan risk buffer reviewer](https://useaiblocks.com/skills/room-for-error-plan-checker). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.

@@ -27,7 +27,7 @@
 - [Headline promise checker](https://useaiblocks.com/skills/headline-promise-checker): Share a headline and offer facts. Check who it speaks to, the benefit it promises and which claims need clearer wording or proof.
 - [Headline relevance checker](https://useaiblocks.com/prompts/headline-reader-and-reward-checker): Check a headline for who it speaks to and what it promises. Get a score out of 100 and stronger versions, backed by your own facts.
 - [Image ad launch reviewer](https://useaiblocks.com/workflows/fix-a-static-ad-then-clear-it-to-run): Review a finished image ad, rewrite its pitch for the buyer and check the actual revised ad before launch.
-- [Image ad reviewer](https://useaiblocks.com/skills/static-ad-critic): Check your static ad before you spend. Attach the image and headline. You get a score out of 100, ranked fixes and two rewritten headlines.
+- [Image ad reviewer](https://useaiblocks.com/skills/static-ad-critic): Check your static ad before you spend. Attach the image, headline and primary text. You get a score out of 100, ranked fixes and two rewritten headlines.
 - [Low-response ad repair planner](https://useaiblocks.com/workflows/ad-not-working-fix): Review a weak ad against its results and your past ads. Get ranked likely causes, a revised draft, readiness checks and a test plan.
 - [Marketing evidence expiry reviewer](https://useaiblocks.com/skills/marketing-evidence-expiry-reviewer): Check which marketing claim evidence is out of date or out of scope. Get affected ads and pages, plus a review queue with owners and next steps.
 - [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker): Share ad copy, images or a script. Get possible policy issues, a custom score and changes to review.

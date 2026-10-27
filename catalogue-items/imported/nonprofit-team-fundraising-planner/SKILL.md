@@ -39,13 +39,13 @@ each independently:
 
 \[ \text{Total raised} = \text{(number of participants)} \times \text{(participation-to-fundraising conversion rate)} \times \text{(average amount raised per active fundraiser)} \]
 
-- **Registration** ≠ fundraising: a large share of registrants in most P2P campaigns never
-  personalize their page or send a single ask — the highest-leverage intervention is usually
-  converting registrants into active askers within the first few days, not recruiting more
-  registrants.
-- **Team structure**: participants recruited onto a team (led by a captain) consistently
-  out-fundraise unaffiliated individual participants, because captains apply direct peer pressure
-  and coaching.
+- **Registration** ≠ fundraising: in many P2P campaigns, a large share of registrants may never
+  personalize their page or send a single ask. Test whether this is true for your campaign by checking
+  last year's numbers. If it is, converting registrants into active askers within the first few days
+  may do more than recruiting more registrants.
+- **Team structure**: participants recruited onto a team (led by a captain) often
+  out-fundraise unaffiliated individuals, possibly because captains apply peer pressure and coaching.
+  Treat this as a hypothesis and compare team and individual results in your own past data.
 
 ## Team Captain Toolkit
 
@@ -58,8 +58,8 @@ distinct from individual participant incentives.
 
 1. **Page copy structure**: personal reason for participating (why this cause, in the
    participant's own words) + a specific fundraising goal + a concrete impact statement tied to a
-   dollar amount + a personal photo. Coach participants that a personalized page outperforms the
-   default template dramatically — this is usually the single highest-leverage coaching point.
+   dollar amount + a personal photo. Coach participants that a personalized page is likely to raise more than
+   the default template. Check this against your own past results before you tell anyone by how much.
 2. **Email sequence to the participant's own network** — provide templates for: (a) a launch
    ask sent to the full contact list in week one, (b) a midpoint update/progress ask, (c) a final
    week urgency ask, (d) a thank-you sent to every donor by the participant personally, not just by
@@ -76,7 +76,7 @@ distinct from individual participant incentives.
 - **Participant coaching email sequence** (page-personalization nudge, launch-ask template,
   midpoint template, final-week template).
 - **Leaderboard/incentive structure** — tiered prizes or recognition for individual and team
-  fundraising milestones (e.g., $100/$500/$1,000 tiers), with incentive cost budgeted against
+  fundraising milestones (for example, [LOW]/[MIDDLE]/[HIGH] tiers that you set from your own past results), with incentive cost budgeted against
   expected incremental revenue lift.
 - **Post-campaign performance report** — total raised, participant count, % of registrants who
   became active fundraisers (the key diagnostic metric), average raised per active fundraiser,
@@ -98,12 +98,14 @@ distinct from individual participant incentives.
 5. Track the leaderboard publicly (with participant consent) to leverage social proof and
    friendly competition; award recognition/incentive tiers as thresholds are hit.
 6. In the final week, send an urgency-focused push (deadline framing, matching-gift challenge if
-   available) — a large share of P2P dollars typically comes in during the final days.
+   available) — many P2P campaigns see more giving in the final days. Check whether yours did last year.
 7. After the campaign, calculate the conversion-rate and per-fundraiser-average metrics, and diagnose
    which lever (registration volume, conversion rate, or average raised) most limited this cycle's
    result before planning next year's targets.
 8. Thank every participant and every donor promptly; route acknowledgment mechanics to
-   `nonprofit-donor-retention` for donors who are new to the organization's file.
+   the Nonprofit donor thank-you and renewal planner for donors who are new to the organization's file.
+9. Hand the post-campaign report to the Nonprofit donor thank-you and renewal planner, or use it as the
+   starting point for next year's campaign plan.
 
 ## Common Failure Modes
 
@@ -113,8 +115,8 @@ distinct from individual participant incentives.
   treat personalization coaching as a required onboarding step, not optional.
 - **No captain structure**: running the campaign as unaffiliated individuals loses the peer-pressure
   and coaching effect teams provide.
-- **Weak final-week push**: under-communicating in the final days, missing the urgency-driven
-  giving spike most P2P campaigns rely on.
+- **Weak final-week push**: under-communicating in the final days, and missing the urgency-driven
+  giving spike that many P2P campaigns see (confirm it in your own data).
 - **Incentive cost exceeding lift**: prize structures that cost more than the marginal revenue they
   generate — budget and evaluate incentives against actual incremental fundraising, not just
   participant enthusiasm.

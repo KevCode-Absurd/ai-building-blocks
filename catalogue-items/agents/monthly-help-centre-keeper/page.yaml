@@ -15,7 +15,7 @@ when:
   - Your help articles have not been checked against what support says since launch.
   - You want proof that an article you published last month reduced tickets.
 not_for:
-  - "You need to answer today's tickets: use the Customer inbox priorities and reply drafts, which writes replies to open tickets."
+  - "You need to answer today's tickets: use the Customer inbox triage and reply drafter, which writes replies to open tickets."
   - "You have no ticket export yet, or only one ticket: write the help page by hand from the reply that solved it."
   - "You want articles published or customers answered for you: this agent only drafts, and a person must publish."
 you_give:

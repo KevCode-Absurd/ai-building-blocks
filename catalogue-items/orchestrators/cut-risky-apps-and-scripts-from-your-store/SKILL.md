@@ -29,6 +29,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+This list replaces the general one above. The "spreadsheet" is your app list, and the "store capture" is the script list you save at the pause.
 - **Your installed apps** (required): each app with its monthly cost and what it is used for. A screenshot of your installed apps page works if you have no list.
 - **Which pages take card, address or login details** (required for step 2).
 - **Speed and bounce data** (optional): your theme speed rating, a PageSpeed result or your bounce rate.
@@ -45,12 +46,12 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Sort your apps into keep, swap or cut.** Use the skill `store-app-stack-picker`. It reads the app list with costs and uses. It marks dead or unused apps as cut, checks the free built-in Shopify tools before any paid app, vets the apps that stay and scores the stack out of 100. It returns a keep, swap or cut verdict with a reason for every app, the free tools to try, what to export before you cut (reviews and email flows), an install order and the score. Save it as `outputs/step-01-store-app-stack-picker.md`.
+1. **Sort your apps into keep, swap or cut.** Use the skill `store-app-stack-picker`. It reads the app list with costs and uses. It marks dead or unused apps as cut, checks the free built-in Shopify tools before any paid app, vets the apps that stay and scores the stack out of 100. Use the skill's own scoring rule and show the points taken off for each app, so two runs on the same list give the same score. It returns a keep, swap or cut verdict with a reason for every app, the free tools to try, what to export before you cut (reviews and email flows), an install order and the score. Save it as `outputs/step-01-store-app-stack-picker.md`.
 
-Pause here: Remove the apps marked cut. Then open your home, product, cart and account pages, and save the list of scripts each one loads, from the network tab or the page source.
+Pause here: Back up your theme and export the data first. Removing an app can break a page or lose its data, so the person does it, ideally on a copy of the theme, and nothing is removed by this workflow. Remove the apps marked cut. Then open your home, product, cart and account pages, and save the list of scripts each one loads, from the network tab or the page source.
 
-2. **Rank the scripts and apps that are left by risk.** Use the skill `store-script-and-app-risk-auditor`. It reads the keep list from `outputs/step-01-store-app-stack-picker.md` and leaves out every app marked cut. It also reads the script list you saved at the pause (your own capture, not step 1's output) and the pages that take card, address or login details. It records who runs each script, why it is there, whether it loads over HTTPS and whether it sits on checkout or account pages. It rates each one High, Medium or Low, doubles the weight for pages with card, address or login fields, and scores the set out of 100. It returns a clean-up list and notes for a developer. Save it as `outputs/step-02-store-script-and-app-risk-auditor.md`.
-3. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+2. **Rank the scripts and apps that are left by risk.** Use the skill `store-script-and-app-risk-auditor`. It reads the keep list from `outputs/step-01-store-app-stack-picker.md` and leaves out every app marked cut. It also reads the script list you saved at the pause (your own capture, not step 1's output) and the pages that take card, address or login details. It records who runs each script, why it is there, whether it loads over HTTPS and whether it sits on checkout or account pages. It rates each one High, Medium or Low, doubles the weight for pages with card, address or login fields, and scores the set out of 100. Use the skill's own scoring rule and list the points taken off for each script, so two runs on the same list give the same score. It returns a clean-up list and notes for a developer. Save it as `outputs/step-02-store-script-and-app-risk-auditor.md`.
+3. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then a `CHECKS MISSED` list (or "none").
 
 ## What you hand back
 Two step files and the summary. The last step file holds the risk audit and the clean-up list.
@@ -64,8 +65,13 @@ Two step files and the summary. The last step file holds the risk audit and the 
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Store security reviewer](https://useaiblocks.com/skills/store-security-checkup). It takes the audit report.
+- The [Sign-in security checker](https://useaiblocks.com/skills/store-sign-in-security-checker). It takes the audit report.
+- The [Bot and AI agent access planner](https://useaiblocks.com/skills/bot-and-ai-agent-access-planner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
+
+## After this (for this job)
+Use this first. For a deeper check of logins, fraud rules and bots, use the [Store security reviewer](https://useaiblocks.com/skills/store-security-checkup). Bring the step 2 audit report and its clean-up list.
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.

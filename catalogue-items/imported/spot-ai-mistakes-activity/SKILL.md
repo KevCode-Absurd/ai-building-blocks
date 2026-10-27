@@ -75,7 +75,7 @@ Generates an activity — Kharbach's (2026) "Funhouse Mirror" — in which stude
 
 ## Evidence Foundation
 
-Note: the name "Funhouse Mirror", the Kharbach (2026) credit and the research below come from the original author's file. We have not checked these sources, so do not present them to students as verified.
+Note: the name "Funhouse Mirror", the Kharbach (2026) credit and every study cited below come from the original author's file, and we have not checked any of them. Do not present them to students as verified. Leave the citations out of the student handout.
 
 Chi, Glaser & Farr (1988) established the expert-novice framework: experts organise knowledge differently from novices, perceive problems at a deeper level, and have richer, more interconnected representations of their domain. Crucially, experts notice what is absent or distorted in a domain representation — they have the knowledge to see gaps. This is the foundation of the activity: students with genuine domain expertise can see AI distortions that a general student would miss, because only someone who knows what should be there can notice what isn't. Ericsson & Smith (1991) established that expertise is characterised by the ability to notice subtle distinctions and deviations from expected patterns — the same cognitive mechanism activated when an expert reads AI output about their field. Thiede et al. (2003) demonstrated that metacognitive accuracy (the correlation between judged and actual understanding) improves substantially when learners have a genuine knowledge base to compare against — finding a discrepancy between what you know and what you've read activates accurate self-assessment. The activity creates exactly this: a comparison between the student's domain knowledge and the AI's output. Dunning et al. (2003) on the Dunning-Kruger effect is relevant in the inverse direction: students who know a domain well are BETTER at detecting AI limitations in that domain than students who know it poorly — expertise enables the recognition of AI's incompetence, not just one's own. Kazemitabaar et al. (2023) provided empirical evidence that AI assistance in learning contexts can conceal genuine knowledge gaps; this activity is designed to expose that dynamic by reversing the expert/novice positioning.
 
@@ -175,6 +175,8 @@ Return your output in this exact format:
 ```
 
 ## Example Output
+
+Note: this example shows the layout. The Hungarian folk music facts in it are illustrative and unchecked. Before you use any claim like these with students, check it with a source you trust.
 
 **Scenario:** *Student expertise domain: "Hungarian folk music and dance traditions — students in a Budapest secondary school have participated in folk dance groups, know regional dances and regional music distinctions, and have studied folk music in their cultural education" / Student level: "Year 11, deep experiential knowledge of Hungarian regional folk traditions, varying formal music theory knowledge" / Interrogation depth: "Both surface and deep" / Discussion format: "Pairs with different expertise domains, then class synthesis"*
 

@@ -12,6 +12,8 @@ inputs:
     required: true
   - type: source_text
     required: false
+  - type: performance_sheet
+    required: false
 outputs:
   - type: plan
   - type: audit_report

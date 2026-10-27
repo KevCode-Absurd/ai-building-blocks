@@ -9,7 +9,7 @@ subhead: A clean bibliography with every entry checked against the real paper. G
 explain: |
   A clean bibliography with every entry checked against the real paper. Give it DOIs, PubMed or arXiv IDs, paper titles or a messy BibTeX file, and get back tidy entries with duplicates removed.
 
-  It looks papers up in PubMed or on the publisher's page and pulls the full details: authors, title, journal, year and pages. Google Scholar can be used by hand, but it may block automated lookups. It turns IDs into correctly formatted BibTeX. For an existing file, it compares each entry with the actual publication, flags mismatches and missing fields, merges duplicates and makes the key names and style consistent. It can also find highly cited papers in a field. The original scripts are not in this copy, so your AI checks each entry by hand against the source page. Web access is needed. Always skim the final list before you submit your paper.
+  It looks papers up in PubMed or on the publisher's page and pulls the full details: authors, title, journal, year and pages. Google Scholar can be used by hand, but it may block automated lookups. It turns IDs into correctly formatted BibTeX. For an existing file, it compares each entry with the actual publication, flags mismatches and missing fields, merges duplicates and makes the key names and style consistent. It can also find highly cited papers in a field. The original scripts are not in this copy, so your AI checks each entry by hand against the source page. Web access is needed. Always skim the final list before you submit your paper. Treat it as a draft check, not proof: confirm each entry on its publisher page. This skill is marked critical risk by its author, because wrong references can reach a published paper. Licence: this copy is from sickn33's collection, whose written content is CC BY 4.0 (see LICENSE-CONTENT). The skill file's own header says MIT, set by K-Dense Inc. Both let you reuse it if you keep the credit.
 when:
   - You have a pile of DOIs and need BibTeX entries for your thesis.
   - Your bibliography has duplicates and odd formatting.
@@ -32,9 +32,9 @@ you_get:
 how_to_use:
   - Use an AI that can reach the web. The skill's scripts are not included, so the AI does the lookups and checks by hand, one entry at a time.
   - Paste your DOIs, titles or BibTeX file into the chat. Add a topic and year range if you want it to search.
-  - Ask your AI to follow the Citation management skill and show each step it runs.
-  - Read the validation report. Check every auto-fixed entry against the publisher page.
-  - Expect Google Scholar lookups to slow down or fail, and its terms may not allow automated searches. PubMed or the publisher's export is the safer route.
+  - Ask your AI to list each entry as "checked against the source page" or "unverified", with the page it used. Without the scripts it cannot produce a full automatic validation report, so it must not claim one.
+  - Read the list. Check every changed entry against the publisher page yourself.
+  - Do not use Google Scholar for bulk or automated searches. Its terms may forbid scraping. Search it by hand if you must, and use PubMed or the publisher's export for the lookups.
   - Skim the final list before you submit your paper.
 output_sample:
   input:
@@ -42,16 +42,16 @@ output_sample:
     - Your existing BibTeX file (optional)
     - A topic and year range to search (optional)
   prerequisites:
-    - An AI that can run Python code and reach the web
-    - The skill's scripts folder, which this page does not confirm is included
+    - An AI that can reach the web
+    - The original scripts folder is not included in this copy, so your AI does the lookups by hand
   output:
     - name: Search results file
-      contains: Papers found on Google Scholar or PubMed for your topic, with citation counts where the search gives them.
+      contains: Papers found on PubMed or the publisher site for your topic, looked up by hand.
     - name: BibTeX file from metadata
       contains: Entries with authors, title, journal, year and pages, built from search results or from DOIs.
     - name: Formatted and deduplicated BibTeX file
       contains: Your entries with consistent style and keys, duplicates removed, sorted by year if you ask.
     - name: Validation report
-      contains: Entries with errors, missing fields or details that do not match the real publication.
+      contains: Each entry marked checked or unverified, with the errors, missing fields or details that do not match the real publication.
     - name: Final references file
       contains: The clean BibTeX file ready to use in your LaTeX paper or thesis.

@@ -9,6 +9,8 @@ Give it your test results and the ads. Get a verdict per ad, a next-round brief 
 
 This workflow chains skills from the library. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
+**When not to use it:** your test has only a handful of sales, so any verdict would be noise (let it run longer first). You have one ad and no spend to compare (there is nothing to read yet). You only want to know whether two versions differ (use the [A/B test results reader](https://useaiblocks.com/skills/split-run-result-reader)).
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -33,6 +35,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+This list replaces the general one above. You do not need to build a brand brain first, though one helps.
 - **The ads you ran** (required): images, screenshots, video transcripts or copy, or ad IDs from your own ad account connector. Mark each ad's role, such as winner, loser or still running. These are the reference set for step 1.
 - **Your results export** (required) for a closed date window, with its definitions. One row per ad, with the ad set, spend, purchases, return, clicks and frequency. Paste it in, or use your connector.
 - **Your target return or cost per sale** (strongly advised). Step 3 judges every ad against it.
@@ -52,8 +55,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 2. **Ad sameness checker.** Use the skill `ad-sameness-checker`. Give it the ad breakdowns from step 1 and the frequency of each cold ad. It groups ads by idea, counts distinct ideas against ads, and scores sameness out of 100. Saves the sameness report. Reads the breakdowns and shows whether the round tested one idea many times. Hands the sameness report to step 3.
 3. **Creative test reader.** Use the skill `creative-test-reader`. Give it your results export and target, the ad breakdowns from step 1 and the sameness report from step 2. It gives each ad set and ad a verdict, flags false winners, and writes the next-round brief. Saves the test read. Reads the results with the breakdowns and the sameness report, so verdicts are by concept. Hands the next-round brief to step 4.
 4. **Meta test campaign planner.** Use the skill `meta-test-campaign-planner`. Give it the brief from step 3, your target cost per sale and your daily budget. It returns the next test's structure, pack plan, minimum spend, naming and scaling rules. Saves the test layout. Turns the brief from the test read into the next round's layout. Hands the plan to step 5.
-5. **Next-dollar budget allocator.** Use the skill `next-dollar-budget-allocator`. Give it the test layout from step 4 and your spend and new-customer revenue by channel. It ranks channels for the next $10,000, with a stop point for each. Saves the budget plan. Uses the next-round plan, with your spend and returns, to decide what budget the winners get.
-6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+5. **Next-dollar budget allocator.** Use the skill `next-dollar-budget-allocator`. Give it the test layout from step 4 and your spend and new-customer revenue by channel. It ranks channels for the next [BUDGET AMOUNT], with a stop point for each. The amount comes from you. Saves the budget plan. Uses the next-round plan, with your spend and returns, to decide what budget the winners get.
+6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then a `CHECKS MISSED` list (or "none").
 
 ## What you hand back
 5 step files and the summary. The last file holds the plan.
@@ -63,7 +66,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Google Ads report auditor](https://useaiblocks.com/skills/google-ads-report-auditor). It takes the plan.
 - The [A/B test results reader](https://useaiblocks.com/skills/split-run-result-reader). It takes the plan.
-- The [Product test results analyst](https://useaiblocks.com/skills/product-test-result-reader).
+- The [Channel decline checker](https://useaiblocks.com/skills/channel-decay-checker). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

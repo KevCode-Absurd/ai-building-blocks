@@ -34,6 +34,8 @@ Individual neurons in neural networks are **polysemantic** - they activate in mu
 - You want causal intervention experiments → Use **pyvene** or **TransformerLens**
 - You need production steering → Consider direct activation engineering
 
+If you have a report from the model internals inspector, use the layers it points to as the layer to study.
+
 ## Installation
 
 ```bash

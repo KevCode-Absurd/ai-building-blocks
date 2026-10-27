@@ -477,7 +477,6 @@
    "area": "store",
    "expect": [
     "shipping-rate-planner",
-    "shipping-zone-and-rate-drafter",
     "shipping-cost-analyzer",
     "shipping-rate-gap-finder"
    ]

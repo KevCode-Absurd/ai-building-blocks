@@ -8,7 +8,11 @@ role: make
 job: ops
 level: intermediate
 inputs:
+  - type: question
+    required: true
   - type: codebase
+    required: false
+  - type: dataset
     required: true
 outputs:
   - type: code_change

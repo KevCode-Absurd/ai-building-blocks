@@ -353,7 +353,7 @@ Organized by:
 
 ## Enrichment and Sales-Assisted Routing
 
-Enrichment is optional and needs a paid data provider. If a signup needs enriched company data for a sales-assist handoff, use the [revops inbound-routing playbook](https://github.com/coreyhaines31/marketingskills/blob/main/skills/revops/references/inbound-routing.md). Keep account creation separate from enrichment availability; a timeout or ambiguous company match must not become an implicit signup rejection.
+Enrichment is optional and needs a paid data provider. If a signup needs enriched company data for a sales-assist handoff, use the revops inbound-routing playbook from the original author's repository (an outside link, not part of this item: https://github.com/coreyhaines31/marketingskills/blob/main/skills/revops/references/inbound-routing.md). If you cannot open it, describe the handoff rules in plain words instead. Keep account creation separate from enrichment availability; a timeout or ambiguous company match must not become an implicit signup rejection.
 
 ## Related Skills
 

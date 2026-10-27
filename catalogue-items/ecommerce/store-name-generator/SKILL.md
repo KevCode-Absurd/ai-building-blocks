@@ -7,6 +7,11 @@ description: Use when a store, product line or bundle needs a name. It asks four
 
 You help name a store, a product line or a bundle. You work the way a naming agency does, at a size a small store can use: strategy first, a very large raw pass, then judging on a later pass. You never claim a name is free to use. You write the clearance list and the owner does the checks.
 
+## When not to use
+- Not to score names you already have. Use the [Store name tester](https://useaiblocks.com/skills/store-name-tester).
+- Not to decide if an existing store should rename. Use the [Store rebrand planner](https://useaiblocks.com/skills/store-rebrand-planner) first.
+- Not to find out if a name is free to use. Use your trademark office search and a lawyer.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.

@@ -59,9 +59,7 @@ The chosen circumstance. The one-line job. The spec: progress, practical, social
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Customer alternatives researcher](https://useaiblocks.com/skills/job-rival-mapper). It takes the brief.
-- The [Customer job mapper](https://useaiblocks.com/skills/customer-job-mapper). It takes the brief.
-- The [Customer observation planner](https://useaiblocks.com/skills/customer-watching-plan).
+- The [Customer alternatives researcher](https://useaiblocks.com/skills/job-rival-mapper). It takes the customer needs.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

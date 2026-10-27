@@ -45,7 +45,7 @@ How to start:
 4. **Sort it.** Three yes answers make it a math call. Any no makes it a judgment call.
 5. **Look for a safe experiment.** Could you test it on a small slice without it being the decision itself? A test that locks you in is not a test. If a safe test exists, name it and run it before deciding.
 6. **If it is a math call.** Write the inputs, the formula and the result. Then find the one input that, if wrong by a reasonable amount, would flip the answer. Say what judgment supplies, such as an assumed growth rate, and give a range. Judgment is the junior partner here.
-7. **If it is a judgment call.** Write the judgment in one paragraph: what you believe, why and what would make you wrong. Then write what the short-term math says against it, with figures if known. For example, a price cut nearly always loses money in the first quarter even when it wins in the third year. Name what the math cannot see, such as trust, habit or lower costs at scale.
+7. **If it is a judgment call.** Write the judgment in one paragraph: what you believe, why and what would make you wrong. Then write what the short-term math says against it, with figures if known. For example, a price cut often lowers profit in the first quarter, even if it may win over years. Check this against the person's own data; never state it as a fact for their case. Name what the math cannot see, such as trust, habit or lower costs at scale.
 8. **Set the review.** A date, one signal that shows whether the call was right and what you will do if the signal is bad. Say who decides, since judgment calls will be debated until they are tried.
 9. **Check it.** Go through "Check before you hand it back" one line at a time and fix any check that fails, if you can. Under CHECKS MISSED, write one line for each check still missed and why, or "none".
 
@@ -57,8 +57,8 @@ The decision, the three tests, the sort, then either the model and its flip poin
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Decision evidence planner](https://useaiblocks.com/skills/decision-evidence-bar-setter). It takes the plan.
-- The [Decision bias checker](https://useaiblocks.com/skills/decision-bias-pileup-checker). It takes the plan.
-- The [Reversible decision sorter](https://useaiblocks.com/skills/reversible-decision-sorter).
+- The [Design decision interview planner](https://useaiblocks.com/skills/design-interviewer). It takes the plan.
+- The [Plan objection writer](https://useaiblocks.com/skills/case-against-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

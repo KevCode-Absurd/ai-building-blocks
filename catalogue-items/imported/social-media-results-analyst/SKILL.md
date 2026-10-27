@@ -296,7 +296,7 @@ Hand back a short report: the headline numbers, how they compare with the benchm
 
 ## Related Skills
 
-- **social-content**: For creating social posts. Use this skill for analyzing performance.
+- **social-post-writer** and **social-post-planner** (in the AI Blocks library): For creating social posts. Use this skill for analyzing performance.
 - **campaign-analytics**: For cross-channel analytics including social.
 - **content-strategy**: For planning social content themes.
 - **marketing-context**: Provides audience context for better analysis.

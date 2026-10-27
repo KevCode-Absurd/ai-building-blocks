@@ -41,12 +41,13 @@ alternatives: [guru, notion-ai, microsoft-copilot, notebooklm]
 last_checked: 2026-10-26
 checked: 26 Oct 2026
 first_result:
-  - "Decide which apps you want searchable, and ask your IT or security lead who can approve access to each one. Glean's pages do not say what setup needs, so expect to be asked."
+  - "Before any demo, list the three apps that hold the most company knowledge, and write down the access-rule questions to ask IT: who may see what, and who approves each connection. Glean's pages do not say what setup needs, so expect to be asked."
   - "Request a demo at glean.com/get-a-demo. The page says only Request a demo and see what Glean can do for your team, so we do not know what the form asks."
   - "In the demo, ask for the price and any minimum contract, whether your apps have connectors, how it keeps each person's access rules, and how long setup takes."
   - "Ask whether a small pilot group is possible before a company-wide start."
   - "Once it is live, ask a question where you already know the answer, such as where your refund policy lives. Check the answer against the file."
-  - "You end with answers drawn from your connected apps, limited to what each person may open. Next: if you are a small team, compare Notion AI or NotebookLM. For a smaller set of checked answers, compare Guru."
+  - "You end with a short answer per question, drawn from your connected apps and limited to what each person may open. Whether each answer shows its source file and date is not confirmed, so open the file yourself to check every claim until you have seen it in the demo, and note which apps were searched."
+  - "Next: if you are a small team, compare Notion AI or NotebookLM. For a smaller set of checked answers, compare Guru."
 needs:
   - "A company, not a personal account. We found no personal plan."
   - "A list of the apps to connect, such as Slack, Google Drive, Jira or SharePoint."
@@ -54,7 +55,7 @@ needs:
   - "A demo request through glean.com."
 example:
   task: "Ask a question your files already answer, such as what your refund policy is."
-  reply: "An answer drawn from your connected apps. Glean says users only see what they are allowed to see, so two people can get different results. We could not confirm whether answers show links to the source files."
+  reply: "A short answer drawn from your connected apps. Glean says users only see what they are allowed to see, so two people can get different results. We could not confirm whether answers show links to the source files, so check each claim against the file yourself, and note the file name, its last-edited date and the apps searched."
 not_verified:
   - "That answers link to source files. An earlier note said so, and the pages we read do not."
   - "A minimum contract. Third-party sites report one, and Glean does not publish it."

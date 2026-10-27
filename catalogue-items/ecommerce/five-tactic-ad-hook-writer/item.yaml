@@ -7,8 +7,12 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: product_data
     required: true
+  - type: persona
+    required: false
+  - type: brief
+    required: false
 outputs:
   - type: hooks
     required: true

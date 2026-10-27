@@ -4,7 +4,7 @@ description: >
   Design and validate digital filters in MATLAB. Use when cleaning up noisy signals,
   removing interference, filtering signals, designing FIR/IIR filters
   (lowpass/highpass/bandpass/bandstop/notch), or comparing filters in Filter Analyzer.
-license: https://www.mathworks.com/content/dam/mathworks/license/pmrl/license.md
+license: BSD-2-Clause plus MathWorks products-only clause (see LICENSE.md in this folder)
 metadata:
   author: MathWorks
   version: "1.1"
@@ -78,6 +78,8 @@ Wait for answer before showing any approach comparison or overview.
 - Edge frequencies in Hz
 
 If any item is missing, ask.
+
+If an earlier analysis report gives the spectrum, the interference frequencies or the signal length, use it to fill the spec, and check it against the data.
 
 ### Required intent for architecture choice (ask if unknown)
 

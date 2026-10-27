@@ -150,7 +150,7 @@ Each row is one ad. The fields you use most:
 | Provenance | `input_url`, `search_term`, `runTag`, `scraped_at` |
 | Everything else | `snapshot` (Meta's raw object) |
 
-For "winning ads", sort by `ad_duration_days` from high to low. An advertiser keeps paying for an ad that works, so the oldest active ads are the best guess. Ads with the same `collation_id` are versions of one ad; count them once.
+For "winning ads", sort by `ad_duration_days` from high to low. An advertiser may keep paying for an ad that works, so the oldest active ads are a guess about what works, not proof. Say so in the report. Ads with the same `collation_id` are versions of one ad; count them once.
 
 Report: the input, the ad count, how many are active, the top ads by `ad_duration_days` with `ad_library_url` links, the common call to action and media type, and which numbers Meta did not disclose.
 
@@ -191,6 +191,7 @@ See <https://github.com/apify/mcpc>.
 
 ## Limitations
 
+- The Actor scrapes Meta's Ad Library through a paid third-party service (Apify). Meta's terms may restrict this use, so tell the user to read those terms before they run it. Use the rows to study ads, not to copy them.
 - Researches public Ad Library content. It does not create or manage ads or report private ad-account metrics.
 - Spend and audience values can be missing; report undisclosed numbers rather than estimating them.
 - Runs spend Apify credit. Confirm the target and expected cost for large runs. Deliver results to another app only when the user requests it and has authorized the destination.

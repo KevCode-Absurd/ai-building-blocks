@@ -10,6 +10,10 @@ level: advanced
 inputs:
   - type: codebase
     required: true
+  - type: code_change
+    required: false
+  - type: data_model
+    required: false
 outputs:
   - type: audit_report
   - type: code_change

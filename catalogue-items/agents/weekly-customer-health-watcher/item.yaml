@@ -7,8 +7,7 @@ role: orchestrate
 job: analysis
 level: intermediate
 inputs:
-  - {type: performance_sheet, required: true}
-  - {type: spreadsheet, required: false}
+  - {type: customer_list, required: true}
   - {type: voc_reviews, required: false}
   - {type: tool_connection, required: false}
 outputs:

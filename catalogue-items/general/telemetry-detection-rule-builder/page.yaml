@@ -6,11 +6,11 @@ job: secure-code
 thinking: high
 thinking_why: The task compares evidence and alternatives. Its output still needs the stated checks.
 explain: |-
-  Draft one detection rule with positive, negative and evasion fixtures before SIEM review
+  A detection rule is only useful if you know what it catches and what it misses. This skill drafts one rule for one behaviour, then writes test events for it: some that should match, some normal ones that should not, and a lookalike that tries to sneak past an exception.
 
-  A repeatable specialist method with non-obvious field, translation and exception checks. A skill can load the rule-language and fixture contract when needed; a generic security persona or one-line prompt would omit essential obligations.
+  It maps every rule condition to a log field you actually have, and asks for any field that is missing instead of guessing. It reports which tests it really ran and marks the rest NOT_RUN, so you can send the rule and its evidence to your SIEM team for review.
 
-  This task uses selected methods from Threat Detection Engineer. It is a focused adaptation. The original agents remain available: [Threat Detection Engineer agent](https://useaiblocks.com/agents/agency-security-threat-detection-engineer).
+  This task uses selected methods from Threat Detection Engineer, an MIT-licensed source (see the LICENSE file). It is a focused adaptation. The original agents remain available: [Threat Detection Engineer agent](https://useaiblocks.com/agents/agency-security-threat-detection-engineer).
 when:
   - You have one behavior to catch and need a first rule draft.
   - You want test events for a rule before your team reviews it.
@@ -61,12 +61,12 @@ output_sample:
     - name: Gaps and false-positive notes
       contains: Missing fields, open assumptions and the tradeoffs in any exceptions.
 how_it_works:
-  - title: 1. A rule draft and field-to-condition map
-    text: Every rule condition maps to supplied telemetry or an explicit unresolved requirement.
-  - title: 2. Positive, negative and lookalike fixtures with expected results
-    text: Required fixtures and fields block a validation pass when absent.
-  - title: 3. Actual compile/replay evidence or an explicit list of unrun checks
-    text: A lookalike trusted-tool string cannot silently trigger an allowlist exemption.
+  - title: Draft the rule and map its fields
+    text: Every rule condition is matched to a log field you supplied, or listed as an open gap.
+  - title: Write the test events
+    text: Events that should match, normal events that should not, and a lookalike trusted-tool string that must not skip the rule. A missing fixture or field fails the check.
+  - title: Report what was really run
+    text: Real compile and replay results, or a clear list of checks marked NOT_RUN.
 judge:
   - Every rule condition maps to supplied telemetry or an explicit unresolved requirement.
   - Required fixtures and fields block a validation pass when absent.

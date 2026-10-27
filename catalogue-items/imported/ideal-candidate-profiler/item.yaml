@@ -8,8 +8,10 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: job_description
     required: true
+  - type: document
+    required: false
 outputs:
   - type: persona
 uses: []

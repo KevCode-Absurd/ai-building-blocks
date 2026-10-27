@@ -9,7 +9,11 @@ subhead: Noise added at exactly the level you intended in a communications simul
 explain: |
   Noise added at exactly the level you intended in a communications simulation, with SNR, Eb/No and Es/No converted the right way. Mix-ups between these measures are a common source of wrong results.
 
-  The skill sets firm rules for MATLAB code. Always give awgn an explicit signal power, never the measured option. Use unit average power if the scale does not matter, or compute the real power with mean(abs(x).^2) when it does. Always use convertSNR instead of hand formulas, since it handles coding rate, bits per symbol and oversampling. It has a pattern for OFDM links and for getting noise variance to feed a soft-decision demodulator. It needs MATLAB with the Communications Toolbox. It writes code only. Unless your AI is connected to MATLAB, it cannot run or check the code, so run it yourself in a licensed MATLAB. This is a MathWorks skill, copied under a licence that lets you use it only with MathWorks products.
+  The skill sets firm rules for MATLAB code. Always give awgn an explicit signal power, never the measured option. Use unit average power if the scale does not matter, or compute the real power with mean(abs(x).^2) when it does. Always use convertSNR instead of hand formulas, since it handles coding rate, bits per symbol and oversampling. It has a pattern for OFDM links and for getting noise variance to feed a soft-decision demodulator. It needs MATLAB with the Communications Toolbox. It writes code only. Unless your AI is connected to MATLAB, it cannot run or check the code, so run it yourself in a licensed MATLAB. This is a MathWorks skill.
+
+  Licence: we share this copy under the BSD 2-Clause licence in the LICENSE.md file, which adds that you may use it only with MathWorks products such as MATLAB. The skill file header links MathWorks' own reuse licence as well.
+
+  The result is a MATLAB code block, a list of the SNR, Eb/No and noise variance values in dB, and a note on any fixes made to your code.
 when:
   - Your bit error curve is off by a few dB and you cannot see why.
   - You have an Eb/No target and need the SNR for your simulation.
@@ -36,6 +40,7 @@ how_to_use:
   - Say if the link is OFDM or uses a fading channel. Give the FFT length and active subcarriers for OFDM.
   - Run the returned MATLAB code in MATLAB with the Communications Toolbox. Check the noise variance variable and the SNR values in dB.
   - If your AI can run MATLAB, ask it to test the code. If not, run it yourself.
+  - Next, compare your simulated bit error rate with the berawgn theory curve at the converted Eb/No. Look at the received points with scatterplot or comm.ConstellationDiagram, and measure the damage with comm.EVM.
 output_sample:
   input:
     - Your target SNR, Eb/No or Es/No, in dB

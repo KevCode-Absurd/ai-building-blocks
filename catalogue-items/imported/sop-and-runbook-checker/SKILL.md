@@ -17,11 +17,11 @@ Company SOP + internal runbook authoring, 5W2H completeness validation, and KB h
 
 An ops organization three years in accumulates a sprawl: 600 Notion pages, 200 Confluence runbooks, three Obsidian vaults, a `Drive/SOPs/` folder, and a `Slack #ops-questions` channel that exists because nobody can find the canonical doc. Predictable failure modes:
 
-1. **No owner** — 40% of SOPs name "the team" instead of a person. When the doc rots, nobody is accountable.
+1. **No owner** — many SOPs name "the team" instead of a person. When the doc rots, nobody is accountable.
 2. **No last-reviewed date** — a years-old vendor-offboarding SOP still references a procurement tool that was sunset over a year ago.
 3. **Vague success signals** — runbook step 4 says "verify the service is up". A new operator can't tell what that means.
 4. **No rollback path** — incident-comms cascade runbook tells you how to send the alert. It doesn't tell you how to retract it when the alert was wrong.
-5. **Orphan pages** — half the KB has no inbound links. Nobody finds them via navigation; they only exist because somebody knew the URL.
+5. **Orphan pages** — in a sprawling KB, many pages have no inbound links. Nobody finds them via navigation; they only exist because somebody knew the URL.
 6. **Glossary drift** — "CSM" means Customer Success Manager in three docs and Customer Solutions Manager in five. New hires guess wrong for six months.
 7. **Happy-path-only SOPs** — the doc covers what happens when everything works. It doesn't cover the 30% case where it doesn't.
 
@@ -50,7 +50,7 @@ Four-step deterministic flow (matches the ops org's actual workflow, not an abst
 
 **`scripts/runbook_validator.py`** — Reads a runbook (markdown file or JSON) and validates each step against six required attributes: (1) named owner (not "the team", not "ops"), (2) expected duration (concrete number + unit), (3) observable success signal (e.g., "HTTP 200 from `/healthz`" — not "service is up"), (4) observable failure signal, (5) rollback path (or explicit "this step cannot be rolled back, escalate to X"), (6) escalation contact (named person or named on-call rotation). Output is a per-step traffic-light (GREEN/AMBER/RED), an overall validity score 0-100, and a MUST-FIX issue list. Verdict: ≥ 80 = SAFE-TO-USE, 60-79 = USE-WITH-CAUTION, < 60 = NOT-SAFE. `--sample` prints a deliberately-broken incident-comms runbook to demonstrate failure detection. Stdlib only.
 
-**`scripts/kb_ingester.py`** — Walks a directory of markdown files (Notion export, Confluence space export, Obsidian vault, `Drive/SOPs/` directory). Extracts: (a) cross-link map (which page references which, via markdown `[link](path)` syntax), (b) glossary candidates (frequently used proper nouns and acronyms that recur in 3+ docs without a single canonical definition page), (c) orphan pages (no inbound links from anywhere in the vault), (d) glossary drift (the same term defined or used inconsistently across docs — e.g., "CSM" expanded differently in two places), (e) stale pages (no edit in > 12 months, detected via filesystem mtime or YAML `last_reviewed` frontmatter), (f) missing-owner pages (no `owner:` field in frontmatter). Emits a KB health report markdown with a prioritized top-20 cleanup list ranked by `staleness × inbound-link-count` (high-traffic stale docs first). `--sample` builds a tiny synthetic 8-page vault in a tmpdir and runs the full pipeline against it. Stdlib only.
+**`scripts/kb_ingester.py`** — Walks a directory of markdown files (Notion export, Confluence space export, Obsidian vault, `Drive/SOPs/` directory). Extracts: (a) cross-link map (which page references which, via markdown `[link](path)` syntax), (b) glossary candidates (frequently used proper nouns and acronyms that recur in 3+ docs without a single canonical definition page), (c) orphan pages (no inbound links from anywhere in the vault), (d) glossary drift (the same term defined or used inconsistently across docs — e.g., "CSM" expanded differently in two places), (e) stale pages (no edit in > 12 months, detected via filesystem mtime or YAML `last_reviewed` frontmatter; file dates are unreliable after a wiki export, so rely on `last_reviewed`), (f) missing-owner pages (no `owner:` field in frontmatter). Emits a KB health report markdown with a prioritized top-20 cleanup list ranked by `staleness × inbound-link-count` (high-traffic stale docs first). `--sample` builds a tiny synthetic 8-page vault in a tmpdir and runs the full pipeline against it. Stdlib only.
 
 ## Quick example
 
@@ -98,7 +98,7 @@ Before invoking the tools, the orchestrator (or `/cs:grill-bizops`) walks the us
 
 1. **"Who is the named owner of this SOP / runbook, and do they know they own it?"**
    Recommended: a single human (not "the team"), and yes — they have agreed in writing.
-   Canon: Gawande 2009 (*The Checklist Manifesto*) — checklists without an owner rot within 12 months. Ownership is the discipline.
+   Canon: Gawande 2009 (*The Checklist Manifesto*) — a checklist with no owner tends to go stale. Ownership is the discipline. (Unverified claim; treat as a rule of thumb.)
 
 2. **"When was this doc last reviewed, and what is the review cadence?"**
    Recommended: reviewed within the last 12 months (90 days if `--profile regulated`); cadence written in the frontmatter.
@@ -114,7 +114,7 @@ Before invoking the tools, the orchestrator (or `/cs:grill-bizops`) walks the us
 
 5. **"Where does this doc live, and what other docs link to it?"**
    Recommended: in the canonical wiki, and at least 2 inbound links from related docs. An orphan SOP is an unfindable SOP.
-   Canon: Atlassian Team Playbook on documentation health — orphan rate > 20% is the leading indicator of a wiki sprawl problem.
+   Canon: Atlassian Team Playbook on documentation health — a high share of orphan pages is a warning sign of wiki sprawl. (Unverified; the 20% line is a rule of thumb, not a sourced figure.)
 
 6. **"What is the regulatory overlay on this process — SOC 2, HIPAA, ISO 13485, GDPR, SOX, none?"**
    Recommended: explicit answer. If "none", confirm by checking the data classes the process touches.
@@ -122,6 +122,6 @@ Before invoking the tools, the orchestrator (or `/cs:grill-bizops`) walks the us
 
 7. **"Is the happy path the *only* path documented, or are the 2-3 most common failure modes also documented?"**
    Recommended: the top-2 failure modes per process are documented with their own recovery sub-procedure.
-   Canon: Fowler 2016 (*Production-Ready Microservices*) — operations docs that cover only the happy path are responsible for 60%+ of incident-time waste.
+   Canon: Fowler 2016 (*Production-Ready Microservices*) — docs that cover only the happy path waste time in an incident. (Unverified; no figure is claimed.)
 
 After all 7 are locked, invoke `kb_ingester.py` → `runbook_validator.py` → `sop_generator.py` in sequence.

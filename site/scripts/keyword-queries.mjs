@@ -39,7 +39,7 @@ const SUMMARY_FILLER = new Set(['give', 'share', 'paste', 'tell', 'list', 'plan'
   'their', 'then', 'each', 'every', 'more', 'most', 'less', 'only', 'also', 'just', 'over', 'have', 'will', 'gets', 'make', 'shows', 'show', 'turn', 'find', 'write',
   'check', 'clear', 'short', 'first', 'next', 'before', 'after', 'about', 'where', 'while', 'than', 'were', 'been', 'being', 'some', 'many', 'much', 'very', 'ready', 'real',
   'three', 'four', 'five', 'plus', 'stop', 'line', 'lines', 'part', 'parts', 'kind', 'type', 'need', 'needs', 'want', 'keep', 'used', 'using', 'work', 'works', 'other', 'same', 'both', 'like', 'good', 'well', 'still', 'take', 'goes', 'come', 'know', 'says', 'said']);
-const summaryWords = text => [...new Set(words(text).filter(w => w.length >= 4 && !/d/.test(w) && !FILLER.has(w) && !ROLE.has(w) && !SUMMARY_FILLER.has(w)))];
+const summaryWords = text => [...new Set(words(text).filter(w => w.length >= 4 && !/\d/.test(w) && !FILLER.has(w) && !ROLE.has(w) && !SUMMARY_FILLER.has(w)))];
 const singular = w => w.length > 4 && w.endsWith('ies') ? w.slice(0, -3) + 'y' : w.length > 3 && /[^s]s$/.test(w) ? w.slice(0, -1) : w;
 /** Items with the same topic words in their names answer the same keyword search equally well. */
 export const topicKey = name => [...new Set(coreWords(name).map(singular))].sort().join(' ');

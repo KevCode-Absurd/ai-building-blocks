@@ -58,10 +58,11 @@ CHECKS MISSED
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Customer buying reasons finder](https://useaiblocks.com/skills/customer-buying-reasons-finder).
-- The [Customer needs profile builder](https://useaiblocks.com/skills/job-based-avatar-builder).
+- The [Ideal customer profile writer](https://useaiblocks.com/skills/ideal-customer-profile-writer). It takes the buying reasons.
 - The [Buyer emotion and copy theme finder](https://useaiblocks.com/skills/dominant-emotion-finder). It takes the buying reasons.
 - **Make image ads** with the [Image ad maker from customer quotes](https://useaiblocks.com/skills/customer-quote-image-ad). It takes the buying reasons.
+- **Write the ad copy** with the [Ad headline variation writer](https://useaiblocks.com/skills/typed-headline-batch-writer). It takes the buying reasons.
+- The [Buyer wish hook planner](https://useaiblocks.com/skills/shared-want-hook-mapper). It takes the buying reasons.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

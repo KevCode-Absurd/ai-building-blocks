@@ -7,9 +7,9 @@ description: Use when your ad brings replies but too few, or too many that never
 
 Give it your ad and lead results. Get raise-or-cut fixes, a better form, and a record of what each ad pulled.
 
-This workflow follows the method in How to Write a Good Advertisement (a book summary) by Victor O. Schwab. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+The order of the steps is adapted from a second-hand summary of Victor O. Schwab's book How to Write a Good Advertisement. He has not endorsed this workflow, and the steps are our reading, not his words. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
-**When not to use:** you want awareness with no reply offer, your sales fell and you don't know why, or you only want to know why one ad gets few replies. Use the Ad results report writer for the first, the Ad sales drop analyst for the second, and the Reply-getting fix writer for the third.
+**When not to use:** you want awareness with no reply offer, your sales fell and you don't know why, or you only want to know why one ad gets few replies. Use the [Ad results report writer](https://useaiblocks.com/skills/ad-results-report-writer) for the first, the [Ad sales drop analyst](https://useaiblocks.com/skills/ad-sales-drop-analyst) for the second, and the [Reply-getting fix writer](https://useaiblocks.com/skills/reply-getting-fix-writer) for the third.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -69,7 +69,7 @@ Five step files and the summary. In order:
 - **The new offer.** Three changes, the new wording and what was left alone.
 - **The form.** The rule check, the rewritten form, the field table and the key code.
 - **The results.** A one-line answer on what changed after your run, and three ranked actions.
-- **The log entry.** One per ad, with the next change to try. This is the lessons register.
+- **The log entry.** One per ad, with the next change to try. This is the lessons register, and it is part of what you get back.
 - **HAND-BACK SUMMARY.** Files, steps not run and every `MISSING:` line.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->

@@ -13,8 +13,9 @@ Read [the original role profile](references/source-agent.md) before you start. I
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Data chart maker](https://useaiblocks.com/skills/data-chart-drawer).
-- The [Statistician agent](https://useaiblocks.com/skills/agency-academic-statistician).
+- The [A/B test results analyst](https://useaiblocks.com/skills/a-b-test-verdict-maker). It takes the plan.
+- The [Data project review writer](https://useaiblocks.com/skills/analysis-lessons-review-writer). It takes the plan.
+- The [Data analyst](https://useaiblocks.com/skills/data-analyst). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -26,10 +27,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **Image** (yours): a finished picture.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, spreadsheet, image. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -44,7 +46,7 @@ Ask once for anything missing. If it is still missing, write `MISSING: <what>`, 
 1. The question the chart must answer, in one sentence.
 2. The columns: name, what it holds, and its type (category, order, number or date). Also the row count.
 3. Where it will appear: slide, web page, print or dashboard.
-4. A chart to review (optional): an image or a description.
+4. A chart to review (optional): an image or a description. A chart image made in an earlier step counts.
 5. The tool the user will build it in (optional). If missing, give tool-neutral steps.
 
 ## How you work

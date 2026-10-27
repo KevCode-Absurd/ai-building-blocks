@@ -7,12 +7,14 @@ description: "Use after an incident is over to turn the notes into a blameless r
 
 Write what happened, change the procedure to match what you learned, and track the prevention work. Three steps run in order. Each saves a file and hands the next step what it needs.
 
+Use it when: an incident is over and you have its timeline. Not for: a live incident (use the Outage incident leader), or a report on its own with no procedure change (use the Incident postmortem writer alone).
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+- **The incident record** (yours): the timeline of the outage, what it affected and who did what.
 
 **Makes it better (optional):**
 - **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
@@ -20,7 +22,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for source text, document, meeting notes. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for the incident record, document, meeting notes. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -28,6 +30,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+
+This list replaces the general "Before you start" list above. There, "Source text" and "Meeting notes" mean the incident timeline and notes, and "Document" means the procedure. They are not an article or a book.
 
 - The incident timeline, logs, chat or notes, with times.
 - What was done to recover, and which facts are confirmed and which are guesses.
@@ -95,9 +99,9 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Each action has a `done_when` and a review date, or `MISSING`.
 - The original notes and procedure are untouched.
 
-## After this
+## Next steps to offer
 
-Suggest one next step in a short question, and say they can type their own:
+Use these instead of the general "After this" list above. Suggest one next step in a short question, and say they can type their own:
 
 - **Review the report with the people involved**, then let them agree owners and dates. A person does this.
 - **Check the new procedure for gaps** with the [SOP and runbook checker](https://useaiblocks.com/skills/sop-and-runbook-checker).

@@ -28,9 +28,9 @@ How to start:
 - **A spreadsheet:** Holds the register so you can sort by owner and due date after the AI hands it back.
 <!-- /needs -->
 
-## Before you start
+## What to gather first
 
-Use what is attached or pasted first. Ask once, in one short message, for only what you cannot work without.
+These replace the generic list above, which asks for source text and a question. This run needs the records below. Use what is attached or pasted first. Ask once, in one short message, for only what you cannot work without.
 
 **You need:**
 - The defects or late deliveries in scope, each with a date and a lot.
@@ -98,9 +98,9 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 Write `MISSING: <what>` next to the affected line. Carry on with work that does not depend on it. Without the acceptance standard, stop at step 2 and return the issue review with a list of what the standard must say. Without the supplier's reply, return steps 1 and 2 and say step 3 is waiting.
 
-## After this
+## What to do with the result
 
-Suggest one next step as a short question, and say the user can type their own:
+Suggest one next step as a short question, and say the user can type their own. These fit a supplier review best:
 - **Track it over later lots.** Use the [Supplier correction evidence review assistant](https://useaiblocks.com/agents/supplier-correction-evidence-review-assistant), which keeps a record and checks each new lot against it.
 - **Reply to the supplier.** Once a person has checked the register, they can send the accepted and open items themselves.
 Nothing is sent for them. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

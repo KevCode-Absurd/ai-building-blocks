@@ -20,7 +20,7 @@ A first PRD is the shortest document that lets the team decide and start: about 
 
 ## Instructions
 
-1. **Start from what the user gave you.** Read any files they provide. If the problem, the target users, or how success will be measured is missing, stop and ask about them first: up to three short questions in one message, and no PRD in that reply. Ask only what only the user knows (their evidence of the problem, their users, their success metric); research what the web can answer. Write the PRD after the answers. Write it without them only if the user tells you to go ahead, and then mark those gaps as assumptions.
+1. **Start from what the user gave you.** Read any files they provide. If the problem, the target users, or how success will be measured is missing, stop and ask about them first: up to three short questions in one message, and no PRD in that reply. Ask only what only the user knows (their evidence of the problem, their users, their success metric); research what the web can answer. Write the PRD after the answers. Write it without them only if the user tells you to go ahead, and then mark those gaps as assumptions. If the user gives an earlier plan or requirements document, use it as the starting point.
 
 2. **Research freely when it helps.** Search the web for the market, competitors and alternatives, regulations, or what changed recently, and read any sources the user points to. Use what you find to sharpen the PRD's decisions: why now, who the segment is, what we do better than the alternatives. Cite the source next to the claim. A finding goes into the document only if it changes a decision; anything else that's useful goes in your reply as notes, so the PRD stays lean.
 

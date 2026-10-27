@@ -55,7 +55,7 @@ This is the most important phase. The examples are what make the calibration act
 
 **First example:**
 
-Ask: "Paste in a recent status update, roundup email, or briefing you've written. Don't overthink which one -- whatever you sent most recently is perfect. Just paste the whole thing right here. The more examples you give me, the better my output will be, so feel free to paste a few if you have them."
+Ask: "Paste in a recent status update, roundup email, or briefing you've written. Don't overthink which one -- whatever you sent most recently is perfect. Just paste the whole thing right here. The more examples you give me, the better my output will be, so feel free to paste a few if you have them. One thing first: I save your examples as plain text in a file on your computer, so please take out client names, personal details and private figures before you paste."
 
 Accept whatever they paste. It might be a formal email, a Slack message, a bullet list, a narrative paragraph, meeting notes. Long or short. Messy formatting is fine -- you're reading for patterns, not presentation. All valid.
 

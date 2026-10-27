@@ -6,7 +6,12 @@ thinking: high
 thinking_why: It weighs buyer evidence, channel fit and test economics. Use your strongest model.
 headline: Traction experiment review agent
 subhead: Paste your product link and add your goal, budget and time limits if you have them. Get advice tied to your business, a small test with clear limits, and the facts still needed before you act.
-explain: Keep a dated log of channel tests and recommend the next decision from measured results. On a manual run or a separately authorized schedule, read the saved profile, selected plans, result exports and action log. On the first run use the workflow to prepare the plan. On later runs compare only new, mature evidence and use the reviewer. Keep draft, approved, running, measured and inconclusive states distinct. Do not repeat a paid action or message after interruption. If evidence is unchanged, preserve the prior decision and say so once. Return focus, revise, stop or wait with the next bounded test. A schedule is only a suggested cadence; do not create or activate one without a request.
+explain: |-
+  Most software teams try a channel, get a few numbers, forget what they tried, and try it again. Nobody can say what was learned or what to do next.
+
+  This agent keeps one dated log of your channel tests. On the first run it reads your product link and builds a small test plan for the channels that fit your buyer. On later runs it adds only new results that have had time to mature, and writes one decision: focus, revise, stop or wait. Each decision comes with the next small test. A lead or trial is never counted as a paid customer. If nothing new came in, it keeps the last decision and says so.
+
+  It never sends messages, spends money or starts a schedule. You approve each action. It works on the first run from your product page alone, but numbers you do not give it stay marked as unknown.
 when:
   - You need a practical way to find customers for a software business.
   - You want to test a growth idea before committing more time or money.
@@ -23,10 +28,10 @@ you_get:
   - A small test with an owner, cost cap and decision rule
   - The next action and what needs approval
 how_to_use:
-  - Add the skill or whole workflow pack to your AI.
-  - Paste your product URL and any facts you already know.
-  - Ask it to follow the skill and cite what it can verify.
-  - Review the plan and approve any external action separately.
+  - Add the agent and both companion skills (Find your SaaS growth channel and Traction experiment result reviewer) to your AI. It needs both.
+  - First run: paste your product URL and any facts you already know, such as your goal, buyer, cash and time limits.
+  - Later runs: attach the saved folder (business-profile.md, results-ledger.csv, decision-log.md) and add the new results with their dates.
+  - Review the plan and the decision. Approve any send, spend or booking yourself.
 output_sample:
   input:
     - Your product link, or pasted product and pricing text

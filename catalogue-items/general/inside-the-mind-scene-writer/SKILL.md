@@ -62,6 +62,7 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Scene suspense reviewer](https://useaiblocks.com/skills/page-pull-scene-checker). It takes the draft.
 - The [Dialogue editor](https://useaiblocks.com/skills/dialogue-ear-checker). It takes the draft.
 - The [SMS send checker](https://useaiblocks.com/skills/sms-send-checker). It takes the draft.
+- The [Company update email rewriter](https://useaiblocks.com/prompts/dull-update-email-rewriter). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -12,6 +12,8 @@ explain: |
   The contract decides your level, so the skill starts there. It reads your DFARS clauses, asks whether you handle only contract information (FCI) or also controlled unclassified information (CUI), and sets the boundary of the systems in scope. If the contract is missing, it leaves the level undetermined and lists what it needs. It never picks one for you.
 
   It then maps your controls to the 110 practices, shows the gaps and drafts security plan text that describes only what you really do. It cannot browse DoD sites on its own. Program rules change, so confirm the current notice and your clauses with an assessor.
+
+  Several details in the skill file are the original author's planning figures and are not checked against a source here. These are a program-status note, a timeline of 9 to 18 months and a list of practices that cannot stay open. Treat them as leads to confirm. This is Hemant Naik's CMMC skill, shared under the MIT licence.
 when:
   - You won a subcontract and the prime says you need CMMC.
   - You must decide what counts as controlled information in your systems.
@@ -38,7 +40,7 @@ how_to_use:
   - Paste your contract clauses and the section that names the CMMC level. Say what data you handle.
   - Describe your systems in plain words. List the controls you already have. If you have none to list, say so.
   - Read the level determination first. If it says undetermined, get the missing documents before you go on.
-  - Take the gap table and open questions to an accredited assessor or your counsel before you spend money on fixes.
+  - Take the gap table and open questions to an accredited assessor or your counsel before you spend money on fixes. Treat the program status, the list of practices that cannot stay open, and any timeline as planning leads to confirm with them, not as facts.
 output_sample:
   input:
     - Your contract clauses and the CMMC level the contract states

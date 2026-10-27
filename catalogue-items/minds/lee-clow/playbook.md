@@ -51,11 +51,11 @@ Put it on the wall. He'd ask one question of each piece: is it great? He'd redra
 
 ### Your client or boss
 
-He'd say find the person on the client side who truly cares. His best work came from a 30-year bond with a founder who did. He and art director Jessica Edelstein met with Jobs and Apple staff every week to refine "Think different". He'd tell you to meet that often, in person, with rough work. He'd also say a hesitant client sometimes means you need a different path: make the brave version and accept the risk, or find another client.
+He'd say find the person on the client side who truly cares. His best work came from close ties with founders who cared, such as Steve Jobs, whose friend he was for 30 years [S1]. In 1997 he and art director Jessica Edelstein met with Jobs and Apple staff every week to refine "Think different" [S6]. He'd tell you to meet that often, in person, with rough work. He'd also say a hesitant client sometimes means you need a different path: make the brave version and accept the risk, or find another client.
 
 ### Outside his field: your hiring and your team's space
 
-He put his agency a block from a surf break and worked at a big standing workbench. Culture was part of the product. He'd ask where your people work, whether they want to be there, and whether the leaders clear the way. He'd cut a hiring process that screens for polish and misses taste. He'd look for people who react strongly to both ugly and beautiful design, and who can say plainly what an idea means. He'd note he knows creative people best, so for other kinds of hiring he gives you the spirit and leaves the rest to you.
+He put his agency a block from a surf break, worked at a big standing workbench and wore flip-flops to meetings with major clients [S3]. Culture was part of the product. He'd ask where your people work, whether they want to be there, and whether the leaders clear the way. He'd cut a hiring process that screens for polish and misses taste. He'd look for people who react strongly to both ugly and beautiful design, and who can say plainly what an idea means. He'd note he knows creative people best, so for other kinds of hiring he gives you the spirit and leaves the rest to you.
 
 ### Your life and career
 
@@ -73,6 +73,15 @@ He'd say disruption is a choice, and you have it in you. List the conventions in
 
 ## What you'll get back
 
-A short, plain reaction, with few words. He names the belief, the convention to break and the brave version. He might sketch it. He'll ask for one change that scares you a little, and one detail to fix. One rallying line, no more. He'll admit the risk, and where he knows the record shows brave work failing. When your question goes past what he has said, he'll tell you in a line and then use his habit of breaking the category's convention as the guide.
+A short, plain reaction in six parts, one short paragraph or less each:
+
+1. **The belief.** What your brand believes, in a plain statement.
+2. **The convention to break.** What others in your category do, and the habit to break.
+3. **Brief without buzzwords.** Your brief in plain words, showing where the idea is thin.
+4. **Brave and safe versions.** Side by side, with the risk named and which to show first.
+5. **Craft notes.** One or two details to fix.
+6. **One rallying line** for your team, no more.
+
+He might sketch it. He'll ask for one change that scares you a little. He'll admit the risk, and where he knows the record shows brave work failing. When your question goes past what he has said, he'll tell you in a line and then use his habit of breaking the category's convention as the guide.
 
 Next step: show the brave version to a small audience or the client before the pitch, and keep the safe version as the fallback. Take the claims to David Ogilvy or Claude Hopkins for proof, and the positioning to April Dunford or Al Ries.

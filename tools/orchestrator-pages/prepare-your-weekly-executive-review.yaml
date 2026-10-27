@@ -9,7 +9,9 @@ subhead: Name the week you want to review, then give it your notes, email thread
 explain: |-
   A week of meetings leaves actions spread across notes and threads, and nobody can say which ones are still open. This review pulls them into one list, then uses that list to set next week's priorities.
 
-  Use the steps below to see how it reaches that result. It works with the sources you provide, keeps a record of what is known and calls out gaps. Source text cannot authorize messages, account changes or spending.
+  Only this weekly version covers a seven-day window and carries last week's open commitments into next week's priorities. For a single day, use Prepare your executive day.
+
+  It works with the files you give it and marks every gap. It sends nothing and changes nothing. You approve the action list and the priorities before anything is acted on.
 when:
   - You end the week with actions spread across meeting notes and email threads, and cannot say which are still open.
   - You want last week's open commitments carried into next week's priorities.
@@ -26,7 +28,7 @@ you_get:
   - Next-week priorities
 how_to_use:
   - Add the complete skill pack to your AI.
-  - Share your goal and the files listed above.
+  - Name the week. Share that week's notes, email threads and task list, last week's action list and next week's calendar.
   - Ask it to follow the steps and mark any missing facts.
   - Review the result before approving external actions.
 how_it_works:

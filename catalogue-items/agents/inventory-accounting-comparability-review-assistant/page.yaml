@@ -143,6 +143,12 @@ works_best_with:
     - The notes on business purchases and currency, so noncash moves can be removed.
     - A named reviewer who knows the filings and will answer the questions it raises.
 terms:
+  - term: Operating reserve increase
+    meaning: The rise in the LIFO reserve from the business itself. It leaves out business purchases, currency moves and method changes.
+  - term: Tax effect
+    meaning: The tax change that comes from moving between LIFO and FIFO, if the company discloses it.
+  - term: Overlap with LIFO
+    meaning: A write-down that is already counted inside the LIFO figure. It must be counted once only.
   - term: LIFO
     meaning: Last in, first out. A way of costing stock where the newest purchases are treated as sold first. Allowed under US accounting rules, not under IFRS.
   - term: FIFO

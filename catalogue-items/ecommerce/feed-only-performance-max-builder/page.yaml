@@ -99,7 +99,7 @@ output_shape: |
 
   PRIORITY  Shopping <High, new customers> | feed-only PMax <serves the rest>
   REVIEW  2 weeks <what to read, what is expected> | 4 weeks <...>
-  KILL RULES  <spend moves to Display or YouTube; new-customer sales fall; ...>
+  KILL RULES  <pause if more than [X] percent of spend moves to Display or YouTube; pause if new-customer sales fall by more than [Y] percent while total revenue is flat; owner sets X and Y>
   CHECKS MISSED: <none | list>
   MISSING: <Shopping setup | conversions | brand list | Merchant Center link>
 

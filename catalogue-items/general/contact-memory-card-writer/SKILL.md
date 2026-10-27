@@ -5,7 +5,7 @@ description: Use right after you meet someone, to turn rough notes into a one-pa
 
 # Contact memory card writer
 
-Remembering a person is a kindness you can plan. This skill keeps what matters about someone in one place, so the next contact feels like a friend remembering, not a salesperson checking a list. It keeps only what the person shared and what you need. It never stores private matters just because you heard them.
+Remembering a person is a kindness you can plan. This skill keeps what matters about someone in one place, so the next contact feels like a friend remembering, not a salesperson checking a list. It keeps only what the person shared and what you need. It never stores private matters just because you heard them. The card is a private record for you, to read before you next speak to the person. It is not the thank-you message itself (use the Honest appreciation note writer for that). Keep cards somewhere private. Rules on holding personal details differ by country, so if you hold them for business, check yours.
 
 ## When not to use
 
@@ -41,7 +41,7 @@ How to start:
 
 ## What you need
 
-Your meeting notes are the only input this skill needs. Ignore any request above for a brand brain.
+Your meeting notes are the only input this skill needs. Ignore any request above for a brand brain or for "your question": the notes are the question.
 
 - **Your notes from the meeting** (required): rough is fine. Include the name, what they said and what you promised.
 - **A brief on the person** (optional).

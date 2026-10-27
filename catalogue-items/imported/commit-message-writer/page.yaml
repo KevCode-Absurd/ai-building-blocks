@@ -5,11 +5,11 @@ name: Commit message writer
 summary: Write a git commit message from your staged changes. You get a typed subject and a short why-focused body, ready to paste.
 job: build-software
 headline: Commit message writer
-subhead: Stage your changes. Get a short commit message that says what changed and why. Bring staged changes in git. Use the result to plan your next step.
+subhead: Stage your changes. Get a short commit message that says what changed and why.
 explain: |
   A short commit message built from your actual staged changes, so a reader knows what changed and why without opening the diff.
 
-  It reads git status and the staged diff first. If nothing is staged it asks for a diff or a description and labels it as such, and it never stages files on its own. It picks one type: feat, fix, docs, refactor, test or chore. If your change mixes types, it asks you to split it. The subject is a verb-first phrase of 50 characters or fewer, and empty subjects like "update code" are banned. A body is added when the reason is not obvious.
+  It reads git status and the staged diff first. If nothing is staged it asks for a diff or a description and labels it as such, and it never stages files on its own. It picks one type: feat, fix, docs, refactor, test or chore. If your change mixes types, it asks you to split it. The subject is a verb-first phrase of 50 characters or fewer, and empty subjects like "update code" are banned. A body is added when the reason is not obvious. It only uses facts your diff or your note shows, and it asks when the why is unclear. Licence: this copy is from sickn33's collection, whose written content is CC BY 4.0 (see LICENSE-CONTENT). The skill file's own header says MIT, set by the original author alapha888. Both let you reuse it if you keep the credit.
 when:
   - You staged changes and cannot think of a good message.
   - Your commits all say "fix bug" or "update code".
@@ -34,6 +34,7 @@ how_to_use:
   - If your AI can run git commands, ask it to write the message. If not, paste the output of git diff --cached.
   - Add a line on why you made the change, and your team's commit style if you have one.
   - Check the subject says what changed. Then paste the message into git commit.
+  - Next, push the branch and open a pull request. The commit-and-pull-request-sender skill can do both, or you can do them yourself.
 output_sample:
   input:
     - Your staged changes in git, or a pasted diff

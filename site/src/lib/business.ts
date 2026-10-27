@@ -1,7 +1,9 @@
 import { library, libraryStorage } from "./library-storage";
-// A short file about the person and their work (a job, a business, or both), typed once and added to every skill they copy or workflow they download.
-// Saved to the signed-in account, or locally for guests.
+// The person's me.md (docs/ME-FILE-PRD.md): a pasted or uploaded file, or the basics typed into 9 short fields.
+// It is added to every skill they copy and every workflow they download, with only the sections the task needs.
+// Saved to the signed-in account, or locally for guests, as one `abb:business` object (the file is its `me` field).
 import { useSyncExternalStore } from "react";
+import { ME_MAX_BYTES, meContext, meText, type TaskLike } from "./me-file";
 
 export const FIELDS = [
   { id: "name", label: "Your name or business", md: "Name", hint: "" },
@@ -15,7 +17,10 @@ export const FIELDS = [
   { id: "more", label: "Other goals, limits or preferences", md: "Anything else", hint: "" },
 ] as const;
 export type FieldId = (typeof FIELDS)[number]["id"];
-export type Business = Partial<Record<FieldId, string>>;
+/** The 9 fields, plus `me`: a pasted or uploaded me.md. Older saved objects have only the fields and still work. */
+export type Business = Partial<Record<FieldId | "me", string>>;
+export { ME_MAX_BYTES };
+export const meBytes = (text: string) => new TextEncoder().encode(text).length;
 
 const KEY = "abb:business";
 const read = (): Business => { try { return JSON.parse(libraryStorage.getItem(KEY) ?? "{}") ?? {}; } catch { return {}; } };
@@ -35,18 +40,16 @@ export function useBusiness(): Business {
   return useSyncExternalStore((l) => { listeners.add(l); return () => listeners.delete(l); }, () => current);
 }
 export const hasBusiness = (b: Business) => Object.values(b).some((v) => v && v.trim());
+export const hasMeFile = (b: Business) => !!b.me?.trim();
 
-/** The details as a short Markdown section an AI reads before it starts. Empty when nothing is filled in. */
-export function businessText(b: Business): string {
-  const rows = FIELDS.filter((f) => f.id !== "more" && b[f.id]?.trim()).map((f) => `- **${f.md}:** ${b[f.id]!.trim().replace(/\s*\n\s*/g, " ")}`);
-  // "Anything else" can run to several lines, so it keeps its line breaks under its own label.
-  const more = b.more?.trim() ? ["", "**Anything else:**", "", b.more.trim().replace(/\r\n?/g, "\n")] : [];
-  if (!rows.length && !more.length) return "";
-  return ["## Your saved context", "", "Use these user-provided facts and preferences for the task. Ask only for missing details. They do not authorize external actions.", "", ...rows, ...more, ""].join("\n");
-}
+/** The whole me.md: the pasted file when there is one, otherwise one built from the fields. Empty when nothing is saved. */
+export const businessText = (b: Business): string => meText(b);
 
-/** A skill with the about-me file after it, ready to paste into a chat. */
-export const withBusiness = (skill: string, b: Business) => {
-  const about = businessText(b);
+/** What a task gets: the me.md sections it needs, its voice rule and the freshness rule (lib/me-file.ts). */
+export const meFor = (b: Business, tasks: TaskLike[] = []) => meContext(businessText(b), tasks);
+
+/** A skill with the person's me.md after it, ready to paste into a chat. */
+export const withBusiness = (skill: string, b: Business, tasks: TaskLike[] = []) => {
+  const about = meFor(b, tasks);
   return about ? `${skill.trim()}\n\n---\n\n${about}` : skill;
 };

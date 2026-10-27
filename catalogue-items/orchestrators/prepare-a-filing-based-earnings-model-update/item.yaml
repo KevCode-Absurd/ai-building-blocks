@@ -10,8 +10,14 @@ inputs:
   - type: document
     required: true
   - type: spreadsheet
-    required: false
-outputs: []
+    required: true
+  - type: financial_statements
+    required: true
+  - type: question
+    required: true
+outputs:
+  - type: spreadsheet
+  - type: document
 needs_mode: manual
 uses:
   - trailing-period-financial-bridge

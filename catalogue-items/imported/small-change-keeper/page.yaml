@@ -29,12 +29,13 @@ you_get:
   - Questions when the request is unclear
   - Smaller changes that are easier to review
 how_to_use:
+  - Before you start, check that your coding tool can read your project folder. This skill uses no paid service, no API key and no scraping.
   - Open your AI coding tool, or a chat if you can paste in the code.
   - Add the skill folder if your coding tool loads SKILL.md skills (Claude Code and similar tools do), or paste the skill text into the chat.
   - "Say: use this skill for the whole session."
   - Describe the bug or change, and name the files it may touch.
   - "The reply has four parts, in this order: the minimal change, the held-back edits, questions, then a checklist result. Approve or skip each held-back edit. If the list is empty, there is nothing to approve."
-  - After you approve edits, run your tests and read the diff yourself. Ask for tests or a separate review by name if you want them.
+  - After you approve edits, run your tests and read the diff yourself. Ask for tests or a separate review by name if you want them. Then merge the change, or ask for a separate review first with the code change reviewer.
   - "If the change is still too big, say: too much, revert. The skill then offers a fix of 10 lines or fewer."
 output_sample:
   input:
@@ -52,3 +53,9 @@ output_sample:
       contains: Short questions when the request is unclear, a new package seems needed or other files must change.
     - name: Moyu checklist result
       contains: A final check that the change stays in scope, adds nothing extra and is small enough to review fast.
+terms:
+  - term: Moyu
+    meaning: "The skill's own name for its three rules: change only what was asked, pick the simplest fix, and ask when unsure."
+  - term: Held-back edit
+    meaning: A change your AI wanted to make but did not, because you did not ask for it.
+next: [code-change-reviewer]

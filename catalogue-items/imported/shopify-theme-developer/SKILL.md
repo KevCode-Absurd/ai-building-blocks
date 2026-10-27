@@ -68,6 +68,8 @@ Layout (theme.liquid)
 
 ## Getting Started
 
+If the user is not a developer, work like this: they give you the brief, you write the files, they look at the local preview and tell you what to change. At each stage, ask them to check one thing: the layout in the preview after step 2, the theme editor controls after the sections are in, and a full click-through on an unpublished copy in step 3 before they publish anything.
+
 ### 1. Initialize a New Theme
 
 Use the Skeleton theme as a starting point:
@@ -309,6 +311,16 @@ Access in Liquid: `{{ settings.primary_color }}`
 
 **Solution:** Run `shopify theme check` and address performance warnings.
 
+## What you get back
+
+Give the user:
+
+- The new or changed theme files, listed by name (sections, templates, snippets, settings).
+- What each file does, in one line.
+- Local preview steps (`shopify theme dev`).
+- Checks to run in the preview before pushing: every page loads, the sections can be added, moved and edited in the theme editor, images are sized and lazy loaded, and `shopify theme check` shows no errors.
+- Push steps as an unpublished theme first. Never publish for the user.
+
 ## Resources
 
 - [Dawn Theme (Reference)](https://github.com/Shopify/dawn)
@@ -316,4 +328,4 @@ Access in Liquid: `{{ settings.primary_color }}`
 - [Theme Architecture Docs](https://shopify.dev/docs/storefronts/themes/architecture)
 - [Theme Best Practices](https://shopify.dev/docs/storefronts/themes/best-practices)
 
-For Liquid templating specifics, see the [liquid-templating](../liquid-templating/SKILL.md) skill.
+For Liquid templating specifics, use the Liquid snippet writer item in the AI Blocks library, or Shopify's Liquid docs. (The original linked a separate liquid-templating skill that is not in this copy.)

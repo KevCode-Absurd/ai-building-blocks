@@ -31,6 +31,8 @@ NVIDIA's toolkit for preparing high-quality training data for LLMs.
 - **dolma**: Allen AI's data toolkit
 - **Ray Data**: General ML data processing (no curation focus)
 
+**Code warning:** the code below was written for the NeMo Curator 0.4 series and has not been run against the current release. Some calls (for example the chained `dataset.filter(...)` lines and the stage list run in a loop) may not match the current API. Check the current NeMo Curator docs, pin the version you install, and run a tiny test first.
+
 ## Quick start
 
 ### Installation
@@ -347,19 +349,9 @@ Vendor figures from the skill's author, undated, on the hardware shown in each l
 
 ## Cost comparison
 
-Example only. These cloud prices are the author's, undated, and will have changed. Check current prices before you plan a budget, and do not quote the totals.
+No tested cost figures are given here. The author's original price table was undated and is out of date. To plan a budget, take the hourly price of the machines you would use from your cloud provider's current price page, time a small run on your own data, and multiply.
 
-**CPU-based curation** (AWS c5.18xlarge × 10):
-- Cost: $3.60/hour × 10 = $36/hour
-- Time for 8TB: 120 hours
-- **Total**: $4,320
-
-**GPU-based curation** (AWS p4d.24xlarge × 2):
-- Cost: $32.77/hour × 2 = $65.54/hour
-- Time for 8TB: 7.5 hours
-- **Total**: $491.55
-
-**Savings**: 89% reduction ($3,828 saved)
+**Total cost** = [hourly price of your machines] x [number of machines] x [hours from your small run, scaled up]
 
 ## Supported data formats
 
@@ -370,8 +362,7 @@ Example only. These cloud prices are the author's, undated, and will have change
 ## Use cases
 
 **Production deployments**:
-- NVIDIA used NeMo Curator to prepare Nemotron-4 training data
-- Open-source datasets curated: RedPajama v2, The Pile
+- The author says NVIDIA used NeMo Curator to prepare Nemotron-4 training data, and that it was used on RedPajama v2 and The Pile. These claims come from the skill's author and were not checked here.
 
 ## References
 
@@ -380,10 +371,10 @@ Example only. These cloud prices are the author's, undated, and will have change
 
 ## Resources
 
-- **GitHub**: https://github.com/NVIDIA/NeMo-Curator ⭐ 500+
+- **GitHub**: https://github.com/NVIDIA/NeMo-Curator
 - **Docs**: https://docs.nvidia.com/nemo-framework/user-guide/latest/datacuration/
 - **Version**: 0.4.0+ (the code in this file was written for the 0.4 series; check the current docs before you run it, as the API changes between versions)
-- **License**: Apache 2.0
+- **License**: this skill file is MIT (see LICENSE). The NeMo Curator library has its own licence, Apache 2.0.
 
 
 

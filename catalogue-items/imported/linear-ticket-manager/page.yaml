@@ -10,6 +10,8 @@ explain: |
   Tell your AI what work needs tracking and it reads, creates or updates the Linear issues for you. No tab switching, no copying details by hand.
 
   First it checks that the Linear connection is set up, and if not, walks you through adding it and logging in. Then it confirms your goal, such as triage or sprint planning, along with the team, project, priority, labels and due dates. It picks the right Linear tools and runs the calls in sensible batches. It checks IDs before changing anything. You need a Linear account and a one-time login.
+
+  Licence: this is a copy of OpenAI's Linear skill, shared under the Apache 2.0 licence. Check its tool list against the tools your own Linear connection offers.
 when:
   - You just left a meeting and want its action items as tickets.
   - You need to triage a pile of new issues quickly.

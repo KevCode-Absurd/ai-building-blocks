@@ -10,6 +10,8 @@ explain: |
   The doubts your audience really holds, and the proof and claim strength that settle them. You stop overclaiming to people who do not believe you, and stop underselling to people who would.
 
   You give the message and the people it is for. The skill names what is missing in their eyes: skill, good intent, proof, familiarity or legitimacy. It checks whether your category is trusted, distrusted or split, then picks signals to match, such as reviews, guarantees, certifications, plain facts or named people. It rates how certain each claim should sound. It labels psychology ideas as working hypotheses to check, not as proven fact, so use your own audience data too.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. Credit goes to MMEHDI0606 and sickn33.
 when:
   - Your page claims a lot, but visitors do not buy.
   - You sell in a category where people feel burned before.
@@ -35,6 +37,7 @@ how_to_use:
   - Add past customer feedback or objections if you have them.
   - Your AI works in this order: it names the barrier, checks how much your kind of offer is trusted, picks the proof signal, places it before the riskiest decision, then checks that nothing overclaims.
   - Check the first barrier it names. Ask it to redo that part if it does not match what you hear from customers.
+  - Compare the barrier the AI names with real customer feedback, such as reviews, emails and support questions. Drop any claim you cannot back with proof you hold.
   - Try the reworded lines. Only use proof you really have.
   - Test the new lines on real customers or in a small A/B test before you roll them out. Then use the Social proof placer to decide where each piece of proof goes.
 output_sample:

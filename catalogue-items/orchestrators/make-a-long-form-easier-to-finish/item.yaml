@@ -8,13 +8,11 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: question
     required: true
   - type: web_page
     required: false
   - type: audit_report
-    required: false
-  - type: question
     required: false
   - type: persona
     required: false

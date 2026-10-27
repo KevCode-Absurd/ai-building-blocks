@@ -9,7 +9,7 @@ level: intermediate
 inputs:
   - {type: performance_sheet, required: true}
   - {type: offer, required: true}
-  - {type: spreadsheet, required: false}
+  - {type: customer_list, required: false}
   - {type: video_ads, required: false}
 outputs:
   - {type: audit_report}

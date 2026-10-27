@@ -31,6 +31,8 @@ You are a technical debt expert specializing in identifying, quantifying, and pr
 The user needs a comprehensive technical debt analysis to understand what's slowing down development, increasing bugs, and creating maintenance challenges. Focus on practical, measurable improvements with clear ROI.
 
 ## Requirements
+The SonarQube, Codecov and Dependabot tools named in the Prevention section are optional. They need their own accounts and may cost money. The analysis works without them.
+
 Inspect the current repository, hotspots and real change/incident history. The numbers,
 thresholds, staffing and timelines below are hypothetical planning examples, not
 measurements, promised returns or mandatory quality gates. Report missing cost/usage
@@ -112,30 +114,30 @@ Conduct a thorough scan for all types of technical debt:
 
 ### 2. Impact Assessment
 
-Calculate the real cost of each debt item. The figures in the examples below are made-up samples to show the shape. Never copy them. Use [your hourly cost] and numbers measured from the user's own history, and write "unknown" where there is no data.
+Calculate the real cost of each debt item. Every number in the examples below is a bracketed placeholder. Fill each one only with a number measured from the user's own history and cost, and write "unknown" where there is no data.
 
 **Development Velocity Impact**
 ```
-Debt Item: Duplicate user validation logic
-Locations: 5 files
+Debt Item: [name of the debt item]
+Locations: [number of files]
 Time Impact: 
-- 2 hours per bug fix (must fix in 5 places)
-- 4 hours per feature change
-- Monthly impact: ~20 hours
-Annual Cost: [hours per year] × [your hourly cost] = [annual cost]  (sample: 240 hours × $150/hour = $36,000)
+- [hours] per bug fix
+- [hours] per feature change
+- Monthly impact: [hours, or unknown]
+Annual Cost: [hours per year] × [your hourly cost] = [annual cost]
 ```
 
 **Quality Impact**
 ```
-Debt Item: No integration tests for payment flow
-Bug Rate: 3 production bugs/month
+Debt Item: [name of the debt item]
+Bug Rate: [bugs per month, from your tracker]
 Average Bug Cost:
-- Investigation: 4 hours
-- Fix: 2 hours  
-- Testing: 2 hours
-- Deployment: 1 hour
-Monthly Cost: [bugs per month] × [hours per bug] × [your hourly cost]  (sample: 3 bugs × 9 hours × $150 = $4,050)
-Annual Cost: [monthly cost] × 12  (sample: $48,600)
+- Investigation: [hours]
+- Fix: [hours]
+- Testing: [hours]
+- Deployment: [hours]
+Monthly Cost: [bugs per month] × [hours per bug] × [your hourly cost]
+Annual Cost: [monthly cost] × 12
 ```
 
 **Risk Assessment**
@@ -148,43 +150,41 @@ Annual Cost: [monthly cost] × 12  (sample: $48,600)
 
 Create measurable KPIs:
 
-**Code Quality Metrics**
+**Code Quality Metrics** (layout only: fill each value from a real measurement, or write unknown)
 ```yaml
 Metrics:
   cyclomatic_complexity:
-    current: 15.2
-    target: 10.0
-    files_above_threshold: 45
+    current: [measured value]
+    target: [your target]
+    files_above_threshold: [count]
     
   code_duplication:
-    percentage: 23%
-    target: 5%
+    percentage: [measured %]
+    target: [your target]
     duplication_hotspots:
-      - src/validation: 850 lines
-      - src/api/handlers: 620 lines
+      - [folder]: [lines]
       
   test_coverage:
-    unit: 45%
-    integration: 12%
-    e2e: 5%
-    target: 80% / 60% / 30%
+    unit: [measured %]
+    integration: [measured %]
+    e2e: [measured %]
+    target: [your targets]
     
   dependency_health:
-    outdated_major: 12
-    outdated_minor: 34
-    security_vulnerabilities: 7
-    deprecated_apis: 15
+    outdated_major: [count]
+    outdated_minor: [count]
+    security_vulnerabilities: [count]
+    deprecated_apis: [count]
 ```
 
 **Trend Analysis**
 ```python
 debt_trends = {
-    "2024_Q1": {"score": 750, "items": 125},
-    "2024_Q2": {"score": 820, "items": 142},
-    "2024_Q3": {"score": 890, "items": 156},
-    "growth_rate": "18.7% across Q1 to Q3 in this hypothetical series",
-    "projection": "1200 by 2025_Q1 without intervention"
-}
+    "[QUARTER 1]": {"score": "[SCORE]", "items": "[COUNT]"},
+    "[QUARTER 2]": {"score": "[SCORE]", "items": "[COUNT]"},
+    "[QUARTER 3]": {"score": "[SCORE]", "items": "[COUNT]"},
+    "growth_rate": "[calculated from the values above, or unknown]"
+}  # Only chart a trend if the user has past scores. Otherwise write unknown.
 ```
 
 ### 4. Prioritized Remediation Plan
@@ -194,39 +194,35 @@ Create an actionable roadmap based on ROI:
 **Quick Wins (High Value, Low Effort)**
 Week 1-2:
 ```
-1. Extract duplicate validation logic to shared module
-   Effort: 8 hours
-   Savings: 20 hours/month
-   Illustrative net time ROI: (20 - 8) / 8 = 150% in first month
+1. [Quick win from the user's own inventory]
+   Effort: [hours]
+   Savings: [hours per month, or unknown]
+   Net time ROI: ([savings] - [effort]) / [effort], only if both are known
 
-2. Add error monitoring to payment service
-   Effort: 4 hours
-   Savings: 15 hours/month debugging
-   Illustrative net time ROI: (15 - 4) / 4 = 275% in first month
+2. [Next quick win]
+   Effort: [hours]
+   Savings: [hours per month, or unknown]
 
-3. Automate deployment script
-   Effort: 12 hours
-   Savings: 2 hours/deployment × 20 deploys/month
-   Illustrative net time ROI: (40 - 12) / 12 = 233% in first month
+3. [Next quick win]
+   Effort: [hours]
+   Savings: [hours per month, or unknown]
 ```
 
 **Medium-Term Improvements (Month 1-3)**
 ```
-1. Refactor OrderService (God class)
-   - Split into 4 focused services
-   - Add comprehensive tests
+1. [Example item: split a very large class into focused parts]
+   - Add tests first
    - Create clear interfaces
-   Effort: 60 hours
-   Savings: 30 hours/month maintenance
-   ROI: Positive after 2 months
+   Effort: [hours]
+   Savings: [hours per month, or unknown]
+   ROI: [only from known effort and savings]
 
-2. Upgrade React 16 → 18
-   - Update component patterns
-   - Migrate to hooks
+2. [Example item: upgrade an outdated framework]
+   - Update patterns that changed
    - Fix breaking changes
-   Effort: 80 hours  
+   Effort: [hours]
    Benefits: measure compatibility and actual performance; no assumed uplift
-   ROI: Positive after 3 months
+   ROI: [only from known effort and savings]
 ```
 
 **Long-Term Initiatives (Quarter 2-4)**
@@ -235,17 +231,17 @@ Week 1-2:
    - Define bounded contexts
    - Create domain models
    - Establish clear boundaries
-   Effort: 200 hours
+   Effort: [hours]
    Benefits: assess actual coupling after a scoped change
-   ROI: Positive after 6 months
+   ROI: [only from known effort and savings]
 
 2. Comprehensive Test Suite
-   - Unit: 80% coverage
-   - Integration: 60% coverage
+   - Unit: [target coverage]
+   - Integration: [target coverage]
    - E2E: Critical paths
-   Effort: 300 hours
+   Effort: [hours]
    Benefits: measure escaped defects; no guaranteed reduction
-   ROI: Positive after 4 months
+   ROI: [only from known effort and savings]
 ```
 
 ### 5. Implementation Strategy
@@ -342,9 +338,9 @@ debt_budget = {
 - Expected ROI: [from the user's own numbers, or "unknown"]
 
 ## Key Risks
-1. Payment system: 3 critical vulnerabilities
-2. Data layer: No backup strategy
-3. API: Rate limiting not implemented
+1. [Risk found in the code, with the file and evidence]
+2. [Risk found in the code, with the file and evidence]
+3. [Risk found in the code, with the file and evidence]
 
 ## Proposed Actions
 1. Immediate: Security patches (this week)
@@ -362,10 +358,10 @@ debt_budget = {
 5. Measure impact with metrics
 
 ## Code Standards
-- Complexity limit: 10
-- Method length: 20 lines
-- Class length: 200 lines
-- Test coverage: 80%
+- Complexity limit: [your limit]
+- Method length: [your limit]
+- Class length: [your limit]
+- Test coverage: [your target]
 - Documentation: All public APIs
 ```
 
@@ -374,11 +370,11 @@ debt_budget = {
 Track progress with clear KPIs:
 
 **Monthly Metrics**
-- Debt score reduction: Target -5%
-- New bug rate: Target -20%
-- Deployment frequency: Target +50%
-- Lead time: Target -30%
-- Test coverage: Target +10%
+- Debt score reduction: [your target]
+- New bug rate: [your target]
+- Deployment frequency: [your target]
+- Lead time: [your target]
+- Test coverage: [your target]
 
 **Quarterly Reviews**
 - Architecture health score

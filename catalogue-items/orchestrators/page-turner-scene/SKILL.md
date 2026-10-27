@@ -1,13 +1,13 @@
 ---
 name: page-turner-scene
-description: Use when you are writing a chapter or scene and want readers to say they have to find out what happens next. It runs 4 skills in order, with the step order adapted from Stephen King's novel Misery, and checks each result before the next step starts.
+description: Use when you are writing a chapter or scene and want readers to say they have to find out what happens next. It runs 4 skills in order and checks each result before the next step starts.
 ---
 
 # Draft a scene that makes readers need the next one
 
 Tell it what happens in the scene. Get a hook plan, a fair way out, a drafted scene and a find-the-lull check.
 
-The step order was adapted from the craft shown in the novel Misery by Stephen King. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+The four-step order is this workflow's own design. It plans the hook, checks the way out is fair, drafts the scene, then finds where readers would stop. It is more than an outline or a single drafting skill because the draft is built on a checked plan and then tested for where the pull drops. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
 **When not to use:** you write non-fiction or a report with no person at risk, you want to find the idea behind someone else's work, or you only need a quick line edit of finished prose.
 
@@ -63,9 +63,10 @@ Four step files and the summary. The step 4 file holds the pull check and the fi
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Reader feedback sorter](https://useaiblocks.com/skills/reader-feedback-sorter). It takes the notes.
-- The [Plain English editor](https://useaiblocks.com/skills/plain-english-editor). It takes the audit report.
-- The [Story theme and scene reviewer](https://useaiblocks.com/skills/hidden-theme-finder). It takes the audit report.
+- The [Plain English editor](https://useaiblocks.com/skills/plain-english-editor). It takes the draft and audit report.
+- The [Story theme and scene reviewer](https://useaiblocks.com/skills/hidden-theme-finder). It takes the draft and audit report.
+- The [Dialogue editor](https://useaiblocks.com/skills/dialogue-ear-checker). It takes the draft.
+- The [Email draft reviewer](https://useaiblocks.com/skills/email-draft-reviewer). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

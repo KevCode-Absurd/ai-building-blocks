@@ -8,7 +8,7 @@ role: source
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: question
     required: false
 outputs:
   - type: document

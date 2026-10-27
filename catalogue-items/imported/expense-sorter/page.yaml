@@ -33,10 +33,11 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini. No code or paid tool is needed.
   - Paste the skill instructions into the chat.
+  - Get a CSV export ready with date, amount, description and cardholder columns. Have your department names and the tax year to hand.
   - Paste your transactions under them. Add your department names, and any rules or tax country.
   - Check the Items to review list first and confirm those lines.
   - Treat the tax flags as a guide for US federal rules only. Have an accountant review them before you file.
-  - Load the sorted list into your bookkeeping software, or send the totals and uncertain items to your accountant.
+  - Spot-check a sample of the other lines too, then pass the totals to your bookkeeper. Load the sorted list into your bookkeeping software, or send the totals and uncertain items to your accountant.
 output_sample:
   input:
     - Your transactions as a CSV or bank statement text, with date, amount and merchant

@@ -10,7 +10,7 @@ level: intermediate
 inputs:
   - {type: question, required: true}
 outputs:
-  - {type: plan}
+  - {type: document}
 origin: rebuilt
 version: 1.0.0
 minds: [marie-curie]

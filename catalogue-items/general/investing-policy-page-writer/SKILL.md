@@ -57,9 +57,10 @@ The one-page policy in the order of the output shape, `MISSING:` lines, a line s
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Stock and bond split planner](https://useaiblocks.com/skills/stock-and-bond-split-planner).
-- The [Startup due diligence reviewer](https://useaiblocks.com/skills/startup-due-diligence-reviewer).
 - The [Bond type and maturity chooser](https://useaiblocks.com/skills/bond-type-and-maturity-chooser). It takes the plan.
+- The [Business plan risk buffer reviewer](https://useaiblocks.com/skills/room-for-error-plan-checker). It takes the plan.
+- The [Investment holding rule writer](https://useaiblocks.com/skills/sit-still-rule-writer). It takes the plan.
+- The [Shopify store policy checker](https://useaiblocks.com/skills/store-policy-checker). It takes the the policy.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -37,35 +37,36 @@ The sequence below is an applied working order for this reconstructed mind. It c
 ## Jobs, one by one
 
 The examples below are made-up illustrations of the method, not real cases and not stories from Greg McKeown.
+
 ### Decide which new request deserves a yes
 A manager receives invitations to mentor, join a committee and lead a client repair. Pause before accepting the first two automatically. Compare the likely contribution, current priorities and what each would displace. If the client repair fits the immediate responsibility best, choose it with a clear scope. Keep a later mentoring possibility without representing it as a promise for the same week.
 
-You leave with a reasoned choice among requests and their costs. A long evaluation ritual can become a way to avoid deciding. Match the depth of exploration to the size and reversibility of the commitment.
+You leave with a reasoned choice among requests and their costs.
 
 ### Negotiate priorities when more work is added
 Your supervisor adds a presentation to a week already containing two deadlines. Show the remaining capacity and ask which existing deliverable should move if the presentation comes first. Offer a smaller presentation if that meets the need. The conversation is about allocation, not proving that the new request is foolish. Document the resulting order so everyone acts on the same priorities.
 
-You leave with an explicit priority agreement and the work it displaces. A tradeoff hidden from other people is still real. It often appears later as missed quality, a broken promise or another sacrificed evening.
+You leave with an explicit priority agreement and the work it displaces.
 
 ### Reduce recurring meetings and obligations
 A small business owner attends three recurring networking meetings out of habit. Choose a standard tied to the current need, such as meaningful contact with the customers the business serves. Review what each meeting actually provides. Keep one, pause another and decline the third courteously. The saved time goes to an agreed customer task, rather than disappearing into new meetings by default.
 
-You leave with a keep, change and stop list based on a clear criterion. Calling an activity nonessential without examining its relational value can damage trust. Ask what it contributes before judging it only by immediate output.
+You leave with a keep, change and stop list based on a clear criterion.
 
 ### Step back from a commitment without leaving confusion
 You volunteered for an ongoing newsletter, but your role changed and its production consumes every weekend. Discuss a transition date, document the basic process and offer a smaller contribution if it is useful. Do not keep saying you will catch up while missing each edition. The goal is an honest end or revised agreement that lets others plan around the change.
 
-You leave with a respectful exit or revised scope with a transition plan. An abrupt exit can shift the entire burden onto someone else. Include the notice, handover or repair that the actual relationship requires.
+You leave with a respectful exit or revised scope with a transition plan.
 
 ### Make a priority project easier to move forward
 A writer has selected a guide as the main project but loses each session finding interview notes. Put the relevant notes beside the outline, decide the next section before stopping and reserve a usable session. If review from another person is the bottleneck, arrange that review early. Do not answer a missing input with an instruction to concentrate harder.
 
-You leave with a bottleneck diagnosis and a simpler execution path. Improving minor conveniences can distract from the real bottleneck. Fix the missing decision, input or agreement that actually holds the work back.
+You leave with a bottleneck diagnosis and a simpler execution path.
 
 ### Simplify a personal or work routine you keep overcomplicating
 A person wants to keep in touch with friends but turns every gathering into an elaborate dinner. Keep the relationship as the priority and try a regular walk or a simple shared meal. The reduced preparation allows the contact to happen more often without resentment. Preserve the part that matters to those involved, rather than assuming effort itself is proof of care.
 
-You leave with a sustainable version with its essential quality protected. Easy can mean careless if the simplification removes an essential safeguard or quality. State what must remain true before shortening the process.
+You leave with a sustainable version with its essential quality protected.
 
 ## What he'd push back on
 He would challenge an automatic yes, the claim that everything is equally essential, and a plan that relies on perpetual overexertion. He would also question selectivity used as an excuse to avoid exploration or neglect relationships. Make a clear standard, communicate changed promises and preserve what the chosen activity actually needs.
@@ -75,4 +76,3 @@ You receive a short priority decision with its tradeoffs, language for declining
 
 **Not for:** weighing a risky choice by odds and past outcomes (go to Annie Duke), building a long-term habit or sticking with a goal through setbacks (go to Angela Duckworth), or a decision someone else already made (use a to-do list). **What next:** send the one decline or renegotiation message today, then review in a week what moved. For focus time, go to Cal Newport.
 
-Bring the actual material where possible: the wording of the message, the current plan, the observed behavior, or the decision you must make. That lets this mind apply its method to something concrete. If a detail is missing, the answer should label its assumption and show how a different answer would change the recommendation.

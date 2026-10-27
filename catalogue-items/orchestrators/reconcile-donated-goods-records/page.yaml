@@ -56,7 +56,7 @@ output_shape: |-
     If you read nothing else | Shortages | Where records are kept | Open custody questions | Next actions
 
   HAND-BACK SUMMARY
-    Files | MISSING lines | Checks not done | One next step
+    Files | MISSING | CHECKS MISSED | One next step
 output_sample:
   input:
     - Your donation intake records

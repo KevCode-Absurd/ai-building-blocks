@@ -114,9 +114,9 @@ If no pictures were made yet, say so and check the prompts instead.
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Reference-style product photo maker](https://useaiblocks.com/skills/reference-product-photos). It takes the product photos.
-- The [Marketplace photo rule checker](https://useaiblocks.com/skills/marketplace-photo-rule-checker). It takes the product photos and photo set.
-- The [AI product photo inspector](https://useaiblocks.com/skills/ai-product-photo-inspector). It takes the product photos and photo set.
+- The [Reference-style product photo maker](https://useaiblocks.com/skills/reference-product-photos).
+- The [Marketplace photo rule checker](https://useaiblocks.com/skills/marketplace-photo-rule-checker). It takes the photo set.
+- The [AI product photo inspector](https://useaiblocks.com/skills/ai-product-photo-inspector). It takes the photo set.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

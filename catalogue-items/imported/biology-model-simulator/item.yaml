@@ -8,8 +8,12 @@ role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
+  - type: codebase
     required: true
+  - type: code_change
+    required: false
+  - type: question
+    required: false
 outputs:
   - type: spreadsheet
   - type: document

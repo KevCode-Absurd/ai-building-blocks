@@ -360,12 +360,18 @@ class LongContextAttention(nn.Module):
 ### Minimal Fine-tuning (Position Interpolation)
 
 ```python
-from transformers import Trainer, TrainingArguments
+from transformers import AutoConfig, AutoModelForCausalLM, Trainer, TrainingArguments
 
-# Extend the config BEFORE loading the model, then load with config=config
-# config.max_position_embeddings = 32768
-# config.rope_scaling = {"type": "linear", "factor": 8.0}
-# model = AutoModelForCausalLM.from_pretrained(model_name, config=config)
+# Extend the config BEFORE loading the model, then load with config=config.
+# Gated models (such as Llama) need an accepted licence and a Hugging Face login first.
+model_name = "meta-llama/Llama-2-7b-hf"  # replace with the model you were given
+config = AutoConfig.from_pretrained(model_name)
+config.max_position_embeddings = 32768
+config.rope_scaling = {"type": "linear", "factor": 8.0}  # key may be "rope_type" in newer transformers
+model = AutoModelForCausalLM.from_pretrained(model_name, config=config)
+
+# long_document_dataset is YOUR tokenised dataset of long documents (32k-token sequences).
+# Build it from the long text the user gave you. Do not make up training data.
 
 # Training args (minimal steps needed)
 training_args = TrainingArguments(

@@ -8,8 +8,10 @@ role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
+  - type: question
     required: true
+  - type: codebase
+    required: false
 outputs:
   - type: web_app
 uses: []

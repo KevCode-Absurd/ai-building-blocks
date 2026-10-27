@@ -7,8 +7,9 @@ role: orchestrate
 job: copy
 level: intermediate
 inputs:
-  - {type: question, required: true}
+  - {type: idea, required: true}
 outputs:
+  - {type: copy_draft}
   - {type: audit_report}
 uses: [durable-customer-need-finder, future-press-release-writer, hard-questions-faq-writer, six-page-narrative-memo-writer, narrative-memo-checker]
 steps:

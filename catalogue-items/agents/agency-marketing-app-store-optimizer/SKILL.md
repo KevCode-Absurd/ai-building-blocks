@@ -11,9 +11,9 @@ Plan how an app gets found in store search and how many visitors then install it
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Title and meta tag writer](https://useaiblocks.com/skills/title-and-meta-tag-writer). It takes the audit report and draft.
-- The [Collection page SEO builder](https://useaiblocks.com/skills/collection-page-seo-builder). It takes the plan and audit report.
-- The [On-page SEO tuner](https://useaiblocks.com/skills/on-page-seo-tuner). It takes the audit report and draft.
+- The [Collection page planner](https://useaiblocks.com/skills/collection-page-planner). It takes the keyword list and audit report.
+- The [Store keyword validator](https://useaiblocks.com/skills/store-keyword-validator). It takes the keyword list.
+- The [Collection page SEO builder](https://useaiblocks.com/skills/collection-page-seo-builder). It takes the keyword list and plan and audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -21,11 +21,16 @@ If they pick one and that skill is added here, carry straight on with what you j
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A draft** (yours): the ad, page, email or script you want checked or improved.
+- **Competitors** (yours): the brands buyers compare you with.
+- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, a draft, competitors. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -34,6 +39,8 @@ How to start:
 <!-- /needs -->
 
 ## Inputs
+
+These are the inputs that count. If the generic "Before you start" list above asks for a long source text such as an article or transcript, ignore it: this agent takes the app name, store, current listing text and 2 or 3 rivals.
 
 Ask once for anything missing. Do not guess.
 
@@ -97,6 +104,9 @@ COUNTRIES AND REVIEWS
 RANKED CHANGES
 <change> | effort | expected effect
 ```
+End with `CHECKS MISSED:` and name every check you could not run, such as keyword volumes or character limits you could not confirm, or write "none".
+
+Next: for one listing scored and rewritten fast, use the [App store listing optimiser](https://useaiblocks.com/skills/app-store-listing-optimiser). For release text, use the [App Store release notes writer](https://useaiblocks.com/skills/app-store-release-notes-writer).
 
 ## Rules
 

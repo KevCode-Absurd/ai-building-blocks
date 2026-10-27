@@ -7,7 +7,7 @@ role: orchestrate
 job: analysis
 level: intermediate
 inputs:
-  - {type: performance_sheet, required: true}
+  - {type: search_query_report, required: true}
   - {type: product_data, required: false}
   - {type: store_capture, required: false}
   - {type: brand_brain, required: false}

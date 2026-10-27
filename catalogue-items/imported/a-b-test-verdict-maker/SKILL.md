@@ -5,11 +5,7 @@ description: Rigorous A/B test statistical analysis. Use when analyzing experime
 
 ## Supporting material availability
 
-This catalog copy does not include these files:
-
-- `references/statistical_tests_reference.md`
-
-Do not say you read or ran them. Do those steps by hand, or ask the user for the original file.
+The test-selection guide from the original is not in this copy. Step 4 gives the rule you need. Do not say you read any file you cannot open.
 
 # A/B Test Analysis
 
@@ -24,7 +20,7 @@ Do not say you read or ran them. Do those steps by hand, or ask the user for the
 1. **Confirm test design** — verify the hypothesis, the control and treatment definitions, the randomisation unit (user/session/device), the primary metric, any guardrail metrics, and the target split ratio.
 2. **Check for sample ratio mismatch (SRM)** — run a chi-square test on the actual vs. expected split. If SRM is detected, stop and investigate the randomisation pipeline before interpreting results. Use `scripts/ab_test_analyzer.py --check-srm`.
 3. **Calculate per-variant metrics** — compute the rate (or mean) and 95% confidence interval for the primary metric in each variant. Document absolute and relative difference.
-4. **Run the significance test** — execute a two-proportion z-test (for rates) or Welch's t-test (for means). Record z-score, p-value, and 95% CI for the effect. Pick the test by data type, as written above. The test guide is not in this copy.
+4. **Run the significance test** — execute a two-proportion z-test (for rates) or Welch's t-test (for means). Record z-score, p-value, and 95% CI for the effect. Pick the test by data type: two-proportion z-test for rates, Welch's t-test for means.
 5. **Check guardrail metrics** — run the same significance test for each guardrail metric. A significant degradation on any guardrail is a blocker regardless of primary metric results.
 6. **Produce the recommendation** — synthesise SRM result, power, significance, and guardrail checks into a clear ship / no-ship / extend decision. Quantify the expected business impact if shipped. Record in `assets/ab_test_report_template.md`.
 
@@ -37,6 +33,5 @@ Do not say you read or ran them. Do those steps by hand, or ask the user for the
 
 # Output
 - `scripts/ab_test_analyzer.py` — runs SRM check, significance test, power analysis, and guardrail checks from a CSV or summary stats input
-- `references/statistical_tests_reference.md` — which test to use and when
 - `references/ab_test_design_guide.md` — SRM causes, power planning, peeking and multiple testing
 - `assets/ab_test_report_template.md` — structured report: design, results, checks, recommendation, expected impact

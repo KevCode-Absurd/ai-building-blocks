@@ -33,10 +33,10 @@ you_get:
   - A ranked improvement plan
 how_to_use:
   - Collect your product title, price, rating and features. Add the same details for each rival listing.
-  - Copy rivals' negative reviews from their Amazon pages (optional). Add your own positive reviews too (optional). More reviews give better patterns.
-  - Open Claude, ChatGPT or Gemini. Paste the skill text, then paste your details and reviews. If you run the script, the reviews go in as a JSON list of review texts, one string per review.
+  - Copy a few of rivals' negative reviews by hand from their Amazon pages (optional). Do not scrape or bulk export reviews, because Amazon's terms may forbid it. Add your own positive reviews too (optional). More reviews give better patterns.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text, then paste your details and reviews. A chat AI works from the pasted text alone. The Python script is optional and needs an AI that can run Python 3. Its reviews go in as a JSON list of review texts, one string per review.
   - Check the pain points against the review text. Make sure each one really appears in the reviews.
-  - Use the ranked plan to update your listing bullets first. The script version needs an AI that can run Python.
+  - Use the ranked plan to update your listing bullets first. Any effect figures in the plan are guesses to test, not predictions.
   - Take the top pain points and selling points into your listing copy, and run it again when you have new reviews.
 output_sample:
   input:
@@ -57,5 +57,5 @@ output_sample:
     - name: Differentiation opportunities
       contains: Gaps in the market and in your listing that you could fill.
     - name: Action plan
-      contains: A ranked list of fixes, grouped by priority.
+      contains: A ranked list of fixes, grouped by priority. Any effect figures are illustrations to test, not predictions.
 next: [product-listing-writer]

@@ -11,7 +11,7 @@ Use it when: you want to cut your price to reach more customers and need to know
 
 Not for: what each step costs today rather than working back from a price (use Cost every step and turn your waste into profit), a main cost that is what a factory charges you (use Cut your product cost and turn supplier terms into cash), finding where a process wastes time and why (use Find process waste and the cause behind it), or setting a price that covers every cost (use Price a product so it pays after every cost).
 
-The order of the steps is taken from My Life and Work by Henry Ford. The three skills are written for this library. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+This workflow draws on ideas in My Life and Work by Henry Ford, such as pricing first and moving work to the person. The order of the three steps is this library's own design. The three skills are written for this library. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -45,7 +45,7 @@ How to start:
 
 ## What you need
 
-This run starts from your own cost and process data. Have your cost lines per unit and your steps in order ready before step 1. Ignore any brand brain mentioned above.
+This run starts from your own cost and process data. Have your cost lines per unit and your steps in order ready before step 1. The general "Before you start" list above mentions a brand brain. This job does not use one.
 
 - **The price you want to sell at** (required): a number or a group of customers and what they can pay now. Say what is fixed, such as a supplier contract or a space.
 - **Your product facts** (required): what it is, today's price and what goes into it, with your cost lines per unit if you have them.
@@ -64,8 +64,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Steps
 1. **Price-first cost planner.** Use the skill `price-first-cost-squeeze-planner`. Give it your target price or customers, your product facts, your cost lines and your rivals' prices. A plan that works backward from the price to cut cost. It saves `outputs/step-01-price-first-cost-squeeze-planner.md`: a table of cost lines marked needed, partly needed or not needed with the action and the saving, where rivals are thin, volume and margin with guesses marked, and a single-job test.
-2. **Work flow layout planner.** Use the skill `work-flow-layout-planner`. Give it the plan from `outputs/step-01-price-first-cost-squeeze-planner.md` (the steps that are left), plus how the work runs now, the space and the tools. A layout where the work moves to the person, with fewer steps and less walking. Reads the plan from the step before. It saves `outputs/step-02-work-flow-layout-planner.md`: the steps in order with a time each (marked measured or guessed), the layout in words, and the move count before and after.
-3. **Waste and by-product finder.** Use the skill `waste-and-by-product-finder`. Give it the plan from `outputs/step-02-work-flow-layout-planner.md`, your list of what you throw away, leave idle or redo, and your labour rate. Each item priced as a possible product, reuse or saving. Reads the plan from the step before. It saves `outputs/step-03-waste-and-by-product-finder.md`: each item with its monthly amount, who might buy it, its value and the effort to reclaim it, ranked by money recovered against effort, with the first three actions.
+2. **Work flow layout planner.** Use the skill `work-flow-layout-planner`. Give it the plan from `outputs/step-01-price-first-cost-squeeze-planner.md` (the steps that are left), plus how the work runs now, the space and the tools. A layout where the work moves to the person, with fewer steps and less walking. It saves `outputs/step-02-work-flow-layout-planner.md`: the steps in order with a time each (marked measured or guessed), the layout in words, and the move count before and after.
+3. **Waste and by-product finder.** Use the skill `waste-and-by-product-finder`. Give it the plan from `outputs/step-02-work-flow-layout-planner.md`, your list of what you throw away, leave idle or redo, and your labour rate. Each item priced as a possible product, reuse or saving. It saves `outputs/step-03-waste-and-by-product-finder.md`: each item with its monthly amount, who might buy it, its value and the effort to reclaim it, ranked by money recovered against effort, with the first three actions.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back
@@ -78,9 +78,9 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Competitive advantage tester](https://useaiblocks.com/skills/business-power-tester). It takes the audit report.
-- The [Process waste finder](https://useaiblocks.com/skills/process-waste-finder). It takes the plan.
 - The [Business target calculator](https://useaiblocks.com/skills/target-size-back-solver). It takes the plan.
+- The [Plan failure reviewer](https://useaiblocks.com/skills/failure-first-plan-check). It takes the plan and audit report.
+- The [Go or no-go launch checker](https://useaiblocks.com/skills/go-or-no-go-launch-checker). It takes the plan and audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -11,7 +11,9 @@ explain: |
 
   It writes Python using the pymoo library. It sets up your goals, settings and limits, picks a method such as NSGA-II or NSGA-III, runs it and draws the curve. It also runs the same method on a known test problem first, so you can tell the setup works before you trust it on yours.
 
-  You need a way to score a design, as formulas or as code. It does not guess your model. Without that, it stops and asks.
+  You need a way to score a design, as formulas or as code. It does not guess your model. Without that, it stops and asks. If you have no formulas, it can write a placeholder scorer. Its numbers mean nothing, so replace it with your real formulas before you use any result.
+
+  Licence: MIT, as the LICENSE.md file in this item says. The skill file's own header names Apache-2.0, which is the licence of the pymoo library it describes. Credit goes to K-Dense.
 
   Compared with the plain pymoo skill it came from, this version checks your inputs first, runs the test-problem check, and ends with a note on which solution suits which priority.
 when:

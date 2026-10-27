@@ -9,7 +9,7 @@ job: ops
 level: intermediate
 inputs:
   - type: codebase
-    required: true
+    required: false
 outputs:
   - type: audit_report
 uses: []

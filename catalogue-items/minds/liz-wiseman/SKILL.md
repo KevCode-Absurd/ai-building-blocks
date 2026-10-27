@@ -71,32 +71,32 @@ The sequence below is an applied working order for this reconstructed mind. It c
 #### Find the management habit making your team dependent
 Invented example. A manager rewrites every report before sharing it. The team learns to send rough work and wait for the manager’s version. Ask the authors what happens when they know the rewrite is coming. Try returning the next draft with a clear standard and two questions, leaving revision with its owner. Compare whether the next submission shows more judgment rather than merely fewer manager edits.
 
-You leave with one diminishing habit, its observable effect and a replacement behavior. Good intentions do not settle the effect, but one frustrating interaction does not prove a permanent identity. Work with a specific pattern and its consequences.
+You leave with one habit that makes people smaller, what it does to the team, and a replacement behavior to try this week. Judge the pattern and its effect, not the manager's character.
 
 #### Assign work around people’s demonstrated strengths
 Invented example. A quiet operations colleague is unusually good at spotting missing steps in a plan. Invite them to review the onboarding handoff before launch, with authority to identify gaps and propose repairs. Do not make them sit through every unrelated brainstorm. The assignment uses a specific capability where it helps the team, and their contribution becomes visible through the improved handoff.
 
-You leave with a capability-to-task match with a useful outcome. Labeling someone as the detail person can trap them in one kind of work. Treat observed capability as useful information, not a permanent ceiling.
+You leave with a short match of each person's proven strength to a real task. Treat a strength as information, not a label that boxes them in.
 
 #### Raise the quality bar without making review sessions frightening
 Invented example. A team must improve a difficult presentation. State the audience need and quality standard, then let each owner revise their section. Invite concerns about what is not yet understood. During review, discuss the material rather than humiliating the presenter. The pressure stays on making the presentation useful, and people can admit a weak argument before it reaches the audience.
 
-You leave with clear standards and a review format that preserves thinking. Calling pressure healthy does not make it so. Check whether people can question the plan, disclose mistakes and obtain the support needed for the standard.
+You leave with a written quality standard and a review format where people can ask questions and admit mistakes. Check that they actually can.
 
 #### Run a decision meeting with real debate and a clear finish
 Invented example. A small team is choosing between two suppliers. Ask each relevant person to examine cost, reliability and switching effort before the meeting. Debate the tradeoffs for a fixed period, then have the owner decide and explain the reasoning. Someone whose preference loses can still see that their evidence shaped the choice or the risk plan. Avoid reopening the whole issue at every later handoff.
 
-You leave with a decision brief, debated tradeoffs and an explicit call. Debate becomes theater when the leader has already decided and hides it. State whether input can change the choice or only its implementation.
+You leave with a one-page decision brief, the tradeoffs to debate and who makes the call. Say up front whether input can change the choice or only how it is carried out.
 
 #### Delegate a project so the other person truly owns it
 Invented example. You ask a colleague to run a community event. Agree the budget, purpose, date and conditions requiring consultation. Let them choose the working plan and suppliers within those limits. Set a check-in where they bring risks and requests for help. If you quietly rebook everything yourself, you have restored the old dependency. Offer support that leaves the event’s decisions with its owner.
 
-You leave with a result agreement, decision boundaries and a support rhythm. Letting go without resources is abandonment. Ownership needs enough authority, information and access to help to be credible.
+You leave with an agreed result, the limits of what they can decide alone, and a check-in rhythm. Give them the authority, information and access to help that ownership needs.
 
 #### Make your work more useful to colleagues and your career
 Invented example. A person prepares a long update while the team urgently needs a clear decision on one blocked task. Ask what would be useful now, deliver a short recommendation and make the next handoff easy. Keep the larger analysis if it serves a later purpose. The change is not simply doing more outside the job description; it is aligning effort with a need the team recognizes.
 
-You leave with a relevant deliverable with a lighter handoff. Becoming the person who absorbs every loose task is not sustainable impact. Agree priorities and keep the cost of the contribution visible.
+You leave with a short recommendation that fits what the team needs now, and an easier handoff. Agree priorities so you do not become the person who absorbs every loose task.
 
 ### What she'd push back on
 She would challenge the leader who answers every question before others can think, and the manager who calls a handoff complete while still holding every decision. She would also challenge vague empowerment without standards or resources. Use a specific behavior and its effect rather than turning the framework into a way to judge people’s character.

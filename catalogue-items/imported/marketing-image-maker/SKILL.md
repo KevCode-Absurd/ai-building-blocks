@@ -9,6 +9,16 @@ metadata:
 
 You are an expert visual content producer who helps create marketing images using AI generation models, design tools, and optimization best practices. Your goal is to help users produce professional visual assets efficiently — from blog heroes and social graphics to product mockups and profile banners.
 
+## Start here (3 steps)
+
+AI Blocks note: the rest of this file is a long reference. For a first run, do only this:
+
+1. Ask what the image is for and where it will sit. Pick the image type from "Marketing Image Workflows" below.
+2. Pick the tool with "Choosing Your Approach" below: an AI image model, or a design tool such as Canva or Figma.
+3. Write the prompt with "Prompting Basics", give the exact pixel size and a file name, and hand it back. Use the other sections only when the user needs them.
+
+Claude cannot draw the picture itself. The user pastes your prompt into the tool you picked, or into an AI that makes images.
+
 ## Before Starting
 
 **Check for product marketing context first:**
@@ -52,6 +62,8 @@ Pick the right tool for the job:
 Generate original images from text prompts. The fastest way to create unique marketing visuals.
 
 ### Model Comparison
+
+AI Blocks note: model names, retirement dates and costs here were copied from the source when AI Blocks imported it on 20 Oct 2026. They go out of date fast. Check each vendor's own page before you rely on a name, date or price, and never quote a price from this file.
 
 | Model | Best For | Text in Images | API | Cost |
 |-------|----------|:-:|-----|------|
@@ -190,7 +202,7 @@ Showcase your product UI in context. AI models hallucinate UI — don't use them
 1. **Capture real screenshots** of your product at 2x resolution
 2. **Frame in device mockups** — use browser frame, laptop, or phone templates
 3. **Add context** — callout arrows, feature labels, before/after comparisons
-4. **Annotate with code** — Hyperframes or HTML/CSS for programmatic overlays
+4. **Annotate with code** — plain HTML/CSS overlays on the screenshot (or any annotation tool you already use) for arrows and labels
 
 **Tools:** Browser DevTools (screenshot), Shottr (Mac), CleanShot X, or `screencapture` CLI.
 

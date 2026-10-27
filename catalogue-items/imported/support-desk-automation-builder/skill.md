@@ -22,7 +22,7 @@ Ask the user about their support infrastructure:
 **Required Questions:**
 1. **Support/Ticketing Platform**: "What platform do you use for customer support?" (Zendesk, Intercom, HelpScout, Freshdesk, Front, etc.)
 2. **Billing/Payment System**: "What do you use for billing?" (Stripe, Chargebee, Paddle, etc.)
-3. **Database Access**: "Do you have access to your production database for customer lookups?" (PostgreSQL, MySQL, MongoDB, etc.)
+3. **Database Access**: "Can you create a read-only database user, limited to the tables needed for customer lookups?" (PostgreSQL, MySQL, MongoDB, etc.) Never use production admin credentials. Connect the automation to the read-only user only.
 4. **API Access**: "Do you have API credentials for these platforms?"
 5. **Other Tools**: "Any other tools you frequently use for support?" (Analytics, feature flags, email service, etc.)
 
@@ -83,12 +83,12 @@ Based on their stack, plan the scripts they'll need.
 1. `query-db.ts [query]` - Run read-only SQL queries
    - Support `--tables` to list all tables
    - Support `--schema <table>` to show table structure
-   - Only allow SELECT, WITH, SHOW, EXPLAIN (read-only)
+   - Only allow SELECT, WITH, SHOW, EXPLAIN (read-only). This keyword check is not a security boundary. The real protection is a read-only database user with access to only the needed tables.
 
 ### Setup Validation
 
 **Always create:**
-- `check-setup.ts` - Validates all required environment variables exist
+- `support-automation/scripts/check-setup.ts` - Validates all required environment variables exist (the one location used everywhere in this skill)
 
 **Approval gate (required):** `reply-to-ticket.ts`, `close-ticket.ts`, `issue-refund.ts` and `cancel-subscription.ts` change a ticket or a payment. Each one must exit with an error unless the caller passes `--approved`, and the AI may only pass `--approved` after the user has read the exact message or amount and said yes in chat. Without the flag, the script prints what it would do and stops.
 
@@ -245,7 +245,7 @@ Required environment variables in `.env.local`:
 
 **Automatically run** `list-open-tickets.ts` to see ALL pending tickets (with automatic pagination):
 
-[Document the triage process]
+[Fill in the triage steps from the Triage Guidelines in section 5: the keyword lists for each urgency level, and the order to list tickets in (CRITICAL, then HIGH, then MEDIUM, then LOW)]
 
 **Present to User:**
 - Show total count of open tickets

@@ -32,17 +32,17 @@ Collect, or state your assumption:
 
 ## Procedure
 
-1. **Social proof numbers.** Show a view or purchase count (purchase intent up to ~58% higher). Views while the numbers are small; once views run into the thousands (e.g. 15,600), switch to the purchase count, because large view counts are hard to process. If views→purchases ≥ 5%, show both. Change what the badge counts; don't remove it.
-2. **Sold-out options.** Visible and marked sold out (sales up to 31% higher — measured among shoppers who hadn't settled on a specific option). Keep the sold-out share at 10–30%; above that, hide some or restock.
-3. **Quantity CTAs.** Multi-unit product → Buy 1 / Buy 2 / Buy 5 buttons instead of "Add to cart" (+14% conversion average, sales up to +28%). Start with three; test quantities.
-4. **Choice partitioning.** More than a handful of options → steps of 2–5 similar options, technical before aesthetic, big decisions first. If one attribute alone has more than 5 values (8 colors), group them by similarity (warm / cool / neutral) and let people pick the group first. Never one grid of every combination.
-5. **Add-on pricing.** Rounded prices with the same ending as the base ($22 → $32), or a flat rate.
-6. **Price position.** Below the product image (reads ~9% lower; store sales +35.2%).
-7. **Copy (depth in `product-copy`).** Three claims max; best features only; intuitive units; plain language; science wording only if utilitarian. †
-8. **Visuals (depth in `product-visuals`).** Hedonic → video; models look away; first-person hand touching the product; a shine; graspable product toward the right; products spaced apart; complementary props.
-9. **Trust.** Small business → say so (unless high-tech). Extraordinary warranty when the category is known but the brand isn't.
+1. **Social proof numbers.** Show a view or purchase count (purchase intent up to ~58% higher in experiments, Das et al., 2021). Views while the numbers are small; once views run into the thousands (e.g. 15,600), switch to the purchase count, because large view counts are hard to process. If views→purchases ≥ 5%, show both. Change what the badge counts; don't remove it.
+2. **Sold-out options.** Visible and marked sold out (sales up to 31% higher among shoppers who hadn't settled on a specific option, Tian et al., 2022). Keep the sold-out share at 10–30%; above that, hide some or restock.
+3. **Quantity CTAs.** Multi-unit product → Buy 1 / Buy 2 / Buy 5 buttons instead of "Add to cart" (+14% conversion on average, sales up to +28%, across 37 experiments, Duke & Amir, 2023). Start with three; test quantities.
+4. **Choice partitioning.** More than a handful of options → steps of 2–5 similar options, technical before aesthetic, big decisions first. If one attribute alone has more than 5 values (8 colors), group them by similarity (warm / cool / neutral) and let people pick the group first. Never one grid of every combination (Dorn et al., 2016).
+5. **Add-on pricing.** Rounded prices with the same ending as the base ($22 → $32), or a flat rate (Homburg et al., 2013).
+6. **Price position.** Below the product image (reads ~9% lower in an experiment; sales were 35.2% higher in one physical liquor store, Barone et al., 2020).
+7. **Copy (for the full rules, use the Product description writer, `product-description-writer`).** Three claims max (Shu & Carlson, 2014); best features only; intuitive units; plain language; science wording only if utilitarian. †
+8. **Visuals (for photo and video briefs, use the Product shoot brief writer, `product-shoot-brief-writer`).** Hedonic → video; models look away; first-person hand touching the product; a shine; graspable product toward the right; products spaced apart; complementary props.
+9. **Trust.** Small business → say so (unless high-tech; Woolley et al., 2022). Extraordinary warranty when the category is known but the brand isn't (see reference.md).
 
-Rank by expected effect × distance from the rule. Cart and payment-step issues are out of scope here; Depth: `checkout-ux`.
+Rank by expected effect × distance from the rule. Cart and payment-step issues are out of scope here; for those use the Checkout page auditor (`checkout-page-auditor`).
 
 ## Before you start
 
@@ -54,7 +54,7 @@ Social proof checks need a view or purchase count. If the user has none, say so,
 |---|---|---|---|---|
 | 1 | Single "Add to cart" on a multi-unit product | Buy 1 / 2 / 5 buttons | +14% conversion | Duke & Amir 2023 |
 
-Close with what the page already does right. Every effect size above is from one study (named in the Source column and in reference.md). Treat it as a guide, not a promise.
+Close with what the page already does right. Every effect size above is from one study (named in the Source column and in reference.md, which sits next to this file). Treat it as a guide, not a promise.
 
 ## Common mistakes
 

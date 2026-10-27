@@ -31,12 +31,12 @@ How to start:
 
 **Tools that do this best:**
 - **Google Forms:** A free way to build and send the survey and collect answers in a sheet.
-- **Shopify post-purchase survey apps:** Ask the survey right after an order so you reach real buyers.
+- **Shopify post-purchase survey apps:** Ask the survey right after an order so you reach real buyers. These apps are usually paid. Google Forms with an emailed link is a free way to do the same.
 - **Any good chat AI:** Writes the survey and works out the ranks on the answers you paste in.
 <!-- /needs -->
 
 ## What you need
-- **Category and rivals** (required): what you sell and the three to seven rivals buyers would think of.
+- **Category and rivals** (required): what you sell and the three to seven rivals buyers would think of. Build the rival list from your reviews, search results for your category, or what buyers say when asked who else they considered.
 - **Who the buyers are, and a way to reach 50 to 200 of them** (required): an email list, a post-purchase survey, or a paid panel.
 - **Six attributes buyers care about** (strongly advised): if the person has none, you propose them in step 3.
 - **Two candidate themes** (optional): two ways you could position the store, for the theme test.
@@ -92,7 +92,9 @@ CHECKS MISSED: <none | list>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Market size and survey planner](https://useaiblocks.com/skills/market-size-and-survey-planner).
+- The [Market size and survey planner](https://useaiblocks.com/skills/market-size-and-survey-planner). It takes the document.
+- The [Customer switching journey mapper](https://useaiblocks.com/skills/switch-story-mapper). It takes the plan.
+- The [Customer research analyst](https://useaiblocks.com/skills/customer-research-analyst). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

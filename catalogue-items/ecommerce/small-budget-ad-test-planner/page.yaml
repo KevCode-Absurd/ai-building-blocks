@@ -146,7 +146,7 @@ works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Planning and diagnosis from a few inputs works in any current chat AI."}
     - {name: "Canva", why: "Makes the plain-text-bar image test in minutes, with no designer."}
-    - {name: "Meta Ads Manager", why: "Gives the clicks, spend and sales that the diagnosis table reads."}
+    - {name: "Meta Ads Manager", why: "Needs an ad account and real ad spend. Gives the clicks, spend and sales that the diagnosis table reads."}
   inputs:
     - "A clean product photo on white"
     - "Customer reviews, to word the three reasons to buy"

@@ -11,6 +11,8 @@ metadata:
 
 Strategic account planning and execution for enterprise deals. Turn complex sales cycles into systematic wins — or at least know when they're dying before you waste months.
 
+Start from the account and deal context. If you have call notes or a current mutual action plan, add them and use them for the buyer roles and deal risks.
+
 ## When to Use
 
 **Triggers:**
@@ -137,7 +139,7 @@ Before sending proposal, validate:
 
 **Common Mistake:**
 
-Treating EB meeting as "nice to have." It's mandatory for any deal >$50K. No EB access = no deal.
+Treating EB meeting as "nice to have." The author's rule of thumb (not an established fact, and the $50K line is the author's own) is that it is a must for any large deal. No EB access is a serious warning sign.
 
 ---
 
@@ -195,10 +197,10 @@ For each stakeholder, map:
 **How This Changes Your Pitch:**
 
 **Generic pitch:**
-"Our platform improves incident response time by 40%."
+"Our platform improves incident response time by [X]%." (placeholder: use only a real, sourced figure)
 
 **Personal win pitch:**
-"You mentioned the on-call burden is burning out your team. We've seen teams reduce on-call pages by 40% in the first month, which helps with retention. And since you're focused on uptime metrics for the board, the improved response time shows up immediately in your QBR dashboards."
+"You mentioned the on-call burden is burning out your team. [Only if you have a real, sourced result from a customer, say it here: e.g. "teams like yours reduced on-call pages by [X]%". Never use a number you cannot back up.] That helps with retention. And since you're focused on uptime metrics for the board, the improved response time shows up immediately in your QBR dashboards."
 
 **The Difference:**
 
@@ -246,7 +248,7 @@ Plus: Issues/Risks table with mitigation plans, help needed, responsible parties
 - Both sides must have actions — if only your team has actions, it's not a deal, it's a demo
 - Track status (complete/in-progress)
 - Use MAP as running agenda for check-in calls
-- **If MAP isn't updated in 3 weeks, deal is dead**
+- **If MAP isn't updated in 3 weeks, treat the deal as in trouble (the author's rule of thumb)**
 
 **Decision Criteria:**
 
@@ -344,7 +346,7 @@ Is MAP being updated weekly?
 └─ No → Continue...
     │
     Has it been >3 weeks since last MAP update?
-    ├─ Yes → Dead deal (qualify out or reset)
+    ├─ Yes → Probably stalled (check with the buyer, then qualify out or reset)
     └─ No → At risk (escalate to champion)
 ```
 
@@ -371,7 +373,7 @@ Have you met the Economic Buyer?
    - Validate each element with customer, don't guess
 
 **3. Stale Mutual Action Plan**
-   - If MAP isn't updated weekly, deal is stalling. 3+ weeks = dead.
+   - If MAP isn't updated weekly, deal is stalling. 3+ weeks is a strong warning (the author's rule of thumb, not a fact).
 
 **4. Mapping only the buyer**
    - Need full org chart: influencers, users, blockers
@@ -392,7 +394,7 @@ Have you met the Economic Buyer?
 **MAP Health Check:**
 - Green: Updated weekly, both sides have actions, customer completing tasks
 - Yellow: Updated bi-weekly, mostly your actions, customer slow to respond
-- Red: 3+ weeks stale, only your actions, customer unresponsive → **Dead deal**
+- Red: 3+ weeks stale, only your actions, customer unresponsive → **Deal in trouble: check with the buyer before you write it off**
 
 **MEDDICC Validation:**
 - [ ] Metrics: Success criteria agreed with EB
@@ -420,10 +422,12 @@ Have you met the Economic Buyer?
 
 ## Related Skills
 
+(These skills come from the same author's collection and are not part of this item. Use the catalogue's own items instead.)
+
 - **enterprise-onboarding**: Post-close customer implementation
 - **partnership-architecture**: Deals involving partner relationships
 - **technical-product-pricing**: Enterprise pricing strategy
 
 ---
 
-*Based on enterprise sales at a platform company during hypergrowth, with patterns from closing strategic accounts, navigating complex procurement processes, and learning the hard way that stale MAPs = dead deals. Not theory — lessons from watching deals die because we didn't track health metrics and closing deals because we validated EB alignment early.*
+*This copy comes from github/awesome-copilot; the author's own repository is github.com/beingsmit/technical-product-gtm. The line below is the author's description of their experience and we have not checked it. Based on enterprise sales at a platform company during hypergrowth, with patterns from closing strategic accounts, navigating complex procurement processes, and learning the hard way that stale MAPs = dead deals. Not theory — lessons from watching deals die because we didn't track health metrics and closing deals because we validated EB alignment early.*

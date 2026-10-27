@@ -9,14 +9,16 @@ subhead: Air, gravity, wind and magnetic values for a given place, altitude and 
 explain: |
   Air, gravity, wind and magnetic values for a given place, altitude and date, worked out in MATLAB with the right Aerospace Toolbox calls. You can drop them straight into flight or spacecraft analysis.
 
-  It first pins down which quantity you need, then picks the matching function from a decision table. Choices cover standard atmosphere models, gravity for Earth and other planets, horizontal wind, magnetic field models, geoid height, space weather inputs, planet positions and Earth orientation values. After each call it checks that units and sizes make physical sense. It does not convert coordinate frames or propagate orbits. You need MATLAB with the Aerospace Toolbox.
+  It first pins down which quantity you need, then picks the matching function from a decision table. Choices cover standard atmosphere models, gravity for Earth and other planets, horizontal wind, magnetic field models, geoid height, space weather inputs, planet positions and Earth orientation values. After each call it checks that units and sizes make physical sense. It does not convert coordinate frames or propagate orbits. You need MATLAB with the Aerospace Toolbox, which is a paid MathWorks product.
+
+  Licence: BSD 2-Clause plus a MathWorks term, as the LICENSE.md file says. You may use it only with MathWorks products, so you need your own MATLAB and Aerospace Toolbox licences.
 when:
   - You need air density and pressure at a set altitude for a vehicle model.
   - You need gravity or wind values for a trajectory study.
   - You need the magnetic field at a location for compass correction.
   - You need Moon or planet positions on a specific date.
 not_for:
-  - "You need to change coordinate frames or rotate vectors: use the matlab-convert-aerospace-coordinates skill."
+  - "You need to change coordinate frames or rotate vectors: use the Aerospace unit and frame converter."
   - "You need to predict an orbit or flight path over time: use a trajectory or orbit tool in MATLAB, since this only gives positions and values."
   - "You want a Simulink environment model: use the blocks in Aerospace Blockset instead."
 you_give:
@@ -32,7 +34,7 @@ you_get:
 how_to_use:
   - Open MATLAB with the Aerospace Toolbox. Use an AI that can run MATLAB code, or copy its code into MATLAB yourself.
   - Paste the skill into your chat.
-  - Tell your AI the place, altitude, date and time, and which quantity you need.
+  - Gather these first. Latitude and longitude (degrees), altitude (metres or feet, say which), date and time (say the time zone), and the one quantity you need. Then tell your AI all of them.
   - Add a planet or model if you have a preference.
   - Run the code and read the results table. Check each unit and the sanity notes.
   - For planet positions, download the aeroDataPackage first. For space weather, add a CelesTrak CSV.

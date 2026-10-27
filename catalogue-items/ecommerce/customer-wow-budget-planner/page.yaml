@@ -9,7 +9,7 @@ headline: "Customer wow budget planner"
 subhead: Tell it your average order, your weekly support cases and who on your team can decide. It sorts each customer moment into fix the effort or add delight, sets a weekly wow budget, writes five to eight trigger rules and a script for the surprise note or call.
 
 explain: |
-  When a customer has a problem, a gift does not repair it. Studies of tens of thousands of service contacts found that loyalty stops rising once expectations are met, and that a hard fix makes customers leave about four times more often than an easy one makes them stay. Delight belongs in the good moments, not in the broken ones.
+  When a customer has a problem, a gift does not repair it. One source reports that service studies found loyalty stops rising once expectations are met, and that a hard fix drives customers away more than an easy one builds loyalty. We could not check those studies, so test it on your own repeat rate. Delight belongs in the good moments, not in the broken ones.
 
   This skill sorts each moment first. Late, broken, wrong item, billing and returns get fast, low-effort fixes. A loyal buyer, a life event or a quiet week gets a small, specific surprise. It then sets a fixed weekly amount your support team can spend without asking, with trigger rules like a damaged item, an angry customer who reached the founder, or a high-value buyer in your CRM. Many numbers come from vendors or one brand's story, so it labels them. The dollar ranges it suggests are starting points, not source figures.
 
@@ -138,8 +138,8 @@ improve:
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Any current chat AI can sort moments and write rules. Describe your moments and numbers."}
-    - {name: "Gorgias", why: "A helpdesk that can tag cases and let you log each wow gift against a customer."}
-    - {name: "Shopify", why: "Shows a customer's order history and lifetime value, so a high-value buyer is easy to spot."}
+    - {name: "Gorgias", why: "A paid helpdesk that needs an account. It can tag cases and let you log each wow gift against a customer. The wow budget works without it."}
+    - {name: "Shopify", why: "A paid service that needs an account. It shows a customer's order history and lifetime value, so a high-value buyer is easy to spot. A plain order export also works."}
   inputs:
     - "Your help desk tags for the types of problems you see"
     - "A list of high lifetime value customers"

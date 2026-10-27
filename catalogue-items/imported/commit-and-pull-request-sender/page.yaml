@@ -18,6 +18,7 @@ when:
 not_for:
   - "You want to review your changes before anything is pushed: use plain git and check each step yourself."
   - "The GitHub CLI (gh) is not installed and you will not install it: open the pull request by hand on GitHub."
+  - "Your code is on GitLab, Bitbucket or another host: this works only with a GitHub remote, so use that host's own tool."
   - "Your repo holds secrets or files you did not mean to share: clean them up first, then commit by hand."
 you_give:
   - Your changes in a git repo
@@ -33,11 +34,11 @@ how_to_use:
   - Open your AI in a tool that can run git and shell commands, such as Claude Code. A plain chat window cannot do this.
   - Check that the GitHub CLI is installed and signed in. The skill tests this first and stops with instructions if it is not.
   - Paste the skill and say you want to commit, push and open a pull request.
-  - Look at the list of changed files when your AI shows it. Stop it if you see secrets or files that do not belong.
+  - Your AI shows the list of changed files and waits for your yes before it stages anything. Read the list. Say no, or name the files to leave out, if you see secrets or files that do not belong.
   - Let it commit, push and open the pull request. It starts a new pull request as a draft.
   - Open the link, read the title and body, then mark the pull request ready when you are happy.
   - If the push or the pull request fails, run gh auth status to check you are signed in, then ask your AI to run it again.
-  - Next, have the change reviewed, for example with the Bug and security code reviewer.
+  - Next, have the change reviewed, for example with bug-and-security-code-reviewer.
 output_sample:
   input:
     - Your changes in a git repo

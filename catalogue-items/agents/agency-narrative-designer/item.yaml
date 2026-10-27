@@ -10,10 +10,12 @@ level: intermediate
 inputs:
   - type: question
     required: true
-  - type: source_text
+  - type: document
     required: false
 outputs:
   - type: document
+  - type: story_outline
+    required: true
 uses: []
 steps: []
 origin: imported

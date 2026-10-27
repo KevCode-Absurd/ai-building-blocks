@@ -8,9 +8,11 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: question
     required: true
   - type: spreadsheet
+    required: false
+  - type: audit_report
     required: false
 outputs:
   - type: plan

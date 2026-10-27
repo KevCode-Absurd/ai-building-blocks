@@ -21,7 +21,7 @@ Use it when you have a product and no customers yet. Do not use it when you alre
 ## Steps
 
 1. **Pick a narrow group you can reach.** Choose a group small enough to name ten people in, that you can meet in person or message. Write why you can reach them. If the group is too wide, narrow it by place, job or situation.
-2. **List where they gather and who to contact by name.** Write places (a market, a forum, a class, a group chat, a trade show) and people to contact, with how to reach each. Only use names the person gave or can find. Each named person or place must be checked against a real source before any message goes out; mark it MISSING if it cannot be confirmed, and never present a guess as a real contact. If none, write MISSING and give a way to find them.
+2. **List where they gather and who to contact by name.** Write places (a market, a forum, a class, a group chat, a trade show) and people to contact, with how to reach each. Use only names the user gives you. You cannot browse, so never invent a person, business or group. For anything else, describe the kind of place or person to look for (for example "owners of local bike shops") and mark it UNVERIFIED. Tell the user to confirm every name before contacting anyone. If the user gave none, write MISSING and say how to find them.
 3. **Recruit them one at a time.** For each target, write a short first message and the next step. Offer to set each person up yourself, on the spot if you can, and say what you will do for them that a big company would not.
 4. **Do by hand what you plan to automate.** List the steps of the product that you will do manually (a sheet, a call, a list). For each, mark AUTOMATE LATER or KEEP, with a reason. Note the exact steps so you can automate them from what you learn.
 5. **Name your community.** Pick a community you already belong to and that trusts you. Say why. If you do not belong to one that fits, write MISSING and advise joining before pitching.
@@ -41,7 +41,7 @@ When you've handed it back, suggest what they could do next in one short questio
 
 ## Check before you hand it back
 
-- Each target is a named person or a named place.
+- Each target is a person or place the user named, or is marked MISSING or UNVERIFIED with a way to find it.
 - Every manual step is marked to automate later or keep.
 - The plan has a way to record what each user said.
 - It does not depend on a big launch or a partnership.

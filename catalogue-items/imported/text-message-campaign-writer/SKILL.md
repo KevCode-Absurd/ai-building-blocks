@@ -44,7 +44,7 @@ SMS is not "another email." Use it where the channel's properties win:
 
 | Use Case | SMS or Email? | Why |
 |----------|---------------|-----|
-| Abandoned cart recovery | **SMS first** | 98% open rate within 3 min vs 20% for email in 24h |
+| Abandoned cart recovery | **SMS first** | Texts are usually read within minutes, while email is read more slowly (check your own open data) |
 | Order/shipping updates | **SMS** | Customers want it now, on their phone |
 | Flash sale / limited drop | **SMS** | Urgency channel; immediate read |
 | Auth codes / 2FA | **SMS** (or app) | Latency-sensitive, must arrive in seconds |
@@ -78,7 +78,7 @@ If most customers are outside the US (LATAM, Europe, Africa, Middle East, India,
 
 **This is not legal advice.** Rules change by country and state. Before you send, confirm the TCPA, 10DLC and CASL points below with a lawyer or your SMS provider.
 
-**Compliance is the foundation, not an afterthought.** A single TCPA class-action settlement runs $5M–$40M. The basics:
+**Compliance is the foundation, not an afterthought.** A TCPA class-action settlement can run into the millions of dollars. The basics:
 
 ### US — TCPA (Telephone Consumer Protection Act)
 
@@ -222,7 +222,7 @@ Optional Send 2 (24h later): Reminder + best-seller showcase
 
 ### Personalization
 
-- First name token if available (boosts CTR ~20%)
+- First name token if available (test whether it lifts clicks for your list)
 - Recent product/category browse-based
 - Location-based offers (where applicable)
 - Don't fake intimacy ("Hey friend!") — it backfires

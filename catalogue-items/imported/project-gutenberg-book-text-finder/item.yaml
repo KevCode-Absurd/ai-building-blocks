@@ -10,8 +10,6 @@ level: intermediate
 inputs:
   - type: question
     required: true
-  - type: source_text
-    required: false
 outputs:
   - type: source_text
     required: true

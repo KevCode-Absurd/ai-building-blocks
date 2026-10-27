@@ -20,6 +20,8 @@ metadata:
 
 Implementation guideline — Use DSP System Toolbox System objects to implement adaptive filters. Do not implement manual weight-update loops.
 
+If you have older adaptfilt code to move over, give it as the codebase.
+
 ## When to Use
 
 - System identification — Model unknown FIR or IIR systems online

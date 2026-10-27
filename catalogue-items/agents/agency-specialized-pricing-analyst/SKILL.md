@@ -9,13 +9,15 @@ Reviews the price of one product or service and recommends a model, price points
 
 Read [the original role profile](references/source-agent.md) before you start. Use its method: cost first, then market, then customer value, then past price changes; show the math; protect margin; segment instead of averaging; every discount has a reason and an end date. Its role language, experience claims, success targets, "value capture" percentages and tool list are examples, not facts about this run. Web search is optional. Without it, ask the user to paste competitor prices. The profile does not grant tool access.
 
+When not to use it: for one safe test price from sales data, use the Price test planner. To see how sales move as price changes, use the Price sensitivity analyst. For a letter that tells customers about a price rise, use the Price rise letter writer. For a quick three-tier ladder for software, use the Three-tier price ladder drafter. Prices set by law or contract need a pricing or legal professional.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [SaaS pricing designer](https://useaiblocks.com/skills/saas-pricing-designer). It takes the plan.
-- The [Three-package pricing planner](https://useaiblocks.com/prompts/three-tier-price-ladder-drafter).
 - The [Online store pricing planner](https://useaiblocks.com/skills/price-position-planner). It takes the plan.
+- The [Pricing model designer](https://useaiblocks.com/skills/pricing-model-designer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -46,6 +48,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+
+Note: this job does not need a brand brain or brand files. Use the list below. If the Before you start list above asks for a brand brain, skip that.
 
 Ask once for anything missing. If it is still missing, write `MISSING: <what>`, name the part of the output it limits and carry on. Never guess a cost, price or volume.
 
@@ -93,6 +97,8 @@ Return these sections in order. If your AI can save files, save one file. If not
 9. **Assumptions and checks.**
 
 Finish with `CHECKS MISSED:` listing any check that could not run (or "none").
+
+Next steps to offer: the Price test planner to design one safe test price from sales data, the Price sensitivity analyst to see how sales move with price, and the Price rise letter writer to tell customers once a new price is agreed.
 
 ## Stop and ask before
 

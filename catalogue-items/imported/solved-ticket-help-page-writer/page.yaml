@@ -20,7 +20,7 @@ not_for:
   - "You need a reply to one customer right now: write a short direct answer to that person instead."
   - "You need to fix a broken help page that already exists: edit that page by hand, then use this to check what is missing."
 you_give:
-  - The solved ticket or a description of the issue
+  - The solved ticket or a description of the issue, with the exact error text and the screens or menu names the customer used
   - The steps that fixed it
   - Who is affected, such as plan or setup (optional)
   - Existing help pages to check against (optional)
@@ -32,9 +32,10 @@ you_get:
 how_to_use:
   - Open a new chat in Claude, ChatGPT or Gemini.
   - Paste the full text of this skill into the chat.
-  - Below it, paste your solved ticket and the steps that fixed it. Add who is affected if you know. Linking your help desk or help center is optional and may need a paid plan. Without it, just paste the ticket text.
+  - Below it, paste your solved ticket and the steps that fixed it. Add who is affected if you know. Linking your help desk or help center is optional and may need a paid plan. Without it, just paste the ticket text. In the skill text, ignore the ~~ words (such as ~~support platform) and the CONNECTORS.md note. They only matter if you link a tool.
   - Send it. You get a full article draft with a title, tags, steps and publishing notes.
   - Check every step, menu name and on-screen message against your live product. Your AI cannot see it and may get them wrong. Ask your AI to adjust the depth for a different reader if needed.
+  - Where the draft says [check in the product], open your product and fill in the real screen name or message first.
   - Publish it, or ask your AI for a companion article. No code or paid tool is needed.
 output_sample:
   input:

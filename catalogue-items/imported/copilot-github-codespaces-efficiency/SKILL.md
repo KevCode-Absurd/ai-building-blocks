@@ -56,7 +56,7 @@ Check each proposed fix against these rules before recommending it:
 
 ### 3. Select the top 3 fixes
 
-From the six candidates below, keep only those supported by audit evidence from step 1 *and* passing all guardrails from step 2. Rank survivors by estimated monthly cost savings (USD). Select all candidates that meet both criteria, up to a maximum of 3.
+From the six candidates below, keep only those supported by audit evidence from step 1 *and* passing all guardrails from step 2. Rank survivors by estimated monthly cost savings (USD). Work out each estimate from the Codespaces rate for the machine size involved (from GitHub's current Codespaces pricing page), the hours the user says are used, and the change in machine size or hours. Show the sum. If you have no billing or usage data, give the saving only as "unverified estimate" with the assumptions, or rank by expected effect (high, medium, low) without a dollar figure. Never present an unverified dollar figure as fact. Select all candidates that meet both criteria, up to a maximum of 3.
 
 1. Trim devcontainer — remove features, packages, or extensions not needed for everyday development work; target image <2 GB and fewer than 10 features
 2. Right-size machine type — match to observed usage patterns; if data is unavailable, state assumptions explicitly
@@ -79,10 +79,10 @@ From the six candidates below, keep only those supported by audit evidence from 
 
 **Validation:** [proven live / static-only / remaining risk]
 
-**Impact:**
-- Startup time: [expected] / [measured if available]
-- Monthly spend: [expected] / [measured if available]
-- Resource utilization: [expected] / [measured if available]
+**Impact:** (for each number, name the data source, or write "no data" when there is no telemetry or billing figure)
+- Startup time: [expected] / [measured if available] / [source or no data]
+- Monthly spend: [expected] / [measured if available] / [source or no data]
+- Resource utilization: [expected] / [measured if available] / [source or no data]
 
 **Next:** apply one fix at a time, build a test Codespace after each, and run this review again to see what changed.
 

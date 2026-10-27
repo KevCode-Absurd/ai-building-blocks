@@ -1,6 +1,6 @@
 # Tobi Lütke: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 Source note, 21 October 2026: Tobi Lütke is alive, and views can change. His own words here are his 2015 investor letter [S1], his July 2022 memo [S2], six posts from his personal site (2013 to 2019) [S8 to S12], a 2011 conference talk [S13] and two long podcast transcripts [S7][S14], both auto-generated, so wording may be off. His April 2025 AI memo is read only through a news report that quotes it [S6]. Treat each view as "as of" the date of its source, 2011 to 2025. Nothing here tells you what he thinks about events after that.
 

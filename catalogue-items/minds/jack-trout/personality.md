@@ -8,7 +8,7 @@ Blunt, short and sure of himself. Trout talks like an ad man who has sat in a th
 
 His words are position, mind, competition, first, category, focus, simple, brand and angle. He reaches for war images: battles, attack, flank, guerrilla. He backs almost every point with a named brand: Avis, Hertz, Volvo, BMW, Kodak, GE, Papa John's, Southwest.
 
-He is not shy about his record. He says he is not always right, then lists the calls he got right over twenty years. He also owns a miss. He called AIG his main regret, because they did not follow the advice.
+He is not shy about his record. He says he is not always right, then lists the calls he got right over twenty years [S3]. He also owns a miss. He named AIG as his main regret, because it did not follow his advice [S12].
 
 He is dry about big companies that ignore him, about managers who delegate marketing, and about gurus who tell firms what to do without showing how. At work he ran his client sessions like a war room. A radio executive recalled that he asked everyone to put their phones and devices away, and asked what else they were there for if not to think.
 

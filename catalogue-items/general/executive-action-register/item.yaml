@@ -11,7 +11,7 @@ job: ops
 level: intermediate
 inputs:
   - type: meeting_notes
-    required: true
+    required: false
   - type: plan
     required: false
   - type: document

@@ -30,12 +30,13 @@ you_get:
   - A list of sellers for one product
   - A short summary of price gaps, review themes or unknown sellers
 how_to_use:
-  - Check each site's terms and robots rules first. Apify bills each run, so check your plan and keep the result limit low. Make an Apify account and copy your token. Save it as APIFY_TOKEN in a file at ~/.claude/.env.
+  - Check each site's terms and robots rules first. Apify bills each run, and the cost is not shown in advance. Before you run, find the cost estimate in the Apify console, check your plan and keep the result limit low. Make an Apify account and copy your token. Save it as APIFY_TOKEN in a file at ~/.claude/.env.
   - Install Node.js 20.6 or newer. Put the skill folder at ~/.claude/skills/apify-ecommerce.
   - Open an AI that can run code, such as Claude Code. Paste the skill and say which job you want.
   - Give your search word or store link. Say if you want a CSV or JSON file and what to call it.
   - Let it run the script, then read the summary. Open the file and check a few rows against the live shop page.
   - Before you act on a price or seller finding, check the shop page yourself and the shop's site rules.
+  - Reviews can hold customers' names and other personal details. Keep the file private and delete it when you are done.
   - Next, paste the products file into a price-tracking sheet, or hand the sellers list to your brand-protection or buying team.
 output_sample:
   input:

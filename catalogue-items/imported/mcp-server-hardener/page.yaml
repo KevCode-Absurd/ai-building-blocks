@@ -12,6 +12,8 @@ explain: |
   It starts from eight known threats, such as stolen keys, one user calling another user's tools, and bad input that tricks a tool. Then it checks four layers in order: the connection, who may sign in, what each user may do, and what gets logged. It also covers input checks, rate limits and how you deploy.
 
   Where a fix needs code or config, it points to a sample in the skill, such as an Nginx proxy with TLS, a client certificate for mutual TLS, or a per-role tool allowlist. You adapt the samples. The skill does not test your live server.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (BagelHole) says MIT. Credit goes to BagelHole and sickn33.
 when:
   - You run an MCP server and plan to open it beyond your own laptop.
   - Your agents connect to the server over plain HTTP, or you are not sure.
@@ -36,7 +38,8 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini. For file-level advice, use one that can read your project files.
   - Paste the skill text into the chat.
-  - Sections 6 to 11 and the quick checklist are in references/details.md. Paste or upload that file too, or those steps are missing.
+  - Sections 6 to 11 and the quick checklist are in references/details.md, in this item's references folder. Paste or upload that file too, or those steps are missing.
+  - Gather these first, so you can paste them for file-level advice: the server entry file, the files that handle each tool call, and your tool policy or config file (for example config/tool-policy.yaml).
   - "Under it, paste your details: how it connects, how users sign in, and the list of tools. Add your config if you can."
   - Read the top three fixes first. If a detail is marked MISSING, answer it and ask for the list again.
   - Apply the fixes in a test copy of your server first. The sample settings are starting points, not drop-in files.

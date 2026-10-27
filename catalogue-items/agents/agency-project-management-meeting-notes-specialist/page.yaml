@@ -8,7 +8,7 @@ thinking_why: It must separate what was decided from what was only discussed, an
 explain: |-
   Meeting notes go wrong in two ways. They record the talk and miss the decisions. Or they get tidy and add things nobody said. This meeting notes summarizer does neither. It reads the whole transcript first, then sorts it into four fixed sections: date and attendees, decisions, action items and open questions.
 
-  It is strict about what counts. A decision is something the group agreed to do, agreed not to do or agreed was true. "We discussed the launch" is not a decision. "We will move the launch to May 15" is. An action item needs a task, an owner and a date. If the notes name no owner, it writes "unassigned". It never works out who "usually" does the job.
+  It is strict about what counts. A decision is something the group agreed to do, agreed not to do or agreed was true. "We discussed the launch" is not a decision. "We will move the launch to [DATE]" is. An action item needs a task, an owner and a date. If the notes name no owner, it writes "unassigned". It never works out who "usually" does the job.
 
   Every section appears every time. An empty one says "None recorded". If the date, project or attendees are missing, it asks once. If you cannot say, it uses a placeholder. It does not guess, and it adds no comment on the quality of the meeting.
 

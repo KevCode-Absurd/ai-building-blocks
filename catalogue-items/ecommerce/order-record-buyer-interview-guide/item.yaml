@@ -7,7 +7,7 @@ role: make
 job: research
 level: intermediate
 inputs:
-  - {type: spreadsheet, required: true}
+  - {type: customer_list, required: true}
   - {type: product_data, required: true}
 outputs:
   - {type: document}

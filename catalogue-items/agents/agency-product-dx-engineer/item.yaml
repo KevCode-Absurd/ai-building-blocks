@@ -8,9 +8,11 @@ role: make
 job: research
 level: intermediate
 inputs:
-  - type: source_text
+  - type: document
     required: true
   - type: codebase
+    required: false
+  - type: voc_reviews
     required: false
 outputs:
   - type: audit_report

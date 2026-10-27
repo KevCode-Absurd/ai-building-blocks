@@ -8,10 +8,16 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: question
     required: true
+  - type: plan
+    required: false
+  - type: business_plan
+    required: false
 outputs:
   - type: spreadsheet
+  - type: financial_statements
+    required: false
 uses: []
 origin: imported
 source:

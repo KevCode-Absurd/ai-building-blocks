@@ -7,7 +7,6 @@ role: orchestrate
 job: ops
 level: beginner
 inputs:
-  - {type: brief, required: true}
   - {type: performance_sheet, required: true}
   - {type: question, required: true}
 outputs:

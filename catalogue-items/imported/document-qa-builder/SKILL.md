@@ -73,7 +73,7 @@ from llama_index.readers.github import GithubRepositoryReader
 # Directory of files
 documents = SimpleDirectoryReader("./data").load_data()
 
-# Web pages
+# Web pages. Only read pages you own or have permission to collect, and follow the site's terms of use and robots rules. Reading pages in bulk is scraping and may be against a site's terms.
 reader = SimpleWebPageReader()
 documents = reader.load_data(["https://example.com"])
 
@@ -556,7 +556,7 @@ These are rough guesses from the skill's author, not measured results, and no da
 
 ## Resources
 
-- **GitHub**: https://github.com/run-llama/llama_index ⭐ 45,100+
+- **GitHub**: https://github.com/run-llama/llama_index
 - **Docs**: https://developers.llamaindex.ai/python/framework/
 - **LlamaHub**: https://llamahub.ai (data connectors)
 - **LlamaCloud**: https://cloud.llamaindex.ai (enterprise)

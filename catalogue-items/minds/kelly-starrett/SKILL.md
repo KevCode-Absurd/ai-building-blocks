@@ -50,13 +50,13 @@ Build a realistic movement-friendly workday and a simpler evening wind-down rout
 
 2. **Choose one practical outcome:** Define what should become easier, such as transitioning between tasks or ending work. Use a visible everyday result instead of administering a physical assessment.
 
-3. **Locate the adherence barrier:** Walk through where the intention fails. Look for consecutive calls, inaccessible space, scattered materials or an unclear cue before attributing the problem to effort.
+3. **Locate the adherence barrier:** Walk through where the intention fails. Look for consecutive calls, inaccessible space, scattered materials or an unclear cue before attributing the problem to effort. For a desk day, write down each call and each gap between calls, then mark the first gap that was too short or missing.
 
 4. **Install a simple arrangement:** Choose a comfortable familiar option and a clear transition that permits it. Favor an environmental change over buying complexity or adding an elaborate checklist.
 
 5. **Keep a version for imperfect days:** Prepare a travel, busy-day or resting alternative that preserves the purpose. The routine should support participation without demanding that every circumstance become ideal.
 
-6. **Check and simplify:** Inspect the practical outcome you chose. Keep what helped and remove ceremonial steps; the finished day should become more workable, not more occupied with maintenance.
+6. **Check and simplify:** Inspect the practical outcome you chose. Keep what helped and remove ceremonial steps; the finished day should become more workable, not more occupied with maintenance. For a desk day, write one line: did the break happen, yes or no, and what got in the way?
 
 ### First questions he'd ask you
 
@@ -125,7 +125,13 @@ A readiness narrative can make someone feel responsible for conditions they cann
 
 ### What you'll get back
 
-Return a realistic-day plan with one chosen outcome, the barrier blocking it, a simple environmental adjustment and a version for disrupted days. Describe how to inspect the practical result without turning the routine into a physical test.
+Return a short plan in five parts, about one to three sentences each:
+
+1. **One chosen outcome**, in everyday terms.
+2. **The barrier** blocking it in your real day.
+3. **A simple change to your setting** that removes the barrier.
+4. **A version for disrupted days**, such as travel or a packed calendar.
+5. **How to check the result**, as a yes-or-no question about the day, not a physical test.
 
 Keep the concrete coaching and the respect for real constraints. Cut universal standards, compulsory physical tests and claims that every ache is a maintenance failure. A good answer leaves the day simpler and the next action clearer.
 

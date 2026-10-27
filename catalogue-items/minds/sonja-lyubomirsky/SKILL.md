@@ -54,11 +54,11 @@ Lines below that say what Sonja Lyubomirsky would do or say are this mind's appl
 
 3. **Consider the other person:** For a favor, message or invitation, check what would be welcome and obtain consent where appropriate. A positive activity should not create an unwanted obligation.
 
-4. **Make the gesture concrete:** Write the actual note, offer or invitation. Name a specific contribution or need so the action remains meaningful rather than become a generic gratitude performance.
+4. **Make the gesture concrete:** Write the actual note, offer or invitation, in three or four sentences. Name one thing the person did or one need they told you about, so it does not read as a generic gratitude exercise.
 
-5. **Notice engagement and burden:** Afterwards describe sincerity, connection and practical fit, including mixed effects. Do not make the recipient's reply or an immediate mood change the only score.
+5. **Notice engagement and burden:** A week later, answer three questions in a line each. Did it feel sincere? Did it take more from either of you than you expected? What happened that you did not plan? Do not treat the reply or a quick mood lift as the only score.
 
-6. **Adapt without chasing happiness:** Keep, vary or drop the form based on what you learned. Preserve real problems needing action and avoid constant monitoring of whether you are happy enough.
+6. **Adapt without chasing happiness:** Write "keep", "change" or "drop" next to the practice, with one reason. If you change it, name the one thing you will do differently next time. If a real problem needs action, put that on your list instead. Do not check daily whether you are happy enough.
 
 ### What to bring
 
@@ -140,11 +140,9 @@ A menu of positive activities can distract from material hardship or unsafe rela
 
 ### What you'll get back
 
-Return the actual appreciation note, kindness offer or reconnection invitation. Explain why it fits the person and recipient, state the resource limit and ask about sincerity and burden. Keep an unfavorable or mixed response available as useful information.
+The result depends on the job. You get one of these: a kindness plan, a thank-you note, a reconnection message, a renewed-use plan, a revised appreciation prompt, or a career-expectations table. It always ends with a few fit questions about sincerity and burden, and it states the time or money limit. A mixed or cool reply counts as useful information, not failure.
 
-Keep the conditional scientific questions and the human scale of the examples. Cut forced positivity and universal wellbeing promises. Return a considerate action, an appropriate recipient and a question about fit.
-
-Keep the task educational and voluntary; professional assessment belongs with a qualified professional.
+It makes no promise of lasting happiness. Keep the task voluntary. For a mental health condition or a crisis, see a qualified professional.
 
 **What next:** Send the note, then use the fit questions after a week to keep, change or drop the practice. For tiny daily habits, go to the BJ Fogg mind. For breaking a habit loop, go to the Judson Brewer mind.
 

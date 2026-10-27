@@ -9,19 +9,20 @@ subhead: Give it the deal size, discount, tier and any redlined contract terms. 
 explain: |
   A big discount request or a customer's redlined contract gets a score, a clear verdict and the right approver. It never approves on its own, so a person always signs off.
 
-  Three tools do the work. A deal scorer rates margin, risk, strategic value, fit and term shape from 0 to 100 and lands on approve, review, escalate or decline. A router maps discount size, deal size and tier to the approver chain, from account exec up to the CFO or CRO, with an estimated number of days. A terms checker catches ten risky patterns such as uncapped indemnity, most favoured customer clauses, missing data agreements and net 60 payment, each with a standard counter. It runs Python scripts.
+  Three tools do the work. A deal scorer rates margin, risk, strategic value, fit and term shape from 0 to 100 and lands on approve, review, escalate or decline. A router maps discount size, deal size and tier to the approver chain, from account exec up to the CFO or CRO, with an estimated number of days. A terms checker catches ten risky patterns such as uncapped indemnity, most favoured customer clauses, missing data agreements and net 60 payment, each with a standard counter. It runs Python scripts. The score weights margin most and are tuned as a guide, so treat the verdict as a recommendation. The skill file lists sources by name for background. They have not been checked here. The other skills named in the original file are not included. This is the claude-code-skills deal-desk skill, shared under the MIT licence.
 when:
   - Sales asks for a discount above their authority.
   - A customer sent back the contract with edits.
   - You need margin after discount for a CFO review.
   - You want a consistent way to route approvals.
 not_for:
-  - "You need to write the proposal or contract itself: ask your AI to draft it, or have a person write it. This item only reviews a deal."
-  - "You need a full legal review of contract text: send it to your lawyer. This item only scans a short list of risky terms."
-  - "You want to set your discount rules or list prices: decide those first with your finance lead. This item applies rules you already have."
+  - "You need to write the proposal or contract itself: use the Contract and proposal drafter, or have a person write it. This item only reviews a deal."
+  - "You need a full legal review of contract text: send it to your lawyer or use the Contract risk reviewer. This item only scans a short list of risky terms."
+  - "You want to set your discount rules or list prices: use the Discount policy designer, or decide them with your finance lead. This item applies rules you already have."
 you_give:
   - Deal size, term, discount and tier
   - Cost or margin details
+  - The intake fields. The deal intake form in the folder asks for deal ID, customer, deal size (ARR and total), term, list price, discount, customer tier, product margin, extra costs, strategic flags (logo, reference, expansion, renewal), payment terms and any term redlines
   - "Contract terms or redline, as short lines such as indemnity: uncapped or payment: net 60"
   - Your discount policy (optional)
 you_get:
@@ -44,6 +45,7 @@ how_to_use:
   - Ask your AI to run the deal scorer, the discount router and the terms checker.
   - Read the verdict, the approver chain and the risky terms. Fix or counter the risky terms.
   - Send the packet to the named approvers. The skill never approves a deal itself.
+next: [contract-risk-reviewer, discount-policy-designer]
 output_sample:
   input:
     - Deal size, term and discount

@@ -13,6 +13,8 @@ explain: |-
   It is not medical advice. It does not diagnose, check doses or judge how urgent a symptom is. Anything unclear is sent back to the care team. For anything urgent, call the care team or emergency services.
 
   This workflow uses selected methods from the Aging Parent Care Companion. It is a focused adaptation. The original agent remains available: [Aging Parent Care Companion agent](https://useaiblocks.com/agents/agency-healthcare-aging-parent-care-companion).
+
+  Licence: the original is MIT licensed, and this adaptation keeps that licence. The licence text is in the download.
 when:
   - You have a doctor or care visit coming up for a parent or relative and want your questions ready.
   - You went to the visit and need to write down what was said before it blurs.

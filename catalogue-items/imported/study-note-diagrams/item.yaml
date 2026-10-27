@@ -10,11 +10,8 @@ level: beginner
 inputs:
   - type: source_text
     required: true
-  - type: brief
-    required: false
 outputs:
   - type: document
-  - type: plan
 uses: []
 origin: imported
 source:

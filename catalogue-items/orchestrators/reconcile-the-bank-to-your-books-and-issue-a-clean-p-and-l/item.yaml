@@ -11,6 +11,7 @@ inputs:
 outputs:
   - {type: spreadsheet}
   - {type: document}
+  - {type: financial_statements, required: true}
 uses: [bank-and-ledger-matcher, reconciliation-break-tracer, p-l-and-balance-sheet-writer]
 steps:
   - {uses: bank-and-ledger-matcher, note: "Starts from the bank file and the ledger and ends with the items that do not match. Hands the matched ledger and the leftovers to step 2."}

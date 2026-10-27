@@ -10,6 +10,10 @@ level: advanced
 inputs:
   - type: brief
     required: true
+  - type: product_photos
+    required: false
+  - type: brand_brain
+    required: false
 outputs:
   - type: script
   - type: video_ads

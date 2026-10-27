@@ -5,29 +5,31 @@ job: write-ad-copy
 headline: Five-tactic ad hook writer
 subhead: Share product facts, angle, buyer and approved claims. Get ten to fifteen hooks grouped by tactic, with first test picks.
 explain: |-
-  Write short ad hooks using five tactics. Rank them by buyer fit and proof, then give production notes.
+  A hook is the first 2 seconds of a video, the top line of a static ad or the first line of copy. If it does not stop the scroll, nothing after it gets seen.
 
-  Share product facts, angle, buyer and approved claims. Get ten to fifteen hooks grouped by tactic, with first test picks.
+  This skill writes 10 to 15 hooks of 3 to 7 words. Each uses one of five tactics: pattern interrupt, question, bold claim, direct callout or story. It ranks them on how specific they are, how natural they sound, how well they stop the scroll, how well they fit your buyer and whether you can prove the claim. Then it adds filming notes for the best ones. A hook with no approved source for its claim is marked missing.
 when:
-  - You need ten to fifteen hooks grouped by tactic, with first test picks.
-  - You need five-tactic ad hook writer for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - You have a product and need many different opening lines to test.
+  - Your ads get little attention in the first 2 seconds.
+  - You want to find which kind of opening works best for your buyer, one tactic at a time.
 not_for:
   - "You have no approved claims or checked numbers yet: get them from your team or product owner first, then come back."
   - "You need full ad copy, not just the first line: write the body copy with your AI in a normal chat, using the best hook as the opener."
   - "You want a longer script or a long headline: this tool keeps each hook to 3 to 7 words."
   - "You want hooks for Reels or TikTok with a first picture: use the Short video hook writer."
 you_give:
-  - Product facts
-  - Angle
-  - Buyer and approved claims
+  - Your product name and what it does
+  - The main pain or promise for your buyer
+  - Your buyer, described in a specific way
+  - Tone, format and claims you can prove
 you_get:
   - Ten to fifteen hooks grouped by tactic, with first test picks
   - The sources used, missing inputs and assumptions
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat.
+  - Paste your product facts, buyer, tone, format and the claims you can prove.
+  - Check every number and claim against your own facts. Remove any hook you cannot back up.
+  - Test the top two hooks one tactic at a time.
 output_sample:
   input:
     - Your product name and what it does
@@ -39,7 +41,7 @@ output_sample:
     - name: Hook list
       contains: Ten to fifteen hooks with a tactic label, exact text, format fit, stop-power rating and a one-line reason.
     - name: Ranking
-      contains: Hooks ordered best first, scored on how specific they sound, how natural they feel and how well they stop the scroll.
+      contains: Hooks ordered best first, scored on how specific they sound, how natural they feel, how well they stop the scroll, how well they fit your buyer and whether the claim has a source.
     - name: Production notes
       contains: For each top hook, the visual to pair with it, how to say it and how fast to cut.
     - name: Evidence and gaps
@@ -54,7 +56,7 @@ how_it_works:
   - title: Generate 10-15 Hooks
     text: Write 10 to 15 hooks of 3 to 7 words, mixed across the five tactics, each labelled with its tactic.
   - title: Rank
-    text: Score each hook on how specific it is, how natural it sounds and how well it stops the scroll. Put the best first.
+    text: Score each hook on how specific it is, how natural it sounds, how well it stops the scroll, how well it fits your buyer and whether you can prove it. Put the best first.
   - title: Production Notes
     text: For each top hook, suggest the visual, the delivery and the tempo.
   - title: Rules

@@ -9,8 +9,9 @@ subhead: Tell your AI about your role, your readers and the places your work hap
 not_for:
   - "You want a briefing written now: set this up first, then use the separate roundup skill to draft it."
   - "You only need a one-off update: write it yourself or ask your AI in a plain chat."
-  - "You have no way to run the full chat flow: this setup asks questions one at a time and saves a file."
+  - "You have no way to run the full chat flow: this setup asks questions one at a time and saves a file. In a plain chat with no tools, ask your AI to draft the briefing straight from one or two past updates instead."
 how_to_use:
+  - Have these ready first. One or two status updates you have written, with names and private details removed. A list of who reads them. A list of where your work and talks happen. Your AI must be able to ask you questions one at a time (the ask_user tool) and to create files.
   - Install the roundup skill and this setup skill in Copilot CLI. This setup needs the ask_user tool and the ability to create files. To read your GitHub repos or Microsoft 365 mail and chats, those tools must also be connected. If they are not, you name your sources by hand.
   - Start a chat and ask your AI to run the roundup setup.
   - Answer the questions one at a time. Paste in a past status update or two when asked. Remove names and private details first, because the saved config file keeps your examples as plain text.

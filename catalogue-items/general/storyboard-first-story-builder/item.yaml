@@ -6,9 +6,11 @@ type: skill
 role: make
 job: strategy
 level: beginner
-inputs: []
+inputs:
+  - {type: question, required: true}
 outputs:
   - {type: plan}
+  - {type: story_outline, required: true}
 origin: rebuilt
 version: 1.0.0
 minds: [hayao-miyazaki]

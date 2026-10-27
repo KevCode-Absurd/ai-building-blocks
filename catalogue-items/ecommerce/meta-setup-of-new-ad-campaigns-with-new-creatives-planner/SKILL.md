@@ -77,9 +77,7 @@ Add the evidence used and the assumptions. Keep the previous approved settings o
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Meta bid cap launch planner](https://useaiblocks.com/skills/meta-set-up-a-bid-cap-campaign-planner).
-- The [Meta campaign change reviewer](https://useaiblocks.com/skills/meta-optimization-of-existing-ad-campaigns-planner).
-- The [Meta bid cap adjustment planner](https://useaiblocks.com/skills/meta-adjusting-and-scaling-bid-caps-in-meta-ads-planner).
+- The [Marketing budget allocation planner](https://useaiblocks.com/skills/next-dollar-budget-allocator). It takes the plan.
 - **Read your ad results** with the [Ad creative test analyst](https://useaiblocks.com/skills/creative-test-reader). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

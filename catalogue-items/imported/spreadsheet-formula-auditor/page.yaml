@@ -9,7 +9,7 @@ subhead: "A list of formula errors, broken links and model problems found in you
 explain: |
   A list of formula errors, broken links and model problems found in your spreadsheet before someone else finds them. You choose the depth: a selected range, a sheet, or the whole model.
 
-  Every scope gets formula checks. The model scope adds financial integrity tests, such as whether the balance sheet balances, cash ties out, roll-forwards agree and the logic holds. It suits DCF, LBO, three-statement and merger models. This version follows Indian conventions: a fiscal year from April to March, and lakh and crore units, with a warning about a number format that shows a 100 times error.
+  Every scope gets formula checks. The model scope adds financial integrity tests, such as whether the balance sheet balances, cash ties out, roll-forwards agree and the logic holds. It suits DCF, LBO, three-statement and merger models. This version follows Indian conventions: a fiscal year from April to March, and lakh and crore units, with a warning about a number format that shows a crore figure 10 times too large.
 when:
   - Your model will not balance and you cannot see why.
   - You are about to send a model to a client or investment committee.
@@ -29,11 +29,13 @@ you_get:
   - Balance sheet and cash tie-out results
   - Unit and fiscal period warnings
 how_to_use:
+  - "Gather first: the workbook file, the scope you want, and the model type (DCF, LBO, three-statement or merger) if it is a full model."
   - Open your AI tool and paste the skill, or upload the skill folder. It needs an AI that can read spreadsheet files.
   - Upload your workbook. For Indian models (crore units, April to March year), also add the india-modeling-rules-checker skill. For other models you do not need it.
   - "Say the scope: selection, sheet or whole model. Add your currency and fiscal year if you have them."
   - Read the findings table. Start with the critical rows, and check the balance sheet first.
   - Tell your AI which fixes to make. It will not change anything until you ask.
+  - "Next: for a single broken formula, fix it in chat. If the model needs rebuilding, hand the findings table to the Financial model builder."
 output_sample:
   input:
     - Your spreadsheet file
@@ -41,7 +43,7 @@ output_sample:
     - Your currency and fiscal year (optional)
   prerequisites:
     - An AI that can open spreadsheet files
-    - Indian market rules from the india-market-conventions skill, if you want the April to March year and lakh and crore checks
+    - Optional: the India modeling rules checker, if you want the April to March year and lakh and crore checks. Without it the skill says what it could not check.
   output:
     - name: Summary line
       contains: "For model scope only: the model type, an overall rating, and the count of critical, warning and info findings."
@@ -54,4 +56,5 @@ output_sample:
     - name: Model-type checks
       contains: Common mistakes for DCF, LBO, merger and three-statement models, plus growth, margin and edge-case flags.
     - name: Unit and fiscal warnings
-      contains: Flags for mixed units, wrong fiscal period labels and lakh or crore formats that show a 100 times error.
+      contains: Flags for mixed units, wrong fiscal period labels and lakh or crore formats that show a figure 10 times too large.
+next: [financial-model-builder]

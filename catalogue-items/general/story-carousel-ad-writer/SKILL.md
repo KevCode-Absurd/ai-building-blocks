@@ -101,9 +101,9 @@ CHECKS MISSED  <one line per check still missed, or none>
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Story image ad writer](https://useaiblocks.com/skills/story-image-ad-writer). It takes the ad copy.
 - **Check it before it goes live** with the [Headline promise checker](https://useaiblocks.com/skills/headline-promise-checker). It takes the ad copy.
-- **Check it before it goes live** with the [Brand voice editor](https://useaiblocks.com/skills/brand-voice-editor). It takes the ad copy.
-- The [Ad headline writer](https://useaiblocks.com/skills/ad-headline-writer). It takes the ad copy.
 - **Check it before it goes live** with the [Headline relevance checker](https://useaiblocks.com/prompts/headline-reader-and-reward-checker). It takes the ad copy.
+- **Check it before it goes live** with the [Ad awareness stage reviewer](https://useaiblocks.com/skills/ad-awareness-stage-checker). It takes the ad copy.
+- The [Closing paragraph writer](https://useaiblocks.com/skills/summing-up-paragraph-writer). It takes the ad copy.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

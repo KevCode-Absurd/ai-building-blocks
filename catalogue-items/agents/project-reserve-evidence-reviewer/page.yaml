@@ -33,7 +33,7 @@ you_give:
   - The reserve balance and the draws that were approved (from the reserve account statement and approvals)
   - The payment priority clause (from the contract)
   - A signed debt-service test, with cash and payments for three periods (optional, only if a distribution is requested)
-  - The last review's record and the earlier source versions (optional, needed to show what changed)
+  - The last review's record and the earlier source versions (optional, needed to show what changed). The record is one small JSON file the agent writes each run; in plain chat it prints the record for you to paste next time
 
 you_get:
   - A reserve roll-forward with opening balance, draws, required balance, top-up needed and what is still unfunded

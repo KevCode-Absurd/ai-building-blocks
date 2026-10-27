@@ -47,7 +47,7 @@ output_sample:
     - "After the test: the numbers for each version and any sale or email send during the run"
   prerequisites:
     - An AI that can work with a folder of files, such as Claude Code or a Claude Project
-    - A way to run a test on your store and export the numbers for each version
+    - A way to run a test on your store and export the numbers for each version, such as a split-testing app. Many charge a monthly fee and some have a free plan, so check the price before you commit. Step 3 tells you which routes your Shopify plan allows.
   output:
     - name: "STEP 1: READINESS"
       contains: Your verdict, stage, smallest lift worth shipping, visitors and weeks needed, main number and guardrails, and a score out of 100.

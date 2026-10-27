@@ -10,6 +10,8 @@ explain: |
   A unit plan built around one real event or puzzle that no single subject can explain alone, so each subject has to contribute. It follows the phenomenon approach from the Finnish national curriculum.
 
   You name something like water quality in a local river. The skill maps what science, geography, maths and civics each add, marks the points where they must connect, and lays out a pathway students follow as they ask and answer their own questions. It ends with an assessment that tests combined understanding. The aim is real integration, not subjects stitched together by the teacher. It suits teachers planning cross-subject work.
+
+  This is Gareth Manning's skill, renamed. Licence: CC BY-SA 4.0 (see the LICENSE file). If you share a changed copy, credit him and use the same licence.
 when:
   - You want a unit that pulls several subjects into one question.
   - A local event is in the news and you want to teach from it.
@@ -32,6 +34,7 @@ you_get:
   - A student inquiry pathway
   - An assessment for combined understanding
 how_to_use:
+  - Before you start, gather four things: the real event or puzzle, the subjects it draws on, the year level and the length of the unit.
   - Open Claude, ChatGPT or Gemini. Paste the skill text into a new chat. No code, files or paid tools are needed.
   - Add your event or puzzle and the subjects it draws on. The skill text has fields written like {{phenomenon}}. Replace each with your own words, or let your AI fill them in from your message.
   - Add your year level, curriculum goals and unit length if you have them.

@@ -130,9 +130,9 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Shopify", why: "Its customer and order reports can show first-order subscribers against one-time buyers."}
-    - {name: "Recharge", why: "A Shopify subscription app that supports plans, gifts at set order counts and cohort reports."}
-    - {name: "Klaviyo", why: "Email and SMS flows that repeat the offer and the gift in the billing reminder."}
+    - {name: "Shopify", why: "Paid plan needed. Its customer and order reports can show first-order subscribers against one-time buyers."}
+    - {name: "Recharge", why: "Paid. A Shopify subscription app that supports plans, gifts at set order counts and cohort reports."}
+    - {name: "Klaviyo", why: "Paid email service. Email and SMS flows that repeat the offer and the gift in the billing reminder."}
   inputs:
     - "Month-3 and month-6 value for subscribers and one-time buyers"
     - "Your subscription app's list of what it can do"

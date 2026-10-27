@@ -7,9 +7,11 @@ job: make-video-ads
 headline: AI video shot planner
 subhead: "A shot list and one ready prompt per shot for your AI video, plus a plan to fix clips that came out wrong. Most failed clips break for dull reasons: two actions in one clip, no camera move, a changing subject, or a mood instead of an image."
 explain: |
-  A shot list and one ready prompt per shot for your AI video, plus a plan to fix clips that came out wrong. Most failed clips break for dull reasons: two actions in one clip, no camera move, a changing subject, or a mood instead of an image.
+  Start by typing your video idea in one line. You get back a shot list and a prompt for every shot.
 
-  Tell it your idea in a line. It asks three questions at most, then splits the video into short shots with a prompt for each. It runs three modes. Plan builds the shot list. Fix rewrites a prompt that is failing. Review looks at a bad clip and names the one change before the next try. It plans only, it does not make video.
+  It asks three questions at most, then splits the video into short shots with a prompt for each. It runs three modes. Plan builds the shot list. Fix rewrites a prompt that is failing. Review looks at a bad clip and names the one change before the next try. It plans only, it does not make video.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (HEOJUNFO) says MIT. Credit goes to HEOJUNFO and sickn33.
 when:
   - You have a video idea and need to turn it into clips an AI model can make.
   - Your video prompt keeps producing the wrong result.

@@ -36,7 +36,9 @@ how_to_use:
   - Ask your AI to write the rules file. In Claude Code, save it as CLAUDE.md in the top folder of your project.
   - Start a new session. Your AI now reads the rules file first. Give it the spec and files for one task.
   - Run the Verification checklist from the skill after the first few tasks. Reset the session when answers drift.
-  - No coding tool? Paste the skill into Claude, ChatGPT or Gemini and ask for the rules file. Then paste it at the start of each new chat.
+  - No coding tool? Paste the skill into Claude, ChatGPT or Gemini and ask for the rules file. Then paste it at the start of each new chat. A free chat plan is enough for this.
+  - Claude Code and the MCP servers named in the optional sections can need a paid plan or an API key. You can skip them. The rules file works without them.
+  - When the checks pass, keep the rules file in version control. Update it each time your AI repeats a mistake.
 output_sample:
   input:
     - A short description of your project

@@ -7,7 +7,7 @@ role: check
 job: analysis
 level: advanced
 inputs:
-  - {type: source_text, required: false}
+  - {type: financial_statements, required: false}
   - {type: audit_report, required: true}
 outputs:
   - {type: audit_report}

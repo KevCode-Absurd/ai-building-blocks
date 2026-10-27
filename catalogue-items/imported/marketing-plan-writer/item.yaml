@@ -10,7 +10,7 @@ level: intermediate
 inputs:
   - type: brand_brain
     required: false
-  - type: brief
+  - type: question
     required: true
   - type: audit_report
     required: false

@@ -22,6 +22,8 @@ NOTE     [Jobs]: Error "EACCES:13" leaks an errno at the user surface; "start
 Verdict: CONCERNS — fix CRITICAL before merge.
 ```
 
+The example is an illustration, not a real review. Its sources (TED 2016, WWDC 1997) match entries in `references/persona_principles.md`. In your own reviews, take every source from that file, and check any source your AI cites against it.
+
 ## Problem
 
 Abstract adversarial review ("act as a saboteur") produces generic findings — the model imagines what a reviewer *might* say. This skill grounds each lens in a **real, sourced engineering philosophy** documented in [`references/persona_principles.md`](references/persona_principles.md): what Ken Thompson actually argued about trust, what Linus actually demonstrated about good taste — not what an AI imagines.

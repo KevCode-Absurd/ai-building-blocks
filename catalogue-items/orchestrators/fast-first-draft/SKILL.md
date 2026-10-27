@@ -9,6 +9,8 @@ Tell it your idea. Get a what-if situation, a daily word plan, scene details and
 
 This workflow chains 4 skills. It is inspired by Stephen King's On Writing: A Memoir of the Craft. The steps and their order are ours. You run them in order and save each result. Step 3 builds on step 1's situation, not step 2's plan.
 
+**When not to use it:** you want to outline before you write, you already have a draft to edit (use the [Manuscript revision planner](https://useaiblocks.com/workflows/draft-revision)), or you are writing nonfiction.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -30,6 +32,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+This list replaces the general one above. The "question" is your story idea.
 - **Your story idea** (required): even one sentence or a mood.
 - **The length you are aiming for** (required): in words or pages. Say if it is a guess.
 - **Your writing days and minutes** (required): which days you can write per week and how long you have on each, so the daily word count fits your worst day.
@@ -50,9 +53,9 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 3. **Pick the scene details.** Use the skill `scene-detail-picker`. Give it step 1's situation (not step 2's plan) and the places your first scenes happen. It makes a short detail sheet for each place, so the draft stays in the story.
 4. **Write the draft without an outline.** Use the skill `unplotted-first-draft-writer`. Give it step 1's situation, step 2's plan and step 3's detail sheet. Add a page of your own writing if you want your voice. It writes today's pages in order, plus the facts sheet to carry into tomorrow. The 700-word limit that applies to notes and summaries does not apply here: write the full daily word count.
 
-Pause here: Repeat the draft step each day with your facts sheet until the draft is done. Keep the door shut and show nobody. Then put it in a drawer for six weeks and run the revise workflow.
+Pause here: Repeat step 4 each day. Paste the facts sheet and the last paragraph from the day before, and ask for the next day's pages at the daily word count from step 2. Stop when the pages reach your target length or the finish date. Keep the door shut and show nobody. Then put the draft in a drawer for six weeks and run the [Manuscript revision planner](https://useaiblocks.com/workflows/draft-revision).
 
-5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then a `CHECKS MISSED` list (or "none").
 
 ## What you hand back
 4 step files and the summary. Step 4's file holds the day's draft pages and the facts sheet to carry into tomorrow.
@@ -62,7 +65,7 @@ Pause here: Repeat the draft step each day with your facts sheet until the draft
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [World detail consistency checker](https://useaiblocks.com/skills/world-detail-consistency-checker). It takes the draft.
 - The [Story theme and scene reviewer](https://useaiblocks.com/skills/hidden-theme-finder). It takes the draft.
-- The [Daily writing session planner](https://useaiblocks.com/skills/daily-writing-session-planner).
+- The [Scene suspense reviewer](https://useaiblocks.com/skills/page-pull-scene-checker). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -51,6 +51,7 @@ how_to_use:
   - Read the data check and the option comparison first. Make sure the recommended option fits your budget and skills.
   - Share the plan with the engineer who will build it. It does not train a model, run code or deploy anything.
   - Replace every number marked ASSUMED with your own before you commit to a launch date.
+  - Next, take the watch plan to the AI agent monitoring planner to set up alerts. If the feature answers from your own documents, use the RAG Pipeline Engineer agent.
 how_it_works:
   - title: Pin down the goal and the data
     text: It restates the feature and the user, asks what good looks like, and checks what data exists, how clean it is and what is private.

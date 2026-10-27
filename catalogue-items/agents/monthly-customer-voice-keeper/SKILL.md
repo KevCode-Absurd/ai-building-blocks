@@ -81,9 +81,10 @@ If the owner approves a brand file change in clear words, make only that change,
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). It takes the brand brain.
-- The [Customer motivation profiler](https://useaiblocks.com/skills/customer-motivation-profiler). It takes the brand brain.
-- The [Ideal customer profile writer](https://useaiblocks.com/skills/ideal-customer-profile-writer). It takes the brand brain.
+- The [Buyer awareness headline brief writer](https://useaiblocks.com/skills/market-stage-reader). It takes the brand brain.
+- The [Customer research analyst](https://useaiblocks.com/skills/customer-research-analyst). It takes the brand brain.
 - **Write the ad copy** with the [Winning ad variant writer](https://useaiblocks.com/skills/winning-ad-variant-writer). It takes the brand brain.
+- The [Repeat purchase improvement reviewer](https://useaiblocks.com/skills/monthly-repeat-buyer-keeper). It takes the brand brain.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

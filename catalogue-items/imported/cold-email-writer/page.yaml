@@ -5,9 +5,9 @@ name: Cold email writer
 summary: Write cold emails, follow-ups and a safe sending setup. Give it your buyer and offer, and get a cold email sequence built to win replies.
 job: write-emails
 headline: Cold email writer
-subhead: Cold emails that read like a sharp person wrote them, plus follow-ups and a sending setup that keeps you out of spam. The goal is replies that turn into meetings.
+subhead: Cold emails that read like a sharp person wrote them, plus follow-ups and a sending setup that lowers the chance of landing in spam. No setup can promise inbox placement. The goal is replies that turn into meetings.
 explain: |
-  Cold emails that read like a sharp person wrote them, plus follow-ups and a sending setup that keeps you out of spam. The goal is replies that turn into meetings. This is Corey Haines' public cold-email skill, shared under the MIT licence.
+  Cold emails that read like a sharp person wrote them, plus follow-ups and a sending setup that keeps you out of spam. The goal is replies that turn into meetings. This is an MIT-licensed copy of Corey Haines' public cold-email skill. Our name and page text are the only changes. Cold email is regulated: rules such as CAN-SPAM in the US and GDPR in Europe differ by country, so check yours before you send.
 
   It asks who you are writing to, what outcome you want, what value you offer, your proof, and any signal such as funding, hiring or a recent post. If you have little, it still writes and tells you what would make it better. It then covers the follow-up sequence, how to work with other channels, and how to handle replies. It checks your product marketing notes first, so you do not repeat yourself.
 when:
@@ -16,9 +16,9 @@ when:
   - You have a buyer list and a clear offer.
   - You need follow-ups that do not sound pushy.
 not_for:
-  - "You write emails to customers or sign-ups you already have: use the emails skill, which covers lifecycle email."
-  - "You need a list of prospects first: use the prospecting skill to build and check the list, then come back."
-  - "You want a call script or voicemail: use the sales-enablement skill."
+  - "You write emails to customers or sign-ups you already have: use email-sequence-writer, which covers lifecycle email."
+  - "You need a list of prospects first: use prospect-list-builder to build and check the list, then come back."
+  - "You want a call script or voicemail: use sales-collateral-writer for call and sales material."
 you_give:
   - Who you are writing to
   - Your offer and proof
@@ -31,7 +31,7 @@ you_get:
   - Sending setup advice
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions. If you have a product marketing notes file, add it too.
-  - Tell your AI who you are writing to, what you want, your offer and your proof.
+  - "Do these in order: set up a separate sending domain with its DNS records, check your list, then write the first email. Tell your AI who you are writing to, what you want, your offer and your proof."
   - Add any signals about the prospect, like funding, hiring or a recent post (optional).
   - Read the emails aloud. Cut any line that sounds like marketing copy.
   - Before you send, set up a separate sending domain and check your list. This needs a paid sending tool such as Instantly, lemlist or Outreach.

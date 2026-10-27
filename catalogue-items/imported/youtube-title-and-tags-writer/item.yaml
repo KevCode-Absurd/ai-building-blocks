@@ -10,6 +10,8 @@ level: beginner
 inputs:
   - type: brief
     required: true
+  - type: transcript
+    required: false
 outputs:
   - type: copy_draft
 uses: []

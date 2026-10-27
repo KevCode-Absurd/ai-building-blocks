@@ -9,12 +9,14 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: incident_record
     required: true
   - type: source_text
     required: false
   - type: copy_draft
     required: false
+  - type: question
+    required: true
 outputs:
   - type: document
   - type: copy_draft

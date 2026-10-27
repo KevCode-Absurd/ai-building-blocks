@@ -34,7 +34,7 @@ when:
   - You built platform tools and want to know if teams use them.
 not_for:
   - You need one build and deploy pipeline for one project. Use the DevOps Automator agent.
-  - You need to keep a live service up, with alerts and recovery goals. Use the SRE agent.
+  - You need to keep a live service up, with alerts and recovery goals. Use the SRE (Site Reliability Engineer) agent.
   - You are designing the structure of a single app. Use the Software Architect agent.
 you_give:
   - A short list of what slows your developers down, such as tickets and wait times

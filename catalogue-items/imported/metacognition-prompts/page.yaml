@@ -10,6 +10,8 @@ explain: |
   A set of questions that students can ask themselves before, during and after a task, so they notice when they are lost and fix it without waiting for you. You describe the task and the class, and the prompts are tuned to both.
 
   The prompts come in four kinds. Planning prompts help pick a strategy and a first step. Monitoring prompts test whether they really understand or just recognise the words. Evaluating prompts check the answer against the criteria. Debugging prompts locate where understanding broke. They are worded for the age group and the subject, and with no phase given, you get all three phases, weighted to where they matter most.
+
+  Licence: this is a copy of Gareth Manning's skill, shared under CC BY-SA 4.0 (see the LICENSE file). If you change it and share it, share your version under the same licence. Credit goes to Gareth Manning.
 when:
   - Students say they understand, then cannot do the problem.
   - You want a card of self-check questions for word problems.
@@ -32,7 +34,7 @@ you_get:
   - Prompts for before, during and after
   - Tips on how to introduce them
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
+  - Before you start, have ready: the task sheet your students are doing, the spot where your class most often gets stuck, and the year group. Then open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
   - Paste in the task, the year group and the skill you want to target.
   - Run it and read the prompts. Cut any that do not fit your class.
   - Print or share the student card.

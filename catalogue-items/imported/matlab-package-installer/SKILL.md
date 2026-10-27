@@ -203,6 +203,8 @@ reload(proj)                                          % re-resolve after editing
 runChecks(proj)                                       % treat any Missing/Unresolved as failure
 ```
 
+If an earlier step set up or changed a MATLAB project, read the `[dependencies]` section of its `matlab.toml` to see which packages it needs.
+
 To **read** declared package dependencies, parse the `[dependencies]` section directly,
 then cross-reference `mpmlist` for install status — do not open the project just to list
 them. After editing, `proj.ProjectDependencies` should show resolved package identity and

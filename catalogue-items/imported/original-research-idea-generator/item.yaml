@@ -12,6 +12,8 @@ inputs:
     required: true
 outputs:
   - type: shortlist
+  - type: idea
+    required: true
 uses: []
 origin: imported
 source:

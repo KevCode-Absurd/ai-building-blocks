@@ -36,7 +36,8 @@ how_to_use:
   - Paste or describe your training examples. Your AI will put them in the right JSON format.
   - For gated models like Meta-Llama, sign in to Hugging Face, accept the licence and give your access token first.
   - Run the commands your AI gives you on your own computer. This needs Python, LitGPT and a GPU. A chat window cannot run them for you, so paste any error back and ask for a fix.
-  - Two helper scripts named in the skill are not in this folder. Your AI will tell you what to do by hand for the dataset and GGUF steps.
+  - Two helper scripts named in the skill are not in this folder. Your AI will tell you what to do by hand for the pretraining data and GGUF steps. Fine-tuning from a JSON file does not need them.
+  - Next, chat with the tuned model, then merge the LoRA weights if you want one file to deploy.
   - Check that your tuned model appears in the out folder, then try the chat steps.
 output_sample:
   input:

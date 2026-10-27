@@ -28,8 +28,8 @@ test("hero is the headline, the mono subhead, and two buttons, How it works a pl
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("Use AI like the top 1%");
   await expect(page.locator(".hero .lede")).toContainText("Turn hours of work into minutes");
   expect(await page.locator(".hero .lede").evaluate((el) => getComputedStyle(el).fontFamily)).toContain("JetBrains Mono");
-  await expect(page.locator(".hero").getByRole("link")).toHaveText(["Browse the blocks", "Build a workflow"]);
-  await expect(page.locator(".hero-in > *")).toHaveCount(3);
+  await expect(page.locator(".hero").getByRole("link")).toHaveText(["Start with a task", "Build a workflow", "Connect your AI once"]);
+  await expect(page.locator(".hero-in > *")).toHaveCount(4);
   await expect(page.locator(".nav a").first()).toHaveText("How it works");
   await expect(page.getByTestId("home-goal")).toHaveCount(0);
   const globe = page.getByTestId("globe");
@@ -349,7 +349,7 @@ test("the workflow download is a complete, repeatable pack", async ({ page }, in
   const files = unzipSync(new Uint8Array(a.bytes));
   const names = Object.keys(files);
   expect(names).toEqual(expect.arrayContaining(["HANDOFF.md", "workflow.json", "README.txt", "skills/accurate-product-image-ad-maker/SKILL.md"]));
-  expect(names, "no about-me file was given").not.toContain("about-me.md");
+  expect(names, "no me.md was given").not.toContain("me.md");
   const wf = JSON.parse(strFromU8(files["workflow.json"]));
   const catalogue = await (await protectedGet(page, "/data/blocks.json")).json();
   const bySlug = new Map<string, { uses?: string[]; steps?: (string | [string, string])[] }>(catalogue.blocks.map((b: { slug: string }) => [b.slug, b]));
@@ -613,40 +613,42 @@ const fillBusiness = async (page: Page) => {
 test("about you: typed once, kept, and added to every copy and download", async ({ page, context }, info) => {
   await context.grantPermissions(["clipboard-read", "clipboard-write"]);
   await page.goto(`/prompts/${MODEL}`);
-  await expect(page.getByTestId("business-note")).toContainText("Use the same facts across your work");
+  await expect(page.getByTestId("business-note")).toContainText("Add your me.md so this fits you");
   await page.getByTestId("business-add").click();
   await expect(page.getByTestId("business-form")).toBeVisible();
   await page.keyboard.press("Escape");
   await fillBusiness(page);
   await expect(page.getByTestId("open-business").locator(".dot")).toBeVisible();
   await page.reload();
-  await expect(page.getByTestId("business-note")).toContainText("Your saved context is included");
+  await expect(page.getByTestId("business-note")).toContainText("Your me.md is included");
 
   // The skill copies with the details after it.
   await page.getByTestId("copy-skill").click();
   const copied = (await page.evaluate(() => navigator.clipboard.readText())).replace(/\r\n/g, "\n");
   expect(copied).toMatch(/^---\nname: /);
-  expect(copied).toContain("## Your saved context");
+  expect(copied).toContain("## Your me.md (the parts this task needs)");
+  expect(copied, "ad copy is sent as a business").toContain("**Voice:** the brand's.");
   expect(copied).toContain("- **Name:** Sprout");
   expect(copied).toContain("- **Who it's for:** Adults who gave up on greens powders");
-  expect(copied, "anything else keeps its own lines").toContain("**Anything else:**\n\nWe ship to the US only.\nOur busy season is January.");
+  expect(copied, "an ad task leaves out the Preferences part").not.toContain("Our busy season is January.");
   // The composer copies them too, even with nothing else typed.
   const box = page.getByTestId("composer");
   await expect(box).toContainText("for Sprout is added too");
   await box.getByTestId("composer-copy").click();
   expect(await page.evaluate(() => navigator.clipboard.readText())).toContain("- **What I do or sell:** Greens gummies in daily packs");
 
-  // A workflow download carries them in about-me.md, and HANDOFF.md says to read it first.
+  // A workflow download carries the parts it needs in me.md, and HANDOFF.md says to read it first.
   await page.goto(`/workflows/${WORKFLOW}`);
   await page.getByTestId("block-page").getByTestId("download-handoff").click();
-  await expect(page.getByTestId("needs")).toContainText("Your saved context goes in the folder too");
+  await expect(page.getByTestId("needs")).toContainText("your me.md this workflow needs are included");
   const [dl] = await Promise.all([page.waitForEvent("download"), page.getByTestId("needs-download").click()]);
   const path = info.outputPath(dl.suggestedFilename());
   await dl.saveAs(path);
   const files = unzipSync(new Uint8Array(fs.readFileSync(path)));
-  expect(strFromU8(files["about-me.md"])).toContain("- **Name:** Sprout");
-  expect(strFromU8(files["HANDOFF.md"])).toContain("Read `about-me.md` first");
-  expect(strFromU8(files["README.txt"])).toContain("about-me.md");
+  expect(strFromU8(files["me.md"])).toContain("- **Name:** Sprout");
+  expect(strFromU8(files["HANDOFF.md"])).toContain("Read `me.md` first");
+  expect(JSON.parse(strFromU8(files["inputs.json"])).supplied_context[0].path).toBe("me.md");
+  expect(strFromU8(files["README.txt"])).toContain("me.md");
 });
 
 test("laptop width: the builder bar stays on one line, and the step panel never covers Download", async ({ page }) => {

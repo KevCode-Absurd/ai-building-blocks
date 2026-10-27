@@ -13,6 +13,8 @@ inputs:
 outputs:
   - type: spreadsheet
   - type: document
+  - type: financial_statements
+    required: true
 uses: []
 origin: imported
 source:

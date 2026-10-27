@@ -8,9 +8,10 @@ role: check
 job: ops
 level: advanced
 inputs:
-  - type: spreadsheet
+  - type: dataset
     required: true
 outputs:
+  - type: dataset
   - type: spreadsheet
   - type: audit_report
 uses: []

@@ -72,9 +72,9 @@ CHECKS MISSED: <each check still missed, or none>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Competitor-inspired video script writer](https://useaiblocks.com/skills/competitor-idea-video-script).
-- **Make video ads** with the [Video ad script point-of-view editor](https://useaiblocks.com/skills/video-script-pov-editor). It takes the script.
 - **Make video ads** with the [Skeleton video clip prompt writer](https://useaiblocks.com/skills/skeleton-video-prompts). It takes the script.
+- **Make video ads** with the [Video ad script point-of-view editor](https://useaiblocks.com/skills/video-script-pov-editor). It takes the script.
+- **Make video ads** with the [3D how-it-works video prompt writer](https://useaiblocks.com/skills/3d-explainer-video-prompts). It takes the script.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

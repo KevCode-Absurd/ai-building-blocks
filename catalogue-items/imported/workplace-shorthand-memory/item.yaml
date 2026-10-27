@@ -11,8 +11,10 @@ level: intermediate
 inputs:
   - type: question
     required: true
+  - type: tool_connection
+    required: false
 outputs:
-  - type: skill_files
+  - type: document
 uses: []
 origin: imported
 source:

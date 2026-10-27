@@ -9,6 +9,9 @@ level: intermediate
 inputs:
   - {type: brief, required: true}
 outputs:
+  - {type: design_direction}
+  - {type: page_layout_spec}
+  - {type: web_page}
   - {type: test_report}
 uses: [web-font-pairing-picker, page-grid-and-type-planner, website-art-director, web-app-tester]
 steps:

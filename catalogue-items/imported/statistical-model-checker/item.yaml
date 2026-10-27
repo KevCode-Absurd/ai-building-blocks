@@ -10,6 +10,8 @@ level: expert
 inputs:
   - type: code_change
     required: true
+  - type: spreadsheet
+    required: false
 outputs:
   - type: audit_report
     required: true

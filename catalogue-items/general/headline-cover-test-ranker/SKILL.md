@@ -19,7 +19,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **Hooks** with the [Ad headline variation writer](https://useaiblocks.com/skills/typed-headline-batch-writer). It uses your buying reasons and brand brain and your offer.
+2. **Hooks** with the [Ad headline variation writer](https://useaiblocks.com/skills/typed-headline-batch-writer). It uses your buying reasons and brand brain and offer.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `proof-and-claims.md`, `offers.md`, `voice-and-look.md`. Take the claims list with each claim's status, the offer terms word for word, and the voice rules. Source notes and rejected ideas never go into the result.
@@ -72,10 +72,10 @@ A table: each headline, the stranger sentence, its five scores, its total and an
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Plan what to test** with the [Headline test tracking planner](https://useaiblocks.com/skills/keyed-headline-test-planner). It takes the shortlist.
-- The [Headline option writer](https://useaiblocks.com/skills/headline-option-writer).
+- The [Ad response copy editor](https://useaiblocks.com/skills/reply-getting-fix-writer). It takes the audit report.
 - **Make image ads** with the [Single image ad planner](https://useaiblocks.com/skills/single-image-ad-planner). It takes the shortlist.
 - The [Theme-based ad copy set writer](https://useaiblocks.com/skills/theme-based-ad-copy-set-writer). It takes the audit report.
-- The [Ad response copy editor](https://useaiblocks.com/skills/reply-getting-fix-writer). It takes the audit report.
+- The [Product weakness line writer](https://useaiblocks.com/skills/candid-line-writer). It takes the shortlist.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -11,6 +11,8 @@ argument-hint: "[describe the proposed mark, goods/services, and jurisdictions â
 
 # /clearance
 
+**Using this on AI Blocks:** the plugin config folder, the matter workspace steps and the `/ip-legal:` commands named below are not part of this item. If the config file is not there, do not stop. Ask the user to type the name, the goods or services, the countries and the look of the name, and run in provisional mode. Skip the matter workspace and work-product header steps. The core check is the eight steps in the Instructions list.
+
 **This is a triage, not a clearance opinion.** A trademark clearance opinion
 requires a full professional search and registered trademark counsel's
 judgment. A "no obvious conflicts" result means the triage

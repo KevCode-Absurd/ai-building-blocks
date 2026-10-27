@@ -13,6 +13,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **Financial statements** (yours): the income statement, balance sheet and cash flow statement, for the periods you have.
 
 **Makes it better (optional):**
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
@@ -24,7 +25,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for spreadsheet, your results, audit report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for spreadsheet, financial statements, your results. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -46,20 +47,20 @@ A bookkeeper able to tag costs is needed to build it fully. Moving fulfilment st
 
 ## Steps
 1. **Pick the layout and keep it.** Offer both and ask the person to choose one for every month.
-   - Layout A: product COGS (making the product, import freight, duties and taxes, up to the warehouse) and fulfilment (pick and pack, packing materials, 3PL charges, shipping to the customer, merchant fees) as two buckets. Gross margin = revenue minus product COGS. Contribution margin = revenue minus product COGS minus fulfilment.
+   - Layout A: product COGS (making the product, import freight, duties and taxes, up to the warehouse) and fulfilment (pick and pack, packing materials, 3PL charges, shipping to the customer, merchant fees) as two buckets. Gross margin = revenue minus product COGS. Margin after fulfilment = gross margin minus fulfilment. The "contribution margin" line in the table is always after marketing (see step 6).
    - Layout B: one cost of delivery bucket that holds all of those.
    The sources disagree here: one keeps only product cost, inbound freight and duties in COGS; others fold fulfilment, shipping and payment fees into cost of delivery. Both work; mixing them across months does not.
 2. **Revenue bridge.** Start from gross revenue (product sales; tax collected stays out), minus discounts, refunds and chargebacks, plus shipping collected, equals net revenue. Show every step, because a revenue move can hide in refunds or discounts, not demand.
-3. **Cost of delivery.** Everything variable: product cost, import duty, inbound freight, shipping to the customer, pick and pack, payment fees, and an allowance for refunds and discounts. Payment fees are not operating expenses because they move with revenue. If fulfilment staff are on payroll, move them in: daily wage over parcels per day gives a per-order cost (one speaker's example: 400 dollars over 100 parcels is 4 dollars).
+3. **Cost of delivery.** Everything variable: product cost, import duty, inbound freight, shipping to the customer, pick and pack, payment fees, and an allowance for refunds and discounts. Payment fees are not operating expenses because they move with revenue. If fulfilment staff are on payroll, move them in: daily wage over parcels per day gives a per-order cost: [DAILY WAGE] / [PARCELS PER DAY] = [COST PER ORDER].
 4. **Marketing.** Paid ads, influencer fees and events. One speaker keeps this to pure variable media only; another puts content spend that flexes with the season (agencies, short-term hires) here, while a fixed in-house team goes to operating expenses. Pick one rule and hold it every month.
-5. **Operating expenses.** Everything left: people, software, office. One speaker's reference: a lean store sits at 10 to 12 percent of revenue and over 20 percent is hard to win with. Another notes that seven-figure founders let this grow faster than revenue, so profit stays flat. Label both as opinions.
-6. **Margins.** Contribution margin = revenue minus cost of delivery minus marketing. In Layout A also show gross margin and post-marketing contribution margin (contribution margin minus marketing). Operating profit = contribution margin minus operating expenses. Keep loan interest below operating profit; a buyer values profit before interest. Net profit comes after interest and tax.
-7. **Percent and per order.** Divide every line by net revenue and by orders so a shift of one or two points stands out. In one speaker's example, fulfilment moved from about 30 to 32 percent of revenue as shipping rose. Use a three-month trailing average when months bounce.
-8. **CAC.** CAC = marketing spend divided by new-customer orders only, because returning orders come from email and need no paid spend. Blended CAC is directional only. Compare marketing per new order with contribution margin per order; in one speaker's example, the one month where marketing per new order beat contribution margin was the one month with an operating loss.
-9. **Back-solve the target.** Net profit target plus operating expenses percent gives the contribution margin to hit. Example from one speaker: 20 percent net plus 15 percent operating expenses needs 35 percent. That is a worked example, not a benchmark.
+5. **Operating expenses.** Everything left: people, software, office. One speaker gives a reference range for a lean store and warns that a high share is hard to win with. Another notes that seven-figure founders let this grow faster than revenue, so profit stays flat. These are unchecked opinions from large-brand speakers. Compare with your own past months and your accountant's view, not with their numbers.
+6. **Margins.** Contribution margin = revenue minus cost of delivery minus marketing. In Layout A, cost of delivery is product COGS plus fulfilment, and you also show gross margin and margin after fulfilment as extra lines. Operating profit = contribution margin minus operating expenses. Keep loan interest below operating profit; a buyer values profit before interest. The table stops at net profit before tax. Income tax is outside this layout, so ask the accountant for it.
+7. **Percent and per order.** Divide every line by net revenue and by orders so a shift of one or two points stands out. Watch for a line that creeps up by a point or two (for example fulfilment moving from [LAST MONTH %] to [THIS MONTH %] of revenue as shipping rose). Use a three-month trailing average when months bounce.
+8. **CAC.** CAC = marketing spend divided by new-customer orders only, because returning orders come from email and need no paid spend. Blended CAC is directional only. Compare marketing per new order with contribution margin per order; a month where marketing per new order is above contribution margin per order is a warning sign for an operating loss.
+9. **Back-solve the target.** Net profit target plus operating expenses percent gives the contribution margin to hit. Sum: [NET PROFIT TARGET %] + [OPERATING EXPENSES %] = [CONTRIBUTION MARGIN NEEDED %].
 10. **Troubleshoot upward.** If a line misses its target, look at the lines above it. A profit miss comes from operating expenses, marketing or delivery. A contribution miss comes from marketing or delivery. A gross margin miss comes from discounts, returns or shipping. Rank the bucket to fix first by points of revenue lost.
-11. **Compare with reference ranges, labelled as one speaker's.** Cost of delivery 30 to 40 percent of revenue, product cost 10 to 20 percent, shipping near 10 percent at most, and 15 to 20 percent net as a strong store. These are one agency leader's ranges for large DTC brands. Marketing share differs by model: around half of revenue for a low-repeat hard-goods brand, falling for a high-repeat brand.
-12. **Profit over revenue.** A 5 million dollar brand at 20 percent net (1 million profit) beats a 10 million dollar brand at 5 percent. Revenue growth does not automatically widen margin.
+11. **Compare with reference ranges only if the person asks, labelled as one speaker's.** One agency leader gave ranges for each bucket for large DTC brands (cost of delivery, product cost, shipping, net profit). They are unchecked opinions for much bigger stores. Verify them against your own accounts and your accountant before relying on them. Marketing share differs by model: higher for a low-repeat hard-goods brand, lower for a high-repeat brand.
+12. **Profit over revenue.** A smaller brand with a higher net margin can earn more profit than a bigger brand with a thin margin. Revenue growth does not automatically widen margin.
 
 If the person already has a new-customer profit dashboard, make sure the CAC definition matches.
 
@@ -80,7 +81,7 @@ Contribution margin
 Operating expenses
 Operating profit
 Interest
-Net profit
+Net profit (before tax)
 
 CAC  marketing on new-customer orders <n> / contribution margin per order <n>
 

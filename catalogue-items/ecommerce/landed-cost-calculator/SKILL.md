@@ -94,9 +94,9 @@ MISSING: <what you did not give>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Sellable unit cost calculator](https://useaiblocks.com/prompts/cost-per-sellable-unit-finder).
 - The [Factory sample revision reviewer](https://useaiblocks.com/skills/product-sample-approval-loop).
-- The [Pre-shipment inspection brief writer](https://useaiblocks.com/skills/pre-shipment-inspection-brief-writer).
+- The [Supplier shortlist vetter](https://useaiblocks.com/skills/factory-shortlist-vetter). It takes the audit report.
+- The [Factory product brief writer](https://useaiblocks.com/skills/product-tech-pack-writer). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

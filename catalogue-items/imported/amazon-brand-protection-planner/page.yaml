@@ -9,7 +9,7 @@ subhead: A set of checks and ready complaint templates to protect your Amazon br
 explain: |
   A set of checks and ready complaint templates to protect your Amazon brand from hijackers, fakes and sellers breaking your price rules. It works to risk levels, so you know what needs action in 24 hours and what only needs watching.
 
-  You give the brand name and listings. The skill watches four signals: new sellers appearing on your listing, prices below your minimum, review wording that hints at counterfeits, and your trademark used in other sellers' titles. Each gets a risk rating of high, medium or low. It supplies a Brand Registry complaint, a cease and desist letter and a guide to making a test buy for evidence. Check each letter with a lawyer before sending.
+  You give the brand name and listings. It does not watch Amazon for you. It checks four signals in the data you paste in: new sellers appearing on your listing, prices below your minimum, review wording that hints at counterfeits, and your trademark used in other sellers' titles. Each gets a risk rating of high, medium or low. It supplies a Brand Registry complaint, a cease and desist letter and a guide to making a test buy for evidence. Check each letter with a lawyer before sending.
 when:
   - Another seller has suddenly joined your listing.
   - Reviews say the product is fake or different from the photos.
@@ -31,8 +31,9 @@ you_get:
   - A test buy guide for evidence
 how_to_use:
   - Gather your brand name, trademark number and the listing IDs (ASINs) you want to protect. Add your minimum price and approved sellers if you have them.
-  - Note that the skill has no data feed and does not watch your listings. You bring the seller, price and review details yourself.
-  - Open the skill in an AI that can run code. The detector script runs only on built-in sample data until your AI replaces it with your brand, listings, sellers and review text.
+  - Note that the skill has no data feed, sends no alerts and does not watch your listings. It only checks the seller, price and review details you bring.
+  - Open the skill in an AI that can run code. The detector script runs only on built-in sample data. Ask your AI to open scripts/detector.py, find get_demo_data(), and replace the brand, listings, sellers and review text there with yours before it runs.
+  - A review that says fake is weak evidence. Confirm with a test buy before you send any complaint.
   - Ask your AI to run detector.py on your details. Read the risk rating for each listing. High means act within 24 hours.
   - "Run the templates script for the letter you need: complaint, cease-desist or testbuy. When a listing rates high, send the Brand Registry complaint first. Use the cease and desist letter only if you know who the seller is."
   - Have a lawyer check each letter before you send it. Treat the sample report as made-up example data.

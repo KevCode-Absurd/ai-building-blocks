@@ -10,10 +10,9 @@ level: intermediate
 inputs:
   - type: question
     required: true
-  - type: source_text
+  - type: document
     required: false
 outputs:
-  - type: brief
   - type: audit_report
 uses: []
 steps: []

@@ -24,6 +24,14 @@ This skill adapts material from the community repository
 [thecsdoctor/brendangregg-use-tsa-skill](https://github.com/thecsdoctor/brendangregg-use-tsa-skill)
 (full checklists, reference library, and report templates live there).
 
+## When not to use
+
+- Bugs in app logic where nothing is slow: read the code and debug it instead.
+- Hosts that are not Linux: the commands below are Linux tools, so ask a systems engineer for the matching ones.
+- Applying fixes for the user: this skill diagnoses first. Any fix needs the user's approval.
+
+Before you run any command on a live server yourself, show the user the command and wait for a yes. This applies to every command, not only the fixes. If the user cannot run commands, ask them to run each one and paste the output.
+
 ## When to Use This Skill
 
 - Use when a server, VM, or container is "slow" and the cause is unknown
@@ -81,6 +89,8 @@ Apply the cheapest effective fix (mantra order: don't do it → cache it → do 
 Produce the report the situation calls for — triage note, RCA report, or full postmortem (summary, impact, root cause, detection, investigation log, evidence table, resolution, prevention actions). Absolute dates everywhere; unknowns marked as known-unknowns.
 
 ## Examples
+
+All server names, times and figures in these two examples are made up to show the method. Never reuse them as real findings.
 
 ### Example 1: "This server feels slow"
 

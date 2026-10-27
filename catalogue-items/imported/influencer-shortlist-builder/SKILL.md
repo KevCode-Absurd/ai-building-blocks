@@ -74,7 +74,7 @@ Fetch the Actor's input schema and details dynamically using mcpc:
 export $(grep APIFY_TOKEN .env | xargs) && mcpc --json mcp.apify.com --header "Authorization: Bearer $APIFY_TOKEN" tools-call fetch-actor-details actor:="ACTOR_ID" | jq -r ".content"
 ```
 
-The command above puts the token in the command line, which can end up in shell history. If your `mcpc` can read the token from an environment variable or a config file, do that instead. Otherwise run it in a private terminal and clear the history after. Run the scripts from the skill folder so `reference/scripts/run_actor.js` resolves.
+The command above puts the token in the command line, which can end up in shell history. Prefer a method where `mcpc` reads the token from an environment variable or a config file, so it never appears in the command text. If that is not possible, run it in a private terminal, then clear the shell history for that session. Never print the token or paste it into the chat. Run the scripts from the skill folder so `reference/scripts/run_actor.js` resolves.
 
 Replace `ACTOR_ID` with the selected Actor (e.g., `apify/instagram-profile-scraper`).
 

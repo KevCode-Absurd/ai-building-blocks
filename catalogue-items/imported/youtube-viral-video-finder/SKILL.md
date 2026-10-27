@@ -19,21 +19,21 @@ python3 swipe.py collected.json --min 2.0
 ## Collecting the input
 
 You need at least **four videos per channel** or a median means nothing, and the tool will skip the
-channel and tell you it did. Collect them however the user prefers - `yt-dlp --flat-playlist -J`
-against a channel URL is the fastest, the public page works, a manual list works. yt-dlp reads public listings automatically, which may breach YouTube's terms, so make a hand-made list the default and use yt-dlp only if the user accepts that risk.
+channel and tell you it did. **Default: a list the user copies by hand** from each channel's public video page.
+
+If an earlier video search gave a shortlist, use its channels as the ones to collect.
+
+Only if the user wants it faster, and accepts the risk, use yt-dlp. Say this first, in plain words: "yt-dlp reads YouTube automatically, which may breach YouTube's terms of service." Then `yt-dlp --flat-playlist -J` against a channel URL lists the videos. Keep the requests few and slow.
 
 ```json
 [{"channel":"...","title":"...","views":412000,"url":"...","duration":613}]
 ```
 
-**Read, do not scrape.** Prefer a list the user copies by hand. Public listings only, never a logged-in session, never the user's own
-account credentials.
+**Public listings only.** Never use a logged-in session or the user's own account credentials. Copy view counts exactly as shown. Never invent a title, view count or channel.
 
 ## Reading the output
 
-The multiple is the signal. The formula line is a judgement about the TITLE, matched against
-the 21 title formulas in `hooks.json` (that file is not bundled with this item; if you do not have it, name the pattern in plain words, such as a number, a question or a before-and-after) - it is not a claim about why the video worked, and you
-should say so when you present it.
+The multiple is the signal. The formula line is a judgement about the TITLE. The 21-formula list (`hooks.json`) is not bundled with this item, so the tool prints "Unclassified" for every title. In that case name the pattern yourself in plain words, such as a number, a question or a before-and-after. It is a guess about the title, not a claim about why the video worked, and you should say so when you present it.
 
 What to hand back: the top five with their multiples, the formula each used, and the ONE structural
 thing they share. Then the harder line - which of those the user could actually make this week, in
@@ -43,3 +43,5 @@ their voice, with what they have.
 
 Nothing here publishes. This skill writes and you publish. Every output ends in a block the user
 copies, and the last line of every run is the question: **ship it, or change it?**
+
+Next: take the video you chose into a script with `youtube-script-writer`, or sharpen its title with `youtube-title-and-tags-writer`.

@@ -9,6 +9,8 @@ level: intermediate
 inputs:
   - type: brief
     required: true
+  - type: product_photos
+    required: false
 outputs:
   - type: design_direction
     required: true

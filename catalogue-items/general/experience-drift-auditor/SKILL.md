@@ -53,8 +53,8 @@ The details customers notice. Decisions matched to what they removed. The combin
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Program keep-or-cut reviewer](https://useaiblocks.com/skills/program-keep-or-cut-reviewer). It takes the plan.
-- The [First customer launch planner](https://useaiblocks.com/skills/copilot-gtm-0-to-1-launch). It takes the plan.
-- The [Hourly work to product planner](https://useaiblocks.com/skills/hours-to-assets-planner). It takes the plan.
+- The [Product outcome roadmap planner](https://useaiblocks.com/skills/outcome-based-roadmap). It takes the plan.
+- The [Plan failure reviewer](https://useaiblocks.com/skills/failure-first-plan-check). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

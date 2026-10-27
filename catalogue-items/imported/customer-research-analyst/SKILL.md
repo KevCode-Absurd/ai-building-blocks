@@ -35,6 +35,8 @@ Most engagements combine modes. Mine what's already public (Mode 2) before you a
 
 ## Mode 1: Analyzing Existing Research Assets
 
+A document that already sorts raw feedback into groups, such as the output of a feedback pile sorter, counts as an asset too.
+
 ### Asset Types
 
 **Customer interview / sales call transcripts**
@@ -119,6 +121,8 @@ Label every insight with a confidence level before presenting it:
 ## Mode 2: Digital Watering Hole Research
 
 Online communities are where customers speak without a filter. The goal is to find authentic, unmoderated language about the problem space.
+
+**Access and terms.** Use reviews and posts the user pastes or exports first. Only read a public site yourself if the user confirms you have web access and the site's terms and robots rules allow it. Automated scraping can break a site's terms, so never log in, get around a block, or collect personal details. If a site is closed to you, ask the user to copy the text in. SparkToro is a paid tool and is optional.
 
 ### Where to Look
 

@@ -39,11 +39,11 @@ This skill runs on its own. All it needs to start is a target cost per sale. If 
 ## How to do it
 1. **Work out the daily test budget.** Daily test budget = sales needed x expected cost per sale / test days. Example from the source: 20 sales x $100 / 14 days = about $143 a day. Show the sum with the person's numbers.
 2. **Compare with Meta's advice.** Meta says 50 sales in 7 days to leave the learning phase. For the same example that is $714 a day for one test, and about $7,000 a day for 10 tests, so use a lower threshold. State that this is the source's reading and the person can check Meta's current advice.
-3. **Set the spend limit before judging.** The common rule is 3 times the target cost per sale. At 3 times: 4 sales is good, 3 is fine, 2 earns another $50 to $100 of spend, and 0 or 1 is cut. The speaker prefers 5 times the target (for a $50 target, $250) as a flat yes or no with no yellow light, because early spend is when delivery learns who to show the ad to. Give both, with the dollar figure for each. Say that 3 times versus 5 times is a speaker's preference, not a rule.
+3. **Set the spend limit before judging.** The common rule is 3 times the target cost per sale. At 3 times: 4 sales is good, 3 is fine, 2 earns another small top-up of spend (the source used $50 to $100 as an example; set your own step), and 0 or 1 is cut. The speaker prefers 5 times the target (for a $50 target, $250) as a flat yes or no with no yellow light, because early spend is when delivery learns who to show the ad to. Give both, with the dollar figure for each. Say that 3 times versus 5 times is a speaker's preference, not a rule.
 4. **Pick the test length.** About one week suits most stores: it covers day-of-week swings and a 3 to 4 day path from first view to purchase. Use 3 to 4 days for large stable stores with a short buying path. Use 10 to 14 days for tiny budgets, a long buying path or big weekly swings. Explain why a one-day test is wrong: you launch on a good or bad day, and people see the ad and buy later after being shown other ads, so you cut the top ad that earned the sale.
-5. **Do not read too early.** Do not read results over fewer than 5 days when spend is low. Match the window to the number of sales: 3 days works with a thousand sales a day and means nothing with 3. Below about $1,000 a day, results swing up and down day to day, so judge on 7 days or more. Do not obsess over the learning label, because ads keep learning. Read the window, not the label.
-6. **Say what to do next.** If the ad set hits the target over the window, raise the budget in steps of about 20 percent a day. The 20 percent habit is a common rule, and the same source says Meta allows faster moves than Google, so call it a habit. Never edit a winning ad set. Add new ads as a new ad set next to it. If it misses, say why the creative missed, make new ads and wind it down. Do not change budgets or bids every day: the source says daily bid moves might squeeze about 5 percent more, while better creative can double the account.
-7. **Count the ads for the idea.** Hit rates are around 5 percent, so a new idea needs at least 10 ads and more like 20 to expect one winner. A losing ad is not a losing idea: build variations, such as three different openings, before you drop the idea.
+5. **Do not read too early.** Do not read results over fewer than 5 days when spend is low. Match the window to the number of sales: 3 days works with a thousand sales a day and means nothing with 3. Below about $1,000 a day, results swing up and down day to day, so judge on 7 days or more. The $1,000 line is a starting point from the course video credited for this item, not a rule. Check it against your own results. Do not obsess over the learning label, because ads keep learning. Read the window, not the label.
+6. **Say what to do next.** If the ad set hits the target over the window, raise the budget in steps of about 20 percent a day. Treat 20 percent as a starting point, not a rule. It is a habit from the course video credited for this item, and the same source says Meta allows faster moves than Google, so call it a habit. Never edit a winning ad set. Add new ads as a new ad set next to it. If it misses, say why the creative missed, make new ads and wind it down. Do not change budgets or bids every day: the source says daily bid moves might squeeze about 5 percent more, while better creative can double the account.
+7. **Count the ads for the idea.** Hit rates are around 5 percent by the source's rough figure, so a new idea needs at least 10 ads and more like 20 to expect one winner. A losing ad is not a losing idea: build variations, such as three different openings, before you drop the idea.
 8. **List common mistakes.** Testing inside the scaling campaign. No exclusions of existing customers. Killing tests too early. Setting budgets from the 50 sales in 7 days rule.
 9. **High order value branch.** If order value is high and orders a week are few, say plainly that there is much less purchase signal: at $1,000 you may see about a tenth of the sales you would at $100 (one founder's estimate). Offer three things. Use longer windows. Test hooks as organic posts on separate topic accounts and run only the ones that work as paid ads (this needs a weekly posting habit; without it the plan stalls). Optimize the test ad on add to cart or page view for more signal, then run the shortlisted winner on purchase before scaling, because an upper-funnel signal can pick the wrong winner. Give a shortlist rule for what moves to paid. Do not copy or imply fake accounts: the topic accounts must not pretend to be customers or hide that they are run by the brand when the platform requires saying so.
 
@@ -61,7 +61,7 @@ Compare: Meta's 50 sales in 7 days would be <$ a day> for this test
 
 JUDGE AT (pick 3x or 5x)
 Spend limit: <3 or 5> x <target> = <$>
-3x rule: <4+ sales good | 3 fine | 2 add $50 to $100 | 0 or 1 cut>
+3x rule: <4+ sales good | 3 fine | 2 add a small top-up (example $50 to $100, change it) | 0 or 1 cut>
 5x rule: yes or no at the limit, no wait
 
 READ WINDOW
@@ -81,8 +81,8 @@ MISSING: <what was not supplied>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Meta test campaign planner](https://useaiblocks.com/skills/meta-test-campaign-planner). It takes the plan.
-- The [Untried ad idea finder](https://useaiblocks.com/skills/untried-ad-idea-finder).
 - The [Ad testing manager](https://useaiblocks.com/skills/ad-test-sprint-runner).
+- The [Ad reach planner](https://useaiblocks.com/skills/reach-before-repeat-planner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -90,7 +90,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The sum for the daily budget is shown and correct.
 - The spend limit is in dollars.
 - The window has a reason.
-- Every number you added is marked as an example or starting point.
+- Every number you added is marked as an example or starting point. That includes the $1,000 a day line, the 20 percent step and the $50 to $100 top-up.
 - High order value plans end with a confirm-on-purchase step.
 
 ## If something is missing

@@ -42,7 +42,7 @@ You bring him an offer, a page, a headline, a launch plan or a job you are about
 
 ### Your offer page
 
-Picture your best prospect reading at midnight, half hopeful and half sure it is another empty promise. He checks the four parts: problem, promise, proof and an easy proposition. He lists your claims one by one and marks the ones that outrun their proof. He asks for the three reasons why. He would hold a headline back if it shouts. A silver ad's hedged headline ("may rise") beat his stronger "will rise" by about 200 percent [S7]. Fix the weakest part first, cut any superlative you can't back, then test the new page against the old one.
+Picture your best prospect reading at midnight, half hopeful and half sure it is another empty promise. He checks the four parts: problem, promise, proof and an easy proposition. He lists your claims one by one and marks the ones that outrun their proof. He asks for the three reasons why. He would hold a headline back if it shouts. In a test he describes, a silver ad's hedged headline ("may rise") beat his stronger "will rise" by about 200 percent [S7]. Fix the weakest part first, cut any superlative you can't back, then test the new page against the old one.
 
 ### Your headline
 
@@ -50,7 +50,7 @@ He'd ask you to write 30 to 50 and then judge them two ways. Would it wake someo
 
 ### Your offer, guarantee and bonus
 
-He'd test the version with the believable reason first: a fire, an anniversary, a founder retiring. He'd add a deluxe option, lengthen the guarantee, and try "buy one, get one". He warned that a limit works only if you keep it. He'd ask what you will do when the limit hits. He once advised a newsletter publisher, by his own account, to cap his list for exactly that reason, and the publisher refused [S6].
+He'd test the version with the believable reason first: a fire, an anniversary, a founder retiring. He'd add a deluxe option, lengthen the guarantee, and try "buy one, get one". He warned that a limit works only if you keep it. He'd ask what you will do when the limit hits. By his own account, he once advised a newsletter publisher to cap his list for exactly that reason, and the publisher refused [S6].
 
 ### Your launch and your market
 
@@ -62,7 +62,7 @@ He'd tell you to let the writer write and judge on results. Ask for two packages
 
 ### Outside his field: a parent planning a move
 
-You are moving your family to a new town for a job, and every choice feels like a leap. He would treat it like a launch. Before you sell the house, rent in the new town for a few months. Test the commute, the school and the weekend routine. Ask what you are really choosing: a house, or a calmer daily life? Demand proof for each big claim about the place. Who says the school is good, and what would convince a sceptic? Then run the cheap test first.
+[beyond the record] He never wrote about moving house. This is our application of his test-first method, not something he has said or would say. You are moving your family to a new town for a job, and every choice feels like a leap. Treat it like a launch. Before you sell the house, rent in the new town for a few months. Test the commute, the school and the weekend routine. Ask what you are really choosing: a house, or a calmer daily life? Demand proof for each big claim about the place. Who says the school is good, and what would convince a sceptic? Then run the cheap test first.
 
 ### Your life and career
 

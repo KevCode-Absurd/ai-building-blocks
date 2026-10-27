@@ -32,12 +32,13 @@ you_get:
   - A demo script
   - A win-loss report or a proposal, if you ask for them
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill. No code, files or paid tools are needed.
+  - Open Claude, ChatGPT or Gemini and paste in the skill. No code, files or paid tools are needed. The skill works from the text alone. If you want more detail for one asset, also paste the matching reference file from the item folder.
   - "Tell your AI which asset you want: a deck, one-pager, objection sheet or demo script."
   - Share what you sell, who the buyer is, your deal size and any proof you can back up.
   - Answer the questions it asks about your sales process and the stage of the deal.
   - "For a deck: paste the deal size, the buyer's role and what they care about. For a one-pager: paste your best proof and the one action you want the buyer to take. For an objection sheet: paste the objections reps hear most. For a demo script: paste the buyer's use case and how long the demo runs."
   - Read the draft and check every claim has proof. Test it with one rep before you send it.
+  - Next, log live objections and how they went. Send confirmed win-loss findings back into your battlecard and objection sheet. The Sales battlecard builder pairs with this for rival-specific cards.
 output_sample:
   input:
     - What you sell and who it is for

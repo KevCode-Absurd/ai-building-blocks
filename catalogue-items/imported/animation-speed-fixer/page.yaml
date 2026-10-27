@@ -10,6 +10,8 @@ explain: |
   Animations that stutter make a good product feel cheap. Point this skill at the troubled code and it finds each slow spot, explains the cause in one sentence, and gives a small fix.
 
   It sorts the work by what the browser must redo each frame. Moving or fading with transform and opacity is cheap. Changing colours, gradients and filters costs more. Changing size or position forces a full layout and costs the most. The skill flags common traps: reading and writing layout in the same frame, animating large areas, tying motion to scroll in a heavy way, and heavy blur.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (ibelick) says MIT. Credit goes to ibelick and sickn33.
 when:
   - Your page janks while scrolling and you suspect the animations.
   - A menu or card slide drops frames on phones.
@@ -35,6 +37,17 @@ how_to_use:
   - Read each quoted line and its reason, then paste in the fix that suits you.
   - Test again on the same device to check the motion is smooth. This skill reads code only and does not run your page.
   - "If jank remains, open the browser's Performance tab, record the animation again and paste the new trace back in. If your AI cannot read your code, paste only the animation CSS or script block."
+  - If you are not a developer, hand the changed component to one. They should test it on a real phone and check the Performance tab before it goes live.
+next: [animation-reviewer]
+terms:
+  - term: compositor
+    meaning: The part of the browser that moves finished layers around. Moving or fading with transform and opacity uses it, so it is cheap.
+  - term: layout thrashing
+    meaning: Reading a size and then changing it again and again in one frame. The browser has to recalculate the page each time, so it stutters.
+  - term: FLIP
+    meaning: A method that measures an element once, then animates it with transform so the browser does not recalculate layout during the move.
+  - term: will-change
+    meaning: A line of CSS that tells the browser to prepare an element for animation. Use it briefly on few elements, because it takes memory.
 output_sample:
   input:
     - The file or component that holds the animation

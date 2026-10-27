@@ -9,7 +9,7 @@ subhead: A language model tuned to answer the way you prefer, taught with exampl
 explain: |
   A language model tuned to answer the way you prefer, taught with examples of good and bad answers. You choose the method that fits your data and compute.
 
-  The skill uses the TRL library. If you have pairs of preferred and rejected answers, it sets up DPO, the simplest route. If you want the classic path, it walks through three stages: teach basic instructions, train a reward model that scores answers, then tune with PPO. It also covers GRPO for tasks with checkable answers. It adds LoRA to cut memory use and ends by testing the tuned model against the original. You need Python and a GPU.
+  The skill uses the TRL library. If you have pairs of preferred and rejected answers, it sets up DPO, the simplest route. If you want the classic path, it walks through three stages: teach basic instructions, train a reward model that scores answers, then tune with PPO. It also covers GRPO for tasks with checkable answers. It adds LoRA to cut memory use and ends by testing the tuned model against the original. This is for developers and technical staff. You need Python and an NVIDIA GPU. The PPO command lines depend on your TRL version, so check them against the TRL docs before you run them.
 when:
   - Your model gives answers that are correct but the wrong tone.
   - You have a pile of thumbs up and thumbs down examples.
@@ -37,6 +37,8 @@ how_to_use:
   - Ask your AI to pick a method. DPO is the simplest if you have answer pairs.
   - Run the training script. If the GPU runs out of memory, ask for smaller batch sizes or LoRA.
   - Compare the tuned model with the original on the same prompts before you use it. Then test on new prompts the model has not seen, or clean your dataset and run again.
+  - When it holds up, deploy or share the saved model folder. For plain prompt and answer pairs with no good or bad ranking, use the Language model trainer instead.
+next: [language-model-trainer, model-launch-engineer]
 output_sample:
   input:
     - The name of a base model to tune

@@ -9,7 +9,9 @@ subhead: "Tell it your news and get a plan to win press coverage: who to contact
 explain: |
   Tell it your news and get a plan to win press coverage: who to contact, what to say and what to put in your press kit.
 
-  The skill starts by testing whether you have a real story, such as your own data, a sharp opinion, a milestone or a strong customer result. It stresses that the story is the trend or the conflict, with your product as proof. You get a target list of journalists, podcasts and newsletters, pitch emails written for each, and an outline for a press page. It also covers fast replies to news already breaking and says when to skip PR.
+  The skill starts by testing whether you have a real story, such as your own data, a sharp opinion, a milestone or a strong customer result. It stresses that the story is the trend or the conflict, with your product as proof. You get a target list of journalists, podcasts and newsletters, pitch emails written for each, and an outline for a press page. It also covers fast replies to news already breaking and says when to skip PR. If something has gone wrong, such as a data breach, an injury, a lawsuit or a regulator, talk to a lawyer before you publish a statement.
+
+  This is Corey Haines' public relations skill, copied under the MIT licence with a plain name and page text. The method is his.
 when:
   - You are launching a product and want coverage.
   - A news story in your field gives you something to say.
@@ -32,11 +34,11 @@ you_get:
   - Advice on timing and follow-up
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text.
-  - Tell it your news, your product and who it is for. Add any data or customer results you have.
-  - Say who can give quotes or do interviews, and when they are free.
-  - Read the story check first. If it says you have no real story yet, fix that before you send anything.
-  - Ask your AI to check each journalist's last 5 articles. This needs web access. If yours has none, open their pages yourself and paste the links.
-  - Edit each pitch email, then send it. Follow up once, as the advice says.
+  - Tell it your news, your product and who it is for. Add any data or customer results you have. Say who can give quotes or do interviews, and when they are free. If you have a product marketing notes file, add it. If not, the AI will ask.
+  - Story check. Read it first. If it says you have no real story yet, fix that before you send anything.
+  - Media list. Ask your AI to check each journalist's last 5 articles. This needs web access. If yours has none, open their pages yourself and paste the links.
+  - Pitch. Edit each pitch email until it passes the checks in the skill (under 150 words, a clear hook, a clear ask). Then send it.
+  - Follow up once, as the advice says. After coverage lands, track placements, visits from the article and searches for your brand.
 output_sample:
   input:
     - Your news or announcement
@@ -59,3 +61,4 @@ output_sample:
       contains: When to send, when to follow up, and when to wait or skip PR.
     - name: Measurement list
       contains: What to track after coverage lands, such as placements, referral traffic and brand searches.
+next: [traction-public-relations, link-and-pr-outreach-planner]

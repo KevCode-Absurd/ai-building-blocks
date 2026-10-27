@@ -11,12 +11,14 @@ job: ops
 level: intermediate
 execution: coordinator
 inputs:
-  - type: brief
+  - type: incident_record
     required: true
   - type: codebase
     required: false
 outputs:
   - type: document
+  - type: incident_record
+    required: true
 uses:
   - copilot-aws-cloudwatch-investigation
   - copilot-aws-resource-health-diagnose

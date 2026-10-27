@@ -31,7 +31,7 @@ you_get:
   - Code for a duplicate theme where a fix needs it
   - A sale-day checklist when a sale is near
 how_to_use:
-  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run this month's speed check.
+  - Start a chat with the agent. In Claude Code (a paid tool; PageSpeed Insights is free), add it as a skill or save it in .claude/agents, then ask it to run this month's speed check. In a free chat, paste last month's baseline and save the new one yourself.
   - Run PageSpeed Insights on the same three pages each month, three times each if you can, and give it the results with your app list.
   - The first month it saves a baseline. Every month after, it compares against it.
   - Read the list. Test each change on a duplicate theme, then say yes to the ones you want.
@@ -71,7 +71,7 @@ how_it_works:
   - title: Run the fixes that match
     text: Leftover code after a removal, heavy features, the hero image, page jumping or blocking scripts. Only the ones that apply.
   - title: Rank by money
-    text: Prices each fix in orders a month as a range, and ranks by gain per hour. The range is your sessions times your conversion rate times a lift taken from third-party studies. It is a rough estimate, not a promise.
+    text: Prices each fix in orders a month as a range, and ranks by gain per hour. The range is your sessions times your conversion rate times an assumed lift, from vendor-quoted figures the ranker names or from a lift you set. It is a rough estimate, not a promise.
   - title: Check for a sale
     text: If a sale is within 30 days, it adds a speed budget and a checklist.
   - title: Save the baseline

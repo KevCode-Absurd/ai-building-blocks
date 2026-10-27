@@ -5,14 +5,14 @@ summary: Build a three-year toll revenue model from your traffic forecasts, toll
 job: money-and-investing
 thinking: high
 thinking_why: "Traffic forecasts and measured counts come from different sources, so they must be kept apart and each one dated."
-subhead: A three-year toll receipts and operating cash schedule. Share three annual chargeable-passage forecasts before collection losses, applicable toll per billable passage, cash collection share and operating cash costs, with independent traffic study sources.
+subhead: Give it three years of chargeable passages, the toll, the share of tolls paid in cash and your operating costs. You get billed receipts, cash receipts and operating cash for each year, with each source dated.
 explain: |-
-  A three-year toll receipts and operating cash schedule.
+  A toll road earns money per passage, but not every billed toll is paid in cash. This skill keeps those two apart. It multiplies each year’s chargeable passages by the toll to get billed receipts, applies the cash collection share to get cash receipts, then takes off operating costs.
 
-  Infrastructure traffic revenue. Illustrative figures only. Chargeable passages before collection loss are 1,000, 1,200 and 1,500 over three years. The toll is 2 and the collection share is 90%. Cash receipts are 1,800, 2,160 and 2,700. Less operating costs of 1,000, 1,100 and 1,200, operating cash is 800, 1,060 and 1,500. Counts already representing cash-paid passages must not be multiplied by collection loss a second time. Annual cash excludes debt service and capital spending handled downstream.
+  It keeps the traffic study forecast separate from passages actually counted, takes out exempt vehicles, and never applies the collection loss twice to counts that are already cash-paid. It is arithmetic only, and it leaves out debt service and capital spending. Practice figures only: chargeable passages before collection loss are 1,000, 1,200 and 1,500 over three years. The toll is 2 and the collection share is 90%. Cash receipts are 1,800, 2,160 and 2,700. Less operating costs of 1,000, 1,100 and 1,200, operating cash is 800, 1,060 and 1,500. Counts already representing cash-paid passages must not be multiplied by collection loss a second time. Annual cash excludes debt service and capital spending handled downstream.
 when:
-  - You need a three-year toll receipts and operating cash schedule.
-  - You work on infrastructure traffic revenue and need traceable calculations.
+  - You have a traffic study with three years of chargeable passages and want the cash they should bring in.
+  - You need to show billed tolls and cash tolls side by side.
   - A reviewer needs to trace the result back to inputs and assumptions.
 not_for:
   - "You need a traffic forecast or a concession valuation: ask a traffic study firm or a valuation adviser, because this model only does the arithmetic."
@@ -20,11 +20,13 @@ not_for:
   - "Your passage counts are already cash-paid: reconcile that basis first, because this model would cut them for collection loss a second time."
   - "You need an energy operating cash schedule from delivered MWh and one contract price: use the Contracted energy cash model instead."
 you_give:
-  - Three annual chargeable-passage forecasts before collection losses, applicable toll per billable passage, cash collection share and operating cash costs, with independent traffic study sources.
+  - Three annual counts of chargeable passages before collection loss, with the traffic study and its date
+  - The toll per billable passage, and the share of billed tolls paid in cash
+  - Operating cash costs for the same three years
   - "The forecast year, plus the currency and scale used for the toll revenue model."
   - "Your spreadsheet tool, if you want the toll revenue model as a workbook."
 you_get:
-  - A three-year toll receipts and operating cash schedule.
+  - Billed receipts, cash receipts and operating cash for each of the three years.
   - "An editable workbook of the toll revenue model, with its inputs, formulas and test cases to rerun."
   - "A tie-out of chargeable passages, receipts and operating cash, the inputs still missing and the checks that ran."
 how_to_use:
@@ -54,14 +56,14 @@ output_sample:
     - name: MISSING and CHECKS MISSED
       contains: Inputs that were not supplied and any checks that failed or could not run.
 how_it_works:
-  - title: 1. Build a dated source ledger of balances, operating units, period boundaries, contractual terms and unresolved evidence gaps
-    text: Build a dated source ledger of balances, operating units, period boundaries, contractual terms and unresolved evidence gaps.
-  - title: 2. Separate traffic-study assumptions from measured chargeable passages before collection loss; exclude exempt passages and document vehicle mix, collection losses and nominal toll basis
-    text: Separate traffic-study assumptions from measured chargeable passages before collection loss; exclude exempt passages and document vehicle mix, collection losses and nominal toll basis.
-  - title: 3. Multiply each year chargeable passages before collection loss by the applicable toll and cash collection share; retain gross billing versus cash realization
-    text: Multiply each year chargeable passages before collection loss by the applicable toll and cash collection share; retain gross billing versus cash realization. Already-paid passage counts must not be reduced by collection losses again.
-  - title: 4. Deduct same-year operating cash costs, hand each annual cash result to project coverage and show volume and collection sensitivities separately
-    text: Deduct same-year operating cash costs, hand each annual cash result to project coverage and show volume and collection sensitivities separately.
+  - title: List and date the sources
+    text: Note the traffic study, toll schedule, collection history and cost budget, and any gap in them.
+  - title: Keep forecasts and counts apart
+    text: Separate the study’s forecast from passages actually counted. Take out exempt vehicles and note the vehicle mix and the toll basis.
+  - title: Work out billed and cash receipts
+    text: Passages times toll gives billed receipts. Billed receipts times the cash collection share gives cash receipts. Counts that are already cash-paid are not cut for collection loss a second time.
+  - title: Take off costs and test
+    text: Subtract the same year’s operating costs. Show a volume change and a collection change one at a time, then hand each year’s cash to the coverage step.
 output_shape: |-
   A three-year toll receipts and operating cash schedule.
   Scope and dated sources

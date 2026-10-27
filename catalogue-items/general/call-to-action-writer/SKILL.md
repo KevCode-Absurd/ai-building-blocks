@@ -7,6 +7,8 @@ description: Use when an ad, page or email ends without a clear ask, or readers 
 
 An ad with no ask is a salesperson who never closes. This skill writes the ask: it picks the right kind, adds a reason to act now only where one is real, removes the barriers and states the steps. It uses your offer terms exactly as given. If you want to write the sum-up that goes before it, use "Summing-up paragraph writer".
 
+Not for: a brand-awareness ad with no offer to act on, the page the reader lands on after the click, a closing sum-up (use the Summing-up paragraph writer), or a quick first pass (use the Ad ask line writer).
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -20,7 +22,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
-2. **Plan** with the [Offer limits and deadline planner](https://useaiblocks.com/skills/honest-urgency-planner). Bring spreadsheet (optional). It uses your your offer.
+2. **Plan** with the [Offer limits and deadline planner](https://useaiblocks.com/skills/honest-urgency-planner). Bring spreadsheet (optional). It uses your offer.
 3. This one.
 
 How to start:
@@ -61,8 +63,8 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Check it before it goes live** with the [Five-part ad checker](https://useaiblocks.com/skills/five-part-ad-checker). It takes the ad copy.
 - The [Sales copy editor](https://useaiblocks.com/skills/sales-copy-editor). It takes the ad copy.
 - **Check it before it goes live** with the [Headline promise checker](https://useaiblocks.com/skills/headline-promise-checker). It takes the ad copy.
-- The [Ad call to action writer](https://useaiblocks.com/prompts/ad-ask-line-writer).
 - The [Ad response copy editor](https://useaiblocks.com/skills/reply-getting-fix-writer). It takes the ad copy.
+- The [Closing paragraph writer](https://useaiblocks.com/skills/summing-up-paragraph-writer). It takes the ad copy.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -73,6 +75,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No reason to act now is invented.
 - The reader can tell what happens after they act.
 - The path is plain: a button label, number, address or form is named.
+- If the offer touches health, money or another field with ad-platform rules, say to check the wording against the platform's ad policy before it runs.
 
 ## If something is missing
 

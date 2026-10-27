@@ -51,9 +51,9 @@ The four conditions with marks and evidence. The answer. Either the break-first 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Competitive advantage development planner](https://useaiblocks.com/skills/power-stage-build-planner). It takes the audit report.
 - The [Strategy trade-off planner](https://useaiblocks.com/skills/strategy-trade-off-planner). It takes the audit report.
 - The [Market expansion roadmap planner](https://useaiblocks.com/skills/market-expansion-sequencer). It takes the audit report.
-- The [Go or no-go launch checker](https://useaiblocks.com/skills/go-or-no-go-launch-checker). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

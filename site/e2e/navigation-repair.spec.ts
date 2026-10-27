@@ -15,8 +15,8 @@ for (const tag of ["", "@mobile "]) {
       await expect(menu.getByTestId(id)).toHaveAttribute("href", href);
       await menu.getByTestId(id).click();
       await expect(page).toHaveURL(new RegExp(href.replace("/", "\\/") + "$"));
-      await expect(page).toHaveTitle("AI Blocks API and MCP server documentation | AI Blocks");
-      await expect(page.getByRole("heading", { level: 1 })).toHaveText("Connect with API & MCP.");
+      await expect(page).toHaveTitle("Connect your AI to AI Blocks with MCP or the API | AI Blocks");
+      await expect(page.getByRole("heading", { level: 1 })).toHaveText("Connect your AI once, then pull any skill or workflow it needs.");
       if (id === "nav-documentation") await expect(page.locator("#api")).toBeInViewport();
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(true);
       await expect(page.getByText("This page doesn't exist", { exact: true })).toHaveCount(0);

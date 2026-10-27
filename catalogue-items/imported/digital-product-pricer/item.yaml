@@ -12,6 +12,7 @@ inputs:
     required: true
 outputs:
   - type: plan
+  - type: offer
 uses: []
 origin: imported
 source:

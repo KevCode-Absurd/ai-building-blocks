@@ -24,7 +24,7 @@ Ask once for anything missing. Never invent objectives, ranges or formulas.
 1. **Goals.** Each thing to improve, and whether lower or higher is better.
 2. **Settings you can change.** Each one with its type (number, whole number, yes/no, choice) and its range.
 3. **Hard limits (optional).** Written as "must stay below" or "must be at least".
-4. **How a design is scored.** The formulas, or code that returns the goal values. If the user has neither, stop and say the skill cannot run without a way to score a design. Offer to write a placeholder scorer they must replace.
+4. **How a design is scored.** The formulas, or code that returns the goal values. If the user has neither, stop and say the skill cannot run without a way to score a design. Offer to write a placeholder scorer they must replace. Label every output from a placeholder scorer "PLACEHOLDER: not a real trade-off", and say so in the table and chart title.
 
 This skill needs Python 3.10 or newer and a way to run code. If your AI cannot run code, write the script, say it is untested, and tell the user how to run it.
 

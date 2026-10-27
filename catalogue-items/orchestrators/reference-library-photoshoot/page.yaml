@@ -3,8 +3,13 @@ name: Reference library product photoshoot
 summary: Pick photo looks for one real product. Get a shot plan, a pilot and checked files in each size you ask for.
 job: product-photos
 headline: Reference library product photoshoot
-subhead: Choose the looks. Keep the real product right.
-explain: Adds a reference-library picker, fit assessment, persistent user directions and review-deck cycle to product-photo production. It changes a reference look when product truth would be lost.
+subhead: Give it real photos of one product and a set of reference photos you like. It picks the looks that fit, plans each shot and checks every picture against your real product before you use it.
+explain: |-
+  Reference photos show the look you want. They do not show your product. This workflow starts from your real photos of one exact product and writes down what is true about it: the colours, the label text and how it looks in use.
+
+  Then it rates each reference look by how well it fits that product. A look that fits as it is is rated exact. A look where only the light and layout carry over is rated structure. A look where only the mood and colours carry over is rated loose. It plans a shot for each look you pick, makes one pilot frame for you to approve, and builds the rest of the set in the sizes you ask for. Every frame is checked against your real photo.
+
+  It runs as one method and calls no other skill. Claude cannot draw the pictures, so you need an image tool. Many image tools are paid or need credits or an API key. If a look would hide the true product, the workflow changes the look and tells you why. You may not reuse a reference photo commercially.
 when:
   - You want to choose looks from a campaign photo library.
   - You need one exact product shown consistently across a reviewed set.
@@ -18,6 +23,7 @@ you_get:
   - A per-ratio QA record, review deck and versioned export set.
 how_to_use:
   - Download the complete pack and give its instructions to your AI.
+  - Have an image tool ready. Many are paid or need credits or an API key.
   - Send your real photos of the exact variant and your reference photos. The AI writes the truth sheet first.
   - Check the truth sheet against the real product, then pick the looks you want, or ask for a shortlist.
   - Approve one pilot frame before the rest of the set is made.
@@ -43,7 +49,7 @@ output_sample:
     - Your brand direction, if you have a brand file (optional)
     - Sizes, number of looks and budget (optional)
   prerequisites:
-    - An image tool that can use your real product photo as a reference
+    - An image tool that can use your real product photo as a reference. Many are paid or need credits or an API key. Claude cannot draw the pictures itself.
   output:
     - name: Product truth sheet
       contains: The exact variant, colours, label text and how the product looks in use.

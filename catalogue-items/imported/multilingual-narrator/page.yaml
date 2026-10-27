@@ -9,7 +9,7 @@ subhead: Spoken audio of your text in a natural voice, in over 90 languages, sav
 explain: |
   Spoken audio of your text in a natural voice, in over 90 languages, saved as a sound file you can use in videos, courses or apps.
 
-  The skill uses the ElevenLabs text-to-speech service. It first checks that an API key is set, and helps you sign in if not. Then you choose a voice and a model, trading quality against speed. It writes short code in Python, JavaScript or a command line call that sends your text and saves the returned audio as an MP3. You can also pipe text straight into a command to hear it right away. It needs an ElevenLabs account, and usage may cost money.
+  The skill uses the ElevenLabs text-to-speech service. It first checks that an API key is set, and helps you sign in if not. Then you choose a voice and a model, trading quality against speed. It writes short code in Python, JavaScript or a command line call that sends your text and saves the returned audio as an MP3. You can also pipe text straight into a command to hear it right away. It needs an ElevenLabs account, and usage may cost money. This is a copy of ElevenLabs' own text-to-speech skill (MIT licence), so updates come from them. One setup step runs ElevenLabs' command line tool through npx, so read that command before you let your AI run it.
 when:
   - You need a voiceover for a video and have only a script.
   - You want your course lessons read aloud in Spanish and French.
@@ -32,12 +32,14 @@ you_get:
   - The character count used by each request
 how_to_use:
   - This uses ElevenLabs, a paid service. Check your plan's price and character limit before you start. Your text is sent to ElevenLabs.
+  - Count the characters in your script (most word processors show this). Compare it with the character limit on your ElevenLabs plan, because each request uses credits.
   - Make an ElevenLabs account and open a chat with an AI that can run code and use the internet.
   - Paste the skill into the chat, then paste the text you want read aloud.
   - "A prompt you can paste: Use the text to speech skill to read this aloud in [language] and save it as output.mp3."
   - Tell your AI the language and any voice you like. If you have no key yet, let it walk you through sign-in.
   - Play the MP3 and check numbers, dates and names sound right. Ask for another voice or model if not.
   - Drop the file into your video editor or course platform. Each request uses character credits on your ElevenLabs plan.
+next: [branded-video-captions]
 output_sample:
   input:
     - The text you want read aloud

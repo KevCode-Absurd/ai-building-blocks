@@ -5,9 +5,9 @@ job: build-software
 headline: Google Ads report coding prompt
 subhead: Give your AI your code folder and your Google Ads details. You get a coding brief for a monthly Google Ads report. It covers the report parts, the math, the tests and what is still missing.
 explain: |-
-  A monthly Google Ads report goes wrong quietly: costs off by a million, two currencies added together, a manager account summed as one customer. This prompt gives you a coding brief that fixes the rules first: dates, currency, metric math and tests. The brief starts with the data checks, then the report.
+  A monthly Google Ads report goes wrong quietly: costs off by a million, two currencies added together, a manager account summed as one customer. This prompt gives you a coding brief that fixes the rules first: dates, currency, metric math and tests. The brief starts with the scope, then the data and money checks, then the report.
 
-  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+  The prompt you paste holds the full method. It marks missing inputs and separates proposed actions from actions that were actually completed.
 when:
   - You want a monthly Google Ads report built into your own tool.
   - You need spend and conversion math written down before anyone codes it.

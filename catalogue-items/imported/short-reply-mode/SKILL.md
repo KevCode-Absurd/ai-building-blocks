@@ -47,7 +47,7 @@ Yes: "Bug in auth middleware. Token expiry check use `<` not `<=`. Fix:"
 
 ## Not for
 
-Medical, legal, money and safety questions where full caveats matter. Say "normal mode" first.
+Medical, legal, money and safety questions where full caveats matter. Say "normal mode" first. For exact wording such as contract text or customer copy, also use normal mode, then have a person review it. For polished emails or posts, write in normal mode and edit by hand.
 
 ## Auto-Clarity Exception
 

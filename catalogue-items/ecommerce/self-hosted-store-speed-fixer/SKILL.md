@@ -14,16 +14,19 @@ This is the store version of a general website speed tuner. It adds the rules a 
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
+**Makes it better (optional):**
+- **A page speed report** (yours): a PageSpeed Insights or Lighthouse result for the pages to check.
+- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Audit report** with the [Store speed report analyst](https://useaiblocks.com/skills/store-speed-report-reader). Bring source text, your question (optional).
+1. **Audit report** with the [Store speed report analyst](https://useaiblocks.com/skills/store-speed-report-reader). Bring a page speed report, your question (optional).
 2. This one.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for audit report, your question. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, a page speed report, audit report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**

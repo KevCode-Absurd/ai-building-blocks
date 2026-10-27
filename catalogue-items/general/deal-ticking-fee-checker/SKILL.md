@@ -10,13 +10,22 @@ Checks a ticking fee, the extra amount a buyer pays for each eligible day a deal
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Remaining fund commitment checker](https://useaiblocks.com/skills/unfunded-commitment-checker). It takes the document and spreadsheet.
 - The [Customer invoice borrowing limit calculator](https://useaiblocks.com/skills/receivables-borrowing-base-builder). It takes the document and spreadsheet.
-- The [Project payment priority planner](https://useaiblocks.com/skills/project-payment-waterfall-builder). It takes the spreadsheet and document.
 - The [Inventory borrowing limit calculator](https://useaiblocks.com/skills/inventory-borrowing-base-builder). It takes the spreadsheet and document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
-## Before you start
+## When not to use
+
+- You want to know whether a delay triggers the fee or whether a breach happened. Take that to your lawyer.
+- The fee compounds or steps up on its own. This handles one fixed daily amount per line, so run each rate as its own line.
+- You want the cash needed at closing. Use the Deal funding gap checker.
+- The payment depends on a metric, not on days. Use the Earnout payout checker.
+
+## Read first
+
+This skill needs only the four figures in "What you need". Ignore any line below that asks for a buyer brief or source text, or says to run another skill first.
 
 A chat is enough. Do the sums yourself and show each one. Run the bundled script or build a workbook only when you have code or file tools and the person wants one. If you cannot run something, say so. Never claim you ran a check you did not run.
 
@@ -27,19 +36,19 @@ If the figures are not in the chat, ask once for the missing items in "What you 
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
-- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+- **The deal terms** (yours): the price, payment terms, discounts, fees and dates of the deal.
 
 **Makes it better (optional):**
 - **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Spreadsheet** with the [Locked-box seller transfer checker](https://useaiblocks.com/skills/locked-box-leakage-checker). Bring document, spreadsheet (optional).
+1. **Spreadsheet** with the [Locked-box seller transfer checker](https://useaiblocks.com/skills/locked-box-leakage-checker). Bring document, the deal terms, spreadsheet (optional).
 2. This one.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a brief, source text, spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, the deal terms, spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -135,15 +144,6 @@ The script `scripts/run-model.mjs` needs Node.js 20 or later. Run `node scripts/
 - [Filed ticking-fee amendment](https://www.sec.gov/Archives/edgar/data/1607716/000119312515398501/d103568dex21.htm): eligible-day triggers and exclusions differ between agreements, so always use your own contract's terms.
 
 The link names a public example. The instructions and practice numbers in this pack are original. The linked page is not bundled or relicensed.
-
-## After this
-
-Hand back the result, then suggest one next step in a short question. If they are done, that is fine. Offer these, and say they can type their own:
-
-- See the cash needed at closing with the revised price using the [Deal funding gap checker](https://useaiblocks.com/skills/deal-funding-gap-checker).
-- Check what is owed after closing with the [Working capital true-up checker](https://useaiblocks.com/skills/working-capital-true-up-checker).
-
-If they pick one and it is not added here, give the link and say what to bring.
 
 ## Hand back
 

@@ -31,7 +31,7 @@ If a figure or target is missing, mark it as missing in the output. Never estima
 ### Priority Order
 1. **Materiality Assessment** (Identifying what to measure).
 2. **Data Ingestion** (Collecting environmental and social metrics).
-3. **Gap Analysis** (Comparing current performance to industry benchmarks).
+3. **Gap Analysis** (Comparing current performance to benchmarks the user supplies, or to the disclosure topics in the chosen standard, such as the SASB industry standard). If the user supplies no benchmark, mark the gap as "benchmark missing" and say what to look up. Never fill a benchmark from memory, and never give an alignment rating you cannot back with the user's data.
 4. **Disclosure Preparation** (Drafting the non-financial statement).
 
 ---
@@ -44,7 +44,11 @@ If a figure or target is missing, mark it as missing in the output. Never estima
 - **Scope 3**: All other indirect emissions in the value chain (Suppliers/Users).
 
 ### 2. Social Metric Calculation
-- Calculate gender pay gaps, diversity ratios in management, and employee turnover rates.
+- Ask for the inputs first: headcount by gender and grade, pay by gender, number of leavers, and average headcount for the period. Use only figures the user gives you.
+- Mean gender pay gap (%) = (mean male pay - mean female pay) / mean male pay x 100. Do the same with median pay for the median gap.
+- Management diversity (%) = number of women (or the group asked about) in management / total managers x 100.
+- Employee turnover (%) = leavers in the period / average headcount in the period x 100.
+- Show the working for each result. If an input is missing, write "missing" instead of a figure.
 
 ### 3. Governance Audit
 - Review board independence, executive compensation alignment with sustainability goals, and anti-corruption policies.

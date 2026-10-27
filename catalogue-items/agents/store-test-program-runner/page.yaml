@@ -43,6 +43,7 @@ output_sample:
   prerequisites:
     - An AI that can keep a tests folder and read it each run, such as Claude Code
     - The skills it calls, such as the Test idea ranker, installed or readable from the library
+    - A Shopify plan and a testing tool (both paid). The agent only reads the numbers you give it and never changes either
   output:
     - name: State
       contains: Whether no test is running, one is running, or one just ended, and what was done about it.

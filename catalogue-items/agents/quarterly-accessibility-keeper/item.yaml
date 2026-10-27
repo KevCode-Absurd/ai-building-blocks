@@ -10,6 +10,8 @@ inputs:
   - { type: web_page, required: true }
   - { type: codebase, required: false }
   - { type: design_direction, required: false }
+  - { type: design_tokens, required: false }
+  - { type: question, required: true }
 outputs:
   - { type: audit_report }
   - { type: plan }

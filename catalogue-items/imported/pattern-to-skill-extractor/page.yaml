@@ -10,6 +10,8 @@ explain: |
   A fix you keep repeating, turned into a skill you can reuse in any project. Describe the pattern and get a packaged folder with instructions, notes and examples.
 
   It first checks the pattern qualifies: it has come up in two or more projects, took real debugging to find, applies broadly and is hard to remember. It searches your saved memory for related notes, then drafts a skill with a name, trigger description, steps and a worked example. You can name the skill, pick the output folder or preview first. This suits fixes like a setup quirk or a stubborn build error.
+
+  This is Alireza Rezvani's MIT-licensed skill, renamed. The method is unchanged. Licence: MIT (see the LICENSE file).
 when:
   - You solved the same bug twice and do not want a third time.
   - A tricky setup fix lives only in your head.
@@ -31,11 +33,12 @@ you_get:
   - Example of the fix in use
 how_to_use:
   - Use Claude Code with auto-memory on (Claude Code keeps notes about your project in a memory folder under your .claude folder). Copy this skill folder into your skills directory.
-  - Check that the skill-extractor agent is installed too. The skill calls it to write the files. It is not in this folder. If it is missing, your AI writes the files itself.
+  - The skill calls a helper called skill-extractor to write the files. That helper is not in this folder and you do not need to find it. If it is not installed, your AI writes the same files itself and tells you so.
   - Run /si:extract with a short description of your pattern. Add --name to pick the skill name.
   - Add --dry-run to preview first, or --output to choose where the folder goes.
   - Answer up to two questions if it asks what problem the fix solves.
   - Read the new SKILL.md without your old context. If it makes sense, install it. Sharing it with clawhub is optional, and you should check whether that service needs an account or costs money.
+  - Then try the new skill on a second project to see that it works without your old context. Add a line about it to that project's CLAUDE.md so your AI knows it exists.
 output_sample:
   input:
     - A short description of the pattern or fix

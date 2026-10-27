@@ -21,7 +21,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and your offer and buying reasons.
+2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and offer and buying reasons.
 3. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
 4. This one.
 
@@ -37,6 +37,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+- **Paid and licensed parts (read first):** a coding agent such as Claude Code needs a Claude plan or an API key, which you pay for. Remotion has its own licence terms and a company may need a paid licence; read them on Remotion's site and state any cost before the build starts. Rendering uses the user's own computer time. Music and any voice must be made in code, supplied by the brand, or cleared for use.
 - **The reel's job** (required): launching something, selling an offer, giving "3 reasons", showing a bundle, or closing another ad.
 - **Real product photos** (required): at minimum the front on a clean background; also out of the pack, in a hand and in use where they exist. For software, real screenshots. Never drawn or generated.
 - **Approved words, in order** (required): a finished script, or the brand's set phrases plus its offers and sourced claims. The build writes no new copy.
@@ -80,7 +81,7 @@ Pick the hero photo for the opening and the photo for each reason, from the real
 ### Stage 4: Storyboard (approval 3)
 1. **Lay the beat grid.** Pick the tempo, the length and named marks counted in beats. Make the music in code (or bring a cleared track) and measure where its beats really fall; grid and measured beats should differ by under 15 ms at worst. Hard cuts land on the first beat of a bar; smaller events on beats or half-beats, never on typed-in seconds.
 2. **Write the shot list.** For a physical product: the opening, done by 2 seconds, with the product in the very first frame and the first word landing with it; what it is, in one line; one to three reasons, each a brand fact paired with the photo that shows it; proof, only if the brand holds some (a figure with its source, or a customer's words as given); the offer and action on an end card no longer than 2 seconds, with the pack, logo and action, never frozen.
-3. **Check regulated claims.** Health, supplement, money or other regulated claims must match the brand's approved source and the ad platform's rules before the storyboard is approved. Show only the wording the brand file approves. If a claim has no approved source, drop it and write `MISSING: approved claim`.
+3. **Check regulated claims.** Health, supplement, money or other regulated claims must match the brand's approved source and the ad platform's rules before the storyboard is approved. Show only the wording the brand file approves. Example wording shown anywhere in this pack is not approved copy for your brand. If a claim has no approved source, drop it and write `MISSING: approved claim`.
 4. **Each row is a shot card:** its beats and seconds, the on-screen words exactly, which photo, the first and last frame of the shot, the motion and way in or out, the sound cue, any voice line, notes for 9:16, and what's new on screen (something new every 2 to 4 seconds). List the source of every claim, price and offer, and any voice cost.
 
 **Approval 3 of 3:** build nothing until the shot list says APPROVED.
@@ -110,7 +111,7 @@ Pick the hero photo for the opening and the photo for each reason, from the real
 
    Each round, fix the three worst problems, show stills or clips proving each fix, and log it. Finish when three or more rounds are done and no score is under 8. Show the person nothing before then.
 4. **Render the finals:** the main shape first, then the rest. Re-check sync and loudness, look at every frame at phone size with the safe-area overlay, have a person listen to the final mix, and check every word against the approved script and claims.
-5. **Deliver** each shape's file path, its length and loudness, the final scores, a contact sheet and anything knowingly left imperfect. A later change starts in the shot list and code, gets a draft render and a review, and only then becomes a new final.
+5. **Deliver** each shape's file path, its length and loudness, the final scores, a contact sheet and anything knowingly left imperfect. Then run the finals through "Pre-launch ad checker" before they run as ads. A later change starts in the shot list and code, gets a draft render and a review, and only then becomes a new final.
 
 ## What you hand back
 One file per stage:
@@ -146,8 +147,8 @@ MISSING: <anything blank>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Video ad on-screen text planner](https://useaiblocks.com/skills/video-ad-text-overlays). It takes the video ads.
+- The [Spoken video ad opening writer](https://useaiblocks.com/skills/spoken-video-ad-opening-writer). It takes the video ads.
 - The [Video caption maker in your brand font](https://useaiblocks.com/skills/branded-video-captions). It takes the video ads.
-- The [Motion graphics video build planner](https://useaiblocks.com/skills/motion-graphics-build-plan).
 - **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the video ads.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

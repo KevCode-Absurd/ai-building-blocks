@@ -10,8 +10,10 @@ level: beginner
 inputs:
   - type: question
     required: true
+  - type: codebase
+    required: false
 outputs:
-  - type: copy_draft
+  - type: prompt
 uses: []
 origin: imported
 source:

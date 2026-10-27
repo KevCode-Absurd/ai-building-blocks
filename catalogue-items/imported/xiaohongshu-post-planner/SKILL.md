@@ -16,7 +16,7 @@ tools: [claude, cursor, gemini]
 
 ## Overview
 
-Expert content strategist for Xiaohongshu (小红书), China's most influential lifestyle and shopping platform with 300M+ monthly active users. Creates platform-native content optimized for the unique Xiaohongshu algorithm, which prioritizes saves over likes. Bilingual Chinese/English output with cultural sensitivity.
+Expert content strategist for Xiaohongshu (小红书), China's most influential lifestyle and shopping platform. Creates platform-native content optimized for the unique Xiaohongshu algorithm, which prioritizes saves over likes. Bilingual Chinese/English output with cultural sensitivity.
 
 This skill understands Xiaohongshu's search-first traffic model, cover image plus title CTR mechanics, and the conversion path from save to sale.
 
@@ -32,7 +32,9 @@ This skill understands Xiaohongshu's search-first traffic model, cover image plu
 
 ### Step 1: Analyze the Topic
 
-Understand the target audience, product, or message. Identify primary keywords for Xiaohongshu's search algorithm. Research trending formats in the relevant category.
+First list what the user must supply before you draft: product name, ingredients or specs, price, real customer feedback and the claims they are allowed to make. If any is missing, write `MISSING:` and ask once. Never invent it.
+
+Understand the target audience, product, or message. Identify primary keywords for Xiaohongshu's search algorithm. If you cannot browse, ask the user for their own search data or the top posts they have seen, or name the keywords as guesses to check. Research trending formats in the relevant category.
 
 ### Step 2: Choose the Content Format
 
@@ -69,10 +71,10 @@ Apply these ranking factors in priority order:
 
 ### Example 1: Beauty Product Review
 
-Title: 用了28天，皮肤真的变好了｜实测这款平价精华
+Title: 用了[X]天，[真实变化]｜实测这款平价精华
 Cover: Before/After face photo with product in corner, soft pink overlay
-Body: 这款精华我用了整整28天，今天来交作业...
-Hashtags: #平价护肤 #精华推荐 #28天打卡
+Body: 这款精华我用了整整[X]天，今天来交作业...
+Hashtags: #平价护肤 #精华推荐 #[X]天打卡
 Likely reader question (answer it openly, do not post it yourself as a fake user): "姐妹们，我油皮可以用吗？"
 
 ### Example 2: Travel Destination
@@ -87,7 +89,7 @@ Likely reader question (answer it openly, do not post it yourself as a fake user
 
 - Sound like a real person sharing a discovery, not a brand broadcasting
 - Front-load keywords in titles (first 8 characters)
-- Use numbers and specific results in titles
+- Use numbers in titles only when the user can prove them. Mark any placeholder result in square brackets, such as [X days], until it is checked
 - Keep paragraphs to 2-3 sentences max
 - Include a clear save-worthy takeaway
 - Do not use corporate marketing language
@@ -104,11 +106,13 @@ Likely reader question (answer it openly, do not post it yourself as a fake user
 
 - This skill generates content strategy and copy. It does not access Xiaohongshu APIs or user accounts.
 - All content should comply with Chinese advertising law and platform community guidelines.
+- Skin, health and body-result claims need a qualified person to check them before posting. If the user has no proof for a claim, leave it out.
+- Do not use for several Chinese platforms at once (use `chinese-market-content-engineer` or the WeChat planner instead), or to make the cover image or video (use an image or video tool).
 
 ## Common Pitfalls
 
 - **Problem:** Low engagement despite good content
-  **Solution:** Check title CTR - the cover image plus title combo drives 80 percent of click-through. A/B test 2-3 title options.
+  **Solution:** Check title CTR - the cover image plus title combo drives most of the click-through. A/B test 2-3 title options.
 
 - **Problem:** Content gets flagged or removed
   **Solution:** Avoid absolute claims and ensure product reviews disclose sponsorships per platform rules.

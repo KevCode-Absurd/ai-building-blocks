@@ -9,7 +9,11 @@ job: ops
 level: intermediate
 inputs:
   - type: design_file
-    required: true
+    required: false
+  - type: design_tokens
+    required: false
+  - type: image
+    required: false
 outputs:
   - type: document
 uses: []

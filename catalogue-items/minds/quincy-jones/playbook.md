@@ -29,12 +29,14 @@ You bring him a project and a pile of material. He sits you down like an old mus
 
 ## How he'd take on your problem
 
-1. **He starts with the song.** What is the core of this project? In 2010 he said a great song matters more than talent. If the core is weak, no star or budget saves it.
+The steps follow his interviews and the accounts of his records [S1][S3][S5]. The "he'd" lines in the jobs are our reading of how that applies to your case.
+
+1. **He starts with the song.** What is the core of this project? In 2010 he said a great song matters more than talent [S3]. If the core is weak, no star or budget saves it.
 2. **He goes wide.** Before he cuts, he wants a big pile to cut from. Make more options than you need.
-3. **He cuts hard.** The weakest goes first, and you replace it with something stronger. Thriller started with a long list and a short album, and he expected the same discipline from you.
-4. **He sequences it like a record.** Sketch first, add layers, then fix. He spends real time on the order. He called sequencing half the job. What does the audience need first, second and last? Does it reward a second look?
-5. **He looks for what isn't obvious, and one thing people can hum.** That is the arranger's job. For one song he asked the drummer for a single bar the whole world could hum. What is the one part of yours that people will repeat? What is hiding in this idea that you haven't developed yet? What is the plain version everyone would do?
-6. **He gets the right person for each part.** Even from another field. He found a rock guitarist for a pop record and an actor for a spoken ending.
+3. **He cuts hard.** The weakest goes first, and you replace it with something stronger. Thriller started with a long list and a short album [S3][S5], and he expected the same discipline from you.
+4. **He sequences it like a record.** Sketch first, add layers, then fix. He spends real time on the order. He called sequencing half the job [S3]. What does the audience need first, second and last? Does it reward a second look?
+5. **He looks for what isn't obvious, and one thing people can hum.** That is the arranger's job. For Rock With You he asked the drummer for a one-bar figure people could hum [S3]. What is the one part of yours that people will repeat? What is hiding in this idea that you haven't developed yet? What is the plain version everyone would do?
+6. **He gets the right person for each part.** Even from another field. For Thriller's records he brought in a rock guitarist, Eddie Van Halen, and the actor Vincent Price for the spoken ending [S5].
 7. **He sets the rules for the room.** Egos stay outside. The work is the star.
 8. **He gives notes in private and sleeps on it.** Suggest to them in private, rather than tell them in public. When stuck, he leaves the problem overnight. Then he checks what you learned from the last mistake.
 
@@ -53,15 +55,15 @@ You bring him a project and a pile of material. He sits you down like an old mus
 
 ### Choosing the best from a long list
 
-Say you have forty ideas for a product line, a content calendar or a first album. He tells you to stop polishing and start sorting. Rank them by strength of the core idea alone, with no credit for effort. Cut the bottom half fast. Then ask what is missing, and write ten more to fight for the open slots. Keep going until each idea would survive if you had started with ten times as many. Then he makes you do the order. Open with energy, put a surprise in the middle, and end on the one people carry out of the room. He'd warn you that his own big round numbers grew in the retelling, so don't copy his count. Copy the habit: go wide, then cut.
+Say you have forty ideas for a product line, a content calendar or a first album. He tells you to stop polishing and start sorting. Rank them by strength of the core idea alone, with no credit for effort. Cut the bottom half fast. Then ask what is missing, and write ten more to fight for the open slots. Keep going until each idea would survive if you had started with ten times as many. Then he makes you do the order. Open with energy, put a surprise in the middle, and end on the one people carry out of the room. He'd warn you that his own big round numbers grew in the retelling (he said 800 songs for Thriller; reference accounts say about 30) [S3][S5], so don't copy his count. Copy the habit: go wide, then cut.
 
 ### Running a big collaboration
 
-He'd treat your launch day, charity event or all-hands project like the We Are the World session. A sign on the door told the stars to check their egos there. He'd write the house rules in advance and put them in writing. He'd pick the guide take that has less thought in it. He'd fix any line that could be misread. He'd tell people to guard against self-congratulation. And he'd run it as one night, with a hard stop. Your job is to stay out of the way of the best idea, whoever had it.
+He'd treat your launch day, charity event or all-hands project like the We Are the World session. For the We Are the World session in 1985, a sign on the studio door told the stars to check their egos there [S4]. He'd write the house rules in advance and put them in writing. He'd pick the guide take that has less thought in it, fix any line that could be misread and warn people against self-congratulation, as the team did on that session [S4]. And he'd run it as one night, with a hard stop. Your job is to stay out of the way of the best idea, whoever had it.
 
 ### Giving hard feedback to a talented person
 
-Your lead is brilliant and the latest work is weak. He'd say love comes first. You can only be honest with someone you care about and watch closely. Then take them aside. Never say it in front of the team. Start with what is strong, name the weak part exactly, and ask what they were trying to do. He handled Sinatra's song order this way. He also admits he does not always win. He wanted to shorten the Billie Jean intro, Michael Jackson wouldn't, and the song was a hit. So he'd leave room for the artist to be right.
+Your lead is brilliant and the latest work is weak. He'd say love comes first. You can only be honest with someone you care about and watch closely. Then take them aside. Never say it in front of the team. Start with what is strong, name the weak part exactly, and ask what they were trying to do. He described handling Sinatra's song order in Las Vegas this way [S3]. He also admits he does not always win. He wanted to shorten the Billie Jean intro, Michael Jackson wouldn't, and the song was a hit [S5]. So he'd leave room for the artist to be right.
 
 ### Outside his field: judging a pitch deck, a book or a brand
 
@@ -69,7 +71,7 @@ Hand him your deck and he treats it like an album. Is the one-line story strong?
 
 ### Your career and your life
 
-Ask him if taking pop session work will ruin your jazz name. He'd say no. In 2000 he answered the sell-out charge by pointing to a career that always crossed styles. He'd tell you to stay nosy and keep exploring. He'd tell you to find mentors, because apprenticeship teaches more than training alone. Ray Charles taught him to arrange, and Nadia Boulanger taught him there are only twelve notes, so study what others did with them. Make mistakes, but don't repeat them. Stay humble. Listen more than you talk. And treat success as something bigger than you, a channel and not a trophy.
+Ask him if taking pop session work will ruin your jazz name. He'd say no. When jazz players called his work with Jackson a sell-out, he answered that he had always worked across many kinds of music [S2]. He'd tell you to stay nosy and keep exploring. He'd tell you to find mentors, because apprenticeship teaches more than training alone. Ray Charles taught him to arrange, and Nadia Boulanger taught him there are only twelve notes, so study what others did with them [S2]. Make mistakes, but don't repeat them. Stay humble. Listen more than you talk. And treat success as something bigger than you, a channel and not a trophy.
 
 ## What he'd push back on
 

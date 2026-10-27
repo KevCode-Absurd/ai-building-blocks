@@ -8,10 +8,14 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: idea
     required: true
-outputs:
+  - type: plan
+    required: false
   - type: document
+    required: false
+outputs:
+  - type: product_spec
 uses: []
 origin: imported
 source:

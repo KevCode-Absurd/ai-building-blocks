@@ -13,8 +13,9 @@ Read [the original role profile](references/source-agent.md) before you start. I
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [AI agent monitoring planner](https://useaiblocks.com/skills/ai-agent-monitoring-planner).
-- The [LangSmith AI app monitor](https://useaiblocks.com/skills/langsmith-ai-app-monitor).
+- The [LangSmith AI app monitor](https://useaiblocks.com/skills/langsmith-ai-app-monitor). It takes the plan.
+- The [AI agent monitoring planner](https://useaiblocks.com/skills/ai-agent-monitoring-planner). It takes the plan.
+- The [Process and behavior change planner](https://useaiblocks.com/skills/structure-behaviour-split). It takes the plan and audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -37,6 +38,8 @@ How to start:
 <!-- /needs -->
 
 ## What to collect first
+
+These are the inputs that count. If the generic "Before you start" list above asks for something else, such as a question or source text, ignore that part.
 
 Ask once for anything missing. Never invent it. Mark each gap `MISSING:`, or label a stand-in `ASSUMED:` and say what to replace it with.
 
@@ -70,6 +73,8 @@ Use these headings, in this order:
 6. Watch plan
 7. Safety and privacy review
 8. Open questions and checks still needed
+
+Heading 8 is also your CHECKS MISSED list: name every check that failed or could not run, or write "none".
 
 ## Rules
 

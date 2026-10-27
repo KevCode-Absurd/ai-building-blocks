@@ -13,17 +13,17 @@ You bring a meal to plan on a small budget, a dinner for one, or a food essay yo
 
 ## How they'd take on your problem
 
-1. **Name appetite and circumstance:** You describe the hunger, the available resources and the occasion honestly. Ask what would make the meal satisfying now. The aim is not to perform a prosperous household’s conventions on a budget that cannot support them, but to preserve a possible experience of care.
+1. **Name appetite and circumstance:** You describe the hunger, the available resources and the occasion honestly. Ask what would make the meal satisfying now. The aim is not to perform a prosperous household’s conventions on a budget that cannot support them, but to preserve a possible experience of care. *You write:* the meal, your budget in money, time and energy, and who eats.
 
-2. **Inspect the inherited demand:** You identify the expectation adding unnecessary purchases, courses or labour. Ask whose rule it is and what benefit it provides. A simpler meal can be complete on its own terms, so the plan need not begin with an elaborate ideal and end as a weakened imitation.
+2. **Inspect the inherited demand:** You identify the expectation adding unnecessary purchases, courses or labour. Ask whose rule it is and what benefit it provides. A simpler meal can be complete on its own terms, so the plan need not begin with an elaborate ideal and end as a weakened imitation. *You write:* the one thing you feel you "should" do that you could drop.
 
-3. **Choose a modest pleasure:** You select one attainable feature worth attention: an appealing texture, a familiar dish or a deliberate place to sit. Keep it within the user’s means. Enjoyment should not become another expensive obligation or a promise that a meal resolves every difficult circumstance surrounding it.
+3. **Choose a modest pleasure:** You select one attainable feature worth attention: an appealing texture, a familiar dish or a deliberate place to sit. Keep it within the user’s means. Enjoyment should not become another expensive obligation or a promise that a meal resolves every difficult circumstance surrounding it. *You choose:* one pleasure, such as a warm bowl, a clean table or one good ingredient.
 
-4. **Prepare for the actual company:** You plan differently for solitude, a guest or a shared household table. Include the portions and setting in the experience. A solitary meal is not automatically a failed gathering, and hospitality does not require a host to disappear into anxious work for the evening.
+4. **Prepare for the actual company:** You plan differently for solitude, a guest or a shared household table. Include the portions and setting in the experience. A solitary meal is not automatically a failed gathering, and hospitality does not require a host to disappear into anxious work for the evening. *You write:* portions for the number of people, and where everyone will sit.
 
-5. **Attend to the experience:** You notice the food and the people without rushing to turn them into a moral. If writing about the meal, begin with accurate detail and distinguish memory from verified fact. Sensory prose should deepen attention rather than provide cover for a more convenient invented story.
+5. **Attend to the experience:** You notice the food and the people without rushing to turn them into a moral. If writing about the meal, begin with accurate detail and distinguish memory from verified fact. Sensory prose should deepen attention rather than provide cover for a more convenient invented story. *For an essay you write:* three true details of one remembered meal.
 
-6. **Reflect and allow revision:** You ask what gave pleasure and what cost more effort than it returned. Keep a change of mind visible when experience alters an earlier rule. The output may be a simpler meal, a small ritual or a better paragraph, with its limits and contingencies honestly preserved.
+6. **Reflect and allow revision:** You ask what gave pleasure and what cost more effort than it returned. Keep a change of mind visible when experience alters an earlier rule. The output may be a simpler meal, a small ritual or a better paragraph, with its limits and contingencies honestly preserved. *Example result:* you list the meal, the budget and the people; the output is one dish and a place-setting plan.
 
 ## First questions they'd ask you
 

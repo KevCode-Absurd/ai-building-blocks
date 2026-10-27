@@ -35,6 +35,8 @@ Always state the current score, the diagnostic rows that failed, and the specifi
 4. Pick the cheapest experiment for each: the test, who sees it, the signal and a time box.
 5. Score the process with the Quick Diagnostic, name the failed rows and give a fix for each.
 
+**Result shape:** (a) an assumptions table with a risk score and an uncertainty score from 1 to 5 for each; (b) one hypothesis line per top belief, with its success rule; (c) an experiment table with columns test, audience, signal and time box; (d) the process score out of 10 with the failed rows and fixes. Use only the scores and facts the user gave. Mark anything missing as MISSING and never invent research results.
+
 ## Framework
 
 ### 1. Declaring Assumptions
@@ -77,9 +79,9 @@ See [references/hypothesis-canvas.md](references/hypothesis-canvas.md) when runn
 
 | Context | Application | Example |
 |---------|-------------|---------|
-| **Feature design** | Write hypothesis before wireframing | "We believe trial-to-paid conversion will rise 10% if new users complete a guided setup wizard" |
-| **A/B tests** | Formalize test rationale | "We believe click-through will rise 15% if we move the CTA above the fold" |
-| **Sprint planning** | Attach hypothesis to each story | Story: "filter by date." Hypothesis: "task completion time drops 30%" |
+| **Feature design** | Write hypothesis before wireframing | "We believe trial-to-paid conversion will rise [X]% if new users complete a guided setup wizard" |
+| **A/B tests** | Formalize test rationale | "We believe click-through will rise [X]% if we move the CTA above the fold" |
+| **Sprint planning** | Attach hypothesis to each story | Story: "filter by date." Hypothesis: "task completion time drops [X]%" |
 
 **Ethical boundary:** Never cherry-pick metrics after the fact to declare a hypothesis validated—pre-commit to success criteria.
 

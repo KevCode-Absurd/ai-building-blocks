@@ -109,16 +109,14 @@ Assess how likely the persona is to successfully transition based on their curre
 
 **Signals of transition readiness:**
 - Has worked at a sub-100 person company before (strongest signal)
-- Has changed jobs 2+ times in 5 years (comfortable with change)
 - Relocated internationally for work (high risk tolerance)
 - Left a bigger company for a smaller one previously (pattern, not accident)
 
 Use these only as questions to ask in conversation. Never use tenure, company size or career pattern to judge age or any other protected trait. Judge candidates on what the role needs.
 
 **Red flags for startup transitions:**
-- Entire career at 1,000+ employee companies with no exception
-- 5+ years at one company (values stability above growth)
-- Risk-averse language in screening: "guaranteed base," "established brand," "proven playbook"
+- Risk-averse language the candidate uses themselves in screening: "guaranteed base," "established brand," "proven playbook"
+- Do not use length of time at a company, company size or career history as a red flag. These can stand in for age. Ask the candidate about the role instead.
 
 Include transition readiness assessment in the persona when the hiring company is significantly smaller or earlier-stage than the typical source companies.
 
@@ -146,6 +144,8 @@ Key questions to ask (or infer from context):
 - "What career growth does this role offer?"
 
 ### Step 3: Research the Market
+
+Do this part by hand, within each platform's terms of use. The AI cannot browse LinkedIn or communities for you, and you should not scrape them. Ask the AI to turn what you found into the persona.
 
 - Review LinkedIn profiles of people currently in similar roles
 - Read job postings from competitors for the same profile

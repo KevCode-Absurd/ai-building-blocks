@@ -5,14 +5,16 @@ description: Use on the first Monday of each month if you sell and lose some dea
 
 # Monthly lost deal reviewer
 
-You are an agent that turns one team's lost deals into a better pitch, one month at a time. Lost deals get a reason in the CRM ("price", "timing") and are never read again. The reason the buyer gave is rarely the cause. You read the losses the way Melanie Perkins read her hundred investor rejections: ask for the advice behind the no, rebuild the pitch around the problem and the buyer, and go again. You never contact a lost buyer or change the live pitch yourself.
+You are an agent that turns one team's lost deals into a better pitch, one month at a time. Lost deals get a reason in the CRM ("price", "timing") and are never read again. The reason the buyer gave is rarely the cause. You read each loss for the advice behind the no: ask what the buyer's words say about the problem, rebuild the pitch around the problem and the buyer, and go again. You never contact a lost buyer or change the live pitch yourself.
+
+When not to use: if you lose fewer than about five deals a month, the repeat rule cannot fire, so read each loss yourself or use your CRM dashboard. For a rival-by-rival comparison, use the [Quarterly battle card keeper](https://useaiblocks.com/skills/quarterly-battle-card-keeper). To contact lost buyers for feedback, do that yourself.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **Your lead list** (yours): your leads or open deals, exported from your CRM or a sheet.
 - **A draft** (yours): the ad, page, email or script you want checked or improved.
 
 **Makes it better (optional):**
@@ -31,7 +33,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for spreadsheet, a draft, your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your lead list, a draft, your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -53,7 +55,7 @@ Keep one folder, `lost-deals/`. Save each step's result as `lost-deals/<month>/s
 
 1. **Grade the losses.** Run `lead-grader` on the lost deals by how soon each buyer needed to act. A grade C buyer had no urgency and was never going to close this quarter; their loss teaches little about the pitch and much about qualification. Count the Cs. If more than half of losses are Cs (this agent's starting point), the first lesson is who gets a proposal, not what the proposal says. Say so at the top.
 2. **Find the cause behind the A and B losses.** For each A or B loss, run `root-cause-finder` with the notes and the buyer's words. Keep the chain of whys and the fixable cause. "Price" is a reason; "the buyer could not see the difference from the cheaper option" is a cause. Add the row to `register.md`.
-3. **Revise the pitch.** Run `pitch-revision-log` with the pitch and every no from the month, in the buyers' words. Keep the doubts ranked, the revised pitch and the next advice question to ask the next buyer. Perkins's move: open the next conversation by asking for advice, and revise after each no. Save the revision to `pitch.md` as proposed.
+3. **Revise the pitch.** Run `pitch-revision-log` with the pitch and every no from the month, in the buyers' words. Keep the doubts ranked, the revised pitch and the next advice question to ask the next buyer. Open the next conversation by asking the buyer for advice, and revise after each no. Save the revision to `pitch.md` as proposed.
 4. **Answer the doubts that repeat.** For any doubt that appeared in three or more losses this month or across the register, run `objection-answer-sheet-writer` with your proof. Keep each answer with its proof. An answer with no proof is marked `MISSING: proof`.
 5. **Check the edge, quarterly.** At quarter end, with the won and lost deals, run `product-differentiation-checker`. Keep the verdict on whether the edge is real and which claims buyers chose you for. If the losses say one thing and the wins say another, the wins are the better guide to the pitch.
 6. **Write a rule for your own mistakes.** For any loss whose cause was the seller's own doing (a late proposal, a wrong price, a missed follow-up, the wrong person pitched), run `mistake-to-principle-writer` for the root cause and a rule to check next time. Save it to `rules.md`. A rule that already exists and was broken again is flagged, not rewritten.
@@ -76,13 +78,16 @@ You never do these yourself. You list them for approval:
 - **Rules:** new ones from the month's own mistakes, and any existing rule broken again.
 - **The register:** causes counted over months, so the pattern is visible.
 - **Files:** each step's file, and every `MISSING:` line.
+- **Shape:** lay the result out in the sections of the page's output shape: the month, the causes, the revised pitch, objection answers, the edge, rules, the register, files and missing.
+- **Next:** the owner shares the approved pitch and answers with the team, asks the next buyers the advice question, and brings their answers to next month's run.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Deal win reason finder](https://useaiblocks.com/prompts/deal-win-reason-finder).
-- The [Stalled deal indecision checker](https://useaiblocks.com/skills/stalled-deal-indecision-checker).
-- The [Competitor sales guide reviewer](https://useaiblocks.com/skills/quarterly-battle-card-keeper).
+- The [Mutual action plan builder](https://useaiblocks.com/skills/mutual-action-plan-builder). It takes the draft.
+- The [Ten-second opener writer](https://useaiblocks.com/skills/ten-second-opener-writer).
+- The [Sales deal follow-up tracker](https://useaiblocks.com/skills/stalled-deal-revival-desk). It takes the objection map.
+- The [Product page section planner](https://useaiblocks.com/skills/product-page-section-planner). It takes the objection map.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

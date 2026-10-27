@@ -10,6 +10,8 @@ level: intermediate
 inputs:
   - type: spreadsheet
     required: true
+  - type: page_speed_report
+    required: false
 outputs:
   - type: audit_report
 uses: []

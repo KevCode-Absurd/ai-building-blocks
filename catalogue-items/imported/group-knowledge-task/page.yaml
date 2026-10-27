@@ -10,6 +10,8 @@ explain: |
   A group task where learners build an answer together and share the blame or credit for it. Give it a topic and you get a task design built on the Ubuntu idea that a person is a person through other people.
 
   The task is made so no one can finish alone: each member holds a piece of the knowledge, and the group result only works when pieces are combined. It sets shared goals, a way for the group to check each other's understanding, and a reflection step. It suits classes that tend to split into individual work, and it comes with a note on how strong the research behind the approach is.
+
+  Licence: CC BY-SA 4.0, as the LICENSE file says. Credit goes to Gareth Manning.
 when:
   - Your class works in groups but one person does the work.
   - You want a task that values shared learning over ranking.
@@ -30,10 +32,10 @@ you_get:
   - A way to check understanding together
   - A reflection activity
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Paste in the skill text from the skill folder.
+  - Open Claude, ChatGPT or Gemini. Add this skill to your AI from the install tab on this page, or copy its text from there and paste it in.
   - Add your learning objective and a few lines on your class. Add the optional details if you have them.
   - Read the task design. Check that every learner holds a piece the group needs.
-  - If students will interview elders or care-home residents, get school approval first. Get consent from each person they interview, and from families.
+  - If students will interview elders, care-home residents or family members, get school approval first. Get consent from each person they interview, and from families. If a family does not want to take part, give that student another way to hold a piece the group needs, such as a source in school, and do not ask them to explain.
   - Follow your school's safeguarding and data protection rules. Never leave a student alone with an interviewee, and agree where recordings are stored and when they are deleted.
   - Adjust the roles and timing to fit your class, then run the task.
   - Afterward, use what the group built as a shared class record, and read the evidence note to see how strong the research is.

@@ -15,6 +15,18 @@ description: >-
 
 # tasteskill v2
 
+## Quick start
+
+1. Ask what the site or screen is for, who it is for and how it should feel.
+2. Run `scripts/draw.mjs` to deal three directions. Show them and let the user pick one.
+3. Write the copy first, then build the page in the user's stack to the house style below.
+4. Run `scripts/inspect.mjs` in a real browser at three widths. Fix every fail.
+5. Look at the screenshots, score them against the rubric, fix and look again. Hand over with picture credits and the sample content to swap.
+
+The full run, rules and references follow.
+
+**About the claims in this file.** The study of 247 sites, the panel scores and the "blind tests" were run by the skill's author, with AI reviewers. The method is in `references/research.md`. They are the author's own claims and have not been checked independently. Do not tell the user a design "wins" or is "proven". Say the author's study found it.
+
 A page built by a model usually looks like the average of every page the model has seen: a centred
 headline over three lines, a little label above it, a row of icon cards, a soft gradient, a few thin
 rules and a monospace caption. Nothing in it is wrong and nothing in it was decided.

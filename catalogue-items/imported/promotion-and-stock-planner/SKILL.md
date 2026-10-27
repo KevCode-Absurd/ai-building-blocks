@@ -9,6 +9,8 @@ description: When the user wants to plan promotions, optimize trade spending, fo
 
 This block was added by AI Blocks. The method below is the original author's.
 
+**Start here.** Everything except fitting the lift model can be done in plain chat, from a small table the user pastes in. Only the Python blocks need an AI that can run code.
+
 **Work in this order.**
 1. Gather: past promotions with dates, price, deal type and units sold; normal weekly sales with no promotion; trade spend; lead times; capacity; the budget and goal.
 2. Estimate the lift for each deal type from the user's own history.
@@ -17,6 +19,8 @@ This block was added by AI Blocks. The method below is the original author's.
 5. Space the deals on a calendar so they do not compete.
 
 **Ask first, never guess.** If there is no history of past promotions or no baseline sales, say the lift cannot be worked out. Offer two choices: gather the data first, or run one small test promotion and measure it. Write MISSING next to each input the user does not have. Do not fill gaps with typical figures.
+
+**Column names must match the user's sheet.** The elasticity code reads a `volume` column and the post-promotion code reads a `sales` column. Use one name for units sold and rename the columns in the user's sheet to match before you run any code. All example tables and numbers in the code must be replaced with the user's own data.
 
 **Every lift number in the code is a placeholder.** The price elasticity of -2.5, the feature lift of 1.5 and the display lift of 2.0 only show the shape of the model. They are not benchmarks. Take them from the user's own history (the elasticity model below does this). Other fixed numbers in the code (promo curves, safety stock rates, cost figures) are placeholders too. Never report a lift or a return that uses them.
 

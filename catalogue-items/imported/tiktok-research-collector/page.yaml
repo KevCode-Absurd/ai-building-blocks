@@ -9,7 +9,9 @@ subhead: Give it a hashtag, account, keyword or video link. It collects public T
 explain: |
   Public TikTok videos, comments and stats for a hashtag or account, pulled into a table you can sort. No TikTok login is needed, but the collection runs through a paid Apify scraper, so you need an Apify account and token.
 
-  The skill picks the right input for your question: profiles, hashtags, search terms, video links, sounds, comments or followers. It sets limits such as the date range, minimum likes and exact tag match, then runs the scraper and returns the data with views, likes and shares. Typical uses are checking the last 20 videos of a creator, finding top videos for a phrase, or exporting a comment thread. It only reads public data.
+  The skill picks the right input for your question: profiles, hashtags, search terms, video links, sounds, comments or followers. It sets limits such as the date range, minimum likes and exact tag match, then runs the scraper and returns the data with views, likes and shares. Typical uses are checking the last 20 videos of a creator, finding top videos for a phrase, or exporting a comment thread. It only reads public data. This page adds to the original skill: the cost check before a run, the privacy steps below and the plain labels for what is paid.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (harshmaur) says MIT. Credit goes to harshmaur and sickn33.
 when:
   - You want to see which videos do best under a hashtag in your niche.
   - You are checking if a creator's last 20 videos look safe for your brand.
@@ -31,7 +33,7 @@ you_get:
   - A cost estimate before the run and a result count after
   - "Next steps: turn the top-video table into a content plan, or export comments to a sheet to sort and code them"
 how_to_use:
-  - Check TikTok's terms and your local privacy rules before you collect comments or follower lists. Do not publish personal details from them.
+  - Check TikTok's terms and your local privacy rules before you collect comments or follower lists. Do not publish personal details from them. Collect only the fields you need, leave comment and follower lists off unless you must have them, keep usernames and IDs out of anything you share, and delete the raw export when your analysis is done.
   - Open an AI that can run code and connect to Apify, and paste the skill. Add your Apify token in its settings or environment.
   - Tell it your hashtag, account, keyword or video link. Add dates, minimum likes and how many videos you want.
   - Read the cost estimate. Any run over $2 needs your yes before it starts. Say yes only if the cost is fine.

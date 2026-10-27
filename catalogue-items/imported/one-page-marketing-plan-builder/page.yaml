@@ -24,6 +24,7 @@ you_give:
   - Who your best customer is
   - What marketing you do today
   - Your budget and goals (optional)
+  - A short description of your best customer and a few sales numbers, if you have them. No paid tool or code is needed.
 you_get:
   - A one-page nine-square plan
   - A score out of ten
@@ -51,7 +52,7 @@ output_sample:
     - name: Weakest squares
       contains: The squares that failed the check, with a short note on why each one is vague.
     - name: Next actions
-      contains: One clear step for each gap, aimed at reaching a full score.
+      contains: One clear step for each gap, aimed at reaching a full score. Fix the lowest square first, then run the score again. The one-page-plan-template.md file in the skill folder is the template to fill in.
 terms:
   - term: PVP Index
     meaning: A way to pick your niche by scoring three things. Personal fulfillment, Value to the marketplace and Profitability.

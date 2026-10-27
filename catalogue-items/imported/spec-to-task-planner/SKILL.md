@@ -19,6 +19,9 @@ Convert a Notion spec into linked implementation plans, tasks, and ongoing statu
 ## Workflow
 
 ### 0) If any MCP call fails because Notion MCP is not connected, pause and set it up:
+In any AI tool, open its settings, add the Notion connection (Notion MCP, https://mcp.notion.com/mcp) and log in to Notion when asked. Then continue with Step 1. The steps below are optional and only for the Codex CLI.
+
+Optional: Codex setup
 1. Add the Notion MCP:
    - `codex mcp add notion --url https://mcp.notion.com/mcp`
 2. Enable remote MCP client:

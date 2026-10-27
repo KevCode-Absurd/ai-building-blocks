@@ -101,9 +101,9 @@ MISSING: <account list | country | posting method | last 20 topics>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Social post format reviewer](https://useaiblocks.com/skills/organic-format-tester).
 - The [Short video format picker](https://useaiblocks.com/skills/short-video-format-picker). It takes the audit report.
-- The [Social post calendar and draft writer](https://useaiblocks.com/skills/social-post-planner).
+- The [Social post calendar and draft writer](https://useaiblocks.com/skills/social-post-planner). It takes the audit report.
+- The [Low-performing post reviewer](https://useaiblocks.com/skills/flop-post-diagnoser). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -10,6 +10,8 @@ explain: |
   A fine-tuning run for your language model, set up with the method that matches what you want. Tell it your base model, your data and your goal. The skill picks from TRL's training types: supervised fine-tuning for following instructions, DPO for learning from preferred versus rejected answers, GRPO and RLOO for reward-based training, and reward model training.
 
   It writes the trl command with learning rate, epochs, packing and dataset settings, and explains why each is set that way. It is built on Hugging Face Transformers and Accelerate. You need Python, the TRL package and a GPU, and larger models need more memory.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (Hugging Face) says Apache-2.0, which covers the code. Credit goes to Hugging Face and sickn33.
 when:
   - You want a small model to follow your company's instruction style.
   - You have pairs of good and bad answers and want to train on the preference.
@@ -35,7 +37,7 @@ how_to_use:
   - Add your GPU type and memory so it can pick safe settings.
   - Check that your dataset columns match the method you picked. SFT, DPO and the others each expect different columns.
   - Read the method choice and the reasons for each setting before you run anything.
-  - Remove --push_to_hub from the command, or check the Hub repo is private. That flag uploads your trained model to the Hugging Face Hub, and it may be public.
+  - The commands leave out --push_to_hub. Add it only if you want to upload your trained model to the Hugging Face Hub, and use a private repo. A public repo shares your model with everyone.
   - Run the command on your own machine. The AI cannot train for you unless it can run code on a GPU.
   - Check the result against the checklist. Do a short test run first, with a small max_steps value on a slice of data, because GPU time costs money.
 output_sample:

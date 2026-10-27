@@ -62,8 +62,8 @@ Three step files and the summary. The last file holds the smaller image.
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Image maker and editor](https://useaiblocks.com/skills/image-maker-and-editor). It takes the image.
-- The [Marketing image prompt writer](https://useaiblocks.com/prompts/marketing-image-prompt-writer).
-- The [Image prompt engineer agent](https://useaiblocks.com/skills/agency-design-image-prompt-engineer). It takes the image.
+- The [Brand sticker set maker](https://useaiblocks.com/skills/brand-sticker-set-maker). It takes the image.
+- The [Slack GIF maker](https://useaiblocks.com/skills/slack-gif-maker). It takes the image.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

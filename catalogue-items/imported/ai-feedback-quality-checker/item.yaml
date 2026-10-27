@@ -8,8 +8,10 @@ role: check
 job: ops
 level: intermediate
 inputs:
-  - type: source_text
+  - type: copy_draft
     required: true
+  - type: question
+    required: false
 outputs:
   - type: audit_report
     required: true

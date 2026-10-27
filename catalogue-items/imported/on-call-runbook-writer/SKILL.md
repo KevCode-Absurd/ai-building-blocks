@@ -327,7 +327,7 @@ exit $EXIT_CODE
 
 ### Disk Space Cleanup
 
-> **Warning: destructive.** This script deletes logs, temp files and Docker data, including volumes. Read each line, test it on a staging host, and have a second person confirm before you run it on production.
+> **Warning: destructive.** This script deletes logs, temp files and unused Docker data. Adding --volumes would also delete volumes. Read each line, test it on a staging host, and have a second person confirm before you run it on production.
 
 ```bash
 #!/usr/bin/env bash
@@ -341,7 +341,8 @@ df -h /
 journalctl --vacuum-time=7d 2>/dev/null || true
 
 # Clean Docker artifacts
-docker system prune -f --volumes 2>/dev/null || true
+# Add --volumes only after you have checked that no data you need lives in a volume
+docker system prune -f 2>/dev/null || true
 
 # Remove old log files
 find /var/log -name "*.gz" -mtime +7 -delete 2>/dev/null || true
@@ -440,3 +441,7 @@ Draft a SEV2 database failover runbook with prerequisites, verification, and rol
 ```
 
 > Adapted from [BagelHole/DevOps-Security-Agent-Skills](https://github.com/BagelHole/DevOps-Security-Agent-Skills) (MIT); frontmatter, When to Use/Limitations, and safety boundaries added for upstream compliance. Docs-only import: helper scripts and templates not bundled.
+
+## Licence note
+
+The header above says MIT (BagelHole/DevOps-Security-Agent-Skills). The collection this copy came from lists its written content as CC BY 4.0 (see `LICENSE-CONTENT`). We share this copy under CC BY 4.0. Keep the credit to the author and sickn33.

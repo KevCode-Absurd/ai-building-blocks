@@ -45,6 +45,8 @@ Example prompt: "Proofread the following research abstract for APA style. Flag a
 
 ## Examples
 
+The examples show the shape of a reply. Any figure in them, such as a reading grade, is a placeholder and not a measured result.
+
 ### Example 1: Proofreading an Academic Paragraph
 
 **Input:**
@@ -72,7 +74,7 @@ Example prompt: "Proofread the following research abstract for APA style. Flag a
 | 11 | "signficant" | "significant" | Spelling error |
 | 12 | "improvement, however" | "improvement; however," | Semicolon before conjunctive adverb |
 
-**Readability:** Estimated Flesch-Kincaid grade level of about 14 (an estimate, not a calculated score; illustrative figure; appropriate for academic audience).
+**Readability:** Estimated Flesch-Kincaid grade level of about [GRADE] (an estimate, not a calculated score; the number depends on the text, so never reuse a figure from an example; appropriate for the stated audience).
 
 ### Example 2: Proofreading Technical Documentation
 

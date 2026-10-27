@@ -16,7 +16,7 @@ Ask once for any of these that are missing. If the user cannot give one, write M
 1. Scope: the systems and teams the audit covers.
 2. Trust categories planned (Security is always in).
 3. The audit period: start date, end date and today's date.
-4. Optional: the control list with how often each runs, the exception log, and the evidence list.
+4. Optional: the control list with how often each runs, the exception log, and the evidence list. A readiness report from the SOC 2 readiness planner can stand in for the control list.
 
 No scripts or tools are needed. Work from what the user pastes. If the user says they run an ISO 27001 audit too, use question 6. Otherwise mark it not applicable.
 

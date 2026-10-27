@@ -12,9 +12,9 @@ Read [the original role profile](references/source-agent.md) before you start. U
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Prospect outreach drafter](https://useaiblocks.com/skills/prospect-outreach-drafter).
 - The [First outreach message writer](https://useaiblocks.com/skills/stranger-first-message-writer). It takes the plan.
 - The [Sales prospecting schedule planner](https://useaiblocks.com/skills/prospecting-block-planner). It takes the plan.
+- The [Mutual action plan builder](https://useaiblocks.com/skills/mutual-action-plan-builder). It takes the draft and plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

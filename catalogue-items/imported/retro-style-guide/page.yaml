@@ -9,7 +9,9 @@ subhead: Describe your product and who uses it. Your AI writes a retro style gui
 explain: |
   A retro mood board is not a set of rules. Without rules, one page uses a slightly different blue, the next page a different font size, and the throwback look falls apart. This skill writes a retro style guide that designers and developers can follow.
 
-  Your AI starts with one sentence on the design idea. Then it sets the foundations. The defaults are the Macondo font for text and headings, JetBrains Mono for code, a blue and a purple as the main colours, a white surface and spacing steps from 4 to 32. After that it writes rules for each part, such as buttons and forms, with every state: default, hover, focus, disabled, loading and error.
+  Your AI starts with one sentence on the design idea. Then it sets the foundations. The defaults are the Macondo font for headings and short labels, a plainer font for long reading text, JetBrains Mono for code, a blue and a purple as the main colours, a white surface and spacing steps from 4 to 32. After that it writes rules for each part, such as buttons and forms, with every state: default, hover, focus, disabled, loading and error.
+
+  This is not the Minimal style guide writer with a new coat of paint. It adds a retro palette, rules for the vintage display font and a contrast ratio for every colour pair.
 
   What sets it apart is the contrast check. The default blue on white is only about 3.7 to 1, and normal text needs 4.5 to 1. The guide shows the ratio for each colour pair and tells you where to darken a colour, so the vintage look stays easy to read.
 when:
@@ -38,6 +40,7 @@ how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your product description and who uses it. Add any fonts or colours you must keep, and say if it is for web, iOS or Android.
   - Answer the one round of questions it asks, or say "use the defaults". Anything you do not give is marked MISSING.
+  - Check the fonts and weights. Use only the weights each font really comes in (Macondo ships in one regular weight). Keep Macondo for headings and short labels.
   - Check the colour table first. Darken any pair below 4.5 to 1 for normal text, or limit it to large text and icons.
   - Cut any rule your team will not follow. Then give the guide to your designer or developer, or paste it into your coding AI's project instructions.
 how_it_works:

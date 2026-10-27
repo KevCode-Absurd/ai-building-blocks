@@ -95,4 +95,4 @@ The skill asks for the client count and the offer. With zero clients, it redirec
 
 ## Source and License
 
-Adapted with permission-compatible terms from the MIT-licensed [Marketing Mindset](https://github.com/axelfreeman/marketing-mindset) skill by Axel Freeman.
+Adapted from the [Marketing Mindset](https://github.com/axelfreeman/marketing-mindset) skill by Axel Freeman. The author's file header says MIT (licence file: https://github.com/axelfreeman/marketing-mindset/blob/master/LICENSE). The AI Blocks catalogue shares this copy under CC BY 4.0, as the LICENSE-CONTENT file in this item says. Credit goes to Axel Freeman and sickn33.

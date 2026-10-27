@@ -8,10 +8,12 @@ role: make
 job: ops
 level: advanced
 inputs:
-  - type: codebase
+  - type: map_data
     required: true
 outputs:
   - type: code_change
+  - type: map_data
+    required: false
 uses: []
 origin: imported
 source:

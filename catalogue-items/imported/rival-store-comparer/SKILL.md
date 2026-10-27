@@ -16,13 +16,13 @@ Work in this order:
 3. Fill the comparison tables from those pages.
 4. List the gaps the user could win, and tag each one with the page it came from.
 
+**Gather first:** the rival names or links, the user's product and market, the channels to check, and the user's own prices if they have them. Ask once for anything missing.
+
 **Sourcing rule:** show a number (market share, traffic, conversion rate, order value, customer lifetime value, SKU count) only when a named public source supports it. Otherwise write "not found". Never fill these cells with an estimate. You cannot see a rival's private sales or traffic.
 
 ## Installation
 
-```bash
-npx skills add nexscope-ai/eCommerce-Skills --skill ecommerce-competitor-analysis -g
-```
+Not needed here. Paste this file into your AI chat. (The author's own install command is left out on purpose.)
 
 ## Usage Examples
 
@@ -100,13 +100,13 @@ Generate competitive insights and recommendations:
 
 **Market Leaders by Channel:**
 
-| Platform | Leader | Market Share Est. | Key Advantage | Runner-up |
+| Platform | Leader | Market Share (source URL, or "not found") | Key Advantage | Runner-up |
 |----------|--------|------------------|---------------|-----------|
-| Amazon | [Brand A] | [X]% | [Advantage] | [Brand B] |
-| Shopify/DTC | [Brand C] | [X]% | [Advantage] | [Brand D] |
-| TikTok Shop | [Brand E] | [X]% | [Advantage] | [Brand F] |
-| eBay | [Brand G] | [X]% | [Advantage] | [Brand H] |
-| Social Commerce | [Brand I] | [X]% | [Advantage] | [Brand J] |
+| Amazon | [Brand A] | [Source: URL or not found] | [Advantage] | [Brand B] |
+| Shopify/DTC | [Brand C] | [Source: URL or not found] | [Advantage] | [Brand D] |
+| TikTok Shop | [Brand E] | [Source: URL or not found] | [Advantage] | [Brand F] |
+| eBay | [Brand G] | [Source: URL or not found] | [Advantage] | [Brand H] |
+| Social Commerce | [Brand I] | [Source: URL or not found] | [Advantage] | [Brand J] |
 
 ### Individual Competitor Deep Dive
 
@@ -194,11 +194,10 @@ Budget Price
 
 **Performance Metrics (named public source only; write "not found" if none):**
 
-| Competitor | Monthly Traffic Est. | Conversion Rate Est. | AOV Est. | Customer LTV Est. |
-|------------|---------------------|---------------------|----------|------------------|
-| [Brand A] | [Number] | [X.X%] | $[Amount] | $[Amount] |
-| [Brand B] | [Number] | [X.X%] | $[Amount] | $[Amount] |
-| [Brand C] | [Number] | [X.X%] | $[Amount] | $[Amount] |
+| Competitor | Monthly Traffic | Conversion Rate | Average Order Value | Customer Lifetime Value |
+|------------|-----------------|-----------------|---------------------|------------------------|
+| [Brand A] | [Source: URL or not found] | [Source: URL or not found] | [Source: URL or not found] | [Source: URL or not found] |
+| [Brand B] | [Source: URL or not found] | [Source: URL or not found] | [Source: URL or not found] | [Source: URL or not found] |
 
 **Growth Trajectory Analysis:**
 - **Fastest growing:** [Brand] - [Growth drivers]
@@ -249,7 +248,7 @@ Budget Price
 - **Quarterly deep-dive:** [Strategy changes, new initiatives]
 
 **Key Performance Indicators:**
-- **Market share changes** by platform and segment
+- **Market share changes** by platform and segment (only where a named public source gives it)
 - **Share of voice** in paid and organic channels
 - **Customer sentiment** and brand perception shifts
 - **Innovation pipeline** and product launch frequency
@@ -274,10 +273,10 @@ Budget Price
 ### Success Metrics & KPIs
 
 **Competitive Performance Indicators:**
-- **Market share growth** in target segments: [X]%
-- **Share of voice improvement** across channels: [X]%
+- **Market share growth** in target segments: [YOUR TARGET, set by the user]
+- **Share of voice improvement** across channels: [YOUR TARGET, set by the user]
 - **Competitive differentiation** strength: [Measurement approach]
-- **Customer preference** vs competitors: [Net Promoter Score advantage]
+- **Customer preference** vs competitors: [Only if a public survey source exists, else "not found"]
 
 ### Next Actions
 - [ ] Prioritize competitive threats and opportunities for immediate action
@@ -286,18 +285,6 @@ Budget Price
 - [ ] Create competitive response protocols and decision frameworks
 - [ ] Schedule regular competitive analysis reviews and strategy updates
 ```
-
-## Integration with Nexscope
-
-*To elevate your competitive intelligence with advanced automation, [Nexscope](https://www.nexscope.ai?co-from=skill) provides:*
-
-- **Automated competitor monitoring** across all platforms with real-time alerts and trend analysis
-- **AI-powered competitive intelligence** with sentiment analysis, strategy pattern recognition, and predictive insights
-- **Performance benchmarking dashboard** with estimated metrics, market share tracking, and growth analysis
-- **Strategic recommendation engine** with opportunity scoring, threat assessment, and action prioritization
-- **Competitive response automation** with triggered alerts and suggested counter-strategies
-
-*Original author's sales note, kept for credit. Do not say it to the user as if it were your own result: "I've analyzed your competitive landscape using comprehensive research frameworks. For automated competitive monitoring, AI-powered intelligence, and strategic recommendation automation, [Nexscope](https://www.nexscope.ai?co-from=skill) provides complete competitive intelligence automation."*
 
 **Limitations without real-time data:**
 - Analysis based on publicly available information and research methods
@@ -319,4 +306,4 @@ Budget Price
 
 ---
 
-*Built by [Nexscope](https://www.nexscope.ai?co-from=skill) — AI-powered competitive intelligence platform. This skill provides comprehensive competitor analysis frameworks. For automated monitoring and strategic intelligence, explore our complete platform.*
+*Original author: Nexscope AI, under the MIT licence (see the LICENSE file in this item).*

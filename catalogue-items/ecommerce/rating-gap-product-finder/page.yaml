@@ -11,7 +11,7 @@ subhead: Name a product category and the buyer group you have in mind. It lists 
 explain: |
   The best product gaps are where many people search and the products they find are bad. A sub-category with an average rating under about 3.8 and strong search volume shows demand with weak products. The reviews tell you what the products get wrong.
 
-  This skill asks an AI with web search for the top ten unmet pain points in a category, with proof from reviews, forums and Q&A, grouped by theme and ranked by urgency and willingness to pay. It then looks for people saying they would pay more for a fix. It lists sub-categories with low ratings and strong search. Each gap must be backed by two sources, such as review text and search volume, before it goes on your list. A single forum post is not enough. It is a variant of the product demand researcher, with the ranking and the rating gap rule added.
+  This skill asks an AI with web search for the top ten unmet pain points in a category, with proof from reviews, forums and Q&A, grouped by theme and ranked by urgency and willingness to pay. It then looks for people saying they would pay more for a fix. It lists sub-categories with low ratings and strong search. Each gap must be backed by two sources, such as review text and search volume, before it goes on your list. A single forum post is not enough. It adds the urgency ranking and the rating gap rule to the Product demand researcher. Review and sales data should come from text you paste or sources you may use. Some data tools are paid, and copying marketplace pages in bulk may break their terms.
 
 when:
   - You are choosing what to make or sell and want proof of unmet demand.

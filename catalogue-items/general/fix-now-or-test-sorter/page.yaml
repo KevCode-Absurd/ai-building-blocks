@@ -35,7 +35,7 @@ how_to_use:
   - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it."
   - "Under it, paste your problems, one per line, with the proof beside each."
   - "Add your page goal if you have one."
-  - "Do the tracking fixes first, then the fix-now items at the top of the rank."
+  - "Do the tracking fixes first, then work down the ranked order."
 output_sample:
   input:
     - Your list of page problems, one per line

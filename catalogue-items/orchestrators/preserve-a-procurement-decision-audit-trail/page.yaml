@@ -19,6 +19,7 @@ when:
   - Your approval checklist exists on paper but nobody has run it against the proposals.
 not_for:
   - You have not written criteria yet. Use the Vendor scorecard builder first, then come back.
+  - You have no approval checklist yet. Use the Decision checklist builder first, then come back.
   - You want a software pick with a weighted scorecard. Use the Software vendor chooser.
   - You have one vendor and no written proposals, or the purchase is small. Run the Decision checklist runner on its own and keep the note.
 you_give:
@@ -38,7 +39,7 @@ how_to_use:
   - Attach the proposals, your criteria, your checklist and the evaluator notes. Say which purchase this record is for.
   - Check the comparison first. Every vendor must be measured on the same scope. A proposal that leaves something out must show an exclusion, not a lower price.
   - Check the checklist result. A failed stop item ends the run for that vendor. An unknown on a must-have stays blocked until someone answers it.
-  - Save the decision trace with the proposals in your records. Your approver signs off outside this tool.
+  - Save the decision trace with the proposals in your records. Your approver signs off outside this tool. Once a contract is signed, check it with the Vendor agreement status checker.
 how_it_works:
   - title: Vendor comparison writer
     text: "Compares the actual proposals on your approved criteria and the same commercial scope. Keeps exclusions, evidence gaps and exit costs. Hands step 2 the comparison and the source file for each claim. Check before moving on: no criterion was added or changed after the proposals arrived."

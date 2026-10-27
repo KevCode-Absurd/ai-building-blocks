@@ -67,9 +67,9 @@ You never do these yourself. You list them for approval:
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [New hire onboarding reviewer](https://useaiblocks.com/skills/new-hire-onboarding-keeper). It takes the notes.
-- The [Hard feedback message writer](https://useaiblocks.com/skills/hard-feedback-message-writer). It takes the notes and plan.
-- The [Recognition plan designer](https://useaiblocks.com/skills/recognition-plan-designer). It takes the plan.
+- The [Problem root cause tracer](https://useaiblocks.com/skills/problem-root-cause-tracer). It takes the notes.
+- The [Team review theme sorter](https://useaiblocks.com/skills/review-lists-sorter). It takes the notes and plan.
+- The [Draft feedback editor](https://useaiblocks.com/skills/good-note-sharpener). It takes the notes.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

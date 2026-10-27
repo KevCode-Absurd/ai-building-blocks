@@ -9,7 +9,11 @@ level: advanced
 inputs:
   - type: spreadsheet
     required: false
+  - type: deal_terms
+    required: true
   - type: document
+    required: true
+  - type: contract
     required: true
 outputs:
   - type: spreadsheet

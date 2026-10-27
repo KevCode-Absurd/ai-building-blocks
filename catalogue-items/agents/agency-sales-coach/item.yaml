@@ -11,11 +11,13 @@ level: intermediate
 inputs:
   - type: question
     required: true
+  - type: transcript
+    required: false
   - type: source_text
     required: false
 outputs:
-  - type: brief
   - type: audit_report
+  - type: plan
 uses: []
 steps: []
 origin: imported

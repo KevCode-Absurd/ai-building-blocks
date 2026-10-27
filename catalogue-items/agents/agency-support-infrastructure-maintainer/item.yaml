@@ -12,6 +12,8 @@ inputs:
     required: true
   - type: document
     required: false
+  - type: code_change
+    required: false
 outputs:
   - type: plan
   - type: audit_report

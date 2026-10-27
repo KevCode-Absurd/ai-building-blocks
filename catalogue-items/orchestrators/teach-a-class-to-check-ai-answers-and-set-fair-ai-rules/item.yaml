@@ -7,12 +7,13 @@ role: orchestrate
 job: ops
 level: beginner
 inputs:
-  - {type: question, required: true}
+  - {type: lesson_plan, required: true}
   - {type: document, required: true}
   - {type: source_text, required: false}
 outputs:
   - {type: plan}
   - {type: audit_report}
+  - {type: lesson_plan, required: true}
 uses: [ai-reliability-lessons, spot-ai-mistakes-activity, ai-answer-critique-lesson, assignment-ai-boundaries]
 steps:
   - {uses: ai-reliability-lessons, note: "Lessons for this age group on where AI answers go wrong, why they sound confident, and how to check a claim, with examples from the subject. Hands step 2 the lesson plan, which sets the subject and age group for the mistake hunt."}

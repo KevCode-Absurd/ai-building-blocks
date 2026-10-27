@@ -5,11 +5,13 @@ name: Symbolic math coder
 summary: Turn your equation into MATLAB code that solves it exactly and builds a fast numeric function. Built for symbolic math in MATLAB.
 job: build-software
 headline: Symbolic math coder
-subhead: Describe the equation in plain words, with any known values or assumptions. It writes MATLAB code that sets up the variables, then differentiates, integrates, solves or transforms, and simplifies the result. You get working code, the exact solution, a fast numeric function and notes on the assumptions used.
+subhead: Describe the equation in plain words, with any known values or assumptions. It writes MATLAB code that sets up the variables, then differentiates, integrates, solves or transforms, and simplifies the result. You get, in this order, working code, the exact solution, a fast numeric function and notes on the assumptions used. Needs paid MATLAB and the Symbolic Math Toolbox.
 explain: |
   MATLAB code that solves your equation exactly, shows the result in clean form, and turns it into a fast numeric function you can run on real data. That saves you from hand algebra and from syntax slips that make symbolic code fail.
 
-  The skill follows the correct Symbolic Math Toolbox patterns. It declares symbolic variables with the right assumptions, then differentiates, integrates, solves or takes transforms. It simplifies or rewrites the result, and uses variable precision when you need digits. It converts answers with matlabFunction, and can go on to C code, transfer functions or state space form. You need MATLAB with the Symbolic Math Toolbox to run it.
+  The skill follows the correct Symbolic Math Toolbox patterns. It declares symbolic variables with the right assumptions, then differentiates, integrates, solves or takes transforms. It simplifies or rewrites the result, and uses variable precision when you need digits. It converts answers with matlabFunction, and can go on to C code, transfer functions or state space form. You need MATLAB with the Symbolic Math Toolbox to run it. Both are paid MathWorks products.
+
+  This is MathWorks' skill. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE.md file.
 when:
   - You have a differential equation and need its exact solution, not an approximation.
   - You derived a long formula and want it simplified or rewritten into a cleaner form.

@@ -5,11 +5,13 @@ name: Biology model fitter
 summary: Fit a SimBiology model to your lab data. Get fitted parameters, virtual patients and AUC, Cmax and half-life, using MATLAB with SimBiology.
 job: build-software
 headline: Biology model fitter
-subhead: Hand over a SimBiology model and measured data, and get back fitted parameters you can trust, along with simulated patients and drug exposure numbers. It saves you from the usual trial and error with fitting calls.
+subhead: Hand over a SimBiology model and measured data, and get back fitted parameters with fit checks, along with simulated patients and drug exposure numbers. It saves you from the usual trial and error with fitting calls.
 explain: |
-  Hand over a SimBiology model and measured data, and get back fitted parameters you can trust, along with simulated patients and drug exposure numbers. It saves you from the usual trial and error with fitting calls.
+  Hand over a SimBiology model and measured data, and get back fitted parameters with fit checks, along with simulated patients and drug exposure numbers. It saves you from the usual trial and error with fitting calls.
 
   The skill sets up each fit through one declared problem object instead of loose function calls. Your data goes into a grouped table, with the response mapped to a model species and bounds set on each parameter. From there it can run population mixed-effects fits, generate virtual patients, and run non-compartmental analysis to give AUC, Cmax, Tmax, half-life and clearance. It runs in MATLAB with SimBiology.
+
+  Licence: this is a copy of MathWorks' public skill simbiology-fit-model, under BSD 2-Clause (see LICENSE.md). The skill file also links MathWorks' own reuse licence, which means you may use it only with MathWorks products such as MATLAB.
 when:
   - You have lab or trial data and need to estimate a model's parameters.
   - You are building a population PK or PD model with variation between people.
@@ -20,8 +22,8 @@ not_for:
   - "You only want to simulate a model without fitting it to data: run the simulation in MATLAB SimBiology directly."
   - "You do not have MATLAB and a SimBiology licence: this skill cannot run, so ask a pharmacometrics colleague or use free tools such as R."
 you_give:
-  - A SimBiology model
-  - Measured data with a group and time column
+  - A SimBiology model. Units on compartment volumes must be set, for example liter
+  - Measured data as a table with a group (subject) column, a time column and a response column. Dose amounts go only on dosing rows, with NaN on every other row
   - Which parameters to estimate, with bounds (bounds are ignored for population fits, so give good starting values there)
   - Dosing details (optional)
 you_get:
@@ -37,6 +39,7 @@ how_to_use:
   - Ask for virtual patients or AUC, Cmax and half-life if you need them.
   - Keep the code your AI wrote so you can rerun the fit later.
   - Pass the fitted parameters or virtual patients on to a simulation with the Biology model simulator, or share the fit plots and code with a pharmacometrics colleague.
+next: [biology-model-simulator]
 output_sample:
   input:
     - Your SimBiology model
@@ -49,12 +52,12 @@ output_sample:
     - Use it only with MathWorks products such as MATLAB, as the licence says (BSD 2-Clause plus MathWorks reuse terms)
   output:
     - name: Fitted parameter estimates
-      contains: The estimated value of each parameter you chose, from a single fit or a population mixed-effects fit.
+      contains: A table with the estimate for each parameter you chose, from a single fit or a population mixed-effects fit.
     - name: Fit quality checks and plots
-      contains: Plots and checks that show how well the fitted model matches your measured data.
+      contains: "An observed-against-predicted plot and a residuals-against-time plot, so you can see how well the fitted model matches your measured data."
     - name: Confidence intervals
-      contains: The range around each estimate, from the fast default method or the slower profile likelihood method.
+      contains: A low and high value around each estimate, from the fast default method or the slower profile likelihood method.
     - name: Virtual patients
       contains: A set of simulated patients sampled from assumed ranges or from your population fit.
     - name: NCA metrics
-      contains: "Non-compartmental analysis results: AUC, Cmax, Tmax, half-life and clearance."
+      contains: "Non-compartmental analysis results, in columns named AUC_0_last, C_max, T_max, T_half and CL (clearance)."

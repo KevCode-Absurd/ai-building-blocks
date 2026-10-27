@@ -102,7 +102,7 @@ CHECKS MISSED: <none, or list>
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Brand direction brainstormer](https://useaiblocks.com/skills/brand-direction-brainstormer). It takes the brief.
 - The [Brand name finder](https://useaiblocks.com/skills/brand-name-finder). It takes the brief.
-- The [Brand voice rewriter](https://useaiblocks.com/skills/brand-voice-rewriter). It takes the brief.
+- The [Brand perception auditor](https://useaiblocks.com/skills/brand-perception-auditor). It takes the brief.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

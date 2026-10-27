@@ -30,6 +30,8 @@ How to start:
 
 ## What you need
 
+These replace the generic spreadsheet and document inputs above. They are the donation intake records, the distribution records and the opening and closing counts.
+
 - **Donation intake records** (required): what came in, with item, quantity, unit, date and an ID if there is one.
 - **Distribution records** (required): what went out, with the same details.
 - **Opening and closing counts** (required): per item, with the date range they cover. If the opening counts are missing, ask once. If still missing, write `MISSING: opening counts` and reconcile only movements.
@@ -83,13 +85,9 @@ When you've handed it back, suggest what they could do next in one short questio
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
-## After this
+## What to do with the result
 
-Nothing has been changed in your records. Offer one next step and say they can type their own:
-
-- Tighten how new donations are accepted and recorded with the [Donated goods intake planner](https://useaiblocks.com/skills/donated-goods-intake-planner).
-- Write down how your team counts and records stock with the [Process and SOP writer](https://useaiblocks.com/skills/process-and-sop-writer).
-- Bring the filled-in MISSING lines back and ask for the reconciliation again.
+Nothing has been changed in your records. Offer one next step and say they can type their own. Use the suggestions above, or bring the filled-in MISSING lines back and ask for the reconciliation again.
 
 ## Check before you hand it back
 

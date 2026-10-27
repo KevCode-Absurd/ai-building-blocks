@@ -8,11 +8,19 @@ role: check
 job: ops
 level: advanced
 inputs:
+  - type: web_page
+    required: true
   - type: competitor_set
     required: true
+  - type: tool_connection
+    required: true
+  - type: spreadsheet
+    required: false
 outputs:
   - type: shortlist
   - type: audit_report
+  - type: keyword_list
+    required: true
 uses: []
 origin: imported
 warnings:

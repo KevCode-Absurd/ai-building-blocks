@@ -9,7 +9,9 @@ subhead: A list of gaps between your setup and the UK Cyber Essentials standard,
 explain: |
   A list of gaps between your setup and the UK Cyber Essentials standard, plus what to fix before you apply. You find out about a failure before you pay for the test.
 
-  You describe your devices, cloud services, home working and who uses what. The skill checks the five control themes: firewalls, secure setup, updates, user access and malware protection. It flags the automatic fail points, such as missing multi-factor login on cloud services and updates older than 14 days. It also applies the scope rules for cloud, personal devices and remote staff, and explains how Plus testing differs. It states which question set version applies, and lists current prices by company size.
+  You describe your devices, cloud services, home working and who uses what. The skill checks the five control themes: firewalls, secure setup, updates, user access and malware protection. It flags the automatic fail points, such as missing multi-factor login on cloud services and updates older than 14 days. It also applies the scope rules for cloud, personal devices and remote staff, and explains how Plus testing differs. It states which question set version applies. It also lists prices by company size as the author last checked them (2026-09-14). Prices, cover and deadlines change, so confirm each one on the IASME and NCSC sites before you decide.
+
+  Licence: MIT, as the LICENSE file in this item says. Credit goes to the original author.
 when:
   - You want Cyber Essentials for a tender or for cyber insurance.
   - You are unsure which devices and cloud tools count in scope.
@@ -32,6 +34,7 @@ you_get:
 how_to_use:
   - Open a chat in Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
   - Paste the instructions from this skill into the chat.
+  - Gather first: a list of your devices with their OS and update dates, the admin settings of your cloud services (especially whether multi-factor login is on), and how staff work remotely.
   - List your devices and operating systems, your cloud services, how staff work remotely and your company size.
   - Ask for the readiness gap table and the scope statement.
   - Fix any auto-fail flags first, then work down the fix list.

@@ -5,7 +5,7 @@ name: Industrial dashboard builder
 summary: Build an industrial dashboard in MATLAB from your plant data script. You get alarms, live trends and setpoint changes that need a confirm step.
 job: build-software
 headline: Industrial dashboard builder
-subhead: Give your AI your plant data script, your tags and your alarm limits. It builds an operator dashboard in MATLAB with ranked alarms, live trends and safe setpoint changes.
+subhead: Give your AI your plant data script, your tags and your alarm limits. It builds an operator dashboard in MATLAB with ranked alarms, live trends and safe setpoint changes. This is a MATLAB-only copy of a MathWorks skill, under MathWorks' own licence.
 explain: |
   A plant-floor dashboard in MATLAB App Designer that an operator can read at a glance, with alarms that stand out, live trends and setpoint changes that need confirmation. It turns a data script into a proper screen.
 
@@ -34,7 +34,7 @@ you_get:
 how_to_use:
   - Open an AI that can run MATLAB code, and paste in this skill.
   - Paste your data script, your tag names, your alarm limits and the values operators may change.
-  - Ask your AI to build the dashboard. It saves a real .mlapp file if the matlab-build-app skill is available. If not, it makes a plain .m app and tells you.
+  - Ask your AI to build the dashboard. It saves a real .mlapp file if the matlab-build-app skill is available. If not, it makes a plain .m app and tells you. Expect one file, either dashboard.mlapp or a .m file. Save it in your MATLAB project folder.
   - "Check the result: alarms stand out, trends show your limits, and each setpoint change asks for a confirm."
   - MATLAB, App Designer and the Industrial Communication Toolbox are licensed products. Test the app on a simulated node before any write goes to a live plant.
   - Next, pair it with matlab-build-app to save the .mlapp file.

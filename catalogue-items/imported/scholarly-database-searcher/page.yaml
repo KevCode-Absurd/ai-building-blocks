@@ -10,6 +10,8 @@ explain: |
   A literature search you can repeat and defend. Ask a research question and get papers, preprints, citations and open full text from eighteen free sources, with the exact queries shown so anyone can rerun them.
 
   It first turns your question into a search plan. It picks the most trusted database for the job, prefers identifiers like DOIs over loose keywords, and keeps each query small. Python scripts using only the standard library call the sources. Some of these APIs report success even when they fail, so it checks the contents, not just the status. The report says what was searched, what came back and what could not be reached. Most sources need no login. CORE full text needs a free CORE key.
+
+  Requirements: it needs an AI that can run code, network access and curl. Only the CORE full-text step needs a key.
 when:
   - You start a literature review and need a clear record of how you searched.
   - You have a DOI and want the open access full text if it exists.
@@ -35,6 +37,8 @@ how_to_use:
   - Add free API keys if you have them. Most sources need no login, but CORE full text needs a free CORE key.
   - Read the Retrieval Summary first. It tells you which sources were searched and which came back empty.
   - Check the Provenance section and save the queries. Use them to rerun the search later.
+  - Next, pick the papers you want and pass their DOIs to Unpaywall or Europe PMC for the full text, or paste them into the Research paper summarizer for a plain summary.
+next: [research-paper-summarizer]
 output_sample:
   input:
     - Your research question or topic

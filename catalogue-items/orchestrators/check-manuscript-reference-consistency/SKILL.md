@@ -32,7 +32,7 @@ How to start:
 
 Use what is attached or pasted first. Ask once, in one short message, for only what you cannot work without.
 
-**You need:**
+**You need for this job.** This list replaces the general one above. The source text is the cited papers.
 - The manuscript, with its version or date.
 - The reference list as it stands now.
 - The cited papers, as PDFs or pasted first pages. As many as you have.
@@ -102,12 +102,12 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 Write `MISSING: <what>` next to the affected line. Carry on with the citations that do not depend on it. Without the reference list, check only the in-text numbering and list what the list must contain. Without the cited papers, run step 2 on the text and list alone and say that no entry was checked against a paper.
 
-## After this
+## After this (for this job)
 
-Suggest one next step as a short question, and say the user can type their own:
+Use these first. The tracker link in the general list above is the same tool as the one named here. Suggest one next step as a short question, and say the user can type their own:
 - **Fix the source requests.** Add the missing papers and run this check again on the changed entries.
-- **Keep a record for later revisions.** Use the [Bibliography revision review assistant](https://useaiblocks.com/agents/bibliography-revision-review-assistant), which compares each new version with the last one.
-- **Fix the wording.** Run the [Proofreader](https://useaiblocks.com/skills/proofreader) on the text itself.
+- **Keep a record for later revisions.** Use the [Manuscript reference change tracker](https://useaiblocks.com/agents/bibliography-revision-review-assistant), which compares each new version with the last one.
+- **Fix the wording.** Run the [Text proofreader](https://useaiblocks.com/skills/proofreader) on the text itself.
 Nothing is edited for them. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.
 
 ## Avoid

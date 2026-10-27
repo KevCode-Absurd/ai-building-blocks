@@ -5,7 +5,12 @@ description: "Paste it above a cold email draft, with text from the prospect's p
 
 # Cold email claim checker
 
-Tests every claim in a cold email against what you can show, then hands back a tighter version.
+Tests every claim in a cold email against what you can show, then hands back a tighter version. It is a shorter prompt adapted from the cold-email-checker skill by Pro Skill Packs: it tests claims and the basics only.
+
+## When not to use
+- You want the full review with every check. Use the [Cold email pre-send checker](https://useaiblocks.com/skills/cold-email-pre-send-checker).
+- You are writing a newsletter, or emailing people who already know you. This checks claims about strangers.
+- You need legal sign-off on email rules in your country. Ask a qualified person.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -49,8 +54,8 @@ BEFORE YOU SEND: what I must confirm or add.
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Cold email pre-send checker](https://useaiblocks.com/skills/cold-email-pre-send-checker). It takes the draft.
-- The [Cold email writer](https://useaiblocks.com/skills/cold-email-writer).
 - The [Email draft reviewer](https://useaiblocks.com/skills/email-draft-reviewer). It takes the draft.
+- The [SMS send checker](https://useaiblocks.com/skills/sms-send-checker). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

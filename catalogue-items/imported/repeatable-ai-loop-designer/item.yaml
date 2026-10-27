@@ -8,8 +8,10 @@ role: make
 job: set-up-ai
 level: intermediate
 inputs:
-  - type: brief
+  - type: question
     required: true
+  - type: codebase
+    required: false
 outputs:
   - type: plan
 uses: []

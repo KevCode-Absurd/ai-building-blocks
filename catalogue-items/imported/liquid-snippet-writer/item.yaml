@@ -10,7 +10,7 @@ level: intermediate
 inputs:
   - type: theme_files
     required: false
-  - type: brief
+  - type: question
     required: true
 outputs:
   - type: theme_files

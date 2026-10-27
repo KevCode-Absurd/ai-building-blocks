@@ -258,6 +258,15 @@ end
 For maximum throughput, use `parfeval` with per-thread connections. Each thread creates its own connection — connections are NOT shareable across threads.
 
 ```matlab
+% Connection details come from saved secrets, never typed into the code.
+% The server and database names below are placeholders for the user's own.
+connParams.user = getSecret("dbUser");
+connParams.pass = getSecret("dbPass");
+connParams.server = "[SERVER NAME]";
+connParams.db = "[DATABASE NAME]";
+tablename = "[TABLE NAME]";
+% largeTable is the table of rows to write, already loaded in MATLAB.
+
 data = parallel.pool.Constant(largeTable);
 pool = parpool("Threads");
 numTasks = 5;

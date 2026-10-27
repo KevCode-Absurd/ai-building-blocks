@@ -10,6 +10,8 @@ explain: |
   A .devcontainer folder that opens your project in the same clean, sandboxed workspace every time, with Claude Code and the right language tools already installed. No more "works on my machine".
 
   The skill looks at your project first. It reads package.json, pyproject.toml, Cargo.toml or go.mod to find the project name, and checks file types to detect your languages. Then it writes the configuration: a Dockerfile, the container settings, and volumes that keep your command history and tool settings between rebuilds. It is meant for development only, not for production deployment. If you already have a working dev container, it is better to edit that one by hand.
+
+  Two licences apply. The skill text is under CC BY 4.0 (the LICENSE-CONTENT file). The two reference files in the references folder are under CC BY-SA 4.0 (the UPSTREAM-LICENSE.txt file). Keep the credit if you share them.
 when:
   - You want a safe sandbox for running an AI coding agent on your code.
   - New teammates lose a day installing tools before they can run the project.
@@ -32,8 +34,8 @@ you_get:
 how_to_use:
   - Open your project folder in an AI that can read and write files, such as Claude Code. A plain chat can only give you the file text to copy.
   - "Paste the skill and say: set up a devcontainer for this project. Add any languages or ports you need."
-  - Before you accept the files, read them. The container gets extra network rights (NET_ADMIN), it installs plugins from other people, and one setup step deletes your existing .venv folder.
-  - Check that the base template files exist. If they are missing, ask your AI to say which ones it needs before it writes anything.
+  - First get the base template files. They are not included here. They live in the same skill folder of the trailofbits/skills repository on GitHub (a Dockerfile, devcontainer.json, post_install.py, .zshrc and install.sh). Give them to your AI. If it has none, it stops and says so, and writes nothing.
+  - Before you accept the files, read them. The skill asks you to approve three things one by one. The container gets extra network rights (NET_ADMIN). It installs plugin collections from other people (anthropics/skills, trailofbits/skills and trailofbits/skills-curated). The deletion of your existing .venv folder is off by default and only goes in if you say yes.
   - Open the project in VS Code and choose Reopen in Container. Or run devcontainer up --workspace-folder . in your terminal.
   - Once it opens, run your tests and build to confirm it works. Then commit the .devcontainer folder so teammates get the same setup.
 output_sample:

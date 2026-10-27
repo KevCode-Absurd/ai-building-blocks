@@ -59,7 +59,9 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Store experiment result reviewer](https://useaiblocks.com/prompts/test-result-trust-checker). It takes the plan.
 - The [Store test readiness checker](https://useaiblocks.com/skills/store-test-readiness-checker). It takes the shortlist.
+- The [Shopify test setup picker](https://useaiblocks.com/skills/shopify-test-setup-picker). It takes the shortlist.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

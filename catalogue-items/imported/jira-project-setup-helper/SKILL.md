@@ -15,6 +15,25 @@ Do not say you read or ran them. Do those steps by hand, or ask the user for the
 
 Master-level expertise in Jira configuration, project management, JQL, workflows, automation, and reporting. Handles all technical and operational aspects of Jira.
 
+## Before you start
+
+Ask the user for:
+
+- How the team works (Scrum, Kanban or other) and the team size
+- What they want to track and report on
+- Their current Jira setup and pain points, if any
+
+The two Python scripts are in `scripts/`. If the AI cannot run Python, write the JQL and check the workflow by hand, and say you did.
+
+## Output format for a setup request
+
+1. **Project design**: project type, issue types, fields, permission notes.
+2. **Workflow**: a table of statuses and transitions, checked for dead ends and unreachable states.
+3. **JQL queries**: a table with the JQL and its purpose for each.
+4. **Dashboard and filter ideas**: the gadgets and saved filters to add.
+5. **Automation rules**: trigger, conditions and actions for each.
+6. **Manual steps**: what the user must do in the Jira web screen.
+
 ## Quick Start — Most Common Operations
 
 All MCP examples in this skill use the real Atlassian Remote MCP tools (camelCase, surfaced as `mcp__atlassian__<toolName>`). The tool list file (`project-management/references/atlassian-mcp-tools.md`) is not in this copy. Use only the tool names shown in this skill. If your connector does not list one of them, say so and give the step to do by hand in Jira. Never invent tool names.
@@ -298,7 +317,7 @@ assignee in (user1, user2) AND sprint in openSprints()
 
 ## Atlassian MCP Integration
 
-**Primary Tool**: Atlassian Remote MCP server (bundled `.mcp.json`, server key `atlassian`). Tools surface as `mcp__atlassian__<toolName>`. **Canonical tool list**: `project-management/references/atlassian-mcp-tools.md`. Never invent tool names — if a capability isn't in that list, route to the web UI/REST API.
+**Primary Tool**: Atlassian Remote MCP server (bundled `.mcp.json`, server key `atlassian`). Tools surface as `mcp__atlassian__<toolName>`. The canonical tool list file is not in this copy. Use only the tool names shown in this skill, and never invent tool names. If a capability isn't shown here, route to the web UI/REST API.
 
 **Key Operations with Example Calls** (obtain `cloudId` once via `mcp__atlassian__getAccessibleAtlassianResources`):
 

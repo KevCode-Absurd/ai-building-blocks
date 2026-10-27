@@ -72,9 +72,9 @@ How to start:
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Short video hook writer](https://useaiblocks.com/skills/short-video-hook-writer). It takes the plan.
 - The [Video opening hook writer](https://useaiblocks.com/prompts/video-opening-line-batch-writer). It takes the brief.
 - **Make video ads** with the [Founder video ad script writer](https://useaiblocks.com/skills/founder-video-ad-script-writer). It takes the brief.
+- The [Short video hook writer](https://useaiblocks.com/skills/short-video-hook-writer). It takes the plan.
 - The [YouTube title and thumbnail checker](https://useaiblocks.com/skills/youtube-title-thumbnail-check). It takes the brief.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

@@ -9,7 +9,7 @@ subhead: A list of Shopify products and variants with no image, or fewer than yo
 explain: |
   A list of Shopify products and variants with no image, or fewer than you want, so no page goes live looking bare. Run it before a launch or a sale and fix the gaps first.
 
-  It reads your products and counts their images. Products with zero images are flagged, and so are those under a minimum you set. It can also check each variant for an assigned image, which catches the colour option that shows the wrong photo. You choose active, draft or all products. It reads data only and never changes your store, so it is safe to run any time. It needs a signed-in Shopify CLI with permission to read products.
+  It reads your products and counts their images. Products with zero images are flagged, and so are those under a minimum you set. It can also check each variant for an assigned image. It flags variants that have no image assigned. It does not check whether an assigned image shows the right colour. You choose active, draft or all products. It reads data only and never changes your store, so it is safe to run any time. It needs a signed-in Shopify CLI with permission to read products.
 when:
   - You are about to launch a sale and want every page to have photos.
   - A bulk import left some products blank.
@@ -32,7 +32,7 @@ you_get:
 how_to_use:
   - Use an AI that can run the Shopify CLI on your computer, such as Claude Code or Cursor. A plain chat window cannot read your store. Paste in the skill text.
   - Sign in first with the Shopify CLI. Run shopify store auth --store your-store.myshopify.com --scopes read_products.
-  - Tell your AI your store domain. Add your minimum images, whether to check variants, and which product status to scan.
+  - Tell your AI your store domain. Add your minimum images (10 or less, because only the first 10 images per product are counted), whether to check variants, and which product status to scan.
   - Read the summary and the list of flagged products. Fix the zero-image products first.
   - Open the CSV file to see each gap by product and variant. Note that only the first 10 images and 50 variants per product are read.
 output_sample:

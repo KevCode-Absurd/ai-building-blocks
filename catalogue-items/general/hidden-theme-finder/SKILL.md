@@ -19,7 +19,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Audit report** with the [Fresh draft reviewer](https://useaiblocks.com/skills/cold-reread-marker). Bring a draft.
-2. **Audit report** with the [Story rules checker](https://useaiblocks.com/skills/story-rules-checker). Bring source text.
+2. **Audit report** with the [Story rules checker](https://useaiblocks.com/skills/story-rules-checker). Bring a draft.
 3. This one.
 
 How to start:
@@ -60,7 +60,7 @@ What recurs. Why it was worth writing. Three readings with counts. The pick. Up 
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Draft shortening editor](https://useaiblocks.com/skills/ten-percent-cutter). It takes the plan.
 - The [Long-form draft editor](https://useaiblocks.com/skills/long-form-draft-editor).
-- The [Dialogue editor](https://useaiblocks.com/skills/dialogue-ear-checker).
+- The [Writing log reviewer](https://useaiblocks.com/skills/writing-log-reviewer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

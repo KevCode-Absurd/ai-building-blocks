@@ -10,6 +10,8 @@ explain: |
   A runbook that a tired person can follow at 3am without asking anyone. You describe a service or a process and get plain, numbered steps with the checks and fixes written out.
 
   A good runbook answers a few things quickly: what this service does, how to tell it is broken, how to fix the common failures, and who to call when the fix does not work. The skill writes each step so it can be done in order, with the exact command or screen and what a good result looks like. It adds troubleshooting trees for known problems, recovery steps, and rollback. The AI only writes the document. It does not touch your systems, but the commands in the runbook need access such as kubectl, a cloud command line or database rights. Examples in the skill use placeholder host names. Some sample steps are destructive, so test them in staging with a second person.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header says MIT. Credit goes to the author and sickn33.
 when:
   - Only one person knows how to restart your main service.
   - An incident exposed that your recovery steps live in someone's head.
@@ -33,9 +35,11 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste in the skill text. No code runs and no files are needed.
   - Describe your service. Add the commands, dashboards, contacts and any past incidents.
-  - Read the runbook. Replace every placeholder host name, ID and phone number with your real ones.
+  - Read the runbook. Replace every placeholder host name, ID and phone number with your real ones. The sample commands in the skill (scaling to zero, a DNS change, promoting a replica, a disk cleanup) are examples only. Do not copy them into a live runbook unchanged.
   - Test it in staging first. Have someone who did not write it follow it step by step.
   - Fix any step that was unclear, then save it where your on-call team can find it.
+  - Next, after each real incident, write a post-incident review with the Incident postmortem writer and update the runbook from what you learn.
+next: [incident-postmortem-writer]
 output_sample:
   input:
     - The service or process you want covered

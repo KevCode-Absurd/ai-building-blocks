@@ -67,7 +67,7 @@ output_shape: |-
     How each question will be counted | Groups to compare | Limits
 
   HAND-BACK SUMMARY
-    Files | MISSING lines | Checks not done | One next step
+    Files | MISSING lines | CHECKS MISSED | One next step
 output_sample:
   input:
     - Your draft survey

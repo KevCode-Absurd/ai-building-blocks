@@ -7,11 +7,16 @@ role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: document
+  - type: financial_statements
     required: true
   - type: spreadsheet
     required: false
-outputs: []
+  - type: question
+    required: true
+outputs:
+  - type: audit_report
+  - type: spreadsheet
+    required: false
 needs_mode: manual
 uses:
   - explain-inventory-accounting-margin-effects

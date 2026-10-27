@@ -11,7 +11,11 @@ inputs:
   - type: question
     required: true
   - type: tool_connection
-    required: true
+    required: false
+  - type: source_text
+    required: false
+  - type: document
+    required: false
 outputs:
   - type: audit_report
     required: true

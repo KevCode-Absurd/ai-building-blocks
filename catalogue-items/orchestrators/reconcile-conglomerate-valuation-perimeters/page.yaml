@@ -11,7 +11,9 @@ explain: |-
 
   This workflow gives every subsidiary and holding one treatment, then checks the scope in three steps. Segment profit is tied to group operating profit, with corporate costs and eliminations kept. Outside ownership of subsidiaries counted at 100% is then added to enterprise value on the same basis. Last, separately held stakes are valued only where their earnings were left out.
 
-  Where a scope difference is unresolved, the valuation it affects stops. The practice figures inside the step skills are not data from any company, and your AI must not use them. This checks what belongs in the valuation. It gives no view on what the group is worth.
+  Where a scope difference is unresolved, the valuation it affects stops. The practice figures inside the step skills are not data from any company, and your AI must not use them. This checks what belongs in the valuation. It gives no view on what the group is worth and is not investment advice.
+
+  Licence: MIT. The licence text is in the download.
 when:
   - You are valuing a holding company or a group with many listed and unlisted businesses.
   - A valuation multiple looks too high or too low because ownership and earnings do not match.
@@ -66,7 +68,7 @@ tweaks:
 judge:
   - Every subsidiary or holding has one documented treatment; group profit reconciles and assets, debt, cash and outside ownership enter once; unresolved perimeter differences stop the affected valuation.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
-  - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
+  - If a workbook is built, keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
 test:
   - Try a small sourced case and inspect every component handoff.
   - Remove one required source and confirm the affected step stops.

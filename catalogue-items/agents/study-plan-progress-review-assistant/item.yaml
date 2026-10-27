@@ -7,14 +7,18 @@ role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: question
     required: true
+  - type: lesson_plan
+    required: false
+  - type: feedback_notes
+    required: false
   - type: source_text
     required: false
 outputs:
   - type: plan
+  - type: audit_report
   - type: document
-  - type: feedback_notes
 uses:
   - choose-a-study-plan-you-can-keep
   - study-understanding-check

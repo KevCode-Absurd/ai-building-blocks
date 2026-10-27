@@ -10,6 +10,8 @@ explain: |
   A style guide for an app or site that looks like real things: leather, paper, glass, brushed metal, buttons that seem to press down. It gives your designers and developers one shared rulebook instead of guesses.
 
   You describe the product and its mood. The skill restates the design intent, then sets colors, type sizes, spacing and shadow depth before moving to parts such as buttons, cards and inputs. For each part it lists states, variants and how it behaves when touched. It adds accessibility rules, do and don't lists, plain-language writing tone, and ends with a checklist your team can use in code review.
+
+  Licence: MIT, as the LICENSE file in this item says. Credit goes to Bergside (typeui.sh).
 when:
   - You want an interface that feels physical and familiar.
   - Your team keeps making buttons and cards that do not match.
@@ -31,10 +33,11 @@ you_get:
   - Accessibility requirements
   - A review checklist
 how_to_use:
+  - Have ready: what your product is and who uses it, the mood you want, your brand colors and fonts, and the parts you must cover (such as buttons, cards and inputs).
   - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
   - Add this skill to your AI, or copy its instructions from this page and paste them into the chat.
   - Describe your product and the mood you want. Add brand colors, fonts and the parts you must cover if you have them. If you add none, the guide uses placeholder colors and fonts built into the skill (an orange primary, Roboto). Swap in your own before you share it.
-  - Read the first section. Check that the design intent matches what you meant.
+  - Read the first section. Check that the design intent matches what you meant, and that the materials, shadow depths and pressed states fit your product.
   - Check the accessibility rules and the QA checklist. Ask your AI to fix any rule that sounds vague.
   - Share the guide with your designers and developers.
 output_sample:

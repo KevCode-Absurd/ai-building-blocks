@@ -150,9 +150,9 @@ The assistant returns the eight items under "When you are done", in order, plus 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Video ad analysis code planner](https://useaiblocks.com/prompts/build-the-video-performance-analyzer-builder-prompt).
-- The [Google Ads Quality Score tool planner](https://useaiblocks.com/prompts/build-the-quality-score-triage-module-builder-prompt).
-- The [Google search term code planner](https://useaiblocks.com/prompts/google-search-term-code-prompt).
+- The [Simple code coach](https://useaiblocks.com/skills/simple-code-coach). It takes the code change.
+- The [Pull request writer](https://useaiblocks.com/skills/pull-request-writer). It takes the code change.
+- The [Oracle migration risk reviewer](https://useaiblocks.com/skills/copilot-reviewing-oracle-to-postgres-migration). It takes the code change.
 - The [Code change reviewer](https://useaiblocks.com/skills/code-change-reviewer). It takes the code change.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

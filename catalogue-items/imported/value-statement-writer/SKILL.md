@@ -41,6 +41,7 @@ To illustrate the approach, here are value proposition statements for Canva:
 ## Tips for Best Results
 
 - Provide existing value propositions or key benefits
+- A value proposition draft from an earlier step works as the one to build from
 - Specify target segments and their pain points
 - Include product features and differentiators
 - Share distribution channels (marketing, sales, onboarding)

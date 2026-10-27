@@ -9,7 +9,9 @@ subhead: Instead of changing settings by hand and rerunning, you get a MATLAB ex
 explain: |
   Instead of changing settings by hand and rerunning, you get a MATLAB experiment that sweeps them for you. Your training script becomes a set of runs you can compare, and the Experiment Manager screen updates as you edit.
 
-  You give it a script or a plain description. It reads the code, finds the settings worth varying, and builds the experiment with the right strategy and parameter values. You can then add, rename, duplicate, edit or delete experiments, and the tree and editor in the app change live without a restart. It only manages the experiment itself. It does not run, analyse or export results. You need MATLAB and Experiment Manager.
+  You give it a script or a plain description. It reads the code, finds the settings worth varying, and builds the experiment with the right strategy and parameter values. You can then add, rename, duplicate, edit or delete experiments, and the tree and editor in the app change live without a restart. It only manages the experiment itself. It does not run, analyse or export results. You need MATLAB and Experiment Manager, both paid MathWorks products.
+
+  This is MathWorks' skill. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE.md file.
 when:
   - You have a training script and want to try ten learning rates.
   - You want to edit sweep values and see the app update right away.
@@ -32,9 +34,9 @@ how_to_use:
   - Open an AI that can run MATLAB code, and start MATLAB with Experiment Manager open. MATLAB and Experiment Manager are paid MathWorks products that need a licence. This skill will not work in a plain chat with no MATLAB.
   - Copy the skill folder to your computer and point your AI at it. In MATLAB, add its scripts folder to the path with addpath('<skill folder>/scripts'). The licence on this copy (BSD 2-Clause, see LICENSE.md) allows use only with MathWorks products.
   - Paste your training script, or describe it. Say which settings to sweep, such as learning rate.
-  - Ask your AI to create the experiment. It reads the code, picks the settings and builds the experiment.
+  - Ask your AI to create the experiment. In order, it asks about your code, goal, settings and metrics. It decides if your script is a general, built-in training or custom training experiment. It writes the experiment function in the right shape, creates or extends a MATLAB project, checks the files, and opens the experiment in Experiment Manager. The full steps are in references/create.md in the skill folder.
   - Check the new experiment in Experiment Manager. Ask for edits, a new name or a copy, and the app updates.
-  - Run the experiment and look at the results yourself in Experiment Manager. This skill does not do that.
+  - Run the experiment and look at the results yourself in Experiment Manager. This skill does not do that. Compare the runs there. If the model itself needs changing, use the matlab-train-network skill.
 output_sample:
   input:
     - Your training script, or a plain description of it

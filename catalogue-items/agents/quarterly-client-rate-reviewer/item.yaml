@@ -11,8 +11,9 @@ inputs:
   - {type: question, required: true}
   - {type: competitor_set, required: false}
 outputs:
+  - {type: audit_report}
   - {type: plan}
-  - {type: offer}
+  - {type: document}
 uses: [cash-tied-up-finder, client-fee-and-cap-setter, pricing-decision-planner, can-they-pay-deal-checker, results-agreement-writer]
 steps:
   - {uses: cash-tied-up-finder, note: "Every quarter: how long each client takes to pay and how much of your cash they hold, so slow payers are priced for it. Hands the days-to-pay per client to step 2."}

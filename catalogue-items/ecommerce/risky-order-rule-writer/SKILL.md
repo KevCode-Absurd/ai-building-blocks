@@ -51,11 +51,12 @@ MISSING: <what you did not give>
 ```
 
 Add: "This lowers risk. It does not guarantee no fraud."
+What next: for 3D Secure and false-decline settings, use the [Fraud rules setter](https://useaiblocks.com/skills/fraud-rules-setter).
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Store fraud rules planner](https://useaiblocks.com/skills/fraud-rules-setter).
+- The [Bot and AI agent access planner](https://useaiblocks.com/skills/bot-and-ai-agent-access-planner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

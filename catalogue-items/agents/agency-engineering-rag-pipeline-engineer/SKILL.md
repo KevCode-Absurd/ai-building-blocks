@@ -11,8 +11,9 @@ Plan retrieval that finds the right context, and prove it with scores. Built on 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [RAG pipeline designer](https://useaiblocks.com/skills/rag-pipeline-designer).
-- The [Chroma search database builder](https://useaiblocks.com/skills/chroma-search-database-setup).
+- The [Chroma search database builder](https://useaiblocks.com/skills/chroma-search-database-setup). It takes the plan.
+- The [AI coding task brief writer](https://useaiblocks.com/skills/coding-agent-handoff-writer). It takes the plan.
+- The [LangSmith AI app monitor](https://useaiblocks.com/skills/langsmith-ai-app-monitor). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -24,10 +25,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, source text, plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -37,10 +39,12 @@ How to start:
 
 ## What you need
 
+These are the inputs that count. If the generic "Before you start" list above asks for something else, such as a question or source text, ignore that part.
+
 - The documents: types, count, length, structure, languages
 - Ten to twenty real user questions, with the document that holds each answer if known
 - The stack and limits: database, language, hosting, speed, budget
-- The current setup and where it fails (optional)
+- The current setup and where it fails (optional). A retrieval plan from an earlier step, such as the RAG pipeline designer, can stand in for the current setup.
 - Access rules for who may see which documents (optional)
 
 Ask once for anything missing, in your first reply. If it is still missing, write `MISSING: <what>` and go on with labelled assumptions. Never invent scores, benchmarks, document facts or logs.
@@ -53,7 +57,7 @@ Ask once for anything missing, in your first reply. If it is still missing, writ
 4. Pick the embedding and index on the user's own text. Compare at least two models on 100 to 200 representative documents. Build a golden set of about 50 question and relevant-passage pairs. Measure recall at k for each model before choosing. Do not trust a leaderboard rank for the user's domain.
 5. Design the search. Mix keyword and meaning search, and tune the mix with a test, not by feel. Filter by metadata before semantic search. Set how many passages to fetch and how to remove duplicates and format the context.
 6. Decide on re-ranking with data. Measure baseline precision first. The profile's rule is to trial a re-ranker if precision is below 0.75, and keep it only if precision gains more than 10 percent and delay stays within the limit. Treat these as starting rules for the user to check.
-7. Plan the evaluation: precision, recall, faithfulness and answer relevancy on the golden set, using RAGAS, LangSmith or a custom script. Find the lowest score, name a cause, change one variable, rerun. Keep a change only if the target score improves and no other drops.
+7. Plan the evaluation: precision, recall, faithfulness and answer relevancy on the golden set, using RAGAS, LangSmith or a custom script. Say once that RAGAS is a Python package the user installs and runs, and that LangSmith is a hosted service that needs an account and an API key and may charge once the free allowance is used. Both are optional: a custom script works. Find the lowest score, name a cause, change one variable, rerun. Keep a change only if the target score improves and no other drops.
 8. Plan ingestion to run async, with chunk checks before bulk loading, and log each retrieval: query, top passage IDs, scores, delay and later user feedback. Add a weekly drift check.
 9. If the user asks about agentic RAG, query splitting, compression or fine-tuning embeddings, treat them as options after the basics are measured.
 
@@ -71,7 +75,9 @@ Use these headings, in this order:
 6. Re-ranking decision
 7. Eval plan
 8. Monitoring
-9. Gaps (`MISSING:` items and checks not run)
+9. Gaps (`MISSING:` items and checks not run). This is also your CHECKS MISSED list: write "none" if every check ran.
+
+Next: for the whole AI feature around the retrieval, use the [AI Engineer agent](https://useaiblocks.com/skills/agency-engineering-ai-engineer). For the search database, use the [Chroma search database builder](https://useaiblocks.com/skills/chroma-search-database-setup).
 
 ## Rules
 

@@ -13,9 +13,9 @@ Read [the original role profile](references/source-agent.md) before you start. U
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Startup financial model builder](https://useaiblocks.com/skills/startup-financial-model-builder). It takes the brief.
-- The [Financial model builder](https://useaiblocks.com/skills/financial-model-builder). It takes the brief.
-- **Check the money** with the [Financial risk mapper](https://useaiblocks.com/skills/financial-risk-mapper). It takes the brief.
+- The [Startup financial model builder](https://useaiblocks.com/skills/startup-financial-model-builder). It takes the plan.
+- The [Nonprofit operating budget planner](https://useaiblocks.com/skills/nonprofit-operating-budget-planner). It takes the plan.
+- The [Store revenue forecast builder](https://useaiblocks.com/skills/store-revenue-forecast-builder). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

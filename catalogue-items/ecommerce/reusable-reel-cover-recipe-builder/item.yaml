@@ -7,8 +7,12 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: question
     required: true
+  - type: image
+    required: false
+  - type: brand_brain
+    required: false
 outputs:
   - type: image_prompt
     required: true

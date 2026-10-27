@@ -11,7 +11,9 @@ Decide whether WebAssembly (Wasm) is the right choice for a task. If it is, plan
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Desktop app engineer agent](https://useaiblocks.com/skills/agency-engineering-desktop-app-engineer).
+- The [Developer tools engineer](https://useaiblocks.com/skills/agency-engineering-developer-tooling-engineer). It takes the plan.
+- The [LangSmith AI app monitor](https://useaiblocks.com/skills/langsmith-ai-app-monitor). It takes the plan.
+- The [Data system design reviewer](https://useaiblocks.com/skills/data-system-designer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

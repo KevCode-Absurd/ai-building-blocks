@@ -7,7 +7,7 @@ thinking_why: It runs two skills with a wait between them. A mid-size model is e
 headline: Send stock to Amazon with proof kept, then claim back what Amazon loses
 subhead: Give it your sales and product facts. It sizes the order, splits the shipment and checks barcodes, labels and limits. After the shipments close, it compares what you sent with what Amazon received and lists the claims worth filing.
 explain: |
-  Sellers lose money at both ends of an Amazon shipment. Before it, a wrong label or a bad barcode can stop sales for weeks. After it, Amazon can receive 400 units of the 405 you sent, put a product in the wrong fee tier or lose a box, and nobody notices because nobody kept the proof. Late claims often are not paid.
+  Sellers lose money at both ends of an Amazon shipment. Before it, a wrong label or a bad barcode can stop sales for weeks. After it, Amazon can receive fewer units than you sent, put a product in the wrong fee tier or lose a box, and nobody notices because nobody kept the proof. Late claims often are not paid.
 
   The steps cover both ends. First it sizes your first order from sales and lead time, splits the shipment so one lost box does not stop sales, and gives a checklist that includes the proof to keep: receipts, packing list and bill of lading. You then ship, track each shipment to closed and export the shipment, fee, damaged and lost reports. The second step reads your checklist and those reports, compares sent against received, checks size tiers and fee lines, and lists the claims to file with a score for how much it could check.
 when:

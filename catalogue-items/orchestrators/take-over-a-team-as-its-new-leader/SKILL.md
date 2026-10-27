@@ -59,9 +59,9 @@ Pause here: Send the message and hold the listening tour. Write down what each p
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Feedback conversation planner](https://useaiblocks.com/skills/feedback-conversation-planner). It takes the draft and plan.
 - The [Employee performance review writer](https://useaiblocks.com/skills/quarterly-performance-review-keeper). It takes the plan.
-- The [Difficult conversation repair planner](https://useaiblocks.com/skills/anger-pause-and-repair-planner). It takes the draft.
+- The [Feedback conversation planner](https://useaiblocks.com/skills/feedback-conversation-planner). It takes the draft and plan.
+- The [Long-term partner screener](https://useaiblocks.com/skills/long-term-partner-screener). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

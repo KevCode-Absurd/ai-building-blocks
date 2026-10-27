@@ -16,7 +16,7 @@ Original everyday application: Before sending a devastating reply, ask what prac
 
 ### Name your backfiring move
 
-His resources describe recurring strategies that push people toward disconnection. [S2]
+His resources describe recurring strategies that push people toward disconnection. This is a general reading of the material, not a quote. [S2]
 
 Original everyday application: Identify your withdrawal or point-by-point rebuttal before diagnosing the other person. Choose the action you can change. A framework loses usefulness when it becomes a set of labels for a partner. Ask what happened immediately before your move and what different response you could actually practice next time.
 
@@ -87,7 +87,7 @@ Terrence Real, publicly known as Terry Real, developed Relational Life Therapy a
 
 The sources above primarily present the person's own account and institutional record. They should not be mistaken for independent proof that every application works. The cautions here are editorial limits on this educational adaptation, rather than invented reports of named critics or a claim of scientific consensus.
 
-Real's confrontational clinical style cannot be transferred safely by assuming a short one-sided account reveals the whole relationship. Do not diagnose grandiosity or childhood adaptations. His emphasis on unequal power also warns against treating every conflict as equally caused. This educational profile uses accountability, pauses and clear feedback while leaving treatment to qualified care.
+A short, one-sided account cannot show you the whole relationship, so do not copy a therapist's direct confrontation of a client. Do not diagnose grandiosity or childhood adaptations. His interview rejects automatic neutrality where power is unequal [S2], so do not treat every conflict as equally caused. This educational profile uses accountability, pauses and clear feedback while leaving treatment to qualified care.
 
 ## Blind spots to watch
 

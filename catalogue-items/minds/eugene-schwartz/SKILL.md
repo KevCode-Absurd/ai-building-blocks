@@ -99,7 +99,7 @@ He'd say the headline is only the door. He'd ask what the reader should want mor
 
 #### Launch a new kind of product
 
-He'd tell you not to try to create the want. He'd ask which want already exists that your product can attach to, then build the message from that. He'd also warn that a new category may need the want explained first. And he'd tell you to put the product to work on the page: in 1949 his team sold a piano course on television by answering viewers' questions about it for half an hour, so the product was shown in action.
+He'd tell you not to try to create the want. He'd ask which want already exists that your product can attach to, then build the message from that. He'd also warn that a new category may need the want explained first. And he'd tell you to put the product to work on the page: he said that in 1949 his team sold a piano course on television by answering viewers' questions about it for half an hour, so the product was shown in action (his own account in an offline transcript, unchecked) [S11].
 
 #### Outside his field: your fundraising pitch or job application
 
@@ -121,7 +121,7 @@ He'd say talent comes second to preparation. He'd tell you to name the asset you
 - Writing before you've read, listened and collected.
 - Small, safe tests with a 5 percent hope. Swing bigger and expect some flops.
 - Trusting taste, experience or a focus group over a test.
-- Bold health or money promises you can't prove. He said he turned down a $7,000 land-deal job when broke because he didn't believe in it [S11], and would not write for a bad product.
+- Bold health or money promises you can't prove. He said in a 1975 interview that he turned down a $7,000 land-deal job when broke because he didn't believe in it [S12], and would not write for a bad product.
 - Skipping the second sale. The first one should set up the next.
 
 ### What you'll get back
@@ -309,7 +309,7 @@ He wrote a crowded, typewritten envelope for Rodale with twenty tricks and page 
 
 #### Putting a taste of the product in the sales piece
 
-For a self-help exercise book he put one exercise in the letter and told readers to try it before reading on. His reason: the selling piece is part of the product, and a result proved in the moment is what people trust. He drew the same lesson from 1949, when his agency built a daily half-hour TV show from questions about a piano course, and the course sold because the show demonstrated it [S11].
+For a self-help exercise book he put one exercise in the letter and told readers to try it before reading on. His reason: the selling piece is part of the product, and a result proved in the moment is what people trust. He drew the same lesson from 1949, when his agency built a daily half-hour TV show from questions about a piano course, and the course sold because the show demonstrated it (his account in the offline lecture transcript, unchecked) [S11].
 
 #### Paying in access, then in a share of the win
 
@@ -317,7 +317,7 @@ Instant Improvement had a small customer list, so Schwartz wrote for Boardroom a
 
 #### Where he drew the line
 
-While broke, years before his success, he refused $7,000 to write promotion for a land deal because he did not believe in it. He wrote only for products he thought good and drew the line at illegal, not at controversial. He promoted *Sex May Be Dangerous to Your Health* without sharing its thesis, and his staff joked about throwing him out of a window. His reason: a person with an unorthodox idea deserves a hearing [S12].
+While broke, years before his success, he refused $7,000 to write promotion for a land deal because he did not believe in it. He wrote only for products he thought good and drew the line at illegal, not at controversial. He promoted *Sex May Be Dangerous to Your Health* without sharing its thesis, and his staff joked about throwing him out of a window. His reason: a person with an unorthodox idea deserves a hearing [S12]. This is his own telling in a 1975 interview; no other source confirms the amount.
 
 #### Rewriting the TV repair manual ad
 
@@ -381,7 +381,7 @@ We could not open any critical review. Fair cautions:
 8. Socrates, Alexander the Great, and Gene Schwartz walk into a bar, Brian Kurtz. https://www.briankurtz.net/socrates-alexander-the-great-and-gene-schwartz-walked-into-a-bar/
 9. Eugene M. Schwartz (author record), Open Library. https://openlibrary.org/search/authors.json?q=Eugene%20M.%20Schwartz
 10. Breakthrough Advertising: How to Write Ads, a recorded Schwartz workshop lecture (AI-generated summary of the video, not a transcript; the video itself could not be read; no quote or claim here rests on it), YouTube Summary, of a lecture by Eugene Schwartz. https://youtubesummary.com/summary/ESdLgLleAaM
-11. The Lost Secrets of Breakthrough Advertising (transcript of a lecture to Phillips Publishing, October 8, 1993, with staff questions; e-book edition with added foreword and headings), Eugene Schwartz
+11. The Lost Secrets of Breakthrough Advertising (offline e-book, no public link; transcript of a lecture to Phillips Publishing, October 8, 1993, with staff questions; e-book edition with added foreword and headings), Eugene Schwartz
 12. Eugene Schwartz Interview: The Creators (profile from The Capitalist Reporter, about 1975, built on an interview with him; reprinted online), Eugene Schwartz, interviewed for The Capitalist Reporter; reprint on Info Marketing Blog. https://infomarketingblog.com/eugene-schwartz-interview-the-creators-1975/
 13. Rules of Great Copywriting from My Mentor Eugene Schwartz (a copywriter's summary of eight rules from a 1993 interview), Write Direction. https://writedirection.com/rules-of-great-copywriting-from-eugene-schwartz/
 14. Breakthrough Advertising (a book summary), A third-party chapter-by-chapter summary of Eugene Schwartz, Breakthrough Advertising (1966)

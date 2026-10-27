@@ -7,7 +7,7 @@ job: build-software
 headline: Image processing coder
 subhead: Say what to do to your pictures. Get MATLAB code that enhances, segments, counts or measures them. Bring a sample image or a description of it. Use the result to plan your next step.
 explain: |
-  Working MATLAB code that cleans up, splits, counts or measures what is in your pictures, so you skip hours of trial and error with the Image Processing Toolbox. It needs MATLAB with that toolbox.
+  Working MATLAB code that cleans up, splits, counts or measures what is in your pictures, so you skip hours of trial and error with the Image Processing Toolbox. MATLAB and the Image Processing Toolbox are paid products from MathWorks, so check for a MathWorks trial or a school or work licence before you start.
 
   You describe the image problem in plain words, such as dark, noisy, blurry or uneven light. The skill first picks the right method for the task, then writes code with the right data types and row and column order, since mistakes there ruin results quietly. It covers file input and output, filtering, thresholding, morphology, measurement, colour, transforms and quality scores. Medical, hyperspectral and inspection jobs get passed to other skills.
 when:
@@ -33,9 +33,9 @@ how_to_use:
   - Open your AI chat and paste in this skill's instructions, or load the skill folder if your AI tool supports files.
   - Describe your image problem in plain words, such as dark, noisy, blurry or uneven light.
   - Add a sample image or a short description of it, plus what you want done, such as counting cells about 15 pixels wide.
-  - Run the code in MATLAB. You need the Image Processing Toolbox for it to work.
+  - Run the code in MATLAB. You need MATLAB and the Image Processing Toolbox for it to work, and both are paid licences. In a plain chat your AI cannot run MATLAB, so paste the code into MATLAB yourself and tell the AI what happened.
   - Check the figures and counts against a few images you know well, then run the whole folder.
-  - Export the masks or counts to a spreadsheet or report. The skill's routes to medical imaging, visual inspection and large-image skills are not in this library, so install those separately if you need them.
+  - Check the counts or masks against hand counts on a few images. Then export them to a spreadsheet or report. The skill's routes to medical imaging, visual inspection and large-image skills are not in this library, so install those separately if you need them.
 output_sample:
   input:
     - A sample image, or a plain description of it

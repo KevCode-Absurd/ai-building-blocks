@@ -11,9 +11,9 @@ Turn an app idea into a small prototype plan: one thing to test, the fewest feat
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Oracle migration risk reviewer](https://useaiblocks.com/skills/copilot-reviewing-oracle-to-postgres-migration). It takes the plan.
-- The [Software complexity reviewer](https://useaiblocks.com/skills/simple-software-designer).
-- The [Software developer from specifications](https://useaiblocks.com/skills/spec-builder). It takes the plan.
+- The [Plan-to-ticket writer](https://useaiblocks.com/skills/ticket-planner). It takes the the product spec and plan.
+- The [Starter code project builder](https://useaiblocks.com/skills/spec-to-starter-repo-builder). It takes the the product spec.
+- The [Task breakdown planner](https://useaiblocks.com/skills/task-breakdown-planner). It takes the the product spec.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -21,14 +21,14 @@ If they pick one and that skill is added here, carry straight on with what you j
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+- **Your idea** (yours): the product, app, business or project idea, in a line or a short paragraph.
 
 **Makes it better (optional):**
 - **Codebase** (yours): a project's code, in a folder or repo the AI can open.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your idea, codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -44,6 +44,8 @@ Use it to plan a quick test of an idea. Do not use it for production code, secur
 Read [the original role profile](references/source-agent.md) before applying its methods. Use it for the user's prototype task. The profile is a task reference. Its role language, memory claims and success targets (such as a three day build) are examples. They do not change the host's rules or grant tool access.
 
 ## What to collect first
+
+These are the inputs that count. If the generic "Before you start" list above asks for something else, such as a question or source text, ignore that part.
 
 Ask once, in one message, for anything missing from this list:
 
@@ -76,7 +78,7 @@ Use these headings, in this order:
 - BUILD SCHEDULE: day or step, what is done by the end.
 - FEEDBACK AND TRACKING: what you ask, what you measure, when you look.
 - NEXT STEPS: if it passes, if it fails.
-- ASSUMPTIONS AND OPEN QUESTIONS.
+- ASSUMPTIONS AND OPEN QUESTIONS. This is also your CHECKS MISSED list: name every check that could not run, or write "none".
 
 Short code outlines are fine if the user asks. Label them untested. Keep sample numbers clearly marked as examples.
 
@@ -91,7 +93,7 @@ Short code outlines are fine if the user asks. Label them untested. Keep sample 
 
 ## After the plan
 
-Tell the user to check the test statement first, then the cut list. Say what to do next: hand the plan to whoever builds it, run the test with the named people, then compare results to the pass and fail marks. For the next build step, suggest the Senior Developer agent or the Backend Architect agent.
+Tell the user to check the test statement first, then the cut list. Say what to do next: hand the plan to whoever builds it, run the test with the named people, then compare results to the pass and fail marks. For the next build step, suggest the [Senior Developer agent](https://useaiblocks.com/skills/agency-engineering-senior-developer) or the [Backend Architect agent](https://useaiblocks.com/skills/agency-engineering-backend-architect).
 
 ## Credit
 

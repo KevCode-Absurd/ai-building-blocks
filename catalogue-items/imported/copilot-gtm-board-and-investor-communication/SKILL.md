@@ -11,6 +11,8 @@ metadata:
 
 Structure board meetings, investor updates, and executive communication that builds trust and drives decisions — not slide decks that nobody reads.
 
+Start from the decisions due and your company facts. If you have a metrics sheet or an evidence map for those decisions, add them and use them for the numbers and the case behind each decision.
+
 ## When to Use
 
 **Triggers:**

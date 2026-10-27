@@ -36,6 +36,8 @@ Queries Shopify's built-in analytics engine (ShopifyQL) to surface session-level
    **Inputs:** ShopifyQL string `FROM sessions SHOW sessions, conversion_rate GROUP BY landing_page_path SINCE -<days_back>d UNTIL today ORDER BY sessions DESC LIMIT 250`; `sessions` and `conversion_rate` are the confirmed available metrics for this data source
    **Expected output:** All landing pages with session counts and conversion rates; paginate via `OFFSET` if result count equals 250
 
+> **Query plan, stated once:** one query fetches up to 250 landing pages (use `OFFSET` for more). Everything after that is done in memory, and only the top `top_n` rows (25 by default) are shown. The CSV file is written to the folder the AI runs from.
+
 2. **In-memory filtering:** Filter rows where `landing_page_path` starts with `/products/` (product pages) or `/collections/` (collection pages); apply `page_type` parameter; sort by `sort_by`; truncate to `top_n`; flag pages with sessions above median and `conversion_rate < 0.02` as `high_traffic_low_conversion`
 
 > **Note:** ShopifyQL does not support `LIKE`, `WHERE` string prefix filters, or aggregate aliases that shadow reserved column names (`sessions`, `conversion_rate`). All page-type filtering must be done in-memory after fetching all rows.
@@ -122,8 +124,8 @@ For `format: json`, emit:
   "completed_at": "<ISO8601>",
   "dry_run": false,
   "steps": [
-    { "step": 1, "operation": "ProductPageTraffic", "type": "query", "params_summary": "products, last <days_back> days", "result_summary": "<n> product pages returned", "skipped": false },
-    { "step": 2, "operation": "ProductPageTraffic", "type": "query", "params_summary": "collections, last <days_back> days", "result_summary": "<n> collection pages returned", "skipped": false }
+    { "step": 1, "operation": "TrafficByPage", "type": "query", "params_summary": "all landing pages, last <days_back> days, up to 250 rows", "result_summary": "<n> landing pages returned", "skipped": false },
+    { "step": 2, "operation": "FilterAndRank", "type": "in-memory", "params_summary": "page_type, sort_by, top_n", "result_summary": "<n> product pages and <n> collection pages kept", "skipped": false }
   ],
   "outcome": {
     "days_back": 30,

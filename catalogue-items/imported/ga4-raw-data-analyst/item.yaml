@@ -8,8 +8,10 @@ role: source
 job: ops
 level: expert
 inputs:
-  - type: question
+  - type: tool_connection
     required: true
+  - type: question
+    required: false
 outputs:
   - type: performance_sheet
     required: true

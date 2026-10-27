@@ -5,26 +5,28 @@ job: launch-and-scale-ads
 headline: Five-gate campaign scaling planner
 subhead: Share campaign results, targets, budget, pacing dates and saturation signals. Get a five-gate scaling review with method, timing and stop rules.
 explain: |-
-  Check five gates before scaling Meta campaigns. Compare pacing, methods and stop rules using your targets and risk limits.
+  Raising budget on a campaign that is not ready wastes money. This skill checks five gates for each campaign: cost per sale under target, enough sales per week, steady click rate, return above target and no creative fatigue. A campaign must pass all five.
 
-  Share campaign results, targets, budget, pacing dates and saturation signals. Get a five-gate scaling review with method, timing and stop rules.
+  It then checks whether your spend is on pace for the month and picks a scaling method with a week-by-week plan, usually steps of 15 to 20 percent. It also lists the signs that mean you should stop. The thresholds are starting points. Check them against your own account and Meta's current guidance.
 when:
-  - You need a five-gate scaling review with method, timing and stop rules.
-  - You need five-gate campaign scaling planner for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - You run Meta campaigns and want to know which ones are safe to scale.
+  - Your spend is behind or ahead of plan for the month and you need to know why.
+  - You want a step-by-step budget plan and stop rules written down before you raise any budget.
 not_for:
   - Your campaign has under 14 days of data, or your ad account is new. Wait and collect more results first.
   - No campaign passes all five checks. Run a creative test first, then come back, because the plan will say fix creative before scaling.
   - You want to write new ads or check them before launch. Use a copywriter or your ad platform's review tools instead.
   - "You want a break-even ROAS, a spend ladder and a scaling campaign design: use the Meta scaling campaign planner."
 you_give:
-  - Campaign results
-  - Targets
-  - Budget
-  - Pacing dates and saturation signals
+  - Results for each campaign over the last 14 to 30 days
+  - Your target cost per sale and target return on ad spend
+  - Your monthly budget cap and growth goal
+  - Days at current budget and number of live ads (optional)
 you_get:
-  - A five-gate scaling review with method, timing and stop rules
-  - The sources used, missing inputs and assumptions
+  - A pass or fail for each campaign on the five gates, with what blocks it
+  - A scaling method, new daily budget and week-by-week plan for each ready campaign
+  - A saturation watchlist, stop rules and a 30-day projection
+  - The missing inputs and assumptions
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill text from this page.
   - Paste your results for each campaign from the last 14 to 30 days, plus your targets, budget cap and growth goal.
@@ -52,21 +54,17 @@ output_sample:
     - name: 30-Day Projection
       contains: Expected spend and revenue for the next 30 days based on the plan.
 how_it_works:
-  - title: Check the inputs
-    text: Confirm campaign results, targets, budget, pacing dates and saturation signals. Mark facts that are missing.
-  - title: How This Works
-    text: Follow the how this works section in the full method and keep its required fields and decision rules.
-  - title: Collect Campaign Data
-    text: Follow the collect campaign data section in the full method and keep its required fields and decision rules.
-  - title: 5-Point Scale-Readiness Checklist
-    text: Follow the 5-point scale-readiness checklist section in the full method and keep its required fields and decision rules.
-  - title: Budget Pacing Analysis
-    text: Follow the budget pacing analysis section in the full method and keep its required fields and decision rules.
-  - title: Scaling Method Recommendations
-    text: Follow the scaling method recommendations section in the full method and keep its required fields and decision rules.
-  - title: Saturation Signals
-    text: Follow the saturation signals section in the full method and keep its required fields and decision rules.
-  - title: Review the result
-    text: Return a five-gate scaling review with method, timing and stop rules. Check facts, math and the decisions before any action.
+  - title: Collects your data
+    text: Asks for 14 to 30 days of results per campaign, plus your targets, budget cap and growth goal. It marks anything missing.
+  - title: Runs the five gates
+    text: Cost per sale under target for 2 weeks, enough sales per week, steady click rate, return above target and no creative fatigue. All five must pass.
+  - title: Checks budget pacing
+    text: Compares your 3-day average spend with the month so far and says if you are on pace, under or over.
+  - title: Picks a scaling method
+    text: Ranks five methods by risk, from raising the budget on a winner to a new market, and uses steps of 15 to 20 percent a week.
+  - title: Watches for saturation
+    text: Lists the signs to watch, such as frequency, cost per thousand views and click rate, with stop rules.
+  - title: Hands back the plan
+    text: A readiness table, pacing status, a plan for each ready campaign, where to move budget and a 30-day projection. Check the maths against your ad account before you change any budget.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

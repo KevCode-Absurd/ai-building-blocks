@@ -21,7 +21,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **Plan** with the [Social content calendar maker](https://useaiblocks.com/skills/standing-social-calendar-maker). Bring plan (optional). It uses your brand brain.
+2. **Plan** with the [Social content calendar maker](https://useaiblocks.com/skills/standing-social-calendar-maker). Bring plan (optional), tool connection (optional). It uses your brand brain.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
@@ -64,9 +64,9 @@ If the product or idea is missing, ask once in one short message, then carry on 
    - list: a count of things ("Three ...")
    - comparison: shows a difference, such as a split screen or "me before ..."
    - identity: how the viewer sees themselves ("Careful buyers never ...")
-4. **Keep on-screen text to five to eight words.** In the one study behind this, the average viral hook was 7.7 words. Up to twelve still worked. Past twelve, results fell. Under four was rare and mostly very short pattern interrupts. Flag any hook outside four to twelve and fix it.
+4. **Keep on-screen text to five to eight words.** In one creator's YouTube review of viral Reels (not a formal study), the average viral hook was 7.7 words. Up to twelve still worked. Past twelve, results fell in that review. Under four was rare and mostly very short pattern interrupts. Flag any hook outside four to twelve and fix it.
 5. **Write at grade 5 or lower.** No insider words, jargon or acronyms the viewer may not know. Test: could someone with no context understand it from one frame and one line? If not, rewrite it.
-6. **Prefer loss framing when it is true.** The study found negative openers (Stop, Don't, Avoid, Never) did better than positive ones (Try, Start, Always), with the idea that people notice threats first. Use it when the warning is true for the viewer. Never invent a threat.
+6. **Prefer loss framing when it is true.** That creator found negative openers (Stop, Don't, Avoid, Never) did better than positive ones (Try, Start, Always), with the idea that people notice threats first. Use it when the warning is true for the viewer. Never invent a threat.
 7. **Test the curiosity gap.** For each curiosity hook write three versions. Too vague (such as "This changed everything") loses strangers. Too complete (the whole answer) leaves no reason to stay. Keep the middle: name the topic and hold back the result.
 8. **Keep outcomes believable.** Use only numbers the person gave you. A realistic result keeps more of the audience than a huge one. Never make up or round up a number.
 9. **Sound like a friend.** Say it as a person talks to a friend, not as a marketing line. In one creator's experience a casual opener got past viewers who ignore lines like "Three mistakes you're making". Use that style for at least two of the ten.
@@ -111,10 +111,11 @@ MISSING: <product | post idea | viewer | first shot | proof>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Video opening hook writer](https://useaiblocks.com/prompts/video-opening-line-batch-writer).
 - The [Shareable content checker](https://useaiblocks.com/skills/shareable-content-checker). It takes the hooks.
-- The [Weekly social post writer](https://useaiblocks.com/skills/weekly-social-content-planner).
 - **Check it before it goes live** with the [Video hook scorer](https://useaiblocks.com/skills/video-hook-scorer). It takes the hooks.
+- The [Social post format reviewer](https://useaiblocks.com/skills/organic-format-tester). It takes the hooks.
+- The [Weekly social post writer](https://useaiblocks.com/skills/weekly-social-content-planner).
+- **Check it before it goes live** with the [Video ad transition reviewer](https://useaiblocks.com/skills/video-ad-bridge-checker). It takes the hooks.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

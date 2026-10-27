@@ -11,6 +11,9 @@ Plan the one function every agent uses to call an AI model. It checks the budget
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Simple code coach](https://useaiblocks.com/skills/simple-code-coach). It takes the code change.
+- The [Pull request writer](https://useaiblocks.com/skills/pull-request-writer). It takes the code change.
+- The [Oracle migration risk reviewer](https://useaiblocks.com/skills/copilot-reviewing-oracle-to-postgres-migration). It takes the code change.
 - The [Lint and type check runner](https://useaiblocks.com/skills/lint-and-type-check-runner). It takes the code change.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
@@ -96,6 +99,8 @@ TEST CASES
 
 NEXT STEP
 <one smallest useful step>
+CHECKS MISSED
+<one line for each check that failed or could not run, or none>
 ```
 
 FAILURE CHECKLIST covers at least: budget refused, provider error, timeout, call cancelled, operation tag not allowed, two calls at the same moment, and price numbers out of date.

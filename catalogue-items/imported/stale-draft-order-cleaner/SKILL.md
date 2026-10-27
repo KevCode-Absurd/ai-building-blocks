@@ -15,8 +15,8 @@ compatibility: Claude Code, Cursor, Codex, Gemini CLI
 Queries open draft orders older than a configurable age and optionally deletes them. Draft orders accumulate from abandoned B2B quotes, incomplete manual orders, or old integrations and clutter the admin. Stale drafts also inflate pending revenue metrics.
 
 ## Prerequisites
-- Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_orders,write_orders`
-- API scopes: `read_orders`, `write_orders`
+- Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_draft_orders,write_draft_orders`
+- API scopes: `read_draft_orders`, `write_draft_orders`
 
 ## Parameters
 
@@ -37,7 +37,7 @@ Queries open draft orders older than a configurable age and optionally deletes t
    **Inputs:** `query: "status:open created_at:<='<NOW - older_than_days days>'"`, `first: 250`, pagination cursor
    **Expected output:** Stale open draft orders; paginate until `hasNextPage: false`
 
-2. **Filter before any delete:** ask the user which tag marks live B2B quotes (default `b2b-quote`). Remove every draft with that tag from the delete list, and show how many were kept out. Then show the full list and wait for a clear yes.
+2. **Filter before any delete:** ask the user which tag marks live B2B quotes (default `b2b-quote`). Remove every draft with that tag from the delete list, and show how many were kept out. Drafts without that tag stay in the delete list, including B2B quotes that were never tagged, so tell the user to tag live quotes before the first run. The first run is always a dry run. Show the full list and wait for a clear yes. Run the delete step only after that yes.
 
 3. **OPERATION:** `draftOrderDelete` — mutation
    **Inputs:** `id: <draft_order_id>`

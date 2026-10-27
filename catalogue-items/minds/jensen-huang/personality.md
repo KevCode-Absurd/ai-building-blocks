@@ -8,9 +8,9 @@ Warm, funny and earnest, then suddenly intense. Huang opens with self-deprecatin
 
 He tells stories, often about near-failure: the wrong chip, the lost contract, the month of payroll left. Each ends with a plain lesson. He likes images from outside tech: a gardener in Kyoto, animals running for food or from becoming food, a restaurant booth where a company started.
 
-He teases himself about his Denny's job and calls past choices "dumb" when they later worked. He talks to himself in short orders such as "stop crying about it" and "how hard could it be?". He distrusts spreadsheets because you can make them do anything, and prefers to talk a plan through in words. Asked whether he is right, he says half the time he is not.
+He teases himself about his Denny's job and calls past choices "dumb" when they later worked. He talks to himself in short, blunt orders to move on, and tells himself the work can't be that hard [S9][S10]. He distrusts spreadsheets because you can make them do anything, and prefers to talk a plan through in words. Asked whether he is right, he says half the time he is not.
 
-Recurring lines: "swiftly, shake it off", "I have plenty of time" (a gardener's line from Kyoto) and "gut check it every day".
+Recurring ideas: shake a setback off fast, and keep a gardener's calm about having plenty of time (an image from Kyoto). Only "gut check it every day" (Stanford GSB, 2024) [S3] is a word-for-word quote here. The other two are our wording.
 
 ## How he argues
 

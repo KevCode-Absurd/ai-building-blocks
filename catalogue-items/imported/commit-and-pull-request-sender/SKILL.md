@@ -39,11 +39,11 @@ If multiple template files are found, stop before PR creation and ask which temp
 
 - If on main/master/default, create a branch: `git checkout -b "{description}"`
 - Otherwise stay on the current branch.
-- Confirm status, then stage everything: `git status -sb` then `git add -A`.
+- Run `git status -sb` and show the user the full list of changed and new files. Point out anything that looks like a secret, a key, an `.env` file, a build folder or a large file. Wait for the user's go-ahead. Only then stage the files: `git add -A` if they approve the whole list, or `git add <paths>` for just the files they pick.
 - Commit tersely with the description: `git commit -m "{description}"`
 - Run the project's own check commands if they have not run yet, such as the test and lint commands named in package.json, a Makefile or the README. Ask the user before you install any dependencies. If a check fails, stop and report it.
 - Push with tracking: `git push -u origin $(git branch --show-current)`
-- If git push fails due to workflow auth errors, pull from master and retry the push.
+- If git push fails due to workflow auth errors, ask the user which base branch to pull from (it may be main, master or another), pull that branch, then retry the push.
 - Discover and read the repository PR template, if any.
 - Check whether the current branch already has a PR: `gh pr view "$(git branch --show-current)" --json number,isDraft,url`
 - If a PR already exists, update that PR in place. Do not create another PR, and do not change whether the existing PR is draft or ready for review.

@@ -122,9 +122,9 @@ works_best_with:
     - name: Any good chat AI
       why: It can sort free-text answers into channels and compare the shares for you.
     - name: Shopify
-      why: Checkout survey apps run on the order status page and give you the answers with order dates.
+      why: Checkout survey apps run on the order status page and give you the answers with order dates. Some apps are paid, so check the price and your plan.
     - name: Slack
-      why: A simple connection can post each new survey answer to a team channel.
+      why: Optional. A simple connection can post each new survey answer to a team channel. It may need a paid plan or an automation tool.
   inputs:
     - Your ad spend by channel for the same weeks
     - Sales each ad platform reports, by channel

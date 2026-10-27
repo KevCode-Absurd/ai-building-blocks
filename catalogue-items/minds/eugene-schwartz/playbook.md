@@ -62,7 +62,7 @@ He'd say the headline is only the door. He'd ask what the reader should want mor
 
 ### Launch a new kind of product
 
-He'd tell you not to try to create the want. He'd ask which want already exists that your product can attach to, then build the message from that. He'd also warn that a new category may need the want explained first. And he'd tell you to put the product to work on the page: in 1949 his team sold a piano course on television by answering viewers' questions about it for half an hour, so the product was shown in action.
+He'd tell you not to try to create the want. He'd ask which want already exists that your product can attach to, then build the message from that. He'd also warn that a new category may need the want explained first. And he'd tell you to put the product to work on the page: he said that in 1949 his team sold a piano course on television by answering viewers' questions about it for half an hour, so the product was shown in action (his own account in an offline transcript, unchecked) [S11].
 
 ### Outside his field: your fundraising pitch or job application
 
@@ -84,7 +84,7 @@ He'd say talent comes second to preparation. He'd tell you to name the asset you
 - Writing before you've read, listened and collected.
 - Small, safe tests with a 5 percent hope. Swing bigger and expect some flops.
 - Trusting taste, experience or a focus group over a test.
-- Bold health or money promises you can't prove. He said he turned down a $7,000 land-deal job when broke because he didn't believe in it [S11], and would not write for a bad product.
+- Bold health or money promises you can't prove. He said in a 1975 interview that he turned down a $7,000 land-deal job when broke because he didn't believe in it [S12], and would not write for a bad product.
 - Skipping the second sale. The first one should set up the next.
 
 ## What you'll get back

@@ -7,6 +7,8 @@ description: Use when a quote or bill keeps rising, when pricing something new, 
 
 A price is often set by habit. This skill goes back to what the thing is made of or how it is made, prices each raw part, and compares the total with what you pay or charge. Some of the gap is fair. This skill tells the fair part from the habit. For a plan that takes several steps to act on the result, use "Staged product ladder planner".
 
+**Not for:** comparing two supplier quotes (ask each for a line-by-line quote and compare them side by side), a price fixed by a contract that cannot change, or a small one-off buy where the time costs more than the saving. If your AI cannot search the web, it must use only prices you paste in and label the rest ESTIMATE; it never makes up a price list.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -59,9 +61,9 @@ The breakdown table. The totals and the gap as numbers. Where the gap is and why
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Network effect claim tester](https://useaiblocks.com/skills/network-effect-claim-tester).
 - The [Market category opportunity finder](https://useaiblocks.com/skills/first-in-category-finder). It takes the audit report.
 - The [Competitive strategy planner](https://useaiblocks.com/skills/one-bold-move-picker). It takes the audit report.
+- The [Product pivot decision reviewer](https://useaiblocks.com/skills/pivot-or-persevere-decider). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

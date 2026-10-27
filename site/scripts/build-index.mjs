@@ -9,10 +9,12 @@ import { zipSync } from "fflate";
 import { quarantineClosure } from "../../tools/lib/quarantine.mjs";
 import { applyDisplayCopy } from "../../tools/lib/display-copy.mjs";
 import { acquireBuildLock } from "./lib/build-lock.mjs";
-import { INFO_PAGES } from "../src/lib/site-info.mjs";
+import { INFO_PAGES, POLICY_DATE } from "../src/lib/site-info.mjs";
 import { makeTaskRecipe } from "../src/lib/copyable-task.mjs";
 import { TASKS } from "../src/lib/catalogue-taxonomy.mjs";
 import { compileClassifications } from "./lib/catalogue-classification.mjs";
+import { gitDates } from "./lib/git-dates.mjs";
+import { FEEDS, connectLines, feedItems, jobHubDates, jsonFeed, newest, pageFacts, rssFeed, sitemapIndex, urlset as sitemapUrlset } from "./lib/crawl-files.mjs";
 await acquireBuildLock(".index-build.lock");
 
 // CATALOGUE_ROOT points the build at another folder (tools/make-fake-catalogue.mjs makes one for load tests).
@@ -39,6 +41,10 @@ const hasStructure = (s) => !!s && Array.isArray(s.input) && s.input.length > 0 
 
 // Until a block has its page written, it is filed under the job closest to its old group.
 const TASK_FROM_JOB = { copy: "write-ad-copy", email: "write-ad-copy", ads: "make-image-ads", image: "make-image-ads", video: "make-video-ads", page: "write-landing-page", analysis: "read-ad-results", research: "understand-customers", brand: "brand-file", offer: "make-offer", organic: "grow-social", ops: "set-up-ai" };
+/** A page's first "Use it when" line, without the leading "You want", "You need", … (one line: a second one adds weight
+ *  to blocks.json and did not match goals better). */
+const cuesOf = (when) => (Array.isArray(when) ? when : []).filter((w) => typeof w === "string").slice(0, 1)
+  .map((w) => w.trim().replace(/^You(?:'re| are| have| want| need)?\s+/i, "")).join(" ").slice(0, 300);
 const PAGE_FIELDS = ["headline", "subhead", "explain", "when", "not_for", "output_sample", "you_give", "you_get", "how_to_use", "how_it_works", "output_shape", "tweaks", "judge", "test", "improve", "terms", "works_best_with"];
 // Source schemas carry precise fields for some imported methods. Keep their
 // meaning separate from display copy and leave the original frontmatter intact.
@@ -88,8 +94,18 @@ const walk = (dir, rel = "") => fs.readdirSync(dir, { withFileTypes: true }).sor
 });
 const seen = new Set();
 // The day an item's own files last changed (the newest of the listed files). Shown on its page as "Updated" and used as
-// the sitemap's lastmod and the page's dateModified.
-const lastChange = (folder, names) => new Date(Math.max(...names.map((n) => { try { return fs.statSync(path.join(folder, n)).mtimeMs; } catch { return 0; } }))).toISOString().slice(0, 10);
+// the sitemap's lastmod, the page's dateModified and the feeds. It comes from git history (scripts/lib/git-dates.mjs), so a
+// fresh checkout or a rebuild never moves it; a file with uncommitted edits uses its file time until it is committed.
+const dates = { catalogue: gitDates(ROOT), workflowPages: gitDates(WORKFLOW_PAGES) };
+if (!dates.catalogue.usable) console.warn("lastmod: no git history for the catalogue, so dates fall back to file times");
+if (dates.catalogue.shallow) console.warn("lastmod: shallow git clone, so dates may be too new; fetch the full history before building for release");
+// `workflowPage` is a workflow's page written in tools/orchestrator-pages instead of its own folder.
+const lastChange = (folder, names, workflowPage) => {
+  const times = [dates.catalogue.modifiedAt(names.map((n) => path.join(folder, n))), workflowPage ? dates.workflowPages.modifiedAt([workflowPage]) : ""].filter(Boolean);
+  return new Date(times.length ? Math.max(...times.map(Date.parse)) : Date.now()).toISOString().slice(0, 10);
+};
+// The day the item first appeared (its oldest committed file): the feeds' date_published and the page's datePublished.
+const firstSeen = (folder, names) => dates.catalogue.published(names.map((n) => path.join(folder, n)));
 for (const dirName of ["general", "ecommerce", "orchestrators", "agents", "imported"]) {
   const category = dirName === "imported" ? "general" : dirName === "agents" ? "agent" : dirName;
   const dir = path.join(ROOT, dirName);
@@ -164,6 +180,9 @@ for (const dirName of ["general", "ecommerce", "orchestrators", "agents", "impor
       name: page?.name ?? item.name ?? slug,
       ...(edited.aliases.length ? { aliases: edited.aliases } : {}),
       summary: page?.summary ?? item.summary ?? "",
+      // The first "Use it when" situation, in people's own words: the builder and plan_workflow match a goal on
+      // them too (lib/goal.ts), so "let someone go" finds the termination checker. Kept short to keep this file small.
+      cues: cuesOf(page?.when),
       headline: page?.headline ?? "",
       task: classifications.primary.get(slug) ?? page?.job ?? TASK_FROM_JOB[item.job] ?? "set-up-ai",
       ...classifications.fields(slug),
@@ -194,7 +213,8 @@ for (const dirName of ["general", "ecommerce", "orchestrators", "agents", "impor
       // The minds whose work the skill comes from (docs/SOURCE-SKILLS-PRD.md). Checked against the roster below.
       minds: Array.isArray(item.minds) ? item.minds.map(String) : [],
       files,
-      added: lastChange(folder, ["item.yaml", "page.yaml", "SKILL.md"]),
+      added: lastChange(folder, ["item.yaml", "page.yaml", "SKILL.md"], pagePath?.startsWith(WORKFLOW_PAGES) ? pagePath : undefined),
+      published: firstSeen(folder, ["item.yaml", "page.yaml", "SKILL.md"]),
     });
   }
 }
@@ -282,7 +302,7 @@ for (const r of roster.minds) {
     seats: m.seats.map((s) => s.seat), area: m.area, also: m.also ?? [], years: m.years ?? "", living: !!m.living, identity: m.identity, labels: labelsOf(r.slug), // the face comes from the roster (lib/data.ts), so it is sent once
     inputs: [{ type: "question", required: true }], outputs: [{ type: "mind_view", required: true }],
     uses: [], steps: [], origin: "own", tested: hasStructure(m.output_sample) ? { result: "pass" } : null, version: String(m.version ?? "1.0.0"), words: skill.split(/\s+/).length,
-    twin: null, files: mindFiles, minds: [], skills: [], flows: [], added: lastChange(folder, ["mind.yaml", "page.yaml", "SKILL.md"]),
+    twin: null, files: mindFiles, minds: [], skills: [], flows: [], added: lastChange(folder, ["mind.yaml", "page.yaml", "SKILL.md", "knowledge.md", "playbook.md"]), published: firstSeen(folder, ["mind.yaml", "SKILL.md"]),
   });
 }
 
@@ -351,6 +371,10 @@ for (const b of blocks) {
   delete b.thinkingWhy;
   // Facts only the block's own page shows (or nothing does) travel with the page, not in blocks.json.
   pageData.words = b.words; pageData.added = b.added; if (b.tested) pageData.tested = b.tested;
+  // The first day it appeared, and the facts its Markdown and JSON twins (src/server/twins.ts) need from blocks.json, so a
+  // twin is made from this one file and SKILL.md instead of the whole catalogue.
+  if (b.published) pageData.published = b.published;
+  pageData.facts = pageFacts(b, { bySlug, describe, taskName: (t) => TASKS.find((x) => x.id === t)?.name });
   // The names of its extra files (a skill's are in its zip; a mind's are served one by one for its pack).
   if (b.files.length) pageData.files = b.files;
   // An imported skill's GitHub link, licence, first name and commit are only shown on its page; the list keeps just the maker.
@@ -374,7 +398,7 @@ const DEFAULTS = { category: "general", type: "skill", role: "make", job: "ops",
 const wire = (b) => {
   const o = {};
   for (const [k, v] of Object.entries(b)) {
-    if (["words", "added", "files", "tested"].includes(k)) continue; // in the page JSON
+    if (["words", "added", "published", "files", "tested"].includes(k)) continue; // in the page JSON
     if (k === "headline") { if (v === b.name) continue; } // same as the name: left out; no page at all: sent as ""
     else if (k in DEFAULTS ? v === DEFAULTS[k] : v == null || v === "" || (Array.isArray(v) && !v.length)) continue;
     o[k] = k === "inputs" || k === "outputs" ? v.map((p) => (p.required ? p.type : `${p.type}?`)) : k === "steps" ? v.map((x) => (x.note ? [x.uses, x.note] : x.uses)) : k === "source" ? { by: v.by } : v;
@@ -389,20 +413,39 @@ fs.writeFileSync(path.join(OUT_DATA, "blocks.json"), JSON.stringify({ built: new
 const SITE = "https://useaiblocks.com";
 const kindPath = (b) => (b.type === "mind" ? "minds" : b.type === "agent" ? "agents" : b.category === "orchestrator" || b.type === "workflow" || b.type === "routine" ? "workflows" : b.type === "prompt" ? "prompts" : "skills");
 const { TOOLS } = await import("../../mini-tools/index.mjs");
-const urls = ["/", "/compose", "/how-it-works", "/minds", "/from-a-source", "/community", "/tools", ...[...BROWSER_TOOLS, ...TOOLS].map((t) => `/tools/${t.slug}`), "/apps", "/api-and-mcp", ...INFO_PAGES.map(page => page.path), ...blocks.filter((b) => b.headline).map((b) => `/${kindPath(b)}/${b.slug}`)];
+const urls = ["/", "/compose", "/how-it-works", "/minds", "/from-a-source", "/community", "/tools", ...[...BROWSER_TOOLS, ...TOOLS].map((t) => `/tools/${t.slug}`), "/apps", "/api-and-mcp", "/me-md", ...INFO_PAGES.map(page => page.path), ...blocks.filter((b) => b.headline).map((b) => `/${kindPath(b)}/${b.slug}`)];
 // One sitemap per kind of page, under a sitemap index, so Search Console shows how each kind is indexed.
-// the only dates we have are file times, so lastmod goes on item pages only (see lastmod below).
-// sitemap-jobs.xml (the job hubs) is written by scripts/prerender.mjs.
-// lastmod is the day the item's own files (item.yaml, page.yaml, SKILL.md) last changed, the same date its page shows as
-// "Updated". Only item pages have one; the other pages have no date we can vouch for, so they get none.
+// sitemap-jobs.xml (the job hubs) is written by scripts/prerender.mjs, with the same dates as jobHubDates below.
+// lastmod is only a date we can vouch for: an item page's is the day its own files (item.yaml, page.yaml, SKILL.md) last
+// changed in git, the same date its page shows as "Updated"; a mini tool's is its `updated`, an AI tool guide's its
+// last_checked and a policy page's its effective date. Other pages get none. A rebuild never moves any of them.
 const lastmod = Object.fromEntries(blocks.filter((b) => b.headline && b.added).map((b) => [`/${kindPath(b)}/${b.slug}`, b.added]));
-const urlset = (us) => `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${us.map((u) => `  <url><loc>${SITE}${u}</loc>${lastmod[u] ? `<lastmod>${lastmod[u]}</lastmod>` : ""}</url>`).join("\n")}\n</urlset>\n`;
+for (const t of TOOLS) if (t.updated) lastmod[`/tools/${t.slug}`] = String(t.updated).slice(0, 10);
+const policyDay = (() => { const t = Date.parse(`${POLICY_DATE} UTC`); return Number.isNaN(t) ? "" : new Date(t).toISOString().slice(0, 10); })();
+// The policy and info pages show this date as "Effective and last updated" and carry it as dateModified.
+for (const page of INFO_PAGES) if (policyDay) lastmod[page.path] = policyDay;
 const SITEMAPS = { pages: [...urls.filter((u) => !/^\/(skills|workflows|agents|prompts|minds)\//.test(u)), "/tools/growth-channel-planner"], skills: urls.filter((u) => u.startsWith("/skills/")), workflows: urls.filter((u) => u.startsWith("/workflows/")), agents: urls.filter((u) => u.startsWith("/agents/")), prompts: urls.filter((u) => u.startsWith("/prompts/")), minds: urls.filter((u) => u.startsWith("/minds/")) };
 const aiToolsRoot = path.join(ROOT, "ai-tools");
-if (fs.existsSync(aiToolsRoot)) SITEMAPS["ai-tools"] = ["/ai-tools", ...fs.readdirSync(aiToolsRoot).filter((f) => f.endsWith(".yaml") && !f.startsWith("_")).map((f) => `/ai-tools/${f.slice(0, -5)}`)];
+if (fs.existsSync(aiToolsRoot)) {
+  const guides = fs.readdirSync(aiToolsRoot).filter((f) => f.endsWith(".yaml") && !f.startsWith("_")).sort();
+  SITEMAPS["ai-tools"] = ["/ai-tools", ...guides.map((f) => `/ai-tools/${f.slice(0, -5)}`)];
+  for (const f of guides) {
+    try { const checked = YAML.parse(fs.readFileSync(path.join(aiToolsRoot, f), "utf8"))?.last_checked; if (checked) lastmod[`/ai-tools/${f.slice(0, -5)}`] = (checked instanceof Date ? checked.toISOString() : String(checked)).slice(0, 10); } catch { /* build-ai-tools.mjs reports a broken guide */ }
+  }
+  lastmod["/ai-tools"] = newest(guides.map((f) => lastmod[`/ai-tools/${f.slice(0, -5)}`] ?? ""));
+}
 for (const f of fs.readdirSync("public").filter((f) => /^sitemap-.*\.xml$/.test(f))) fs.rmSync(path.join("public", f));
-for (const [k, us] of Object.entries(SITEMAPS)) if (us.length) fs.writeFileSync(`public/sitemap-${k}.xml`, urlset(us));
-fs.writeFileSync("public/sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${[...Object.keys(SITEMAPS).filter((k) => SITEMAPS[k].length), "jobs"].map((k) => `  <sitemap><loc>${SITE}/sitemap-${k}.xml</loc></sitemap>`).join("\n")}\n</sitemapindex>\n`);
+for (const [k, us] of Object.entries(SITEMAPS)) if (us.length) fs.writeFileSync(`public/sitemap-${k}.xml`, sitemapUrlset(us, lastmod));
+// Each child carries the newest lastmod of its pages, so a crawler re-reads only the children that changed.
+fs.writeFileSync("public/sitemap.xml", sitemapIndex([
+  ...Object.keys(SITEMAPS).filter((k) => SITEMAPS[k].length).map((name) => ({ name, lastmod: newest(SITEMAPS[name].map((u) => lastmod[u] ?? "")) })),
+  { name: "jobs", lastmod: jobHubDates(blocks).all },
+]));
+// The feeds of new and changed items (the newest 100 by the dates above), linked from the home page, /jobs and llms.txt.
+const taskName = (t) => TASKS.find((x) => x.id === t)?.name;
+const feed = feedItems(blocks);
+fs.writeFileSync(`public${FEEDS.json}`, JSON.stringify(jsonFeed(feed, { taskName }), null, 1) + "\n");
+fs.writeFileSync(`public${FEEDS.rss}`, rssFeed(feed, { taskName }));
 // Everyone may crawl and index everything: search engines, answer engines and AI assistants. The library is free and
 // credited, so training crawlers are allowed too, on purpose. The saved example app is a copy of another app: it is
 // noindex by a meta tag and by an X-Robots-Tag header (public/_headers), so robots.txt must NOT block it, or crawlers
@@ -430,13 +473,15 @@ const example = paged.find((b) => b.slug === "ad-angle-planner") ?? paged[0];
 const intro = [
   "# AI Blocks", "",
   "> Free AI skills, workflows, prompts and minds for real work. Each skill is a reusable SKILL.md for an AI assistant that can read files.", "",
+  // How to connect comes first: the MCP server and the API are what an AI uses most (docs/AI-HUB-PRD.md §9).
+  ...connectLines(example),
   "## Key facts", "",
   "- Free to use, no account needed.",
   `- ${nSkills} skills, workflows and prompts in ${tasksBySize.length} jobs, ${nMinds} minds and ${TOOLS.length} mini tools.`,
   "- Imported skills keep their open-licence sources and credits (MIT, Apache 2.0, BSD, CC BY, CC BY-SA). Local changes are identified on the page and in the skill file.",
   "- Minds are AIs built from a person's public work, with their sources listed. They are not the person. Minds that invest teach frameworks only, never buy or sell advice.",
   "- Skills that scrape websites or need a paid outside account say so on their page.",
-  `- Last built ${new Date().toISOString().slice(0, 10)}.`, "",
+  `- Last changed ${newest(paged.map((b) => b.added))}. See the [JSON Feed](${SITE}${FEEDS.json}) or [RSS](${SITE}${FEEDS.rss}) for what changed.`, "",
   "## How to use a skill", "",
   `- Every skill has a page and a skill file. For example: [${example.name}](${SITE}/${kindPath(example)}/${example.slug}), and its file [SKILL.md](${SITE}/skills/${example.slug}/SKILL.md). Add the file to your AI as a skill, or paste it into a chat.`,
   `- [Every page by job](${SITE}/jobs), and the whole catalogue as data: [blocks.json](${SITE}/data/blocks.json)`, "",

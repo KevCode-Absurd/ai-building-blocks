@@ -9,6 +9,7 @@ level: intermediate
 inputs:
   - {type: product_data, required: true}
   - {type: performance_sheet, required: true}
+  - {type: question, required: true}
 outputs:
   - {type: plan}
 uses: [willingness-to-pay-survey, pricing-model-designer, price-test-planner]

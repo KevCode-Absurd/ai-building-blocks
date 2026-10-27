@@ -127,7 +127,7 @@ Route here when the user asks *what kind* of community to build, which model fit
 
 Track these signals weekly:
 
-- **DAU/MAU ratio** — Stickiness. Above 20% is healthy for most communities.
+- **DAU/MAU ratio** — Stickiness. Above 20% is a common rule of thumb for a healthy community, not a measured standard. Compare against your own past numbers first.
 - **New member post rate** — % of new members who post within 7 days of joining
 - **Thread reply rate** — % of posts that receive at least one reply
 - **Churn / lurker ratio** — Members who joined but haven't posted in 30+ days

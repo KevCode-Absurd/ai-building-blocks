@@ -8,7 +8,7 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: question
     required: true
 outputs:
   - type: web_app

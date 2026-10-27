@@ -43,14 +43,14 @@ Claude Code note: after it finishes, it may prefill a predicted next user messag
 
 Remote execution requires authorization for the exact host/project and credential boundary. Use the supported sandbox/approval configuration; do not launch an unrestricted agent or infer remote access from a delegation request.
 
-## The 4 agents (background reference)
+## The 4 agents (background reference, safe to skip if you only need the brief)
 
 All four use the portable SKILL.md standard; project skills win over global.
 
-- **Pi** (pi.dev, open-source TS): minimal read/write/edit/bash core, self-extends via TS extensions; true BYOK; best-in-class session branch/fork/resume. Skills: `~/.pi/agent/skills/`.
-- **Codex CLI** (OpenAI, Rust): fastest startup; kernel-level sandboxing; `codex exec` for CI; reads AGENTS.md. Skills: `~/.codex/skills/`.
-- **Claude Code** (Anthropic, TS): deepest Claude integration, `.claude/` conventions, live skill hot-reload. Skills: `~/.claude/skills/`.
-- **Hermes** (Nous Research, Python): persistent autonomous agent — cross-session memory, built-in scheduler, 40+ tools; can orchestrate the other CLIs as workers. Skills: `~/.hermes/skills/`.
+- **Pi** (pi.dev, open-source TS): minimal read/write/edit/bash core, self-extends via TS extensions; true BYOK; session branch/fork/resume. Skills: `~/.pi/agent/skills/`.
+- **Codex CLI** (OpenAI, Rust): kernel-level sandboxing; `codex exec` for CI; reads AGENTS.md. Skills: `~/.codex/skills/`.
+- **Claude Code** (Anthropic, TS): Claude integration, `.claude/` conventions, live skill hot-reload. Skills: `~/.claude/skills/`.
+- **Hermes** (Nous Research, Python): persistent autonomous agent — cross-session memory, built-in scheduler, many tools; can orchestrate the other CLIs as workers. Skills: `~/.hermes/skills/`.
 
 ## Driving interactive CLIs
 
@@ -62,6 +62,10 @@ All four use the portable SKILL.md standard; project skills win over global.
 **User request:**
 
 > Delegate these independent work items with complete context, clear ownership, and progress checks.
+
+## Next steps
+
+Read the report and the open issues yourself. Then run a review or checklist skill on the agent's changes before you merge or publish them.
 
 ## Limitations
 

@@ -17,11 +17,13 @@ If your host has not already executed the shell probes below (for example, in Co
 
 Generates a pre-earnings briefing using Yahoo Finance data via [yfinance](https://github.com/ranaroussi/yfinance). Pulls together upcoming earnings date, consensus estimates, historical accuracy, analyst sentiment, and key financial context — everything you need before an earnings call.
 
-**Important**: Data is for research and educational purposes only. Not financial advice. yfinance is not affiliated with Yahoo, Inc.
+**Important**: Data is for research and educational purposes only. Not financial advice. yfinance is not affiliated with Yahoo, Inc. It is an unofficial package that reads Yahoo's web pages. It can break or be blocked without notice, and using it may not suit Yahoo's terms. Tell the user this before you fetch anything.
 
 ---
 
 ## Step 1: Ensure yfinance Is Available
+
+The check below only tests whether yfinance is installed. It changes nothing. The user can skip it and run the install by hand: `pip install yfinance`. If they decline the install, stop and say the skill cannot run without it.
 
 **Current environment status:**
 
@@ -100,7 +102,7 @@ The briefing should let the user see the setup at a glance. Cover these five are
 
 ## Step 4: Respond to the User
 
-Keep the brief to about one page (around 600 words). Open with the headline — the report date and a one-line read of the setup — then the five areas above, using tables where they help. Close with a short read of the overall setup drawn from the estimates, track record, and sentiment, framed as what the street expects rather than a recommendation.
+Keep the brief to about one page (around 600 words). Open with the headline — the report date and a one-line read of the setup — then the five areas above, using tables where they help. Close with a short read of the overall setup drawn from the estimates, track record, and sentiment, framed as what the street expects rather than a recommendation. If Yahoo data is missing or empty for any area, say so, and tell the user to check the company's own investor page. Never fill the gap with figures from memory.
 
 Include the caveats that apply: estimates can change until the report date, past beats don't guarantee future ones, Yahoo Finance consensus can lag real-time providers by a few hours, and this is not financial advice.
 

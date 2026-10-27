@@ -61,14 +61,14 @@ output_sample:
     - name: "MISSING: and CHECKS MISSED"
       contains: Inputs not supplied and checks that failed or could not run, or none.
 how_it_works:
-  - title: 1. Document exactly which businesses, dates and currencies belong in both comparable periods; remove divested or acquired contributions symmetrically where present
-    text: Document exactly which businesses, dates and currencies belong in both comparable periods; remove divested or acquired contributions symmetrically where present.
-  - title: 2. Strip the supplied acquisition and signed currency effects from current revenue and supplied disposed revenue from the prior base
-    text: Strip the supplied acquisition and signed currency effects from current revenue and supplied disposed revenue from the prior base.
-  - title: 3. Divide comparable current revenue by comparable prior revenue less one; reconcile every bridge component and avoid labeling a vendor-defined measure universal organic growth
-    text: Divide comparable current revenue by comparable prior revenue less one; reconcile every bridge component and avoid labeling a vendor-defined measure universal organic growth.
+  - title: Fixes the perimeter
+    text: Writes which businesses, dates and currencies sit in both periods, so acquired and divested revenue are removed the same way.
+  - title: Removes the three effects
+    text: Takes disposed revenue off the prior base, then acquired revenue and the signed currency effect off the current figure.
+  - title: Works out organic growth
+    text: Comparable current divided by comparable prior, less one. Every removed part is shown and ties back to reported revenue.
 output_shape: |-
-  A reported-to-organic revenue bridge with clearly defined comparable bases.
+  Reported-to-organic revenue bridge: comparable prior, comparable current, organic growth
   Scope and dated sources
   Inputs and assumptions
   Model calculations and reconciliations
@@ -78,7 +78,7 @@ tweaks:
   - what: "Period end"
     how: "Take the period end from the revenue for both periods and the notes on acquisitions, disposals and currency. Use one currency and scale on every line."
   - what: "The order of the adjustments"
-    how: "Change the the order of the adjustments and have your AI recalculate. Keep the actual figures you supplied."
+    how: "State the order you use: disposals from the prior year, then acquisitions, then currency from the current year. A different order changes the middle figures, so keep it fixed. The bridge must still add back to reported revenue."
   - what: Acceptance
     how: Acquisition, disposal and FX effects are mutually exclusive and use a documented ordering.
 judge:

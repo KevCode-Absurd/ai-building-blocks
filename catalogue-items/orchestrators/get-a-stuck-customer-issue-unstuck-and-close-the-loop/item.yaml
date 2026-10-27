@@ -10,6 +10,7 @@ inputs:
   - {type: question, required: true}
   - {type: voc_reviews, required: true}
   - {type: source_text, required: false}
+  - {type: policy, required: true}
 outputs:
   - {type: audit_report}
   - {type: document}

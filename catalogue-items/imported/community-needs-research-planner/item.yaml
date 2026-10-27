@@ -13,6 +13,8 @@ inputs:
   - type: document
     required: false
 outputs:
+  - type: plan
+    required: true
   - type: audit_report
     required: true
 uses: []

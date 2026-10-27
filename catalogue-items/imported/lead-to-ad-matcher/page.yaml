@@ -5,7 +5,7 @@ name: Lead to ad matcher
 summary: Match CRM leads to the paid channel and ad that brought them in. Give it your lead export and get one row per lead, with unmatched leads kept.
 job: track-numbers
 headline: Lead to ad matcher
-subhead: "A table with one row per lead showing which paid channel and ad brought it in. Give it a CRM lead export. The skill reads click IDs and UTM tags in a set order: current click, current UTM, first-touch click, then first-touch UTM."
+subhead: "A table with one row per lead showing which paid channel and ad brought it in. Give it a CRM lead export. The skill reads click IDs and UTM tags (the tags in your ad links) in a set order: current click, current UTM, first-touch click, then first-touch UTM."
 explain: |
   A table with one row per lead showing which paid channel and ad brought it in. Give it a CRM lead export. The skill reads click IDs and UTM tags in a set order: current click, current UTM, first-touch click, then first-touch UTM. A current tag always beats an older one.
 
@@ -31,11 +31,11 @@ you_get:
   - Reference SQL for BigQuery
 how_to_use:
   - Export your leads from your CRM as a spreadsheet or CSV. Check it has a lead ID, a source name, a created date with a time zone, and UTM and click ID columns.
-  - Open your AI in a chat that can run code and take file uploads. Paste the skill text from this page.
+  - Open your AI in a chat that can run code (Node) and take file uploads. Upload the whole skill folder, which holds SKILL.md, the scripts folder and the references folder. If your AI cannot run Node, it can still match leads by hand, and it will say the checks were not run.
   - Upload the export. Add your channel naming rules, and your ad data if you have it (optional).
   - Ask your AI to match each lead to a channel and ad, and to keep every lead, even unmatched ones.
   - Check the unmatched and unclear rows first. Fix missing tags in your CRM, then run it again.
-  - Next, join the matched table to your GA4 or ad spend data, or feed it into a funnel report. Any report that uses it must say its date mode and lookback, and whether it counts only the attribution-primary leads.
+  - Next, join the matched table to your GA4 or ad spend data, or feed it into a funnel report. Any report that uses it must say its date mode and lookback, and whether it counts only the attribution-primary leads (one lead per click, so a repeat click is not counted twice).
   - To repeat this on your own data, ask for the BigQuery SQL. You need a BigQuery account to run it.
 output_sample:
   input:

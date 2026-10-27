@@ -47,7 +47,7 @@
 - [LaTeX paper converter](https://useaiblocks.com/skills/latex-paper-converter): Bring your LaTeX paper and journal template. Get converted source and a reusable conversion script.
 - [LibreOffice document builder](https://useaiblocks.com/skills/libreoffice-document-builder): Build a document from a plain description and turn it into Word, PDF or HTML, or make many letters from one template and a list, with LibreOffice.
 - [LibreOffice slide builder](https://useaiblocks.com/skills/libreoffice-slide-builder): Build plain slides from an outline with LibreOffice, then convert the deck to PowerPoint or PDF. Handle a whole folder of decks in one run.
-- [LibreOffice spreadsheet builder](https://useaiblocks.com/skills/libreoffice-spreadsheet-builder): Build a spreadsheet from a plain description. You get an ODS file with formulas and charts, or a copy in Excel, CSV or PDF format.
+- [LibreOffice spreadsheet builder](https://useaiblocks.com/skills/libreoffice-spreadsheet-builder): Describe a spreadsheet and get an ODS file with formulas, or a copy as Excel, CSV or PDF. Charts are untested.
 - [Markdown slide deck maker](https://useaiblocks.com/skills/markdown-slide-deck-maker): Share Markdown with slide breaks and notes. Get a branded HTML deck with keyboard controls, presenter mode and PDF printing.
 - [Markdown to web page maker](https://useaiblocks.com/skills/markdown-to-web-page-maker): Share Markdown with at least 100 lines. Get a branded HTML page with a contents bar, search and code-copy buttons.
 - [MATLAB data file reader and writer](https://useaiblocks.com/skills/data-file-reader-and-writer): Share CSV, Excel, JSON, Parquet or XML files. Get MATLAB import/export code with format, missing-value and data-integrity checks.

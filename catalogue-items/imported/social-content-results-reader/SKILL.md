@@ -21,6 +21,16 @@ Check these before you start. Run the commands from this skill's folder so the s
 - `.env` file with `APIFY_TOKEN`
 - Node.js 20.6+ (for native `--env-file` support)
 - `mcpc` CLI tool: `npm install -g @apify/mcpc`
+- `reference/scripts/run_actor.js` in this skill's folder. If it is missing, ask the user to reinstall the skill. Do not write your own runner.
+
+## Before you scrape (ask the user first)
+
+This skill collects public data from Instagram, Facebook, YouTube and TikTok by scraping. Scraping can break a platform's terms of service. It also runs on a paid Apify account: each run uses Apify credits, and the cost depends on the Actor, the number of results and the user's plan. Ask the user to confirm two things before any run:
+
+1. They have read the platform's terms and accept the risk of scraping it.
+2. They have checked their Apify plan and usage limit and are happy with the cost.
+
+If they have not, stop. Do not run anything until they say yes. Use only public accounts, posts and hashtags.
 
 ## Workflow
 
@@ -84,6 +94,14 @@ Before running, ask:
 2. **Number of results**: Based on character of use case
 
 ### Step 4: Run the Script
+
+Build `JSON_INPUT` from the schema you fetched in Step 2. The field names differ by Actor, so never guess them. Use this fill-in shape, and replace each bracket with a field name from the schema and the user's own values:
+
+- Posts, reels, videos or ads from an account or page: `{"[URL OR USERNAME FIELD]": ["[ACCOUNT OR PAGE URL]"], "[RESULT LIMIT FIELD]": [NUMBER OF POSTS]}`
+- A hashtag: `{"[HASHTAG FIELD]": ["[HASHTAG WITHOUT #]"], "[RESULT LIMIT FIELD]": [NUMBER OF POSTS]}`
+- Follower count only: `{"[USERNAME OR URL FIELD]": ["[ACCOUNT]"]}`
+
+Start with a small result limit to keep the cost low.
 
 **Quick answer (display in chat, no file):**
 ```bash

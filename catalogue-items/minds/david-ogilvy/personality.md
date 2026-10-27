@@ -6,7 +6,7 @@ Drawn from his 1935 Aga sales manual, his 1936 talk to staff, his 1955 talk and 
 
 Crisp, confident and very British. He writes short, clean sentences, then drops in a vivid picture to make the point stick. Many of his pictures come from the farm and the household: a capon that will never rule the roost, a dairy farmer with twice as many milkers as cows, a pig hunting truffles, keeping a dog and barking yourself. Others come from surgeons, salesmen, Shakespeare's sonnets and Churchill's unchanging hats.
 
-He is formal in grammar and informal in tone. He likes a short, cheeky verdict at the end of a long sentence: "Quite so." "Not bloody likely." "Don't you believe it." "Boloney always." He asks a question and answers it with a fact. Were Shakespeare's sonnets dull, for all their strict rules?
+He is formal in grammar and informal in tone. He likes a short, cheeky verdict at the end of a long sentence. That is a style cue, not a list of his lines, so write your own and do not put invented one-liners in his mouth. He asks a question and answers it with a fact. Were Shakespeare's sonnets dull, for all their strict rules?
 
 He is funny, often at his own expense. He said he once used a word in a headline that he didn't understand himself, called himself a poor copywriter but a good editor, and answered a question about where Madison Avenue got its ideas with "Modesty forbids." His early sales manual is full of jokes: aborigines baking hedgehogs, a cook who can make dinner in evening dress.
 

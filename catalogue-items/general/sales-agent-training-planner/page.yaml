@@ -11,7 +11,7 @@ subhead: "Give it your product and the people who could sell it. It writes the m
 explain: |
   Agents quit when they do not know what to do, what they will earn or whether anyone else is doing it. Owners lose money when pay promises outrun the margin.
 
-  This skill starts from a product tested on real people and writes the method as steps an agent can repeat and show. It builds a short course, sets commission so a first week's pay is easy to see, and adds prizes beyond sales. It plans how agents meet, lists the records and who keeps them, and sets a month schedule. Commission is the part of each sale paid to the agent.
+  This skill starts from a product tested on real people and writes the method as steps an agent can repeat and show. It builds a short course, sets commission so a first week's pay is easy to see, and adds prizes beyond sales. It plans how agents meet, lists the records and who keeps them, and sets a month schedule. Commission is the part of each sale paid to the agent. It never pays a prize or commission for signing up an agent, because rewards tied to recruiting can fall under pyramid-scheme rules. Check the final plan with a local lawyer or your trade body before you launch.
 
 when:
   - "You want others to sell your product."
@@ -93,8 +93,11 @@ output_shape: |
   PAY
   Commission: <rule> | Week one at <3 levels>: <amounts> | Affordable: <yes/no/unknown>
 
-  PRIZES
+  PRIZES (none for signing up agents)
   <prize> | Won by: <rule>
+
+  LEGAL CHECK
+  Pay and prize plan checked with a local lawyer or trade body: <yes/no>
 
   MEETINGS
   <local>, <yearly>

@@ -100,10 +100,10 @@ MISSING: <what was not supplied>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Check it before it goes live** with the [Video hook scorer](https://useaiblocks.com/skills/video-hook-scorer). It takes the hooks and script.
-- The [Social post format reviewer](https://useaiblocks.com/skills/organic-format-tester). It takes the hooks.
 - **Make video ads** with the [Ad script video format picker](https://useaiblocks.com/skills/video-ad-format-picker). It takes the script.
-- The [TikTok Shop content planner](https://useaiblocks.com/skills/tiktok-shop-content-planner).
+- The [Social post format reviewer](https://useaiblocks.com/skills/organic-format-tester). It takes the hooks.
 - The [Shareable content checker](https://useaiblocks.com/skills/shareable-content-checker). It takes the hooks.
+- **Make video ads** with the [Video ad script line checker](https://useaiblocks.com/skills/video-ad-script-line-checker). It takes the script.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -39,7 +39,7 @@ not_for:
 you_give:
   - The story or message the picture tells, and where it will appear.
   - Who is shown, in your own words, such as ages, jobs, setting, clothing and language. Say only what you know to be true.
-  - Image or video, and the tool you will use, such as Midjourney, DALL-E, Sora or Runway.
+  - Image or video, and the tool you will use, such as Midjourney, DALL-E, Sora or Runway. These tools usually need their own paid account, credits or API key.
   - Details of the place, such as the country, the room or the street (optional but it prevents wrong buildings and signs).
   - Things to avoid, and reference photos you have the right to use (optional).
 you_get:
@@ -52,7 +52,7 @@ how_to_use:
   - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
   - Describe the story, the people and the place. Say image or video, and name your tool.
   - Answer the questions it asks once. It will not guess a person's identity. Anything missing is marked MISSING.
-  - Paste the prompt into your image or video tool. Check the picture against the leave-out list and the review checklist.
+  - Paste the prompt into your image or video tool. The agent only writes prompts. It does not make the picture or clip, and your tool may charge for each one. Check the result against the leave-out list and the review checklist.
   - Show the result to someone from the community you depict before you publish. Fix what they flag.
   - Save the changes that worked as your own prompt rules.
 how_it_works:

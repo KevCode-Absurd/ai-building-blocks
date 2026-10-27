@@ -8,11 +8,16 @@ role: make
 job: ops
 level: expert
 inputs:
-  - type: brief
+  - type: question
     required: true
+  - type: document
+    required: false
+  - type: dataset
+    required: false
 outputs:
   - type: code_change
   - type: document
+  - type: image
 uses: []
 origin: imported
 source:

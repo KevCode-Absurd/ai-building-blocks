@@ -18,7 +18,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Audit report** with the [Owner earnings calculator](https://useaiblocks.com/skills/owner-earnings-calculator). Bring spreadsheet, audit report (optional).
+1. **Audit report** with the [Owner earnings calculator](https://useaiblocks.com/skills/owner-earnings-calculator). Bring financial statements, audit report (optional).
 2. This one.
 
 How to start:

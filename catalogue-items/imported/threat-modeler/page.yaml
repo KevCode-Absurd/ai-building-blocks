@@ -10,6 +10,8 @@ explain: |
   Describe a system and get a list of what could go wrong, ranked by risk, each with a fix. It suits the design stage, when changing a plan costs far less than changing shipped code.
 
   The skill walks through the STRIDE method: spoofing, tampering, repudiation, information disclosure, denial of service and elevation of privilege. For each one it asks where your system is exposed, such as logins, data stores or third-party links. It scores likelihood and impact, then suggests controls like multi-factor login, signed requests or stricter logging. It works from your architecture notes or diagrams, and from how sensitive your data is.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header says MIT. Credit goes to BagelHole and sickn33.
 when:
   - You are designing a new feature that handles personal data.
   - You are adding a third-party service and want to know the risk.
@@ -36,6 +38,7 @@ how_to_use:
   - Ask your AI to go through each part of the system one at a time using STRIDE and fill in the worksheet.
   - Check the risk ratings with someone who knows the system. Fix any that look wrong.
   - Ask for the short reviewer summary, then share it with your team.
+  - Last, give each open threat an owner and a deadline, and track it in your issue tracker with your other work.
 output_sample:
   input:
     - A description or diagram of your system

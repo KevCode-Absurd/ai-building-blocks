@@ -34,6 +34,7 @@ how_to_use:
   - Name the framework or frameworks, such as SOC 2 Type II or GDPR.
   - Describe your business, the tools you use and the controls you already have. Add your audit date if you have one.
   - Read the readiness summary first. Then check the status of each item against what you really have.
+  - Check the version of the framework and its effective dates against the official source before you act on the gap ranking. Rules change.
   - Take the top ranked gaps into a fix plan. Ask an auditor or lawyer to confirm your scope before you act on it.
   - Next, turn each top gap into an owner and a due date. Re-run the checklist when you have fixed them, to see your new readiness.
 output_sample:

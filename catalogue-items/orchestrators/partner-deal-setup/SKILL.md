@@ -48,13 +48,13 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A question** (a step needs something only the person knows): if they're there, wait. If not, write it as `MISSING: <what>` and carry on.
 - **A pause after step 1 if the call is thin or unfair:** suggest the person changes a fee and runs step 1 again before they read the term sheet.
 - **A stop:** if the offer or the fees are missing, stop at step 1 and ask in one short message.
-- Nothing is sent, signed or paid. Do not invent a legal rule.
+- Nothing is sent, signed or paid. Do not invent a legal rule. Franchise, agency and consumer rules differ by country, and some places require disclosures before a partner pays you. Have a lawyer check them.
 
 ## Steps
-1. **Test that the partner makes money.** Use the skill `partner-profit-tester`. It receives your offer, every fee, and the partner's sales, costs and hours. It saves the partner's year at your forecast and at sales a fifth lower, pay per hour against a fair wage, and a call of fair, thin or unfair.
+1. **Test that the partner makes money.** Use the skill `partner-profit-tester`. It receives your offer, every fee, and the partner's sales, costs and hours. It saves the partner's year at your forecast and at sales a fifth lower, pay per hour against a fair wage, and a call of fair, thin or unfair. The fair wage is the going local pay for similar work in the partner's country. Ask the person for it. If they give none, write `MISSING: fair wage` and cap the call at thin. The steps never invent a wage.
 2. **Write the terms.** Use the skill `partner-deal-terms-writer`. It receives the step 1 partner profit file (the fees and the call), your standards sheet if you have one, and the country. It saves a one-page term sheet: who gives what, fixed and local standards, one fee table, a rule that changes count only when both sides sign, the exits, and points for a lawyer. Every fee from step 1 appears in the fee table.
 3. **Check who is paid for what.** Use the skill `incentive-checker`. It receives the step 1 partner profit file and the step 2 term sheet. It saves who is paid for what on your side, where your own pay or a supply markup would tempt you to squeeze the partner, and a fix.
-4. **Set fair terms with your suppliers.** Use the skill `supplier-partner-terms-planner`. It receives the step 1 file, the step 3 incentive findings, and what you buy from suppliers and what partners pay. It saves what you need from suppliers, what you give back, a no-gifts rule, a savings split that passes cost savings to the partners, and a bad-week plan.
+4. **Set fair terms with your suppliers.** Use the skill `supplier-partner-terms-planner`. It receives the step 1 file and your own supplier facts (who supplies what, volumes, costs, and what partners pay), not step 3's check. It saves what you need from suppliers, what you give back, a no-gifts rule, a savings split that passes cost savings to the partners, and a bad-week plan.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back
@@ -64,9 +64,10 @@ Four step files and the summary. The step 4 file holds the supplier plan.
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Deal and dispute negotiation planner](https://useaiblocks.com/skills/win-win-stance-planner).
-- The [Partner deal evaluator](https://useaiblocks.com/skills/partner-deal-evaluator).
-- The [Proposal discussion planner](https://useaiblocks.com/skills/buy-in-conversation-planner). It takes the plan.
+- The [Deal desk reviewer](https://useaiblocks.com/skills/deal-desk-reviewer). It takes the the deal terms.
+- The [Deal payment checker](https://useaiblocks.com/skills/can-they-pay-deal-checker). It takes the plan.
+- The [Mutual action plan builder](https://useaiblocks.com/skills/mutual-action-plan-builder). It takes the plan.
+- **Check the money** with the [Indian merger earnings model builder](https://useaiblocks.com/skills/merger-effect-modeler). It takes the the deal terms.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

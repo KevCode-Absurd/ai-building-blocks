@@ -11,6 +11,8 @@ level: intermediate
 inputs:
   - type: question
     required: true
+  - type: document
+    required: false
   - type: source_text
     required: false
 outputs:

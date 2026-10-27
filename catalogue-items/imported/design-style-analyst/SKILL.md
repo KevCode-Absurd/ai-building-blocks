@@ -43,7 +43,7 @@ When the user provides images, screenshots, or links representing a target desig
 1. Read [references/schema.md](references/schema.md) for the full field list
 2. For each reference provided:
    - If image/screenshot: **first run the deterministic color measurement** (see below), then analyze the remaining visual properties directly
-   - If URL: fetch and analyze the page's visual design
+   - If URL: fetch and analyze the page's visual design. Colors from a URL alone are visual estimates, not measured values, so say so in the output. Look at the page only to describe its style. Do not copy its assets.
 3. For every field in the schema, extract or infer a value from the references
 4. When multiple references conflict, note the dominant pattern and mention variants
 5. Output a complete Design DNA JSON — every field populated, no empty strings

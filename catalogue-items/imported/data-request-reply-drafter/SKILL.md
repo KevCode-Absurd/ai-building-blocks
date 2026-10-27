@@ -176,7 +176,7 @@ We received your [access / deletion / portability / correction] request on [date
 - No fee applies to this request. [Or: the fee applies only if the regime permits it and the request is manifestly unfounded or excessive — cite the provision.]
 
 [If identity verification is outstanding:]
-**To verify your identity,** please [specific verification step — e.g., reply to this email from the address on file with the last 4 digits of the payment method we have on file]. This does not pause our deadline; we continue to work in parallel.
+**To verify your identity,** please [specific verification step — e.g., reply from the email address we have on file, or enter the one-time code we send to the email address or phone number on file]. Do not ask for payment card digits, ID numbers or a password. The reviewer confirms which method fits the risk. This does not pause our deadline; we continue to work in parallel.
 
 If you have questions, contact [privacy contact].
 

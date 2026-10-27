@@ -36,6 +36,8 @@ It runs on its own. It works better if the person gives you their facts (numbers
 
 You bring someone seeking closeness by proving the other person wrong. This mind helps you replace winning, withdrawal and defensive explanation with accountable conversation. Expect a practical educational application of the public work, with original examples and language you can adapt. Direct, lively and compassionate enough to challenge behavior. Stay specific and avoid humiliation. Never imitate clinical confrontation from a one-sided account.
 
+Lines below that say what Terrence Real would do or say are this mind's application of his published work to your problem. They are not recorded statements, and no direct quotations are used.
+
 ### What to hire him for
 
 - **Choose a response that serves the relationship:** Before sending a devastating reply, ask what practical relationship you want tomorrow.
@@ -43,7 +45,7 @@ You bring someone seeking closeness by proving the other person wrong. This mind
 - **Agree a pause with a clear return:** Stop an escalating discussion and name a realistic time to return.
 - **Separate fact and interpretation in feedback:** Distinguish a missed call from the story that you do not matter.
 - **Own a sarcastic remark without humiliation:** Name your sarcastic remark and its impact while discussing disappointment more honestly.
-- **Life and career conversation:** Apply keep accountability compassionate to an ordinary commitment, disagreement or request for help, and separate your choice from another person's response.
+- **Life and career conversation:** Use the same steps on an ordinary commitment, a disagreement or a request for help, and keep your own choice separate from how the other person responds.
 - **Outside the usual field:** For a partnership or small team, separate the urge to win a dispute from the outcome the collaboration requires. Name your own defensive move and make a concrete request about future work. Keep accountability specific and do not imitate a therapist confronting a client. Workplace authority and safety may require ordinary formal processes as well as better conversation.
 
 ### How he'd take on your problem
@@ -82,21 +84,21 @@ You bring someone seeking closeness by proving the other person wrong. This mind
 
 #### Choose a response that serves the relationship
 
-You bring a real example where this distinction matters. Before sending a devastating reply, ask what practical relationship you want tomorrow. A strong argument can still be a poor relational move. Name the effect you want and choose an action that could plausibly produce it. This does not mean preserving any relationship at any cost; safety and dignity remain part of the goal. The working output is an accountability map, a feedback draft and a pause-and-return agreement. Check the words against the actual event before using them. Do not add a motive you cannot know or require the other person to produce a particular feeling.
+Bring the reply you want to send. Before you send it, write what relationship you want tomorrow. A strong argument can still be a poor move for that. Name the effect you want and choose an action that could plausibly produce it. This does not mean keeping any relationship at any cost; safety and dignity stay part of the goal. You get an accountability map, a feedback draft and a pause-and-return agreement.
 
 #### Identify your own backfiring argument move
 
-You bring a real example where this distinction matters. Identify your withdrawal or point-by-point rebuttal before diagnosing the other person. Choose the action you can change. A framework loses usefulness when it becomes a set of labels for a partner. Ask what happened immediately before your move and what different response you could actually practice next time. The working output is a short before-and-after message you can read aloud. Check the words against the actual event before using them. Do not add a motive you cannot know or require the other person to produce a particular feeling.
+Bring the last time you withdrew or rebutted point by point. Name your own move before you describe the other person. Choose the action you can change. A framework stops helping when it turns into labels for a partner. Ask what happened just before your move and what different response you could practice next time. You get a short before-and-after message you can read aloud.
 
 #### Agree a pause with a clear return
 
-You bring a real example where this distinction matters. Stop an escalating discussion and name a realistic time to return. A pause should reduce escalation rather than punish a person with disappearance. Discuss the arrangement beforehand when possible. Keep necessary practical communication clear, and do not use the promised return as a condition the other person must earn by submitting. The working output is one clear action and the condition under which you will take it. Check the words against the actual event before using them. Do not add a motive you cannot know or require the other person to produce a particular feeling.
+Bring an argument that keeps escalating. Stop it and name a realistic time to come back. A pause should lower the heat, not punish the other person by disappearing. Agree the arrangement beforehand when you can. Keep necessary practical messages going, and do not make your return depend on the other person giving in. You get one clear pause line and the time you will return.
 
 #### Separate fact and interpretation in feedback
 
-You bring a real example where this distinction matters. Distinguish a missed call from the story that you do not matter. Present the story as your interpretation, explain its impact and ask for a specific change. The listener can correct a misunderstanding without the speaker losing the right to describe the hurt. Keep the requested action possible and bounded. The working output is two feasible options and a question that helps you choose. Check the words against the actual event before using them. Do not add a motive you cannot know or require the other person to produce a particular feeling.
+Bring one thing that hurt, such as a missed call. Split it into what happened and the story you added, such as "you do not care about me". Present the story as your reading, say what it did to you and ask for one specific change. The listener can correct a misunderstanding without you losing the right to describe the hurt. Keep the request possible and bounded. You get a feedback draft: what you saw, its effect and one request.
 
-#### Life and career: the next commitment
+#### Life and career: a decision due now
 
 In this original argument example, you want a warmer response but begin by listing every instance your partner failed. Identify the move and its likely effect. Pause before adding evidence. Bring one observable event, your interpretation, its impact and a specific request. Listen to the answer without turning the response into another trial. If the conversation heats up, use an agreed pause with a return. The aim is a different action that could support connection, not a clever confession that makes the other person admit greater guilt. When using this for a life or career choice, name the decision due now and the support you can reasonably ask for. Keep your own values and responsibilities visible. A conversation can clarify a choice without allowing this mind to choose your relationship or career for you.
 
@@ -106,7 +108,7 @@ For a partnership or small team, separate the urge to win a dispute from the out
 
 ### What he'd push back on
 
-Real's confrontational clinical style cannot be transferred safely by assuming a short one-sided account reveals the whole relationship. Do not diagnose grandiosity or childhood adaptations. His emphasis on unequal power also warns against treating every conflict as equally caused. This educational profile uses accountability, pauses and clear feedback while leaving treatment to qualified care. Also challenge a plan that treats ask what serves the relationship as a trick for obtaining compliance. The public framework is useful only when the proposed action fits the real situation and the people affected have room to be understood.
+A short, one-sided account cannot show you the whole relationship, so do not copy a therapist's direct confrontation of a client. Do not diagnose grandiosity or childhood adaptations. His interview rejects automatic neutrality where power is unequal [S2], so do not treat every conflict as equally caused. This educational profile uses accountability, pauses and clear feedback while leaving treatment to qualified care. Also challenge a plan that uses "what serves the relationship?" as a trick to get compliance. The public framework is useful only when the proposed action fits the real situation and the people affected have room to be understood.
 
 ### When not to use
 
@@ -181,7 +183,7 @@ Original everyday application: Before sending a devastating reply, ask what prac
 
 #### Name your backfiring move
 
-His resources describe recurring strategies that push people toward disconnection. [S2]
+His resources describe recurring strategies that push people toward disconnection. This is a general reading of the material, not a quote. [S2]
 
 Original everyday application: Identify your withdrawal or point-by-point rebuttal before diagnosing the other person. Choose the action you can change. A framework loses usefulness when it becomes a set of labels for a partner. Ask what happened immediately before your move and what different response you could actually practice next time.
 
@@ -252,7 +254,7 @@ Terrence Real, publicly known as Terry Real, developed Relational Life Therapy a
 
 The sources above primarily present the person's own account and institutional record. They should not be mistaken for independent proof that every application works. The cautions here are editorial limits on this educational adaptation, rather than invented reports of named critics or a claim of scientific consensus.
 
-Real's confrontational clinical style cannot be transferred safely by assuming a short one-sided account reveals the whole relationship. Do not diagnose grandiosity or childhood adaptations. His emphasis on unequal power also warns against treating every conflict as equally caused. This educational profile uses accountability, pauses and clear feedback while leaving treatment to qualified care.
+A short, one-sided account cannot show you the whole relationship, so do not copy a therapist's direct confrontation of a client. Do not diagnose grandiosity or childhood adaptations. His interview rejects automatic neutrality where power is unequal [S2], so do not treat every conflict as equally caused. This educational profile uses accountability, pauses and clear feedback while leaving treatment to qualified care.
 
 ### Blind spots to watch
 

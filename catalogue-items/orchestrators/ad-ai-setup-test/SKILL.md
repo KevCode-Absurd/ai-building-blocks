@@ -20,6 +20,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Product data** (yours): one product's facts: price, variants, ingredients or materials, how it is used, photos by job.
 - **Your image ads** (yours): the image ads, attached as pictures.
 - **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+- **Your prompt** (yours): the full prompt or instructions you give the AI.
 
 **Makes it better (optional):**
 - **Persona** (yours): a buyer grounded in real review language: problem, trigger, wants, doubts, words they use.
@@ -62,7 +63,7 @@ Pause here: Run the old chain and the new chain on the same briefs, using the ru
 Three step files and the summary, in this shape:
 - **Test plan** (step 1): the lead problem, the narrator, four stories and where the click goes.
 - **Handoff cards** (step 2): claim cards with full wording and limits, a card for each AI step, and the run rules.
-- **Score** (step 3): pass rates for old and new, blind picks won out of the pairs judged (twice), cost per usable ad, the decision and a score from 0 to 100. The last file holds the audit report.
+- **Score** (step 3): pass rates for old and new, blind picks won out of the pairs judged (twice), cost per usable ad (from your usage records; if you have none, it says the cost is not measured), the decision and a score from 0 to 100. Step 3's file holds the audit report.
 - **HAND-BACK SUMMARY:** each step's file and every `MISSING:` line in one list.
 
 If the decision is "better", hand the score and the winning setup to the Ad test brief writer to plan a test with real ad spend.

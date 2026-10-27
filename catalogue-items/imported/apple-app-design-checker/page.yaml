@@ -10,6 +10,8 @@ explain: |
   A list of what to fix so your iPhone, iPad or Mac app design matches Apple's own design rules. Show it a design and you get findings tied to the principle behind each one.
 
   The skill checks your design against Apple's Human Interface Guidelines foundations. It looks at whether content leads over decoration, whether system colours and fonts are used, and whether the design works with VoiceOver, large text and reduced motion. It reviews icons, branding, colour contrast, privacy prompts, motion and right-to-left support. It starts by reading any design notes you keep, so it asks only what is missing. Detailed topic files back each point, such as accessibility, colour and app icons.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. Credit goes to Raintree Technology and sickn33.
 when:
   - You are designing a first iPhone app and want to avoid rejection.
   - Your app feels off compared with Apple's own apps.
@@ -20,7 +22,7 @@ not_for:
   - "You need proof your app is accessible: test it with VoiceOver and large text on a real device, or hire a tester who uses assistive tech."
   - "You want to know if Apple will approve your app: read App Store Review Guidelines or submit a build to TestFlight."
 you_give:
-  - Screenshots or a description of your design
+  - Screenshots or a description of your design. Findings cite a guideline file only if you paste or upload those files. Otherwise your AI should say the finding comes from general knowledge
   - Target device and OS
   - Design notes (optional)
   - Your app's main purpose
@@ -47,7 +49,7 @@ output_sample:
     - name: Findings by principle
       contains: Each problem is tied to one of Apple's design principles, such as content first, accessibility or privacy.
     - name: Reference file and section
-      contains: Each finding names the guideline file it comes from, such as accessibility.md or color.md.
+      contains: Each finding names the guideline file it comes from, such as accessibility.md or color.md, when you gave your AI those files. Without them it says the finding is from general knowledge.
     - name: Fixes for color, type and icons
       contains: Plain changes for system colors, text styles, SF Symbols and app icon problems.
     - name: Accessibility impact

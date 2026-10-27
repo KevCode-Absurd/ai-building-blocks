@@ -1,0 +1,13 @@
+ABOUT ME: SHORT CORE
+
+Paste this into your AI's settings box, such as custom instructions or personal
+preferences. Keep it to about 1,200 characters. Stable facts only: your projects
+change too often, so they stay in your full me.md.
+
+I am <your name>. I <what you do> for <who it's for>.
+My goals right now: <goal 1>; <goal 2>; <goal 3>.
+How I like answers: <length>, <tone>, <format>.
+Never: <things an AI should never do for you>.
+How I write: <tone, sentence length, words I use and avoid>. Use this voice only
+for things sent as me. For a business, use its brand voice.
+For my current projects, ask me or check <where they live>.

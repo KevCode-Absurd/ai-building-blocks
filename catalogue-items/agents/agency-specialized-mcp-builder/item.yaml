@@ -13,6 +13,8 @@ inputs:
     required: true
   - type: source_text
     required: false
+  - type: api_spec
+    required: false
 outputs:
   - type: plan
   - type: code_change

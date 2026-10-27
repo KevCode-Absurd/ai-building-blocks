@@ -30,7 +30,7 @@ you_get:
   - Clear column headings
   - No invented rows
 how_to_use:
-  - Have your confirmed field list ready. If you don't have one yet, make it first with the skill that decides your fields.
+  - Have your confirmed field list ready. If you don't have one yet, make it first with a skill that decides your fields, such as the Database schema planner, then paste the list here.
   - Open your AI. Use one that can run code and save files, like Claude or ChatGPT with file tools on. Making an .xlsx file often needs a paid plan or a tool with file access. On a free chat without file tools, ask for the CSV as plain text and paste it into a text file or Excel yourself.
   - Paste the skill, then paste your field list and say if you want Excel or CSV.
   - Add any column rules, such as which columns are dates or pick-lists. Add a sheet name if you want one.
@@ -53,3 +53,4 @@ output_sample:
       contains: Date format on date fields, number format on number fields, and wrapped text on long-text fields.
     - name: Matching CSV (optional)
       contains: A CSV file with the same headings in the same order as the workbook.
+next: [database-schema-planner, fixed-asset-register-keeper]

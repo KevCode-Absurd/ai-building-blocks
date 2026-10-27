@@ -31,7 +31,7 @@ you_get:
   - A Word document
 how_to_use:
   - Use an AI that can search the web, and has Node.js to make the Word file. Claude Code works.
-  - Paste the skill into your chat, or add the skill folder. Check the terms of sites such as Glassdoor and LinkedIn first. They may block automated collection, and the skill then falls back to web search.
+  - Paste the skill into your chat, or add the skill folder. Check the terms of sites such as Glassdoor and LinkedIn first. They may block automated collection. If a page's terms forbid it, the skill stops there and falls back to web search. It uses public pages only and collects no personal data beyond them.
   - Answer the questions one at a time. Say what you expect to find. This is the key step.
   - Wait while it searches, then read the verdict and the red flags first.
   - Open the Word file. Check the sources behind any claim you plan to use.

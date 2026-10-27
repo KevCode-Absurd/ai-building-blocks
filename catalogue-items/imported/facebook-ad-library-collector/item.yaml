@@ -11,7 +11,7 @@ inputs:
   - type: question
     required: true
 outputs:
-  - type: ad_breakdowns
+  - type: spreadsheet
 uses: []
 origin: imported
 warnings:

@@ -12,6 +12,7 @@ inputs:
     required: true
 outputs:
   - type: copy_draft
+  - type: audit_report
 uses: []
 origin: imported
 source:

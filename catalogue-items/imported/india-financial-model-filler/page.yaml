@@ -12,6 +12,8 @@ explain: |
   It sets Indian years first. FY2025 ends on 31 March 2025, and each quarter shows its months. It also avoids a common Excel trap. One common number format shows millions under a crore label, so the figure is 10 times too big. This skill divides by 10,000,000 in a live formula instead.
 
   It works one statement at a time and stops for you to confirm. After the income statement, it checks the totals. After the balance sheet, it checks that assets equal liabilities plus equity. After cash flow, it checks that ending cash matches the balance sheet. Anything it cannot fill goes on a gap list.
+
+  This is a renamed copy of the "3-statement-model" skill by nighomni123 (fsi-skills-india on GitHub), under the Apache 2.0 licence. The original may have changed since, so check the upstream repository for newer versions.
 when:
   - You have a blank three-statement template and need it filled from an annual report.
   - Your model mixes lakh and crore and the totals look wrong.
@@ -34,7 +36,7 @@ you_get:
   - A balance check and cash tie-out for every period
   - A gap list of cells it could not fill
 how_to_use:
-  - Use an AI that can run commands and read your files, such as Claude Code. Install the officecli tool first.
+  - Use an AI that can run commands and read your files, such as Claude Code. Install the officecli tool first. It is a command-line tool, not part of this library. Check its own project page for install steps and cost. If you cannot install it, ask your AI for the formulas to type into Excel yourself.
   - Open the skill. Give your AI the template and the company's results files, and tell it which years to fill. The US-only parts of the skill, the SEC filing guide and the 80% tax loss limit, are skipped for Indian companies.
   - Check the tab map it shows you before it touches any cell. Fix the mapping if a tab is read wrongly.
   - Approve each statement in turn, starting with historicals, then income statement, then balance sheet, then cash flow.

@@ -144,9 +144,9 @@ Rule of thumb: Ask for the minimum needed. Every extra field reduces conversion,
 
 ### How to Frame the Exchange
 
-- Make the value obvious: "Get the full 25-page guide free"
+- Make the value obvious: "Get the full [LENGTH] guide free"
 - Show a preview: table of contents, first page, sample results
-- Add social proof: "Downloaded by 5,000+ marketers"
+- Add social proof only if it is true: "Downloaded by [YOUR REAL COUNT] [YOUR AUDIENCE]"
 - Reduce risk: "No spam. Unsubscribe anytime."
 
 **For form optimization**: See **cro** skill
@@ -192,7 +192,7 @@ Don't waste the thank you page. After they've converted:
 
 - Add relevant CTAs within blog posts (inline, end-of-post)
 - Create post-specific content upgrades (bonus checklist for a how-to post)
-- Content upgrades often convert better than generic sidebar CTAs (a common claim of 2-5x; unsourced, so treat it as a rough guide and test it yourself)
+- Content upgrades often convert better than generic sidebar CTAs (a common claim, unsourced, so treat it as a rough guide and test it yourself)
 
 ### Exit-Intent & Popups
 
@@ -230,13 +230,13 @@ Don't waste the thank you page. After they've converted:
 
 | Metric | What It Tells You | Benchmark |
 |--------|-------------------|-----------|
-| **Landing page conversion rate** | Offer attractiveness | 20-40% (warm traffic), 5-15% (cold) |
+| **Landing page conversion rate** | Offer attractiveness | Directional only, test it yourself: higher for warm traffic than for cold |
 | **Cost per lead** | Acquisition efficiency | Varies by channel and industry |
-| **Lead-to-customer rate** | Lead quality | 1-5% (B2B), varies widely |
-| **Email engagement** | Content relevance | 30-50% open, 2-5% click |
+| **Lead-to-customer rate** | Lead quality | Directional only, varies widely; use your own past rate |
+| **Email engagement** | Content relevance | Directional only; compare with your own past emails |
 | **Time to conversion** | Nurture effectiveness | Track by lead magnet source |
 
-**For detailed benchmarks by format and industry**: See [references/benchmarks.md](references/benchmarks.md)
+The benchmark column is a rough guide, not a measured result. Compare against your own numbers. **For more detail by format and industry**: See [references/benchmarks.md](references/benchmarks.md)
 
 ### A/B Testing Ideas
 
@@ -259,7 +259,7 @@ Good lead magnet attracted quality leads if:
 
 ## Output Format
 
-When creating a lead magnet strategy, work in this order and provide:
+When creating a lead magnet strategy, run these steps in order: (1) check what content, data and expertise the person already has, (2) list several lead magnet ideas, (3) score the ideas by buyer stage and effort, (4) pick one, (5) outline the signup page and the content, (6) plan the follow-up emails and how to promote it. Then provide:
 
 ### 1. Lead Magnet Recommendation
 - Format and topic

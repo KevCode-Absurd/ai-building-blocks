@@ -11,6 +11,8 @@ explain: |-
   It uses Lean and Six Sigma tools, but in plain words. It wants a baseline first, such as how long the job takes today and how often it goes wrong. Without one it cannot claim an improvement, so it marks the gap and tells you how to measure it.
 
   It looks at the whole flow, not one team. It flags jobs that only one person can do, vendors with no agreed service levels, and fixes that would remove a fallback.
+
+  The role comes from Agency Agents under the MIT licence. Its sample thresholds, such as utilization and scorecard weights, are starting points to confirm with your team, not results from AI Blocks.
 when:
   - Orders, tickets or invoices are late, and you do not know which step is the cause.
   - Only one person knows how a key job is done, and you worry about what happens if they leave.

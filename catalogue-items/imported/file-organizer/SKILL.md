@@ -44,7 +44,7 @@ Point the agent at a directory and specify the organization strategy. If no stra
 ```
 
 ```
-"Organize ~/Projects/acme-app using this config file: .file-org-rules.yaml"
+"Organize ~/Documents/Scans using this config file: .file-org-rules.yaml"
 ```
 
 A custom rule file looks like this:
@@ -141,36 +141,27 @@ Confirm? (yes / no / edit plan)
     └── vacation-vid.mp4
 ```
 
-### Example 2 — Organizing a Project Repository with a Standard Structure
+### Example 2 — Sorting Exports by Date
 
 **User input:**
 ```
-"Reorganize ~/code/my-api into a standard Go project layout. Move source files, tests, configs, and docs into conventional locations."
+"Sort the files in /data/raw-exports by modification date, using YYYY/MM subfolders. Do not rename anything."
 ```
 
 **Agent output (dry-run preview):**
 ```
-Detected project type: Go (found go.mod)
+Scan complete: [N] files found, [N] duplicates detected.
 
-Proposed structure:
-  cmd/my-api/main.go         ← entry point (moved from ./main.go)
-  internal/handlers/          ← HTTP handlers (moved from ./handlers/)
-  internal/models/            ← data models (moved from ./models/)
-  internal/service/           ← business logic (moved from ./service/)
-  pkg/                        ← exported library code (empty — populate later)
-  configs/config.yaml         ← moved from ./config.yaml
-  docs/api-spec.md            ← moved from ./API.md
-  scripts/migrate.sh          ← moved from ./migrate.sh
-  test/integration/           ← moved from ./integration_tests/
-  go.mod                      ← unchanged
-  go.sum                      ← unchanged
-  README.md                   ← unchanged
+Move plan:
+  [file name]    → [YYYY]/[MM]/[file name]
+  [file name]    → [YYYY]/[MM]/[file name]
 
-7 files moved, 3 directories created, 2 files unchanged.
-Note: moving Go files does not fix their import paths. After the move, run `go build ./...` and fix the imports by hand or with a tool such as goimports before you commit.
+[N] files moved, [N] folders created, [N] files left in place.
 
 Confirm? (yes / no / edit plan)
 ```
+
+This skill is for document, photo and export folders. Do not run it on a live code project. Moving source files breaks imports, builds and Git history, so move those by hand with Git.
 
 ## Best Practices
 

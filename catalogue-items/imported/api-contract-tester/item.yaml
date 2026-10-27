@@ -10,6 +10,8 @@ level: advanced
 inputs:
   - type: codebase
     required: true
+  - type: api_spec
+    required: false
 outputs:
   - type: test_report
 uses: []

@@ -89,7 +89,7 @@ related: []
 
 ### Example 2: Research Notes with Source Tracking
 
-> Added by AI Blocks: in this sample, the file includes some points the request did not state (for example, which ORMs break, the memory cost of raising max_connections, and read replica routing). Treat them as examples of added context. In real use, mark such points "(to verify)" with a source, or leave them out.
+> Added by AI Blocks: the file below holds only points the request stated. The figures and claims are the user's own and are not checked. If you add anything the user did not say, mark it "(to verify)" and name its source. Never invent a source title or link.
 
 **User Request:**
 > I'm researching connection pooling strategies for PostgreSQL. Take notes on what I've found so far:
@@ -115,32 +115,28 @@ related: []
 - Three pooling modes: session, transaction, and statement.
 - **Transaction mode** is recommended for web applications — reuses connections between transactions.
 - Typically **reduces connection count by ~10x**.
-- **Limitation:** Transaction mode does not support prepared statements, which can break some ORMs (notably older versions of ActiveRecord and SQLAlchemy).
+- **Limitation:** Transaction mode does not support prepared statements, which breaks some ORMs (as you noted).
 
 ### Pgpool-II
-- Alternative to PgBouncer with additional features: load balancing, automatic failover, and replication.
-- **More complex** to configure and operate than PgBouncer.
-- Better suited for setups that need read replica routing in addition to pooling.
+- Alternative to PgBouncer that also does load balancing and replication.
+- **More complex** to configure than PgBouncer.
 
 ### Built-in PostgreSQL Limits
-- Default `max_connections` is **100**.
-- Increasing this significantly (e.g., to 1000+) causes memory and performance issues due to per-connection overhead.
+- The built-in connection limit is usually **100** by default.
 
 ### Production Scale Reference
-- **Supabase** handles 1M+ connections using PgBouncer (transaction mode) with their custom Supavisor proxy.
-- Source: Supabase engineering blog.
+- **Supabase** published a blog post showing they handle 1M+ connections using PgBouncer in transaction mode with Supavisor (your note; the post's title and link were not given).
 
 ## Open Questions
 
 - What is the performance overhead of PgBouncer itself at high connection counts?
-- How do modern ORMs (Prisma, Drizzle) handle the prepared statement limitation in transaction mode?
+- Which ORMs are affected by the prepared statement limitation in transaction mode, and how do they cope?
 - When does Pgpool-II's complexity become justified over PgBouncer?
 
 ## Sources
 
-- Supabase Blog: "Scaling Postgres to 1M connections"
-- PgBouncer documentation: https://www.pgbouncer.org/
-- PostgreSQL documentation: Connection settings
+- A Supabase blog post (title and link not given, to verify)
+- Your own research so far
 ```
 
 ## Best Practices

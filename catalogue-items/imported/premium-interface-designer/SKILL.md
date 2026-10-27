@@ -46,10 +46,10 @@ If your generated code includes ANY of the following, the design instantly fails
 - **Banned Motion:** Standard `linear` or `ease-in-out` transitions. Instant state changes without interpolation.
 
 ## 3. THE CREATIVE VARIANCE ENGINE
-Before writing code, silently "roll the dice" and select ONE combination from the following archetypes based on the prompt's context to ensure the output is uniquely tailored but always premium:
+Before writing code, silently select ONE combination from the following archetypes. Match the brief type shown in brackets (SaaS / AI / Tech gets Ethereal Glass, Lifestyle / Real Estate / Agency gets Editorial Luxury, Consumer / Health / Portfolio gets Soft Structuralism). For layout, use the Asymmetrical Bento when there are many unlike items, the Z-Axis Cascade for a story or collage, and the Editorial Split for one big message with images. If the last design in this conversation used that combination, pick the next best match so the output stays uniquely tailored but always premium:
 
 ### A. Vibe & Texture Archetypes (Pick 1)
-1. **Ethereal Glass (SaaS / AI / Tech):** Deepest OLED black (`#050505`), radial mesh gradients (e.g., subtle glowing purple/emerald orbs) in the background. Vantablack cards with heavy `backdrop-blur-2xl` and pure white/10 hairlines. Wide geometric Grotesk typography.
+1. **Ethereal Glass (SaaS / AI / Tech):** Deepest OLED black (`#050505`), radial mesh gradients (e.g., subtle glowing purple/emerald orbs) in the background. Vantablack cards with pure white/10 hairlines (add `backdrop-blur-2xl` only to fixed or sticky cards, per Section 6). Wide geometric Grotesk typography.
 2. **Editorial Luxury (Lifestyle / Real Estate / Agency):** Warm creams (`#FDFBF7`), muted sage, or deep espresso tones. High-contrast Variable Serif fonts for massive headings. Subtle CSS noise/film-grain overlay (`opacity-[0.03]`) for a physical paper feel.
 3. **Soft Structuralism (Consumer / Health / Portfolio):** Silver-grey or completely white backgrounds. Massive bold Grotesk typography. Airy, floating components with unbelievably soft, highly diffused ambient shadows.
 
@@ -79,7 +79,7 @@ Never place a premium card, image, or container flatly on the background. They m
 - **Eyebrow Tags:** Precede major H1/H2s with a microscopic, pill-shaped badge (`rounded-full px-3 py-1 text-[10px] uppercase tracking-[0.2em] font-medium`).
 
 ## 5. MOTION CHOREOGRAPHY (FLUID DYNAMICS)
-Never use default transitions. All motion must simulate real-world mass and spring physics. Use custom cubic-beziers (e.g., `transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)]`).
+Never use default transitions. All motion must simulate real-world mass and spring physics. Use custom cubic-beziers (e.g., `transition-[transform,opacity] duration-700 ease-[cubic-bezier(0.32,0.72,0,1)]`). Never use `transition-all`: it animates layout properties, which Section 6 forbids.
 
 ### A. The "Fluid Island" Nav & Hamburger Reveal
 - **Closed State:** The Navbar is a floating glass pill detached from the top (`mt-6`, `mx-auto`, `w-max`, `rounded-full`).
@@ -93,7 +93,7 @@ Never use default transitions. All motion must simulate real-world mass and spri
 - The nested inner icon circle should translate diagonally (`group-hover:translate-x-1 group-hover:-translate-y-[1px]`) and scale up slightly (`scale-105`), creating internal kinetic tension.
 
 ### C. Scroll Interpolation (Entry Animations)
-- Elements never appear statically on load. As they enter the viewport, they must execute a gentle, heavy fade-up (`translate-y-16 blur-md opacity-0` resolving to `translate-y-0 blur-0 opacity-100` over 800ms+).
+- Elements never appear statically on load. As they enter the viewport, they must execute a gentle, heavy fade-up (`translate-y-16 opacity-0` resolving to `translate-y-0 opacity-100` over 800ms+). Do not animate blur: Section 6 allows only `transform` and `opacity`.
 - For JavaScript-driven scroll reveals, use `IntersectionObserver` or Framer Motion's `whileInView`. Never use `window.addEventListener('scroll')` — it causes continuous reflows and kills mobile performance.
 
 ## 6. PERFORMANCE GUARDRAILS
@@ -104,7 +104,7 @@ Never use default transitions. All motion must simulate real-world mass and spri
 
 ## 7. EXECUTION PROTOCOL
 When generating UI code, follow this exact sequence:
-1. **[SILENT THOUGHT]** Roll the Variance Engine (Section 3). Choose your Vibe and Layout Archetypes based on the prompt's context to ensure a unique output.
+1. **[SILENT THOUGHT]** Run the Variance Engine (Section 3). Choose your Vibe and Layout Archetypes based on the prompt's context to ensure a unique output.
 2. **[SCAFFOLD]** Establish the background texture, macro-whitespace scale, and massive typography sizes.
 3. **[ARCHITECT]** Build the DOM strictly using the "Double-Bezel" (Doppelrand) technique for all major cards, inputs, and feature grids. Use exaggerated squircle radii (`rounded-[2rem]`).
 4. **[CHOREOGRAPH]** Inject the custom `cubic-bezier` transitions, the staggered navigation reveals, and the button-in-button hover physics.

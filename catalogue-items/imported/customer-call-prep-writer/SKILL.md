@@ -43,7 +43,7 @@ For each external attendee, use the contact-research skill process. If that skil
 - Role and influence in the buying process
 - Their personal activity and engagement history
 - Any recent signals that suggest their current mood/priorities
-- Spark persona classification if available
+- Persona tag (Common Room's label for the kind of buyer someone is), if there is one
 
 ### Step 4: Synthesize Talking Points and Objectives
 
@@ -53,7 +53,7 @@ Based on the combined account and contact research:
 - Anticipate **2–3 likely objections or topics** the customer may raise
 - Suggest a **recommended outcome** for the call
 
-When the user's company context is available (see `references/my-company-context.md`), tailor talking points to the user's product and value proposition.
+If the user has told you what they sell and why it is worth buying, tailor the talking points to that. If they have not, ask for it in one line before you write the talking points.
 
 ### Step 5: Recency Check (Web Search)
 
@@ -87,7 +87,7 @@ The output adapts to how much data Common Room returned. Only include sections w
 ### Attendee Profiles
 
 **[Attendee Name] — [Title]**
-[3–4 bullets: role, recent activity, Spark persona if available, personal hook]
+[3–4 bullets: role, recent activity, persona tag if available, personal hook]
 
 [Repeat for each attendee]
 
@@ -111,12 +111,12 @@ The output adapts to how much data Common Room returned. Only include sections w
 [1–2 sentences: what success looks like for this meeting]
 ```
 
-### When data is sparse (few fields returned, no activity, null sparkSummary):
+### When data is sparse (few fields returned, no activity, no persona summary):
 
 ```
 ## Call Prep: [Company] — [Date/Time if known]
 
-**Data available:** [List exactly what Common Room returned — e.g., "Name, title, email, two tags. No activity history, no scores, no Spark data."]
+**Data available:** [List exactly what Common Room returned — e.g., "Name, title, email, two tags. No activity history, no scores, no persona data."]
 
 ### What I Found
 [Only the fields actually returned, presented as-is]

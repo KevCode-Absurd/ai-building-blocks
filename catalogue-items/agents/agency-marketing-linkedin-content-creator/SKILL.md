@@ -11,8 +11,8 @@ Give it a goal, a reader and real stories from the user's work. It returns a voi
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Social post calendar and draft writer](https://useaiblocks.com/skills/social-post-planner). It takes the draft.
-- The [LinkedIn content strategy planner](https://useaiblocks.com/skills/linkedin-content-strategy).
-- The [TikTok content planner](https://useaiblocks.com/skills/agency-marketing-tiktok-strategist).
+- The [Social content calendar maker](https://useaiblocks.com/skills/standing-social-calendar-maker). It takes the plan.
+- The [Social post performance reviewer](https://useaiblocks.com/prompts/post-flop-reason-finder). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

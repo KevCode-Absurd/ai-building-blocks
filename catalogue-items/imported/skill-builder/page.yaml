@@ -35,6 +35,7 @@ how_to_use:
   - "Check the folder it builds: a main SKILL.md plus any reference files, scripts or assets."
   - Building real files and running scripts needs an AI that can create files and run code. In a plain chat, ask for the text of each file (SKILL.md, any reference files, and the test notes) and save each one yourself. The helper scripts and the agents metadata file are for tools that run code, so skip them in a plain chat.
   - Load the folder into your AI tool if it supports skills. If not, paste the SKILL.md text at the start of a chat.
+  - Next, save the SKILL.md text and try it on one real task. Note what went wrong, paste that back to your AI, and ask it to revise the skill. Repeat until it works. The skill safety checker can review it before you share it.
 output_sample:
   input:
     - What you want the skill to do

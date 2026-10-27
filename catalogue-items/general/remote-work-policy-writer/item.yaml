@@ -11,7 +11,7 @@ inputs:
   - type: question
     required: true
 outputs:
-  - type: document
+  - type: policy
     required: true
 origin: own
 version: 1.0.0

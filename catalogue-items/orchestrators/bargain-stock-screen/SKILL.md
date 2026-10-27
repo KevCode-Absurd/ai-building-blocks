@@ -9,7 +9,7 @@ Paste a table of listed companies. Get the cheap ones that pass five safety test
 
 This workflow follows the method in The Intelligent Investor (revised edition, with commentary by Jason Zweig) by Benjamin Graham. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
-**When not to use it:** Not for banks, insurers or utilities. The five tests suit industrial companies, so name any you hold and they are set aside. Not for a quick tip. If you do not have time to study companies, a low-cost index fund is the plain path. This is a method of analysis, not personal financial advice, and it never says buy or sell.
+**When not to use it:** Not for banks, insurers or utilities. The five tests suit industrial companies, so name any you hold and they are set aside. Not for a quick tip. If you do not have time to study companies, a low-cost index fund is the plain path. This is a method of analysis, not personal financial advice, and it never says buy or sell. For a steadier list of large companies, use the [Screen stocks with a defensive investor's seven tests](https://useaiblocks.com/workflows/defensive-stock-screen) workflow instead.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -25,6 +25,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+
+The general "Before you start" block above mentions source text. For this workflow the required input is the company table below, not an article or transcript.
 
 - **A table of listed companies** (required): price, earnings per share for the last twelve months, current assets, current liabilities, long-term debt, tangible book value per share, dividend now, and profit for each of the last five years. Paste it or attach it.
 - **The latest balance sheet for each survivor** (needed for step 2): the one before it too, if you have it. Step 1 tells you which companies survive.

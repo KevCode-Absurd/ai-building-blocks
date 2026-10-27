@@ -57,8 +57,8 @@ Then say what to do next: make the one change, keep logging, and run this again 
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Daily word quota planner](https://useaiblocks.com/skills/daily-word-quota-planner). It takes the plan.
-- The [Daily writing session planner](https://useaiblocks.com/skills/daily-writing-session-planner).
 - The [Story theme and scene reviewer](https://useaiblocks.com/skills/hidden-theme-finder). It takes the audit report.
+- The [Page-turner scene drafter](https://useaiblocks.com/skills/page-turner-scene-drafter). It takes the plan and audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

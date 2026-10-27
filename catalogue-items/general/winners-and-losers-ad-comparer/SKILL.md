@@ -21,7 +21,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and a buyer brief.
-2. **Audit report** with the [Ad response troubleshooter](https://useaiblocks.com/skills/ad-pull-diagnoser). Bring your results (optional). It uses your ad copy and your offer.
+2. **Audit report** with the [Ad response troubleshooter](https://useaiblocks.com/skills/ad-pull-diagnoser). Bring your results (optional). It uses your ad copy and offer.
 3. This one.
 
 How to start:
@@ -70,7 +70,6 @@ The ranked table with each ad's number. The completed checklist. What the winner
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Write the ad copy** with the [Ad response copy editor](https://useaiblocks.com/skills/reply-getting-fix-writer). It takes the lessons.
-- **Plan what to test** with the [A/B test design planner](https://useaiblocks.com/skills/split-run-test-planner).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

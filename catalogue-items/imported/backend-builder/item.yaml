@@ -8,12 +8,16 @@ role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
+  - type: question
     required: true
   - type: codebase
     required: false
+  - type: api_spec
+    required: false
 outputs:
   - type: code_change
+  - type: data_model
+    required: true
 uses: []
 origin: imported
 source:

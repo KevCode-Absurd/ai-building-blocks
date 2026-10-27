@@ -9,7 +9,7 @@ subhead: Describe the deal or dispute. It sets your stance and your walk-away li
 explain: |
   Most deals end in a split of the difference, or one side gives in and resents it. Neither lasts. A better deal comes from knowing your stance, trusting enough to be honest, listening until the other side feels understood, and then looking for an option neither of you named.
 
-  This workflow follows the fourth to sixth habits in Stephen Covey's book: think win-win, seek first to understand, then look for a third alternative. It starts with your stance and your no-deal line, because being ready to walk away lets you listen. It adds to trust, plans the listening, and leaves a pause for the real talk. It then finds a third option and puts the result in an agreement with review dates and consequences.
+  This workflow draws on ideas in Stephen Covey's book: think win-win, seek first to understand, then look for a third alternative. The order of the steps is this library's own design. It starts with your stance and your no-deal line, because being ready to walk away lets you listen. It adds to trust, plans the listening, and leaves a pause for the real talk. It then finds a third option and puts the result in an agreement with review dates and consequences.
 when:
   - You must settle terms with a client, partner, boss or supplier you will deal with again.
   - A family or business dispute keeps going in circles.
@@ -19,7 +19,7 @@ not_for:
   - "You need to calm one tense moment, not settle terms: use the Difficult conversation repair planner."
   - "You need to win over a team on a proposal, not strike a deal: use the Proposal discussion planner."
 you_give:
-  - The deal or dispute, with who, what each wants and what is at stake
+  - The deal or dispute, with who, what each wants and what is at stake (for example, a client who pays late)
   - What you would do if there were no deal
   - Anything the other side has said, word for word (optional)
   - Notes from the real conversation, when you get to the pause
@@ -27,7 +27,7 @@ you_get:
   - Your stance, what a win is for each side and the point where you walk away
   - A trust check with two small deposits to make before the talk
   - A plan for listening first and for stating your side after
-  - A third option beyond both plans, and a written agreement with review and consequences
+  - A third option beyond both plans, and a draft agreement with review and consequences. It is a draft for both sides to read, not legal advice. Have a lawyer or adviser check any terms on money, legal duties or staff before you sign.
 how_to_use:
   - Download the handoff pack. It is a zip with HANDOFF.md and the five skill files this workflow uses.
   - Gather a short paragraph on the deal and what you would do if there were no deal.

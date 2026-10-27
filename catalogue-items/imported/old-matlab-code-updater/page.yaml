@@ -7,9 +7,13 @@ job: test-and-fix-code
 headline: Old MATLAB code updater
 subhead: Old MATLAB code rewritten with current functions, so it runs on new releases and stops giving warnings. It handles removed functions that now cause errors, and older ones that still work but have a better replacement.
 explain: |
+  Needs a licensed MATLAB install, ideally with MATLAB's code checker (the check_matlab_code tool). The licence lets you use this skill only with MathWorks products.
+
   Old MATLAB code rewritten with current functions, so it runs on new releases and stops giving warnings. It handles removed functions that now cause errors, and older ones that still work but have a better replacement.
 
-  It starts from the warnings in MATLAB's code checker. It swaps each flagged function for the modern one, in place. It also catches habits the checker misses, such as the old map container, the old array expansion helper, turning text into numbers with eval, and clearing everything at the top of a script. Examples include newer ways to read spreadsheets, handle dates and train neural networks. You need a licensed MATLAB install. Without MATLAB's code checker (the check_matlab_code tool), your AI can only spot old functions by reading the code, so it will miss some. This is a MathWorks skill, copied under a licence that lets you use it only with MathWorks products.
+  It starts from the warnings in MATLAB's code checker. It swaps each flagged function for the modern one, in place. It also catches habits the checker misses, such as the old map container, the old array expansion helper, turning text into numbers with eval, and clearing everything at the top of a script. Examples include newer ways to read spreadsheets, handle dates and train neural networks. You need a licensed MATLAB install. Without MATLAB's code checker (the check_matlab_code tool), your AI can only spot old functions by reading the code, so it will miss some. This is a MathWorks skill.
+
+  Licence: we share this copy under the BSD 2-Clause licence in the LICENSE.md file, which adds that you may use it only with MathWorks products such as MATLAB. The skill file header links MathWorks' own reuse licence as well.
 when:
   - Your old script errors on a new MATLAB release because a function is gone.
   - The code checker is full of warnings about discouraged functions.
@@ -31,12 +35,13 @@ you_get:
   - Notes on any behaviour change
 how_to_use:
   - Open your AI tool. Paste in your MATLAB code, or upload the files.
-  - Paste the skill instructions, or attach the skill folder, and ask your AI to follow them.
-  - Add the checker warnings and your target MATLAB release if you have them (optional).
+  - Attach the skill folder (SKILL.md plus the guidance files in references), or paste SKILL.md, and ask your AI to follow it. Without MATLAB access it can still read your code and swap the old functions it knows, but it will miss some.
+  - Add the checker warnings and your target MATLAB release if you have them (optional). If you do not know your release, say so. Your AI should then name the functions it is unsure about and ask you to check them in your release notes, instead of guessing.
   - Say which behaviour must stay the same, such as output format or file names.
   - Read the list of swaps and the behaviour notes before you accept the new code.
   - Run the old and new code on the same inputs and compare the results. Your AI needs MATLAB access to run the code checker itself.
   - Next, use the MATLAB speed tuner for slow code, or the function argument checker writer to add input checks.
+next: [matlab-speed-tuner, function-argument-checker-writer]
 output_sample:
   input:
     - Your MATLAB files or code

@@ -10,8 +10,11 @@ level: beginner
 inputs:
   - type: question
     required: true
+  - type: tool_connection
+    required: false
 outputs:
   - type: audit_report
+  - type: copy_draft
 uses: []
 origin: imported
 source:

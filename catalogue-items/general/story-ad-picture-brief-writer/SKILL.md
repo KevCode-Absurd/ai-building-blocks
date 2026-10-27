@@ -7,6 +7,8 @@ description: Paste this above a story-style ad. It finds the moment the old way 
 
 One honest picture for a story ad, chosen from the story itself, with a prompt you can paste into an image tool.
 
+**Not for:** a plain product or price ad with no story (use a direct product picture, or the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer) to fix the copy first), or a full check of every picture rule (use the [Image style picker for story ads](https://useaiblocks.com/skills/image-style-picker-for-story-ads)).
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -78,10 +80,8 @@ CHECKS MISSED: <none, or a line each>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Story ad visual style planner](https://useaiblocks.com/skills/image-style-picker-for-story-ads).
-- The [Chat screenshot image ad maker](https://useaiblocks.com/skills/chat-screenshot-image-ad-maker).
-- The [Leftover mess image ad maker](https://useaiblocks.com/skills/leftover-mess-image-ad-maker).
 - **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image prompt.
+- The [Multi-provider image maker](https://useaiblocks.com/skills/multi-provider-image-maker). It takes the image prompt.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

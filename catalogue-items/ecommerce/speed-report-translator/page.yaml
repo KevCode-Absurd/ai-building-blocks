@@ -53,6 +53,8 @@ output_sample:
       contains: Three fixes, each naming the page, the element, and whether you or a developer does it.
     - name: RECHECK
       contains: "When to test again: lab at once, real-user data after about 28 days."
+    - name: CHECKS MISSED
+      contains: Any check that could not run, or none.
 
 how_it_works:
   - title: "Split the report"
@@ -72,6 +74,7 @@ output_shape: |
   CAUSE: slow element <what> | shifting elements <what>
   FIRST THREE FIXES: <page, element, who>
   RECHECK: lab at once; real-user data after about 28 days
+  CHECKS MISSED: <none, or the checks you could not run>
 
 tweaks:
   - what: "Pages"

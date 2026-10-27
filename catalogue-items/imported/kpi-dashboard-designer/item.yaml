@@ -10,7 +10,7 @@ level: intermediate
 inputs:
   - type: performance_sheet
     required: false
-  - type: brief
+  - type: question
     required: true
 outputs:
   - type: plan

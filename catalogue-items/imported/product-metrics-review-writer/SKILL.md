@@ -31,6 +31,7 @@ If no analytics tool is connected, ask the user to paste their figures. Ask for:
 - The metrics and their values (paste a table, screenshot, or describe)
 - Comparison data (previous period, targets)
 - Any context on recent changes (launches, incidents, seasonality)
+- Release notes for recent launches (optional), to help explain what moved the numbers
 
 Ask the user:
 - What time period to review? (last week, last month, last quarter)

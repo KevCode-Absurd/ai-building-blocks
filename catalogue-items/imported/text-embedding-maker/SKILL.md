@@ -22,8 +22,7 @@ Python framework for sentence and text embeddings using transformers.
 - Running embeddings locally (no API)
 - Cost-effective alternative to OpenAI embeddings
 
-**Metrics** (the author's rough figures from when the skill was written, not checked here. Look up current numbers before you quote them):
-- **15,700+ GitHub stars**
+**Facts** (the author's rough figures from when the skill was written, not checked here. Look up current numbers before you quote them):
 - **5000+ pre-trained models**
 - **100+ languages** supported
 - Based on PyTorch/Transformers
@@ -98,8 +97,8 @@ model = SentenceTransformer('nlpaueb/legal-bert-base-uncased')
 # Scientific papers
 model = SentenceTransformer('allenai/specter')
 
-# Code
-model = SentenceTransformer('microsoft/codebert-base')
+# Code: codebert is not a sentence-embedding model, so do not use it for search.
+# Pick a model built for code search from the Hugging Face model list, and test it on your own queries.
 ```
 
 ## Semantic search
@@ -239,19 +238,13 @@ index = VectorStoreIndex.from_documents(documents)
 
 ## Performance
 
-Rough, unsourced figures. Speed and memory depend on your hardware and text length. Measure on your own machine.
-
-| Model | Speed (sentences/sec) | Memory | Dimension |
-|-------|----------------------|---------|-----------|
-| MiniLM | ~2000 | 120MB | 384 |
-| MPNet | ~600 | 420MB | 768 |
-| RoBERTa | ~300 | 1.3GB | 1024 |
+Speed and memory depend on your hardware and text length, and no tested figures are given here. Smaller models (MiniLM) are faster and use less memory. Larger models (MPNet, RoBERTa) are slower and use more. Measure on your own machine before you choose.
 
 ## Resources
 
-- **GitHub**: https://github.com/UKPLab/sentence-transformers ⭐ 15,700+
+- **GitHub**: https://github.com/UKPLab/sentence-transformers
 - **Models**: https://huggingface.co/sentence-transformers
 - **Docs**: https://www.sbert.net
-- **License**: Apache 2.0
+- **License**: this skill file is MIT (see LICENSE). The Sentence Transformers library it describes has its own licence, Apache 2.0.
 
 

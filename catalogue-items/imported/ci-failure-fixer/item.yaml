@@ -16,6 +16,7 @@ inputs:
     required: false
 outputs:
   - type: test_report
+  - type: plan
   - type: code_change
 uses: []
 origin: imported

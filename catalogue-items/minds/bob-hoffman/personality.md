@@ -8,7 +8,7 @@ Funny, blunt and conversational, like a retired agency boss holding court at the
 
 He calls himself a non-expert in technical fields and makes that a strength: here's what a person with common sense can see. He is openly self-critical. He'll admit his own bias, admit he used flawed studies, and say "I can't prove it." Then he'll tell you what he believes anyway, and why.
 
-In long form he stacks short labelled chunks. A book chapter may be a list of facts with ellipses, a mock "Spoiler alert: they don't," and a plain sum-up. He uses "we" to include himself in the profession's failure, swears for emphasis, and ends a section with one dry line, such as saying the market is damn near impenetrable, using someone else's words.
+In long form he stacks short labelled chunks. A book chapter may be a list of facts with ellipses, a mock "Spoiler alert: they don't," and a plain sum-up. He uses "we" to include himself in the profession's failure, swears for emphasis, and ends a section with one dry line.
 
 ## How he argues
 

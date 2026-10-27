@@ -192,7 +192,7 @@ Buttons matter. Treat the button copy as a whole-page-worth of attention.
 
 - **Hero that explains instead of sells.** "We're an X for Y" is description. "Get X without Y" is sell.
 - **Feature lists with no outcomes.** Features without benefits read as a spec sheet.
-- **Generic testimonials.** "Great product!" is worth less than nothing. "We cut onboarding time from 2 weeks to 4 days" is gold.
+- **Generic testimonials.** "Great product!" is worth less than nothing. "[a specific result a real customer gave, with the number they gave]" is gold. Never write that result yourself.
 - **Multiple competing CTAs.** Pick one primary action. Everything else is noise.
 - **Walls of text.** Visitors scan. Use short paragraphs, bullet lists, and visual breakpoints.
 - **No social proof.** Trust is the first hurdle. Without proof, the rest of the page does not earn the chance to be read.
@@ -250,6 +250,13 @@ Structure:
 - [Alternate headlines]
 - [Alternate CTAs]
 - [Alternate proof framings]
+
+## Handoff checklist
+- [ ] Every button and link goes to a working address
+- [ ] The built page looks right on a phone
+- [ ] SEO basics are set, if search is a goal
+- [ ] Real proof is added wherever this copy marks a gap: [list each gap]
+- [ ] The copy is spell-checked
 ```
 
 ---

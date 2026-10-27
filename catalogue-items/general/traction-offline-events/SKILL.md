@@ -1,17 +1,23 @@
 ---
 name: traction-offline-events
-description: "Plan a offline events acquisition experiment from a product URL or business brief. SaaS first, with a general-business mode. Use for this channel specifically; use the Traction workflow to compare all 19."
+description: "Plan an offline events acquisition experiment from a product URL or business brief. SaaS first, with a general-business mode. Use for this channel specifically; use the Traction workflow to compare all 19."
 ---
 
 # Customer event experiment planner
+
+Needs no account, API key or paid tool, and no scraping. If your AI can browse, it reads the public pages you point to. If not, paste your page text.
+
+Not for comparing all 19 growth channels: use the Find your SaaS growth channel workflow (or, for a shop or service, Find your business growth channel). Not for exhibiting at someone else’s trade show: use the Trade show experiment planner. Not for booking a venue or inviting people today: this plan sends and books nothing.
+
+Gather first: your product link or pasted pricing text, your buyer’s role, your growth goal, the cash and hours you have, your expected headcount, and any past event or outreach results.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Speaking event outreach planner](https://useaiblocks.com/skills/traction-speaking-engagements).
-- **Plan your strategy** with the [Growth channel shortlist planner](https://useaiblocks.com/skills/traction-channel-ranker).
 - **Plan your strategy** with the [Customer acquisition experiment reviewer](https://useaiblocks.com/skills/traction-experiment-reviewer). It takes the channel experiment.
+- **Plan your strategy** with the [Growth channel shortlist planner](https://useaiblocks.com/skills/traction-channel-ranker).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -47,11 +53,16 @@ Use the funnel qualified visitor or account -> useful product action -> paying c
 
 Decision to resolve: Would bringing the intended buyers together solve a shared problem and create useful product conversations?
 
-1. Define a narrow attendee group and a practical outcome for a meetup, workshop or small gathering. Clarify why an attendee would come without a sales pitch.
-2. Choose attending, sponsoring or hosting based on cost and control. Plan the agenda, facilitation, permissions, accessibility and staffing.
-3. Draft an invitation, one optional product next step and follow-up. Keep a hosted event distinct from exhibiting at someone else's trade show.
+1. Define one narrow attendee group (one buyer role, one shared problem) and one practical outcome for a meetup, workshop or small gathering. Write why an attendee would come without a sales pitch.
+2. Choose attending, sponsoring or hosting based on cost and control. Set an attendee count, a venue type, a cash cap for the event and the staff hours it needs, each marked proposed until the person approves it. Plan the agenda, facilitation, permissions, accessibility and staffing.
+3. Draft an invitation, one optional product next step and a dated follow-up sequence. Keep a hosted event distinct from exhibiting at someone else's trade show.
 
-Cheap pilot: Design one small workshop or roundtable and validate attendee interest before booking a large venue or event series.
+Cheap pilot, in order:
+1. Write the attendee profile and the outcome in two lines.
+2. Set the cash cap, attendee count and venue type.
+3. Draft the agenda, the invitation and one optional product next step.
+4. Test interest with a short invite to a few relevant people, with approval, before booking anything.
+5. Review on a set date: relevant attendance, useful conversations and follow-ups, against all event costs.
 
 Produce: An attendee profile, agenda, cost cap, invitation and follow-up plan.
 
@@ -68,11 +79,13 @@ Evidence: <source URL, access date, fact, implication>
 Buyer and useful action: <...>
 Channel mechanism: <how the buyer reaches value>
 Pilot: <hypothesis, audience, offer, deliverable, owner>
+Produces: <an attendee profile, agenda, cost cap, invitation and follow-up plan>
 Limits: <cash, hours, date, proposed or approved>
 Measurement: <events, cohort, denominators, attribution>
 Decision: <continue / revise / stop rule>
 Risks and next action: <...>
 MISSING: <unknowns>
+CHECKS MISSED: <one line each, or none>
 
 ## Check the answer
 

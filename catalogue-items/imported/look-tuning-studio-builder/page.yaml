@@ -10,6 +10,8 @@ explain: |
   A small local web page where you change the look of something with sliders and pickers, and see the result as you go. You choose by eye, not by typing numbers into a chat.
 
   There are two kinds. For visual settings such as color, type, layout, image treatment or animation, the page has controls for each setting and records your final choices. For text, such as a blog post, doc or copy, the page lets you read, edit and mark up the content directly, and it captures your edits. Either way, the point is to replace static grids of options and walls of prose with something you can act on. Your AI builds the page for whatever you name.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (Conner K Ward) says MIT. Credit goes to Conner K Ward and sickn33.
 when:
   - You want to fine-tune colors and spacing and pick by looking, not by guessing numbers.
   - You need to compare design variations quickly.
@@ -34,8 +36,8 @@ how_to_use:
   - Paste the skill, then say what you want to tune, for example the colors and spacing of your landing page.
   - Share the files or page involved. Say which settings matter, if you know.
   - Your AI builds a local page. Open it and adjust the controls by eye, or edit and comment on the text.
-  - Save your choices. Your AI gets the settings or edits back and applies them to your files.
-  - "Check the result: reload the real page and compare it with the look you chose in the studio, or with your reference look. If no code-running AI is available, ask a chat AI for a short list of 3 or 4 looks to compare by eye, then give your pick back in words."
+  - Save your choices. Copy the settings JSON or the captured edits back into the chat. Your AI applies them to the files you named.
+  - "Check the result after the apply step: reload the real page and compare it with the look you chose in the studio, or with your reference look. If no code-running AI is available, ask a chat AI for a short list of 3 or 4 looks to compare by eye, then give your pick back in words."
 output_sample:
   input:
     - What you want to tune or review, such as a landing page's colors and spacing
@@ -44,6 +46,7 @@ output_sample:
     - A reference look (optional)
   prerequisites:
     - An AI that can run code and open a browser
+    - The studio runs on your own computer. It needs no paid service and no API key.
   output:
     - name: Visual studio page
       contains: A local web page with sliders, pickers and drag handles for each setting, and a live preview of the change.

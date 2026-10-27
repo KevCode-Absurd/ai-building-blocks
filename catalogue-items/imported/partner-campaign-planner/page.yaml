@@ -9,7 +9,7 @@ subhead: A shortlist of partners you could team up with, plus a joint campaign p
 explain: |
   A shortlist of partners you could team up with, plus a joint campaign plan and a pitch you can send. It aims at companies that share your buyer without competing for the same budget.
 
-  It starts with your audience and the tools they use before, during and after yours. It then ranks partner ideas by audience overlap, size match and fit. For a chosen partner it suggests campaign formats such as a joint webinar, guide or launch, with who does what. It also outlines the partner agreement terms. It is written with software companies in mind but the method fits other teams.
+  It starts with your audience and the tools they use before, during and after yours. It then ranks partner ideas by audience overlap, size match and fit. For a chosen partner it suggests campaign formats such as a joint webinar, guide or launch, with who does what. It also outlines the partner agreement terms. It is written with software companies in mind. If you sell something else, swap "tools your customers use" for "other brands your customers already buy from" and the rest works the same.
 when:
   - You want to reach new customers without more ad spend.
   - You have a partner in mind and need campaign ideas.
@@ -33,7 +33,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text. It needs no code and no files.
   - Tell your AI who you serve, what you sell and the tools your customers use.
   - Add your goal and any partner you already have in mind.
-  - "Ask for these in order: your audience and shared tools, a ranked partner list, then the campaign options. Check that the picks share your buyer and do not compete for the same budget."
+  - "Work in this order. First, give your inputs: who you serve, what you sell and the tools your customers use. Second, ask for a ranked partner list and check that the picks share your buyer and do not compete for the same budget. Third, pick one partner and ask for one campaign plan. Fourth, ask for the pitch and send it yourself."
   - The skill quotes partner-program figures from its author, such as revenue shares. Treat them as unchecked and verify any you want to repeat.
   - Pick one partner. Ask for the campaign plan and the pitch.
   - Edit the pitch so it sounds like you. Then send it.

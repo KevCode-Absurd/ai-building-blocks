@@ -35,6 +35,7 @@ Find the queries worth ranking for, classify them by intent, cluster them into t
 - The target audience and what they need
 - A keyword tool (Ahrefs, Semrush, Moz, Google Keyword Planner, or similar) OR access to search console for an existing site
 - Optional: 3 to 5 known competitors to seed the research
+- Optional: a keyword shortlist from an earlier step. It is used as the seed list in Stage 1.
 
 If no tool is available, the skill still works using SERP inspection and search console data alone. Volume and Difficulty stay blank and are marked "no data". Never estimate them. Ahrefs, Semrush and Moz are paid. Search Console is free for sites you own. Google Keyword Planner is free with an ads account.
 

@@ -153,7 +153,7 @@ For complete stage-by-stage breakdowns, competency matrices, and interviewer gui
 - `scorecards.md` for all other stages
 - `teamtailor-setup.md` for ATS kit configuration
 
-Each stage in `interview-plan.md` should list competencies assessed and then POINT to the relevant operator file. Never duplicate questions across files; every update should only require changing one file.
+Each stage in `interview-plan.md` should list competencies assessed and then say the questions and scoring sheet are to be written separately. Never duplicate questions across files; every update should only require changing one file.
 
 When generating an interview plan for a role, produce this structure. If you can save files, save it to `roles/[role-name]/interview-plan.md`. In a plain chat, return it in the chat as Markdown with the same sections. The operator files named below (`scorecards.md`, `screening-guide.md`, `take-home-exercise.md`, `teamtailor-setup.md`) are not in this copy, so refer to them as "to be written":
 
@@ -177,7 +177,7 @@ When generating an interview plan for a role, produce this structure. If you can
 **Format:** [Type] | **Duration:** [X min] | **Interviewer:** [Name/Role]
 **Purpose:** [What this stage determines]
 **Competencies assessed:** [List]
-**Full questions, rubrics, and evaluation criteria:** See [`scorecards.md`](scorecards.md), Stage N section. / See [`screening-guide.md`](screening-guide.md).
+**Full questions, rubrics, and evaluation criteria:** To be written separately by your hiring team (no operator file is included in this copy).
 **Advance if:** [Criteria]
 **Reject if:** [Criteria]
 

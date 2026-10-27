@@ -13,11 +13,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **Store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
-- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+- **A page speed report** (yours): a PageSpeed Insights or Lighthouse result for the pages to check.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for store capture, audit report. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for store capture, a page speed report. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -90,7 +90,7 @@ NOT RUN is also the checks-missed line: list only checks you could not run, or w
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Website performance fix ranker](https://useaiblocks.com/skills/speed-fix-ranker). It takes the audit report.
 - The [Store website speed reviewer](https://useaiblocks.com/skills/speed-budget-and-sale-check). It takes the audit report.
-- The [WooCommerce speed repair planner](https://useaiblocks.com/skills/self-hosted-store-speed-fixer). It takes the audit report.
+- The [Website speed repair planner](https://useaiblocks.com/prompts/speed-fix-week-planner). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

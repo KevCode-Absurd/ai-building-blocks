@@ -1,6 +1,6 @@
 # Directory List — Full Reference
 
-Canonical list of directories organized by tier. DR values are approximate and drift over time — verify via Ahrefs or Moz before building a plan around them.
+Canonical list of directories organized by tier. DR values are approximate and drift over time — verify via Ahrefs or Moz before building a plan around them. Prices, costs, who owns a directory and whether a link is dofollow are the author's notes from one point in time. Check each on the directory's own site before you rely on it. Some tools named here (Ahrefs, Moz) are paid.
 
 **Column legend:**
 - **DR** — Domain Rating (Ahrefs). Higher = more link equity passed.
@@ -69,7 +69,7 @@ Submit during launch week and continue rolling submissions thereafter.
 |---|---|---|---|---|
 | **AlternativeTo** | 79 | Nofollow | Free | Massive SEO value despite nofollow. Submit as alternative to your top 4 competitors. |
 | **SaaSHub** | 77 | Yes | Free | Ranks well for "[tool] alternatives" queries. High intent. |
-| **G2** | 92 | Yes | Free listing | 10 reviews required for Grid appearance. Paid badges start at $2,999/yr. |
+| **G2** | 92 | Yes | Free listing | The author says about 10 reviews are needed for Grid appearance, and paid badges cost extra. Check G2's current pricing. |
 | **Capterra** | 93 | Yes | Free listing | Owned by G2 (acquired Feb 2026). Reviews drive everything. |
 | **GetApp** | 78 | Yes | Free | Auto-syncs from Capterra in some cases. Owned by G2. |
 | **SourceForge** | 92 | Yes | Free | Legacy but still high DR. Trivial to list. |

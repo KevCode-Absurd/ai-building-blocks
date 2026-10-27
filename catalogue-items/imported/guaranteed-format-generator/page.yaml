@@ -38,9 +38,10 @@ you_get:
 how_to_use:
   - Open an AI that can run Python, such as Claude Code, or open any chat AI and run the code yourself. Paste in this skill.
   - Say what shape you need and paste two or three sample texts. Name your model and backend. If you have none, ask for the small Phi-3-mini model.
-  - Install the library with pip install outlines transformers. Check the version against the docs, because the code in this skill may not match the newest release.
+  - Install the older release the code was written for: pip install "outlines>=0.1,<0.2" transformers. Newer releases changed the calls. If you use one, ask your AI to rewrite the code from that version's docs, and give it the output of pip show outlines.
   - Run the first example on one sample. Look at the type it returns and the values inside.
   - Run your samples, and check the content by eye. A valid shape does not mean a right answer. Then add more fields or limits.
+  - Log every sample where the content is wrong. Tighten the type, enum or limit that let it through, and run again on 20 or more real samples before you use it for real work.
 how_it_works:
   - title: Fixes the shape
     text: Turns your description into a Pydantic class, a list of choices or a regex pattern.

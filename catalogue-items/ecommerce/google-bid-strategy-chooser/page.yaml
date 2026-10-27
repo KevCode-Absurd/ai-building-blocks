@@ -66,7 +66,7 @@ how_it_works:
   - title: Counts the conversions
     text: Under 15 a month the skill keeps you on click bidding and sends you to fix traffic quality first.
   - title: Picks by stage
-    text: No conversions means Maximize Clicks. 10 to 15 for Search or 15 or more for Shopping means Maximize Conversion Value. 30 or more with steady ROAS allows a Target ROAS.
+    text: No conversions means Maximize Clicks. 15 or more a month, on Search or Shopping, means Maximize Conversion Value. 30 or more with steady ROAS allows a Target ROAS.
   - title: Sets the starting target
     text: 10 to 15 percent below your current actual ROAS, then small steps up while watching impression share and conversions.
   - title: Shows the timing views
@@ -96,6 +96,7 @@ output_shape: |
   SCHEDULE  <date> | <campaign> | <bid or budget change, with percent>
 
   SCORE  <n>/100 (<spend in matching campaigns> / <total spend> = <n>)
+  CHECKS MISSED: <none | checks that failed or could not run>
   MISSING: <campaign data | weekly ROAS | break-even>
 
 tweaks:

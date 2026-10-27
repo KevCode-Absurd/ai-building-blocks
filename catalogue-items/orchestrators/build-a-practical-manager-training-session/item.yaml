@@ -8,13 +8,13 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
-    required: true
   - type: question
-    required: false
+    required: true
 outputs:
   - type: plan
   - type: document
+  - type: lesson_plan
+    required: true
 uses:
   - leadership-program-designer
   - training-program-builder

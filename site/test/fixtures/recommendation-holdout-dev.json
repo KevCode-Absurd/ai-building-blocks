@@ -409,7 +409,8 @@
    "audience": "anyone",
    "area": "career",
    "expect": [
-    "negotiation-prep-coach"
+    "negotiation-prep-coach",
+    "pay-raise-case-builder"
    ]
   },
   {
@@ -521,7 +522,8 @@
     "sales-opener-trio-writer",
     "agency-sales-outreach",
     "sales-call-plan",
-    "stranger-first-message-writer"
+    "stranger-first-message-writer",
+    "cold-call-script-writer"
    ]
   },
   {
@@ -693,7 +695,6 @@
    "audience": "owner",
    "area": "design",
    "expect": [
-    "five-colour-feeling-palette-picker",
     "mood-colour-palette-planner",
     "brand-stylescape-planner"
    ]
@@ -705,7 +706,8 @@
    "area": "hr",
    "expect": [
     "hr-policy-drafter",
-    "policy-handbook-writer"
+    "policy-handbook-writer",
+    "remote-work-policy-writer"
    ]
   },
   {

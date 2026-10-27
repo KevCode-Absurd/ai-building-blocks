@@ -11,10 +11,12 @@ level: intermediate
 inputs:
   - type: source_text
     required: true
-  - type: plan
+  - type: lesson_plan
     required: false
 outputs:
   - type: plan
+    required: true
+  - type: lesson_plan
     required: true
 uses: []
 origin: imported

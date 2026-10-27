@@ -45,6 +45,14 @@ Before anything else, establish:
 
 If unclear, ask. Getting this wrong inverts every recommendation.
 
+## When not to use
+
+- The contract is not a data processing agreement. Say so and stop.
+- The data moves across borders and nobody has set up the transfer rules. Do the review, but say a privacy lawyer must settle the transfer mechanism before signing.
+- The user wants a final legal call or a sign-off. This is a first-pass memo for a lawyer to check.
+
+For a wider privacy risk write-up, see the Privacy impact assessment writer in AI Blocks.
+
 ## Jurisdiction assumption
 
 This review assumes the jurisdictional scope specified in your configuration. Privacy rules, response deadlines, and lawful bases vary materially by jurisdiction (GDPR vs. state consumer privacy laws vs. sectoral). If the controller, processor, or data subjects are in a different jurisdiction than configured, this review may not apply as written.

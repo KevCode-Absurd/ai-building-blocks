@@ -18,6 +18,8 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Brand brain** (its buyers part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
+- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+- **Transcript** (yours): the words from a recording, written out, with who said what.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -38,7 +40,7 @@ How to start:
 ## What you need
 - **The contract register** (required): one row per customer with start date, renewal date, value, plan, notice period and the main contact. A spreadsheet or an export from your billing tool.
 - **A read-only connection to your account tool** (optional): so renewals, usage and notes can be read directly.
-- **Account notes** (advised): recent emails, call notes and tickets for the accounts renewing soon. The brief is built from them.
+- **Account notes** (advised): recent emails, call notes and tickets for the accounts renewing soon. The brief is built from them. A customer health report, such as the one the Weekly customer health watcher makes, can stand in for notes on the accounts it flagged.
 - **Customer words** (optional): survey answers or complaints from the last quarter.
 - **Your price rules** (optional): how much you may raise at renewal, and your floor for a discount.
 
@@ -78,9 +80,9 @@ You never do these yourself. You list them for approval:
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Customer renewal risk reviewer](https://useaiblocks.com/skills/weekly-customer-health-watcher).
-- The [Customer success planner](https://useaiblocks.com/skills/agency-customer-success-manager).
 - The [Nonprofit donor thank-you and renewal planner](https://useaiblocks.com/skills/nonprofit-donor-thank-you-and-renewal-planner). It takes the document.
+- The [New customer onboarding sequence writer](https://useaiblocks.com/skills/new-customer-onboarding-sequence-writer). It takes the plan.
+- The [Top-customer outreach planner](https://useaiblocks.com/skills/top-customer-touch-planner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

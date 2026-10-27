@@ -7,13 +7,17 @@ description: 生成带中文排版的详情页模块。商品图 + 卖点 → �
 
 一张商品图 + 卖点文案 → **带中文排版的详情页视觉**。
 
-> **For English readers (added by AI Blocks).** This file is written in Chinese. To get readable text on the picture, the method sets four conditions: (1) write each line of text into the prompt word for word, inside quote marks; (2) name the font style and weight; (3) say where each text block sits; (4) tell the model the text must be clear and not garbled. Keep lines short, and make one image per block, not the whole page at once. Each block comes out as a jpg at 3:4, 1:1 or 9:16, at about 2K. The sample selling points below, such as 机洗不缩 (machine washable, no shrinking), 不易变形 and 蓬松保暖, are illustration only. Never copy a claim into a real listing until it is checked against verified product specs. Scripts need the skill folder, Node and a dLazy account, or the dLazy command line tool.
+> **Before you start (added by AI Blocks).** You need: one clear product photo; your verified selling points and size data; the language for the text on the picture; and an image model that draws text cleanly. The skill's own commands use a paid dLazy account (an API key and credits). Another text-friendly image model also works. English prompt template for each block: "Product detail page [block name], [aspect ratio]. [Position] shows the product from image 1 as [model photo / flat lay / close-up]. Keep the product's colour, [material or weave] and [pattern] exactly as in image 1. In [position], set the text: large text '[HEADLINE]', small subtext '[SUBHEAD]'. Style: [background and tone], clean sans-serif font, aligned layout. All text must be clear and correct, with no garbled characters. Add no text that was not provided."
+>
+> **For English readers (added by AI Blocks).** This file is written in Chinese. To get readable text on the picture, the method sets four conditions: (1) write each line of text into the prompt word for word, inside quote marks; (2) name the font style and weight; (3) say where each text block sits; (4) tell the model the text must be clear and not garbled. Keep lines short, and make one image per block, not the whole page at once. Each block comes out as a jpg at 3:4, 1:1 or 9:16, at about 2K. The sample selling points in the source have been replaced with bracketed placeholders such as [主标题] (main title). Fill each one only with a claim that you have checked against verified product specs. Never make up a claim, a certification or a size. Scripts need the skill folder, Node and a dLazy account, or the dLazy command line tool.
 
 和其他技能的区别：本技能的产出**带文字**。所以模型选型的第一标准是**中文字形渲染能力**——大多数图像模型会把中文画成乱码。
 
 ---
 
 ## 生成效果示例
+
+> **Example from the source author, not made by AI Blocks.** The photo and the finished picture named below are not included here. Read it as a sample prompt only.
 
 | 输入：商品图 |
 | --- |
@@ -24,7 +28,7 @@ description: 生成带中文排版的详情页模块。商品图 + 卖点 → �
 
 ```bash
 dlazy seedream-5.0-pro \
-  --prompt '电商服饰详情页首屏 banner，竖版。左侧是图1 中的军绿色麻花针织圆领毛衣的模特上身图（青年男模特，半身，落肩宽松版型），毛衣颜色、麻花织法与菱形提花必须与图1一致。右上方留白区排版中文标题，大字「粗棒麻花 复古落肩」，副标题小字「羊毛混纺 · 加厚保暖 · 男女同款」。底部一行三个圆形图标配文字「亲肤不扎」「不易变形」「机洗不缩」。整体米灰色背景，暖色调，留白克制，字体为无衬线黑体，排版整齐对齐，商业电商详情页设计感，中文字必须清晰正确无乱码。' \
+  --prompt '电商服饰详情页首屏 banner，竖版。左侧是图1 中的[商品描述]的模特上身图（青年男模特，半身，落肩宽松版型），商品颜色、[织法/材质]与[图案]必须与图1一致。右上方留白区排版中文标题，大字「[主标题]」，副标题小字「[副标题]」。底部一行三个圆形图标配文字「[图标文案1]」「[图标文案2]」「[图标文案3]」。整体米灰色背景，暖色调，留白克制，字体为无衬线黑体，排版整齐对齐，商业电商详情页设计感，中文字必须清晰正确无乱码。' \
   --images docs/item-detail/product-flatlay.jpg --size 3:4 \
   --save docs/item-detail/example-output.jpg
 ```
@@ -33,7 +37,7 @@ dlazy seedream-5.0-pro \
 
 <img src="../../docs/item-detail/example-output.jpg" width="320">
 
-`example-output.jpg` — 3:4 / 2K，5 credits。模特上身图占左侧，毛衣的军绿色、麻花与菱形提花保留；右上标题「粗棒麻花 复古落肩」与副标题「羊毛混纺 · 加厚保暖 · 男女同款」字形正确、层级分明；底部三个线描图标配「亲肤不扎」「不易变形」「机洗不缩」，米灰底暖调，排版对齐。
+`example-output.jpg` — 3:4 / 2K，5 credits。模特上身图占左侧，毛衣的军绿色、麻花与菱形提花保留；右上标题「[主标题]」与副标题「[副标题]」字形正确、层级分明；底部三个线描图标配「[图标文案1]」「[图标文案2]」「[图标文案3]」，米灰底暖调，排版对齐。
 
 ---
 
@@ -70,7 +74,7 @@ dlazy seedream-5.0-pro \
 | 做法 | 说明 |
 | --- | --- |
 | ✅ 商品图干净 | 带文字的图会让新排版和旧文字打架，先走 [remove-watermark](../remove-watermark/skill.md) |
-| ✅ 卖点写成短句 | `亲肤不扎` 比 `采用优质柔软亲肤面料不刺激皮肤` 好排版 |
+| ✅ 卖点写成短句 | `[短句]` 比一整句长描述好排版 |
 | ✅ 文案字数控制 | 主标题 ≤ 8 字，副标题 ≤ 16 字，图标文案 ≤ 5 字 |
 | ❌ 一个模块塞十条卖点 | 排不下，会挤成乱码 |
 | ❌ 未经核实的功效宣称 | 合规风险 |
@@ -83,7 +87,7 @@ dlazy seedream-5.0-pro \
 
 | 条件 | 写法 |
 | --- | --- |
-| 1 · 把每一段文案原文写进 prompt | 用「」括起来：`大字「粗棒麻花 复古落肩」`、`小字「羊毛混纺 · 加厚保暖 · 男女同款」` |
+| 1 · 把每一段文案原文写进 prompt | 用「」括起来：`大字「[主标题]」`、`小字「[副标题]」` |
 | 2 · 指定字体族与字重 | `字体为无衬线黑体，字号层级分明` |
 | 3 · 指定版式关系 | `右上方留白区排版中文标题`、`底部一行三个圆形图标配文字` |
 | 4 · 显式要求不乱码 | `中文字必须清晰正确无乱码` |
@@ -145,25 +149,25 @@ dlazy seedream-5.0-pro --prompt '...' --images ... --save output/item-detail.jpg
 ```bash
 # basic call: 首屏 banner
 dlazy seedream-5.0-pro \
-  --prompt '电商服饰详情页首屏 banner，竖版。左侧是图1 商品的模特上身图，颜色与织法必须与图1一致。右上方留白区排版中文标题，大字「粗棒麻花 复古落肩」，副标题小字「羊毛混纺 · 加厚保暖 · 男女同款」。米灰色背景，暖色调，无衬线黑体，排版整齐对齐，中文字必须清晰正确无乱码。' \
+  --prompt '电商服饰详情页首屏 banner，竖版。左侧是图1 商品的模特上身图，颜色与织法必须与图1一致。右上方留白区排版中文标题，大字「[主标题]」，副标题小字「[副标题]」。[背景与色调]，无衬线黑体，排版整齐对齐，中文字必须清晰正确无乱码。' \
   --images docs/item-detail/product-flatlay.jpg --size 3:4
 
 # complex call: 分模块跑完一整套详情页
 SRC=docs/item-detail/product-flatlay.jpg
 BASE='米灰色背景，暖色调，留白克制，字体为无衬线黑体，排版整齐对齐，商业电商详情页设计感，中文字必须清晰正确无乱码。'
-KEEP='商品的颜色、麻花织法与菱形提花必须与图1完全一致。'
+KEEP='商品的颜色、[织法/材质]与[图案]必须与图1完全一致。'
 
 dlazy seedream-5.0-pro --size 3:4 --images "$SRC" --save docs/item-detail/output-sku001-1-banner.jpg \
-  --prompt "电商服饰详情页首屏 banner，竖版。左侧是图1 商品的模特上身图（青年男模特，半身，落肩宽松版型）。${KEEP} 右上方留白区排版中文标题，大字「粗棒麻花 复古落肩」，副标题小字「羊毛混纺 · 加厚保暖 · 男女同款」。${BASE}"
+  --prompt "电商服饰详情页首屏 banner，竖版。左侧是图1 商品的模特上身图（青年男模特，半身，落肩宽松版型）。${KEEP} 右上方留白区排版中文标题，大字「[主标题]」，副标题小字「[副标题]」。${BASE}"
 
 dlazy seedream-5.0-pro --size 1:1 --images "$SRC" --save docs/item-detail/output-sku001-2-icons.jpg \
-  --prompt "电商详情页卖点图标块，正方形。上方一行三个线性圆形图标，图标下方各配四字中文：「亲肤不扎」「不易变形」「机洗不缩」。下方居中一张商品局部特写。${KEEP} ${BASE}"
+  --prompt "电商详情页卖点图标块，正方形。上方一行三个线性圆形图标，图标下方各配四字中文：「[图标文案1]」「[图标文案2]」「[图标文案3]」。下方居中一张商品局部特写。${KEEP} ${BASE}"
 
 dlazy seedream-5.0-pro --size 1:1 --images "$SRC" --save docs/item-detail/output-sku001-3-fabric.jpg \
-  --prompt "电商详情页面料说明块，正方形。左侧是面料微距特写，右侧竖排中文说明：标题「粗棒羊毛混纺」，正文两行小字「蓬松保暖不压身」「细腻纱线不刺挠」。${KEEP} ${BASE}"
+  --prompt "电商详情页面料说明块，正方形。左侧是面料微距特写，右侧竖排中文说明：标题「[材质标题]」，正文两行小字「[说明1]」「[说明2]」。${KEEP} ${BASE}"
 
 dlazy seedream-5.0-pro --size 9:16 --images "$SRC" --save docs/item-detail/output-sku001-4-size.jpg \
-  --prompt "电商详情页尺码块，长条竖版。顶部中文标题「尺码参考」，下方一张三行四列的简洁尺码表格，表头为「尺码」「衣长」「胸围」「袖长」，内容为 S/M/L 三行数字。${BASE}"
+  --prompt "电商详情页尺码块，长条竖版。顶部中文标题「尺码参考」，下方一张三行四列的简洁尺码表格，表头为「尺码」「衣长」「胸围」「袖长」，内容只使用用户提供的真实尺码数据；没有提供的数据留空并标注 [待补充]，不得编造数字。${BASE}"
 
 # 先估价不真跑
 dlazy seedream-5.0-pro --dry-run --prompt '...' --images a.jpg --size 3:4
@@ -218,6 +222,7 @@ dlazy seedream-5.0-pro --dry-run --prompt '...' --images a.jpg --size 3:4
 6. **`--batch 2~3`** 挑字形正确的一张，落盘到 `docs/item-detail/`。
 7. **逐字校对中文**（这是最容易出错的地方）→ 用设计工具拼成详情页长图。
 8. **合规检查**：卖点是否有依据、有没有虚假促销与绝对化用语。
+9. **下一步 (Next steps, added by AI Blocks)**: proofread every word on each picture, join the blocks in a design tool, and check every claim against your verified specs before you upload.
 
 ---
 

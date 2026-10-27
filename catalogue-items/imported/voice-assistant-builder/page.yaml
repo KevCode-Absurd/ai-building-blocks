@@ -5,7 +5,7 @@ name: Voice assistant builder
 summary: Build a voice assistant that talks with your customers. Get a live ElevenLabs agent, tools it can call and a snippet to put it on your site.
 job: help-customers
 headline: Voice assistant builder
-subhead: Say what your voice assistant should do. Get a working agent that talks with customers, with tools and a web embed. Bring what the assistant should do and say. Use the result to plan your next step.
+subhead: Say what your voice assistant should do. Get a working agent that talks with customers, with tools and a web embed. It needs a paid ElevenLabs account and API key, and ElevenLabs bills the usage. Bring what the assistant should do and say.
 explain: |
   A voice agent that talks with your customers, answers from your instructions and can run actions you define, plus a snippet to put it on your website. You can test it by speaking to it.
 
@@ -35,6 +35,7 @@ how_to_use:
   - Tell your AI what the assistant should do, its first line, the language and the voice. Add any tools it should call.
   - Let your AI create the agent and push it live. Then speak to it and check the answers.
   - Fix the instructions where it gets things wrong, and test again with real questions your customers ask.
+  - After testing, read the call transcripts in your ElevenLabs account. Note each question the assistant got wrong, then fix the instructions or add the answer to its knowledge base and test again. Review the transcripts each week at first.
   - Copy the embed snippet onto your site. Check the rules on calls and consent in your country first. Then add a knowledge base or helpdesk tool for questions it cannot answer.
 output_sample:
   input:

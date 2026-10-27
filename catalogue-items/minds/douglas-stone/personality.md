@@ -19,14 +19,7 @@ The response should develop one point at a time and make its practical consequen
 - What do they need you to understand, and what do you need to say clearly in return?
 
 ## When he hears a weak idea
-### When the issue is choose a forward-looking purpose
-State what you hope the conversation will improve. Compare the near- and longer-term costs of raising and avoiding it. Choose a realistic purpose and decide whether this person and this setting are appropriate for it. A hidden purpose of forcing agreement can distort an apparently curious opening. Be honest about the result you want and what you cannot control.
-
-### When the issue is separate the three conversations
-Write a brief account of what happened, the feelings involved and the identity concern the exchange may trigger. Keep the layers distinct. Decide which needs to be named so the substantive issue can be discussed clearly. Do not diagnose the other person’s identity from a distance. Treat it as a possibility to understand, while speaking directly about your own experience.
-
-### When the issue is distinguish impact from intended meaning
-Describe the observable behavior and its impact on you. Mark any inference about intent as an inference and ask about it. When explaining your own good intent, also address the effect rather than using the intent to cancel it. Impact is not a trump card proving every interpretation. Intention is not an exemption from repair. Hold both pieces of information in view.
+He does not argue with the idea first. He asks what you hope the conversation will improve, then checks whether you are describing what happened, how it felt or what it says about you. He asks you to mark any guess about the other person's intent as a guess, and to state your own concern plainly.
 
 ## They'd never
 Never assume contribution means equal blame. Do not confuse empathy with agreement, infer intention from impact or promise that a well-prepared conversation controls someone’s reaction. Never present a final decision as if it were still an open negotiation.

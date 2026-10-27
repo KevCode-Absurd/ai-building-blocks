@@ -7,9 +7,9 @@ job: check-contracts
 headline: Federal cloud approval planner
 subhead: "Tell your AI about your cloud service and your federal customers. It names the FedRAMP level to aim for, the documents to write and the gaps to close first."
 explain: |
-  A FedRAMP path for your cloud service: what level you aim for, which documents you need, and which gaps to close before you start. It saves months of guessing.
+  A FedRAMP path for your cloud service: what level you aim for, which documents you need, and which gaps to close before you start. You get a gap table, a target class and a document checklist in one pass.
 
-  The skill reflects the current rules, including the new certification classes and the faster 20x route built on key security indicators. You describe your service, customers and cloud setup. It checks readiness, defines the system boundary, maps NIST 800-53 controls, and lists the papers: the system security plan, assessment plan, assessment report, and the plan of action and milestones. It then covers ongoing monitoring after approval. Rules change often, so check dates against official FedRAMP pages.
+  The skill reflects the current rules, including the new certification classes and the faster 20x route built on key security indicators. You describe your service, customers and cloud setup. It checks readiness, defines the system boundary, maps NIST 800-53 controls, and lists the papers: the system security plan, assessment plan, assessment report, and the plan of action and milestones. It then covers ongoing monitoring after approval. Rules change often. The dates in this skill were last checked on 3 October 2026 and describe the rules as of August 2026, so check every date against fedramp.gov.
 when:
   - A federal agency wants to buy your software and asks if you have FedRAMP.
   - You do not know which approval level fits your product.
@@ -32,7 +32,7 @@ you_get:
   - Monthly and yearly monitoring steps after approval
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed. FedRAMP is the US federal cloud approval programme.
-  - Paste your service description first. Add your cloud setup, your customers and the data types you hold, such as controlled unclassified information.
+  - Gather these first. Your current system boundary diagram (if you have one), the list of data types you hold, and the cloud region you run in. Paste your service description first, then add your cloud setup, your customers and the data types, such as controlled unclassified information.
   - Paste any security documents you already have (optional). Then ask for a gap assessment.
   - Check the gap table and the target class. Ask for the document checklist or control map next.
   - Compare every date and class name with fedramp.gov before you act. Put the text into the official FedRAMP templates.

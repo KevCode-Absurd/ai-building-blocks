@@ -8,8 +8,10 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: question
     required: true
+  - type: design_direction
+    required: false
 outputs:
   - type: web_app
 uses: []

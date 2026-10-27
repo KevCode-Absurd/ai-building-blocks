@@ -7,7 +7,7 @@ role: make
 job: page
 level: beginner
 inputs:
-  - {type: brief, required: true}
+  - {type: question, required: true}
 outputs:
   - {type: page_layout_spec}
 uses: []

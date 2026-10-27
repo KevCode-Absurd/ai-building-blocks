@@ -14,7 +14,7 @@ dependencies: [outlines, transformers, vllm, pydantic]
 
 1. Ask once for what is missing: the exact shape of each answer (fields and types, allowed labels, or a pattern), two or three sample texts, and the local model and backend (Transformers, llama.cpp or vLLM). Python setup and GPU are optional. If something is still missing, write `MISSING: <what>`. Never invent fields, labels or sample data.
 2. Pick the generator that matches the shape: `choice` for a fixed list, `json` for a Pydantic class or schema, `regex` for a pattern, `integer` or `float` for numbers.
-3. The code in this file uses the `outlines.models.*` and `outlines.generate.*` calls. Newer Outlines releases changed their API, so the calls may not match the version the user installs. Ask which version is installed (`pip show outlines`), check the calls against the docs for that version, and say which version you wrote the code for. Do not claim the code was run unless you ran it.
+3. The code in this file uses the `outlines.models.*` and `outlines.generate.*` calls from the Outlines 0.1 series. Install it with `pip install "outlines>=0.1,<0.2"`. Newer releases changed the API. If the user has a newer version, ask for `pip show outlines`, rewrite the calls from the docs for that version, and say which version you wrote the code for. Do not claim the code was run unless you ran it.
 4. Hand back: the format definition, the setup commands, the code with its file name, a sample run that shows the result type and values, and speed notes. End with `OPEN QUESTIONS`.
 5. A valid shape does not mean a correct answer. Tell the user to read the sample results and check them before they trust the run.
 6. Never put an API key in code. Read it from an environment variable.
@@ -37,13 +37,13 @@ Use Outlines when you need to:
 ## Installation
 
 ```bash
-# Base installation
-pip install outlines
+# Base installation (the calls in this file match the 0.1 series)
+pip install "outlines>=0.1,<0.2"
 
 # With specific backends
-pip install outlines transformers  # Hugging Face models
-pip install outlines llama-cpp-python  # llama.cpp
-pip install outlines vllm  # vLLM for high-throughput
+pip install "outlines>=0.1,<0.2" transformers  # Hugging Face models
+pip install "outlines>=0.1,<0.2" llama-cpp-python  # llama.cpp
+pip install "outlines>=0.1,<0.2" vllm  # vLLM for high-throughput
 ```
 
 ## Quick Start

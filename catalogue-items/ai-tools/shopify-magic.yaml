@@ -6,12 +6,12 @@ promise: "Draft product copy, edit photos and handle store tasks inside Shopify.
 use_cases: [write-copy, make-images, sell-and-support]
 categories: [marketing]
 what_it_does:
+  - "Naming note: Shopify's page at this address now describes these features under the name Sidekick, its assistant. Shopify Magic may be an older name for the same tools (checked 26 Oct 2026)."
   - "Writes product copy from details you give it. Typing /product-description in Sidekick is one way in (checked 26 Oct 2026)."
   - "Turns phone photos into studio-style shots (checked 26 Oct 2026)."
-  - "Helps you pick a theme and change your store design (checked 26 Oct 2026)."
+  - "Helps you pick a theme, change your store design, and do launch tasks such as a domain, social posts and email campaigns (checked 26 Oct 2026)."
   - "Builds Shopify Flow automations for repeated jobs, and shows each change for your review before it applies (checked 26 Oct 2026)."
   - "Writes and runs code to forecast, compare or sum up your store data. In some stores it cannot run code (checked 26 Oct 2026)."
-  - "Helps with launch tasks such as a domain, social posts and email campaigns (checked 26 Oct 2026)."
 benefits:
   - "Draft product descriptions for a whole catalogue, then check each product's facts."
   - Get cleaner product photos without booking a shoot.
@@ -27,7 +27,7 @@ not_for:
 pricing:
   model: subscription
   from: Included with a Shopify plan
-  note: "Sidekick, Shopify's assistant, is included with your Shopify plan at no extra cost (checked 26 Oct 2026). Features and usage limits vary by plan, and the page does not say which plan gets what. You need a Shopify store to use it. The page also showed a trial offer that may differ by country."
+  note: "Sidekick, Shopify's assistant, is included with your Shopify plan at no extra cost (checked 26 Oct 2026). Features and usage limits vary by plan, and the page does not say which plan gets what, so check shopify.com/pricing for your plan before you start. You need a Shopify store to use it. The page also showed a trial offer that may differ by country."
 works_with:
   - Shopify
   - klaviyo
@@ -50,7 +50,8 @@ first_result:
   - "Type one small job, such as a description for one product. Add its name, material, size and price. Slash commands like /product-description are listed on Shopify's page."
   - "Read the draft against your real product. Fix any claim that is not true before you save it."
   - "Do the same for a photo: upload a phone photo and ask for a studio-style version. Compare it to the real product."
-  - "You end with a draft description or an edited photo in your admin, ready to review. Next: plan your store with the Shopify store setup planner, or clean up product titles with the Product title cleaner."
+  - "You end with a short product description plus a short list of features, shown for you to edit in the admin, or an edited photo. The exact length depends on what you ask for and was not measured."
+  - "Next: plan your store with the Shopify store setup planner, or clean up product titles with the Product title cleaner."
 needs:
   - "A Shopify store on any plan. Sidekick is included, but limits vary by plan."
   - "Product facts for each item: name, materials, size, price and what it is for."

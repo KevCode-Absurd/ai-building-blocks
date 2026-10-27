@@ -17,7 +17,7 @@ license_source: "https://github.com/morsechimwai/lemmaly/blob/main/LICENSE"
 
 The model already knows Big-O, hash tables, divide-and-conquer, dynamic programming, sorting, graph algorithms, and amortized analysis. It just does not apply them spontaneously. lemmaly fixes the behavior, not the knowledge.
 
-This skill is the gateway for an algorithm-discipline suite of four skills (`lemmaly`, `mathguard`, `invariant-guard`, `complexity-cuts`). It enforces the hard rules that every other guard in the suite assumes.
+This skill is the gateway for an algorithm-discipline suite of four skills (`lemmaly`, `mathguard`, `invariant-guard`, `complexity-cuts`). In this library only the gateway is here, plus `slow-code-speeder`, which is the `complexity-cuts` sibling. If a sibling is not available, say so and handle the case with the rules in this file. It enforces the hard rules that every other guard in the suite assumes.
 
 **Violating the letter of these rules is violating the spirit of the skill.** "Just this once" is how O(n²) ships to production.
 
@@ -192,7 +192,7 @@ The upstream author says these thoughts were captured when a model shipped O(n·
 | "`.filter` then `.reduce` is the idiomatic way, ship it." | Idiomatic ≠ correct asymptotic. Idiom-driven coding is how O(n²) ships. |
 | "It's fine for now, we can optimize later." | Later is a different engineer with no context. State the complexity now. |
 | "I'll just use `Array.find` here, it's just one lookup." | One lookup inside a loop over `n` items is `O(n)` lookups. Make the `Map` outside. |
-| "The data is small in dev — I'll worry about scale when we ship." | Production data is never the size of dev data. The seven-step protocol takes 30 seconds. |
+| "The data is small in dev — I'll worry about scale when we ship." | Production data is never the size of dev data. Stating the plan first costs far less than fixing slow code in production. |
 | "I already understand the problem, the protocol is overhead." | The cases the protocol "wastes time on" are the cases that break in prod. |
 
 If any of these sound familiar mid-thought: stop, write the seven steps.

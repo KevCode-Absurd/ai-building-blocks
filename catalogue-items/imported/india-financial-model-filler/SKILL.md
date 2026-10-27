@@ -19,8 +19,7 @@ description: Complete, populate and fill out 3-statement financial model templat
 
 ## India
 
-This skill operates on **Indian markets**. Load **`india-market-conventions`**
-before building anything, and **`india-market-data`** for sources. Two rules cause
+This skill operates on **Indian markets**. The guides `india-market-conventions` and `india-market-data` are not included in this copy, so the two rules below are the whole India guide. Two rules cause
 most Indian errors:
 
 - **Fiscal year is April–March.** `FY2025` = year ending **31 Mar 2025**; `Q1 FY26` =
@@ -31,15 +30,14 @@ most Indian errors:
   **millions under a crore label: the number shown is 10× the real crore figure**. Divide by `10000000` in a live
   formula and label the column `Total Revenue (₹ Cr)`.
 
-What has no Indian equivalent is listed in `NOT-ADAPTABLE.md`. Name the gap —
-never substitute a proxy and present it as the real thing.
+`NOT-ADAPTABLE.md` is not included in this copy. Where a US feature has no Indian equivalent, name the gap. Never substitute a proxy and present it as the real thing.
 
 Complete and populate integrated financial model templates with proper linkages between Income Statement, Balance Sheet, and Cash Flow Statement.
 
 ## ⚠️ CRITICAL PRINCIPLES — Read Before Populating Any Template
 
 **Environment — one path: officecli.**
-- Build every workbook with the `officecli` CLI. Load **`xlsx-author`** for the build loop and **`officecli-xlsx`** for the element vocabulary.
+- Build every workbook with the `officecli` CLI. The guides `xlsx-author` and `officecli-xlsx` are not included in this copy, so use `officecli`'s own built-in help for the build loop and the element names.
 - Write formulas as `--prop formula="D14*(1+Assumptions!$B$5)"` (no leading `=`). **No `recalc.py` step** — officecli evaluates formulas on read.
 - **Section headers:** set value, merge and fill in one call on the top-left cell. The merge ref is the `merge` prop's value. Example: `{"command":"set","path":"A1","props":{"value":"INCOME STATEMENT","merge":"A1:G1","fill":"1F4E79"}}`
 - All principles below apply identically in either environment.

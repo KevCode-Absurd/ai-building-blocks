@@ -22,6 +22,10 @@ and the emerging MCP standard that's becoming the lingua franca for AI tools.
 Key insight: Tool descriptions are more important than tool implementations.
 The LLM never sees your code - it only sees the schema and description.
 
+## What you need
+
+What the agent must be able to do. If you already have a tool list or draft tool schemas, start from those and improve them.
+
 ## Detailed Guide
 
 Read [the detailed guide](references/detailed-guide.md) before executing this skill. It retains the complete procedure and reference material. Treat its safety, prerequisites, and validation requirements as mandatory. For focused work, load the relevant sections; for end-to-end work, read the guide completely.
@@ -49,8 +53,8 @@ def get_weather(location: str, unit: str = "fahrenheit") -> str:
         location: The city and state, e.g. San Francisco, CA
         unit: Temperature unit, either 'celsius' or 'fahrenheit'
     '''
-    # Implementation
-    return json.dumps({"temperature": "72°F", "conditions": "Sunny"})
+    # PLACEHOLDER: replace with a real weather lookup. This fixed reply is not real data.
+    return json.dumps({"temperature": "[REAL VALUE]", "conditions": "[REAL VALUE]"})
 
 @beta_tool
 def search_web(query: str) -> str:

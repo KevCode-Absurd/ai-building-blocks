@@ -16,7 +16,7 @@ The upstream skill is only a pointer to two other skills, "grilling" and "domain
 
 Ask once, in one message, for anything missing:
 
-1. The plan, design or proposal. Pasted text, a file or a link the user can open.
+1. The plan, design or proposal. Pasted text, a file or a link the user can open. A strategy document from an earlier step can stand in for the plan.
 2. Context: who it is for, why now, and what "done" looks like.
 3. Existing terms, such as a glossary or `CONTEXT.md` (optional).
 4. Existing decision records, such as `docs/adr/` (optional).

@@ -43,8 +43,8 @@ How to start:
 4. **Set the sizes.** With the stock amount known, give each name a size and cap any one name at a figure the person picks, such as five or ten percent. Cap any one industry at a share such as a quarter. Show the sums. Made-up example: 20 passers, 60,000 to invest, equal sizes of 3,000 each (5%), and three of the 20 in one industry, 15% of the list, under a quarter cap.
 5. **Handle a short list.** If fewer than ten pass, do not loosen a test to reach ten. The options, with the reason for each:
    - Hold fewer names, and say that each one is a larger share of the plan and the person should accept that.
-   - Hold a broad, low-cost cross-section of the market through a fund for the rest. The book shows a plain investor can do this by buying equal amounts of the leading companies, or through a fund, and expect about the market result.
-   - Wait, and keep the money in bonds, if the stock part has no sound home right now.
+   - Ask a licensed adviser whether a broad, low-cost fund could hold the rest. The book says a plain investor can buy a wide cross-section of the market, or a fund that does, and expect about the market result. Do not name a fund.
+   - Ask a licensed adviser whether to wait and keep the money outside stocks for now, if the stock part has no sound home right now. Do not name an asset class to buy.
    If a very large number pass, as when prices are low, cut to thirty or fewer by choosing the ones with the lowest price against earnings and the widest spread of industries, and say so.
 6. **Set the yearly review.** One date a year, with the facts to check: did the company still pass the quality tests, did earnings hold, did debt rise. The only reasons to change the list are a broken fact, a price far above the ceilings, or a clearly better use of the money. Price falls alone are not a reason. Add the cost of changing: selling a winner in a taxable account can cost a tax bill, and each trade has a fee. The book's blunt view is that it is better to sell and pay the tax than to hold an overpriced stock and regret it, so list the tax cost as one of the things to weigh, not a bar to action.
 7. **Say what the list is not.** It is a list of companies that passed rules, not a forecast. Say that the plain list may lag a hot market, because popular names fail on price. That is the price of safety, and the plan accepts it.
@@ -57,9 +57,9 @@ The list with sizes and caps, the set-aside list with failed tests, the spread c
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Defensive stock quality screener](https://useaiblocks.com/skills/defensive-stock-quality-screener).
 - The [Investment holding rule writer](https://useaiblocks.com/skills/sit-still-rule-writer). It takes the plan.
-- The [Stock purchase price checker](https://useaiblocks.com/skills/defensive-price-ceiling-tester).
+- The [Business plan risk buffer reviewer](https://useaiblocks.com/skills/room-for-error-plan-checker). It takes the plan.
+- The [Investing policy page writer](https://useaiblocks.com/skills/investing-policy-page-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

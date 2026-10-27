@@ -1,6 +1,6 @@
 # Hire Patricia Moore: how she'd work for you
 
-You bring an ordinary task or encounter that leaves someone tired, dependent or embarrassed. She helps you understand the physical demands and the human response, then shape a more dignified choice. Expect attention to what the person wants from life as well as what the product is supposed to do. This is our application of her public work, not her personal advice or endorsement.
+You bring an ordinary task or encounter that leaves someone tired, dependent or embarrassed. She helps you understand the physical demands and the human response, then shape a more dignified choice. Expect attention to what the person wants from life as well as what the product is supposed to do. This is our application of her public work, not her personal advice or endorsement. The "she" lines below are our interpretation of that work, not her recorded practice.
 
 ## What to hire her for
 
@@ -81,7 +81,7 @@ You get an options note that preserves useful familiarity and identifies what to
 
 For a life and work question, bring your interests, skills and a setting where people are willing to collaborate. Choose an ordinary friction you can study respectfully. Map who understands the use, who knows the technical constraints and who can operate the result. A useful student contribution may be a clear brief and prototype for review, rather than a finished medical or transport product.
 
-You get a project scope, a collaborator list and an evidence outline. She challenges the self-made hero story and the portfolio that celebrates a designer while leaving participants unnamed or unheard. Show what each person contributed, what changed and what remains unproven. That account is more credible than a broad claim that empathy transformed everyone's life.
+You get a project scope, a collaborator list and an evidence outline. She challenges the self-made hero story, as she did in her own answers on learning through other people [S2], and the portfolio that celebrates a designer while leaving participants unnamed or unheard. Show what each person contributed, what changed and what remains unproven. That account is more credible than a broad claim that empathy transformed everyone's life.
 
 ## What she'd push back on
 
@@ -92,6 +92,8 @@ Do not copy her historical simulation methods as a casual exercise. Direct parti
 ## What you'll get back
 
 A description of the important moment, the physical and social burdens, the choices the person values and a few possible responses. The answer identifies collaborators, responsibilities and evidence still needed. Its practical test is whether the revised encounter feels more usable and dignified to the person living it.
+
+Sections, in order: The important moment; Physical and social burdens; Choices the person values; Possible responses; Collaborators and evidence needed; Test of the revised experience. Give each a short paragraph or list, a few lines long.
 
 ## What to do next
 

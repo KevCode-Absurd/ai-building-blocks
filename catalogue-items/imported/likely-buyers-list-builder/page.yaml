@@ -37,12 +37,14 @@ you_get:
   - Contact mapping for tier 1, by role and best way in
   - A one-page summary for a pitch or engagement letter
 how_to_use:
-  - Write a short brief on the company. Use the list above. Say who you are, such as the owner, the adviser or an analyst.
+  - Write a short brief on the company. Use the list above. State the currency, the units (for example crore) and the fiscal year end used for revenue and profit. Say who you are, such as the owner, the adviser or an analyst.
+  - The India files the skill names (market conventions, market data, the not-adaptable list) are not in the library. Your AI applies the two Indian rules written in the skill instead. These are the April to March fiscal year, and lakh and crore units.
   - Open the skill and paste the brief. If your AI can search the web, turn that on, so buyers come with sources.
   - Add the names the seller wants in or out before you read the list.
   - Check every row marked TO VERIFY against the buyer's own site, exchange filings or news of past deals.
   - Move names between tiers as you learn more, and ask your AI to update the tables.
   - Keep contacts in your own sheet. Fill them from public pages or your own network.
+  - After the first wave of calls, move buyers between tiers based on the replies, ask your AI to update the tables, and start tier 2 when tier 1 has answered.
 output_sample:
   input:
     - A description of the company, its sector and what it sells

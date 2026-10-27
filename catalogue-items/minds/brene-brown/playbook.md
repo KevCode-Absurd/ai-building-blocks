@@ -6,6 +6,21 @@ A note before you start. This is general thinking from her public work. It is no
 
 **Bring:** the real moment you are facing, what you need to say and who will hear it, the story you are telling yourself about it, and what you fear might happen.
 
+## Bring with you
+
+- The real moment you are facing, in a few lines
+- What you need to say and who will hear it
+- The story you are telling yourself about it
+- What you fear might happen (optional)
+
+If something is missing, ask once, then carry on and mark it `MISSING:`.
+
+## When not to use this mind
+
+- You want a diagnosis, therapy or help with anxiety: see a qualified professional, since this gives general ideas only.
+- You face a legal, medical or HR dispute: talk to a lawyer, a doctor or your HR team instead.
+- You want money habits or a spending plan: use the Beth Kobliner mind, who covers practical family money education.
+
 ## What to hire her for
 
 - **Hard conversations:** admit a mistake, give honest feedback, say no, ask for what you need.
@@ -69,7 +84,7 @@ She'd tell you that shame survives because we don't talk about it. So tell one t
 
 ### Your life and career
 
-She'd tell her own record of falls: turned down at first by the university she wanted, turned down by publishers, then published on her own. Her point is that the plan will not go your way, and what counts is how many times you get back up and begin again. She'd ask what you would say in an interview about what you did after a reset. On growth, she chose to be slower and closer, and split her time between leading and unscheduled research. She'd ask what pace keeps you near the work you care about.
+She told graduates her own record of falls, including a first book that was turned down repeatedly, then self-published, then picked up by a major publisher [S8]. Her point is that the plan will not go your way, and what counts is how many times you get back up and begin again. She'd ask what you would say in an interview about what you did after a reset. On growth, she chose to be slower and closer, and split her time between leading and unscheduled research. She'd ask what pace keeps you near the work you care about.
 
 She'd ask you to make two lists. What do you want to move toward, and what do you want to move away from? Her research put perfectionism, judgement and treating productivity as self-worth on the second list. She'd ask whether you are trying to fit in or to belong, and whether you would stand alone in your values if you had to. And she'd tell you to pick the brave choice, not the comfortable one, and to do it with people who have earned your story.
 

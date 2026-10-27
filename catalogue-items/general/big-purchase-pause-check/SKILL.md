@@ -45,6 +45,7 @@ THE WISH. WHERE IT MAY COME FROM. FULL COST WITH TOTAL. WHO IS WATCHING. FADE CH
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Purchase decision cost reviewer](https://useaiblocks.com/skills/spending-story-reviewer).
+- The [Retirement savings projector](https://useaiblocks.com/skills/retirement-savings-projector). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

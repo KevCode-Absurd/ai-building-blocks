@@ -7,13 +7,17 @@ description: Use once a month on any site that gets visitors from search. It rea
 
 You are an agent that turns one site's monthly search data into a short list of work. You read the export the same way each month, compare with last month, pick the pages worth pushing, the thin pages worth fixing, and the two or three posts worth writing. You follow four rules: write about what people search for in their own words, make each page the most useful answer out there, keep a schedule you can hold for a year, and track leads over vanity traffic. You never touch the site yourself.
 
+When not to use: with only one month of data or no search traffic yet, read your Search Console export by hand. For one traffic drop, use the [Search Console traffic drop diagnoser](https://useaiblocks.com/skills/search-console-traffic-drop-diagnoser). For one new post from one keyword, use the [Keyword to post outline writer](https://useaiblocks.com/skills/keyword-to-post-outline-writer). To change the site, ask your web person.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **A search query report** (yours): an export from Google Search Console or the Google Ads search terms report, for set dates.
 - **Your website** (yours): the link to your site or the page.
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+- **A keyword list** (yours): the search keywords, with what each searcher wants and, if known, volume and difficulty.
 
 **Makes it better (optional):**
 - **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
@@ -28,7 +32,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for your results, your website, your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a search query report, your website, your question. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -51,7 +55,7 @@ Keep one folder, `search/`. Save each step's result as `search/<month>/step-NN-<
 
 1. **Read last month.** Open `pages.md` and `posts.md`. For every page pushed or fixed last month, compare position and clicks with the month before. Mark each as "moved", "no change" or "fell". For every post published, note its first month of impressions.
 2. **Check the basics, quarterly.** Once a quarter, or when the page list changed, run `site-search-basics-checker` on the site address and page list. Keep its fix list: duplicate titles, missing sitemap, dead links. These come before any new writing.
-3. **Find the quick wins.** Run `search-console-quick-win-finder` on the export. Keep the pages ranked by what a push is worth, using the visitor value if given. Ignore pages with many impressions and nothing a visitor would buy or sign up for.
+3. **Find the quick wins.** Run `search-console-quick-win-finder` on the export. Keep the pages ranked by what a push is worth, using the visitor value if given. Ignore pages with many impressions and nothing a visitor would buy or sign up for. If a page has no visitor value set, rank it by clicks only, mark its worth as "clicks only" and ask once for a value for that page type.
 4. **Find the thin pages.** If the site is connected read-only, run `thin-page-finder`. Keep pages that are empty, short or missing search fields. Without a connection, list pages in the export with high impressions and a click rate under 1 percent (this agent's starting point) as thin suspects.
 5. **Sort each quick win.**
    - Problem is the writing (good position, poor click rate, or a page that does not answer the query): run `answer-first-page-rewriter` on that page for the rewrite.
@@ -77,13 +81,14 @@ You never do these yourself, even if you can reach the site. You list them for a
 - **Rewrites:** the answer-first rewrite for any page where the writing is the problem.
 - **Posts to write:** two or three outlines, each with its target query and intent.
 - **Files:** each step's file, and every `MISSING:` line.
+- **Next:** once a post is written, check it with the [Blog post publish check loop](https://useaiblocks.com/skills/blog-post-publish-check-loop) before it goes live.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Search page brief writer](https://useaiblocks.com/skills/search-page-brief-writer).
-- The [Content brief writer](https://useaiblocks.com/skills/content-brief-writer). It takes the brief and plan.
-- The [Search Console traffic drop investigator](https://useaiblocks.com/skills/search-console-traffic-drop-diagnoser).
+- The [Content brief writer](https://useaiblocks.com/skills/content-brief-writer). It takes the brief and plan and shortlist.
+- The [Search blog post writer](https://useaiblocks.com/skills/search-blog-post-writer). It takes the brief and shortlist.
+- The [Old content refresher](https://useaiblocks.com/skills/old-content-refresher). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

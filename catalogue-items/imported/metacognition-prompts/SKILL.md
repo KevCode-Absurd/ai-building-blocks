@@ -16,7 +16,7 @@ evidence_strength: "strong"
 evidence_sources:
   - "Flavell (1979) — Metacognition and cognitive monitoring: a new area of cognitive-developmental inquiry"
   - "Veenman et al. (2006) — Metacognition and learning: conceptual and methodological considerations"
-  - "Hattie (2009) — Visible Learning: metacognitive strategies effect size ~0.69"
+  - "Hattie (2009) — Visible Learning: metacognitive strategies, a large reported effect (the author's figure of ~0.69 is unverified here; check the book before quoting)"
   - "Schraw (1998) — Promoting general metacognitive awareness"
   - "Tanner (2012) — Promoting student metacognition in the sciences"
 input_schema:
@@ -69,7 +69,7 @@ Generates a calibrated set of metacognitive prompts for a specific learning task
 
 ## Evidence Foundation
 
-Flavell (1979) defined metacognition as "knowledge and cognition about cognitive phenomena" — thinking about thinking. He distinguished metacognitive knowledge (what you know about your own cognition) from metacognitive regulation (how you control it). Veenman et al. (2006) reported that metacognitive skilfulness predicts learning outcomes beyond intelligence. Hattie's (2009) synthesis reported a large effect size for metacognitive strategies. Check the original papers before you quote any figure from them. Schraw (1998) identified that metacognitive awareness can be explicitly taught through structured prompting — students who regularly use metacognitive prompts develop stronger monitoring skills over time. Tanner (2012) applied metacognitive research specifically to science education, suggesting that discipline-specific metacognitive prompts (e.g., "What evidence would change my conclusion?") are more effective than generic ones. The evidence is clear: metacognition is teachable, transferable, and among the highest-leverage interventions available.
+Flavell (1979) defined metacognition as "knowledge and cognition about cognitive phenomena" — thinking about thinking. He distinguished metacognitive knowledge (what you know about your own cognition) from metacognitive regulation (how you control it). Veenman et al. (2006) reported that metacognitive skilfulness predicts learning outcomes beyond intelligence. Hattie's (2009) synthesis reported a large effect size for metacognitive strategies. Check the original papers before you quote any figure from them. Schraw (1998) identified that metacognitive awareness can be explicitly taught through structured prompting — students who regularly use metacognitive prompts develop stronger monitoring skills over time. Tanner (2012) applied metacognitive research specifically to science education, suggesting that discipline-specific metacognitive prompts (e.g., "What evidence would change my conclusion?") are more effective than generic ones. The research points the same way: metacognition can be taught, and many studies link it to better learning. How strong the effect is varies by study, age group and subject, so treat these as supporting background, not proof. The authors above are the original sources; none are linked here, so look them up before you quote them.
 
 ## Input Schema
 

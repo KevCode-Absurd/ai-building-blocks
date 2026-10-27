@@ -12,6 +12,8 @@ explain: |
   This skill does not write the file from memory. It first downloads Expo's current rules, so job names, triggers and options are correct today. It then writes the file for your case, such as a build on every push to the main branch, a preview build for each pull request, or a store submission after a build. It checks the file against the rules, and fixes any error before it hands the file back.
 
   It can also edit a workflow file you already have, without breaking it.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (Expo) says MIT. Credit goes to Expo and sickn33.
 when:
   - You want every push to your main branch to make a test build.
   - You want each pull request to make a preview build you can share.
@@ -36,6 +38,7 @@ how_to_use:
   - Upload or open the skill folder, with its scripts, and open your Expo project.
   - Say what you want, for example "build iOS and Android on every push to main, then submit". Add your existing workflow file if you have one.
   - Make sure you have Node installed and an internet connection. The skill needs both to download Expo's rules. It also runs npm install for its helper scripts. Those scripts download files from the internet and run on your machine, so read scripts/fetch.js and scripts/validate.js first, and run it in a copy of your project if you can.
+  - Before you run the scripts, check the versions of ajv, ajv-formats and js-yaml in scripts/package.json, or compare the script files with the original. Never run a store submission job against your real App Store or Google Play account without your own clear yes.
   - Read the note on each job. Check that the file passes the check, and commit it to your project in .eas/workflows.
   - Next, run the first workflow on a test branch and read the job logs in EAS. Fix anything that fails, then merge it into your main workflow.
   - You need an Expo account to run the workflow. EAS builds can have limits or costs on your Expo plan, so check your plan first.
@@ -52,6 +55,8 @@ how_it_works:
     text: It runs the validator script on the file and fixes every error it reports.
   - title: Explain each job
     text: It hands back the file with a short note on each job, and what the job needs.
+  - title: Confirm before store or paid steps
+    text: Before any store submission or paid build is set up to run, it shows you the job list and waits for your yes.
 output_shape: |
   YOUR REQUEST: <what should build, when, on which platforms>
 

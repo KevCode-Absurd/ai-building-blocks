@@ -14,6 +14,8 @@ explain: |-
 
   A coherent cross-profile job: inventory the actual fleet, inspect its update state machine, design controlled failure cases, review actual test evidence, and prepare a canary decision. These artifacts depend on one another and require clear stop/resume gates.
 
+  Licence: the two source profiles are MIT licensed, and this adaptation keeps that licence. The licence text is in the download.
+
   This task uses selected methods from IoT Fleet Engineer, Embedded Firmware Engineer. It is a focused adaptation. The original agents remain available: [IoT Fleet Engineer agent](https://useaiblocks.com/agents/agency-engineering-iot-fleet-engineer), [Embedded Firmware Engineer agent](https://useaiblocks.com/agents/agency-engineering-embedded-firmware-engineer).
 when:
   - You need a revision-specific compatibility and recovery matrix.
@@ -76,7 +78,13 @@ tweaks:
       starting.
 improve:
   - Keep useful corrections with the task evidence for the next run.
-terms: []
+terms:
+  - term: PASS, FAIL, NOT_RUN, BLOCKED
+    meaning: How each test case is marked. PASS means it ran and recovered. FAIL means it ran and did not recover. NOT_RUN means no test was done. BLOCKED means a missing fact or recovery path stops the test.
+  - term: Boot-confirm
+    meaning: The step where a new firmware tells the device it started well. If it never does, the device goes back to the old firmware.
+  - term: Canary rollout
+    meaning: Updating a small, mixed group of devices first, and widening only if they stay healthy.
 
 not_for:
   - "You want a general review of embedded code: use the Embedded Firmware Engineer agent."

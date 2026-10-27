@@ -7,11 +7,11 @@ role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - {type: source_text, required: true}
+  - {type: voc_reviews, required: true}
   - {type: document, required: true}
   - {type: tool_connection, required: false}
   - {type: brand_brain, required: false}
-  - {type: voc_reviews, required: false}
+  - {type: policy, required: false}
 outputs:
   - {type: spreadsheet}
   - {type: copy_draft}
@@ -26,7 +26,7 @@ steps:
   - {uses: angry-customer-reply-checker, note: "Only for complaints and upset customers: checks step 5's draft against the customer's words and the policy. Fixes and checks again, up to two rounds. Hands back a draft that passed."}
   - {uses: chargeback-evidence-gatherer, note: "Only when an email mentions a dispute or chargeback: that email becomes its question, with the order facts you give, not the reply drafts. Lists the proof to collect and whether to accept it."}
   - {uses: solved-ticket-help-page-writer, note: "Only when the same question has come in three times in 30 days: reads those solved tickets and their answers, not step 7's plan. Drafts a help article."}
-schedule: "Every weekday morning, and again mid-afternoon if the inbox is busy"
+schedule: "Run by hand each weekday morning, and again mid-afternoon if the inbox is busy. Nothing starts on a timer unless you connect a scheduler."
 asks_before: [sending any reply, issuing a refund, replacement or credit, closing or assigning a ticket, publishing a help article, promising a date, an outcome or anything outside the policy, replying to a customer who mentions harm, legal action or a regulator]
 origin: own
 version: 1.0.0

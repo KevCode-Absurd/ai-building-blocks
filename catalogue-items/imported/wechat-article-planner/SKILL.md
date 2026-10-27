@@ -16,7 +16,7 @@ tools: [claude, cursor, gemini]
 
 ## Overview
 
-Expert strategist for WeChat Official Accounts (微信公众号), China's most powerful content marketing channel with 1.3 billion WeChat users. Creates high-conversion article strategies with proven title formulas, reading-flow optimization, and Mini-Program integration paths.
+Expert strategist for WeChat Official Accounts (微信公众号), China's most powerful content marketing channel (the author gives a figure of 1.3 billion users, which is not checked here). Creates high-conversion article strategies with proven title formulas, reading-flow optimization, and Mini-Program integration paths.
 
 This skill understands the unique WeChat ecosystem: closed garden distribution, Moments sharing mechanics, subscription vs. service account differences, and the critical role of the first fold (首屏) in reader retention.
 
@@ -27,6 +27,31 @@ This skill understands the unique WeChat ecosystem: closed garden distribution, 
 - Use when optimizing article open rates and sharing rates
 - Use when designing WeChat-driven sales funnels
 - Use when converting readers to Mini-Program users or private traffic (私域流量)
+
+## How to Run It
+
+Work in this order, and ask once for anything missing:
+
+1. Ask for the inputs: the topic, the account type (subscription or service), the target readers, the goal (sales or followers), and any real data or customer quotes to use. If the user has none, write MISSING and do not invent any.
+2. Check the account type and say what it means for how often they can post. Posting limits change, so tell the user to confirm the current limits with WeChat.
+3. Write 5 to 6 title options with the formulas in Step 2. Mark the one you recommend.
+4. Lay out the article with the structure in Step 3, section by section.
+5. Add sharing hooks and one call to action.
+6. Return the result in the output template below.
+
+### Output template
+
+```
+Account type check: <type, what it means for posting>
+Title options: <5 to 6 titles, recommended one marked>
+Article outline: <first fold, ramp, core, emotional peak, call to action, one or two lines each>
+Sharing hooks: <1 to 3 pull quotes, 1 suggested forwarding text>
+Call to action: <one low-effort next step>
+Posting time tips: <suggested times in China time, labelled as a rule of thumb>
+Facts the user must add: <data, quotes, sources>
+```
+
+Keep the whole plan to about one page.
 
 ## How It Works
 
@@ -43,7 +68,7 @@ Apply proven title formulas for WeChat:
 
 1. **Curiosity Gap**: "为什么XXX却YYY？" (Why X but Y?)
 2. **Counter-intuitive**: "一直以为XXX，原来YYY" (Always thought X, turns out Y)
-3. **Social Proof**: "XXX万人都在用的..." (X million people use this)
+3. **Social Proof**: "XXX万人都在用的..." (X million people use this; only use a number the user can prove)
 4. **Urgency**: "再不看就晚了！" (Read before it's too late)
 5. **Value Promise**: "看完这篇，你就懂了..." (After reading this, you'll understand)
 6. **Identity**: "XXX的人，都有一共性" (People who X share this trait)
@@ -103,7 +128,7 @@ Structure:
 - Include 1 image every 300-500 words to break up text
 - End with a specific, low-friction CTA
 - Maintain consistent voice across articles to build brand recognition
-- Post at peak hours: 7-9am, 12-1pm, 8-10pm (China time)
+- Post at peak hours: 7-9am, 12-1pm, 8-10pm (China time). This is the author's rule of thumb. Check your own account's read data.
 
 ## Limitations
 

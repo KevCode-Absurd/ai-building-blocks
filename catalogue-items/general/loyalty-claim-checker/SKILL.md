@@ -49,8 +49,9 @@ The claim, a table of gain sources, costs, the room-to-buy check, the evidence t
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Knowledge gap decision planner](https://useaiblocks.com/skills/learn-borrow-or-pass-planner). It takes the audit report.
 - The [Vendor comparison writer](https://useaiblocks.com/skills/vendor-comparison-writer). It takes the audit report.
-- The [Decision consequence planner](https://useaiblocks.com/skills/second-order-effects-tracer). It takes the audit report.
+- The [Campaign lessons reviewer](https://useaiblocks.com/skills/copy-or-skip-lesson-writer). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

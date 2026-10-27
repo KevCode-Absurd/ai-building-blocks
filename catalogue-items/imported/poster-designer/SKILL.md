@@ -15,7 +15,7 @@ These are instructions for creating design philosophies - aesthetic movements th
 - A poster that must use a real logo or a product photo. This skill does not draw them. Place them yourself afterwards.
 - A print job with strict press rules (bleed, colour profile). Ask the printer for specs first and check the file against them.
 
-**Needs:** an AI that can run code (for example Python with a drawing library) and save files. If it cannot, say so, write the design philosophy and a short brief for the piece, and stop. Do not pretend to have made an image.
+**Needs:** an AI that can run code (for example Python with Pillow for a PNG or reportlab for a PDF) and save files. If it cannot, say so, write the design philosophy and a short brief for the piece, and stop. Do not pretend to have made an image.
 
 **Ask once, in one message, for anything not given:**
 - The topic or message of the poster (required)
@@ -79,11 +79,11 @@ The philosophy must guide the next version to express ideas VISUALLY, not throug
 
 **"Concrete Poetry"**
 Philosophy: Communication through monumental form and bold geometry.
-Visual expression: Massive color blocks, sculptural typography (huge single words, tiny labels), Brutalist spatial divisions, Polish poster energy meets Le Corbusier. Ideas expressed through visual weight and spatial tension, not explanation. Text as rare, powerful gesture - never paragraphs, only essential words integrated into the visual architecture. Every element placed with the precision of a master craftsman.
+Visual expression: Massive color blocks, sculptural typography (huge single words, tiny labels), Brutalist spatial divisions, Polish poster energy meets Le Corbusier. Ideas expressed through visual weight and spatial tension, not explanation. Text as rare, powerful gesture - never paragraphs, only essential words integrated into the visual architecture. Every element placed on a clear grid.
 
 **"Chromatic Language"**
 Philosophy: Color as the primary information system.
-Visual expression: Geometric precision where color zones create meaning. Typography minimal - small sans-serif labels letting chromatic fields communicate. Think Josef Albers' interaction meets data visualization. Information encoded spatially and chromatically. Words only to anchor what color already shows. The result of painstaking chromatic calibration.
+Visual expression: Geometric precision where color zones create meaning. Typography minimal - small sans-serif labels letting chromatic fields communicate. Think Josef Albers' interaction meets data visualization. Information encoded spatially and chromatically. Words only to anchor what color already shows. Colour zones follow clear, consistent rules.
 
 **"Analog Meditation"**
 Philosophy: Quiet visual contemplation through texture and breathing room.
@@ -91,11 +91,11 @@ Visual expression: Paper grain, ink bleeds, vast negative space. Photography and
 
 **"Organic Systems"**
 Philosophy: Natural clustering and modular growth patterns.
-Visual expression: Rounded forms, organic arrangements, color from nature through architecture. Information shown through visual diagrams, spatial relationships, iconography. Text only for key labels floating in space. The composition tells the story through expert spatial orchestration.
+Visual expression: Rounded forms, organic arrangements, color from nature through architecture. Information shown through visual diagrams, spatial relationships, iconography. Text only for key labels floating in space. The composition tells the story through spatial arrangement.
 
 **"Geometric Silence"**
 Philosophy: Pure order and restraint.
-Visual expression: Grid-based precision, bold photography or stark graphics, dramatic negative space. Typography precise but minimal - small essential text, large quiet zones. Swiss formalism meets Brutalist material honesty. Structure communicates, not words. Every alignment the work of countless refinements.
+Visual expression: Grid-based precision, bold photography or stark graphics, dramatic negative space. Typography precise but minimal - small essential text, large quiet zones. Swiss formalism meets Brutalist material honesty. Structure communicates, not words. Every alignment is checked against the grid.
 
 *These are condensed examples. The actual design philosophy should be 4-6 substantial paragraphs.*
 
@@ -132,11 +132,11 @@ To create museum or magazine quality work, use the design philosophy as the foun
 
 **Text as a contextual element**: Text is always minimal and visual-first, but let context guide whether that means whisper-quiet labels or bold typographic gestures. A punk venue poster might have larger, more aggressive type than a minimalist ceramics studio identity. Most of the time, font should be thin. All use of fonts must be design-forward and prioritize visual communication. Regardless of text scale, nothing falls off the page and nothing overlaps. Every element must be contained within the canvas boundaries with proper margins. Check carefully that all text, graphics, and visual elements have breathing room and clear separation. This is non-negotiable for professional execution. **IMPORTANT: Use different fonts if writing text. Search the `./canvas-fonts` directory. Regardless of approach, sophistication is non-negotiable.**
 
-Use fonts from the `./canvas-fonts` folder first. Only fetch another font if none of them fits, and only if you can reach the internet and the font's licence allows it. Get creative by making the typography actually part of the art itself -- if the art is abstract, bring the font onto the canvas, not typeset digitally.
+Use fonts from the `./canvas-fonts` folder first. Only fetch another font if none of them fits, and only if you can reach the internet and the font is free to use (no paid fonts). Get creative by making the typography actually part of the art itself -- if the art is abstract, bring the font onto the canvas, not typeset digitally.
 
 To push boundaries, follow design instinct/intuition while using the philosophy as a guiding principle. Embrace ultimate design freedom and choice. Push aesthetics and design to the frontier. 
 
-**CRITICAL**: Aim for a very high level of finish and detail. Ensure the composition, spacing, color choices and typography all show expert-level craftsmanship. Do not add a signature, an artist credit or any claim that a person made the work. Double-check that nothing overlaps, formatting is flawless, every detail perfect. Create something that could be shown to people to prove expertise and rank as undeniably impressive.
+**CRITICAL**: Aim for a very high level of finish and detail. Ensure the composition, spacing, color choices and typography all show expert-level craftsmanship. Do not add a signature, an artist credit or any claim that a person made the work. Double-check that nothing overlaps, formatting is flawless, every detail perfect. Create something clean and well finished.
 
 Output the final result as a single, downloadable .pdf or .png file, alongside the design philosophy used as a .md file.
 

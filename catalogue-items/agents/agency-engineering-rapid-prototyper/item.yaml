@@ -8,12 +8,14 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: question
+  - type: idea
     required: true
   - type: codebase
     required: false
 outputs:
   - type: plan
+  - type: product_spec
+    required: true
 uses: []
 steps: []
 origin: imported

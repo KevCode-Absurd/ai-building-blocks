@@ -24,6 +24,8 @@ Instructor is an open-source Python library that works with many AI providers.
 
 ## Installation
 
+The examples were written for Instructor 1.x with Pydantic v2. Pin the versions you install, and if a call or mode name fails, check the Instructor docs for your version. Model names in the examples change often, so use one your provider offers today.
+
 ```bash
 # Base installation
 pip install instructor
@@ -284,8 +286,6 @@ Stream partial results for real-time processing.
 #### Streaming Partial Objects
 
 ```python
-from instructor import Partial
-
 class Story(BaseModel):
     title: str
     content: str
@@ -619,14 +619,16 @@ except Exception as e:
 ### Custom Error Messages
 
 ```python
+from pydantic import ConfigDict
+
 class ValidatedUser(BaseModel):
     name: str = Field(description="Full name, 2-100 characters")
     age: int = Field(description="Age between 0 and 120", ge=0, le=120)
     email: EmailStr = Field(description="Valid email address")
 
-    class Config:
-        # Custom error messages
-        json_schema_extra = {
+    # Pydantic v2 style (the older `class Config` is Pydantic v1)
+    model_config = ConfigDict(
+        json_schema_extra={
             "examples": [
                 {
                     "name": "John Doe",
@@ -635,6 +637,7 @@ class ValidatedUser(BaseModel):
                 }
             ]
         }
+    )
 ```
 
 ## Best Practices

@@ -10,13 +10,15 @@ metadata: {"openclaw": {"requires": {"env": ["ELEVENLABS_API_KEY"]}, "primaryEnv
 
 Transform the voice in an audio recording into a different target voice. Voice Changer (previously called Speech-to-Speech — the API endpoint and SDK methods still use the `speech_to_speech` / `speechToSpeech` name) keeps the original performance — emotion, pacing, intonation, breaths, whispers, laughs, cries — and only swaps who is speaking.
 
+> **Before you run the setup command:** the command above downloads a tool from npm, signs the user in and stores an API key for the project. Tell the user this first and wait for a yes. If they would rather not, they can create a key in their ElevenLabs account and set `ELEVENLABS_API_KEY` themselves.
+>
 > **Setup, before writing any code:** if `ELEVENLABS_API_KEY` isn't set for this project, run `npx -y @elevenlabs/cli@latest onboard init` from the app's folder first and follow what it prints: it signs the user in and stores a key for the project, so nobody copies one by hand. Otherwise see the [Installation Guide](references/installation.md). For JavaScript, use `@elevenlabs/*` packages only.
 
 ## Key Facts
 
 - **Maximum input length:** 5 minutes per request — split longer recordings into chunks and stitch the outputs.
 - **Maximum file size:** 50 MB per request — compress to MP3 if your source is larger.
-- **Pricing:** 1,000 characters per minute of audio processed (duration-based, not text-based).
+- **Pricing:** billed by the length of audio processed, not by text. The original skill says each minute of audio counts as about 1,000 characters of the user's ElevenLabs quota. Plans change, so tell the user to check their current ElevenLabs plan before converting long files.
 - **Recommended model:** `eleven_multilingual_sts_v2` — often outperforms `eleven_english_sts_v2` even for English-only content.
 
 ## Quick Start

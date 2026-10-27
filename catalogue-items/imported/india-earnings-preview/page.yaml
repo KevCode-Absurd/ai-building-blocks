@@ -36,7 +36,7 @@ you_get:
   - A source appendix and a manual review list
 how_to_use:
   - Pick an AI that can run Python and reach the web, such as Claude Code or ChatGPT with code running. A plain chat cannot fetch the data.
-  - Install yfinance once (pip install yfinance). It reads Yahoo Finance pages without a licence, so check Yahoo's terms before routine use. The US-only data sources (EDGAR, FRED, CBOE) do not cover Indian companies, so paste the Indian actuals yourself. Get a free Alpha Vantage key if you want analyst consensus from that source.
+  - Install yfinance once (pip install yfinance). It reads Yahoo Finance pages without a licence. Check Yahoo's terms before you use it, and do not use it for routine or commercial work unless the terms allow it. Your AI should stop and ask you first. The US-only data sources (EDGAR, FRED, CBOE) do not cover Indian companies, so paste the Indian actuals yourself. Get a free Alpha Vantage key if you want analyst consensus from that source.
   - Open the skill, then give your AI one company, the quarter, and the latest results if you have them.
   - Read the manual review table first. Check every gap against the company's own results filing on NSE or BSE.
   - Open the HTML file and check the consensus source line, the as-of dates and that fiscal quarters are labelled right.

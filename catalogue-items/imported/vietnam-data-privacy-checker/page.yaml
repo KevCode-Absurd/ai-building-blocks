@@ -34,8 +34,9 @@ how_to_use:
   - Have ready a list of the data you collect, your vendors and the countries data goes to, the date you first sent data abroad, and your headcount. Describe where it is kept and who gets it.
   - Add your business type and sector, such as finance, AI or cloud.
   - Paste your current privacy notice or consent wording, if you have one (optional).
-  - Read the gap list and check each point against the official law text.
-  - Take the plan to your data protection officer or Vietnamese counsel before you act. The skill does not link the official law text, so check every fine in the penalty table against the official Decree 330/2026 before you quote it. It was last verified on 5 September 2026.
+  - Read the gap list and check each point against the official law text. Duties, deadlines and the 72-hour breach rule come from the skill's summary of Law 91/2025 and Decree 356/2025. The penalty table and its dates are an unchecked summary, so your AI should give you violation types without exact fines unless you paste the official decree.
+  - Take the plan to your data protection officer or Vietnamese counsel before you act. The skill does not link the official law text, so find it yourself on Vietnam's official legal database (vbpl.vn) or the Official Gazette (congbao.chinhphu.vn) and check every fine and date against Decree 330/2026 before you quote it. The author's last check was on 5 September 2026, and none of the figures were rechecked here. This is general information, not legal advice.
+  - Next, use privacy-impact-assessment-writer for the transfer and data protection assessments the gap list calls for, and agency-data-privacy-officer for ongoing privacy work. Run the breach response steps with your counsel before you need them.
 output_sample:
   input:
     - A description of the personal data you collect
@@ -57,4 +58,4 @@ output_sample:
       contains: What your notice and consent wording must include, and what yours is missing.
     - name: Breach response steps
       contains: The 72-hour sequence from containing a breach to review, and what a report must say.
-next: [agency-data-privacy-officer]
+next: [privacy-impact-assessment-writer, agency-data-privacy-officer]

@@ -9,7 +9,9 @@ subhead: See how the pitch or frequency of a signal moves over time, such as a b
 explain: |
   See how the pitch or frequency of a signal moves over time, such as a bearing that starts to whine or a heart rhythm that shifts. You get plots and numbers showing when each frequency appears and fades.
 
-  The skill is for MATLAB. It first picks the method that fits your goal: short-time Fourier transform for steady views, wavelets for sharp changes, synchrosqueezing for crisp ridges, or EMD and VMD to split a signal into parts. It draws spectrograms or scalograms, extracts and rebuilds single components, and estimates instantaneous frequency. For two signals it can compute time-varying coherence. It points out common mistakes for each method.
+  The skill is for MATLAB. It first picks the method that fits your goal: short-time Fourier transform for steady views, wavelets for sharp changes, synchrosqueezing for crisp ridges, or EMD and VMD to split a signal into parts. It draws spectrograms or scalograms, extracts and rebuilds single components, and estimates instantaneous frequency. For two signals it can compute time-varying coherence. It points out common mistakes for each method. It needs paid MATLAB with the Signal Processing and Wavelet Toolboxes, and some signal-processing knowledge. It is not for non-technical business users.
+
+  This is MathWorks' skill. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE.md file.
 when:
   - Your sensor signal changes pitch and a single spectrum hides it.
   - You need to pull one component out of a mixed signal.

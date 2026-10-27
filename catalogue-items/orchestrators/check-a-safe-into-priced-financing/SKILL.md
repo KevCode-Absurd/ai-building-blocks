@@ -16,8 +16,8 @@ This one covers a cap-only post-money SAFE going into a priced round. You must s
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Check the money** with the [Staged follow-on investment checker](https://useaiblocks.com/workflows/check-staged-follow-on-commitments). It takes the document and spreadsheet.
-- The [Convertible note conversion checker](https://useaiblocks.com/workflows/check-a-convertible-note-conversion). It takes the document and spreadsheet.
-- The [Down-round conversion and option-pool change checker](https://useaiblocks.com/workflows/review-a-down-round-rights-change). It takes the document and spreadsheet.
+- The [Convertible note conversion checker](https://useaiblocks.com/workflows/check-a-convertible-note-conversion). It takes the spreadsheet and document.
+- The [Down-round conversion and option-pool change checker](https://useaiblocks.com/workflows/review-a-down-round-rights-change). It takes the spreadsheet.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -29,10 +29,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **The deal terms** (yours): the price, payment terms, discounts, fees and dates of the deal.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for document, spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for document, spreadsheet, the deal terms. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**

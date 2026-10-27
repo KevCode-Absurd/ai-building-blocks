@@ -9,11 +9,13 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: question
     required: true
 outputs:
   - type: plan
   - type: document
+  - type: policy
+    required: true
 uses: []
 origin: imported
 source:

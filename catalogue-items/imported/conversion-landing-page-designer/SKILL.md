@@ -23,7 +23,7 @@ Apply to all web UI work: landing pages, marketing sites, components, dashboards
 
 ## A1. Intake
 
-Gather these before designing or writing. Ask only for what is missing, and ask in one batch rather than one question at a time.
+Gather these before designing or writing. Ask only for what is missing, and ask in one batch rather than one question at a time. If you have a page layout spec from an earlier step, use its sections as the page structure instead of choosing new ones.
 
 **Purpose**
 - What is the ONE primary action? (trial, demo, buy, waitlist, download)

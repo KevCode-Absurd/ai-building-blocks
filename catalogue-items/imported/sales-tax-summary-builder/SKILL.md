@@ -13,6 +13,9 @@ compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ## Purpose
 Aggregates tax amounts collected across all orders in a period, broken down by tax jurisdiction (state/province, country) and tax rate. Produces a summary suitable for periodic tax filing prep. Read-only — no mutations.
 
+## When not to use
+Not for stores outside Shopify (copy your order tax totals into a spreadsheet and group them there). Not for deciding where you must collect tax or how much you owe: ask a tax professional.
+
 ## Prerequisites
 - Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_orders`
 - API scopes: `read_orders`
@@ -34,12 +37,12 @@ Aggregates tax amounts collected across all orders in a period, broken down by t
 ## Workflow Steps
 
 1. **OPERATION:** `orders` — query
-   **Inputs:** `query: "financial_status:paid created_at:>='<NOW - days_back days>'"`, `first: 250`, select `taxLines { title, rate, priceSet }`, `refunds { refundLineItems }`, pagination cursor
+   **Inputs:** `query: "financial_status:paid created_at:>='<NOW - days_back days>'"`, `first: 250`, select `totalPriceSet`, `taxLines { title, rate, priceSet }`, `refunds { totalRefundedSet }`, pagination cursor
    **Expected output:** All paid orders with tax lines; paginate until `hasNextPage: false`
 
 2. Check each order's refunds:
-   - Fully refunded (refunded total equals the order total): if `exclude_refunded` is true, leave its tax out of the totals.
-   - Partly refunded: keep its tax in the totals, flag the order, and list it in a separate "Partly refunded orders" block with its order name, tax and amount refunded, so the user or their accountant can adjust by hand.
+   - Fully refunded (the sum of `refunds[].totalRefundedSet` equals the order's `totalPriceSet`): if `exclude_refunded` is true, leave its tax out of the totals.
+   - Partly refunded (the refunded sum is more than 0 but less than `totalPriceSet`): keep its tax in the totals, flag the order, and list it in a separate "Partly refunded orders" block with its order name, tax and amount refunded, so the user or their accountant can adjust by hand.
    - Not refunded: no change.
 
 3. Group by `group_by` (jurisdiction title or rate): one row per distinct `taxLine.title` (or per distinct `taxLine.rate`). For each row, sum `taxLine.priceSet.shopMoney.amount` over the orders kept in step 2, and also count the orders. Show a grand total at the bottom.
@@ -57,6 +60,12 @@ query TaxLiabilityOrders($query: String!, $after: String) {
         createdAt
         displayFinancialStatus
         totalTaxSet {
+          shopMoney {
+            amount
+            currencyCode
+          }
+        }
+        totalPriceSet {
           shopMoney {
             amount
             currencyCode

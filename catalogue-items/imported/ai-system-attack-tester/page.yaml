@@ -37,6 +37,7 @@ how_to_use:
   - Ask for a scan. Gray-box or white-box testing needs your written permission first.
   - Check that the coverage list includes injection and jailbreak, then read the findings from top severity down.
   - Fix the critical findings first, then the high ones. Scan again after each change and before each release.
+  - The risk scores and the 0.5 injection threshold come from fixed tables, not from measuring your app. A clean scan does not prove it is safe.
 output_sample:
   input:
     - Test prompts as a JSON file, or built-in seed prompts

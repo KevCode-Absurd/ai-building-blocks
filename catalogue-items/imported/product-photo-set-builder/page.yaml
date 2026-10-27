@@ -30,11 +30,13 @@ you_get:
   - Angle and scene variations
   - Tips to spot drift in the product
 how_to_use:
+  - The free route is to use ChatGPT or Gemini. The skill's dlazy commands, scripts and docs/ paths are paid or not included, so skip them.
   - Pick a photo with the whole product in view and a clean background. Remove any text or watermark first.
   - Paste this skill into Claude, ChatGPT or Gemini. Add the photo, the product name and your selling points.
+  - Know the five shots you need before you start, in this order. Front hero, 45-degree angle, in-use scene, detail close-up, and size or inside view.
   - Ask for the shot list and one prompt per shot. Check that the product description is identical in every prompt.
-  - Draw the images. In ChatGPT or Gemini, upload your photo with each prompt. The example commands in this skill use the paid dlazy gpt-image-2 tool, which needs a dlazy account and a way to run commands.
-  - Put all images side by side. Check that it is the same item in each one, then rerun only the shots that drift.
+  - Draw the images. In ChatGPT or Gemini, upload your photo with each prompt. The example commands in this skill use the paid dlazy gpt-image-2 tool. It needs a dlazy account, credits and a way to run commands. You do not need it.
+  - Put all images side by side. Check that it is the same item in each one, then rerun only the shots that drift. Next, check each image against your marketplace's photo rules.
 next: [marketplace-photo-rule-checker, main-image-a-b-test-planner]
 output_sample:
   input:

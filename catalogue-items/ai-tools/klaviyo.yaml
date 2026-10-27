@@ -3,7 +3,7 @@ name: Klaviyo
 maker: Klaviyo
 url: https://www.klaviyo.com
 promise: "Build email and text campaigns and flows from your store's customer and order data."
-use_cases: [email-and-sms, run-ads]
+use_cases: [email-and-sms]
 categories: [marketing]
 what_it_does:
   - "Builds campaigns and flows from a conversation with its Composer assistant (checked 26 Oct 2026)."
@@ -19,7 +19,7 @@ benefits:
 best_for:
   - Online stores that sell through Shopify and want email and text in one place.
   - "Owners who want cart reminders, welcome notes and messages for past buyers."
-  - Teams that sync ad audiences from customer lists.
+  - Teams that want messages based on what customers bought and did.
 not_for:
   - "Businesses with no customer or order data to group on. Start with a plain email tool."
   - "Teams that want a flat price. Paid prices were not on the page we read, so confirm the cost before you move your list."
@@ -30,10 +30,6 @@ pricing:
   note: "Checked 26 Oct 2026. The free plan covers up to 250 active profiles and 500 emails a month. It also includes US$5 of mobile messages and US$5 of Composer use each month. Paid prices were not on the page we read. The page offers an estimate builder, so use that to price your list."
 works_with:
   - Shopify
-  - claude
-  - chatgpt
-  - gorgias
-  - zapier
 runs_in: [web, api]
 blocks:
   - welcome-flow-builder
@@ -57,7 +53,7 @@ first_result:
   - "Open Composer and describe one flow, such as a 3-email reminder for people who left items in their cart."
   - "Read each email, the delays between them and which customers it goes to. Change what you do not like."
   - "Send a test to yourself, then launch. Watch the first week of results before you add more flows."
-  - "You end with a draft flow that sends email or text to the right customers, and results to read each week. Next: build the core flows with the Welcome flow builder and the Cart recovery flow builder."
+  - "You end with one flow draft: the trigger, the number of emails, the delays, the target group and a note to send a test before launch. Then read the results each week. Next: build the core flows with the Welcome flow builder and the Cart recovery flow builder."
 needs:
   - "A Klaviyo account. The free plan is enough to try it."
   - "A connected store with customer and order data, or an imported customer list."
@@ -71,7 +67,7 @@ not_verified:
   - "Paid plan prices, and how cost scales with profiles. The page we read only offers an estimate builder."
   - "Whether Composer and the Customer Agent are included on paid plans."
   - "That it predicts the best send time. The AI page lists lifetime value, churn risk, buying patterns and channel preference."
-  - "Which tools work with Klaviyo. Shopify, Claude, ChatGPT, Gorgias and Zapier are from our earlier notes, not the pages we read."
+  - "Which tools work with Klaviyo. Shopify is from our earlier notes, not the pages we read. Claude, ChatGPT, Gorgias and Zapier were taken off the list until they are checked against Klaviyo's integrations page."
 sources:
   - https://www.klaviyo.com/pricing
   - https://www.klaviyo.com/features/ai

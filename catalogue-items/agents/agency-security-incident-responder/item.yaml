@@ -13,9 +13,10 @@ inputs:
     required: true
   - type: source_text
     required: false
+  - type: incident_record
+    required: false
 outputs:
-  - type: brief
-  - type: audit_report
+  - type: plan
 uses: []
 steps: []
 origin: imported

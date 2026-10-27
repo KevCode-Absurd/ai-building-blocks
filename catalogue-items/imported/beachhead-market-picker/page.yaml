@@ -31,12 +31,13 @@ you_get:
   - A 0 to 10 diagnostic score with fixes
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste in the skill text. It needs no code, files or paid tools.
-  - Describe your product and what it does. Say who uses it today and why they like it.
+  - Describe your product and what it does. Say who uses it today and why they like it. Before it starts, your AI needs the full product description and a list of the named segments you are weighing, so the brief is complete.
   - List the segments you are thinking about. Add your partners and references if you have them (optional).
   - Ask your AI to pick one beachhead segment and score you with the quick diagnostic.
   - Check the result against what you know about your customers. Fill in any messaging templates with real customer words before you use them.
   - Work through the fixes for the weak rows, then run it again.
   - Take the top fix into a real conversation with a customer in your beachhead segment. Then re-run the diagnostic with what you learn.
+next: [positioning-statement-writer, go-to-market-positioning-planner]
 output_sample:
   input:
     - What your product is and does
@@ -53,6 +54,6 @@ output_sample:
     - name: Bowling pin sequence
       contains: The order of nearby segments to enter after your first one.
     - name: Quick diagnostic score
-      contains: A score out of 10 from seven yes or no rows, naming the weak rows.
+      contains: "One row for each of seven yes or no questions, the total of yes answers out of 7, a score out of 10 (about 1.4 points per yes) and the weak rows named."
     - name: Fixes
       contains: One fix for each weak row in the diagnostic.

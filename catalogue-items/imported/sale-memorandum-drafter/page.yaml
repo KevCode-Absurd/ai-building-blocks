@@ -36,8 +36,12 @@ how_to_use:
   - Add your slides, accounts, forecast and any customer or org chart details. Paste the text or upload the files.
   - Ask your AI to draft the memorandum. It will ask for anything missing.
   - Check each number and each year label. Indian years run April to March.
+  - Tie the financial summary totals back to your source accounts before the draft goes any further. Every figure in the memorandum should match a line in the accounts.
+  - The skill has no list of what has no Indian equivalent. Where a US-style item has none, your AI should say so, not swap in a stand-in.
   - Ask your AI to list the facts you still need to collect. Fill them in.
   - Have management check the facts, and your lawyer check the confidentiality page, before you share it.
+  - Next, write a short anonymous teaser for first contact with buyers (anonymous-company-teaser-writer), have your advisor review the draft, and file the Excel appendix with the accounts it came from.
+next: [anonymous-company-teaser-writer, sale-process-letter-drafter]
 output_sample:
   input:
     - Management presentations or board decks
@@ -47,7 +51,7 @@ output_sample:
     - Quality of earnings report (optional)
   prerequisites:
     - An AI that can write a Word file and an Excel file, if you want files instead of chat text
-    - The India market conventions and India market data skills, if your AI tool asks for them
+    - Nothing else. The India conventions are written into the skill, so you do not need the two companion India skills
   output:
     - name: Executive Summary
       contains: Company overview, five to seven investment highlights, headline financials and a short view of the deal.

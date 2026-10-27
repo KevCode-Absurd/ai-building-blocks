@@ -5,7 +5,7 @@ description: Use when a story ad's picture should point at one flaw a camera can
 
 # Circled flaw image ad maker
 
-You write the brief for a phone photo of one visible flaw, plus one rough mark that points at it, the way people mark up a photo before sending it to a friend. The mark works because it's the only thing in the frame unlike the rest. A second mark halves the pull of the first.
+You write the brief for a phone photo of one visible flaw, plus one rough mark that points at it, the way people mark up a photo before sending it to a friend. The mark works because it's the only thing in the frame unlike the rest. A second mark competes with the first.
 
 **Good for:** one flaw a stranger can see: a seam, a stain, a gap, a worn spot, a box of pills nobody took.
 
@@ -42,8 +42,8 @@ How to start:
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
-- **GPT Image:** Makes the plain photo, and lets you point at one spot to change it without remaking the rest.
-- **Nano Banana:** A good second choice for the plain photo, and it holds the scene steady while you ask for small fixes.
+- **GPT Image:** Makes the plain photo, and lets you point at one spot to change it without remaking the rest. Comes with ChatGPT: free plans are limited, paid plans give more.
+- **Nano Banana:** A good second choice for the plain photo, and it holds the scene steady while you ask for small fixes. Comes with Gemini: free plans are limited, paid plans give more.
 - **iPhone Markup, or any phone photo editor:** Lets you draw the rough mark with a fingertip. Image models tend to draw it too neat.
 <!-- /needs -->
 
@@ -58,7 +58,7 @@ How to start:
 
 If you can make images in this chat (ChatGPT and Gemini can), make the picture from your prompt once the prompt passes its checks, then check the picture against the same list and say what to fix. If you can't (Claude can't draw unless an image tool is connected), say that once, in one line, before you start, so nobody waits for a picture that won't come. Hand back the prompt, and at the end tell them how to finish it:
 - **ChatGPT or Gemini:** paste the image prompt into a chat and ask for the picture, or paste this whole skill there so it writes the prompt and makes the picture in one go. ChatGPT uses GPT Image, Gemini uses Nano Banana. Free plans have tight daily limits. Codex on a paid ChatGPT plan can make it too.
-- **Higgsfield:** paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
+- **Higgsfield:** paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there. It runs on paid credits.
 - **Claude Code:** with an OpenAI or Google key saved as `OPENAI_API_KEY` or `GEMINI_API_KEY`, offer to send the prompt to that image API and save the file. Keys: platform.openai.com/api-keys (OpenAI) or aistudio.google.com/apikey (Google). OpenAI or Google bills each picture.
 
 If an image tool is connected, offer to make the picture with it, and ask before you spend credits.
@@ -106,10 +106,10 @@ CHECKS MISSED      <one line each, or none>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image prompt.
+- The [Watercolor image ad maker](https://useaiblocks.com/skills/watercolor-image-ad-maker).
 - The [Tracker chart image ad maker](https://useaiblocks.com/skills/tracker-chart-image-ad-maker).
 - The [Sticky-note image ad maker](https://useaiblocks.com/skills/sticky-note-image-ad-maker).
-- The [Fact caption image ad maker](https://useaiblocks.com/skills/fact-caption-image-ad-maker).
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image prompt.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

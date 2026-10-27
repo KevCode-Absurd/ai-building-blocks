@@ -10,7 +10,7 @@ level: intermediate
 inputs:
   - type: question
     required: true
-  - type: source_text
+  - type: plan
     required: false
 outputs:
   - type: plan

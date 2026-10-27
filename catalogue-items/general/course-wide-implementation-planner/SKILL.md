@@ -11,7 +11,10 @@ Plan how to adapt a small starter for an AI agent worker to your own project. Th
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Redis BullMQ job queue code planner](https://useaiblocks.com/prompts/set-up-redis-bullmq-job-queue-builder-prompt).
+- The [Simple code coach](https://useaiblocks.com/skills/simple-code-coach). It takes the code change.
+- The [Slack agent message router builder](https://useaiblocks.com/skills/how-messages-reach-your-agent-implementation-planner). It takes the code change.
+- The [Pull request writer](https://useaiblocks.com/skills/pull-request-writer). It takes the code change.
+- The [Parallel code reviewer](https://useaiblocks.com/skills/parallel-code-reviewer). It takes the code change.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -108,6 +111,9 @@ TEST PLAN
 
 NEXT STEP
 <one smallest useful step>
+
+CHECKS MISSED
+<one line per check that failed or could not run, or none>
 ```
 
 If the owner allows it, add `DRAFT CHANGES` after FILE PLAN with the code for the changed files. Label the code as untested.
@@ -121,4 +127,4 @@ If the owner allows it, add `DRAFT CHANGES` after FILE PLAN with the code for th
 
 ## Final check
 
-Before you send the result, confirm: no secret or token appears; no check is marked `pass` without evidence; every proposed change names the file it touches; nothing says a command ran or a test passed unless it did; NEXT STEP is one step the owner can do today.
+Before you send the result, confirm: no secret or token appears; no check is marked `pass` without evidence; every proposed change names the file it touches; nothing says a command ran or a test passed unless it did; NEXT STEP is one step the owner can do today; CHECKS MISSED lists each check that failed or could not run, or says none.

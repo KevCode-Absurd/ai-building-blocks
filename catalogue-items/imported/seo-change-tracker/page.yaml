@@ -9,7 +9,9 @@ subhead: A saved picture of how your site looks to search engines today, and a w
 explain: |
   A saved picture of how your site looks to search engines today, and a warning later if something slips. It records a baseline of search performance and live page details, then compares a new snapshot against it.
 
-  From Search Console it takes queries, positions, clicks, impressions and indexed pages. From the live pages it reads titles, descriptions, canonical links, robots directives and schema. When you compare, it flags ranking drops, pages that dropped out of the index, overwritten metadata and missing markup. This is useful after a redesign, migration or redeploy. If Search Console is missing, it compares pages only and says ranking changes could not be measured.
+  From Search Console it takes queries, positions, clicks, impressions and indexed pages. From the live pages it reads titles, descriptions, canonical links (the address you tell Google is the main copy of a page), robots rules (instructions that tell search engines to skip or hide a page) and schema (hidden labels that describe the page). When you compare, it flags ranking drops, pages that dropped out of the index, overwritten metadata and missing markup. This is useful after a redesign, migration or redeploy. If Search Console is missing, it compares pages only and says ranking changes could not be measured.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (nowork-studio) says MIT. Credit goes to nowork-studio and sickn33.
 when:
   - You are about to relaunch your site and want a before picture.
   - Traffic dropped after a release and you need to see what changed.
@@ -30,7 +32,7 @@ you_get:
   - Ranking and index losses
   - Changed titles, tags and schema
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Pick a chat that can browse the web, and connect Search Console if you can. You need verified access to your site's property there. Without it, the tool only compares pages and cannot measure ranking changes.
+  - Open Claude, ChatGPT or Gemini. Pick a chat that can browse the web. Have a Search Console export or access ready if you can, because the ranking checks depend on it. You need verified access to your site's property there. Without it, the tool only compares pages and cannot measure ranking changes.
   - Paste the skill text into the chat. Say if you want a baseline or a comparison.
   - Give your site address and the key URLs. Include your best landing pages, sales pages and any page a recent release touched.
   - For a comparison, paste your last snapshot and say which dates each one covers. Use the same URLs and date range both times.
@@ -58,3 +60,10 @@ output_sample:
       contains: Critical, warning and info levels, with noindex and index problems first and likely causes marked as guesses.
     - name: Next steps
       contains: What to check or fix for each change, and an offer to save a new baseline once repairs are done.
+terms:
+  - term: Search Console
+    meaning: Google's free tool that shows which searches bring people to your site and which pages Google has indexed.
+  - term: Indexed
+    meaning: Saved by Google so the page can appear in search results.
+  - term: Noindex
+    meaning: A tag that tells search engines to leave a page out of results. If it appears by mistake, the page can vanish from search.

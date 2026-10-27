@@ -9,7 +9,7 @@ headline: "Store LTV and payback reader"
 subhead: Give it your customers grouped by the month of their first order, with later orders and your margin and CAC. It works out retention, lifetime value per customer by month, and the real month your CAC pays back. You get a score out of 100.
 
 explain: |
-  Lifetime value (LTV) is the profit one customer brings you over their time with the store. Most stores work out payback by dividing CAC by one month's gross profit. That ignores customers who stop buying. In the source's example, CAC of $90 and $28 of profit a month gave 3.2 months on paper, and the cohort took about 8 months. The source says errors of 20% to 100%, and up to 200%, are common. That is one lecture's claim.
+  Lifetime value (LTV) is the profit one customer brings you over their time with the store. Most stores work out payback by dividing CAC by one month's gross profit. That ignores customers who stop buying. In the lecture this skill draws on, the paper estimate came out much shorter than the real cohort payback. That is one lecture's claim, so check it against your own cohorts.
 
   This skill groups customers by first-purchase month (a cohort). It divides each later month by the cohort's starting count to get retention, builds running revenue per customer, multiplies by margin to get LTV, and finds the month cumulative profit passes CAC. It also gives a lifetime-order estimate for stores with no subscription. It extends a subscription-focused unit economics skill with that second path and the payback error check.
 

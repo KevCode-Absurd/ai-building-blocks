@@ -21,7 +21,7 @@ not_for:
   - "You need a formal or legal message: have a person review it, because a casual tone can be the wrong fit."
 you_give:
   - The message or situation you want a reply to
-  - Who the reply is for
+  - Who the reply is for, how close you are to them, and whether you want it short or longer
   - Two or three of your own sample lines, if you want your voice matched (optional)
 you_get:
   - A reply that reads as human
@@ -34,7 +34,7 @@ how_to_use:
   - Add two or three of your own sample lines if you want your voice matched (optional).
   - "On first use you see three parts: the first answer, the mirror note and the final reply. Use the final reply."
   - Ask for quiet mode if you only want the final reply from then on.
-  - Read the final reply once more, then paste it into your message or post. To check a draft you already wrote, use the Pre-publish content checker.
+  - Read the final reply once more, then paste it into your message or post. It pairs with the Pre-publish content checker (pre-publish-content-checker), which checks a draft you already wrote.
   - If the message mentions danger or self-harm, do not rely on this loop. Contact local emergency or crisis support.
 output_sample:
   input:

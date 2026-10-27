@@ -10,6 +10,8 @@ explain: |
   Your project vision and decisions captured in a README and short decision records, written from a quick interview. You answer a few questions at a time, and your taste and reasoning end up saved as plain text.
 
   Before anything else it reads your existing docs, since other people and agents may have added to them. Then it asks, listens, and writes. The README holds the vision, and a docs folder holds one record per decision, with what you chose and why. Over time the files become what a new teammate or AI agent reads to understand your project. Each pass checks the docs first, so nothing is overwritten by accident.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (davidondrej) says MIT. Credit goes to davidondrej and sickn33.
 when:
   - You have a project in your head and nothing written down.
   - Your team keeps re-debating decisions that were already made.
@@ -29,12 +31,13 @@ you_get:
   - Reasons behind each decision
   - Updated docs after each session
 how_to_use:
-  - Open your AI in a chat that can read and save files in your project folder. If it cannot, paste your README and notes into the chat.
+  - Have ready the path to your project folder and any README or notes you already have. Open your AI in a chat that can read and save files there. If it cannot, paste your README and notes into the chat.
   - "Paste the skill text and say: start the README and decision interview."
   - Answer the questions you find most useful. You can skip the rest.
   - Check each update. Tell your AI to fix anything that is wrong or too long.
   - Say "we're done" when you have covered enough. Save the README and the docs folder in your project.
   - Commit the README and the docs/adr folder, then link new decision records from the README so teammates and AI agents find them.
+  - For each big choice, ask decision-record-writer to tighten the record. It turns the choice into one clear page.
   - To pick up an existing project in a new session, open it in the same folder. Your AI reads README.md and docs/adr first, then asks only about what is missing.
 output_sample:
   input:

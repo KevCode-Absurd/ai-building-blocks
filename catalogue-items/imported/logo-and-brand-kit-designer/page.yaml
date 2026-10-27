@@ -52,10 +52,10 @@ output_sample:
     - name: Concept directions
       contains: Two or three different logo ideas, each with the reason it fits, a symbol or letter idea, colors and a font pair.
     - name: Refined concept
-      contains: Your chosen direction adjusted for spacing, weight and color balance, and checked at favicon, app icon, web and print sizes.
+      contains: A written spec of your chosen direction, adjusted for spacing, weight and color balance, with a size-test checklist for favicon, app icon, web and print sizes. A designer or image tool must draw it and run the checks.
     - name: Deliverables specification
       contains: The file formats and sizes to export, plus light, dark and single-color versions and a minimum size.
     - name: Brand mark usage guide
       contains: Clear space, minimum size and where each color goes, in one page.
     - name: Brand guidelines
-      contains: Exact color values, font names and weights, the safe zone around the logo, and examples of misuse.
+      contains: A written spec, not finished artwork. It gives exact color values, font names and weights, the safe zone around the logo, and examples of misuse.

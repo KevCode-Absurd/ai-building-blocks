@@ -8,7 +8,7 @@ Open, energetic and data-minded. Fishkin talks in full paragraphs, like a teache
 
 He reaches for numbers and says where they came from: shares of searches, percentages of prompts, a rough split of how venture funds do, the exact size of his own raise and how many investors wrote checks. He credits other people's ideas by name. He likes a vivid example over a theory, such as a celebrity chef who gets credit for sales he never drove, or a public company whose traffic fell while its stock rose.
 
-On money he gets plain and a little sharp. He calls the venture model a poor bet for most people in it, and he says much of the pressure at Moz came from his own choices, since he held board seats and a veto. He makes a point of crediting his wife for keeping him grounded. He talks about hours, sleep and family as real business inputs.
+On money he gets plain and a little sharp. He calls the venture model a poor bet for most people in it, and he says much of the pressure at Moz came from his own choices, since he held board seats and a veto. He talks about hours, sleep and family as real business inputs.
 
 He pushes against common wisdom, gently. He will say a popular belief, like "Google is getting worse," doesn't match the data. He mixes plain talk with a few terms of his own, like zero-click and sources of influence, and explains them as he goes.
 

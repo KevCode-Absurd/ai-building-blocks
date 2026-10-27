@@ -1,0 +1,131 @@
+new_slug: me-md-builder
+name: me.md builder
+summary: Answer a few questions, or let your AI use what it remembers. Get one private file that tells any AI who you are.
+job: set-up-ai
+thinking: medium
+thinking_why: It sorts facts from memory, documents and answers into set sections, and removes private details.
+headline: me.md builder
+subhead: Your AI asks before it uses what it remembers about you. Then it reads any CV or bio you attach and asks a few short questions. You get one me.md file, dated and checked, ready to save and use in any AI.
+explain: |
+  You tell your AI the same things every day: your job, your projects, how you like answers, what to avoid. Each app keeps its own memory, and you can't see or fix most of it.
+
+  A me.md is one short file that says it once, in your words. This skill writes it with you in three ways. It drafts from what your AI already remembers, but only after you say yes, and it marks each of those facts for you to check. It reads documents you attach, like a CV or a LinkedIn export. It asks up to 12 short questions for whatever is still missing. Then it removes private details, dates every section and shows you the file to approve.
+when:
+  - You keep explaining your job and projects at the start of every chat.
+  - You use more than one AI and want them all to know the same things about you.
+  - Your AI gives you answers that don't sound like you or don't fit your work.
+not_for:
+  - "You want a file about a business, its products and its claims: use the Brand profile builder."
+  - "You already have a me.md and want to bring it up to date: use the me.md refresher."
+  - "You only need the short version for a settings box: use the me.md short-core writer."
+you_give:
+  - A yes or no to using what your AI remembers about you
+  - A CV, LinkedIn export, bio or old me.md (optional)
+  - Short answers to the questions it asks, or "skip"
+you_get:
+  - One me.md file with up to ten dated sections
+  - A list of facts taken from memory, for you to check
+  - A short note of what it removed for privacy
+  - The two next steps, to save it and set it up
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Answer yes or no when it asks to use what it remembers.
+  - Attach a CV, bio or LinkedIn export if you have one.
+  - Answer its questions one at a time. Say "skip" or "enough" whenever you like.
+  - Check every fact marked from memory, then approve the file.
+  - Save it in AI Blocks under Your me.md, and set it up in your AI.
+next:
+  - me-md-short-core-writer
+  - me-md-refresher
+output_sample:
+  input:
+    - A yes or no to using what your AI remembers
+    - A CV, LinkedIn export, bio or old me.md (optional)
+    - Your answers to up to 12 short questions
+  output:
+    - name: me.md
+      contains: Core, Work, Projects, Voice, Preferences, Background, Life (only if you ask), Never, Where to look, and Sources and dates, each with an as-of date.
+    - name: TO CHECK
+      contains: Every fact taken from memory, so you can confirm or fix it.
+    - name: MISSING
+      contains: What it looked for and couldn't find.
+    - name: REMOVED
+      contains: What kind of private detail it took out, without repeating it.
+    - name: Next steps
+      contains: Save it in AI Blocks, then set it up in your AI.
+how_it_works:
+  - title: Asks first
+    text: Asks if it may use what it remembers about you. Nothing from memory is used before you say yes.
+  - title: Drafts from memory
+    text: Fills each section from what it remembers and marks every one of those facts for you to check.
+  - title: Reads your documents
+    text: Takes facts from a CV, bio or export, and describes your writing style instead of copying it.
+  - title: Asks what's missing
+    text: Up to 12 short questions, one at a time, in section order. You can skip any of them.
+  - title: Checks the file
+    text: Removes passwords, ID and bank numbers, health details and other people's private facts. Dates every section and gives projects an expiry date.
+  - title: Shows it to you
+    text: Shows the whole file and waits for your yes or your fixes.
+output_shape: |
+  # me.md
+  Last checked: <date>
+
+  ## Core (as of <date>)
+  <name>, <what you do>, <who it's for>. Goals now: <3 goals>.
+  Answers: <length, tone, format>. Never: <top things to avoid>.
+  ## Work (as of <date>)
+  ## Projects (as of <date>, expires <date>)
+  - <project>: <status>. Next: <step>.
+  ## Voice (as of <date>)
+  <tone, sentence length, words you use and avoid>
+  ## Preferences, ## Background, ## Life (opt-in), ## Never
+  ## Where to look
+  - <live source>: <what to check there>
+  ## Sources and dates
+
+  TO CHECK: <facts from memory>
+  MISSING: <gaps>
+  REMOVED: <kinds of private detail>
+  CHECKS MISSED: <one line each, or none>
+tweaks:
+  - what: Memory
+    how: Say yes to let it draft from what it remembers. It is the fastest route, but check every marked fact, because memory can be old or wrong.
+  - what: Documents
+    how: A current CV or bio fills Work and Background at once, so the interview gets shorter.
+  - what: Where to look
+    how: Point it at a live notes page or your recent posts. Your file stays short, and your AI checks the live facts when a task needs them.
+  - what: Core length
+    how: Keep Core near 1,200 characters, so it fits the settings box in ChatGPT, Claude and Gemini.
+judge:
+  - Every fact is something you said, something in your documents, or a marked fact from memory.
+  - No password, ID number, bank detail, health detail or private fact about someone else is in the file.
+  - Voice describes how you write in a few lines, with no pasted samples.
+  - Every section has a date, and Projects has an expiry date.
+  - Core reads as a true picture of you in under a minute.
+test:
+  - Say no to memory and answer only three questions. The file should hold just those facts, with the rest listed as missing.
+  - Attach a CV that mentions a colleague's phone number. It should not reach the file.
+  - Run it in two different AIs with the same answers. Both files should hold the same facts.
+improve:
+  - Add your own questions to step 4 if your work needs them, such as your rates or your service area. Keep the total at 12 or fewer.
+  - Change the default expiry from 30 days if your projects change faster or slower.
+  - Run the me.md refresher once a month so the dates stay true.
+works_best_with:
+  tools:
+    - name: ChatGPT
+      why: With memory turned on, it can draft from what it remembers about you, after you say yes.
+    - name: Claude
+      why: Reads a long CV or export in one go, and can draft from past chats when that feature is on.
+    - name: Gemini
+      why: Can read documents you attach and keep the result in a Gem.
+  inputs:
+    - A link to a notes page where you keep your current projects
+    - Three of your own recent posts or emails, so it can describe your style
+    - The settings text you already use in your AI, so nothing good is lost
+terms:
+  - term: me.md
+    meaning: One short private file that tells any AI who you are, your work, projects, style and what to avoid.
+  - term: Core
+    meaning: The top part of your me.md, short enough to paste into your AI's settings box.
+  - term: Live section
+    meaning: A part that changes often, like your projects. It carries an expiry date, so your AI checks it before using it.

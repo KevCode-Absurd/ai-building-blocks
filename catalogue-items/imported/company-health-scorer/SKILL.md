@@ -37,7 +37,7 @@ Or describe your metrics in natural language:
 **What it measures:** Can we fund operations and invest in growth?
 
 Key metrics:
-- **Runway** — months at current burn. Thresholds depend on stage: Seed green >18, red <12; Series A and B green >12, red <6; Series C green >18, red <9; yellow is in between (see `references/health-benchmarks.md`)
+- **Runway** — months at current burn. Thresholds depend on stage: Seed green >18, yellow 12-18 inclusive (exactly 18 is yellow), red <12; Series A and B green >12, yellow 6-12 inclusive, red <6; Series C green >18, yellow 9-18 inclusive, red <9 (see `references/health-benchmarks.md`). Missing or zero runway is Unknown, not Red
 - **Burn multiple** — net burn / net new ARR (Green: <1.5x, Yellow: 1.5-2.5x, Red: >2.5x)
 - **Gross margin** — SaaS target: >65% (Green: >70%, Yellow: 55-70%, Red: <55%)
 - **MoM growth rate** — contextual by stage (see benchmarks)
@@ -117,13 +117,13 @@ Key metrics:
 
 ## Scoring & Traffic Lights
 
-Each dimension is scored 1-10 with traffic light:
+Each metric gets a colour from its threshold, then a score from 1 to 10. A dimension's score is the average of the scores of the metrics you supplied. The dimension colour follows that score:
 - 🟢 **Green (7-10):** Healthy — maintain and optimize
 - 🟡 **Yellow (4-6):** Watch — trend matters; improving or declining?
 - 🔴 **Red (1-3):** Action required — address within 30 days
 
 **Overall Health Score:**
-Weighted average by company stage (see `references/health-benchmarks.md` for weights).
+Weighted average by company stage (see `references/health-benchmarks.md` for weights). If a stage-specific threshold in the reference file differs from an example above, the reference file wins. If neither the reference file nor the script is available, use the thresholds on this page and say so in the result.
 
 ---
 
@@ -142,7 +142,7 @@ Weighted average by company stage (see `references/health-benchmarks.md` for wei
 
 ## Dashboard Output Format
 
-The numbers in this dashboard are sample figures to show the layout. They are not a real company's result.
+Every value in this layout is a placeholder. Fill each from the numbers the user supplied, and show [data needed] where none was given.
 
 ```
 ORG HEALTH DIAGNOSTIC — [Company] — [Date]
@@ -150,26 +150,24 @@ Stage: [Seed/A/B/C]   Overall: [Score]/10   Trend: [↑ Improving / → Stable /
 
 DIMENSION SCORES
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-💰 Financial    🟢 8.2  Runway 14mo, burn 1.6x — strong
-📈 Revenue      🟡 5.8  NRR 104%, pipeline thin (1.8x coverage)
-🚀 Product      🟢 7.4  NPS 42, DAU/MAU 38%
-⚙️  Engineering  🟡 5.2  Debt at 30%, MTTR 3.2h
-👥 People       🔴 3.8  Attrition 24%, eng morale low
-🔄 Operations   🟡 6.0  OKR 65% completion
-🔒 Security     🟢 7.8  SOC 2 Type II complete, 0 incidents
-📣 Market       🟡 5.5  CAC rising, win rate dropped to 22%
+💰 Financial    [colour] [score]  [key metrics and values supplied]
+📈 Revenue      [colour] [score]  [key metrics and values supplied]
+🚀 Product      [colour] [score]  [key metrics and values supplied]
+⚙️  Engineering  [colour] [score]  [key metrics and values supplied]
+👥 People       [colour] [score]  [key metrics and values supplied]
+🔄 Operations   [colour] [score]  [key metrics and values supplied]
+🔒 Security     [colour] [score]  [key metrics and values supplied]
+📣 Market       [colour] [score]  [key metrics and values supplied]
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 TOP PRIORITIES
-🔴 [1] People: attrition at 24% — engineering velocity will drop in 60 days
-   Action: CHRO + CEO to run retention audit; target top 5 at-risk this week
-🟡 [2] Revenue: pipeline coverage at 1.8x — Q+1 miss risk is high
-   Action: CRO to add 3 qualified opps within 30 days or shift forecast down
-🟡 [3] Engineering: tech debt at 30% of sprint — shipping will slow by Q3
-   Action: CTO to propose debt sprint plan; COO to protect capacity
+🔴 [1] [Weakest dimension]: [metric and value supplied] — [what it puts at risk]
+   Action: [owner] to [specific action] by [date]
+🟡 [2] [Next dimension]: [metric and value supplied] — [what it puts at risk]
+   Action: [owner] to [specific action] by [date]
 
 WATCH
-→ People → Engineering cascade risk if attrition continues (see dimension interactions)
+→ [Knock-on risk from the dimension interactions table]
 ```
 
 ---
@@ -187,4 +185,4 @@ You don't need all metrics to run a diagnostic. The tool handles partial data:
 
 ## Repaired scoring rules
 
-Apply thresholds from the benchmark reference as the single source of truth; this section overrides conflicting threshold examples elsewhere. For Seed runway: Green >18 months, Yellow 12–18 months inclusive, Red <12 months. Missing or nonpositive runway is Unknown, not Red. Use the supplied scorer thresholds for other dimensions and show the raw metric, comparison operator and threshold next to every color. Values on a boundary follow the stated inclusive rule. Do not average Unknown into a company total. If a dimension is missing, report it as unscored and show the denominator for any aggregate; never silently reweight. Treat the score as a diagnostic based on supplied inputs, not a prediction. Do not generalize Seed runway thresholds to other stages unless their benchmark is explicitly provided.
+Apply thresholds from the benchmark reference as the single source of truth. Use the supplied scorer thresholds for other dimensions and show the raw metric, comparison operator and threshold next to every color. Values on a boundary follow the stated inclusive rule. Do not average Unknown into a company total. If a dimension is missing, report it as unscored and show the denominator for any aggregate; never silently reweight. Treat the score as a diagnostic based on supplied inputs, not a prediction. Do not generalize Seed runway thresholds to other stages unless their benchmark is explicitly provided.

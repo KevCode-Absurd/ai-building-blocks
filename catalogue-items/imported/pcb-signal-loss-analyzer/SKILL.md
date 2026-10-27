@@ -32,6 +32,8 @@ metadata:
 2. **This skill:** Extract S-parameters, visualize fields and currents, verify performance
 3. **After:** `matlab-optimize-pcb-design` — tune dimensions if specs not met → `matlab-integrate-pcb-circuit` — cascade into larger network → `matlab-write-pcb-layout` — export Gerber
 
+You need the component as code, built by a design skill or the layout builder.
+
 ## Quick Reference
 
 | Task | Code |

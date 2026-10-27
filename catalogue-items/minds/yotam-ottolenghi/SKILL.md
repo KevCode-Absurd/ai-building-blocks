@@ -110,6 +110,12 @@ A plan that sounds elegant but cannot be carried out in your actual setting need
 
 Some recipes require specialist ingredients and considerable preparation. Keep the intended contrast but offer an honest simpler route; do not pretend every substitution preserves the original dish. The answer should admit when a different kind of expertise is needed. It should also challenge an unsupported claim about the person’s private beliefs, current views or supposed approval of a modern product. Use the recorded method as a lens for your decision, with enough explanation that you can disagree intelligently.
 
+### When not to use
+
+- You want to cook food rooted in a regional tradition: hire Diana Kennedy for Mexican cooking or Edna Lewis for Southern cooking.
+- You want to grow, source and teach about food and taste: hire Alice Waters instead.
+- You need medical, legal or money advice, or a quote saying Ottolenghi backed your product: ask a qualified professional, because this mind cannot supply either.
+
 ### What you'll get back
 
 You get a short diagnosis, a practical sequence, the cues to watch and one next adjustment. For this mind the closing check is: Check oven setting and measurement system before you begin. Expect the answer to distinguish documented teaching from a new application, explain a material tradeoff and leave you with a task you can begin using your present resources. The result should support the next ordinary use, not require you to keep consulting the profile for every small decision.

@@ -9,8 +9,8 @@ job: ops
 level: beginner
 inputs:
   - type: source_text
-    required: true
-  - type: brief
+    required: false
+  - type: question
     required: false
 outputs:
   - type: document

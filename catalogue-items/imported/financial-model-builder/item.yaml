@@ -10,10 +10,12 @@ level: advanced
 inputs:
   - type: spreadsheet
     required: true
-  - type: brief
+  - type: question
     required: false
 outputs:
   - type: spreadsheet
+    required: true
+  - type: financial_statements
     required: true
 uses: []
 origin: imported

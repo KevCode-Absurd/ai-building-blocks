@@ -46,7 +46,7 @@ output_sample:
     - A template to follow (optional)
   prerequisites:
     - An AI that can read files and save Excel spreadsheets
-    - "The skills india-market-conventions, india-market-data and xlsx, which this skill loads. They are not in this folder, so install them first"
+    - "The skills india-market-conventions, india-market-data and xlsx, which this skill names. They are not in this folder or in the AI Blocks library. If you do not have them, your AI follows the fiscal year and lakh and crore rules written at the top of the skill instead"
   output:
     - name: Executive Summary
       contains: Key figures and highlights from the company, set out for a first read.
@@ -59,6 +59,6 @@ output_sample:
     - name: Operating Metrics
       contains: Business measures taken from the source, such as volumes or margins, in a standard layout.
     - name: Market Analysis
-      contains: Market facts from the source document, kept short and referenced.
+      contains: Market facts from the source document, each with its page. Anything the document does not give reads "not in source".
     - name: Investment Highlights
       contains: The main points for a deal meeting, taken from the source.

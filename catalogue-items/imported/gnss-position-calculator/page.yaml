@@ -9,7 +9,9 @@ subhead: Give it RINEX satellite data. Get receiver positions worked out from ch
 explain: |
   Where a receiver was, worked out from satellite data you already have. Give it RINEX observation and navigation files and it calculates positions using pseudoranges from GPS, GLONASS, Galileo, BeiDou, QZSS, NavIC and SBAS.
 
-  You can pick which satellite groups to use and compare a single group against several. It also reports dilution of precision and satellite geometry, so you can judge solution quality. You can test options such as the elevation mask, signal strength cutoff and corrections to see their effect. It handles RINEX version 3 only, not carrier-phase methods. It needs MATLAB with the Navigation Toolbox, release R2026a or newer.
+  You can pick which satellite groups to use and compare a single group against several. It also reports dilution of precision and satellite geometry, so you can judge solution quality. You can test options such as the elevation mask, signal strength cutoff and corrections to see their effect. It handles RINEX version 3 only, not carrier-phase methods. It needs MATLAB with the Navigation Toolbox, release R2026a or newer. Both are paid MathWorks products.
+
+  Licence: BSD 2-Clause plus a MathWorks term, as the LICENSE.md file says. You may use it only with MathWorks products. The skill file links MathWorks' own reuse licence page, which says the same.
 when:
   - You logged satellite data and need receiver positions from it.
   - You want to see if adding Galileo improves accuracy.
@@ -36,6 +38,7 @@ how_to_use:
   - Set the elevation mask and signal strength cutoff you want, or ask your AI to use the defaults.
   - Check the file summary and the DOP values first. Weak geometry means the positions are less reliable.
   - Rerun with another satellite group or mask, then compare. Add a known true position to measure the error.
+  - What next. Pick the satellite group with the lowest DOP and the smallest scatter, and say which mask you used. To test your setup against made-up signals, use the GNSS signal generator.
 output_sample:
   input:
     - Your RINEX 3 observation file

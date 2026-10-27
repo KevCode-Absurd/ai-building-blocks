@@ -52,7 +52,7 @@ Limits: rules differ by country, and Shopify setting names move often, so re-che
 
    Official starting points (read the current page at the time of use; none has been checked for you): Shopify Payments account setup, https://help.shopify.com/en/manual/payments/shopify-payments/onboarding/account-setup ; bank requirements, https://help.shopify.com/en/manual/payments/shopify-payments/onboarding/bank-account-requirements/ ; checkout form and regional consent settings, https://help.shopify.com/en/manual/checkout-settings/checkout-form-options . These platform pages do not establish full legal compliance; add current jurisdiction-specific primary guidance where a legal rule matters.
 
-1. **Two-step sign-in.** Turn it on first. Shopify Payments requires it. Missing is a blocker.
+1. **Two-step sign-in.** Turn it on first. Shopify has asked for it on accounts that use Shopify Payments, but read the current Shopify help page from step 0 and note the date you checked. If you cannot check it, mark it NOT CHECKED. Confirmed missing is a blocker.
 2. **Business type.** Use the actual legal business type and the provider’s current country-specific categories. Do not classify a business solely by whether it has a registration number. Verify which account representative and ownership details that category requires; if unclear, leave it unresolved for the owner or provider to confirm.
 3. **Names.** Names and details must match the government ID exactly, for example Robert not Rob. A mismatch can hold up verification. Review can take hours or days, so the owner can keep building meanwhile. A mismatch is a blocker.
 4. **Bank account type.** Check the provider’s requirements for the exact business country, payout currency, account type and supported transfer network. Do not infer a transfer network from a continent. Say only which type or requirement the owner must confirm, never request or repeat an account number. Unverified eligibility stays NOT CHECKED.
@@ -64,7 +64,7 @@ Limits: rules differ by country, and Shopify setting names move often, so re-che
 10. **Limits and accounts.** Set an order quantity limit when stock is low or to stop bulk buying. Choose the new customer accounts (passcode sign-in) over legacy, and consider enabling returns and store credit there.
 11. **Show shipping early.** Add a "free shipping over X" line to the announcement bar or cart so there are no surprises at the last step.
 12. **Add trust.** Payment logos, SSL, and a clear delivery promise such as "arrives by Thursday" rather than a range.
-13. **Recovery.** Check recovery is on. In the admin, check which abandoned-checkout and abandoned-cart emails are on, and what rules apply, such as skipping people emailed recently. Do not assume defaults. For high-value carts consider a WhatsApp recovery via Shopify Flow.
+13. **Recovery.** Check recovery is on. In the admin, check which abandoned-checkout and abandoned-cart emails are on, and what rules apply, such as skipping people emailed recently. Do not assume defaults. For high-value carts you could consider a WhatsApp recovery message via Shopify Flow. Check first which Shopify plan it needs, whether it needs a paid app, and what WhatsApp charges per message. Get the buyer's consent before messaging.
 14. **Rank and score.**
 
 ## Score it
@@ -103,12 +103,11 @@ Consent rules vary by country. This is not legal advice.
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Store launch readiness reviewer](https://useaiblocks.com/skills/pre-launch-store-checker).
 - The [Shipping rate planner](https://useaiblocks.com/skills/shipping-rate-planner). It takes the audit report.
-- The [Store tax setup planner](https://useaiblocks.com/skills/store-tax-setup-planner).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
 ## When not to use
-To test real orders before launch, use the store go-live checker. For where buyers leave the checkout page, use the store friction checker. For legal sign-off on consent rules, ask a qualified lawyer in each region you sell to.
+To test real orders before launch, use the store go-live checker. For where buyers leave the checkout page, use the Checkout page auditor. For legal sign-off on consent rules, ask a qualified lawyer in each region you sell to.
 
 ## Checks
 - Risks are ranked with payout blockers first.
@@ -119,7 +118,7 @@ To test real orders before launch, use the store go-live checker. For where buye
 - Anything you could not see is under NOT CHECKED.
 
 ## If something is missing
-Write `MISSING: <platform | country | business type | settings>`. Without the country, say Shopify Payments availability is not confirmed and ask once. Never fill in a setting you were not told.
+Write `MISSING: <platform | country | business type | settings>`. Without the country, say Shopify Payments availability is not confirmed and ask once. Never fill in a setting you were not told. List anything you could not check under `NOT CHECKED` (this is the same as the "CHECKS MISSED" note above).
 
 ## Avoid
 - Asking for or repeating bank, ID or card numbers.

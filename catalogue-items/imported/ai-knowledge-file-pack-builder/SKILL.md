@@ -24,6 +24,10 @@ Google Cloud published the [Open Knowledge Format v0.1](https://cloud.google.com
 
 > "If you can `cat` a file, you can read OKF; if you can `git clone` a repo, you can ship it."
 
+## What you need
+
+The knowledge to put in the bundle: pasted text, a source such as an article or transcript, or a finished document such as meeting minutes.
+
 ## Core Concepts
 
 | Concept | Definition |

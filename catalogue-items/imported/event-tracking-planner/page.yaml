@@ -37,7 +37,8 @@ how_to_use:
   - Read the event list first. Cut any event you will not use, and check that names follow the rules.
   - Check the funnels and the North Star metric against your goal. Ask your AI to fix anything that does not fit.
   - Hand the final plan to your developers to build.
-  - If you have not yet decided what to measure and why, do that first with your team. The strategy skills this plan mentions, analytics-strategy and experimentation-analytics, are not in this library yet.
+  - If you have not yet decided what to measure and why, decide it by hand first. Write down your business goal and the three questions you want your data to answer. Your AI will ask for these if you leave them out.
+  - After your developers build the events, check the first dashboard against your North Star metric after two weeks. Fix any event that is missing or named wrong, and review the plan again every quarter.
 output_sample:
   input:
     - Your product description and the main steps a user takes

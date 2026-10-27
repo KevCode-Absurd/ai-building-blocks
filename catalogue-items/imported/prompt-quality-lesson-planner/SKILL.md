@@ -71,7 +71,7 @@ tags: ["AI-literacy", "prompt-engineering", "prompt-literacy", "specificity", "A
 
 ## What This Skill Does
 
-Generates a structured learning sequence that teaches students why prompt quality determines AI output quality — and what specific prompt moves produce more useful, accurate, and contextually appropriate responses. The sequence follows a compare-contrast structure: students run vague and refined prompts on the same question, analyse the difference in output quality, and abstract the principles. The core insight is that AI fills missing context with the most statistically common response — so a prompt with no context about audience, purpose, discipline, or constraints will receive an answer calibrated for the average case, not the student's specific situation. The Pricing Exercise (credited to Kharbach, 2026 in the original skill; not checked here) is included as the anchor activity: students take a context-free AI answer ("What should I charge for a service?") and iteratively add constraints (type of service, location, target market, quality level), showing in real time how specificity transforms output from generically unhelpful to genuinely useful. The sequence teaches five prompt dimensions: context (who am I, what am I doing?), task (exactly what do I want?), constraints (what limits apply?), format (how should the output be structured?), and persona (what role should the AI take?). Prompt literacy is a prerequisite for effective AI use and a direct complement to AI output evaluation skills.
+Generates a structured learning sequence that teaches students why prompt quality determines AI output quality — and what specific prompt moves produce more useful, accurate, and contextually appropriate responses. The sequence follows a compare-contrast structure: students run vague and refined prompts on the same question, analyse the difference in output quality, and abstract the principles. The core insight is that AI fills missing context with the most statistically common response — so a prompt with no context about audience, purpose, discipline, or constraints will receive an answer calibrated for the average case, not the student's specific situation. The Pricing Exercise (credited to Kharbach, 2026 in the original skill; this credit and the papers listed above have not been checked against the originals) is included as the anchor activity: students take a context-free AI answer ("What should I charge for a service?") and iteratively add constraints (type of service, location, target market, quality level), showing in real time how specificity transforms output from generically unhelpful to genuinely useful. The sequence teaches five prompt dimensions: context (who am I, what am I doing?), task (exactly what do I want?), constraints (what limits apply?), format (how should the output be structured?), and persona (what role should the AI take?). Prompt literacy is a prerequisite for effective AI use and a direct complement to AI output evaluation skills.
 
 ## Evidence Foundation
 
@@ -135,11 +135,11 @@ Return your output in this exact format:
 
 **Vague prompt:** [A realistic example of how students currently write prompts for this task]
 
-**What AI gives back:** [Description of what output this prompt generates — generic, unspecific, average-case]
+**What AI gives back:** [Expected shape of the output this prompt generates: generic, unspecific, average-case. Not a recorded reply]
 
 **Refined prompt:** [The same task with all relevant dimensions added]
 
-**What AI gives back:** [Description of how output quality changes — specific, audience-calibrated, more useful]
+**What AI gives back:** [Expected shape of how output quality changes — specific, audience-calibrated, more useful]
 
 **Analysis questions for students:**
 [4-5 questions that guide students to identify WHY the refined prompt produced better output — not just "it's better" but what specifically changed]
@@ -182,7 +182,7 @@ Return your output in this exact format:
 
 ## Example Output
 
-*Illustrative only. This shows the shape of a result, not a tested run. Replace every detail with your own subject and students.*
+*Illustrative only. This shows the shape of a result, not a tested run, and the "What AI gives back" lines describe what a reply might look like, not a recorded reply. Replace every detail with your own subject and students. Check any date, figure or named treaty against the course textbook before class.*
 
 **Scenario:** *Subject area: "History" / Student level: "Year 11, use ChatGPT regularly for essay help but consistently receive generic outputs that don't address their specific exam requirements" / AI task type: "Writing: getting help with essay arguments and paragraph structure" / Common student prompts: "write me an essay about the causes of World War One" / "help me write a paragraph about the Treaty of Versailles"*
 
@@ -210,11 +210,11 @@ Return your output in this exact format:
 
 **Vague prompt:** "write me an essay paragraph about the Treaty of Versailles"
 
-**What AI gives back:** A generic 200-word paragraph that explains what the Treaty of Versailles was, its terms, and that it "caused resentment in Germany." It has no specific argument, no GCSE exam structure, and would score poorly because it describes rather than analyses.
+**What AI might give back (expected shape):** A generic 200-word paragraph that explains what the Treaty of Versailles was, its terms, and that it "caused resentment in Germany." It has no specific argument, no GCSE exam structure, and would score poorly because it describes rather than analyses.
 
 **Refined prompt:** "I'm writing a GCSE History essay arguing that the Treaty of Versailles was the most important cause of the rise of the Nazis. I need one well-structured paragraph (around 120 words) in PEEL format (Point, Evidence, Explanation, Link) that uses at least one specific piece of evidence from the treaty terms. Focus on the economic consequences rather than the territorial ones."
 
-**What AI gives back:** A 120-word paragraph beginning with a clear historical argument, using the specific reparations figure (£6.6 billion) as evidence, explaining the mechanism (economic instability → unemployment → extremism), and linking explicitly to the essay thesis about Nazi rise. Structurally sound, exam-appropriate, immediately useful.
+**What AI might give back (expected shape):** A 120-word paragraph beginning with a clear historical argument, using a specific reparations figure as evidence (the teacher checks that figure against the textbook), explaining the mechanism (economic instability → unemployment → extremism), and linking explicitly to the essay thesis about Nazi rise. Structurally sound, exam-appropriate, immediately useful.
 
 **Analysis questions for students:**
 - "What information did I add in the refined prompt that the vague one was missing? List them."

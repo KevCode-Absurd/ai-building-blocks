@@ -8,7 +8,7 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: document
+  - type: contract
     required: true
   - type: question
     required: false

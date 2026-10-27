@@ -66,9 +66,11 @@ You bring him a boss who undermines you, a rival, a career that has stalled or a
 
 ### How he'd take on your problem
 
+The steps follow his books and interviews [S5][S6][S8]. The "he'd" lines in the jobs are our reading of how that applies to your case, not things he said about it.
+
 1. **He starts with a story.** A general, a courtier or a rapper did something, it worked or failed, and he draws the law. He asks you for your story first, in plain detail.
 2. **He sorts you into one of three types.** Deniers refuse to see the politics. Open manipulators enjoy the games but fall because they ignore empathy. Radical realists see the games clearly, accept them and use that knowledge to stay free.
-3. **He asks whose ego you might threaten.** His first law is never outshine the master. He learned it in his twenties when a boss pushed him out after he did well. He asks if you made someone above you feel outdone.
+3. **He asks whose ego you might threaten.** His first law is never outshine the master. He learned it in his mid-twenties when a boss pushed him out of a magazine job after he did well [S6]. He asks if you made someone above you feel outdone.
 4. **He tells you to watch, not react.** Emotion clouds the view. Watch the people, find what they want and what they fear.
 5. **He treats it as material.** It's all material. The bad moment is something to study and use.
 6. **He looks for a parallel in history, and checks his sources.** Who faced this problem, and how did it end for them? Where did that story come from, and does it hold up against others? He won't build a plan on one vivid tale.
@@ -90,11 +92,11 @@ You bring him a boss who undermines you, a rival, a career that has stalled or a
 
 #### Office politics and a hard boss
 
-He'd tell you politics exists in every group, so look for it first. He'd ask what happened when it went wrong. If you outshone the boss, he'd explain how that feels from above and how to give credit while still doing well. He'd tell you not to take revenge. Study what the person wanted and what you can learn. He quit his own job after being pushed out, thought hard about it and resolved to watch people. He'd cut the habit of reacting in anger.
+He'd tell you politics exists in every group, so look for it first. He'd ask what happened when it went wrong. If you outshone the boss, he'd explain how that feels from above and how to give credit while still doing well. He'd tell you not to take revenge. Study what the person wanted and what you can learn. He quit after being pushed out, thought hard about it and resolved to watch people [S6]. He'd cut the habit of reacting in anger.
 
 #### Learning a skill to mastery
 
-He'd say mastery is a power most people can build, not a gift for a few. Many masters he studied were average students or grew up poor. The path: a strong early pull, a long apprenticeship inside an established place, then experiments that challenge the rules. He'd lay out the years it takes and the stage you're in. He'd also say to watch how the best people work, not only what they make. He'd cut any plan for overnight mastery.
+He'd say mastery is a power most people can build, not a gift for a few. Many masters he studied were average students or grew up poor [S5]. The path: a strong early pull, a long apprenticeship inside an established place, then experiments that challenge the rules. He'd lay out the years it takes and the stage you're in. He'd also say to watch how the best people work, not only what they make. He'd cut any plan for overnight mastery.
 
 #### Your first hires or your first job
 
@@ -102,19 +104,19 @@ He'd tell you to serve an apprenticeship and learn the culture and the social si
 
 #### Charm and persuasion
 
-He argued charm comes from paying attention to what other people need, so anyone can learn it. Charisma is harder because it comes from inner conviction. He'd pair this with empathy: understanding how others think makes you more effective, not just more manipulative. He'd say only a few of the 48 laws are openly manipulative. He'd still tell you not to use any of it to hurt someone.
+He argued charm comes from paying attention to what other people need, so anyone can learn it. Charisma is harder because it comes from inner conviction. He'd pair this with empathy: understanding how others think makes you more effective, not just more manipulative. He said only four or five of the 48 laws are openly manipulative [S1][S2]. He'd still tell you not to use any of it to hurt someone.
 
 #### Outside his field: a negotiation or a creative career
 
-For a negotiation, he'd ask what each side wants under the stated demand, and what each fears. He'd look for a historical parallel, such as Caesar's decision to cross the Rubicon, then apply the lesson in plain terms. For a creative career, he'd say the freelancer's equivalent of a boss is a patron. Don't depend on one. Find the early pull, spend years on the craft and let the work build your name. He'd cut the habit of chasing every trend.
+For a negotiation, he'd ask what each side wants under the stated demand, and what each fears. He'd look for a historical parallel, such as Caesar's decision to cross the Rubicon, which was the story behind his first book pitch [S2], then apply the lesson in plain terms. For a creative career, he'd say the freelancer's equivalent of a boss is a patron. Don't depend on one. Find the early pull, spend years on the craft and let the work build your name. He'd cut the habit of chasing every trend.
 
 #### A book, report or research project
 
-He ran his work on index cards. He reads with a pen, copies the key points onto cards, files them by theme, and lets the themes become the chapters. He says structure is not boring, since it keeps a project alive when your energy runs out. He waited years for the pattern across many lives before he wrote, and he trained his body and mind so the later chapters would not go flat. He'd have you chase every source back to where it came from. He'd cut the summary you have not checked.
+He ran his work on index cards [S9]. He reads with a pen, copies the key points onto cards, files them by theme, and lets the themes become the chapters. He says structure is not boring, since it keeps a project alive when your energy runs out. He waited years for the pattern across many lives before he wrote, and he trained his body and mind so the later chapters would not go flat. He'd have you chase every source back to where it came from. He'd cut the summary you have not checked.
 
 #### Your life and career
 
-He had around 50 jobs before the idea for his first book came together, and he treats the whole string as material. He'd tell you your odd path is not a waste. Ask what pulled you as a child and where that points now. Expect failure as part of learning. Aim for work that satisfies you, and build skills so you are less exposed. He'd also tell you his critics have a point: he teaches through stories, and a vivid story can stand in for proof.
+He held about 50 jobs before a 1995 meeting led to his first book [S1][S2], and he treats the whole string as material. He'd tell you your odd path is not a waste. Ask what pulled you as a child and where that points now. Expect failure as part of learning. Aim for work that satisfies you, and build skills so you are less exposed. He'd also tell you his critics have a point: he teaches through stories, and a vivid story can stand in for proof.
 
 ### What he'd push back on
 

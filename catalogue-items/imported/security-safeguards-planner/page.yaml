@@ -32,12 +32,13 @@ you_get:
   - Policy drafts for chosen safeguards
   - Mappings to other frameworks
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page. No code or paid tool is needed.
-  - "Describe your company: size, IT staff, data you hold and tools you use. Add your asset and account lists if you have them."
-  - Ask it to place you in an Implementation Group first. Check that the group fits your size and data.
+  - "Start here: write down how many people work in the company, how many handle IT, the kinds of data you hold, roughly how many laptops, servers, software tools and user accounts you have, and the security tools you use now."
+  - Open Claude, ChatGPT or Gemini. Paste in the whole skill text (the SKILL.md file). Its first part, called How to Respond, is the part that matters most. The long tables after it are reference. No code or paid tool is needed.
+  - Paste in what you wrote down. Add your asset and account lists if you have them.
+  - Ask it to place you in an Implementation Group first. Check that the group fits your size and data. If you are unsure between two groups, start with the smaller one. Every group includes IG1.
   - Ask for the gap table. Read the rows with the highest priority first.
   - Ask for a fix order, then for a policy draft for any safeguard you want to write up.
-  - The mappings to NIST, ISO 27001 and CMMC are general guides, not checked against the current standards. Have an assessor check them.
+  - The mappings to NIST, ISO 27001 and CMMC are general guides, not checked against the current standards. Some CMMC entries use an x as a placeholder. Have an assessor check them.
   - Have a qualified person review the result before you rely on it for an audit or legal decision.
   - Next, draft the policy for your top-priority gap, then put the fixes on your plan in the order it gave you.
 output_sample:
@@ -57,3 +58,4 @@ output_sample:
       contains: A short document for a safeguard you pick, with purpose, scope, requirements and who is responsible.
     - name: Framework mapping
       contains: A side-by-side table linking CIS controls to NIST CSF, ISO 27001 or CMMC, if you ask for it.
+next: [security-posture-auditor, vulnerability-scan-planner]

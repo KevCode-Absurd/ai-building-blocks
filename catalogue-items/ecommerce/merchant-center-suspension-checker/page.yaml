@@ -50,7 +50,7 @@ how_it_works:
   - title: Checks setup
     text: Programmes, business info, claimed store, logos and colours, and for the US the small business attribute.
   - title: Checks shipping and returns
-    text: Shipping set to manual in the Shopify Google and YouTube app, a rate for every country, a ship-from location and a return policy linked to the real page.
+    text: On Shopify, shipping set to manual in the Google and YouTube app (other platforms use their own feed settings), a rate for every country, a ship-from location and a return policy linked to the real page.
   - title: Checks product data
     text: The main feed, any extra feeds, and everything under Products needs attention.
   - title: Checks checkout

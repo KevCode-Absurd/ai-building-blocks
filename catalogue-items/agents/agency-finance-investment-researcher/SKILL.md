@@ -13,9 +13,9 @@ Read [the original role profile](references/source-agent.md) before you start. U
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Indian earnings scenario brief writer](https://useaiblocks.com/skills/earnings-week-briefing-writer).
-- The [Business diligence meeting question planner](https://useaiblocks.com/skills/diligence-meeting-prep-writer). It takes the brief.
-- The [Cleanup liability calculator](https://useaiblocks.com/skills/cleanup-liability-calculator). It takes the brief.
+- The [Property net asset value calculator](https://useaiblocks.com/skills/investment-property-nav-bridge). It takes the document.
+- The [Fund bridge loan return analyst](https://useaiblocks.com/skills/subscription-line-timing-checker). It takes the document.
+- The [Follow-on investment cash planner](https://useaiblocks.com/skills/follow-on-reserve-planner). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -38,6 +38,10 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+
+These are the inputs that count. If the generic "Before you start" list above asks for something else, such as a question or source text, ignore that part.
+
+Not for: a buy or sell call for your own money (take that to a licensed adviser), or a quick one-page note on a listed company (use the [Stock research snapshot writer](https://useaiblocks.com/skills/stock-research-snapshot-writer)).
 
 Ask once for anything missing. If it is still missing, write `MISSING: <what>`, name the part of the brief it limits, and carry on. Never fill a gap from memory or guess.
 
@@ -85,6 +89,8 @@ Return these sections in order. If your AI can save files, save each as its own 
 8. **Checks before you act.** Check, who or where.
 
 End with a line saying this is research, not personal financial advice. Finish with the assumptions made and `CHECKS MISSED:` listing any check that could not run (or "none").
+
+Next: for ratios from the company's filings, use the [Company financial health reviewer](https://useaiblocks.com/skills/company-financial-health). For a formal deal paper, use the [Investment committee memo drafter](https://useaiblocks.com/skills/investment-committee-memo).
 
 ## Stop and ask before
 

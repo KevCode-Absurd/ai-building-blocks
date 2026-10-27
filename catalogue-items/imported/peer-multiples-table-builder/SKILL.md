@@ -23,9 +23,10 @@ description: |
 
 ## India
 
-This skill operates on **Indian markets**. Load **`india-market-conventions`**
-before building anything, and **`india-market-data`** for sources. Two rules cause
-most Indian errors:
+This skill operates on **Indian markets**. The original asks you to load
+`india-market-conventions` and `india-market-data`. Those files are not in this
+folder, so do not say you loaded them. Follow the two rules below instead. They
+cause most Indian errors:
 
 - **Fiscal year is April–March.** `FY2025` = year ending **31 Mar 2025**; `Q1 FY26` =
   Apr–Jun 2025. Label periods `Q3 FY26 (Oct–Dec 25)`, never a bare calendar year.
@@ -35,7 +36,7 @@ most Indian errors:
   **millions under a crore label: the number shown is 10× the real crore figure**. Divide by `10000000` in a live
   formula and label the column `Total Revenue (₹ Cr)`.
 
-What has no Indian equivalent is listed in `NOT-ADAPTABLE.md`. Name the gap —
+The original lists what has no Indian equivalent in `NOT-ADAPTABLE.md`, which is not in this folder. Name any gap you find —
 never substitute a proxy and present it as the real thing.
 
 ## Before you start
@@ -104,7 +105,7 @@ Start with headers that force strategic thinking about what matters, input clean
 ## ⚠️ CRITICAL: Formulas Over Hardcodes + Step-by-Step Verification
 
 **Environment — one path: officecli.**
-- Build the workbook with the `officecli` CLI. Load **`xlsx-author`** for the build loop and **`officecli-xlsx`** for the element vocabulary.
+- Build the workbook with the `officecli` CLI. The original loads `xlsx-author` and `officecli-xlsx` for this. They are not in this folder, so use the commands shown below.
 - Write formulas as `--prop formula="E7/C7"` (no leading `=`). **No recalc step** — officecli evaluates formulas on read.
 - Same principles either way — just translate the API calls.
 - **Section headers:** set value, merge, and fill in one call on the top-left cell; the merge ref is the `merge` prop's value.

@@ -5,7 +5,7 @@ description: Use when someone will speak, read, present, sing or play what you a
 
 # Deliverer fit planner
 
-A piece sounds best when it was written for the person who delivers it. This skill starts from that person, not from the script. It finds what they do well and what trips them, gives the strongest moment to their strength and makes the weak spots easy. If you are the deliverer, it works from your own habits. Use it after the brief and before the draft is final; "Layered draft writer" can use its plan.
+A piece sounds best when it was written for the person who delivers it. This skill starts from that person, not from the script. It finds what they do well and what trips them, gives the strongest moment to their strength and makes the weak spots easy. If you are the deliverer, it works from your own habits. Use it after the brief and before the draft is final; "Layered draft writer" can use its plan. The method is inspired by how Mozart wrote for the singers of his time. It makes no claim about how he worked, and he has no link to this skill.
 
 ## When not to use
 
@@ -20,13 +20,17 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **What you need** (use your own material or the linked skill):
 - **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
 
+**Makes it better (optional):**
+- **A draft** (yours): the ad, page, email or script you want checked or improved.
+- **Transcript** (yours): the words from a recording, written out, with who said what.
+
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
 2. This one.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a buyer brief, a draft, transcript. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -36,7 +40,7 @@ How to start:
 
 ## What you need
 
-These are the inputs for this skill. Ignore any request above for customer words or a brand brain. A brief from the Two-audience brief writer works best, but a short description of the piece is enough.
+These are the inputs for this skill. Ignore any request above for customer words or a brand brain. The "buyer brief" named above means the brief for this piece. A brief from the Two-audience brief writer works best, but a short description of the piece is enough.
 
 - **The brief or a description of the piece** (required): what it is for and how long it runs.
 - **Who delivers it and how** (required): a speaker on stage, a rep on a call, an actor, a presenter on video, you.

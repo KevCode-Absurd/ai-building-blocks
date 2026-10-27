@@ -1,7 +1,7 @@
 import { useState, type ReactNode } from "react";
 import type { Block } from "./lib/data";
 import { buildSkillZip, download } from "./lib/handoff";
-import { getBusiness, useBusiness, withBusiness } from "./lib/business";
+import { getBusiness, hasBusiness, useBusiness, withBusiness } from "./lib/business";
 import "./task-simplicity.css";
 import { trackUxEvent } from "./lib/ux-events";
 
@@ -16,7 +16,7 @@ const KEY = "abb:install-tab";
 /** Full-file transfer stays available on the task after download. */
 export default function Install({ b, skill, toast, compact = false, onPrepared }: { b: Block; skill: string | null; toast: (m: string) => void; compact?: boolean; onPrepared?: () => void }) {
   const business = useBusiness();
-  const personalSkill = skill ? withBusiness(skill, business) : null;
+  const personalSkill = skill ? withBusiness(skill, business, [b]) : null;
   const [tab, setTab] = useState<Tab>(() => { try { const t = localStorage.getItem(KEY); return TABS.some(x => x.id === t) ? t as Tab : "chat"; } catch { return "chat"; } });
   const [prepared, setPrepared] = useState(false);
   const [busy, setBusy] = useState(false);
@@ -26,7 +26,7 @@ export default function Install({ b, skill, toast, compact = false, onPrepared }
   const zip = async () => {
     if (!skill || busy) return;
     setBusy(true); setError(""); trackUxEvent("pack_download_requested");
-    try { download(await buildSkillZip(b.slug, skill, b.hasFiles, getBusiness()), `${b.slug}.zip`); setPrepared(true); onPrepared?.(); toast("Files prepared. Follow the steps to use them in your AI."); }
+    try { download(await buildSkillZip(b.slug, skill, b.hasFiles, getBusiness(), b), `${b.slug}.zip`); setPrepared(true); onPrepared?.(); toast("Files prepared. Follow the steps to use them in your AI."); }
     catch { setError("The files could not be prepared. Your details are kept. Try downloading again."); }
     finally { setBusy(false); }
   };
@@ -42,7 +42,7 @@ export default function Install({ b, skill, toast, compact = false, onPrepared }
   };
   return <div className="install task-install" data-testid="install">
     <button className="btn btn-primary btn-sm" disabled={!skill || busy} onClick={() => void zip()} data-testid="install-zip">{busy ? "Preparing the files…" : prepared ? "Download the files again" : "Download the files"}</button>
-    <p className="small">Includes the complete instructions and supporting files.{getBusiness().name ? " Your saved business details are included too." : ""}</p>
+    <p className="small">Includes the complete instructions and supporting files.{hasBusiness(business) ? " The parts of your me.md this task needs are included too." : ""}</p>
     {error && <p role="alert">{error}</p>}
     {(!compact || prepared) && <div className="task-file-transfer" data-testid="skill-transfer">
       <h3>Use the files in your AI</h3>

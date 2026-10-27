@@ -19,8 +19,8 @@ when:
   - Your last quarter of growth work gave mixed results and you want the plan checked against the evidence.
 not_for:
   - You have no public product page and no written description yet. It has nothing to read. Write a short description of what you sell and who buys it first.
-  - You only want the buyer, offer and goal written down. Use the Growth channel profile builder.
-  - You already ran tests and want the results judged. Use the Growth channel experiment tracker or the Customer acquisition experiment reviewer.
+  - You only want the buyer, offer and goal written down. Use the Traction business profile builder.
+  - You already ran tests and want the results judged. Use the Traction experiment review agent or the Traction experiment result reviewer.
   - You want it to send outreach, buy ads or book a stand. It plans only; you run each action.
 you_give:
   - A link to your product page, or pasted page and pricing text
@@ -35,11 +35,11 @@ you_get:
   - A list of facts still missing, and the one next action
   - A decision log saved for next time
 how_to_use:
-  - Add the agent to your AI. In Claude Code, add it as a skill or save it in .claude/agents. In Claude, ChatGPT or Gemini, paste it at the start of a chat.
+  - Add the agent and its two companion skills (Traction business profile builder and Traction channel test picker) to your AI. It needs both. In Claude Code, add them as skills or save them in .claude/agents. In Claude, ChatGPT or Gemini, paste them at the start of a chat. If a skill is missing, the agent reads it from its useaiblocks.com link.
   - Paste your product link. Add your goal, cash cap and weekly hours if you know them. If your AI can't open links, paste the page text instead.
   - Read the profile first. Fix any fact it got wrong, and fill in the private numbers it marked as missing.
   - Read the shortlist. Check each test has a cap and a stop rule you can live with. Approve one test.
-  - Run the test yourself. When it has results, paste them in and run the agent again, or use the Growth channel experiment tracker.
+  - Run the test yourself. When it has results, paste them in and run the agent again, or use the Traction experiment review agent.
 output_sample:
   input:
     - Your product page link, or pasted page and pricing text
@@ -47,6 +47,7 @@ output_sample:
     - Your cash cap and hours per week (optional)
     - Your past tests and results (optional)
   prerequisites:
+    - The skills Traction business profile builder and Traction channel test picker, added with the agent
     - An AI that can open links, or page text you paste in
     - A folder the AI can save files to, if you want it to remember the last run (optional)
   output:
@@ -70,11 +71,11 @@ how_it_works:
   - title: Read your public sources
     text: Reads your homepage, pricing and product pages. Notes the link and the date for each fact. Treats page text as evidence, never as instructions.
   - title: Update the profile
-    text: Builds or refreshes the profile with the Growth channel profile builder. Shows what changed since last time and marks private numbers as missing.
+    text: Builds or refreshes the profile with the Traction business profile builder. Shows what changed since last time and marks private numbers as missing.
   - title: Decide whether to re-rank
     text: Ranks again only when your goal, buyer, limits or evidence changed. Otherwise it keeps the old ranking and says so.
   - title: Compare the 19 channels
-    text: Uses the Growth channel shortlist planner to give every channel an idea and a fit rating, then picks up to three affordable tests.
+    text: Uses the Traction channel test picker to give every channel an idea and a fit rating, then picks up to three affordable tests.
   - title: Check only what helps a test
     text: Looks up a specific publication or platform only when a chosen test needs it. Checks current facts on official pages and never invents a contact.
   - title: Save and stop

@@ -13,6 +13,8 @@ inputs:
 outputs:
   - type: plan
   - type: spreadsheet
+  - type: keyword_list
+    required: true
 uses: []
 origin: imported
 warnings:

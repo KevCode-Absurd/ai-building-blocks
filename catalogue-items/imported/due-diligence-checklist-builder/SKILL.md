@@ -35,7 +35,12 @@ Ask the user for:
 
 ### Step 2: Generate Workstream Checklists
 
-Generate a checklist across all major workstreams, tailored to the sector:
+Generate a checklist across all major workstreams, tailored to the sector. Give every item a priority:
+- **P0**: gates the offer letter (LOI) or the close. Nothing is signed without it.
+- **P1**: affects price or terms, so it is needed before final terms.
+- **P2**: useful detail that can finish after signing.
+
+Expect roughly 6 to 10 items per workstream, fewer for a small deal. Build the list from what the user told you, not from invented facts about the target. Tell the user to compare it with the real data room.
 
 **Financial Due Diligence**
 - Quality of earnings (QoE) — revenue and EBITDA adjustments

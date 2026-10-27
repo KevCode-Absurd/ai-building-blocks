@@ -36,8 +36,9 @@ How to start:
 
 ## What you need
 
-This is a documentation job. Ignore any buyer brief mentioned above. This workflow needs your repeat tasks, what breaks and the names of your tools. Have ready the place the pages will go, such as a wiki or a shared drive, and the store, email and help desk tools your fixes use.
+This is a documentation job. The general "Before you start" list above mentions a buyer brief. This job does not use one. This workflow needs your repeat tasks, what breaks and the names of your tools. Have ready the place the pages will go, such as a wiki or a shared drive, and the store, email and help desk tools your fixes use.
 
+- **Access** (required): a folder or chat where the AI can read your pasted notes, and a place to save the `outputs/` files. The pages are written as text. Nothing is put into your wiki or shared drive by the AI.
 - **The repeat tasks** (required): what they are, who does each, and where notes live today.
 - **What goes wrong and how it gets fixed now** (required): describe the fix as the person does it, clicks and all. The runbooks write down what they actually do.
 - **Your tools and systems** (required): the exact names of screens and settings, so the check can catch a step that names them wrong.
@@ -60,7 +61,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Next steps to offer
 
-Ignore the suggestions in "After this" that do not fit documentation. Offer these instead:
+Use these instead of the general "After this" list above:
 - Put the review dates from step 1 in your calendar, and check each page again on its date.
 - Teach one procedure with [Write a procedure, test it and build a training deck](https://useaiblocks.com/workflows/write-a-procedure-test-it-and-build-a-training-deck).
 

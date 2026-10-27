@@ -7,7 +7,6 @@ description: Share fund fee terms, dates, eligible receipts and prior credits. G
 
 The management fee for one invoice period, the offsets that apply, the net invoice and the credit left over.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -16,18 +15,25 @@ When you've handed it back, suggest what they could do next in one short questio
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
+## When not to use
+- To check a capital call, use the Private fund commitment and capital call checker (`reconcile-a-private-fund-capital-call`).
+- To check a payout under no-catch-up terms, use the No-catchup fund payout checker (`check-a-no-catchup-fund-distribution`).
+- To understand why the fee changed between periods only, run step 1 alone: the Fund management fee change checker (`management-fee-stepdown-checker`).
+- For a legal reading of the agreement, ask fund counsel. This applies the terms you supply.
+
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+- **The contract** (yours): the full agreement or terms, with dates and any changes.
 
 **Makes it better (optional):**
 - **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for source text, spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for the contract, spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -35,6 +41,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+
+These items replace the generic article and spreadsheet inputs above. They are the fee clauses quoted word for word from the agreement, the stepdown date, the fee base for each period, the eligible fees received and the offset ledger. Quote each fee clause before any calculation. A rate, base or offset rule with no quoted clause is marked `MISSING:`.
 
 - The fee rates and the fee basis definitions from the fund agreement.
 - The stepdown date and what changes on it.
@@ -58,21 +66,25 @@ If an item is missing, ask once. If it cannot be supplied, write MISSING: with w
 
 ## Steps
 
-Read each step's own SKILL.md if it is attached. If it is not, follow the step as written here and say so in the hand-back. Build a short input map first: each source, its date, units, period and what is missing.
+Read each step's own SKILL.md if it is attached. If it is not, follow the step as written here, using the rows and formulas listed under it, and say so in the hand-back. Build a short input map first: each source, its date, units, period and what is missing.
 
 1. **Fund management fee change checker** (`management-fee-stepdown-checker`). Recompute both comparable-period fees using the exact basis and rates. Select the fee applicable to the actual invoice period and split partial periods separately when needed.
+   - Takes: the quoted fee clauses, the stepdown date and the fee base for each period. Rows are in date order: one FEE BY PERIOD row per comparable period, then the INVOICE CHARGE row.
+   - Works: fee = base x rate for the period. A period that crosses the stepdown date is split at that date.
    - Check before moving on: Rate and base match the agreement for the invoice period. Partial periods are split. Comparison periods are never added.
    - Hands to step 2: the gross charge for the invoice period only.
    - Save `outputs/step-1-management-fee-stepdown-checker.md` and any real file. With no file access, give it as a labelled section. If a needed input is missing, stop this step and write MISSING:.
 
 2. **Fund management fee offset checker** (`transaction-fee-offset-checker`). Convert the selected gross charge explicitly to the offset ledger currency scale, then apply actual eligible fee receipts and beginning credits. Reconcile ending credit and net invoice without inventing carryforward permission.
+   - Takes: the gross charge from step 1, the eligible fees received, the opening credit and the ledger's currency scale.
+   - Works: net due = gross fee - offsets used. Ending credit = opening credit + eligible fees received - credit used, only where the agreement allows carry-forward.
    - Check before moving on: Currency scale matches the offset ledger. Credit carries forward only where the agreement permits.
    - Goes into the result: the net invoice and the ending credit.
    - Save `outputs/step-2-transaction-fee-offset-checker.md` and any real file. With no file access, give it as a labelled section. If a needed input is missing, stop this step and write MISSING:.
 
-## Workbook
+## Workbook (only if asked)
 
-If they ask for a workbook and you can make files, build one linked workbook: inputs, calculations, checks and a summary on separate sheets. Mark inputs in blue, same-sheet formulas in black and cross-sheet links in green. Show units and put negatives in parentheses. Recalculate, look for errors, change one input to test the links, put the case back, and reopen the saved file. If you cannot make files, give each schedule as a table and say no workbook was built. Report any check that could not run.
+Only if they ask for a workbook and you can make files, build one linked workbook: inputs, calculations, checks and a summary on separate sheets. Mark inputs in blue, same-sheet formulas in black and cross-sheet links in green. Show units and put negatives in parentheses. Recalculate, look for errors, change one input to test the links, put the case back, and reopen the saved file. If you cannot make files, give each schedule as a table and say no workbook was built. Report any check that could not run.
 
 ## Acceptance
 

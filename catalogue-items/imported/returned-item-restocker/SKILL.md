@@ -38,10 +38,10 @@ Walks through recently approved or closed returns and restocks inventory for eac
 ## Workflow Steps
 
 1. **OPERATION:** `returns` — query
-   **Inputs:** `query: "status:<return_status> updated_at:>='<NOW - days_back days>'"` (use `updated_at:>='...'` only when `return_status:ANY`), `first: 250`, select `id`, `name`, `status`, `closedAt`, `order { id name }`, `returnLineItems(first: 50) { quantity, returnReason, fulfillmentLineItem { lineItem { variant { id sku inventoryItem { id tracked } } } } }`, `reverseFulfillmentOrders(first: 5) { reverseDeliveries(first: 5) { deliverable { ... on ReverseDeliveryShippingDeliverable { label { ... } } } }, location { id name } }`, pagination cursor
+   **Inputs:** `query: "status:<return_status> updated_at:>='<NOW - days_back days>'"` (use `updated_at:>='...'` only when `return_status:ANY`), `first: 250`, select `id`, `name`, `status`, `closedAt`, `order { id name }`, `returnLineItems(first: 50) { quantity, returnReason, fulfillmentLineItem { lineItem { variant { id sku inventoryItem { id tracked } } } } }`, `reverseFulfillmentOrders(first: 5) { lineItems(first: 50) { dispositions { location { id name } quantity type } } }` (the destination location is read from the dispositions), pagination cursor
    **Expected output:** Returns with their line items, return reasons, inventory item IDs, and destination location
 
-2. Build the restock plan: for each `returnLineItem` not previously restocked, where `returnReason` is allowed by params and `inventoryItem.tracked: true`, group by `(inventoryItemId, locationId)` summing `quantity` deltas. Skip items where the variant is missing, where `tracked: false`, or where the return has no destination location.
+2. Build the restock plan: for each `returnLineItem` not previously restocked, where `returnReason` is allowed by params and `inventoryItem.tracked: true`, group by `(inventoryItemId, locationId)` summing `quantity` deltas. Skip items where the variant is missing, where `tracked: false`, or where the return has no destination location (no disposition location, and no `location_id` given by the user). List every skipped return in the report as "no destination location". Never guess a location. If Shopify rejects a field name, check the current API docs before going on.
 
 3. **OPERATION:** `inventoryAdjustQuantities` — mutation
    **Inputs:** `input.reason: "restock"`, `input.name: "available"`, `input.referenceDocumentUri: "shopify://returns/<return_id>"`, `input.changes: [{ inventoryItemId, locationId, delta: +<quantity> }, ...]`
@@ -85,6 +85,14 @@ query ReturnsForRestock($query: String!, $after: String) {
           edges {
             node {
               id
+              lineItems(first: 50) {
+                edges {
+                  node {
+                    id
+                    dispositions { location { id name } quantity type }
+                  }
+                }
+              }
               reverseDeliveries(first: 5) { edges { node { id } } }
             }
           }

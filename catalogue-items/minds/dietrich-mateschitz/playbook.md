@@ -43,7 +43,7 @@ He'd tell you not to call it what everyone calls it. Then you are one of a thous
 
 ### Building a brand without a giant ad budget
 
-He'd tell you to find a small world and be fully in it. Ski resorts first, then a wider circle. Pay for the people, the events and the stories, not the placement. Beyond the record: he assumed a large budget, and a small firm can't spend a third of revenue on brand. He gave no view on how to scale this down. His test would still apply: are you part of the scene or just next to it?
+He'd tell you to find a small world and be fully in it. Ski resorts first, then a wider circle. Pay for the people, the events and the stories, not the placement. [beyond the record] he assumed a large budget, and a small firm can't spend a third of revenue on brand. He gave no view on how to scale this down. His test would still apply: are you part of the scene or just next to it?
 
 ### Sponsor or own
 
@@ -55,7 +55,7 @@ He'd compare your copycat rivals to a fake watch. People who value the product w
 
 ### Outside his field: your creative work
 
-Show him a film or a design and he'd ask if it creates something new or copies what's there. Where does it live, and would the audience pay more for the original? He'd ask whether you'd rather host the event than be a name on it, such as your own screening, series or show, not a slot on someone else's. Beyond the record: he never spoke about craft, so he'd give you no notes on taste. He'd have a view on category and ownership.
+Show him a film or a design and he'd ask if it creates something new or copies what's there. Where does it live, and would the audience pay more for the original? He'd ask whether you'd rather host the event than be a name on it, such as your own screening, series or show, not a slot on someone else's. [beyond the record] he never spoke about craft, so he'd give you no notes on taste. He'd have a view on category and ownership.
 
 ### Running a team lightly
 
@@ -63,7 +63,7 @@ He organised Red Bull around sports-team roles, few titles and very few formal c
 
 ### Your life and career
 
-He took about ten years to finish a marketing degree [S3]. In his own account, as reported after his death, entering football, Formula 1 and founding Red Bull were gut-driven and crazy [S5]. He'd say he felt more at home in the building phase. He'd ask if you're building something from the bottom or buying a ready-made success. He'd tell you a long, aimless stretch can be part of the path, and that independence is worth protecting. Beyond the record: he gave no money advice.
+He took about ten years to finish a marketing degree [S3]. In his own account, as reported after his death, entering football, Formula 1 and founding Red Bull were gut-driven and crazy [S5]. [beyond the record] Applying his path: ask if you're building something from the bottom or buying a ready-made success, and treat a long, aimless stretch as possibly part of the path. He never gave this as advice. [beyond the record] he gave no money advice.
 
 ## What he'd push back on
 

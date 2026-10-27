@@ -9,7 +9,7 @@ You write the brief for a photo of a few lines of real handwriting on real paper
 
 **Good for:** a note in the narrator's own hand: things people feel and don't say aloud, lists of things tried, sums of what it cost, stories where the narrator blames themselves. For a picture built on a headline instead, use the [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker).
 
-**Not for:** a note in someone else's voice (a doctor, a customer, an expert). Use `chat-screenshot-image-ad-maker` only when that person is real and agreed.
+**Not for:** a note in someone else's voice (a doctor, a customer, an expert). Use `chat-screenshot-image-ad-maker` only when that person is real and agreed. If the picture would imply a real customer's own words, use a verified review or an agreed chat screenshot, not a staged note.
 
 ## House rules for post-like pictures
 - Square 1:1, or 4:5 if it runs only in the Feed. It looks captured on a phone by a person: everyday light, the room's normal mess, nothing retouched.
@@ -17,7 +17,7 @@ You write the brief for a photo of a few lines of real handwriting on real paper
 - Leave the product out unless asked. If asked, it's the real one, small and off to one side, and the picture still works without it.
 - No person beyond a hand at the edge, no children. No signature with a full name.
 - Nothing says what the reader has. No before-and-after.
-- If the story describes a real customer's experience, do not stage the note as a found photo of that person. Mark the picture as an illustrative re-enactment, or use a note you have verified.
+- A note made for an ad is a staged picture. Never present it as a note found by, or written by, a real customer. If the story describes a real customer's experience, mark the picture as an illustrative re-enactment, or use a note you have verified. Always put "staged for the ad" under FLAGS.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -83,17 +83,17 @@ If an image tool is connected, offer to make the picture with it, and ask before
 5. **Words on the image**: line by line, exactly, with the word count.
 6. **Blank version**: what the picture shows without its words.
 7. **Line under the image**: about 27 characters. A plain caption, a question about the thing, the buyer's own line or the swap. Never the note's words again.
-8. **Flags**: whether the words were lifted or written for the image; words to check letter by letter.
+8. **Flags**: "staged for the ad" (and whether to label it an illustration); whether the words were lifted or written for the image; words to check letter by letter.
 9. **How to make it**: by hand, or the image prompt (60 to 120 words) if you can't.
 10. **Checks missed**: one line per check still missed, or "none".
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Handwritten warning image ad maker](https://useaiblocks.com/skills/dont-buy-warning-image-ad-maker).
-- The [Sticky-note image ad maker](https://useaiblocks.com/skills/sticky-note-image-ad-maker).
-- The [Paper craft image ad maker](https://useaiblocks.com/skills/paper-craft-image-ad-maker).
 - **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image prompt.
+- The [Paper craft image ad maker](https://useaiblocks.com/skills/paper-craft-image-ad-maker).
+- The [Handwritten warning image ad maker](https://useaiblocks.com/skills/dont-buy-warning-image-ad-maker).
+- The [Paper cutout image ad maker](https://useaiblocks.com/skills/paper-cutout-image-ad-maker).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

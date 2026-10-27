@@ -54,7 +54,7 @@ sources:
   - {n: 4, title: "Andrew S. Grove 1936 – 2016 (press release)", by: "Intel Corporation", url: "https://www.intc.com/news-events/press-releases/detail/284/andrew-s-grove-1936-2016", kind: reference}
   - {n: 5, title: "High Output Management", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/High_Output_Management", kind: reference}
   - {n: 6, title: "Objectives and key results", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Objectives_and_key_results", kind: reference}
-  - {n: 7, title: "High Output Management (1983; a full text copy, scanned, with some garbled characters)", by: "Andrew S. Grove", url: "", kind: own-words}
+  - {n: 7, title: "High Output Management (1983, Random House). We read an unofficial scanned text copy with garbled characters that we cannot link to, so check any wording against a printed edition", by: "Andrew S. Grove", url: "", kind: own-words}
   - {n: 8, title: "Pentium FDIV bug", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Pentium_FDIV_bug", kind: reference}
   - {n: 9, title: "Andrew Grove (dated quotations with sources)", by: "Wikiquote", url: "https://en.wikiquote.org/wiki/Andrew_Grove", kind: reference}
   - {n: 10, title: "Oral history interview with Andrew S. Grove (14 July and 1 September 2004; by Arnold Thackray and David C. Brock)", by: "Andy Grove, Chemical Heritage Foundation / Science History Institute", url: "https://digital.sciencehistory.org/works/2514nm24n", kind: own-words}

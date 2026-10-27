@@ -27,7 +27,7 @@ Collect, or state your assumption: product and candidate price; individual vs kn
 
 ## Procedure
 
-Only the rules that change for digital products. These are rules of thumb from published pricing research (sources in reference.md), not guarantees. Test any price change on your own audience.
+Only the rules that change for digital products. These are rules of thumb from published pricing research (named in reference.md), not guarantees. Test any price change on your own audience. Never state an effect size or a percentage gain that you cannot find in reference.md.
 
 1. **Unknown or individual seller → rounded.** No materials or shipping to signal quality, so a rounded price ($100, not $97) is one of the few quality cues available. Just-below reads as price-led.
 2. **Buyer already knows the quality → just-below.** After a free sample or a freemium upgrade prompt, quality is already experienced and a low-price ending is fine — and the left digit must actually drop.
@@ -38,6 +38,8 @@ Only the rules that change for digital products. These are rules of thumb from p
 Shared, unchanged: sale-price just-below, same-left-digit upgrade tiers, deadline not a seat cap, discount ≤ 40% (quality is hard to judge before buying a file).
 
 ## Worked example
+
+The prices below are only an example of how the rules change digits. Use the user's own planned price.
 
 Individual creator, LinkedIn-growth course, plan: $97, "FREE download" checklist, pre-orders 6 weeks out at 20% off, pay-what-you-want ebook.
 
@@ -51,11 +53,11 @@ Individual creator, LinkedIn-growth course, plan: $97, "FREE download" checklist
 
 | Item | Value |
 |---|---|
-| Price | $100 (rounded — individual seller, quality signal) |
-| Sale/upgrade price | $79.99 during launch week only |
+| Price | [ROUNDED PRICE] (rounded — individual seller, quality signal) |
+| Sale/upgrade price | [JUST-BELOW PRICE] during launch week only |
 | Pre-order offer | Bonus module at no cost for orders before launch |
-| Lead magnet wording | "Get the checklist for $0" |
-| Participative pricing | Ebook at $9 / $15 / $25, not pay-what-you-want |
+| Lead magnet wording | "Get the [ITEM] for $0" |
+| Participative pricing | Ebook at [LOW] / [MIDDLE] / [HIGH], not pay-what-you-want |
 | Why | one line per choice |
 
 ## Common mistakes

@@ -10,8 +10,11 @@ level: beginner
 inputs:
   - type: tool_connection
     required: true
+  - type: policy
+    required: false
 outputs:
-  - type: document
+  - type: policy
+  - type: audit_report
 uses: []
 origin: imported
 source:

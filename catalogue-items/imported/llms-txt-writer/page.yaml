@@ -10,6 +10,8 @@ explain: |
   An llms.txt file for your site, a plain list that tells AI tools which pages and facts matter most. You choose what they see first instead of letting them guess.
 
   It studies the site, then writes the file to the published format: a title, a short summary, then sections of links. Each link is a full address with a 10 to 30 word note on what the page covers, ordered by importance. An optional section holds lower priority pages. Key facts such as pricing, features and locations are stated outright, so a tool that reads the file has less to guess. It can also check an existing file against the rules.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header says MIT. Credit goes to the original author and sickn33.
 when:
   - AI tools get your pricing or services wrong.
   - You want AI answers to cite your best page.
@@ -35,7 +37,7 @@ how_to_use:
   - Paste the skill text into the chat.
   - Add your website address. Add your key pages and facts if you have them.
   - If you already have an llms.txt, paste it in and ask for a check first.
-  - Read the result. Make sure every fact in Key Facts is true and comes from your site.
+  - Read the result. Check every fact in Key Facts against your live site before you publish. Leave out any line your site does not state.
   - Save the file as llms.txt and upload it to the root of your site, so it loads at yourdomain.com/llms.txt.
 output_sample:
   input:

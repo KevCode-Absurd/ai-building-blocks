@@ -8,12 +8,16 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: question
     required: true
   - type: performance_sheet
     required: true
   - type: feedback_notes
     required: true
+  - type: document
+    required: false
+  - type: product_spec
+    required: false
 outputs:
   - type: audit_report
     required: true

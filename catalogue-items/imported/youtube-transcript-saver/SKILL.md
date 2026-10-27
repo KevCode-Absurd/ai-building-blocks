@@ -99,6 +99,8 @@ For a manual fallback today, download audio with `yt-dlp`, transcribe it with yo
 - Depends on subtitles returned by `yt-dlp`; videos without subtitles produce a metadata stub, not a transcript.
 - Does not download video files or perform built-in Whisper transcription in this version.
 - Network availability, YouTube subtitle access, and local `yt-dlp` behavior determine whether ingest succeeds.
+- Saving a transcript may breach YouTube's terms or the creator's copyright. Keep notes for your own use, quote briefly and link to the video. Never fill in transcript text the script did not return.
+- Licence: the script is MIT. The text of this copy is shared under CC BY 4.0 (see LICENSE-CONTENT). Credit adelaidasofia.
 
 ## Acceptance test
 

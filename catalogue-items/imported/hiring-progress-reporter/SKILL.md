@@ -7,9 +7,14 @@ description: This skill should be used when the user asks to "create a sourcing 
 
 This catalog copy does not include these files:
 
-- `.claude/skills/stakeholder-reporting/references/brandguidelines.pdf`
+- `references/brandguidelines.pdf`
+- `references/market-insights-template.md`
+- `references/dashboard-templates.md`
+- `references/chart-examples.md`
 
-Do not say you read or ran them. Do those steps by hand, or ask the user for the original file.
+Do not say you read or ran them. Brand and PDF steps are skipped in this copy: give a plain markdown report, and for a chart page write a simple standalone HTML file with Chart.js yourself.
+
+Every figure in a report must come from the user's data, or be labelled as an estimate with its source. Never make one up. The numbers in the templates below are placeholders.
 
 # Stakeholder Reporting for Recruiting Sourcing
 
@@ -59,7 +64,7 @@ Visual representation of the talent landscape.
 
 **Contents:**
 - Target company matrix (concentric circles)
-- Pool size estimates by segment
+- Pool size estimates by segment (label each as an estimate and name the source; if there is none, write "not found")
 - Geographic distribution
 - Key individual highlights
 - Recommended approach per segment
@@ -118,12 +123,12 @@ Post-search analysis of what worked and what didn't.
 
 | Stage | Count | This Week | Conversion |
 |-------|-------|-----------|------------|
-| Identified | 45 | +12 | - |
-| Contacted | 28 | +8 | 62% |
-| Responded | 14 | +3 | 50% |
-| Interested | 8 | +2 | 57% |
-| Screened | 5 | +1 | 63% |
-| Submitted to HM | 3 | +1 | 60% |
+| Identified | [COUNT] | [+THIS WEEK] | - |
+| Contacted | [COUNT] | [+THIS WEEK] | [%] |
+| Responded | [COUNT] | [+THIS WEEK] | [%] |
+| Interested | [COUNT] | [+THIS WEEK] | [%] |
+| Screened | [COUNT] | [+THIS WEEK] | [%] |
+| Submitted to HM | [COUNT] | [+THIS WEEK] | [%] |
 ```
 
 ## HTML Dashboard Generation
@@ -132,7 +137,7 @@ For visual dashboards, generate standalone HTML files using Chart.js for charts.
 
 ### Dashboard Template
 
-Use the full template from `references/dashboard-templates.md`. It includes HTML structure, CSS, Chart.js setup, KPI cards, pipeline funnel, source channel doughnut, and candidate table with placeholder comments.
+The full template file is not included in this copy. Build a simple standalone page with HTML structure, CSS, Chart.js setup, KPI cards, a pipeline funnel, a source channel doughnut, and a candidate table. Fill it only with the user's own numbers.
 
 ### Chart Types for Sourcing
 
@@ -158,7 +163,7 @@ Use the full template from `references/dashboard-templates.md`. It includes HTML
 
 - Lead with insights, not activity metrics
 - Frame data around decisions they need to make
-- Use comparisons: "This search is performing 20% above average response rate"
+- Use comparisons only when the user supplies the baseline: "This search is performing [X]% above [BASELINE]"
 - Highlight blockers clearly with recommended solutions
 - Keep reports scannable: bullets, tables, bold key numbers
 
@@ -167,7 +172,7 @@ Use the full template from `references/dashboard-templates.md`. It includes HTML
 - Focus on strategic insights over tactical details
 - Include market context (supply/demand, compensation trends)
 - Frame recommendations in business terms
-- Quantify trade-offs: "Expanding budget by €20K increases pool by 40%"
+- Quantify trade-offs only from the user's data or a named source: "Expanding budget by [AMOUNT] increases pool by [%]". Label it an estimate otherwise.
 - Keep to one page / one screen when possible
 
 ### Data Integrity
@@ -194,7 +199,7 @@ roles/
 
 ## Brand Guidelines
 
-**Optional.** Branding and PDF export only apply if the user has a brand guide to follow. The QuoIntelligence guide below is the original author's own and is not in this copy. If the user has no brand guide, skip this section and the PDF steps (they need Puppeteer, Chrome and build scripts that are not included) and give a plain markdown report. When a brand guide is available, branded reports and PDF-exportable deliverables follow it. See `.claude/skills/stakeholder-reporting/references/brandguidelines.pdf` for the complete specification including:
+**Optional.** Branding and PDF export only apply if the user has a brand guide to follow. The brand guide below is the original author's own and is not in this copy. If the user has no brand guide, skip this section and the PDF steps (they need Puppeteer, Chrome and build scripts that are not included) and give a plain markdown report. When a brand guide is available, branded reports and PDF-exportable deliverables follow it. See `.claude/skills/stakeholder-reporting/references/brandguidelines.pdf` for the complete specification including:
 
 - **60-30-10 color rule** — White (60%), QUO Sec Blue (30%), QUO Main Orange (10%)
 - **Typography** — Inter font family at specified weights and sizes
@@ -270,7 +275,7 @@ If Puppeteer is unavailable:
 
 ### Reference Files
 
-You are **stongly encouraged** to read the reference files
+These reference files are not included in this copy. If the user has their own versions, use them.
 
 - **`references/brandguidelines.pdf`** - your brand guidelines
 - **`references/market-insights-template.md`** - Branded HTML template for market insights reports (PDF-ready)

@@ -31,6 +31,7 @@ const Globe = lazy(() => import("./Globe")); // drawn behind the hero, so the te
 // The other pages load after the home page has drawn, while the browser is idle, so a click opens them at once.
 const PAGES = {
   docs: () => import("./ApiMcpPage"),
+  memd: () => import("./MeMdPage"),
   community: () => import("./CommunityPage"),
   account: () => import("./AccountPage"),
   block: () => import("./BlockPage"),
@@ -50,6 +51,7 @@ const PAGES = {
 function sectionOf(to: string): keyof typeof PAGES | null {
   const path = to.split(/[?#]/)[0];
   if (["/api-and-mcp", "/api-and-mcp.html"].includes(path)) return "docs";
+  if (path === "/me-md") return "memd";
   if (["/publish", "/my-submissions", "/admin/review", "/community"].includes(path) || path.startsWith("/community/")) return "community";
   if (["/account", "/sign-up", "/sign-in"].includes(path)) return "account";
   if (path === "/tools/growth-channel-planner") return "traction";
@@ -78,6 +80,7 @@ const BlockPage = startupPage(PAGES.block);
 const CommunityPage = startupPage(PAGES.community);
 const HowItWorks = startupPage(PAGES.guide);
 const ApiMcpPage = startupPage(PAGES.docs);
+const MeMdPage = startupPage(PAGES.memd);
 async function loadToolPage(to: string) {
   const slug = to.split(/[?#]/)[0].split("/")[2];
   if (!slug) return PAGES.tools();
@@ -303,10 +306,11 @@ function Library({ c, complete = true, error = "", retry, onNeedFull }: { c: Cat
         <Link to="/minds" className="btn btn-ghost btn-sm" data-testid="library-minds-link">Minds and advisory council <span aria-hidden="true">→</span></Link>
         <Link to="/how-it-works" className="btn btn-ghost btn-sm">How it works <span aria-hidden="true">→</span></Link>
       </div>
+      <p className="small library-me-step" data-testid="home-me-step"><Link to="/me-md">Make your me.md once.</Link> Every task then fits you.</p>
       {audience && <div className="audience-guide small" data-testid="audience-guide">
         <p><strong>{audience.goal}</strong> These are starter picks. Clear this filter to explore all tasks.</p>
         <p>Bring: {audience.bring}</p>
-        <p><button className="link-btn" onClick={openBusiness}>Add business details</button> · <a href={starterTemplate(audience.id)} download>Download a details template</a></p>
+        <p><button className="link-btn" onClick={openBusiness}>Add your me.md</button> · <a href={starterTemplate(audience.id)} download>Download a details template</a></p>
         {audience.id === "enterprise" && <p>These packs support your work in your chosen AI tool. Team access controls, company system connections and audit storage need your own implementation.</p>}
       </div>}
       {moreFilters && <div className="library-more-filters" id="library-more-filters" role="group" aria-label="More filters">
@@ -445,6 +449,7 @@ function Home({ c, toast, error, retry, complete, onNeedFull }: { c: Catalogue |
             <Link to="/#library" className="btn btn-primary" onClick={e => { e.preventDefault(); onNeedFull(); trackUxEvent("task_started"); navigate("/#library"); requestAnimationFrame(() => document.querySelector<HTMLInputElement>('[data-testid="library-search"]')?.focus()); }}>Start with a task <ArrowIcon /></Link>
             <Link to="/#build" className="btn btn-line" data-testid="hero-build-workflow" onClick={onNeedFull}>Build a workflow <ArrowIcon /></Link>
           </div>
+          <p className="hero-connect small" data-testid="hero-connect"><Link to="/api-and-mcp">Connect your AI once</Link>. Then it pulls any skill or workflow it needs, when it needs it.</p>
         </div>
       </section>
 
@@ -493,7 +498,7 @@ export default function App() {
   useHashLanding();
   const { path, search } = useLocation();
   const [kitsOpen, setKitsOpen] = useState(false);
-  const needsCatalogue = !infoPage(path) && !["/ai-tools", "/tools", "/apps", "/how-it-works", "/traction", "/api-and-mcp", "/api-and-mcp.html"].some((p) => path === p || path.startsWith(`${p}/`));
+  const needsCatalogue = !infoPage(path) && !["/ai-tools", "/tools", "/apps", "/how-it-works", "/traction", "/api-and-mcp", "/api-and-mcp.html", "/me-md"].some((p) => path === p || path.startsWith(`${p}/`));
   // Home only lists cards, so it loads the small list index; other catalogue pages need the full file.
   // A first visit to home shows the starter picks; the list index waits until the visitor starts browsing.
   const starterFirst = path === "/" && !search.has("block") && !search.has("workflow");
@@ -573,6 +578,8 @@ export default function App() {
             c ? <IntakePage c={c} toast={setToast} /> : <main className="wrap bp-hero"><p className="small">Loading…</p></main>
           ) : ["/api-and-mcp", "/api-and-mcp.html"].includes(path) ? (
             <ApiMcpPage />
+          ) : path === "/me-md" ? (
+            <MeMdPage />
           ) : path === "/how-it-works" ? (
             <HowItWorks toast={setToast} />
           ) : pageSlug ? (

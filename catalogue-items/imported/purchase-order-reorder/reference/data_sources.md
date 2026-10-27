@@ -85,6 +85,8 @@ Run these and report what they find:
 
 ## Worked example
 
+*Invented business and figures, to show the shape only. Never reuse them.*
+
 Okonkwo Mechanical stocks common parts on the trucks and in the shop. No Shopify — Ray exported two CSVs from his supply-house portal and counted the shop shelf on a Saturday.
 
 - 84 SKUs, 120 days of usage history

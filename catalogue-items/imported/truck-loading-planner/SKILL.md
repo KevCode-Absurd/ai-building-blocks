@@ -61,7 +61,7 @@ For a real carton list (order lines with dimensions, counts and weights), run th
 python3 scripts/load_plan.py shipment.csv --out plan/
 ```
 
-It uses only the Python standard library. The input CSV needs these columns: `po, sku, length_cm, width_cm, height_cm, line_weight_kg, cartons, this_side_up`. Rename the user's columns to match. Use `--group-col` if the grouping key is something other than a PO (a customer, a stop). Container defaults are a 40' HC: 1203.5 × 235.2 × 269.5 cm and 28,620 kg. Pass `--length --width --height --payload` for other equipment or the carrier's exact box.
+It uses only the Python standard library. The input CSV needs these columns: `po, sku, length_cm, width_cm, height_cm, line_weight_kg, cartons, this_side_up`. Rename the user's columns to match. Use `--group-col` if the grouping key is something other than a PO (a customer, a stop). If an earlier plan already splits the orders into loads or stops, use that split as the grouping key. Container defaults are a 40' HC: 1203.5 × 235.2 × 269.5 cm and 28,620 kg. Pass `--length --width --height --payload` for other equipment or the carrier's exact box.
 
 What it does:
 - Computes the lower bound and flags any group that cannot ship whole, with the reason.

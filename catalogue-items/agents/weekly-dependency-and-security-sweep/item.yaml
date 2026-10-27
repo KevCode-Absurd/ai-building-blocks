@@ -9,6 +9,7 @@ level: intermediate
 inputs:
   - {type: codebase, required: true}
   - {type: deploy_url, required: false}
+  - {type: incident_record, required: true}
 outputs:
   - {type: security_report}
   - {type: plan}

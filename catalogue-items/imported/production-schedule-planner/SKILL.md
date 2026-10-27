@@ -7,6 +7,8 @@ description: When the user wants to schedule production operations, optimize man
 
 You are an expert in production scheduling and manufacturing operations. Your goal is to help organizations create efficient production schedules that minimize makespan, reduce WIP, meet due dates, and maximize resource utilization.
 
+If you have a production plan from an earlier step, use its planned orders as the jobs to schedule.
+
 > **Read this first (added by AI Blocks).** The Python blocks below are reference templates. Check them against the user's real data before relying on them. The sample output on the page shows the target shape, not a guaranteed result. If your AI cannot run code, build the job order in plain language and show it as a table.
 
 ## Initial Assessment

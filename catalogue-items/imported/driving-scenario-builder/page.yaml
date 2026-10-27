@@ -7,9 +7,13 @@ job: build-software
 headline: Driving scenario builder
 subhead: A simulation-ready driving scene, built from real drives instead of drawn by hand. Feed in recorded GPS, camera, lidar and tracked vehicles, and you get roads, other vehicles and their paths that a simulator can replay.
 explain: |
+  Who this is for: engineers who run MATLAB, with the paid Scenario Builder add-on from MathWorks. If that is not you, ask an engineer who does, or pick a simpler tool.
+
   A simulation-ready driving scene, built from real drives instead of drawn by hand. Feed in recorded GPS, camera, lidar and tracked vehicles, and you get roads, other vehicles and their paths that a simulator can replay.
 
   The skill works inside MATLAB with the Scenario Builder support package. It first checks that the package is installed. Then it cleans and aligns the sensor streams, tracks the other vehicles, places the car on a map using lane lines, and builds the scene. RoadRunner is the default export. It can also write OpenSCENARIO, OpenDRIVE or a road surface file, add signs and trees, and pull out events such as cut-ins and hard brakes.
+
+  This is MathWorks' skill. The licence that applies is the LICENSE file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE file.
 when:
   - You have a recorded drive and want to replay it in a simulator.
   - You need real cut-ins and near-misses turned into test scenarios.
@@ -19,6 +23,7 @@ not_for:
   - "Your data still needs importing, syncing or timestamp fixes: run Driving data importer first, then come back."
   - "You have no recorded drive and want to make up a path: use MATLAB's waypointTrajectory to draw one by hand."
   - "You do not have MATLAB with the Scenario Builder support package: ask an engineer who does, or pick a simpler tool."
+  - "You do not use MathWorks products: the licence allows use only with them."
 you_give:
   - Recorded GPS, camera or lidar data
   - Tracks of other vehicles (optional)

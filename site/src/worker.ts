@@ -1,5 +1,6 @@
 // Static assets, rewrites and redirects are served by Cloudflare's asset service.
-// Only /api/* runs this router before assets; reuse the existing API adapters.
+// Only /api/*, /mcp/*, OAuth and discovery run this router before assets; everything else reaches it only when no asset
+// matches, which is how the item pages' Markdown and JSON twins (/skills/<slug>.md, .json) get here.
 import { onRequest as comments } from "../functions/api/comments.ts";
 import { onRequest as spaces } from "../functions/api/spaces/[[path]].ts";
 import { onRequest as compose } from "../functions/api/compose.ts";
@@ -10,8 +11,9 @@ import { onRequest as library } from "../functions/api/library.ts";
 import { onRequest as community } from "../functions/api/community/[[path]].ts";
 import { securityConfig, apiSecurity, previewSecurity } from "./server/api-security.ts";
 import { previewSessionRoute } from "./server/preview-session.ts";
-import { handlePublicApi } from "./server/public-api.ts";
+import { handlePublicApi, isPublicApiRoute } from "./server/public-api.ts";
 import { handleCompanyApi, isCompanyApiRoute, type CompanyApiEnv } from "./server/company-api.ts";
+import { itemTwin } from "./server/twins.ts";
 
 type Env = Parameters<typeof comments>[0]["env"] & Parameters<typeof spaces>[0]["env"] &
   Parameters<typeof compose>[0]["env"] & Parameters<typeof community>[0]["env"] & CompanyApiEnv;
@@ -24,7 +26,7 @@ export default {
     if (privatePreview) return privatePreview;
     const path = new URL(request.url).pathname.replace(/\/+$/, '') || '/';
     if (isCompanyApiRoute(path)) return handleCompanyApi(request, env);
-    if (path === '/mcp' || path === '/api/v1' || path.startsWith('/api/v1/')) return handlePublicApi(request, env);
+    if (isPublicApiRoute(path)) return handlePublicApi(request, env);
     if (path === "/apps/mercatura-ads" && ["GET", "HEAD"].includes(request.method)) {
       const target = new URL(request.url); target.pathname = "/apps";
       return Response.redirect(target.toString(), 301);
@@ -43,6 +45,9 @@ export default {
       if (denied) return denied;
       return Response.json({ error: "API route not found." }, { status: 404, headers: { "cache-control": "no-store" } });
     }
+    // Item pages' Markdown and JSON twins (server/twins.ts). No twin is an asset, so these arrive after the asset miss.
+    const twin = await itemTwin(request, env.ASSETS, path);
+    if (twin) return twin;
     const response = await env.ASSETS.fetch(request);
     if (response.status === 404 && /^\/community\/[0-9a-f-]+$/.test(path) && ["GET", "HEAD"].includes(request.method)) {
       const shell = await env.ASSETS.fetch(new Request(new URL('/community', request.url), { method: request.method }));

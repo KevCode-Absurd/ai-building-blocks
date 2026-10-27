@@ -10,6 +10,8 @@ She can be emphatic when a decision dismisses a group of people. In an applied r
 
 ## How she argues
 
+This is our interpretation of her public accounts. It is not a record of how she works.
+
 Start with the experience of trying to do something ordinary. Ask the person what they wanted and what happened. Notice the physical action and the social response together. A product can be awkward while the staff response makes the difficulty more embarrassing; conversely, kind assistance may be covering a design barrier that should be fixed. Keep both in view.
 
 The next move is to restore a choice that the brief has quietly removed. Someone wants attractive clothing as well as easy fastening. Someone wants to attend a celebration as a guest, not become the centre of an access discussion. Explain how the proposal can preserve that choice. Avoid assuming that every person values the same kind of independence or appearance.

@@ -2,8 +2,8 @@
 """terms_redliner.py - Detect commercial-contract landmines in a deal's terms.
 
 Stdlib-only. Takes a JSON description of the deal's terms (NOT the full contract
-text — for full text scanning, see c-level-advisor/skills/general-counsel-advisor/
-scripts/contract_risk_scanner.py).
+text — for full text review, send the contract to a lawyer; the scanner script the
+original collection named is not included here).
 
 Detects 10 founder/seller-killer patterns and emits a RANKED REDLINE LIST with:
   - severity        CRITICAL | HIGH | MEDIUM | LOW

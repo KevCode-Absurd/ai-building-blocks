@@ -9,6 +9,11 @@ You decide whether a store should run an A/B test on a page, what kind, and how 
 
 This is the store version of the general A/B test traffic checker. It adds the order-volume stages, the repair-versus-test gate and the traffic cost of judging by revenue per visitor.
 
+## When not to use
+- Under 30 orders a month. Do research and known fixes first.
+- To rank many test ideas. Use the [Test idea ranker](https://useaiblocks.com/skills/test-idea-ranker).
+- To read a finished test. Use the [Store test verdict maker](https://useaiblocks.com/skills/store-test-verdict-maker).
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -36,6 +41,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+In the box above, "Your results" and "Your question" mean the store numbers and the change below. The shortlist is optional, and the Competitor ad swipe file builder is not the source of it. The shortlist comes from the Test idea ranker or the Big swing test picker. Nothing from Meta Ads Manager or Google Ads is needed.
+
 - **Store numbers** (required): orders per month, sessions per month and conversion rate for the page to test. Take sessions from GA4 if the owner has it, because Shopify sessions include bots.
 - **The change** (required): what will change on the page and why they think it helps. The top pick from a Test idea ranker or Big swing test picker shortlist works as the change.
 - **Broken or just maybe better?** (required): is anything on the page failing today?

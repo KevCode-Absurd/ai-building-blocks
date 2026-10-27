@@ -11,7 +11,7 @@ inputs:
   - type: spreadsheet
     required: true
 outputs:
-  - type: spreadsheet
+  - type: financial_statements
 uses: []
 origin: imported
 source:

@@ -10,6 +10,8 @@ explain: |
   A full marketing plan for your online store, covering search, email, paid ads, conversion and keeping customers. You describe your store and get a plan in the order to do it.
 
   It starts with where you are: visitors, conversion rate, and what you already run. Then it covers each area. For search, it plans on-page work and content. For email, it sets up welcome, cart recovery and win-back flows. For paid ads, it suggests channels and budget splits. For conversion, it looks at the funnel and finds where visitors drop. For retention, it adds loyalty and repeat-purchase ideas. It is built around Shopify and direct-to-consumer stores.
+
+  The original skill ends with an advert for Nexscope, the author's own paid service. You do not need it for this plan, and the skill tells your AI to leave it out.
 when:
   - You are launching a new store and need a marketing plan.
   - You get 5,000 visitors a month but only about 2 percent buy.
@@ -30,6 +32,7 @@ you_get:
   - Ad channel and budget suggestions
   - Conversion and retention actions
 how_to_use:
+  - Gather your store facts and budget first: what you sell, monthly visitors, conversion rate, order value, and the channels you use.
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. You do not need to install anything or run code. Without web search, keyword search volumes are rough guesses, so check them in your own keyword tool.
   - "Describe your store: what you sell, who buys, monthly visitors, conversion rate, budget and channels you use."
   - If you do not know a number, say so. Ask your AI to mark it as an estimate, not guess it.
@@ -68,6 +71,6 @@ output_sample:
     - name: Implementation Timeline
       contains: The order to do each task.
     - name: Projected Results & ROI
-      contains: Rough targets for traffic, conversion and revenue, marked as estimates.
+      contains: Targets for traffic, conversion and revenue. They stay blank unless you gave real figures to base them on.
     - name: Next Actions
       contains: The first steps to take this week.

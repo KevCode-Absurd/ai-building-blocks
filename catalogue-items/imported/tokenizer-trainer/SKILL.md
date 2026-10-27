@@ -88,7 +88,7 @@ tokenizer.train(files, trainer)
 tokenizer.save("my-tokenizer.json")
 ```
 
-**Training time**: ~1-2 minutes for 100MB corpus, ~10-20 minutes for 1GB
+**Training time**: see the benchmark table near the end. It is the upstream author's test on a 16-core computer, not measured here. A laptop will be slower.
 
 ### Batch encoding with padding
 
@@ -304,12 +304,39 @@ TemplateProcessing(
 )
 ```
 
+## Complete example: train, save and test encode
+
+This joins the pieces above into one script. Save it as `train_tokenizer.py`, change the file names, and run it.
+
+```python
+from tokenizers import Tokenizer
+from tokenizers.models import BPE
+from tokenizers.trainers import BpeTrainer
+from tokenizers.pre_tokenizers import Whitespace
+
+tokenizer = Tokenizer(BPE(unk_token="[UNK]"))
+tokenizer.pre_tokenizer = Whitespace()
+trainer = BpeTrainer(vocab_size=30000, special_tokens=["[UNK]", "[PAD]", "[CLS]", "[SEP]", "[MASK]"])
+
+files = ["train.txt", "validation.txt"]   # your own plain text files
+tokenizer.train(files, trainer)
+tokenizer.save("my-tokenizer.json")
+
+# Test encode: use a sentence that contains your own key terms
+text = "[A SENTENCE WITH YOUR OWN PRODUCT NAMES OR JARGON]"
+output = tokenizer.encode(text)
+print(output.tokens)   # the pieces
+print(output.ids)      # the ids
+print(output.offsets)  # start and end position of each piece in text
+```
+
 ## Alignment tracking
 
 Track token positions in original text:
 
 ```python
-output = tokenizer.encode("Hello, world!")
+text = "Hello, world!"
+output = tokenizer.encode(text)
 
 # Get token offsets
 for token, offset in zip(output.tokens, output.offsets):
@@ -400,7 +427,7 @@ tokenizer.train_from_iterator(
 )
 ```
 
-**Performance**: Processes 1GB in ~10-20 minutes
+**Performance**: see the benchmark table near the end (the upstream author's test, not measured here).
 
 ### Enable truncation and padding
 
@@ -445,6 +472,8 @@ with Pool(8) as pool:
 **Speedup**: 5-8× with 8 cores
 
 ## Performance benchmarks
+
+These figures come from the upstream author's own test. They were not checked for this item. Speed depends on your computer and text, so time a small run first.
 
 ### Training speed
 

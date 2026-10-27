@@ -24,6 +24,7 @@ you_give:
   - The job description or must-have skills
   - Who is available to interview
   - Your target time to hire (optional)
+  - Current interview stages or pass-through numbers you already have (optional), so the plan can fix a live process
 you_get:
   - A stage-by-stage interview plan
   - A skills-to-stage map
@@ -34,6 +35,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
   - Paste the role title, level and job description. Add who can interview if you know.
   - Ask your AI to design the interview process for that role, and to return the plan in the chat as Markdown with the five sections shown in the sample. It does not need to save files.
+  - The plan does not include interview questions or scoring sheets. You write those separately with your hiring team.
   - Check that each must-have skill appears in at least two stages.
   - Check that each stage has a clear advance and reject rule, then share the plan with your hiring manager.
   - Next, after every 5 hires, compare pass-through rates by stage and change the stage that loses the most candidates.

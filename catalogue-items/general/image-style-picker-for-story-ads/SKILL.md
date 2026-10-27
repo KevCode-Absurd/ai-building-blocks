@@ -26,6 +26,7 @@ Every post-style picture in this library passes these three.
 - Leave the product out unless asked. If asked, it's the real one from its photos, small and off to one side, and the picture still works without it.
 - Any person is a made-up adult, no children, never shown as a customer. Any screen, app or caption look is generic.
 - Nothing says what the reader has. No before-and-after.
+- A picture built to look like a personal post is still an ad. It carries the platform's ad label, and any partnership or "paid for" label the platform requires. Never present the narrator or a made-up person as a real customer. Show a real customer, a real review or a real quote only with their written permission on file.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -92,7 +93,8 @@ If an image tool is connected, offer to make the picture with it, and ask before
 6. **Write what the picture makes people wonder,** in one line. The picture never answers it. Check the story's first 125 characters pick it up (that's about what shows before "See more").
 7. **Write the line under the picture.** Meta suggests about 27 characters for this headline. Count the characters one by one, spaces included, and write the count. Use one of four: a **plain caption** (what's in the frame, with a time or a count), **a question about the thing** (never about the reader), **the buyer's own line** (real, cut at a whole word) or **the swap** (old step out, new step in). Never the product name, never a line about the reader's body or health.
 8. **Run stop, sort and follow** on the brief. For sort, name the one detail in the frame that only a person with the problem would recognise (a thing, a time, a habit). If you can't name one, the picture fails sort: switch to the runner-up or the problem moment fallback and say why.
-9. **Check it.** Run the four checks in "Check before you hand it back", the four rules in "People and fixes" (skip them when no person is in the picture), and the chosen skill's own checks only if its file is in this chat. Fix any that fail where you can. List any still missed under CHECKS MISSED, one line each, or write "none". Then hand it back.
+9. **Check the health and ad-policy risk.** If the story or the picture touches the body, a symptom, digestion, sleep, weight, mood or any other health topic, check the words and the picture against the ad policy for your platform and market before you hand the brief back. Use the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker) or the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker) if you can. Allow only what the claims on file support, and never say a product treats, cures or prevents anything. If you could not run a check, list "ad policy check not run" under CHECKS MISSED.
+10. **Check it.** Run the four checks in "Check before you hand it back", the four rules in "People and fixes" (skip them when no person is in the picture), and the chosen skill's own checks only if its file is in this chat. Fix any that fail where you can. List any still missed under CHECKS MISSED, one line each, or write "none". Then hand it back.
 
 ## People and fixes, for any skill
 - Any person is made up and close to the buyer in age and look. Often only their hands or back need to show. Never theatrical pain.
@@ -133,11 +135,9 @@ CHECKS MISSED
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Story ad image brief writer](https://useaiblocks.com/prompts/story-ad-picture-brief-writer).
 - **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image prompt.
-- The [Image ad visual brief writer](https://useaiblocks.com/prompts/image-ad-settings-picker).
-- The [Review quote ad card planner](https://useaiblocks.com/prompts/review-quote-ad-card-planner).
 - **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the image prompt.
+- **Write the ad copy** with the [Story image ad writer](https://useaiblocks.com/skills/story-image-ad-writer).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

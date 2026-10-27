@@ -31,11 +31,11 @@ you_get:
 how_to_use:
   - Open Claude Code, or any AI chat that can read your project files.
   - Add the skill instructions to your AI. In a chat, paste the contents of SKILL.md first.
-  - Show it what to review. Say "review staged changes", "review the last 3 commits" or "review src/auth.ts". In a chat, paste the code or diff.
+  - Show it what to review. Say "review staged changes", "review the last 3 commits" or "review src/auth.ts". The git commands in the skill (git diff, git diff --cached) need a coding tool with access to your repo. In a plain chat, paste the code or the diff yourself.
   - Add what the change should do and what worries you (optional).
   - Read the verdict first, then the Critical Findings. Fix those before you merge.
   - Check each finding against your code. Treat any point your AI marks as unverified as a question to check, not a fact.
-  - Fix the critical findings, then run it again on the new change. For a deeper security pass, use the Insecure code catcher.
+  - Fix the critical findings, then run it again on the new change. For a deeper security pass, use the Insecure code catcher (insecure-code-catcher) in this library.
 output_sample:
   input:
     - Your code changes, a commit range, or one file

@@ -36,7 +36,7 @@ How to start:
 1. **Gather the four results.** Write the four results in a table: understand it (its yes, no or too-hard basket), quality (its grade), people (their trust verdict) and price (walk-away price against price asked). Add the failure check result if it is in the plan.
 2. **Apply the basket rule.** NO if any filter says pass, do not trust, weak with a price that is not very low, or a price above the walk-away. TOO HARD if any filter is unknown or the person cannot explain how it works. YES only if all four pass. State which rule gave the call.
 3. **Compare with the best chances.** Ask the person to list the best two or three chances they saw in the last year. Rank this choice against them. "Standout" means it ranks first, or tied for first, among the chances you list (1 of 3 or better). Anything lower is only average. If it is only average, the call is NO or TOO HARD even if all four pass: waiting for a clearly better chance is cheap, and acting on an average one is not. Say so.
-4. **Size the commitment.** For a YES that is a clear standout, say a larger share of the money, time or effort set aside for this type of choice is justified, but never more than a quarter of it, and never more than the person can afford to lose entirely. This is decision support, not licensed financial advice. For a large money decision, say a qualified adviser should check it. For a YES that is only good, size it smaller. Never size beyond what the person can lose without being ruined. Avoid half-measures: a tiny trial position that teaches nothing is not a plan.
+4. **Size the commitment.** For a YES that is a clear standout, say a larger share of the money, time or effort set aside for this type of choice is justified, but never more than a quarter of it, and never more than the person can afford to lose entirely. This is decision support, not licensed financial advice. Size only money the person can afford to lose entirely. Do not give a size for savings, retirement money, borrowed money or money needed within five years: say the call stands but the amount must be set with a licensed financial adviser. For any large money decision, say a qualified adviser should check it before they commit. For a YES that is only good, size it smaller. Never size beyond what the person can lose without being ruined. Avoid half-measures: a tiny trial position that teaches nothing is not a plan.
 5. **Run the before-you-commit list.** Check the short list from the price step. Timing forced by the other side? Cash or borrowed? Exit cost? A better use of the money now? Any approval or disclosure needed first? Any answer that is a problem changes the call or the size.
 6. **Say what would change the call.** List two or three things the person could see, with numbers or dates, that would change the call. For a NO or TOO HARD, say what would move it to YES. For a YES, say what would make them stop.
 7. **Plan the review.** Set a date to review. Write the main reasons for the call in the person's words and what they expect. Say it will be judged by how well it was decided and not only by the result, and that it should be saved for "Checklist upkeep planner".
@@ -44,14 +44,14 @@ How to start:
 
 ## What you hand back
 
-The four results. The call and the rule that gave it. The comparison with the best chances. The size. The before-you-commit answers. What would change the call. The review date and reasons. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
+The four results. The call and the rule that gave it. The comparison with the best chances. The size. The before-you-commit answers. What would change the call. The review date and reasons. A line saying this is decision support, not financial, legal or tax advice. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Decision bias checker](https://useaiblocks.com/skills/decision-bias-pileup-checker). It takes the plan.
 - The [Plan objection writer](https://useaiblocks.com/skills/case-against-writer). It takes the plan.
 - The [Decision checklist runner](https://useaiblocks.com/skills/decision-checklist-runner). It takes the plan.
+- The [Decision bias checker](https://useaiblocks.com/skills/decision-bias-pileup-checker). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

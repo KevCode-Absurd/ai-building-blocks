@@ -86,3 +86,23 @@ test('a workflow lists its own inputs and specific step inputs, not the generic 
   assert.deepEqual(needed.map(i => i.key), ['spreadsheet']);
   assert.deepEqual(helps.map(i => i.key), ['performance_sheet']);
 });
+
+test('real hand-offs beat a same-job sibling that takes nothing, and the label names only what it really takes', () => {
+  const base = { type: 'skill', category: 'general', task: 'organise-work', outputs: [] };
+  const notes = { ...base, slug: 'weekly-meeting-notes-writer', name: 'Weekly meeting notes writer', summary: 'Turn a weekly team meeting into clean notes.', inputs: [{ type: 'transcript', required: true }], outputs: [{ type: 'meeting_notes' }] };
+  const sibling = { ...base, slug: 'weekly-meeting-notes-tidier', name: 'Weekly meeting notes tidier', summary: 'Turn a weekly team meeting into tidy notes.', inputs: [{ type: 'transcript', required: true }] };
+  const actions = { ...base, slug: 'action-tracker', name: 'Action tracker', summary: 'Keep owners and dates for each action.', inputs: [{ type: 'meeting_notes', required: true }] };
+  const board = { ...base, slug: 'board-minutes-drafter', name: 'Board minutes writer', summary: 'Write formal minutes for the board.', inputs: [{ type: 'meeting_notes', required: true }, { type: 'plan', required: false }] };
+  const next = nextOf(notes, [notes, sibling, actions, board]);
+  assert.deepEqual(next.map(x => x.slug).sort(), [actions.slug, board.slug]);
+  assert(next.every(x => x.takes.length === 1 && x.takes[0] === 'meeting notes'));
+});
+
+test('a result that only stands in for another type helps pick the link but is never named as the hand-off', () => {
+  const base = { type: 'skill', category: 'general', task: 'product-photos', outputs: [] };
+  const shoot = { ...base, slug: 'studio-photo-set-maker', name: 'Studio photo set maker', summary: 'Make a studio photo set of the product.', inputs: [{ type: 'product_data', required: true }], outputs: [{ type: 'photo_set' }] };
+  const checker = { ...base, slug: 'product-photo-checker', name: 'Product photo checker', summary: 'Check product photos against the real product.', inputs: [{ type: 'product_photos', required: true }] };
+  const next = nextOf(shoot, [shoot, checker]);
+  assert.deepEqual(next.map(x => x.slug), [checker.slug]);
+  assert.deepEqual(next[0].takes, []);
+});

@@ -31,7 +31,7 @@ How to start:
 
 ## What you need
 
-This is a pay job. Ignore any buyer brief mentioned above. This workflow needs your roles, headcount and budget.
+This is a pay job. The general "Before you start" list above mentions a buyer brief. This job does not use one. This workflow needs your roles, headcount and budget.
 
 - **Your roles** (required): each with its level and place, plus your industry.
 - **How many people are in each role** (required): step 3 uses it to cost the plan.
@@ -59,7 +59,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Next steps to offer
 
-Ignore the suggestions in "After this" that do not fit pay. Offer these instead:
+Use these instead of the general "After this" list above:
 - Price each planned hire from the new bands with [Plan a year of hiring and what it will cost](https://useaiblocks.com/workflows/plan-a-year-of-hiring-and-what-it-will-cost).
 - When you make an offer, check the letter with [Hire fairly, from job post to a checked offer letter](https://useaiblocks.com/workflows/hire-fairly-from-job-post-to-a-checked-offer-letter).
 
@@ -72,8 +72,8 @@ Ignore the suggestions in "After this" that do not fit pay. Offer these instead:
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Pay and benefits package designer](https://useaiblocks.com/skills/pay-benefits-package).
-- The [Offer letter drafter](https://useaiblocks.com/skills/offer-letter-drafter).
+- The [Pay and benefits package designer](https://useaiblocks.com/skills/pay-benefits-package). It takes the spreadsheet.
+- The [Team size and turnover report writer](https://useaiblocks.com/skills/headcount-and-turnover-reporter). It takes the spreadsheet.
 - The [People cost budget builder](https://useaiblocks.com/skills/people-cost-budget-builder). It takes the spreadsheet and plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
@@ -86,3 +86,4 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every market range names its source and date, or says the date is unknown.
 - Each band has a low, middle and high inside the market range, or explains why not, and the method can be said in three sentences to an employee.
 - The plan's total cost is shown against the budget with the sums, and the result is labelled a draft for you to check.
+- The middle of each band is close to a recent offer you made, or the gap is explained.

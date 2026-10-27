@@ -54,7 +54,7 @@ how_to_use:
   - Describe your documents, paste your real questions and say where answers fail today. Remove private data first.
   - Read "Corpus audit" and "Chunking plan" first. Check that the plan fits how your documents are laid out.
   - Build the question set it asks for. Fifty pairs of a question and its right passage is the profile's starting size.
-  - Run the compare and score steps yourself with your tools. Paste the scores back and ask for the next single change.
+  - Run the compare and score steps yourself with your tools. Paste the scores back and ask for the next single change. RAGAS needs a Python setup. LangSmith is a hosted service that needs an account and an API key, and it may charge. A custom script works too.
   - Keep a change only if the scores improve and no other score drops.
 how_it_works:
   - title: Audit the documents

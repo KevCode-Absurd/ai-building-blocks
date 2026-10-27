@@ -29,7 +29,7 @@ how_it_works:
 works_best_with:
   tools:
     - name: Gorgias and HubSpot
-      why: Live lookups need Composio CLI access and connected accounts for these services.
+      why: Live lookups need Composio CLI access and connected accounts for these services. Composio is a third-party service. It needs its own account, may charge for use, and must be connected before you run the check.
 how_to_use:
   - Open an AI that can run Composio CLI commands. This check needs code running and live access to your accounts.
   - Link your accounts. If the AI says Gorgias or HubSpot is not connected, run the link command it gives you, then try again.

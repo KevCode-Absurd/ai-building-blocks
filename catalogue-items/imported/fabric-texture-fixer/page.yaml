@@ -2,14 +2,14 @@ thinking: low
 thinking_why: It follows a set edit recipe using your sharp photo as the guide.
 new_slug: fabric-texture-fixer
 name: Fabric texture fixer
-summary: Fix blurry fabric in a clothing photo. Give it your photo and a sharp product shot, and get a prompt that rebuilds clear, real texture.
+summary: Fix blurry fabric in a clothing photo. Give it your photo and a sharp product shot. Get rebuilt texture, not proof of quality.
 job: product-photos
 headline: Fabric texture fixer
 subhead: A blurry garment photo repaired so the fabric looks real and sharp, while the model, pose and layout stay untouched. Knits that turned to mush when zoomed in get their texture back.
 explain: |
   A blurry garment photo repaired so the fabric looks real and sharp, while the model, pose and layout stay untouched. Knits that turned to mush when zoomed in get their texture back.
 
-  You give two images: the photo to fix, and a clear product photo of the same item that shows the true fabric. The skill writes a prompt telling the image model to rebuild the surface from the clear photo: cable ridges, jacquard relief, fibre fuzz and the dark folds. Faces, hair and background are left alone. It is a finishing pass for AI-made or low quality fashion images, and it uses the dlazy command line tool with credits.
+  You give two images: the photo to fix, and a clear product photo of the same item that shows the true fabric. The skill writes a prompt telling the image model to rebuild the surface from the clear photo: cable ridges, jacquard relief, fibre fuzz and the dark folds. Faces, hair and background are left alone. It is a finishing pass for AI-made or low quality fashion images, and it uses the dlazy command line tool with credits. The image model can invent texture the real garment does not have, so do not use the result as proof of fabric quality on a product page.
 when:
   - Your AI-generated clothing photo looks fine small and mushy when zoomed.
   - A supplier image shows the garment but the fabric is blurred.
@@ -52,7 +52,7 @@ output_sample:
     - name: Second variant
       contains: A second version from the batch, so you can pick the more believable fabric.
     - name: Saved file
-      contains: The result is saved as output-<sku>-enhanced.jpg, apart from your original, so you can compare the two.
+      contains: The result is saved as output-<sku>-enhanced.jpg in docs/material-enhancement, apart from your original, so you can compare the two. If you use the skill's unified script, it saves to output/material-enhancement-<sku>.jpg instead.
     - name: Fix-up lines
       contains: Extra sentences to add to the prompt if the result is only sharper, changed colour, or altered the face.
 next: [fabric-swap-sample-maker, product-photo-retoucher, ai-product-photo-inspector]

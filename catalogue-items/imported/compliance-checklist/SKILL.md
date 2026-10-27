@@ -60,7 +60,7 @@ The counts, percentages and day estimates below are made up to show the layout. 
 |---|------------|--------|-----------------|--------------|--------|
 | AC-1 | MFA enforced for all production systems | Partial | AWS IAM policy screenshots, IdP config | MFA enabled for AWS console but not for SSH access to EC2 instances. Enable MFA for all access paths. | 2 days |
 | AC-2 | Role-based access control with least privilege | Missing | IAM role definitions, access matrix | No formal RBAC model. Define roles, map to AWS IAM policies, GitHub teams, and Google Workspace groups. | 5 days |
-| AC-3 | Quarterly access reviews | Missing | Access review records, approval logs | No process exists. Implement quarterly reviews of all system access with manager sign-off. Tool recommendation: Vanta or Drata for automated tracking. | 3 days |
+| AC-3 | Quarterly access reviews | Missing | Access review records, approval logs | No process exists. Implement quarterly reviews of all system access with manager sign-off. Optional: a paid compliance tool such as Vanta or Drata can track this automatically. A free option is a shared sheet with a named owner and a review date. | 3 days |
 | AC-4 | Offboarding removes access within 24 hours | Partial | Offboarding checklist, deprovisioning logs | Ad hoc process exists but not documented. Formalize checklist covering all systems, automate via identity provider where possible. | 2 days |
 
 **Priority Remediation (Month 1):** Risk assessment (required foundation for all other controls), MFA enforcement across all systems, formal access control policy document, incident response plan draft.
@@ -90,13 +90,13 @@ The counts, percentages and day estimates below are made up to show the layout. 
 | DSR-1 | Right of access (Art. 15) — respond within 30 days | Missing | No automated process to compile all data held about a user. Implement data export from database, Google Analytics, Mailchimp. Build internal tool or use privacy management platform. | 5 days |
 | DSR-2 | Right to erasure (Art. 17) — delete on request | Partial | Can delete from main database but not from analytics, backups, or Mailchimp. Map all data stores and implement deletion cascade across all systems. | 4 days |
 | DSR-3 | Right to portability (Art. 20) — machine-readable export | Missing | No export functionality. Build JSON/CSV export endpoint for user data. | 3 days |
-| DSR-4 | Cookie consent with granular opt-in | Partial | Cookie banner exists but uses pre-ticked boxes (non-compliant). Replace with compliant CMP (e.g., Cookiebot, OneTrust) with granular categories and reject-all option. | 2 days |
+| DSR-4 | Cookie consent with granular opt-in | Partial | Cookie banner exists but uses pre-ticked boxes (non-compliant). Replace with a compliant consent tool with granular categories and reject-all option. | 2 days |
 
 ## Best Practices
 
 - Start with a single framework and expand — SOC2 Security criteria overlap significantly with HIPAA Technical Safeguards and PCI-DSS, so the first framework provides a foundation.
 - Map controls across frameworks to identify shared requirements and avoid duplicating effort on controls that satisfy multiple standards simultaneously.
-- Use compliance automation platforms (Vanta, Drata, Secureframe) to continuously collect evidence rather than scrambling before audits.
+- Optional and paid: compliance automation platforms (Vanta, Drata, Secureframe) and consent tools (Cookiebot, OneTrust) can collect evidence for you. None is needed to use this skill. A free route is a shared sheet that records each control, its owner, its evidence and the date you last checked it.
 - Document "Not Applicable" justifications formally — auditors will question every N/A item and require documented rationale.
 - Set calendar reminders for recurring controls (quarterly access reviews, annual risk assessments, penetration tests) to avoid lapses between audit periods.
 - Treat the checklist as a living document — update status weekly during active remediation and review quarterly once compliant.

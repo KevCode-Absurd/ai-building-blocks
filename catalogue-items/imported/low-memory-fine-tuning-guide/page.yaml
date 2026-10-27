@@ -9,7 +9,7 @@ subhead: A fine-tuning setup that trains less than one percent of a large model,
 explain: |
   A fine-tuning setup that trains less than one percent of a large model, so it fits on a single GPU. It uses small add-on layers called adapters, which can be around 6 MB instead of a 14 GB full copy.
 
-  Tell it your model and GPU. It picks LoRA for standard fine-tuning of 7B to 70B models, or QLoRA when memory is tight. QLoRA gives up around five percent of quality. It gives Python code using the peft, transformers and bitsandbytes libraries, along with settings like rank. It also covers saving several adapters for different tasks on one base model, and when full fine-tuning is the better choice instead.
+  Tell it your model and GPU. It picks LoRA for standard fine-tuning of 7B to 70B models, or QLoRA when memory is tight. QLoRA saves memory and may cost a little quality. The source's own table shows a drop of under one point on one benchmark, but it does not say what hardware it used, so test on your own task. It gives Python code using the peft, transformers and bitsandbytes libraries, along with settings like rank. It also covers saving several adapters for different tasks on one base model, and when full fine-tuning is the better choice instead.
 when:
   - You want to fine-tune a 7B to 70B model on a consumer GPU.
   - Full fine-tuning runs out of memory on your card.
@@ -37,6 +37,9 @@ how_to_use:
   - Copy the script to a computer with a GPU, or a cloud notebook, and run it. Your AI does not run the training itself.
   - If memory runs out, ask your AI for the fixes in this skill. A 70B model in 4-bit needs about 35 GB for the weights alone, so one 24 GB card is not enough. Memory use changes with your setup, so test a short run first.
   - Save the adapter. Keep one per task if you need more than one.
+  - Before you merge the adapter, test it on examples you held back from training. If it does well, serve it with the vLLM model server setup.
+next:
+  - vllm-model-server-setup
 output_sample:
   input:
     - The base model you want to tune

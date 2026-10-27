@@ -9,7 +9,9 @@ subhead: A short report on which buttons, links and inputs on a page you just bu
 explain: |
   A short report on which buttons, links and inputs on a page you just built do not work. It catches the broken things you would only find by clicking everything yourself.
 
-  The skill uses assay, a command line tool. It serves your page locally, opens it in a real Chromium browser through Playwright, finds every control and drives each one. It then prints a result that says where the page does not do what it promises. You run it once at the end, after your last edit, on each page you changed. The skill reports the result and does not fix the page itself. It needs Python 3.10 or newer and a one-time pip install.
+  The skill uses assay, a command line tool. It serves your page locally, opens it in a real Chromium browser through Playwright, finds every control and drives each one. It then prints a result that says where the page does not do what it promises. You run it once at the end, after your last edit, on each page you changed. The skill reports the result and does not fix the page itself. It needs Python 3.10 or newer and a one-time pip install. The first run also downloads the Chromium browser that Playwright uses.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (awss1i) says MIT. Credit goes to awss1i and sickn33.
 when:
   - You just made an HTML page and want a quick check.
   - You changed a script or style file and worry something broke.
@@ -22,6 +24,7 @@ not_for:
 you_give:
   - The page file or local address
   - Confirmation that edits are finished
+  - An AI that can run shell commands and open a local browser, because the check cannot run without them
   - Permission to install the tool once
 you_get:
   - A one-line result that says if anything was flagged

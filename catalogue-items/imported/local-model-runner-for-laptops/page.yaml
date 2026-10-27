@@ -31,11 +31,11 @@ you_get:
   - A server command and test request
   - A quantization choice that fits
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste this skill into the chat.
+  - This needs a terminal and some comfort running commands. Open Claude, ChatGPT or Gemini and paste this skill into the chat. Your AI writes the commands. You run them yourself.
   - Gather first the model name, your computer and its memory (RAM, or video memory if you have a graphics card), your operating system, and about how much free disk space you have. Then tell your AI these, and whether you want chat or a server.
   - Read the commands it gives you and check the model size fits your memory.
   - Run the commands one at a time in your terminal. Your AI cannot run them for you in a normal chat.
-  - Send the test request to check the server works, then point your app at it.
+  - Send the test request to check the server works, then point your app or any OpenAI-style client at http://localhost:8080/v1.
 output_sample:
   input:
     - The name of the model you want to run

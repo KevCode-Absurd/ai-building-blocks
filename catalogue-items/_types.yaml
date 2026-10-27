@@ -83,3 +83,44 @@ code_and_files:
   skill_files:   {desc: "A skill's folder: its SKILL.md and any files it needs."}
   tool_connection: {desc: "An AI connected to an outside tool or service, such as an MCP server."}
   image:         {desc: "A finished picture."}
+# Added 2026-10-27 so items that really hand work to each other connect on a specific thing, not a generic brief or document.
+# A plain request with no special shape stays a question; "brief" is only for creative briefs.
+ideas_and_research:
+  idea:           {desc: "An idea for a product, app, business, study or project, from one line to a short paragraph, or a list of rough ideas to compare."}
+  customer_needs: {desc: "A ranked list of customer problems or unmet needs, each backed by the customers' own words and where they came from."}
+  business_plan:  {desc: "A plan for a business or startup: the idea, the customers, the market, how it makes money and the key numbers."}
+  story_outline:  {desc: "A story's plan: the premise, the characters and the scenes or chapters in order, with what happens in each."}
+work_and_people:
+  job_description: {desc: "A job or role in writing: title, team, duties, level and what good work looks like, as a job post or plain notes."}
+  resume:          {desc: "A person's resume or CV, as pasted text or a file."}
+  lesson_plan:     {desc: "A lesson, class task or activity for a stated age group and subject: the aims, the steps and what students do. Can be a full plan or a short note of what you want to teach."}
+  contract:        {desc: "A contract or agreement in full, such as terms of service, an NDA or an order form, with its clauses, dates and any changes."}
+  policy:          {desc: "A written policy or set of rules, such as a returns policy, a privacy policy or a staff handbook section, with the date it starts."}
+  incident_record: {desc: "The record of an outage or incident: the timeline, what was affected, the alerts and who did what."}
+sales_and_finance:
+  lead_list:            {desc: "A list of sales leads or open deals, from a CRM or a CSV export, with company, contact, stage and last contact."}
+  customer_list:        {desc: "A customer or order export, one row per customer or order, with dates, amounts and what they bought."}
+  deal_terms:           {desc: "The terms of one deal, such as a sale, an investment or a company purchase: price, payment terms, discounts, debt, fees and dates."}
+  financial_statements: {desc: "A company's income statement, balance sheet and cash flow statement, with notes, for one or more periods."}
+search_and_site:
+  keyword_list:        {desc: "A list of search keywords, each with what the searcher wants and, where known, monthly searches and difficulty."}
+  search_query_report: {desc: "A search query export from Google Search Console or the Google Ads search terms report: each query with clicks, views, position or spend, for set dates."}
+  page_speed_report:   {desc: "A PageSpeed Insights or Lighthouse result: real-user and lab speed numbers for each page tested."}
+product_and_code:
+  product_spec:        {desc: "What to build and how to tell it's done: a product requirements doc, feature spec or user stories with acceptance criteria."}
+  api_spec:            {desc: "An API's spec, such as an OpenAPI file: the endpoints, data shapes, sign-in method and errors."}
+  data_model:          {desc: "A database design: the tables or collections, their fields and keys, and how they link."}
+  design_tokens:       {desc: "A design system's tokens: colours, type sizes, spacing and breakpoints, as CSS or JSON that code can use."}
+  automation_workflow: {desc: "An automation built or designed in a tool such as n8n, Zapier or Make: its trigger, steps, error paths and settings."}
+  prompt:              {desc: "A prompt or set of instructions written for an AI, such as a chat or system prompt, ready to use, test or improve."}
+  eval_set:            {desc: "A fixed set of test cases for an AI, each with its input and the answer that counts as a pass."}
+data_and_science:
+  dataset:       {desc: "Data files to process or analyse, such as a CSV or JSON export, logs, lab or sensor files, with their format and where they came from."}
+  signal_data:   {desc: "A recorded signal or time series, such as audio, sensor or measurement data, with its sample rate."}
+  map_data:      {desc: "Map data, such as GeoJSON, a shapefile, a GeoPackage, a raster or a point cloud, with its coordinate system and fields."}
+  training_data: {desc: "Examples used to train or fine-tune an AI model, such as labelled text pairs or images, with how they are split."}
+  ai_model:      {desc: "A trained AI model file, such as a checkpoint, ONNX or TFLite file, ready to test, convert or deploy."}
+media_links:
+  video_link:    {desc: "A link to a video, playlist, channel or social post, to read or fetch."}
+you:
+  me_file:       {desc: "Your me.md: who you are, your work, projects, voice and preferences, with dates."}

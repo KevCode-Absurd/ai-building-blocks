@@ -71,6 +71,7 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Offer checklist reviewer](https://useaiblocks.com/skills/offer-checklist-reviewer). It takes the offer.
 - The [Niche offer pricing planner](https://useaiblocks.com/skills/niche-price-ladder-builder). It takes the offer.
 - **Plan what to test** with the [Small launch test planner](https://useaiblocks.com/skills/small-launch-test-planner). It takes the offer.
+- The [Google remarketing campaign builder](https://useaiblocks.com/skills/google-remarketing-campaign-builder). It takes the offer and plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

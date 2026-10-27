@@ -12,6 +12,8 @@ inputs:
     required: true
 outputs:
   - type: audit_report
+  - type: eval_set
+    required: true
 uses: []
 origin: imported
 source:

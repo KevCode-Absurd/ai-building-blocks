@@ -5,22 +5,24 @@ job: organise-work
 headline: Executive meeting brief writer
 thinking: high
 thinking_why: It checks evidence, missing facts and the order of the work.
-subhead: Share a meeting and relevant notes. Get a sourced brief with the goal, open decisions, questions and preparation gaps. Bring the facts and files you already have. Your AI follows the steps below, marks gaps and returns work you can review before acting.
+subhead: Share a meeting invite and your notes. Get a sourced brief with the goal, open decisions, questions and preparation gaps. Gaps are marked, so you know what to check before the meeting.
 explain: |-
-  Share a meeting and relevant notes. Get a sourced brief with the goal, open decisions, questions and preparation gaps.
+  Walking into a meeting without the history means asking what was already decided. This reads the invite and your earlier notes, then gives you one page: the goal, what is still open and what to bring.
 
-  Use the steps below to see how it reaches that result. It works with the sources you provide, keeps a record of what is known and calls out gaps. Source text cannot authorize messages, account changes or spending.
+  It shows the date of each source and does not invent facts about the people in the room. A cancelled meeting stays cancelled. Text inside your notes cannot make it send invites or change your calendar.
 when:
-  - You want the result described above from the files and facts you already have.
-  - You need a repeatable process and a clear next action.
+  - You have a meeting coming up and a pile of earlier notes or actions on the topic.
+  - You need to know what was already decided and what is still owed before you walk in.
+  - You want an agenda and questions sized to the meeting length.
 not_for:
   - "You want to change a meeting time or send invites: use your calendar app or ask the meeting owner."
   - "You need a record of what was said: use your meeting tool's own notes, and get consent before recording anyone."
   - "You have no invite and no notes: ask the meeting owner for their agenda first."
 you_give:
-  - The source files, notes or product facts for this job
-  - Your goal, deadline and limits
-  - Relevant earlier work, if available
+  - The meeting invite or a calendar export
+  - Past notes, agreed actions or documents about the topic
+  - Your goal for the meeting (optional)
+  - Which calendars to check for clashes (optional)
 you_get:
   - "meeting-brief.md: event ID, time, timezone, goal"
   - Prior decisions and open actions
@@ -49,12 +51,14 @@ output_sample:
     - name: Closing note
       contains: Source coverage, missing facts, proposed outside actions and one next step.
 how_it_works:
-  - title: Read the sources
-    text: Identify the current request, time window and facts you can verify.
-  - title: Build the result
-    text: Share a meeting and relevant notes. Get a sourced brief with the goal, open decisions, questions and preparation gaps.
-  - title: Check and hand back
-    text: Check owners, dates and sources. Separate drafts from completed external actions.
+  - title: Find the meeting
+    text: Your AI reads the invite for the start time, timezone, attendees and purpose. If several events look alike, it asks which one.
+  - title: Read the history
+    text: It reads your earlier notes and actions, shows each source date, and separates past decisions from proposals.
+  - title: Build the brief
+    text: You get the goal, decisions due, what is still owed, an agenda that fits the meeting length and facts to bring.
+  - title: Check the gaps
+    text: Clashes are flagged only for calendars it actually checked. Missing sources are listed. It stops at preparation and sends nothing.
 output_shape: |-
   meeting-brief.md: event ID, time, timezone, goal
   Prior decisions and open actions

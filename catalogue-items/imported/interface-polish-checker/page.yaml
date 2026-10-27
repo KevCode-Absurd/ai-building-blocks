@@ -10,6 +10,8 @@ explain: |
   A list of spacing, type and layout slips in your page or component code, each with a reason and a fix. It cleans up the rough edges that make an interface look unfinished.
 
   Give it a file and it checks against a firm baseline. For each problem it quotes the exact line, says in one short sentence why it matters, and offers a code-level fix. The baseline leans on Tailwind defaults, uses motion libraries only when script animation is needed, and respects your existing design, accessibility needs and framework choices. It is aimed at quick clean-up passes, not redesigns.
+
+  Licence: the written text of this skill is shared under CC BY-4.0 (the LICENSE-CONTENT file). The "MIT" line in the SKILL.md header is the original author's own note. Keep the credit to the author.
 when:
   - A page works but looks slightly off and you cannot say why.
   - You want a fast review before a launch.
@@ -34,7 +36,7 @@ how_to_use:
   - "Paste the skill text into the chat, then write: Apply this baseline to the file below. (The /baseline-ui slash form only works in tools that support custom commands.)"
   - Paste your page or component code below it. Add your framework and any design rules to keep.
   - Read each quoted line, the reason and the fix. Skip any fix that clashes with your existing design.
-  - Apply the fixes you agree with, then paste the updated code and run the check again.
+  - Apply the fixes you agree with, then paste the updated code and run the check again. Have a developer apply the fixes inside your project and test the page. Do not paste fixes in blindly.
 output_sample:
   input:
     - Your page or component file

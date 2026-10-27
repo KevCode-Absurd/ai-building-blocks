@@ -33,11 +33,12 @@ you_get:
   - A baseline and a rule that flags a drop
   - A plan for live A/B tests
 how_to_use:
+  - "Know before you start: the AI judge and some scores need a paid API key or a large model download. This skill only writes the plan, so you can use it with a free chat."
   - Open Claude, ChatGPT or Gemini and paste in the skill.
-  - Describe your feature in a few lines. Add 5 to 20 example inputs with the answers you would call good, if you have them.
+  - Describe your feature in a few lines. Collect 5 to 20 real user questions as example inputs, with the answers you would call good. The plan helps you pick them if you have none.
   - Say what matters most. Pick one or two of accuracy, tone, speed and safety, so the plan stays short.
   - Read the list of scores. Cut any you cannot explain to a teammate. Fewer, clearer scores beat a long list.
-  - Run the plan on your own data. This skill writes the plan and sample code. It does not run tests, and the code needs changes before it works for you.
+  - Run the plan on your own data yourself or with a developer. This skill writes the plan and sample code. It does not run tests, and the sample code will not run as it is. It uses placeholder names that a developer must replace.
   - Next, run the baseline before you change any prompt or model, and save the scores. Then change one thing and run the same tests again.
   - Note the costs. The AI judge and some scores need a paid API key or a large model download. Say your budget up front.
 output_sample:

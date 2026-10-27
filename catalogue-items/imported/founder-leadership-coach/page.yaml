@@ -35,9 +35,9 @@ you_get:
   - An energy and burnout check
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste the SKILL.md text from this item, or upload the file. No code or paid tools are needed.
-  - Paste the last four weeks of your calendar as text or a list of recurring meetings. Say how many people work with you. The calendar is used only in this chat. The skill does not store it or send it anywhere else. Remove names and private details first if you prefer.
+  - Gather these first. A description of a normal week, the last four weeks of your calendar (or a list of recurring meetings), and your team size and who reports to you. Remove names and private details before you paste. How your chat tool stores what you paste depends on the tool, so check its data settings first.
   - Describe a normal week in your own words. Say what you put off and what you enjoy most.
-  - Read your founder type first. Tell your AI where it is wrong, and ask it to redo the plan.
+  - Read your founder type first. The type and any percentage targets are working guesses from the author's rules of thumb, not research. Tell your AI where it is wrong, and ask it to redo the plan.
   - Pick one handoff from the delegation plan and do it this week. Review the plan again in a month.
   - Then plan the handoff conversation with the feedback conversation planner, and set up regular one-on-ones with the one-on-one meeting planner.
 how_it_works:

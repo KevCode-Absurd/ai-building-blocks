@@ -49,7 +49,11 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back
-4 step files and the summary. The last file holds the plan.
+4 step files and the summary:
+- Step 1, investor type: defensive, enterprising or neither yet, with ranked reasons from your own answers and the paths closed to you.
+- Step 2, stock and bond split: the split, its range, a rebalancing trigger and the reasons. No named funds.
+- Step 3, bond choice: which kind of bond, how long and why.
+- Step 4, one-page policy: what you hold, how you keep it, what you expect (only from your own figures), what you will not do and a review date. The last file holds the plan.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

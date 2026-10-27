@@ -57,7 +57,7 @@ test('saved context travels with imported skill files and preserves scripts and 
  const file=info.outputPath(dl.suggestedFilename());await dl.saveAs(file);
  const files=unzipSync(fs.readFileSync(file)),root='copilot-copilot-usage-metrics';
  expect(strFromU8(files[`${root}/SKILL.md`])).toContain('B2B software for small teams');
- expect(strFromU8(files[`${root}/SKILL.md`])).toContain('Your saved context');
+ expect(strFromU8(files[`${root}/SKILL.md`])).toContain('## Your me.md');
  expect(files[`${root}/get-org-metrics.sh`]).toBeTruthy();
  expect(files[`${root}/LICENSE`]).toBeTruthy();
 });
@@ -81,9 +81,9 @@ test('saved context is included in a mind pack',async({page},info)=>{
  const [dl]=await Promise.all([page.waitForEvent('download'),page.getByTestId('mind-pack').click()]);
  const file=info.outputPath(dl.suggestedFilename());await dl.saveAs(file);
  const files=unzipSync(fs.readFileSync(file));
- expect(strFromU8(files['claude-hopkins-pack/about-me.md'])).toContain('Software for small teams');
+ expect(strFromU8(files['claude-hopkins-pack/me.md'])).toContain('Software for small teams');
  expect(strFromU8(files['claude-hopkins-pack/claude-hopkins/SKILL.md'])).toContain('Software for small teams');
- expect(strFromU8(files['claude-hopkins-pack/README.md'])).toContain('Read about-me.md');
+ expect(strFromU8(files['claude-hopkins-pack/README.md'])).toContain('Read me.md');
 });
 
 test('home shows a goal search above the fold and How it works remains reachable',async({page})=>{
@@ -110,7 +110,7 @@ test('@mobile goal search, context and compact filters fit without page overflow
  await page.getByTestId('library-search').fill('Executive');
  await expect(page.getByTestId('library-search')).toHaveValue('Executive');
  await page.getByTestId('open-business').click();
- await expect(page.getByTestId('business-form')).toContainText('Tell your AI once');
+ await expect(page.getByTestId('business-form')).toContainText('Your me.md');
  await page.getByTestId('biz-sells').fill('B2B software');
  await page.getByTestId('biz-save').click();
  await page.reload();

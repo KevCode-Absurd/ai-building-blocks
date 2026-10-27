@@ -9,7 +9,7 @@ headline: "Weekly store ad pulse checker"
 subhead: Paste your store's weekly spend, sales, email and discount numbers. It reads them in a fixed order, flags what moved, scores the week's health out of 100 and lists which levers to pull first, with email and drops ahead of any discount.
 
 explain: |
-  Looking at ad numbers every hour makes owners jumpy. Mid-day, blended ROAS (all your revenue divided by all your ad spend) can look weak because the day's emails haven't gone out. A weak week can lead to a discount, and a discount can hide a bigger problem.
+  Looking at ad numbers every hour makes owners jumpy. Mid-day, blended ROAS (all your revenue divided by all your ad spend) can look weak because the day's emails haven't gone out. This is the sources' view, so check it on your own numbers. A weak week can lead to a discount, and a discount can hide a bigger problem.
 
   This skill gives you one weekly pulse. It reads blended ROAS first, then new-customer ROAS and CAC (the cost to get a new customer), CPM and spend by channel. It adds email capture, discount share and large orders. It tells you what moved and what to pull, in order: emails and drops first, creative and budget next, a discount last. The method comes from two large brands, so use it as practice and test it on your own store.
 
@@ -20,7 +20,7 @@ when:
 not_for:
   - "You only have one day of numbers, or half a day: wait for a full week, then run this check."
   - "Your store is brand new with no past weeks: there is nothing to compare, so track a few weeks by hand first."
-  - "You want to know if one campaign pays back its cost: use a CAC payback checker or a simple spreadsheet, as this page does not have one listed."
+  - "You want to know if one campaign pays back its cost: use the CAC payback checker."
 
 you_give:
   - This week's and last week's blended ROAS, new-customer ROAS, CAC, CPM and spend by channel

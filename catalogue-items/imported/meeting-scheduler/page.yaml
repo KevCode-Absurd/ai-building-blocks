@@ -54,6 +54,6 @@ output_sample:
     - name: Recommendation
       contains: The slot it suggests and the reason, followed by a question asking you to confirm.
     - name: Calendar invite
-      contains: An event with the agenda and a video link, sent only after you confirm.
+      contains: An event with the agenda and a video link, sent only after you confirm. A Zoom, Meet or Teams link may need an account or plan of its own. The AI must never say a slot is free unless it read that person's calendar.
     - name: RSVP updates
       contains: Who accepted, replied maybe or declined, and new slots if a key person declines.

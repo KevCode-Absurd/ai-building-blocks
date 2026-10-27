@@ -40,6 +40,7 @@ how_to_use:
   - Add the downloaded folder to an AI that can run commands and read skill files.
   - Install the Composio CLI and link your Wati or Whautomate account when your AI asks.
   - Ask your AI to run the WhatsApp support reply assistant on your waiting chats.
+  - Your AI reads customer phone numbers and chat history. Limit it to the chats you need for this review, and do not paste them into other tools.
   - Read the queue. Check each draft against what you know. Drafts should use only facts from the chat.
   - Tell your AI which replies to send. It sends only those you approve. Pass the escalation list to your helpdesk or the team that owns each issue.
 output_sample:

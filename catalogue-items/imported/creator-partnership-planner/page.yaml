@@ -31,10 +31,11 @@ you_get:
   - Creative brief
   - Measurement plan
 how_to_use:
+  - Gather first: your product and price, your audience, your budget (cash or free product), and any results from creator work you have done before.
   - Open Claude, ChatGPT or Gemini and paste in the skill text. This one plans a whole partnership program. To only build a shortlist, use the influencer shortlist builder. To only check one creator's audience, use the creator audience checker. Tools like SparkToro for audience checks are usually paid.
   - Tell your AI what you sell, your price, your audience and your budget.
   - Say which platforms you want, or leave this out and let it suggest some.
-  - Read the plan. Check the creator vetting steps and the disclosure rules first. Treat the pay ranges as rough starting points to negotiate from, not market data.
+  - Read the plan. Check the creator vetting steps and the disclosure rules first. Treat the pay ranges as rough, undated estimates from the skill's contributors, to negotiate from, not market data. This is a copy of a public MIT-licensed skill.
   - Send the brief and outreach messages to your shortlist, then follow the checklist through to the review.
 output_sample:
   input:

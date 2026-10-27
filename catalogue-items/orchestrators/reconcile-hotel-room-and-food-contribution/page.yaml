@@ -12,6 +12,8 @@ explain: |-
   This workflow does the two departments one after the other. The first step reconciles room-night receipts, commissions and the cost to service occupied rooms, and passes on the period and cost boundaries. The second step builds food contribution from yields, servings and receipts across that same period, then brings both into one management summary.
 
   Shared overhead, such as rent, management pay or utilities used by both, stays out of both subtotals unless you allocate it and show the evidence. The summary is department contribution. It is not the full profit of the property.
+
+  Licence: MIT. The licence text is in the download.
 when:
   - Booking sites take commission and you want room contribution after those fees.
   - Food cost per portion seems off and you want to test it against real yields.
@@ -19,7 +21,7 @@ when:
   - Owners ask why departmental figures do not add up to the profit statement.
 not_for:
   - "You want full property profit: this stops at department contribution. Use your accounts and add shared costs."
-  - "You only need room revenue after channel fees: use the Hotel room revenue and cost checker."
+  - "You only need room revenue after channel fees: run step 1 alone, the Hotel room revenue and cost checker."
   - "You only want dish cost: use the Restaurant portion cost calculator."
   - "You want to allocate shared costs between departments: use the Service capacity and cost reviewer."
 you_give:
@@ -63,7 +65,7 @@ tweaks:
 judge:
   - Periods and currency match, shared expenses are not duplicated, and department contribution is clearly separate from complete property profit.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
-  - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
+  - If a workbook is built, keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
 test:
   - Try a small sourced case and inspect every component handoff.
   - Remove one required source and confirm the affected step stops.

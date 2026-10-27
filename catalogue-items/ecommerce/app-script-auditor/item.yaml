@@ -8,7 +8,7 @@ job: analysis
 level: beginner
 inputs:
   - {type: store_capture, required: true}
-  - {type: audit_report, required: true}
+  - {type: page_speed_report, required: true}
 outputs:
   - {type: audit_report}
 uses: []

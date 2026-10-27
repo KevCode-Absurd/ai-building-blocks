@@ -8,10 +8,12 @@ role: compress
 job: ops
 level: intermediate
 inputs:
-  - type: question
+  - type: video_link
     required: true
+  - type: audit_report
+    required: false
 outputs:
-  - type: transcript
+  - type: document
 uses: []
 origin: imported
 warnings:

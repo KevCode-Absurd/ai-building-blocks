@@ -57,8 +57,8 @@ The opening. One chapter per problem, each with a numbered routine, a do-not lis
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Sales copy reviewer](https://useaiblocks.com/skills/sales-copy-reviewer). It takes the draft.
+- The [Sales copy editor](https://useaiblocks.com/skills/sales-copy-editor). It takes the draft.
 - The [How-it-works copy writer](https://useaiblocks.com/skills/how-it-works-copy-writer). It takes the draft.
-- The [Concrete copy rewriter](https://useaiblocks.com/skills/concrete-copy-rewriter). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

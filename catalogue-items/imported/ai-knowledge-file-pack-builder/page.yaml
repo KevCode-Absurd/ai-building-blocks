@@ -6,12 +6,19 @@ summary: "Turn your notes and facts into an Open Knowledge Format folder: linked
 job: document-work
 headline: AI knowledge file pack builder
 subhead: Share facts, definitions or steps you want to reuse. You get a folder of linked Markdown notes in Open Knowledge Format v0.1, with clear document types and sources. It is a plain folder, not a database or a wiki. The Python checker is optional.
+explain: |
+  Open Knowledge Format (OKF) is a folder of Markdown files. Each file holds one idea and starts with a type line. Files link to each other, so people and AI tools can read, reuse and check what you know.
+
+  You give your AI your notes, facts and sources. It writes one file per idea, picks stable folder names and adds the type and source to each. The optional Python checker then tests the types, reserved file names and links. The skill's own examples are about data tables. For business knowledge, such as a process or a policy, treat each process or policy as one file.
+when:
+  - You want facts, definitions or steps saved in a form your AI tools can reuse.
+  - You need a folder of notes that links together and cites its sources.
+  - You want to share a body of knowledge with a team or another AI tool.
 not_for:
   - "You want a normal wiki or help pages for people: use a plain wiki or docs tool instead."
   - "You need to check full YAML syntax: use a YAML parser, because the bundled checker only reads a simple subset."
   - "You have one short note to save: keep it in a plain document, no folder needed."
   - "You want a wiki to build up over time from your notes: use the notes wiki builder instead."
-  - "Its examples are about data tables. For business knowledge, such as processes or policies, treat each process or policy as one file."
 you_give:
   - The knowledge, sources, document types, stable folder names, and intended readers.
 you_get:
@@ -31,8 +38,8 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste the skill, or upload its folder if your AI can read files.
   - Paste your notes, facts and sources. Say who will read the folder and what each topic should be called.
   - Ask your AI to write the folder. Check that each file has a type and that links point to real files.
-  - The checker is optional. To run it, you need Python 3.8 or newer with PyYAML. Without Python, your AI can still write the folder, and you check the links by hand. Create each folder before you add files to it.
-  - Next, save the folder in a repo or shared drive. Point your AI tool's file access at its index.md.
+  - The checker is optional. A business user can get a usable folder by pasting notes into an AI tool and skipping it. To run the checker, you need Python 3.8 or newer with PyYAML. Without Python, your AI can still write the folder, and you check the links by hand. Create each folder before you add files to it.
+  - Next, save the folder in a repo or shared drive. Point your AI tool's file access at its index.md. Choose the notes wiki builder if your notes grow over time, the company wiki planner for team processes with owners, or the text to knowledge graph builder to pull links out of one long document.
 output_sample:
   input:
     - Your notes, facts, definitions or steps to reuse

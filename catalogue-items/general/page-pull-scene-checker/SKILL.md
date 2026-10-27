@@ -63,7 +63,7 @@ The question. The paragraph table. The lowest-pull paragraph and its fix. The op
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Show-don't-tell scene rewriter](https://useaiblocks.com/skills/show-dont-tell-scene-rewriter).
+- The [Reader feedback sorter](https://useaiblocks.com/skills/reader-feedback-sorter). It takes the notes.
 - The [Page-turner scene drafter](https://useaiblocks.com/skills/page-turner-scene-drafter). It takes the audit report.
 - The [Story theme and scene reviewer](https://useaiblocks.com/skills/hidden-theme-finder). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.

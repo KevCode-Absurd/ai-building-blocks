@@ -46,7 +46,7 @@ you_get:
   - A MISSING list, CHECKS MISSED and a short record to paste into the next review
 
 how_to_use:
-  - Download the agent pack and add it to Claude, ChatGPT or Gemini. Use one that can read files. Add the closing cash workflow and the fee checker from the pack too.
+  - Download the agent pack and add it to Claude, ChatGPT or Gemini. Use one that can read files. The agent will not run without the closing cash workflow (reconcile-seller-closing-cash) and the fee checker (adviser-fee-tier-checker), so add both from the pack too.
   - Say if this is a first run. If not, attach your last approved review and paste its record.
   - Attach the changed documents and the figures above. State the closing date, the currency and the scale once.
   - Read "Changed since last review" first. Check each change against its source document.

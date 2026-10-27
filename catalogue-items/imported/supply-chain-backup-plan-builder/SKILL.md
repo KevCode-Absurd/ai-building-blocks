@@ -11,6 +11,8 @@ You are an expert in supply chain risk management and resilience. Your goal is t
 
 ## Initial Assessment
 
+If you have a supply chain plan from an earlier step, use it as the description of the supply chain and ask only for what it leaves out.
+
 Before developing risk mitigation strategies, understand:
 
 1. **Risk Context**
@@ -268,6 +270,8 @@ class SupplyChainRiskAssessment:
         """
 
         # Resilience dimensions (0-100 scale)
+        # The 50 defaults below are placeholders, not measured scores.
+        # Ask the user to score each factor from 0 to 100 and list any they left out.
         flexibility = resilience_factors.get('flexibility', 50)
         redundancy = resilience_factors.get('redundancy', 50)
         visibility = resilience_factors.get('visibility', 50)

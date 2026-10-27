@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import type { Plugin } from 'vite';
-import { handlePublicApi, MAX_PUBLIC_BODY_BYTES, publicJson } from '../src/server/public-api.ts';
+import { handlePublicApi, isPublicApiRoute, MAX_PUBLIC_BODY_BYTES, publicJson } from '../src/server/public-api.ts';
 
 /** Local development serves public catalogue data only. Private company OAuth/D1 runs in the local Worker. */
 export function devPublicApi(): Plugin {
@@ -12,7 +12,7 @@ export function devPublicApi(): Plugin {
       server.middlewares.use(async (req, res, next) => {
         const rawPath = (req.url ?? '/').split('?')[0].replace(/\/+$/, '') || '/';
         const company = rawPath === '/mcp/company' || rawPath.startsWith('/mcp/company/');
-        const publicRoute = rawPath === '/mcp' || rawPath === '/api/v1' || rawPath.startsWith('/api/v1/');
+        const publicRoute = isPublicApiRoute(rawPath);
         if (!company && !publicRoute) return next();
         const send = async (response: Response) => {
           res.statusCode = response.status;

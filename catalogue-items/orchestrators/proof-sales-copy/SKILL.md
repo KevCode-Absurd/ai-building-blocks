@@ -42,7 +42,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-- **Customer reviews, copied as written** (required): with the source and date of each. Reviews that show a result, with the numbers, are the most useful. Tickets, survey answers and call notes also work.
+- **Customer reviews, copied as written** (required): with the source and date of each. With fewer than about ten reviews, mark the buyer brief `weak: few reviews` and say what is thin. Do not present a pattern from three reviews as a pattern. Reviews that show a result, with the numbers, are the most useful. Tickets, survey answers and call notes also work.
 - **Your product facts** (required): what it is, how it is used, and your exact price, delivery and guarantee terms, with every condition. Confirm these before you start. The body step states them word for word and never fills a gap.
 - **Any test or study you can show** (optional): with its source, so the body can put it beside the claim it backs.
 - **Your brand file** (optional): voice, approved claims, claims the brand must never make.
@@ -78,10 +78,10 @@ The order matters: the brief names the buyer and the one force to move, the open
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Check it before it goes live** with the [Headline promise checker](https://useaiblocks.com/skills/headline-promise-checker). It takes the ad copy.
-- **Check it before it goes live** with the [Claim evidence checker](https://useaiblocks.com/skills/claim-and-proof-matcher). It takes the ad copy.
-- The [Page copywriter](https://useaiblocks.com/skills/page-copywriter).
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy.
 - **Check it before it goes live** with the [Ad awareness stage reviewer](https://useaiblocks.com/skills/ad-awareness-stage-checker). It takes the ad copy.
 - The [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer). It takes the ad copy.
+- The [Page type and layout planner](https://useaiblocks.com/skills/page-type-and-layout-planner). It takes the ad copy.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

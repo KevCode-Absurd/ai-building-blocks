@@ -12,6 +12,8 @@ argument-hint: "[regulation name, or paste regulatory text, or attach a document
 
 # /reg-gap-analysis
 
+**Needs a setup file (added by AI Blocks).** This skill depends on the `ai-governance-legal` plugin from claude-for-legal and its CLAUDE.md file, which is not in this folder. Without that file it will not run as intended: say so and ask the user to fill in the file or give you the same facts in the chat. Applicability answers, thresholds, dates and article numbers can come from memory or web search, so they are leads for a lawyer to check, not legal conclusions. This is not legal advice.
+
 1. Read `~/.claude/plugins/config/claude-for-legal/ai-governance-legal/CLAUDE.md`. Confirm regulatory footprint and use case registry are populated.
 2. Use the framework below.
 3. Scope: does this regulation apply? (Jurisdiction, threshold, builder/deployer, sector.) If not, one line and done.

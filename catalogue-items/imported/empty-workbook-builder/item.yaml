@@ -8,8 +8,10 @@ role: make
 job: ops
 level: beginner
 inputs:
-  - type: brief
+  - type: document
     required: true
+  - type: spreadsheet
+    required: false
 outputs:
   - type: spreadsheet
 uses: []

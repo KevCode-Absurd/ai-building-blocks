@@ -10,6 +10,8 @@ level: expert
 inputs:
   - type: question
     required: true
+  - type: training_data
+    required: false
 outputs:
   - type: code_change
 uses: []

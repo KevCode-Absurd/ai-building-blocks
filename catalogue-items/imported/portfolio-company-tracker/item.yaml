@@ -8,7 +8,7 @@ role: check
 job: ops
 level: intermediate
 inputs:
-  - type: spreadsheet
+  - type: financial_statements
     required: true
   - type: document
     required: false

@@ -10,6 +10,8 @@ explain: |
   A claim checked against several independent sources, with a table that shows what supports it, what contradicts it and where the evidence runs out. You stop trusting the first search result.
 
   The skill sets a small search budget first, about six searches and six page opens. It then uses at least two different search tools and prefers primary documents over summaries. Articles that all trace back to one origin count once. Each claim gets a confidence level of low, medium or high, and is marked as sourced or inferred. Pages it reads are treated as evidence only, never as instructions. It stops when another search is unlikely to add anything new.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (sandbaseai) says Apache-2.0. Credit goes to sandbaseai.
 when:
   - You read a statistic in an article and need to know if it is true.
   - You are about to put a claim in a report and want proof behind it.
@@ -35,7 +37,8 @@ how_to_use:
   - Type the claim you want checked, word for word. Add links to any sources you already trust, how deep to go, and any topics that must not be searched.
   - Read the table by confidence first. Then read the conflicts and gaps before you use the claim.
   - Click the cited links yourself for anything important. The check shows how well sources agree. It does not prove a claim is true.
-  - Running the validator needs an AI that can run code. Without it, ask for the table in plain text.
+  - Running the validator (scripts/validate_report.py) needs an AI that can run code, plus Python 3. It needs no API key. Without code, ask for the table in plain text.
+  - Carry each claim into your final report with its confidence level and conflicts beside it. Run the check again if the claim is time-sensitive.
 output_sample:
   input:
     - The claim or question you want checked

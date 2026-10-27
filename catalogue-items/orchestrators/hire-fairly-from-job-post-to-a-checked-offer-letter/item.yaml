@@ -7,10 +7,13 @@ role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - {type: brief, required: true}
+  - {type: job_description, required: true}
   - {type: feedback_notes, required: true}
+  - {type: resume, required: false}
+  - {type: contract, required: true}
 outputs:
   - {type: audit_report}
+  - {type: job_description, required: true}
 uses: [hiring-packet-builder, applicant-shortlist-builder, fair-candidate-comparer, offer-letter-check]
 steps:
   - {uses: hiring-packet-builder, note: "Makes the job post, the scoring guide and the offer template that every later step uses."}

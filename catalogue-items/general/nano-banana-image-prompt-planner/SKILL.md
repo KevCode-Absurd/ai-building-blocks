@@ -29,6 +29,7 @@ How to start:
 - Your brief in one sentence, plus where the image will be used.
 - Any approved image to edit, with its file type and how many references you have.
 - One line on which reference wins if they clash.
+- How many images your tool accepts at once. If unknown, plan for at most three references and rank them; drop the weakest first.
 
 ## Scope and intake
 
@@ -44,7 +45,7 @@ This method produces image prompt from the supplied brief. Read what the user al
 
 4. For every edit identify the element, current_state, target_state, preserved properties and integration constraints. Never claim to observe a named image that is unavailable.
 
-5. Give every attached reference a role and explicit exclusions: identity only, product shape/label, composition or style. Write one line per reference, for example "Image 1: product shape and label only; ignore its background." Resolve collisions by explicit user priorities.
+5. Give every attached reference a role and explicit exclusions: identity only, product shape/label, composition or style. Write one line per reference, for example "Image 1: product shape and label only; ignore its background." Resolve collisions by the user's ranking; with no ranking, ask once or use the order given. With no references and no approved image, set `references` and `edits` to empty lists and put the whole scene in the plain-language prompt, so the JSON still parses.
 
 6. For style extraction describe visible traits rather than copying an entire reference subject. For style reuse lock the chosen palette, light, material and composition vocabulary across a new subject.
 
@@ -67,7 +68,6 @@ NOT RUN
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Multi-provider image maker](https://useaiblocks.com/skills/multi-provider-image-maker). It takes the image prompt.
-- The [Midjourney image prompt writer](https://useaiblocks.com/skills/midjourney-four-direction-prompt-writer).
 - The [Image maker and editor](https://useaiblocks.com/skills/image-maker-and-editor).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

@@ -9,6 +9,8 @@ Give it a category. Get complaints that sell, the gap in it and a score out of 1
 
 This workflow chains skills from the library. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
+**When not to use it:** you already have a product and only want it scored (use the [Winning product scorer](https://useaiblocks.com/skills/winning-product-scorer) on its own). Complaint volume shows pain, not demand: a loud complaint does not prove people will pay to fix it, so the score is a first filter, not a green light. In health, supplement, children's or other regulated categories, claims and safety rules apply, so check them before you pick a product.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -28,6 +30,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+Start with the first two items: the category, plus your budget and country. Public review pages and forums are where the complaints come from.
 - **A product category or market** (required): the narrower the better.
 - **Who you are** (required): beginner or not, your budget and your country.
 - **The competitor set** (step 3 needs it): the top three to five brands in the category. Step 2 lists brands already selling to each problem. Add your own list if you have one, with price and where each sells.
@@ -51,15 +54,24 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 Pause here: Pick one product for the top gap. Write down its cost, shipping cost and the price you would charge.
 
 4. **Winning product scorer.** Use the skill `winning-product-scorer`. Give it the ranked gaps from step 3, your chosen product, its landed cost and your price. It does the margin sums first, then marks its rules pass, warn or fail, and returns a score out of 100 with a go or no-go and the first fix. Scores the product you chose for the gap, using your costs. The gap from step 3 is the problem it must solve; the score is the end result.
-5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then a `CHECKS MISSED` list (or "none").
 
 ## What you hand back
 4 step files and the summary. The last file holds the audit report.
+- **Step 1, complaints:** ranked unmet pain points with the review lines behind each.
+- **Step 2, problems and brands:** the best five problems and the brands already selling to each.
+- **Step 3, gaps:** ranked gaps and a one-line position for the top gap.
+- **Step 4, score:** the margin sums, each rule marked pass, warn or fail, a score out of 100, a go or no-go and the first fix.
+- **Hand-back summary:** each file, every `MISSING:` line and the `CHECKS MISSED` list.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Untapped buyer finder](https://useaiblocks.com/skills/untapped-buyer-finder).
+- The [Category and trend risk checker](https://useaiblocks.com/skills/category-and-trend-risk-checker). It takes the idea.
+- The [New product line checker](https://useaiblocks.com/skills/new-product-line-checker). It takes the audit report.
+- **Shape the product** with the [Product build blueprint writer](https://useaiblocks.com/skills/build-blueprint-writer). It takes the idea.
+- **Test the idea with real people** with the [Product demand researcher](https://useaiblocks.com/skills/product-demand-researcher). It takes the idea.
+- **Plan your strategy** with the [Growth idea ranker](https://useaiblocks.com/skills/growth-idea-ranker). It takes the idea and audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

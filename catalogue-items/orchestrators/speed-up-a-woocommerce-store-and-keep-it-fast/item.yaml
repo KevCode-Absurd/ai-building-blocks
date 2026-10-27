@@ -7,10 +7,11 @@ role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - {type: source_text, required: true}
+  - {type: page_speed_report, required: true}
   - {type: question, required: true}
 outputs:
   - {type: plan}
+  - {type: audit_report}
 uses: [store-speed-report-reader, self-hosted-store-speed-fixer, speed-budget-and-sale-check]
 steps:
   - {uses: store-speed-report-reader, note: "Reads your pasted PageSpeed report and names what is slow and why."}

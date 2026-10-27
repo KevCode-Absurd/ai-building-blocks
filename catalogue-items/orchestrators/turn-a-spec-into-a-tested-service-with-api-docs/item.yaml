@@ -7,11 +7,12 @@ role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - {type: document, required: true}
+  - {type: product_spec, required: true}
+  - {type: question, required: true}
 outputs:
   - {type: codebase}
   - {type: test_report}
-  - {type: document}
+  - {type: api_spec}
 uses: [spec-to-starter-repo-builder, backend-builder, api-test-suite-builder, api-spec-writer]
 steps:
   - {uses: spec-to-starter-repo-builder, note: "Turns the spec into a project folder with structure and setup, and hands that folder to step 2."}

@@ -9,11 +9,13 @@ level: advanced
 inputs:
   - type: source_text
     required: true
-  - type: question
+  - type: lesson_plan
     required: true
 outputs:
   - type: document
   - type: plan
+  - type: lesson_plan
+    required: true
 uses:
   - history-source-simplifier
   - primary-source-lesson

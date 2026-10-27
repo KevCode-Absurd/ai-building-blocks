@@ -30,6 +30,12 @@ Pyzotero is a Python wrapper for the [Zotero API v3](https://www.zotero.org/supp
 
 **Reviewed target:** [pyzotero 1.15.2](https://pypi.org/project/pyzotero/1.15.2/) on 2026-09-30. Checked official [SDK documentation](https://pyzotero.readthedocs.io/en/latest/), release source, and [Web API contracts](https://www.zotero.org/support/dev/web_api/v3/basics). Examples requiring a private library or running Zotero are illustrative; read-only public probes and isolated SDK contract checks do not establish authenticated write success.
 
+If an earlier step gave a shortlist of books or papers, use it as the items to add. Ask for a clear yes before you add them.
+
+## Before any write
+
+Reads are safe. Anything that creates, edits, moves, tags or deletes changes the user's real library. Before you call any write method, list every item you plan to change and what the change is, then wait for a clear yes. Never delete without a separate yes for each delete. Do not invent items, authors or DOIs: add only what the user gave you, and write `MISSING:` for fields you lack. Keep the API key in an environment variable and never paste it into the chat.
+
 ## Authentication Setup
 
 **For remote private reads and writes**, get credentials from https://www.zotero.org/settings/keys:

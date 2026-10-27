@@ -53,9 +53,9 @@ The customer's want. The problem on three levels. The guide lines. The plan. The
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Customer-first message planner](https://useaiblocks.com/skills/customer-as-hero-message-planner).
 - The [Memorable message writer](https://useaiblocks.com/skills/memorable-message-writer). It takes the draft.
-- The [Product positioning brief writer](https://useaiblocks.com/skills/positioning-memo).
+- The [Story rules checker](https://useaiblocks.com/skills/story-rules-checker). It takes the draft.
+- The [Usability test audience planner](https://useaiblocks.com/skills/expert-and-newcomer-test-planner). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

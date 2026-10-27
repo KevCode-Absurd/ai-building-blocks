@@ -10,11 +10,12 @@ level: intermediate
 inputs:
   - type: question
     required: true
-  - type: source_text
+  - type: performance_sheet
     required: false
 outputs:
-  - type: brief
-  - type: audit_report
+  - type: plan
+  - type: keyword_list
+    required: true
 uses: []
 steps: []
 origin: imported

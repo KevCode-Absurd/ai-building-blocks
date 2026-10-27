@@ -67,9 +67,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Customer proof placement planner](https://useaiblocks.com/prompts/proof-spot-mapper).
-- The [Website first-screen copy writer](https://useaiblocks.com/prompts/top-of-page-headline-writer).
-- The [Evidence-based sales copy writer](https://useaiblocks.com/skills/proof-backed-sales-copy-writer).
+- The [Competitor comparison page writer](https://useaiblocks.com/skills/alternative-page-writer). It takes the audit report.
+- **Understand your buyers** with the [Customer needs profile builder](https://useaiblocks.com/skills/job-based-avatar-builder). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

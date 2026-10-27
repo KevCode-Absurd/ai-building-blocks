@@ -40,11 +40,24 @@ Before planning seasonal buys, understand:
 
 ---
 
+## Required inputs before any code runs
+
+Do not run any of the code below, and do not give buy quantities, until the user has told you all four of these. If one is missing, ask for it and wait. Never fill it in yourself.
+
+1. Season length in weeks (set once as `season_weeks`; every phase and curve below uses it)
+2. Markdown rate: how far prices drop on leftover stock
+3. Stockout cost: how much more a lost sale costs than the margin on it (a multiplier)
+4. Demand variation: how far sales usually miss the forecast, from their own history
+
+The code raises an error if the markdown rate or the stockout cost is left out. The numbers in the code examples are made up so the code can run. They are not benchmarks.
+
+---
+
 ## Seasonal Planning Framework
 
 ### Season Phases
 
-The phases below assume a selling season of about 12 weeks, with planning starting 12 weeks before it. The code defaults use a 16-week season. Ask the user for their real season length and scale the phases to it. Change `weeks` in the generic curve and `season_weeks` in the config to match.
+The phase weeks below are written for a selling season of 12 weeks, with planning starting 12 weeks before it. Ask the user for their real season length (`season_weeks`) and scale each phase by season_weeks divided by 12. For example, a 16-week season stretches Early Season from weeks 1-4 to weeks 1-5.
 
 **Pre-Season (Weeks -12 to 0)**
 - Trend forecasting and market research
@@ -103,16 +116,18 @@ class SeasonalBuyOptimizer:
         self.season = season_config
 
     def calculate_optimal_buy(self, sku_forecast, unit_cost, retail_price,
-                             markdown_rate=0.50, stockout_cost_multiplier=1.5):
+                             markdown_rate, stockout_cost_multiplier):
         """
         Calculate optimal buy quantity using newsvendor model
 
         Classic single-period inventory problem
 
-        The defaults below (50% markdown rate, 1.5x stockout cost) are placeholders,
-        not drawn from the user's data. Replace them with the user's own figures
-        before any buy quantity is used.
+        markdown_rate and stockout_cost_multiplier have no defaults. Both must come
+        from the user. Do not guess them.
         """
+
+        if markdown_rate is None or stockout_cost_multiplier is None:
+            raise ValueError("Ask the user for the markdown rate and the stockout cost first.")
 
         # Expected demand
         mean_demand = sku_forecast['mean']
@@ -292,11 +307,13 @@ class SeasonalBuyOptimizer:
         }
 
 # Example usage
+# DEMO ONLY: every number below is made up so the code runs.
+# Replace each one with the user's own figures before you read any result as a buy plan.
 season_config = {
-    'season_name': 'Fall 2024',
-    'start_date': '2024-08-01',
-    'end_date': '2024-11-30',
-    'weeks': 16
+    'season_name': '[SEASON NAME]',
+    'start_date': '[START DATE]',
+    'end_date': '[END DATE]',
+    'season_weeks': 16  # set once from the user's answer; reused below
 }
 
 optimizer = SeasonalBuyOptimizer(season_config)
@@ -307,7 +324,8 @@ buy_decision = optimizer.calculate_optimal_buy(
     sku_forecast=sku_forecast,
     unit_cost=25,
     retail_price=60,
-    markdown_rate=0.50
+    markdown_rate=0.50,            # DEMO: use the user's markdown rate
+    stockout_cost_multiplier=1.5   # DEMO: use the user's stockout cost
 )
 
 print("Optimal Buy Analysis:")
@@ -318,6 +336,7 @@ print(f"  Expected profit: ${buy_decision['expected_profit']:,.2f}")
 print(f"  Service level: {buy_decision['service_level']:.1f}%")
 
 # Assortment optimization
+# Synthetic random products so the code runs. Replace with the user's real SKUs.
 product_options = pd.DataFrame({
     'sku': [f'SKU{i:03d}' for i in range(1, 21)],
     'category': np.random.choice(['Tops', 'Bottoms', 'Dresses'], 20),
@@ -357,13 +376,18 @@ class SeasonalDemandForecaster:
     - Weather impacts
     """
 
-    def __init__(self, historical_data):
+    def __init__(self, historical_data, season_weeks, demand_variation):
         """
         Parameters:
         - historical_data: Historical sales by week/season
           columns: ['season', 'year', 'week', 'sales', 'category']
+        - season_weeks: the user's season length in weeks (the only place it is set)
+        - demand_variation: how far sales usually miss forecast, as a fraction,
+          taken from the user's own history (for example, a miss of one third is 0.33)
         """
         self.history = historical_data
+        self.season_weeks = season_weeks
+        self.demand_variation = demand_variation
 
     def forecast_seasonal_curve(self, season, category):
         """
@@ -403,15 +427,16 @@ class SeasonalDemandForecaster:
     def _generic_seasonal_curve(self):
         """Generic seasonal curve (normal distribution)"""
 
-        weeks = range(1, 17)  # 16-week season
-        peak_week = 6  # Peak in week 6
+        weeks = range(1, self.season_weeks + 1)
+        peak_week = round(self.season_weeks * 0.4)  # peak about 40% into the season
+        sigma = 0.2 * self.season_weeks
 
         curve = {}
         total = 0
 
         for week in weeks:
             # Normal distribution centered at peak
-            sales = np.exp(-((week - peak_week) ** 2) / 20)
+            sales = np.exp(-((week - peak_week) ** 2) / (2 * sigma ** 2))
             curve[week] = sales
             total += sales
 
@@ -473,7 +498,7 @@ class SeasonalDemandForecaster:
             sku_forecast = total_forecast * (forecast_pct / 100) * price_adjustment
 
             # Add uncertainty (standard deviation)
-            sku_std = sku_forecast * 0.30  # PLACEHOLDER 30% demand variation: replace with the user's own history
+            sku_std = sku_forecast * self.demand_variation  # from the user's own history
 
             sku_forecasts.append({
                 'sku': sku['sku'],
@@ -552,6 +577,7 @@ class SeasonalDemandForecaster:
         return results_df, summary
 
 # Example
+# Synthetic random history so the code runs. Replace with the user's real weekly sales.
 historical_data = pd.DataFrame({
     'season': ['Fall'] * 48,
     'year': [2021, 2021, 2022, 2022, 2023, 2023] * 8,
@@ -560,7 +586,11 @@ historical_data = pd.DataFrame({
     'category': 'Sweaters'
 })
 
-forecaster = SeasonalDemandForecaster(historical_data)
+forecaster = SeasonalDemandForecaster(
+    historical_data,
+    season_weeks=season_config['season_weeks'],
+    demand_variation=0.30  # DEMO: use the user's own figure
+)
 
 # Get seasonal curve
 curve = forecaster.forecast_seasonal_curve('Fall', 'Sweaters')
@@ -780,9 +810,9 @@ class InSeasonManager:
         else:
             return 'Poor - aggressive intervention needed'
 
-# Example
+# Example (made-up SKUs and quantities: replace with the user's own)
 season_plan = {
-    'season_weeks': 16,
+    'season_weeks': season_config['season_weeks'],
     'SKU001': {'total_plan': 10000, 'buy_quantity': 8000, 'lead_time_weeks': 6},
     'SKU002': {'total_plan': 15000, 'buy_quantity': 12000, 'lead_time_weeks': 8},
     'SKU003': {'total_plan': 5000, 'buy_quantity': 5000, 'lead_time_weeks': 6}

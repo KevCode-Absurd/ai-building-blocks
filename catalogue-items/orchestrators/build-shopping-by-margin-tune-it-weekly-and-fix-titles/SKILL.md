@@ -21,6 +21,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Product photos** (yours): clear photos of the real product, from more than one angle. Attach them.
+- **A search query report** (yours): an export from Google Search Console or the Google Ads search terms report, for set dates.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).

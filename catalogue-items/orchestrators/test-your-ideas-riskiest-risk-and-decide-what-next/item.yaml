@@ -7,7 +7,7 @@ role: orchestrate
 job: research
 level: intermediate
 inputs:
-  - {type: question, required: true}
+  - {type: idea, required: true}
   - {type: voc_reviews, required: false}
   - {type: document, required: false}
 outputs:

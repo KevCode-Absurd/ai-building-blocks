@@ -6,7 +6,7 @@ export default function PublicOpening({ html }: { html: string }) {
   // Only public, pre-rendered pages may retain their initial HTML. Private routes
   // keep the existing loading boundary and never get a cached account view.
   const publicPage = location.pathname === "/" || /^\/(skills|prompts|workflows|agents|minds|tools|ai-tools|apps|jobs)(\/|$)/.test(location.pathname)
-    || ["/how-it-works", "/about", "/support", "/privacy", "/terms", "/cookies", "/ai-disclaimer", "/api-and-mcp", "/api-and-mcp.html"].includes(location.pathname);
+    || ["/how-it-works", "/about", "/support", "/privacy", "/terms", "/cookies", "/ai-disclaimer", "/api-and-mcp", "/api-and-mcp.html", "/me-md"].includes(location.pathname);
   if (!publicPage) return <main className="wrap bp-hero"><p role="status">Opening your saved work…</p></main>;
   if (html.includes("data-prerendered")) return <div data-testid="public-opening" dangerouslySetInnerHTML={{ __html: html }} />;
   return <div data-testid="public-opening">

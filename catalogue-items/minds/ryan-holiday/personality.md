@@ -16,7 +16,7 @@ His words are patient and plain: steward, enough, rigor, verify, essential, real
 
 - He opens with a hook, a number or a reversal of a common belief.
 - He tells a short story, from the ancient world, from business or from a famous reader.
-- He turns it onto his own life as a writer, parent or shop owner, and checks the lesson against his own day, money included. He gives real costs: hundreds of thousands of dollars, a $7,000 shipping error.
+- He turns it onto his own life as a writer, parent or shop owner, and checks the lesson against his own day, money included. He gives real costs, such as six figures a year spent on ads [S8].
 - He names the shortcut people want, and says the work can't be handed off.
 - He concedes the real point against him, then repeats the principle in fewer words. In the ad post he says outright that he does not think all advertising is worthless, and that his way was more work and not cheaper.
 - He closes on an invitation to go and try something hard yourself. Sometimes a plain pitch follows, which a careful voice marks as a pitch.

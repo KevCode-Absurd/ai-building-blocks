@@ -13,9 +13,10 @@ Read [the original role profile](references/source-agent.md) before you start. I
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Draft brand voice checker](https://useaiblocks.com/skills/draft-brand-voice-checker). It takes the brand brain and brand guide.
-- The [Brand health auditor](https://useaiblocks.com/skills/brand-health-auditor). It takes the brand brain.
-- The [Brand voice rules writer](https://useaiblocks.com/skills/brand-voice-rules-writer). It takes the brand brain.
+- The [Brand health auditor](https://useaiblocks.com/skills/brand-health-auditor). It takes the audit report.
+- The [Draft brand voice checker](https://useaiblocks.com/skills/draft-brand-voice-checker). It takes the brand guide.
+- The [Brand voice rules writer](https://useaiblocks.com/skills/brand-voice-rules-writer).
+- The [AI writing workflow planner](https://useaiblocks.com/skills/ai-writing-workflow-planner). It takes the brand guide.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -39,6 +40,8 @@ How to start:
 <!-- /needs -->
 
 ## What to collect first
+
+These are the inputs that count. If the generic "Before you start" list above asks for something else, such as a question or source text, ignore that part.
 
 Ask once for anything missing. Never invent it. Mark each gap `MISSING:` in the answer, or label a stand-in `ASSUMED:` and say what to replace it with.
 
@@ -72,7 +75,7 @@ Use these headings, in this order:
 7. Protection and monitoring
 8. Checks still needed
 
-Skip a heading that does not apply to the job and say so in one line.
+Skip a heading that does not apply to the job and say so in one line. Heading 8 is also your CHECKS MISSED list: name every check that failed or could not run, or write "none".
 
 ## Rules
 

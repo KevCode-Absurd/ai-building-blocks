@@ -10,7 +10,6 @@ inputs:
   - {type: question, required: true}
 outputs:
   - {type: plan}
-  - {type: lessons_register, required: false}
 origin: rebuilt
 version: 1.0.0
 minds: [stephen-hawking]

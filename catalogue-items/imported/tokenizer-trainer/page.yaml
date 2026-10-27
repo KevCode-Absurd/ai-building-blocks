@@ -9,7 +9,9 @@ subhead: Give it your text files. It trains a tokenizer on them, so a model sees
 explain: |
   A tokenizer built from your own text, so a model sees your words, codes or product names as clean pieces instead of broken fragments. It is useful when general tokenizers split your specialist vocabulary badly.
 
-  The skill uses the Hugging Face Tokenizers library. You pick a method: BPE, WordPiece or Unigram. It trains the vocabulary on your files, sets special tokens, and adds rules for padding and maximum length. It can track where each token came from in the original text, which helps with highlighting and entity work. It also loads ready-made tokenizers when you do not need a custom one. In the skill's own test (a 16-core computer, English Wikipedia text), the library tokenized about 1 GB in under 20 seconds. Training on 1 GB took about 15 to 40 minutes, depending on the method. A laptop will be slower.
+  The skill uses the Hugging Face Tokenizers library. You pick a method: BPE, WordPiece or Unigram. It trains the vocabulary on your files, sets special tokens, and adds rules for padding and maximum length. It can track where each token came from in the original text, which helps with highlighting and entity work. It also loads ready-made tokenizers when you do not need a custom one. The speed figures in the skill are the upstream author's own test on a 16-core computer with English Wikipedia text, not a test of this item. They put training on 1 GB at about 15 to 40 minutes, depending on the method. A laptop will be slower, so time a small run first.
+
+  Licence: MIT, as the LICENSE file in this item says. This is a copy of the Orchestra Research tokenizers skill. We gave it a plain name, rewrote the page text, and added a complete script with a test encode. The method is unchanged.
 when:
   - Standard tokenizers chop your industry terms or product codes into odd pieces.
   - You are training a model and need a vocabulary built from your data.
@@ -33,7 +35,7 @@ you_get:
 how_to_use:
   - Use an AI that can run Python code, or run the code on your own computer. Install tokenizers, transformers and datasets with pip.
   - Gather your text files as plain .txt. Note their rough size, because training takes longer on bigger files.
-  - Paste the skill into your AI. Add your files, your method (or ask it to pick) and your vocabulary size. The skill's code blocks are fragments, so ask your AI to join them into one script, save it as train_tokenizer.py, and run it.
+  - Paste the skill into your AI. Add your files, your method (or ask it to pick) and your vocabulary size. The skill includes a complete train_tokenizer.py with a test encode. Ask your AI to adapt the file names and your test sentence, then run it.
   - Check the test encode. Your key terms should stay in one or two pieces. If not, raise the vocabulary size and train again.
   - Load the saved my-tokenizer.json in your training run, or wrap it for transformers. If a pretrained tokenizer fits your model, use that instead.
 output_sample:

@@ -14,7 +14,7 @@ inputs:
   - type: source_text
     required: false
 outputs:
-  - type: brief
+  - type: plan
   - type: audit_report
 uses: []
 steps: []

@@ -13,7 +13,9 @@ Read [the original role profile](references/source-agent.md) before you start. I
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Bug root cause finder](https://useaiblocks.com/skills/bug-root-cause-finder). It takes the audit report.
 - The [Web accessibility checker](https://useaiblocks.com/skills/accessibility-checker). It takes the audit report.
+- The [Live code debugger](https://useaiblocks.com/skills/live-code-debugger). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -24,11 +26,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+- **Map data** (yours): the map files, such as GeoJSON or a shapefile, with their coordinate system.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, map data. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -38,6 +40,8 @@ How to start:
 <!-- /needs -->
 
 ## What to collect first
+
+These are the inputs that count. If the generic "Before you start" list above asks for something else, such as a question or source text, ignore that part. This agent takes a dataset's name, schema, about 20 sample rows, the declared coordinate system and the spec.
 
 Ask once for anything missing. Never invent it. Mark each gap `MISSING:` in the answer, or label a stand-in `ASSUMED:` and say what to replace it with.
 
@@ -70,6 +74,10 @@ Use these headings, in this order:
 4. Checks not run
 5. Metadata review
 6. Retest after fixes
+
+Heading 4 is also your CHECKS MISSED list: name every check that was not run, or write "none".
+
+Next: to fix the issues, use the [Spatial Data Engineer agent](https://useaiblocks.com/skills/agency-gis-spatial-data-engineer). Once the data is clean, use the [GIS Analyst agent](https://useaiblocks.com/skills/agency-gis-analyst).
 
 ## Rules
 

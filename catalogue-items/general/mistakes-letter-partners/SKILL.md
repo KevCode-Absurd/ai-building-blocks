@@ -5,7 +5,7 @@ description: Use when you must write to owners, partners, members or backers aft
 
 # Mistakes letter to partners writer
 
-People who trust you with money or time want the truth in plain words, bad news first. A letter that names each mistake and its cost earns more trust than one that hides it. This skill writes that letter for a business, fund, club, charity or team.
+People who trust you with money or time want the truth in plain words, bad news first. A letter that names each mistake and its cost earns more trust than one that hides it. This skill writes that letter for a business, fund, club, charity or team. Not for routine updates, and not for formal reports you owe investors or lenders by law: check those with an accountant or lawyer first.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -49,12 +49,14 @@ How to start:
 
 The letter: results, the wider world, mistakes with costs, lessons and changes, cash and risk, closing line. Then `MISSING:` lines for each figure to fill in. Last, CHECKS MISSED: one line per check missed, or "none".
 
+Tell the person what to do next: check every figure against their records, fill in each MISSING line, then run the letter through "Plain English editor" before sending.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Story rules checker](https://useaiblocks.com/skills/story-rules-checker). It takes the draft.
 - The [Plain English editor](https://useaiblocks.com/skills/plain-english-editor). It takes the draft.
-- The [Show-don't-tell scene rewriter](https://useaiblocks.com/skills/show-dont-tell-scene-rewriter). It takes the draft.
-- The [Commit message humaniser](https://useaiblocks.com/skills/commit-message-humaniser). It takes the draft.
+- The [Fresh draft reviewer](https://useaiblocks.com/skills/cold-reread-marker). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

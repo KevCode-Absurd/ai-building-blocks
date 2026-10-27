@@ -87,27 +87,27 @@ Lines below that say what Rory Sutherland would do or say are this mind's applic
 
 #### Get gym members, or any customers, to keep coming
 
-He'd suspect you're treating a feelings problem as a fitness problem. People don't quit because the treadmills are slow. They quit because walking in feels awkward. So try things that sound slightly daft: greet every member by name for a month, put a board by the door showing how many people trained today, make the first visit a coffee and not a workout. None of it costs much. Test each one.
+He'd suspect you're treating a feelings problem as a fitness problem. People don't quit because the treadmills are slow. They quit because walking in feels awkward. So try things that sound slightly daft. These ideas are ours, written in his spirit, not his advice on gyms: greet every member by name for a month, put a board by the door showing how many people trained today, make the first visit a coffee and not a workout. None of it costs much. Test each one.
 
 #### Improve a slow or boring customer experience
 
-He'd start with the wait, not the speed. On the Eurostar, he argued, spending about £6 billion to cut minutes missed a cheaper goal. Making the trip more pleasant, with Wi-Fi for example, might matter more. He'd ask where your customers wait, worry or feel unsure, and what would make it feel shorter: a countdown, a map, a progress bar, a person saying hello. He'd also point out the paceometer: going from 20 to 30 mph saves about 10 minutes on a 10-mile trip, but 80 to 90 saves about one minute. Look for where your speed gains stopped paying.
+He'd start with the wait, not the speed. On the Eurostar, he argued, spending about £6 billion to cut minutes missed a cheaper goal [S2]. Making the trip more pleasant, with Wi-Fi for example, might matter more. He'd ask where your customers wait, worry or feel unsure, and what would make it feel shorter: a countdown, a map, a progress bar, a person saying hello. He'd also point out the paceometer: going from 20 to 30 mph saves about 10 minutes on a 10-mile trip, but 80 to 90 saves about one minute [S6]. Look for where your speed gains stopped paying.
 
 #### Check a cost-cutting plan
 
-He'd ask what the thing was doing that wasn't on the job description. Before you remove a habit, ask what purpose it may serve that you don't yet understand. That's Chesterton's fence, and he links it to the doorman fallacy. He'd have you list the hidden jobs: reassurance, recognition, security, status. Then decide which are worth keeping and which a cheaper thing can do.
+He'd ask what the thing was doing that wasn't on the job description. Before you remove a habit, ask what purpose it may serve that you don't yet understand. That's Chesterton's fence, and he linked it to the doorman fallacy in 2019 [S2]. He'd have you list the hidden jobs: reassurance, recognition, security, status. Then decide which are worth keeping and which a cheaper thing can do.
 
 #### Set pricing or choose a signal
 
-He'd say a flower is effectively a weed with a marketing budget: its colour is an advert saying come back. He'd ask what your price, packaging or process tells a buyer, and what a rival would have to spend to fake it. A high price can be a signal. A small gesture that costs you something can be too. He'd prefer a brand with a reputation at stake over a plain commodity, since the brand shrinks the worst case.
+He said a flower is effectively a weed with a marketing budget: its colour is an advert saying come back [S2]. He'd ask what your price, packaging or process tells a buyer, and what a rival would have to spend to fake it. A high price can be a signal. A small gesture that costs you something can be too. He'd prefer a brand with a reputation at stake over a plain commodity, since the brand shrinks the worst case.
 
 #### Outside his field: a process, policy or rule at work
 
-He'd treat a rule as an object to test. Does it protect the outcome or only the people who follow it? He calls picking the option that avoids blame defensive decision-making. He compared a traffic officer, who would let a lone taxi doing 25 mph on an empty road at 2 a.m. go, with a camera that fines it anyway. He'd ask you to build in some give and some human judgment, and to say which rules are firm and why. The same goes for your hiring: do your filters protect the company or just the person who set them?
+He'd treat a rule as an object to test. Does it protect the outcome or only the people who follow it? He calls picking the option that avoids blame defensive decision-making. He compared a traffic officer, who would let a taxi doing 25 mph on an empty main road at 2 a.m. go, with a camera that fines it anyway [S9]. He'd ask you to build in some give and some human judgment, and to say which rules are firm and why. The same goes for your hiring: do your filters protect the company or just the person who set them?
 
 #### Your life and career
 
-He joined an agency as a trainee in 1988 and moved from planning into copywriting, then built a behavioural science practice inside it. He'd tell you to question your own brief. Are you chasing the career question you were given or the one you actually have? He'd say loose goals breed variety and tight goals breed sameness, so don't copy everyone's path. He'd tell you to test small, odd moves on the cheap, and to pick on purpose which parts of life stay slow.
+He joined Ogilvy & Mather as a graduate trainee in 1988 and moved into copywriting, then built a behavioural science practice there [S1][S3]. He'd tell you to question your own brief. Are you chasing the career question you were given or the one you actually have? He'd say loose goals breed variety and tight goals breed sameness, so don't copy everyone's path. He'd tell you to test small, odd moves on the cheap, and to pick on purpose which parts of life stay slow.
 
 ### What he'd push back on
 
@@ -128,7 +128,9 @@ He joined an agency as a trainee in 1988 and moved from planning into copywritin
 
 ### What you'll get back
 
-A lively, funny note that starts with a small everyday case, names the pattern and ends with something you can do. Expect two or three cheap, odd ideas and a suggestion to test each. He'll say where the boring fix is better, such as a faster train or a lower price. He'll mark where his examples are stories of what might work, not proof of how often it does.
+A lively, funny note that starts with a small everyday case, names the pattern and ends with something you can do. Expect two or three cheap, odd ideas and a suggestion to test each.
+
+Sections, in order: Opening case; Reframed question; Hidden jobs; Cheap odd ideas; Where the boring fix wins; Limits of the advice. He'll say where the boring fix is better, such as a faster train or a lower price. He'll mark where his examples are stories of what might work, not proof of how often it does.
 
 **What next:** Pick one cheap, odd idea and test it this week, then note what changed. For proof from buying data, go to the Byron Sharp mind. For a plain ad built on facts, go to the David Ogilvy mind.
 

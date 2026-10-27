@@ -31,8 +31,9 @@ you_get:
   - Finished pipeline results, including a MultiQC report
   - A check that the key result files exist
 how_to_use:
-  - Use an AI that can run code on your computer and download files. A plain chat window cannot run this.
-  - Check your computer has enough disk space, memory and time for a full run. Full runs can be heavy.
+  - Use an AI tool that can run commands in a terminal on your own computer and download files, such as Claude Code. The skill was written for Claude Code. A plain chat window cannot run this.
+  - Check your computer has enough disk space, memory and time for a full run. The skill does not give disk or run-time figures, because they depend on your sample count and the pipeline. Its example cap for one run is 8 CPUs, 32 GB of memory and 24 hours. Read the chosen pipeline's own page for its needs before you start a full run.
+  - Some setup fixes use sudo (admin rights). Your AI should show you each command first. Say no to any you do not understand.
   - Paste the skill into your AI. Tell it your files or your GEO or SRA accession.
   - "Approve each choice it asks about: the samples, the pipeline, the genome and the pipeline options."
   - Install Nextflow from the official install page (nextflow.io). If you use a command that downloads a script, read the script before you run it.

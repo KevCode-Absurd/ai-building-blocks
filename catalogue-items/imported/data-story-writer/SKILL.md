@@ -64,145 +64,134 @@ Resolution: Insights and recommendations
 
 ## Story Frameworks
 
-The numeric stories below are synthetic teaching examples, not observed customer outcomes or benchmarks. Replace their figures with verified input, show assumptions, and distinguish association from causation. Recalculate totals before recommending spending or forecasting impact.
+Every figure in the stories below is a placeholder in [square brackets]. They are teaching shapes, not observed results or benchmarks. Fill each one only from the user's own data, show your assumptions, and separate association from causation. If the user gives you no figure for a slot, leave it empty and say so. Recalculate totals before recommending spending or forecasting impact.
 
 ### Framework 1: The Problem-Solution Story
 
 ```markdown
-# Customer Churn Analysis
+# [Problem name] Analysis
 
 ## The Hook
 
-"We're losing $2.4M annually to preventable churn."
+"We're losing [AMOUNT] a year to [PROBLEM]."
 
 ## The Context
 
-- Current churn rate: 8.5% (industry average: 5%)
-- Average customer lifetime value: $4,800
-- 500 customers churned last quarter
+- Current rate: [RATE] (benchmark: [BENCHMARK, with its source])
+- Average customer lifetime value: [VALUE]
+- [COUNT] customers lost last quarter
 
 ## The Problem
 
-Analysis of churned customers reveals a pattern:
+Analysis of the lost customers reveals a pattern:
 
-- 73% churned within first 90 days
-- Common factor: < 3 support interactions
-- Low feature adoption in first month
+- [SHARE]% left within [PERIOD]
+- Common factor: [FACTOR FROM THE DATA]
+- [SECOND PATTERN FROM THE DATA]
 
 ## The Insight
 
-[Show engagement curve visualization]
-Customers who don't engage in the first 14 days
-are 4x more likely to churn.
+[Show chart of the pattern]
+[GROUP A] are [MULTIPLE]x more likely to leave than [GROUP B].
 
 ## The Solution
 
-1. Implement 14-day onboarding sequence
-2. Proactive outreach at day 7
-3. Feature adoption tracking
+1. [ACTION 1]
+2. [ACTION 2]
+3. [ACTION 3]
 
 ## Expected Impact
 
-- Reduce early churn by 40%
-- Save $960K annually
-- Payback period: 3 months
+- [EXPECTED CHANGE, with the assumption behind it]
+- [ANNUAL VALUE, with the calculation shown]
+- Payback period: [PERIOD]
 
 ## Call to Action
 
-Approve $50K budget for onboarding automation.
+Approve [BUDGET] for [ACTION].
 ```
 
 ### Framework 2: The Trend Story
 
 ```markdown
-# Q4 Performance Analysis
+# [Period] Performance Analysis
 
 ## Where We Started
 
-Q3 ended with $1.2M MRR, 15% below target.
-Team morale was low after missed goals.
+[PERIOD] ended with [METRIC VALUE], [GAP] against target.
 
 ## What Changed
 
-[Timeline visualization]
+[Timeline chart]
 
-- Oct: Launched self-serve pricing
-- Nov: Reduced friction in signup
-- Dec: Added customer success calls
+- [MONTH]: [CHANGE 1]
+- [MONTH]: [CHANGE 2]
+- [MONTH]: [CHANGE 3]
 
 ## The Transformation
 
 [Before/after comparison chart]
-| Metric | Q3 | Q4 | Change |
+| Metric | [PERIOD 1] | [PERIOD 2] | Change |
 |----------------|--------|--------|--------|
-| Trial → Paid | 8% | 15% | +87% |
-| Time to Value | 14 days| 5 days | -64% |
-| Expansion Rate | 2% | 8% | +300% |
+| [METRIC 1] | [VALUE] | [VALUE] | [CHANGE] |
+| [METRIC 2] | [VALUE] | [VALUE] | [CHANGE] |
+| [METRIC 3] | [VALUE] | [VALUE] | [CHANGE] |
 
 ## Key Insight
 
-Self-serve + high-touch creates compound growth.
-Customers who self-serve AND get a success call
-have 3x higher expansion rate.
+[WHAT THE DATA SHOWS, in one sentence, and whether it shows cause or only a link]
 
 ## Going Forward
 
-Double down on hybrid model.
-Target: $1.8M MRR by Q2.
+[NEXT STEP]. Target: [TARGET] by [DATE].
 ```
 
 ### Framework 3: The Comparison Story
 
 ```markdown
-# Market Opportunity Analysis
+# [Decision] Analysis
 
 ## The Question
 
-Should we expand into EMEA or APAC first?
+Should we choose [OPTION A] or [OPTION B] first?
 
 ## The Comparison
 
-[Side-by-side market analysis]
+[Side-by-side analysis]
 
-### EMEA
+### [OPTION A]
 
-- Market size: $4.2B
-- Growth rate: 8%
-- Competition: High
-- Regulatory: Complex (GDPR)
-- Language: Multiple
+- [FACTOR 1]: [VALUE AND SOURCE]
+- [FACTOR 2]: [VALUE AND SOURCE]
+- [FACTOR 3]: [VALUE AND SOURCE]
 
-### APAC
+### [OPTION B]
 
-- Market size: $3.8B
-- Growth rate: 15%
-- Competition: Moderate
-- Regulatory: Varied
-- Language: Multiple
+- [FACTOR 1]: [VALUE AND SOURCE]
+- [FACTOR 2]: [VALUE AND SOURCE]
+- [FACTOR 3]: [VALUE AND SOURCE]
 
 ## The Analysis
 
-[Weighted scoring matrix visualization]
+[Weighted scoring matrix]
 
-| Factor      | Weight | EMEA Score | APAC Score |
+| Factor | Weight | [OPTION A] score | [OPTION B] score |
 | ----------- | ------ | ---------- | ---------- |
-| Market Size | 25%    | 5          | 4          |
-| Growth      | 30%    | 3          | 5          |
-| Competition | 20%    | 2          | 4          |
-| Ease        | 25%    | 2          | 3          |
-| **Total**   |        | **3.05**   | **4.05**   |
+| [FACTOR 1] | [WEIGHT]% | [SCORE] | [SCORE] |
+| [FACTOR 2] | [WEIGHT]% | [SCORE] | [SCORE] |
+| [FACTOR 3] | [WEIGHT]% | [SCORE] | [SCORE] |
+| **Total** | 100% | **[TOTAL]** | **[TOTAL]** |
+
+Weights and scores are the user's judgement. Say who set them.
 
 ## The Recommendation
 
-APAC first. Higher growth, less competition.
-Start with Singapore hub (English, business-friendly).
-Enter EMEA in Year 2 with localization ready.
+[OPTION] first, because [REASON FROM THE TABLE].
 
 ## Risk Mitigation
 
-- Timezone coverage: Hire 24/7 support
-- Cultural fit: Local partnerships
-- Payment: Multi-currency from day 1
+- [RISK 1]: [HOW TO REDUCE IT]
+- [RISK 2]: [HOW TO REDUCE IT]
 ```
 
 ## Visualization Techniques
@@ -212,7 +201,7 @@ Enter EMEA in Year 2 with localization ready.
 ```markdown
 Start simple, add layers:
 
-Slide 1: "Revenue is growing" [single line chart]
+Slide 1: "[METRIC] is growing" [single line chart]
 Slide 2: "But growth is slowing" [add growth rate overlay]
 Slide 3: "Driven by one segment" [add segment breakdown]
 Slide 4: "Which is saturating" [add market share]
@@ -226,20 +215,20 @@ Before/After:
 ┌─────────────────┬─────────────────┐
 │ BEFORE │ AFTER │
 │ │ │
-│ Process: 5 days│ Process: 1 day │
-│ Errors: 15% │ Errors: 2% │
-│ Cost: $50/unit │ Cost: $20/unit │
+│ Process: [N] days │ Process: [N] days │
+│ Errors: [N]% │ Errors: [N]% │
+│ Cost: [AMOUNT]/unit │ Cost: [AMOUNT]/unit │
 └─────────────────┴─────────────────┘
 
 This/That (emphasize difference):
 ┌─────────────────────────────────────┐
-│ CUSTOMER A vs B │
+│ GROUP A vs GROUP B │
 │ ┌──────────┐ ┌──────────┐ │
 │ │ ████████ │ │ ██ │ │
-│ │ $45,000 │ │ $8,000 │ │
-│ │ LTV │ │ LTV │ │
+│ │ [VALUE] │ │ [VALUE] │ │
+│ │ [METRIC] │ │ [METRIC] │ │
 │ └──────────┘ └──────────┘ │
-│ Onboarded No onboarding │
+│ [GROUP A LABEL] [GROUP B LABEL] │
 └─────────────────────────────────────┘
 ```
 
@@ -254,11 +243,11 @@ fig, ax = plt.subplots(figsize=(12, 6))
 # Plot the main data
 ax.plot(dates, revenue, linewidth=2, color='#2E86AB')
 
-# Add annotation for key events
+# Add annotation for key events (use the real event name and the real change)
 ax.annotate(
-    'Product Launch\n+32% spike',
-    xy=(launch_date, launch_revenue),
-    xytext=(launch_date, launch_revenue * 1.2),
+    '[EVENT NAME]\n[CHANGE FROM THE DATA]',
+    xy=(event_date, event_revenue),
+    xytext=(event_date, event_revenue * 1.2),
     fontsize=10,
     arrowprops=dict(arrowstyle='->', color='#E63946'),
     color='#E63946'
@@ -270,9 +259,9 @@ ax.axvspan(growth_start, growth_end, alpha=0.2, color='green',
 
 # Add threshold line
 ax.axhline(y=target, color='gray', linestyle='--',
-           label=f'Target: ${target:,.0f}')
+           label=f'Target: {target:,.0f}')
 
-ax.set_title('Revenue Growth Story', fontsize=14, fontweight='bold')
+ax.set_title('[Metric] Story', fontsize=14, fontweight='bold')
 ax.legend()
 ```
 
@@ -285,22 +274,22 @@ ax.legend()
 │  KEY INSIGHT                                                │
 │  ══════════════════════════════════════════════════════════│
 │                                                             │
-│  "Customers who complete onboarding in week 1              │
-│   have 3x higher lifetime value"                           │
+│  "[GROUP A] have [MULTIPLE]x higher [METRIC]                │
+│   than [GROUP B]"                                           │
 │                                                             │
 ├──────────────────────┬──────────────────────────────────────┤
 │                      │                                      │
 │  THE DATA            │  THE IMPLICATION                     │
 │                      │                                      │
-│  Week 1 completers:  │  ✓ Prioritize onboarding UX         │
-│  • LTV: $4,500       │  ✓ Add day-1 success milestones     │
-│  • Retention: 85%    │  ✓ Proactive week-1 outreach        │
-│  • NPS: 72           │                                      │
-│                      │  Investment: $75K                    │
-│  Others:             │  Expected ROI: 8x                    │
-│  • LTV: $1,500       │                                      │
-│  • Retention: 45%    │                                      │
-│  • NPS: 34           │                                      │
+│  [GROUP A]:          │  ✓ [ACTION 1]                        │
+│  • [METRIC 1]: [VALUE]│  ✓ [ACTION 2]                       │
+│  • [METRIC 2]: [VALUE]│  ✓ [ACTION 3]                       │
+│  • [METRIC 3]: [VALUE]│                                     │
+│                      │  Investment: [AMOUNT]                │
+│  [GROUP B]:          │  Expected return: [RETURN, with its │
+│  • [METRIC 1]: [VALUE]│  assumptions]                       │
+│  • [METRIC 2]: [VALUE]│                                     │
+│  • [METRIC 3]: [VALUE]│                                     │
 │                      │                                      │
 └──────────────────────┴──────────────────────────────────────┘
 ```
@@ -309,11 +298,11 @@ ax.legend()
 
 ```
 Slide 1: THE HEADLINE
-"We can grow 40% faster by fixing onboarding"
+"[Main finding, with its number]"
 
 Slide 2: THE CONTEXT
 Current state metrics
-Industry benchmarks
+Benchmarks (only with a named source)
 Gap analysis
 
 Slide 3: THE DISCOVERY
@@ -324,7 +313,7 @@ Pattern identification
 Slide 4: THE DEEP DIVE
 Root cause analysis
 Segment breakdowns
-Statistical significance
+Statistical significance (only if a test was run)
 
 Slide 5: THE RECOMMENDATION
 Proposed actions
@@ -333,7 +322,7 @@ Timeline
 
 Slide 6: THE IMPACT
 Expected outcomes
-ROI calculation
+Return calculation with assumptions shown
 Risk assessment
 
 Slide 7: THE ASK
@@ -345,49 +334,48 @@ Next steps
 ### Template 3: One-Page Dashboard Story
 
 ```markdown
-# Monthly Business Review: January 2024
+# [Period] Business Review
 
 ## THE HEADLINE
 
-Revenue up 15% but CAC increasing faster than LTV
+[Main finding in one sentence, with its number]
 
 ## KEY METRICS AT A GLANCE
 
 ┌────────┬────────┬────────┬────────┐
-│ MRR │ NRR │ CAC │ LTV │
-│ $125K │ 108% │ $450 │ $2,200 │
-│ ▲15% │ ▲3% │ ▲22% │ ▲8% │
+│ [METRIC 1] │ [METRIC 2] │ [METRIC 3] │ [METRIC 4] │
+│ [VALUE] │ [VALUE] │ [VALUE] │ [VALUE] │
+│ [CHANGE] │ [CHANGE] │ [CHANGE] │ [CHANGE] │
 └────────┴────────┴────────┴────────┘
 
 ## WHAT'S WORKING
 
-✓ Enterprise segment growing 25% MoM
-✓ Referral program driving 30% of new logos
-✓ Support satisfaction at all-time high (94%)
+✓ [WIN 1, with its number]
+✓ [WIN 2, with its number]
+✓ [WIN 3, with its number]
 
 ## WHAT NEEDS ATTENTION
 
-✗ SMB acquisition cost up 40%
-✗ Trial conversion down 5 points
-✗ Time-to-value increased by 3 days
+✗ [PROBLEM 1, with its number]
+✗ [PROBLEM 2, with its number]
+✗ [PROBLEM 3, with its number]
 
 ## ROOT CAUSE
 
-[Mini chart showing SMB vs Enterprise CAC trend]
-SMB paid ads becoming less efficient.
-CPC up 35% while conversion flat.
+[Mini chart of the cause]
+[WHAT THE DATA SHOWS, and how sure you are]
 
 ## RECOMMENDATION
 
-1. Shift $20K/mo from paid to content
-2. Launch SMB self-serve trial
-3. A/B test shorter onboarding
+1. [ACTION 1]
+2. [ACTION 2]
+3. [ACTION 3]
 
-## NEXT MONTH'S FOCUS
+## NEXT PERIOD'S FOCUS
 
-- Launch content marketing pilot
-- Complete self-serve MVP
-- Reduce time-to-value to < 7 days
+- [FOCUS 1]
+- [FOCUS 2]
+- [FOCUS 3]
 ```
 
 ## Writing Techniques
@@ -395,18 +383,20 @@ CPC up 35% while conversion flat.
 ### Headlines That Work
 
 ```markdown
-BAD: "Q4 Sales Analysis"
-GOOD: "Q4 Sales Beat Target by 23% - Here's Why"
+BAD: "[Period] Sales Analysis"
+GOOD: "[Period] Sales Beat Target by [X]% - Here's Why"
 
 BAD: "Customer Churn Report"
-GOOD: "We're Losing $2.4M to Preventable Churn"
+GOOD: "We're Losing [AMOUNT] to [CAUSE]"
 
 BAD: "Marketing Performance"
-GOOD: "Content Marketing Delivers 4x ROI vs. Paid"
+GOOD: "[Channel] Delivers [X]x Return vs. [Other Channel]"
 
 Formula:
 [Specific Number] + [Business Impact] + [Actionable Context]
 ```
+
+The numbers in a headline must come from the user's data. Never use a number you cannot trace to it.
 
 ### Transition Phrases
 
@@ -434,15 +424,15 @@ Moving to action:
 
 ```markdown
 Acknowledge limitations:
-• "With 95% confidence, we can say..."
-• "The sample size of 500 shows..."
+• "With [XX]% confidence, we can say..." (only if a test gave that figure)
+• "The sample size of [N] shows..."
 • "While correlation is strong, causation requires..."
 • "This trend holds for [segment], though [caveat]..."
 
 Present ranges:
-• "Impact estimate: $400K-$600K"
-• "Confidence interval: 15-20% improvement"
-• "Best case: X, Conservative: Y"
+• "Impact estimate: [LOW] to [HIGH]"
+• "Confidence interval: [LOW]% to [HIGH]% improvement"
+• "Best case: [X], Conservative: [Y]"
 ```
 
 ## Best Practices

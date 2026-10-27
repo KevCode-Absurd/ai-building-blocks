@@ -12,7 +12,7 @@ argument-hint: "[optional — scope hint, e.g. 'firm-wide', 'legal team only', '
 
 # /policy-starter
 
-**Using this on AI Blocks:** the plugin files and `/ai-governance-legal:` commands named below are not part of this item. If the practice profile file does not exist, do not stop. Ask the user to paste a short company profile instead: the AI role (builds AI, uses AI, or both), the countries and sector, who approves policy, any existing AI policy, and who will use this. Or run the interview in the `setup-interview` folder. Where a step below names another command, tell the user the matching job in plain words (see Handoffs) and offer to do it by hand.
+**Using this on AI Blocks:** the plugin files and `/ai-governance-legal:` commands named below are not part of this item. If the practice profile file does not exist, do not stop. Ask the user to paste a short company profile instead: the AI role (builds AI, uses AI, or both), the countries and sector, who approves policy, any existing AI policy, and who will use this. Or run the interview in the `setup-interview` folder. Ignore any step below that tells you to read the plugin CLAUDE.md file or to run a /ai-governance-legal command. Use the pasted profile instead. Every source you cite must be one you actually found by web search. If you could not search, label the source as training knowledge and tell the user to check it for the current version. Where a step below names another command, tell the user the matching job in plain words (see Handoffs) and offer to do it by hand.
 
 1. Read `~/.claude/plugins/config/claude-for-legal/ai-governance-legal/CLAUDE.md` if it exists. If the practice profile is unpopulated, use the pasted profile or run the setup interview.
 2. Use the framework below.

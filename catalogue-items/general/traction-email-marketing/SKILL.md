@@ -16,10 +16,7 @@ Gather first: your product link or pasted pricing text, your growth goal, the mo
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Shape the product** with the [Free tool experiment planner](https://useaiblocks.com/skills/traction-engineering-as-marketing).
-- **Sell it** with the [Partnership experiment planner](https://useaiblocks.com/skills/traction-business-development).
-- The [Community growth experiment planner](https://useaiblocks.com/skills/traction-community-building).
-- **Sell it** with the [Trade show experiment planner](https://useaiblocks.com/skills/traction-trade-shows).
-- **Say it to the room** with the [Offline event experiment planner](https://useaiblocks.com/skills/traction-offline-events).
+- **Plan your strategy** with the [Growth channel shortlist planner](https://useaiblocks.com/skills/traction-channel-ranker).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

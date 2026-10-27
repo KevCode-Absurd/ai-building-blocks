@@ -114,10 +114,10 @@ Run the six checks under "Check before you hand it back" and fix any that fail. 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Paper craft image ad maker](https://useaiblocks.com/skills/paper-craft-image-ad-maker).
-- The [Knitted wool image ad maker](https://useaiblocks.com/skills/knitted-wool-image-ad-maker).
-- The [Single image ad planner](https://useaiblocks.com/skills/single-image-ad-planner).
 - **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy and image prompt.
+- The [Sticky-note image ad maker](https://useaiblocks.com/skills/sticky-note-image-ad-maker). It takes the ad copy.
+- The [Tried-before products image ad maker](https://useaiblocks.com/skills/tried-before-image-ad). It takes the ad copy.
+- The [Fact caption image ad maker](https://useaiblocks.com/skills/fact-caption-image-ad-maker). It takes the ad copy.
 - **Check it before it goes live** with the [Headline promise checker](https://useaiblocks.com/skills/headline-promise-checker). It takes the ad copy.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

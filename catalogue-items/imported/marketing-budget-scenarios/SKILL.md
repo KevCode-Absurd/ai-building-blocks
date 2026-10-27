@@ -29,9 +29,9 @@ Ask once. If it is still missing, write `MISSING: <what>` and stop that step. Ne
 
 1. **Inputs used**: periods covered, channels, gaps found, and which betas and sigmas were supplied or estimated.
 2. **Fitted curves**: one line per channel with the asymptote, the half-saturation point and the historical mean spend.
-3. **Allocation**: spend per channel for the new budget, from the marginal-return rule (never all in one channel).
+3. **Allocation**: spend per channel for the new budget, using one rule: the Karush-Kuhn-Tucker (KKT) conditions on the Hill curves, which means each funded channel ends with the same return on its next dollar (the equal marginal-return rule). `optimize_budget` in `scripts/run-budget-scenario.py` does this. Never put all of it in one channel.
 4. **Forecast**: p10 (cautious), mean and p90 (optimistic) for total results, then the funnel counts at each stage.
-5. **Backtest**: error (RMSE or MAPE) on held-out periods. `scripts/run-budget-scenario.py` does not backtest. Compute it yourself from the history, or write `BACKTEST NOT RUN: <reason>`.
+5. **Backtest**: error (RMSE or MAPE) on held-out periods. Hold out the last 2 to 4 periods (or about a quarter of the history), fit on the earlier ones, forecast the held-out periods and report the error as RMSE. `scripts/run-budget-scenario.py` does not backtest. Compute it yourself from the history, or write `BACKTEST NOT RUN: <reason>`.
 6. **Caveats**: forecasts from past correlation, not proof that more spend causes more results. Say it in the result, not only here.
 
 ## Core concepts & workflow

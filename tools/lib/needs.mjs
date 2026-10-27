@@ -49,6 +49,38 @@ export const INPUTS = {
   feedback_notes: { label: "Your notes", what: "what to keep, change or drop" },
   question: { label: "Your question", what: "the decision or problem, and what a good outcome looks like" },
   mind_view: { label: "Views from great minds", what: "each mind's answer from the steps before this one, or their skill files from the minds library" },
+  // Specific hand-offs added 2026-10-27 (catalogue-items/_types.yaml), so pages say "Your API spec", not "Api spec".
+  idea: { label: "Your idea", what: "the product, app, business or project idea, in a line or a short paragraph" },
+  customer_needs: { label: "Customer needs", what: "the problems customers want solved, ranked, each with their own words" },
+  business_plan: { label: "Your business plan", what: "the idea, customers, market, how it makes money and the key numbers" },
+  story_outline: { label: "A story outline", what: "the premise, the characters and the scenes in order" },
+  job_description: { label: "The job description", what: "the role's title, team, duties and level, as a job post or plain notes" },
+  resume: { label: "Your resume", what: "your resume or CV, pasted or attached" },
+  lesson_plan: { label: "Your lesson plan", what: "the lesson or class task, the age group, the subject and the aims" },
+  contract: { label: "The contract", what: "the full agreement or terms, with dates and any changes" },
+  policy: { label: "The policy", what: "the written policy or rules, with the date they start" },
+  incident_record: { label: "The incident record", what: "the timeline of the outage, what it affected and who did what" },
+  lead_list: { label: "Your lead list", what: "your leads or open deals, exported from your CRM or a sheet" },
+  customer_list: { label: "Your customer list", what: "a customer or order export with dates, amounts and what they bought" },
+  deal_terms: { label: "The deal terms", what: "the price, payment terms, discounts, fees and dates of the deal" },
+  financial_statements: { label: "Financial statements", what: "the income statement, balance sheet and cash flow statement, for the periods you have" },
+  keyword_list: { label: "A keyword list", what: "the search keywords, with what each searcher wants and, if known, volume and difficulty" },
+  search_query_report: { label: "A search query report", what: "an export from Google Search Console or the Google Ads search terms report, for set dates" },
+  page_speed_report: { label: "A page speed report", what: "a PageSpeed Insights or Lighthouse result for the pages to check" },
+  product_spec: { label: "The product spec", what: "what to build and how to tell it's done: a requirements doc or user stories" },
+  api_spec: { label: "Your API spec", what: "the API's endpoints, data shapes, sign-in method and errors, such as an OpenAPI file" },
+  data_model: { label: "The data model", what: "the database tables or collections, their fields and how they link" },
+  design_tokens: { label: "Design tokens", what: "the colours, type sizes and spacing, as CSS or JSON" },
+  automation_workflow: { label: "The automation", what: "the n8n, Zapier or Make workflow, exported or described step by step" },
+  prompt: { label: "Your prompt", what: "the full prompt or instructions you give the AI" },
+  eval_set: { label: "A test set", what: "test cases for the AI, each with the answer that counts as a pass" },
+  dataset: { label: "Your data", what: "the data files, with their format and where they came from" },
+  signal_data: { label: "Signal data", what: "the recorded signal or time series, with its sample rate" },
+  map_data: { label: "Map data", what: "the map files, such as GeoJSON or a shapefile, with their coordinate system" },
+  training_data: { label: "Training data", what: "the examples to train the model on, with how they are split" },
+  ai_model: { label: "The AI model", what: "the trained model file, such as a checkpoint or ONNX file" },
+  video_link: { label: "A video link", what: "the link to the video, playlist, channel or post" },
+  me_file: { label: "Your me.md", what: "who you are, your work, projects, voice and preferences, with dates" },
 };
 /** The same hand-offs in plain words, for jobs outside the maker's line of work (their usual words are about ads). */
 const PLAIN = {
@@ -239,20 +271,24 @@ const NEXT_CHOSEN = {
   "rough-notes-to-minutes-writer": ["weekly-meeting-actions-keeper", "board-minutes-drafter"],
 };
 
+/** A hand-off as "Takes the …" names it. What it takes is what this block made, so a brief is "the brief", not a buyer brief. */
+export const handoffLabel = (type) => bare((PLAIN[type] ?? INPUTS[type])?.label ?? type.replace(/_/g, " "));
+
 export function nextOf(b, all, max = 5, override) {
   const outs = new Set((b.outputs ?? []).map((o) => o.type));
   if (outs.has("brand_brain")) { outs.add("product_data"); outs.add("persona"); } // its products and buyers parts
-  // Results no block takes by name still go somewhere: opening lines are ad copy, a theme is a page, and so on.
-  for (const t of [...outs]) if (LIKE[t]) outs.add(LIKE[t]);
-  // What it takes is what this block made, so a brief is "the brief", not a buyer brief.
-  const link = (x) => ({ job: x.task, label: NEXT_JOB[x.task] ?? x.name, ...ref(x), takes: [...new Set((x.inputs ?? []).filter((p) => outs.has(p.type)).map((p) => bare((PLAIN[p.type] ?? INPUTS[p.type])?.label ?? p.type.replace(/_/g, " "))))] });
+  // Results no block takes by name still go somewhere: opening lines can stand in for ad copy, a theme for a page, and
+  // so on. A stand-in helps pick the paths, but "Takes the …" only names what this block really makes.
+  const alike = [...outs].map((t) => LIKE[t]).filter((t) => t && !outs.has(t));
+  const link = (x, takes = (x.inputs ?? []).filter((p) => outs.has(p.type)).map((p) => p.type)) => ({ job: x.task, label: NEXT_JOB[x.task] ?? x.name, ...ref(x), takes: [...new Set(takes.map(handoffLabel))] });
   // A reviewed per-item list (page.yaml or item.yaml `next:`), then the chosen lists below, beat the worked-out paths.
   const chosen = Array.isArray(override) ? override : NEXT_CHOSEN[b.slug];
-  if (chosen) return chosen.map((slug) => all.find((x) => x.slug === slug)).filter((x) => x && x.slug !== b.slug).slice(0, Math.max(max, chosen.length)).map(link);
+  if (chosen) return chosen.map((slug) => all.find((x) => x.slug === slug)).filter((x) => x && x.slug !== b.slug).slice(0, Math.max(max, chosen.length)).map((x) => link(x));
   if (!outs.size) return [];
   // Reviewed workflows, specific hand-offs and the same subject decide (site/src/lib/next-steps.mjs). A check comes
   // first after something people will see; a generic report or brief only links within the same job and subject.
-  return nextSteps(b, all, { max, outs: [...outs], startHere: START_HERE }).map(({ x }) => link(x));
+  // Its hand-offs come strongest first (a specific thing the next block needs, then a generic one).
+  return nextSteps(b, all, { max, outs: [...outs], alike, startHere: START_HERE }).map(({ x, takes }) => link(x, takes));
 }
 
 /** Everything the page and the SKILL.md show: the needs, the chain before, the brand brain files and the next steps. */
@@ -279,7 +315,8 @@ export function beforeSection(plan, tools = [], nl = "\n") {
     out.push("**Recommended steps before this one** (optional; do each once, then reuse what it makes):");
     chain.forEach((s, n) => {
       const bring = s.bring.length ? ` Bring ${s.bring.join(", ")}.` : "";
-      const uses = s.uses.length ? ` It uses your ${s.uses.map(lower).join(" and ")}.` : "";
+      // Some labels already say "your" ("Your offer"), so it isn't repeated.
+      const uses = s.uses.length ? ` It uses your ${s.uses.map((u) => lower(u).replace(/^your /, "")).join(" and ")}.` : "";
       out.push(`${n + 1}. **${s.label}** with the [${s.name}](${s.url}).${bring}${uses}`);
     });
     out.push(`${chain.length + 1}. This one.`, "");

@@ -109,8 +109,8 @@ next one faster, but only with the user's consent.
 ### Example 1: Idea that dies on the free-AI test
 
 ```
-User: Should I build a chargeback-response kit for Shopify sellers? Ready-to-send
-      evidence packets, $29 one-time.
+User: Should I build a chargeback-response kit for online sellers? Ready-to-send
+      evidence packets, [PRICE] one-time.
 Agent: Running the autopsy... Step 3 kills it: one prompt to a frontier model
       produces a complete, usable evidence packet for free.
       VERDICT: DEAD. KILL-PATTERN: free-AI.
@@ -121,9 +121,9 @@ Agent: Running the autopsy... Step 3 kills it: one prompt to a frontier model
 ### Example 2: Proven demand that still dies
 
 ```
-User: An app that identifies plants from a photo — there are over a thousand
-      active ads for these, demand is proven!
-Agent: Step 4 confirms ~1,100 active advertisers — and that's the trap. The AI is
+User: An app that identifies plants from a photo — there are [NUMBER]
+      active ads for these, demand is proven! (illustrative; the real number comes from your own ad-library check)
+Agent: Step 4 confirms [NUMBER] active advertisers — and that's the trap. The AI is
       free, the datasets are public, everyone could build it, so everyone did.
       VERDICT: DEAD. KILL-PATTERN: no-moat.
       THE ONE SENTENCE: Demand tells you a market exists; it doesn't tell you

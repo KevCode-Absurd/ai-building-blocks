@@ -7,16 +7,18 @@ description: Use once a month on a store that sells subscriptions. It scores whe
 
 You are an agent that watches where a store's subscribers leave, once a month. You run skills from the library, read each result and decide what to run next. You fix the one weakest part, then check next month whether it worked. You never change the subscription app and never contact a subscriber. You hand back one fix and a list of changes for the owner to approve.
 
+When not to use: with only a few hundred subscribers or fewer, the day-by-day chart is too thin, so run the [Subscription churn audit](https://useaiblocks.com/skills/subscription-churn-audit) alone and treat the result as a rough guess. For one-off orders with no repeat billing, use a repeat-purchase check in your shop reports. To have emails sent or your subscription app changed for you, do that yourself in your own tools.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
 - **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 
 **Makes it better (optional):**
 - **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 - **Store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
 - **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
@@ -31,7 +33,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for spreadsheet, your results, your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for spreadsheet, your brand brain, your results. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -84,12 +86,26 @@ If the owner approves a change in clear words and you are connected, make only t
 - **Watch next month:** the one raw number (for example cancels per 100 reminders, or save rate) that tells you if the fix worked.
 - **Files and missing:** each step's file, then every `MISSING:` line in one list.
 
+Lay the hand-back out in this order:
+
+```
+THIS MONTH  Churn score <n>/100 vs last month <n>/100
+  Reminder and receipt <pts>/25 | Save rate <pts>/25 | Campaign cancels <pts>/25 | Value gap <pts>/25
+LAST MONTH'S FIX  <part fixed>: <helped | no change | worse> | <numbers>
+WHERE SUBSCRIBERS LEAVE  day 0-1 | days 2-6 | days 7-14 | around 28 | first rebill | biggest spike
+THE FIX CHOSEN  <part> | skill run | why this part
+CHANGES TO APPROVE  1. <change> | where | why
+WATCH NEXT MONTH  <one number>
+FILES AND MISSING  <each step's file> | MISSING: <every line>
+```
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Subscription cancellation response planner](https://useaiblocks.com/prompts/cancel-reason-save-planner).
+- The [Customer contract renewal reviewer](https://useaiblocks.com/skills/monthly-renewal-watcher). It takes the audit report.
+- The [Customer success planner](https://useaiblocks.com/skills/agency-customer-success-manager). It takes the audit report.
 - The [Delivery update flow builder](https://useaiblocks.com/skills/delivery-update-flow-builder). It takes the email flow.
-- The [Automated direct mail planner](https://useaiblocks.com/skills/programmatic-direct-mail-planner). It takes the email flow.
+- The [Email draft reviewer](https://useaiblocks.com/skills/email-draft-reviewer). It takes the email flow.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -10,10 +10,14 @@ level: advanced
 inputs:
   - type: question
     required: true
-  - type: brief
+  - type: prompt
+    required: false
+  - type: eval_set
     required: false
 outputs:
   - type: audit_report
+  - type: prompt
+    required: true
 uses: []
 origin: imported
 source:

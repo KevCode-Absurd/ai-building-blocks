@@ -61,9 +61,9 @@ The behaviour and the result. The draft message. Numbered questions if the issue
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Feedback notes writer](https://useaiblocks.com/skills/behaviour-and-fix-notes-writer).
 - The [Polite request editor](https://useaiblocks.com/skills/order-to-request-rewriter). It takes the draft.
-- The [Clear refusal message writer](https://useaiblocks.com/skills/hard-no-planner).
+- The [Employee performance review writer](https://useaiblocks.com/skills/quarterly-performance-review-keeper).
+- The [Change rollout planner](https://useaiblocks.com/skills/change-rollout-planner). It takes the draft.
 - **Tell it as a story** with the [Plain English editor](https://useaiblocks.com/skills/plain-english-editor). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

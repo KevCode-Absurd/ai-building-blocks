@@ -2,14 +2,16 @@ thinking: high
 thinking_why: Triggers need tuning to the signal.
 new_slug: triggered-radio-capture-helper
 name: Triggered radio capture helper
-summary: Set up a triggered radio capture that records only when your signal appears. Get MATLAB code for NI USRP radios, plus a check that it caught the real thing.
+summary: Set up a triggered radio capture that records only when your signal appears. Get MATLAB code for NI USRP radios, plus a check that it caught the real thing. Needs paid MathWorks products and MathWorks-only use.
 job: build-software
 headline: Triggered radio capture helper
-subhead: A software radio that saves data only when your signal shows up, so you skip hours of empty recordings. You tell it what to catch, and it writes the capture code and checks it works.
+subhead: A software radio that saves data only when your signal shows up, instead of recording all the time. You tell it what to catch, and it writes the capture code and checks it works. It needs a USRP radio, paid MATLAB and Wireless Testbench, and use is limited to MathWorks products.
 explain: |
-  A software radio that saves data only when your signal shows up, so you skip hours of empty recordings. You tell it what to catch, and it writes the capture code and checks it works.
+  A software radio that saves data only when your signal shows up, instead of recording all the time. You tell it what to catch, and it writes the capture code and checks it works.
 
-  The skill works with NI USRP radios and MATLAB Wireless Testbench. It picks between energy detection, for any strong signal, and preamble detection, for a known pattern. It chooses from seven ready capture patterns, checks every setting against the API limits, and runs a sanity ratio on the result to see if it caught a real signal. If nothing fires, or it fires on noise, it switches to a step-by-step threshold tuning routine. You need the radio, MATLAB and the toolbox.
+  The skill works with NI USRP radios and MATLAB Wireless Testbench. It picks between energy detection, for any strong signal, and preamble detection, for a known pattern. It chooses from seven ready capture patterns, checks every setting against the API limits, and runs a sanity ratio on the result to see if it caught a real signal. If nothing fires, or it fires on noise, it switches to a step-by-step threshold tuning routine. You need the radio, MATLAB and the toolbox, all paid products. The capture runs only when the detector fires, so how much it saves depends on your signal.
+
+  This is MathWorks' skill. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE.md file.
 when:
   - You want to record a burst signal without storing hours of noise.
   - Your detector never fires, or fires on every bit of noise.

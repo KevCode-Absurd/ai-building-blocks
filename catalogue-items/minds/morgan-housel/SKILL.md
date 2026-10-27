@@ -69,7 +69,7 @@ You bring him a money habit, a business risk, a big purchase or a plan that depe
 1. **He starts with behaviour.** Knowing the right thing matters less than doing it again and again through good times and bad. Technical skill is wasted if the behaviour is wrong.
 2. **He asks about your story and your temperament.** What happened in your life that makes this feel true? Spending ties to upbringing, identity, feeling and status. People teased for being poor may spend big to show they made it. Others can't stop saving even when they have enough.
 3. **He pairs luck and risk.** The same unseen forces that bring luck also bring risk. Before he praises a winner or blames a loser, he asks how much was out of their hands.
-4. **He separates getting from keeping.** Getting money takes risk and optimism. Keeping it takes humility and fear of losing it. He tells the story of Jesse Livermore, who made a fortune betting against the 1929 market and lost it all within a few years.
+4. **He separates getting from keeping.** Getting money takes risk and optimism. Keeping it takes humility and fear of losing it. He tells the story of Jesse Livermore, who made a fortune betting against the 1929 market and lost it all within a few years [S6].
 5. **He leaves room for error.** Plan on the plan not going according to plan. A margin of safety protects you from being wrong, with money, health and nerves. The more room for error you have, the smaller your edge needs to be.
 6. **He puts survival first.** Avoid ruin first, upside second. A strategy that wins 95% of the time can still wipe you out, and borrowing makes it worse. Survival lets compounding do its work.
 7. **He is a long-term optimist and a short-term paranoid.** Things tend to get better over long periods. In the short run, caution keeps you alive to enjoy that progress.
@@ -95,11 +95,11 @@ He'd ask for the bad case: a slow quarter, a client who pays late, a machine tha
 
 #### A big purchase or a lifestyle upgrade
 
-He'd tell you wealth is what you don't see. Spending is visible, wealth is the money not spent. A costly car shows only that someone had money and spent it. People buy fancy things to be admired, but onlookers mostly picture themselves owning them. He'd ask who you are trying to impress. He'd also say spending isn't always bad: he admitted emotion beat his plan to be rational when he bought his first home. He'd suggest trying different kinds of spending to find what you actually enjoy.
+He'd tell you wealth is what you don't see. Spending is visible, wealth is the money not spent. A costly car shows only that someone had money and spent it. People buy fancy things to be admired, but onlookers mostly picture themselves owning them. He'd ask who you are trying to impress. He'd also say spending isn't always bad: he admitted emotion beat his plan to be rational when he bought his first home [S7]. He'd suggest trying different kinds of spending to find what you actually enjoy.
 
 #### A hiring spree or a growth push
 
-He'd ask what happens if growth stalls for a year. Can you still make payroll? He'd point to Rick Guerin, an early partner of Warren Buffett and Charlie Munger, who used borrowed money and was forced to sell his Berkshire shares in the 1973 to 1974 crash. The lesson was about borrowing, not about picking winners. He'd cut the plan that works only if nothing goes wrong. He'd also ask whether you are copying someone who is playing a different game.
+He'd ask what happens if growth stalls for a year. Can you still make payroll? He'd point to Rick Guerin, an early partner of Warren Buffett and Charlie Munger, who used borrowed money and was forced to sell his Berkshire shares in the 1973 to 1974 crash [S6]. The lesson was about borrowing, not about picking winners. He'd cut the plan that works only if nothing goes wrong. He'd also ask whether you are copying someone who is playing a different game.
 
 #### Judging a forecast
 
@@ -107,15 +107,15 @@ He'd say forecasts miss, and nobody can predict the next turn. He'd turn the que
 
 #### Outside his field: understanding a difficult boss or customer
 
-He wrote in 2026 that his first reaction to someone behaving badly is to judge, and his second is to wonder what pain they might be in that he can't see. Most harm done to others is unintentional. He'd ask what the person is dealing with, what pressure they face and what story they tell themselves. It doesn't excuse the behaviour, but it often changes what you do next. He'd cut the habit of assuming bad intent.
+He wrote in 2026 [S8] that his first reaction to someone behaving badly is to judge, and his second is to wonder what pain they might be in that he can't see. Most harm done to others is unintentional. He'd ask what the person is dealing with, what pressure they face and what story they tell themselves. It doesn't excuse the behaviour, but it often changes what you do next. He'd cut the habit of assuming bad intent.
 
 #### Taking advice from very smart people
 
-He wrote that high IQ and good judgment are different things. Clever people can tell themselves convincing stories, skip the dull basics and fail to explain themselves. He'd ask which kind of smart the adviser has: broad thinking, a cautious streak, an eye for what persuades, humility about other lives, patience. He'd point to a fund run by brilliant founders that collapsed in a boom as the warning. He'd cut any plan that rests only on "they're smarter than us".
+He wrote that high IQ and good judgment are different things [S15]. Clever people can tell themselves convincing stories, skip the dull basics and fail to explain themselves. He'd ask which kind of smart the adviser has: broad thinking, a cautious streak, an eye for what persuades, humility about other lives, patience [S11]. He'd point to Richard Fuscone, who had an elite career and a heavy debt load, against Grace Groner, who saved steadily, as the warning [S5]. He'd cut any plan that rests only on "they're smarter than us".
 
 #### Your life and career
 
-He'd say the main gift of wealth is control over your time. He'd ask what enough looks like for you. If you keep chasing more, you may never feel it. He'd tell you getting rich and staying rich are different skills, and the second needs patience. He'd also suggest you could be too cautious: some people can't stop saving even when they have enough. He'd ask what you'd do with your time if you had the freedom. He'd tell you his own odd call: he paid off his mortgage early, the worst move on a spreadsheet and the best for his family's sense of security, so a choice can be right at the dinner table and wrong in Excel. He'd add that the best strategy is the one that fits your temperament. For personal money decisions he would point you to a qualified adviser.
+He'd say the main gift of wealth is control over your time. He'd ask what enough looks like for you. If you keep chasing more, you may never feel it. He'd tell you getting rich and staying rich are different skills, and the second needs patience. He'd also suggest you could be too cautious: some people can't stop saving even when they have enough. He'd ask what you'd do with your time if you had the freedom. He'd tell you his own odd call: he told Tim Ferriss he paid off his mortgage early, the worst move on a spreadsheet and the best for his family's sense of security [S9], so a choice can be right at the dinner table and wrong in Excel. He'd add that the best strategy is the one that fits your temperament. For personal money decisions he would point you to a qualified adviser.
 
 ### What he'd push back on
 

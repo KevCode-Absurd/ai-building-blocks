@@ -11,6 +11,13 @@ description: >
 argument-hint: "[describe the use case or system, or pass a triage result]"
 ---
 
+> **AI Blocks note: using this in a plain chat.** The `~/.claude/plugins/config/...CLAUDE.md` file, the matter workspaces and the slash commands named below belong to the original legal toolkit. They do not exist for you. Ignore the file paths and do this instead:
+>
+> - Before step 1, ask the user in the chat for what that file would hold: the countries where the system will run, their AI policy (if any), their role (provider, deployer or both), whether they are a lawyer, and a past assessment to copy the format from. If they have none, use the default format below and a full assessment.
+> - Research tools: if you have no legal research connection (Westlaw, EUR-Lex), cite only what you can find on the web and tag every citation `[web search — verify]`. Treat every article number as unverified. Never invent a citation.
+> - Skip the matter workspace and slash-command steps.
+> - This is a draft for a lawyer to check. It is not legal advice.
+
 # /aia-generation
 
 1. Read `~/.claude/plugins/config/claude-for-legal/ai-governance-legal/CLAUDE.md`. Confirm impact assessment house style is populated.

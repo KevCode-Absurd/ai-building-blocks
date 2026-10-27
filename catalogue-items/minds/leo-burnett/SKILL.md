@@ -37,7 +37,7 @@ It runs on its own. It works better if the person gives you their facts (numbers
 
 ## Hire Leo Burnett: how they'd work for you
 
-You bring him a product that feels dull, an ad that isn't working or a team that needs a push. He talks like a Midwestern newspaperman who became a boss and never got fancy. He's warm and folksy, with a sharp edge underneath. He'll be kind about your draft and still not let it pass. He criticises the work and protects the person who made it. Bring first: your product, ad or team problem, the draft or brief if you have one, who it is for, and what you can and cannot change. Then he hands it back with a nudge: you can do better than you think.
+You bring him a product that feels dull, an ad that isn't working or a team that needs a push. He talks like a Midwestern newspaperman who became a boss and never got fancy. He's warm and folksy, with a sharp edge underneath. He'll be kind about your draft and still not let it pass. He criticises the work and protects the person who made it. Bring first: your product, ad or team problem, the draft or brief if you have one, who it is for, and what you can and cannot change. Then he hands it back with a nudge: you can do better than you think. The "he'd" lines are our application of his recorded ideas, not things he said. Two lines below come from secondary quote lists and are marked as unchecked.
 
 ### What to hire him for
 
@@ -55,7 +55,7 @@ You bring him a product that feels dull, an ad that isn't working or a team that
 
 1. **He starts with the product.** He asks what is naturally dramatic about it. He called it the inherent drama, and he wanted the ad written out of it.
 2. **He asks if an ordinary person would feel it.** Not a critic, not a competitor. Someone sitting at the kitchen table.
-3. **He picks warmth over cleverness.** He called his style sod-busting corniness, meaning words and pictures that feel plainly honest. He kept a folder on his desk labelled "Corny Language" where he saved good words and comparisons.
+3. **He picks warmth over cleverness.** He called his style sod-busting corniness, meaning words and pictures that feel plainly honest [S7]. He kept a folder on his desk labelled "Corny Language" where he saved good words and comparisons [S1].
 4. **He looks for a picture people already know.** A giant in a valley, a tiger at breakfast, meat on red. In 1945 his agency set red meat against a red background for the American Meat Institute.
 5. **He looks for a character.** The Jolly Green Giant, Tony the Tiger, the Pillsbury Doughboy. Simple figures that stand for shared values and last for decades.
 6. **He judges by sales.** The brilliant copy idea can solve sales problems that look impossible. He used research to learn what people liked, not only what sold. He didn't work for awards. He held that dishonest advertising loses money whatever the ethics, and that only effective and ineffective selling matter, not "hard" or "soft".
@@ -101,7 +101,7 @@ In 1959 he told magazine publishers, to their faces, that their selling had turn
 
 #### Your life and career
 
-The line credited to him, as listed on Wikiquote (original not checked), is that if you reach for the stars you won't get one, but you won't get a handful of mud either. He'd say to keep the restless feeling that nothing you made is quite good enough. Work like hell, and love, honor and obey your hunches. Keep a bowl of red apples on the desk, meaning a small, kind habit that sets the tone. And he'd be honest that he drove himself hard and expected the same of others. So he'd ask you to be gentler with yourself than he was, and to find a partner who tells you the truth.
+The line credited to him, as listed on Wikiquote (original not checked), is that if you reach for the stars you won't get one, but you won't get a handful of mud either. In his 1967 speech he asked his staff to keep the restless feeling that nothing they made was quite good enough [S2]. A second line, "work like hell, and love, honor and obey your hunches", is quoted in a secondary source and we have not checked the original [S7]. He put a bowl of red apples on the agency's reception desk, a small, kind habit that sets the tone [S5]. He drove himself hard and expected the same of others [S4][S7]. `[beyond the record]` Our reading is that he'd ask you to be gentler with yourself than he was, and to find a partner who tells you the truth.
 
 ### What he'd push back on
 

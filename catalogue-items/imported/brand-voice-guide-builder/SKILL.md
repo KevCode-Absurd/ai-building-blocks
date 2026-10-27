@@ -30,11 +30,13 @@ When a discovery report is provided, use it as the primary input — sources are
 ### 1. Identify and Classify Sources
 
 Determine what the user has provided. If no sources are available:
-- Check if a discovery report exists from a previous `/brand-voice:discover-brand` run
-- Check `.claude/brand-voice.local.md` for known brand material locations
-- Suggest running discovery first: `/brand-voice:discover-brand`
+- Check if a discovery report exists from an earlier discovery step. The `/brand-voice:discover-brand` command is not part of this item. On AI Blocks, the Brand materials finder does the same job.
+- Check `.claude/brand-voice.local.md` for known brand material locations. It is an optional settings file, so skip it if it does not exist.
+- Suggest running discovery first, or ask the user to upload their documents.
 
 ### 2. Process Sources
+
+The helper agents named below are not included in this item. If your AI has none, do each step yourself in the same chat, one after another.
 
 **For documents:** Delegate to the document-analysis agent for heavy parsing. Extract voice attributes, messaging themes, terminology, tone guidance, and examples.
 
@@ -119,13 +121,13 @@ The default save location is `.claude/brand-voice-guidelines.md` inside the user
 2. **Check if guidelines already exist** at that path
 3. **If they exist, archive the previous version:** Rename the existing file to `brand-voice-guidelines-YYYY-MM-DD.md` in the same directory (using today's date)
 4. **Save new guidelines** to `.claude/brand-voice-guidelines.md` inside the working folder
-5. **Confirm to the user** with the full absolute path: "Guidelines saved to `<full-path>`. `/brand-voice:enforce-voice` will find them automatically in future sessions."
+5. **Confirm to the user** with the full absolute path: "Guidelines saved to `<full-path>`." The `/brand-voice:enforce-voice` command that would read them automatically is not part of this item, so tell the user to paste the file into their AI as a standing brief before they write.
 
-The guidelines are also present in this conversation, so `/brand-voice:enforce-voice` can use them immediately without loading from file.
+The guidelines are also present in this conversation, so the user can ask for copy in this voice right away.
 
 After saving, offer:
 1. Walk through the guidelines section by section
-2. Start creating content with `/brand-voice:enforce-voice`
+2. Write or rewrite copy in this voice (the Brand voice rewriter on AI Blocks does this)
 3. Resolve open questions
 
 ## Privacy and Security

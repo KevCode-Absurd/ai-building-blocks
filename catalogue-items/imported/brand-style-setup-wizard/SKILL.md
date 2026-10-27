@@ -18,7 +18,7 @@ This skill ships exactly three Python tools:
 2. **`config_loader.py`** — importable customization loader with project > global > defaults precedence and `MARKDOWN_HTML_NO_CONFIG=1` bypass.
 3. **`brand_palette_validator.py`** — WCAG-AA contrast checker + HSL palette deriver.
 
-All three are stdlib-only and contain no LLM calls (deterministic per Path-B discipline).
+All three use only Python's standard library and make no AI calls, so the same input always gives the same result.
 
 ## When to invoke
 
@@ -53,7 +53,7 @@ All three are stdlib-only and contain no LLM calls (deterministic per Path-B dis
 2. **Output directory must be writable.** `onboard.py` walks up the path to find an existing ancestor and checks `os.W_OK`. Empty or unwritable path → exit code 3. The orchestrator's `output_path_resolver.py` honors the same rule per-conversion.
 3. **Customization must change behavior, not sit as decoration.** Every consumer (md-document, md-review, md-slides) must read the config and render differently when the user changes `design_style`, `brand.primary`, `code_theme`, or `toc.behavior`. Decorative-only fields fail the design discipline.
 4. **Precedence is fixed.** Project > global > defaults. The deep-merge preserves nested keys (e.g. you can override `brand.primary` in a project config without losing `typography.heading_font` from global).
-5. **Bypass env exists for a reason.** `MARKDOWN_HTML_NO_CONFIG=1` is for headless CI, ephemeral test containers, and the autoresearch-style evaluator loops. Never set it silently for an interactive user.
+5. **Bypass env exists for a reason.** `MARKDOWN_HTML_NO_CONFIG=1` is for headless CI and short-lived test containers. Never set it silently for an interactive user.
 
 ## Derived 12-token palette
 
@@ -74,9 +74,9 @@ Once the user's brand is captured, `brand_palette_validator.derive_palette()` pr
 | `--md-success` | OK / approved / passed | Green anchored, luminance-matched |
 | `--md-warn` | Caution / nit / TODO | Amber anchored, luminance-matched |
 
-## Forcing-question library (Matt Pocock grill-with-docs pattern)
+## Question guide
 
-One question per turn, recommended answer, canon citation.
+Ask one question at a time. Give a recommended answer and the source it comes from.
 
 1. **What's your brand primary color?** Recommended: a HEX you already use in your product or docs — not a stock blue. Canon: Aarron Walter, *Designing for Emotion* (color carries brand affect).
 2. **Should accent be derived or set?** Recommended: derive on first run (hue-shift + lighten produces a coherent companion); set explicitly only if your brand kit specifies one. Canon: Adobe Spectrum, *Color Foundations*.

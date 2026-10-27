@@ -7,10 +7,12 @@ role: check
 job: ops
 level: beginner
 inputs:
-  - type: shortlist
+  - type: lead_list
     required: true
 outputs:
   - type: shortlist
+  - type: lead_list
+    required: true
 origin: rebuilt
 version: 1.0.0
 minds:

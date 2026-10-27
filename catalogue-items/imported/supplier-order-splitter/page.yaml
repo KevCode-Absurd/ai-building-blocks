@@ -5,7 +5,7 @@ name: Supplier order splitter
 summary: Split a big order across suppliers at the lowest total cost. Give it quotes, limits and demand. Get order sizes per supplier.
 job: plan-supply-chain
 headline: Supplier order splitter
-subhead: How much to buy from each supplier to get the lowest total cost, within their limits and your demand. It replaces guessing with a worked allocation.
+subhead: How much to buy from each supplier to get the lowest total cost, within their limits and your demand. It replaces guessing with a worked allocation. The code has not been tested on real orders, so check the result before you buy.
 explain: |
   How much to buy from each supplier to get the lowest total cost, within their limits and your demand. It replaces guessing with a worked allocation.
 
@@ -31,11 +31,12 @@ you_get:
   - A dual-sourcing split
   - The Python code used
 how_to_use:
-  - Open a chat with an AI that can run Python code, such as Claude or ChatGPT.
+  - Open a chat with an AI that can run Python code, such as Claude or ChatGPT. Code tools may need a paid plan in some AI apps.
   - Paste the skill text, or upload the skill file.
-  - Add your supplier quotes, price breaks, limits and demand. Say if you have holding and ordering costs.
+  - "Add your supplier quotes, price breaks, limits and demand. A simple layout works: one row per supplier, with columns for unit price, price breaks, minimum order, maximum capacity and lead time, and the demand figure on its own line. Say if you have holding and ordering costs."
   - Answer any questions your AI asks. If a quote, limit or demand figure is missing, it should ask you for it before it calculates. Do not let it guess.
   - Check every total against your original quotes, and that each supplier stays within its limit and the total meets your demand. The code is copied as it is and has not been tested on your numbers.
+  - Before you place any order, compare the result with your original quotes and each supplier's limits. This is a plan to check, not an order.
   - If you run the code yourself, install numpy, pandas, pulp, scipy and matplotlib first. Then run the Supplier scorer or the Spend savings finder to act on the result.
 output_sample:
   input:

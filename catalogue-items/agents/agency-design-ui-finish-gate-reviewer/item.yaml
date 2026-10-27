@@ -16,6 +16,8 @@ inputs:
     required: false
   - type: codebase
     required: false
+  - type: image
+    required: false
 outputs:
   - type: audit_report
 uses: []

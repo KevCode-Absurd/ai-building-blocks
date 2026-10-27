@@ -9,7 +9,7 @@ subhead: Slides, docs or a web page that look designed, in one consistent style.
 explain: |
   Slides, docs or a web page that look designed, in one consistent style. You pick from ten ready-made themes, or ask for a new one made for your topic, and the skill restyles your work to match.
 
-  Each theme sets a colour palette with exact hex codes and a pair of fonts for headings and body text. The themes include Ocean Depths, Sunset Boulevard, Forest Canopy, Modern Minimalist, Golden Hour, Arctic Frost, Desert Rose and Tech Innovation. First you see a showcase file, then you choose, then you confirm, and only then does it apply the theme. Your content stays the same. Only colours and type change.
+  Each theme sets a colour palette with exact hex codes and a pair of fonts for headings and body text. The themes include Ocean Depths, Sunset Boulevard, Forest Canopy, Modern Minimalist, Golden Hour, Arctic Frost, Desert Rose, Tech Innovation, Botanical Garden and Midnight Galaxy. First you see a showcase file, then you choose, then you confirm, and only then does it apply the theme. Your content stays the same. Only colours and type change. It does not change your images, your layout or any fonts beyond the heading and body pair, so check those after the restyle.
 when:
   - Your slide deck looks plain and you want it to look finished.
   - You want your report and your landing page to share one look.
@@ -29,11 +29,12 @@ you_get:
   - Exact colours and fonts used
   - A custom theme if none fit
 how_to_use:
+  - Before you start, decide your file type (.pptx, .docx or .html), your audience and any brand colours. These make a custom theme easier to brief.
   - Add the skill to your AI, or paste its instructions into a chat.
   - Attach your file and ask your AI to follow this skill. Use a file your AI can edit, such as a .pptx deck, a .docx document or an .html page.
   - Look at the theme showcase. Name a theme, or describe the mood you want.
   - Confirm your choice. Your AI then restyles the file.
-  - Open the restyled file and check it. Read the text on the screen or paper you will really use, and check it is easy to read. Then use the skill that wrote the file to keep editing it.
+  - Open the restyled file and check it. Read the text on the screen or paper you will really use, and check it is easy to read. Then use the skill that wrote the file to keep editing it. When you are happy, export the file to PDF or send it.
 output_sample:
   input:
     - The slides, doc or page you want to style

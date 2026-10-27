@@ -8,9 +8,11 @@ role: make
 job: ops
 level: beginner
 inputs:
-  - type: brief
+  - type: question
     required: true
   - type: meeting_notes
+    required: false
+  - type: brief
     required: false
 outputs:
   - type: plan

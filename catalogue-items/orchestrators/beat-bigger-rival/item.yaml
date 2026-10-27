@@ -11,6 +11,7 @@ inputs:
   - {type: voc_reviews, required: false}
   - {type: brand_brain, required: false}
   - {type: question, required: false}
+  - {type: idea, required: true}
 outputs:
   - {type: plan}
 uses: [competitor-white-space-mapper, counter-positioning-finder, ten-year-durability-checker, power-stage-build-planner]

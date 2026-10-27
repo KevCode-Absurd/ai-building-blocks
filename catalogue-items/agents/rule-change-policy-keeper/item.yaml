@@ -8,12 +8,14 @@ job: analysis
 level: advanced
 inputs:
   - {type: source_text, required: true}
+  - {type: policy, required: true}
+  - {type: question, required: false}
   - {type: document, required: true}
-  - {type: brief, required: false}
 outputs:
   - {type: audit_report}
   - {type: copy_draft}
   - {type: plan}
+  - {type: policy, required: true}
 uses: [rule-change-policy-comparer, new-ai-rule-gap-checker, privacy-policy-drift-checker, policy-redraft-proposer, store-policy-checker, handbook-change-checker]
 steps:
   - {uses: rule-change-policy-comparer, note: "Every rule change: which of your policies it touches and the gap for each requirement. Run again on each redraft. Hands steps 2 and 3 the gap list, one row per requirement."}

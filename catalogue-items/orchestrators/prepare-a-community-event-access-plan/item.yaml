@@ -8,9 +8,9 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
-    required: true
   - type: question
+    required: true
+  - type: document
     required: false
 outputs:
   - type: plan

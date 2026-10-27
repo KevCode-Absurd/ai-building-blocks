@@ -169,7 +169,7 @@ Where:
 - L = Lead time in days
 ```
 
-**Simplified Safety Stock (if limited data):**
+**Simplified Safety Stock (if limited data). This is a rough rule, not a service-level calculation. Say so in the answer:**
 ```
 Safety Stock = (Max Daily Sales - Avg Daily Sales) × Lead Time
 ```
@@ -179,7 +179,7 @@ Safety Stock = (Max Daily Sales - Avg Daily Sales) × Lead Time
 Reorder Point = (Avg Daily Sales × Lead Time) + Safety Stock
 ```
 
-**Example calculation:**
+**Example calculation (made-up numbers to show the arithmetic only, not a benchmark):**
 ```
 Product: Widget A
 - Average daily sales: 10 units

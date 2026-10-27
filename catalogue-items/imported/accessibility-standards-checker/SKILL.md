@@ -151,7 +151,7 @@ Always cite the **criterion number and name** (e.g., SC 2.4.7 Focus Visible) —
 ## Common Workflows
 
 ### Full Accessibility Audit (WCAG 2.1 AA)
-1. **Automated scan** — axe-core, Lighthouse, WAVE, or IBM Equal Access Checker. Catches ~30–40% of issues.
+1. **Automated scan** — axe-core, Lighthouse, WAVE, or IBM Equal Access Checker. Catches only part of the issues. It cannot replace the manual tests below.
 2. **Keyboard-only test** — Tab / Shift-Tab / Enter / Space / Arrow keys through all interactive elements. Tests SC 2.1.1, 2.1.2, 2.4.3, 2.4.7.
 3. **Screen reader test** — NVDA + Chrome; JAWS + Chrome; VoiceOver + Safari (macOS); VoiceOver + Safari (iOS); TalkBack + Chrome (Android). Tests SC 1.1.1, 1.3.1, 4.1.2, and all informational criteria.
 4. **Colour contrast** — Colour Contrast Analyser or browser DevTools. Tests SC 1.4.3, 1.4.11.
@@ -160,7 +160,7 @@ Always cite the **criterion number and name** (e.g., SC 2.4.7 Focus Visible) —
 7. **Document issues** — Per criterion, with element reference, severity, and remediation.
 
 ### Accessibility Statement
-A WCAG-conformant accessibility statement should include:
+Do not claim a conformance level in a statement unless a full test has been done on the pages covered and checked by a qualified person. Without that, write draft notes only and mark the level as "not yet assessed". A WCAG-conformant accessibility statement should include:
 - The specific WCAG version and level claimed (e.g., "WCAG 2.1 Level AA")
 - Scope: which pages or products the claim covers
 - Known non-conformances: list each SC not met with an explanation
@@ -188,7 +188,7 @@ ARIA (Accessible Rich Internet Applications) adds semantics when HTML alone is i
 
 ## Global Legal Framework Mapping
 
-These rows are not checked against current law. Before anyone relies on a deadline or a jurisdiction, ask them to confirm it with an accredited accessibility assessor or a lawyer.
+These rows were last checked by the original author on the "Last verified" date at the top. They are not checked against current law, and some dates (such as the June 2025 EAA deadline) have already passed. Before anyone relies on a deadline or a jurisdiction, ask them to confirm it with an accredited accessibility assessor or a lawyer.
 
 | Law / Standard | Jurisdiction | WCAG Requirement |
 |----------------|-------------|-----------------|

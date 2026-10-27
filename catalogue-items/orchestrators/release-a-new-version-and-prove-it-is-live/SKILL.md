@@ -62,9 +62,9 @@ Pause here: Fix every blocker it lists. If it said no-go, run the gate again unt
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Cloudflare deploy planner](https://useaiblocks.com/skills/cloudflare-publisher).
-- The [Netlify publisher](https://useaiblocks.com/skills/netlify-publisher).
-- The [Version and release notes planner](https://useaiblocks.com/skills/version-and-changelog-automator).
+- The [Release safety planner](https://useaiblocks.com/skills/safe-release-planner). It takes the audit report.
+- The [AWS service health investigator](https://useaiblocks.com/skills/copilot-aws-resource-health-diagnose). It takes the audit report.
+- The [Incident learning report writer](https://useaiblocks.com/skills/copilot-incident-postmortem). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -5,15 +5,15 @@ summary: Find a trailing 12-month figure for revenue or another flow. Give it la
 job: track-numbers
 thinking: high
 thinking_why: "The sum only works for flows and when both periods match, so the period lengths and the cut-offs need checking."
-subhead: A trailing-period additive-flow reconciliation with period-boundary checks. Share last full-year flow, current YTD flow, comparable prior YTD flow and fiscal-period definitions.
+subhead: Give it last full-year revenue (or another flow), this year to date and the same period last year. It adds and subtracts them into a trailing 12-month figure, and checks that both year-to-date periods match.
 explain: |-
-  A trailing-period additive-flow reconciliation with period-boundary checks.
+  A trailing 12-month figure shows the latest full twelve months of a flow, such as revenue, without waiting for the year-end report. You get it by adding this year to date to last full year, then taking off the same period last year.
 
-  Issuer revenue and cash-flow reconciliation. Illustrative figures. Last full year 100 + current YTD 40 - matching prior-year YTD 30 = trailing 110. With a current YTD of 50, the result is 120. This identity must not be applied to EPS or balance-sheet stocks.
+  This skill does that sum and checks the traps: a year-to-date figure read as a single quarter, a prior period of a different length, restated comparatives and a changed fiscal year. Practice figures: last full year 100 + current year to date 40 - prior-year period 30 = trailing 110. The sum works for flows such as revenue, not for EPS, margins or balance-sheet figures.
 when:
-  - You need a trailing-period additive-flow reconciliation with period-boundary checks.
-  - You work on issuer revenue and cash-flow reconciliation and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - You want a trailing 12-month figure for revenue, operating profit or another flow.
+  - You have the last annual report and two matching year-to-date statements.
+  - A reviewer needs to trace the result back to its inputs and assumptions.
 not_for:
   - "You need trailing EPS, margins or average-balance ratios: these need a different method, so work them out with your finance lead or accountant."
   - "You need a balance-sheet figure such as cash or debt: use the closing balance from the latest statement, not a trailing sum."
@@ -24,7 +24,7 @@ you_give:
   - "The year-to-date cut-off, plus the currency and scale used for the trailing twelve months."
   - "Your spreadsheet tool, if you want the trailing twelve months as a workbook."
 you_get:
-  - A trailing-period additive-flow reconciliation with period-boundary checks.
+  - A trailing 12-month figure built from last year, this year to date and the same period last year, with the period checks.
   - "An editable workbook of the trailing twelve months, with its inputs, formulas and test cases to rerun."
   - "A tie-out of the trailing figure and four quarters where available, the inputs still missing and the checks that ran."
 how_to_use:
@@ -56,12 +56,12 @@ output_sample:
     - name: CHECKS MISSED
       contains: Checks that failed or could not run, or none if all passed.
 how_it_works:
-  - title: 1. Identify an additive flow such as revenue or operating profit and align fiscal cut-offs, currency and accounting perimeter
-    text: Identify an additive flow such as revenue or operating profit and align fiscal cut-offs, currency and accounting perimeter.
-  - title: 2. Add current YTD to last full year and subtract the identical prior YTD interval; preserve restated annual and comparative figures
-    text: Add current YTD to last full year and subtract the identical prior YTD interval; preserve restated annual and comparative figures.
-  - title: 3. Reconcile the resulting interval to four quarter records where available; keep balance-sheet stocks, weighted shares, margins and EPS outside this additive formula
-    text: Reconcile the resulting interval to four quarter records where available; keep balance-sheet stocks, weighted shares, margins and EPS outside this additive formula.
+  - title: Pick one flow and line up the periods
+    text: Choose a flow such as revenue or operating profit. Match the fiscal cut-offs, currency and scope across the three statements.
+  - title: Add and subtract
+    text: Add current year to date to last full year, then subtract the same interval last year. Keep restated figures next to the originals.
+  - title: Tie it to the quarters
+    text: Compare the result with the last four quarter records where you have them, and show any gap. Keep balance-sheet figures, margins and EPS out of this sum.
 output_shape: |-
   A trailing-period additive-flow reconciliation with period-boundary checks.
   Scope and dated sources
@@ -73,7 +73,7 @@ tweaks:
   - what: "Year-to-date cut-off"
     how: "Take the year-to-date cut-off from the last annual report and both year-to-date statements. Use one currency and scale on every line."
   - what: "The figure being rolled"
-    how: "Change the the figure being rolled and have your AI recalculate. Keep the actual figures you supplied."
+    how: "Change the figure being rolled and have your AI recalculate. Keep the actual figures you supplied."
   - what: Acceptance
     how: Prior YTD has the same duration and calendar cut-off as current YTD.
 judge:

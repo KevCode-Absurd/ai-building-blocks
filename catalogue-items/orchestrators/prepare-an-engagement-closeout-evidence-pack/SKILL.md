@@ -12,14 +12,14 @@ End a client engagement with proof. Two skills run in order. The first builds a 
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+- **The contract** (yours): the full agreement or terms, with dates and any changes.
 
 **Makes it better (optional):**
 - **Meeting notes** (yours): an agenda, notes or decisions from a meeting.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a brief, meeting notes. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for the contract, meeting notes. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -27,6 +27,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+
+These replace the generic brief in the list above.
 
 - **The agreed deliverables** (required): from the contract, proposal or statement of work.
 - **Proof of delivery** (required): sent files, delivery emails or notes, with dates.
@@ -50,7 +52,7 @@ Ask once, in one short message, for only what you cannot work without. If there 
 
 1. **Executive action register keeper** (`executive-action-register`). Read the sources in the date window. Extract each explicit commitment still open, with an ID, task, owner, due date, timezone, status, dependency and source. An unanswered request is not an accepted commitment. Then build the **delivery register**, one row per agreed deliverable: where it was agreed, delivered (date and proof), reviewed (by whom, date and proof), accepted (by whom, date and proof) and the resulting status. Put owner and date gaps in a short clarification list. Save `outputs/step-01-executive-action-register.md`. **Hand to step 2:** the register, the open commitments and the clarifications. **Gate:** every "accepted" row cites written acceptance, every owner and date comes from a source, and no commitment is invented.
 
-2. **Handover note writer** (`handover-note-writer`). Use the step 1 file and the original sources. Write the closeout handover for the client or support team: what to read first, where each delivered file lives, the open issues, the support window and what it covers, the sign-offs still needed and who to contact. Never write passwords. Do not infer that the engagement is complete. Save `outputs/step-02-handover-note-writer.md`. **Gate:** every open issue and sign-off matches the register, and the support terms match the clause you were given.
+2. **Handover note writer** (`handover-note-writer`). Use the step 1 file and the original sources. Write the closeout handover for the client or support team: what to read first, where each delivered file lives, the open issues, the support window and what it covers, the sign-offs still needed and who to contact. Never write passwords. Do not infer that the engagement is complete. If the register has no accepted rows, the handover says plainly that no written sign-off exists yet. Save `outputs/step-02-handover-note-writer.md`. **Gate:** every open issue and sign-off matches the register, and the support terms match the clause you were given.
 
 3. **Check and hand back.** Run the checks below, then hand back the files and one suggested next step.
 
@@ -79,6 +81,9 @@ End with a HAND-BACK SUMMARY: each saved file, each step run or skipped and why,
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [SOP and runbook checker](https://useaiblocks.com/skills/sop-and-runbook-checker). It takes the document and plan.
+- The [Developer docs writer](https://useaiblocks.com/skills/developer-docs-writer). It takes the document.
+- The [AI knowledge file pack builder](https://useaiblocks.com/skills/ai-knowledge-file-pack-builder). It takes the document.
 - The [Capstone team agreement and handover reviewer](https://useaiblocks.com/skills/capstone-commitment-review-assistant). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
@@ -87,8 +92,8 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 Write `MISSING: <what>` beside the affected row and carry on with the rest. A deliverable with no proof of delivery stays "not delivered" in the register. Stop a step only when its required source is absent, and return what you finished with the exact input needed to resume.
 
-## After this
+## What to do with the result
 
-Suggest one next step in a short question, and say they can type their own:
+Suggest one next step in a short question, and say they can type their own. This fits closeout better than the generic suggestion above:
 - **Keep tracking open items** with the [Executive action register keeper](https://useaiblocks.com/skills/executive-action-register).
 Nothing here sends the handover or an invoice. A person does that.

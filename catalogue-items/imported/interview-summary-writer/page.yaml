@@ -16,7 +16,7 @@ when:
   - You are running many interviews and want the same format each time.
   - You want follow-up actions captured with owners and dates.
 not_for:
-  - "You have many interviews or survey answers and want themes across them: use a theme-analysis step on all the notes together, not this single-interview summary."
+  - "You have many interviews or survey answers and want themes across them: use hidden-theme-finder on all the notes together, not this single-interview summary."
   - "You only have notes and no transcript: write up the notes first, or ask the person who ran the call for a transcript."
   - "You need a full research report with a plan and sample size: ask a researcher, since this skill only summarizes one call."
 you_give:
@@ -32,7 +32,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
   - Paste your transcript, or attach it as a file if your AI can read files.
   - Tell your AI the product or area you are exploring, and the names and roles of the people on the call if you have them.
-  - Read the summary. Check that any missing detail shows as a dash and that the quotes match what was said.
+  - Read the summary. Check that any missing detail shows as a dash, that importance and satisfaction read "not stated" unless the customer said it, and that the quotes match what was said.
   - Copy the action items into your team tracker. Use the Key Insights when you map customer problems and opportunities.
   - Save the summary as a markdown file if your AI can save files, or copy it into your own notes.
 output_sample:

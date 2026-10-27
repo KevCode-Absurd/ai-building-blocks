@@ -5,7 +5,9 @@ description: Use when you have found the edge of your knowledge and still face a
 
 # Learn, borrow or pass planner
 
-A gap in your knowledge calls for a decision about the gap before the decision about the thing. This skill chooses between learning, borrowing competence, starting small and passing, and writes a first-week plan. If it is borrowing, it checks the helper for reward bias and for seeing every problem their own way. It follows "Real knowledge tester" and "Advice skin-in-the-game checker".
+A gap in your knowledge calls for a decision about the gap before the decision about the thing. This skill chooses between learning, borrowing competence, starting small and passing, and writes a first-week plan. If it is borrowing, it checks the helper for reward bias and for seeing every problem their own way. It follows "Real knowledge tester" and "Advice skin-in-the-game checker" (both are in the library).
+
+Not for advice you will act on in law, health or money: talk to a licensed professional. Not for finding where your knowledge ends: run "Real knowledge tester" first. It never names a person, product or course to pick.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -56,9 +58,9 @@ The decision size. The aptitude check. The learning time. The helper checks. The
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Plan assumptions and evidence tracker](https://useaiblocks.com/skills/monthly-belief-evidence-keeper).
-- The [Knowledge gap reviewer](https://useaiblocks.com/skills/circle-of-competence-mapper).
 - The [Decision checklist runner](https://useaiblocks.com/skills/decision-checklist-runner). It takes the plan.
+- The [Second-opinion reviewer](https://useaiblocks.com/skills/second-opinion-reviewer). It takes the plan.
+- The [Not-to-do list builder](https://useaiblocks.com/skills/not-to-do-list-builder). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

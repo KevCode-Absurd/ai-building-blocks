@@ -11,7 +11,7 @@ subhead: "Paste the numbers from a short product test: cost per click, click rat
 explain: |
   A product test that does not sell rarely means the product is bad. Most of the time the ad, the page or the checkout is at fault. If you blame the product too early, you drop a good one. If you blame the ad too late, you keep paying for one that cannot work.
 
-  This skill reads your test numbers against simple benchmarks, in the order a shopper moves: the ad, then the page, then checkout. Each number gets a pass or a miss, and the first miss points to the cause. The score is a tally of benchmarks met, not a forecast. The benchmarks are US, cold-traffic, 2026 figures from two creators who sell low-cost goods. It is a variant of the general ad performance diagnoser, with product-test numbers added.
+  This skill reads your test numbers against simple benchmarks, in the order a shopper moves: the ad, then the page, then checkout. Each number gets a pass or a miss, and the first miss points to the cause. The score is a tally of benchmarks met, not a forecast. The benchmarks are US, cold-traffic figures from two creators who sell low-cost goods. They are rules of thumb, not verified, so compare with your own past results first and never drop a product on the score alone. It is a variant of the general ad performance diagnoser, with product-test numbers added.
 
 when:
   - You ran a short test on a new product and sales did not come.
@@ -65,7 +65,7 @@ how_it_works:
   - title: Asks why first
     text: Rarely is it the product alone. One creator says about 90% of failures are the ads or the funnel. That is one person's claim.
   - title: Reads the ads
-    text: Link cost per click at or under $1.50 is the US target the creators use. Over $2 is a miss, and $2 to $4 is a problem. These are rules of thumb, not verified figures; swap in your own past results. Click rate under 3% is weak creative, with about 4% as the aim. Cost per 1,000 views over about $80 is high.
+    text: Link cost per click at or under $1.50 is the US target the creators use. Over $2 is a miss. These are rules of thumb, not verified figures; swap in your own past results. Click rate under 3% is weak creative, with about 4% as the aim. Cost per 1,000 views over about $80 is high.
   - title: Reads the page
     text: Landing page to add-to-cart should be at least 10%, or 8% to 9% for pricier items. Below that, the page, the offer or the traffic is weak.
   - title: Reads the checkout

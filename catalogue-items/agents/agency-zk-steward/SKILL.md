@@ -11,9 +11,11 @@ Turn a note or task into a part of a linked knowledge base, in the spirit of Nik
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Analysis assumptions logger](https://useaiblocks.com/skills/analysis-assumptions-logger). It takes the document.
+- The [SOP and runbook checker](https://useaiblocks.com/skills/sop-and-runbook-checker). It takes the document and plan.
+- The [AI knowledge file pack builder](https://useaiblocks.com/skills/ai-knowledge-file-pack-builder). It takes the document.
+- The [Process and SOP writer](https://useaiblocks.com/skills/process-and-sop-writer). It takes the plan and document.
+- The [Meeting pre-read writer](https://useaiblocks.com/skills/meeting-pre-read-writer). It takes the plan and document.
 - The [Notes wiki builder](https://useaiblocks.com/skills/notes-wiki-builder). It takes the document.
-- The [Meeting pre-read writer](https://useaiblocks.com/skills/meeting-pre-read-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

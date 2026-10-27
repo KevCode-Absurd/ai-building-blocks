@@ -31,6 +31,8 @@ metadata:
 2. **This skill:** Cascade components, add lumped elements, export Touchstone, bridge to eye diagram analysis
 3. **After:** `matlab-write-pcb-layout` — export final design to Gerber; or feed S-parameters into Signal Integrity Toolbox workflows
 
+You need the parts as code, one object for each part you already designed.
+
 ## Quick Reference
 
 | Task | Code |

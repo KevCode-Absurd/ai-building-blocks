@@ -7,8 +7,8 @@ role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - {type: question, required: true}
-  - {type: store_capture, required: false}
+  - {type: store_capture, required: true}
+  - {type: question, required: false}
   - {type: performance_sheet, required: false}
 outputs:
   - {type: audit_report}

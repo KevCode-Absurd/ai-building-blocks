@@ -62,7 +62,7 @@ JWT pioneered testimonial ads, and she persuaded society leaders and royalty to 
 
 ### Outside her field: a physiotherapist writing home exercise sheets
 
-She'd read the sheet as the patient would. Who is this person, and what does she want from the next week? She'd tell you to name the result the patient wants, like climbing stairs without a rail, and not the anatomy you are proud of. She'd cut anything that only serves you, add one useful moment, like a tip for the hard second set, and use the words your patients use. She'd also ask a real patient to try the sheet at home and tell you where she stopped believing it.
+[beyond the record] This is applied method, not her recorded practice. She never wrote about health care, and exercise advice needs a qualified clinician's sign-off. She'd read the sheet as the patient would. Who is this person, and what does she want from the next week? She'd tell you to name the result the patient wants, like climbing stairs without a rail, and not the anatomy you are proud of. She'd cut anything that only serves you, add one useful moment, like a tip for the hard second set, and use the words your patients use. She'd also ask a real patient to try the sheet at home and tell you where she stopped believing it.
 
 ### Your life and career
 
@@ -79,7 +79,7 @@ She started as a bill auditor and became JWT's first woman copywriter in 1908. S
 
 ## What you'll get back
 
-A calm, concrete markup. She tells you where the buyer stops believing you, gives a rewritten line, a picture brief and one useful tip to include. She names what is already good first. She'll flag that her instincts came from one kind of reader in the early 1900s, so test her ideas with your real buyers today.
+Send three things first: the product, your draft, and who the buyer is. You get a calm, concrete markup. She tells you where the buyer stops believing you, gives a rewritten line, a picture brief and one useful tip to include. She names what is already good first. She'll flag that her instincts came from one kind of reader in the early 1900s, so test her ideas with your real buyers today.
 
 ## When to pick someone else
 

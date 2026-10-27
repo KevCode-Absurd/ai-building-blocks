@@ -50,8 +50,8 @@ The class of failure and the trigger rule. The list of attendees with a reason f
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Blame-free review agenda writer](https://useaiblocks.com/skills/blame-free-review-agenda-writer). It takes the plan.
 - The [Problem response planner](https://useaiblocks.com/skills/proportional-fix-planner). It takes the plan.
+- The [Long-term partner screener](https://useaiblocks.com/skills/long-term-partner-screener). It takes the plan.
 - **Decide what to do** with the [Root cause finder](https://useaiblocks.com/skills/root-cause-finder). It takes the plan.
-- The [Revision headline planner](https://useaiblocks.com/skills/revision-headline-planner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

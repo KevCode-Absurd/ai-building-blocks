@@ -88,9 +88,8 @@ Five step files and the summary. The audit report is the step 5 file, `outputs/s
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Text message campaign writer](https://useaiblocks.com/skills/text-message-campaign-writer).
-- The [Welcome flow builder](https://useaiblocks.com/skills/welcome-flow-builder).
-- The [Reorder and second-order planner](https://useaiblocks.com/skills/reorder-and-second-order-planner).
+- The [Email build brief writer](https://useaiblocks.com/skills/email-layout-brief-writer). It takes the audit report.
+- The [Win-back flow builder](https://useaiblocks.com/skills/win-back-flow-builder). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

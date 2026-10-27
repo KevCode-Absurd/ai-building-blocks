@@ -75,8 +75,9 @@ Five step files and the summary:
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Store brand architecture planner](https://useaiblocks.com/skills/store-brand-architecture-planner).
-- The [Brand voice rewriter](https://useaiblocks.com/skills/brand-voice-rewriter). It takes the audit report.
+- The [Store brand architecture planner](https://useaiblocks.com/skills/store-brand-architecture-planner). It takes the plan.
+- The [Brand health auditor](https://useaiblocks.com/skills/brand-health-auditor). It takes the audit report.
+- The [Brand messaging builder](https://useaiblocks.com/skills/brand-messaging-builder). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

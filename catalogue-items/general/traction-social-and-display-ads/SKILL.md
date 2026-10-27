@@ -5,6 +5,10 @@ description: "Plan a social and display ads acquisition experiment from a produc
 
 # Social ads experiment planner
 
+Needs no account, API key or paid tool, and no scraping. If your AI can browse, it reads the public pages you point to. If not, paste your page text.
+
+Ad platforms have their own rules on claims and targeting. Check the current rules before any ad runs.
+
 Not for comparing every growth channel: use the Find your SaaS growth channel workflow (or, for a shop or service, Find your business growth channel). Not for a very long sales cycle or a product with no working demo: pick a slower channel or build a demo first. Not for building and publishing ads: this plan sends and spends nothing.
 
 To start you need a product link or pasted pricing text, plus your buyer if you know them.
@@ -14,10 +18,8 @@ To start you need a product link or pasted pricing text, plus your buyer if you 
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Plan your strategy** with the [Offline ads experiment planner](https://useaiblocks.com/skills/traction-offline-ads).
-- The [Lifecycle email experiment planner](https://useaiblocks.com/skills/traction-email-marketing).
 - **Plan your strategy** with the [Customer acquisition experiment reviewer](https://useaiblocks.com/skills/traction-experiment-reviewer). It takes the channel experiment.
 - **Plan your strategy** with the [Growth channel shortlist planner](https://useaiblocks.com/skills/traction-channel-ranker).
-- **Grow on social** with the [Niche publication experiment planner](https://useaiblocks.com/skills/traction-targeting-blogs).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -74,11 +76,13 @@ Evidence: <source URL, access date, fact, implication>
 Buyer and useful action: <...>
 Channel mechanism: <how the buyer reaches value>
 Pilot: <hypothesis, audience, offer, deliverable, owner>
+Produces: <audience hypotheses, ad concepts, a placement brief and a measurement map>
 Limits: <cash, hours, date, proposed or approved>
 Measurement: <events, cohort, denominators, attribution>
 Decision: <continue / revise / stop rule>
 Risks and next action: <...>
 MISSING: <unknowns>
+CHECKS MISSED: <one line each, or none>
 
 ## Check the answer
 

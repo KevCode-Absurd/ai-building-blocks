@@ -8,10 +8,12 @@ role: make
 job: ops
 level: beginner
 inputs:
-  - type: brief
+  - type: api_spec
     required: true
 outputs:
   - type: document
+  - type: api_spec
+    required: true
 uses: []
 origin: imported
 source:

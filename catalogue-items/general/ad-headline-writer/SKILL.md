@@ -74,7 +74,7 @@ The level and what it allows. Then a numbered list: the line, its way in, who it
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Check it before it goes live** with the [Headline promise checker](https://useaiblocks.com/skills/headline-promise-checker). It takes the ad copy.
-- The [Five-angle ad headline writer](https://useaiblocks.com/skills/five-angle-ad-headline-writer).
+- **Check it before it goes live** with the [Headline relevance checker](https://useaiblocks.com/prompts/headline-reader-and-reward-checker). It takes the ad copy.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -84,6 +84,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every number, date and quote comes from what was supplied.
 - Every question line is answered by a fact on file.
 - Every line fits its limit.
+- Health, nutrition, money and child-directed claims are flagged. Tell the user to check each one against the ad platform's rules before the line runs.
 
 ## If something is missing
 Write `MISSING: <material> for <way in>` and skip that way in. With no awareness given, write `MISSING: awareness` and write for the less aware level.

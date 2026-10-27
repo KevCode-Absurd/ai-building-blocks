@@ -167,6 +167,8 @@ tweaks:
     how: Give exact character limits. About 40 characters fits the headline under a Facebook image. On-image words can run longer, but fewer is better.
   - what: Customer quotes
     how: Paste real quotes word for word. Without them it skips the their-words way in, because it never invents what a customer said.
+  - what: Health, food or child-directed claims
+    how: The skill flags these lines. Check each against the ad platform's rules before you run it.
   - what: Dated news
     how: A new flavour, price or finding with its date opens the news way in. Without one, that way in is skipped.
 

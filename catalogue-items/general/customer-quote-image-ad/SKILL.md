@@ -104,10 +104,10 @@ CHECKS MISSED  <one line each, or none>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Complaint review image ad maker](https://useaiblocks.com/skills/complaint-review-image-ad-maker). It takes the ad copy.
-- The [Story ad image brief writer](https://useaiblocks.com/prompts/story-ad-picture-brief-writer). It takes the ad copy.
-- The [Single image ad planner](https://useaiblocks.com/skills/single-image-ad-planner).
 - **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy and image ads.
-- **Check it before it goes live** with the [Brand voice editor](https://useaiblocks.com/skills/brand-voice-editor). It takes the ad copy.
+- The [Story ad image brief writer](https://useaiblocks.com/prompts/story-ad-picture-brief-writer). It takes the ad copy.
+- The [Story ad visual style planner](https://useaiblocks.com/skills/image-style-picker-for-story-ads). It takes the ad copy.
+- **Check it before it goes live** with the [Ad awareness stage reviewer](https://useaiblocks.com/skills/ad-awareness-stage-checker). It takes the ad copy and image ads.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

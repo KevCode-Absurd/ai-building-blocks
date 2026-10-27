@@ -10,6 +10,8 @@ explain: |
   A set of planning documents that takes a startup idea from a rough thought to something tested. Tell it your idea. It moves through phases: intake, brainstorm, research, customer discovery, strategy, brand, product, finance and validation.
 
   You get market sizing, a competitive scan, a lean canvas, a business model, financial projections, brand basics and go-to-market ideas. It adds a gate for real customer interviews, so you do not rely on desk research alone. Everything is saved as markdown files with a progress tracker, so you can resume after a break. A fast mode gives a quick check in far less time.
+
+  A full run is a long job. Expect many hours of AI work across several sessions. Licence: this copy is MIT-licensed, as the LICENSE file says. The original author is credited on this page.
 when:
   - You have an idea and want to know if it is worth pursuing.
   - You need a business plan or lean canvas for an investor.
@@ -31,12 +33,14 @@ you_get:
   - Financial projections
   - A list of validation experiments
 how_to_use:
+  - "Before you start: use an AI that can search the web and save files. Without web search the figures come from the AI's memory, so every number needs your own check. Some AI plans charge for web search or file tools."
   - Open a chat in Claude, ChatGPT or Gemini. Paste the skill, or upload its folder if your AI takes files.
   - Tell your AI your idea. Say if you want fast mode or full mode, and add your budget and time limits.
   - Answer the intake questions. Share notes from any customer conversations you have had.
   - "Let it run the phases. It needs web search and file saving, and runs faster if your AI can use helper agents. Without web search it falls back to what the AI already knows, marks those figures \"Knowledge-Based, not live data\", and you must check them yourself."
   - "You end with a folder of files, one set per phase, a go or no-go note at the research gate, and a 30-day action plan."
   - Check the go or no-go note after research. Then do the customer interviews it asks for.
+  - "Next: take the go or no-go note and the interview questions into real customer conversations. Log each answer, then bring the notes back before you build or pitch."
   - Treat all market figures and projections as assumptions. Mark any number you could not source before you show it to an investor.
 output_sample:
   input:

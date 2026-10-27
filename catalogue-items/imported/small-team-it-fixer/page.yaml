@@ -12,6 +12,8 @@ explain: |
   It starts by asking how many people are affected and whether money is at risk. A company-wide outage comes before one person's laptop. Then it walks through the fix, safest step first, with the command for each step and what it changes.
 
   Many commands act on live accounts with admin power. The skill asks you to confirm the target, take a backup and get approval before it resets, deletes or lowers security. It uses random passwords, never fixed ones. Some steps need paid or admin accounts, such as Google Workspace admin or Okta.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (BagelHole) says MIT. Credit goes to BagelHole and sickn33.
 when:
   - Someone is locked out of their work account at midnight.
   - The office Wi-Fi keeps dropping before a client demo.
@@ -37,7 +39,8 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini. A plain chat can write the steps. You run any command yourself.
   - Paste the skill text. Then describe the problem, who is hit and which systems you use.
-  - Read each step and its command before you run it. Do not run anything you do not understand.
+  - Read each step and its command before you run it. Do not run anything you do not understand. Never run a command that downloads a script and runs it in one go. Read the script first.
+  - Check what each admin section needs before you start: Google Workspace admin, Okta, Slack admin and AWS IAM each need a paid plan or admin role.
   - Before a reset, delete or security change, confirm the target, take a backup and get the owner's yes.
   - Keep real passwords, tokens and keys out of the chat. Use your password manager.
   - Write the incident log line. For a break-in, switch to the Security incident triager.

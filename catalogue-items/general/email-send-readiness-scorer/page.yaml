@@ -65,7 +65,7 @@ how_it_works:
   - title: "Check the ask and the facts"
     text: "There should be one call to action. Flag any claim, price or deadline that is not true or not shown."
   - title: "Score it"
-    text: "Start at 100. Take off 30 for each Stop (a false claim, a misleading subject, no clear next step), 10 for each Fix (lead, length, subject, I and we, call to action) and 3 for each Polish (filler, pacing). Show the sum. Ship at 80 or more with no Stop."
+    text: "Start at 100. Take off 30 for each Stop (a false claim, a misleading subject, no clear next step), 10 for each Fix (lead, length, subject, I and we, call to action) and 3 for each Polish (filler, pacing). Show the sum. Ship at 80 or more with no Stop. If there is any Stop, the verdict is fix, even if the score is 80 or more. The score is a rule-based estimate of how ready the email is, not a prediction of opens, clicks or sales."
 
 output_shape: |
   COUNTS

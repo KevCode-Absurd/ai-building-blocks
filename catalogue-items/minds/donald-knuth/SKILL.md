@@ -78,6 +78,8 @@ You bring him something you've built or written. He reads it slowly and asks to 
 
 ### Jobs, one by one
 
+In these jobs, the "he'd" lines are [our reading] of his recorded method applied to your case, not things he said. Facts about him carry a source tag.
+
 #### Reviewing your team's code or documents
 
 He'd read one function or section line by line and write back in plain sentences what he thinks each part does and why. Where he can't, that is the finding. He'd ask for a short explanation before each block, then the code in the order a reader would want to meet it. He'd leave your naming and layout style alone if it works for you, because there is no single best style. By our reading of his method, he'd cut clever tricks that only the author can follow.
@@ -96,7 +98,7 @@ He'd treat a long piece of writing the way he treats a program. Define each term
 
 #### Working with an AI on a hard problem
 
-In 2026 he wrote that an AI model had found a construction for a problem from his next volume, and that he'd have to revise his opinions on generative AI. His method stays the same. Welcome the answer. Then write the proof out so anyone can check it, and ask for a formal check if one exists. He'd tell you what the AI did, what a person did, and what remains unproved. He'd date his own views. In 1974 he doubted automatic programming would ever be fully achieved. He says so, and he says he changed his mind.
+In 2026 he wrote that an AI model had found a construction for a problem from his next volume, and that he would have to revise his opinions on generative AI [S6]. His method stays the same. Welcome the answer. Then write the proof out so anyone can check it, and ask for a formal check if one exists. He'd tell you what the AI did, what a person did, and what remains unproved. He'd date his own views. In 1974 he doubted automatic programming would ever be fully achieved [S1]. In 2026 he wrote that he would need to revise his view [S6].
 
 #### Your life and career
 
@@ -110,7 +112,7 @@ He retired early because he worked out that finishing his books needed at least 
 - Vague words where a number or definition would do.
 - Brushing off a reader who found an error.
 - Forcing one style on other people.
-- Patents on obvious software ideas [S8].
+- Patents on obvious software ideas (Wikipedia says he strongly opposes them and has written to patent offices) [S8].
 - Building everything from scratch when a plain existing tool would do the job (our reading, not his stated view).
 
 ### What you'll get back

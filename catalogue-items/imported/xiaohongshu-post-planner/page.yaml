@@ -2,14 +2,16 @@ thinking: medium
 thinking_why: It adapts content to one platform.
 new_slug: xiaohongshu-post-planner
 name: Xiaohongshu post planner
-summary: Plan a Xiaohongshu post that earns saves. Give it your topic and get a cover brief, titles, body, hashtags and seed comments.
+summary: Plan a Xiaohongshu post that earns saves. Give it your topic and get a cover brief, titles, body, hashtags and reader-question replies.
 job: grow-social
 headline: Xiaohongshu post planner
 subhead: Name your topic. Get a Xiaohongshu post plan with cover, title and layout aimed at saves and sales. Bring your topic, product or message. Use the result to plan your next step.
 explain: |
   A full Xiaohongshu post plan for one topic, built to win saves and, in time, sales on China's biggest lifestyle app.
 
-  You name the topic, product or message. The skill finds the search keywords people use, then picks a format that fits, such as before and after, step by step or a ranked list. For each post it writes a cover brief with a short text overlay, two or three titles with the main keyword near the start, a body with a hook and short paragraphs, three to five hashtags, and seed comments with likely questions. It orders its choices by save rate first, then click rate, comment depth and read-through.
+  You name the topic, product or message. The skill finds the search keywords people use, then picks a format that fits, such as before and after, step by step or a ranked list. For each post it writes a cover brief with a short text overlay, two or three titles with the main keyword near the start, a body with a hook and short paragraphs, three to five hashtags, and the questions real readers are likely to ask, with a reply drafted for each. It orders its choices by save rate first, then click rate, comment depth and read-through.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. Credit goes to yundu-ai and sickn33.
 when:
   - You sell a product and want to reach Chinese shoppers on Xiaohongshu.
   - You have a topic and need a cover, title and body that fit the platform.
@@ -28,15 +30,15 @@ you_get:
   - A cover image brief
   - Two or three title options
   - A full post body with hashtags
-  - Seed comments and likely questions
+  - Likely reader questions with draft replies
   - A format recommendation
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
-  - "Type your topic, product or message. Add your audience and your goal: saves, follows or sales."
-  - Add competitor accounts if you have them (optional).
+  - "Have ready: your product name, what it is made of or how it works, the price, real customer feedback and any claims you are allowed to make. Type your topic, product or message, then your audience and your goal: saves, follows or sales."
+  - Add competitor accounts if you have them (optional). If your AI cannot browse, also paste the search terms or top posts you have seen, because it cannot look up keywords for you.
   - Read the format choice first. Then check the cover brief, titles and body against your real product and facts.
   - Seed comments in the result are likely reader questions with drafted replies. Do not post them from your own or paid accounts as fake users.
-  - Remove any claim you cannot prove. Label posts that are paid, gifted or linked to a product as ads, as Xiaohongshu rules and Chinese ad law require.
+  - Remove any claim you cannot prove, and any number or result you did not get yourself. For skin, health or body claims, have a qualified person check the wording first. Label posts that are paid, gifted or linked to a product as ads, as Xiaohongshu rules and Chinese ad law require.
   - Next, test two or three titles, then track save rate and click rate for each post before you plan a content calendar with content-calendar-builder.
 output_sample:
   input:
@@ -56,5 +58,5 @@ output_sample:
     - name: Hashtags
       contains: Three to five tags that mix popular and niche ones.
     - name: Comment engagement plan
-      contains: Seed comments to post and likely reader questions with answers.
+      contains: Likely reader questions with draft replies, to be answered openly as the brand, never posted from fake accounts.
 next: [content-calendar-builder, wechat-article-planner]

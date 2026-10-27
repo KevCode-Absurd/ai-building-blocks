@@ -9,7 +9,7 @@ role: check
 job: ops
 level: intermediate
 inputs:
-  - type: document
+  - type: contract
     required: true
 outputs:
   - type: audit_report

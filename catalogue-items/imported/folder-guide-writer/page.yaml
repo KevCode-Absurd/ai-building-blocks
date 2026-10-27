@@ -9,6 +9,8 @@ subhead: A short CLAUDE.md file for one folder, so any AI helper that opens it k
 explain: |
   A short CLAUDE.md file for one folder, so any AI helper that opens it knows what the work is, which files matter and what not to touch. A matching AGENTS.md points to the same file.
 
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (davidondrej) says MIT. Credit goes to davidondrej.
+
   First it checks the folder is worth a guide. Then it reads every file in full, not just names. Before writing, it shows you a bullet list of what it plans to include, so you can react. Sections cover purpose, key files, hard limits, naming habits, decisions already made and how you like to work. The hard limits section tends to pay off most. You approve the list, then it writes the file.
 when:
   - You keep re-explaining a project folder to your AI each session.
@@ -35,7 +37,7 @@ how_to_use:
   - Tell your AI which folder to write a guide for. Add any rules you want kept.
   - The skill asks for the folder path, reads every file, and shows you a bullet outline. Fix anything wrong or missing in the outline, then say go. Only then does it write CLAUDE.md and the AGENTS.md link.
   - Check the finished CLAUDE.md for rules that clash. Add any rule your AI keeps breaking. A good guide is short, about 60 lines or fewer.
-  - Nothing is committed unless you ask. When your AI breaks a rule later, add that rule to the file.
+  - Nothing is committed or pushed unless you ask. A push sends the file to your remote repository, so your AI must ask you first. When your AI breaks a rule later, add that rule to the file.
 output_sample:
   input:
     - The path to one project folder

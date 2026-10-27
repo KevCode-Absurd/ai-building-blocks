@@ -10,6 +10,8 @@ explain: |
   A custom library so MATLAB can use a sensor or part it doesn't support out of the box, such as a DHT22, an OLED screen or NeoPixels. Name the part and you get the link between MATLAB and the Arduino code.
 
   The skill does two fast checks first. It runs listArduinoLibraries to see if native support exists, and it searches MathWorks contributions on File Exchange for a ready add-on. If either exists, it stops and tells you. If not, it builds a custom add-on that wraps the Arduino C++ library for MATLAB, using the LibraryBase structure and the arduinoioaddons folder. It does not handle plain I2C or SPI, standalone Arduino code or Simulink.
+
+  Licence: this copy is under BSD 2-Clause (see LICENSE.md). The skill file also links MathWorks' own reuse licence, which means you may use it only with MathWorks products such as MATLAB. Credit goes to MathWorks.
 when:
   - You want temperature readings from a DHT22 sensor in MATLAB.
   - You need to drive an OLED screen or motor driver from MATLAB.
@@ -35,8 +37,11 @@ how_to_use:
   - Tell your AI the sensor or part name and your Arduino board model.
   - "Run the native support check in MATLAB: type listArduinoLibraries. If your part is listed, stop and use it."
   - If no MathWorks add-on exists, give your AI a custom library name and an output folder. Add the Arduino library name if you have one.
+  - Before you install any third-party Arduino library, check that library's own licence. It is not covered by this item.
   - Copy the files your AI writes into your folder, then run listArduinoLibraries again to see your library.
   - Connect your board with arduino() and addon() to test it. This step needs MATLAB and a real board.
+  - "Next: to find and connect your board, use the Arduino connector. Then call your new add-on from a MATLAB script."
+next: [arduino-connector]
 output_sample:
   input:
     - The name of your sensor or part

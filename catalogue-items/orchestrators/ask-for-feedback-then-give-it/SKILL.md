@@ -9,7 +9,7 @@ Say who you manage. Get a go-to question to ask for feedback and a plan for the 
 
 This workflow follows the method in How do you get feedback? The four steps to solicit Radical Candor by Kim Scott. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
-**When not to use it:** Not for a serious conduct or performance issue in a first talk. Speak to HR or your manager first. If you only want to write a thank-you to your team, use the Honest appreciation note writer. If you need to settle a team disagreement, use the Disagreement calming line writer.
+**When not to use it:** Not for a serious conduct or performance issue in a first talk. Speak to HR or your manager first. If you only want to write a thank-you to your team, use the [Honest appreciation note writer](https://useaiblocks.com/skills/honest-appreciation-note-writer). If you need to settle a team disagreement, use the [Disagreement calming line writer](https://useaiblocks.com/skills/disagreement-calming-line-writer).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -25,6 +25,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+
+Run this in an AI that can read and save files, such as a Claude Project or Claude Code.
 
 - **Who you manage, and how they relate to you** (required): their role and your history together.
 - **What you want to learn about how you lead** (required): for example, how clear your instructions are or how you run meetings.
@@ -45,6 +47,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 1. **Write your feedback request script.** Use the skill `feedback-request-script-writer`. Give it who you manage, what you want to learn and, if you have them, a recent project and a sample of how you talk. It returns your go-to question, a plan for the silence after you ask, a second question tied to a recent project, and lines to repeat back, reward honesty and handle disagreement. Save it as `outputs/step-01-feedback-request-script-writer.md`.
 2. **Plan the feedback conversation.** Use the skill `feedback-conversation-planner`. Give it the person who needs your feedback, what you saw, its effect and what you have already said. Also give it the go-to question, the silence plan and the reply lines from `outputs/step-01-feedback-request-script-writer.md`, so the plan matches your voice and your relationship with this person. It returns where you sit on the care and challenge chart, one specific piece of praise to open with, the behaviour and its effect in plain words, questions to ask, a plan for push-back and a follow-up date. Save it as `outputs/step-02-feedback-conversation-planner.md`.
+
+   If you have not yet asked for feedback and heard back, you can still run step 2, but mark the praise line `MISSING: a real example` rather than inventing one. If you cannot name one specific thing to praise, say so and keep the praise line empty.
 3. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back
@@ -57,9 +61,9 @@ Two step files and the summary, in this shape:
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Small-win praise planner](https://useaiblocks.com/skills/small-win-praise-planner).
 - The [Listening conversation planner](https://useaiblocks.com/skills/listen-first-talk-planner). It takes the plan.
-- The [Manager routine and priorities coach](https://useaiblocks.com/skills/manager-output-coach).
+- The [Employee performance review writer](https://useaiblocks.com/skills/quarterly-performance-review-keeper). It takes the plan.
+- The [Long-term partner screener](https://useaiblocks.com/skills/long-term-partner-screener). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -10,8 +10,12 @@ level: intermediate
 inputs:
   - type: question
     required: true
+  - type: codebase
+    required: false
+  - type: tool_connection
+    required: false
 outputs:
-  - type: document
+  - type: product_spec
 uses: []
 origin: imported
 source:

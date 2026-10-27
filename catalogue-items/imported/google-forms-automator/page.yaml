@@ -31,12 +31,12 @@ you_get:
   - A test checklist
 how_to_use:
   - Open Claude, ChatGPT or Gemini. No code runs on your computer.
-  - Tell your AI what the form is for, your questions, and what should happen on each reply.
-  - Add the email address or sheet link to use. Say if the sheet needs a specific name.
+  - Gather these first. Your list of questions with their answer types, the email address to notify, and the sheet link and tab name if you want rows logged. Then tell your AI what the form is for and what should happen on each reply.
   - Build the form in Google Forms, then open Extensions, then Apps Script, and paste the script your AI wrote.
   - "Add the trigger from the clock menu: pick your function, From form, On form submit. Approve access."
   - Send a test reply from a private window. Check the email or sheet row arrives once.
   - If your script thanks the person who replied, the form needs an email question. Without one, the message goes to you.
+  - After it works, check the first few rows or emails. If you change the form's questions later, update the script to match and install the trigger again if it stops firing.
 output_sample:
   input:
     - What your form is for

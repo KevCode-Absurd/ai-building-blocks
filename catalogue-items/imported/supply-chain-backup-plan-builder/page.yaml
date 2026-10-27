@@ -10,6 +10,8 @@ explain: |
   The biggest threats to your supply chain, ranked, with a backup for each and a clear owner for every step if something breaks. You get a plan to use on the bad day.
 
   Describe your supply chain. The skill lists risks by category and rates each by chance and damage, which gives a value at risk and a priority order. It runs disruption scenarios, including a stress test and a random simulation, so you see the likely cost of a port closure or a supplier failure. It then picks responses such as dual sourcing and safety stock, and scores your overall resilience. Python code is included.
+
+  Every dollar, value at risk and resilience figure is a placeholder until you replace the 8, 20, 25 and 10 percent factors and the default scores of 50 with your own data.
 when:
   - A single supplier or port failing would stop your business.
   - You must write a business continuity plan.
@@ -33,7 +35,8 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Use one that can run Python code if you want the scenario and simulation steps.
   - Paste the skill text, or upload the skill folder if your AI takes files.
-  - "Before you paste anything, gather: your key suppliers, their lead times, what a day of downtime costs you, and how many days of safety stock you hold."
+  - "Before you paste anything, gather: your key suppliers, their lead times, what a day of downtime costs you, and how many days of safety stock you hold. Take the cost, chance and stock figures from your own ERP, supplier contracts or finance records."
+  - "The scenario and simulation steps need Python. If your AI cannot run code, fill in the risk register and mitigation table by hand, or ask your AI to build them as plain tables from your numbers."
   - "Describe your supply chain: key suppliers, routes, sites and what an outage costs you."
   - Add your own cost, chance and stock numbers. Warning: the code uses placeholder figures for cascade effects (8, 20 and 25 percent), mitigation cost (10 percent) and variability. Do not show any dollar figure to management until you have replaced them with your own data.
   - Check the ranked risks and the owners in the plan. Fix anything that does not match your business.

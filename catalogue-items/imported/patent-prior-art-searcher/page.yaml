@@ -34,11 +34,12 @@ you_get:
   - A source link for every patent cited
 how_to_use:
   - Use an AI that can search the web and run code, such as Claude with web tools and code running turned on.
-  - Paste the skill into the chat, or upload the skill folder. The search reads public patent sites automatically, about one query a second, so it may hit rate limits and take a while.
+  - Before you start, check the terms of use of Google Patents, Espacenet and the USPTO for automated access. If a site forbids it, stop and search that site by hand.
+  - Paste the skill into the chat, or upload the skill folder. The search reads public patent sites automatically, about one query a second, so it may hit rate limits and take a while. If your AI cannot run the scripts, it gives you a list of search queries to type into each site yourself.
   - Describe your invention, rival product or target patent.
   - Answer the questions one at a time. Pick one of the five goals when asked.
   - Check the ranked patents and their source links. Open the ones that matter.
-  - Take the report to a patent attorney before you file, license or buy. Send the novelty and freedom-to-operate findings first.
+  - Take the report to a patent attorney before you file, license or buy. Send the ranked closest art with its claim text, the audit log and the verdict for your goal. For a novelty or freedom-to-operate search, send those findings first.
 output_sample:
   input:
     - A short description of your invention, rival product or target patent

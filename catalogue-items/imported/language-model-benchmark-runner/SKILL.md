@@ -117,7 +117,7 @@ lm_eval --model hf \
 
 **Step 4: Analyze results**
 
-The scores in the sample JSON and tables below are illustrative. Your scores will differ by model, settings and run. Never copy them into a report as real results.
+The scores in the sample JSON and tables below are placeholders. Your scores will differ by model, settings and run. Never copy placeholders into a report as real results.
 
 Results saved to `results/llama2-7b-eval.json`:
 
@@ -125,16 +125,16 @@ Results saved to `results/llama2-7b-eval.json`:
 {
   "results": {
     "mmlu": {
-      "acc": 0.459,
-      "acc_stderr": 0.004
+      "acc": [SCORE],
+      "acc_stderr": [ERROR MARGIN]
     },
     "gsm8k": {
-      "exact_match": 0.142,
-      "exact_match_stderr": 0.006
+      "exact_match": [SCORE],
+      "exact_match_stderr": [ERROR MARGIN]
     },
     "hellaswag": {
-      "acc_norm": 0.765,
-      "acc_norm_stderr": 0.004
+      "acc_norm": [SCORE],
+      "acc_norm_stderr": [ERROR MARGIN]
     }
   },
   "config": {
@@ -220,6 +220,7 @@ class EvalHarnessCallback(Callback):
 **Step 4: Plot learning curves**
 
 ```python
+import glob
 import json
 import matplotlib.pyplot as plt
 
@@ -320,14 +321,12 @@ df = pd.DataFrame(results)
 print(df.to_markdown(index=False))
 ```
 
-Output:
+Output (layout only. The scores are placeholders, not real results. Your own run fills them in):
 ```
-| Model                  | MMLU  | GSM8K | HELLASWAG | TRUTHFULQA |
-|------------------------|-------|-------|-----------|------------|
-| meta-llama/Llama-2-7b  | 0.459 | 0.142 | 0.765     | 0.391      |
-| meta-llama/Llama-2-13b | 0.549 | 0.287 | 0.801     | 0.430      |
-| mistralai/Mistral-7B   | 0.626 | 0.395 | 0.812     | 0.428      |
-| microsoft/phi-2        | 0.560 | 0.613 | 0.682     | 0.447      |
+| Model          | MMLU    | GSM8K   | HELLASWAG | TRUTHFULQA |
+|----------------|---------|---------|-----------|------------|
+| [MODEL NAME 1] | [SCORE] | [SCORE] | [SCORE]   | [SCORE]    |
+| [MODEL NAME 2] | [SCORE] | [SCORE] | [SCORE]   | [SCORE]    |
 ```
 
 ### Workflow 4: Evaluate with vLLM (faster inference)
@@ -450,7 +449,7 @@ Install execution dependencies:
 pip install human-eval
 ```
 
-Enable code execution:
+Enable code execution. HumanEval runs code that the model wrote, so run it only in an isolated sandbox or container, never on a machine with private files or keys:
 ```bash
 lm_eval --model hf \
   --model_args pretrained=model-name \

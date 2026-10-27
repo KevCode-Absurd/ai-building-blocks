@@ -15,7 +15,16 @@ When you've handed it back, suggest what they could do next in one short questio
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
+## When not to use
+
+- Your loan has no reserve requirement. There is nothing to roll forward.
+- You want to split a period's cash between lenders and the reserve in the order the loan sets. Use the Project payment waterfall builder.
+- You want to test a cash covenant. Use the Debt service covenant headroom checker.
+- Your payments are uneven across the year and you only have the yearly total. Give the real months, or treat the result as rough.
+
 ## Before you start
+
+This skill needs only the figures in "What you need". A document or spreadsheet is optional: if a line below asks for one as required, ignore that.
 
 A chat is enough. Do the sums yourself and show each one. Run the bundled script or build a workbook only when you have code or file tools and the person wants one. If you cannot run something, say so. Never claim you ran a check you did not run.
 

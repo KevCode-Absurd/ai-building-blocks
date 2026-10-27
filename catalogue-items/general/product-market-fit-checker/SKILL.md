@@ -54,9 +54,9 @@ The verdict and score. How the score was worked out. What the evidence says, eac
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Business idea validation planner](https://useaiblocks.com/skills/idea-to-business-guide).
 - The [Customer success milestone planner](https://useaiblocks.com/skills/customer-success-signals). It takes the audit report.
-- The [Seven-question startup scorer](https://useaiblocks.com/skills/seven-question-startup-scorer). It takes the audit report.
+- The [Idea evidence reviewer](https://useaiblocks.com/skills/idea-evidence-review). It takes the audit report.
+- The [Ten-year durability checker](https://useaiblocks.com/skills/ten-year-durability-checker). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

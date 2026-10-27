@@ -62,10 +62,9 @@ The dominant emotion in one sentence and the proposed theme. The lived events wi
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Write the landing page** with the [Sales letter outline planner](https://useaiblocks.com/skills/sales-letter-outline-planner). It takes the buying reasons and brand brain.
-- The [Customer fit reviewer](https://useaiblocks.com/skills/wrong-buyer-review-checker). It takes the brand brain.
 - The [Buyer profile reviewer](https://useaiblocks.com/skills/avatar-fit-checker). It takes the brand brain.
-- The [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). It takes the brand brain.
-- **Write the ad copy** with the [Customer needs finder](https://useaiblocks.com/skills/buyer-wants-finder). It takes the brand brain.
+- The [Customer fit reviewer](https://useaiblocks.com/skills/wrong-buyer-review-checker). It takes the brand brain.
+- The [Customer community finder](https://useaiblocks.com/skills/audience-hangout-finder). It takes the brand brain.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

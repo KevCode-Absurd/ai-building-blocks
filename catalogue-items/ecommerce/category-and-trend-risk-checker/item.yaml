@@ -7,7 +7,7 @@ role: check
 job: analysis
 level: intermediate
 inputs:
-  - {type: question, required: true}
+  - {type: idea, required: true}
   - {type: product_data, required: false}
 outputs:
   - {type: audit_report}

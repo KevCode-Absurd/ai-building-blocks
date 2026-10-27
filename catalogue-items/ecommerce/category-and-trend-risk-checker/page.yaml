@@ -79,7 +79,7 @@ how_it_works:
   - title: Checks one-trend risk
     text: Looks at whether the brand rests on one trend. A core identity that can change products is safer than a single claim.
   - title: Reads the exact term
-    text: Searches the exact product term, not only the parent topic. A parent trend at its peak does not mean the sub-product is rising.
+    text: Uses the exact product term, not only the parent topic. You search it and paste the result. A parent trend at its peak does not mean the sub-product is rising.
   - title: Reads the shape and season
     text: Multi-year growth is good. One-month spikes are fads. A several-year view shows seasonality for cash planning.
   - title: Sizes demand and buyers

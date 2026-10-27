@@ -12,6 +12,8 @@ inputs:
     required: true
   - type: competitor_set
     required: false
+  - type: spreadsheet
+    required: false
 outputs:
   - type: competitor_set
   - type: audit_report

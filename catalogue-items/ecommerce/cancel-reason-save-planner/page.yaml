@@ -70,6 +70,7 @@ output_shape: |
   (five to seven reasons plus Other)
   TRACKING COLUMNS: <reason, shown, saved, save rate, repeat orders after save, discount cost>
   LEGAL NOTE: <cancelling stays easy; check local rules>
+  CHECKS MISSED: <checks that failed or could not run, or none>
   MISSING: <...>
 
 tweaks:

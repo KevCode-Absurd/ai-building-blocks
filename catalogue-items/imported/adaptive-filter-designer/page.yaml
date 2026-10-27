@@ -7,9 +7,11 @@ job: build-software
 headline: Adaptive filter designer
 subhead: Give it your signal, a reference signal and a description of the noise or echo, plus your sample rate and filter length goals. It picks the filter type and update method, builds the filter in MATLAB and tests it on your signal. You get the filter code, the reason for the choice, a convergence check, the final weights and a cleaned signal.
 explain: |
+  This is for engineers who already work in MATLAB. It is not a general business tool. An adaptive filter is a filter that adjusts itself as the signal comes in.
+
   You get an adaptive filter built and tested on your own signal, ready to cancel noise or echo. The skill shows whether it settles on the right answer and gives you the final filter weights.
 
-  It starts by studying the problem: what is the signal, what is the interference, and what reference do you have. It then picks the filter type and update method that suits, such as a least mean squares style for light work or a frequency-domain one for long filters. It sets the step size and length, runs the filter in a streaming loop, and checks that the error falls. It needs MATLAB with the right signal toolbox.
+  It starts by studying the problem: what is the signal, what is the interference, and what reference do you have. It then picks the filter type and update method that suits, such as a simple one that nudges its settings a little with each sample for light work, or one that works on blocks of the signal for long filters. It sets the step size (how big each nudge is) and the filter length, runs the filter in a streaming loop, and checks that the error falls. It needs MATLAB with the right signal toolbox.
 when:
   - You need to remove an echo from a recording.
   - Engine or fan noise is hiding your signal.
@@ -24,7 +26,7 @@ you_give:
   - Your signal and a reference signal
   - A description of the noise or echo
   - Sample rate and filter length goals
-  - MATLAB with the signal processing toolbox
+  - MATLAB with the DSP System Toolbox (paid MathWorks products, so you need your own licence)
 you_get:
   - Filter code in MATLAB
   - A choice of filter type, with the reason

@@ -82,7 +82,7 @@ You list them as steps for the owner to approve.
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [A/B test results reader](https://useaiblocks.com/skills/split-run-result-reader). It takes the plan.
 - The [Ad sales drop analyst](https://useaiblocks.com/skills/ad-sales-drop-analyst). It takes the audit report.
-- The [Ad results report writer](https://useaiblocks.com/skills/ad-results-report-writer). It takes the audit report.
+- The [Ad change decision checker](https://useaiblocks.com/skills/campaign-keep-or-change-checker). It takes the audit report.
 - **Plan what to test** with the [Ad reach planner](https://useaiblocks.com/skills/reach-before-repeat-planner). It takes the plan.
 - The [TikTok starter campaign builder](https://useaiblocks.com/skills/tiktok-starter-campaign-builder). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.

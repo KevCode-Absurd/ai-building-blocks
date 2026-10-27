@@ -11,6 +11,8 @@ level: beginner
 inputs:
   - type: product_data
     required: true
+  - type: spreadsheet
+    required: false
 outputs:
   - type: plan
   - type: hooks

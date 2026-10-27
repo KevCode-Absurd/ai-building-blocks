@@ -44,7 +44,7 @@ Forensic evidence must be provided as static files (CSV exports, PDF statements)
 - A flag means the digits look unusual, not that the numbers were invented. Benford's Law needs a few hundred amounts that span several orders of magnitude, and many honest data sets (such as fixed prices) fail it.
 
 ### 2. Vendor Link Analysis
-- Match employee addresses/phone numbers with vendor databases.
+- Match employee addresses/phone numbers with vendor databases. This uses personal data about named people. Replace identifiers with codes before sharing files with an AI, and check with a lawyer that you may do the matching. Employment and privacy law differ by country.
 - Flag "Ghost Vendors" or shell companies owned by insiders.
 
 ### 3. Round-Trip Tracking
@@ -52,7 +52,7 @@ Forensic evidence must be provided as static files (CSV exports, PDF statements)
 - Check for "Lazy Round-Tripping" (identical amounts/dates).
 
 ### 4. Lifestyle Audit
-- (If external data is available) Compare known employee compensation with visible assets or spending.
+- (If external data is available) Compare known employee compensation with visible assets or spending. Only do this with a lawful basis and legal advice, because it looks into the private spending of named people.
 
 ---
 

@@ -8,8 +8,14 @@ role: make
 job: ops
 level: beginner
 inputs:
-  - type: brief
+  - type: question
     required: true
+  - type: skill_files
+    required: false
+  - type: audit_report
+    required: false
+  - type: prompt
+    required: false
 outputs:
   - type: skill_files
 uses: []

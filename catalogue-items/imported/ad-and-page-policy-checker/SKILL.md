@@ -100,13 +100,13 @@ Run through each category. Report PASS / FAIL / WARN for each.
 
 **Required modifiers:** helps, supports, can, may, promotes, aids in, assists with
 
-**Disease name workarounds:**
+**Disease names the author says platforms flag (these are how the author words them, not a way round the rules):**
 - "Diabetes" → "type two" (without the word "diabetes")
 - "Alzheimer's/dementia" → "memory," "brain health," "brain fog"
 - "Cancer" → cannot mention, must reframe entirely
 - "Arthritis" → "joint health," "joint comfort"
 
-**Rewording is not a fix by itself:** swapping a word does not make a claim compliant. The claim underneath must be true and supportable, and a platform can still reject copy that implies a disease. Tell the user to fix the claim first and to check the wording against the platform's current policy.
+**Rewording is not a fix by itself:** renaming a condition does not make a claim compliant. The claim underneath must be true and supportable, and a platform can still reject copy that implies a disease. Never suggest a swap that hides a disease claim. Tell the user to fix the claim first and to check the wording against the platform's current policy.
 
 ### 4. Income & Financial Claims
 - [ ] No guaranteed income promises
@@ -249,13 +249,14 @@ After both phases, calculate:
 - X HIGH issues, Y MEDIUM, Z LOW
 - Top priority fixes: [numbered list]
 - What's already compliant: [brief note]
+- Next steps: fix the high issues, run the check again on the new copy, confirm the final version against the platform's live policy, and for health or income claims get a compliance review before launch
 ```
 
 ---
 
 # Platform-Specific Rules
 
-> **AI Blocks note:** the rules below are the original author's, with no date and no source links, and they may be out of date. Tell the user to confirm each rule against the platform's current policy before relying on it (Meta: the Advertising Standards page in Meta's Business Help Centre; Google: Google Ads policies; TikTok: TikTok Advertising Policies; YouTube: YouTube ad policies; ClickBank: ClickBank's affiliate and vendor policies). This is a check for common risks, not legal advice.
+> **AI Blocks note:** the rules below are the original author's, with no date and no source links, and they may be out of date. Treat every rule as undated. Say so in your report. Tell the user to confirm each rule against the platform's current policy before relying on it (Meta: the Advertising Standards page in Meta's Business Help Centre; Google: Google Ads policies; TikTok: TikTok Advertising Policies; YouTube: YouTube ad policies; ClickBank: ClickBank's affiliate and vendor policies). This is a check for common risks, not legal advice.
 
 ## Meta / Facebook (Deep Coverage)
 
@@ -309,7 +310,7 @@ After both phases, calculate:
 - **All claims must be supported by scientific evidence**
 - **Bait-and-switch:** Landing page must align perfectly with ad
 - **Consequences:** Immediate account suspension without warning; potential permanent ban
-- Google is less nuanced than Meta — they tend to ban first, ask questions never
+- The author says Google can act fast with little warning, so check the current Google Ads policy before you launch
 
 ## TikTok (Light Coverage)
 - **Mandatory commercial content disclosure** for all promotional posts
@@ -349,6 +350,8 @@ For health and supplement copy, FDA rules apply on top of platform rules:
 - "High blood sugar" → use "erratic blood sugar"
 - "Blood sugar spike" → use "blood sugar fluctuations"
 - "Managing your blood sugar" → use "sustaining your blood sugar"
+
+**Not legal clearance:** following this list does not make health or supplement copy lawful. Get a compliance or legal review before you launch any health, supplement or income claim. The word swaps above are the author's tips and do not remove the need for the claim to be true and supportable.
 
 **Pro tip:** Read FDA warning letters — they show the exact language the FDA does not like. These are essentially a cheat sheet for what to avoid.
 

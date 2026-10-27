@@ -10,6 +10,8 @@ level: beginner
 inputs:
   - type: persona
     required: true
+  - type: brand_brain
+    required: false
 outputs:
   - type: offer
   - type: plan

@@ -54,8 +54,8 @@ The three cases and the sums. The supported ordered value range, or separate unr
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Bond type and maturity chooser](https://useaiblocks.com/skills/bond-type-and-maturity-chooser). It takes the plan.
-- The [Terminal growth reinvestment checker](https://useaiblocks.com/skills/terminal-growth-reinvestment-consistency).
-- The [Equity research and valuation report builder](https://useaiblocks.com/skills/equity-research-valuation-report-builder).
+- The [Investment holding rule writer](https://useaiblocks.com/skills/sit-still-rule-writer). It takes the plan.
+- The [Price drop rules writer](https://useaiblocks.com/skills/price-drop-rules-writer). It takes the plan.
 - **Make an offer people want** with the [Guarantee and refund plan writer](https://useaiblocks.com/skills/guarantee-designer). It takes the plan.
 - **Plan your strategy** with the [Plan failure reviewer](https://useaiblocks.com/skills/failure-first-plan-check). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.

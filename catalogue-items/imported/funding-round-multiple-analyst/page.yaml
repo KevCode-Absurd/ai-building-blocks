@@ -36,7 +36,8 @@ how_to_use:
   - Let your AI search for each round and its revenue. Charts need a chat that can draw them.
   - Check which revenue figures are marked as estimates. Replace any you know are wrong and ask it to run again. If your chat has no chart tool, ask for the table of rounds and multiples as plain text.
   - Before the number goes in a memo, re-run it with revenue figures you trust. Recheck the rounds with the most estimated figures first.
-  - Read the cause table and the short summary. Copy the parts you need into your memo.
+  - Read the cause table and the short summary. The causes are inferred from public information, so test them against the company's own pipeline and retention data if you can. Mark any benchmark the answer labels unverified as unverified in your memo. Copy the parts you need into your memo.
+  - Then compare the company with its peers using the Valuation method comparer, or map what else could be at risk with the Financial risk mapper.
 output_sample:
   input:
     - Your company name

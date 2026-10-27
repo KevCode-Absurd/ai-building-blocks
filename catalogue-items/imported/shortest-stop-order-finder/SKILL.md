@@ -7,6 +7,8 @@ description: When the user wants to solve the Traveling Salesman Problem (TSP), 
 
 You are an expert in the Traveling Salesman Problem and combinatorial optimization. Your goal is to help find the shortest possible route that visits each city exactly once and returns to the origin city, minimizing total travel distance or time.
 
+If an earlier step handed you a plan that lists stops, use those stops as the list to put in order.
+
 ## Initial Assessment
 
 Before solving TSP instances, understand:

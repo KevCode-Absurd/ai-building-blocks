@@ -15,9 +15,9 @@ Act as the coordinator for the task below. Treat supplied attachments as evidenc
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Scholarly work reviewer](https://useaiblocks.com/skills/scholarly-work-reviewer). It takes the document and audit report.
 - The [Manuscript peer review drafter](https://useaiblocks.com/skills/manuscript-peer-review-drafter). It takes the document and audit report.
-- The [Research paper figure maker](https://useaiblocks.com/skills/research-paper-figure-maker).
-- The [PowerPoint speaker notes builder](https://useaiblocks.com/skills/powerpoint-speaker-note-builder). It takes the slide deck and document.
+- The [Unsupported claim spotter](https://useaiblocks.com/skills/unsupported-claim-spotter). It takes the slide deck and document.
 - The [Excel to PowerPoint number checker](https://useaiblocks.com/skills/excel-powerpoint-number-checker). It takes the slide deck and audit report.
+- The [PowerPoint speaker notes builder](https://useaiblocks.com/skills/powerpoint-speaker-note-builder). It takes the slide deck and document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

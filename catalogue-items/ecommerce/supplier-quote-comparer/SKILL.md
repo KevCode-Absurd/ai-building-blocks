@@ -105,9 +105,9 @@ MISSING: <quotes | retail price | cash limit | freight | duty>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Supplier quote comparison planner](https://useaiblocks.com/prompts/supplier-quote-table-builder).
-- The [Supplier risk scorecard builder](https://useaiblocks.com/skills/supplier-risk-scorecard-builder).
 - The [Supplier shortlist vetter](https://useaiblocks.com/skills/factory-shortlist-vetter). It takes the audit report.
+- The [Supplier risk scorecard builder](https://useaiblocks.com/skills/supplier-risk-scorecard-builder).
+- The [Pre-shipment inspection brief writer](https://useaiblocks.com/skills/pre-shipment-inspection-brief-writer). It takes the the deal terms.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

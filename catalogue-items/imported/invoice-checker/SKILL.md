@@ -36,64 +36,66 @@ Extract structured data from invoices, validate fields against purchase orders a
 Provide invoice data as text, structured data, or describe the invoices you need processed. Specify any PO data for validation and your GL code mapping preferences.
 
 **Example prompt:**
-> Process this vendor invoice: Invoice #INV-2024-0847 from Acme Cloud Services, dated 2024-11-15, PO #PO-4521. Line items: 10x API Gateway licenses at $150/ea, 1x Premium Support at $2,400/yr. Tax 8.5%. Validate against PO and assign GL codes.
+> Process this vendor invoice: Invoice #[INVOICE NUMBER] from [VENDOR NAME], dated [DATE], PO #[PO NUMBER]. Line items: [QTY] x [ITEM] at [UNIT PRICE] each, [QTY] x [ITEM] at [UNIT PRICE]. Tax [TAX RATE]. Validate against PO and assign GL codes.
 
 ## Examples
 
-### Example 1: Single Invoice Processing
+All names, numbers and codes below are placeholders. Replace them with your own. Never keep them in a real record.
+
+### Example 1: Single Invoice Processing (no goods receipt given)
 
 **Input:**
 ```
-Invoice #INV-2024-0847
-Vendor: Acme Cloud Services (Vendor ID: V-1042)
-Date: 2024-11-15 | Due: 2024-12-15 | Terms: Net 30
-PO Reference: PO-4521
+Invoice #[INVOICE NUMBER]
+Vendor: [VENDOR NAME] (Vendor ID: [VENDOR ID])
+Date: [DATE] | Due: [DUE DATE] | Terms: [PAYMENT TERMS]
+PO Reference: [PO NUMBER]
 
 Line Items:
-  1. API Gateway License (qty: 10, unit: $150.00) — $1,500.00
-  2. Premium Support Annual (qty: 1, unit: $2,400.00) — $2,400.00
+  1. [ITEM 1] (qty: [QTY 1], unit: [UNIT PRICE 1]) — [LINE AMOUNT 1]
+  2. [ITEM 2] (qty: [QTY 2], unit: [UNIT PRICE 2]) — [LINE AMOUNT 2]
 
-Subtotal: $3,900.00
-Tax (8.5%): $331.50
-Total: $4,231.50
+Subtotal: [SUBTOTAL]
+Tax ([TAX RATE]): [TAX AMOUNT]
+Total: [TOTAL]
 ```
 
 **Output:**
 ```json
 {
-  "invoice_number": "INV-2024-0847",
-  "vendor": { "name": "Acme Cloud Services", "id": "V-1042" },
-  "date": "2024-11-15",
-  "due_date": "2024-12-15",
-  "po_reference": "PO-4521",
+  "invoice_number": "[INVOICE NUMBER]",
+  "vendor": { "name": "[VENDOR NAME]", "id": "[VENDOR ID]" },
+  "date": "[DATE]",
+  "due_date": "[DUE DATE]",
+  "po_reference": "[PO NUMBER]",
   "line_items": [
     {
-      "description": "API Gateway License",
-      "quantity": 10,
-      "unit_price": 150.00,
-      "amount": 1500.00,
-      "gl_code": "6500",
-      "gl_name": "Software Subscriptions",
-      "cost_center": "IT-200"
+      "description": "[ITEM 1]",
+      "quantity": "[QTY 1]",
+      "unit_price": "[UNIT PRICE 1]",
+      "amount": "[LINE AMOUNT 1]",
+      "gl_code": "[SUGGESTED CODE, confirm]",
+      "gl_name": "[ACCOUNT NAME]",
+      "cost_center": "[SUGGESTED COST CENTER, confirm]"
     },
     {
-      "description": "Premium Support Annual",
-      "quantity": 1,
-      "unit_price": 2400.00,
-      "amount": 2400.00,
-      "gl_code": "6510",
-      "gl_name": "Software Maintenance & Support",
-      "cost_center": "IT-200"
+      "description": "[ITEM 2]",
+      "quantity": "[QTY 2]",
+      "unit_price": "[UNIT PRICE 2]",
+      "amount": "[LINE AMOUNT 2]",
+      "gl_code": "[SUGGESTED CODE, confirm]",
+      "gl_name": "[ACCOUNT NAME]",
+      "cost_center": "[SUGGESTED COST CENTER, confirm]"
     }
   ],
-  "subtotal": 3900.00,
-  "tax": 331.50,
-  "total": 4231.50,
+  "subtotal": "[SUBTOTAL]",
+  "tax": "[TAX AMOUNT]",
+  "total": "[TOTAL]",
   "validation": {
-    "arithmetic_check": "PASS",
-    "po_match": "PASS",
-    "price_variance": "0.0%",
-    "three_way_match": "PASS"
+    "arithmetic_check": "PASS or FAIL, from your own recalculation",
+    "po_match": "PASS or FAIL",
+    "price_variance": "[PERCENT]",
+    "three_way_match": "SKIPPED (no goods receipt data given)"
   },
   "flags": []
 }
@@ -101,24 +103,24 @@ Total: $4,231.50
 
 ### Example 2: Batch Processing with Validation Errors
 
-**Input:** 4 invoices from different vendors processed in batch.
+**Input:** [NUMBER] invoices from different vendors processed in batch.
 
 **Output — Error Report:**
 
-| Invoice #       | Vendor              | Amount     | Status  | Flags                                          |
-|-----------------|---------------------|------------|---------|-------------------------------------------------|
-| INV-2024-0847   | Acme Cloud Services | $4,231.50  | PASS    | —                                               |
-| INV-2024-1193   | Delta Office Supply | $892.40    | WARNING | Unit price $14.20 vs PO price $12.99 (+9.3%)   |
-| INV-2024-1205   | Spark Consulting    | $18,750.00 | BLOCKED | No matching PO found                            |
-| INV-2024-1210   | GreenLeaf Catering  | $1,345.00  | BLOCKED | Line item total $1,280 ≠ stated subtotal $1,345 |
+| Invoice #            | Vendor        | Amount     | Status  | Flags                                              |
+|----------------------|---------------|------------|---------|----------------------------------------------------|
+| [INVOICE NUMBER 1]   | [VENDOR 1]    | [AMOUNT 1] | PASS    | —                                                  |
+| [INVOICE NUMBER 2]   | [VENDOR 2]    | [AMOUNT 2] | WARNING | Unit price [INVOICE PRICE] vs PO price [PO PRICE] ([VARIANCE %]) |
+| [INVOICE NUMBER 3]   | [VENDOR 3]    | [AMOUNT 3] | BLOCKED | No matching PO found                               |
+| [INVOICE NUMBER 4]   | [VENDOR 4]    | [AMOUNT 4] | BLOCKED | Line item total [LINE TOTAL] ≠ stated subtotal [SUBTOTAL] |
 
 **Batch Summary:**
-- **Total Processed:** 4
-- **Passed:** 1 (25%) — $4,231.50
-- **Warnings:** 1 (25%) — $892.40
-- **Blocked:** 2 (50%) — $20,095.00
-- **Total Value:** $25,218.90
-- **Action Required:** 2 invoices require manual review before payment authorization.
+- **Total Processed:** [COUNT]
+- **Passed:** [COUNT] ([SHARE]) — [VALUE]
+- **Warnings:** [COUNT] ([SHARE]) — [VALUE]
+- **Blocked:** [COUNT] ([SHARE]) — [VALUE]
+- **Total Value:** [TOTAL VALUE]
+- **Action Required:** [COUNT] invoices require manual review before payment authorization.
 
 ## Best Practices
 

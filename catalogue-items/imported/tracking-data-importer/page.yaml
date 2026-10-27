@@ -9,7 +9,9 @@ subhead: Give it a CSV or Excel file of tracks or detections. Get data ready for
 explain: |
   Raw track logs from GPS, flight recorders, radar or cameras rarely load straight into MATLAB's tracking tools. This skill turns your CSV, Excel or text file into the exact format those tools expect, so you can replay trajectories, tune filters or feed a tracker.
 
-  It first asks one thing: is this ground truth or sensor detections? Then it reads your real file, shows a summary of columns, units, object count and time span, and proposes a column mapping for you to confirm. It handles coordinate frames for geographic data, remaps IDs, sorts by time, writes plain MATLAB code, runs it and plots the result. You need MATLAB with the Sensor Fusion and Tracking Toolbox.
+  It first asks one thing: is this ground truth or sensor detections? Then it reads your real file, shows a summary of columns, units, object count and time span, and proposes a column mapping for you to confirm. It handles coordinate frames for geographic data, remaps IDs, sorts by time, writes plain MATLAB code, runs it and plots the result. You need MATLAB with the Sensor Fusion and Tracking Toolbox, both paid MathWorks products. This is for engineers who work with MATLAB on tracking or radar data, not for general business users. If you do not use MATLAB, this skill is not for you: ask a data engineer to convert the file with your own tools.
+
+  This is MathWorks' skill. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE.md file.
 when:
   - You have a GPS or flight log and want to replay it in a tracking tool.
   - You have radar, lidar or camera detections in a spreadsheet and need to feed them to a tracker.
@@ -35,7 +37,8 @@ how_to_use:
   - Say if the file holds truth paths or sensor measurements. Add units and sensor type if you know them.
   - Check the column mapping table your AI shows. Fix any wrong row and confirm.
   - Run the code, then look at the plot to check the result.
-  - This skill is a copy of the MathWorks source, shared under its BSD-2 licence, which allows use only with MathWorks products (see LICENSE.md). The toolbox is a separate, paid MathWorks product.
+  - Next, the skill stops after the import. Run multiSensorTargetTracker or trackingFilterTuner in MATLAB with the calling pattern shown in the output.
+  - This skill is a copy of the MathWorks source. The binding terms are in LICENSE.md, which allows use only with MathWorks products. The toolbox is a separate, paid MathWorks product.
 output_sample:
   input:
     - Your CSV, Excel or text file of tracks or detections

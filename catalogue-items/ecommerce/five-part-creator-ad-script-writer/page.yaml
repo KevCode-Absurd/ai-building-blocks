@@ -76,6 +76,7 @@ output_shape: |
   <each personal line, number and claim, and where it came from>
   Disclosure line: <for a paid or gifted post>
 
+  CHECKS MISSED: <none | checks that failed or could not run>
   MISSING: <...>
 output_sample:
   input:

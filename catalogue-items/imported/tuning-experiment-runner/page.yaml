@@ -10,6 +10,8 @@ explain: |
   A small, controlled search for better settings, with a log of each trial and a rule for when to stop. You avoid burning compute on random changes with no baseline.
 
   You name one score to push up or down and list the settings with their ranges and defaults. The skill runs a baseline first, sets a budget in trials, time or money, and then tries one change at a time unless you allow parallel runs. It compares each trial to the best so far, writes down the result and the reason for the next step, and stops at the limit or when gains flatten. It works for model settings, prompts, inference options, simulations and control policies.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (Optim-Agent) says MIT. Credit goes to Optim-Agent and sickn33.
 when:
   - You want to tune model settings with a small, fixed budget.
   - You need a record of what you tried and what each trial scored.
@@ -33,7 +35,7 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text.
   - Say the one score to improve, the settings with their ranges, and your current settings.
-  - Set a cap on trials, time or money before the first run. Trials can use paid API calls or compute.
+  - Set a cap on trials, time or money before the first run. Trials can use paid API calls or compute. Ask your AI for a cost estimate for one trial and for the whole budget, and say yes only if it is fine. Stop at the cap.
   - Let your AI run the baseline, then one trial at a time. Code running helps here. If it cannot run code, run each trial yourself and paste back the score.
   - Read the trial log and the stop reason. Check the best settings on held-out data or a fresh run before you rely on them. Then save the winning settings to your config.
 output_sample:

@@ -8,8 +8,8 @@ role: compress
 job: ops
 level: beginner
 inputs:
-  - type: source_text
-    required: false
+  - type: web_page
+    required: true
 outputs:
   - type: source_text
 uses: []

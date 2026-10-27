@@ -120,9 +120,9 @@ improve:
 works_best_with:
   tools:
     - name: Klaviyo
-      why: Its flow screens show triggers, filters, delays and revenue per flow, which is everything this check reads.
+      why: Paid service with an account. Not required, since you can paste a flow list instead. Its flow screens show triggers, filters, delays and revenue per flow, which is everything this check reads.
     - name: Shopify
-      why: It provides the Checkout Started and Placed Order events, and the Added to Cart event with the right tracking.
+      why: Paid store plan with an account. Not required. It provides the Checkout Started and Placed Order events, and the Added to Cart event with the right tracking.
   inputs:
     - Screenshots of each flow canvas
     - Revenue per flow and per campaign for 90 days

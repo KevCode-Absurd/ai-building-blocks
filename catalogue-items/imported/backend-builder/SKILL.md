@@ -209,11 +209,16 @@ Use when preparing an API for production or after a security review.
 **Step 1: Review authentication setup**
 ```typescript
 // Verify JWT configuration
+// Preferred: RS256 signs with a private key and checks with a public key.
+// The key file paths come from env, never hardcoded.
 const jwtConfig = {
-  secret: process.env.JWT_SECRET,  // Must be from env, never hardcoded
-  expiresIn: '1h',                 // Short-lived tokens
-  algorithm: 'RS256'               // Prefer asymmetric
+  algorithm: 'RS256',
+  privateKey: fs.readFileSync(process.env.JWT_PRIVATE_KEY_PATH),
+  publicKey: fs.readFileSync(process.env.JWT_PUBLIC_KEY_PATH),
+  expiresIn: '1h'                  // Short-lived tokens
 };
+// If you use one shared secret instead, set algorithm to 'HS256' and
+// read the secret from process.env.JWT_SECRET. Never pair a shared secret with RS256.
 ```
 
 **Step 2: Add rate limiting**
@@ -355,7 +360,7 @@ python scripts/api_load_tester.py https://api.example.com/v1 https://api.example
 
 ## Assumptions and Verifiable Success Criteria (Karpathy discipline)
 
-Before this skill scaffolds, recommends a pattern, or modifies a schema, the following four assumptions MUST be surfaced. If any are unknown, the skill stops and walks the [Forcing-question library](#forcing-question-library-matt-pocock-grill) instead.
+Before this skill recommends a pattern or modifies a schema, the following four assumptions MUST be surfaced. If any are unknown for a new system, a data-store change or a tenancy decision, the skill stops and walks the [Forcing-question library](#forcing-question-library-matt-pocock-grill) instead. For a quick route scaffold or a one-off query check, do not stop: say which of the four you are assuming and carry on.
 
 1. **Read/write ratio + one-year p99 QPS** — drives DB, cache, queue, and partitioning choices. Kleppmann, *DDIA* (2017).
 2. **Tenancy model** — single-tenant, shared multi-tenant, isolated multi-tenant. Drives data-access pattern.

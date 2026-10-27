@@ -5,9 +5,9 @@ name: Short reply mode
 summary: Get short AI replies that cut filler and keep the facts. Turn on short reply mode to save tokens and read less. Switch it off any time.
 job: set-up-ai
 headline: Short reply mode
-subhead: Much shorter AI replies that drop filler and keep every fact, so you read less and spend fewer tokens. The upstream project reports around 75% fewer words. Your savings will vary.
+subhead: Much shorter AI replies that drop filler and keep every fact, so you read less and spend fewer tokens. The upstream project claims around 75% fewer tokens, which we have not measured. Your savings will vary.
 explain: |
-  Much shorter AI replies that drop filler and keep every fact, so you read less and spend fewer tokens. The upstream project reports around 75% fewer words. Your savings will vary.
+  Much shorter AI replies that drop filler and keep every fact, so you read less and spend fewer tokens. The upstream project claims around 75% fewer tokens, which we have not measured. Your savings will vary.
 
   Once switched on, the AI writes in clipped fragments. It drops articles, pleasantries, hedging and words like "basically". It uses short words, common abbreviations and arrows to show cause and effect. Technical terms, code blocks and error messages stay exact. The mode stays on for every reply, even when you forget, until you say "stop caveman" or "normal mode". Expect a blunt style, since it is built on a joke persona.
 when:
@@ -30,7 +30,7 @@ you_get:
   - Lower token use
   - A way to switch it off
 how_to_use:
-  - Open a chat in Claude, ChatGPT or Gemini. Turning the mode on needs no code, files or paid tools. The bundled scripts (a compressor, a token estimator and a lint check) are optional and need Python.
+  - Open a chat in Claude, ChatGPT or Gemini. Turning the mode on needs no code, files or paid tools. The scripts in the skill folder (a compressor, a token estimator and a lint check) are optional and need Python. The AI chat alone is enough.
   - Paste the skill text into the chat. Then type "caveman mode" to turn it on.
   - Ask your questions as normal. Every reply stays short until you turn it off.
   - If a reply is too blunt, say "normal mode" to get the full version.

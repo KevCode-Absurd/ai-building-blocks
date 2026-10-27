@@ -10,6 +10,12 @@ level: intermediate
 inputs:
   - type: brief
     required: true
+  - type: script
+    required: false
+  - type: video_prompt
+    required: false
+  - type: product_photos
+    required: false
 outputs:
   - type: shot_list
   - type: video_prompt

@@ -90,11 +90,13 @@ npm run dev
 
 ### Routes and Data Loading
 
-> Note: newer Hydrogen projects import from `react-router` where these examples import from `@remix-run/react` or `@remix-run/cloudflare`. Check your project's package.json and match the imports to what it uses.
+> Note: these samples are written for the `@remix-run/react` and `@remix-run/cloudflare` packages. Newer Hydrogen projects import the same names from `react-router`. Check your project's package.json and switch every import in the samples to the package it uses. The samples are short fragments to adapt, not a finished storefront.
 
 ```tsx
 // app/routes/products.$handle.tsx
-import { useLoaderData, type LoaderFunctionArgs } from "@remix-run/react";
+import { useLoaderData } from "@remix-run/react";
+import { type LoaderFunctionArgs } from "@remix-run/cloudflare";
+import { CartForm, Money } from "@shopify/hydrogen";
 
 export async function loader({ params, context }: LoaderFunctionArgs) {
   const { storefront } = context;
@@ -121,6 +123,23 @@ export default function ProductPage() {
       <ProductPrice data={product} />
       <AddToCartButton variantId={product.variants.nodes[0].id} />
     </div>
+  );
+}
+
+// Small helper components used above (defined here so the sample is complete)
+function ProductPrice({ data }: { data: any }) {
+  return <Money data={data.variants.nodes[0].price} />;
+}
+
+function AddToCartButton({ variantId }: { variantId: string }) {
+  return (
+    <CartForm
+      route="/cart"
+      action={CartForm.ACTIONS.LinesAdd}
+      inputs={{ lines: [{ merchandiseId: variantId, quantity: 1 }] }}
+    >
+      <button type="submit">Add to Cart</button>
+    </CartForm>
   );
 }
 
@@ -186,8 +205,14 @@ import {
 
 ```tsx
 // app/routes/cart.tsx
-import { CartForm } from "@shopify/hydrogen";
-import { type ActionFunctionArgs } from "@remix-run/cloudflare";
+import { CartForm, Money } from "@shopify/hydrogen";
+import { useLoaderData } from "@remix-run/react";
+import { type ActionFunctionArgs, type LoaderFunctionArgs } from "@remix-run/cloudflare";
+
+export async function loader({ context }: LoaderFunctionArgs) {
+  // Reads the current cart for this visitor (may be null if the cart is empty)
+  return { cart: await context.cart.get() };
+}
 
 export async function action({ request, context }: ActionFunctionArgs) {
   const { cart } = context;
@@ -206,12 +231,22 @@ export async function action({ request, context }: ActionFunctionArgs) {
   }
 }
 
+// Minimal line item so the sample is complete. Replace it with your own design.
+function CartLineItem({ line }: { line: any }) {
+  return (
+    <div>
+      {line.merchandise.product.title} x {line.quantity}
+    </div>
+  );
+}
+
 export default function CartPage() {
-  const cart = useLoaderData<typeof loader>();
+  const { cart } = useLoaderData<typeof loader>();
+  if (!cart || cart.lines.nodes.length === 0) return <p>Your cart is empty.</p>;
 
   return (
     <div className="cart">
-      {cart.lines.nodes.map((line) => (
+      {cart.lines.nodes.map((line: any) => (
         <CartLineItem key={line.id} line={line} />
       ))}
       <Money data={cart.cost.totalAmount} />
@@ -224,6 +259,8 @@ export default function CartPage() {
 
 ```tsx
 // app/routes/collections.$handle.tsx
+import { type LoaderFunctionArgs } from "@remix-run/cloudflare";
+
 export async function loader({ params, context }: LoaderFunctionArgs) {
   const { handle } = params;
   const { storefront } = context;
@@ -269,6 +306,8 @@ const COLLECTION_QUERY = `#graphql
 
 ```tsx
 // app/routes/search.tsx
+import { type LoaderFunctionArgs } from "@remix-run/cloudflare";
+
 export async function loader({ request, context }: LoaderFunctionArgs) {
   const url = new URL(request.url);
   const searchTerm = url.searchParams.get("q");
@@ -306,6 +345,11 @@ const SEARCH_QUERY = `#graphql
 
 ```tsx
 // app/routes/account.login.tsx
+// LOGIN_MUTATION is not shown here. Take it from Shopify's current docs.
+// Newer Hydrogen projects sign customers in through Shopify's hosted
+// Customer Account login instead of a custom password form, so check which one your project uses.
+import { type ActionFunctionArgs, redirect } from "@remix-run/cloudflare";
+
 export async function action({ request, context }: ActionFunctionArgs) {
   const { customerAccount } = context;
   const formData = await request.formData();
@@ -330,8 +374,12 @@ export async function action({ request, context }: ActionFunctionArgs) {
 
 ```tsx
 // Multi-currency and language support
-export async function loader({ request, context }: LoaderFunctionArgs) {
+// LOCALIZATION_QUERY is not shown here. Take it from Shopify's current docs.
+import { type LoaderFunctionArgs } from "@remix-run/cloudflare";
+
+export async function loader({ params, context }: LoaderFunctionArgs) {
   const { storefront } = context;
+  const { handle } = params;
 
   // Get localized data
   const { localization } = await storefront.query(LOCALIZATION_QUERY);

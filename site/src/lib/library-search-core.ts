@@ -2,7 +2,7 @@
 import { geoAnswerAlias, searchIntents } from "./library-search-intents.ts";
 import { WORD_ALIASES } from "./library-search-language.ts";
 export type SearchField = "title" | "summary" | "intro" | "body" | "metadata";
-export type SearchHit = { score: number; field: SearchField; reason?: string };
+export type SearchHit = { score: number; field: SearchField; reason?: string; literal?: number };
 export type SearchDocument = { slug: string; title: string; kind?: string; summary?: string; intro?: string; body?: string; metadata?: string; purpose?: Partial<Record<SearchField, string[]>>; excludeIntents?: string[] };
 export type LibrarySearchIndex = { version: 1; sourceHash: string; corpusHash?: string; engineHash?: string; docs: string[]; terms: string[]; postings: string[]; shards?: { size: number; files: { file: string; sha256: string; terms: number }[] } };
 const FIELDS = ["title", "summary", "intro", "body", "metadata"] as const;
@@ -17,14 +17,16 @@ export function searchTokens(text: string, preserveConceptWords = false): string
     .replace(/\b(?:answer\s*engine\s*optimi[sz]ation|generative\s*engine\s*optimi[sz]ation|ai\s*search|aeo)\b/g, " aeo ")
     .replace(/\b(?:search\s*engine\s*optimi[sz]ation|seo)\b/g, " seo ")
     .replace(/\b(?:agentic|agents)\b/g, " agent ");
-  const inflections = normalized.replace(/\b(?:writing|writers?|writes)\b/g, ' write ').replace(/\b(?:investing|investments?|investors?)\b/g, ' invest ').replace(/\b(?:budgeting|budgets)\b/g, ' budget ').replace(/\b(?:financial|financing)\b/g, ' finance ').replace(/\b(?:designing|designers?)\b/g, ' design ').replace(/\b(?:planning|planners?)\b/g, ' plan ')
+  const inflections = normalized.replace(/\bcopywrit(?:ing|ers?|es|e)\b/g, ' copy write ').replace(/\b(?:writing|writers?|writes)\b/g, ' write ').replace(/\b(?:investing|investments?|investors?)\b/g, ' invest ').replace(/\b(?:budgeting|budgets)\b/g, ' budget ').replace(/\b(?:financial|financing)\b/g, ' finance ').replace(/\b(?:designing|designers?)\b/g, ' design ').replace(/\b(?:planning|planners?)\b/g, ' plan ').replace(/\b(?:pricing|priced)\b/g, ' price ')
     // One spelling for -ise/-ize words (analyse, summarise, organise) and one form of "ads".
     .replace(/\b(\w{3,}?)([iy])z(e|es|ed|er|ers|ing|ation|ations)\b/g, "$1$2s$3").replace(/\bads\b/g, " ad ");
   return [...new Set(((preserveConceptWords ? original + " " + inflections : inflections).match(/[\p{L}\p{N}]+/gu) ?? []).filter(token => !STOP.has(token)).map(token => token === "ads" ? "ad" : token.length > 4 && token.endsWith("ies") ? token.slice(0, -3) + "y" : token.length > 3 && /[^s]s$/.test(token) ? token.slice(0, -1) : token))];
 }
 
 /** A query's words: required subject words, optional "how" words, and catalogue words that can stand in for a typed word. */
-type QueryWords = { hard: string[]; soft: string[]; alternatives: Record<string, string[]>; sequence: string[] };
+/** `phrase` groups the typed words of one multi-word phrase a rule rewrote ("ask for a raise"): one catalogue word
+ *  can stand in for the whole phrase. */
+type QueryWords = { hard: string[]; soft: string[]; alternatives: Record<string, string[]>; sequence: string[]; phrase: Record<string, number> };
 const recentQueries = new Map<string, QueryWords>();
 export function queryTokens(query: string): QueryWords {
   const text = query.slice(0, 300), known = recentQueries.get(text);
@@ -34,11 +36,17 @@ export function queryTokens(query: string): QueryWords {
   const all = searchTokens(lower);
   const alternatives: Record<string, string[]> = {};
   const add = (token: string, words: string[]) => { const extra = words.filter(t => t !== token); if (extra.length) alternatives[token] = [...new Set([...(alternatives[token] ?? []), ...extra])]; };
-  for (const [pattern, instead] of aliasRules()) for (const match of lower.matchAll(pattern)) for (const token of searchTokens(match[0])) add(token, instead);
+  const phrase: Record<string, number> = {};
+  let phrases = 0;
+  for (const [pattern, instead] of aliasRules()) for (const match of lower.matchAll(pattern)) {
+    const tokens = searchTokens(match[0]);
+    for (const token of tokens) { add(token, instead); if (tokens.length > 1) phrase[token] ??= phrases; }
+    phrases++;
+  }
   let hard = all.filter(token => !SOFT.has(token));
   // Nothing but "how" words: they are the subject after all.
   if (!hard.length) hard = all;
-  const words = { hard: hard.slice(0, 12), soft: all.filter(token => !hard.includes(token)).slice(0, 12), alternatives, sequence: all };
+  const words = { hard: hard.slice(0, 12), soft: all.filter(token => !hard.includes(token)).slice(0, 12), alternatives, sequence: all, phrase };
   if (recentQueries.size > 64) recentQueries.clear();
   recentQueries.set(text, words);
   return words;
@@ -57,8 +65,9 @@ function withJoinedWords(index: LibrarySearchIndex, words: QueryWords): Record<s
   return alternatives;
 }
 
-/** Words that say how or how well, not what. They add evidence but are not required while a subject word remains. */
-const SOFT = new Set(["creative", "write", "create", "generate", "build", "analyse", "analysis", "analyst", "check", "review", "fix", "improve", "better", "good", "great", "idea", "template", "tip", "example", "simple", "simply", "quick", "easy", "free", "tool", "online", "using", "old", "more", "higher", "plan", "list", "set", "up", "keep", "keeping", "start", "starting", "find", "tell", "turn", "give", "ready", "proper", "professional"]);
+/** Words that say how or how well, not what. They add evidence but are not required while a subject word remains.
+ *  Kept in token form ("analysis" is the token "analysi"). */
+const SOFT = new Set(["creative", "write", "create", "generate", "build", "analyse", "analysis", "analyst", "check", "review", "fix", "improve", "better", "good", "great", "idea", "template", "tip", "example", "simple", "simply", "quick", "easy", "free", "tool", "online", "using", "old", "new", "small", "several", "multiple", "many", "more", "higher", "plan", "list", "set", "up", "keep", "keeping", "start", "starting", "find", "tell", "turn", "give", "ready", "proper", "professional"].flatMap(word => searchTokens(word)));
 /** Plain wording people type, mapped to the words the catalogue uses. Each typed word may be met by the catalogue words instead. */
 const QUERY_ALIASES: [RegExp, string][] = [
   [/\b(?:stop(?:ped|s)? (?:working|selling|converting)|not (?:working|selling|converting)|are ?n'?t (?:working|selling|converting)|dropp?(?:ed|ing)|declin(?:e|ed|ing)|tank(?:ed|ing))\b/, "drop"],
@@ -226,7 +235,8 @@ export function searchLibraryIndex(index: LibrarySearchIndex, query: string): Ma
     for (const token of [typed, ...(alternatives[typed] ?? [])]) {
       const terms = matchingTerms(index, token, token === typed), corrections = fuzzyCache.get(index)?.get(token) ?? [];
       for (const term of terms) {
-        const hits = posting(index, term), specificity = Math.min(4, 1 + Math.log(1 + index.docs.length / Math.max(1, hits.length)));
+        // Rarer words say more ("fee" over "terms"); the cap only stops a one-off word from swamping the rest.
+        const hits = posting(index, term), specificity = Math.min(6, 1 + Math.log(1 + index.docs.length / Math.max(1, hits.length)));
         // Exact words count fully, longer forms and catalogue stand-ins a little less, a corrected spelling less again
         // (the closest correction more than the others).
         const correction = corrections.indexOf(term);
@@ -281,7 +291,9 @@ export function searchLibraryIndex(index: LibrarySearchIndex, query: string): Ma
       // make a mind outrank a new-hire method). Literal matches remain available.
       const shared = overlap.get(id), score = weight(mask) * 100 + Math.min(weight(mask) * 50, shared ? shared.score * Math.min(1, shared.count / tokens) : 0);
       const old = result.get(index.docs[id]);
-      if (!old || score > old.score) result.set(index.docs[id], { score, field: fieldOf(mask), reason: (fieldOf(mask) === "body" ? "Full instructions mention: " : "Matches goal: ") + intent.label + "." });
+      // The plain word match stays on the hit, so ranking can still treat a title that says the words as one.
+      const literal = old?.literal ?? (old && !old.reason ? old.score : undefined);
+      if (!old || score > old.score) result.set(index.docs[id], { score, field: fieldOf(mask), reason: (fieldOf(mask) === "body" ? "Full instructions mention: " : "Matches goal: ") + intent.label + ".", ...(literal ? { literal } : {}) });
     }
   }
   // Explicit format requests change ranking only among relevant candidates.

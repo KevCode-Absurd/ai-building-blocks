@@ -12,9 +12,13 @@ inputs:
     required: true
   - type: codebase
     required: false
+  - type: api_spec
+    required: false
 outputs:
   - type: plan
   - type: audit_report
+  - type: api_spec
+    required: true
 uses: []
 steps: []
 origin: imported

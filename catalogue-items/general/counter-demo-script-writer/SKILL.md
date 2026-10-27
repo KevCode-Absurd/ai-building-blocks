@@ -5,7 +5,7 @@ description: Use when you will show your product in person, at a counter, a stal
 
 # Counter demo script writer
 
-A buyer believes what they feel or see more than what they are told. This skill writes a short demo where you say what it does in one line, then put the product on or in the buyer's hands and let them say the difference. It builds the whole pitch to fit in a short slot. To plan the questions that follow, use "Ask-which closing planner".
+A buyer believes what they feel or see more than what they are told. This skill writes a short demo where you say what it does in one line, then put the product on or in the buyer's hands and let them say the difference. It builds the whole pitch to fit in a short slot. To plan the questions that follow, use "Ask-which closing planner". The method draws on the public work of Estée Lauder and Sara Blakely; neither has any link to this skill.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -41,7 +41,7 @@ How to start:
 1. **Name the result they can see or feel in under a minute.** From the product facts, choose a result a buyer can notice quickly: a smoother surface, a lighter weight, a faster task. Write it in plain words. If the result takes weeks, say what the buyer can notice now.
 2. **Find the before-and-after they can see in seconds.** Write one comparison that shows the difference without explaining: the same item with and without, one hand and the other, old way and new way. Describe exactly how to set it up.
 3. **Write a one-line explanation.** One sentence on what it does and why it works, in everyday words. No more than twenty words. Keep the long story for after the demo.
-4. **Put the product on the buyer.** Write the lines that invite them to try it themselves, on their hand, in their palm or at their desk. Write what you do first, what you say and when you stop talking.
+4. **Put the product on the buyer.** Write the lines that invite them to try it themselves, on their hand, in their palm or at their desk. Write what you do first, what you say and when you stop talking. If the product goes on skin or is eaten, first ask about allergies and skin conditions, offer a small patch on the back of the hand, and never press a buyer who says no. Show only results you can show on the spot; add no health or medical claim.
 5. **Let the buyer say the difference.** Write one open question, such as "What do you notice?" Then write what you will do with the answer: repeat it back and write it down, and use their words in the next step.
 6. **Close with a sample or next step.** Write a small, real next step: a sample to keep, a trial, a visit, a short order. Then ask who else they know who would like to try it.
 7. **Fit it in a short slot and make it portable.** Cut the plan to the time you have, with a thirty-second version. List what goes in the bag so it works away from your base: the product, a clean cloth, a mirror or whatever the demo needs.
@@ -55,7 +55,9 @@ The result a buyer can see. The before-and-after set-up. The one-line explanatio
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Trade show experiment planner](https://useaiblocks.com/skills/traction-trade-shows).
+- The [Deal payment checker](https://useaiblocks.com/skills/can-they-pay-deal-checker). It takes the plan.
+- The [Disagreement response writer](https://useaiblocks.com/skills/disagreement-calming-line-writer). It takes the plan.
+- The [Mutual action plan builder](https://useaiblocks.com/skills/mutual-action-plan-builder). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

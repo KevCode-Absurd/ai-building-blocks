@@ -14,8 +14,6 @@ inputs:
     required: false
   - type: spreadsheet
     required: false
-  - type: brief
-    required: false
   - type: question
     required: false
 outputs:

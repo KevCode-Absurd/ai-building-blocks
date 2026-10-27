@@ -81,6 +81,7 @@ output_shape: |
   ONE TRUE LINE      Ad: <...>   Page: <...>
   CHANGE WHERE       <place: new words>
   MISSING            <...>
+  CHECKS MISSED      <one line per check that failed or could not run, or none>
 
 example:
   business: sprout

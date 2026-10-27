@@ -28,12 +28,13 @@ you_get:
   - Code to run it on more files
   - A faster PCM option for low delay
 how_to_use:
-  - Make an ElevenLabs account and create an API key. Using it may cost credits.
-  - Open an AI tool that can run code, such as Claude Code, and add this skill. Save your key as the ELEVENLABS_API_KEY setting on your own computer, or in the tool's secrets settings. Never paste the key into a chat.
+  - Make an ElevenLabs account. Each file you clean uses credits on your plan, so check current pricing before you run it on many files.
+  - Open an AI tool that can run code, such as Claude Code, and add this skill. If the key is not set, your AI will ask to run ElevenLabs' sign-in command (npx -y @elevenlabs/cli@latest onboard init). It signs you in and stores a key for the project. That command downloads the newest version of a third-party tool, so read it before you say yes. You can also save your key as the ELEVENLABS_API_KEY setting on your own computer. Never paste the key into a chat.
   - Give your AI the audio file or link and ask it to clean the speech.
   - Ask it to run the example on your file first. It saves the result as clean.mp3.
-  - Play clean.mp3 and check that the voice is clear. Then run it on your other files. Send the clean file to a speech-to-text tool if you want a transcript.
+  - Play clean.mp3 and check that the voice is clear. Then run it on your other files. Send the clean file to a speech-to-text tool, such as the Recording transcriber, if you want a transcript. Read the transcript against the audio for names and numbers before you publish it.
   - If you see an error, 401 means a bad key, 422 means the wrong format, and 429 means wait and try again.
+next: [recording-transcriber]
 output_sample:
   input:
     - A noisy audio or video file, or a link to one

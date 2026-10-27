@@ -82,7 +82,7 @@ how_it_works:
   - title: Scores readiness
     text: Ten checks at 10 points each. A hard stop means WAIT whatever the score.
   - title: Gives the setup
-    text: Demand Gen with Maximise Conversions at about 3 times AOV a day, mobile Shorts first, optimised targeting off.
+    text: Demand Gen with Maximise Conversions, mobile Shorts first, optimised targeting off. The daily budget of about 3 times AOV is one agency's rough starting point. Check it against your own margin.
   - title: Plans audiences and creative
     text: Three audiences to test with the same 2 or 3 best ads, and a creative format for Shorts.
   - title: Lists metrics
@@ -106,7 +106,7 @@ output_shape: |
   CREATIVE  9:16 | 20 to 60 seconds | subtitles | hook in the first 1 to 2 seconds | demo | proof | clear call
   WEEKS 1 TO 6 SIGNALS  view rate, watch quartiles, CTR, CPM, cost per view, frequency, add to cart
   BUDGET SPLIT  <Demand Gen and YouTube / PMax or search / brand>   SKIP  <...>
-  NOT CHECKED: <check, and what is needed>
+  CHECKS MISSED: <check that failed or could not run, and what is needed; or none>
   MISSING: <item>
 
 tweaks:

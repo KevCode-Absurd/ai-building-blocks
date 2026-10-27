@@ -17,6 +17,8 @@ inputs:
 outputs:
   - type: plan
   - type: copy_draft
+  - type: keyword_list
+    required: true
 uses: []
 steps: []
 origin: imported

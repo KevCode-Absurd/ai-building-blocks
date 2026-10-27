@@ -8,6 +8,7 @@ job: design
 level: beginner
 inputs:
   - {type: question, required: true}
+  - {type: brand_brain, required: false}
 outputs:
   - {type: design_direction}
 uses: []

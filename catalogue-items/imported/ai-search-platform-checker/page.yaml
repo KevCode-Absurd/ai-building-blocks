@@ -10,12 +10,15 @@ explain: |
   Each AI search tool picks its sources by its own rules, so a site that wins in one can be missing from another. This check scores your site on each platform separately.
 
   For every platform, it runs a checklist and gives a score from 0 to 100. Google AI Overviews checks include question headings, direct answers under them, tables, lists, a FAQ, cited statistics, dates and author bylines. The output is one file with a score, the gaps and action items for each platform. Fix the platform that matters most to your buyers first.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (zubair-trabzada) says MIT. Credit goes to zubair-trabzada and sickn33.
 when:
   - You rank in Google but never appear in ChatGPT answers.
   - You want to pick which AI platform to work on first.
   - You need platform-specific edits for one key page.
   - You have to show a client where each AI engine stands.
 not_for:
+  - You need every check scored. Checks that need facts your AI cannot reach (Reddit activity, backlinks, Bing coverage) are marked unverified, which leaves the score incomplete.
   - Your site has no public pages yet. Publish a few pages first, then run the check.
   - You want a quick look at one page only. Read that page yourself against the checklist, or ask your AI for a short review.
   - You want your Google rankings tracked over time. Use a rank tracking tool, since this check gives a one-time report.
@@ -30,6 +33,8 @@ you_get:
   - One saved report file
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Use one that can open web pages, or the check will be weaker.
+  - The percentages in the skill are the original author's and have no source. Do not quote them to clients as fact.
+  - If you want the report as a PDF, that step needs pandoc and headless Chrome, which the skill does not include. Ask for the report as text instead.
   - Paste the skill text into the chat, or upload the skill file.
   - Type your website address and your main topic or industry. Add the questions you want to win if you have them.
   - Ask your AI to check your site against each platform and write the report.

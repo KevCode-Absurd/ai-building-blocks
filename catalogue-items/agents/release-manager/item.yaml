@@ -9,6 +9,7 @@ level: intermediate
 inputs:
   - {type: codebase, required: true}
   - {type: deploy_url, required: false}
+  - {type: question, required: true}
 outputs:
   - {type: plan}
   - {type: audit_report}

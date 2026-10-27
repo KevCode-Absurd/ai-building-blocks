@@ -34,8 +34,9 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste the skill text from this page into a new chat.
   - Paste your signup fields, step by step. Add your drop-off numbers and any rules that force a field.
   - Answer any question your AI asks about your flow type, such as free trial or paid account.
+  - Ask for the result in these sections: audit findings, field verdicts, quick wins, high-impact changes and test ideas. That gives you a fixed shape to check against.
   - Read the field verdicts first. Each field is marked keep, defer or cut.
-  - Make the quick wins, then pick one or two test ideas to try.
+  - Act on the quick wins first, since you can make them the same day. Then pick one or two test ideas and run them in your own testing tool. This skill does not run tests.
   - This needs no code, files or paid tools. If you want company data added at signup, that needs a paid data provider, so skip it for now.
 output_sample:
   input:

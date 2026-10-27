@@ -1,12 +1,11 @@
 // The pieces around the builder's canvas: connections that say what they carry, the step panel,
 // the "what you'll need" list, starting from a goal, and the step list phones get instead of the canvas.
-import { memo, useEffect, useMemo, useRef, useState, type CSSProperties, type FormEvent } from "react";
+import { memo, useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import { BaseEdge, EdgeLabelRenderer, getSmoothStepPath, type Edge, type EdgeProps } from "@xyflow/react";
 import { type Catalogue, type Page, KINDS, kindOf, loadPage, pathOf, portLabel, taskOf } from "./lib/data";
 import { useTyped } from "./lib/typing";
 import type { Ordered } from "./lib/handoff";
 import { passLabel, passes } from "./lib/plan";
-import { GOAL_EXAMPLES } from "./lib/goal";
 import { type Flow, type Team, TEAM_MAX } from "./lib/store";
 import { type Lead, leadsOf, mindName, mindsIn, suggestMinds, taskMinds } from "./lib/crew";
 import "./my-minds.css";
@@ -309,25 +308,6 @@ function StepMind({ c, flow, order, nodeId, onNotes }: { c: Catalogue; flow: Flo
       {!selected.length && lead?.from === "team" && <p className="small" data-testid="team-lead">Your team gives this step to <b>{mindName(c, lead.mind)}</b>. Choose minds here to change that.</p>}
       <p className="small">Create or import your own mind in Compose or the Minds library. Minds run when you give the downloaded pack to your AI.</p>
     </div>
-  );
-}
-
-/** Type what you want at the end; the builder lays out the steps. */
-export function GoalBox({ onPlan, big }: { onPlan: (goal: string) => boolean; big?: boolean }) {
-  const [goal, setGoal] = useState("");
-  const [miss, setMiss] = useState(false);
-  const go = (g: string) => { const ok = onPlan(g); setMiss(!ok); if (ok) setGoal(""); };
-  const submit = (e: FormEvent) => { e.preventDefault(); if (goal.trim()) go(goal); };
-  return (
-    <form className={`goal${big ? " big" : ""}`} onSubmit={submit} data-testid="goal">
-      <label className="goal-q" htmlFor={big ? "goal-big" : "goal-side"}>What do you want at the end?</label>
-      <div className="goal-row">
-        <input id={big ? "goal-big" : "goal-side"} value={goal} onChange={(e) => { setGoal(e.target.value); setMiss(false); }} placeholder={`Try “${GOAL_EXAMPLES[0]}”`} data-testid="goal-input" />
-        <button className="btn btn-dark btn-sm" disabled={!goal.trim()} data-testid="goal-go">Find my steps</button>
-      </div>
-      {miss && <p className="small goal-miss">No steps for that yet. Name the result you want, like a landing page, video ads or ad copy.</p>}
-      {big && <div className="goal-eg">{GOAL_EXAMPLES.map((g) => <button type="button" key={g} className="chip" onClick={() => go(g)}>{g}</button>)}</div>}
-    </form>
   );
 }
 

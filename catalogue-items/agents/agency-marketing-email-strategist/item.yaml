@@ -11,7 +11,9 @@ level: intermediate
 inputs:
   - type: question
     required: true
-  - type: source_text
+  - type: business_profile
+    required: false
+  - type: performance_sheet
     required: false
 outputs:
   - type: email_flow

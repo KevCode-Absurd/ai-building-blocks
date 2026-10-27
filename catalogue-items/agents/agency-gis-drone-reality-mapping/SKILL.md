@@ -11,8 +11,9 @@ Turn a drone mapping brief into a plan: the flight, the ground control, the chec
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [3D map scene developer](https://useaiblocks.com/skills/agency-gis-3d-scene-developer).
-- The [Geoprocessing specialist agent](https://useaiblocks.com/skills/agency-gis-geoprocessing-specialist).
+- The [Item-by-item researcher](https://useaiblocks.com/skills/item-by-item-researcher). It takes the plan.
+- The [Geoprocessing specialist agent](https://useaiblocks.com/skills/agency-gis-geoprocessing-specialist). It takes the plan.
+- The [Scholarly database searcher](https://useaiblocks.com/skills/scholarly-database-searcher). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

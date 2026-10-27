@@ -2,14 +2,14 @@ thinking: medium
 thinking_why: It sets filters, then qualifies each lead.
 new_slug: prospect-list-builder
 name: Prospect list builder
-summary: Build a prospect list of accounts that fit your ideal customer, with the reason each one fits, a score and a check on every email.
+summary: Build a prospect list of accounts that fit your ideal customer, with the reason each one fits, a score and an email status for each contact.
 job: sell-and-negotiate
 headline: Prospect list builder
 subhead: A list of accounts that really fit your ideal customer, with the reason each one made the cut. You can start outreach without sorting through junk contacts.
 explain: |
   A list of accounts that really fit your ideal customer, with the reason each one made the cut. You can start outreach without sorting through junk contacts.
 
-  You describe your ideal customer, and the skill picks the right path: software companies, general B2B, local small businesses or early customer discovery from public complaints. It finds accounts, looks for buying signals such as job changes or hiring, enriches the data, and verifies emails before anything goes to a sequence. Accounts are scored and sorted into tiers. It uses licensed data and never scrapes LinkedIn. Each account can get a short research note.
+  You describe your ideal customer, and the skill picks the right path: software companies, general B2B, local small businesses or early customer discovery from public complaints. It finds accounts, looks for buying signals such as job changes or hiring, enriches the data, and checks emails with a verifier tool if you have one. Without one, it marks every email unverified, so do not treat it as checked. Accounts are scored and sorted into tiers. It uses licensed data and never scrapes LinkedIn. Each account can get a short research note.
 when:
   - You are starting outbound and need your first 100 targets.
   - You want to reach companies that show signs they are ready to buy.
@@ -28,7 +28,7 @@ you_give:
 you_get:
   - Qualified account list
   - Fit reason for each account
-  - Verified contacts
+  - Contacts with an email status, verified only if you have a verifier tool
   - Tier or score for each lead
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill instructions into a new chat.
@@ -36,7 +36,7 @@ how_to_use:
   - Say which data tools you have, such as Apollo, ZoomInfo or Clay. These need a paid account or API key. With none, your AI can still research in the browser, but only if it has web access.
   - For early customer discovery, your AI reads only public pages such as forums, review sites, job posts and open issue threads. It cites each one and does not bulk-scrape platforms. Tools like Firecrawl or Browserbase read one company's own site and need a paid account.
   - Read the lead table. Check the fit reason and confidence on each row.
-  - "Verify every email before it goes into a sequence. Sources: licensed data and public pages are fine, and LinkedIn scraping is never used."
+  - "Verify every email before it goes into a sequence. This needs a verifier tool such as Truelist or Hunter, which needs an account or API key. Without one, the sheet marks emails unverified. Sources: licensed data and public pages are fine, and LinkedIn scraping is never used."
 output_sample:
   input:
     - Your ideal customer in a few lines

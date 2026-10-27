@@ -7,6 +7,9 @@
 const SYNONYM_GROUPS: string[][] = [
   ["ad", "ads", "advert", "adverts", "advertisement", "advertisements"],
   ["competitor", "competitors", "rival", "rivals"],
+  ["customer", "customers", "buyer", "buyers"],
+  ["store", "stores", "shop", "shops"],
+  ["resume", "resumes", "cv", "cvs"],
   ["supplier", "suppliers", "vendor", "vendors"],
   ["refund", "refunds", "return", "returns"],
   ["invoice", "invoices", "bill", "bills"],
@@ -42,6 +45,8 @@ const ONE_WAY: [RegExp, string][] = [
   [/\b(?:websites?|web sites?)\b/, "site"],
   [/\bsites?\b/, "website"],
   [/\b(?:revenue|turnover)\b/, "sales"],
+  [/\bsales\b/, "revenue"],
+  [/\baudits?\b/, "review"],
   [/\bnew business\b/, "startup"],
   [/\bsales pages?\b/, "landing"],
   [/\bbrand marks?\b/, "logo"],
@@ -118,6 +123,13 @@ const ONE_WAY: [RegExp, string][] = [
   [/\bplan my week\b/, "weekly week plan planner"],
   [/\bwhich (?:ai|chat ?bot|llm)(?: tools?| apps?| assistants?)? (?:should i|do i|to|can i) use\b/, "picker choose"],
   [/\b(?:scrap(?:e|ing)|web scraping)\b/, "extract scrape data"],
+  // Words from the 27 Oct workflow bench misses (dev half only)
+  [/\b(?:flyers?|leaflets?|pamphlets?|handbills?)\b/, "poster print"],
+  [/\b(?:accountants?|bookkeepers?|cpas?)\b/, "accounting bookkeeping"],
+  [/\b(?:bank loans?|business loans?|lenders?|bank manager)\b/, "loan finance funding"],
+  [/\b(?:python|javascript|typescript|java|php|ruby|golang|stack trace|traceback)\b/, "code debug"],
+  [/\b(?:google reviews?|yelp|trustpilot|tripadvisor|star ratings?)\b/, "customer review reply"],
+  [/\b(?:wrote|written|writ+en) (?:it )?(?:with|by|using) (?:chatgpt|chat gpt|gpt|ai|claude|gemini)\b/, "slop human voice style"],
 ];
 
 const escape = (word: string) => word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&").replace(/ /g, "\\s+");

@@ -19,6 +19,7 @@ not_for:
   - "You need ad copy or images made: use a creative writer or designer, since this plan does not produce ad creative."
   - "You want a deep read of past campaign results: pull your own numbers from your analytics tool or ask a performance marketer."
   - "You have no ad account or sales tracking yet: set up conversion tracking first, then come back to plan spend."
+  - "You want to set up one channel's campaigns step by step: use the Paid campaign builder after you have the plan."
 you_give:
   - Goal and monthly budget
   - Product and buyer
@@ -34,7 +35,7 @@ how_to_use:
   - Gather your goal, monthly budget, target cost per customer, and what you sell and to whom.
   - "Expect the plan in this order: test table, channel picks, budget split, audiences, bid style, what not to buy, attribution check."
   - Add your current results from each ad platform if you have them (optional).
-  - Paste the skill into Claude, ChatGPT or Gemini, then paste your details. No code or paid tool is needed.
+  - Paste the skill into Claude, ChatGPT or Gemini, then paste your details. No code or paid tool is needed to read the plan. To act on it you need a live ad account with conversion tracking, and ad spend is paid to the platforms.
   - Read the test table first. Check that each test has a stop number and a scale number you can measure.
   - Compare any benchmarks in the plan with your own data. Treat them as rules of thumb.
   - Start with one or two tests. Review them against the stop and scale numbers before you move more budget.

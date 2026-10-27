@@ -57,7 +57,7 @@ The score out of 100 and what it measures. The verdict. For each of the four tes
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Competitor ad change reviewer](https://useaiblocks.com/skills/monthly-competitor-watcher).
-- The [Competitive sales message writer](https://useaiblocks.com/prompts/rival-gap-message-writer).
+- The [Market opportunity finder](https://useaiblocks.com/skills/competitor-white-space-mapper). It takes the audit report.
 - The [Rival weakness message finder](https://useaiblocks.com/skills/rival-weakness-message-finder). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

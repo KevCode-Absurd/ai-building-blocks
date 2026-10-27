@@ -33,9 +33,11 @@ how_to_use:
   - Open an AI that can run Shopify CLI commands and reach your store. Paste in this skill.
   - Sign in to your store with the Shopify CLI. Give it access to returns, inventory and locations.
   - Give your store address. Add the days to look back, a location or return reasons if you want to narrow it.
+  - Defaults: it looks at returns closed in the last 14 days and runs in preview mode (dry_run is true). Returns with no destination location are skipped and listed.
   - Run it in preview mode first. Check the CSV and make sure each item can be sold again.
   - "To go live, tell your AI to run it with dry_run set to false (for example, \"run it for real, dry_run: false\"). Stock changes right away and shows in Shopify's inventory history."
-  - Check the new stock counts in Shopify against the CSV.
+  - Check the new stock counts in Shopify against the CSV. Then run restock-list-builder to see what is still low.
+next: [restock-list-builder, return-request-creator]
 output_sample:
   input:
     - Your Shopify store address

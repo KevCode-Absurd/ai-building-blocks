@@ -11,6 +11,8 @@ inputs:
     required: true
   - type: spreadsheet
     required: false
+  - type: deal_terms
+    required: true
 outputs:
   - type: spreadsheet
     required: false

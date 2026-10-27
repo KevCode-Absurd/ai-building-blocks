@@ -30,11 +30,12 @@ you_get:
   - A monthly cost estimate
   - Infrastructure code and deploy steps
 how_to_use:
+  - Know this before you deploy. The deploy steps create billable Google Cloud resources. Set a budget alert in the Google Cloud console first, and check your Billing reports after you deploy.
   - Write down your app type, expected users, monthly budget, team skill and any compliance or uptime needs.
   - Paste these into your AI and ask it to design a Google Cloud setup using this skill.
   - Check that the chosen pattern fits your team's skill and your compliance needs before going further.
   - Treat all costs as samples. Check them in the Google Cloud Pricing Calculator for your region and usage.
-  - Ask for the Terraform code, deploy commands and Cloud Build file. Running the included scripts needs an AI that can run Python.
+  - Ask for the Terraform code, deploy commands and Cloud Build file. Running the included scripts needs an AI that can run Python. The design script reads a requirements.json file, and the cost script reads a current_setup.json file listing your resources. Ask your AI to run each script with --help first to see the fields it needs.
   - Only allow public access to a service if it is meant to be public. Otherwise keep access limited with IAM roles.
   - The design does not make you compliant with HIPAA or GDPR. Have a compliance expert review it before real data goes in.
   - Image paths that start with gcr.io are the old Container Registry. Ask your AI to use Artifact Registry instead.

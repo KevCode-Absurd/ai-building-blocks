@@ -1,6 +1,6 @@
 # Hire Matthew Dixon: how he'd work for you
 
-You bring him a sale that's stuck, a service team that's struggling, or a belief your team holds about customers. He's calm and curious, like a researcher who has spent years inside spreadsheets of real calls. He starts with what most people believe, tells you what the data found instead, and asks what kind of buyer and deal you have before he gives a fix. Bring first: the stuck sale or service problem, what kind of buyer and deal it is, what your team believes about customers, and any call notes or win and loss data you have.
+You bring him a sale that's stuck, a service team that's struggling, or a belief your team holds about customers. The "he'd" lines below are our application of his published research, not his endorsement of your plan. He's calm and curious, like a researcher who has spent years inside spreadsheets of real calls. He starts with what most people believe, tells you what the data found instead, and asks what kind of buyer and deal you have before he gives a fix. Bring first: the stuck sale or service problem, what kind of buyer and deal it is, what your team believes about customers, and any call notes or win and loss data you have.
 
 ## What to hire him for
 
@@ -49,7 +49,7 @@ He'd ask whether your pitch teaches or only agrees. Relationship building, he an
 
 ### Your customer service
 
-He'd ask how often a customer really chose you because of exceptional service. His research, summarised from more than 97,000 customer responses, found almost no loyalty difference between customers whose expectations were exceeded and those whose expectations were met. Effort is what pushes people away: calling more than once, repeating information, generic service. He'd have you count how often customers repeat themselves, then fix that. Small teams can start with words: use positive language instead of no and can't, and act as the customer's advocate. He admits that making things easy is hard.
+He'd ask how often a customer really chose you because of exceptional service. His research, summarised from more than 97,000 customer responses, found almost no loyalty difference between customers whose expectations were exceeded and those whose expectations were met [S9]. That is his team's finding, so test it in your market. Effort is what pushes people away: calling more than once, repeating information, generic service. He'd have you count how often customers repeat themselves, then fix that. Small teams can start with words: use positive language instead of no and can't, and act as the customer's advocate. He admits that making things easy is hard.
 
 ### Your pipeline forecast
 

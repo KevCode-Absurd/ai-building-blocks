@@ -10,6 +10,8 @@ explain: |
   A week-by-week plan that says what to make, how many and when. It is a draft a planner checks before any delivery date is promised. It balances your sales forecast and customer orders against what your capacity can really build.
 
   First the skill asks how you make things (to stock, to order or assembled to order), your planning horizon and your bottlenecks. Then it builds a schedule by week. It shows forecast against orders, projected stock, planned production lots and the quantity you can still promise. A rough check tests the plan against critical resources. The plan is adjusted until it fits, and it can feed your materials planning.
+
+  This is an imported copy of Kishor Kukreja's master production scheduling skill, under the MIT licence. We fixed a mismatch between its text and its example code, and added a plain note on lead times.
 when:
   - You have a sales forecast and need to turn it into a build schedule.
   - A customer asks for a delivery date and you need to know what you can promise.
@@ -33,11 +35,11 @@ you_get:
   - A capacity check that lists overloaded work centres
   - A list of changes from last week's plan (if you gave it)
 how_to_use:
-  - "Gather your data in a spreadsheet with these columns: SKU, week, forecast, orders, stock and capacity hours per work centre."
+  - "Gather your data in a spreadsheet with these columns: SKU, week, forecast, orders, stock and capacity hours per work centre. Also note your lead time for each SKU."
   - Open Claude, ChatGPT or Gemini. Paste the skill text from this page into a new chat. No code or paid tool is needed.
   - Paste or attach your spreadsheet. Say how you make products and how many weeks to plan.
   - Answer any questions your AI asks about bottlenecks and changeover times.
-  - The skill text includes Python code. Your AI does not need to run it. The chat can follow the steps in plain language. The code is for reference, and the example in it ignores lead time.
+  - "The skill text includes Python code. Your AI does not need to run it. Ask it to follow these steps in plain language instead. 1. Set demand for each week as the larger of forecast and orders. 2. Work out projected stock week by week. 3. Add a production lot when stock would fall below your safety stock. 4. Check each work centre's hours against its capacity. 5. Work out the quantity you can still promise (the available-to-promise number). The code is for reference. Its example ignores lead time, so add lead times by hand."
   - Check the weekly table and the overload list against your own numbers. Treat the result as a planning draft.
   - Ask your AI to fix any overloaded week. Then have a planner check the plan against real capacity and lead times before you promise any delivery date to a customer.
   - Next, load the approved weekly plan into your ERP or material planning run. Each week, compare actual output with the plan and tune it.

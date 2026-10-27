@@ -9,6 +9,16 @@ metadata:
 
 # CRM paid attribution
 
+## Plain-words guide (added by AI Blocks)
+
+- Run order: (1) check the export has the required columns, (2) read each lead's tags in the order below, (3) name its channel, (4) match the ad, (5) mark which lead counts for the click, (6) keep unmatched leads and say why.
+- "Decoding pass": turning an encoded value such as `%20` back into normal text. The rules below do this five times for each value, then clean it.
+- "Lexical-ID pattern": a rule that spots an ad or campaign by the shape of its ID text.
+- "Byte-identical": an exact copy with no changes. Use the classifier file in `scripts/` as it is.
+- "Attribution-primary": the one lead per click that you count in totals, so a repeat click is not counted twice. Other leads from that click stay in the table.
+- This skill needs the whole folder (SKILL.md, `scripts/` and `references/`) and an AI that can run Node. If your AI cannot run Node, it can still read tags and match leads by hand using these rules, but say that the semantic checks were not run.
+- Leads that stay unmatched need their tags fixed in the CRM before the next run.
+
 Use this skill when a CRM lead export must be connected to paid channel and ad evidence. It
 returns one row per scoped lead and retains rows that cannot be matched. It does not prove
 spend, incrementality, or revenue; downstream reports must declare their date mode, lookback,

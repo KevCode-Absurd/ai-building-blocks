@@ -5,6 +5,8 @@ description: "Paste your product link. Get the buyer, offer, growth goal and mis
 
 # Traction business profile builder
 
+Needs no account, API key or paid tool, and no scraping. Paste your product URL or page text, then add your goal, cash cap and weekly hours if you know them. If your AI cannot browse, paste your page text. It saves business-profile.md, which the Growth channel test picker reads next.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

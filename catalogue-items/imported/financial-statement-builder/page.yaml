@@ -10,6 +10,8 @@ explain: |
   The three main statements and a short summary, produced from a trial balance or ledger export. You get an income statement, balance sheet and cash flow statement ready to hand to a reader.
 
   The skill first checks that debits equal credits. It then maps each account to its place: current or long-term assets and liabilities, revenue, cost of sales and expenses, under GAAP or IFRS as you choose. It builds the statements, with prior-period comparison if you supply one, and computes ratios such as gross margin, current ratio and debt to equity. It ends with a plain-language executive summary that opens with the headline for people who do not read accounts.
+
+  What it cannot check: it does not match your ledger to bank statements, and it cannot tell whether every account is there beyond the test that debits equal credits.
 when:
   - Your bookkeeper sent a trial balance and you need statements.
   - You must show lenders last quarter's results.
@@ -32,7 +34,7 @@ you_get:
   - An executive summary
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
-  - Paste your trial balance or ledger export under it. Spreadsheet text works, or attach the file if your AI takes files.
+  - Before you paste, remove customer names, account numbers and bank details, and check your chat tool's data policy. Then paste your trial balance or ledger export under the skill. Spreadsheet text works, or attach the file if your AI takes files.
   - Say the reporting period and whether you use GAAP or IFRS. Add last period figures if you have them.
   - Check that the balance sheet balances and that net income matches across all three statements.
   - Send the results to your bookkeeper or accountant before they go to lenders, investors or regulators.

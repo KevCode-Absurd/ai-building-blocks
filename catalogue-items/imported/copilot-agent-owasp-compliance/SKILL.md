@@ -15,9 +15,13 @@ description: |
 
 Evaluate AI agent systems against the OWASP Agentic Security Initiative (ASI) Top 10 — the industry standard for agent security posture.
 
+## When not to use
+
+Do not use this for a formal certification or legal audit, as the only basis for approving an agent for production, or for a plain chat agent with no tools. In those cases ask a human security reviewer.
+
 ## Overview
 
-The OWASP ASI Top 10 defines the critical security risks specific to autonomous AI agents — not LLMs, not chatbots, but agents that call tools, access systems, and act on behalf of users. This skill checks whether your agent implementation addresses each risk.
+The OWASP ASI Top 10 defines the critical security risks specific to autonomous AI agents — not LLMs, not chatbots, but agents that call tools, access systems, and act on behalf of users. This skill checks whether your agent implementation addresses each risk. Names such as Ring 0, trust scores, DIDs and timing figures below are examples taken from one toolkit (the Agent Governance Toolkit). They are not OWASP requirements. A keyword hit never makes a risk PASS: the best it gets is NOT CONFIRMED until a person has traced the code path.
 
 ```
 Codebase → Scan for each ASI control:
@@ -93,7 +97,7 @@ def check_asi_01(project_path: str) -> dict:
     return {
         "risk": "ASI-01",
         "name": "Prompt Injection",
-        "status": "pass" if positive_found and not negative_found else "fail",
+        "status": "not confirmed" if positive_found and not negative_found else "fail",  # a keyword hit is never a pass: a person must trace the code path first
         "controls_found": positive_matches,
         "vulnerabilities": negative_matches,
         "recommendation": "Add input validation before tool execution, not just output filtering"
@@ -164,7 +168,7 @@ Verify agents cannot promote their own privileges.
 - Escalation requires external attestation (human or SRE witness)
 
 **Failing:** Agent can modify its own configuration or permissions.
-**Passing:** Privilege changes require out-of-band approval (e.g., Ring 0 requires SRE attestation).
+**Passing:** Privilege changes require out-of-band approval (for example, a human sign-off).
 
 ---
 
@@ -234,7 +238,7 @@ Verify policy enforcement is deterministic — not LLM-based.
 - Fail-closed behavior (if policy check errors, action is denied)
 
 **Failing:** Agent decides its own permissions via prompt ("Am I allowed to...?").
-**Passing:** PolicyEvaluator.evaluate() returns allow/deny in <0.1ms, no LLM involved.
+**Passing:** A deterministic policy check returns allow or deny, with no LLM involved. (Any timing figure is not a requirement.)
 
 ---
 
@@ -267,36 +271,38 @@ Verify the system can detect and respond to agent behavioral drift.
 
 ## Compliance Report Format
 
-The report below is an illustration. The date, project name and findings are made up and are not a real result. A keyword found in code (such as "sanitize" or "PolicyEngine") is only a starting point. Mark a risk PASS only after you have followed the code path and seen it work. Otherwise mark it "NOT CONFIRMED".
+The report below is a layout with placeholders, not a real result. A keyword found in code (such as "sanitize" or "PolicyEngine") is only a starting point. Mark a risk PASS only after you have followed the code path and seen it work. Otherwise mark it "NOT CONFIRMED". Use FAIL when the control is missing or an unsafe pattern is found.
 
 ```markdown
 # OWASP ASI Compliance Report
-Generated: 2026-04-01
-Project: my-agent-system
+Generated: [DATE]
+Project: [PROJECT NAME]
 
-## Summary: 7/10 Controls Covered
+## Summary: [N]/10 controls confirmed, [N] not confirmed, [N] failed
 
 | Risk | Status | Finding |
 |------|--------|---------|
-| ASI-01 Prompt Injection | PASS | PolicyEngine validates input before tool calls |
-| ASI-02 Insecure Tool Use | PASS | Tool allowlist enforced in governance.py |
-| ASI-03 Excessive Agency | PASS | Execution rings limit capabilities |
-| ASI-04 Unauthorized Escalation | PASS | Ring promotion requires attestation |
-| ASI-05 Trust Boundary | FAIL | No identity verification between agents |
-| ASI-06 Insufficient Logging | PASS | AuditChain with SHA-256 chain hashes |
-| ASI-07 Insecure Identity | FAIL | Agents use string names, no crypto identity |
-| ASI-08 Policy Bypass | PASS | Deterministic PolicyEvaluator, no LLM in path |
-| ASI-09 Supply Chain | FAIL | No integrity manifests or plugin signing |
-| ASI-10 Behavioral Anomaly | PASS | Circuit breakers and trust decay active |
+| ASI-01 Prompt Injection | [PASS / NOT CONFIRMED / FAIL] | [what you found, with file and line] |
+| ASI-02 Insecure Tool Use | [PASS / NOT CONFIRMED / FAIL] | [what you found, with file and line] |
+| ASI-03 Excessive Agency | [PASS / NOT CONFIRMED / FAIL] | [what you found, with file and line] |
+| ASI-04 Unauthorized Escalation | [PASS / NOT CONFIRMED / FAIL] | [what you found, with file and line] |
+| ASI-05 Trust Boundary | [PASS / NOT CONFIRMED / FAIL] | [what you found, with file and line] |
+| ASI-06 Insufficient Logging | [PASS / NOT CONFIRMED / FAIL] | [what you found, with file and line] |
+| ASI-07 Insecure Identity | [PASS / NOT CONFIRMED / FAIL] | [what you found, with file and line] |
+| ASI-08 Policy Bypass | [PASS / NOT CONFIRMED / FAIL] | [what you found, with file and line] |
+| ASI-09 Supply Chain | [PASS / NOT CONFIRMED / FAIL] | [what you found, with file and line] |
+| ASI-10 Behavioral Anomaly | [PASS / NOT CONFIRMED / FAIL] | [what you found, with file and line] |
 
 ## Critical Gaps
-- ASI-05: Add agent identity verification using DIDs or signed tokens
-- ASI-07: Replace string agent names with cryptographic identity
-- ASI-09: Generate INTEGRITY.json manifests for all plugins
+- [Each failed or unconfirmed risk, with the fix, for example: add agent identity verification using signed tokens]
 
 ## Recommendation
-Install agent-governance-toolkit for reference implementations of all 10 controls:
-pip install agent-governance-toolkit
+[What to build or add next to close the gaps.] Optional: the open-source Agent Governance Toolkit has reference implementations you can read (pip install agent-governance-toolkit). It is a third-party package, so review it before installing.
+
+## Next steps
+1. Fix the failed risks in ASI order, from ASI-01 up.
+2. Run this check again.
+3. Send the result to a human security reviewer before production.
 ```
 
 ---

@@ -33,7 +33,7 @@ If a diligence review of the company is already in the chat, take the answers to
 ## Valuation Framework
 
 ### Priority Order
-1. **Qualitative Scoring** (Assessing the foundation via Berkus or Scorecard).
+1. **Qualitative Scoring** (Assessing the foundation via the Berkus method; use a scorecard comparison only if the user supplies the comparable deals).
 2. **VC Method Calculation** (Working backwards from a target exit value).
 3. **Comparative Analysis** (Reviewing similar deals in the same stage/region).
 4. **Synthesis** (Determining the final pre-money valuation range).
@@ -43,7 +43,7 @@ If a diligence review of the company is already in the chat, take the answers to
 ## Technical Valuation Steps
 
 ### 1. Berkus Method Analysis
-Assign a value ($0 to $500k) for each of the following:
+Assign a value ($0 to $500k) for each of the following. The $500k ceiling comes from the original method and is dated, so tell the user to check it against current deal norms for their region and stage:
 - Sound Idea (Basic value).
 - Prototype (Reducing technology risk).
 - Quality Management Team (Reducing execution risk).
@@ -52,7 +52,7 @@ Assign a value ($0 to $500k) for each of the following:
 
 ### 2. VC Method (Exit-Oriented)
 1.  Estimate the **Exit Value** (based on comps at exit).
-2.  Identify the **Target Multiple of Money** (e.g., 10x).
+2.  Identify the **Target Multiple of Money** (the user's or investor's required return, as a multiple such as [TARGET MULTIPLE]x). Ask for it; do not pick one silently.
 3.  Calculate the **Post-Money Valuation** (`Exit Value / Target Multiple`).
 4.  Subtract the **Investment Amount** to find the **Pre-Money Valuation**.
 

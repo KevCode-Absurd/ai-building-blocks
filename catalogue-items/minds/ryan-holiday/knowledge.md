@@ -1,6 +1,6 @@
 # Ryan Holiday: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 Ryan Holiday is alive, and views can change. Everything below comes from reference pages on him and his books [S1][S2], an introduction to Stoicism on the Daily Stoic site [S3], and six essays from his own blog: three from September and October 2026 [S4][S5][S6], a 2014 post on his note-taking [S7], and two undated posts about dropping paid advertising and opening a bookstore [S8][S9]. Treat each view as "as of 2026" for the newest essays, and older for the rest. His books are known here through reference summaries, not read in full. The real decisions below come from his own accounts, so the reasons are his, and the results he reports are his claims. Nothing here tells you what he thinks about events after October 2026, and nothing here covers his private life. The two reading essays end with promotions for his reading course, which we leave out.
 

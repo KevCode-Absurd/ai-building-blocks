@@ -48,6 +48,8 @@ Define ideal customer profile for targeting:
 
 ### Firmographics Template
 
+The ranges below are examples only. Set your own from your best customers' data.
+
 | Dimension | Target Range | Rationale |
 |-----------|--------------|-----------|
 | Employees | 50-5000 | Series A sweet spot |
@@ -65,6 +67,8 @@ Define ideal customer profile for targeting:
 | User/Champion | Manager, Team Lead, Power User | Makes job easier, quick wins | UX, ease of use, time savings |
 
 ### ICP Validation Checklist
+
+The thresholds below (such as churn under 5%) are example baselines. Replace them with your own numbers.
 
 - [ ] 5+ paying customers match this profile
 - [ ] Fastest sales cycles (< median)
@@ -128,7 +132,7 @@ Build competitive knowledge base:
 5. Read G2/Capterra reviews (pros and cons)
 6. Track competitor job postings (roadmap signals)
 7. Update battlecards monthly
-8. **Validation:** Sales team uses battlecards in 80%+ competitive deals
+8. **Validation:** Sales team uses battlecards in most competitive deals (the author's example target is 80%+; set your own)
 
 ### Competitive Tier Structure
 
@@ -237,7 +241,7 @@ Equip sales team with PMM assets:
 5. Create ROI calculator (input costs, output savings)
 6. Conduct monthly enablement calls
 7. Deliver quarterly training (positioning, competitive)
-8. **Validation:** Sales uses assets in 80%+ of opportunities
+8. **Validation:** Sales uses assets in most opportunities (the author's example target is 80%+; set your own)
 
 ### Sales Deck Structure
 
@@ -348,6 +352,8 @@ The figures below are an example split only. Use the user's own budget and targe
 ---
 
 ## PMM KPIs
+
+The targets below are example figures from the author, not market data or benchmarks. Set your own baselines from your data first, and do not cite these as industry norms.
 
 | Metric | Target | Measurement |
 |--------|--------|-------------|

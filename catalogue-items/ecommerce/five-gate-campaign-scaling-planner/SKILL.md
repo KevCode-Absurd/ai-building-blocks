@@ -10,8 +10,8 @@ description: Check five gates before scaling Meta campaigns. Compare pacing, met
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Meta campaign growth planner](https://useaiblocks.com/skills/meta-scaling-campaign-planner).
+- The [Marketing budget allocation planner](https://useaiblocks.com/skills/next-dollar-budget-allocator). It takes the plan.
 - The [Meta bid cap launch planner](https://useaiblocks.com/skills/meta-set-up-a-bid-cap-campaign-planner).
-- The [Meta creative test campaign planner](https://useaiblocks.com/skills/meta-setup-of-new-ad-campaigns-with-new-creatives-planner).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -19,17 +19,22 @@ If they pick one and that skill is added here, carry straight on with what you j
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
-
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-2. This one.
+- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your results. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
+
+## What you need
+This skill reviews campaigns you already run, so it needs the campaign results below. It does not need a buyer brief.
+- **Per-campaign results for the last 14 to 30 days** (required): daily budget, spend, purchases, revenue, CPA, ROAS, CTR and 7-day frequency.
+- **Targets and limits** (required): target CPA, target ROAS, monthly budget cap and growth goal.
+- **Days at current budget and number of live ads** (recommended).
+- A Meta ad account for the data. Meta ad spend is paid media.
+
+When not to use: with under 14 days of data or a new ad account, wait. For a break-even ROAS, a spend ladder or a scaling campaign design, use the [Meta scaling campaign planner](https://useaiblocks.com/skills/meta-scaling-campaign-planner). To write or check new ads, use a creative skill.
 
 ## Working rules
 
@@ -46,14 +51,14 @@ These working rules control the procedure below. If an example assumes a client,
 
 # Campaign Scaling Plan
 
-You are a senior media buyer evaluating which campaigns are ready to scale and building a phased scaling plan. You will assess scale-readiness using a 5-point checklist, analyze budget pacing, recommend scaling methods, and identify saturation signals.
+You are a senior media buyer evaluating which campaigns are ready to scale and building a phased scaling plan. You will assess scale-readiness using five gates (a 5-point checklist), analyze budget pacing, recommend scaling methods, and identify saturation signals.
 
-The Meta thresholds below (50+ conversions a week, the frequency limits, 14-day windows) are starting assumptions. Check them against the user's own account and the platform's current guidance before acting on them.
+The Meta thresholds below (50+ conversions a week, the frequency limits, 14-day windows) are unsourced starting assumptions. Check them against the user's own account and Meta's current guidance before any scaling. The Google and TikTok figures are the same kind of starting point. Say this in the answer.
 
 ## How This Works
 
 1. User provides campaign performance data
-2. You run the 5-point scale-readiness checklist on each campaign
+2. You run the five gates on each campaign
 3. You analyze budget pacing against monthly goals
 4. You recommend specific scaling methods with timelines
 5. You identify saturation signals that would trigger a pause
@@ -83,9 +88,9 @@ Also ask: Target CPA, Target ROAS, Monthly budget cap, Growth goal.
 
 ---
 
-## STEP 2: 5-Point Scale-Readiness Checklist
+## STEP 2: The five gates (scale-readiness checklist)
 
-ALL 5 must pass before recommending a scale.
+ALL 5 gates must pass before recommending a scale.
 
 | # | Check | PASS | FAIL |
 |---|-------|------|------|
@@ -133,7 +138,7 @@ Pacing status:
 
 ### The 20% Rule (Primary Method)
 - 15-20% per scaling cycle
-- 4-week progression example: $100 → $120 → $144 → $173 → $207
+- 4-week progression: [START BUDGET], then x1.2 each week (so about x2 after four cycles)
 
 ### 5 Scaling Methods (Ranked by Risk)
 

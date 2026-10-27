@@ -16,6 +16,8 @@ This is planning help. It does not run payroll and it does not replace your fina
 
 You need the headcount plan (each role with team or cost center, start date, and whether it is approved or planned), the pay rate for each role, and the benefit and employer-cost rates. The assumptions are also needed: merit increase and its date, attrition, and backfill delay. Optional: actual spend to date, shared program costs, and last year's budget.
 
+If you have a headcount and turnover report, use its headcount and attrition figures.
+
 If an input is missing, ask once for all of them in one message. If one stays missing, write "MISSING: <input>" on the line that needs it and use a clearly labelled placeholder the user can change. Never invent a pay rate, benefit rate, attrition figure or merit percent.
 
 ## Steps

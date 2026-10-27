@@ -35,8 +35,8 @@ how_to_use:
   - Paste each source as text, or attach the file. Say what question you want answered.
   - Add your citation style and who the summary is for, if you have them.
   - For a comparison, give at least two sources.
-  - Check that each finding points to a place in the source. Fix anything marked not stated.
-  - The extractor scripts need code running. Without it, the AI still writes the summaries and citations by hand. Use the brief to write a decision memo or a first draft. Before you rely on it, check every number and quote against the source.
+  - Check that each finding points to a place in the source. A missing author, date or DOI is marked "not stated" and never filled in. Fix anything marked not stated. Check the citation format against your style guide.
+  - The extractor scripts need code running. Without it, the AI still writes the summaries and citations by hand. Use the brief to write a decision memo or a first draft. Before you rely on it, check every number and quote against the source. The synthesis brief also works as the input for a decision memo, or for content-production if you are writing from it.
 output_sample:
   input:
     - Your paper, article or report, pasted as text or attached

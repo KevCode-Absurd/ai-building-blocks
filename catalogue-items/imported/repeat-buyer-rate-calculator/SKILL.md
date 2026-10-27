@@ -39,13 +39,13 @@ Calculates the repeat purchase rate — the percentage of customers who return t
    **Expected output:** Customers acquired in window
 
 2. **OPERATION:** `orders` — query
-   **Inputs:** `query: "created_at:>='<NOW - days_back + repeat_window days>'"`, `first: 250`, select `customer { id }`, `createdAt`, `lineItems { product { id, title } }`, pagination cursor
+   **Inputs:** `query: "created_at:>='<acquisition start>'"` where acquisition start = today minus `days_back` days (no end date, so every order from then until today is read), `first: 250`, select `customer { id }`, `createdAt`, `lineItems { product { id, title } }`, pagination cursor
    **Expected output:** Orders to build per-customer purchase history and first-product mapping
 
    Keep paging with `hasNextPage` and `endCursor` for both queries until `hasNextPage` is false, so no customer or order is missed.
    Note: `numberOfOrders` counts all orders ever placed, so do not use it for the repeat check. Count the dated orders returned in step 2 that fall inside the window instead. The first product is the first line item of the customer's earliest order. Only the first 5 line items of each order are read.
 
-3. For each acquired customer: if they have ≥ 2 orders within `repeat_window` days → repeat purchaser
+3. For each acquired customer, find their earliest order in the step 2 data. That first order counts as order 1. They are a repeat purchaser if they placed at least one more order no later than `repeat_window` days after the first order. The window is measured from the first order, not from the start of the acquisition period. Customers whose window is still open today can only count as repeat if they already ordered again; say how many of those there are in the report.
 
 4. Calculate overall rate; if `segment_by: product`, group by first-purchased product
 

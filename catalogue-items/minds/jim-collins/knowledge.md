@@ -143,7 +143,7 @@ Good-to-great leaders got the right people on, moved the wrong people off, and p
 ## Short phrases on the record
 
 - "personal humility and indomitable will" (on Level 5 leaders) [S1]
-- "Great vision without great people is irrelevant." [S2]
+- "Great vision without great people is irrelevant." (the wording on his concept page, a summary line) [S2]
 - "an unwavering faith in the endgame" (on the Stockdale Paradox) [S5]
 - "discipline amidst chaos" (on the 20 Mile March) [S6]
 - "the curse of competence" (on the hedgehog concept) [S3]

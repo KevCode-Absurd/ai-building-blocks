@@ -25,7 +25,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Audit report** with the [PowerPoint deck change reviewer](https://useaiblocks.com/skills/powerpoint-deck-change-reviewer). Bring a brief, slide deck.
+1. **Audit report** with the [PowerPoint deck change reviewer](https://useaiblocks.com/skills/powerpoint-deck-change-reviewer). Bring slide deck, your question (optional).
 2. **Slide deck** with the [PowerPoint template deck builder](https://useaiblocks.com/skills/powerpoint-template-populator). Bring slide deck, document (optional), spreadsheet (optional).
 3. This one.
 

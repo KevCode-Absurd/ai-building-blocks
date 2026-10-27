@@ -31,6 +31,7 @@ Ask once for anything not given:
 - Where it runs (Vercel, Netlify, Railway, Render, a server with PM2 or Docker, Kubernetes).
 - Whether the release changes the database.
 - Who is affected if it breaks, and the current deploy steps (optional).
+- A ship-readiness report, if you have one (optional): carry its open findings into the pre-release checks.
 
 ## What you hand back
 

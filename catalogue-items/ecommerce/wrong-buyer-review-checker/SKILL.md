@@ -24,7 +24,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **Brand brain** with the [Customer profitability and ad source analyst](https://useaiblocks.com/skills/best-and-worst-customer-profiler). Bring your results, customer words (optional).
+2. **Brand brain** with the [Customer profitability and ad source analyst](https://useaiblocks.com/skills/best-and-worst-customer-profiler). Bring your customer list, customer words (optional).
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `proof-and-claims.md`, `offers.md`, `voice-and-look.md`. Take the claims list with each claim's status, the offer terms word for word, and the voice rules. Source notes and rejected ideas never go into the result.
@@ -95,9 +95,8 @@ CHECKS MISSED: <list or none>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Customer switching barrier planner](https://useaiblocks.com/skills/switch-friction-remover). It takes the audit report.
-- The [Buyer identity segment finder](https://useaiblocks.com/skills/buyer-identity-segment-finder).
 - The [Customer feedback and brand reviewer](https://useaiblocks.com/skills/monthly-customer-voice-keeper).
-- **Write the ad copy** with the [Theme-based ad copy set writer](https://useaiblocks.com/skills/theme-based-ad-copy-set-writer). It takes the audit report.
+- The [Buyer identity segment finder](https://useaiblocks.com/skills/buyer-identity-segment-finder).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

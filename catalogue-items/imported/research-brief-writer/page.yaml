@@ -10,6 +10,8 @@ explain: |
   One clear paragraph that a deep research tool can act on without asking you anything. Vague research needs usually give vague answers, and this fixes the request before you send it.
 
   The paragraph is written for a researcher who knows nothing about your project. It opens by explaining what the project is and why it exists. Then it states the single question and the decision the answer will inform. It adds all the names, dates, known facts and limits, and lists three to six numbered sub-questions. It says what to include and what to avoid, and how the answer should look. It asks for the job to be done, not just a topic.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (davidondrej) says MIT. Credit goes to davidondrej and sickn33.
 when:
   - You want to use a deep research tool but your question is fuzzy.
   - Past research results were off topic or too general.
@@ -34,6 +36,7 @@ how_to_use:
   - Gather first: your project name, the decision this research feeds, your deadline, who the answer is for, and any sources you already know. Then describe what you want to learn and why. Say what to include or avoid.
   - Read the brief your AI writes. Check that it has one question, three to six numbered sub-questions and your limits.
   - Fix anything wrong or missing, then ask your AI to rewrite it as one paragraph.
+  - The result is one pasted paragraph, not a report. Read it once, check every name, date and fact in it is true, then send it.
   - Paste the brief into a deep research tool. Some of these need a paid plan or an account, so check yours first. The skill's optional DeepAPI route needs an API key and a paid service. Pasting by hand needs neither.
 output_sample:
   input:

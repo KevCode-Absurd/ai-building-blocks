@@ -12,6 +12,8 @@ level: intermediate
 inputs:
   - type: question
     required: true
+  - type: spreadsheet
+    required: false
 outputs:
   - type: slide_deck
 uses: []

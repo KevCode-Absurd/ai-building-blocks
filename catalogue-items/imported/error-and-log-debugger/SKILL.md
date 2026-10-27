@@ -17,7 +17,7 @@ This skill equips an AI agent with a systematic methodology for diagnosing and r
 
 2. **Isolate the fault location.** Use the stack trace, error message, and code structure to narrow down the region of code responsible. Trace data flow backward from the point of failure to find where the value diverged from expectations. Eliminate unrelated code paths by checking whether the bug persists when components are stubbed out or bypassed. For large codebases, use binary search strategies — disable half the system, check if the bug still occurs, and repeat.
 
-3. **Diagnose the root cause.** Once the faulty region is identified, determine exactly why the code misbehaves. Common root causes include: incorrect assumptions about input (null, empty, out-of-range), state mutation from a concurrent thread, stale cache or memoized value, incorrect operator precedence, missing await on an async call, or a dependency version incompatibility. Distinguish the root cause from its symptoms — a NullPointerException is a symptom; the root cause may be a missing validation three function calls earlier.
+3. **Diagnose the root cause.** Once the faulty region is identified, determine exactly why the code misbehaves. Common root causes include: incorrect assumptions about input (null, empty, out-of-range), state mutation from another thread or from async tasks that interleave on one thread, stale cache or memoized value, incorrect operator precedence, missing await on an async call, or a dependency version incompatibility. Distinguish the root cause from its symptoms — a NullPointerException is a symptom; the root cause may be a missing validation three function calls earlier.
 
 4. **Develop and apply the fix.** Write the smallest change that addresses the root cause without introducing side effects. If the fix involves changing a shared interface, trace all callers to ensure compatibility. Prefer defensive fixes that handle the error class broadly (e.g., adding input validation) over narrow patches that only address the single observed failure.
 
@@ -79,9 +79,9 @@ async def build_response(user_id):
 
 **Agent diagnosis:**
 
-The `user_cache` dictionary is shared mutable state accessed by concurrent coroutines without synchronization. When two requests for the same `user_id` arrive simultaneously, both see a cache miss, both issue HTTP requests, and the second write may overwrite the first with a partially different object. More critically, dictionary mutation during concurrent iteration can produce `RuntimeError` on Python 3.
+The `user_cache` dictionary is shared mutable state accessed by async tasks that interleave at each `await`, without synchronization (asyncio runs on one thread, so this is a race between awaits, not between threads). When two requests for the same `user_id` arrive simultaneously, both see a cache miss, both issue HTTP requests, and the second write may overwrite the first with a partially different object. More critically, dictionary mutation during concurrent iteration can produce `RuntimeError` on Python 3.
 
-**Root cause:** Unsynchronized shared mutable state in a concurrent context.
+**Root cause:** Unsynchronized shared mutable state across interleaved async tasks.
 
 **Fix:**
 

@@ -10,8 +10,11 @@ level: intermediate
 inputs:
   - type: tool_connection
     required: true
+  - type: spreadsheet
+    required: false
 outputs:
   - type: plan
+  - type: spreadsheet
 uses: []
 origin: imported
 source:

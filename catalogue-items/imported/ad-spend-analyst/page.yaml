@@ -10,6 +10,8 @@ explain: |
   You get a clear view of what is working and what is wasting money across your ad channels, plus small budget tests to try next. It labels what the data proves and what it only hints at.
 
   The skill starts with an intake of your goals, then cleans and lines up data from different channels so they can be compared. It checks each campaign's health, flags ones to investigate, notes standout performers, and runs a significance check so small numbers do not fool you. It follows the funnel from click to sale to find where people drop off. Then it looks at where a shift of budget may pay, models a few scenarios, and proposes tests.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (gooseworks-ai) says MIT. Credit goes to gooseworks-ai and sickn33.
 when:
   - You run ads on several channels and want a combined view.
   - You need to decide where to move next month's budget.

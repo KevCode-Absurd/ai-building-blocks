@@ -55,7 +55,7 @@ output_sample:
     - name: Marketing strategy comparison
       contains: Side-by-side look at each rival's content, tone and ways of winning customers.
     - name: Performance benchmarking
-      contains: Estimated traffic and sales figures, marked as estimates. Public sources are noted where found.
+      contains: Traffic, conversion and order-value figures only where a named public source gives them. Every other cell says "not found". No estimates are made up.
     - name: Strategic opportunities and threats
       contains: Gaps in the market, such as a channel or promise no rival owns.
     - name: Recommendations and next actions

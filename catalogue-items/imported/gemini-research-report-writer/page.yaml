@@ -9,7 +9,9 @@ subhead: A long research report with cited sources, written while you do somethi
 explain: |
   A long research report with cited sources, written while you do something else. You give a question and Google Gemini's research mode plans the search, reads the pages and writes the report. The skill starts the job, checks on it, and collects the finished text.
 
-  Before anything runs, it shows you the exact question, the cost range (about $2 to $5 per run, an estimate and not a spending limit) and where the file will be saved. It only starts after you agree, because the question goes to Google. It suits market scans, literature reviews and competitor checks where a quick web search falls short. It needs Python and a paid Gemini API key.
+  Before anything runs, it shows you the exact question, the cost range (about $2 to $5 per run, the author's estimate from an unstated date, not a spending limit; check Google's current Gemini API prices before you approve) and where the file will be saved. It only starts after you agree, because the question goes to Google. It suits market scans, literature reviews and competitor checks where a quick web search falls short. It needs Python and a paid Gemini API key.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The skill file's own header says Apache-2.0. Credit goes to sanjay3290 and the collection maintainer, sickn33.
 when:
   - You need a market or competitor scan with sources you can check.
   - A quick web search will not cover a topic you must understand.

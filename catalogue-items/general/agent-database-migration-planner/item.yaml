@@ -9,6 +9,8 @@ level: intermediate
 inputs:
   - type: codebase
     required: true
+  - type: data_model
+    required: true
 outputs:
   - type: code_change
     required: true

@@ -9,9 +9,11 @@ role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: document
     required: true
-  - type: source_text
+  - type: test_report
+    required: false
+  - type: question
     required: false
 outputs:
   - type: plan

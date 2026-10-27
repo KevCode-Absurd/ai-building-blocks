@@ -42,7 +42,7 @@ how_to_use:
   - Install Composio CLI and link your accounts. Run composio link gorgias, and link Google Sheets if you want the export.
   - Add the downloaded folder to your AI and ask it to run the support metrics skill.
   - Tell it the dates to review.
-  - Check the sample note. Counts cover the first 100 tickets in your dates. Response times come from up to 20 tickets.
+  - Check the sample note. Counts cover the first 100 tickets in your dates, so a busy period is cut off. Response times come from up to 20 tickets, the most recently created ones.
   - Say yes if you want the Google Sheet. The sheet holds customer ticket data, so share it with care.
 output_sample:
   input:

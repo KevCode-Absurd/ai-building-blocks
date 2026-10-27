@@ -12,7 +12,7 @@ inputs:
   - type: source_text
     required: true
 outputs:
-  - type: copy_draft
+  - type: document
     required: true
 uses: []
 origin: imported

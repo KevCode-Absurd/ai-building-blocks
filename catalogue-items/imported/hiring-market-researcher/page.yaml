@@ -32,7 +32,7 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini with web search turned on. Paste in the skill instructions.
   - Type the role, seniority and place. Add your budget and company stage if you have them.
-  - Tell it which sources you can use, such as paid pay surveys, or paste in numbers you already have. It reads public pages only. Never give it a login.
+  - Tell it which sources you can use, such as paid pay surveys, or paste in numbers you already have. It does not scrape. It reads public pages only. Never give it a login. Pool sizes come only from numbers you paste or pages you can open without a login. Respect each site's terms.
   - Read the summary first. Check the date and source of each pay range.
   - Treat pool sizes and pay ranges as estimates. Check them with a recruiter before you set an offer.
 output_sample:
@@ -43,7 +43,7 @@ output_sample:
     - Company stage and size (optional)
   prerequisites:
     - An AI that can search the web
-    - A LinkedIn login for pool sizes (optional)
+    - Pool-size numbers you paste in yourself, or pages you can open without a login (optional)
   output:
     - name: Executive summary
       contains: Three to five key findings, a hiring difficulty rating and the top recommendation.

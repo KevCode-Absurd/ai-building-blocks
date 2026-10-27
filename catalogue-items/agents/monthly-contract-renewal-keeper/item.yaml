@@ -7,7 +7,7 @@ role: orchestrate
 job: analysis
 level: intermediate
 inputs:
-  - { type: document, required: true }
+  - { type: contract, required: true }
   - { type: spreadsheet, required: false }
 outputs:
   - { type: plan }

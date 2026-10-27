@@ -24,6 +24,8 @@ Use this skill when:
 
 ## Core Capabilities
 
+AI Blocks note: this list is the original author's. This copy has tested steps only for creating a sheet, writing formulas and converting formats. For charts, pivot tables, forms and dashboards, say plainly that there are no tested steps, try and check the result, or tell the person to do it by hand in Calc.
+
 ### 1. Spreadsheet Creation
 - Create new ODS spreadsheets from scratch
 - Generate spreadsheets from templates
@@ -73,8 +75,15 @@ AI Blocks note: this file shows no steps for building a chart. If the person ask
 
 ```python
 import uno
+from com.sun.star.beans import PropertyValue
 
-def create_spreadsheet():
+def prop(name, value):
+    p = PropertyValue()
+    p.Name, p.Value = name, value
+    return p
+
+def open_new_calc():
+    """Connect to the running listener and open a new, hidden spreadsheet."""
     local_ctx = uno.getComponentContext()
     resolver = local_ctx.ServiceManager.createInstanceWithContext(
         "com.sun.star.bridge.UnoUrlResolver", local_ctx
@@ -82,15 +91,19 @@ def create_spreadsheet():
     ctx = resolver.resolve(
         "uno:socket,host=localhost,port=8100;urp;StarOffice.ComponentContext"
     )
-    smgr = ctx.ServiceManager
-    doc = smgr.createInstanceWithContext("com.sun.star.sheet.SpreadsheetDocument", ctx)
-    sheets = doc.getSheets()
-    sheet = sheets.getByIndex(0)
-    cell = sheet.getCellByPosition(0, 0)
-    cell.setString("Hello from LibreOffice Calc!")
-    doc.storeToURL("file:///path/to/spreadsheet.ods", ())
+    desktop = ctx.ServiceManager.createInstanceWithContext("com.sun.star.frame.Desktop", ctx)
+    return desktop.loadComponentFromURL("private:factory/scalc", "_blank", 0, (prop("Hidden", True),))
+
+def create_spreadsheet():
+    doc = open_new_calc()
+    sheet = doc.getSheets().getByIndex(0)
+    sheet.getCellByPosition(0, 0).setString("Hello from LibreOffice Calc!")
+    # calc8 is the filter name for the native ODS format
+    doc.storeToURL("file:///path/to/spreadsheet.ods", (prop("FilterName", "calc8"),))
     doc.close(True)
 ```
+
+This pattern is the document-creation step only. Open the saved file and check it before you call it done.
 
 #### Method 3: Using ezodf
 ```python
@@ -125,28 +138,20 @@ done
 ```
 
 ### Formula Automation
-```python
-import uno
+This uses `open_new_calc()` and `prop()` from the block above. The numbers are placeholders for your own data.
 
+```python
 def create_formula_spreadsheet():
-    local_ctx = uno.getComponentContext()
-    resolver = local_ctx.ServiceManager.createInstanceWithContext(
-        "com.sun.star.bridge.UnoUrlResolver", local_ctx
-    )
-    ctx = resolver.resolve(
-        "uno:socket,host=localhost,port=8100;urp;StarOffice.ComponentContext"
-    )
-    smgr = ctx.ServiceManager
-    doc = smgr.createInstanceWithContext("com.sun.star.sheet.SpreadsheetDocument", ctx)
+    doc = open_new_calc()
     sheet = doc.getSheets().getByIndex(0)
-    
-    sheet.getCellByPosition(0, 0).setDoubleValue(100)
-    sheet.getCellByPosition(0, 1).setDoubleValue(200)
-    
+
+    sheet.getCellByPosition(0, 0).setDoubleValue(100)  # replace with your own value
+    sheet.getCellByPosition(0, 1).setDoubleValue(200)  # replace with your own value
+
     cell = sheet.getCellByPosition(0, 2)
-    cell.setFormula("SUM(A1:A2)")
-    
-    doc.storeToURL("file:///path/to/formulas.ods", ())
+    cell.setFormula("=SUM(A1:A2)")
+
+    doc.storeToURL("file:///path/to/formulas.ods", (prop("FilterName", "calc8"),))
     doc.close(True)
 ```
 
@@ -188,6 +193,7 @@ pip install pandas    # Data analysis
 ## Troubleshooting
 
 ### Cannot open socket
+Warning: `killall soffice.bin` closes every LibreOffice window, and any unsaved work in them is lost. Save and close your documents first.
 ```bash
 killall soffice.bin
 soffice --headless --accept="socket,host=localhost,port=8100;urp;"

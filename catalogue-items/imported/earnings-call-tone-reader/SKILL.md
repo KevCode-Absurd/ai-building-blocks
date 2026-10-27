@@ -40,7 +40,12 @@ Ask once for anything missing. Do not guess.
 
 ### Technical Limitation
 **Context Matters.**
-Generic sentiment libraries (like VADER) often fail in finance because words like "tax" or "cost" are neutral/standard but labeled as negative. This skill uses **FinBERT** or custom financial lexicons. In a chat with no code, use a finance word list in your head: treat routine words like "tax", "cost" and "liability" as neutral, and judge tone from the phrase, not the word.
+Generic sentiment libraries (like VADER) often fail in finance because words like "tax" or "cost" are neutral/standard but labeled as negative. This skill uses **FinBERT** or custom financial lexicons. In a chat with no code, use this short list and judge tone from the phrase, not the word:
+  - Neutral, never count as negative: tax, cost, liability, debt, capital, loss (in an accounting sense), risk factors (in a legal disclaimer).
+  - Positive: strong, improved, record, ahead of plan, accelerating, confident, momentum, raised guidance.
+  - Negative: weaker, declined, pressure, shortfall, delay, missed, impairment, cut guidance, headwind.
+  - Hedging: uncertain, volatile, might, may, could, assume, depends, visibility, too early to say.
+  Add words the call itself leans on, and say which ones you added.
 
 ### Priority Order
 1. **Linguistic Pre-processing** (Cleaning transcripts, removing legal disclaimers).

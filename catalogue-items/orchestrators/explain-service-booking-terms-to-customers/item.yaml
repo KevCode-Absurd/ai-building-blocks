@@ -9,9 +9,9 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: question
     required: true
-  - type: document
+  - type: contract
     required: true
   - type: copy_draft
     required: false

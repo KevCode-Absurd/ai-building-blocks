@@ -45,6 +45,7 @@ How to start:
 - **Real reviews** (optional): word for word, with the credit as published, for the safety-net ad.
 - **Product facts** (optional): what's in it, how much, how it's made.
 - **Brand look** (optional): colours, typefaces.
+- **Cost of the pictures** (know before stage one): planning is free in any chat. Making the pictures can cost money. Image tools bill per picture through an API key, and free chat plans have daily limits. See "Making the picture" below.
 
 <!-- making-it -->
 ## Making the picture
@@ -77,10 +78,8 @@ The offer block (with its word count and where each line came from), then `MISSI
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image ads.
-- The [Single image ad planner](https://useaiblocks.com/skills/single-image-ad-planner).
-- The [Image ad maker from customer quotes](https://useaiblocks.com/skills/customer-quote-image-ad).
-- The [Image ad visual brief writer](https://useaiblocks.com/prompts/image-ad-settings-picker). It takes the image ads.
 - **Check it before it goes live** with the [Ad layout readability checker](https://useaiblocks.com/skills/ad-reading-flow-checker). It takes the image ads.
+- The [Image ad visual brief writer](https://useaiblocks.com/prompts/image-ad-settings-picker). It takes the image ads.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -90,6 +89,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No saving without a real earlier price. No urgency without a real date or count.
 - Each 9:16 is laid out on its own, not cropped from the 4:5.
 - Any review is word for word, with only the credit its source holds.
+- Any health, nutrition or testing claim on an ad (for example vitamin counts or third-party testing) comes from the brand file or the site, with its source. If it can't be matched, leave it off the ad and flag it for a qualified person to check against the platform's ad rules.
 
 ## If something is missing
 Write `MISSING: <offer terms | renewal price | end date | earlier price | review | photo>`. No review: the safety-net ad uses the policy's own words alone. No end date: no urgency anywhere. No photo: say so instead of describing one.

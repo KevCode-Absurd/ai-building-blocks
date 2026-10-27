@@ -22,7 +22,7 @@ Systems fail, not people. The goal is to understand HOW the incident happened â€
 
 ## Input Requirements
 
-Gather these details before writing the post-mortem. Ask for anything missing:
+Gather these details before writing the post-mortem. If you have an incident record, investigation findings or a recovery plan, add them and take the timeline and impact from them. Ask for anything missing:
 
 ### Incident Metadata
 - Incident title (short, descriptive)

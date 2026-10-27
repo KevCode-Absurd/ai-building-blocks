@@ -5,6 +5,12 @@ description: Build professional financial services data packs from various sourc
 
 # Financial Data Pack Builder
 
+> **Plain-chat note (added by AI Blocks).** This skill mentions three other skills: `india-market-conventions`, `india-market-data` and `xlsx`. They are not in this folder and are not in the AI Blocks library. If you do not have them, use the India rules written below, say so at the top of your answer, and build the workbook with whatever spreadsheet tools you have. Never invent data to stand in for a skill you do not have.
+>
+> **Facts rule.** Every number, including market size, growth, market share, benchmark and peer figures, must come from the document the user uploaded, with its page. If a figure is not in the source, write "not in source" in the cell. Do not fill it from memory. If you use a web search, tag each figure "web, unverified" and give the link.
+>
+> **Scenarios.** Base and Downside cases are assumptions, not forecasts or advice. Label every such figure "Assumption".
+
 ## India
 
 This skill operates on **Indian markets**. Load **`india-market-conventions`**
@@ -232,7 +238,7 @@ Contents:
 - Industry benchmarks and peer comparisons
 - Regulatory environment if relevant
 
-Format: Mix of narrative text and tables, cite sources for market data
+Format: Mix of narrative text and tables, cite the source page for every market figure, and write "not in source" where the document gives none
 
 ### Tab 8: Investment Highlights
 Purpose: Narrative summary of key investment thesis points
@@ -272,6 +278,7 @@ Format: Clear headers, bullet points, concise paragraphs
 - Document growth metrics and trends
 
 **Step 1.4: Extract market and industry data**
+(Only what the source states, with its page. Write "not in source" for the rest.)
 - Competitive positioning information
 - Market size and growth rates
 - Industry benchmark data

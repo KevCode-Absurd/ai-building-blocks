@@ -226,6 +226,7 @@ optimized_module = optimizer.compile(qa, trainset=trainset)
 ```python
 import dspy
 
+# Needs a retriever first: dspy.configure(lm=lm, rm=retriever), as in the RAG example below.
 class MultiHopQA(dspy.Module):
     def __init__(self):
         super().__init__()
@@ -256,11 +257,13 @@ result = qa_system(question="Who wrote the book that inspired the movie Blade Ru
 import dspy
 from dspy.retrieve.chromadb_rm import ChromadbRM
 
-# Configure retriever
+# Configure retriever. dspy.Retrieve only works after the retriever is set here,
+# and you also need a language model: lm = dspy.LM("<your model>")
 retriever = ChromadbRM(
     collection_name="documents",
     persist_directory="./chroma_db"
 )
+dspy.configure(lm=lm, rm=retriever)
 
 class RAG(dspy.Module):
     def __init__(self, num_passages=3):
@@ -410,6 +413,7 @@ class ConsistentQA(dspy.Module):
 ### Pattern 4: Retrieval with Reranking
 
 ```python
+# Needs dspy.configure(lm=lm, rm=retriever) first, as in the RAG example above.
 class RerankedRAG(dspy.Module):
     def __init__(self):
         super().__init__()

@@ -42,6 +42,7 @@ how_to_use:
   - Use the scorecard at your next carrier review. Share the red-flag lines with the carriers first. Feed the routing guide and the scorecard into that review, then re-bid the lanes that fail.
   - Rate ranges, extra-charge fees, insurance minimums and market indicators in the skill are the original author's defaults, not current figures. Check them against your own quotes and current FMCSA and DAT sources.
   - Check carrier insurance and authority on the FMCSA site yourself before you award a lane.
+  - After the scorecard, start with the carriers in the warning band. Re-bid their lanes first, then add a backup carrier on any lane that has only one.
 output_sample:
   input:
     - Your lanes, with loads per week and spend

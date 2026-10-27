@@ -137,7 +137,7 @@ The following optional context may or may not be provided. Use whatever is avail
 Design the following:
 
 1. **Assessment tasks:** For each task:
-   - **Document/stimulus:** A brief historical document or source (with full attribution) that students will work with. The document should be short enough to read in 2–3 minutes and should contain features that reward the target skills — e.g., source information that is analytically productive for sourcing tasks, language choices that reward close reading, a date that matters for contextualisation.
+   - **Document/stimulus:** A brief historical document or source (with full attribution) that students will work with. Use a real, findable document that the user supplied or that you can name with author, date and where to find it. If you must write a classroom source yourself, label it "written for this task" and never give it a made-up author, date or archive. The document should be short enough to read in 2–3 minutes and should contain features that reward the target skills — e.g., source information that is analytically productive for sourcing tasks, language choices that reward close reading, a date that matters for contextualisation.
    - **Question/prompt:** The question students must answer. Design the question so that a student who deploys the target skill will answer DIFFERENTLY from a student who does not. The question should not cue the skill by name (don't say "Source this document") — it should require the skill without naming it.
    - **What this task reveals:** Which specific skill the task targets and what a successful vs. unsuccessful response looks like.
 

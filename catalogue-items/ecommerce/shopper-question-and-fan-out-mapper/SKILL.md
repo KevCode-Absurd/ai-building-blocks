@@ -18,7 +18,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **A search query report** (yours): an export from Google Search Console or the Google Ads search terms report, for set dates.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -28,7 +28,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for your brand brain, customer words, your results. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your brand brain, customer words, a search query report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -58,7 +58,7 @@ How AI assistants search changes often, and the published numbers on prompt leng
 1. **Start from money terms.** Take the store's own and rivals' paid search terms and rewrite each as a conversational question. Best sellers become "what is the best X for Y".
 2. **Add the long tail.** Add questions from the customer words the user pasted: sales calls, support tickets, reviews, Reddit threads. Typical shapes are does it work with, will it fit, is it safe for. Use the customer's own phrasing. Never invent a customer quote; guessed questions get `[inferred]`.
 3. **Add shopper context.** Put detail in some questions ("I have dry skin and a small budget"). Long prompts make an AI run narrower searches.
-4. **Show the fan-out where you can.** Ask the user to run a few questions in Perplexity, which shows its searches, and paste them. This is the safe default. Reading ChatGPT's searches through the browser's developer tools (Network tab, then the response's `queries`) is an unofficial method and may go against the provider's terms, so offer it only if the user asks, and say that. Tell them to run each question 3 times, because fan-out changes every run. Without pasted data, write 3 to 5 likely follow-ups per topic and label them `likely`. Never call a guess `seen`.
+4. **Show the fan-out where you can.** Ask the user to run a few questions in Perplexity, which shows its searches, and paste them. This is the safe default. Warning, do not follow: some guides read an AI tool's hidden searches through the browser's developer tools. That is an unofficial method and may go against the provider's terms, so do not describe it or suggest it. Use only what the tool shows on screen, such as the searches or sources it lists, and ask the user to paste those. Tell them to run each question 3 times, because fan-out changes every run. Without pasted data, write 3 to 5 likely follow-ups per topic and label them `likely`. Never call a guess `seen`.
 5. **Use fan-out as topics, not keywords.** Most fan-out queries have no search volume. Use them to see what a page must cover, not as a keyword list.
 6. **Group into topics.** One page should answer a whole topic with its follow-ups.
 7. **Add People Also Ask.** If you have web search, pull the questions for each product keyword and go one level deeper. If you do not, ask the user to paste them, or skip this step and say so under CHECKS MISSED. These are a related but different set from fan-out.

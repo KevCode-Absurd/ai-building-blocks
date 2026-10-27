@@ -1,0 +1,105 @@
+new_slug: me-md-from-ai-memory
+name: Ask your AI what it knows about you
+summary: Paste one prompt. Your AI asks first, then turns what it remembers about you into a me.md for you to check.
+job: set-up-ai
+thinking: low
+thinking_why: It sorts what the AI already remembers into set sections.
+headline: Ask your AI what it knows about you
+subhead: Paste one prompt into ChatGPT, Claude or Gemini. It asks if it may use what it remembers about you. Then it drafts your me.md, marks every remembered fact for you to check, and shows you the file to approve.
+explain: |
+  Your AI may already know a lot about you from past chats. That memory is locked inside one app, and some of it is old or wrong.
+
+  This prompt brings it out into a file you own. It asks first and waits for your yes. Then it fills each part of a me.md from what it remembers: your work, projects, how you write, how you like answers and what to avoid. Every remembered fact is marked so you can check it. If you say no, it asks you up to 12 short questions instead. It removes private details, dates each section and shows you the whole file before you save it.
+when:
+  - You've used one AI for months and want the others to know what it knows.
+  - You want a me.md in a few minutes, without filling in a form.
+  - You want to see what your AI thinks it knows about you, and fix it.
+not_for:
+  - "You want to add a CV or bio and a full interview: use the me.md builder."
+  - "You already have a me.md and want it brought up to date: use the me.md refresher."
+you_give:
+  - A yes or no to using what your AI remembers
+  - Fixes to anything it got wrong
+you_get:
+  - A me.md drafted from what your AI remembers, or from your answers
+  - Every remembered fact marked for you to check
+  - The two next steps, to save it and set it up
+how_to_use:
+  - Copy the prompt and paste it into a new chat with ChatGPT, Claude or Gemini.
+  - Say yes or no when it asks to use what it remembers.
+  - Read every fact marked "from memory, please check" and fix what's wrong.
+  - Approve the file, then save it in AI Blocks under Your me.md.
+next:
+  - me-md-short-core-writer
+  - me-md-builder
+output_sample:
+  input:
+    - A yes or no to using what your AI remembers
+  output:
+    - name: me.md
+      contains: Up to ten dated sections, from Core to Sources and dates, with every fact from memory marked.
+    - name: TO CHECK
+      contains: The remembered facts, listed so you can confirm or fix them.
+    - name: MISSING
+      contains: Sections it knew nothing about.
+    - name: Next steps
+      contains: Save it in AI Blocks, then set it up in your AI.
+how_it_works:
+  - title: Asks first
+    text: Waits for your yes before it uses anything it remembers.
+  - title: Drafts from memory
+    text: Fills each section and marks every remembered fact to check.
+  - title: Or interviews you
+    text: On a no, asks up to 12 short questions, one at a time.
+  - title: Checks the file
+    text: Removes private details, dates every section and cuts Core to about 1,200 characters.
+  - title: Shows it to you
+    text: Shows the whole file and waits for your approval.
+output_shape: |
+  # me.md
+  ## Core (as of <date>)
+  <facts> (from memory, please check)
+  ## Work, ## Projects (expires <date>), ## Voice,
+  ## Preferences, ## Background, ## Never
+  ## Where to look
+  ## Sources and dates
+
+  TO CHECK: <facts from memory>
+  MISSING: <sections it knew nothing about>
+  CHECKS MISSED: <one line each, or none>
+tweaks:
+  - what: Memory on or off
+    how: With memory or past-chat search turned on, it has much more to draft from. With it off, the prompt interviews you instead.
+  - what: Which AI
+    how: Run it in the AI you use most. It knows you best.
+  - what: What to leave out
+    how: Tell it before you start if there's a topic you don't want in the file.
+judge:
+  - Nothing from memory was used before you said yes.
+  - Every remembered fact is marked, and the marked facts are true or fixed.
+  - No private detail about you or anyone else that you wouldn't want an AI to read.
+  - Every section is dated, and Projects has an expiry date.
+test:
+  - Say no when it asks. It should switch to questions and use nothing from memory.
+  - Run it in two AIs you use. Compare the drafts to see what each one got wrong.
+  - Ask it to leave out one topic. It should not appear in the file.
+improve:
+  - Add a line to the prompt naming a section you care about most, so it asks about it first.
+  - If you work in a field with its own facts, such as a sales area or a teaching subject, add them to the Core line.
+  - Run the me.md refresher a month later to bring the dates up to date.
+works_best_with:
+  tools:
+    - name: ChatGPT
+      why: With memory turned on, it has the most to draft from after you say yes.
+    - name: Claude
+      why: Can draft from past chats when that feature is on, and follows the section order closely.
+    - name: Gemini
+      why: Works the same way when it has your past chats to draw on.
+  inputs:
+    - The settings text you already use in your AI, so nothing good is lost
+    - A link to where you keep your current projects
+terms:
+  - term: me.md
+    meaning: One short private file that tells any AI who you are, your work, projects, style and what to avoid.
+  - term: Memory
+    meaning: What your AI keeps about you from past chats. Each app keeps its own, and you can turn it off.

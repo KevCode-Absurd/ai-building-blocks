@@ -86,9 +86,9 @@ An agreed shorter deck keeps the same order and merges slides.
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Deal health reviewer](https://useaiblocks.com/skills/deal-health-reviewer). It takes the document.
 - The [Nonprofit sponsor package planner](https://useaiblocks.com/skills/nonprofit-sponsor-package-planner). It takes the document.
 - The [Pre-sales proof of concept planner](https://useaiblocks.com/skills/proof-of-concept-plan). It takes the document.
-- The [Sales proposal narrative writer](https://useaiblocks.com/skills/agency-sales-proposal-strategist). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

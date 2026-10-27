@@ -5,7 +5,7 @@ description: Use when you must speak or read something aloud and have notes but 
 
 # Read-aloud speech shaper
 
-Words made for the ear need short breaths and returning shapes. This skill turns notes into a speech or poem that can be said in one go and remembered. For a funny speech, use "Funny speech planner"; for stories that carry lessons, use "Lesson talk writer".
+Words made for the ear need short breaths and returning shapes. The method is inspired by working habits Maya Angelou described in public; she has not endorsed it, and it does not copy her voice. This skill turns notes into a speech or poem that can be said in one go and remembered. For a funny speech, use "Funny speech planner"; for stories that carry lessons, use "Lesson talk writer".
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

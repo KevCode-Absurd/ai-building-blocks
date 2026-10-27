@@ -37,6 +37,8 @@ Ask for the original question, the answer text or public answer URLs, the
 platform labels, and the desired jurisdiction or date cutoff. If a material
 choice is missing, ask before browsing.
 
+The answers can also come as one document that holds several AI answers to the same question.
+
 Do not use this workflow to harvest private conversations, bypass access
 controls, automate account creation, or recover API keys, cookies, browser
 profiles, or session tokens.

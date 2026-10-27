@@ -17,7 +17,7 @@ This skill guides an AI agent through the disciplined process of restructuring e
 
 2. **Select Refactoring Patterns**: For every identified smell, choose the most appropriate refactoring pattern. Common patterns include Extract Method, Rename Symbol, Simplify Conditional, Inline Variable, Replace Magic Number with Named Constant, Remove Dead Code, and Introduce Parameter Object. Explain the trade-offs and expected improvement for each proposed change.
 
-3. **Plan the Change Order**: Determine a safe sequence for applying refactorings. Prefer small, independent changes that can each be verified in isolation. Group related changes (e.g., extracting a helper then renaming it) and avoid interleaving unrelated transformations that make rollback difficult.
+3. **Plan the Change Order**: Determine a safe sequence for applying refactorings. Prefer small, independent changes that can each be verified in isolation. Group related changes (e.g., extracting a helper then renaming it) and avoid interleaving unrelated transformations that make rollback difficult. If an earlier step gave you a plan that ranks what to clean up first, start the order from it.
 
 4. **Apply Refactorings**: Transform the code one pattern at a time. Preserve the original public API and behavior. Use language-idiomatic constructs — list comprehensions in Python, destructuring in JavaScript, pattern matching in Rust, etc.
 

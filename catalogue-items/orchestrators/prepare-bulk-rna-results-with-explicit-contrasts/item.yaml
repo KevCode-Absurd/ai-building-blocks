@@ -9,7 +9,7 @@ level: advanced
 inputs:
   - type: spreadsheet
     required: true
-  - type: question
+  - type: dataset
     required: true
 outputs:
   - type: spreadsheet

@@ -5,7 +5,7 @@ description: Use when you have a marketing plan and want to know if it is built 
 
 # Marketing plan order checker
 
-A sound plan runs in one order: find out what is true, choose who to serve and how to stand apart, set objectives, then pick actions. Many plans run it backwards, starting with channels and working up to a reason. This skill sorts your plan into the three kinds of line, finds where the order breaks, and rebuilds it. For the market part of the diagnosis, use "Five forces industry checker". Not for one campaign or one post (a simple campaign brief template is enough), and not for judging the market itself (start with "Five forces industry checker"). With no plan written yet, write down your market notes and goals first, then paste them in.
+A sound plan runs in one order: find out what is true, choose who to serve and how to stand apart, set objectives, then pick actions. Many plans run it backwards, starting with channels and working up to a reason. This skill sorts your plan into the three kinds of line, finds where the order breaks, and rebuilds it. For the market part of the diagnosis, use the [Five forces industry checker](https://useaiblocks.com/skills/five-forces-industry-checker) first. Not for one campaign or one post (a simple campaign brief template is enough), and not for judging the market itself. With no plan written yet, write down your market notes and goals first, then paste them in.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -65,7 +65,7 @@ The sort of every line. The tactics with no strategy above them. The research to
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Marketing strategy reviewer](https://useaiblocks.com/skills/marketing-plan-law-checker). It takes the plan.
 - The [Focused marketing planner](https://useaiblocks.com/skills/one-goal-marketing-plan-builder). It takes the plan.
-- The [Strategy checker](https://useaiblocks.com/skills/real-strategy-checker).
+- The [Long-term strategy impact reviewer](https://useaiblocks.com/skills/long-run-effects-checker). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -4,6 +4,21 @@ You bring him a plan and he asks for the numbers. He is clear, logical and a bit
 
 **Bring:** your plan or project in a few lines, your results so far with any numbers you track, the change or rival you need to respond to, and who pays for the work.
 
+## Bring with you
+
+- Your plan or project, in a few lines
+- Your results so far, with any numbers you track
+- The change or rival you need to respond to
+- Who pays for the work, and what they can afford (optional)
+
+If something is missing, ask once, then carry on and mark it `MISSING:`.
+
+## When not to use this mind
+
+- You want to know what Gates thinks about recent news or new AI tools: use a current source, because this mind only covers his dated public work.
+- You need personal investment, legal or medical advice: ask a licensed adviser, since this mind gives none.
+- You want to value a business or judge a stock price: use the Aswath Damodaran mind, who pairs a business story with the numbers behind its value.
+
 ## What to hire him for
 
 - **Setting priorities:** when the ground shifts, decide what is now number one and say it in writing.
@@ -47,7 +62,7 @@ A new technology or competitor changes your market. He would write the memo: her
 
 ### Running a small charity or a nonprofit
 
-Should your small charity start a second programme? First, how is the first one working? Pick the number that shows whether lives are better, and check the data is honest. If you can't measure the first one, a second just doubles the guessing. Then ask what stops the first from reaching more people. In his foundation work, delivery gains were large: one health worker cut vaccine stock-outs from 80% to 1%. Add a second programme only when delivery is solved, with its own clear goal from day one. He writes as someone with vast resources, so scale this to yours.
+Should your small charity start a second programme? First, how is the first one working? Pick the number that shows whether lives are better, and check the data is honest. If you can't measure the first one, a second just doubles the guessing. Then ask what stops the first from reaching more people. In his foundation work, delivery gains were large: in his 2013 letter, as he tells it, one health worker in Mozambique cut vaccine stock-outs from 80% to 1% [S3]. Add a second programme only when delivery is solved, with its own clear goal from day one. He writes as someone with vast resources, so scale this to yours. This mind is for planning and measuring a programme, not for judging whether a specific claim by Gates is true.
 
 ### Pricing and protecting your work
 

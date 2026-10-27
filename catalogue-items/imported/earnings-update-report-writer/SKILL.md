@@ -24,7 +24,7 @@ never substitute a proxy and present it as the real thing.
 
 **Missing files.** `india-market-conventions`, `india-market-data` and `NOT-ADAPTABLE.md` are not in this folder. Without them, follow the two rules above, take figures only from the company's exchange filing (BSE or NSE) and the documents the user gives you, and name any gap.
 
-**US examples below.** The 10-Q, SEC, EDGAR and dollar examples in the sections below come from the original US skill. For an Indian company, use the exchange results filing (BSE or NSE), the results press release, the investor presentation and the concall transcript instead, and show amounts in ₹ crore. Do not cite a US form for an Indian issuer.
+**Wording from the US original.** Any 10-Q, SEC, EDGAR or dollar wording that is left in the sections below comes from the original US skill. For an Indian company, use the exchange results filing (BSE or NSE), the results press release, the investor presentation and the concall transcript instead, and show amounts in ₹ crore. Do not cite a US form for an Indian issuer.
 
 **Links.** Only link a document you actually opened. Never guess or complete a URL. If you did not open the page, write the document name and date with no link.
 
@@ -45,7 +45,7 @@ Create professional **EARNINGS UPDATE REPORTS** analyzing quarterly results for 
 ## When to Use
 
 Use when the user requests:
-- "Create an earnings update for [Company] Q3 2024"
+- "Create an earnings update for [Company] Q3 FY26"
 - "Analyze [Company]'s quarterly results"
 - "Post-earnings report for [Company]"
 - "Q1/Q2/Q3/Q4 update for [Company]"
@@ -64,7 +64,7 @@ Use when the user requests:
 
 ### 2. Beat/Miss Analysis
 - Lead with whether company beat or missed estimates
-- Quantify variances (e.g., "Revenue beat by $120M or 3%")
+- Quantify variances (for example, "Revenue beat by ₹[AMOUNT] crore or [PERCENT]%"). Use only figures from the filing and the consensus the user gave you.
 - Explain WHY results differed from expectations
 
 ### 3. Summary Format
@@ -79,9 +79,9 @@ Use when the user requests:
 **Include specific citations WITH CLICKABLE LINKS in every figure and table:**
 
 ```
-Source: Q3 2024 10-Q filed November 8, 2024; Company earnings release
-        [Hyperlink "10-Q" to: https://www.sec.gov/cgi-bin/viewer?accession=...]
-        [Hyperlink "earnings release" to: https://investor.company.com/news/q3-2024]
+Source: Q[N] FY[YY] results filing on [BSE or NSE], filed [DATE]; company results press release
+        [Hyperlink "results filing" to the exchange page you opened]
+        [Hyperlink "press release" to the company page you opened]
 ```
 
 **HOW HYPERLINKS SHOULD APPEAR IN WORD:**
@@ -93,10 +93,10 @@ Source: Q3 2024 10-Q filed November 8, 2024; Company earnings release
 
 Cite in every earnings update:
 - ✅ Earnings release (with date and URL)
-- ✅ 10-Q filing (with filing date and EDGAR link)
-- ✅ Earnings call transcript (with date)
+- ✅ Exchange results filing from BSE or NSE (with filing date and link)
+- ✅ Earnings call (concall) transcript (with date)
 - ✅ Investor presentation/supplemental materials (if available)
-- ✅ Consensus estimates source (Bloomberg/FactSet/etc. with date)
+- ✅ Consensus estimates source with date. Bloomberg and FactSet are paid services and optional. The user can paste consensus from any source they already have, and you must say where it came from.
 - ✅ Prior guidance (from previous quarter's materials)
 
 **REFERENCE SECTION WITH CLICKABLE HYPERLINKS:**
@@ -106,18 +106,18 @@ Include "Sources" section at end of report:
 ```
 SOURCES & REFERENCES
 
-Earnings Materials (Q3 2024):
-• Earnings Release (November 7, 2024)
-  [Hyperlink entire line to: https://investor.company.com/news/q3-2024-earnings]
+Earnings Materials (Q[N] FY[YY]):
+• Results press release ([DATE])
+  [Hyperlink to the company page you opened]
 
-• Form 10-Q (Filed November 8, 2024)
-  [Hyperlink to: https://www.sec.gov/cgi-bin/viewer?accession=...]
+• Exchange results filing on BSE or NSE (filed [DATE])
+  [Hyperlink to the exchange page you opened]
 
-• Earnings Call Transcript (November 7, 2024)
-  [Hyperlink to: https://seekingalpha.com/article/...]
+• Concall transcript ([DATE])
+  [Hyperlink to the transcript page you opened]
 
-• Investor Presentation (November 7, 2024)
-  [Hyperlink to: https://investor.company.com/presentations/q3-2024.pdf]
+• Investor presentation ([DATE])
+  [Hyperlink to the file you opened]
 ```
 
 **VERIFICATION CHECKLIST:**
@@ -128,7 +128,7 @@ Earnings Materials (Q3 2024):
 - [ ] Key statistics have footnotes
 - [ ] Sources section lists all materials with URLs
 - [ ] ALL URLs are CLICKABLE HYPERLINKS (not plain text)
-- [ ] All SEC filings hyperlinked to EDGAR viewer
+- [ ] All exchange filings hyperlinked to the BSE or NSE page you opened
 
 ### 5. Updated Estimates
 - Update forward estimates based on results
@@ -203,7 +203,7 @@ Verify content, formatting, accuracy, and timeliness before delivery.
 
 **Primary Deliverable**: DOCX report (8-12 pages)
 **File Name**: `[Company]_Q[Quarter]_[Year]_Earnings_Update.docx`
-**Example**: `Nike_Q2_FY24_Earnings_Update.docx`
+**Example**: `[Company]_Q2_FY26_Earnings_Update.docx`
 
 **Contents:**
 - Page 1: Summary with rating, price target, key takeaways

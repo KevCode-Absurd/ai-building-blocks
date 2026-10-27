@@ -13,9 +13,10 @@ Read [the original role profile](references/source-agent.md) before you start. I
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Meta ad copywriter](https://useaiblocks.com/skills/meta-ad-copywriter).
+- **Check it before it goes live** with the [Image ad reviewer](https://useaiblocks.com/skills/static-ad-critic). It takes the draft.
 - The [Call-to-action writer](https://useaiblocks.com/skills/call-to-action-writer). It takes the draft and plan.
-- The [Story carousel ad writer](https://useaiblocks.com/skills/story-carousel-ad-writer).
+- The [Sales copy editor](https://useaiblocks.com/skills/sales-copy-editor). It takes the draft.
+- The [Sales copy reviewer](https://useaiblocks.com/skills/sales-copy-reviewer). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -7,17 +7,17 @@ job: test-and-fix-code
 headline: Code habits reviewer
 subhead: Your code gets a score out of ten against the habits from The Pragmatic Programmer, plus a list of what to fix. It shows where repeated logic, tangled parts and unclear promises will make future changes expensive.
 explain: |
-  Your code gets a score out of ten against the habits from The Pragmatic Programmer, plus a list of what to fix. It shows where repeated logic, tangled parts and unclear promises will make future changes expensive.
+  Pick the part of your code you worry about, and see which habits it breaks before the next change costs you a week. This is an MIT-licensed copy of the pragmatic-programmer skill from Wondel.ai.
 
-  It checks seven questions: is each fact stored once, are layers independent, is there a thin working slice through the whole system, are the contracts at boundaries clear, are there broken windows left unfixed, can vendor or database choices be reversed, and are estimates given as ranges. Each yes adds points. The score bands tell you if you have no issues or a few that cost real effort, and each flagged problem comes with a fix.
+  It checks seven questions: is each fact stored once, are layers independent, is there a thin working slice through the whole system, are the contracts at boundaries clear, are there broken windows left unfixed, can vendor or database choices be reversed, and are estimates given as ranges. Each yes adds points. The score bands tell you if you have no issues or a few that cost real effort, and each flagged problem comes with a fix. The score is your AI's judgement against this seven-item list. It is not a measured code-quality number, so use it to decide what to look at, not to compare projects. It only suggests fixes. You apply them yourself, or take them to code-cleanup-planner or code-refactor-planner.
 when:
   - You are reviewing a design before the team builds on it.
   - Changing one feature keeps breaking three others.
   - Business logic is copied into several places.
   - You want a quick quality score for a codebase.
 not_for:
-  - "You want line-level tidying of names and functions: use the Code cleanup planner."
-  - "You want to restructure messy code step by step: use the Code refactor planner."
+  - "You want line-level tidying of names and functions: use code-cleanup-planner."
+  - "You want to restructure messy code step by step: use code-refactor-planner."
   - "You have a small script or a throwaway prototype: skip this and just run it, since the habits pay off only when code lives long."
 you_give:
   - Code or a design description

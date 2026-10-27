@@ -46,7 +46,7 @@ Converts Lanelet2 `.osm` files to RoadRunner HD Map `.rrhd` format.
 ## Key Rules
 
 - **Always write to .m files** when executing code. Never put multi-line MATLAB code directly in `evaluate_matlab_code`. Write to a `.m` file, run with `run_matlab_file`, edit on error. Exception: if the user asks to "show the pattern" or says "do not execute", show code inline without writing files.
-- **ALL pipeline steps are mandatory.** Do NOT stop after writing lanes/boundaries — junctions, curve markings, barriers, signs, and speed limits must all be built.
+- **ALL pipeline steps are mandatory, except where the files listed under Supporting material availability are missing.** Do NOT stop after writing lanes/boundaries just because it is tedious — junctions, curve markings, barriers, signs, and speed limits must all be built. But in this catalog copy, stop before center line synthesis, closed-road splitting, endpoint snapping, height conflicts, boundary alignment and boundary deduplication, and ask the user for the eight missing files. Never guess that geometry.
 - **Boundary geometry is IMMUTABLE.** Never flip, resample, project, or modify boundary points.
 - **One boundary object per way.** Deduplicate via `wayToBndID` map.
 - **Detect alignment for EVERY lane.** Never hardcode `"Forward"` for all boundaries.

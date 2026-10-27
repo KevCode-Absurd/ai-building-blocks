@@ -43,23 +43,32 @@ Fill `assets/pricing_brief_template.md` (≈ 20 min). Capture: industry, deal si
 
 ### Step 2 — Pick the pricing model
 
-Run `scripts/pricing_model_picker.py --input brief.json --profile saas --output markdown`. Output ranks 5 models by fit-score 0-100 with trade-offs. Decision logic is deterministic: low usage variance + high seat-attach → subscription wins; power-law usage + variable customer value → usage-based wins.
+Run `scripts/pricing_model_picker.py --input brief.json --profile saas --output markdown`. `brief.json` holds the answers from Step 1, with these fields (use the user's real answers; leave a field out if unknown):
+- `industry`: text, e.g. "[INDUSTRY]"
+- `deal_size_avg`: number, average deal size
+- `customer_count`: whole number
+- `value_drivers`: list of text, what customers gain
+- `adoption_curve`: text, e.g. "bottom-up"
+- `consumption_pattern`: numbers from 0 to 1 for `seat-based`, `usage-based`, `value-based`, `hybrid`
+- `competitor_pricing_models`: list of text
+
+Output ranks 5 models by fit-score 0-100 with trade-offs. Decision logic is deterministic: low usage variance + high seat-attach → subscription wins; power-law usage + variable customer value → usage-based wins.
 
 ### Step 3 — Validate WTP with Van Westendorp PSM
 
 If a survey plan from the willingness to pay survey planner is in the chat, use its questions and its sums to read the answers you collected.
 
-If you have survey data (≥ 4 questions per respondent: too cheap / bargain / getting expensive / too expensive), run `scripts/wtp_analyzer.py --input survey.json --output markdown`. Output: 4 intersection points (OPP, IDP, PMC, PME) and the Range of Acceptable Prices.
+If you have survey data (≥ 4 questions per respondent: too cheap / bargain / getting expensive / too expensive), run `scripts/wtp_analyzer.py --input survey.json --output markdown`. `survey.json` is `{"respondents": [{"too_cheap": [PRICE], "bargain": [PRICE], "getting_expensive": [PRICE], "too_expensive": [PRICE]}, ...]}`, one entry per person, with the prices they gave. Output: 4 intersection points (OPP, IDP, PMC, PME) and the Range of Acceptable Prices.
 
 PSM gives a **range**, not the price. See `references/van_westendorp_methodology.md` for common misinterpretations.
 
 ### Step 4 — Design packaging
 
-Run `scripts/packaging_designer.py --input features.json --profile saas --output markdown`. Output: 3-tier Good/Better/Best assignment with anti-pattern flags (decoy tier, feature dump, no upgrade trigger, Bronze loss leader, Enterprise no-anchor).
+Run `scripts/packaging_designer.py --input features.json --profile saas --output markdown`. `features.json` holds `segments` (list of customer groups), optional `current_pricing` (`good`, `better`, `best` prices), and `features`: a list where each has `name`, `importance` (0 to 1), `cost_to_serve` (relative cost, e.g. 1 for average) and `segment_fit` (0 to 1 per segment). Take these from the user's own feature list. Output: 3-tier Good/Better/Best assignment with anti-pattern flags (decoy tier, feature dump, no upgrade trigger, Bronze loss leader, Enterprise no-anchor).
 
 ### Step 5 — Decide
 
-Take model + range + packaging into the pricing committee. Skill does not commit the number — you do.
+Hand back one markdown report with these sections, in order: the ranked models with fit scores and trade-offs; the four price points and the Range of Acceptable Prices (with the sample-size warning if there are fewer than 30 respondents); the Good, Better, Best tiers with their features; and the packaging flags. Take it into the pricing committee. Skill does not commit the number — you do.
 
 ## Scripts
 
@@ -67,7 +76,7 @@ Take model + range + packaging into the pricing committee. Skill does not commit
 - `scripts/wtp_analyzer.py` — Van Westendorp PSM implementation
 - `scripts/packaging_designer.py` — Good/Better/Best tier designer with anti-pattern detection
 
-All scripts: stdlib only. `--help` and `--sample` work on all three.
+All scripts: stdlib only. `--help` and `--sample` work on all three. The `--sample` data is made-up demo data. Never quote it as a result for the user's product.
 
 ## Quick example
 
@@ -97,7 +106,7 @@ cd commercial/skills/pricing-strategist && python3 scripts/pricing_model_picker.
 - **Treating PSM as "the price."** PSM gives a Range of Acceptable Prices (RAP) and an Optimal Price Point (OPP). Test the range in market, don't anchor on a single intersection.
 - **Picking value-based pricing without a measurable value metric.** Without instrumentation to show customer ROI, value-based collapses into "whatever they'll pay" — which is just bad usage-based pricing.
 - **Designing tiers before picking a model.** Tier structure depends on the model. Run pricing_model_picker first.
-- **Packaging "feature dumps" into the Best tier.** If Best has 3x the features for 2x the price, customers buy Better and never upgrade. See `packaging_anti_patterns.md`.
+- **Packaging "feature dumps" into the Best tier.** If Best has about 3x the features for about 2x the price, customers buy Better and never upgrade. See `packaging_anti_patterns.md`.
 - **Hidden usage-based pricing inside subscription tiers.** "Up to 100k API calls/mo, then $X per 1k" disguised as a "Pro tier" is two pricing models in one. Customers notice. Pick one.
 - **Confusing this skill with deal-desk.** Pricing strategy = the menu. Deal-desk = approving discounts off the menu. Different decision, different cadence, different owner.
 
@@ -116,26 +125,26 @@ Walked one at a time by `/cs:grill-commercial` or the orchestrator. Recommended 
 
 1. **"Is your customer paying for outcomes, seats, or usage?"**
    Recommended: outcomes (value-based) if you can measure them; usage if marginal cost is variable; seats only if usage is roughly flat per user.
-   Canon: Ramanujam 2016 (*Monetizing Innovation*) — Mistake #1 of 9: seat-based pricing on a usage-variable product caps TAM at ~20% of WTP.
+   Canon: Ramanujam 2016 (*Monetizing Innovation*) — Mistake #1 of 9: seat-based pricing on a usage-variable product caps TAM at ~20% of WTP (unverified rule of thumb, check before use).
 
 2. **"Do you have a measurable value metric, or are you guessing?"**
    Recommended: instrument the value metric BEFORE going to market with value-based pricing.
    Canon: Patrick Campbell / ProfitWell research — value-based without instrumentation collapses into bad usage-based pricing.
 
 3. **"What's the variance in customer usage across your top decile vs. median?"**
-   Recommended: variance > 10x → usage-based wins; variance < 3x → subscription wins; in between → hybrid with usage overage.
-   Canon: Kyle Poyar (*Growth Unhinged*) — high-variance products lose 60%+ of revenue on flat-rate plans.
+   Recommended: variance > 10x → usage-based wins; variance < 3x → subscription wins; in between → hybrid with usage overage (unverified rule of thumb, check before use).
+   Canon: Kyle Poyar (*Growth Unhinged*) — high-variance products lose 60%+ of revenue on flat-rate plans (unverified rule of thumb, check before use).
 
 4. **"What's your competitor's pricing model, and why are you choosing the same or different?"**
    Recommended: surface the differentiation hypothesis explicitly. Identical pricing = identical value claim.
    Canon: David Skok (*For Entrepreneurs*) — pricing is a positioning signal.
 
 5. **"What sample size do you have for WTP analysis, and is it segmented?"**
-   Recommended: N≥30 per segment for PSM, N≥100 for conjoint.
+   Recommended: N≥30 per segment for PSM, N≥100 for conjoint (unverified rule of thumb, check before use).
    Canon: van Westendorp 1976 / Sawtooth Software methodology — sub-30 PSM is statistical noise.
 
 6. **"What's the ONE feature that forces a tier upgrade?"**
    Recommended: every Better and Best tier needs a single non-negotiable upgrade trigger.
-   Canon: Ramanujam (*Monetizing Innovation*) — Mistake #4: tiers with no clear differentiator make 70% of customers pick the cheapest.
+   Canon: Ramanujam (*Monetizing Innovation*) — Mistake #4: tiers with no clear differentiator make 70% of customers pick the cheapest (unverified rule of thumb, check before use).
 
 Walk depth-first. Lock 1-3 before opening 4-6. After all 6 are answered, invoke `pricing_model_picker.py` → `wtp_analyzer.py` → `packaging_designer.py` in sequence.

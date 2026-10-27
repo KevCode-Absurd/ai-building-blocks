@@ -194,12 +194,12 @@ Students investigate the fast fashion phenomenon through four disciplinary lense
 **Science: What does fast fashion do to the planet?**
 - **Knowledge:** Properties of textile fibres (natural vs. synthetic), chemical processes in dyeing and finishing, water pollution (chemical effluent from factories), microplastic pollution (synthetic fibres released in washing), carbon emissions from global transportation
 - **Skills:** Scientific enquiry (testing microplastic release from different fabrics), data collection, understanding chemical processes
-- **Why this subject is necessary:** Without Science, students cannot understand the ENVIRONMENTAL cost. "Pollution" remains vague unless students understand the specific chemistry — what chemicals are in textile dyes, what happens when synthetic fibres enter waterways, why polyester takes 200 years to decompose.
+- **Why this subject is necessary:** Without Science, students cannot understand the ENVIRONMENTAL cost. "Pollution" remains vague unless students understand the specific chemistry — what chemicals are in textile dyes, what happens when synthetic fibres enter waterways, why polyester takes [N] years to decompose (needs a source).
 
 **Mathematics: How big is the problem, and can we trust the numbers?**
-- **Knowledge:** Percentages (cost breakdowns — what percentage of a £5 t-shirt goes to the worker?), large number sense (2.7 billion garments produced annually — how to comprehend this), data interpretation (reading and critiquing graphs from campaign organisations and industry reports)
+- **Knowledge:** Percentages (cost breakdowns — what percentage of a £5 t-shirt goes to the worker?), large number sense ([N] garments produced annually, needs a source — how to comprehend this), data interpretation (reading and critiquing graphs from campaign organisations and industry reports)
 - **Skills:** Calculating percentages, interpreting and comparing data from different sources, understanding statistical claims, creating data visualisations
-- **Why this subject is necessary:** Without Mathematics, students cannot grasp the SCALE of the problem. "Lots of clothes are wasted" is vague. "In the UK, 350,000 tonnes of clothing goes to landfill each year — that's the weight of 35,000 double-decker buses" is specific and comprehensible. Mathematics also provides critical tools for evaluating competing claims from industry and campaign groups.
+- **Why this subject is necessary:** Without Mathematics, students cannot grasp the SCALE of the problem. "Lots of clothes are wasted" is vague. "In the UK, [N] tonnes of clothing goes to landfill each year — that's the weight of [N] double-decker buses" (figures need a source) is specific and comprehensible. Mathematics also provides critical tools for evaluating competing claims from industry and campaign groups.
 
 **Ethics/PSHE: What should we do about it?**
 - **Knowledge:** Ethical frameworks (rights, consequences, fairness), consumer responsibility, the concept of "ethical consumption," tension between individual choice and systemic change, workers' rights (UN Declaration of Human Rights, ILO conventions)
@@ -212,7 +212,7 @@ Students investigate the fast fashion phenomenon through four disciplinary lense
 |---|---|---|
 | **Supply chain mapping** | Geography maps the production journey of a t-shirt (cotton field → spinner → factory → ship → warehouse → shop) | Maths calculates the cost at each stage (what % of the retail price goes where?) |
 | **Environmental evidence** | Science identifies specific pollutants from textile production | Geography maps where the pollution occurs (river systems near factories in producing countries, not consuming countries) |
-| **Scale of the problem** | Maths analyses production and waste statistics | Ethics uses the data to evaluate moral responsibility ("If 87% of clothing fibre ends up in landfill or incineration, is this a design problem or a consumer problem?") |
+| **Scale of the problem** | Maths analyses production and waste statistics | Ethics uses the data to evaluate moral responsibility ("If [N]% of clothing fibre ends up in landfill or incineration (needs a source), is this a design problem or a consumer problem?") |
 | **Worker conditions** | Geography describes working conditions and wages in garment factories | Ethics examines these through a rights framework ("Does this violate Article 23 of the UDHR?") |
 | **The True Cost Label** | ALL subjects contribute data and analysis | Students synthesise all four lenses into a single product |
 
@@ -232,7 +232,7 @@ Students investigate the fast fashion phenomenon through four disciplinary lense
 
 *Ethics/PSHE (2 lessons):* Lesson 1: The ethical debate. Present three positions: "Buy fewer, better clothes" (consumer responsibility), "Companies should pay living wages" (corporate responsibility), "Governments should regulate" (systemic change). Students evaluate each using ethical frameworks. Lesson 2: "Is boycotting ethical?" — if consumers stop buying from Bangladesh, factory workers lose their jobs. Students grapple with the unintended consequences of well-intentioned action.
 
-*Mathematics (1 lesson):* Evaluating competing claims. Students are given two data sources: an industry report claiming "fast fashion has reduced clothing costs, benefiting low-income families" and a campaign report claiming "fast fashion produces 10% of global carbon emissions." Evaluate both: What data is being used? Is it reliable? Are the claims accurate? Students learn to read data critically.
+*Mathematics (1 lesson):* Evaluating competing claims. Students are given two data sources: an industry report claiming "fast fashion has reduced clothing costs, benefiting low-income families" and a campaign report claiming "fast fashion produces [N]% of global carbon emissions" (a claim for students to test, with a real report supplied by the teacher). Evaluate both: What data is being used? Is it reliable? Are the claims accurate? Students learn to read data critically.
 
 *ALL subjects (1 lesson — combined or coordinated):* Create the "True Cost Label." Each student designs a label for a garment that communicates: where it was made and who made it (Geography), its environmental impact (Science), the cost breakdown (Maths), and an ethical rating (Ethics). The label must be evidence-based — every claim must be supported by data from the unit.
 

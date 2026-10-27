@@ -256,6 +256,8 @@ Document every exception. Track which non-standard terms get requested most — 
 
 ### Enrichment Tools
 
+These are paid services. Each needs its own account and plan. Enrichment is optional: you can design the handoff rules without any of them.
+
 | Tool | Strength |
 |------|----------|
 | Clay | Waterfall enrichment across many providers |

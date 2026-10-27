@@ -13,8 +13,11 @@ Read [the original role profile](references/source-agent.md) before you start. I
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [API designer](https://useaiblocks.com/skills/api-designer).
-- The [Software package upgrade planner](https://useaiblocks.com/skills/major-upgrade-planner).
+- The [OpenAPI app builder](https://useaiblocks.com/skills/build-an-app-from-an-openapi-spec). It takes the API spec.
+- The [API design reviewer](https://useaiblocks.com/skills/api-design-reviewer). It takes the API spec.
+- The [AI coding task brief writer](https://useaiblocks.com/skills/coding-agent-handoff-writer). It takes the plan.
+- The [Process and behavior change planner](https://useaiblocks.com/skills/structure-behaviour-split). It takes the plan and audit report.
+- The [API test planner](https://useaiblocks.com/skills/agency-testing-api-tester). It takes the API spec.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -26,10 +29,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Codebase** (yours): a project's code, in a folder or repo the AI can open.
+- **Your API spec** (yours): the API's endpoints, data shapes, sign-in method and errors, such as an OpenAPI file.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, codebase, your API spec. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -38,6 +42,8 @@ How to start:
 <!-- /needs -->
 
 ## What to collect first
+
+These are the inputs that count. If the generic "Before you start" list above asks for something else, such as a question or source text, ignore that part.
 
 Ask once for anything missing. Never invent it. Mark each gap `MISSING:`, or label a stand-in `ASSUMED:` and say what to replace it with.
 
@@ -70,6 +76,8 @@ Use these headings, in this order:
 6. SDK, docs and quickstart
 7. Checks for CI
 8. Open questions and checks still needed
+
+Heading 8 is also your CHECKS MISSED list: name every check that failed or could not run, or write "none".
 
 When you show spec snippets, label them as examples. Say that a full OpenAPI 3.1 document must be checked with a validator, which you cannot run in a plain chat.
 

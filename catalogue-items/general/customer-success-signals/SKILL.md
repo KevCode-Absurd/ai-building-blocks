@@ -23,7 +23,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your customer list** (yours): a customer or order export with dates, amounts and what they bought.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
@@ -52,7 +52,7 @@ The list of who stayed and who left is the one input it cannot run without. Ask 
 4. **Find what stayers did that others did not.** Rank actions by the gap between the groups. Prefer an action that is early, that a customer can do on their own, and that your team can influence. Ignore actions that happen only because the customer stayed long enough.
 5. **Pick one action.** Choose the clearest, most countable action. Write why it was chosen and what the next best was. Do not pick a feeling such as "engaged".
 6. **Write the sign.** Use this form: P percent of customers do E within T days. Set T so you can read it in 30 to 60 days. Set P from the percent of stayers who did it, rounded down to a number you could reach. Show your working.
-7. **Plan the cohort check.** Write how to count it: take all customers who started in one week or month, count how many did the action within T days, and compare the percent with P. Name the first date to check.
+7. **Plan the cohort check.** Write how to count it: take all customers who started in one week or month, count how many did the action within T days, and compare the percent with P. Name the first date to check. Say what to do if the first cohort misses P: keep the sign and check the next cohort. If two cohorts in a row miss it, test the next best action from step 5, or lower P and say why.
 8. **Separate message fit from product fit.** Look for customers who left without ever taking the action (the message may have promised something the product does not do) and customers who took the action and still left (the product may not deliver). Write one line on which one is more likely, or `MISSING:` if the data cannot say.
 9. **Check the economics.** If cost figures were given, work out lifetime value divided by cost to win. Write the ratio. If it is poor, say that adding sellers will not help until customers stay longer.
 10. **Check it.** Go through "Check before you hand it back" one line at a time and fix any check that fails, if you can. Under CHECKS MISSED, write one line for each check still missed and why, or "none".

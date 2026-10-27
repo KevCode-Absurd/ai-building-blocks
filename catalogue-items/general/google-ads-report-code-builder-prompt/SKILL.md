@@ -5,13 +5,17 @@ description: Get a coding brief for a Google Ads report with matched dates, clea
 
 # Google Ads report coding prompt
 
+Use it to get a coding brief for a monthly Google Ads report in your own tool. It needs your code folder and your Google Ads details.
+
+Not for: Meta ads only (use the [Meta Ads reporting app planner](https://useaiblocks.com/prompts/meta-ads-report-code-builder-prompt)), one report across a whole manager account as a single total (this brief keeps each customer separate, so run it once per customer), or a finished report with no code (export your data to a spreadsheet and ask your AI to summarize it).
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Google Ads Quality Score tool planner](https://useaiblocks.com/prompts/build-the-quality-score-triage-module-builder-prompt).
-- The [Google search term code planner](https://useaiblocks.com/prompts/google-search-term-code-prompt).
-- The [Meta Ads reporting app planner](https://useaiblocks.com/prompts/meta-ads-report-code-builder-prompt).
+- The [Simple code coach](https://useaiblocks.com/skills/simple-code-coach). It takes the code change.
+- The [Pull request writer](https://useaiblocks.com/skills/pull-request-writer). It takes the code change.
+- The [Oracle migration risk reviewer](https://useaiblocks.com/skills/copilot-reviewing-oracle-to-postgres-migration). It takes the code change.
 - The [Code change reviewer](https://useaiblocks.com/skills/code-change-reviewer). It takes the code change.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

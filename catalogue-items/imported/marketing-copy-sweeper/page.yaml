@@ -10,6 +10,8 @@ explain: |
   Your copy, tightened in seven set passes, each on one thing: clarity, voice, proof, calls to action and more. One focused pass at a time catches problems that a single read-through misses.
 
   First it decides which mode fits. If the draft is blank or generic, it rebuilds from your facts. If it has a real voice, it restores that voice and keeps your argument and words. If you only want one line changed, it skips the passes, changes only what you asked and returns those lines with a reason. It reads your saved product and brand context first if you have it. Every edit has a stated reason, and your core message stays as written.
+
+  The seven passes are clarity, voice and tone, so what, prove it, specificity, heightened emotion and zero risk. Zero risk means removing doubts that stop a reader from acting.
 when:
   - Your landing page draft is wordy and you cannot see why.
   - You want a final polish on email copy before sending.
@@ -31,12 +33,15 @@ you_get:
   - Only the changed lines for a small edit
 how_to_use:
   - Before you paste, gather the goal of the copy and any real proof you have, such as numbers and customer quotes. A saved brand-context file is optional.
-  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed. The skill points to files in its references folder (checklist.md, plain-english-alternatives.md, content-refresh.md). It works from the main skill text alone. Paste checklist.md too if you want the full final check.
   - Paste the copy you want edited.
   - Say the goal of the copy, such as a landing page or a sales email.
   - Add your brand voice notes if you have them (optional).
   - Say if you want a full edit or just one line changed.
   - "Read the change table, then check any [NEED: ...] gaps and fill them with real facts."
+  - Run the sweep again on the revised copy to check it. If the copy needs a new draft more than an edit, use the Page copywriter.
+next:
+  - page-copywriter
 output_sample:
   input:
     - The copy you want edited

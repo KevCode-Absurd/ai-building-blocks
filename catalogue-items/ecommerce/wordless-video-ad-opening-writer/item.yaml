@@ -23,6 +23,8 @@ outputs:
     required: true
   - type: video_prompt
     required: true
+  - type: shot_list
+    required: true
   - type: edit_plan
     required: true
 uses:

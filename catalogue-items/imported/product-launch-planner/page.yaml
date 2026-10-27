@@ -24,6 +24,7 @@ you_give:
   - Your target audience
   - Your target date and available channels
   - Your product context file (optional)
+  - Your stage today, such as idea, prototype or live product, so finished phases can be skipped
 you_get:
   - A phased launch timeline
   - Channel recommendations

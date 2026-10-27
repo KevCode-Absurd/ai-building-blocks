@@ -65,7 +65,7 @@ The roles and what each owns. A job card for each role. The missed-standard rule
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Second location readiness checker](https://useaiblocks.com/skills/second-location-check). It takes the plan.
 - The [Go or no-go launch checker](https://useaiblocks.com/skills/go-or-no-go-launch-checker). It takes the plan.
-- The [Values-based weekly planner](https://useaiblocks.com/skills/values-to-week-planner). It takes the plan.
+- The [Customer success metric planner](https://useaiblocks.com/skills/customer-progress-measure-picker). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -34,7 +34,7 @@ when:
 not_for:
   - You only want a table layout for an app. Use the Backend Architect agent.
   - You want an AI to answer questions from documents by search, with no graph. Use the RAG Pipeline Engineer agent.
-  - Your data is messy and needs cleaning first. Use the AI Data Remediation Engineer agent.
+  - Your data is messy and needs cleaning first. Use the Messy data cleanup agent.
 you_give:
   - Three to five sample documents, pasted or attached
   - The questions the graph must answer, such as "which services depend on billing?"

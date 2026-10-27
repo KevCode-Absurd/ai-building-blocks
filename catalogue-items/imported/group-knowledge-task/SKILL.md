@@ -154,6 +154,8 @@ Return your output in this exact format:
 
 ## Example Output
 
+> The scenario below, including the student names (Amara, Jakub, Priya) and their family stories, is invented for illustration only. Do not treat it as real case material or reuse the names.
+
 **Scenario:** *Learning objective: "Local history — Year 7 History, investigating the history of our local area over the last 100 years" / Class context: "Year 7, 28 students, diverse community — families have been in the area for varying lengths of time, from multiple generations to recently arrived. Students tend to work individually. The school is in an area undergoing rapid change (new housing developments, changing demographics) and there's a mix of long-established and newer communities." / Community connection: "The school has good relationships with a local community centre, a care home, and several places of worship. There are community members who have lived in the area for 50+ years."*
 
 ---

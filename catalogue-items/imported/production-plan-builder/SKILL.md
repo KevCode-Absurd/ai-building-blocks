@@ -7,7 +7,9 @@ description: When the user wants to create detailed production schedules, develo
 
 You are an expert in Master Production Scheduling (MPS) and production planning. Your goal is to help organizations create feasible, optimized production schedules that balance demand requirements with capacity constraints while maximizing efficiency and service levels.
 
-> **Read this first (added by AI Blocks).** The Python blocks below are reference templates, not tested tools. The text and the code do not always match: the available-to-promise rule in the text differs from the code, and the example sets `lead_time` but never uses it, so its schedule ignores lead times. If your AI cannot run code, follow the steps in plain language and do the sums in a table. Treat every plan as a draft. A planner must check it against real capacity and lead times before any delivery date is promised to a customer.
+If you have last week's plan or a plan from an earlier step, give it too, so the new plan can show what changed.
+
+> **Read this first (added by AI Blocks).** The Python blocks below are reference templates, not tested tools. We changed the code so its available-to-promise rule matches the text. The example still sets `lead_time` but never uses it, so its schedule ignores lead times. Add lead times by hand. If your AI cannot run code, follow the steps in plain language and do the sums in a table. Treat every plan as a draft. A planner must check it against real capacity and lead times before any delivery date is promised to a customer.
 
 ## Initial Assessment
 
@@ -274,7 +276,9 @@ class MasterProductionSchedule:
                     # Lot-for-lot
                     mps_quantity = shortage
 
-                # Account for lead time (schedule in future period)
+                # NOTE: lead time is not applied in this simplified example.
+                # In a real plan, start each lot self.lead_time periods before
+                # its receipt period t. Add lead times by hand.
                 mps_receipt_period = t
             else:
                 mps_quantity = 0
@@ -283,12 +287,9 @@ class MasterProductionSchedule:
             # Update projected available
             projected_available = projected_available + mps_quantity - total_demand
 
-            # Calculate Available-to-Promise (ATP)
-            # ATP[t] = MPS[t] - sum(orders from t to next MPS)
-            if mps_quantity > 0:
-                atp = mps_quantity - orders
-            else:
-                atp = 0
+            # Available-to-Promise (ATP) is filled in after this loop,
+            # using the rule in Step 4 (MPS minus the orders up to the next MPS).
+            atp = 0
 
             mps_table.append({
                 'period': t + 1,
@@ -300,7 +301,26 @@ class MasterProductionSchedule:
                 'atp': max(0, atp)
             })
 
-        return pd.DataFrame(mps_table)
+        df = pd.DataFrame(mps_table)
+
+        # ATP rule from Step 4: first period = on hand + MPS - orders;
+        # a later period with an MPS = MPS - orders until the next MPS
+        atp_values = [0] * len(df)
+        for i in range(len(df)):
+            if i == 0:
+                atp_values[i] = (self.beginning_inventory
+                                 + df.loc[i, 'mps_quantity']
+                                 - df.loc[i, 'customer_orders'])
+            elif df.loc[i, 'mps_quantity'] > 0:
+                orders_to_next_mps = 0
+                for j in range(i, len(df)):
+                    if j > i and df.loc[j, 'mps_quantity'] > 0:
+                        break
+                    orders_to_next_mps += df.loc[j, 'customer_orders']
+                atp_values[i] = df.loc[i, 'mps_quantity'] - orders_to_next_mps
+        df['atp'] = [max(0, a) for a in atp_values]
+
+        return df
 
     def calculate_rough_cut_capacity(self, mps_table, routing_time_per_unit):
         """
@@ -560,11 +580,11 @@ class AvailableToPromise:
 
                     # Look ahead for orders until next MPS
                     for j in range(i, len(atp_table)):
-                        orders_to_next_mps += atp_table.loc[j, 'customer_orders']
-
-                        # Stop at next MPS
+                        # Stop at next MPS (its orders belong to that MPS)
                         if j > i and atp_table.loc[j, 'mps_quantity'] > 0:
                             break
+
+                        orders_to_next_mps += atp_table.loc[j, 'customer_orders']
 
                     atp_table.loc[i, 'atp'] = (
                         atp_table.loc[i, 'mps_quantity'] - orders_to_next_mps

@@ -13,11 +13,15 @@ inputs:
     required: true
   - type: web_page
     required: false
-  - type: spreadsheet
+  - type: search_query_report
+    required: false
+  - type: keyword_list
     required: false
 outputs:
   - type: audit_report
   - type: plan
+  - type: keyword_list
+    required: true
 uses: []
 steps: []
 origin: imported

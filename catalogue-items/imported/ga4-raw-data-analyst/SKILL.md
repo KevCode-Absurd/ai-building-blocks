@@ -13,6 +13,17 @@ Use this skill for raw daily event exports. GA4 Data API reports, the GA4 UI and
 
 Read the [schema prerequisites](references/schema.md), [channel and session rules](references/channel_rules.md) and [execution contract](references/export-execution-contract.md) before running a property query. [Verification status](references/verification-status.md) distinguishes native evidence from model evaluation and UI parity.
 
+## What you need before you start
+
+Gather these first. If one is missing, ask once, then stop and say what is missing.
+
+- The GA4 export dataset (the BigQuery project and dataset name) and the first and last date to check.
+- A billing project and a data location. BigQuery bills the queries to the billing project, so ask the user which project to charge. Do not accept the wrapper default silently.
+- A signed-in `bq` or `gcloud` login with permission to run queries, and Node.js 20 or newer.
+- Optionally, the key events to count if they are not `purchase`, `generate_lead` and `sign_up`.
+
+**What you hand back:** a JSON report saved to the Downloads folder, with one result for each of the eight SQL files, plus a short note on why the numbers differ from the GA4 screen. Open the reconciliation result first. Send the list of gaps to whoever owns tracking.
+
 ## Establish the report boundary
 
 1. Obtain the exact authorized source project/dataset, billing project, location and inclusive daily date window. Inspect the selected table metadata and nested schema. A NULL field value differs from an absent schema field.
@@ -108,7 +119,7 @@ bash scripts/run_checks.sh example-project analytics_synthetic 20260901 20260903
   --report "$HOME/Downloads/ga4-results.json"
 ```
 
-Billing defaults to source project and location to `US`; these are wrapper defaults, not discovered source metadata. `MAX_BYTES` defaults to `1073741824` per job. An explicit override is supported, but the wrapper never raises it automatically. All eight jobs use Standard SQL and no query cache. Dates, identifiers, caps and every placeholder are validated before credential access. The allowlist is fixed; no arbitrary SQL filename is accepted.
+Billing defaults to source project and location to `US`; these are wrapper defaults, not discovered source metadata. Because the default can bill a project the user did not mean, always pass `--billing-project` explicitly after the user confirms which project to charge, and show the cost estimate before every run. `MAX_BYTES` defaults to `1073741824` per job. An explicit override is supported, but the wrapper never raises it automatically. All eight jobs use Standard SQL and no query cache. Dates, identifiers, caps and every placeholder are validated before credential access. The allowlist is fixed; no arbitrary SQL filename is accepted.
 
 Reports are exclusively created, mode `0600`, in Downloads by default. They retain exact source/query hashes, configuration, IDs before submission, native metadata/errors and every result page. INT64/NUMERIC/BIGNUMERIC remain strings. Native TIMESTAMP values are retrieved as exact microsecond strings via [DataFormatOptions](https://docs.cloud.google.com/bigquery/docs/reference/rest/v2/DataFormatOptions); `result_json` strings remain unchanged alongside their parsed form. Customer evidence stays private.
 

@@ -10,6 +10,8 @@ level: beginner
 inputs:
   - type: copy_draft
     required: true
+  - type: source_text
+    required: false
   - type: email_flow
     required: false
 outputs:

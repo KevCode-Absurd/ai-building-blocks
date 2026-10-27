@@ -12,6 +12,8 @@ inputs:
     required: false
   - type: plan
     required: false
+  - type: tool_connection
+    required: false
 outputs:
   - type: plan
   - type: copy_draft

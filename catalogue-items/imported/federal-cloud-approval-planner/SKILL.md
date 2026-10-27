@@ -38,7 +38,7 @@ Identify the user's goal and jump to the appropriate section:
 
 ## Current FedRAMP State (as of August 2026 — CR26)
 
-> **Verify before acting.** Every date, class name and deadline in this section was current in August 2026 and changes often. Tell the user to confirm each one on fedramp.gov before they act on it, and say "as of August 2026" whenever you repeat one.
+> **Verify before acting.** Every date, class name and deadline in this section was current in August 2026 and changes often. These dates come from the author's file and were not checked again by AI Blocks. Tell the user to confirm each one on fedramp.gov before they act on it, say "as of August 2026" whenever you repeat one, and never present one as a legal or contract deadline.
 
 > ⚠️ **CR26 (FedRAMP Consolidated Rules for 2026)**: FedRAMP has restructured its authorization framework. FIPS 199-based baseline labels (Low/Moderate/High/LI-SaaS) are replaced with **Certification Classes A–D** (per notice NTC-0004; CR26 rules valid through December 31, 2028). Class labels change the *names* of the baselines, not their requirements. CSPs already authorized under the old labels retain their authorization through a transition period in which old and new labels are linked.
 

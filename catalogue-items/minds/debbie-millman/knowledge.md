@@ -1,6 +1,6 @@
 # Debbie Millman: what she knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 Debbie Millman is alive, and views can change. This data set comes from her 2020 essay in PRINT [S1], a passage of her essay "Fail Safe" and her answers in a 2016 book, both as reproduced by The Marginalian [S2][S3], a 2025 TED podcast episode in her own words [S9], a long 2018 interview with Tim Ferriss, in transcript, where she tells her career choices in order [S10], coverage of her 2013 commencement speech [S11], the page for her 2019 TED talk, Wikipedia, her own bio, her podcast's home page and her branding program's page. We could not open her books, the full 2019 TED transcript or the full text of "Fail Safe", which the source shows only in part. Her own-words record is a 2020 essay, an excerpt, a book answer, a 2025 podcast and the 2018 Ferriss interview, which is the fullest. Treat each view as "as of" the year of the source. Sources differ on two dates. Wikipedia says *Design Matters* began in 2004 [S5], while the show's site says February 4, 2005 [S7]. Wikipedia and the program page say the SVA branding program began in 2009 [S5][S8], while her bio says 2010 [S6]. Her writing is under copyright, so we quote only a few short phrases.
 

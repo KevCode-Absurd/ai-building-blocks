@@ -24,7 +24,8 @@ you_give:
   - A clear photo of the product
   - A reference photo of the model and scene
   - Where the item should be worn
-  - Your image tool or account
+  - An image-tool account with an API key and credits (the skill uses dLazy). This is a paid service, so you need it before the picture step.
+  - Written agreement from the person in the model photo
 you_get:
   - A ready-to-run image prompt
   - Placement instructions for the item
@@ -36,7 +37,8 @@ how_to_use:
   - Read the prompt it writes. Check the placement line and the keep-unchanged rules.
   - To get the picture, run the prompt in your image tool. It uses paid credits and a key, so do a cost check first.
   - Ask for 2 to 4 versions, pick the best, and fix any problem with the fix-up lines.
-  - Label the image as illustrative where a marketplace asks for it.
+  - Label the image as illustrative wherever a buyer or marketplace could take it for a real customer photo.
+  - Check the image against the marketplace's image rules before you upload it.
 output_sample:
   input:
     - "A clear photo of your product (optional: more angles of it)"

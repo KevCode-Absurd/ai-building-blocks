@@ -43,6 +43,8 @@ the highlights where the team can see them.
 Account (name or record ID); mode - create new (default if none exists)
 or refresh existing; planning horizon - quarter (default), half, or year.
 
+For a refresh, you can also give it the earlier account plan, and it updates that plan instead of starting again.
+
 ## Step 1 - Ground
 
 Check which tools are connected (plus any org facts the user or the project instructions already gave). Ground ICP, products/value prop, qualification

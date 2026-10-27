@@ -65,7 +65,17 @@ Consider how principles interact:
 
 5. **Privacy + Writing + Onboarding** -- Permission requests need clear, specific usage descriptions. Time them to when the user will understand the benefit.
 
+## Steps
+
+1. Read the design notes (see the first line of this file) and ask only for what is missing.
+2. Collect the design (screenshots or a description), the target device and system, and the app's purpose.
+3. Check each screen against the Key Principles above, using the Reference Index files that were provided.
+4. Write each finding using the Output Format below, in a table.
+5. Order the fixes: accessibility and privacy first, then colour, type and icons, then polish.
+
 ## Output Format
+
+If the reference files were not provided, say each finding comes from general knowledge and not from a cited file.
 
 1. **Cite the specific HIG foundation** with file and section.
 2. **Note platform differences** for the user's target platforms.
@@ -82,6 +92,8 @@ Put the findings in a table with these columns: screen, principle, finding, fix 
 4. System colors or custom?
 
 ## Related Skills
+
+These related skills are not part of this item:
 
 - **hig-platforms** -- How foundations apply per platform (e.g., type scale differences on watchOS vs macOS)
 - **hig-patterns** -- Interaction patterns where foundations like writing and accessibility are critical

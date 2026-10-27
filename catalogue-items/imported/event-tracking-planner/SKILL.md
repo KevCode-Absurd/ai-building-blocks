@@ -32,7 +32,7 @@ When to use this skill: setting up product analytics from scratch, auditing an e
 
 This skill spans instrumentation execution. It does not cover measurement strategy (use `analytics-strategy`), experimentation result interpretation (use `experimentation-analytics`), paid media analytics (use `ads-performance-analytics`), or platform decisions (use `experimentation-platform-orchestrator`). Pair this skill with the relevant integrations microsite for your specific tool.
 
-The clean distinction from analytics-strategy. That skill (Growth category) is strategic: what to measure and why, KPI hierarchy, dashboard architecture, attribution models. This skill (Product category) is execution: how to actually instrument the product correctly. The two compose. Read analytics-strategy first to decide what matters; read this skill to instrument it.
+The clean distinction from analytics-strategy. That skill (Growth category) is strategic: what to measure and why, KPI hierarchy, dashboard architecture, attribution models. This skill (Product category) is execution: how to actually instrument the product correctly. The two compose. Decide what matters first (the analytics-strategy skill is not in this library, so do this with the person: ask for their goal and the three questions they want answered); then use this skill to instrument it.
 
 ---
 

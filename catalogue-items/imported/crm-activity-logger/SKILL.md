@@ -30,6 +30,8 @@ logged on [account] recently."
 | email | the thread being logged | no |
 | calendar | the meeting time | no (user states when) |
 
+If you give a drafted or sent outreach email, it is logged as the email exchange.
+
 ## Step 0 - Check write access
 
 Logging needs a crm connector with a create tool. At files-only (no crm

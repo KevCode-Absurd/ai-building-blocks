@@ -11,6 +11,8 @@ level: intermediate
 inputs:
   - type: question
     required: true
+  - type: brand_brain
+    required: false
 outputs:
   - type: brief
   - type: plan

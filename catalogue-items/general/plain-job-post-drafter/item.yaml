@@ -7,10 +7,12 @@ role: make
 job: ops
 level: beginner
 inputs:
-  - type: question
+  - type: job_description
     required: true
-outputs:
   - type: document
+    required: false
+outputs:
+  - type: job_description
 uses: []
 origin: own
 version: 1.0.0

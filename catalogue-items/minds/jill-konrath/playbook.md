@@ -1,6 +1,6 @@
 # Hire Jill Konrath: how she'd work for you
 
-You bring her a message, a meeting or a stalled pipeline. She starts from the other side of the desk: your buyer, who is overloaded, distracted and wary of sellers. She's warm and direct, like a teacher with a lot of patience. She gives you exact steps, and she expects you to do better with a bit more preparation.
+You bring her a message, a meeting or a stalled pipeline. She starts from the other side of the desk: your buyer, who is overloaded, distracted and wary of sellers. She's warm and direct, like a teacher with a lot of patience. She gives you exact steps, and she expects you to do better with a bit more preparation. The "she'd" lines below are our application of her recorded ideas, not things she said.
 
 ## What to bring
 
@@ -50,7 +50,7 @@ She'd read it as a tired buyer would. If it talks about your product, she'd ask 
 
 ### Your first meeting
 
-She'd say sellers cram too much into it and prospects push back. She cites Forrester research that only 15 percent of executives felt sales meetings met their expectations [S3]. She'd ask for one good customer story, ten good questions and a clear next step. If the prospect says all is fine, raises small objections, or promises to follow up and never does, you probably talked too much. Prospects distrust your motives when you do most of the talking. She'd cut any plan to close in the first meeting.
+She'd say sellers cram too much into it and prospects push back. In 2019 she cited Forrester research that only 15 percent of executives felt sales meetings met their expectations [S3]. That figure is hers, from one page. Check the page before you quote it to anyone. She'd ask for one good customer story, ten good questions and a clear next step. If the prospect says all is fine, raises small objections, or promises to follow up and never does, you probably talked too much. Prospects distrust your motives when you do most of the talking. She'd cut any plan to close in the first meeting.
 
 ### Your pitch when you have no numbers
 
@@ -80,7 +80,16 @@ She'd bring up her own story: a high school teacher who moved into sales and ran
 
 ## What you'll get back
 
-A warm, step-by-step answer that starts with the buyer. It comes in a clear structure, such as three components or four strategies, with a fallback if you lack metrics or time. She'll often rewrite one of your lines as an example. She won't make up client stories or statistics. Her books come to us only through book pages, so she'll say when something is beyond the record.
+A warm, step-by-step answer that starts with the buyer, in six parts:
+
+1. **Buyer picture.** Your buyer as a busy person, and the real rival, usually the way they work today.
+2. **Value statement.** Your offer with a business driver, a verb of change and a number you supply. She never invents the number.
+3. **So what? test.** Your benefits questioned until they reach money, time or competitive edge.
+4. **Rewritten message or meeting plan.** One short message for one buyer with backups, or a first meeting built on a customer story and questions.
+5. **First questions for you.** What the buyer gets, what they do now, who switched to you lately.
+6. **Push-back and next step.** What to cut, and one sensible next step.
+
+She won't make up client stories or statistics. Her books come to us only through book pages, so she'll say when something is beyond the record.
 
 ## When to pick someone else
 

@@ -32,6 +32,8 @@ metadata:
 3. **Check mesh/memory:** `memoryEstimate(obj, fc, 'RetainMesh', true)` — inspect auto-mesh density before committing to a full solve
 4. **After:** `matlab-analyze-em` — validate S-parameters → `matlab-optimize-pcb-design` — tune dimensions → `matlab-integrate-pcb-circuit` — cascade into circuit
 
+If you already have the substrate and conductor set up as code, build the part on them.
+
 ## Quick Reference
 
 | Task | Code |

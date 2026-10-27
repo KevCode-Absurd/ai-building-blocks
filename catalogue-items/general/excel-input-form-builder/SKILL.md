@@ -48,9 +48,9 @@ Use an actual tool that can read and write the required native format. Plain tex
 
 2. Create one record per row in a native Excel table. Store IDs as text, keep dates typed and reserve separate columns for inputs and calculated results.
 
-3. Add bounded dropdowns or named-list validation and understandable error messages. Check required fields and duplicate keys with visible diagnostics; pasted data can bypass validation.
+3. Add dropdowns with Excel's Data Validation list (from a named list on a separate sheet) and plain error messages. Check required fields and duplicate keys with visible diagnostics; pasted data can bypass validation.
 
-4. Use a restrained input fill, freeze the table header and preserve existing formulas. Lock calculation cells only if requested, explaining that worksheet protection is not encryption.
+4. Give the entry cells a light fill, freeze the top row of the table and keep any existing formulas. Add a duplicate flag column (for example a COUNTIF check on the key). Lock calculation cells only if asked, and say that worksheet protection is not encryption.
 
 5. Test valid, missing, duplicate and pasted-invalid records in a disposable copy. Reopen the saved workbook and deliver the empty form with its rules and unresolved limitations.
 
@@ -61,6 +61,7 @@ Use an actual tool that can read and write the required native format. Plain tex
 - Keep every failed or unrun check visible in the final report. Repair confirmed issues within scope, then recheck at most twice. Stop if a required gate still fails.
 
 ## Deliverables
+Report sections are SOURCE MAP, CHECKS and OPEN ITEMS. List checks that failed or could not run under CHECKS as "not run" and again under OPEN ITEMS; read "CHECKS MISSED" above as OPEN ITEMS.
 input-form.xlsx and field-rules.md, with an empty production table and a separate illustrative test copy.
 Include a compact run register with the source file/version, action, actual output path, check result and remaining limitations. Record missing prerequisites as MISSING: lines.
 
@@ -68,4 +69,6 @@ Include a compact run register with the source file/version, action, actual outp
 Send the empty input-form.xlsx and field-rules.md to the person who will enter the data, and keep the illustrative test copy out of production. Review pasted rows by hand, because pasting skips the dropdowns. To write down how the workbook works for its next owner, use the [Excel workbook handover writer](https://useaiblocks.com/skills/excel-handover-guide-writer).
 
 ## Verification cases
-Read tests/cases.json. These are illustrative test specifications, not evidence that a native application has already run them.
+These are illustrative test cases, not evidence that a native application has already run them.
+- Record ID 0012, quantity 0 allowed, status Open or Closed: keep 0012 as text and 0 as a valid number, and restrict the status list.
+- Two pasted records share the same required ID: flag both as duplicate candidates and do not silently delete either.

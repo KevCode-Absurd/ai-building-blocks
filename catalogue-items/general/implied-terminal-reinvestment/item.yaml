@@ -7,7 +7,7 @@ role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
+  - type: question
     required: true
   - type: source_text
     required: true

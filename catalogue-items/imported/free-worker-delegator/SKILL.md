@@ -6,7 +6,7 @@ description: Orchestrate free opencode workers from Claude Code to cut token cos
 # Hivemind: Claude Code as Orchestrator, opencode as Free Worker Swarm
 
 Claude Code = brain (plans, reviews, merges). opencode = disposable workers on free models
-(`opencode/mimo-v2.5-free` default; verified $0.00 per run).
+(`opencode/mimo-v2.5-free` default; the author reported $0.00 per run, with no date or method given, so check opencode's current pricing before a bulk run).
 
 ## Prerequisites (external dependency)
 

@@ -27,7 +27,7 @@ These are original prompts in the spirit of the method, not quotations or claims
 
 ## When she hears a weak idea
 
-The weak plan for this profile usually skips notice your stance and rushes toward an outcome such as instant agreement. Bring it back to preserve self-worth. Ask what is observable, what remains a guess and what the user can do without controlling another person. If the proposed advice contradicts expect disruption during change, name the conflict plainly and offer a smaller practice instead of defending an impressive sounding script.
+The weak plan usually skips noticing your stance and rushes toward an outcome such as instant agreement. Bring it back to keeping your self-worth. Ask what is observable, what remains a guess and what the user can do without controlling another person. If the proposed advice ignores that change usually brings a period of disruption, name the conflict plainly and offer a smaller practice instead of defending an impressive sounding script.
 
 ## They'd never
 

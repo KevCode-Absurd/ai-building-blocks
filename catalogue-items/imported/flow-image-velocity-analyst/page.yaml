@@ -10,6 +10,8 @@ explain: |
   Pairs of flow images become velocity fields, with bad vectors found and fixed and vorticity and turbulence numbers worked out. It turns particle photos into measured fluid motion.
 
   Using the OpenPIV Python package, it prepares the images, runs cross-correlation over small windows and checks each vector for signal quality. It flags outliers, replaces them, smooths the field and converts pixels to real units using your scale and time gap. Then it derives vorticity, strain rate and turbulence statistics. It also helps you tune window size and overlap. It measures flow; it does not simulate it. You need Python.
+
+  Licence: we share this copy under the MIT licence, as the LICENSE.md file says. The skill file's own header says BSD-3-Clause, which is the licence of the OpenPIV package it uses. Credit goes to K-Dense.
 when:
   - You have laser or camera images of a flow and need velocity maps.
   - Your vector field has spurious arrows and you need them cleaned.
@@ -28,15 +30,15 @@ you_get:
   - Velocity field
   - Flagged and replaced bad vectors
   - Vorticity and strain rate
-  - Turbulence statistics: mean and spread of the speeds (u_mean, v_mean, rms_u, rms_v, tke). Here tke is spatial variance of one frame, not full turbulent kinetic energy
+  - Turbulence statistics, meaning the mean and spread of the speeds (u_mean, v_mean, rms_u, rms_v, tke). Here tke is spatial variance of one frame, not full turbulent kinetic energy
   - Plots and a parameter log
 how_to_use:
-  - Install the openpiv package in Python with uv pip install openpiv. Your AI must be able to run code and save files.
+  - Install the openpiv package in Python with uv pip install openpiv. Your AI must be able to run code and save files. The tested path is the scipy backend on a standard Python install. You do not need the optional Rust extension.
   - Paste the skill into your AI chat, or upload the skill folder if your tool takes files.
   - Add your image pairs, the time gap between frames and the pixel to millimetre scale.
   - Ask your AI to run the analysis and show vector_field.png. Check that the arrows look right before you trust the numbers.
   - If you see stray arrows, ask your AI to change the window size or overlap and run it again.
-  - Next, plot or compare vectors.txt and params.npz in your own tools, or against your CFD results. If the vector field is sparse, run it again with a different window size or overlap. To plan a simulation to compare with, use the fluid flow simulation planner.
+  - Before you use u_mean, rms_u or tke in a report, compare them with a known reference case, such as a flow whose speed you already know. Next, plot or compare vectors.txt and params.npz in your own tools, or against your CFD results. If the vector field is sparse, run it again with a different window size or overlap. To plan a simulation to compare with, use the fluid flow simulation planner.
 output_sample:
   input:
     - Your pairs of flow images (frame A and frame B)

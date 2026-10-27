@@ -7,7 +7,7 @@ role: check
 job: analysis
 level: intermediate
 inputs:
-  - {type: source_text, required: true}
+  - {type: copy_draft, required: true}
 outputs:
   - {type: audit_report}
 next: [ten-percent-cutter, hidden-theme-finder]

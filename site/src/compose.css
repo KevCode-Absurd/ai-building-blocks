@@ -119,3 +119,13 @@
 .compose-goal-help { margin: .6rem 0 0; line-height: 1.6; }
 .compose-navigation > span[aria-disabled="true"] { color: var(--muted); }
 .compose-actions > .workflow-options > p { max-width: 32ch; line-height: 1.6; }
+/* Free mode: pick the first step, then grow the workflow in the builder. */
+.compose-start h3 { margin: 22px 0 8px; }
+.compose-start-list { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 8px; }
+.compose-start-list > li { display: flex; gap: 12px; align-items: center; justify-content: space-between; border: 1px solid var(--line); border-radius: 8px; padding: 12px; background: var(--panel); min-width: 0; overflow-wrap: anywhere; }
+.compose-start-list > li > div { min-width: 0; }
+.compose-start-list b { display: block; font-size: 13px; line-height: 1.4; }
+.compose-start-list p { margin: 6px 0; color: var(--muted); }
+.compose-start-list small { display: block; font-size: 11.5px; color: var(--faint); }
+.compose-start-list button { flex: none; min-height: 44px; }
+@media(max-width:600px) { .compose-start-list > li { flex-direction: column; align-items: stretch; } }

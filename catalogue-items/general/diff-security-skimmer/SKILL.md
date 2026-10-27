@@ -17,21 +17,21 @@ Reads only what changed and flags the lines that could let someone in, leak data
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+- **Code change** (yours): a change to the code, with what it fixes and how it was checked.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for code change. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
-- **Any good chat AI:** A one-message prompt works in any strong chat AI, so use the one you already have.
+- **Any good chat AI:** A one-message prompt works in any strong chat AI, so use the one you already have. No paid service, API key or file access is needed.
 <!-- /needs -->
 
 ## What you need
 The diff is the only input this skill needs. Ignore any request above for a long source text, article or transcript.
 
-- **The change** (required): the diff or pull request text, with the lines that changed. Include a few lines of context around each change, so the review can see what the changed line sits inside.
+- **The change** (required): the diff or pull request text, with the lines that changed. Include a few lines of context around each change, so the review can see what the changed line sits inside. If there are none, ask for the surrounding function once. If you still have none, write `MISSING: context for <line>` and say the finding is less certain. No paid service, API key or file access is needed.
 - **What the change is for** (required): one or two lines.
 - **What the code protects** (optional): logins, payments, personal data.
 

@@ -9,6 +9,7 @@ level: advanced
 inputs:
   - {type: performance_sheet, required: true}
   - {type: store_capture, required: false}
+  - {type: search_query_report, required: false}
 outputs:
   - {type: audit_report}
 uses: []

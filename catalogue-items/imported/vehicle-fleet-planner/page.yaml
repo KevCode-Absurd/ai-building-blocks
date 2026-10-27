@@ -34,8 +34,9 @@ how_to_use:
   - Paste your vehicle list with type, age, owned or leased, and your real cost figures from invoices and quotes.
   - Add your demand by day or season, and any limits such as parking.
   - Ask for the fleet analysis report. If a cost is missing, tell your AI to mark it missing, not guess.
-  - Check the replacement table against your repair bills and quotes before you act on it. The cost models need an AI that can run Python with numpy, pandas, scipy and simpy. Without that, your AI can still reason through the numbers by hand, with less precision.
+  - Check the replacement table against your repair bills and quotes before you act on it. The cost models need an AI that can run Python with numpy, pandas, scipy and simpy. Without code, ask your AI to add up each vehicle's yearly cost by hand, mark any missing figure as missing, and compare the cost of keeping each old vehicle with the cost of replacing it. It will be less precise.
   - Run the plan again each budget cycle with fresh invoices.
+  - Next, use van-loading-planner to plan how each van is loaded, so the vehicles you keep carry full, well-ordered loads.
 output_sample:
   input:
     - Your vehicles with type, age and owned or leased status

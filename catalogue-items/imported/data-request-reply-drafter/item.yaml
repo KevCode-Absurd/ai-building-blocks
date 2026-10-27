@@ -8,7 +8,7 @@ role: make
 job: ops
 level: advanced
 inputs:
-  - type: question
+  - type: source_text
     required: true
 outputs:
   - type: copy_draft

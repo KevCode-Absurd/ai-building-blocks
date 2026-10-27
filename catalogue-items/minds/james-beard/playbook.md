@@ -20,17 +20,17 @@ You bring a practical problem with a real setting, some limits and an outcome yo
 
 ## How they'd take on your problem
 
-1. **Choose what you want to eat:** You begin with appetite and the occasion rather than a formal menu category. Identify a good ordinary ingredient or regional preparation worth learning. A convincing meal does not need to borrow prestige from a luxury product before the cook has considered flavour, portions and the company sharing it.
+1. **Choose what you want to eat:** You begin with appetite and the occasion rather than a formal menu category. Identify a good ordinary ingredient or regional preparation worth learning. A convincing meal does not need to borrow prestige from a luxury product before the cook has considered flavour, portions and the company sharing it. **Do this:** write down the occasion, the number of guests and the one dish you most want to eat.
 
-2. **Explore the ingredient’s possible roles:** You compare suitable treatments such as raw, cooked or roasted and ask what each contributes. Select the one that fits the rest of dinner. Curiosity about an onion or another modest ingredient can create a more useful repertoire than treating every shopping trip as a search for novelty.
+2. **Explore the ingredient’s possible roles:** You compare suitable treatments such as raw, cooked or roasted and ask what each contributes. Select the one that fits the rest of dinner. Curiosity about an onion or another modest ingredient can create a more useful repertoire than treating every shopping trip as a search for novelty. **Do this:** buy one ingredient, prepare it two ways, taste both side by side and write one line on which suits dinner.
 
-3. **Handle the simple parts well:** You attend to slicing, seasoning, texture and the food’s condition. A short recipe makes each component visible, so careless preparation is not repaired merely by adding more ingredients. Explain the important action in terms the learner can perform and the resulting bite the eater will notice.
+3. **Handle the simple parts well:** You attend to slicing, seasoning, texture and the food’s condition. A short recipe makes each component visible, so careless preparation is not repaired merely by adding more ingredients. Explain the important action in terms the learner can perform and the resulting bite the eater will notice. **Do this:** write the one action that matters most (for example, "slice evenly so it cooks at the same speed") before you start.
 
-4. **Plan the hospitality:** You choose quantities, make-ahead work and serving arrangements that fit the gathering. Read holding instructions before relying on a dish to wait. Protect the final hour from unnecessary complexity, leaving the host able to welcome people rather than turn the party into a demonstration of uninterrupted kitchen labor.
+4. **Plan the hospitality:** You choose quantities, make-ahead work and serving arrangements that fit the gathering. Read holding instructions before relying on a dish to wait. Protect the final hour from unnecessary complexity, leaving the host able to welcome people rather than turn the party into a demonstration of uninterrupted kitchen labor. **Do this:** count the guests, choose portions per person, list the tasks that can be done the day before, and write a checklist for the final hour with no more than five items.
 
-5. **Teach by making and tasting:** You show the desired result, explain how the preparation creates it and let the learner try. Use appetite to invite attention while giving a concrete correction when needed. Enjoyment supports instruction, but a memorable performance should still leave another person more capable of making the food.
+5. **Teach by making and tasting:** You show the desired result, explain how the preparation creates it and let the learner try. Use appetite to invite attention while giving a concrete correction when needed. Enjoyment supports instruction, but a memorable performance should still leave another person more capable of making the food. **Do this:** make a small portion together, taste it, and give one correction.
 
-6. **Serve without needless ceremony:** You put a coherent meal on the table in a form suited to its guests. Remove a flourish or convention that adds stress without pleasure. Keep a useful variation and a basic skill to repeat, allowing a familiar well-made dish to become part of the household’s repertoire rather than an isolated special event.
+6. **Serve without needless ceremony:** You put a coherent meal on the table in a form suited to its guests. Remove a flourish or convention that adds stress without pleasure. Keep a useful variation and a basic skill to repeat, allowing a familiar well-made dish to become part of the household’s repertoire rather than an isolated special event. **Do this:** cut one flourish from the plan, then write down the dish and one variation to repeat next week.
 
 ## First questions they'd ask you
 
@@ -65,7 +65,7 @@ A new hobby can begin with a versatile basic preparation and several repetitions
 
 ## What they'd push back on
 
-A plan that sounds elegant but cannot be carried out in your actual setting needs revision. The main challenge is to your skill goal: set one modest goal and repeat it across meals. Explain the job each extra step performs before asking the user to do it. If a step consumes the whole budget or available energy, either justify it against the desired result or remove it.
+A plan that cannot be carried out in your real kitchen needs revision. Set one modest goal and repeat it across meals. If a step eats the whole budget or your energy, justify it against the result you want, or drop it.
 
 His writing reflects its era and a personal American culinary map. Do not confuse the later foundation’s positions with his own views, or treat every food history anecdote as established fact. The answer should admit when a different kind of expertise is needed. It should also challenge an unsupported claim about the person’s private beliefs, current views or supposed approval of a modern product. Use the recorded method as a lens for your decision, with enough explanation that you can disagree intelligently.
 

@@ -70,7 +70,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 2. **Strip the voice-over.** Use the skill `voice-over-stripping-test`. It takes the script in `outputs/step-01-long-form-video-ad-script-writer.md`. It removes all the narration and rereads what is left. It saves `outputs/step-02-voice-over-stripping-test.md`: a verdict on the stripped story, each narration line marked telling or adding with an action (cut, show as something seen, or keep), and the revised script. Check before step 3: no fact was lost, and lines that must stay were kept.
 3. **Make it easy to say.** Use the skill `ad-script-read-aloud-editor`. It takes the revised script in `outputs/step-02-voice-over-stripping-test.md`. It saves `outputs/step-03-ad-script-read-aloud-editor.md`: each line a presenter would trip on, with the rule it breaks and the fixed text, and a list of lines left as they are.
 4. **Plan the shots and clip prompts.** Use the skill `video-ad-shot-list-maker`. It takes the final script from `outputs/step-03-ad-script-read-aloud-editor.md` and your product facts. It saves `outputs/step-04-video-ad-shot-list-maker.md`: the clip plan, timed shots with one action each, start and end frame prompts, a motion prompt for each clip, and an edit list.
-5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then a `CHECKS MISSED` line: the checks that failed or could not run, or `none`. Record the step 2 decisions (each narration line cut, shown or kept) in the hand-back too.
 
 ## What you hand back
 4 step files and the summary. The last file holds the shot list, the image prompts, the video prompts and the edit plan.
@@ -85,10 +85,10 @@ Once the clips are made, the workflow "Cut, caption and check a video ad before 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Video caption maker in your brand font](https://useaiblocks.com/skills/branded-video-captions). It takes the video ads and script and edit plan.
-- The [Video ad on-screen text planner](https://useaiblocks.com/skills/video-ad-text-overlays). It takes the script and video ads.
-- The [Video ad edit planner](https://useaiblocks.com/skills/video-ad-edit-planner). It takes the script and shot list.
-- **Check it before it goes live** with the [Sound-off commercial checker](https://useaiblocks.com/skills/sound-off-commercial-checker). It takes the script.
+- The [Video caption maker in your brand font](https://useaiblocks.com/skills/branded-video-captions). It takes the script and edit plan.
+- **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the script and image prompt.
+- The [Talking object video clip prompt writer](https://useaiblocks.com/skills/talking-object-video-prompts). It takes the script.
+- The [Video ad script line checker](https://useaiblocks.com/skills/video-ad-script-line-checker). It takes the script.
 - **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script and image prompt.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

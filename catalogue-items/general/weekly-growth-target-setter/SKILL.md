@@ -49,8 +49,8 @@ The measure. The rate table, the average and what was left out. The target and i
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Customer success metric planner](https://useaiblocks.com/skills/customer-progress-measure-picker). It takes the plan.
-- The [Marketing strategy advisor](https://useaiblocks.com/skills/marketing-strategy-advisor).
-- The [Weekly big task sorter](https://useaiblocks.com/skills/weekly-big-task-sorter). It takes the plan.
+- The [Plan failure reviewer](https://useaiblocks.com/skills/failure-first-plan-check). It takes the plan.
+- The [Business target calculator](https://useaiblocks.com/skills/target-size-back-solver). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

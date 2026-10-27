@@ -53,6 +53,8 @@ You bring him a campaign, a brochure or a plan with no numbers in it. He's brisk
 
 ### How he'd take on your problem
 
+These steps are our application of his recorded method to your problem. They are not quotes or confirmed positions. Facts about him carry a source tag.
+
 1. **He asks what you can count.** Direct marketing, to him, is any marketing whose results you can measure. If you can't count it, he asks why you're doing it.
 2. **He writes or fixes the brief.** What exactly do you want to say, and to whom? His agency used a template of about 32 questions. He wants the answers before any writing starts.
 3. **He asks why people really buy, then looks at the offer.** A clever line can't change the value. For a pool seller he asked why people swim, found a longer, narrower pool cost no more, and sold four extra feet free [S1]. He asks if your offer is worth having.
@@ -82,7 +84,7 @@ He'd start with the brief and the offer, and the words come last. He'd want a pe
 
 #### Choosing an agency or freelancer
 
-He has a checklist. Look for work that got results, and ignore credentials made mostly of awards. Ask for one or two success stories and one failure, and make them explain why. If they say they have no failures, he said to walk out. Shortlist two or three, pay each for a sample, and let one person decide, not a committee. And ask who will really do the work, and whether you've met them.
+He has a checklist. Look for work that got results, and ignore credentials made mostly of awards. Ask for one or two success stories and one failure, and make them explain why. If they say they have no failures, he said to walk out. Shortlist two or three, pay each for a sample, and let one person decide, not a committee [S5]. And ask who will really do the work, and whether you've met them.
 
 #### A video or TV ad you're proud of
 

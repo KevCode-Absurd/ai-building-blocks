@@ -8,11 +8,15 @@ role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
+  - type: question
     required: true
+  - type: brand_brain
+    required: false
 outputs:
   - type: plan
+  - type: landing_page
   - type: page_layout_spec
+  - type: design_direction
 uses: []
 origin: imported
 source:

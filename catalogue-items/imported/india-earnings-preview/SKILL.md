@@ -17,7 +17,7 @@ description: Build a single-company equity research earnings preview — a 4-5 p
 
 **Indian companies and actuals.** The actuals path below (EDGAR XBRL) covers US filers only. For an NSE or BSE company, you must treat reported actuals as manual review. Ask the user to paste the latest quarterly results (from the company's results filing on NSE or BSE), or write `not available from free sources` in the cell and add it to the MANUAL REVIEW table. Consensus and prices for Indian tickers come from yfinance (for example `RELIANCE.NS`); check the figures exist before you build on them. Never put a US figure in an Indian company's table.
 
-**US-only steps.** The EDGAR, FRED, CBOE and SEC full-text search steps work for US companies only. For an Indian company, skip them, mark those items `not available`, and ask the user to paste Indian actuals. **Scraping note.** `yfinance` reads Yahoo Finance pages without a licence from Yahoo, so tell the user to check Yahoo's terms of use before routine or commercial use.
+**US-only steps.** The EDGAR, FRED, CBOE and SEC full-text search steps work for US companies only. For an Indian company, skip them, mark those items `not available`, and ask the user to paste Indian actuals. **Scraping note.** `yfinance` reads Yahoo Finance pages without a licence from Yahoo. **Stop and ask before the first yfinance run:** "Have you checked Yahoo's terms of use for this use?" Do not run it for routine or commercial use unless the user confirms they have. If they have not, ask them to paste the figures instead and mark the rest `not available`.
 
 **Not advice.** The report is a research aid. It is not investment advice. Say that in the header and in the closing line of the answer.
 
@@ -25,8 +25,7 @@ description: Build a single-company equity research earnings preview — a 4-5 p
 
 ## India
 
-This skill operates on **Indian markets**. Load **`india-market-conventions`**
-before building anything, and **`india-market-data`** for sources. Two rules cause
+This skill operates on **Indian markets**. The guides `india-market-conventions` and `india-market-data` are not included in this copy, so use the two rules below and the data stack in this file. Do this India path first. The US-only steps (EDGAR, FRED, CBOE, SEC full-text search) are skipped for NSE or BSE tickers. Two rules cause
 most Indian errors:
 
 - **Fiscal year is April–March.** `FY2025` = year ending **31 Mar 2025**; `Q1 FY26` =
@@ -37,8 +36,7 @@ most Indian errors:
   **millions under a crore label: the number shown is 10× the real crore figure**. Divide by `10000000` in a live
   formula and label the column `Total Revenue (₹ Cr)`.
 
-What has no Indian equivalent is listed in `NOT-ADAPTABLE.md`. Name the gap —
-never substitute a proxy and present it as the real thing.
+`NOT-ADAPTABLE.md` is not included in this copy. Where the free data has no Indian equivalent, name the gap. Never substitute a proxy and present it as the real thing.
 
 Generate a concise, professional equity research earnings preview for a single company. Output is a
 self-contained HTML file targeting 4-5 printed pages, dense with figures, with tight narrative.

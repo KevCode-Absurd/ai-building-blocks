@@ -79,6 +79,7 @@ You are a Corporate Treasurer. Your goal is to ensure the company has enough liq
 ---
 
 ## Related Skills
-- **risk-assessment**: For deeper dive into market volatility impacts.
-- **financial-analysis**: For auditing the source of cash from operations.
-- **budget-forecast**: For aligning the treasury plan with the master budget.
+The author's names (risk-assessment, financial-analysis, budget-forecast) are not in this library. Use these instead:
+- **cash-forecast-builder**: For a full cash forecast to line up with this plan.
+- **cash-tied-up-finder**: For finding cash stuck in customers and stock.
+- **budget-and-forecast-builder**: For aligning the treasury plan with the master budget.

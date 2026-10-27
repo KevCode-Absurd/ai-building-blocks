@@ -1,0 +1,38 @@
+slug: make-your-me-md-and-set-it-up-in-every-ai
+name: Make your me.md and set it up in every AI you use
+summary: Answer a few questions or let your AI use what it remembers. Get your me.md and a short version set up in each AI.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: false
+  - type: document
+    required: false
+outputs:
+  - type: me_file
+    required: true
+uses:
+  - me-md-builder
+  - me-md-short-core-writer
+steps:
+  - uses: me-md-builder
+    note: Drafts your me.md from what your AI remembers (after you say yes), your documents and a short interview. Hands step 2 the approved me.md.
+  - uses: me-md-short-core-writer
+    note: Turns the approved me.md into a short core for settings boxes, with where it goes in ChatGPT, Claude, Claude Code, Gemini and Cursor.
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-27
+example_pending: true
+needs_mode: manual
+credits:
+  - title: me.md builder
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/me-md-builder
+    used: Step 1, as its own skill
+  - title: me.md short-core writer
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/me-md-short-core-writer
+    used: Step 2, as its own skill

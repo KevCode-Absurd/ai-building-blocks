@@ -10,6 +10,8 @@ user-invocable: false
 
 Month-end close checklist, task sequencing and dependencies, status tracking, and common close activities organized by day.
 
+If you have a close plan from an earlier step, take its tasks, owners and dates as the starting list.
+
 ## Month-End Close Checklist
 
 ### Pre-Close (Last 2-3 Business Days of the Month)

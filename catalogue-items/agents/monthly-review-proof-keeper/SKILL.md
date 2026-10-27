@@ -81,11 +81,11 @@ You never do these yourself, even if you can reach the store, the email tool or 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Buyer emotion and copy theme finder](https://useaiblocks.com/skills/dominant-emotion-finder). It takes the buying reasons.
+- The [Buyer emotion and copy theme finder](https://useaiblocks.com/skills/dominant-emotion-finder).
 - The [Customer needs profile builder](https://useaiblocks.com/skills/job-based-avatar-builder). It takes the audit report.
-- The [Customer feedback and brand reviewer](https://useaiblocks.com/skills/monthly-customer-voice-keeper).
-- **Make image ads** with the [Image ad maker from customer quotes](https://useaiblocks.com/skills/customer-quote-image-ad). It takes the buying reasons.
-- **Make video ads** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). It takes the buying reasons and plan.
+- The [Customer switching journey mapper](https://useaiblocks.com/skills/switch-story-mapper). It takes the plan and audit report.
+- **Write the landing page** with the [Evidence-based sales copy writer](https://useaiblocks.com/skills/proof-backed-sales-copy-writer). It takes the objection map.
+- **Write the ad copy** with the [Story image ad writer](https://useaiblocks.com/skills/story-image-ad-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

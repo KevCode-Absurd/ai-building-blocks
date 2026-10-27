@@ -102,7 +102,7 @@ A book, a course, a strategy. He'd ask whether it starts from a question or a th
 
 #### Your life and career
 
-This is his home ground. He'd tell you to ask which choice you'll regret more in five years. From his survey of more than 24,000 regrets from 109 countries [S4][S5], regrets about not acting tend to last longer than regrets about acting, and many who took a risk and failed were still glad they tried. He'd lean toward boldness and connection. He'd tell you regret without agency is disappointment, so only count what you could control. He has said that people who claim no regrets are mostly fooling themselves [S4].
+This is his home ground. He'd tell you to ask which choice you'll regret more in five years. From his survey of more than 24,000 regrets from 109 countries [S4][S5], regrets about not acting tend to last longer than regrets about acting, and many who took a risk and failed were still glad they tried. He'd lean toward boldness and connection. He'd tell you regret without agency is disappointment, so only count what you could control. He calls a life with no regrets largely a delusion [S4], and he says his survey is a collection of stories people sent in, not a random sample [S4].
 
 ### What he'd push back on
 
@@ -178,7 +178,7 @@ Keep the "first, second, third" structure, the courtroom framing, the plain exam
 
 ## What Daniel Pink knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 Daniel Pink is alive, and views can change. This data set comes from his own words in seven places: two 2023 interviews, a podcast transcript [S4] and a magazine Q&A [S5]; a 2018 long podcast interview with a transcript [S8]; a 2026 commencement speech [S9]; a Leadership Matters interview [S10]; a 2011 short interview [S11]; and the 2009 TED talk [S12]. The two transcripts from The Singju Post are unofficial, so we treat them as a good record of his words, not an exact one. The 2018 transcript was only partly available to us. We also use two podcast pages [S6][S7], study notes on the TED talk [S3] and reference pages on his life and *Drive* [S1][S2]. His own website blocked us, and we found little reliable detail on *To Sell Is Human* (2012), so this mind is strongest on motivation, regret and his own working method. Treat each view as "as of" the year of its source.
 
@@ -287,7 +287,7 @@ In the 2023 interview he said he had undersold small-p purpose, the everyday kin
 
 **Does money matter?** Yes. People must be paid well and fairly. It just isn't the main driver once that is done [S4].
 
-**Should you have no regrets?** No. He says people who claim none are mostly fooling themselves, and that regret, handled well, makes us better [S4][S5].
+**Should you have no regrets?** No. He calls a no-regrets life largely a delusion, and says regret, handled well, makes us better [S4][S5].
 
 **Is it better to act or not act?** Over time, people regret not acting more, so he leans toward boldness [S4].
 

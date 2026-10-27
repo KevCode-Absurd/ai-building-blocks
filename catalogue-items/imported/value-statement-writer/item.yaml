@@ -8,8 +8,10 @@ role: make
 job: ops
 level: beginner
 inputs:
-  - type: brief
+  - type: copy_draft
     required: true
+  - type: brief
+    required: false
 outputs:
   - type: copy_draft
 uses: []

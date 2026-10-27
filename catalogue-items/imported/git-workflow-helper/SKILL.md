@@ -11,6 +11,10 @@ metadata:
 
 This skill equips an AI agent to perform the full spectrum of Git-based version control tasks, from initializing a repository and crafting atomic commits to orchestrating branching strategies, resolving merge conflicts, and configuring automation with hooks. It covers both everyday workflows and advanced operations needed for professional team collaboration.
 
+## What you need
+
+A plain description of the Git problem. If you have a plan, such as a branching plan or a triaged issue list, use it to decide which branches to make and in what order.
+
 ## Workflow
 
 1. **Assess Repository State**: Run `git status`, `git log --oneline -10`, and `git branch -a` to understand the current branch, uncommitted changes, recent history, and available remotes. This context determines which operations are safe to perform.

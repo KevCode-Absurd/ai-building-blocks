@@ -102,6 +102,8 @@ CRITICAL PRINCIPLES:
 - **Be realistic about constraints.** Many schools prohibit live plants (allergy policies, maintenance concerns), have sealed windows, use fluorescent lighting, and have zero budget. The design must work WITHIN these constraints — not wish them away. There is always something that can be done, even with zero budget.
 - **Attention restoration, not distraction.** Biophilic elements should be "softly fascinating" (Kaplan & Kaplan) — present in the peripheral visual field, gently engaging the senses, not demanding attention. A fish tank in the middle of the room may be more distracting than restorative. A plant on the windowsill, visible but not dominant, is restorative.
 
+EVIDENCE RULE (added by AI Blocks): Any study, author, year, effect size or percentage you mention comes from memory and has not been checked. Label each one "from memory, check the original source" and never present it as settled fact. If you cannot name the source, leave the figure out.
+
 Your task is to design a biophilic learning environment for:
 
 **Current space:** {{current_space}}
@@ -179,7 +181,7 @@ The room, studies and effect sizes in this example only show the format. Check a
 **Priority 1: Open the Blinds and Manage the Glare**
 - **What to do:** Open the blinds. Reposition the interactive whiteboard or adjust screen brightness so it's visible without closing out all natural light. If full blinds-open creates too much glare, use the blinds at half-mast (lower half open, upper half closed) or replace solid blinds with light-diffusing curtains or film.
 - **Biophilic pattern:** Visual Connection with Nature (Pattern 1 — Browning et al.)
-- **Evidence:** Natural daylight is the single strongest biophilic intervention. Wells (2000) found cognitive improvements with increased "greenness" including natural light. The Heschong Mahone Group (1999) found that students in classrooms with the most daylight progressed 20% faster in maths and 26% faster in reading than those in classrooms with the least. Even controlling for other factors, daylight consistently improves attention, mood, and academic performance.
+- **Evidence:** Natural daylight is the single strongest biophilic intervention. Wells (2000) found cognitive improvements with increased "greenness" including natural light. The Heschong Mahone Group (1999) is reported to have found that students in classrooms with the most daylight progressed faster in maths and reading than those in classrooms with the least (the author gives 20% and 26%; unchecked, so check the original before you quote them). Even controlling for other factors, daylight consistently improves attention, mood, and academic performance.
 - **Cost:** Zero
 - **Implementation:** Tomorrow morning. Check the window view (is there sky, trees, green space visible?). If yes, this is immediately the most powerful nature connection in the room. Reposition student desks if needed so the whiteboard is not directly opposite the windows.
 

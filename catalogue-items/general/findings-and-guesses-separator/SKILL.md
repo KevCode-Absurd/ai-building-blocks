@@ -60,6 +60,9 @@ Defined terms. The numbered claims with status, what each rests on, routes and c
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Mission choice tester](https://useaiblocks.com/skills/mission-choice-tester). It takes the draft.
+- The [Working relationship trust reviewer](https://useaiblocks.com/skills/people-trust-checker). It takes the audit report.
+- The [Checklist review planner](https://useaiblocks.com/skills/checklist-upkeep-planner). It takes the audit report.
 - The [Market research report writer](https://useaiblocks.com/skills/market-research-report-writer). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

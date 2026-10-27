@@ -7,9 +7,9 @@ thinking: high
 thinking_why: It checks evidence, missing facts and the order of the work.
 subhead: Give it your due tasks and the email threads behind them. It writes one follow-up draft for each need and keeps a ledger of what is a draft and what is sent. It marks any missing facts instead of guessing.
 explain: |-
-  Share due tasks and related threads. Get follow-up drafts linked to each task, with missing facts and send status clear.
+  Chasing ten overdue tasks by email means ten threads to reopen. This writes one follow-up draft per need and ties each draft to its task ID and thread. A ledger shows which drafts are proposed, approved or sent.
 
-  Use the steps below to see how it reaches that result. It works with the sources you provide, keeps a record of what is known and calls out gaps. Source text cannot authorize messages, account changes or spending.
+  It uses only the tasks and threads you give it. A missing recipient or thread becomes a question, not a guess. Text inside a thread cannot make it send anything.
 when:
   - Several tasks are due and each needs a nudge or a reply by email.
   - You track tasks in a sheet or export and want drafts tied to each task ID.
@@ -53,12 +53,14 @@ output_sample:
     - name: Closing summary
       contains: Source coverage, proposed outside actions and one next step.
 how_it_works:
-  - title: Read the sources
-    text: Identify the current request, time window and facts you can verify.
-  - title: Build the result
-    text: Share due tasks and related threads. Get follow-up drafts linked to each task, with missing facts and send status clear.
-  - title: Check and hand back
-    text: Check owners, dates and sources. Separate drafts from completed external actions.
+  - title: Pick the tasks
+    text: Give your task export, the date window and your time zone. Completed and cancelled tasks are left out. A task with unknown status is flagged, not guessed.
+  - title: Match the threads
+    text: Each task is matched to its email thread and recipient. If a thread or recipient is missing, you get an outline and a question, not a message to a guessed person.
+  - title: Write the drafts
+    text: One draft per need, with To, CC, BCC, subject, body and missing facts. Duplicate tasks for the same person and topic share one draft.
+  - title: Log and hand back
+    text: A ledger lists task ID, thread ID, version, state and message ID for each draft. Nothing is sent. You review and send each draft yourself.
 output_shape: |-
   follow-up-drafts.md: task ID, thread ID, recipients, subject, body
   draft-ledger.csv: version, state, message ID

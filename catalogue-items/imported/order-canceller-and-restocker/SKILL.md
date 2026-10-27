@@ -196,8 +196,8 @@ No CSV output. The session summary reports the cancellation result inline. If `r
 |-------|-------|----------|
 | `cancelledAt` is not null | Order is already cancelled | No action needed |
 | Fulfillment order `status: IN_PROGRESS` | Order is being picked/packed | Contact warehouse to stop — cannot cancel programmatically once IN_PROGRESS |
-| `orderCancelUserErrors` | Order has already been fully fulfilled | Use `refund-and-reorder` skill instead |
-| Order not found | Invalid order GID | Use `order-lookup-and-summary` skill to find the correct ID |
+| `orderCancelUserErrors` | Order has already been fully fulfilled | Use the Refund and reorder processor (`refund-and-reorder-processor`), or refund in Shopify admin |
+| Order not found | Invalid order GID | Use the Order lookup assistant (`order-lookup-assistant`), or find the order in Shopify admin and copy its ID |
 
 ## Best Practices
 1. Always run `dry_run: true` first — check `displayFulfillmentStatus` and fulfillment order statuses before committing to a cancel.

@@ -7,11 +7,10 @@ role: orchestrate
 job: analysis
 level: intermediate
 inputs:
-  - {type: performance_sheet, required: true}
+  - {type: customer_list, required: true}
   - {type: voc_reviews, required: true}
   - {type: copy_draft, required: true}
   - {type: question, required: false}
-  - {type: brief, required: false}
 outputs:
   - {type: plan}
 uses: [best-and-worst-customer-profiler, wrong-buyer-review-checker, switch-friction-remover, customer-progress-measure-picker]

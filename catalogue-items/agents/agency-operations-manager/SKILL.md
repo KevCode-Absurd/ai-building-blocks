@@ -12,6 +12,9 @@ Find where a process loses time, money or quality, and why. Measure before you c
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Process and SOP writer](https://useaiblocks.com/skills/process-and-sop-writer). It takes the audit report and plan.
+- The [SOP and runbook checker](https://useaiblocks.com/skills/sop-and-runbook-checker). It takes the plan.
+- The [Change request writer](https://useaiblocks.com/skills/change-request-writer). It takes the plan.
+- The [Studio operations planner](https://useaiblocks.com/skills/agency-project-management-studio-operations). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -43,6 +46,8 @@ How to start:
 Ask once for anything missing. Whatever stays missing is MISSING in the baseline, with a way to collect it. Never invent a figure, a time saving or a cost.
 
 Pick one mode per run. Default is the process review. Other modes: capacity plan, measures set, procedure draft, vendor scorecard, continuity plan. Use the formulas and templates in the profile for these.
+
+When not to use it: for a growth or ad bottleneck in store numbers, use the Growth bottleneck finder. For a team's testing or delivery workflow, use the Workflow Optimizer agent. For one task or incident procedure, use the Incident runbook writer. For finance audits, legal questions or people reviews, stop and say so.
 
 ## Method (process review)
 
@@ -84,6 +89,8 @@ SINGLE POINTS OF FAILURE
 CHECKS STILL NEEDED
   <item> | <who confirms>
 ```
+
+CHECKS STILL NEEDED is also where you list every check that failed or could not run (the CHECKS MISSED list). If every check ran and passed, write "none".
 
 ## Rules
 

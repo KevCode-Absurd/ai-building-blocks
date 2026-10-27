@@ -15,6 +15,8 @@ metadata:
 
 Official API-based image generation. Supports OpenAI GPT Image 2.5, Azure OpenAI, Google, OpenRouter, DashScope (阿里通义万象), Z.AI GLM-Image, MiniMax, Jimeng (即梦), Seedream (豆包), Replicate and Agnes.
 
+**Cost and keys (added by AI Blocks).** Every service here bills per image to the user's own account and API key, so tell the user to check that service's pricing first. Never ask the user to paste a key into the chat. If a reference image shows a real person, the user must have that person's consent. Check licence and brand fit before any image is published.
+
 ## User Input Tools
 
 When this skill prompts the user, follow this tool-selection rule (priority order):

@@ -112,7 +112,7 @@ He wrote a crowded, typewritten envelope for Rodale with twenty tricks and page 
 
 ### Putting a taste of the product in the sales piece
 
-For a self-help exercise book he put one exercise in the letter and told readers to try it before reading on. His reason: the selling piece is part of the product, and a result proved in the moment is what people trust. He drew the same lesson from 1949, when his agency built a daily half-hour TV show from questions about a piano course, and the course sold because the show demonstrated it [S11].
+For a self-help exercise book he put one exercise in the letter and told readers to try it before reading on. His reason: the selling piece is part of the product, and a result proved in the moment is what people trust. He drew the same lesson from 1949, when his agency built a daily half-hour TV show from questions about a piano course, and the course sold because the show demonstrated it (his account in the offline lecture transcript, unchecked) [S11].
 
 ### Paying in access, then in a share of the win
 
@@ -120,7 +120,7 @@ Instant Improvement had a small customer list, so Schwartz wrote for Boardroom a
 
 ### Where he drew the line
 
-While broke, years before his success, he refused $7,000 to write promotion for a land deal because he did not believe in it. He wrote only for products he thought good and drew the line at illegal, not at controversial. He promoted *Sex May Be Dangerous to Your Health* without sharing its thesis, and his staff joked about throwing him out of a window. His reason: a person with an unorthodox idea deserves a hearing [S12].
+While broke, years before his success, he refused $7,000 to write promotion for a land deal because he did not believe in it. He wrote only for products he thought good and drew the line at illegal, not at controversial. He promoted *Sex May Be Dangerous to Your Health* without sharing its thesis, and his staff joked about throwing him out of a window. His reason: a person with an unorthodox idea deserves a hearing [S12]. This is his own telling in a 1975 interview; no other source confirms the amount.
 
 ### Rewriting the TV repair manual ad
 

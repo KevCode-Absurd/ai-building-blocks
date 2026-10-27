@@ -5,6 +5,8 @@ description: Decide who owns an unrouted lead or opportunity and manage the hand
 
 # Route Lead
 
+> AI Blocks note: this skill mentions `lead-triage` and `update-opportunity`. They are not in this copy. If you have no triage result, ask the person for the lead's score, or score it with the Lead prioritizer item. If you have no CRM write access, give the ownership change as a checklist for the person to apply.
+
 **Rules (apply to every step of this skill):**
 - Work silently between tool calls and batch independent reads. When the user asks for an action (update a record, send an email, post to chat, book a meeting), take it through the connector. When the skill suggests a change the user did not ask for, show the change and its evidence and let the user decide. Permissions live in each connector's own settings (allow, ask or block per tool): never add a restriction the connector does not impose, and never refuse an action the user asked for on the plugin's own authority.
 - Ground field, stage and picklist names on the live CRM's own schema. Never assume one vendor's shapes on another.

@@ -10,11 +10,8 @@ level: intermediate
 inputs:
   - type: question
     required: true
-  - type: source_text
-    required: false
 outputs:
-  - type: brief
-  - type: audit_report
+  - type: prompt
 uses: []
 steps: []
 origin: imported

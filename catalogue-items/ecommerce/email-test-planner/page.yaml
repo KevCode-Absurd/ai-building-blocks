@@ -29,7 +29,7 @@ not_for:
 
 you_give:
   - Monthly revenue and email list size
-  - Your flows, with recipients per month and revenue per flow
+  - Your flows, with recipients per month and revenue per flow (needed for flow tests; without them you get popup and campaign tests only)
   - Your last 8 or more campaigns, with revenue per send if you have it
   - Your current popup signup rate (optional)
   - Your email tool (optional)
@@ -133,7 +133,7 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Klaviyo", why: "Its A/B tests show win probability and placed order rate, and flows can split into paths for timing tests. Check that your plan includes A/B testing."}
+    - {name: "Klaviyo", why: "Paid service with an account. Its A/B tests show win probability and placed order rate, and flows can split into paths for timing tests. Check that your plan includes A/B testing."}
     - {name: "Google Sheets", why: "A test log with one row per test keeps hypothesis, sample, result and the next step in one place."}
   inputs:
     - "Revenue per recipient for each flow and campaign"

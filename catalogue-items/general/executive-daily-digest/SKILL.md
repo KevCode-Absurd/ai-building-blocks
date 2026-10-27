@@ -11,7 +11,7 @@ description: "Share your calendar, action list and updates. Get a dated brief of
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Work commitment and follow-up writer](https://useaiblocks.com/skills/executive-work-keeper). It takes the document.
 - The [Action item tracker](https://useaiblocks.com/skills/executive-action-register). It takes the document.
-- The [Executive meeting brief writer](https://useaiblocks.com/skills/executive-meeting-brief).
+- The [Cross-tool status briefing writer](https://useaiblocks.com/skills/copilot-roundup). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -25,7 +25,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A draft** (yours): the ad, page, email or script you want checked or improved.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Plan** with the [Action item tracker](https://useaiblocks.com/skills/executive-action-register). Bring meeting notes, plan (optional), document (optional), audit report (optional), spreadsheet (optional).
+1. **Plan** with the [Action item tracker](https://useaiblocks.com/skills/executive-action-register). Bring meeting notes (optional), plan (optional), document (optional), audit report (optional), spreadsheet (optional).
 2. This one.
 
 How to start:
@@ -33,6 +33,14 @@ How to start:
 2. **Check what's missing.** Look for plan, a draft. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
+
+## Required inputs
+- Your calendar for the day, as an export or a pasted agenda.
+- Your action list with a task, an owner and a due date for each.
+- Recent updates, with dates.
+- Today's date and your timezone. Yesterday's brief is optional.
+
+If the "What you need" list above names a different input, use this list.
 
 ## The job
 

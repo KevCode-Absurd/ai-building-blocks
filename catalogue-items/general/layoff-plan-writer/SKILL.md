@@ -53,9 +53,9 @@ The decision check. The timing. The reason. Who and why. The support list. The m
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Long-term partner screener](https://useaiblocks.com/skills/long-term-partner-screener). It takes the plan.
 - The [Change rollout planner](https://useaiblocks.com/skills/change-rollout-planner). It takes the draft and plan.
-- The [Hard feedback message writer](https://useaiblocks.com/skills/hard-feedback-message-writer). It takes the plan.
-- The [Polite request editor](https://useaiblocks.com/skills/order-to-request-rewriter). It takes the draft.
+- The [Sales pay plan checker](https://useaiblocks.com/skills/sales-pay-plan-checker). It takes the plan.
 - The [Employee termination risk reviewer](https://useaiblocks.com/skills/termination-risk-checker). It takes the plan.
 - The [Workplace change announcement writer](https://useaiblocks.com/skills/org-change-announcement-writer). It takes the draft and plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.

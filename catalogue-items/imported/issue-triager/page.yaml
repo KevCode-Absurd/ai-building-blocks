@@ -31,7 +31,7 @@ you_get:
   - An out-of-scope record for rejected ideas
 how_to_use:
   - Open your AI in a tool that can reach your issue tracker. Paste in this skill.
-  - Tell it your label names for each role, such as bug, enhancement and needs-info. Add your out-of-scope notes if you have them. If it asks for the /setup-matt-pocock-skills command, which is not in this folder, give it your label names instead.
+  - Tell it your label names for the seven roles (bug, enhancement, needs-triage, needs-info, ready-for-agent, ready-for-human and wontfix). Write the label your tracker uses for each one. Add your out-of-scope notes if you have them. A glossary file and decision records are optional. If it asks for the /setup-matt-pocock-skills command, which is not in this folder, give it your label names instead.
   - "Ask what needs attention, or name one issue or pull request, like \"Let's look at #42\"."
   - Read its suggested category and state. Say yes, or tell it to change them.
   - Ask to see each comment and label change before it posts or closes anything, and say yes only when it looks right. Every comment starts with a note that AI wrote it.

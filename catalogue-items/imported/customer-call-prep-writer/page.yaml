@@ -9,7 +9,9 @@ subhead: "One page you can scan five minutes before a customer call. Name the co
 explain: |
   One page you can scan five minutes before a customer call. Name the company and who will be on the line, and you get a brief built from signals in Common Room: recent product use, open deals, risks and news.
 
-  It looks up the account, then each attendee's role, influence and recent activity. It pulls past call recordings first, since those show what was already said. If a calendar is connected it finds attendees for you. It sets a call goal, writes three to five talking points tied to real signals, and lists two or three likely questions or objections. It needs a Common Room connection.
+  It looks up the account, then each attendee's role, influence and recent activity. It pulls past call recordings first, since those show what was already said. If a calendar is connected it finds attendees for you. It sets a call goal, writes three to five talking points tied to real signals, and lists two or three likely questions or objections. If your data is thin it says so and shows only what it found.
+
+  Common Room is a separate service with its own account, and its plans may cost money. Without it, write your own call notes or ask a teammate who knows the account. The persona tag is Common Room's label for the kind of buyer a person is. This is Common Room's call-prep skill, shared by Anthropic under the Apache 2.0 licence, with a plainer name. We did not change the method.
 when:
   - You have a renewal call in an hour and have not looked at the account.
   - A new contact joined the thread and you know nothing about them.
@@ -43,7 +45,7 @@ output_sample:
     - Call type, such as discovery, demo or renewal (optional)
     - Your calendar, if connected (optional)
   prerequisites:
-    - A Common Room account your AI can connect to
+    - A Common Room account your AI can connect to (a separate service, and its plans may be paid)
     - An AI that can search the web for recent news
   output:
     - name: Meeting Context

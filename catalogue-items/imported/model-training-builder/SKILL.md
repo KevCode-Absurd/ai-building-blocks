@@ -41,6 +41,8 @@ Provide the agent with the dataset location, the target variable or task descrip
 
 ### Example 1: Training a Text Classifier with PyTorch
 
+> The data in this example is made up (random numbers and a fixed 1,000/1,000 label split) so the code runs on its own. Replace the data loading with your own file before you run it. Any scores from the made-up data mean nothing.
+
 ```python
 import torch
 import torch.nn as nn

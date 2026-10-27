@@ -74,7 +74,7 @@ Run the course with one or two agents before you recruit more, then ask the skil
 
 ## If something is missing
 
-Write `MISSING: <what> for <step>`. With no prices or costs, give pay as a formula with blanks. Never invent earnings or promise a level of income.
+Write `MISSING: <what> for <step>`. With no prices or costs, give pay as a formula with blanks. Never invent earnings or promise a level of income. Week-one pay examples are worked from the formula and the user's own price and cost, and labelled "example, not a promise".
 
 ## Avoid
 

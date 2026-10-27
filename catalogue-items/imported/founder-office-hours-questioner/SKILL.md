@@ -9,6 +9,8 @@ description: "/cs:office-hours <topic> — YC-style 6-question founder interroga
 
 Before any advice, the founder must answer six questions. Modeled on YC office hours: no analysis until the founder has done the thinking. This is the cognitive forcing function that prevents drift into solutionism.
 
+**What you need.** A topic to test. If you have a ranked shortlist of ideas, use its top pick as the topic.
+
 ## When to Run
 
 - Before starting any major initiative

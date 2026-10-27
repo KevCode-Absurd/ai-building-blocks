@@ -7,7 +7,7 @@ job: build-websites
 headline: Interface builder
 subhead: Responsive, accessible interface components with a design system behind them and dark mode that works, built from your description of the screens. Output is code in the framework you use, such as React with Tailwind.
 explain: |
-  Responsive, accessible interface components with a design system behind them and dark mode that works, built from your description of the screens. Output is code in the framework you use, such as React with Tailwind.
+  Screens that look different on every page are slow to fix by hand. This skill builds them from one set of rules instead, so buttons, cards and forms match everywhere.
 
   The skill works in a set order. It first confirms the devices and framework. Then it sets design tokens: a 4px spacing scale, type sizes, colours. Components are built with variants for size, colour and state. Layouts use grid for pages and flexbox for parts, with set breakpoints. Accessibility comes first, with proper HTML elements before ARIA, and dark mode uses swapped colour variables. It ships a worked example of a card component with variants.
 when:
@@ -35,9 +35,9 @@ how_to_use:
   - Describe your screens. Add your framework, such as React with Tailwind, and the devices you must support.
   - Paste your existing colours or brand rules if you have them (optional). If you have none, it uses a neutral set.
   - Read the tokens first, then the components. Ask for changes before you copy the code.
-  - Test with the Tab key only, then run an accessibility checker and a contrast check. Fix any failures before release.
+  - Test with the Tab key only, then run an accessibility checker and a contrast check on a real device. The skill writes code but cannot run a browser or a device test, so WCAG and contrast compliance is not confirmed until you check it. Fix any failures before release.
   - Running the code and viewing it in a browser needs your own project or a tool that can run code.
-  - You get code files for each component and a tokens file. The example code is React with Tailwind, and other frameworks follow the same tokens. Paste the code into your project, run the Tab-key and contrast checks, then pair it with a backend or coding tool to connect your data.
+  - You get code files for each component and a tokens file. The example code is React with Tailwind, and other frameworks follow the same tokens. Paste the code into your project, run the Tab-key and contrast checks, then connect it to your data source, or ask a designer or your AI for a design review of the result.
 output_sample:
   input:
     - A description of the screens or components you need

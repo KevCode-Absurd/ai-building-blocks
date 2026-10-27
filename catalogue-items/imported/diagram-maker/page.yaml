@@ -9,7 +9,7 @@ subhead: Describe a system, process or idea in words. Your AI picks a diagram ty
 explain: |
   A clean SVG diagram in a dark theme, saved as one file you can open in any browser, drop into slides or edit later. The styles are built in. It loads the JetBrains Mono font from Google Fonts, so it needs internet access to show that font.
 
-  Pick from nine types: architecture, flowchart, sequence, structure (classes, ER, org charts), mind map, timeline, illustrative, state machine and data flow. The skill uses a fixed colour system so meaning stays consistent: cyan for front-end and user-facing parts, green for back-end services, violet for storage, amber for cloud and infrastructure. Describe your system, process or idea in words, and it chooses a fitting type and lays out the boxes, arrows and labels.
+  Pick from nine types: architecture, flowchart, sequence, structure (classes, ER, org charts), mind map, timeline, illustrative, state machine and data flow. The skill uses a fixed colour system so meaning stays consistent: cyan for front-end and user-facing parts, green for back-end services, violet for storage, amber for cloud and infrastructure. Describe your system, process or idea in words, and it chooses a fitting type and lays out the boxes, arrows and labels. Check the result against what you meant, since the AI draws what you describe and may miss a link. This is Jim Liu's baoyu-diagram skill, shared under the MIT licence.
 when:
   - You need an architecture picture for a document and have no design tool open.
   - You want a flowchart of a process your team follows.
@@ -35,7 +35,8 @@ how_to_use:
   - Describe your system, process or idea. List the parts to include. Name a diagram type if you have a preference.
   - 'Example: say "A shop site calls an API, which reads orders from a database and sends emails through a queue." Your AI picks an architecture diagram and saves a .svg file plus a matching @2x .png.'
   - Open the SVG in a browser. Check that no text spills out of a box and no arrows cross labels. Ask for fixes. Then drop the SVG or PNG into a document or slide deck, or ask your AI to change labels or layout and save a new version.
-  - "Know the limits: the SVG loads the JetBrains Mono font from Google Fonts, so it needs internet to show that font. The PNG step needs bun or npx installed."
+  - "Know the limits: the SVG loads the JetBrains Mono font from Google Fonts, so it needs internet to show that font. The PNG step needs bun or npx installed, and npx downloads bun from the web. Without either you still get the SVG. Skip the PNG."
+  - Next, paste the PNG into a slide deck or a document. Send the SVG to a designer if you want a brand-styled version.
 output_sample:
   input:
     - A plain description of your system, process or idea

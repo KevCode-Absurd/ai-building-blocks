@@ -26,7 +26,7 @@ not_for:
 pricing:
   model: freemium
   from: "Free; the Launch price is unclear (see note)"
-  note: "Free plan: 100 data credits and 500 actions a month, tables up to 200 rows, no phone enrichment. The pricing page conflicts on paid plans. Launch shows US$167 a month as the headline and US$185 in the FAQ. Another table on the page shows from US$54 a month billed yearly and US$60 monthly. Growth shows US$446 a month as the headline and US$495 in the FAQ, with other figures lower down. We could not tell which billing term each number is for, so confirm the price and term on clay.com before you buy. Checked 26 Oct 2026."
+  note: "Pricing is unverified: the paid prices on the page disagree with each other. Free plan: 100 data credits and 500 actions a month, tables up to 200 rows, no phone enrichment. The pricing page conflicts on paid plans. Launch shows US$167 a month as the headline and US$185 in the FAQ. Another table on the page shows from US$54 a month billed yearly and US$60 monthly. Growth shows US$446 a month as the headline and US$495 in the FAQ, with other figures lower down. We could not tell which billing term each number is for, so confirm the price and term on clay.com before you buy. Checked 26 Oct 2026."
 works_with:
   - Salesforce
   - HubSpot
@@ -45,6 +45,7 @@ first_result:
     - "Start a table. Import a list of companies, or search for companies and people."
     - "Add one enrichment column for work email. Run it on 5 rows first and look at what comes back."
     - "Add a Claygent column with a plain question, such as 'What does this company sell, and who is it for?'. Run it on the same 5 rows and check the answers against the company website."
+    - "Before you email anyone, check the email rules where your contacts live (such as CAN-SPAM or GDPR) and each data source's terms, and keep only contacts you may email."
     - "Export the rows, or sync them to your customer records if you are on Growth."
     - "Next: put the list in order with the Who to call first ranker, or compare Apollo if you want a simpler list builder."
 needs:
@@ -55,7 +56,7 @@ needs:
 example:
   task: "Fill in work emails and a one-line note about each company for 50 target accounts."
   cost: "Uses data credits and actions from your monthly pool. The free plan has 100 credits and 500 actions. We did not check how many credits one email lookup or one Claygent run uses, so run 5 rows and watch the counter."
-  reply: "A table with one row per person or company. It has columns for email, job title, company details and your Claygent answer. The exact columns depend on what you add. Check a sample of rows by hand before you email anyone."
+  reply: "A table with one row per person or company. For the 5-row test, expect these columns: company name, website, person name, job title, work email, and your Claygent answer. Other columns depend on what you add. Check a sample of rows by hand before you email anyone."
 not_verified:
   - "The real price of Launch and Growth, and the billing term behind each figure."
   - "How many credits one lookup or one Claygent run costs."

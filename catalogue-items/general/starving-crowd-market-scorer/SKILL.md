@@ -59,7 +59,8 @@ Candidates, the score table with evidence, the ruled-out list, what the offer mu
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Niche offer pricing planner](https://useaiblocks.com/skills/niche-price-ladder-builder). It takes the shortlist.
-- The [Pricing decision planner](https://useaiblocks.com/skills/pricing-decision-planner).
+- The [Promotion explanation writer](https://useaiblocks.com/skills/reason-why-deal-writer). It takes the shortlist.
+- The [Offer package planner](https://useaiblocks.com/skills/offer-trim-and-stack-builder). It takes the shortlist.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

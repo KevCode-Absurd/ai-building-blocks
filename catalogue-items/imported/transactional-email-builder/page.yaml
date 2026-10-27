@@ -9,7 +9,9 @@ subhead: The emails your app sends, such as welcome, verify, password reset and 
 explain: |
   The emails your app sends, such as welcome, verify, password reset and invoice, built as real code you can ship. They look right in dark mode, in different languages and in major email apps.
 
-  The skill writes React Email templates, or MJML where wide email client support matters. It wires them to Resend, Postmark, SendGrid or AWS SES through one sending interface, and adds a local preview server with hot reload. It handles translated text with typed keys, dark mode styles, UTM links and open and click tracking. A spam checklist helps your mail reach the inbox. You need a code project, Node and an account with one email provider.
+  The skill writes React Email templates, or MJML where wide email client support matters. It wires them to Resend, Postmark, SendGrid or AWS SES through one sending interface, and adds a local preview server with hot reload. It handles translated text in one file per language, dark mode styles, UTM links and open and click tracking. A spam checklist helps reduce the chance of spam placement. No setup guarantees inbox delivery. You need a code project, Node and an account with one email provider. The sample copy and the trial length in the welcome email are placeholders. Replace them with facts about your own product before you send.
+
+  Licence: MIT, as the LICENSE file in this item says. Credit goes to the original author.
 when:
   - You are adding sign-up and password emails to a new product.
   - Your old email system is hard to change and you want to replace it.
@@ -35,6 +37,7 @@ how_to_use:
   - Ask for the layout and one template first. Check it, then ask for the rest.
   - Run the preview server. Check each email in light and dark mode.
   - Replace every bracketed placeholder and sample detail (company address, trial length, seat limit) with your real ones. Send a test email to yourself and check that the unsubscribe and tracking links work. Then work through the spam checklist and test with Mail-Tester before your first real send. Keep marketing sends on a separate domain.
+  - After your first real send, check bounce and spam-complaint rates in your provider's dashboard. For marketing mail, pair this with your existing email campaign tool.
 output_sample:
   input:
     - The list of emails your app sends
@@ -55,8 +58,8 @@ output_sample:
     - name: Preview server
       contains: A local page that shows each email and reloads when you change the code.
     - name: i18n files
-      contains: Translated text for each language, with typed keys so a missing line is caught.
+      contains: Translated text for each language, kept in one file per language.
     - name: Tracking helper
       contains: Code that adds UTM tags to the links in your emails.
     - name: Spam score checklist
-      contains: A list of checks to run before your first send so mail reaches the inbox.
+      contains: A list of checks to run before your first send, to reduce the chance of landing in spam.

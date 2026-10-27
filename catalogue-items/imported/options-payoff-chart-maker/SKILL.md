@@ -14,7 +14,7 @@ description: >
 
 # Options Payoff Curve Skill
 
-If your host has not already executed the shell probes below (for example, in Codex), run the commands inside the `!` wrappers with its shell tool before choosing a setup path. Use the actual output; if shell access is unavailable, report that limitation.
+The live-quote probe below is optional. If your host has not already executed it (for example, in Codex), run it only when the user wants a live price, and use the actual output; if shell access is unavailable, report that limitation and ask for the spot price. This skill is for learning, not for live trading decisions.
 
 Generates an interactive HTML chart using the host's available visualization tool, or a standalone HTML file in Codex, showing:
 - **Expiry payoff curve** (dashed gray line) — intrinsic value at expiration
@@ -41,7 +41,7 @@ When the user provides a screenshot or text, extract:
 | IV | Shown in greeks panel, or estimate from vega | 20% |
 | Risk-free rate | — | 4.3% |
 
-**Ask before you guess.** If the premium or quantity is missing, ask the user for the real number first. Use a default only if they cannot give one, and then show a visible "DEFAULTS USED" banner on the chart that lists each guessed value (premium, IV, spot, days to expiry). Never present a defaulted number as the user's real figure.
+**Ask before you guess.** If the premium or quantity is missing, ask the user for the real number first. Use a default only if they cannot give one, and then show a visible "DEFAULTS USED" banner on the chart that lists each guessed value (premium, IV, spot, days to expiry). Never present a defaulted number as the user's real figure. When any default is used, also mark the stats cards "based on guessed values" and put "Educational only, not advice. Check every figure with your broker before you trade." on the chart.
 
 **Spot for screenshots**: spot is the underlying's current price, and broker screenshots often omit it or show it far from the strikes — don't read it off the strike labels. Use the price shown, else a live quote (the SPX probe below, or yfinance for other underlyings). Fall back to the middle strike only when no quote is available, and tell the user you did.
 
@@ -187,7 +187,7 @@ update();
 After rendering the widget, briefly explain:
 1. What strategy was detected and how legs were mapped
 2. Max profit / max loss at current settings
-3. One key insight (e.g., "spot is currently 950 pts below the profit zone, expiring tomorrow")
+3. One key insight (e.g., "spot is currently [N] pts below the profit zone, expiring in [N] days")
 
 Keep it concise — the chart speaks for itself.
 

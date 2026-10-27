@@ -10,6 +10,8 @@ explain: |
   Backups that run on a schedule, get verified, and actually restore. A backup nobody has tested is a guess, so this skill builds in the test.
 
   You name the database, its size, how much data you can afford to lose and how long you can be down. The skill picks full, incremental or point-in-time backups to match. It writes shell scripts for PostgreSQL, MySQL or MongoDB using pg_dump, mysqldump or mongodump, with compression, optional encryption, dated file names and error handling. It sets the schedule and a retention rule such as 7 daily and 4 weekly, checks file integrity, runs a test restore in staging, and sets alerts for missed runs.
+
+  The example scripts cover full dumps. Point-in-time recovery needs extra setup that you must switch on yourself: WAL archiving for PostgreSQL, binary logs for MySQL, or the oplog on a MongoDB replica set. Local disk costs nothing. Cloud storage such as AWS S3, Google Cloud Storage or Azure Blob, and monitoring tools such as Datadog, need an account and may cost money. Names like production, backup_user and /var/backups in the scripts are placeholders. Replace them with yours, and give the backup user only the rights it needs to read and back up. This is the AI Agent Skills Community's database-backup skill, shared under the MIT licence.
 when:
   - Your app has no tested backups and you want some.
   - You need to restore to a moment just before a bad change.
@@ -31,8 +33,8 @@ you_get:
   - Failure alert setup
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text.
-  - Tell your AI your database type and size, how much data you can lose, how long you can be down, and where to store backups.
-  - Read the scripts and the restore steps before you run anything. Never put passwords in the chat or in the scripts.
+  - Tell your AI your database type and size, how much data you can lose, how long you can be down, and where to store backups. Local disk needs no account. Cloud storage needs an account and may cost money.
+  - Read the scripts and the restore steps before you run anything. Replace the example names with your own. Never put passwords in the chat or in the scripts.
   - Run the scripts on a test setup first. This needs code running and access to your database, so a person with server access may need to do it.
   - Do a test restore into staging before you rely on the backups. If the restore passes, keep the schedule and add a failure alert. If it fails, fix the script before you trust any backup.
 next: [uptime-and-alert-setup-planner, logging-and-alerts-setter]

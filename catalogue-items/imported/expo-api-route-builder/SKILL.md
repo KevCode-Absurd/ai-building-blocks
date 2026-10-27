@@ -148,7 +148,7 @@ export async function POST(request: Request) {
       Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
     },
     body: JSON.stringify({
-      model: "gpt-4",
+      model: "<MODEL NAME>", // replace with a current model name from OpenAI's docs
       messages: [{ role: "user", content: prompt }],
     }),
   });
@@ -333,8 +333,10 @@ export async function requireAuth(request: Request) {
     });
   }
 
-  // PLACEHOLDER: you MUST replace this before shipping. As written, any token is accepted.
-  // Verify the token with your auth provider (check signature and expiry), then return the real user ID.
+  // PLACEHOLDER: you MUST replace this before shipping. As written, EVERY request that has a token is
+  // refused with a 501, so the route never works until you add a real check.
+  // Verify the token with your auth provider (check signature and expiry), then return { userId }.
+  // Never change this to accept any token: that would leave the route open to everyone.
   throw new Response(JSON.stringify({ error: "Token check not implemented" }), {
     status: 501,
     headers: { "Content-Type": "application/json" },
@@ -363,7 +365,8 @@ export async function GET(request: Request) {
   }
 
   // Encode the value, and send the key in a header if the provider allows it
-  // (header name shown is an example; use the one your provider documents)
+  // (the URL and header name shown are placeholders: replace them with the endpoint and header
+  // your weather provider documents, and check them before you rely on this example)
   const response = await fetch(
     `https://api.weather.com/v1/current?city=${encodeURIComponent(city)}`,
     { headers: { "X-Api-Key": process.env.WEATHER_API_KEY! } }

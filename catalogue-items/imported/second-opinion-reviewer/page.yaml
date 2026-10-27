@@ -34,7 +34,7 @@ how_to_use:
   - Add your plan, change or claim, and what it must achieve. Add limits you already know (optional).
   - Ask your AI to follow the skill. It writes down your claim, picks the smallest piece to review, and sends it to the fresh reviewer.
   - Read the objections. Mark each one fix or dismiss, and give a reason.
-  - The step that asks another AI tool for a view is optional. It may need a paid account or API key, and it sends your work to that tool's service. Only use it with material you may share.
+  - The commands in the skill file are only for that optional other-AI step. Skip them if you do not use a terminal. The step that asks another AI tool for a view is optional. It may need a paid account or API key, and it sends your work to that tool's service. Only use it with material you may share.
   - Use the revised decision. The skill stops after a set number of rounds, so it does not loop forever.
 output_sample:
   input:
@@ -50,8 +50,8 @@ output_sample:
     - name: Reviewable unit
       contains: The smallest piece of your work, plus what it must achieve, handed to the fresh reviewer.
     - name: Reviewer objections
-      contains: The strongest reasons the work may be wrong, from a reviewer who has not seen your reasoning.
+      contains: The strongest reasons the work may be wrong, from a reviewer who has not seen your reasoning. Each objection says which part of the work it targets, how much it matters, and why.
     - name: Reconciliation
-      contains: Each objection marked as fix or dismiss, with a short reason for the call.
+      contains: Each objection marked as fix, accepted trade-off or dismiss (noise), with a short reason for the call. One of these labels per objection.
     - name: Revised decision
       contains: Your updated plan or change after the objections you accepted, or a note that it stands.

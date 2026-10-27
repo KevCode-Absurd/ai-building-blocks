@@ -8,6 +8,8 @@ compatibility: 'Requires uv, Python 3.10 or later, and network access to install
 
 Create a Model Context Protocol (MCP) server in Python with the official [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk) v2. SDK v2 supports the MCP specification revision [2026-07-28](https://modelcontextprotocol.io/specification/2026-07-28). The same server also serves clients that use earlier revisions.
 
+Start from the tools to expose and where their data comes from. If you have a tool set plan, take the tools from it. If you have existing Python functions to expose, add them.
+
 ## Workflow
 
 Copy this checklist and track your progress:

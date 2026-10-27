@@ -7,6 +7,7 @@ description: Use when something said or done at work or home has made you angry 
 
 The first reply to a hurt is often the one you regret. This skill puts a pause between the hurt and the message, helps you sort what happened from how it felt, and drafts a calm first message that asks for help instead of blame. It is not therapy and gives no mental health advice. If you feel unsafe or in crisis, contact a qualified person or your local emergency line.
 
+When not to use: for abuse, threats or harassment, go to HR, a manager or a qualified adviser, not a message plan. For a legal dispute, talk to a lawyer before you write back. If the user describes any of these, say so in the first lines, point them there, and do not draft a message. Once you are calm and want to hold the conversation, use the Listening conversation planner.
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -36,8 +37,8 @@ How to start:
 2. **Separate facts from feelings.** Make two lists. Facts: only what a camera or a record would show, with who and when. Feelings: how it felt to the user, in their words. Move any judgement about motive from facts to a third list marked guesses.
 3. **Check the source.** Ask whether the user saw or heard it first-hand, or was told, and by whom. If told, note that the account may be partial or told in secret, and write what they would need to check before acting.
 4. **Test your view of the other person.** List what you may not know about the other person's day, pressure, health or intent. Ask whether you may have this wrong, and name one other reading of the same facts.
-5. **Ask where the anger comes from.** Ask whether it comes from care about a person, a standard or a result, or from plain irritation at being crossed. Write one sentence on which it is. Keep care and drop the rest.
-6. **Picture what might be hurting them.** Picture the other person as a child, and write one thing that might be hurting them, labelled as a guess. Do not tell them this guess.
+5. **Ask where the anger comes from.** Ask whether it comes from care about a person, a standard or a result, or from plain irritation at being crossed. Write one sentence on which it is. If it is mainly irritation, write the message without the irritated wording and list the irritation under feelings. If it is care, let the message say what you care about.
+6. **Picture what might be hurting them.** Think about what pressure or worry might sit behind what they did, and write one possibility, labelled as a guess. Do not tell them this guess.
 7. **Draft a calm opening.** Write a message of five or six sentences: one fact, how it hurt, what you need and one open question. Say you are hurt and need help, and do not blame. Remove claims you cannot back up. Offer a time to talk.
 8. **Check it.** Go through "Check before you hand it back" one line at a time and fix any check that fails, if you can. Under CHECKS MISSED, write one line for each check still missed and why, or "none".
 
@@ -47,9 +48,9 @@ The pause plan, the three lists (facts, feelings, guesses), the source check, th
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Long-term partner screener](https://useaiblocks.com/skills/long-term-partner-screener). It takes the plan.
 - The [Feedback conversation planner](https://useaiblocks.com/skills/feedback-conversation-planner). It takes the draft and plan.
-- The [Blame-free review agenda writer](https://useaiblocks.com/skills/blame-free-review-agenda-writer). It takes the plan.
-- The [Listening conversation planner](https://useaiblocks.com/skills/listen-first-talk-planner). It takes the plan.
+- The [Sales pay plan checker](https://useaiblocks.com/skills/sales-pay-plan-checker). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -9,7 +9,7 @@ level: intermediate
 inputs:
   - {type: persona, required: false}
   - {type: voc_reviews, required: false}
-  - {type: question, required: false}
+  - {type: idea, required: false}
   - {type: lessons_register, required: false}
 outputs:
   - {type: plan}

@@ -9,7 +9,9 @@ subhead: Ask what broke in production and get a short, readable answer pulled st
 explain: |
   Ask what broke in production and get a short, readable answer pulled straight from Sentry. No clicking through dashboards to find the issues that matter.
 
-  The skill uses the Sentry command line tool in read-only mode. It lists unresolved issues from the last 24 hours in the production environment, newest first, with title, level and priority. You can then open one issue to see its events and details. It never changes anything in Sentry. You need the Sentry CLI installed and signed in, and you set your access token locally, never in chat.
+  The skill uses the Sentry command line tool in read-only mode. It lists unresolved issues from the last 24 hours in the production environment, newest first, with title, level and priority. You can then open one issue to see its events and details. It never changes anything in Sentry. You need the Sentry CLI installed and signed in, and you set your access token locally, never in chat. The token only needs read access to issues and events.
+
+  This is OpenAI's read-only Sentry skill, copied under the Apache 2.0 licence. The upstream skill is the source of truth.
 when:
   - You just shipped a release and want to know if new errors appeared.
   - You are on call and need the top live issues in a minute.
@@ -21,7 +23,7 @@ not_for:
   - "You have billing or account questions for your whole organisation: use the Sentry website directly."
 you_give:
   - A question about recent errors, such as a time range or project
-  - Sentry CLI installed and signed in
+  - Sentry CLI installed and signed in, with a token that can read issues and events
   - Organisation and project names (optional, usually found automatically)
 you_get:
   - List of recent unresolved issues
@@ -34,7 +36,7 @@ how_to_use:
   - Ask a plain question, such as "What broke in production in the last 24 hours?"
   - Read the issue list. Pick one issue by its short ID and ask for its details.
   - Check the summary against what you know. The skill only reads from Sentry and never changes anything.
-  - To go further, ask your AI to explain the cause or plan a fix for the top issue.
+  - To go further, ask your AI to explain the cause or plan a fix for the top issue. These two commands may need a paid Sentry plan or AI add-on, so check your plan first.
 output_sample:
   input:
     - A question about recent errors, such as "List the top 10 open issues for prod in the last 24h"

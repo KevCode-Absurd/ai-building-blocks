@@ -36,7 +36,9 @@ rank for", "keyword analysis", "best keywords for [topic]",
 }
 ```
 
-Start by asking the owner which keywords, products, audiences, locations, and business outcomes matter. If they do not know, derive provisional candidates from the site, audit findings, competitor language, and observed search results. Do not silently replace owner-supplied priorities with guessed keywords.
+Start by asking the owner which keywords, products, audiences, locations, and business outcomes matter. If they do not know, derive provisional candidates from the site, audit findings, competitor language, and observed search results. Do not silently replace owner-supplied priorities with guessed keywords. If inputs are still missing after you ask, list what is missing at the top, then produce the full report anyway with every figure marked provisional.
+
+Without browsing or a keyword tool, you cannot see competitor pages. In that case, leave out competitor keyword gaps, say so, and do not invent them.
 
 ## Live search-intent research
 

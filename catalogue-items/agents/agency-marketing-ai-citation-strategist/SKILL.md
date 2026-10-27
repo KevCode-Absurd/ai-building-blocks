@@ -11,9 +11,9 @@ Find out who AI tools name when buyers ask for a pick, why, and what to change. 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [AI search platform checker](https://useaiblocks.com/skills/ai-search-platform-checker).
 - The [AI search visibility tester](https://useaiblocks.com/skills/ai-recommendation-panel-runner). It takes the plan.
-- The [Page keep-or-cut auditor](https://useaiblocks.com/skills/page-keep-or-cut-auditor). It takes the audit report.
+- The [Store SEO fix prioritiser](https://useaiblocks.com/skills/store-seo-fix-prioritiser). It takes the audit report.
+- The [Answer-first page rewriter](https://useaiblocks.com/skills/answer-first-page-rewriter). It takes the draft and plan and audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -21,14 +21,17 @@ If they pick one and that skill is added here, carry straight on with what you j
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+- **Business profile** (yours): a sourced business profile with buyer, offer, activation, growth goal, stage and limits; missing private metrics remain unknown.
 
 **Makes it better (optional):**
+- **Competitors** (yours): the brands buyers compare you with.
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
 - **Your website** (yours): the link to your site or the page.
+- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for source text, your website. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for business profile, competitors, source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -37,6 +40,8 @@ How to start:
 
 ## Inputs
 
+These are the inputs that count. If the generic "Before you start" list above asks for source text or a web page, ignore that part: this agent takes the brand, site, category, 2 to 4 rivals, the buyer, and AI answers pasted in and labelled by tool and question.
+
 Ask once for anything missing. Do not guess.
 
 1. **Brand, site address and category.** Required.
@@ -44,8 +49,9 @@ Ask once for anything missing. Do not guess.
 3. **Buyer.** Who asks, and in what situation. Required for the question list.
 4. **AI answers** for each question, from each tool, labelled by tool and question. Needed for the audit itself. If none, deliver only the question list and the answer-collection sheet.
 5. **Key pages** (FAQ, comparison, product). Optional.
+6. **A site check report** from an earlier step, such as an AI search platform check. Optional. Use it to explain why pages are not named.
 
-You cannot query other AI tools from here. Never invent, guess or simulate what ChatGPT, Claude, Gemini or Perplexity would say. If the user supplied answers for only some tools or questions, compute on those and show how many answers each number is based on. Mark the rest "Not tested".
+You cannot query other AI tools from here. Never invent, guess or simulate what ChatGPT, Claude, Gemini or Perplexity would say. If the user supplied answers for only some tools or questions, compute on those and show how many answers each number is based on. Mark the rest "Not tested". If a tool has fewer than 10 answers, show the counts only and call the rate too thin to trust.
 
 ## Steps
 
@@ -85,6 +91,8 @@ DRAFTS
 RECHECK
 <date, same questions, what to compare>
 ```
+
+End with `CHECKS MISSED:` and name every tool, question or check you could not test, or write "none".
 
 ## Rules
 

@@ -46,6 +46,8 @@ output_sample:
     - Notes on your product (optional)
   prerequisites:
     - An AI that can open web pages
+    - "The five reference files from this item's references folder, pasted in full. Without the scoring criteria file the scores cannot be worked out, and without the benchmarks file the conversion figures have no source"
+    - Conversion figures in the report (such as video lift) are rough guides from the benchmarks file, not promises
   output:
     - name: Score card
       contains: A table with a score and grade for each of the 6 areas of your listing.

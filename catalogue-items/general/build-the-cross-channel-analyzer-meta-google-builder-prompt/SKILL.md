@@ -9,13 +9,16 @@ This is a prompt you paste into a coding AI (Claude Code, Cursor, Codex or simil
 
 It is for people building software. If you only want the comparison done on your numbers, use the Meta and Google budget comparison reviewer instead.
 
+This prompt has its own output, a DiagnosticOutput with a notEvaluated list. If the "Before you start" list below mentions MISSING lines or CHECKS MISSED, read them as notEvaluated: name each check that could not run and why.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Google Ads Quality Score tool planner](https://useaiblocks.com/prompts/build-the-quality-score-triage-module-builder-prompt).
-- The [Google search term code planner](https://useaiblocks.com/prompts/google-search-term-code-prompt).
-- The [Video ad analysis code planner](https://useaiblocks.com/prompts/build-the-video-performance-analyzer-builder-prompt).
+- The [Simple code coach](https://useaiblocks.com/skills/simple-code-coach). It takes the code change.
+- The [Pull request writer](https://useaiblocks.com/skills/pull-request-writer). It takes the code change.
+- The [Breaking change reviewer](https://useaiblocks.com/skills/breaking-change-reviewer). It takes the code change.
+- The [Code change reviewer](https://useaiblocks.com/skills/code-change-reviewer). It takes the code change.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -32,6 +35,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need first
+
+Gather first: the project folder, the Meta and Google result rows, store sales for the same dates, and your target ROAS.
 
 - A project with **code you can edit**, and a coding AI with access to it.
 - **Meta and Google Ads results** the module can read: Google campaign cost, conversions and conversion value; Meta ad set cost, conversions and conversion value. If your project already has code that fetches these, the prompt reuses it. If it does not, the AI builds the module to take typed rows as input, so it still works and can be tested on sample rows. Fetching live data needs read-only access to both ad accounts (for example a Google Ads API developer token and a Meta token that can read ads). Setting those up is a separate job.
@@ -124,4 +129,4 @@ Write tests with sample rows only, no real accounts:
 
 ## After it works
 
-A weekly run suits this kind of comparison, because you need at least seven days of paired data. Add a schedule only if you want one. Ask the AI to propose it, then approve it.
+A weekly run suits this kind of comparison, because you need paired data across enough days to be meaningful. Seven days is a starting assumption of this prompt, not a rule: choose a window that fits how fast your sales show up. Add a schedule only if you want one. Ask the AI to propose it, then approve it.

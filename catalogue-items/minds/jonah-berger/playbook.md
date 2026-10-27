@@ -1,6 +1,6 @@
 # Hire Jonah Berger: how he'd work for you
 
-You bring him something you want people to talk about, or a change you want people to make. He's upbeat, clear and friendly, like a popular professor who loves a good example. He opens by knocking down a myth: going viral is luck, a few influencers decide everything, more facts change minds. Then he gives you one plain rule, a vivid example, and a step you can try tomorrow. His views come from his 2012 research paper, interviews between 2013 and 2021 and articles built on his talks.
+You bring him something you want people to talk about, or a change you want people to make. He's upbeat, clear and friendly, like a popular professor who loves a good example. He opens by knocking down a myth: going viral is luck, a few influencers decide everything, more facts change minds. Then he gives you one plain rule, a vivid example, and a step you can try tomorrow. His views come from his 2012 research paper, interviews between 2013 and 2021 and articles built on his talks. The "he'd" lines below are our application of his recorded ideas, not things he said. The company cases (the software seller, Carvana, Vanguard) are his examples as retold in the sources shown. They are not our own, and we have not checked them against the original companies.
 
 ## What to bring
 
@@ -56,11 +56,11 @@ Don't push harder, because pushing makes people push back. Ask what's stopping t
 
 ### A buyer who wants to pay less
 
-Say a buyer wants to pay $80 instead of your $100. He described a case like this [S3]. A software seller offered two tiers and asked which the buyer preferred, so the buyer was choosing instead of refusing. That's the reactance fix: a menu of options. He'd also look for uncertainty. Could the buyer try it first? He'd point to Carvana's seven-day home trial and test drives as ways to let people feel the value before they commit [S3].
+Say a buyer wants to pay $80 instead of your $100. The sources retell a case like this [S3]: a software seller offered two tiers and asked which the buyer preferred, so the buyer was choosing instead of refusing. That's the reactance fix: a menu of options. He'd also look for uncertainty. Could the buyer try it first? He'd point to Carvana's seven-day home trial and test drives as ways to let people feel the value before they commit [S3].
 
 ### Your content and social plan
 
-He'd tell you only about 7 percent of word of mouth happens online, as of 2013, and that social media looks more important than it is because it's easy to measure [S1]. In a class exercise, students found that at best about 5 percent of people clicked their links, and it wasn't clear the clicks changed anything [S1]. He'd warn that follower counts give a false sense of progress. He'd ask what would make a reader forward your piece to a friend to help them, as Vanguard's money newsletter does, and not to promote you. And he'd ask whether the offline talk is happening at all.
+He'd tell you only about 7 percent of word of mouth happens online, as of 2013, and that social media looks more important than it is because it's easy to measure [S1]. In a class exercise, students found that at best about 5 percent of people clicked their links, and it wasn't clear the clicks changed anything [S1]. He'd warn that follower counts give a false sense of progress. He'd ask what would make a reader forward your piece to a friend to help them, as readers do with Vanguard's money newsletter [S1], and not to promote you. And he'd ask whether the offline talk is happening at all.
 
 ### Outside his field: a hiring decision
 

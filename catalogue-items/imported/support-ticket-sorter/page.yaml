@@ -33,7 +33,8 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini. No code or paid tool is needed.
   - Paste the skill instructions into the chat.
-  - Paste your tickets below them. Add your team list, severity rules and tone if you have them.
+  - "Gather first: your team names, your severity rules, and your reply times and refund rules. Then paste your tickets below the skill. Add the team list, severity rules and tone if you have them."
+  - "P0 to P3 are severity levels, where P0 is the most urgent (an outage) and P3 the least (a general question). SLA means the reply time you promise customers. SRE means the engineers who keep your service running."
   - Ask your AI to sort the tickets into a table with category, priority, team and a draft reply.
   - Replace the reply times and refund promises with your own policy. The sample ones are placeholders.
   - Paste the table into your helpdesk or a spreadsheet. Handle the P0 and P1 rows first and hand them to the right team.

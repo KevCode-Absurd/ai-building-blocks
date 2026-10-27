@@ -23,10 +23,10 @@ Run `composio execute <SLUG> --get-schema` in Bash (in parallel) for:
 - `GOOGLEDRIVE_FIND_FILE`
 
 ### Step 3: Fetch ticket data
-Run `composio execute GORGIAS_LIST_TICKETS -d '<JSON>'` in Bash to pull tickets for the dates the user gave, using the argument names from the schema in Step 1. Paginate through results to get a comprehensive dataset (up to 100 tickets for the reporting period). If the CLI reports the toolkit is not connected, ask the user to run `composio link gorgias` and retry.
+Run `composio execute GORGIAS_LIST_TICKETS -d '<JSON>'` in Bash to pull tickets for the dates the user gave, using the argument names from the schema you fetched in Step 2. Paginate through results, but stop at 100 tickets for the reporting period. This means every count below covers at most the first 100 tickets, not the whole period. If the period holds more, say so and show the figure as "first 100 tickets". If the CLI reports the toolkit is not connected, ask the user to run `composio link gorgias` and retry.
 
 ### Step 4: Enrich with details
-For a sample of tickets (up to 20), run `composio execute GORGIAS_GET_TICKET -d '{"ticket_id":"<ID>"}'` in Bash as parallel calls to get message-level data for response time calculations.
+Choose the sample as the 20 most recently created tickets in the period (or all of them if there are fewer), and say so in the report. Calculate first response time as the time from the customer's first message to the first reply from an agent, and resolution time as the time from the first message to the closing time, both read from message timestamps. For each sampled ticket, run `composio execute GORGIAS_GET_TICKET -d '{"ticket_id":"<ID>"}'` in Bash as parallel calls to get message-level data for response time calculations.
 
 ### Step 5: Compute metrics
 Calculate and present:
@@ -37,7 +37,7 @@ Calculate and present:
 **Generated:** [current date/time]
 
 ### Volume
-- Total Tickets: X
+- Total Tickets: X (this is the capped count of up to 100 tickets, not the full total for the period; say "100+ in the period" if you hit the cap)
 - Open: X | Pending: X | Closed: X
 - New (last 24h): X
 - New (last 7d): X

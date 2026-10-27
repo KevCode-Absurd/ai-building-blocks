@@ -21,6 +21,8 @@ Ask once for anything missing. Never invent a model name, GPU or target.
 3. **Target.** Expected users at once, and a response-time goal if they have one. If they have none, say so and set a goal to measure, not a guess.
 4. **Quantized model OK?** (optional) Smaller files that fit smaller cards, with some quality risk.
 
+If a GPU server plan from an earlier step names the card type and count, use it for the GPU answer.
+
 If your AI cannot run commands on the user's GPU machine, write the commands, say they are untested, and ask the user to paste the output of each step.
 
 Flag names change between vLLM versions. Run `vllm serve --help` on the user's install and check each flag below against it before you use it.

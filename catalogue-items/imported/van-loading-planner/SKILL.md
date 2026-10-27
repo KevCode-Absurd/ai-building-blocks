@@ -102,7 +102,7 @@ Before optimizing vehicle loading, understand:
 **4. Load Securing**
 - Prevent shifting during transport
 - Use load bars, straps, or airbags
-- Comply with DOT cargo securement rules
+- Comply with your country's cargo securement rules (check with your local transport authority)
 - Protect fragile items
 
 ---
@@ -151,14 +151,16 @@ class SingleStopVehicleLoader:
     """
 
     def __init__(self, vehicle_length, vehicle_width, vehicle_height,
-                 weight_capacity, front_axle_limit=13000, rear_axle_limit=34000):
+                 weight_capacity, front_axle_limit=None, rear_axle_limit=None):
         """
         Initialize vehicle loader
 
         Parameters:
         - vehicle_length, vehicle_width, vehicle_height: cargo area dimensions (inches)
         - weight_capacity: max payload weight (lbs)
-        - front_axle_limit, rear_axle_limit: axle weight limits (lbs)
+        - front_axle_limit, rear_axle_limit: axle weight limits (lbs), from the
+          vehicle plate or handbook. If left as None the axle check is skipped
+          and reported as MISSING.
         """
 
         self.vehicle_dims = (vehicle_length, vehicle_width, vehicle_height)
@@ -280,6 +282,9 @@ class SingleStopVehicleLoader:
         - Rear axle at 60% of vehicle length
         """
 
+        if self.front_axle_limit is None or self.rear_axle_limit is None:
+            return {'valid': False, 'note': 'MISSING: axle limits. Axle check not valid.'}
+
         L = self.vehicle_dims[0]
         rear_axle_position = L * 0.6
 
@@ -346,6 +351,9 @@ class SingleStopVehicleLoader:
         print()
         print("Axle Weight Distribution:")
         axle = self.solution['axle_weights']
+        if axle.get('valid') is False:
+            print(f"  {axle['note']}")
+            return
         print(f"  Front Axle: {axle['front_axle']:,.0f} lbs "
               f"({'OK' if axle['front_ok'] else 'OVER LIMIT'})")
         print(f"  Rear Axle: {axle['rear_axle']:,.0f} lbs "
@@ -429,6 +437,7 @@ class MultiStopVehicleLoader:
         zone_length = L / num_stops
 
         zones = []
+        unplaced = []
         current_weight = 0
 
         for idx, stop in enumerate(sorted_stops):
@@ -439,6 +448,12 @@ class MultiStopVehicleLoader:
 
             # Load items for this stop in this zone
             for item in stop['items']:
+                # Fit check: each side must fit the cargo area, and the item must fit
+                # the zone length. Anything that does not fit is reported, not placed.
+                l, w, h = item['dims']
+                if w > W or h > H or l > zone_length:
+                    unplaced.append(item)
+                    continue
                 if current_weight + item['weight'] <= self.weight_capacity:
                     # Simple placement (could be more sophisticated)
                     zone_items.append({
@@ -458,6 +473,7 @@ class MultiStopVehicleLoader:
             'zones': zones,
             'total_weight': current_weight,
             'stops_loaded': len(zones),
+            'unplaced_items': unplaced,
             'total_items': sum(len(z['items']) for z in zones)
         }
 
@@ -475,6 +491,7 @@ class MultiStopVehicleLoader:
         print(f"Total Weight: {self.solution['total_weight']:,} lbs")
         print(f"Stops: {self.solution['stops_loaded']}")
         print(f"Total Items: {self.solution['total_items']}")
+        print(f"Not placed (too big for the zone or too heavy): {len(self.solution['unplaced_items'])}")
         print()
 
         for zone_data in self.solution['zones']:
@@ -617,39 +634,34 @@ def optimize_fleet_loading(orders, vehicles):
 
 ### Vehicle Loading Report
 
-**Vehicle: 26ft Box Truck**
-- Dimensions: 26'L x 8'W x 8'H
-- Weight Capacity: 12,000 lbs
-- Route: 5 stops
+Fill every [BRACKET] from the user's own figures. If a figure is missing, write MISSING. Never use a made-up number.
+
+**Vehicle: [VEHICLE TYPE]**
+- Dimensions: [LENGTH] x [WIDTH] x [HEIGHT]
+- Weight capacity: [PAYLOAD LIMIT FROM PLATE OR HANDBOOK]
+- Route: [NUMBER OF STOPS] stops
 
 **Loading Plan:**
 
-Zone 1 (0-5ft) - Stop 5 (Last):
-- 3 pallets: P045, P046, P047
-- Weight: 2,100 lbs
+Zone 1 (nearest the rear door) - Stop [LAST STOP]:
+- [ITEMS AND IDS]
+- Weight: [ZONE WEIGHT]
 - Accessible from rear door
 
-Zone 2 (5-10ft) - Stop 4:
-- 2 pallets + 8 boxes
-- Weight: 1,850 lbs
+Zone 2 - Stop [NEXT STOP BACK]:
+- [ITEMS AND IDS]
+- Weight: [ZONE WEIGHT]
 
-Zone 3 (10-15ft) - Stop 3:
-- 4 pallets
-- Weight: 2,800 lbs
+(One zone per stop, ending with the first stop deepest in the vehicle.)
 
-Zone 4 (15-20ft) - Stop 2:
-- 3 pallets + 12 boxes
-- Weight: 2,400 lbs
-
-Zone 5 (20-26ft) - Stop 1 (First):
-- 2 pallets
-- Weight: 1,600 lbs
+**Not placed:** [ITEMS THAT DID NOT FIT OR WERE TOO HEAVY, OR "none"]
 
 **Summary:**
-- Total Weight: 10,750 lbs (90% capacity)
-- Volume Utilization: 82%
-- Axle Weights: Front 4,200 lbs, Rear 6,550 lbs ✓
-- Load Secured: Yes (4 load bars, stretch wrap)
+- Total weight: [TOTAL] against [CAPACITY]
+- Space used: [PERCENT, only if volumes were given]
+- Axle weights (estimate): front [FRONT], rear [REAR] against limits [FRONT LIMIT] and [REAR LIMIT] from the vehicle plate. State that the rear axle was assumed at 60% of cargo length. If the limits are missing, write "MISSING: axle limits, axle check not valid".
+- Weighbridge check: weigh the loaded van and compare with these axle figures before the first drop
+- Load secured: [HOW, per your country's securement rules]
 
 ---
 
@@ -662,6 +674,8 @@ Zone 5 (20-26ft) - Stop 1 (First):
 5. Any axle weight concerns or restrictions?
 6. Are items palletized or loose cargo?
 7. Any special handling requirements?
+
+If you have a route plan from an earlier step, use its stop order as the delivery sequence.
 
 ---
 

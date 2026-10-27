@@ -18,7 +18,8 @@ when:
 not_for:
   - Your site has no clear topic or products yet. Decide what you sell or teach first, then run this.
   - You need checked search volumes. Use a live keyword tool such as Google Keyword Planner or Ahrefs.
-  - You want to fix a page you already wrote. Ask a person who knows SEO, or edit the page by hand.
+  - You want to fix a page you already wrote. Use the On-page SEO tuner instead.
+  - You want to audit your whole site or see where you rank today. Use the SEO auditor instead.
 you_give:
   - Your topic and what the site does
   - Your target audience
@@ -29,13 +30,13 @@ you_get:
   - A ranked keyword list
   - Question searches
   - Terms grouped by intent
-  - Gaps compared with competitors
+  - Gaps compared with competitors (only if your AI can browse; otherwise left out)
   - A note on which numbers are estimates
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
   - "Tell your AI your topic, what your site does, who it is for, and your goal: rank, convert or educate."
   - Add a city, competitor links or keywords you already care about (optional).
-  - A browser or keyword tool is optional. Without one, every number in the report is an estimate.
+  - A browser or keyword tool is optional. Without one, every number in the report is an estimate and the competitor gaps are left out, not guessed.
   - If your AI can browse the web or use a keyword data service, say so. If not, it will mark volume and difficulty as estimates.
   - Check the Quick Wins Summary first, then the Keyword → Content Map.
   - Treat volume, difficulty and cost per click as estimates unless you gave your AI a named data source. The Note line in the report keeps that warning, so don't delete it.

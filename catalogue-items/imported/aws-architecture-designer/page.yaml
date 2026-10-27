@@ -32,7 +32,7 @@ you_get:
 how_to_use:
   - Write down your app type, expected users, monthly budget, team experience and any rules like GDPR or HIPAA. Add your current AWS resource list if you want savings ideas.
   - Open your AI and paste this skill, or upload the skill folder. It works best in a tool that can run code, because it uses Python scripts.
-  - Give it your details and ask for a design. Check that the pattern fits your team and your rules before you ask for templates.
+  - Give it your details and ask for a design. It turns them into a small file called requirements.json for its Python scripts. Check that the pattern fits your team and your rules before you ask for templates.
   - Ask for the CloudFormation template. Read it, and have someone who knows AWS review it before you deploy.
   - Deploying creates AWS resources that cost money. Set a budget alarm and try it in a test account first.
   - The cost figures in the examples are only illustrations. Your real costs depend on your usage, so check the AWS pricing pages.

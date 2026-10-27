@@ -336,7 +336,7 @@ Validated issues: X (Y Critical, Z High)
 - Traced: UserListView → users queryset → user_list.html → `{{ user.profile.bio }}` in loop
 - Searched the code you were given: no select_related('profile') found (say so if you could not search the whole project)
 - User table size: only if the user told you (for example "50k rows, as you said"). If you were not given a size, write "size not given" and do not guess
-- Hot path: linked from homepage navigation
+- Hot path: only write what you saw in the code or what the user told you (for example "linked from homepage navigation, as you said"). If you could not tell, write "hot path not confirmed"
 
 **Evidence:**
 ```python

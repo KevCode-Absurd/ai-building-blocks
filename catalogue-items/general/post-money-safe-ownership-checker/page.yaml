@@ -7,9 +7,9 @@ thinking: high
 thinking_why: "A SAFE is not stock until it converts, so the cap, the share count and the later round must each come from the signed documents."
 subhead: Give it your cap-only post-money SAFE, the amount received, the cap and the later round's dilution. It works out the ownership the SAFE gives, then what is left after the later round. You get a plain bridge, an editable workbook and a list of open questions.
 explain: |-
-  A cap-binding ownership bridge and unresolved conversion conditions.
+  A SAFE gives an investor a share of the company later, when a priced round converts it. This skill works out that share for a cap-only post-money SAFE, then what is left after a later round dilutes it. It lists the conversion terms it could not settle, so a lawyer can check them. It is arithmetic, not legal or investment advice.
 
-  Venture financing. Illustrative figures only. An amount of 100 at a post-money cap of 1,000 gives 100 / 1,000 = 10%. If a later round dilutes by 20%, the holder keeps 80% of that: 10% x 0.8 = 8%. An amount of 200 at the same cap gives 20%, and 16% after the same round.
+  Illustrative figures only. An amount of 100 at a post-money cap of 1,000 gives 100 / 1,000 = 10%. If a later round dilutes by 20%, the holder keeps 80% of that: 10% x 0.8 = 8%. An amount of 200 at the same cap gives 20%, and 16% after the same round.
 when:
   - You hold or issued a cap-only post-money SAFE and want to know the ownership it converts to.
   - A priced round is coming and you want to see how it dilutes the SAFE holder.
@@ -73,19 +73,19 @@ how_it_works:
   - title: 3. Apply the supplied later round dilution fraction; keep any new option-pool expansion separate
     text: Apply the supplied later round dilution fraction; keep any new option-pool expansion separate.
 output_shape: |-
-  A cap-binding ownership bridge and unresolved conversion conditions.
   Scope and dated sources
   Inputs and assumptions
   Model calculations and reconciliations
+  Open conversion conditions (terms still to confirm)
   Actual file verification
   MISSING: and CHECKS MISSED
 tweaks:
   - what: "Conversion date"
     how: "Take the conversion date from the signed SAFE and the later round documents. Use one currency and scale on every line."
   - what: "The later round's dilution"
-    how: "Change the the later round's dilution and have your AI recalculate. Keep the actual figures you supplied."
-  - what: Acceptance
-    how: Investment and cap use identical currency and scale.
+    how: "Change the later round's dilution and have your AI recalculate. Keep the actual figures you supplied."
+  - what: Several amounts
+    how: Run the same cap with each amount received to compare holders side by side.
 judge:
   - Investment and cap use identical currency and scale.
   - SAFE ownership and aggregate ownership must remain between zero and one.

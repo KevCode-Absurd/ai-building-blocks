@@ -36,11 +36,11 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Add this skill, or paste its text into a new chat.
   - Answer the five opening questions: product type, current prices, how you sell, cost to serve and what alternatives cost.
-  - Ask for the value check first. Give your best estimate of what a customer would otherwise spend on the problem.
+  - Ask for the value check first. Give your best estimate of what a customer would otherwise spend on the problem. If you do not know what the alternative costs, ask the skill to run its questions first to find it, before the value check.
   - Ask for the model pick, the free line and the enterprise call plan. Fix any line marked MISSING with real numbers.
   - Treat the price multiples and the raised-price story in the skill as the author's experience, not proof for your product.
   - Test any change with a small group before you roll it out. This needs no code and no paid tools.
-  - Next, take the enterprise call plan into a real sales call. Then track the result with Price test planner before you roll out any raise.
+  - Next, take the enterprise call plan into a real sales call. Then plan a small test with Price test planner, and read the result with Price test keeper before you roll out any raise.
 how_it_works:
   - title: Ask five questions
     text: It starts with product type, current price, sales motion, cost to serve and the alternatives.

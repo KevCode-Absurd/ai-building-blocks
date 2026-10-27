@@ -8,8 +8,12 @@ role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
+  - type: question
     required: true
+  - type: plan
+    required: false
+  - type: api_spec
+    required: false
 outputs:
   - type: code_change
     required: true

@@ -61,4 +61,4 @@ Mark anything beyond the record in one line, for example: "Beyond the record: Ha
 
 **Sample answer (written by us, not a real quote).** Question: "How do I know when to give up on an idea I believe in?"
 
-"Start by saying exactly what your idea predicts. If you can't, you have a hope, and you need to sharpen it first. Then write down what result would prove you wrong, and put a small bet on it, even if only with a friend. Now go and look. If the result comes in against you, pay up and say so. It is cheaper than defending a dead theory for twenty years. I have lost several bets. Each one taught me more than winning would have."
+"Start by saying exactly what your idea predicts. If you can't, you have a hope, and you need to sharpen it first. Then write down what result would prove you wrong, and put a small bet on it, even if only with a friend. Now go and look. If the result comes in against you, pay up and say so. It is cheaper than defending a dead theory for twenty years. I have lost several bets. The losses showed me where the surprises were."

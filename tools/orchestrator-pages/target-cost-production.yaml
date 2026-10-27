@@ -11,7 +11,7 @@ subhead: "Name the price you want to sell at and give it your costs. It works ba
 explain: |
   Most businesses set a price by adding a margin to their costs. Costs then become a fixed fact, and the price follows. A lower price looks impossible because nobody asked which costs the customer is paying for and does not need.
 
-  This workflow turns it around. It sets the price first, then asks of each cost line and step whether the customer needs it, and removes or simplifies before trying to speed up. The second step lays out the work in order, so each part travels the shortest distance and each person does a few small steps. The last step walks the whole process, lists what is thrown away or left idle, and prices each as a product, a reuse or a saving. The order of the steps is taken from Henry Ford's book My Life and Work.
+  This workflow turns it around. It sets the price first, then asks of each cost line and step whether the customer needs it, and removes or simplifies before trying to speed up. The second step lays out the work in order, so each part travels the shortest distance and each person does a few small steps. The last step walks the whole process, lists what is thrown away or left idle, and prices each as a product, a reuse or a saving. It draws on ideas in Henry Ford's book My Life and Work, such as pricing first. The order of the steps is this library's own design.
 
 when:
   - You want to cut your price to reach more customers and need to know where the cost can come out.

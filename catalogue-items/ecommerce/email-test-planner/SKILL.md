@@ -30,8 +30,10 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+The "Your results" line above means your email tool's campaign and flow results, not ad exports.
+
 - **Monthly revenue and email list size** (required).
-- **Flows** (required): each with recipients per month and revenue per flow. A results export from your email tool works.
+- **Flows** (needed for flow tests): each with recipients per month and revenue per flow. A results export from your email tool works. Without flow numbers, the plan covers popup and campaign tests only (see below).
 - **Campaign send history** (strongly advised): the last 8 or more sends, ideally with revenue per send.
 - **Current popup signup rate** (optional).
 - **Email tool** (optional), so set-up notes use its words. Klaviyo is the default. Check that your plan includes A/B testing.

@@ -8,10 +8,16 @@ role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
+  - type: question
     required: true
+  - type: codebase
+    required: false
+  - type: signal_data
+    required: false
 outputs:
   - type: code_change
+  - type: signal_data
+    required: true
 uses: []
 origin: imported
 source:

@@ -9,7 +9,7 @@ level: intermediate
 inputs:
   - type: copy_draft
     required: true
-  - type: brief
+  - type: customer_needs
     required: false
 outputs:
   - type: copy_draft

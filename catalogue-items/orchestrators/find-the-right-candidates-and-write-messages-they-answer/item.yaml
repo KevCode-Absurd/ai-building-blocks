@@ -7,7 +7,7 @@ role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - {type: brief, required: true}
+  - {type: job_description, required: true}
   - {type: performance_sheet, required: true}
 outputs:
   - {type: document}

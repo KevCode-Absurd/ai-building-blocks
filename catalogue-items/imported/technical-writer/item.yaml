@@ -10,7 +10,9 @@ level: intermediate
 inputs:
   - type: codebase
     required: true
-  - type: brief
+  - type: question
+    required: false
+  - type: api_spec
     required: false
 outputs:
   - type: document

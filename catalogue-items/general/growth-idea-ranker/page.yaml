@@ -26,6 +26,7 @@ you_give:
   - Your list of ideas, from everyone who has them
   - What you know so far, such as results from earlier checks
   - Your goal number and what you tried before (optional)
+  - Results from the last 30 days, so the confidence scores rest on evidence
 you_get:
   - Each idea scored for impact, confidence and ease, with a reason for each score
   - The list sorted by average score

@@ -60,7 +60,7 @@ How to start:
    - The founder, in first person, with facts on record.
    - A named expert who agreed, saying only what they said.
    - The brand, summing up what customers tell it.
-   Never invent a person, a first name or a "customer" voice. Public reviews may be quoted word for word as "one customer wrote", unnamed, and each one goes on the review list. If nobody is cleared, the brand speaks.
+   Never invent a person, a first name or a "customer" voice. A review may be quoted word for word as "one customer wrote", unnamed, only if that reviewer agreed to it appearing in an ad. Each one goes on the review list with the proof of that OK. If nobody is cleared, the brand speaks.
 7. **Say where the click goes.** A stranger should land on an article-style page from the brand that opens on the same moment, not on a product page. If none exists, write `MISSING: an article-style page` and say it must be built before the ad runs.
 8. **Plan the test.** Four stories on the lead problem. Each row differs by a lot on three things: which force opens it, which trace the picture shows, and the opener (the scene in the picture, a date or count, or a real quote). Distinct ads let the ad system find different people. Add a fifth row only if the budget allows.
 9. **Run the checks.** Check the sheet against the 6 checks under "Check before you hand it back". Fix any failed check you can, then check again. Show `CHECKS MISSED: <one line each>`, or "none".
@@ -84,7 +84,10 @@ Use these headings, in this order:
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Write the ad copy** with the [Story image ad writer](https://useaiblocks.com/skills/story-image-ad-writer). It takes the plan.
-- The [Ad variant change auditor](https://useaiblocks.com/skills/ad-variant-change-auditor). It takes the plan.
+- The [Ad reach planner](https://useaiblocks.com/skills/reach-before-repeat-planner). It takes the plan.
+- The [Ad response incentive planner](https://useaiblocks.com/skills/test-reply-offer-planner). It takes the plan.
+- The [Meta test campaign planner](https://useaiblocks.com/skills/meta-test-campaign-planner). It takes the plan.
+- The [AI creative workflow handoff planner](https://useaiblocks.com/skills/ai-workflow-handoff-planner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

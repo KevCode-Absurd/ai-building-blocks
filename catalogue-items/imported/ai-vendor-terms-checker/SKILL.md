@@ -9,6 +9,8 @@ description: >
 argument-hint: "[vendor name, or attach the contract]"
 ---
 
+> **AI Blocks note: using this in a plain chat.** The `~/.claude/plugins/config/...CLAUDE.md` files, the matter workspaces and the slash commands in this file belong to the original legal toolkit. They do not exist for you, so ignore every reference to them. Use the provisional path (see "Provisional mode") by default when the user has not pasted an AI policy. The parts you need are the term-by-term table, the severity scale, the output template under "Output", and the signature gate. Skip the matter context and the long notes on mapping to the user's own tech stack. This is a first check, not legal advice.
+
 # /vendor-ai-review
 
 1. Read `~/.claude/plugins/config/claude-for-legal/ai-governance-legal/CLAUDE.md`. Confirm vendor governance positions are populated. If that file does not exist (for example in a plain chat), ask the user to paste their AI policy and vendor positions, or to say "provisional", and carry on.

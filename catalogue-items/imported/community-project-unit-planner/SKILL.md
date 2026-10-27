@@ -92,6 +92,7 @@ Optional (injected by context engine if available):
 - **Project duration:** How long
 - **School context:** Service learning tradition
 - **Student voice:** How much choice students have
+- **Curriculum gap report:** If you have a table of what your curriculum covers and misses, use its gaps to choose the curriculum connection.
 
 ## Prompt
 

@@ -5,7 +5,25 @@ description: UGC 口播种草视频。商品 + 人设 → 口播脚本与成片�
 
 # ugc-testimonial — UGC 口播种草
 
-> AI Blocks note (English): Before you use this skill, check that every product claim in the script is true for your product. The sample lines below (for example "washed three times, no deformation", "five below zero") are placeholders; replace them with facts you have checked. Only use a face image of a person who gave written consent, never a customer or a public figure. The paths assets/model/face-a.jpg and the brand-kit link are examples; point them at your own files, or leave the face out. Next: join the clips, add captions and a voiceover, and label the video as AI-made where the platform asks.
+## English summary (added by AI Blocks)
+
+The instructions below are in Chinese. This summary is in English.
+
+**What it does.** You give a product and a persona. It writes a 15-second spoken script and a shot list, then shows how to make handheld, creator-style clips with your own video model.
+
+**Rules, read first.**
+- These videos are acted demos. Never present them as a real buyer's review, never use a customer's or a public figure's face, and label the video as AI-made wherever the platform asks.
+- Every product claim in the script must be true for your product and checked by you. The Chinese sample lines in this file are placeholders only, such as 「[你核实过的具体说法]」 ("a claim you have checked"). Replace them with your own checked facts.
+- Only use a face image of a person who gave written consent. If you have none, leave the face out and use hand and product shots.
+
+**Requirements.** To make video you need an AI that can run code, Node.js, and a paid video-model key from fal or Replicate (the original skill is set up for the dLazy service). Each clip costs money. The `--dry-run` step is free: it only prints what would be sent. The paths assets/model/face-a.jpg and docs/flat-lay/... are examples, so point them at your own files. The brand-kit skill the original links to is not included here.
+
+**Steps.**
+1. Decide the persona: who is speaking, in what setting, and why a viewer would trust them.
+2. Write the script and check it with the user. The words matter more than the picture.
+3. Lock one face: use the same reference image in every talking shot (or leave the face out).
+4. Run `--dry-run`, read the plan and the cost, then run it for real.
+5. Join the clips, add captions, and add a voiceover, because lip sync is weak.
 
 投流素材里转化最好的一类往往不是精致广告，而是**看起来像真人随手拍的推荐**。
 
@@ -65,7 +83,7 @@ UGC 风格 ≠ 伪造评价。生成的内容**不能声称是真实买家的真
 
 **写口播的三条铁律**
 
-1. **说具体的**。「特别暖和」无效，「零下五度我只穿了这一件」有效。
+1. **说具体的**。「特别暖和」无效，「[你核实过的具体细节]」有效。（方括号内是占位符，必须换成你核实过的事实。）
 2. **留犹豫**。真人说话有停顿和自我修正，全是完美长句就假了。
 3. **不念参数**。参数放字幕，嘴里说感受。
 
@@ -87,13 +105,13 @@ node scripts/video.mjs --mode storyboard --task ugc-testimonial \
   "shots": [
     { "id": "talk1", "seconds": 4, "image": "assets/model/face-a.jpg",
       "prompt": "Handheld selfie-style shot, young woman talking to camera in a bright apartment, slight natural camera shake, warm window light, casual home background. She is wearing the olive cable-knit sweater.",
-      "caption": "零下五度，我就穿了这一件" },
+      "caption": "[你核实过的具体说法]" },
     { "id": "detail1", "seconds": 3, "image": "docs/flat-lay/garment-flatlay.jpg",
       "prompt": "Handheld close-up of the sweater texture, phone-camera look, natural indoor light.",
-      "caption": "粗棒针织，比看起来厚" },
+      "caption": "[你核实过的具体说法]" },
     { "id": "talk2", "seconds": 4, "image": "assets/model/face-a.jpg",
       "prompt": "Handheld selfie-style shot, same woman, she pulls the collar up and smiles, same apartment.",
-      "caption": "洗了三次也没变形" }
+      "caption": "[你核实过的具体说法]" }
   ]
 }
 ```
@@ -108,7 +126,7 @@ node scripts/video.mjs --mode storyboard --task ugc-testimonial \
 
 1. **先定人设**。问用户卖给谁，人设跟着买家画像走。
 2. **写脚本给用户确认**。口播文案比画面更决定转化。
-3. **锁脸**。多个口播镜头必须是同一个人，用 [brand-kit](../brand-kit/skill.md) 的 `model.reference`。
+3. **锁脸**。多个口播镜头必须是同一个人，用同一张参考图（`model.reference`，原技能在 brand-kit 里，此处未包含，请自备经书面同意的人像）。
 4. **`--dry-run` 过一遍**，再真跑。
 5. **配旁白**。生成的视频不做唇形同步，成片后用剪辑软件配一条旁白，比同期声自然。
 

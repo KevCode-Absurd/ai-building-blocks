@@ -10,7 +10,7 @@ level: advanced
 inputs:
   - type: codebase
     required: true
-  - type: brief
+  - type: question
     required: true
 outputs:
   - type: code_change

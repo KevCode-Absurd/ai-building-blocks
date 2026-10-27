@@ -7,12 +7,12 @@ living: false
 known_for: His adult literacy work informed Pedagogy of the Oppressed; The Importance of the Act of Reading connects written language with experience of the world.
 summary: Use Paulo Freire's approach to teach with people by connecting words, lived experience and shared action.
 use_cases:
-  - "Teach reading through a familiar real text: You receive a relevant reading and writing task."
-  - "Begin training with existing knowledge: You receive an experience-to-instruction map."
-  - "Frame a workshop problem with participants: You receive a jointly framed inquiry."
-  - "Connect discussion with a chosen action: You receive a tested draft and revision question."
-  - "Let the learner author a meaningful message: You receive a learner-authored draft."
-  - "Inspect power in onboarding: You receive a question-and-response route."
+  - "Teach reading through a familiar real text, with a reading and writing task built from it"
+  - "Begin training with what people already know, with a map from their experience to what you teach"
+  - "Frame a workshop problem with participants, so the question is theirs too"
+  - "Connect discussion with a chosen action, with a tested draft and a question for revising it"
+  - "Let the learner write their own message, with help on the written form"
+  - "Inspect power in onboarding, with a clear route for questions and changes"
 not_for:
   - "You want to build a study habit or learn faster alone: use the Barbara Oakley mind, or the Benedict Carey mind for memory and study tips."
   - "You want to change how kids respond to praise, rewards or grades: use the Alfie Kohn mind."

@@ -34,6 +34,7 @@ how_to_use:
   - Paste the skill text into the chat, or upload the skill folder if your AI accepts files.
   - Type your ticker, for example one fund to check, several to compare, or a list to scan for the widest gaps.
   - Let your AI install the data packages if it asks. Then read the premium or discount percent and the reason given.
+  - The skill's NAV figure (navPrice) is an end-of-day number, so an intraday premium can be stale. Check the issuer's NAV page first.
   - Compare the result with the issuer's published NAV page and check the fund's bid-ask spread. Repeat over several days, since one day can mislead. The size labels are rules of thumb, not sourced limits. The output is research, not a trading signal.
 output_sample:
   input:
@@ -56,3 +57,4 @@ output_sample:
       contains: A sudden move split into the part driven by value and the part driven by structure, with a convergence outlook.
     - name: Caveats
       contains: A note that this is research only, not financial advice, and that the data comes from unofficial Yahoo Finance.
+next: [stock-trading-cost-checker, portfolio-mix-optimizer, bond-portfolio-reviewer]

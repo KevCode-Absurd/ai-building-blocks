@@ -19,6 +19,7 @@ A performance review for Postgres, built on rules maintained by Supabase. It has
 - The SQL to review: slow queries, or the SQL files from the project.
 - The table definitions (CREATE TABLE and CREATE INDEX statements).
 - Optional but useful: EXPLAIN ANALYZE output for the slow queries, rough table sizes, how many connections the app opens, and whether it uses a pooler.
+- Optional: SQL or schema changes from an earlier step, such as a tuned query, to review as well.
 
 If the queries or the table definitions are missing, ask once. If you still do not have them, review what you were given and write `MISSING: <what>` under "Not checked". Never invent table names, columns, sizes or timings.
 

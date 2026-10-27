@@ -18,6 +18,7 @@ how_to_use:
   - Ask your AI to rewrite the tests and list any it could not translate.
   - Run the new tests in your project. This step needs your own machine, not the chat.
   - Review each dropped state or instance check before you merge into your React 18 branch.
+  - After the rewrite, you are left with new test files that pass or fail in your project, plus a list of checks that were dropped because they tested internal state. A developer on your team should read that list.
   - Next, run the full test suite on React 18. Check that the behavior covered by each dropped state check is still tested, then merge.
 output_sample:
   input:

@@ -12,6 +12,8 @@ inputs:
     required: true
   - type: voc_reviews
     required: false
+  - type: transcript
+    required: false
 outputs:
   - type: brand_guide
 uses: []

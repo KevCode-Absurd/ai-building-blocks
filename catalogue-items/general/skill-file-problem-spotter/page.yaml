@@ -6,7 +6,7 @@ thinking: low
 thinking_why: "It checks the file against a fixed list, with little judgement."
 
 headline: "Skill file problem spotter"
-subhead: "A skill with a vague trigger line never gets picked up, and one with a loose step gives different results each time. You usually find out only after it has failed in front of someone."
+subhead: "Paste the whole SKILL.md. You get a one-line verdict, a ranked list of weak trigger lines, loose steps and risky lines, each with the quoted line and a written fix."
 
 explain: |
   A skill with a vague trigger line never gets picked up, and one with a loose step gives different results each time. You usually find out only after it has failed in front of someone.
@@ -103,7 +103,7 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Any good chat AI", why: "Paste the whole file under the prompt."}
+    - { name: "Any good chat AI", why: "Paste the whole file under the prompt." }
   inputs:
     - "The folder name of the skill"
     - "Any helper files the skill refers to"

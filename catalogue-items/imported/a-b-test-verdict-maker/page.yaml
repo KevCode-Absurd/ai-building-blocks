@@ -31,6 +31,7 @@ you_get:
   - A ship, stop or extend call
   - A written test report
 how_to_use:
+  - Before you start, have ready the planned sample size for each version, the column names in your data, and the smallest gain that is worth shipping.
   - Open Claude, ChatGPT or Gemini. Pick one that can run code and read files, as the script in this skill needs it to check the split.
   - Paste in this skill and your test plan, with the main metric, guard metrics and planned split.
   - Upload your data file with user ID, version and outcome for each user.

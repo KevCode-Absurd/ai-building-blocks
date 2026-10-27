@@ -10,8 +10,13 @@ level: intermediate
 inputs:
   - type: brief
     required: true
+  - type: codebase
+    required: false
+  - type: image
+    required: false
 outputs:
   - type: web_app
+  - type: design_direction
 uses: []
 origin: imported
 source:

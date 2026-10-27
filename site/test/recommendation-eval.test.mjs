@@ -4,20 +4,19 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import os from 'node:os';
-import path from 'node:path';
-import { build } from 'esbuild';
 import { buildLibrarySearchIndex, searchLibraryIndex } from '../src/lib/library-search-core.ts';
 import { rankLibraryResults } from '../src/lib/library-rank.ts';
 import { makeSearchDocument } from '../src/lib/search-document.mjs';
 import { classificationText } from '../src/lib/catalogue-taxonomy.mjs';
 import { reviewedTask } from '../src/lib/task-discovery.ts';
-import { decodeCatalogue, freeSelection } from '../src/lib/composer-core.ts';
+import { decodeCatalogue, freeSelection, startPicks } from '../src/lib/composer-core.ts';
 import { planOf } from '../../tools/lib/needs.mjs';
 
 // Measured 2026-10-26 after the ranking, next-link and composer changes (quick index top-5 0.855, MRR 0.742; next 0.738;
-// finance 0.979; builder 0.871; free 0.757). Each floor is that level minus about 0.03.
-const FLOOR = { quickTop5: 0.82, quickMrr: 0.7, nextLenient: 0.7, financeNext: 0.94, builderCoverage: 0.84, freeCoverage: 0.72 };
+// finance 0.979; free 0.757). Each floor is that level minus about 0.03.
+// "Start with" picks (free mode, composer-core startPicks), measured 2026-10-27: a labelled step in the top five for 0.857;
+// 0.952 after the step-ranking pass (rank fusion, ready workflows lending weight to their steps, "use it when" cues).
+const FLOOR = { quickTop5: 0.82, quickMrr: 0.7, nextLenient: 0.7, financeNext: 0.94, startTop5: 0.93, freeCoverage: 0.72 };
 
 const fixture = JSON.parse(fs.readFileSync(new URL('./fixtures/recommendation-eval.json', import.meta.url), 'utf8'));
 const raw = JSON.parse(fs.readFileSync(new URL('../public/data/blocks.json', import.meta.url), 'utf8'));
@@ -76,20 +75,17 @@ test('reviewed next/before lists replace the worked-out links', () => {
   assert.deepEqual(plan.chain.map(x => x.slug), ['customer-buying-reasons-finder']);
 });
 
-test('the workflow builder and free assembly cover the expected steps', async () => {
-  const out = path.join(os.tmpdir(), `abb-goal-test-${process.pid}.mjs`);
-  await build({ entryPoints: [new URL('../src/lib/goal.ts', import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')], bundle: true, format: 'esm', platform: 'node', outfile: out, logLevel: 'silent', jsx: 'automatic' });
-  let planFromGoal;
-  try { ({ planFromGoal } = await import('file://' + out.replace(/\\/g, '/'))); } finally { fs.rmSync(out, { force: true }); }
+test('free mode starts with a labelled step, and free assembly covers the expected steps', () => {
   const lib = decodeCatalogue(raw), catalogue = { ...raw, blocks, bySlug };
   const expand = steps => steps.flatMap(s => [s, ...(bySlug[s]?.steps ?? []).map(x => x.uses)]);
   const cover = (steps, groups) => groups.filter(g => g.some(s => expand(steps).includes(s))).length / groups.length;
-  let builder = 0, free = 0;
+  let start = 0, free = 0;
   for (const { goal, steps } of fixture.goals) {
-    builder += cover(planFromGoal(catalogue, goal)?.slugs ?? [], steps);
+    const good = new Set(steps.flat());
+    start += startPicks(catalogue, goal, 5).tasks.some(p => good.has(p.b.slug)) ? 1 : 0;
     try { free += cover(freeSelection(lib, goal).steps.map(s => s.slug), steps); } catch { /* zero */ }
   }
   const n = fixture.goals.length;
-  assert.ok(builder / n >= FLOOR.builderCoverage, `builder step coverage ${(builder / n).toFixed(3)} fell below ${FLOOR.builderCoverage}`);
+  assert.ok(start / n >= FLOOR.startTop5, `"Start with" top-5 hit rate ${(start / n).toFixed(3)} fell below ${FLOOR.startTop5}`);
   assert.ok(free / n >= FLOOR.freeCoverage, `free assembly step coverage ${(free / n).toFixed(3)} fell below ${FLOOR.freeCoverage}`);
 });

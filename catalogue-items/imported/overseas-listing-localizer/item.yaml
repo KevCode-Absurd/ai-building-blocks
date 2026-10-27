@@ -10,6 +10,10 @@ level: intermediate
 inputs:
   - type: pdp_copy
     required: true
+  - type: product_photos
+    required: false
+  - type: plan
+    required: false
 outputs:
   - type: pdp_copy
     required: true

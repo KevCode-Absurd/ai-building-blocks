@@ -38,6 +38,7 @@ how_to_use:
   - "Ask for what you need: a task breakdown, a sprint plan or a status report."
   - Check the estimates and dependencies. Fix anything that does not match how your team works.
   - Copy the lists into your tracker by hand. This works with no setup. After a sprint plan, copy the tasks into your tracker, then ask for a status report at the end of each sprint.
+  - "Next: ask for a status report at the end of each sprint, and share it with your manager."
   - To sync with Jira, Linear, GitHub Issues or Trello, you need an account and an access key, and some plans may cost money. Slack or Teams posting is optional.
 output_sample:
   input:

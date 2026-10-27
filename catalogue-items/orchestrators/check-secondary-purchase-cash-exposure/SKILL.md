@@ -15,8 +15,8 @@ You supply the unfunded commitment result and the signed price quote. The refere
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Private fund commitment and capital call checker](https://useaiblocks.com/workflows/reconcile-a-private-fund-capital-call). It takes the document and spreadsheet.
-- The [Fund subscription-line return and hurdle checker](https://useaiblocks.com/workflows/review-a-fund-bridge-and-hurdle). It takes the document and spreadsheet.
+- The [Private fund commitment and capital call checker](https://useaiblocks.com/workflows/reconcile-a-private-fund-capital-call). It takes the spreadsheet.
+- The [Fund subscription-line return and hurdle checker](https://useaiblocks.com/workflows/review-a-fund-bridge-and-hurdle). It takes the spreadsheet and document.
 - The [Staged follow-on investment checker](https://useaiblocks.com/workflows/check-staged-follow-on-commitments). It takes the document and spreadsheet.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
@@ -25,14 +25,16 @@ If they pick one and that skill is added here, carry straight on with what you j
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
+- **The deal terms** (yours): the price, payment terms, discounts, fees and dates of the deal.
 - **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 
 **Makes it better (optional):**
 - **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **The contract** (yours): the full agreement or terms, with dates and any changes.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for document, spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for the deal terms, document, spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -65,7 +67,7 @@ Read each component SKILL.md in full if it is attached. If it is not, follow the
 
 1. **Unfunded commitment checker** (`unfunded-commitment-checker`). It reads the ledger for only the interest being transferred, at the cutoff date. Restored base = commitment + distributions the agreement lets the fund call back. Used or reduced = original calls + recall calls + approved reductions. Remaining callable = restored base - used or reduced. A negative result is flagged as an overcall for review. It flags consent and assumption terms for the authorized reviewer. It returns the unfunded amount that transfers. Save `outputs/step-1-unfunded-commitment-checker.md` and any native file. Stop this step if a tool or input is missing.
 
-2. **Secondary NAV price checker** (`secondary-nav-price-checker`). It reads the transferred unfunded amount from `outputs/step-1-unfunded-commitment-checker.md`, the reference NAV and the signed quote. Price now = reference NAV x the quoted price fraction, less only the seller-kept distributions the contract credits dollar for dollar. The future unfunded commitment is shown on its own line. The two are summed only as a gross cash funding budget, not a fair value. It returns the adjusted payment due now and the future-call budget. Save `outputs/step-2-secondary-nav-price-checker.md` and any native file. Stop this step if a tool or input is missing.
+2. **Secondary NAV price checker** (`secondary-nav-price-checker`). It reads the transferred unfunded amount from `outputs/step-1-unfunded-commitment-checker.md`, the reference NAV and the signed quote. Price now = reference NAV x the quoted price fraction, less only the seller-kept distributions the contract credits dollar for dollar. The future unfunded commitment is shown on its own line. The two are shown side by side and never added into one number or read as a fair value. It returns the adjusted payment due now and the future-call budget. Save `outputs/step-2-secondary-nav-price-checker.md` and any native file. Stop this step if a tool or input is missing.
 
 ## Workbook (only if the user asks for one)
 

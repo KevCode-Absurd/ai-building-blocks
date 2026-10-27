@@ -9,7 +9,7 @@ role: make
 job: copy
 level: intermediate
 inputs:
-  - type: brief
+  - type: question
     required: true
   - type: source_text
     required: false

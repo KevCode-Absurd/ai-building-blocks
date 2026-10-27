@@ -28,6 +28,7 @@ How to start:
 ## What you need
 - **The task** (required): what learners or staff must produce.
 - **The goal** (required): what the task shows they can do.
+- **Who it is for** (strongly advised): their age or stage, such as Year 6 or new hires, so the wording fits. The "question" in the block above means the task and its goal. Without this, write for a general adult reader and say so.
 - **Levels** (optional): default four, from beginning to strong.
 - **A sample of strong work** (optional): if you have one, the top level is written from it.
 
@@ -57,6 +58,6 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Each cell describes something you can see in the work.
 - The levels step up evenly.
 - Every part ties to the goal.
-- The same work would get the same level from two markers.
+- The same work would get the same level from two markers. Tell the person how to test it: have two markers grade the same two pieces of work, then rewrite any cell where they differ.
 
 For the full version with every check, use the [Marking rubric writer](https://useaiblocks.com/skills/marking-rubric-writer).

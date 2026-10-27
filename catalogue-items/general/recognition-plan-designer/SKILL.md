@@ -60,7 +60,7 @@ Who wins now. The pay check. Levels with goals and prizes. Public moments. Prais
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Employee performance review writer](https://useaiblocks.com/skills/quarterly-performance-review-keeper). It takes the plan.
 - The [Policy removal test planner](https://useaiblocks.com/skills/policy-removal-test-planner). It takes the plan.
-- The [Event key moment designer](https://useaiblocks.com/skills/key-moment-designer).
+- The [Long-term partner screener](https://useaiblocks.com/skills/long-term-partner-screener). It takes the plan.
 - **Grow on social** with the [Community question and update writer](https://useaiblocks.com/skills/weekly-community-keeper).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

@@ -89,7 +89,7 @@ const WEBSITE = { "@type": "WebSite", "@id": `${SITE}/#site`, name: "AI Blocks",
   potentialAction: { "@type": "SearchAction", target: { "@type": "EntryPoint", urlTemplate: `${SITE}/?q={search_term_string}` }, "query-input": "required name=search_term_string" } };
 
 // The same links on every plain page, so no page is more than a few clicks from the rest.
-const NAV = [["/jobs", "All skills by job"], ["/minds", "Minds"], ["/tools", "Tools"], ["/ai-tools", "AI tool guides"], ["/how-it-works", "How it works"], ["/apps", "Apps"], ["/api-and-mcp", "API &amp; MCP"], ["/api-and-mcp#api", "Documentation"]];
+const NAV = [["/jobs", "All skills by job"], ["/minds", "Minds"], ["/tools", "Tools"], ["/ai-tools", "AI tool guides"], ["/how-it-works", "How it works"], ["/apps", "Apps"], ["/api-and-mcp", "Connect your AI"], ["/api-and-mcp#api", "Documentation"]];
 const header = `<header class="small" data-prerendered-nav><a href="/"><b>AI Blocks</b></a><nav aria-label="Main navigation"><a href="/#library">Find a task</a> · <a href="/compose">Build a workflow</a> · <a href="/tools">Tools</a> · <a href="/space">My space</a> · <a href="/account" data-testid="account-link">My saved work</a></nav></header>`;
 // The job hubs use the app's own header (logo, name, the four main links), drawn without the app.
 const GLOBE = ["..###..", ".#+#+#.", "#+#+#+#", "##+#+##", "#+#+#+#", ".#+#+#.", "..###.."];
@@ -124,7 +124,8 @@ const SEO_PAGES = {
   "/from-a-source": ["Turn an article or transcript into AI skills | AI Blocks", STATIC["/from-a-source"][1]],
   "/tools": ["Free online calculators and everyday tools | AI Blocks", STATIC["/tools"][1]],
   "/apps": ["Example AI app you can click through and copy | AI Blocks", STATIC["/apps"][1]],
-  "/api-and-mcp": ["AI Blocks API and MCP server documentation | AI Blocks", "Connect to AI Blocks with MCP or the REST API. Get server URLs, setup instructions, authentication scopes, API examples and troubleshooting."],
+  "/api-and-mcp": ["Connect your AI to AI Blocks with MCP or the API | AI Blocks", "Connect ChatGPT, Claude, Codex or your own app to AI Blocks once. Then your AI can find, plan and get any skill or workflow when it needs one."],
+  "/me-md": ["me.md: one file that tells every AI who you are | AI Blocks", "Make one private file that tells ChatGPT, Claude and Gemini who you are. Get the template, three prompts to make it, and where to put it in each AI."],
   "/tools/growth-channel-planner": ["Growth channel planner: compare 19 channels | AI Blocks", "Prepare a growth brief for any business. Compare 19 channels, define customer outcomes and download a complete planning skill pack. No sign-in needed."],
   "/support": ["Get help with AI Blocks skills and workflows | AI Blocks", "Ask a question, report a broken skill or get help with your workflow. Write to Kevin Mark at hello@useaiblocks.com and get a reply from a person."],
   "/about": ["About: free reusable AI skills and workflows | AI Blocks", "AI Blocks is a free library of AI skills, prompts, workflows, minds and mini tools, run by Kevin Mark in India. See what it is for and who makes it."],
@@ -150,6 +151,7 @@ function howItWorksBody() {
     `<h2>Six kinds, from one message to an app</h2><p>Each one does more than the one before. Start with the smallest one that does your job.</p>${list(kinds.map(([n, l]) => `<b>${esc(n)}</b>: ${esc(l)}`))}`,
     `<h2>Which one to use</h2>${list(choose.map(([need, kind]) => `${esc(need)}: use a ${esc(kind.toLowerCase())}.`))}`,
     `<p><a href="/jobs">Browse every skill by job</a> · <a href="/compose">Build a workflow from your goal</a> · <a href="/apps">See an example app</a></p>`,
+    `<p><a href="/me-md">Make your me.md once. Every task then fits you.</a></p>`,
     `<h2>How we build and review</h2>${list(["Kevin Mark runs AI Blocks. Each page says what you give the item, what you get back and when to skip it.", "Some items are rebuilt by us in our own words from public sources, which the page credits. Others are imported from open-licence collections, with the author, source and licence on the page.", "Tested means the item ran on a real business's files and a second AI graded the result against the page's own checks. Imported items say when they have not been tested yet."])}<p><a href="/about#how-built">Read more about how we build and review</a></p>`,
     `<h2>Words you'll see</h2>${list(words.map(([w, d]) => `<b>${esc(w)}</b>: ${esc(d)}`))}`,
   ].join("");
@@ -231,10 +233,16 @@ const itemList = (entries) => ({ "@type": "ItemList", numberOfItems: entries.len
 
 function pageFor(url) {
   if (url === "/api-and-mcp") return {
-    title: "API & MCP documentation", h1: "Connect with API & MCP.", documentTitle: SEO_PAGES[url][0],
+    title: "Connect your AI", h1: "Connect your AI once, then pull any skill or workflow it needs.", documentTitle: SEO_PAGES[url][0],
     desc: SEO_PAGES[url][1],
     content: fs.readFileSync("src/content/api-mcp.html", "utf8"),
     stylesheet: fs.readdirSync(path.join(DIST, "assets")).find(file => /^ApiMcpPage-.*\.css$/.test(file)),
+  };
+  if (url === "/me-md") return {
+    title: "Your me.md", h1: "Write one file that tells every AI who you are.", documentTitle: SEO_PAGES[url][0],
+    desc: SEO_PAGES[url][1], modified: "2026-10-27", mainClass: "me-md-docs",
+    content: fs.readFileSync("src/content/me-md.html", "utf8"),
+    stylesheet: fs.readdirSync(path.join(DIST, "assets")).find(file => /^MeMdPage-.*\.css$/.test(file)),
   };
   const info = infoPage(url);
   if (info) return {
@@ -407,6 +415,74 @@ function pageFor(url) {
   };
 }
 
+// --- Crawl extras (docs/AI-HUB-PRD.md §9): twin links, feed links, richer structured data and job-hub dates. -------
+// Kept apart from the page templates above: crawlPage() adds to what pageFor() made, crawlHead() adds head links, and
+// jobsSitemap() writes sitemap-jobs.xml. None of it changes what a visitor sees.
+const FEED_LINKS = [
+  `<link rel="alternate" type="application/feed+json" href="/feed.json" title="AI Blocks: new and changed items (JSON Feed)" />`,
+  `<link rel="alternate" type="application/rss+xml" href="/feed.xml" title="AI Blocks: new and changed items (RSS)" />`,
+];
+// The newest "Updated" day of each job's items, gathered as item pages render: a hub changes when one of its items does.
+const jobDates = new Map();
+function crawlHead(url, p) {
+  return [...(url === "/" || url === "/jobs" ? FEED_LINKS : []), ...(p.json ? [`<link rel="alternate" type="application/json" href="${p.json}" title="JSON version" />`] : [])];
+}
+function crawlPage(url, p) {
+  if (!p) return p;
+  if (url.startsWith("/ai-tools/") && p.about?.["@type"] === "SoftwareApplication") return { ...p, about: aiToolLd(p.about, aiTools.tools.find((t) => `/ai-tools/${t.slug}` === url)) };
+  const [, kind, slug] = url.split("/");
+  const b = bySlug[slug];
+  if (!b || kindPath(b) !== kind) return p;
+  const page = readPage(slug);
+  if (b.type !== "mind" && b.task && /^\d{4}-\d{2}-\d{2}$/.test(page.added ?? "")) jobDates.set(b.task, [jobDates.get(b.task) ?? "", page.added].sort().at(-1));
+  // Pages built before the twins existed have no facts; they keep their SKILL.md link.
+  if (!page.facts) return p;
+  return { ...p, markdown: `${url}.md`, json: `${url}.json`, main: p.main ? itemLd(p.main, b, page, url) : p.main };
+}
+// CreativeWork for every item (HowTo for a workflow with steps), with what goes in and what comes out, its source credit
+// and licence, and the same dates as its sitemap lastmod and its page.
+function itemLd(main, b, page, url) {
+  const full = `${SITE}${url}`, src = page.source ?? {}, facts = page.facts;
+  const port = (x) => `${x.label ?? x.type}${x.what ? `: ${x.what}` : ""}${x.required === false ? " (optional)" : ""}`;
+  const credits = (page.credits ?? []).filter((c) => c?.title);
+  const out = { ...main, "@id": `${full}#item`, url: full,
+    ...(page.published ? { datePublished: page.published } : {}), ...(page.added ? { dateModified: page.added } : {}),
+    encoding: [...[main.encoding].flat().filter(Boolean),
+      { "@type": "MediaObject", contentUrl: `${full}.md`, encodingFormat: "text/markdown", name: "Markdown version" },
+      { "@type": "MediaObject", contentUrl: `${full}.json`, encodingFormat: "application/json", name: "JSON version" }] };
+  if (b.type === "mind") return out;
+  const basedOn = [...new Set([src.url, ...credits.map((c) => c.url)].filter((u) => /^https?:\/\//.test(u ?? "")))].slice(0, 10);
+  if (basedOn.length) out.isBasedOn = basedOn.length === 1 ? basedOn[0] : basedOn;
+  const credit = src.by ? `From ${src.by}${src.repo ? ` (${src.repo})` : ""}${src.licence ? `, ${src.licence} licence` : ""}. Adapted by AI Blocks.`
+    : credits.length ? `By AI Blocks, built from ${credits.slice(0, 5).map((c) => `${c.title}${c.by ? ` by ${c.by}` : ""}`).join("; ")}.` : "";
+  if (credit) out.creditText = credit;
+  const inputs = facts.inputs ?? [], outputs = facts.outputs ?? [];
+  if (main["@type"] === "HowTo") {
+    // A workflow with steps: its inputs and results as HowTo supply and yield.
+    if (inputs.length) out.supply = inputs.map((x) => ({ "@type": "HowToSupply", name: x.label ?? x.type, description: port(x) }));
+    if (outputs.length) out.yield = outputs.map(port);
+  } else if (inputs.length || outputs.length) {
+    // A skill, prompt or agent stays a CreativeWork (check-seo.mjs): running it is an Action that works on your inputs
+    // (object) and gives the results (result).
+    out.potentialAction = { "@type": "Action", name: `Run ${b.name} in your AI`,
+      ...(inputs.length ? { object: inputs.map((x) => ({ "@type": "Thing", name: x.label ?? x.type, description: port(x) })) } : {}),
+      ...(outputs.length ? { result: outputs.map((x) => ({ "@type": "CreativeWork", name: x.label ?? x.type, description: port(x) })) } : {}) };
+  }
+  return out;
+}
+// AI tool guides: the product as a SoftwareApplication, with only what the guide states.
+function aiToolLd(about, t) {
+  if (!t) return about;
+  return { ...about, description: t.promise, ...(t.categories?.length ? { applicationCategory: t.categories.join(", ") } : {}),
+    ...(t.runsIn?.length ? { operatingSystem: t.runsIn.join(", ") } : {}), ...(["free", "freemium"].includes(t.pricing?.model) ? { isAccessibleForFree: true } : {}) };
+}
+// The job hubs' sitemap, each hub with the newest date of its items (the same rule as build-index's jobHubDates).
+function jobsSitemap(hubUrls) {
+  const all = [...jobDates.values()].sort().at(-1) ?? "";
+  const dateOf = (u) => (u === "/jobs" ? all : jobDates.get(u.split("/")[2]) ?? "");
+  fs.writeFileSync(path.join(DIST, "sitemap-jobs.xml"), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${hubUrls.map((u) => `  <url><loc>${SITE}${u}</loc>${dateOf(u) ? `<lastmod>${dateOf(u)}</lastmod>` : ""}</url>`).join("\n")}\n</urlset>\n`);
+}
+
 // One page's HTML: the shell with this page's head tags, structured data and first screen.
 function render(url, p, { plain = false, noindex = false } = {}) {
   const full = `${SITE}${url === "/" ? "/" : url}`;
@@ -425,18 +501,19 @@ function render(url, p, { plain = false, noindex = false } = {}) {
   // The trail above the heading, left out when it would only repeat "AI Blocks" under the header.
   const trail = crumbs.length > 2 ? `<p class="small hub-trail">${crumbs.slice(0, -1).map(([n, u]) => `<a href="${u}">${esc(n)}</a>`).join(" › ")}</p>` : "";
   const body = p.content
-    ? `<main class="wrap api-mcp-docs" data-prerendered>${header}${p.content}${footer}</main>`
+    ? `<main class="wrap ${p.mainClass ?? "api-mcp-docs"}" data-prerendered>${header}${p.content}${footer}</main>`
     : p.hub
     ? `${siteHeader}<main class="wrap bp-hero hub" data-prerendered>${trail}<h1 class="bp-h1">${esc(p.h1)}</h1>${p.body}</main>${footer}`
     : `<main class="wrap bp-hero" data-prerendered>${header}${trail}${url === "/" ? `<h2 class="bp-h1">${esc(p.h1)}</h2>` : `<h1 class="bp-h1">${esc(p.h1)}</h1>`}${p.body}${footer}</main>`;
-  const metadata = { title, description: desc, canonical: full, robots: noindex ? "noindex, nofollow" : "max-image-preview:large, max-snippet:-1", graph: noindex ? null : { "@context": "https://schema.org", "@graph": graph }, markdown: p.markdown || null, image: `${SITE}/og/default.png` };
+  const metadata = { title, description: desc, canonical: full, robots: noindex ? "noindex, nofollow" : "max-image-preview:large, max-snippet:-1", graph: noindex ? null : { "@context": "https://schema.org", "@graph": graph }, markdown: p.markdown || null, ...(p.json ? { json: p.json } : {}), image: `${SITE}/og/default.png` };
   const metadataFile = path.join(DIST, "metadata", `${url === "/" ? "index" : url.slice(1)}.json`);
   fs.mkdirSync(path.dirname(metadataFile), { recursive: true });
   fs.writeFileSync(metadataFile, JSON.stringify(metadata));
   const head = [
     p.stylesheet ? `<link rel="stylesheet" href="/assets/${p.stylesheet}" />` : "",
     noindex ? "" : `<script type="application/ld+json">${JSON.stringify({ "@context": "https://schema.org", "@graph": graph }).replace(/</g, "\\u003c")}</script>`,
-    p.markdown ? `<link rel="alternate" type="text/markdown" href="${p.markdown}" title="The skill file" />` : "",
+    p.markdown ? `<link rel="alternate" type="text/markdown" href="${p.markdown}" title="${p.json ? "Markdown version" : "The skill file"}" />` : "",
+    ...crawlHead(url, p),
     `<meta name="robots" content="${metadata.robots}" />`,
   ].filter(Boolean).join("\n    ");
   return (plain ? plainShell : shell)
@@ -456,6 +533,7 @@ const write = (url, html) => { const out = path.join(DIST, `${url.slice(1)}.html
 
 const urls = [...fs.readdirSync("public").filter((f) => /^sitemap-.*.xml$/.test(f)).map((f) => fs.readFileSync(`public/${f}`, "utf8")).join("").matchAll(/<loc>https:\/\/useaiblocks\.com([^<]*)<\/loc>/g)].map((m) => m[1] || "/");
 if (!urls.includes("/api-and-mcp")) urls.push("/api-and-mcp");
+if (!urls.includes("/me-md")) urls.push("/me-md");
 // Imported pages without a Tested label still get a page and stay indexable.
 const thinUrls = new Set(cat.blocks.filter((b) => hasPage(b) && isThin(b)).map(hrefOf));
 for (const u of thinUrls) if (!urls.includes(u)) urls.push(u);
@@ -474,7 +552,7 @@ fs.writeFileSync(path.join(DIST, "index.html"), render("/", {
   body: [
     `<p class="bp-sub">Turn hours of work into minutes. Spend the time you save on the work only you can do. Or at the beach (we won't tell).</p>`,
     `<p><a class="btn btn-line" href="/#build" data-testid="hero-build-workflow">Build a workflow →</a></p>`,
-    `<section id="library"><h2>Explore the library</h2><nav aria-label="Task types">${list(homeTypes.map(([kind, name, description]) => `<a href="/${kind ? `?kind=${kind}` : ""}#library"><b>${name}</b></a>: ${description}`))}</nav>${list(cat.blocks.filter(b => hasPage(b) && b.type !== "mind").slice(0, 16).map(b => `${link(b)}: ${esc(b.summary)}`))}<p><a href="/jobs">Browse all tasks by job</a> · <a href="/how-it-works">How it works</a></p></section>`,
+    `<section id="library"><h2>Explore the library</h2><nav aria-label="Task types">${list(homeTypes.map(([kind, name, description]) => `<a href="/${kind ? `?kind=${kind}` : ""}#library"><b>${name}</b></a>: ${description}`))}</nav>${list(cat.blocks.filter(b => hasPage(b) && b.type !== "mind").slice(0, 16).map(b => `${link(b)}: ${esc(b.summary)}`))}<p><a href="/jobs">Browse all tasks by job</a> · <a href="/how-it-works">How it works</a></p><p><a href="/me-md">Make your me.md once. Every task then fits you.</a></p></section>`,
     `<section id="home-minds"><h2>Minds</h2>${list(homeMinds.slice(0, 8).map(link))}<p><a href="/minds">Explore all ${homeMinds.length} minds</a></p></section>`,
     `<section id="home-workflows"><h2>Workflows and builder</h2><p><a href="/#build">Open the workflow builder</a> · <a href="/compose">Plan from a goal</a> · <a href="/apps">See an example</a></p>${list(homeFlows.slice(0, 6).map(link))}<p><a href="/?kind=workflow#library">Browse all workflows</a></p></section>`,
     `<section id="home-agents"><h2>Agents</h2>${list(homeAgents.slice(0, 4).map(link))}<p><a href="/?kind=agent#library">Browse all agents</a></p></section>`,
@@ -578,7 +656,7 @@ for (const [t, bs] of tasks) {
 for (const url of urls) {
   // Job hubs and their pagination are rendered by the dedicated loop above.
   if (url === "/" || url === "/people" || url === "/jobs" || url.startsWith("/jobs/")) continue;
-  const p = pageFor(url);
+  const p = crawlPage(url, pageFor(url));
   if (!p) { problems.push(`no page data for ${url}`); continue; }
   const html = render(url, p);
   const t = html.match(/<title>([^<]*)<\/title>/)[1];
@@ -597,8 +675,8 @@ write("/shared-space-shell", render("/shared-space-shell", { title: "Shared spac
 // A real 404: Cloudflare Pages answers unknown addresses with it (and a 404 status) instead of the home page.
 fs.writeFileSync(path.join(DIST, "404.html"), render("/404", { title: "Page not found", desc: "This page doesn't exist. Find the skill you need by job.", h1: "This page doesn't exist",
   body: `<p class="bp-sub">The address may have a typo, or the page may have moved. Start from a job:</p>${list(tasks.map(([t]) => `<a href="${jobHref(t)}">${esc(TASK_NAMES[t] ?? t)}</a>`))}` }, { plain: true, noindex: true }));
-// The hub addresses go into their own sitemap, read by build-index's sitemap index.
-fs.writeFileSync(path.join(DIST, "sitemap-jobs.xml"), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${hubUrls.map((u) => `  <url><loc>${SITE}${u}</loc></url>`).join("\n")}\n</urlset>\n`);
+// The hub addresses go into their own sitemap, read by build-index's sitemap index, each with its items' newest date.
+jobsSitemap(hubUrls);
 console.log(`prerender: ${wrote} pages (${thinUrls.size} imported without the Tested label), ${hubUrls.length} job hubs, a 404 page${problems.length ? `\n  ${problems.slice(0, 20).join("\n  ")}` : ""}`);
 // The saved, non-writing example is part of this deployment. This avoids a
 // separate unconfigured host; its files count against the same capacity guard.

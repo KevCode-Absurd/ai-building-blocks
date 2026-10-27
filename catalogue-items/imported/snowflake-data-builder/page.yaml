@@ -7,9 +7,9 @@ job: build-software
 headline: Snowflake data builder
 subhead: Snowflake SQL and data pipelines that follow the platform's own rules, ready to test in a dev schema. You describe the data job, and the skill writes the code and explains the choices.
 explain: |
-  Snowflake SQL and data pipelines that follow the platform's own rules, ready to test in a dev schema. You describe the data job, and the skill writes the code and explains the choices.
+  A general SQL helper writes SQL that runs anywhere. This skill writes it the way Snowflake wants it, which avoids errors like an invalid identifier in a stored procedure. You describe the data job, and it writes the code for a dev schema and explains the choices.
 
-  It covers style rules such as snake_case names, CTEs and explicit column lists. It knows Snowflake quirks, like needing a colon before variables inside stored procedures, and handles JSON in VARIANT columns. For pipelines it chooses between Dynamic Tables, Streams and Tasks, and Snowpipe. It also writes Cortex AI function calls, Snowpark Python, dbt setup, tuning advice and access settings. You need a Snowflake account to run the output, and costs depend on your warehouse size.
+  It covers style rules such as snake_case names, CTEs and explicit column lists. It knows Snowflake quirks, like needing a colon before variables inside stored procedures, and handles JSON in VARIANT columns. For pipelines it chooses between Dynamic Tables, Streams and Tasks, and Snowpipe. It also writes Cortex AI function calls, Snowpark Python, dbt setup, tuning advice and access settings. You need a Snowflake account to run the output. Costs depend on your warehouse size. Cortex AI function calls are billed separately from warehouse compute, so estimate them first with the AI_COUNT_TOKENS function before you run a big table through them.
 when:
   - You need a pipeline that refreshes data every few minutes.
   - A stored procedure fails with an invalid identifier error.
@@ -31,7 +31,7 @@ you_get:
   - Performance and security tips
 how_to_use:
   - Collect your table definitions and a few sample rows. Write down how fresh the data must be.
-  - Open Claude, ChatGPT or Gemini. Paste the skill text, then describe the data job in plain words. The reply comes in this order: the code, the pipeline choice and why, then cost and risk notes, then steps to test it in a dev schema.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text, then describe the data job in plain words. The reply comes in this order: the code, the pipeline choice and why, the Cortex AI calls (if you need them), performance and security notes, then steps to test it in a dev schema.
   - Paste your table and column details. Say if you want SQL, Snowpark Python or dbt.
   - Read the code and the pipeline choice. Ask your AI to explain anything you do not follow.
   - Run the code in a dev schema in your own Snowflake account first. Your AI cannot run it for you in a chat.

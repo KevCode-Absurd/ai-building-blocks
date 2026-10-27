@@ -53,7 +53,7 @@ The two cases side by side. The conditions for each cause. The hidden parts. Eac
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Plan objection writer](https://useaiblocks.com/skills/case-against-writer). It takes the plan.
 - The [Root cause finder](https://useaiblocks.com/skills/root-cause-finder). It takes the plan.
-- The [Lessons learned principle writer](https://useaiblocks.com/skills/mistake-to-principle-writer). It takes the plan.
+- The [Decision consequence planner](https://useaiblocks.com/skills/second-order-effects-tracer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

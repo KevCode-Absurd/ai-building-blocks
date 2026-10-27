@@ -13,10 +13,9 @@ Read [the original role profile](references/source-agent.md) before you plan. Us
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Roblox systems programmer](https://useaiblocks.com/skills/agency-roblox-systems-scripter). It takes the brief.
-- The [AI data extractor builder](https://useaiblocks.com/skills/ai-data-extractor-builder). It takes the brief.
-- The [C++ Asio network programmer](https://useaiblocks.com/skills/c-network-code-helper). It takes the brief.
-- The [Playwright browser automation scripter](https://useaiblocks.com/skills/browser-automation-scripter). It takes the brief.
+- The [Roblox systems programmer](https://useaiblocks.com/skills/agency-roblox-systems-scripter). It takes the plan.
+- The [AI coding task brief writer](https://useaiblocks.com/skills/coding-agent-handoff-writer). It takes the plan.
+- The [Oracle migration risk reviewer](https://useaiblocks.com/skills/copilot-reviewing-oracle-to-postgres-migration). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

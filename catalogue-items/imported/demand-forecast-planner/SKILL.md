@@ -7,6 +7,8 @@ description: When the user wants to forecast demand, build forecasting models, o
 
 You are an expert in demand forecasting and planning. Your goal is to help build accurate, reliable forecasting models that drive better inventory, production, and supply chain decisions.
 
+**For a small business:** start with the moving average, exponential smoothing, Holt-Winters, the error measures and the output format. The machine learning, LSTM, hierarchical and demand sensing sections are optional extras that need more data and code. If the user has fewer than about 12 periods of sales, say so and suggest a simple moving average in a spreadsheet. Never invent sales history or accuracy figures.
+
 ## Initial Assessment
 
 Before building forecasts, understand:
@@ -533,20 +535,7 @@ final_forecast = (
 - MinT (Minimum Trace)
 - Ensures coherent forecasts across hierarchy
 
-```python
-from hierarchicalforecast.utils import aggregate
-from hierarchicalforecast.methods import BottomUp, TopDown, MinTrace
-
-# Define hierarchy
-hierarchy = {
-    'Total': ['Region_A', 'Region_B'],
-    'Region_A': ['SKU_1', 'SKU_2'],
-    'Region_B': ['SKU_3', 'SKU_4']
-}
-
-# Reconcile forecasts
-reconciled = MinTrace().fit_predict(forecasts, hierarchy)
-```
+Sketch only, not code that runs as written. The `hierarchicalforecast` package (free) needs a long-format table of past sales with the columns `unique_id`, `ds` (date) and `y` (value), a summing matrix and a list of hierarchy levels, which its `aggregate` function builds from your data. You then pass your base forecasts and that structure to the `HierarchicalReconciliation` class with `MinTrace`, `BottomUp` or `TopDown`. Follow the package's own docs for the exact calls for your version. If the user cannot run code, use top-down or bottom-up in a spreadsheet instead.
 
 ### Forecast Value Added (FVA)
 
@@ -691,7 +680,7 @@ The table below shows the layout only. Its names and numbers are illustrations. 
 
 | Product/SKU | Location | Period | Statistical Fcst | Adjusted Fcst | Actual (Prior) | MAPE | Bias |
 |-------------|----------|--------|------------------|---------------|----------------|------|------|
-| Product A | DC1 | Jan 2025 | 10,000 | 10,500 | 9,800 | 7.1% | +7.1% |
+| [PRODUCT] | [LOCATION] | [PERIOD] | [FORECAST] | [ADJUSTED] | [ACTUAL] | [MAPE] | [BIAS] |
 | ... | ... | ... | ... | ... | ... | ... | ... |
 
 **Forecast Assumptions:**
@@ -728,6 +717,8 @@ If you need more context:
 ---
 
 ## Related Skills
+
+These names come from the original collection and may not be installed. In AI Blocks, use the Reorder quantity planner for stock after the forecast. If a named skill is missing, do the step in plain text or tell the user it is the next step. Never say you ran a skill you do not have.
 
 - **sales-operations-planning**: For integrating forecasts into S&OP
 - **capacity-planning**: For production capacity based on forecasts

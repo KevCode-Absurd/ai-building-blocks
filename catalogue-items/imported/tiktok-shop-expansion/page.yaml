@@ -9,7 +9,9 @@ subhead: A shortlist of countries to sell in next, in the order you should enter
 explain: |
   A shortlist of countries to sell in next, in the order you should enter them, with the shipping, tax, rule and language work each one needs. It helps you avoid launching in a market and then finding out about a customs problem.
 
-  You say what you sell and where you sell now. The skill scores markets by demand, competition, how people there shop, and what it would cost to start. For the top picks it sets out fulfilment options, customs paperwork, payment and currency issues, and how returns will work. It covers VAT or GST setup, product rules and sales rules by region. It then lists what to change in content, product pages and messaging to suit local taste.
+  You say what you sell and where you sell now. The skill scores markets by demand, competition, how people there shop, and what it would cost to start. For the top picks it sets out fulfilment options, customs paperwork, payment and currency issues, and how returns will work. It covers VAT or GST setup, product rules and sales rules by region. It then lists what to change in content, product pages and messaging to suit local taste. Revenue and profit figures stay unknown unless you give your own numbers. Tax, customs and product rules change often, so check them with a local adviser. This is not tax or legal advice.
+
+  Licence: MIT, as the LICENSE file in this item says. Credit goes to Nexscope AI.
 when:
   - Your US shop is doing well and you want to sell in the UK or Germany.
   - You do not know how VAT works for a seller based abroad.

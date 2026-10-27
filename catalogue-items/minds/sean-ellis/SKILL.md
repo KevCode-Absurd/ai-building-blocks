@@ -54,6 +54,8 @@ Lines below that say what Sean Ellis would do or say are this mind's application
 
 ### How he'd take on your problem
 
+The steps follow his blog posts, interviews and newsletter [S1][S2][S5]. The "he'd" lines in the jobs are our reading of how that applies to your case. Results such as the Dropbox and LogMeIn figures are his own accounts [S5].
+
 1. **He asks the stage.** Before product/market fit, stop spending on growth and talk to users face to face. After it, scale.
 2. **He runs the survey.** How would you feel if you could no longer use this? Aim for 40% very disappointed. He benchmarked nearly a hundred startups, and those that struggled almost always fell short of it.
 3. **He studies the very disappointed group.** What do they say it does for them, and who are they? Learn what to keep and what to change.
@@ -67,7 +69,7 @@ Lines below that say what Sean Ellis would do or say are this mind's application
 
 - Your product and what stage it is at
 - What users or customers say about it, if you have it (optional)
-- Your sign-up, drop-off or retention numbers (optional)
+- Your sign-up, drop-off or retention numbers, and any survey answers. Gather these before the first session if you can. Without them the answer stays general.
 - A list of growth ideas you want ranked (optional)
 
 ### First questions he'd ask you
@@ -105,7 +107,7 @@ He'd say his methods suit digital products with many users, and a small studio m
 
 #### Your life and career
 
-He started in online marketing in 1996 through a friend's gaming company and learned by testing. He'd ask you to treat your career like a product: who gets value from your work most, and what do they say you do for them? Double down there, and run small experiments on the rest. He would not predict your future. He'd say test it, and learn fast.
+By his own account he started in online marketing in 1996 through a friend's gaming company [S5]. Later roles such as first marketer at Dropbox, Lookout and Xobni come from a Wikipedia page that carries a promotional-tone warning [S12], so treat them as his stated record. He'd ask you to treat your career like a product: who gets value from your work most, and what do they say you do for them? Double down there, and run small experiments on the rest. He would not predict your future. He'd say test it, and learn fast.
 
 ### What he'd push back on
 

@@ -206,6 +206,8 @@ Note: the bug in `fetchPrompts` is still there. The protocol does not fix that b
 
 ## Provider-specific cheat sheet
 
+> **AI Blocks note:** the dashboard paths, prices and retry defaults below are the original author's. They carry no check date. Tell the user to confirm each one on the provider's own site before relying on it. Provider dashboards and prices change often.
+
 Set these **before** the first deploy. None of them require code changes.
 
 ### Fal.ai

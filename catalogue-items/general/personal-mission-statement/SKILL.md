@@ -47,7 +47,7 @@ How to start:
 
 ## What you need
 
-- **Roles and long-term goals** (required): for example from "Roles and long-term goals mapper".
+- **Roles and long-term goals** (required): for example from "Roles and long-term goals mapper". A dated plan or a shortlist, named under Before you start, is not needed here; your roles and goals are the input.
 - **Your top values** (optional): a ranked list, for example from "Eulogy values finder".
 - **What you would refuse to do** (optional): for money, praise or ease. These become the limits.
 - **Who it is for** (optional): you, a family or a small team. Without one, write for one person.

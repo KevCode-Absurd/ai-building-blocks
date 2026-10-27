@@ -24,6 +24,8 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 ## Before you start
 
+This skill needs only the figures in "What you need". A document or spreadsheet is optional: if a line below asks for one as required, ignore that.
+
 A chat is enough. Do the sums yourself and show each one. Run the bundled script or build a workbook only when you have code or file tools and the person wants one. If you cannot run something, say so. Never claim you ran a check you did not run.
 
 If the figures are not in the chat, ask once for the missing items in "What you need". If the person says to go ahead with what they have, finish what you can and mark each gap `MISSING:`. If nothing at all was given, ask for the opening loan, the three cash flow figures, the rate and the target cover in one line and stop.
@@ -37,14 +39,15 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **The contract** (yours): the full agreement or terms, with dates and any changes.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Spreadsheet** with the [Project cash for debt checker](https://useaiblocks.com/skills/project-cash-available-bridge). Bring document, spreadsheet (optional).
+1. **Spreadsheet** with the [Project cash for debt checker](https://useaiblocks.com/skills/project-cash-available-bridge). Bring document, the contract, spreadsheet (optional).
 2. This one.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for document, spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for document, spreadsheet, the contract. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -57,7 +60,7 @@ How to start:
 
 - **Opening loan balance:** from the loan agreement or term sheet.
 - **Cash flow available for debt service for each of three years:** from the project forecast, using the loan's own definition.
-- **Interest rate:** the fixed yearly rate, from the agreement. Write it as a decimal, so 10% is 0.1.
+- **Interest rate:** the fixed yearly rate, from the agreement. The person may give a percent such as 10%. Use it as a decimal in the sums, so 10% is 0.1.
 - **Target cover ratio:** from the agreement, such as 1.2. If none is given, ask once and do not assume one.
 - **Principal rules:** any minimum, maximum or lock-up on repayments. If the person does not know, say that none was applied.
 - **Currency and units**, and the start date.

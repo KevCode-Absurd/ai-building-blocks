@@ -89,6 +89,8 @@ curl -H "Authorization: Bearer $API_KEY" https://api.example.com
 
 ```bash
 # Install Varlock CLI
+# Before running, open https://github.com/dmno-dev/varlock/releases, pick a specific release,
+# and compare the installer with that release. Ask the user to confirm the release they want.
 tmpdir="$(mktemp -d)"
 trap 'rm -rf "$tmpdir"' EXIT
 curl -sSfL https://varlock.dev/install.sh -o "$tmpdir/varlock-install.sh"
@@ -231,7 +233,7 @@ varlock load
 
 # 4. If using GitHub Secrets, update them yourself. This copy has no sync script.
 #    Use the repo's Settings page, or the GitHub CLI, which asks for the value
-#    without showing it in the chat:
+#    without showing it in the chat. The USER runs this command, never the AI:
 gh secret set SECRET_NAME
 ```
 

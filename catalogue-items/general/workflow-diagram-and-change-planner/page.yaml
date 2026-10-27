@@ -1,0 +1,140 @@
+name: "Workflow diagram and change planner"
+new_slug: workflow-diagram-and-change-planner
+summary: "Share a workflow or goal. Get it drawn as a diagram, each hand-off checked, and changes with reasons."
+job: set-up-ai
+thinking: medium
+thinking_why: "It follows a clear method, but it has to track what every step needs and makes."
+
+headline: "Workflow diagram and change planner"
+subhead: "Share a workflow, a goal or your own steps. It draws the steps as a diagram, shows what each one hands to the next, and finds gaps. Then it asks what you want to change, suggests fixes with reasons and draws it again."
+
+explain: |
+  A workflow is a few AI steps in a row, where each step uses what the one before it made. It is hard to see in a list when a step is missing something, or runs before the step that feeds it. Changing one step can quietly break the next.
+
+  This skill draws the workflow as a diagram. Each arrow says what is passed on, and the things you give sit at the start. Gaps show up in red. Then it asks what you want to change and suggests fixes, each with a reason. It only redraws once you agree. If your AI is connected to AI Blocks, it uses the library's own check and can open the result in the builder.
+
+when:
+  - You found a ready workflow and want to see how its steps connect before you use it.
+  - You want to swap, add or remove a step and keep everything else working.
+  - A workflow keeps stalling and you want to find the step that is missing something.
+not_for:
+  - "You want to run the workflow: open it in your AI and follow its steps instead."
+  - "You need one task done, not a chain of steps: use that task's skill on its own."
+  - "You want an automation in Zapier or Make: use the Automation flow sketcher."
+
+you_give:
+  - A workflow id or link, a goal, or your own steps in order
+  - What you want to change (optional)
+you_get:
+  - A diagram of the steps, with what each one hands on
+  - A short outline and a list of gaps
+  - Suggested changes, each with a reason
+  - A new diagram once you approve the changes
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Connect your AI to AI Blocks if you can, so it can load any workflow and check it for you.
+  - Share the workflow link, your goal or your steps in order.
+  - Read the diagram and the gaps, then say what you want to change.
+  - Approve the changes you want. It draws the new version, with a link to open it in the builder.
+output_sample:
+  input:
+    - A workflow id or link, a goal, or your own steps in order
+    - What you want to change (optional)
+  prerequisites:
+    - An AI that shows Mermaid diagrams, such as Claude or ChatGPT. Without one, you get the same thing as a text outline.
+    - The AI Blocks connection (optional). Without it, the skill works from the steps you paste.
+  output:
+    - name: Diagram
+      contains: A Mermaid flowchart with one box per step, arrows labelled with what is passed on, and your inputs as start points.
+    - name: Outline
+      contains: Each step in order, what it takes and from where, and what it hands on.
+    - name: Gaps
+      contains: Missing inputs, steps out of order and repeated steps, one line each.
+    - name: Suggested changes
+      contains: Add, move, swap or remove a step, each with a one-line reason.
+    - name: New diagram
+      contains: The workflow redrawn with only the changes you approved, and a builder link when connected.
+    - name: Checks missed
+      contains: Any of its own checks that failed, or none.
+
+how_it_works:
+  - title: Gets the workflow
+    text: Loads it by id or plans one from your goal through the AI Blocks connection, or reads the steps you pasted.
+  - title: Draws the diagram
+    text: One box per step, arrows labelled with what is handed over, your inputs at the start and gaps in red.
+  - title: Explains the hand-offs
+    text: Lists what each step takes and from where, then names each missing input, step out of order or repeat.
+  - title: Asks what to change
+    text: Asks one question and offers the fixes it found as choices.
+  - title: Suggests changes
+    text: Gives each change with a reason, using the library's own check and swap options when connected.
+  - title: Redraws and checks
+    text: Applies only what you approve, checks it again and shows what changed.
+
+output_shape: |
+  DIAGRAM
+  ```mermaid
+  flowchart LR
+    u1(["You give: <input>"])
+    s1["1. <step>"]
+    s2["2. <step>"]
+    u1 --> s1
+    s1 -->|"<what is handed on>"| s2
+  ```
+
+  OUTLINE
+  1. <step>: takes <input> from <you | step n>; hands on <result>
+
+  GAPS
+  - <Missing | Out of order | Repeated>: <step> <what>
+
+  SUGGESTED CHANGES
+  - <Add | Move | Swap | Remove> <step>: <reason>
+
+  NEW DIAGRAM (after you approve)
+  <diagram>   Open in builder: <link>
+
+  CHECKS MISSED
+  <failed checks, or none>
+
+tweaks:
+  - what: The AI Blocks connection
+    how: With it, the diagram and checks come from the library itself, and you get a link that opens the workflow in the builder.
+  - what: What you want to change
+    how: Name it up front, such as "swap step 2", and it goes straight to the options for that step.
+  - what: Your own steps
+    how: Say what each step needs and makes. The clearer that is, the better it can spot gaps.
+
+judge:
+  - Every step is in the diagram, in order.
+  - Every arrow says what is handed over.
+  - Each gap names the step and what it is missing.
+  - Each suggested change has a reason you understand.
+  - Nothing changed before you agreed.
+
+test:
+  - Ask it for a ready workflow you know well. The diagram should match the steps on its page.
+  - Remove a step that makes something the next step needs. It should flag the gap and suggest adding it back.
+  - Put two steps in the wrong order. It should suggest moving the one that makes the input earlier.
+
+improve:
+  - Add the names of the tools you use, so it suggests steps you can really run.
+  - Add a rule for steps you never want removed, such as a final check.
+  - Save the approved diagram with your workflow, so the next change starts from it.
+
+works_best_with:
+  tools:
+    - {name: "Claude", why: "Shows Mermaid diagrams in chat and can use the AI Blocks connection."}
+    - {name: "ChatGPT", why: "Can use the AI Blocks connection and show the steps as a diagram or outline."}
+  inputs:
+    - "The AI Blocks connection, so it checks the real library steps"
+    - "The goal of the workflow in one sentence"
+
+terms:
+  - term: Workflow
+    meaning: A few AI steps in a row, where each step uses what the one before it made.
+  - term: Hand-off
+    meaning: What one step passes to the next, such as a brand file or ad copy.
+  - term: Mermaid
+    meaning: A simple text format for diagrams that many AI apps draw as a picture.

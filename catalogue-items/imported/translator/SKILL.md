@@ -33,7 +33,7 @@ This skill enables an AI agent to translate text between languages while preserv
 
 ## Usage
 
-Provide the text to translate along with the target language. Optionally specify:
+Provide the text to translate along with the target language. You can also give a finished document, and its text is translated. Optionally specify:
 
 - **Source language** (if not auto-detectable)
 - **Formality level** — formal, informal, or neutral

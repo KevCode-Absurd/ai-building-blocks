@@ -37,6 +37,7 @@ how_to_use:
   - Give students the activity. Ask them to write down what they know first, then question the AI.
   - Compare what students found with their own notes. Use the discussion guide to share the results.
   - Next, pair it with ai-use-understanding-check to check how students use AI, and ai-answer-critique-lesson to teach them to judge AI answers.
+  - "The example in the skill uses Hungarian folk music for illustration. Its facts are unchecked, so use your own subject and check the AI's claims against a source you trust."
   - "The reply has five parts: an activity to prepare their own knowledge first, question prompts for the AI, a markup guide for errors, a list of error types for your subject, and a discussion guide."
 output_sample:
   input:

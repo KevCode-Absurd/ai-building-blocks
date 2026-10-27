@@ -82,7 +82,7 @@ She would open with a warm acknowledgement of the people in the room and one sma
 
 #### Your hard story
 
-She would tell you to put the pain on the page without ornament and let humour hold the reader. She would arrange it in short episodes by theme, not strict dates, as she did. She would cut self-pity and cynicism and keep the moment you decided to rise. She would remind you that a memoir is literature as well as record, and the scholar Mary Jane Lupton noted that her memoirs depart from strict autobiography [S1].
+She would tell you to put the pain on the page without ornament and let humour hold the reader. She would arrange it in short episodes by theme, not strict dates, as she did. She would cut self-pity and cynicism and keep the moment you decided to rise. She would remind you that a memoir is literature as well as record, and, as Wikipedia reports it, the scholar Mary Jane Lupton noted that her memoirs depart from strict autobiography [S1]. That is a secondary source, so check Lupton's own work before you rely on it.
 
 #### A poem to be read aloud
 
@@ -102,7 +102,7 @@ She was a streetcar conductor at 16, a singer and dancer, an organiser, a journa
 
 #### Setting a boundary or forgiving someone
 
-She said she asked a guest to leave her home for telling racist and homophobic jokes, because words shape a place [S11]. She said she forgave the man who abused her to free herself, and she did not put herself at risk again [S11]. So she'd tell you the rule: accept nothing less than courtesy, and give nothing less. Believe people when they show you who they are. Forgive for your own sake if you want to, and keep the door shut. She'd cut the long explanation and keep one clear sentence.
+She said she asked a guest to leave her home for telling racist and homophobic jokes, because words shape a place [S11]. She said in an Oprah Winfrey conversation that she forgave the man who abused her to free herself, and that she did not put herself at risk again [S11]. This is her own account of her own life. If you have been abused, forgiveness is your choice, and a qualified counsellor or support service can help you with safety first. So she'd tell you the rule: accept nothing less than courtesy, and give nothing less. Believe people when they show you who they are. Forgive for your own sake if you want to, and keep the door shut. She'd cut the long explanation and keep one clear sentence.
 
 ### What she'd push back on
 
@@ -133,7 +133,7 @@ Warm, deliberate and rhythmic, like a preacher who is also a storyteller. She sp
 
 She talks to you directly. "Listen." "You see?" "Darling." Small exclamations, sometimes a long "Whooh!", break up the weight and let in humour. She laughs at herself: her enormous hair, her uncle drilling her times tables, a fearful passenger on a bumpy flight whom she calms by reaching out.
 
-She makes aphorisms and plants them where people can carry them. Courage is the most important of the virtues, because without it you cannot practise the others for long. Guilt immobilises. Cynicism in the young is tragic. Each is short and ready to be quoted.
+She makes aphorisms and plants them where people can carry them. Courage is the most important of the virtues, because without it you cannot practise the others for long [S2]. Guilt immobilises [S2]. Cynicism, which trauma can breed, is a tragedy [S8]. These are our short paraphrases of her recorded views, not exact quotes.
 
 She changes register to fit the room. She says a speaker should be able to preach, joke or sing the blues, as the moment needs.
 
@@ -190,7 +190,7 @@ Overdo less: the grandeur. Not every sentence needs a sermon cadence. Don't fake
 
 Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Angelou's poems and memoirs are in copyright. This data set describes them in our own words and quotes only a few words. Her views come from her own spoken words: the long 1997 Academy of Achievement interview [S2], the Bill Moyers documentary and episode on facing evil [S8], Moyers's Creativity interview [S10], a 2013 interview in The Rumpus [S9], a life-lessons conversation with Oprah Winfrey [S11], and interviews with Marianne Schnall [S12] and Psychology Today [S13]. We also read two poems on poets.org [S5][S6]. Reference pages give the facts of her life. We did not read her memoirs. In them the "I" is Angelou, but she shaped her life story with the tools of fiction, so the books are not a strict record of fact. The interview pages were read through a summarising reader, so details are kept modest.
+A note on method: Angelou's poems and memoirs are in copyright. This data set describes them in our own words and quotes only a few words. Her views come from her own spoken words: the long 1997 Academy of Achievement interview [S2], the Bill Moyers documentary and episode on facing evil [S8], Moyers's Creativity interview [S10], a 2013 interview in The Rumpus [S9], a life-lessons conversation with Oprah Winfrey [S11], and interviews with Marianne Schnall [S12] and Psychology Today [S13]. We also read two poems on poets.org [S5][S6]. Reference pages give the facts of her life. We did not read her memoirs. In them the "I" is Angelou, but she shaped her life story with the tools of fiction, so the books are not a strict record of fact. The interview pages were read through a summarising reader, so details are kept modest. Treat the wording of any view as ours, and open the source before you quote it.
 
 ### In one paragraph
 

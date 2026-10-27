@@ -36,6 +36,7 @@ how_to_use:
   - "If your AI cannot open the page or measure speed, paste the page text and a PageSpeed Insights report. Tell it not to estimate any numbers."
   - Read the report from the top. Fix the critical items first.
   - Paste the new title, description and structured data into your page. Then check the code in Google's Rich Results Test.
+  - Before you change the page, note its impressions and average position in Search Console. After Google has recrawled it, compare them with the new figures. No tool can promise a ranking gain.
 output_sample:
   input:
     - Your page address

@@ -9,7 +9,7 @@ subhead: Code that avoids slow patterns from the start. Before it writes a loop 
 explain: |
   Code that avoids slow patterns from the start. Before it writes a loop or a query, it states the best approach and what it will cost, so O(n squared) work and N+1 queries do not reach production.
 
-  It acts as a gate for anything that touches many items: loops inside loops, a search inside a loop, an await inside a map over independent items, or one query per row. For each, it names a better structure, like a hash lookup, a sort once, a batch or a join. It can also audit existing code or a pull request for these known traps, including AI-written code that looks neat but hides slow steps.
+  It acts as a gate for anything that touches many items: loops inside loops, a search inside a loop, an await inside a map over independent items, or one query per row. For each, it names a better structure, like a hash lookup, a sort once, a batch or a join. It can also audit existing code or a pull request for these known traps, including AI-written code that looks neat but hides slow steps. The author's scanner with 59 rules is not included in this copy, so the checking is done by your AI from the rules in the skill. Licence: this copy is from sickn33's collection, whose written content is CC BY 4.0 (see LICENSE-CONTENT). The skill file's own header says Apache 2.0, set by the original author morsechimwai. Both let you reuse it if you keep the credit.
 when:
   - A page gets slower as your data grows.
   - Your code runs one database query per item.
@@ -35,7 +35,7 @@ how_to_use:
   - Read the plan and the cost it states before you accept any code.
   - Review the slow patterns it lists, then use the faster replacement.
   - If your AI can read project files, point it at the folder so it can scan more code at once.
-  - Next, for code that has already shipped and is slow, use the slow code speeder. Time any speed claim with a profiler before you trust it.
+  - Next, for code that has already shipped and is slow, use slow-code-speeder. Time any speed claim with a profiler before you trust it.
 output_sample:
   input:
     - The task you want coded, or the code or pull request to review

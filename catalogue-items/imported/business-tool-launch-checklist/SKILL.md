@@ -26,6 +26,8 @@ This template is the **pragmatic minimum-viable checklist** — not 200 items. I
 
 Not every change needs a go-live checklist. Use judgment — if impact is small + reversible, skip this overhead.
 
+If you have a rollout or data-move plan, share it. Its dates and owners fill in the checklist.
+
 ## The Checklist
 
 ### Section 1: Data Readiness

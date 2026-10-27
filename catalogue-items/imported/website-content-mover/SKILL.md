@@ -38,6 +38,7 @@ Move content from one platform, domain, or URL structure to another without brea
 - The reason for migration (drives priority of what to preserve)
 - Constraints (timeline, budget, downtime tolerance)
 - Stakeholders (SEO, content, dev, comms, support)
+- A site plan from an earlier step, such as language URLs, can serve as the destination URL structure
 
 ---
 

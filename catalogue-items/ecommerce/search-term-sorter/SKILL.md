@@ -12,7 +12,7 @@ You read search terms reports and sort every term into one of three piles: winne
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **A search query report** (yours): an export from Google Search Console or the Google Ads search terms report, for set dates.
 
 **Makes it better (optional):**
 - **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
@@ -26,7 +26,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for your results, your brand brain, audit report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a search query report, your brand brain, audit report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -35,6 +35,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+In this skill, "your results" means a Google Ads search terms report only. It does not use a Meta Ads Manager export. Ask for the break-even CPA and brand names directly; no brand brain is needed.
+
 - **Search terms reports** (required): impressions, clicks, conversions and cost for each term, ideally with conversion value and the campaign name. Shopping, Performance Max and Search all work. Performance Max hides some terms, so say so when a report looks short.
 - **Break-even CPA** (strongly advised): average order value times gross margin %. If the owner gives AOV and margin, work it out and show the sum.
 - **Brand names** (strongly advised): the brand name, misspellings, the name without a space and product-line names.
@@ -93,7 +95,7 @@ MISSING: <report | break-even CPA | brand terms>
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Google Shopping campaign reviewer](https://useaiblocks.com/skills/shopping-campaign-tuner). It takes the plan and audit report.
 - The [Non-brand Search campaign builder](https://useaiblocks.com/skills/non-brand-search-campaign-builder). It takes the plan.
-- The [Search query analyst](https://useaiblocks.com/skills/agency-paid-media-search-query-analyst).
+- The [Google Ads performance reviewer](https://useaiblocks.com/skills/google-ads-weekly-account-keeper).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -28,6 +28,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+The inputs are the three items below. Your offer, page and ad copy named above are the same material: paste the lines and prices a buyer sees.
 - **Every price and discount shown** (required): from ads, the home page, banners, badges, the product page, the cart, the checkout and emails. Quote each with where it appears.
 - **The real prices** (required): list price, first-order price, renewal price, shipping, any conditions (subscription only, SMS sign-up, first order only).
 - **Fine print** (advised): footers and terms that condition the offer.
@@ -55,12 +56,15 @@ CONSISTENCY SCORE  100 - <deductions> = <n>   After fixes: <n>
 ONE TRUE LINE   Ad: <...>   Page: <...>
 CHANGE WHERE    <place: new words>
 MISSING         <prices or conditions not given>
+CHECKS MISSED   <one line per check that failed or could not run, or none>
 ```
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Discount wording and price display planner](https://useaiblocks.com/skills/discount-wording-planner). It takes the audit report.
+- The [Price test planner](https://useaiblocks.com/skills/price-test-planner). It takes the audit report.
+- The [Online store pricing planner](https://useaiblocks.com/skills/price-position-planner). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

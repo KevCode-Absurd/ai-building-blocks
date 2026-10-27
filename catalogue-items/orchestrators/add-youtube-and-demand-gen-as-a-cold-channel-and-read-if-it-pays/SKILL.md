@@ -82,7 +82,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Google Shopping campaign reviewer](https://useaiblocks.com/skills/shopping-campaign-tuner). It takes the plan.
 - The [Performance Max campaign reviewer](https://useaiblocks.com/skills/performance-max-routine-keeper). It takes the plan.
 - The [Non-brand Search campaign builder](https://useaiblocks.com/skills/non-brand-search-campaign-builder). It takes the plan.
-- **Read your ad results** with the [LinkedIn ads account auditor](https://useaiblocks.com/skills/linkedin-ads-account-auditor). It takes the brief.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

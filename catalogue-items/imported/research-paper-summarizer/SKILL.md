@@ -66,7 +66,7 @@ If the user has a document and wants structured understanding → this skill app
    - Technical report → use executive summary structure
    - Documentation → use reference summary structure
 
-2. **Scaffold the brief** — `python3 scripts/format_summary.py --template academic` (or `article`/`report`/`executive` per source type), then fill in every section from the source:
+2. **Scaffold the brief** — if code can run, `python3 scripts/format_summary.py --template academic` (or `article`/`report`/`executive` per source type). If code cannot run, skip the script and use the scaffold below by hand. Fill in every section from the source:
    ```
    Title: [exact title]
    Author(s): [names]
@@ -94,7 +94,7 @@ If the user has a document and wants structured understanding → this skill app
    > "[Direct quote]" (p. X)
    ```
 
-3. **Assess quality**
+3. **Assess quality** — judge only from what the document itself shows. Where the document does not say (funding, author affiliation, peer review), write "not stated". Do not state facts about an author or outlet that you cannot see in the text.
    - Source credibility (peer-reviewed, reputable outlet, primary vs secondary)
    - Evidence strength (data-backed, anecdotal, theoretical)
    - Recency (when published, still relevant?)
@@ -141,7 +141,7 @@ If the user has a document and wants structured understanding → this skill app
 
 1. **Run the extractor** — `python3 scripts/extract_citations.py document.txt --output json` detects DOI/URL/author-year/numbered citations and deduplicates them. If code cannot run, skip the script: read the document, list each citation by hand, and count them
 2. **Review and format** the extracted list in the requested style (APA 7 default); manually catch citations the regex missed
-3. **Classify citations** by type:
+3. **Classify citations** by type, from what the citation itself shows. If you cannot tell, write "unclear" rather than guess:
    - Primary sources (original research, data)
    - Secondary sources (reviews, meta-analyses, commentary)
    - Tertiary sources (textbooks, encyclopedias)

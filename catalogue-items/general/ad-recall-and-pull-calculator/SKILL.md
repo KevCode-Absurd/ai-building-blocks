@@ -63,8 +63,8 @@ The counts. Recall. The buying rates and pull. The margin and whether the gap cl
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Ad change decision checker](https://useaiblocks.com/skills/campaign-keep-or-change-checker). It takes the audit report.
-- The [Ad response survey planner](https://useaiblocks.com/skills/recall-and-pull-survey-planner).
 - The [Cost per customer calculator](https://useaiblocks.com/skills/cost-per-customer-calculator). It takes the audit report.
+- The [Ad results report writer](https://useaiblocks.com/skills/ad-results-report-writer). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

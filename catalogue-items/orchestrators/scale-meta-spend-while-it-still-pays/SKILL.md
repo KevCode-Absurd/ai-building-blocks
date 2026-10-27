@@ -82,8 +82,8 @@ Pause here: After the owner authorizes the bounded budget plan, implement only t
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Meta campaign scaling planner](https://useaiblocks.com/skills/five-gate-campaign-scaling-planner).
 - The [TikTok starter campaign builder](https://useaiblocks.com/skills/tiktok-starter-campaign-builder). It takes the audit report.
+- The [TikTok Spark ad picker](https://useaiblocks.com/skills/tiktok-spark-ad-picker). It takes the audit report.
 - **Read your ad results** with the [Ad results report writer](https://useaiblocks.com/skills/ad-results-report-writer). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

@@ -64,10 +64,10 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Check it before it goes live** with the [Headline promise checker](https://useaiblocks.com/skills/headline-promise-checker). It takes the ad copy.
-- The [Product weakness line writer](https://useaiblocks.com/skills/candid-line-writer).
-- **Check it before it goes live** with the [Claim evidence checker](https://useaiblocks.com/skills/claim-and-proof-matcher). It takes the ad copy.
-- **Check it before it goes live** with the [Brand voice editor](https://useaiblocks.com/skills/brand-voice-editor). It takes the ad copy.
+- **Check it before it goes live** with the [Ad response troubleshooter](https://useaiblocks.com/skills/ad-pull-diagnoser). It takes the ad copy.
+- **Check it before it goes live** with the [Ad awareness stage reviewer](https://useaiblocks.com/skills/ad-awareness-stage-checker). It takes the ad copy.
 - The [Headline and cover test planner](https://useaiblocks.com/skills/headline-cover-test-ranker). It takes the hooks.
+- The [Closing paragraph writer](https://useaiblocks.com/skills/summing-up-paragraph-writer). It takes the ad copy.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -10,7 +10,7 @@ This catalog copy does not include these files:
 - `project-management/references/atlassian-mcp-tools.md`
 - `../atlassian-templates/scripts/template_scaffolder.py`
 
-Do not say you read or ran them. Do those steps by hand, or ask the user for the original file.
+Do not say you read or ran them. Do those steps by hand: write the storage-format XHTML for each page yourself, using `references/macro-cheat-sheet.md` and `references/templates.md`.
 
 # Atlassian Confluence Expert
 
@@ -18,7 +18,7 @@ Master-level expertise in Confluence space management, documentation architectur
 
 ## Atlassian MCP Integration
 
-**Primary Tool**: Atlassian Remote MCP server (bundled `.mcp.json`, server key `atlassian`). Tools are camelCase and surface as `mcp__atlassian__<toolName>`. **Tool list**: the file `project-management/references/atlassian-mcp-tools.md` is not in this copy, so use only the Atlassian tool names your AI can actually see. Never invent tool names — if a capability isn't there, it is not available via MCP. For page bodies, write the storage-format XHTML by hand (see `references/macro-cheat-sheet.md`).
+**Primary Tool**: Atlassian Remote MCP server (server key `atlassian`; the original bundled `.mcp.json` is not in this copy, so the user must turn the Atlassian connector on in their AI). Tools are camelCase and surface as `mcp__atlassian__<toolName>`. **Tool list**: the file `project-management/references/atlassian-mcp-tools.md` is not in this copy, so use only the Atlassian tool names your AI can actually see. Never invent tool names — if a capability isn't there, it is not available via MCP. For page bodies, write the storage-format XHTML by hand (see `references/macro-cheat-sheet.md`).
 
 **Key Operations** (obtain `cloudId` once via `mcp__atlassian__getAccessibleAtlassianResources`):
 
@@ -69,7 +69,7 @@ mcp__atlassian__getConfluencePageFooterComments / mcp__atlassian__createConfluen
    ```bash
    python3 scripts/space_structure_generator.py team_info.json --format json
    ```
-   Input: JSON with team `name`, `size`, `type`, `projects`. Consume the output: use the emitted page tree as the creation plan for step 5 — one `mcp__atlassian__createConfluencePage` call per node, passing the parent page id to nest children.
+   This needs Python 3 on the user's computer. If it cannot be run, plan the page tree by hand instead. Input: JSON with team `name`, `size`, `type` and `projects`, for example `{"name": "[TEAM NAME]", "size": [NUMBER], "type": "[engineering, product, marketing or project]", "projects": ["[PROJECT]"]}`. Consume the output: use the emitted page tree as the creation plan for step 5 — one `mcp__atlassian__createConfluencePage` call per node, passing the parent page id to nest children.
 1. Determine space type (Team, Project, Knowledge Base, Personal)
 2. Create space with clear name and description (web UI / REST)
 3. Set space homepage with overview
@@ -133,7 +133,7 @@ Space Home
 ```bash
 python3 scripts/content_audit_analyzer.py pages.json --format json
 ```
-Input: a JSON page inventory (`title`, `last_modified`, `view_count`, `author`, `labels`, `word_count`) — build it by exporting page metadata via `mcp__atlassian__getPagesInConfluenceSpace` / `mcp__atlassian__searchConfluenceUsingCql`. Consume the output: the stale/orphaned/low-engagement findings become the archive list (label + move via UI, since label tools aren't on the MCP) and the update backlog for the quality standards below.
+This also needs Python 3. Without it, review the page list by hand. Input: a JSON list of pages, one object per page, with the fields (`title`, `last_modified`, `view_count`, `author`, `labels`, `word_count`) — build it by exporting page metadata via `mcp__atlassian__getPagesInConfluenceSpace` / `mcp__atlassian__searchConfluenceUsingCql`. Consume the output: the stale/orphaned/low-engagement findings become the archive list (label + move via UI, since label tools aren't on the MCP) and the update backlog for the quality standards below.
 
 **Article Types**:
 - How-to guides
@@ -151,108 +151,77 @@ Input: a JSON page inventory (`title`, `last_modified`, `view_count`, `author`, 
 
 ## Essential Macros
 
-> **Syntax note**: The `{macro}` shorthand below is **legacy wiki-markup notation**, shown for readability only. Confluence Cloud pages created via MCP (`createConfluencePage` / `updateConfluencePage`) require **storage format (XHTML)** — e.g. `{info}` is really `<ac:structured-macro ac:name="info"><ac:rich-text-body>...</ac:rich-text-body></ac:structured-macro>`. For the storage-format syntax of every macro listed here, see `references/macro-cheat-sheet.md`; for ready-made storage-format page bodies, run the atlassian-templates scaffolder (`python3 ../atlassian-templates/scripts/template_scaffolder.py meeting-notes`).
+> **Syntax note**: Confluence Cloud pages created through the connector (`createConfluencePage` / `updateConfluencePage`) need **storage format (XHTML)**. The examples below are in that format. For every other macro, see `references/macro-cheat-sheet.md`. For full page bodies, see `references/templates.md`, or write the XHTML by hand from the macro examples.
 
 ### Content Macros
-**Info, Note, Warning, Tip**:
-```
-{info}
-Important information here
-{info}
+**Info, Note, Warning, Tip** (swap `info` for `note`, `warning` or `tip`):
+```xml
+<ac:structured-macro ac:name="info"><ac:rich-text-body><p>Important information here</p></ac:rich-text-body></ac:structured-macro>
 ```
 
 **Expand**:
-```
-{expand:title=Click to expand}
-Hidden content here
-{expand}
+```xml
+<ac:structured-macro ac:name="expand"><ac:parameter ac:name="title">Click to expand</ac:parameter><ac:rich-text-body><p>Hidden content here</p></ac:rich-text-body></ac:structured-macro>
 ```
 
 **Table of Contents**:
-```
-{toc:maxLevel=3}
+```xml
+<ac:structured-macro ac:name="toc"><ac:parameter ac:name="maxLevel">3</ac:parameter></ac:structured-macro>
 ```
 
 **Excerpt & Excerpt Include**:
-```
-{excerpt}
-Reusable content
-{excerpt}
+```xml
+<ac:structured-macro ac:name="excerpt"><ac:rich-text-body><p>Reusable content</p></ac:rich-text-body></ac:structured-macro>
 
-{excerpt-include:Page Name}
+<ac:structured-macro ac:name="excerpt-include"><ac:parameter ac:name=""><ac:link><ri:page ri:content-title="Page Name" /></ac:link></ac:parameter></ac:structured-macro>
 ```
 
 ### Dynamic Content
 **Jira Issues**:
-```
-{jira:JQL=project = PROJ AND status = "In Progress"}
-```
-
-**Jira Chart**:
-```
-{jirachart:type=pie|jql=project = PROJ|statType=statuses}
+```xml
+<ac:structured-macro ac:name="jira"><ac:parameter ac:name="jqlQuery">project = PROJ AND status = "In Progress"</ac:parameter></ac:structured-macro>
 ```
 
 **Recently Updated**:
-```
-{recently-updated:spaces=@all|max=10}
+```xml
+<ac:structured-macro ac:name="recently-updated"><ac:parameter ac:name="max">10</ac:parameter></ac:structured-macro>
 ```
 
 **Content by Label**:
+```xml
+<ac:structured-macro ac:name="contentbylabel"><ac:parameter ac:name="labels">meeting-notes</ac:parameter><ac:parameter ac:name="maxResults">20</ac:parameter></ac:structured-macro>
 ```
-{contentbylabel:label=meeting-notes|maxResults=20}
-```
+
+For a Jira chart, see `references/macro-cheat-sheet.md` and check the macro name in your own Confluence before using it.
 
 ### Collaboration Macros
 **Status**:
-```
-{status:colour=Green|title=Approved}
+```xml
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Green</ac:parameter><ac:parameter ac:name="title">Approved</ac:parameter></ac:structured-macro>
 ```
 
 **Task List**:
-```
-{tasks}
-- [ ] Task 1
-- [x] Task 2 completed
-{tasks}
+```xml
+<ac:task-list><ac:task><ac:task-status>incomplete</ac:task-status><ac:task-body>Task 1</ac:task-body></ac:task><ac:task><ac:task-status>complete</ac:task-status><ac:task-body>Task 2 completed</ac:task-body></ac:task></ac:task-list>
 ```
 
-**User Mention**:
-```
-@username
-```
-
-**Date**:
-```
-{date:format=dd MMM yyyy}
-```
+**User Mention**: type `@` and the person's name in the Confluence editor. A mention made through the connector needs the person's account ID, so ask the user to add mentions by hand.
 
 ## Page Layouts & Formatting
 
 **Two-Column Layout**:
-```
-{section}
-{column:width=50%}
-Left content
-{column}
-{column:width=50%}
-Right content
-{column}
-{section}
+```xml
+<ac:layout><ac:layout-section ac:type="two_equal"><ac:layout-cell><p>Left content</p></ac:layout-cell><ac:layout-cell><p>Right content</p></ac:layout-cell></ac:layout-section></ac:layout>
 ```
 
 **Panel**:
-```
-{panel:title=Panel Title|borderColor=#ccc}
-Panel content
-{panel}
+```xml
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="title">Panel Title</ac:parameter><ac:parameter ac:name="borderColor">#ccc</ac:parameter><ac:rich-text-body><p>Panel content</p></ac:rich-text-body></ac:structured-macro>
 ```
 
 **Code Block**:
-```
-{code:javascript}
-const example = "code here";
-{code}
+```xml
+<ac:structured-macro ac:name="code"><ac:parameter ac:name="language">javascript</ac:parameter><ac:plain-text-body><![CDATA[const example = "code here";]]></ac:plain-text-body></ac:structured-macro>
 ```
 
 ## Templates Library

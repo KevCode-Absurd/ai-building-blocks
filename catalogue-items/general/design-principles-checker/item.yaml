@@ -7,7 +7,7 @@ role: check
 job: analysis
 level: advanced
 inputs:
-  - {type: question, required: true}
+  - {type: document, required: true}
 outputs:
   - {type: audit_report}
 origin: rebuilt

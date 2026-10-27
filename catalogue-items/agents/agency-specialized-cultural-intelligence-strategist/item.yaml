@@ -11,11 +11,13 @@ level: intermediate
 inputs:
   - type: question
     required: true
-  - type: source_text
+  - type: copy_draft
+    required: true
+  - type: image_prompt
     required: false
 outputs:
-  - type: brief
   - type: audit_report
+  - type: copy_draft
 uses: []
 steps: []
 origin: imported

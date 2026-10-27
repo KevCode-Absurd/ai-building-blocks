@@ -8,13 +8,15 @@ role: make
 job: research
 level: intermediate
 inputs:
-  - type: question
+  - type: idea
     required: true
   - type: source_text
     required: false
 outputs:
   - type: document
   - type: plan
+  - type: product_spec
+    required: true
 uses: []
 steps: []
 origin: imported

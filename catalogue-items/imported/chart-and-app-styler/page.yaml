@@ -9,7 +9,7 @@ subhead: MATLAB charts and apps that use one clean set of colours, with dark mod
 explain: |
   MATLAB charts and apps that use one clean set of colours, with dark mode that works. You give it your figures or app, and it sets palettes, colormaps and themes the way MATLAB expects, instead of scattering colour values through your code.
 
-  It keeps brand colours in one struct. It uses colororder for series that are categories and colormap for smooth gradients, and never mixes them up. For apps built with uifigure it uses the newer theme tools: dark mode through lightness flipping, a callback that reacts when the system theme changes, and uistyle for conditional colours in tables and trees. It can also bring in a palette from Material Design, Adobe Color or Tailwind. MATLAB is required. This is MathWorks' skill, shared under a BSD 2-Clause licence that allows use only with MathWorks products.
+  It keeps brand colours in one struct. It uses colororder for series that are categories and colormap for smooth gradients, and never mixes them up. For apps built with uifigure it uses the newer theme tools: dark mode through lightness flipping, a callback that reacts when the system theme changes, and uistyle for conditional colours in tables and trees. It can also bring in a palette from Material Design, Adobe Color or Tailwind. MATLAB is required. This is a copy of MathWorks' matlab-apply-theme skill. Our page text and name are the only changes. Licence: the LICENSE.md in this folder applies. It is BSD 2-Clause with an added term that you may use it only with MathWorks products such as MATLAB. The skill file header links MathWorks' own licence page, which is where that term comes from.
 when:
   - Your MATLAB plots all look default blue and orange and you want your brand colours.
   - Your app needs a dark mode that follows the user's system setting.
@@ -30,13 +30,14 @@ you_get:
   - A colormap for continuous data
   - Dark mode and theme handling for your app
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in this skill's instructions.
+  - "You need first: MATLAB (a paid product) and an AI that can run MATLAB code. Dark mode in apps needs MATLAB R2025a or newer."
+  - Open your AI and paste in this skill's instructions.
   - Paste your MATLAB figure or app code.
   - Add your brand colours, or a hex palette from a design tool, if you have one.
   - Say whether you want dark mode and whether your data is categories or smooth values.
   - Run the code in MATLAB. Dark mode in apps needs R2025a or newer. Check both light and dark views.
   - "Test it: if a component ignores the theme, remove its explicit colour. List any component that still shows the default theme."
-  - Next, use the MATLAB app builder to change the layout, or the MATLAB chart maker to add new charts.
+  - Next, use matlab-app-builder to change the layout, or matlab-chart-maker to add new charts.
 output_sample:
   input:
     - Your MATLAB figure or app code

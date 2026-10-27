@@ -10,6 +10,8 @@ explain: |
   A road network built from your description as a RoadRunner HD map file, with lanes, boundaries, markings, junctions, signs, signals, barriers and parking. You get a scene that can be used to test automated driving.
 
   You describe the layout, or point to data from another map source. The skill writes MATLAB scripts that build each element through the roadrunnerHDMap tools. It uses ready methods for detecting lane direction, drawing centre lines at least one point per metre, shaping junction areas, snapping ends together and splitting loops. Code goes in .m files and runs from there. It needs MATLAB and RoadRunner. It is made for simulation and driving-software engineers, so it is not for general business use.
+
+  Licence: this copy is under BSD 2-Clause (see the LICENSE.md file in this item). The skill file also links MathWorks' own reuse licence, which means you may use it only with MathWorks products such as MATLAB. Follow the LICENSE.md file. Credit goes to MathWorks.
 when:
   - You need a test road for a driving simulation.
   - You are assembling a map from converted data and need the building pieces.
@@ -30,7 +32,7 @@ you_get:
   - Junctions, signs and signals
   - MATLAB scripts that built it
 how_to_use:
-  - Check you have MATLAB with RoadRunner. Your AI must be able to run code, or you must run the scripts yourself.
+  - Check you have MATLAB and RoadRunner. Both are paid products and must be installed and licensed before you start. Your AI must be able to run code, or you must run the scripts yourself.
   - "Gather these first: lane count, lane width in metres, road length, junction layout, speed limit, and any source file with its coordinate system."
   - Paste the skill into your AI, or add its folder if your AI takes files.
   - "Describe your road: lanes, widths, length, junctions, signs and signals. Add any source map file."

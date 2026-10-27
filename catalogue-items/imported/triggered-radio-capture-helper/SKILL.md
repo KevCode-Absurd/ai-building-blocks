@@ -46,6 +46,8 @@ If the failure mode is RF-path (no peaks at all on the figure, wrong frequency, 
 
 Generate working MATLAB code to detect and capture RF signals using energy detection or preamble detection triggers on NI USRP radios with Wireless Testbench.
 
+If you already have a spectrum analysis of the signal, use its centre frequency, bandwidth and noise floor to set the detector and its thresholds.
+
 ## Prerequisites
 
 Before this skill applies, the user must have:

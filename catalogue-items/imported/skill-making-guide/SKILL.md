@@ -29,6 +29,7 @@ A walkthrough for designing, writing, and maintaining your own Claude Skills. Co
 - The task or workflow you want to encode.
 - The audience: who will trigger this skill, in what kind of conversation.
 - Existing artifacts: prompts you have used, docs you have written, examples of good output.
+- Optional: an existing skill folder you want fixed, and an audit report on it from an earlier step. The report shows which skills fire badly or clash, so you know where to start.
 
 ## The framework: how skills work
 

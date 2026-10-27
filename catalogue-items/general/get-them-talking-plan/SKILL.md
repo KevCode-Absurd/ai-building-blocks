@@ -7,6 +7,10 @@ description: Use before a first or important meeting when you want the other per
 
 People like those who are interested in them, and most of what they remember is how they felt when they talked. This skill plans a meeting in which the other person does most of the talking. The interest has to be real. If you do not care about their answers, no plan will help, and the skill tells you to pick a different topic or person.
 
+**Not for:** a negotiation or a hard sell (write your terms and limits first, then meet), a first cold approach to someone you have no brief on (send a short intro message), or notes after the meeting (use the [Contact notes organizer](https://useaiblocks.com/skills/contact-memory-card-writer)).
+
+**What to bring:** a brief on the person, where and how long you will meet, and your aim if you have one. This skill is about a person, not a brand, so ignore the brand brain files named in the start list below.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -54,13 +58,15 @@ How to start:
 
 ## What you hand back
 
+A one-page plan that uses the headings in the list below, in this order.
+
 How they should feel. The first ten seconds. The questions in three layers. The listening rules and quiet points. Two true appreciations with timing. The ask in their terms, if any. The close. The reminder to take notes. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Contact notes organizer](https://useaiblocks.com/skills/contact-memory-card-writer).
 - The [Honest thank-you note writer](https://useaiblocks.com/skills/honest-appreciation-note-writer). It takes the plan.
+- The [Pitch objection and answer writer](https://useaiblocks.com/skills/hardest-objections-answer-writer). It takes the plan.
 - The [Speech tension planner](https://useaiblocks.com/skills/talk-tension-planner). It takes the plan.
 - **Sell it** with the [Proposal discussion planner](https://useaiblocks.com/skills/buy-in-conversation-planner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.

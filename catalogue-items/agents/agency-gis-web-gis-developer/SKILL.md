@@ -11,7 +11,9 @@ Turn a web map brief into a plan: the mapping library, how the data is served, t
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Page speed fixer](https://useaiblocks.com/skills/page-speed-fixer). It takes the audit report.
+- The [WordPress health fixer](https://useaiblocks.com/skills/wordpress-health-fixer). It takes the audit report.
+- The [Website speed tuner](https://useaiblocks.com/skills/website-speed-tuner). It takes the plan.
+- The [Shopify AI search attribute updater](https://useaiblocks.com/skills/product-attribute-field-setter). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -22,11 +24,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+- **Map data** (yours): the map files, such as GeoJSON or a shapefile, with their coordinate system.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, map data. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -35,6 +37,8 @@ How to start:
 <!-- /needs -->
 
 ## Ask for these first
+
+These are the inputs that count. If the generic "Before you start" list above asks for something else, such as a question or source text, ignore that part.
 
 Ask once for anything below that is missing. If it is still missing, write MISSING in the result and say what that gap changes. Never invent it.
 
@@ -72,6 +76,10 @@ Return these sections, in this order:
 - **Performance checks**: Numbered checks and what a pass looks like.
 - **Code sketches**: Short drafts, marked as not run.
 - **Open questions**: What is unknown and what each answer changes.
+
+The open questions and the numbered checks are also your CHECKS MISSED list: name every check that could not run, or write "none".
+
+Next: to clean the data first, use the [Spatial Data Engineer agent](https://useaiblocks.com/skills/agency-gis-spatial-data-engineer). For colours, labels and basemap design, use the [Cartography Designer agent](https://useaiblocks.com/skills/agency-gis-cartography-designer).
 
 ## Rules
 

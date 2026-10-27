@@ -12,6 +12,8 @@ explain: |
   The skill first cleans the export and shows you a cleaning summary. Then it groups each payment by what it was for and who it went to. It runs a Pareto check, which shows how few suppliers take most of the spend. It also looks at the long tail of small suppliers, duplicate suppliers and, if you give it a contract list, buying outside contracts.
 
   Each saving is ranked by size and effort, so you know what to chase first. Savings are estimates, and each one shows its assumption. Your AI needs to run Python, or you can try it on a short pasted sample.
+
+  Licence: this is an MIT-licensed copy of an external skill, and the LICENSE file says so. The original author is credited on this page. The code needs pandas, scikit-learn and matplotlib installed.
 when:
   - You do not know where your money goes each month and want one clear view.
   - You suspect you pay several suppliers for the same thing and want to consolidate.
@@ -38,7 +40,7 @@ how_to_use:
   - Export your payments from QuickBooks, Xero, your bank, card or purchasing system as a CSV or spreadsheet. Keep supplier, amount and date columns. Remove personal or payroll rows.
   - Use an AI that can run Python with pandas and scikit-learn installed, such as Claude Code or ChatGPT with data analysis. The automated classifier is optional and needs your own labelled rows. For a short list, a plain chat can work on a pasted sample.
   - Paste the skill and attach the file. Say the period it covers and your goal.
-  - Check the cleaning summary first. Look at rows dropped, duplicates removed and any supplier names merged. Fix anything wrong before you accept the ranking.
+  - Check the cleaning summary first. Look at rows dropped, possible duplicates flagged, credits set aside and any supplier names merged. Fix anything wrong before you accept the ranking.
   - Read the Pareto view and the ranked savings. Ask your AI to show the assumption behind each saving.
   - Pick the top two or three savings and ask for a short action plan with an owner for each.
 how_it_works:

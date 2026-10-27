@@ -70,9 +70,9 @@ The want and the one thing the product does for it. The list of moves kept and d
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Sales argument order editor](https://useaiblocks.com/skills/belief-ladder-builder). It takes the draft.
 - **Check it before it goes live** with the [Claim evidence checker](https://useaiblocks.com/skills/claim-and-proof-matcher). It takes the draft.
-- The [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer).
 - The [Sales copy editor](https://useaiblocks.com/skills/sales-copy-editor). It takes the draft.
 - **Check it before it goes live** with the [Sales copy readiness checker](https://useaiblocks.com/skills/sales-copy-readiness-checker). It takes the draft.
+- The [How-it-works copy writer](https://useaiblocks.com/skills/how-it-works-copy-writer). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

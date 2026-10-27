@@ -58,10 +58,10 @@ Pause here: Have a lawyer or HR check the plan and the flags. Hold the conversat
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Fair candidate comparer](https://useaiblocks.com/skills/fair-candidate-comparer). It takes the document.
-- The [Workplace change announcement writer](https://useaiblocks.com/skills/org-change-announcement-writer). It takes the plan.
+- The [Employee data privacy checker](https://useaiblocks.com/skills/employee-data-privacy-checker). It takes the document.
 - The [Onboarding rules checker](https://useaiblocks.com/skills/onboarding-rules-checker). It takes the document.
-- **Lead the team** with the [Team decision and dissent note writer](https://useaiblocks.com/skills/disagree-and-commit-note-writer). It takes the plan.
 - **Lead the team** with the [One-on-one meeting planner](https://useaiblocks.com/skills/one-on-one-meeting-planner). It takes the plan.
+- **Lead the team** with the [Team decision and dissent note writer](https://useaiblocks.com/skills/disagree-and-commit-note-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -7,9 +7,9 @@ description: Build quick IRR/MOIC sensitivity tables for PE deal evaluation. Mod
 
 ## India
 
-This skill operates on **Indian markets**. The companion files `india-market-conventions`
-and `india-market-data` are not shipped with this item. If you have them, load them. If not,
-the two rules below are what this skill relies on. They cause most Indian errors:
+This skill operates on **Indian markets**. The helper files it once pointed to
+(`india-market-conventions`, `india-market-data` and `NOT-ADAPTABLE.md`) are not in this folder.
+Only the two rules below apply. They cause most Indian errors:
 
 - **Fiscal year is April–March.** `FY2025` = year ending **31 Mar 2025**; `Q1 FY26` =
   Apr–Jun 2025. Label periods `Q3 FY26 (Oct–Dec 25)`, never a bare calendar year.
@@ -19,7 +19,7 @@ the two rules below are what this skill relies on. They cause most Indian errors
   **lakh under a crore label: a 100× error**. Divide by `10000000` in a live
   formula and label the column `Total Revenue (₹ Cr)`.
 
-Where a US term has no Indian equivalent (`NOT-ADAPTABLE.md` lists these when you have it), name the gap.
+Where a US term has no Indian equivalent, name the gap.
 Never substitute a proxy and present it as the real thing.
 
 ## Workflow
@@ -111,6 +111,8 @@ Build 3 scenarios:
 
 ### Step 5: Output
 
+Mark every number in the workbook as an input you were given or a formula. Never make up a deal term. If an input is missing, ask once and mark it `MISSING`.
+
 - Excel workbook with:
   - Assumptions tab
   - Returns calculation
@@ -135,4 +137,4 @@ Build 3 scenarios:
 - Don't forget transaction costs (typically 2-4% of EV) — they reduce Day 1 equity value
 - Tax treatment (for example a share sale versus an asset or business transfer under Indian tax rules) can materially affect after-tax returns, so ask the user to confirm it with their tax adviser
 
-- **Runbook:** [`references/runbook-returns.md`](references/runbook-returns.md) — the end-to-end walkthrough (which skills to load in what order, and the output contract).
+- **Runbook:** [`references/runbook-returns.md`](references/runbook-returns.md) — a short note on when to run this skill. The other skills it may name are not in this folder, so follow the steps in this file.

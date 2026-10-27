@@ -71,9 +71,11 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [How-it-works copy writer](https://useaiblocks.com/skills/how-it-works-copy-writer).
 - The [Product promise finder](https://useaiblocks.com/skills/selling-proposition-finder). It takes the audit report.
-- The [Sales evidence copy writer](https://useaiblocks.com/skills/sold-out-proof-line-writer).
+- The [Ad response copy editor](https://useaiblocks.com/skills/reply-getting-fix-writer). It takes the audit report.
+- The [Article-style image ad writer](https://useaiblocks.com/skills/article-style-image-ad-writer). It takes the audit report.
+- **Make video ads** with the [Product claim demo planner](https://useaiblocks.com/skills/claim-demonstration-planner). It takes the audit report.
+- **Write the landing page** with the [Competitor comparison page writer](https://useaiblocks.com/skills/alternative-page-writer). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -111,7 +111,7 @@ What the wizard is actually trying to engineer.
 **Design implications.**
 
 - The wizard's path should converge on the ah-ha moment. Steps that do not contribute should be deferred or cut.
-- The ah-ah moment should appear within the user's first session, ideally within 5-10 minutes of signup. Longer time-to-value correlates with churn.
+- The ah-ah moment should appear within the user's first session, ideally within the first few minutes of signup (the author's rule of thumb, not a measured finding; test it against your own numbers). A longer time to first value often goes with higher churn, so check that in your own data.
 - The ah-ha moment differs by audience. The B2B admin's ah-ha moment differs from the end-user's. Wizards may need to differentiate.
 
 **Common ah-ha moment patterns.**
@@ -212,7 +212,7 @@ Different users may need different wizards.
 - **Use-case-based branching.** First step asks use case; wizard tailors.
 - **Size-based branching.** Solo, team, enterprise paths differ.
 
-**The over-differentiated trap.** Too many variants produce unmaintainable wizards. Most wizards work with 2-3 variants at most.
+**The over-differentiated trap.** Too many variants produce unmaintainable wizards. As a rule of thumb, keep to 2-3 variants at most, and test whether more are worth it for your product.
 
 Detail in [`references/user-type-variation-patterns.md`](references/user-type-variation-patterns.md).
 
@@ -246,7 +246,7 @@ When designing or auditing an onboarding wizard, walk these 12 considerations.
 6. **Skip mechanics honest.** Skip exists but does not produce an empty product.
 7. **Resume mechanics work.** Skipped users have a path back; instrumented for follow-through.
 8. **Drop-off measurement instrumented.** Per-step tracking from launch.
-9. **User-type variations balanced.** 2-3 variants max; over-differentiation avoided.
+9. **User-type variations balanced.** 2-3 variants as a rule of thumb; over-differentiation avoided.
 10. **Mobile parity.** Wizard works on the devices the audience uses.
 11. **Activation as success metric.** Not just completion rate; the metric is post-wizard product engagement.
 12. **Maintenance discipline.** Wizard updated alongside product changes; quarterly audit.

@@ -47,9 +47,9 @@ The effect. The first-sentence verdict. A table of paragraphs with marks and rea
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Emotional arc mapper](https://useaiblocks.com/skills/emotional-arc-mapper).
-- The [Show-don't-tell scene rewriter](https://useaiblocks.com/skills/show-dont-tell-scene-rewriter).
 - The [Plain English editor](https://useaiblocks.com/skills/plain-english-editor). It takes the audit report.
+- The [Case study story planner](https://useaiblocks.com/skills/case-first-story-builder). It takes the audit report.
+- The [Text proofreader](https://useaiblocks.com/skills/proofreader). It takes the audit report.
 - **Say it to the room** with the [Lesson talk writer](https://useaiblocks.com/skills/lesson-talk-writer). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

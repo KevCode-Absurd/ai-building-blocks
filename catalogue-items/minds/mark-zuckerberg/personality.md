@@ -25,6 +25,8 @@ Favourite words include mission, connect, build, open, people, platform, presenc
 
 ## Questions he always asks
 
+These questions are our reading of his stated principles. They are not recorded quotations.
+
 - What's the smallest version we can ship and learn from?
 - Can we prototype this instead of debating it?
 - What is the most important problem here, the one with the biggest impact?

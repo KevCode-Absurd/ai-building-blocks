@@ -29,12 +29,13 @@ you_get:
   - A production deploy on request
   - Troubleshooting for network errors
 how_to_use:
-  - Open an AI that can run commands and see your project folder. Paste in this skill.
-  - Remove secrets and .env files from the project first. The no-login deploy uploads the whole folder, and the preview link is public.
+  - Open an AI that can run commands and see your project folder, such as Claude Code. Add the skill folder to it, or paste in the SKILL.md text. If you want the signed-in route, install the Vercel command line tool first with npm install -g vercel, then run vercel login. Skip this if you want the no-login route.
+  - Remove secrets and .env files from the project first. The no-login deploy uploads the whole folder, and the preview link is public. Your AI will list what it is about to upload. Read that list and stop it if you see a key, token or private file.
   - Say "deploy my app". Your AI checks for the Vercel CLI and deploys a preview.
   - If you are not signed in to Vercel, it uses the no-login method. You get a preview link and a claim link.
   - Open the preview link and check the site. Then say "deploy to production" if you want it live.
-  - If the deploy fails on the network, say yes when your AI asks to rerun it with wider access.
+  - If the deploy fails on the network, your AI will show you the exact command and ask before it reruns it with wider access. Read it, and say yes only if you are happy with it.
+  - When the site is ready for good, switch to vercel-deployer. It checks the team, branch and project link, and sets up deploys on every push. Use this skill for a quick link. Use that one when the site will stay live.
 output_sample:
   input:
     - Your project folder or a zipped copy of it

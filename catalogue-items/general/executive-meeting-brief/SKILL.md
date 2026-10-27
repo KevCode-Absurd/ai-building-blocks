@@ -10,7 +10,7 @@ description: "Share a meeting and relevant notes. Get a sourced brief with the g
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Action item tracker](https://useaiblocks.com/skills/executive-action-register). It takes the meeting notes.
-- The [Meeting agenda and cost planner](https://useaiblocks.com/skills/meeting-agenda-and-cost-planner). It takes the brief and meeting notes.
+- The [Meeting agenda and cost planner](https://useaiblocks.com/skills/meeting-agenda-and-cost-planner). It takes the meeting notes and brief.
 - The [Internal meeting minutes writer](https://useaiblocks.com/skills/copilot-meeting-minutes). It takes the meeting notes.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
@@ -26,6 +26,13 @@ How to start:
 2. **Check what's missing.** Look for meeting notes. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
+
+## Required inputs
+- The meeting invite or a calendar export.
+- Past notes, agreed actions or documents about the topic.
+- Your goal for the meeting and the calendars to check for clashes (both optional).
+
+If the "What you need" list above names a different input, use this list.
 
 ## The job
 

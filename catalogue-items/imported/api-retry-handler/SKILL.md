@@ -285,5 +285,5 @@ def fetch_with_retry(url: str, max_retries: int = 3, max_elapsed_s: float = 120,
 
 ## Related Skills
 
-- `@poka-yoke` - Mistake-proofing APIs so invalid requests never reach the retry path
-- `@circuit-breaker` - When to stop retrying entirely and fail fast
+- `@poka-yoke` - Mistake-proofing APIs so invalid requests never reach the retry path (not included in this item)
+- `@circuit-breaker` - When to stop retrying entirely and fail fast (not included in this item)

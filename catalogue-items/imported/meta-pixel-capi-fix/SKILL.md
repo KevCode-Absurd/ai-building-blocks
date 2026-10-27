@@ -12,7 +12,7 @@ metadata:
 
 # Pixel + CAPI -- Your Server-Side Signal Stack
 
-The browser pixel alone is broken. iOS 14.5 killed a large share of signal (rough estimates of 30-50%, with no source). Ad blockers take another 20-30% (also a rough estimate). Cookie deprecation is finishing the job.
+The browser pixel alone misses events. iOS privacy changes, ad blockers and cookie limits all stop some browser events from reaching Meta. How many varies by site and audience, and this skill has no figure for yours. The EMQ targets below (9.3 and 8.0) are this skill's own guidance, not a Meta rule.
 
 The fix is Conversions API (CAPI) -- server-side event sending that runs parallel to the browser pixel, shares event IDs for deduplication, and passes hashed user data that browsers can't block.
 
@@ -141,7 +141,7 @@ PII (email, phone, names) is hashed automatically. Event ID is generated if not 
 
 ### Get a META_TOKEN
 
-You need a Meta access token with `ads_management` and `ads_read` permissions. Two ways:
+You need a Meta access token with `ads_management` and `ads_read` permissions (no other scopes). The score itself is confirmed on one screen: Events Manager > Data Sources > [Pixel] > Overview. Keep the token in an environment variable (`META_TOKEN`) and never paste it into a chat. Two ways:
 
 **Option A -- System User token (recommended for CAPI):**
 1. Business Manager > Business Settings > System Users

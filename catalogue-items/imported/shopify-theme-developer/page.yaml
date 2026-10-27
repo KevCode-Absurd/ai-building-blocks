@@ -59,3 +59,4 @@ output_sample:
       contains: Changes such as lazy loaded images and sized images, plus theme check warnings to fix.
     - name: Install and test steps
       contains: Commands to start the local preview, push the theme as unpublished and then publish it.
+next: [liquid-snippet-writer]

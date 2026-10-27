@@ -9,8 +9,9 @@ role: make
 job: organic
 level: intermediate
 inputs:
-  - {type: brand_brain, required: true}
+  - {type: brand_brain, required: false}
   - {type: persona, required: false}
+  - {type: shortlist, required: false}
 outputs:
   - {type: plan}
   - {type: brief}

@@ -13,17 +13,15 @@ argument-hint: "<--send | --respond | --counter> [context or path to incoming no
 
 Three modes. Pick one:
 
-- `/ip-legal:takedown --send` — draft a §512(c)(3) takedown notice. Fair-use gate (*Lenz*) + loud perjury / §512(f) gate before delivery.
-- `/ip-legal:takedown --respond` — triage a takedown someone sent you. Options: comply / counter / engage / ignore.
-- `/ip-legal:takedown --counter` — draft a §512(g)(3) counter-notice. Loud gate for the federal-jurisdiction admission and the perjury statement.
+- Send mode — draft a §512(c)(3) takedown notice. Fair-use gate (*Lenz*) + loud perjury / §512(f) gate before delivery.
+- Respond mode — triage a takedown someone sent you. Options: comply / counter / engage / ignore.
+- `a counter-notice draft (counter mode)` — draft a §512(g)(3) counter-notice. Loud gate for the federal-jurisdiction admission and the perjury statement.
 
 ## Instructions
 
-1. **Read the practice profile.** Load `~/.claude/plugins/config/claude-for-legal/ip-legal/CLAUDE.md`. If it contains `[PLACEHOLDER]` markers or does not exist, stop and say: "This plugin needs setup before it can give you useful output. Run `/ip-legal:cold-start-interview` — the takedown skill depends on your approval matrix and practice profile."
+1. **Collect the facts in plain words.** This works in a plain chat. No plugin, saved profile or setup interview is needed. Ask for: who must approve a notice before it goes out; the work, who owns it and any registration; the exact web addresses of the copies; and the user's own read on fair use. Use those answers wherever the steps below mention a practice profile or approval matrix, and say so at the top of the draft. Ignore any step below that mentions slash commands, `~/.claude` paths, `CLAUDE.md`, matter workspaces or the setup interview. Save files named notice-v1.md, submission.md and so on only if the AI can save files; in a chat, give the text in the reply.
 
-   If the user is in a plain chat with no plugin, do not just stop. Ask for the same facts in plain words: who must approve a notice, and the facts of the case (the work, who owns it, any registration, the exact URLs, and your fair-use read). Use those answers in place of the profile, say so at the top of the draft, and keep every other rule below. The file names below (notice-v1.md, submission.md and so on) apply only when the AI can save files; in a chat, give the text in the reply.
-
-2. **Check matter workspaces.** Per `## Matter workspaces`: if `Enabled` is `✗`, skip. If enabled and there is no active matter, ask: "Which matter is this for? Run `/ip-legal:matter-workspace switch <slug>` or say `practice-level`."
+2. **Ask whether the user is a lawyer.** If not, give a one-page brief for the lawyer conversation before the final gate clears.
 
 3. **Dispatch on `$ARGUMENTS`:**
    - `--send` → run send mode (below). Walk identify-the-work, identify-the-infringing-material, fair-use gate (*Lenz*), good-faith belief, accuracy/authority, draft the §512(c)(3) notice, run the loud gate, write output.
@@ -35,15 +33,14 @@ Three modes. Pick one:
 
 5. **Jurisdiction note.** DMCA §512 is US federal law. If the service provider, content, or infringer sits outside US jurisdiction, flag before drafting — you may need an EU DSA notice, UK OSA notice, or local-regime instrument instead of (or in addition to) a DMCA notice.
 
-6. **Hand off where appropriate.** `--respond` with a counter-notice recommendation chains into `/ip-legal:takedown --counter` — but only after the triage memo has been reviewed and the decision to counter has been made deliberately.
+6. **Hand off where appropriate.** `--respond` with a counter-notice recommendation chains into `a counter-notice draft (counter mode)` — but only after the triage memo has been reviewed and the decision to counter has been made deliberately.
 
 ## Examples
 
 ```
-/ip-legal:takedown --send
-/ip-legal:takedown --respond ~/Downloads/youtube-takedown-notice.pdf
-/ip-legal:takedown --counter
-/ip-legal:takedown
+I want to send a DMCA takedown for [WORK] copied at [WEB ADDRESS].
+I received this takedown notice. Help me triage it. [PASTE NOTICE]
+Help me draft a counter-notice. [PASTE FACTS]
 ```
 
 ## Notes
@@ -75,8 +72,8 @@ DMCA §512 is **US federal law**. It runs against service providers subject to U
 
 ## Load context
 
-- `~/.claude/plugins/config/claude-for-legal/ip-legal/CLAUDE.md` → `## IP practice profile` (copyright registrations if any), `## Enforcement posture` → `Approval matrix → DMCA takedown (ordinary)` row, `## Outputs` (work-product header, role), `## Who's using this` (role — lawyer vs. non-lawyer)
-- **Matter context.** Check `## Matter workspaces` in the practice-level CLAUDE.md. If `Enabled` is `✗` (in-house default), skip matter machinery. If enabled and no active matter, ask: "Which matter? Run `/ip-legal:matter-workspace switch <slug>` or say `practice-level`." Write outputs to the active matter's folder at `~/.claude/plugins/config/claude-for-legal/ip-legal/matters/<matter-slug>/takedown/<slug>/` (or `takedown/<slug>/` at practice level). Never read another matter's files unless `Cross-matter context` is `on`.
+- The facts the user gave in plain words (see Instructions step 1): approver, registrations if any, enforcement approach, and whether the user is a lawyer.
+- No matter workspaces or saved folders are used. Keep each draft in the reply or in one folder the user names.
 
 ## Send mode — drafting a §512(c)(3) takedown notice
 
@@ -266,7 +263,7 @@ Present 4 options with tradeoffs:
 **B — Send a counter-notice** (§512(g)(3))
 - When: we have a good-faith belief the material was misidentified or removed by mistake — often applies where the use is licensed, fair use, or the sender doesn't own the work
 - Tradeoff: sworn under penalty of perjury, consents to federal court jurisdiction in the sender's district (or our own if outside the US and we designate), puts the decision in the sender's hands for 10–14 business days — if they sue, content stays down; if they don't, content is restored
-- Next step: `/ip-legal:takedown --counter`
+- Next step: `a counter-notice draft (counter mode)`
 
 **C — Engage the sender directly**
 - When: there's room for a business resolution (license, credit, takedown of a narrower portion)

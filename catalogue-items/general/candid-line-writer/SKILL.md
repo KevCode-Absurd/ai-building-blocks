@@ -61,10 +61,9 @@ The flaws with sources and tests. The flaw that leads to the word, with its chai
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Subject line writer](https://useaiblocks.com/skills/subject-line-writer). It takes the draft.
+- The [Sales copy editor](https://useaiblocks.com/skills/sales-copy-editor). It takes the draft.
 - The [Sales copy reviewer](https://useaiblocks.com/skills/sales-copy-reviewer). It takes the draft.
-- The [Sales argument order editor](https://useaiblocks.com/skills/belief-ladder-builder). It takes the draft.
-- **Plan your strategy** with the [Brand focus trade-off planner](https://useaiblocks.com/skills/give-up-list-planner).
+- The [Subject line writer](https://useaiblocks.com/skills/subject-line-writer). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

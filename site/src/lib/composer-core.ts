@@ -1,7 +1,9 @@
 // Shared, provider-independent planning and validation. No network or browser globals.
 import { recipeFor } from "./composer-recipes.ts";
 import { isReviewRequest, taskFocus } from "./composer-intent.ts";
-export type Part = { slug: string; name: string; summary: string; area?: string; also?: string[]; seats?: string[]; identity?: string; headline?: string; aliases?: string[]; type?: string; category?: string; role?: string; task?: string; usedIn?: number; execution?: string; inputs: { type: string; required: boolean }[]; outputs: { type: string }[]; steps?: { uses: string; note: string }[]; uses?: string[]; warnings?: string[]; version?: string };
+import { goalMatches, rootOf } from "./goal.ts";
+import { queryTokens } from "./library-search-core.ts";
+export type Part = { slug: string; name: string; summary: string; cues?: string; area?: string; also?: string[]; seats?: string[]; identity?: string; headline?: string; aliases?: string[]; type?: string; category?: string; role?: string; task?: string; usedIn?: number; execution?: string; inputs: { type: string; required: boolean }[]; outputs: { type: string }[]; steps?: { uses: string; note: string }[]; uses?: string[]; warnings?: string[]; version?: string };
 export type Library = { blocks: Part[]; bySlug: Record<string, Part>; built?: string };
 export type Choices = { mode?: string; reference?: string; delivery?: string; automation?: string };
 export function validateChoices(raw: unknown): Choices {
@@ -52,22 +54,26 @@ export function decodeCatalogue(data: { blocks: Record<string, unknown>[]; built
   } as Part));
   return { built: data.built, blocks, bySlug: Object.fromEntries(blocks.map(b => [b.slug, b])) };
 }
-type SearchIndex = { docs: { b: Part; words: Set<string>; title: Set<string> }[]; df: Map<string, number> };
+type SearchIndex = { docs: { b: Part; words: Set<string>; title: Set<string> }[]; df: Map<string, number>; postings: Map<string, number[]> };
 const INDEX = new WeakMap<Library, SearchIndex>();
 function index(c: Library) {
+  c = rootOf(c);
   let found = INDEX.get(c); if (found) return found;
-  const df = new Map<string, number>();
-  const docs = c.blocks.filter(b => b.type !== "mind").map(b => {
+  const df = new Map<string, number>(), postings = new Map<string, number[]>();
+  const docs = c.blocks.filter(b => b.type !== "mind").map((b, i) => {
     const title = new Set(terms(`${b.name} ${b.slug} ${(b.aliases ?? []).join(" ")}`, false));
-    const words = new Set([...title, ...terms(`${b.summary} ${b.headline ?? ""} ${b.task ?? ""} ${b.outputs.map(p => p.type).join(" ")}`, false)]);
-    for (const t of words) df.set(t, (df.get(t) ?? 0) + 1);
+    const words = new Set([...title, ...terms(`${b.summary} ${b.headline ?? ""} ${b.task ?? ""} ${b.outputs.map(p => p.type).join(" ")} ${b.cues ?? ""}`, false)]);
+    for (const t of words) { df.set(t, (df.get(t) ?? 0) + 1); let list = postings.get(t); if (!list) postings.set(t, (list = [])); list.push(i); }
     return { b, words, title };
   });
-  found = { docs, df }; INDEX.set(c, found); return found;
+  found = { docs, df, postings }; INDEX.set(c, found); return found;
 }
 export function retrieve(c: Library, goal: string, limit = LIMITS.candidates): Part[] {
-  const q = terms(goal), { docs, df } = index(c), topical = q.filter(w => !GENERIC.has(w));
-  return docs.map(d => {
+  const q = terms(goal), { docs, df, postings } = index(c), topical = q.filter(w => !GENERIC.has(w));
+  // Only items with a topical word can score: read them from the word lists instead of scanning the library.
+  const near = new Set<number>();
+  for (const t of topical) for (const i of postings.get(t) ?? []) near.add(i);
+  return [...near].map(i => docs[i]).filter(d => c.bySlug[d.b.slug]).map(d => {
     let score = 0, hits = 0;
     for (const t of q) if (d.words.has(t)) { score += Math.log(1 + docs.length / (1 + (df.get(t) ?? 0))) * (d.title.has(t) ? 3 : 1); if (topical.includes(t)) hits++; }
     if (!hits) return { b: d.b, score: 0 };
@@ -261,7 +267,7 @@ export function finalize(c: Library, raw: unknown, source: "free" | "ai", allowe
       if (b.slug === "marketing-claims-checker" && p.type === "copy_draft" && suppliers.has("landing_page")) { from = suppliers.get("landing_page"); conversion = "Extract the drafted page's written claims as a copy draft, preserving section IDs and offer facts. Return checked wording to the page draft before building; require missing product evidence instead of inventing proof."; }
       if (b.slug === "supplier-scorer" && p.type === "spreadsheet" && earlier("supplier-quote-table-builder") >= 0) { from = earlier("supplier-quote-table-builder"); conversion = "Extract the normalized quote table from the prior audit report into quotes.xlsx, preserving units, currencies, source IDs and unknown quality evidence. Verify the file/table exists before scoring; do not invent missing quote values."; }
       if (b.slug === "outcome-based-roadmap" && p.type === "plan" && earlier("feedback-theme-finder") >= 0) { from = earlier("feedback-theme-finder"); conversion = "Convert the earlier theme report into a candidate feature/problem plan with response IDs and contradictory evidence. Keep impact and effort assumptions explicit and request missing estimates; this conversion does not establish priorities as facts."; }
-      if (b.slug === "accessible-lesson-auditor" && p.type === "document" && earlier("direct-teaching-lesson-builder") >= 0) { from = i - 1; conversion = "Collect the earlier teacher plan, worked examples, student practice, quiz and separate answer keys into named editable documents. Verify every expected file exists before accessibility and independent mathematical checks; report missing files rather than asking the user to create outputs that earlier steps should supply."; }
+      if (b.slug === "accessible-lesson-auditor" && p.type === "lesson_plan" && earlier("direct-teaching-lesson-builder") >= 0) { from = i - 1; conversion = "Collect the earlier teacher plan, worked examples, student practice, quiz and separate answer keys into named editable documents. Verify every expected file exists before accessibility and independent mathematical checks; report missing files rather than asking the user to create outputs that earlier steps should supply."; }
       if (page && suppliers.has("theme_files") && ["codebase", "code_change", "web_page", "landing_page"].includes(p.type)) { from = suppliers.get("theme_files"); conversion = "Use the generated Shopify theme files as the source project. For page checks render them in a compatible Shopify theme preview, preserving cart and checkout integrations. Do not substitute a React codebase. If preview access is unavailable, mark the check not run."; }
       if (page && p.type === "code_change" && suppliers.has("code_change")) { from = suppliers.get("code_change"); }
       if (p.type === "copy_draft" && suppliers.has("script")) { from = suppliers.get("script"); conversion = "Use the latest spoken script verbatim as the copy draft. Preserve script IDs and timings; apply corrections back to the scripts before production."; }
@@ -284,6 +290,45 @@ export function finalize(c: Library, raw: unknown, source: "free" | "ai", allowe
   if (s.steps.some(s => c.bySlug[s.slug].type === "agent")) warnings.push("Agent steps need a compatible runner and explicit schedule setup. Downloading this pack starts no automation.");
   return { ...s, title: s.title.slice(0, 100), summary: s.summary.slice(0, 500), questionIds: [...new Set(s.questionIds)], source, missing: [...missing].map(([type, steps]) => ({ type, steps })), dependencies, bindings, warnings };
 }
+export type StartPick<P extends Part = Part> = { b: P; why: string };
+const isFlow = (b: Part) => (b.type === "workflow" || b.category === "orchestrator") && !!b.steps?.length;
+/** Free mode's "Start with" list: single steps that make what the goal asks for, best first, and ready workflows that
+ *  already do the whole job. The person picks one; the builder then suggests what goes before and after it.
+ *  Library search matches (goal.ts) merged with this file's word matching, which reads long requests better. */
+/** A question that asks for a verdict or a diagnosis ("is it any good", "why did my traffic drop") wants a check. */
+const CHECK_QUESTION = /\b(?:is (?:it|this|my \w+) (?:any )?(?:good|ok|okay|right|safe|legal|allowed)|what(?:'s| is) wrong|why (?:did|is|are|does|do|has|have|isn'?t|aren'?t|doesn'?t|don'?t|won'?t)\b|what happened|doing wrong|any good|get (?:me|us) in trouble|(?:can|could|would) you (?:check|review|audit|proofread|look over|go over)\b)/i;
+export const wantsCheck = (goal: string) => isReviewRequest(goal) || CHECK_QUESTION.test(goal);
+/** How many of the best-matching ready workflows lend weight to their own steps. */
+const LENDING_FLOWS = 5;
+export function startPicks<P extends Part>(c: { blocks: P[]; bySlug: Record<string, P> }, goal: string, limit = 6): { tasks: StartPick<P>[]; workflows: StartPick<P>[] } {
+  const lib = c as unknown as Library, focus = taskFocus(positiveRequest(goal)), review = wantsCheck(goal);
+  const code = /\b(code|coding|app|api|website|site|software|react|html|shopify|webhook|program|plugin|deploy)\b/i.test(goal);
+  // Two readings of the goal, merged by rank: the library search on its words and pairs (goal.ts) and the planner's
+  // word match (retrieve), which reads long requests better. A ready workflow that matches lends its steps a share
+  // of its own rank: its title says, in people's words, what those steps are for.
+  const matches = goalMatches(lib, positiveRequest(goal), 80), score = new Map<string, number>();
+  const add = (slug: string, value: number) => score.set(slug, (score.get(slug) ?? 0) + value);
+  matches.forEach((m, i) => add(m.b.slug, 1 / (i + 6)));
+  retrieve(lib, focus, 40).forEach((b, i) => add(b.slug, 1 / (i + 6)));
+  matches.map((m, i) => ({ m, i })).filter(({ m }) => (isFlow(m.b) || m.b.type === "agent") && m.b.steps?.length).slice(0, LENDING_FLOWS)
+    .forEach(({ m, i }) => { for (const s of new Set(m.b.steps!.map(x => x.uses))) if (c.bySlug[s]) add(s, 1 / (i + 6)); });
+  // A check fits a request to check something; otherwise the step that makes the result comes first.
+  const tasks = [...score].map(([slug, value]) => ({ b: c.bySlug[slug], value })).filter(({ b }) => b && b.type !== "mind" && b.type !== "agent" && !isFlow(b) && b.execution !== "coordinator" && !b.slug.startsWith("request-"))
+    .map(({ b, value }) => ({ b, value: value * ((b.role === "check") === review ? 1 : 0.6) * (!code && b.inputs.some(p => p.required && ["codebase", "code_change", "theme_files"].includes(p.type)) ? 0.3 : 1) }))
+    .sort((x, y) => y.value - x.value || x.b.slug.localeCompare(y.b.slug))
+    // Much weaker matches than the best one share a word with the goal, not its subject.
+    .filter((x, _, all) => x.value >= all[0].value * 0.2).slice(0, limit)
+    .map(({ b }) => ({ b, why: b.role === "check" ? "Checks this kind of work" : "Makes what you asked for" }));
+  // A ready workflow must say the goal, not share one word with it: most of its subject, two neighbouring words when
+  // there are two, and a match close to the best one. Or it says a good part of the goal, is among the closest matches
+  // and runs one of the best first steps, so the steps and the workflow agree on what the goal is.
+  const pairs = queryTokens(focus).sequence.length > 1, best = new Set(tasks.slice(0, 3).map(t => t.b.slug));
+  const workflows = matches.map((m, i) => ({ m, i })).filter(({ m, i }) => isFlow(m.b) && c.bySlug[m.b.slug] && (
+    (m.share >= 0.6 && (m.pair || !pairs) && m.score >= matches[0].score * 0.5)
+    || (i < 20 && m.share >= 0.4 && m.b.steps!.some(s => best.has(s.uses)))))
+    .slice(0, 2).map(({ m }) => ({ b: c.bySlug[m.b.slug], why: `A ready workflow with ${m.b.steps!.length} steps` }));
+  return { tasks, workflows };
+}
 export type SearchIntent = { query: string; kind: "create" | "review" | "research" | "automate" | "other" };
 export function candidatesFor(c: Library, goal: string, choices: Choices = {}, context = "", intents: SearchIntent[] = []): Part[] {
   const picked = new Map<string, Part>();
@@ -302,6 +347,8 @@ export function candidatesFor(c: Library, goal: string, choices: Choices = {}, c
   });
   // Every interpreted task gets candidates before any one task fills the window.
   for (let rank = 0; rank < 6; rank++) for (const bucket of buckets) add(bucket[rank]);
+  // The library search's best matches for the whole request and its first parts; a matching ready workflow brings its steps below.
+  for (const [query, n] of [[positive, 12], ...queries.slice(0, 4).map(q => [q.query, 6] as const)] as const) for (const m of goalMatches(c, query, n)) add(m.b);
   if (choices.automation !== "once" && intents.some(q => q.kind === "automate")) {
     for (const slug of ["repeatable-ai-loop-designer", "check-a-new-automation-before-relying-on-it"]) add(c.bySlug[slug]);
   }

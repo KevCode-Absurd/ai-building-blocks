@@ -10,7 +10,9 @@ level: intermediate
 inputs:
   - type: question
     required: true
-  - type: source_text
+  - type: map_data
+    required: false
+  - type: plan
     required: false
 outputs:
   - type: plan

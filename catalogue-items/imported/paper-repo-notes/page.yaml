@@ -35,7 +35,7 @@ you_get:
 how_to_use:
   - Open an AI that can read and write files, such as Claude Code. Add the skill, then point it at your paper, repo or notes folder.
   - Tell it where to save the result. If you do not, it uses a folder named ara-output in your current folder.
-  - Ask it to build the folder, then run the coverage check. It rereads your sources up to 3 times and patches gaps.
+  - Ask it to build the folder, then run the coverage check. It rereads your sources up to 3 times and patches gaps. The coverage check and the final structure check are read-throughs by your AI, not scripts you run. The final check uses the author's own checklist, called Seal Level 1.
   - Open evidence/README.md first. It lists each evidence file and the claims it backs. Check that the numbers match your source.
   - Read the final report. Anything marked "Not specified" needs input from you. Add that source and run it again.
   - If you only have a chat window, paste your text and ask for claims.md and evidence/README.md only.

@@ -49,6 +49,7 @@ test('Workers deployment protects API, MCP and consent routing while isolating s
   assert.equal(config.assets.html_handling, 'auto-trailing-slash');
   assert.equal(config.assets.not_found_handling, undefined, 'Missing paths reach the router for canonical repair and a custom 404');
   assert(config.compatibility_flags.includes('assets_navigation_has_no_effect'));
+  // Item pages stay asset-first (no Worker on a page view); their .md and .json twins reach the Worker on the asset miss.
   assert.deepEqual(config.assets.run_worker_first, ['/api', '/api/*', '/mcp', '/mcp/*', '/oauth/*', '/.well-known/*', '/connect-mcp', '/connect-mcp.html']);
   assert.equal(config.vars.PUBLIC_API_ENABLED, 'false');
   assert.equal(config.vars.MCP_OAUTH_ENABLED, 'false');

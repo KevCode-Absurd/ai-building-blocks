@@ -13,6 +13,8 @@ inputs:
 outputs:
   - type: shortlist
   - type: plan
+  - type: idea
+    required: true
 uses: []
 origin: imported
 source:

@@ -3,8 +3,11 @@ name: Five reasons landing page builder
 summary: Share product facts and an offer. Get a five-reasons HTML page, with a choice of looks and a Shopify file if needed.
 job: write-landing-page
 headline: Five reasons landing page builder
-subhead: Build a reasons page from facts you can back up.
-explain: Extends a reasons-page copy draft into two explicit design modes and portable implementation. Handles fewer than five true reasons honestly rather than padding claims.
+subhead: Give it your product facts, your offer and the ad that sends people to the page. You get five reasons to buy, each with its proof, a mobile-ready page in the look you pick and, if you ask, a Shopify file.
+explain: |-
+  A reasons page gives a shopper five clear reasons to buy, each with proof beside it. This workflow builds the whole page, not only the words. It starts from your product facts, your real offer terms and the ad that sends people to the page.
+
+  If you have fewer than five reasons you can prove, it says so and offers a shorter page. It never pads the list, invents reviews or adds a rating you do not have. You pick one of two looks, a storytelling look or a quicker-to-scan look, and the facts stay the same in both.
 when:
   - You want a complete reasons-style landing page, not just copy.
   - You need a choice of editorial or direct-response layout.
@@ -14,18 +17,18 @@ you_give:
   - Actual offer terms, product images and source-backed proof.
   - Design preference and optional Shopify project conventions.
 you_get:
-  - A reason/proof map and page copy.
-  - Responsive HTML in the chosen design with a revision log.
-  - Optional namespaced Liquid section and template data, with validation status.
+  - A list of reasons, each with its proof, and the page copy.
+  - A mobile-ready HTML page in the look you pick, with a log of changes and checks.
+  - Optional Shopify section and template files, marked as a starter if no theme was given.
 how_to_use:
   - Download the complete pack and give its instructions to your AI.
   - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
   - Check the result against the supplied facts before using it.
 how_it_works:
   - title: Build five supported reasons
-    text: Map distinct buying arguments to actual product and customer evidence.
+    text: Match each buying reason to real product facts and customer proof, so no reason stands without evidence.
   - title: Choose a visual mode
-    text: Use editorial pacing or a more direct product/offer layout without changing the facts.
+    text: Pick a storytelling look, with numbered reasons and images taking turns with text, or a quicker-to-scan look that puts the product and offer first. The facts stay the same.
   - title: Build and verify
     text: Render mobile HTML, refine it and export scoped Shopify files when requested.
 thinking: high
@@ -44,7 +47,7 @@ output_sample:
   prerequisites:
     - An AI that can write code files and, ideally, view a page in a browser
   output:
-    - name: Reason and proof map
+    - name: Reason and proof list
       contains: Five buying reasons, each with its claim, source, buyer doubt and image job.
     - name: Page copy
       contains: Three headline options, the five reasons, the offer, real conditions and questions.

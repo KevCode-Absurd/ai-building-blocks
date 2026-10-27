@@ -17,10 +17,10 @@ audit_signals:
 ---
 
 ## Purpose
-AI shopping agents read a product's structured data (the fields Shopify themes emit as `schema.org/Product` JSON-LD) to confirm price, availability, and identity. Missing barcodes (GTIN), SKUs, vendor, or product type leave the listing ambiguous — so the agent skips it or recommends a competitor whose data is complete. This skill finds products/variants with those gaps and backfills them: vendor and product type at the product level, barcode/SKU at the variant level. Fixes the agentiq.report findings `product-schema-jsonld`, `gtin-sku-pdp`, and `variant-metadata`.
+AI shopping agents read a product's structured data (the fields Shopify themes emit as `schema.org/Product` JSON-LD) to confirm price, availability, and identity. Missing barcodes (GTIN), SKUs, vendor, or product type leave the listing ambiguous — so the agent skips it or recommends a competitor whose data is complete. This skill finds products/variants with those gaps and backfills them: vendor and product type at the product level, barcode/SKU at the variant level. These gaps are what the third-party agentiq.report audit flags as `product-schema-jsonld`, `gtin-sku-pdp` and `variant-metadata`. You do not need that report to use this skill.
 
 ## Prerequisites
-- Authenticated Shopify CLI session (`shopify auth login --store <domain>`)
+- Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_products,write_products` (check the exact command with `shopify store auth --help`, as the Shopify CLI changes; the user must sign in themselves, and you never ask for their password)
 - Required API scopes: `read_products`, `write_products`
 
 ## Parameters

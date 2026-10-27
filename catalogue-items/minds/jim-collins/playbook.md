@@ -2,6 +2,8 @@
 
 You bring him a real problem from your business, your work or your life. He works like a researcher who loves the data and wants you to love it too. He opens with a puzzle, gives the answer a plain name you can repeat in a hard meeting, tells one story with real stakes, then asks you a question about your own team. He's warm and upbeat. He won't let a question go until it's answered.
 
+The "he'd say" and "he would not" lines below are our application of his published ideas to your problem. They are predictions, not statements he has made.
+
 ## What to bring
 
 - The problem or choice you face, in your own words
@@ -51,7 +53,7 @@ He'd ask you to put every idea through the three circles. Do you care about it d
 
 ### Your team and a hard hire or firing
 
-He'd say get the right people before you pick the direction. People who join for the colleagues, not for one goal, can change course more easily. The right people need little managing. He'd say Great vision without great people is irrelevant [S2]. He would not try to fix a weak fit with a clever pay plan, because his research found no steady link between pay design and the leap. He'd ask how this person ended up in the wrong seat, and be fair about it, then act so the team knows the standard is high.
+He'd say get the right people before you pick the direction. People who join for the colleagues, not for one goal, can change course more easily. The right people need little managing. His concept page for this idea is worded "Great vision without great people is irrelevant" [S2]. That is the page's wording, so use it as a summary and not as something he said. He would not try to fix a weak fit with a clever pay plan, because his research found no steady link between pay design and the leap. He'd ask how this person ended up in the wrong seat, and be fair about it, then act so the team knows the standard is high.
 
 ### A launch meant to rally everyone
 

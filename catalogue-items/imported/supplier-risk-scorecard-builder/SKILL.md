@@ -5,7 +5,7 @@ description: When the user wants to assess supplier risks, monitor supplier heal
 
 # Supplier Risk Management
 
-> Missing data rule. The code below fills missing inputs with default values (for example a "BB" credit rating or a 10% margin). These defaults are placeholders for testing only. With real suppliers, when an input is missing, show that risk factor as "no data", score only the factors you have data for, and say how many factors the score is based on. Never present a score built on defaults as a real assessment. The supplier names and figures in the examples (such as Acme Manufacturing) are made up.
+> Missing data rule. The code below does not fill missing inputs with defaults. A missing input is listed as "no data" and adds no points. A category with no data at all gets no score, the overall score only uses categories that have data, and the result says how many checks it is based on. A score built on few checks is thin, so say so. Never present a thin score as a full assessment. The supplier names and figures in the examples (such as Acme Manufacturing) are made up.
 
 You are an expert in supplier risk management and business continuity planning. Your goal is to help organizations identify, assess, monitor, and mitigate supplier-related risks to ensure supply chain resilience and continuity.
 
@@ -119,315 +119,379 @@ class SupplierRiskAssessment:
             'cybersecurity': 0.10
         }
 
+    def _new_check(self):
+        """Start a category: points so far, risk factors found, inputs with no data."""
+        return 0, [], []
+
+    def _finish(self, category, score, factors, no_data, checks_total):
+        """Save a category. A category with no data at all gets no score."""
+        used = checks_total - len(no_data)
+        self.risk_scores[category] = {
+            'score': None if used == 0 else min(100, score),
+            'factors': factors,
+            'no_data': no_data,
+            'checks_used': used,
+            'checks_total': checks_total
+        }
+        return self.risk_scores[category]
+
     def assess_financial_risk(self, financial_data):
         """
         Assess financial risk (0-100, higher = riskier)
 
-        financial_data: dict with financial metrics
+        financial_data: dict with financial metrics.
+        A metric that is missing is listed under 'no_data' and adds no points.
         """
-        score = 0
-        factors = []
+        score, factors, no_data = self._new_check()
 
         # Credit rating
-        credit_rating = financial_data.get('credit_rating', 'BB')
+        credit_rating = financial_data.get('credit_rating')
         rating_scores = {
             'AAA': 0, 'AA': 5, 'A': 10, 'BBB': 20,
             'BB': 40, 'B': 60, 'CCC': 80, 'CC': 90, 'D': 100
         }
-        rating_score = rating_scores.get(credit_rating, 50)
-        score += rating_score * 0.3
-
-        if rating_score >= 40:
-            factors.append(f"Poor credit rating ({credit_rating})")
+        if credit_rating is None:
+            no_data.append('credit_rating')
+        else:
+            rating_score = rating_scores.get(credit_rating)
+            if rating_score is None:
+                no_data.append('credit_rating (unrecognised value)')
+            else:
+                score += rating_score * 0.3
+                if rating_score >= 40:
+                    factors.append(f"Poor credit rating ({credit_rating})")
 
         # Years in business
-        years = financial_data.get('years_in_business', 10)
-        if years < 3:
+        years = financial_data.get('years_in_business')
+        if years is None:
+            no_data.append('years_in_business')
+        elif years < 3:
             score += 20
             factors.append("Limited operating history")
         elif years < 5:
             score += 10
 
         # Revenue trend
-        revenue_growth = financial_data.get('revenue_growth_3yr', 0)
-        if revenue_growth < -0.15:
+        revenue_growth = financial_data.get('revenue_growth_3yr')
+        if revenue_growth is None:
+            no_data.append('revenue_growth_3yr')
+        elif revenue_growth < -0.15:
             score += 15
             factors.append("Significant revenue decline")
         elif revenue_growth < 0:
             score += 8
 
         # Profitability
-        ebitda_margin = financial_data.get('ebitda_margin', 0.1)
-        if ebitda_margin < 0:
+        ebitda_margin = financial_data.get('ebitda_margin')
+        if ebitda_margin is None:
+            no_data.append('ebitda_margin')
+        elif ebitda_margin < 0:
             score += 15
             factors.append("Unprofitable operations")
         elif ebitda_margin < 0.05:
             score += 8
 
         # Liquidity
-        current_ratio = financial_data.get('current_ratio', 1.5)
-        if current_ratio < 1.0:
+        current_ratio = financial_data.get('current_ratio')
+        if current_ratio is None:
+            no_data.append('current_ratio')
+        elif current_ratio < 1.0:
             score += 15
             factors.append("Liquidity crisis")
         elif current_ratio < 1.2:
             score += 8
 
         # Leverage
-        debt_to_equity = financial_data.get('debt_to_equity', 1.0)
-        if debt_to_equity > 3.0:
+        debt_to_equity = financial_data.get('debt_to_equity')
+        if debt_to_equity is None:
+            no_data.append('debt_to_equity')
+        elif debt_to_equity > 3.0:
             score += 15
             factors.append("Excessive leverage")
         elif debt_to_equity > 2.0:
             score += 8
 
-        self.risk_scores['financial'] = {
-            'score': min(100, score),
-            'factors': factors
-        }
-        return self.risk_scores['financial']
+        return self._finish('financial', score, factors, no_data, 6)
 
     def assess_operational_risk(self, operational_data):
-        """Assess operational risk"""
-        score = 0
-        factors = []
+        """Assess operational risk. Missing metrics are listed under 'no_data'."""
+        score, factors, no_data = self._new_check()
 
         # Capacity utilization
-        capacity_util = operational_data.get('capacity_utilization', 0.75)
-        if capacity_util > 0.95:
+        capacity_util = operational_data.get('capacity_utilization')
+        if capacity_util is None:
+            no_data.append('capacity_utilization')
+        elif capacity_util > 0.95:
             score += 20
             factors.append("Critical capacity constraints")
         elif capacity_util > 0.85:
             score += 10
 
         # Single facility risk
-        num_facilities = operational_data.get('num_facilities', 2)
-        if num_facilities == 1:
+        num_facilities = operational_data.get('num_facilities')
+        if num_facilities is None:
+            no_data.append('num_facilities')
+        elif num_facilities == 1:
             score += 15
             factors.append("Single facility risk")
 
         # Technology age
-        tech_age_years = operational_data.get('technology_age_years', 5)
-        if tech_age_years > 15:
+        tech_age_years = operational_data.get('technology_age_years')
+        if tech_age_years is None:
+            no_data.append('technology_age_years')
+        elif tech_age_years > 15:
             score += 10
             factors.append("Outdated technology")
 
         # Workforce stability
-        employee_turnover = operational_data.get('employee_turnover', 0.15)
-        if employee_turnover > 0.30:
+        employee_turnover = operational_data.get('employee_turnover')
+        if employee_turnover is None:
+            no_data.append('employee_turnover')
+        elif employee_turnover > 0.30:
             score += 15
             factors.append("High workforce turnover")
         elif employee_turnover > 0.20:
             score += 8
 
         # Recent disruptions
-        disruptions_12mo = operational_data.get('disruptions_last_12mo', 0)
-        if disruptions_12mo > 2:
+        disruptions_12mo = operational_data.get('disruptions_last_12mo')
+        if disruptions_12mo is None:
+            no_data.append('disruptions_last_12mo')
+        elif disruptions_12mo > 2:
             score += 20
             factors.append("Frequent operational disruptions")
         elif disruptions_12mo > 0:
             score += 10
 
         # Quality performance
-        defect_ppm = operational_data.get('defect_rate_ppm', 500)
-        if defect_ppm > 2000:
+        defect_ppm = operational_data.get('defect_rate_ppm')
+        if defect_ppm is None:
+            no_data.append('defect_rate_ppm')
+        elif defect_ppm > 2000:
             score += 15
             factors.append("Quality issues")
         elif defect_ppm > 1000:
             score += 8
 
-        self.risk_scores['operational'] = {
-            'score': min(100, score),
-            'factors': factors
-        }
-        return self.risk_scores['operational']
+        return self._finish('operational', score, factors, no_data, 6)
 
     def assess_geopolitical_risk(self, geo_data):
-        """Assess geopolitical risk"""
-        score = 0
-        factors = []
+        """Assess geopolitical risk. Missing metrics are listed under 'no_data'."""
+        score, factors, no_data = self._new_check()
 
-        # Country risk
-        country_risk_index = geo_data.get('country_risk_index', 50)  # 0-100
-        score += country_risk_index * 0.4
-
-        if country_risk_index > 70:
-            factors.append("High-risk country location")
+        # Country risk (0-100)
+        country_risk_index = geo_data.get('country_risk_index')
+        if country_risk_index is None:
+            no_data.append('country_risk_index')
+        else:
+            score += country_risk_index * 0.4
+            if country_risk_index > 70:
+                factors.append("High-risk country location")
 
         # Trade restrictions
-        if geo_data.get('trade_restrictions', False):
+        trade_restrictions = geo_data.get('trade_restrictions')
+        if trade_restrictions is None:
+            no_data.append('trade_restrictions')
+        elif trade_restrictions:
             score += 20
             factors.append("Active trade restrictions")
 
         # Currency volatility
-        currency_volatility = geo_data.get('currency_volatility_12mo', 0.05)
-        if currency_volatility > 0.20:
+        currency_volatility = geo_data.get('currency_volatility_12mo')
+        if currency_volatility is None:
+            no_data.append('currency_volatility_12mo')
+        elif currency_volatility > 0.20:
             score += 15
             factors.append("High currency volatility")
         elif currency_volatility > 0.10:
             score += 8
 
-        # Political stability
-        political_stability = geo_data.get('political_stability', 7)  # 0-10
-        if political_stability < 4:
+        # Political stability (0-10)
+        political_stability = geo_data.get('political_stability')
+        if political_stability is None:
+            no_data.append('political_stability')
+        elif political_stability < 4:
             score += 15
             factors.append("Political instability")
 
         # Border distance/complexity
-        if geo_data.get('cross_border', False):
+        cross_border = geo_data.get('cross_border')
+        if cross_border is None:
+            no_data.append('cross_border')
+        elif cross_border:
             score += 5
             if geo_data.get('multiple_borders', False):
                 score += 5
                 factors.append("Complex cross-border logistics")
 
-        self.risk_scores['geopolitical'] = {
-            'score': min(100, score),
-            'factors': factors
-        }
-        return self.risk_scores['geopolitical']
+        return self._finish('geopolitical', score, factors, no_data, 5)
 
     def assess_compliance_risk(self, compliance_data):
-        """Assess compliance and regulatory risk"""
-        score = 0
-        factors = []
+        """Assess compliance and regulatory risk. Missing metrics are listed under 'no_data'."""
+        score, factors, no_data = self._new_check()
 
         # Certifications
-        required_certs = compliance_data.get('required_certifications', [])
-        actual_certs = compliance_data.get('actual_certifications', [])
-        missing_certs = set(required_certs) - set(actual_certs)
-
-        if missing_certs:
-            score += 20
-            factors.append(f"Missing certifications: {', '.join(missing_certs)}")
+        required_certs = compliance_data.get('required_certifications')
+        actual_certs = compliance_data.get('actual_certifications')
+        if required_certs is None or actual_certs is None:
+            no_data.append('certifications')
+        else:
+            missing_certs = set(required_certs) - set(actual_certs)
+            if missing_certs:
+                score += 20
+                factors.append(f"Missing certifications: {', '.join(missing_certs)}")
 
         # Recent violations
-        violations_3yr = compliance_data.get('violations_last_3yr', 0)
-        if violations_3yr > 2:
+        violations_3yr = compliance_data.get('violations_last_3yr')
+        if violations_3yr is None:
+            no_data.append('violations_last_3yr')
+        elif violations_3yr > 2:
             score += 25
             factors.append("Multiple compliance violations")
         elif violations_3yr > 0:
             score += 12
 
-        # Audit results
-        last_audit_score = compliance_data.get('last_audit_score', 85)  # 0-100
-        if last_audit_score < 70:
+        # Audit results (0-100)
+        last_audit_score = compliance_data.get('last_audit_score')
+        if last_audit_score is None:
+            no_data.append('last_audit_score')
+        elif last_audit_score < 70:
             score += 20
             factors.append("Failed recent audit")
         elif last_audit_score < 80:
             score += 10
 
         # Environmental incidents
-        if compliance_data.get('environmental_incidents', 0) > 0:
+        environmental_incidents = compliance_data.get('environmental_incidents')
+        if environmental_incidents is None:
+            no_data.append('environmental_incidents')
+        elif environmental_incidents > 0:
             score += 15
             factors.append("Environmental incidents")
 
         # Labor concerns
-        if compliance_data.get('labor_concerns', False):
+        labor_concerns = compliance_data.get('labor_concerns')
+        if labor_concerns is None:
+            no_data.append('labor_concerns')
+        elif labor_concerns:
             score += 20
             factors.append("Labor or human rights concerns")
 
-        self.risk_scores['compliance'] = {
-            'score': min(100, score),
-            'factors': factors
-        }
-        return self.risk_scores['compliance']
+        return self._finish('compliance', score, factors, no_data, 5)
 
     def assess_quality_risk(self, quality_data):
-        """Assess quality risk"""
-        score = 0
-        factors = []
+        """Assess quality risk. Missing metrics are listed under 'no_data'."""
+        score, factors, no_data = self._new_check()
 
         # Defect rate
-        defect_ppm = quality_data.get('defect_rate_ppm', 500)
-        if defect_ppm > 2000:
+        defect_ppm = quality_data.get('defect_rate_ppm')
+        if defect_ppm is None:
+            no_data.append('defect_rate_ppm')
+        elif defect_ppm > 2000:
             score += 30
             factors.append("High defect rate")
         elif defect_ppm > 1000:
             score += 15
 
         # Quality certifications
-        if not quality_data.get('iso_9001', False):
+        iso_9001 = quality_data.get('iso_9001')
+        if iso_9001 is None:
+            no_data.append('iso_9001')
+        elif not iso_9001:
             score += 10
             factors.append("No ISO 9001 certification")
 
         # Recent recalls
-        recalls_3yr = quality_data.get('recalls_last_3yr', 0)
-        if recalls_3yr > 0:
+        recalls_3yr = quality_data.get('recalls_last_3yr')
+        if recalls_3yr is None:
+            no_data.append('recalls_last_3yr')
+        elif recalls_3yr > 0:
             score += 25 * recalls_3yr
             factors.append(f"{recalls_3yr} product recalls")
 
         # Customer complaints
-        complaints = quality_data.get('customer_complaints_per_1000', 5)
-        if complaints > 20:
+        complaints = quality_data.get('customer_complaints_per_1000')
+        if complaints is None:
+            no_data.append('customer_complaints_per_1000')
+        elif complaints > 20:
             score += 20
             factors.append("High customer complaint rate")
         elif complaints > 10:
             score += 10
 
         # Corrective actions
-        open_corrective_actions = quality_data.get('open_corrective_actions', 0)
-        if open_corrective_actions > 5:
+        open_corrective_actions = quality_data.get('open_corrective_actions')
+        if open_corrective_actions is None:
+            no_data.append('open_corrective_actions')
+        elif open_corrective_actions > 5:
             score += 15
             factors.append("Multiple open corrective actions")
 
-        self.risk_scores['quality'] = {
-            'score': min(100, score),
-            'factors': factors
-        }
-        return self.risk_scores['quality']
+        return self._finish('quality', score, factors, no_data, 5)
 
     def assess_cybersecurity_risk(self, cyber_data):
-        """Assess cybersecurity risk"""
-        score = 0
-        factors = []
+        """Assess cybersecurity risk. Missing metrics are listed under 'no_data'."""
+        score, factors, no_data = self._new_check()
 
         # Security certifications
-        if not cyber_data.get('iso_27001', False):
+        iso_27001 = cyber_data.get('iso_27001')
+        if iso_27001 is None:
+            no_data.append('iso_27001')
+        elif not iso_27001:
             score += 15
             factors.append("No ISO 27001 certification")
 
         # Recent breaches
-        breaches_3yr = cyber_data.get('breaches_last_3yr', 0)
-        if breaches_3yr > 0:
+        breaches_3yr = cyber_data.get('breaches_last_3yr')
+        if breaches_3yr is None:
+            no_data.append('breaches_last_3yr')
+        elif breaches_3yr > 0:
             score += 30 * breaches_3yr
             factors.append(f"{breaches_3yr} security breaches")
 
-        # Security maturity
-        security_maturity = cyber_data.get('security_maturity', 3)  # 1-5
-        if security_maturity < 2:
+        # Security maturity (1-5)
+        security_maturity = cyber_data.get('security_maturity')
+        if security_maturity is None:
+            no_data.append('security_maturity')
+        elif security_maturity < 2:
             score += 25
             factors.append("Immature cybersecurity practices")
         elif security_maturity < 3:
             score += 12
 
         # Third-party access
-        if cyber_data.get('network_integration', False):
+        network_integration = cyber_data.get('network_integration')
+        if network_integration is None:
+            no_data.append('network_integration')
+        elif network_integration:
             score += 10
             if not cyber_data.get('secure_access_controls', False):
                 score += 10
                 factors.append("Inadequate access controls")
 
         # Incident response
-        if not cyber_data.get('incident_response_plan', False):
+        incident_response_plan = cyber_data.get('incident_response_plan')
+        if incident_response_plan is None:
+            no_data.append('incident_response_plan')
+        elif not incident_response_plan:
             score += 10
             factors.append("No incident response plan")
 
-        self.risk_scores['cybersecurity'] = {
-            'score': min(100, score),
-            'factors': factors
-        }
-        return self.risk_scores['cybersecurity']
+        return self._finish('cybersecurity', score, factors, no_data, 5)
 
     def calculate_overall_risk(self):
-        """Calculate weighted overall risk score"""
+        """Calculate weighted overall risk score from the categories that have data"""
 
-        if not self.risk_scores:
+        scored = {c: d for c, d in self.risk_scores.items() if d['score'] is not None}
+        if not scored:
             return None
 
+        # Re-weight over the categories that have data, so a missing category
+        # does not pull the score down.
+        total_weight = sum(self.weights[c] for c in scored)
         overall_score = sum(
-            self.risk_scores[category]['score'] * weight
-            for category, weight in self.weights.items()
-            if category in self.risk_scores
-        )
+            scored[c]['score'] * self.weights[c] for c in scored
+        ) / total_weight
 
         # Classify risk level
         if overall_score < 25:
@@ -449,20 +513,28 @@ class SupplierRiskAssessment:
             for factor in data['factors']:
                 all_factors.append(f"{category.capitalize()}: {factor}")
 
+        checks_used = sum(d['checks_used'] for d in self.risk_scores.values())
+        checks_total = sum(d['checks_total'] for d in self.risk_scores.values())
+
         return {
             'supplier': self.supplier_name,
             'overall_score': round(overall_score, 1),
             'risk_level': risk_level,
             'recommended_action': action,
+            'based_on': f"{checks_used} of {checks_total} checks had data",
             'category_scores': {
-                cat: data['score']
+                cat: ('no data' if data['score'] is None else data['score'])
                 for cat, data in self.risk_scores.items()
+            },
+            'no_data': {
+                cat: data['no_data']
+                for cat, data in self.risk_scores.items() if data['no_data']
             },
             'risk_factors': all_factors
         }
 
-
-# Example usage
+# Example usage. EXAMPLE VALUES ONLY: made-up data to show the layout.
+# Replace every value with your own supplier data. Leave out any input you do not have.
 supplier = SupplierRiskAssessment('Acme Manufacturing Inc.')
 
 # Assess each risk category
@@ -524,10 +596,12 @@ result = supplier.calculate_overall_risk()
 print(f"Supplier: {result['supplier']}")
 print(f"Overall Risk Score: {result['overall_score']}/100")
 print(f"Risk Level: {result['risk_level']}")
+print(f"Based on: {result['based_on']}")
 print(f"Recommended Action: {result['recommended_action']}")
 print("\nCategory Scores:")
 for cat, score in result['category_scores'].items():
-    print(f"  {cat.capitalize()}: {score}/100")
+    print(f"  {cat.capitalize()}: {score if score == 'no data' else str(score) + '/100'}")
+print("\nInputs with no data:", result['no_data'])
 ```
 
 ---
@@ -545,9 +619,13 @@ def assess_supplier_criticality(supplier_data):
     """
 
     criticality_score = 0
+    no_data = []  # inputs that were not given add no points and are listed here
 
     # Spend volume
-    annual_spend = supplier_data.get('annual_spend', 0)
+    annual_spend = supplier_data.get('annual_spend')
+    if annual_spend is None:
+        no_data.append('annual_spend')
+        annual_spend = 0
     if annual_spend > 10000000:  # >$10M
         criticality_score += 20
     elif annual_spend > 1000000:  # >$1M
@@ -556,7 +634,9 @@ def assess_supplier_criticality(supplier_data):
         criticality_score += 10
 
     # Replaceability
-    substitute_availability = supplier_data.get('substitute_availability', 'high')
+    substitute_availability = supplier_data.get('substitute_availability')
+    if substitute_availability is None:
+        no_data.append('substitute_availability')
     if substitute_availability == 'none':
         criticality_score += 30
     elif substitute_availability == 'low':
@@ -565,7 +645,10 @@ def assess_supplier_criticality(supplier_data):
         criticality_score += 10
 
     # Lead time to replace
-    replacement_time_weeks = supplier_data.get('replacement_time_weeks', 12)
+    replacement_time_weeks = supplier_data.get('replacement_time_weeks')
+    if replacement_time_weeks is None:
+        no_data.append('replacement_time_weeks')
+        replacement_time_weeks = 0
     if replacement_time_weeks > 26:  # >6 months
         criticality_score += 20
     elif replacement_time_weeks > 12:  # >3 months
@@ -574,7 +657,10 @@ def assess_supplier_criticality(supplier_data):
         criticality_score += 10
 
     # Business impact
-    revenue_at_risk = supplier_data.get('revenue_at_risk', 0)
+    revenue_at_risk = supplier_data.get('revenue_at_risk')
+    if revenue_at_risk is None:
+        no_data.append('revenue_at_risk')
+        revenue_at_risk = 0
     if revenue_at_risk > 50000000:  # >$50M
         criticality_score += 20
     elif revenue_at_risk > 10000000:  # >$10M
@@ -583,7 +669,9 @@ def assess_supplier_criticality(supplier_data):
         criticality_score += 10
 
     # Customer impact
-    customers_affected = supplier_data.get('customers_affected', 'none')
+    customers_affected = supplier_data.get('customers_affected')
+    if customers_affected is None:
+        no_data.append('customers_affected')
     if customers_affected == 'critical':
         criticality_score += 10
     elif customers_affected == 'major':
@@ -606,7 +694,8 @@ def assess_supplier_criticality(supplier_data):
     return {
         'criticality_score': criticality_score,
         'tier': tier,
-        'monitoring_frequency': monitoring_frequency
+        'monitoring_frequency': monitoring_frequency,
+        'no_data': no_data  # if this list is long, the tier is a floor, not a fact
     }
 ```
 

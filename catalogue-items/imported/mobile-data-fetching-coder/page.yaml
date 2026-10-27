@@ -10,6 +10,8 @@ explain: |
   The code that gets data into your React Native app and keeps it working when the network is slow, gone or wrong. You end up with fetching that retries, remembers recent answers and shows something useful offline.
 
   The skill starts with plain fetch plus error handling, then picks React Query for bigger apps or SWR for simpler ones. It sets how long data stays fresh, keeps saved answers on the phone, and watches the connection to pause or resume requests. Login tokens go in secure storage, not plain files. Web addresses for development and production live in separate environment files. Secret keys stay on the server side only.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (Expo) says MIT. Credit goes to Expo and sickn33.
 when:
   - Your app shows a blank screen whenever the signal drops.
   - API calls feel slow and repeat for data you already have.

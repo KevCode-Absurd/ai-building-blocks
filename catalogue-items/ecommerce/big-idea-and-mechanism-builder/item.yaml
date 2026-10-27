@@ -13,6 +13,7 @@ inputs:
   - {type: brand_brain, required: false}
 outputs:
   - {type: brief}
+  - {type: customer_needs, required: true}
 uses: []
 origin: rebuilt
 example_pending: true

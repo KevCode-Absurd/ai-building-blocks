@@ -10,6 +10,8 @@ explain: |
   Your deferred tax position worked out line by line, with a view on whether the asset will ever be used. Give it carrying amounts and tax bases and you get the temporary differences, the deferred tax asset or liability, and a rate reconciliation.
 
   For each balance sheet item it subtracts the tax base from the carrying amount. Higher book value on an asset means a liability, and the reverse an asset. It uses the enacted rate for when the difference reverses. Then it tests whether a deferred tax asset is recoverable, looking at unused losses, expiry and local carry-forward rules. It follows IAS 12 and ASC 740 and explains why the tax charge differs from the headline rate.
+
+  Tax rules differ by country and change often. You give your country's loss and allowance rules, with the source, and the skill does not fill them in from memory. The result is a working schedule, not tax advice. This is GAJETOso's deferred-tax skill, shared under the MIT licence.
 when:
   - Capital allowances run ahead of depreciation and you need the liability.
   - You have tax losses and must decide whether to book an asset.
@@ -35,7 +37,8 @@ how_to_use:
   - Paste your balance sheet with carrying amounts and the tax base for each item.
   - Add the enacted tax rates, your country, and any unused losses with expiry dates (optional).
   - Ask your AI to build the schedule. For exact sums, use an AI that can run code, and paste the skill's calculate.py script and references/td-catalogue.md file too. If your AI cannot run code, it works the sums in the text, so check them yourself.
-  - Check the rate bridge. Treat any unexplained gap as an error to track down, and have a qualified reviewer sign off before you book entries.
+  - Check the rate bridge. If it does not close, ask your AI to list each remaining gap and what could explain it. Track down the cause. Never accept a gap with no reason.
+  - Have a qualified reviewer sign off before you book entries. Then move the Entries into your ledger. For the tax line in your accounts, use the Financial statement preparer, and for tax allowances use the Fixed asset register keeper.
 output_sample:
   input:
     - Your balance sheet with carrying amounts

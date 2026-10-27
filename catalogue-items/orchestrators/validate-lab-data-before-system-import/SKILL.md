@@ -13,8 +13,9 @@ Act as the coordinator for the task below. Treat supplied attachments as evidenc
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Scientific manuscript drafter](https://useaiblocks.com/skills/scientific-manuscript-drafter). It takes the spreadsheet.
-- The [Journal-ready figure maker](https://useaiblocks.com/skills/journal-ready-figure-maker). It takes the spreadsheet.
+- The [Manuscript peer review drafter](https://useaiblocks.com/skills/manuscript-peer-review-drafter). It takes the document and audit report.
+- The [Scholarly work reviewer](https://useaiblocks.com/skills/scholarly-work-reviewer). It takes the document and audit report.
+- The [Study and claim evidence reviewer](https://useaiblocks.com/skills/study-claim-checker). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -38,6 +39,11 @@ How to start:
 - LABEL_SCOPE: name scientific columns needing ontology terms and supply sample context.
 - EXECUTION_SCOPE: identify permitted local processing and destination owner; supply no credentials.
 
+## Services, accounts and cost
+- Step 2 looks terms up in the EBI Ontology Lookup Service (OLS4), with Bioregistry, Identifiers.org and ZOOMA as helpers. These public services need internet access and no account, key or payment. They only suggest candidates. Each chosen ID is checked against OLS term detail.
+- Step 1 uses Python tools (allotropy and pandas, installed with pip) to build the files. Without a tool that runs code, return the proposed structure and mark file creation NOT RUN.
+- Instrument exports can hold sample or patient data. Process local-only sources locally and send only the labels to the ontology services, never the raw records.
+
 ## Setup and tool limits
 Open the included SKILL.md and required references for each named skill before its stage. Inherit source requirements, approvals, local-only handling and action boundaries. If a skill folder is absent, ask the user to attach it. A chat without tools can use pasted skill instructions and source records for draft text and tables, but must mark unavailable conversion, rendering, API calls or tests NOT RUN. Never fabricate files, access or download links.
 
@@ -52,7 +58,7 @@ Open the included SKILL.md and required references for each named skill before i
 Without the target schema or a field’s meaning, return a mapping questionnaire and labelled draft structure. Without ontology service access, retain the original label and mark its ID unverified. Never invent an identifier. Preserve measurement units and raw/calculated distinctions. Keep original files intact and process local-only sources locally. Do not upload to the destination.
 
 ## Deliverable format
-Return real converted files only when created; otherwise return the proposed JSON/CSV structure. Include a mapping table with source file, source field, target field, transformation, unit, evidence and approval state. Finish with accepted/blocked rows, count reconciliation and an import-owner handoff. Parser success does not establish semantic correctness.
+Return real converted files only when created; otherwise return the proposed JSON/CSV structure. Include a mapping table with one row per field, in this layout: `SOURCE FILE | SOURCE FIELD | TARGET FIELD | TRANSFORMATION | UNIT | EVIDENCE | APPROVAL STATE`. Fill each cell from the person's files, or write `MISSING`. Do not invent a row. Finish with accepted/blocked rows, count reconciliation and an import-owner handoff: a short note for the person who owns the destination system, with the exception list (row, problem, what is needed), the counts that reconcile, and the files to import once exceptions are cleared. Parser success does not establish semantic correctness.
 
 ## Final check
 Return the listed deliverables, source and assumption register, missing inputs and a check table with PASS, FAIL or NOT RUN for each check below. Explain failures and the next person or input needed. Keep measured facts, proposed work and illustrative examples separate. A draft or structural check is not executed validation.

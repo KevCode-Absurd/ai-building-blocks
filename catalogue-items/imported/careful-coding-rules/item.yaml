@@ -8,6 +8,8 @@ role: orchestrate
 job: ops
 level: beginner
 inputs:
+  - type: question
+    required: false
   - type: codebase
     required: false
 outputs:

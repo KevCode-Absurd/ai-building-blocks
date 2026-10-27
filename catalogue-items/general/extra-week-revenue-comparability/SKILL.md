@@ -20,7 +20,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Spreadsheet** with the [Like-for-like sales growth checker](https://useaiblocks.com/skills/organic-revenue-perimeter-bridge). Bring spreadsheet, document (optional).
+1. **Spreadsheet** with the [Like-for-like sales growth checker](https://useaiblocks.com/skills/organic-revenue-perimeter-bridge). Bring spreadsheet, financial statements (optional).
 2. This one.
 
 How to start:
@@ -60,13 +60,13 @@ These come with the pack. They only show the arithmetic and are not anyone's dat
 ## Using the pack's files
 
 - `examples/model.xlsx` is an editable workbook with the practice figures. If your AI can make files, build one with an inputs sheet, a calculation sheet and a checks sheet. Make inputs blue and formulas black.
-- `scripts/run-model.mjs` and `references/model.json` check the arithmetic: `node scripts/run-model.mjs references/model.json inputs.json`. The input names are `current`, `prior` and `extraWeek`. It needs Node.js and does not check sources.
+- `scripts/run-model.mjs` and `references/model.json` check the arithmetic: `node scripts/run-model.mjs references/model.json examples/inputs.json`. The input file is JSON with the names `current`, `prior` and `extraWeek`, as in `examples/inputs.json`. It needs Node.js and does not check sources.
 - If you cannot run code or make files, do the sums line by line in chat, show each line, and write under CHECKS MISSED that no script ran.
 
 ## Check before you hand it back
 
 - The extra week is for the right year and the same business as the revenue it comes out of.
-- Reported growth is shown beside comparable growth.
+- Reported growth is shown beside comparable growth. When the extra week is above zero, comparable growth must be lower than reported growth. If it is not, recheck the sums.
 - An estimated week is labelled ASSUMPTION. A real zero is told apart from missing evidence.
 - Any gap that cannot be explained is shown, not hidden.
 
@@ -76,11 +76,9 @@ These come with the pack. They only show the arithmetic and are not anyone's dat
 - It cannot work out true seasonality from annual totals. An estimated week stays an assumption.
 - The practice figures show arithmetic only. They do not prove source accuracy.
 
-## Method references
+## Where the method comes from
 
-- [IFRS 15 Revenue from Contracts with Customers](https://www.ifrs.org/issued-standards/list-of-standards/ifrs-15-revenue-from-contracts-with-customers/): Primary contract asset and liability context; balances do not by themselves prove collections or future revenue.
-
-These links name public methods. All instructions and practice figures in this pack are original. Linked publications are not bundled or relicensed.
+All instructions and practice figures in this pack are original (MIT licence, see the LICENSE file). It is arithmetic on the figures you give it, not accounting or investment advice. Have an accountant review anything that goes into a filing.
 
 ## What you hand back
 
@@ -97,7 +95,7 @@ Begin with one line: "Review the sources before anyone uses this in a report or 
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Revenue growth currency checker](https://useaiblocks.com/skills/constant-currency-revenue-bridge). It takes the document and spreadsheet.
-- The [Like-for-like sales growth checker](https://useaiblocks.com/skills/organic-revenue-perimeter-bridge). It takes the spreadsheet and document.
+- The [Like-for-like sales growth checker](https://useaiblocks.com/skills/organic-revenue-perimeter-bridge). It takes the spreadsheet.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

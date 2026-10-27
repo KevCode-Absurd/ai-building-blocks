@@ -13,6 +13,8 @@ inputs:
 outputs:
   - type: meeting_notes
     required: true
+  - type: document
+    required: false
 uses: []
 origin: imported
 source:

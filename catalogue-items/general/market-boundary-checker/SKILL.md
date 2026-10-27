@@ -19,7 +19,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Shortlist** (yours): a ranked short list chosen from a larger set, with reasons.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Plan** with the [Contrarian belief tester](https://useaiblocks.com/skills/contrarian-belief-tester). Bring your question.
+1. **Plan** with the [Contrarian belief tester](https://useaiblocks.com/skills/contrarian-belief-tester). Bring your idea.
 2. This one.
 
 How to start:

@@ -58,7 +58,9 @@ For each pick, the facts that must stay true. The review dates and the HOLDS, WE
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Business plan risk buffer reviewer](https://useaiblocks.com/skills/room-for-error-plan-checker). It takes the plan.
 - The [Investing policy page writer](https://useaiblocks.com/skills/investing-policy-page-writer). It takes the plan.
+- The [Price drop rules writer](https://useaiblocks.com/skills/price-drop-rules-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

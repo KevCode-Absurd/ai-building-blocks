@@ -79,7 +79,8 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Write the ad copy** with the [Story carousel ad writer](https://useaiblocks.com/skills/story-carousel-ad-writer). It takes the ad copy.
 - The [Story ad image brief writer](https://useaiblocks.com/prompts/story-ad-picture-brief-writer). It takes the ad copy.
 - The [Story ad visual style planner](https://useaiblocks.com/skills/image-style-picker-for-story-ads). It takes the ad copy.
-- The [Image ad remake planner](https://useaiblocks.com/skills/image-ad-remake-planner).
+- The [Visible symptom image ad maker](https://useaiblocks.com/skills/visible-symptom-image-ad-maker). It takes the ad copy.
+- **Write the ad copy** with the [Closing paragraph writer](https://useaiblocks.com/skills/summing-up-paragraph-writer). It takes the ad copy.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

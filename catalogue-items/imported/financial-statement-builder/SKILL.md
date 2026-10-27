@@ -77,7 +77,7 @@ Revenue grew 22.7% year-over-year to $3.3M. Product revenue grew 22.9% and servi
 
 ### Example 2: Cash Flow Statement
 
-**Input:** Q3 2024 income statement (above) plus balance sheet changes.
+**Input:** Q3 2024 income statement (above) plus balance sheet changes. All figures here are made up to show the layout. They are not real data and not benchmarks.
 
 **Output:**
 

@@ -10,6 +10,8 @@ explain: |
   Your screen looks off and you cannot say why. This review finds the reason. It reads your UI code, scores it from 0 to 100 and points to the exact lines that make it look machine-made.
 
   The score comes from seven categories, such as coherence, colour, type hierarchy, layout, and missing states. Each starts at full marks. Points come off for faults it can cite, like mixed corner radii, two accent colours, pure black text, emoji used as icons, or no empty and error states. You get a fix list ranked by how much each change lifts the score. It only reviews. It will not edit your files unless you ask.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (bitjaru) says MIT. Credit goes to bitjaru and sickn33. The rubric is bitjaru's StyleSeed review, shared through sickn33's collection. The full 74-rule set is at github.com/bitjaru/styleseed.
 when:
   - Your app screen looks generic or unfinished and you cannot say why.
   - You want a quality check on a page before you ship it.

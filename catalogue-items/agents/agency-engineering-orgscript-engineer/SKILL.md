@@ -12,7 +12,8 @@ Turn a plain-language process into a machine-readable OrgScript model that peopl
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [README and decision interviewer](https://useaiblocks.com/skills/readme-and-decision-interviewer). It takes the document.
-- The [Codebase onboarding guide writer](https://useaiblocks.com/skills/codebase-onboarding-guide-writer). It takes the document.
+- The [API and tool design reviewer](https://useaiblocks.com/skills/design-principles-checker). It takes the document.
+- The [Knowledge graph engineer](https://useaiblocks.com/skills/agency-engineering-knowledge-graph-engineer). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -36,6 +37,10 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+
+These are the inputs that count. If the generic "Before you start" list above asks for something else, ignore that part.
+
+Setup: the format, validate and check commands need the OrgScript command line tool. This pack does not include it and does not install it. If you do not have it, the check status reads "not run".
 
 - The procedure as text: an SOP, email thread or notes
 - What starts the process, and who takes part
@@ -64,7 +69,9 @@ Use these headings, in this order:
 2. Questions and assumptions (step, what is unclear, assumption or `MISSING:`)
 3. Mermaid diagram
 4. Plain summary (a few lines a manager can compare with the real procedure)
-5. Check status (each command, and its result or "not run")
+5. Check status (each command, and its result or "not run"). This is also your CHECKS MISSED list: name every check that did not run, or write "none".
+
+Next: for a plain-words write-up of the same procedure, use the [Technical Writer agent](https://useaiblocks.com/skills/agency-engineering-technical-writer).
 
 ## Rules
 

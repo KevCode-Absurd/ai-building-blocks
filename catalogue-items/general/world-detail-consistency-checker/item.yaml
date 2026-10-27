@@ -8,7 +8,7 @@ job: creative
 level: intermediate
 inputs:
   - {type: copy_draft, required: true}
-  - {type: brief, required: false}
+  - {type: story_outline, required: false}
 outputs:
   - {type: audit_report}
 origin: rebuilt

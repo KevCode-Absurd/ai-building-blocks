@@ -34,9 +34,10 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste in the skill text, or upload the skill file if your AI takes files.
   - Type the topic, the age group and your own background with the topic.
   - Add the mistakes you already see and your curriculum framework, if you have them (optional).
-  - Send it. No code, web access or paid tool is needed.
+  - Send it. No code, web access or paid tool is needed. If your chat has a short length limit, paste only the Prompt block from the skill file.
   - Read the mistakes map first. Check it against what you see in class.
   - Pick one example for each mistake and use the check questions mid-lesson.
+  - Then read the Developmental Action Plan and test its questions on a real class. Note which mistakes you did not expect.
 output_sample:
   input:
     - The topic or unit you will teach

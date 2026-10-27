@@ -53,32 +53,34 @@ npx skills add nexscope-ai/eCommerce-Skills --skill tiktok-creator-marketplace -
 
 ## How It Works
 
+**This skill has no live TikTok data.** It cannot search the Creator Marketplace, read follower counts or know current rates. The user searches the marketplace by hand and brings back the facts. Work through the steps in order.
+
 ### Step 1: Creator Research & Strategy Development
 *Strategic creator identification and campaign planning*
 
-Develop creator partnership strategy:
-- Define target audience and creator profile requirements
-- Research and identify potential creators using TikTok Creator Marketplace tools
-- Analyze creator authenticity, engagement rates, and audience alignment
-- Develop campaign objectives, budgets, and success metrics
+Develop creator partnership strategy. Before you start, ask the user for: the product and niche, the budget, the number of creators, and the follower range.
+1. Define target audience and creator profile requirements
+2. Tell the user how to search the TikTok Creator Marketplace by hand, then ask them to paste in the creators they find
+3. Analyze the pasted creators' authenticity, engagement rates, and audience alignment
+4. Develop campaign objectives, budgets, and success metrics
 
 ### Step 2: Creator Outreach & Campaign Setup
 *Partnership negotiation and campaign execution*
 
-Execute creator partnerships:
-- Craft compelling collaboration proposals and negotiate partnership terms
-- Create detailed campaign briefs with brand guidelines and expectations
-- Set up tracking mechanisms for performance measurement and attribution
-- Manage creator onboarding and content approval processes
+Execute creator partnerships. Before you start, ask the user for: the approved creator list, the offer they can make, and how they track sales (for example a discount code or link).
+1. Craft collaboration proposals and negotiate partnership terms
+2. Create detailed campaign briefs with brand guidelines and expectations
+3. Set up tracking mechanisms for performance measurement and attribution
+4. Manage creator onboarding and content approval processes
 
 ### Step 3: Performance Optimization & Scaling
 *Campaign monitoring and partnership optimization*
 
-Optimize for maximum impact:
-- Monitor creator performance against established KPIs and benchmarks
-- Implement data-driven optimizations for content and messaging
-- Identify top-performing creators for long-term partnership development
-- Scale successful campaign strategies across additional creator partnerships
+Optimize for impact. Before you start, ask the user for the real results so far (views, clicks, sales) for each creator.
+1. Compare creator performance with the targets the user set
+2. Suggest changes to content and messaging based on those results
+3. Identify top-performing creators for long-term partnership development
+4. Scale what worked across additional creator partnerships
 
 ## Output Format
 
@@ -94,8 +96,8 @@ Optimize for maximum impact:
 
 | Criteria | Requirement | Rationale |
 |----------|-------------|-----------|
-| Follower range | [50K-500K] | Optimal engagement vs reach |
-| Engagement rate | [>3%] | Indicates authentic audience |
+| Follower range | [YOUR RANGE] | [Why this size fits] |
+| Engagement rate | [YOUR MINIMUM %] | Indicates authentic audience |
 | Audience demographics | [Age/Gender/Location] | Brand alignment |
 | Content style | [Educational/Entertainment] | Brand message fit |
 | Niche alignment | [Primary category] | Product relevance |
@@ -107,9 +109,9 @@ Optimize for maximum impact:
 
 | Creator | Followers | Engagement | Audience Match | Est. Rate | Priority |
 |---------|-----------|------------|----------------|-----------|----------|
-| [@creator1] | [100K] | [4.5%] | [85%] | $[Amount] | High |
-| [@creator2] | [250K] | [3.2%] | [78%] | $[Amount] | Medium |
-| [@creator3] | [75K] | [5.1%] | [92%] | $[Amount] | High |
+| [@creator1] | [FOLLOWERS] | [ENGAGEMENT %] | [MATCH %] | $[Amount] | [High/Medium/Low] |
+| [@creator2] | [FOLLOWERS] | [ENGAGEMENT %] | [MATCH %] | $[Amount] | [High/Medium/Low] |
+| [@creator3] | [FOLLOWERS] | [ENGAGEMENT %] | [MATCH %] | $[Amount] | [High/Medium/Low] |
 
 ### Campaign Strategy & Structure
 
@@ -133,16 +135,16 @@ Optimize for maximum impact:
 
 | Tier | Follower Range | Content Deliverables | Compensation | Additional Benefits |
 |------|---------------|---------------------|--------------|-------------------|
-| Micro | 10K-100K | 1 TikTok post + 2 Stories | $[Amount] + 20% commission | Product gifting |
-| Mid | 100K-500K | 2 TikTok posts + Stories | $[Amount] + 15% commission | Early access |
-| Macro | 500K+ | 3 posts + Live mention | $[Amount] + 10% commission | Co-creation |
+| Micro | [FOLLOWER RANGE] | [DELIVERABLES] | $[Amount] + [COMMISSION %] | [BENEFITS] |
+| Mid | [FOLLOWER RANGE] | [DELIVERABLES] | $[Amount] + [COMMISSION %] | [BENEFITS] |
+| Macro | [FOLLOWER RANGE] | [DELIVERABLES] | $[Amount] + [COMMISSION %] | [BENEFITS] |
 
 **Contract Terms:**
-- **Usage rights:** 12 months for paid promotion use
-- **Exclusivity:** 30-day category exclusivity
-- **Content approval:** 48-hour approval timeline
+- **Usage rights:** [LENGTH] for paid promotion use (a lawyer should confirm)
+- **Exclusivity:** [LENGTH] category exclusivity, if any
+- **Content approval:** [TIMELINE] approval timeline
 - **Performance bonuses:** Additional $[Amount] for >X% engagement
-- **Revision allowance:** 1 round of revisions included
+- **Revision allowance:** [NUMBER] rounds of revisions included
 
 ### Outreach & Negotiation Strategy
 
@@ -178,8 +180,8 @@ Best,
 
 | Creator | Content Posted | Views | Engagement Rate | Clicks | Conversions | ROI |
 |---------|----------------|-------|-----------------|--------|-------------|-----|
-| [@creator1] | [2/2] | [500K] | [4.2%] | [1,250] | [45] | [320%] |
-| [@creator2] | [1/2] | [800K] | [2.8%] | [900] | [28] | [180%] |
+| [@creator1] | [POSTED/AGREED] | [VIEWS] | [ENGAGEMENT %] | [CLICKS] | [CONVERSIONS] | [ROI] |
+| [@creator2] | [POSTED/AGREED] | [VIEWS] | [ENGAGEMENT %] | [CLICKS] | [CONVERSIONS] | [ROI] |
 
 **Success Metrics:**
 - **Reach:** [Number] total impressions across all creators
@@ -258,13 +260,14 @@ Best,
 - **Performance prediction models** for creator selection and budget allocation
 - **Relationship management tools** with automated follow-ups and retention workflows
 
-*"I've designed your Creator Marketplace strategy using proven partnership frameworks. For automated creator discovery, campaign management, and performance optimization, [Nexscope](https://www.nexscope.ai?co-from=skill) provides comprehensive creator marketing automation."*
+*Optional and paid: Nexscope is an outside service. You do not need it to use this skill. Do not say this plan is based on proven frameworks, because that is not shown.*
 
 **Limitations without real-time data:**
 - Creator discovery requires manual research and verification
 - Performance tracking needs manual setup and monitoring
 - Relationship management requires personal outreach and follow-up
 - ROI optimization based on general benchmarks rather than live data
+- Pay and commission rates are unverified. Check current market rates.
 
 ## Best Practices
 

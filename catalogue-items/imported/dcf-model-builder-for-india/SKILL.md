@@ -44,8 +44,8 @@ These constraints apply throughout all DCF model building. Review before startin
 **Environment: one path — officecli.**
 Every workbook is a file built with the `officecli` CLI. There is no live-Excel branch and no
 `recalc.py` step: **officecli evaluates formulas on read**, so `officecli get` returns computed values
-and a build → get → close loop is the whole lifecycle. Load `xlsx-author` for the build loop and the
-blue/black/green convention.
+and a build → get → close loop is the whole lifecycle. If the helper skill `xlsx-author` is installed, load it for the build loop and the
+blue/black/green convention. It is not in this folder. If it is missing, use blue for typed inputs, black for formulas and green for links to other sheets.
 
 ```json
 {"command":"add","parent":"DCF!D20","type":"cell","props":{"formula":"D19*(1+$B$8)","numberformat":"#,##0"}}
@@ -236,12 +236,13 @@ Where:
   - Zero curve (best): `https://www.ccilindia.com/web/ccil/zero-rates` — JSON in the page, key
     `zerorate_10` = 10-year zero. A zero curve is the correct discount-rate input.
   - Par curve: `https://www.ccilindia.com/web/ccil/tenorwise-indicative-yields` — take the `9Y-10Y`
-    row (verified 2026-09-28: `6.94% GS 2036` at 7.1679%).
+    row (use the yield and bond name shown on the day you read it).
 
-  **Label the basis in the source comment** — "9Y-10Y bucket, 6.94% GS 2036, CCIL, 2026-09-28" — not
+  **Label the basis in the source comment** — "9Y-10Y bucket, [BOND NAME], CCIL, [DATE READ]" — not
   bare "10Y". It is a tenor bucket, not an on-the-run bond. Record the date: these pages give today
-  and the previous business day only, so a stale gilt silently moves every valuation. Full recipe in
-  `india-market-data`.
+  and the previous business day only, so a stale gilt silently moves every valuation. The `india-market-data`
+  recipe this once pointed to is not in this folder. If the page cannot be read, ask the user to paste the
+  current yield and its date.
 - Beta = 5-year monthly stock beta vs **NIFTY 50** (state the index — NIFTY 50 and the BSE Sensex are
   different indices, and neither is the S&P 500; a US-computed beta is not a substitute).
 - Equity Risk Premium = 5.0-6.0% (market standard). This is a judgement input: state the basis and
@@ -1067,7 +1068,7 @@ Implied Upside/(Downside),XX%,,,,,
 
 ```csv
 COST OF EQUITY CALCULATION,,
-Risk-Free Rate (9Y-10Y G-sec),0.00%,[Input - CCIL returns 7.1679 as a NUMBER; store 0.071679 or divide by 100 in a formula, or it displays 716.79%]
+Risk-Free Rate (9Y-10Y G-sec),0.00%,[Input - CCIL returns the yield as a percent number such as [YIELD]; store it as a decimal or divide by 100 in a formula, or it displays 100 times too large]
 Beta (5Y monthly),X.XX,[Yellow input]
 Equity Risk Premium,X.XX%,[Yellow input]
 Cost of Equity,X.XX%,[Calculated blue]
@@ -1255,7 +1256,7 @@ This approach centralizes scenario logic, making the model easier to audit and m
 ### During Model Construction
 
 1. **Build Excel model** with officecli, using formulas (not hardcoded values)
-2. **Follow `xlsx-author` conventions** for formula construction and formatting
+2. **Follow `xlsx-author` conventions** (if that helper skill is installed; otherwise the blue/black/green colour rule above) for formula construction and formatting
 3. **Apply fill colors only if requested** by user or if specific brand guidelines are provided
 
 ### Before Delivering Model (MANDATORY)

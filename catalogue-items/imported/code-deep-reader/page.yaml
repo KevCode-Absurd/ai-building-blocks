@@ -9,7 +9,7 @@ subhead: Before you hunt for bugs, you get a slow, line-by-line understanding of
 explain: |
   Before you hunt for bugs, you get a slow, line-by-line understanding of what the code does. That cuts guessing, mixed-up facts and lost context in the later audit.
 
-  It reads each block on its own and asks why it exists, how it works and what it assumes. For every function it notes inputs, outputs, side effects and what must hold true. Then it links each insight to the module and the whole system, so the picture grows from the bottom up. It keeps one clear model and updates it when new evidence appears. It does not report vulnerabilities or suggest fixes.
+  It reads each block on its own and asks why it exists, how it works and what it assumes. For every function it notes inputs, outputs, side effects and what must hold true. Then it links each insight to the module and the whole system, so the picture grows from the bottom up. It keeps one clear model and updates it when new evidence appears. It does not report vulnerabilities or suggest fixes. Licence: this copy is from sickn33's collection, whose written content is CC BY 4.0 (see LICENSE-CONTENT).
 when:
   - You must audit unfamiliar code and need to understand it first.
   - You keep misreading how two modules talk to each other.
@@ -33,7 +33,7 @@ how_to_use:
   - Share the code or module. Say which area matters most, if you have one. For a large codebase, split it by module and read one module or a few files per request.
   - Ask for the orientation map first. Check that the modules and entry points match what you know.
   - Ask your AI to go function by function. It asks why each block exists (5 Whys) and how it works (5 Hows).
-  - Ask for a final summary of purpose, assumptions, rules that must hold and spots that are risky to read.
+  - "Ask for a final summary of purpose, assumptions, rules that must hold and spots that are risky to read. The result has these headings in order: orientation, function-by-function analysis, flows between functions, whole-system view, fragile spots, and corrections."
   - Keep the result. Use it as the starting point for a separate bug-hunting or audit step.
 output_sample:
   input:

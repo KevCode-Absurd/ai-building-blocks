@@ -101,15 +101,9 @@ The line between persuasion and manipulation is giving a person the signals they
 
 ## SKILL CHAINING
 
-Optional context from related skills (equivalent supplied research is sufficient; do not create a prerequisite cycle):
-- [ ] `@customer-psychographic-profiler`
-- [ ] `@awareness-stage-mapper`
+Optional context: any research the user already has about their buyers is enough. Do not stop to ask for other skills.
 
-This skill's output feeds into:
-- [ ] `@social-proof-architect`
-- [ ] `@copywriting-psychologist`
-- [ ] `@pitch-psychologist`
-- [ ] `@sequence-psychologist`
+This skill's output feeds into the Social proof placer on AI Blocks (social-proof-placer), which decides where each piece of proof goes on the page. Its upstream names (`@social-proof-architect`, `@copywriting-psychologist`, `@pitch-psychologist`, `@sequence-psychologist`) are not in this library.
 
 ## OUTPUT QUALITY CHECK
 
@@ -134,8 +128,6 @@ Before finalizing output, the agent asks:
 - Claim strength: soften the headline to what you can show, such as "See how [named customer] grew their list in [timeframe]", and drop the "10x" unless you can prove it.
 
 Use only proof the user really has.
-
-**Reliability variant:** map a reliability concern to the available incident history and recovery procedure; disclose the observation period and avoid an uptime percentage without a measured denominator.
 
 ## Limitations
 - Use this skill only when the task clearly matches the scope described above.

@@ -12,6 +12,8 @@ inputs:
     required: true
   - type: document
     required: false
+  - type: policy
+    required: false
 outputs:
   - type: audit_report
   - type: plan

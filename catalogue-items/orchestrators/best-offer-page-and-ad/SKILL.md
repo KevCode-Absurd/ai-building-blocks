@@ -79,11 +79,11 @@ Four step files and the summary. In order:
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Make image ads** with the [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker). It takes the ad copy.
 - **Check the landing page** with the [Article-style ad readiness checker](https://useaiblocks.com/skills/advertorial-readiness-checker). It takes the ad copy.
+- **Make image ads** with the [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker). It takes the ad copy.
 - **Write the landing page** with the [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer). It takes the ad copy.
-- **Check the landing page** with the [Article-style ad story checker](https://useaiblocks.com/skills/advertorial-story-and-belief-checker). It takes the ad copy.
 - **Write the landing page** with the [Page type and layout planner](https://useaiblocks.com/skills/page-type-and-layout-planner). It takes the ad copy.
+- **Check the landing page** with the [Landing page conversion reviewer](https://useaiblocks.com/skills/landing-page-auditor). It takes the ad copy.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

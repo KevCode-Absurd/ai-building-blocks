@@ -10,11 +10,10 @@ level: intermediate
 inputs:
   - type: question
     required: true
-  - type: source_text
+  - type: codebase
     required: false
 outputs:
-  - type: brief
-  - type: audit_report
+  - type: plan
 uses: []
 steps: []
 origin: imported

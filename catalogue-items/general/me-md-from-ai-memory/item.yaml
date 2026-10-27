@@ -1,0 +1,27 @@
+slug: me-md-from-ai-memory
+name: Ask your AI what it knows about you
+summary: Paste one prompt. Your AI asks first, then turns what it remembers about you into a me.md for you to check.
+category: general
+type: prompt
+role: source
+job: ops
+level: beginner
+inputs: []
+outputs:
+  - type: me_file
+    required: true
+uses: []
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-27
+example_pending: true
+needs_mode: manual
+credits:
+  - title: Memory FAQ
+    by: OpenAI Help Center
+    url: https://help.openai.com/en/articles/8590148-memory-faq
+    used: Asking before using what the AI remembers, and treating remembered facts as things to check
+  - title: How Claude remembers your project
+    by: Anthropic, Claude Code docs
+    url: https://code.claude.com/docs/en/memory
+    used: A short file grouped under headings, loaded every time

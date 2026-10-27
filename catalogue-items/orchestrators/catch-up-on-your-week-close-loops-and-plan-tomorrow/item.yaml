@@ -8,6 +8,7 @@ job: ops
 level: beginner
 inputs:
   - {type: tool_connection, required: true}
+  - {type: question, required: true}
 outputs:
   - {type: plan}
 uses: [activity-digest-writer, weekly-review-guide, deep-work-day-planner]

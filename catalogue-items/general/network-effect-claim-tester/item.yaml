@@ -8,6 +8,7 @@ job: strategy
 level: advanced
 inputs:
   - {type: question, required: true}
+  - {type: spreadsheet, required: false}
 outputs:
   - {type: audit_report, required: true}
 origin: rebuilt

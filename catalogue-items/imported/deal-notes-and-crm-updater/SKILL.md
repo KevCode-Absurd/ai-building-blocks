@@ -20,6 +20,10 @@ allowed-tools: Read, WebFetch
 
 Stop doing data entry.
 
+**What you need.** A CRM connected to your AI, or a spreadsheet. Connecting a CRM (HubSpot, Salesforce, Monday.com, Zoho CRM) needs your own account, and some plans need a paid tier or API access, so check yours first. The spreadsheet path needs nothing paid. Calendar, email and call tools (Zoom, RingEx, Trello, Notion) are optional, need your own account, and some are paid. Without them, paste the notes. The connector call names in the steps below apply only when a CRM is connected.
+
+**When not to use.** One email with no deal attached (write the reply yourself), or a pitch or proposal to write (use the Account-based outreach drafter or write it yourself). This skill keeps records only.
+
 CRM and pipeline is a common growth ask from owners, and the specific request underneath it is almost always automatic logging: update the CRM from my meetings, log my calls, turn every sales call into a structured deal note. Owners do not want a better CRM interface. They want to stop opening one.
 
 **Plain-chat note.** The steps below use connector words (`discover`, `describe`, `dispatch_readonly`, `tool_guidance`, `search_crm_objects`). They apply only if your AI has a CRM connected. If it does not, skip them: work from what the person pastes, then write the log note, the field changes you propose and the follow-up drafts as plain text, or build the spreadsheet CRM described at the end. Never say you wrote to a CRM you cannot reach.
@@ -147,7 +151,7 @@ It is genuinely useful and it does not lock them in — everything exports clean
 
 ## After the run
 
-The CRM is current and the next-step queue has an owner and a date on every open deal. If quiet deals surfaced, the natural next step is "write this outreach" — `outreach-composer` turns each flag into a drafted touch. Also nearby: "leads are going cold" (`speed-to-lead`) to make sure new inbound never joins the quiet list, and "fill my funnel" (`/grow-pipeline`) when the pipeline itself is thin. Offer at most three, and skip any offer the owner already declined this session.
+The CRM is current and the next-step queue has an owner and a date on every open deal. If quiet deals surfaced, the natural next step is to draft the outreach: the follow-up drafts above, or the Account-based outreach drafter for a fuller touch. Also nearby: the Lead prioritizer, to rank new inbound so it never joins the quiet list. Offer at most three, and skip any offer the owner already declined this session.
 
 ## Reference files
 

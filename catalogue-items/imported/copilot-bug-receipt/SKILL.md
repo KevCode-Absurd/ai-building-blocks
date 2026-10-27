@@ -25,6 +25,8 @@ Source     executed now | supplied | mixed
 
 Use `not run`, `unproven`, or `none` explicitly. Never omit a row to make the receipt look complete.
 
+Two terms in plain words. The **owner path** is the real route the data takes through the code from the input the user gave to the symptom they saw, not a copy of it in a test. A **decisive layer** is any step on that route where a check could show the bug is gone, such as the screen, the API reply or the stored data. List every one you checked.
+
 ## Establish the evidence boundary
 
 Before editing, record the observed problem, intended behavior, strongest direct check, and evidence source: `executed now`, `supplied`, or `mixed`. Never imply that supplied evidence was executed in the current run.
@@ -76,4 +78,4 @@ When a JSON artifact is requested, start from [assets/receipt.template.json](ass
 
 ## Source and license
 
-Originally published at https://github.com/lMysticl/bug-receipt under the MIT License.
+This copy comes from github/awesome-copilot (skills/bug-receipt), under the MIT License. That skill says it was originally published at https://github.com/lMysticl/bug-receipt, also under the MIT License.

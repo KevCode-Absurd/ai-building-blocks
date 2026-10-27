@@ -5,11 +5,17 @@ name: Time-to-event model builder
 summary: Build a survival model from follow-up data where some people have not had the event yet. Get leak-safe scores and risk curves.
 job: track-numbers
 headline: Time-to-event model builder
-subhead: Give it follow-up data with dropouts. Get survival models that avoid data leaks, with scores and risk curves. Bring a table with time, event flag and features. Use the result to plan your next step.
+subhead: Give it follow-up data with dropouts. Get survival models that avoid data leaks, with scores and risk curves. Bring a table with time, event flag and features. You get a report to take to a statistician before you act.
 explain: |
   Models that predict how long until something happens, such as a customer leaving or a patient relapsing, even when some people have not yet had the event. Those cases are cut off and must be handled with care, or the results mislead.
 
-  The skill uses the scikit-survival library in Python. It sets up data in the right form, then fits Cox models, penalized Cox, survival trees, forests and boosting. It splits and tunes models in a way that prevents leaks from test data into training. Scores include concordance and time-based error, and it plots risk curves and cumulative incidence with competing risks. It will not present results as clinical advice. You need Python 3.11 or later.
+  The skill uses the scikit-survival library in Python. It sets up data in the right form, then fits Cox models, penalized Cox, survival trees, forests and boosting. It splits and tunes models in a way that prevents leaks from test data into training.
+
+  Plain words for the terms. A Cox model estimates how fast risk grows and which features raise it. A penalized Cox model does the same but shrinks weak features so it does not overfit. Concordance is how often the model ranks who has the event first correctly. Time-based error scores how close the predicted risk is at a chosen time. Cumulative incidence is the share of people who have had the event by each point in time, when there is more than one possible event.
+
+  It will not present results as clinical advice. You need Python 3.11 or later.
+
+  Licence: MIT, as the LICENSE.md file in this item says. Credit goes to K-Dense.
 when:
   - You have customer or patient follow-up data where many people have not yet had the event.
   - You want to compare several survival models fairly.
@@ -34,9 +40,10 @@ how_to_use:
   - Download the skill folder and add it to your AI that can run code, such as Claude Code. A plain chat can explain the steps but cannot fit the models.
   - Use only data with names and IDs removed, and only data you are allowed to use. Do not paste patient records.
   - Ask your AI to set up a Python 3.11 or later environment with uv, and to install scikit-survival there.
-  - Ask it to check your table first with validate_survival_csv.py. Fix any error before moving on.
+  - Before you fit anything, check three things: the time column, the event column coded 1 (the event happened) or 0 (cut off), and the feature columns. Ask it to check your table with validate_survival_csv.py. It must pass before any model is trained, so fix any error first.
   - Tell it your time column, event column and features, and the question you want answered. It then trains the models with train_survival_model.py and scores them with evaluate_survival_metrics.py.
   - Ask for model_report.py to write the summary. Take that summary to a statistician or an expert in your field before you act on any score.
+  - Known limit: the report helper cannot confirm that the training summary and the metrics summary come from the same model and the same test group. Check that yourself before you combine them.
   - The scikit-survival library is licensed GPL-3.0-or-later, even though this skill is MIT. Check the library's licence before you redistribute anything built on it.
 output_sample:
   input:

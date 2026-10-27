@@ -60,8 +60,7 @@ CHECKS MISSED   <one line each, or none>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Ten-second opener writer](https://useaiblocks.com/skills/ten-second-opener-writer). It takes the buying reasons.
-- The [Deal competitor playbook builder](https://useaiblocks.com/skills/deal-competitor-playbook-builder).
-- The [Lost deal pitch reviewer](https://useaiblocks.com/skills/monthly-lost-deal-reviewer).
+- The [Objection answer sheet writer](https://useaiblocks.com/skills/objection-answer-sheet-writer). It takes the buying reasons.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -11,11 +11,10 @@ Reviews a learner's study plan against the sessions done and the real practice a
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Study gap tracker](https://useaiblocks.com/skills/study-gap-tracker).
-- The [Claude Code learning coach](https://useaiblocks.com/skills/claude-code-learning-coach). It takes the document.
-- The [Worked-example practice ladder builder](https://useaiblocks.com/skills/worked-example-practice). It takes the plan and notes.
-- The [Study session planner and reviewer](https://useaiblocks.com/skills/study-session-planner-and-review). It takes the plan.
-- The [Practice problem set writer](https://useaiblocks.com/skills/practice-problem-set-writer). It takes the plan.
+- The [Study gap tracker](https://useaiblocks.com/skills/study-gap-tracker). It takes the document.
+- The [System design practice reviewer](https://useaiblocks.com/skills/system-design-practice-review). It takes the document.
+- The [Research paper comparison writer](https://useaiblocks.com/skills/research-literature-comparison). It takes the audit report.
+- The [Volunteer training clearance reviewer](https://useaiblocks.com/skills/volunteer-induction-evidence-review-assistant). It takes the document and audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -23,14 +22,16 @@ If they pick one and that skill is added here, carry straight on with what you j
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
+- **Your notes** (yours): what to keep, change or drop.
 - **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a brief, source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, your lesson plan, your notes. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -44,7 +45,7 @@ Ask once for anything below that is missing. If it is still missing, write `MISS
 - The learning goal and the exam or deadline date.
 - The current study plan.
 - Sessions completed, with dates and topics.
-- Practice results: the learner's real answers or scores by topic, with dates.
+- Practice results: the learner's real answers or scores by topic, with dates. Notes from an earlier study understanding check can be used here.
 - The hours available now.
 - The last review file (optional).
 

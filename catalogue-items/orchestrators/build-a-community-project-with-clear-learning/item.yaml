@@ -8,7 +8,7 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: lesson_plan
     required: true
   - type: question
     required: false
@@ -18,6 +18,8 @@ outputs:
   - type: plan
   - type: copy_draft
   - type: document
+  - type: lesson_plan
+    required: true
 uses:
   - community-project-unit-planner
   - project-based-unit-brief-writer

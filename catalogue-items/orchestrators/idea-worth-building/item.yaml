@@ -7,9 +7,10 @@ role: orchestrate
 job: research
 level: beginner
 inputs:
-  - {type: brief, required: true}
+  - {type: idea, required: true}
   - {type: persona, required: false}
   - {type: voc_reviews, required: false}
+  - {type: question, required: true}
 outputs:
   - {type: audit_report}
   - {type: plan}

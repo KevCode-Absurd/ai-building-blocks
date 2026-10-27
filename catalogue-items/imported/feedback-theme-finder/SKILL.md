@@ -13,7 +13,7 @@ Transform raw customer feedback from NPS surveys, CSAT responses, support intera
 
 ## Workflow
 
-1. **Collect feedback data** — Aggregate feedback from all available sources: NPS survey responses (score + open text), CSAT ratings from support interactions, in-app feedback widgets, app store reviews, social media mentions, G2/Capterra reviews, and sales call notes. Tag each response with metadata: date, customer segment, plan tier, account tenure, and source channel. Ensure consistent schema across all sources.
+1. **Collect feedback data** — Aggregate feedback from all available sources: NPS survey responses (score + open text), CSAT ratings from support interactions, in-app feedback widgets, app store reviews, social media mentions, G2/Capterra reviews, and sales call notes. Use only what the user pastes or uploads. Do not scrape G2, Capterra, app stores or social sites, which may break their terms; ask the user to export or copy the text by hand. Tag each response with metadata: date, customer segment, plan tier, account tenure, and source channel. Ensure consistent schema across all sources.
 
 2. **Clean and normalize** — Deduplicate responses from the same customer across channels. Standardize rating scales (convert 1-5 CSAT to 1-10 for cross-comparison). Strip PII from open-text responses. Handle multilingual responses by detecting language and translating to English while preserving the original. Remove bot/spam responses using pattern detection (identical text, suspicious timing, single-word noise).
 
@@ -23,7 +23,7 @@ Transform raw customer feedback from NPS surveys, CSAT responses, support intera
 
 5. **Identify trends** — Compare current period metrics against previous periods (month-over-month, quarter-over-quarter). Flag themes with significant volume changes (up or down 20%+ from baseline). Detect emerging themes that appear for the first time or cross a frequency threshold. Correlate sentiment shifts with product releases, pricing changes, or market events.
 
-6. **Generate insight report** — Produce a structured report with: executive summary (3-5 key takeaways), quantitative scorecard, theme breakdown with representative quotes, trend analysis, segment comparison, and recommended actions. Each recommendation should be tied to a specific theme and prioritized by frequency and business impact.
+6. **Generate insight report** — Produce a structured report with: executive summary (3-5 key takeaways), quantitative scorecard, theme breakdown with representative quotes, trend analysis, segment comparison, and recommended actions. Each recommendation should be tied to a specific theme and prioritized by frequency and, only if the user gave revenue or account-size data, business impact. Without that data, rank by frequency alone and say so.
 
 ## What you need and what to do when it is missing
 
@@ -104,7 +104,7 @@ Both examples use invented figures to show the layout. They are not real results
 ## Best Practices
 
 - Analyze detractor and promoter comments separately — blending them into a single theme analysis dilutes the signal from each group.
-- Always report confidence intervals and sample sizes alongside NPS scores. A segment NPS of +60 from 15 responses is not actionable.
+- Always report sample sizes alongside NPS scores, and add confidence intervals only if you can calculate them. A segment NPS of +60 from 15 responses is not actionable.
 - Use verbatim quotes in reports to leadership — raw customer voice is more persuasive than statistical summaries and prevents misinterpretation of theme labels.
 - Close the feedback loop by replying to detractors soon after they respond, so they know someone read it.
 - Track theme frequency over time rather than reacting to a single snapshot. A theme trending upward over 3 quarters is a structural issue; a one-quarter spike may be a temporary reaction to a specific release.

@@ -41,7 +41,8 @@ how_to_use:
   - Put your history in a sheet with one row per period and channel. Columns are the period, the channel, spend and results. Leave blank any spend you do not know.
   - Tell your AI your new total budget and the period it covers. Keep the same unit as the history, such as monthly for monthly data.
   - Ask it to follow the skill and run scripts/run-budget-scenario.py. To test the setup first, run it on references/scenario-fixtures.json.
-  - Read the inputs-used section first, then the cautious and optimistic range. Ask for the error check on past periods before you trust the forecast.
+  - Read the inputs-used section first, then the cautious and optimistic range. Ask for the error check on past periods before you trust the forecast. To run it, hold back the last 2 to 4 periods, fit on the earlier ones, forecast the held-back ones, and report the gap as RMSE (average miss in results). The script does not do this, so your AI works it out from your sheet.
+  - With only two or three periods of history the curves are rough guesses, and the forecast should say so. With only one or two periods, use the Channel budget mix planner instead.
   - Use the range, not one number, in your plan. Test a bigger spend in one channel before you commit all of it.
   - After that test, add the actual results to your history sheet and run the planner again for the next budget round.
 how_it_works:
@@ -50,7 +51,7 @@ how_it_works:
   - title: Fit the curves
     text: It fits a curve to each channel that flattens as spend grows. A cap stops small channels from scaling forever.
   - title: Split the budget
-    text: It shares money across channels so the next dollar earns about the same in each funded channel.
+    text: It shares money across channels using the equal marginal-return rule (KKT), so the next dollar earns about the same in each funded channel.
   - title: Run the draws
     text: It runs thousands of random draws using each channel's usual error, and reads the cautious and optimistic cases.
   - title: Project the funnel

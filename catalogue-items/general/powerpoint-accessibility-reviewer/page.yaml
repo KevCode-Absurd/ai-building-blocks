@@ -89,11 +89,11 @@ output_shape: >-
   <missing fact or unsupported check> | <next action>
 tweaks:
   - what: Your source files
-    how: Actual PPTX, audience needs, intended presentation app and available source images or chart data.
+    how: Give the real .pptx, who will use the deck, the PowerPoint version, and any source images or chart data.
   - what: The result you need
     how: Name the file format, audience and parts that must stay editable. State any page or slide limit.
   - what: The app used to check it
-    how: Say which Excel or PowerPoint version you will use. Your AI must name any check it cannot run.
+    how: Say which PowerPoint version you will use. Your AI must name any check it cannot run.
 judge:
   - Structural and visual checks are recorded separately.
   - Reading order is not inferred from coordinates alone.
@@ -104,9 +104,9 @@ test:
   - "Try this case: The chart only distinguishes series by red and green. Check that it does this: Require an additional readable distinction such as labels or patterns."
   - Reopen the saved result and compare it with the source. Keep any failed or unrun check in the report.
 improve:
-  - Add your confirmed field names, file rules and target app version to the required-input section.
-  - Add a small test case with a known answer to the acceptance checks. Keep made-up records separate from real work.
-  - Save the working rules with the file guide so the next run uses the same meanings and checks.
+  - Add your target PowerPoint version and your organisation's accessibility rules to the required-input section.
+  - Add a small test deck with a known problem to the acceptance checks. Keep it apart from real work.
+  - Save your own checklist with the skill so the next run uses the same checks.
 warnings:
   - Requires tools for the requested native file format. Checks requiring an unavailable native application must remain marked not run.
 tests:

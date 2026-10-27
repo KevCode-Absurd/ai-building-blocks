@@ -85,6 +85,10 @@ Antenna Toolbox and RF Toolbox.
 - **Always normalize** to a known input power (typically 1W accepted)
 - **`conformalArray` rejects intersecting geometries** -- cannot place antenna inside tissue
 
+## What you need
+
+The antenna to match, as the MATLAB code that builds it (for example a script from the antenna designer), plus the target impedance and band.
+
 ## Workflow
 
 ### 1. Impedance Matching

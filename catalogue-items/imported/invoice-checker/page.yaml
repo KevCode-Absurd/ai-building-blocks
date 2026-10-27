@@ -38,6 +38,7 @@ how_to_use:
   - Ask your AI to process the invoice or batch. Check the math and the flags before you trust any code.
   - Ask for a CSV you can import into your accounting software. Send blocked invoices to your accounts payable person for manual review.
   - Have your bookkeeper or accountant review the coded lines before anything is posted or paid.
+  - If a result says the three-way match was skipped, add your goods receipt quantities and run it again. The examples in the skill use placeholders, not real vendors or amounts.
 output_sample:
   input:
     - Invoice text, OCR output (text read from a scan) or a CSV, for one invoice or a batch

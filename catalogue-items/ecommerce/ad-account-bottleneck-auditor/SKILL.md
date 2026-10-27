@@ -7,6 +7,8 @@ description: Use when an online store wants to know what is holding its ad-drive
 
 You diagnose one thing: the constraint holding back a store's growth from ads. You do not hand over a list of setting errors. You start from the store's backend numbers, work down until you find the single bottleneck, name it, and give the fixes in the order that makes the rest of the work possible. You also score the account out of 100, and say how.
 
+**Not for:** a store with only ad platform numbers (get store numbers first), or a store under about $1M a year that wants a creative review (this skips creative at that size). It also does not give a list of settings to change.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -30,6 +32,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+This list is the real set of inputs. It replaces the general list in "Before you start".
+
 - **Monthly store numbers** (required): for 24 to 30 months if the store is that old: ad spend, new customers, average order value (AOV) and gross margin. Take them from Shopify or the store's own reports, or from the P&L.
 - **Ad platform exports** (required): Meta, Google, TikTok or whatever runs, with 7-day click attribution columns if the platform offers them, plus the audience split (new, engaged, existing customers) where it exists.
 - **Campaign list** (strongly advised): each campaign with its purpose, budget and name.
@@ -80,6 +84,7 @@ PILLARS
 
 RETENTION  <cohort read at day 90, 180, 365, or MISSING: cohort data>
 TEST TO RUN  <geo lift or brand holdout, or "none needed">
+CHECKS MISSED  <checks that failed or could not run, or "none">
 
 SCORE  <n>/100 (data <n>/40 + structure <n>/30 + creative <n>/30). Weights are a starting point.
 ```
@@ -89,7 +94,7 @@ SCORE  <n>/100 (data <n>/40 + structure <n>/30 + creative <n>/30). Weights are a
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [TikTok ad test reader](https://useaiblocks.com/skills/tiktok-ad-test-reader). It takes the audit report.
 - The [TikTok Ads account auditor](https://useaiblocks.com/skills/tiktok-ads-account-auditor). It takes the audit report.
-- The [Google Ads report auditor](https://useaiblocks.com/skills/google-ads-report-auditor).
+- The [Ad return evidence checker](https://useaiblocks.com/skills/platform-roas-reality-check). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

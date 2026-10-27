@@ -30,7 +30,8 @@ you_get:
 how_to_use:
   - "Download the pack. It holds HANDOFF.md and three skill files, in the order they run: Leap-of-faith assumption finder, Smallest test picker, then MVP experiment planner."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Paste your plan as it stands, comparisons and all. Say what worries you most.
+  - Paste your plan as it stands, comparisons and all. Add the numbers you have, such as price, reach and sign-up rate. Say what worries you most.
+  - Any number your plan does not give is marked GUESS. Check each GUESS before you rely on it.
   - Agree the pass numbers before you run the test, then bring back the results. This workflow plans the test. It does not run it.
 output_sample:
   input:

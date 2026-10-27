@@ -7,7 +7,7 @@ description: Use when a team needs one clear idea of what it sells. Writes a mem
 
 Teams drift into selling the feature list, but customers shop for what the product helps them become. This skill writes a team memo that names the outcome, who users become after three months and a clearly invented example user. It boils the memo to one line the team can repeat.
 
-Use [Six-page narrative memo writer](https://useaiblocks.com/skills/six-page-narrative-memo-writer) instead when you need a decision on a proposal, with the ask on page one.
+Not for: ad copy or a landing page (agree the line first, then use `customer-hero-message-writer`), or when you have no product facts yet. Use [Six-page narrative memo writer](https://useaiblocks.com/skills/six-page-narrative-memo-writer) instead when you need a decision on a proposal, with the ask on page one.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -43,7 +43,7 @@ How to start:
 1. **Say what they think they are shopping for.** Write in one or two lines what a customer believes they are buying when they arrive, in their words. Use only the facts and customer words given. If none are given, mark MISSING and ask.
 2. **Translate to the outcome.** Restate your value in those terms, then in the outcome they really get. Write three columns: what you built (feature), what it lets them do, what it changes in their life or work. The outcome must not be a feature list.
 3. **Ask who they become.** Describe who a customer is after three months of use, in two or three lines, using only what the facts support. Phrase it as a change in what they can do or how they feel about their work. Mark any guess.
-4. **Add one analogy.** Choose one analogy from a business that sells a way of life or an identity rather than a thing. Explain in two lines how it maps to your product, and where the analogy breaks.
+4. **Add one analogy.** Choose one analogy from a business that sells a way of life or an identity rather than a thing. Use only well-known public facts about that business; do not invent figures or history. Explain in two lines how it maps to your product, and where the analogy breaks.
 5. **Walk through a relatable user.** Invent one example user who is in a hurry. Label them clearly as invented. Walk them through using the product from first need to first result, using only features in the facts.
 6. **Boil it to one line.** Write the single line the team can repeat to explain what you sell. Test it: it must name the outcome, not a feature, and it must fit in one breath.
 7. **End with the polish bar.** State the standard of quality the work must meet, based on what the outcome demands. Write three concrete things that fail the bar. Then assemble the memo in a plain voice for the team.
@@ -56,9 +56,9 @@ The memo, with these parts: what customers think they shop for, the outcome, who
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Customer-focused message writer](https://useaiblocks.com/skills/customer-hero-message-writer).
-- The [Code review comment editor](https://useaiblocks.com/skills/review-comment-humaniser). It takes the draft.
-- The [Page-turner scene drafter](https://useaiblocks.com/skills/page-turner-scene-drafter). It takes the plan.
+- The [Story rules checker](https://useaiblocks.com/skills/story-rules-checker). It takes the draft.
+- The [Usability test audience planner](https://useaiblocks.com/skills/expert-and-newcomer-test-planner). It takes the draft.
+- The [Long-form draft reviewer](https://useaiblocks.com/skills/honest-draft-feedback-giver). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -9,6 +9,8 @@ level: intermediate
 inputs:
   - type: brief
     required: true
+  - type: product_data
+    required: false
 outputs:
   - type: ad_copy
     required: true

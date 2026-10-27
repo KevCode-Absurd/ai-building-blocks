@@ -8,8 +8,8 @@ role: source
 job: ops
 level: advanced
 inputs:
-  - type: transcript
-    required: true
+  - type: tool_connection
+    required: false
 outputs:
   - type: skill_files
 uses: []

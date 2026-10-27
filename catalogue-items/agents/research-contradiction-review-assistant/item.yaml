@@ -9,7 +9,7 @@ level: intermediate
 inputs:
   - type: source_text
     required: true
-  - type: brief
+  - type: question
     required: false
   - type: copy_draft
     required: false

@@ -125,7 +125,7 @@ Habit advice can overemphasize personal preferences when the barrier is workload
 
 ### What you'll get back
 
-Return a habit-fit comparison: the commitment kept, the one postponed, the relevant expectation and a strategy that addresses the difference. Add the prepared starting action and a question that permits changing the strategy if it feels burdensome.
+The result has fixed sections, one per job: (1) Commitment kept. (2) Commitment postponed. (3) The expectation involved. (4) A strategy that addresses the difference. (5) A prepared starting action. (6) A change-it question that lets you drop or change the strategy if it feels burdensome. For the other jobs the sections are the deliverable named under each one.
 
 Keep the practical distinctions and the interest in individual preferences. Cut typecasting, universal promises and the idea that everyone should enjoy tracking. Return an arrangement the reader can try without becoming a different person.
 

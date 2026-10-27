@@ -13,6 +13,8 @@ Added by AI Blocks. The method below is the original. This part says what you ne
 
 **What it reads:** only the sources you list. Connected tools such as GitHub, Slack, Microsoft 365 or Google Workspace give it your private email, chat and calendar. Some of those connections need a paid account or an admin to switch them on. If your AI has no such tools, paste your notes into the chat instead. The skill works from pasted text.
 
+**Setup file:** if you ran Roundup setup, give this skill the setup file it made. It is read as your config.
+
 **Skip it when:** the update is about hiring, firing, legal matters or a personal issue. Write those yourself.
 
 **No setup file? Do not stop.** Use this config template. Ask the user to fill it in once, in one message, or to paste one past update they wrote as a style sample:

@@ -1,32 +1,35 @@
 new_slug: restaurant-portion-cost-builder
 name: Restaurant portion cost builder
 headline: Restaurant portion cost builder
-summary: Work out the cost per portion and contribution for one batch of one dish, from real weights, yield, cash costs and price. Built for restaurant portion costing.
+summary: Work out what one portion of a dish costs and what the batch earned, from real weights, yield, cash costs and price.
 job: track-numbers
 thinking: high
 thinking_why: "Yield is measured per batch, so portion cost is only as sound as the weights and cash costs recorded for that batch."
-subhead: A batch yield, portion cost and service contribution schedule. Share purchased batch weight, observed edible yield, actual portion weight, same-batch ingredient/labor/energy cash, confirmed selling price and served demand.
+subhead: Give it the weight you bought, the edible weight you measured, the weight of one portion, the cash cost of the batch, the price and the portions served. It works out yield, cost per portion and what the batch contributed.
 explain: |-
-  A batch yield, portion cost and service contribution schedule.
+  Portion costs go wrong when they use recipe weights instead of real ones. Trim, cooking loss and portion size change how many portions a batch gives, and so what each one costs.
 
-  Give it the weight you bought, the edible weight you measured, the portion weight, the batch's cash cost, the price and the portions served. It works out the yield, the cost per portion and what the batch contributed. It covers one batch of one dish. It is not a full business forecast and gives no food safety advice.
+  Give it the weight you bought, the weight left after trimming and cooking, the weight of one served portion, the batch's cash cost, the price and the portions served. It works out the edible yield, the portions the batch could give, the cost per portion, and what the batch contributed after its own costs. It shows unserved portions apart. It covers one batch of one dish. It leaves out rent and other fixed costs. It is not a full business forecast and gives no food safety, allergen or tax advice.
 when:
-  - You need a batch yield, portion cost and service contribution schedule.
-  - You work on food service operating finance and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - You want the real cost of one portion of a dish, from weights you measured.
+  - Trim or cooking loss changes how many portions you get from a batch.
+  - You want to see what one batch earned after its own ingredients, labor and energy.
 not_for:
   - "You want a full venue profit and loss with rent and wages: use a restaurant P&L in your accounting tool or ask your accountant."
   - "You want to set menu prices that cover fixed costs: use a menu pricing sheet in Google Sheets or Excel."
   - "You need food safety, allergen or tax stock valuation advice: ask a qualified food safety or accounting professional."
   - "You need the cost per good unit of a production batch after yield loss: use the Manufacturing yield cost bridge instead."
 you_give:
-  - Purchased batch weight, observed edible yield, actual portion weight, same-batch ingredient/labor/energy cash, confirmed selling price and served demand.
-  - "The batch date, plus the currency and scale used for the portion cost."
-  - "Your spreadsheet tool, if you want the portion cost as a workbook."
+  - The weight you bought for the batch, with the purchase date and receipt
+  - The edible weight you measured after trimming and cooking
+  - The weight of one portion as served
+  - "The cash cost of the same batch: ingredients, labor and energy"
+  - The selling price and the portions served or expected
+  - The currency and scale; and your spreadsheet tool if you want a workbook
 you_get:
-  - A batch yield, portion cost and service contribution schedule.
-  - "An editable workbook of the portion cost, with its inputs, formulas and test cases to rerun."
-  - "A tie-out of batch cost, portions served and receipts, the inputs still missing and the checks that ran."
+  - The edible yield, the portions the batch could give, the cost per portion and the batch contribution
+  - An editable workbook with inputs, formulas and test cases to rerun
+  - A tie-out of batch cost, portions and receipts, the inputs still missing and the checks that ran
 how_to_use:
   - "Download the pack and give your AI its SKILL.md. Then add the batch purchase, the measured yield and the portion weight."
   - "Tell it what you need: the cost per portion and the contribution from one batch of one dish."
@@ -63,19 +66,22 @@ how_it_works:
   - title: 4. Allocate batch cash across theoretical portions, show unserved capacity and reconcile actual modeled service receipts less full batch cash
     text: Allocate batch cash across theoretical portions, show unserved capacity and reconcile actual modeled service receipts less full batch cash.
 output_shape: |-
-  A batch yield, portion cost and service contribution schedule.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  SCOPE AND DATED SOURCES
+  INPUTS AND ASSUMPTIONS
+  YIELD: purchased weight, edible weight, edible yield
+  PORTIONS: theoretical, served, unserved
+  COST PER PORTION AND BATCH CONTRIBUTION
+  RECONCILIATION: portions x cost per portion = batch cash
+  FILE CHECKS: what ran
+  MISSING:
+  CHECKS MISSED:
 tweaks:
-  - what: "Batch date"
-    how: "Take the batch date from the batch purchase, the measured yield and the portion weight. Use one currency and scale on every line."
-  - what: "Portion weight"
-    how: "Change the portion weight and have your AI recalculate. Keep the actual figures you supplied."
-  - what: Acceptance
-    how: Every material driver traces to a dated source; actuals and scenarios remain separate.
+  - what: Batch date
+    how: Take the batch date from the purchase receipt. Use one currency and scale on every line.
+  - what: Portion weight
+    how: Change the portion weight and have your AI recalculate. Keep the actual figures you supplied.
+  - what: Trim loss by ingredient
+    how: Give the loss for each ingredient to see which one drives the cost.
 judge:
   - Every material driver traces to a dated source; actuals and scenarios remain separate.
   - Missing evidence blocks the affected calculation instead of becoming a zero.
@@ -89,7 +95,7 @@ improve:
   - "Save one portion cost you have already checked as an approved example, so your AI copies its layout."
   - "Write how your documents define edible yield into SKILL.md, so every run uses your wording."
 before: []
-next: [manufacturing-yield-cost-bridge, service-utilization-margin-builder]
+next: [ manufacturing-yield-cost-bridge, service-utilization-margin-builder ]
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI

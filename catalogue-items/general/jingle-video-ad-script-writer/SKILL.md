@@ -29,8 +29,8 @@ How to start:
 
 **Tools that do this best:**
 - **Any good chat AI:** Claude, ChatGPT and Gemini all follow this skill well, so use the one you already have.
-- **Suno:** Has a style box and a lyrics box that reads section tags like [Verse]. Songs you download on a paid plan can run in ads.
-- **Eleven Music:** Can build a song from a section-by-section plan, and its paid plans are cleared for commercial use.
+- **Suno:** Has a style box and a lyrics box that reads section tags like [Verse]. Free and paid plans differ, so check Suno's current licence terms for your plan before a song runs in an ad.
+- **Eleven Music:** Can build a song from a section-by-section plan. Check Eleven Music's current licence terms for your plan before a song runs in an ad.
 <!-- /needs -->
 
 ## What you need
@@ -90,19 +90,24 @@ How to start:
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Jingle video clip prompt writer](https://useaiblocks.com/skills/jingle-video-clip-prompt-writer). It takes the script.
+- The [Video ad script line checker](https://useaiblocks.com/skills/video-ad-script-line-checker). It takes the script.
 - The [Ad script read-aloud editor](https://useaiblocks.com/skills/ad-script-read-aloud-editor). It takes the script.
-- The [Silent video story reviewer](https://useaiblocks.com/skills/voice-over-stripping-test). It takes the script.
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script.
+- **Check it before it goes live** with the [Sound-off commercial checker](https://useaiblocks.com/skills/sound-off-commercial-checker). It takes the script.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
 ## Check before you hand it back
 - The hook is sung in bar 1, and comes back the planned number of times on the same tune.
-- Every line is 5 to 9 syllables (a long claim or brand line may take two bars), with key words on the beat.
+- Every verse and lift line is 5 to 9 syllables. The hook may be 4 to 8, and a long claim or brand line may take two bars. Key words land on the beat.
 - The brand name is in the tag only, and the product is on screen within 5 seconds.
 - The bar count matches the length to within one bar.
 - Every number, time, health result or rival in the lyric is in the approved claims.
 - No artist or band is named. On-screen text is on the tag only.
 - The cast note names the voice and who is on screen, with a reason.
+
+## Music rights
+A song made in a music tool is only safe to run in an ad if that tool's current licence allows it. Tell the user to check the tool's current terms for their plan before the ad runs. Never state that a plan covers ads.
 
 ## If something is missing
 Write `MISSING: <what>`. No buyer moment: build it from how the product is used and mark it `inferred`. No word on music: ask once whether the brand uses music. With no answer, write the script and mark `MISSING: the brand's OK to use music` before anything is made. No brand lines: write the hook from review words.

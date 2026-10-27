@@ -10,6 +10,10 @@ explain: |
   New Twitter/X or LinkedIn posts that sound like you wrote them, checked against how you really write. Most AI drafts read like nobody; this one starts from your own posts.
 
   You paste five ordinary recent posts. If you cannot, you answer four short questions about your topics, openings, pace and words you never use. The skill writes a voice sketch covering how you open, your sentence length and your habits, and shows it to you before drafting. It then writes the post, compares the draft to the sketch and fixes lines that drift. You can also paste text and ask whether it sounds like you.
+
+  On its own it only writes text. It posts nothing. The skill file header carries a risk label from the source, which comes from the optional VoiceMoat connector that can post for you.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (prateeks367) says MIT. Credit goes to prateeks367 and sickn33.
 when:
   - You post on LinkedIn or X and want drafts that need less editing.
   - Your AI posts all sound generic.
@@ -34,8 +38,9 @@ how_to_use:
   - Paste five ordinary posts you wrote yourself. If you cannot, answer the four short style questions.
   - Read the voice sketch your AI shows you. Correct anything that is wrong.
   - Say the topic and the platform, then read the draft and the match check.
-  - Edit the lines your AI flagged. Paste the final post into your scheduler, or ask for the match check again on your last edit.
+  - Edit the lines your AI flagged, then ask for the match check again on your last edit. When it passes, paste the final post into your scheduler.
   - "Optional: the VoiceMoat connector needs a paid Pro or Enterprise plan. It can post to your real account, but only after a preview and your clear yes."
+next: [x-thread-writer, x-reply-writer]
 output_sample:
   input:
     - Five recent posts you wrote yourself, pasted in

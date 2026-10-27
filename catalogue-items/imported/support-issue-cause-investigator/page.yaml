@@ -37,7 +37,7 @@ works_best_with:
       why: Live lookups need Composio CLI access and connected accounts for these services.
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text from the page.
-  - Paste your ticket descriptions, or give ticket numbers if Composio CLI and Gorgias are connected.
+  - Paste your ticket descriptions. Or give ticket numbers if Composio CLI and Gorgias are connected. Live lookup needs your own Gorgias account and a Composio account with the Gorgias connection, and either may cost money depending on the plan, so check before you start. Pasted text needs neither.
   - Add dates, errors or workarounds you know about.
   - Check the evidence table against your tickets. Make sure each claim has a source.
   - Send the fixes to the teams that own them and ask them to confirm the cause before acting.

@@ -12,8 +12,9 @@ inputs:
     required: true
   - type: source_text
     required: false
+  - type: spreadsheet
+    required: false
 outputs:
-  - type: plan
   - type: code_change
 uses: []
 steps: []

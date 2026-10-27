@@ -5,7 +5,7 @@ description: Use when you are about to spend money on selling an offer and want 
 
 # Small test and rollout planner
 
-Before you spend on a large launch, run the numbers and try it small. This skill turns your offer, price and costs into a break-even line, a test small enough to lose, and a rule for what to do next. For choosing who to test on, use "Hungry audience ranker".
+Before you spend on a large launch, run the numbers and try it small. This skill turns your offer, price and costs into a break-even line, a test small enough to lose, and a rule for what to do next. For choosing who to test on, use "Hungry audience ranker". If you have no offer or price yet, use the Hidden offer finder first. Spend on ads is real money: set a loss limit you can afford, and check the ad platform's rules for your claims before you run the test.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -43,7 +43,7 @@ How to start:
 ## Steps
 
 1. **Name the group and the offer.** Write two lines: who the test group is, and the offer with its price and terms. If the group is not named, write `MISSING: test group`.
-2. **Work the sums first.** Write each figure with its source: how many people you can reach, the cost per thousand reached (or cost per click and click rate), the expected response rate, the price, and the cost to deliver each order (product, shipping, fees, refunds). Where a figure is a guess, label it "assumption" and give a low, middle and high case. Then work out: profit per order (price minus delivery cost); cost per thousand reached; and the break-even response (cost per thousand divided by profit per order times a thousand). Show each calculation.
+2. **Work the sums first.** Write each figure with its source: how many people you can reach, the cost per thousand reached (or cost per click and click rate), the expected response rate, the price, and the cost to deliver each order (product, shipping, fees, refunds). Where a figure is a guess, label it "assumption" and give a low, middle and high case. Then work out: profit per order (price minus delivery cost); cost per thousand reached; and the break-even response. Break-even response = cost per thousand / (profit per order x 1,000), shown as a percent. Example with placeholder figures: cost per thousand [CPM] and profit per order [PROFIT] give [CPM] / ([PROFIT] x 1,000) x 100 = [BREAK-EVEN %]. Show each calculation.
 3. **Size the test.** Use the amount the user can afford to lose; if not given, write `MISSING: loss limit`. Choose a test size at or under that amount. Rule of thumb for this skill: the test should give about ten orders at the break-even response. If it cannot, say the test will not read clearly and offer a cheaper change to test instead.
 4. **Change one thing at a time.** Write the one thing being tested: the group, the offer or the message. List everything else as fixed, so a different result has one cause. Do not test two things in one run.
 5. **Write the result table.** Make a table to fill in after the test: people reached, responses, orders, revenue, all costs including delivery, profit, and the break-even line beside the actual response.
@@ -58,8 +58,8 @@ The group and offer. The sums with every figure sourced or marked as an assumpti
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Small launch test planner](https://useaiblocks.com/skills/small-launch-test-planner).
 - The [Ad response incentive planner](https://useaiblocks.com/skills/test-reply-offer-planner). It takes the plan.
+- The [Ad reach planner](https://useaiblocks.com/skills/reach-before-repeat-planner). It takes the plan.
 - The [Meta test campaign planner](https://useaiblocks.com/skills/meta-test-campaign-planner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

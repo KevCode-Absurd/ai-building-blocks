@@ -1,6 +1,6 @@
 # David Carson: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 David Carson is alive, and views can change. Everything below comes from his own words in four places: a 2019 interview with the AIGA's Eye on Design [S2], his studio's own site, which reports what he said at talks around 2014 to 2015 [S3], a Designboom interview from 2013 [S6] and a Designboom piece from 2021 that sits alongside his MasterClass [S7]. Two reference pages [S1][S4] and a 2016 article about a film on him [S5] fill in the career. The Designboom pages are written up by the interviewers, so the wording is theirs where it is not in quotation marks. Treat each view as "as of" its source. Reference pages differ on his birth year, 1954 or 1955, so we use 1955 with that caveat [S1][S4]. Nothing here tells you what he thinks about events after 2021.
 

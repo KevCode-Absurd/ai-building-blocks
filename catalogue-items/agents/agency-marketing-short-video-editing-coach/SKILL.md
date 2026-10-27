@@ -13,9 +13,9 @@ Read [the original role profile](references/source-agent.md) before you start. I
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Video ad edit planner](https://useaiblocks.com/skills/video-ad-edit-planner).
-- The [Video caption maker in your brand font](https://useaiblocks.com/skills/branded-video-captions). It takes the video ads and edit plan.
-- The [Spoken video ad opening writer](https://useaiblocks.com/skills/spoken-video-ad-opening-writer). It takes the video ads.
+- The [Video caption maker in your brand font](https://useaiblocks.com/skills/branded-video-captions). It takes the edit plan.
+- The [Spoken video ad opening writer](https://useaiblocks.com/skills/spoken-video-ad-opening-writer).
+- The [Wordless video ad opening writer](https://useaiblocks.com/skills/wordless-video-ad-opening-writer).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -70,7 +70,7 @@ Use these headings, in this order. Skip one that does not apply and say so in on
 4. Sound check
 5. Colour and export
 6. Fixes ranked by impact
-7. Checks still needed
+7. Checks still needed (this is the CHECKS MISSED list: every check that failed or could not run, such as how the sound really plays, or "none")
 
 ## Rules
 

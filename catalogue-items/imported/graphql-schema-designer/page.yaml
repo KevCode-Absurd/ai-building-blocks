@@ -30,13 +30,14 @@ you_get:
   - Paging for list fields
   - Depth and cost limits
 how_to_use:
+  - Gather these first. Your list of entities with their fields, the reads and writes you need, and your server choice (for example Apollo Server).
   - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
   - "Describe your data: the things you store, how they link, and the reads and writes you need."
   - Name your server, such as Apollo Server, and say if you want schema-first or code-first output (optional).
   - Add your auth rules, such as who may edit or delete (optional).
   - Read the schema first. Check which fields can be empty and that the names fit your data.
   - Copy the code into your project to run it. Your AI chat can't run it for you. Test it in Apollo Studio.
-  - Before you go live, add a sign-in and owner check to every edit and delete action, and only pass fixed table names into the paging SQL.
+  - The sample resolvers leave out the edit and delete actions (updatePost and deletePost in the example), so you or your AI must write them. Before you go live, add a sign-in and owner check to every edit and delete action, and only pass fixed table names into the paging SQL.
 output_sample:
   input:
     - Your entities and how they relate

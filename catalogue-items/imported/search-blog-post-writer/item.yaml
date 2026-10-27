@@ -10,6 +10,10 @@ level: beginner
 inputs:
   - type: brief
     required: true
+  - type: shortlist
+    required: false
+  - type: keyword_list
+    required: false
 outputs:
   - type: copy_draft
 uses: []

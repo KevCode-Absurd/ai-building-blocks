@@ -9,7 +9,7 @@ level: beginner
 inputs:
   - {type: question, required: true}
 outputs:
-  - {type: brief}
+  - {type: story_outline}
 origin: rebuilt
 version: 1.0.0
 minds: [stephen-king, anne-lamott]

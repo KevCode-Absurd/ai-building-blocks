@@ -1,6 +1,6 @@
 ---
 name: batch-image
-description: 多商品批量生图流水线。商品清单 CSV → 整批统一视觉的商拍图，带并发、重试、断点续跑、成本熔断与挑图联系表。当用户说「批量生图」「一批商品」「跑整个 SKU 表」「几百个商品出图」时使用。
+description: 多商品批量生图流水线。商品清单 CSV → 整批统一视觉的商拍图，带并发、重试与失败重跑（本版没有自动成本熔断，也不生成挑图联系表）。当用户说「批量生图」「一批商品」「跑整个 SKU 表」「几百个商品出图」时使用。
 ---
 
 # batch-image — 多商品批量生图
@@ -9,7 +9,9 @@ description: 多商品批量生图流水线。商品清单 CSV → 整批统一�
 
 批量的难点不是「跑很多次」，而是**跑出来的图要像一套**。本技能的核心是**规范段与变量段分离**：视觉规范逐字不变，只有商品描述随 SKU 变化。
 
-> **For English readers (added by AI Blocks).** This file is written in Chinese. Keep one fixed style block word for word the same for every product, and change only the product details. Cost figures in this file (about 5 credits per image, "about 7 折" meaning roughly 30% off at batch scale, about 500 credits for 100 products, and about 6 times the cost for the second model) are the author's own figures for the dLazy service. Check them against dLazy's current price list. The script shows a price check with `--dry-run` but does not stop on its own when spending hits a cap, so watch the total yourself. The last step names a separate skill (detect-task) that is not included here.
+> **For English readers (added by AI Blocks).** This file is written in Chinese. Keep one fixed style block word for word the same for every product, and change only the product details. Cost figures in this file (about 5 credits per image, "about 7 折" meaning roughly 30% off at batch scale, about 500 credits for 100 products, and about 6 times the cost for the second model) are the author's own figures for the dLazy service. Check them against dLazy's current price list. The script shows a price check with `--dry-run` but does not stop on its own when spending hits a cap, so watch the total yourself. The last step named a separate skill (detect-task) that is not included, so we replaced it with a manual check of a 10% sample. This copy has no automatic spending stop and does not build a contact sheet. report.csv has one row per product, marked ok or fail. English prompt template: "Product photo for a catalogue. Image 1 is the product: [category, colour, material, key details]. Keep its colour, material texture and style details exactly as in image 1. [FIXED STYLE BLOCK, the same word for word for every product: background, light, camera angle, shadow]. Realistic commercial product photography, no text, no watermark."
+>
+> **Set a spending cap first.** The loop below has no spending stop. Before the full run, work out price per image times number of products, write down the most you accept, and run in chunks (for example 20 products at a time) while you check your credit balance between chunks.
 
 ---
 
@@ -84,7 +86,7 @@ SKU002,docs/batch-image/sku-b-shoes.jpg,黑色亮面皮革布洛克德比鞋，�
 | --- | --- |
 | ✅ 先跑通 1 个 SKU | 单个跑不对，跑 100 个只是错 100 次 |
 | ✅ 再抽样 5 个 SKU | 覆盖品类/颜色/深浅色的边界情况 |
-| ✅ 确认成本 | `--dry-run` 单价 × SKU 数 × batch 数 |
+| ✅ 确认成本并设上限 | `--dry-run` 单价 × SKU 数 × batch 数；写下可接受的最高总额，分批跑，批与批之间查看余额（脚本不会自动停） |
 | ❌ 直接全量 | 最容易烧算力的做法 |
 
 ---
@@ -268,7 +270,7 @@ echo "SKU 数：$(wc -l < manifest.csv)"
 5. **`--dry-run` 估总价**：单价 × SKU 数。
 6. **全量跑**：5 路并发 + 3 次重试；SKU 很多时用 `--no-wait` 提交后统一轮询。
 7. **看汇总报告**：失败的单独重跑。
-8. **抽样质检**：随机抽 10% 过 [detect-task](../detect-task/skill.md)；不合格的 SKU 单独用 `gpt-image-2` 重跑。
+8. **抽样质检**：随机抽 10% 的图，由用户逐张人工检查（商品是否保真、风格是否一致、有无文字或水印）；不合格的 SKU 单独用 `gpt-image-2` 重跑。
 
 ---
 

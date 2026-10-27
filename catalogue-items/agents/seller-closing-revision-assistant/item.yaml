@@ -7,9 +7,15 @@ role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: document
+  - type: deal_terms
     required: true
   - type: spreadsheet
+    required: true
+  - type: document
+    required: true
+  - type: contract
+    required: true
+  - type: question
     required: true
 outputs:
   - type: audit_report

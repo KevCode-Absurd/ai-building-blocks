@@ -20,7 +20,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-2. **Plan** with the [Internal proposal pitch planner](https://useaiblocks.com/skills/idea-buy-in-pitch-planner). Bring your question. It uses your a buyer brief and brand brain.
+2. **Plan** with the [Internal proposal pitch planner](https://useaiblocks.com/skills/idea-buy-in-pitch-planner). Bring your question, your idea (optional). It uses your brand brain and a buyer brief.
 3. This one.
 
 How to start:
@@ -58,8 +58,9 @@ The news in one sentence. The first-minute opening. The clock and its source. Th
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Funny speech planner](https://useaiblocks.com/skills/funny-speech-planner).
 - The [Pitch objection and answer writer](https://useaiblocks.com/skills/hardest-objections-answer-writer). It takes the plan.
+- The [Honest thank-you note writer](https://useaiblocks.com/skills/honest-appreciation-note-writer). It takes the plan.
+- The [Annual letter writer](https://useaiblocks.com/skills/annual-letter-writer). It takes the plan.
 - **Sell it** with the [Proposal discussion planner](https://useaiblocks.com/skills/buy-in-conversation-planner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

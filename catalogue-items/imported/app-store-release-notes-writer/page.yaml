@@ -10,6 +10,8 @@ explain: |
   Plain "What's New" notes your users can read, built from what truly changed since your last release. No more guessing from memory or pasting raw commit text.
 
   The skill reads your git history from the last tag using a helper script, or from the full history if there are no tags. It sorts the changes by what a user would notice: new, improved and fixed. It drops internal work like build scripts, refactors, dependency updates and test setup. Each kept change becomes a short bullet with a clear verb. A login race fix, for instance, becomes a line about fewer unexpected sign-outs. It then checks every bullet against a real change, removes duplicates, and asks if anything is unclear.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (Dimillian) says MIT. Credit goes to Dimillian and sickn33.
 when:
   - You are about to submit an update and have no release notes.
   - Your commit log reads like code and users need plain words.
@@ -20,14 +22,14 @@ not_for:
   - "You need final legal or regulatory wording: ask a person who handles compliance to write or approve it."
   - "You want notes for a web app or a changelog file: use a manual changelog or ask a human editor."
 you_give:
-  - Your project folder with git history
+  - Your project folder with git history. Your AI must be able to run bash and git in that folder, so the helper script can run
   - The last release tag (optional)
   - Desired length of notes (optional)
 you_get:
   - Five to ten user-friendly bullets
   - Changes grouped by theme
   - Internal work left out
-  - Each bullet traced to a real commit
+  - Each bullet checked against a real change in your history
 how_to_use:
   - Open your AI in a tool that can run code and read your project folder.
   - Paste the skill text, or upload the skill folder with its helper script.
@@ -35,6 +37,8 @@ how_to_use:
   - Add your last release tag, your wanted length or a character limit if you have them.
   - Check each bullet against your changes and answer any questions the AI asks.
   - Paste the bullets into the "What's New" field in App Store Connect and check the character limit.
+  - Once the update is live, check your listing with the App Store listing optimiser.
+next: [app-store-listing-optimiser]
 output_sample:
   input:
     - Your project folder with git history
@@ -43,6 +47,7 @@ output_sample:
     - A storefront character limit (optional)
   prerequisites:
     - An AI that can run code and read your project files, so it can run the helper script
+    - bash and git on the machine where the AI runs, and the helper script (scripts/collect_release_changes.sh) from this item
   output:
     - name: Title
       contains: An optional heading with "What's New" or your app name and version number.

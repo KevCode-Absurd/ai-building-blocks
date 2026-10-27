@@ -5,18 +5,28 @@ description: "Check a loan cash sweep. Get the repayment the loan asks for, the 
 
 # Debt cash sweep checker
 
-Checks one year of a loan cash sweep, the rule that sends a share of excess cash flow to repay debt early. It works out the sweep the loan asks for, the cash available above the minimum, and the repayment as the smallest of the sweep owed, the cash available and the debt that can be repaid. It then shows ending cash, ending debt and any sweep left unpaid. It does not build the excess cash flow figure, handle several debt tranches, or say whether any loan test is met. For the order of payments use the Project payment waterfall builder. For a leverage test after the sweep use the Net leverage covenant checker.
+Checks one year of a loan cash sweep, the rule that sends a share of excess cash flow to repay debt early. It works out the sweep the loan asks for, the cash available above the minimum, and the repayment as the smallest of the sweep owed, the cash available and the debt that can be repaid. It then shows ending cash, ending debt and any sweep left unpaid. It does not build the excess cash flow figure, handle several debt tranches, or say whether any loan test is met. For the order of payments use the Project payment waterfall builder. For a cover test after the sweep use the Debt service covenant headroom checker, and for a leverage test use the Net leverage covenant checker.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Net debt covenant checker](https://useaiblocks.com/skills/net-leverage-covenant-checker). It takes the document and spreadsheet.
-- The [Loan leverage covenant reviewer](https://useaiblocks.com/skills/leverage-covenant-change-assistant). It takes the document and spreadsheet.
 - The [Debt payment reserve checker](https://useaiblocks.com/skills/debt-reserve-rollforward-builder). It takes the document and spreadsheet.
+- The [Loan covenant cash coverage checker](https://useaiblocks.com/skills/debt-service-covenant-headroom-checker). It takes the document and spreadsheet.
+- The [Spendable cash balance checker](https://useaiblocks.com/skills/restricted-cash-availability-checker). It takes the document and spreadsheet.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
-## Before you start
+## When not to use
+
+- You want to work out excess cash flow itself. This takes a confirmed figure and does not build one.
+- The loan has several debt tranches repaid in an order, or required repayments on a schedule. Use the Project payment waterfall builder.
+- You want to test a loan limit after the sweep. Use the Debt service covenant headroom checker or the Net leverage covenant checker.
+- You want a full cash forecast. This is one year and one tier only.
+
+## Read first
+
+This skill needs only the five figures in "What you need". Ignore any line below that asks for a buyer brief or source text, or for a Cash and added interest calculator step.
 
 A chat is enough. Do the sums yourself and show each one. Run the bundled script or build a workbook only when you have code or file tools and the person wants one. If you cannot run something, say so. Never claim you ran a check you did not run.
 
@@ -27,19 +37,19 @@ If the figures are not in the chat, ask once for the missing items in "What you 
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
-- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+- **The contract** (yours): the full agreement or terms, with dates and any changes.
 
 **Makes it better (optional):**
 - **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Spreadsheet** with the [Cash and added interest calculator](https://useaiblocks.com/skills/cash-and-pik-interest-checker). Bring document, spreadsheet (optional).
+1. **Spreadsheet** with the [Cash and added interest calculator](https://useaiblocks.com/skills/cash-and-pik-interest-checker). Bring document, spreadsheet (optional), the contract (optional).
 2. This one.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a brief, source text, spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, the contract, spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -137,15 +147,6 @@ The script `scripts/run-model.mjs` needs Node.js 20 or later. Run `node scripts/
 - [Filed credit amendment](https://www.sec.gov/Archives/edgar/data/1589526/000158952620000094/exhibit101thirdamendme.htm): an example of a loan term that bars counting the same money twice, once through debt reduction and once through cash netting. Your agreement's own terms always decide.
 
 The link names a public example. The instructions and practice numbers in this pack are original. The linked page is not bundled or relicensed.
-
-## After this
-
-Hand back the result, then suggest one next step in a short question. If they are done, that is fine. Offer these, and say they can type their own:
-
-- Test the cover with the lower debt using the [Debt service covenant headroom checker](https://useaiblocks.com/skills/debt-service-covenant-headroom-checker).
-- Test leverage after the repayment with the [Net leverage covenant checker](https://useaiblocks.com/skills/net-leverage-covenant-checker).
-
-If they pick one and it is not added here, give the link and say what to bring.
 
 ## Hand back
 

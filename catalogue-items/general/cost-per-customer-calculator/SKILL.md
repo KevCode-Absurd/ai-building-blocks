@@ -55,7 +55,7 @@ The data score with how it was worked out. The table with sums. Costs included. 
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Channel decline checker](https://useaiblocks.com/skills/channel-decay-checker). It takes the audit report.
 - The [Ad channel budget reviewer](https://useaiblocks.com/skills/monthly-channel-budget-reviewer).
-- The [TikTok ad test reader](https://useaiblocks.com/skills/tiktok-ad-test-reader). It takes the audit report.
+- The [Ad change decision checker](https://useaiblocks.com/skills/campaign-keep-or-change-checker). It takes the audit report.
 - The [TikTok starter campaign builder](https://useaiblocks.com/skills/tiktok-starter-campaign-builder). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

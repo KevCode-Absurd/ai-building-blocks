@@ -23,7 +23,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Lead quality reviewer** with the [Lead quality reviewer](https://useaiblocks.com/skills/inquiry-problem-diagnoser). Bring your results (optional), a draft (optional). It uses your your offer.
+1. **Lead quality reviewer** with the [Lead quality reviewer](https://useaiblocks.com/skills/inquiry-problem-diagnoser). Bring your results (optional), a draft (optional). It uses your offer.
 2. This one.
 
 How to start:

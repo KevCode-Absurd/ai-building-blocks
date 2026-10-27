@@ -7,7 +7,7 @@ description: "Comprehensive incident response framework from detection through r
 
 **Category:** Engineering Team  
 **Tier:** POWERFUL  
-**Author:** Claude Skills Team  
+**Author:** Alireza Rezvani  
 **Version:** 1.0.0  
 **Last Updated:** February 2026
 
@@ -54,7 +54,7 @@ Incident response framework for **availability/reliability incidents** (outages,
 **Characteristics:**
 - Customer-facing services completely unavailable
 - Data loss or corruption affecting users
-- Security breaches with customer data exposure
+- (Security breaches are out of scope here. Send them to a security incident process.)
 - Revenue-generating systems down
 - SLA violations with financial penalties
 

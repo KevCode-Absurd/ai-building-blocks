@@ -58,9 +58,9 @@ The promise. The base pair. The pairs to test, each with its one change. The fee
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Shareable content checker](https://useaiblocks.com/skills/shareable-content-checker). It takes the hooks.
-- The [YouTube title and thumbnail checker](https://useaiblocks.com/skills/youtube-title-thumbnail-check).
-- The [Brand social account checker](https://useaiblocks.com/skills/brand-social-account-checker). It takes the plan.
 - **Write the ad copy** with the [Headline and cover test planner](https://useaiblocks.com/skills/headline-cover-test-ranker). It takes the hooks.
+- The [Social post format reviewer](https://useaiblocks.com/skills/organic-format-tester). It takes the hooks.
+- The [Brand social account checker](https://useaiblocks.com/skills/brand-social-account-checker). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

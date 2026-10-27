@@ -16,7 +16,7 @@ how_to_use:
   - Paste them in and ask your AI to close out the bug with a receipt.
   - Read the status and the Gaps line. If it says partial or blocked, run the one next step it names.
   - Paste the new results back to update the receipt.
-  - For the JSON receipt, use an AI that can run code and read files.
+  - For the JSON receipt, use an AI that can run code and read files. The JSON template, the checking script (validate-receipt.mjs) and references/receipt-contract.md are not in the text you paste. The JSON step only works when you add the whole skill folder to your AI. The text receipt works without them.
   - This skill assumes a developer is involved, or someone who can run the checks. If you are not one, ask a developer for the check results first.
   - Next, attach a verified receipt to the ticket or incident record. If it says partial, run the one step it names. For a second pair of eyes, ask a teammate for a code review.
 output_sample:

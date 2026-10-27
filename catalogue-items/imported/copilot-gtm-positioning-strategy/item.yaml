@@ -10,6 +10,8 @@ level: advanced
 inputs:
   - type: brief
     required: true
+  - type: competitor_set
+    required: false
 outputs:
   - type: plan
 uses: []

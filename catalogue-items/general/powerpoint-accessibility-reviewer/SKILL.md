@@ -47,6 +47,8 @@ Read the user's goal, existing conversation and supplied files first. Reuse conf
 4. Source images or chart data, if you have them (optional).
 
 ## Runtime requirements
+If this chat cannot open or edit a .pptx file, say so first. Then give a checklist-only review from what the user pastes (slide titles, alt text, notes), mark every file-based check "not run" and state that limit. Never claim the deck was opened.
+
 Use an actual tool that can read and write the required native format. Plain text, JSON, HTML or a screenshot is not a finished XLSX/PPTX file. Inventory unsupported features before changing an existing file. Preserve macros, pivots, connections, masters and linked objects by using a compatible native engine when required; otherwise stop or return a clearly scoped review/plan. A formula string, cached value or successful export is not proof of recalculation, native refresh, accessibility compliance or layout. Render real output where the method calls for it and record any check that could not run.
 
 ## Method
@@ -74,4 +76,6 @@ Include a compact run register with the source file/version, action, actual outp
 Before the deck is shared, open accessibility-review.md. Fix each failed mark in the remediated copy and run PowerPoint's own Accessibility Checker on it. Check each mark that says "not run" by hand, or find someone who can. Do not call the deck accessible while any mark is failed or not run.
 
 ## Verification cases
-Read tests/cases.json. These are illustrative test specifications, not evidence that a native application has already run them.
+These are illustrative test cases, not evidence that a native application has already run them (they are also in `tests/cases.json`).
+- The first object in reading order is a decorative background. Expected: inspect the actual reading order and mark the decoration as decorative.
+- A chart tells its series apart only by red and green. Expected: ask for another distinction, such as labels or patterns.

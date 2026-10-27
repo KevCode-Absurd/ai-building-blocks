@@ -2,14 +2,14 @@ thinking: low
 thinking_why: It follows known file steps.
 new_slug: libreoffice-spreadsheet-builder
 name: LibreOffice spreadsheet builder
-summary: Build a spreadsheet from a plain description. You get an ODS file with formulas and charts, or a copy in Excel, CSV or PDF format.
+summary: Describe a spreadsheet and get an ODS file with formulas, or a copy as Excel, CSV or PDF. Charts are untested.
 job: work-with-files
 headline: LibreOffice spreadsheet builder
-subhead: A working spreadsheet with formulas and charts, built from a plain description, and ready to open in Excel or save as CSV. You describe the sheet and skip the manual setup.
+subhead: A working spreadsheet with formulas, built from a plain description, and ready to open in Excel or save as CSV. You describe the sheet and skip the manual setup.
 explain: |
   A working spreadsheet with formulas and charts, built from a plain description, and ready to open in Excel or save as CSV. You describe the sheet and skip the manual setup.
 
-  The skill uses LibreOffice Calc from the command line. It makes ODS files, writes formulas, adds charts, and converts between ODS, XLSX, CSV and PDF. It can run the same formula pass over many files, and Python scripts can clean or analyse data. LibreOffice must be installed. If a conversion hangs, it first checks for a stuck background process, which is the common cause.
+  The skill uses LibreOffice Calc from the command line. It makes ODS files, writes formulas and converts between ODS, XLSX, CSV and PDF. The skill has no tested steps for charts. If you ask for one, your AI tries and checks it, or tells you to add it in LibreOffice by hand. It can run the same formula pass over many files, and Python scripts can clean or analyse data. LibreOffice must be installed. If a conversion hangs, it first checks for a stuck background process, which is the common cause.
 when:
   - You need a budget sheet with totals and a chart by the end of the day.
   - A partner wants Excel but you use LibreOffice.
@@ -27,7 +27,7 @@ you_give:
   - LibreOffice installed
 you_get:
   - An ODS spreadsheet with formulas
-  - Charts for your numbers
+  - Charts, if your AI manages one (untested, so check it)
   - XLSX, CSV or PDF copies
   - A batch conversion command
 how_to_use:
@@ -35,7 +35,7 @@ how_to_use:
   - "Write a short brief: what the sheet tracks, the totals you need, and the file format you want back."
   - Add a CSV or sample data if you have it (optional).
   - Paste the brief into an AI that can run code and save files, and ask it to use this skill.
-  - Open the ODS file and check the formulas and charts. Charts are the least tested part. If your AI cannot make one, add it in LibreOffice by hand.
+  - Open the ODS file and check the formulas and charts. This skill has no tested steps for charts. If your AI cannot make one, add it in LibreOffice by hand.
   - Open the converted copies, such as XLSX or CSV, and check they look right before you send them.
   - Next, send the file, or import the CSV into your reporting tool. Rerun the batch command on next month's files.
 output_sample:
@@ -49,11 +49,11 @@ output_sample:
     - An AI that can run code and save files
   output:
     - name: ODS spreadsheet
-      contains: Your sheet in LibreOffice's own format, with the data, formulas and totals you asked for.
+      contains: Your sheet in LibreOffice's own format. Your data sits in the first rows, formulas such as totals sit in cells below or beside it, and each sheet is named for what it tracks.
     - name: Formulas
       contains: Cell formulas such as sums, written into the sheet so totals update when numbers change.
     - name: Charts
-      contains: Charts built from your numbers, when you ask for them.
+      contains: A chart built from your numbers, only if your AI manages it. Otherwise it tells you to add the chart by hand.
     - name: Converted copies
       contains: The same sheet saved as XLSX, CSV or PDF, whichever you ask for.
     - name: Batch conversion command

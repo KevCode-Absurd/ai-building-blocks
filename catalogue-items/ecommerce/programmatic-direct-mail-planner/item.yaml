@@ -7,7 +7,7 @@ role: make
 job: ops
 level: advanced
 inputs:
-  - {type: performance_sheet, required: true}
+  - {type: customer_list, required: true}
   - {type: email_flow, required: false}
 outputs:
   - {type: plan}

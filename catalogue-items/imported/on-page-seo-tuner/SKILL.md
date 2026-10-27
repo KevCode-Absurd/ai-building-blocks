@@ -31,7 +31,7 @@ Optimize a single page for search relevance, click-through, and crawler comprehe
 
 ## Required inputs
 
-- The page URL or the draft content if pre-launch
+- The page URL or the draft content if pre-launch (finished product page copy from an earlier step counts as the draft)
 - The primary target query (one phrase the page should rank for)
 - The page's role in the site (commercial, informational, navigational)
 

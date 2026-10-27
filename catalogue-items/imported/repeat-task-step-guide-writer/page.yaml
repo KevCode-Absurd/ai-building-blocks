@@ -10,6 +10,8 @@ explain: |
   A step-by-step guide for a task someone has to run again and again, written so a person on call can follow it at 2am. What lives in one person's head ends up on the page.
 
   You name the task. The skill writes the purpose, who owns it, how often it runs and what you need before starting. Each step gets the exact command or action, the result you should see and what to do if it fails. It then adds how to check it worked, how to roll back, who to escalate to and how long it takes. It can also update an old guide when the process changes.
+
+  Licence: this is a copy of Anthropic's runbook skill, under the Apache 2.0 licence (see the LICENSE file in this item). The source link is in the credits.
 when:
   - Only one person knows how to do a weekly task and they are going on leave.
   - A new hire must run a monthly process alone.
@@ -30,12 +32,13 @@ you_get:
   - Rollback and check steps
   - Escalation contacts section
 how_to_use:
+  - Have ready the commands or notes you use today, the systems involved, and the name and contact details of the owner.
   - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
   - "Type the name of the task, for example: weekly sales export."
   - Paste your notes or commands for how you do it today. Add the owner, how often it runs and known failures if you have them.
   - Read the steps. Check that each command is exact and each step has an expected result and a fix.
   - Fill any gaps your AI marks, such as contact names. Then ask a person new to the task to follow the guide and fix where they get stuck.
-  - Save the guide where your team can find it, such as your shared drive or wiki. Add a line to History after each run.
+  - Save the guide where your team can find it, such as your shared drive or wiki. Add a line to History after each run, and go through the Verification checklist each time you run the task.
   - Your AI will not make up commands, paths or contact names. It writes TBC for anything it does not know. Replace every TBC before anyone relies on the guide, and review the guide after each run.
 output_sample:
   input:

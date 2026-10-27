@@ -33,7 +33,7 @@ how_to_use:
   - Open an AI that can run commands on your computer, with the Shopify CLI installed and signed in to your store (shopify auth login). Check that gift cards are on in your settings.
   - Paste the skill into the chat. Add your store domain, the customer email or ID, and the amount.
   - Add a reason, an expiry date and a customer tag if you want them (optional).
-  - Ask for a dry run first. The skill does not default to one, so say so. Check the customer, amount and expiry. Do not let it issue anything live until you say so.
+  - The skill runs a dry run first by default. Check the customer, amount and expiry in the preview. Nothing is created until you tell your AI to go ahead and run it live.
   - For a list of customers, check the full list before you run it. Then run it for real and copy each code from the summary.
   - Send each code to its customer. Cards cannot be deleted, only disabled, so check amounts with care.
 output_sample:

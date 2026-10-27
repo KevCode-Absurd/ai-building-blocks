@@ -10,6 +10,8 @@ explain: |
   A plan to get your open source project noticed, used and contributed to, without coming across as pushy. Developers can smell hype, so the plan is built on being useful.
 
   The skill starts by working out who would use the project, where they spend time, what they use today and how they judge a project: stars, recent activity, docs and community. It then covers your GitHub page, a readme that answers a visitor in seconds, easy first issues for new contributors, a launch plan, and how to keep going after launch. It suggests how to talk about the project on developer forums and social channels in a way that feels like sharing, not selling.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (jonathimer) says MIT. Credit goes to jonathimer and sickn33.
 when:
   - You built a useful tool and nobody knows it exists.
   - Your repo has stars but no contributors.

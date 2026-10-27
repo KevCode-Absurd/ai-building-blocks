@@ -10,6 +10,8 @@ explain: |
   A written picture of where your security stands now, where you want it to be, and the steps between. It follows the NIST Cybersecurity Framework, the common standard used by auditors and insurers.
 
   You describe your current setup and goals. The skill works through the six areas of the framework: Govern, Identify, Protect, Detect, Respond and Recover. It builds a current profile and a target profile, then lists gaps by area with a priority for each. It rates your implementation tier (a measure of how your risk practices are set up, not a maturity score) and turns the gaps into an action plan sorted by effort and impact. It can also map controls to ISO 27001 or CIS Controls. It assumes the 2.0 version unless you ask for the older one.
+
+  The result is guidance, not an audit or legal advice. It cannot see your systems, so every rating comes from what you tell it. Have a qualified security professional check it before you rely on it for a regulator, insurer or contract. This is Hemant Naik's NIST CSF skill, shared under the MIT licence.
 when:
   - A client or insurer asks how your security lines up with NIST.
   - You need a plan to improve security but do not know where to begin.
@@ -34,10 +36,12 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, web access or paid tool is needed.
   - Do not paste passwords, IP addresses, client data or unredacted incident reports into a consumer AI tool. Describe them in general terms instead.
   - Describe your security today and your goals in a few lines. Add your industry and size, and say if you want CSF 2.0 or 1.1.
+  - Start with one area, such as Govern, then do the rest one area at a time. A first pass of one area is usually a short chat. All six areas take several rounds of answering questions.
   - Check the gap table. Fix any row that does not match what you really do.
   - Ask for the action plan, and for a mapping to ISO 27001 or CIS Controls if you need one.
   - Share the gap table with whoever owns security in your business, and agree the first three actions.
   - Use the plan to write your policies. Ask your AI to draft a policy for each area, such as access control or incident response.
+next: [incident-runbook-writer, security-incident-triager]
 output_sample:
   input:
     - A short description of your security today

@@ -58,7 +58,7 @@ Then continue to Step 1.
 python scripts/check_environment.py
 ```
 
-All critical checks must pass. If any fail, provide fix instructions:
+All critical checks must pass. If any fail, provide fix instructions. Several fixes below use `sudo` (admin rights) or change system services. Show the user each command and wait for a yes before you run it. Do not run them on a shared or managed computer without the owner's approval.
 
 ### Docker issues
 

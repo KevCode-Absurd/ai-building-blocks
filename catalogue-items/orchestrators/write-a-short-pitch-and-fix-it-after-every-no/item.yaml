@@ -7,11 +7,12 @@ role: orchestrate
 job: copy
 level: intermediate
 inputs:
-  - {type: question, required: true}
+  - {type: idea, required: true}
   - {type: brand_brain, required: false}
   - {type: persona, required: false}
   - {type: voc_reviews, required: false}
   - {type: feedback_notes, required: false}
+  - {type: question, required: true}
 outputs:
   - {type: copy_draft}
   - {type: feedback_notes}

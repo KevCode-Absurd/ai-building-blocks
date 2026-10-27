@@ -9,7 +9,7 @@ subhead: A small helper network, trained on your language model, that shows whic
 explain: |
   A small helper network, trained on your language model, that shows which ideas its inner activity stands for. Instead of a blur of numbers, you get named features such as a place, a tone or a risky topic.
 
-  The skill uses SAELens, a Python library. It picks one layer of the model, collects activations from lots of text, and trains a sparse autoencoder to split them into features where only a few fire at once. You then look at which text lights each feature up, and test it by turning it up or down. It needs Python, a GPU for larger models, and some comfort with research code.
+  The skill uses SAELens, a Python library. It picks one layer of the model, collects activations from lots of text, and trains a sparse autoencoder to split them into features where only a few fire at once. You then look at which text lights each feature up, and test it by turning it up or down. This is for machine learning researchers and technical staff. If you do not write Python, skip it. It needs Python, a GPU for larger models, and some comfort with research code.
 when:
   - You want to know what concept a layer of your model has learned.
   - You are studying whether a model holds a feature for something unsafe.
@@ -31,6 +31,7 @@ you_get:
   - Steering and removal tests
   - Notes on quality checks
 how_to_use:
+  - "Have ready: a computer with a GPU that has enough memory for your model, a Hugging Face account if the model or dataset needs one, and a Weights & Biases account if you want run logging. Logging is on in the sample config, so switch it off if you have no account."
   - Use an AI that can run Python code on a computer with a GPU. A chat window alone cannot run this.
   - "Install the tools with pip install sae-lens transformer-lens torch. You need Python 3.10 or newer."
   - Tell your AI the model name, the layer to study and the text dataset to use.

@@ -120,8 +120,8 @@ example:
     4. Say goodbye to unpleasant powdered beverages.
     5. Our formulation is designed to support digestive wellness.
     6. Rip. Tip. Enjoy.
-    7. $29.99 for your first box with our text sign-up discount.
-       Renews at $49.99 every 4 weeks.
+    7. [FIRST BOX PRICE] for your first box with our text sign-up
+       discount. Renews at [RENEWAL PRICE] every 4 weeks.
   output: |
     VERDICT: needs_fixes
 
@@ -151,7 +151,9 @@ example:
       Corrected: It supports digestion and gut health.
 
     NOT FLAGGED
-    Line 2: a plain sentence with an approved claim.
+    Line 2: the wording is plain, so it is not changed. But "clinically
+      tested for nutrient absorption" is not on the approved-claims
+      list. Reported for a fact check before it runs.
     Line 3: product facts and numbers.
     Line 6: the brand's own line.
     Line 7: price and renewal terms.

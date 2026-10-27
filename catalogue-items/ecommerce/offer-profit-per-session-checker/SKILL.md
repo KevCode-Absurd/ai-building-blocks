@@ -90,9 +90,9 @@ MISSING: <what was not given>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Offer profitability test reviewer](https://useaiblocks.com/skills/offer-refresh-keeper).
 - The [Offer test planner](https://useaiblocks.com/skills/offer-test-planner). It takes the audit report.
-- The [Order threshold planner](https://useaiblocks.com/skills/order-threshold-planner).
+- The [Offer profitability test reviewer](https://useaiblocks.com/skills/offer-refresh-keeper).
+- The [Pricing decision planner](https://useaiblocks.com/skills/pricing-decision-planner). It takes the audit report.
 - The [Store test evidence reviewer](https://useaiblocks.com/skills/store-test-verdict-maker). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

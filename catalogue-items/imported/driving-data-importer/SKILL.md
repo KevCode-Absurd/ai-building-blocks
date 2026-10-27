@@ -1,7 +1,7 @@
 ---
 name: matlab-import-driving-data
 description: "Import recorded driving sensor data (GPS, camera, lidar, actor tracks, lanes) into scenariobuilder.* objects (GPSData, CameraData, LidarData, ActorTrackData, Trajectory, laneData) and run preprocessing — synchronize, offset correction, crop, normalizeTimestamps, convertTimestamps. Also: compute actor tracks from lidar when no annotations exist, attach camera/lidar mounting + intrinsics, export to MAT/workspace/timetable/script. Use for raw driving dataset files (KITTI, nuScenes, Waymo, Pandaset, ROS/ROS2 bags, .mat, .csv, .mp4) or driving/vehicle/sensor logs that need wrapping. drivingLogAnalyzer (DLA) is OPT-IN ONLY — invoke only on explicit user request ('DLA', 'open in DLA', 'inspect/explore/analyze the recording') or reported sensor problem (sync drift, timestamp mismatch, overlay misalignment). NEVER auto-launch DLA after wrapping (Rule 0). For 'build scenario / export to RoadRunner / drivingScenario / OpenSCENARIO / Unreal / simulate', hand off to matlab-use-scenario-builder."
-license: https://www.mathworks.com/content/dam/mathworks/license/pmrl/license.md
+license: BSD-2-Clause plus MathWorks products-only clause (see LICENSE.md in this folder)
 metadata:
   author: MathWorks
   version: "2.0"
@@ -180,6 +180,12 @@ Always check which frame and transform to ego if needed.
 
 ## Import Pipeline
 
+**Questions to ask the user before Step 2, 3 and 4 (never guess the answers):**
+1. Where do the timestamps live? (file names, a CSV, file metadata, or inside the bag)
+2. How does the annotation file map rows to frames? (one row per object per frame, one file per frame, or keyframes only)
+3. Which coordinate frame are the positions in? (ego, world or sensor)
+4. Do they want the whole recording or a segment?
+
 ### Step 1: GPS → GPSData
 
 **Canonical GPSData construction is THREE lines, always together** — bare `scenariobuilder.GPSData(...)` is incomplete. The post-construction `convertTimestamps` + `normalizeTimestamps` calls are part of the canonical construction, not optional cleanup. Downstream APIs (`synchronize`, `trajectory`, `actorprops`, `localizeEgoUsingLanes`, RoadRunner export) expect numeric timestamps starting at t=0.
@@ -210,7 +216,7 @@ positions = cell(N, 1);   % each cell: Mx3 [x y z] in ego frame
 
 for i = 1:N
     % Get annotations for frame i
-    % PLACEHOLDER: ask the user how their annotation file maps rows to frames. Do not guess.
+    % Use the answer to question 2 above about how annotation rows map to frames. If you do not have it, ask. Do not guess.
     frameAnnots = <filter annotations for this frame>;
     trackIDs{i} = string({frameAnnots.track_id}');
     positions{i} = [frameAnnots.x, frameAnnots.y, frameAnnots.z];
@@ -236,7 +242,7 @@ end
 ```matlab
 % Match camera image files to timestamps
 imageFiles = dir(fullfile(camDir, '*.jpg'));
-% PLACEHOLDER: ask the user where timestamps live (file names, a CSV, metadata). Do not guess.
+% Use the answer to question 1 above about where timestamps live. If you do not have it, ask. Do not guess.
 camTimestamps = <parse timestamps from filenames or metadata>;
 
 cameraData = scenariobuilder.CameraData(camTimestamps, ...
@@ -250,7 +256,7 @@ cameraData = scenariobuilder.CameraData(camTimestamps, ...
 ```matlab
 % Match lidar files (.pcd, .ply, .las/.laz) to timestamps
 lidarFiles = dir(fullfile(lidarDir, '*.pcd'));
-% PLACEHOLDER: same as for the camera. Ask the user.
+% Use the answer to question 1 above. If you do not have it, ask. Do not guess.
 lidarTimestamps = <parse timestamps from filenames or metadata>;
 
 lidarData = scenariobuilder.LidarData(lidarTimestamps, ...

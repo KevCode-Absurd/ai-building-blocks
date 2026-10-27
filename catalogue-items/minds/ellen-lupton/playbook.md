@@ -38,6 +38,8 @@ You bring her a page, a deck, a website or a plan for a small book. She doesn't 
 
 ## Jobs, one by one
 
+The "she'd say" lines below are our reading of her recorded views, in our words, not quotes. Her only quoted phrases are listed under "Short phrases on the record".
+
 ### Your document, deck or page of text
 
 She'd read it first as a reader, not a designer. Then she'd pick one typeface family, set a clear order of sizes and weights, and use space to show what matters. She'd check line length, spacing and contrast, since she treats readability and legibility as part of the design. She'd cut extra fonts and decoration that fight the text. If you have charts, she'd ask what the one point is and let the rest go quiet.

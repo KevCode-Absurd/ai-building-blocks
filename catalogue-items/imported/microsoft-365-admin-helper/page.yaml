@@ -38,9 +38,9 @@ how_to_use:
   - Use an AI that can run PowerShell, or run the scripts yourself. Install the Microsoft Graph, Exchange Online and Teams PowerShell modules first.
   - Start in a test tenant or with a small test group. Do not run a new script on all staff first.
   - Say what you need. For new users, give your AI the CSV. Name your two break-glass admin accounts, or say you have none.
-  - Run the security audit first, since it only reads. Read the list of findings before you change anything.
+  - Run the security audit first, since it only reads. Read the list of findings before you change anything. Then ask your AI for the admin sign-in policy (multi-factor for admins) to fix the gaps it found. Then ask your AI for the admin sign-in policy (multi-factor for admins) to fix the gaps it found.
   - Before each change, check the script, the count of accounts it touches and what it does. Say yes only when it matches.
-  - Keep new sign-in policies in report-only for about 48 hours. Check the sign-in logs, then ask your AI to switch them on. Hand over temporary passwords safely, then delete the passwords file.
+  - Keep new sign-in policies in report-only for about 48 hours. Check the sign-in logs, then ask your AI to switch them on. Hand over temporary passwords safely, never by email to the same account. The skill limits the passwords file to your own Windows account. Delete the file after you hand the passwords over.
 how_it_works:
   - title: Ask what is missing
     text: It asks for your domain, the user list and the break-glass accounts, and does not invent them.

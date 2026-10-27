@@ -31,7 +31,7 @@ you_get:
   - Tone notes
 how_to_use:
   - Open a chat in Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
-  - Paste the skill text into the chat, then paste your text below it.
+  - Before you start, decide which style guide you want and gather any glossary of names and terms. Paste the skill text into the chat in full, then paste your text below it.
   - Say which style guide to use, such as AP, Chicago or APA. Add your audience and tone if you have them.
   - Read the Changes Made table. Accept or reject each fix. The reading grade is the AI's estimate, not a measured score.
   - If you edit the text, paste it back in and run the proofread again.

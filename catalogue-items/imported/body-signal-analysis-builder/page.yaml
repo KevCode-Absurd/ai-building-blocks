@@ -10,6 +10,8 @@ explain: |
   Turn raw heart, skin or breathing recordings into a cleaned, checked analysis of events and variability. The code is repeatable, so another person can rerun it and get the same result.
 
   The skill builds Python workflows with NeuroKit2 for filtering and cleaning, finding peaks and intervals, lining up signals from different sensors, and measuring heart rate variability and signal complexity. It picks methods to fit your signal and checks the output at each step. It pins the library version so results do not shift. It is for research use only and is not for diagnosis or device validation.
+
+  Who it is for: researchers who write Python. If you do not code, give your recording and this page to an analyst and ask them to run it. Licence: MIT (see LICENSE.md).
 when:
   - You have an ECG or pulse recording and need beats found.
   - You want heart rate variability from a short recording.
@@ -37,6 +39,7 @@ how_to_use:
   - Ask your AI "Inspect my file first, then clean the signal and find the peaks." Open the inspection report before anything else. Then look at the plots to check that peaks sit in the right places.
   - Keep the script and the pinned library version. Rerun them to get the same result.
   - Next, check the peak and variability tables against the raw plots. Then pass them to a statistician before you run any analysis.
+next: [statistical-test-picker]
 output_sample:
   input:
     - Your signal files or arrays, such as ECG, skin conductance or breathing

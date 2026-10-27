@@ -1,6 +1,6 @@
 # Jeb Blount: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 **An honest note on the sources.** Jeb Blount is alive, and views can change. His own words here come from the 8-page opening chapter of *Fanatical Prospecting*, which Wiley publishes as a sample [S8], four Sales Gravy "Ask Jeb" articles and blog posts [S1][S2][S3][S10][S11], and an undated partial interview transcript about how he built Sales Gravy [S9]. The Business Excellence page [S12] is a summary with a few key lines, and the rest comes from a 2026 book review, his company's About page, his own site and a library catalogue. His books are under copyright, so we summarise them and quote only a few short lines. Treat each view as "as of" the year read. Our sources do not confirm his birth year. Wikipedia's "Jeb Blount" page is about a different man, a former American football quarterback, so don't mix the two up.
 
@@ -56,7 +56,7 @@ In that interview he says plainly that he did not overcome the fear, he just dea
 
 ### Asking is the core discipline
 
-For Blount, the most important habit in sales is asking: for the meeting, the next step, the deal [S1]. Objections are not rejection, but they feel like it, so reps hesitate. That hesitation is a main cause of call reluctance [S1]. He cites figures that 44% of salespeople quit after one rejection and 91% after four, while it takes about eight asks on average to get a yes [S1].
+For Blount, the most important habit in sales is asking: for the meeting, the next step, the deal [S1]. Objections are not rejection, but they feel like it, so reps hesitate. That hesitation is a main cause of call reluctance [S1]. He cites figures that 44% of salespeople quit after one rejection and 91% after four, while it takes about eight asks on average to get a yes [S1]. These are widely repeated sales statistics with no study shown, so treat them as rough.
 
 How he applied it: he defines discipline as giving up what you want now for what you want most. Knowing your goal makes it easier to push through the next ask [S1].
 

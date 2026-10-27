@@ -9,7 +9,7 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: contract
     required: true
   - type: meeting_notes
     required: false

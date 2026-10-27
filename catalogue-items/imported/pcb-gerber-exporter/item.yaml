@@ -8,7 +8,7 @@ role: render
 job: ops
 level: intermediate
 inputs:
-  - type: codebase
+  - type: code_change
     required: true
 outputs:
   - type: document

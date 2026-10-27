@@ -2,14 +2,14 @@ thinking: low
 thinking_why: It picks a hook pattern and fills it in.
 new_slug: linkedin-hook-post-writer
 name: LinkedIn hook post writer
-summary: Write a LinkedIn post with a strong hook line. Give your topic and goal, and get a draft built on a proven opening for comments, reposts, likes or saves.
+summary: Write a LinkedIn post with a hook line matched to your goal. Give your topic and goal, and get a draft aimed at comments, reposts, likes or saves.
 job: grow-social
 headline: LinkedIn hook post writer
 subhead: "A LinkedIn post that opens with a line chosen for what you want it to do: draw comments, reposts, likes or saves. You pick the goal first and the opening follows."
 explain: |
   A LinkedIn post that opens with a line chosen for what you want it to do: draw comments, reposts, likes or saves. You pick the goal first and the opening follows.
 
-  The skill holds 16 opening formulas, each matched to an engagement goal. The engagement figures and the best posting time come from the original author's own posts, not from a controlled test. You give it a topic, an angle and who you are talking to. It selects a formula, drafts the post with current formatting rules, such as keeping the hook above the fold. Then it scrubs wording that sounds machine-written and hands you the result. It warns against picking a hook just because its raw reach number is bigger.
+  The skill holds 16 opening formulas, each matched to an engagement goal. The engagement figures and the best posting time come from the original author's own posts, not from a controlled test. You give it a topic, an angle and who you are talking to. It selects a formula, drafts the post with formatting rules from the author's experience, such as keeping the hook above the fold. Then it scrubs wording that sounds machine-written and hands you the result. It warns against picking a hook just because its raw reach number is bigger.
 when:
   - You have a story but your first line is weak.
   - You want more comments, not just views.
@@ -37,6 +37,7 @@ how_to_use:
   - Read the formula it picked and the draft. Ask for another formula if the hook does not fit.
   - Replace any detail that is not true for you, then post it. Put links in the first comment.
   - Treat the engagement figures and the suggested posting time as the author's guesses. Check them against your own post data.
+  - After you post, log the comments and reach for a week. Use that to see which formula works for your own audience.
 output_sample:
   input:
     - Your topic

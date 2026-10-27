@@ -10,6 +10,10 @@ explain: |
   Your project live on Render, with the setup file written and the dashboard link in your hand. You do not need to learn the hosting settings first.
 
   It starts by asking where the code lives and whether Render should create everything the app needs, such as a database. It reads your code to find the language, start command and needed settings. Then it writes a render.yaml file, which describes the whole setup, or creates the services directly. The code must be on GitHub, GitLab or Bitbucket. Ready-made Docker images need the Render dashboard instead. You need a Render account and a pushed repository.
+
+  Cost: the setup file uses Render's free plan unless you choose otherwise. Databases and extras beyond the free tier can be charged by Render, so check the plan on each one before you click Apply.
+
+  Licence: this is an unchanged copy of OpenAI's render-deploy skill, under the Apache 2.0 licence (see the LICENSE.txt file in this item).
 when:
   - Your app works on your computer and you want it online.
   - You want your hosting setup saved as a file, not clicked together.
@@ -33,7 +37,7 @@ how_to_use:
   - Push your project to GitHub, GitLab or Bitbucket. Make sure you have a Render account.
   - 'Words you will see. A Blueprint is Render''s name for a setup file, render.yaml, that describes your whole app. MCP is the link that lets your AI act in your Render account. sync: false marks a secret setting that you type into the Render dashboard yourself.'
   - Open your AI tool and paste in this skill. Use an AI that can run commands if you can.
-  - Tell it your repo and whether Render should create a database and other extras.
+  - Tell it your repo and whether Render should create a database and other extras. Never paste secret values or your Render API key into the chat. Type them only into the Render dashboard, or into your own settings file or shell.
   - Answer its questions. It reads your code and writes render.yaml.
   - Push the file to a new branch (git push origin add-render-config), review it, then merge it to main. Your AI will not push straight to main.
   - Open the Blueprint link, add your secret settings in Render, and check that the deploy runs.

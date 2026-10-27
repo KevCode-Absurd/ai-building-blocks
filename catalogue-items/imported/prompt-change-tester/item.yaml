@@ -8,7 +8,9 @@ role: check
 job: ops
 level: advanced
 inputs:
-  - type: brief
+  - type: prompt
+    required: true
+  - type: eval_set
     required: true
 outputs:
   - type: test_report

@@ -52,7 +52,7 @@ When not to use:
 2. **Check the awareness mix.** If over 90 percent of ads aim at people who already know the brand (one speaker's count for one brand found almost all of its ads in the last two stages of awareness; we have not checked it), the account is a way to reach known buyers, not an acquisition engine. Note that a few product-aware ads can work in fashion because the sell is simple.
 3. **List what you cannot see.** Spend per ad, offer margin, funding. Ad libraries show no spend data, so any "winner" is a guess. Mark each as unknown and do not guess a number.
 4. **For a listed company, check observed against modelled.** Ask: what time horizon is the quoted lifetime gross profit to CAC measured on, how old is the oldest cohort, how much is observed and how much is modelled out, what is cash flow after outside financing, and was one strong month annualised? The source gives an example of a company whose multi-year payback was modelled from a young cohort, with two different gross margins in two documents. That is the speaker's reading of public data, not verified here. Never repeat it as a fact about a named company. CAC means customer acquisition cost.
-5. **List the dependencies.** Things you cannot copy at normal size, such as a financing facility that covers about 70 percent of upfront acquisition cost, a celebrity co-founder, 150 or more shops, an ambassador equity model.
+5. **List the dependencies.** Things you cannot copy at normal size, such as a financing facility that covers a large share of upfront acquisition cost (one speaker said about 70 percent, which we have not verified), a celebrity co-founder, 150 or more shops, an ambassador equity model.
 6. **List what travels.** Testing one variable at a time, landing pages for each buyer type, scripts that lead with the mechanism (how the product works), offer stacking, price discipline, building around a hero product. Offer stacking must use offers the store can really honour.
 7. **Mark claim risk.** Aggressive health claims may cut cost to win a customer but add legal and ad account risk, and listed companies cannot go as far. Do not suggest copying a claim the store cannot prove. Add a short line telling the person to check health, money or legal claims with a qualified person and against the platform's ad rules.
 8. **Decide yes, adapt or skip for each tactic** and write the smallest test: one change, a cost, a time frame and a go rule.
@@ -85,13 +85,16 @@ Unknown tactics: <list>, not counted
 SMALL TEST
 <the one test, cost, how long, what result means go>
 CLAIM RISK: <note and a line to check with a qualified person>
+CHECKS MISSED: <checks that failed or could not run, or none>
 MISSING: <what was not supplied>
 ```
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Market opportunity finder](https://useaiblocks.com/skills/competitor-white-space-mapper). It takes the audit report.
 - The [Competitive disruption risk reviewer](https://useaiblocks.com/skills/disruption-risk-checker). It takes the audit report.
+- The [Rival weakness message finder](https://useaiblocks.com/skills/rival-weakness-message-finder). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

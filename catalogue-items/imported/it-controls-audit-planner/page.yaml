@@ -31,12 +31,13 @@ you_get:
   - A note on which SOX rules apply to you
   - A fix plan
 how_to_use:
+  - Gather your filer status, a list of the finance systems with an owner for each, your last audit findings and your fiscal year-end date.
   - Open a chat in Claude, ChatGPT or Gemini and paste in the skill text from this page.
   - Paste your list of finance systems, who runs each one, and your company size or filer status.
   - Add your current controls, policies and any test exceptions if you have them.
   - Ask for the system inventory first. Check it matches your real systems before you go on.
   - Then ask for the risk and control matrix, test scripts and a rating for any gaps.
-  - Check the rules, dates and statistics against SEC and PCAOB sources before you rely on them. The skill was last checked on 14 Sep 2026.
+  - Check the rules, dates and statistics against SEC and PCAOB sources before you rely on them. The skill was last checked on 14 Sep 2026. Sample sizes and review timings are audit habits, not rules. The SEC proposal it flags is not final.
   - Take the remediation plan and re-test window to your audit committee or external auditor. Run the matrix again after each control fix.
 output_sample:
   input:

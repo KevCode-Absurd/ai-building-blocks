@@ -16,6 +16,7 @@ compatibility: Claude Code, Cursor, Codex, Gemini CLI
 Calculates the total inventory value (on-hand quantity × unit cost) broken down by location and vendor. Used for periodic balance sheet reconciliation, insurance valuation, and cost-of-goods reporting. Read-only — no mutations.
 
 ## Prerequisites
+- Shopify CLI installed (a recent version that has the `shopify store auth` command). Check that the auth command below works before the first run.
 - Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_products,read_inventory`
 - API scopes: `read_products`, `read_inventory`
 - Unit costs must be set on inventory items for accurate valuation (variants without cost are included at $0)
@@ -43,8 +44,8 @@ Calculates the total inventory value (on-hand quantity × unit cost) broken down
    **Inputs:** `first: 250`, select `sku`, `inventoryQuantity`, `product { vendor }`, `inventoryItem { id, unitCost }`, pagination cursor
    **Expected output:** All variants with cost and stock; paginate until `hasNextPage: false`
 
-3. **OPERATION:** `inventoryItems` — query
-   **Note:** the `productVariants` query in step 2 returns only a total `inventoryQuantity` with no location. Loop this query per batch of IDs and per location, then sum the quantities before the value calculation.
+3. **OPERATION:** `inventoryItems` — query (the `InventoryLevelsByLocation` query below, which reads each inventory item through `nodes(ids:)`)
+   **Note:** the `productVariants` query in step 2 returns only a total `inventoryQuantity` with no location, so use this query for all per-location quantities. Run it per batch of inventory item IDs from step 2, then use the on-hand quantity at each location in the value calculation.
    **Inputs:** Batch by inventory item IDs; fetch `inventoryLevels` per location
    **Expected output:** Per-location quantities for each inventory item
 
@@ -100,7 +101,7 @@ query VariantsForValuation($after: String) {
 ```
 
 ```graphql
-# inventoryItems:query — validated against api_version 2025-01
+# inventoryItems:query (step 3, reads InventoryItem nodes by ID) — validated against api_version 2025-01
 query InventoryLevelsByLocation($ids: [ID!]!) {
   nodes(ids: $ids) {
     ... on InventoryItem {
@@ -195,4 +196,4 @@ CSV file `inventory_valuation_<YYYY-MM-DD>.csv` with columns:
 - Run at month-end for balance sheet reconciliation — compare with your accounting system to identify discrepancies.
 - Items with no cost set will appear as $0 and understate total value. Use the output to identify and fill cost gaps before the next run.
 - For insurance purposes, the total is a cost baseline only. Confirm the valuation method with your insurer before you use it, since policies differ on cost, replacement or retail value.
-- Pair with `dead-stock-identifier` to understand what portion of your inventory value is tied up in slow-moving stock.
+- Pair with the Dead stock finder to understand what portion of your inventory value is tied up in slow-moving stock.

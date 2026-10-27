@@ -14,7 +14,7 @@ needs_mode: manual
 inputs:
   - type: business_profile
     required: true
-  - type: spreadsheet
+  - type: question
     required: false
 outputs:
   - type: plan

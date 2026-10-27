@@ -200,8 +200,9 @@ export class CompanyMcpService {
       if (!this.options.publicService) { blockers.push(`Published skill ${slug} could not be retrieved.`); continue; }
       try {
         let result;
-        try { result = await this.options.publicService.callTool("get_skill", { slug }); }
-        catch (error) { if (error instanceof PublicApiError && error.code === "workflow_requires_governance") result = await this.options.publicService.callTool("get_workflow", { slug }); else throw error; }
+        // The full package (detailed), as before concise views existed: the draft carries complete instructions.
+        try { result = await this.options.publicService.callTool("get_skill", { slug, response_format: "detailed" }); }
+        catch (error) { if (error instanceof PublicApiError && error.code === "workflow_requires_governance") result = await this.options.publicService.callTool("get_workflow", { slug, response_format: "detailed" }); else throw error; }
         if (!obj(result) || typeof result.revision_sha256 !== "string") throw Error();
         publicPackages.push(result);
         if (obj(result.resource_validation) && result.resource_validation.status === "BLOCKED") blockers.push(`Resolve resource completeness for ${slug} before execution.`);

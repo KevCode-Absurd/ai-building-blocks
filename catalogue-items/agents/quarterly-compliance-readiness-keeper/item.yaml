@@ -7,7 +7,7 @@ role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - {type: brief, required: true}
+  - {type: question, required: true}
   - {type: codebase, required: false}
 outputs:
   - {type: audit_report}

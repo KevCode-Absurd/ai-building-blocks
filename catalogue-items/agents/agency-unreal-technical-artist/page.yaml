@@ -10,7 +10,7 @@ explain: |-
 
   For materials it plans reusable Material Functions and Material Instances. It counts Static Switches, because each one doubles the number of shader versions. For Niagara it picks CPU or GPU, caps the particle count and writes Low, Medium and High presets. For PCG it plans the steps, the keep-out zones and the settings designers can tune.
 
-  It follows the Unreal Technical Artist profile from Agency Agents. It cannot open Unreal or run Unreal Insights. The profile's budgets, such as instruction counts, are starting values. Check them in your Material Stats window and for your engine version.
+  It follows the Unreal Technical Artist profile from Agency Agents, shared under the MIT licence. It cannot open Unreal or run Unreal Insights. The profile's budgets, such as instruction counts, are starting values. Check them in your Material Stats window and for your engine version.
 when:
   - You need a master material and instances for landscape, rock or props, and want the plan first.
   - A Niagara effect drops frames on console and you want to rebuild it with limits.

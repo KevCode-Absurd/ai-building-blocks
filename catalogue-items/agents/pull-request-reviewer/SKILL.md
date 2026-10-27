@@ -72,8 +72,8 @@ If the person says yes to posting in clear words, post only the comments they ap
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Pull request comment repairer](https://useaiblocks.com/skills/review-comment-fixer). It takes the notes.
-- The [Two-model pull request reviewer](https://useaiblocks.com/skills/two-model-pull-request-reviewer).
-- The [Bug and security code reviewer](https://useaiblocks.com/skills/bug-and-security-code-reviewer).
+- The [Web accessibility checker](https://useaiblocks.com/skills/accessibility-checker). It takes the audit report.
+- The [Bug root cause finder](https://useaiblocks.com/skills/bug-root-cause-finder). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -26,7 +26,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Audit report** with the [Independent income floor calculator](https://useaiblocks.com/skills/income-floor-calculator). Bring your question.
+1. **Audit report** with the [Independent income floor calculator](https://useaiblocks.com/skills/income-floor-calculator). Bring your question, spreadsheet (optional).
 2. This one.
 
 How to start:
@@ -69,10 +69,10 @@ The prices found and the top third. The fees compared. The chosen fee with its r
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Job exit plan writer](https://useaiblocks.com/skills/job-exit-plan-writer). It takes the plan.
-- The [Independent income floor calculator](https://useaiblocks.com/skills/income-floor-calculator).
 - The [Ruin risk stress tester](https://useaiblocks.com/skills/ruin-risk-stress-tester). It takes the plan.
+- The [Decision consequence planner](https://useaiblocks.com/skills/second-order-effects-tracer). It takes the plan.
 - **Make an offer people want** with the [Pricing decision planner](https://useaiblocks.com/skills/pricing-decision-planner). It takes the offer and plan.
-- The [Client fee and work-hour reviewer](https://useaiblocks.com/skills/quarterly-client-rate-reviewer).
+- **Grow on social** with the [First customer outreach planner](https://useaiblocks.com/skills/first-customers-by-hand-planner). It takes the offer.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

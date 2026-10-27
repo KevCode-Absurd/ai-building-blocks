@@ -8,7 +8,7 @@ job: ops
 level: intermediate
 inputs:
   - {type: image, required: true}
-  - {type: brief, required: true}
+  - {type: design_tokens, required: true}
   - {type: copy_draft, required: false}
   - {type: brand_brain, required: false}
 outputs:

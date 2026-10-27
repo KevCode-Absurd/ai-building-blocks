@@ -11,7 +11,7 @@ subhead: Give it 12 to 36 months of daily spend and new-customer revenue, your m
 explain: |
   Most store forecasts are one number pulled from last year with a growth rate on top. New customers and returning customers do not respond to the same levers, so they need separate models. New revenue follows ad spend and its efficiency. Returning revenue follows the customers you already have and how often they come back.
 
-  This skill fits a line through daily new-customer efficiency against daily spend, and reads efficiency at the spend you plan. For returning revenue it multiplies each past monthly cohort by its repeat rate at its age. It adds seasonality and the events on your calendar, sized from past launches, promos and emails. The two speakers claim about 10% accuracy for the cohort method, rising to 1 to 2% with seasonality. Those are their claims, so treat the error bars as yours to test.
+  This skill fits a line through daily new-customer efficiency against daily spend, and reads efficiency at the spend you plan. For returning revenue it multiplies each past monthly cohort by its repeat rate at its age. It adds seasonality and the events on your calendar, sized from past launches, promos and emails. The two speakers claim the cohort method is fairly accurate, and more so with seasonality. Those are their claims, so test the error bars on your own past months.
 
 when:
   - You must give your board or team a revenue number for next quarter.
@@ -20,7 +20,7 @@ when:
 not_for:
   - "You have under 12 months of daily data: use a plain guess of spend times return, marked weak, or ask your accountant."
   - "You want a forecast for one campaign only: use a simple sheet of spend, expected sales and your break-even point."
-  - "You want profit, not revenue: pair this with the daily contribution margin tracker, as no sibling here covers it yet."
+  - "You want profit, not revenue: use the Daily contribution margin tracker."
 
 you_give:
   - 12 to 36 months of daily ad spend and new-customer revenue

@@ -32,7 +32,9 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text. For the scripts, use an AI that can run Python code and read files.
   - Tell your AI who the partner is, what they ask for, and what they bring. Add your product, price and margin.
-  - Answer its questions one at a time. It first checks whether the partner has their own customers.
+  - Answer its questions one at a time. It first checks whether the partner has their own customers. You must supply the partner's proof of demand and your own margin yourself. Without them, the tier call cannot be trusted, and your AI writes "unknown".
+  - Without Python, your AI works through the same steps by hand in chat. The answer is less exact.
+  - The skill names researchers, companies and case studies. The author did not check these. Treat them as the author's rules of thumb, not as research results.
   - Read the tier call, the 90-day plan and the revenue share range. Check them against your own numbers.
   - Put the stop criteria into the contract before you sign. You make the final call.
   - Take the tier call and revenue share band to whoever approves partner deals. Ask your sales operations or deal desk to handle pricing questions after the deal is signed.
@@ -56,3 +58,16 @@ output_sample:
     - name: Kill criteria
       contains: The signs that mean you should restructure or end the deal, to write into the contract.
 next: [partner-profit-tester, partner-deal-terms-writer]
+terms:
+  - term: Reseller
+    meaning: A partner that buys or sells your product to its own customers and keeps part of the price.
+  - term: OEM
+    meaning: A partner that builds your product into its own product and sells it under its own name.
+  - term: SI-consulting
+    meaning: A services firm that sets up your product for customers and may want a share of the product revenue.
+  - term: Revshare
+    meaning: The part of each sale you pay the partner.
+  - term: MDF
+    meaning: Market development funds. Money you give a partner to promote your product.
+  - term: Break-even
+    meaning: The sales volume at which selling through the partner earns you the same as selling direct.

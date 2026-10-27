@@ -10,8 +10,10 @@ level: intermediate
 inputs:
   - type: competitor_set
     required: false
-  - type: brief
+  - type: product_data
     required: true
+  - type: voc_reviews
+    required: false
 outputs:
   - type: audit_report
 uses: []

@@ -70,13 +70,13 @@ how_it_works:
   - title: "Write a review checklist"
     text: "Billing and shipping mismatch, rush shipping to a freight forwarder, a big order of one item, a new account with a high value, an odd email domain."
   - title: "Set the watch line"
-    text: "Processors may flag chargeback rates above 0.9% and stop cards above 1%. Confirm both with your processor, and act at 0.5%."
+    text: "Ask your processor for its flag and stop thresholds. Write MISSING if you do not know them. Act at half the flag level, or at 0.5% if the flag level is unknown."
 
 output_shape: |
   READ: <orders a month | chargeback rate | review hours>
   RULES: 1 Low <action> | 2 Medium <action> | 3 High <action> | 4 Cancel only if <pattern>
   REVIEW CHECKLIST: <list>
-  WATCH LINE: now <n>% | act at 0.5% | processor flag 0.9%
+  WATCH LINE: now <n>% | act at <half the processor flag, or 0.5% if unknown> | processor flag <their figure, or MISSING>
   MONTHLY LOOP: count blocked, held, released, disputed; change one rule at a time
   MISSING: <what you did not give>
 

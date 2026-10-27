@@ -12,6 +12,10 @@ inputs:
     required: true
   - type: codebase
     required: false
+  - type: audit_report
+    required: false
+  - type: design_tokens
+    required: false
 outputs:
   - type: web_page
   - type: design_direction

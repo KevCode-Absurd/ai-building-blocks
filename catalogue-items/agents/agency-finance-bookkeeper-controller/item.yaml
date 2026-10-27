@@ -12,6 +12,8 @@ inputs:
     required: true
   - type: spreadsheet
     required: true
+  - type: plan
+    required: false
 outputs:
   - type: audit_report
   - type: plan

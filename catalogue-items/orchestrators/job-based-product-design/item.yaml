@@ -7,8 +7,6 @@ role: orchestrate
 job: strategy
 level: advanced
 inputs:
-  - type: brief
-    required: true
   - type: question
     required: true
   - type: voc_reviews
@@ -17,6 +15,8 @@ inputs:
     required: false
   - type: performance_sheet
     required: false
+  - type: customer_needs
+    required: true
 outputs:
   - type: plan
 uses:

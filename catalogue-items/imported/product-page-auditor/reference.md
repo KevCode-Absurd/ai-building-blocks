@@ -1,6 +1,6 @@
 # Evidence: product-page
 
-Peer-reviewed findings behind the `product-page` audit. Effects are as reported in the studies, in the context they were measured. Copy and visual rules are summarized here; their full evidence lives in the `product-copy` and `product-visuals` skills.
+Peer-reviewed findings behind the `product-page` audit. Effects are as reported in the studies, in the context they were measured. Copy and visual rules are summarized here; the full evidence for the copy rules is in the reference.md of the Product description writer (`product-description-writer`). The visual rules have no separate reference file here.
 
 ## Show a view count or a purchase count; switch to purchases as numbers grow
 
@@ -67,4 +67,4 @@ Peer-reviewed findings behind the `product-page` audit. Effects are as reported 
 
 ## Condensed copy and visual rules
 
-The audit's copy checks (best features only, intuitive units, plain language, science-based wording only for utilitarian products) and visual checks (video for hedonic products, gaze away, first-person hand, shine, spacing, right-side placement, complementary items) are summarized from the `product-copy` and `product-visuals` skills; see those reference files for sources and effect sizes. Two of the copy checks — plain language and science-based wording only for utilitarian products — have no primary citation on file and are practitioner tips.
+The audit's copy checks (best features only, intuitive units, plain language, science-based wording only for utilitarian products) and visual checks (video for hedonic products, gaze away, first-person hand, shine, spacing, right-side placement, complementary items) are summarized from the Product description writer; see its reference.md for the copy sources and effect sizes. The visual checks are listed here without effect sizes, so treat them as practitioner tips. Two of the copy checks — plain language and science-based wording only for utilitarian products — have no primary citation on file and are practitioner tips.

@@ -40,6 +40,8 @@ Detect whether a compatible GPU is available, validate it works, and diagnose co
 
 ## Workflow
 
+**Gather first:** the user's MATLAB release, any error message, the GPU model and driver version if known, and the text printed by `nvidia-smi` if they have an NVIDIA card. Also confirm the Parallel Computing Toolbox is installed (it is a paid add-on). No config files are needed.
+
 ### 1. Is a GPU available?
 
 ```matlab
@@ -83,7 +85,7 @@ d.KernelExecutionTimeout
 
 If WDDM: the GPU is shared with the display — long-running kernels may be killed by the OS watchdog, and the GPU may exhibit unstable behaviour when low on memory. If `d.KernelExecutionTimeout` is `true`, kernel timeouts are active.
 
-TCC or MCDM avoid these issues but are only available on select professional and data centre GPUs not connected to a display. If switching is not an option, and user experiences kernel timeouts, advise: increase TDR timeout in Windows Registry (only as a last resort; tell the user to back up the registry or make a restore point first, because a wrong edit can break Windows), close other GPU-accelerated apps, or break computation into smaller chunks.
+TCC or MCDM avoid these issues but are only available on select professional and data centre GPUs not connected to a display. If switching is not an option, and user experiences kernel timeouts, advise: increase TDR timeout in Windows Registry (only as a last resort, and only on a Windows machine where the user has administrator rights; it changes a system setting, so ask for their agreement first). Before any edit, tell the user to make a restore point (in an administrator PowerShell: `Checkpoint-Computer -Description "before TDR change"`) and to back up the key with `reg export "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" tdr-backup.reg`. To undo, double-click `tdr-backup.reg` or restore the restore point. A wrong edit can break Windows, close other GPU-accelerated apps, or break computation into smaller chunks.
 
 ### 6. Benchmark GPU performance (optional)
 

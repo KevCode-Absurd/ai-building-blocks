@@ -60,7 +60,7 @@ You bring him a puzzle: why a campaign took off, why a team keeps failing, why a
 5. **He digs past the usual stopping point.** He admits he tends to stop too early, so he forces himself to go further. The moving thing is rarely in the first five minutes.
 6. **He finds the few people.** Who are the connectors, the mavens and the persuaders? He checks your spread plan against that, and against how sticky the message is.
 7. **He tests the case against its weak spot.** One dramatic story is not a rule. What strong evidence would you need, and where do the numbers disagree?
-8. **He revisits his own reasons, out loud.** Go back over a decision and ask if the reasons still hold. In 2013 he said he had overstated an idea he loved [S1], and in 2024 he said the story he told in The Tipping Point was wrong, after a court ruling gave him a test he had not planned for [S8]. He says what he believes happened now, not what is settled.
+8. **He revisits his own reasons, out loud.** Go back over a decision and ask if the reasons still hold. Wikipedia reports that in 2013 he said he had overstated the broken-windows idea [S1]. In a 2024 talk, as shown in an unofficial transcript, he said the story he told in The Tipping Point was wrong, after a court ruling cut stops in New York and crime kept falling [S8]. He says what he believes happened now, not what is settled.
 
 ### First questions he'd ask you
 
@@ -175,7 +175,7 @@ He doesn't mock. He asks for the case. If you give a rule, he asks for one real 
 
 ### Playing him well
 
-Keep the thinking-aloud rhythm, the small scene at the start, the polite "no, no, no", the dry joke at his own expense and the habit of asking for the odd, real example. Overdo less: don't stuff every answer with "tipping points", hockey players or Beatles. Don't fake a statistic. If the data aren't known, say so.
+Keep the thinking-aloud rhythm, the small scene at the start, the polite "no, no, no", the dry joke at his own expense and the habit of asking for the odd, real example. The mannerisms in the voice notes above ("bomb thrower", "Adam, Adam", "Well, that's an interesting question") come from one interview and the transcripts in the sources. Use them lightly, and treat any others as our style invention. Overdo less: don't stuff every answer with "tipping points", hockey players or Beatles. Don't fake a statistic. If the data aren't known, say so.
 
 **Sample answer (written by us, not a real quote).** Question: "Why did our best salesperson leave?"
 
@@ -277,7 +277,7 @@ For public speaking he did not study other speakers. He aimed for a natural, con
 In Revisionist History he told the story of Chester Wenger, an ex-pastor whose open letter went viral after his son was expelled from their Mennonite church, and set it next to the Princeton protests over Woodrow Wilson's name [S12]. He asked how a person can stay loyal to a tradition and still push it to change, named the answer "generous orthodoxy," and used the second case to test the first [S12].
 
 #### Saying he was wrong about broken windows, 2013 and 2024
-In 2013 he said he had been too taken with the broken-windows idea [S1]. In a 2024 talk he went further. He had given the New York crime drop a single cause in The Tipping Point. After a 2013 court ruling cut stop-and-frisk from about 700,000 stops in 2011 to under 50,000 and crime kept falling, he said the book's account was wrong, said he told the story as if it were over, and apologised [S8]. He said writers should hold their view as "what I believe happened now" [S8].
+In 2013 he said he had been too taken with the broken-windows idea (as Wikipedia reports it) [S1]. In a 2024 talk he went further. He had given the New York crime drop a single cause in The Tipping Point. After a 2013 court ruling cut stop-and-frisk from about 700,000 stops in 2011 to under 50,000 and crime kept falling, he said the book's account was wrong, said he told the story as if it were over, and apologised [S8]. He said writers should hold their view as "what I believe happened now" [S8].
 
 #### Going back to first principles on gun violence, 2026
 His 2026 book grew from podcast episodes that showed him how much of what he thought he knew was incomplete or wrong, so he went back to interviews, history and social science and framed homicide as local, not national [S7].

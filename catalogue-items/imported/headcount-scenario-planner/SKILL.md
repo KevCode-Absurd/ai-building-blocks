@@ -10,6 +10,10 @@ metadata:
 
 Model multiple plausible workforce futures — growth, contraction, disruption, and structural change — so workforce plans hold up under uncertainty instead of assuming a single forecast will come true.
 
+## What you need
+
+A description of the business and the period to plan for. If you already have a hiring plan, bring it, and the scenarios stress-test that plan.
+
 ## Supported tasks
 
 - Building multiple workforce scenarios (base, upside, downside, disruption)

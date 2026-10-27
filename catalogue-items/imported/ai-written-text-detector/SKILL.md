@@ -59,9 +59,11 @@ Inspect a provider’s uncalibrated AI-style signal for a document’s prose, wi
 
 ## Output format
 
+The numbers below are an invented layout example, not a real result. Fill every value from the service's actual reply.
+
 ```
-Provider AI-style score: 0.87 (uncalibrated; lean: ai; not authorship proof)
-prose ratio: 0.82
+Provider AI-style score: [0 TO 1] (uncalibrated; lean: [ai / human / unsure]; not authorship proof)
+prose ratio: [0 TO 1]
 
 linguistic tells:
   - "It is important to note that, in today's fast-paced world" (stock phrase)

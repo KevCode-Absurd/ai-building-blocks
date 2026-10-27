@@ -116,6 +116,8 @@ Before implementing automation, understand:
 | Tilt-Tray Sorter | 5K-20K units/hr | $$$ | Medium to high speed |
 | Bomb-Bay Sorter | 3K-10K units/hr | $$ | Case sorting |
 
+The throughput ranges and cost signs in this table are rough placeholders from the original file. Get the real figures from vendors.
+
 ```python
 import numpy as np
 import pandas as pd
@@ -221,20 +223,20 @@ print(f"Cost per order (amortized): ${sortation['cost_per_order']}")
 **Unit-Load AS/RS:**
 - Full pallet storage
 - 40+ ft high
-- 100-200 cycles/hour
-- Cost: $2M-$10M+
+- 100-200 cycles/hour (placeholder from the original file)
+- Cost: $2M-$10M+ (placeholder range from the original file, not a quote)
 
 **Mini-Load AS/RS:**
 - Tote/carton storage
 - 20-40 ft high
-- 200-400 cycles/hour
-- Cost: $1M-$5M
+- 200-400 cycles/hour (placeholder from the original file)
+- Cost: $1M-$5M (placeholder range from the original file, not a quote)
 
 **Shuttle Systems:**
 - High-density storage
 - Scalable (add shuttles as needed)
-- 400-800+ cycles/hour
-- Cost: $2M-$8M
+- 400-800+ cycles/hour (placeholder from the original file)
+- Cost: $2M-$8M (placeholder range from the original file, not a quote)
 
 ```python
 def asrs_capacity_analysis(pallet_positions_needed, storage_height_ft,
@@ -360,22 +362,22 @@ print(f"Cost per position: ${asrs['cost_per_position']}")
 - Vertical storage with elevator
 - 30-50 ft high
 - Good for small parts
-- Cost: $150K-$300K per unit
+- Cost: $150K-$300K per unit (placeholder range from the original file, not a quote)
 
 **Horizontal Carousels:**
 - Rotating shelves
 - Picker waits, carousel rotates to item
-- Cost: $80K-$150K per unit
+- Cost: $80K-$150K per unit (placeholder range from the original file, not a quote)
 
 **Vertical Carousels:**
 - Similar to VLM but rotating
-- Cost: $100K-$200K per unit
+- Cost: $100K-$200K per unit (placeholder range from the original file, not a quote)
 
 **Shuttle-Based GTP (AutoStore, Exotec, etc.):**
 - Cube storage with robots retrieving bins
 - Very high density
 - Scalable
-- Cost: $2M-$10M+
+- Cost: $2M-$10M+ (placeholder range from the original file, not a quote)
 
 ```python
 def gtp_system_comparison(pick_lines_per_day, operating_hours=16,
@@ -576,17 +578,17 @@ print(f"Labor reduction: {amr_fleet['labor_reduction']} pickers ({amr_fleet['lab
 - Pick individual items
 - Technology still maturing
 - Examples: RightHand Robotics, Berkshire Grey
-- Cost: $250K-$500K per cell
+- Cost: $250K-$500K per cell (placeholder range from the original file, not a quote)
 
 **Pick-to-Light:**
 - Lights guide pickers
 - Simple, effective
-- Cost: $200-$500 per light position
+- Cost: $200-$500 per light position (placeholder range from the original file, not a quote)
 
 **Voice Picking:**
 - Hands-free, eyes-free
 - Headset directs picker
-- Cost: $2K-$3K per headset + software
+- Cost: $2K-$3K per headset + software (placeholder range from the original file, not a quote)
 
 ```python
 def picking_technology_comparison(pick_lines_per_day, accuracy_target=0.995):
@@ -837,13 +839,13 @@ def automation_selection_decision(volume_level, sku_count, order_profile,
             'technology': 'Shuttle-based GTP (AutoStore, Exotec)',
             'priority': 1,
             'reason': 'High volume justifies high automation, excellent ROI',
-            'est_cost': '$5M-$15M'
+            'est_cost': '$5M-$15M'  # placeholder, not a quote
         })
         recommendations.append({
             'technology': 'Cross-Belt Sorter',
             'priority': 2,
             'reason': 'High throughput sortation needed',
-            'est_cost': '$3M-$8M'
+            'est_cost': '$3M-$8M'  # placeholder, not a quote
         })
 
     # Medium volume, e-commerce profile
@@ -852,13 +854,13 @@ def automation_selection_decision(volume_level, sku_count, order_profile,
             'technology': 'AMR Fleet + Pick-to-Light',
             'priority': 1,
             'reason': 'Scalable, flexible for e-commerce picking',
-            'est_cost': '$500K-$2M'
+            'est_cost': '$500K-$2M'  # placeholder, not a quote
         })
         recommendations.append({
             'technology': 'Vertical Lift Modules (VLM)',
             'priority': 2,
             'reason': 'Goods-to-person for fast movers',
-            'est_cost': '$400K-$1M'
+            'est_cost': '$400K-$1M'  # placeholder, not a quote
         })
 
     # Pallet-focused operations
@@ -867,13 +869,13 @@ def automation_selection_decision(volume_level, sku_count, order_profile,
             'technology': 'AS/RS Unit-Load',
             'priority': 1,
             'reason': 'Dense pallet storage, high throughput',
-            'est_cost': '$2M-$8M'
+            'est_cost': '$2M-$8M'  # placeholder, not a quote
         })
         recommendations.append({
             'technology': 'AGV Pallet Movers',
             'priority': 2,
             'reason': 'Automate pallet transport',
-            'est_cost': '$500K-$1.5M'
+            'est_cost': '$500K-$1.5M'  # placeholder, not a quote
         })
 
     # Labor scarcity driver
@@ -882,13 +884,13 @@ def automation_selection_decision(volume_level, sku_count, order_profile,
             'technology': 'AMR Fleet',
             'priority': 1,
             'reason': 'Reduce labor dependency, scalable',
-            'est_cost': '$300K-$1M'
+            'est_cost': '$300K-$1M'  # placeholder, not a quote
         })
         recommendations.append({
             'technology': 'Voice Picking',
             'priority': 2,
             'reason': 'Improve productivity of available labor',
-            'est_cost': '$50K-$200K'
+            'est_cost': '$50K-$200K'  # placeholder, not a quote
         })
 
     # Low budget
@@ -897,13 +899,13 @@ def automation_selection_decision(volume_level, sku_count, order_profile,
             'technology': 'WMS + RF Scanning',
             'priority': 1,
             'reason': 'Foundation for efficiency, low cost',
-            'est_cost': '$100K-$300K'
+            'est_cost': '$100K-$300K'  # placeholder, not a quote
         })
         recommendations.append({
             'technology': 'Conveyor System (Basic)',
             'priority': 2,
             'reason': 'Improve flow at modest cost',
-            'est_cost': '$100K-$500K'
+            'est_cost': '$100K-$500K'  # placeholder, not a quote
         })
 
     else:
@@ -912,7 +914,7 @@ def automation_selection_decision(volume_level, sku_count, order_profile,
             'technology': 'Start with WMS + RF Scanning',
             'priority': 1,
             'reason': 'Build foundation before advanced automation',
-            'est_cost': '$100K-$300K'
+            'est_cost': '$100K-$300K'  # placeholder, not a quote
         })
 
     return pd.DataFrame(recommendations)
@@ -978,7 +980,7 @@ print(automation_recs)
 ### Challenge: High Capital Cost
 
 **Problem:**
-- $2M-$10M+ investment
+- $2M-$10M+ investment (placeholder from the original file)
 - Long payback periods
 - Risk of technology obsolescence
 

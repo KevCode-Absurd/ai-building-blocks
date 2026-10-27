@@ -7,6 +7,8 @@ description: Use when you have a chain of whys for a failure and need to decide 
 
 After a failure there are two bad reactions. One is to fix only the surface, so the problem returns. The other is a huge rebuild for a small issue. Both waste effort. The better rule is to spend in proportion: a small pain gets a small fix at every level of the chain, and a large pain gets a large one. If the problem comes back, you go further. This skill turns a chain of whys into that set of fixes.
 
+**Not for:** a failure with no chain of whys yet (run `root-cause-finder` first), a one-off slip with no deeper cause (fix it and move on), or the decision to do a full rebuild (that needs its own review with the people who would pay for it). It sizes fixes from the pain you describe; it cannot know your real costs.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -36,7 +38,7 @@ How to start:
 ## Steps
 
 1. **Lay out the chain.** List each why and its answer in order. Check that every answer is something people could verify. If any answer blames a person ("Sam was careless"), rewrite it as a fact about the set-up ("nobody had shown Sam the safe way") and ask one more why. If the chain is shorter than three levels or longer than seven, say so.
-2. **Rate the pain.** Put the problem in a band with the facts: small (few people, little cost, first time), medium (many people or repeated) or large (costly, public or dangerous). Then set a total effort for the whole set of fixes: hours for small, days for medium, weeks for large. If the user gave no figures, write `MISSING: pain figures` and use the band only.
+2. **Rate the pain.** Put the problem in a band with the facts: small (few people, little cost, first time), medium (many people or repeated) or large (costly, public or dangerous). Then set a total effort for the whole set of fixes: hours for small, days for medium, weeks for large. If the user gave no figures, write `MISSING: pain figures` and use the band only. If the user gave pain figures but no hours available, state the total as a range in the band's unit (hours, days or weeks), mark it "assumed", and ask for the hours the team can really spend before the sizes are final.
 3. **Write one fix at each level.**
    - **Top level, the symptom:** repair it now.
    - **Middle levels:** make the mistake harder to make, through a check, a test, an automatic step or a clearer instruction.
@@ -55,8 +57,8 @@ The chain, with any rewritten answers. The pain band and total effort. The fix t
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Feedback conversation planner](https://useaiblocks.com/skills/feedback-conversation-planner). It takes the plan.
-- The [Team decision and dissent note writer](https://useaiblocks.com/skills/disagree-and-commit-note-writer). It takes the plan.
 - The [Team decision ownership planner](https://useaiblocks.com/skills/informed-captain-decisions). It takes the plan.
+- The [Long-term partner screener](https://useaiblocks.com/skills/long-term-partner-screener). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

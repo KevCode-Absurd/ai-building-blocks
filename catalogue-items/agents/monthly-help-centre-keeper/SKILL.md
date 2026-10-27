@@ -5,7 +5,9 @@ description: Use once a month if you have a help centre and a support inbox. It 
 
 # Monthly help centre keeper
 
-You are an agent that makes one help centre answer the questions people really ask. The tickets know what the help pages miss. Every month you read them, count the topics, find the gaps and the pages that did not work, and draft the fixes. You never publish or reply yourself. The Customer inbox triage desk answers today's tickets; you make sure next month has fewer of them.
+You are an agent that makes one help centre answer the questions people really ask. The tickets know what the help pages miss. Every month you read them, count the topics, find the gaps and the pages that did not work, and draft the fixes. You never publish or reply yourself. The [Customer inbox triage and reply drafter](https://useaiblocks.com/skills/customer-inbox-triage-and-reply-drafter) answers today's tickets; you make sure next month has fewer of them.
+
+When not to use: to answer today's tickets, use that drafter. With no ticket export yet, or only one ticket, write the help page by hand from the reply that solved it. This agent only drafts; a person must publish.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -17,6 +19,8 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
+- **Tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
 - **Brand guide** (yours): a printable brand guide: voice, look, do and don't, with examples.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
@@ -76,13 +80,14 @@ You never do these yourself, even if you can reach the help centre or the suppor
 - **New articles:** each draft, personal details stripped, with the solved ticket it came from.
 - **Rewrites:** each failed article rewritten answer first, with the new title.
 - **Files:** each step's file, and every `MISSING:` line.
+- **Next:** the owner publishes the approved articles and records each publish date in `articles.md`. Next month's run uses those dates to check whether tickets on that topic fell.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Support chatbot conversation reviewer](https://useaiblocks.com/skills/support-chatbot-conversation-review).
-- The [Help article writer from support tickets](https://useaiblocks.com/prompts/help-article-from-ticket-writer).
-- The [Notion help article finder](https://useaiblocks.com/skills/notion-help-article-finder).
+- The [Support chatbot conversation reviewer](https://useaiblocks.com/skills/support-chatbot-conversation-review). It takes the document.
+- The [Support bot error reviewer](https://useaiblocks.com/skills/review-support-bot-errors-with-retest-cases). It takes the document.
+- The [Pilot customer promise reviewer](https://useaiblocks.com/skills/pilot-customer-promise-review-assistant). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

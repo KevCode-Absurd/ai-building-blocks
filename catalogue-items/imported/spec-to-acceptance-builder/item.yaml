@@ -8,12 +8,16 @@ role: orchestrate
 job: ops
 level: expert
 inputs:
-  - type: brief
+  - type: question
     required: true
   - type: codebase
     required: false
 outputs:
   - type: code_change
+  - type: document
+  - type: test_report
+  - type: product_spec
+    required: true
 uses: []
 origin: imported
 source:

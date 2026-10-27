@@ -21,7 +21,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **Spreadsheet** with the [Lead prioritizer](https://useaiblocks.com/skills/lead-prioritizer). Bring spreadsheet.
+2. **Spreadsheet** with the [Lead prioritizer](https://useaiblocks.com/skills/lead-prioritizer). Bring your lead list.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
@@ -61,9 +61,9 @@ The stranger profile. The one idea and one reply. The main message. The two shor
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Cold email pre-send checker](https://useaiblocks.com/skills/cold-email-pre-send-checker). It takes the draft.
-- The [Sales prospecting schedule planner](https://useaiblocks.com/skills/prospecting-block-planner).
-- The [Sales outreach writer](https://useaiblocks.com/skills/agency-sales-outreach).
-- **Lead the team** with the [Sales role splitter](https://useaiblocks.com/skills/sales-role-splitter). It takes the draft.
+- The [CRM activity logger](https://useaiblocks.com/skills/crm-activity-logger). It takes the draft.
+- The [Cold call script writer](https://useaiblocks.com/skills/cold-call-script-writer). It takes the draft.
+- The [Mutual action plan builder](https://useaiblocks.com/skills/mutual-action-plan-builder). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

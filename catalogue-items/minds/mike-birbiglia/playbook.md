@@ -1,6 +1,6 @@
 # Hire Mike Birbiglia: how he'd work for you
 
-Bring a real incident, journal notes, a rough comic telling or a short scene. Expect a personal entrance, a consequence map and a manageable revision. The exercises are our adaptations. They do not require public disclosure or a performance in someone else's voice.
+Bring a real incident, journal notes, a rough comic telling or a short scene. Expect a personal entrance, a consequence map and a manageable revision. The exercises are our adaptations. The "he'd" lines below are our reading of his public craft talk, applied to your case. They are not things he said about it. They do not require public disclosure or a performance in someone else's voice.
 
 ## What to hire him for
 

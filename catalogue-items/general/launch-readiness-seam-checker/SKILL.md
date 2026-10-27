@@ -39,7 +39,7 @@ How to start:
 5. **Require a reason and an approval for every change.** For each change since the last test, write its reason and who approved it. A change without both is flagged. State the rule for any change from now to launch.
 6. **Name one person to read the final package by eye.** The package is what will actually go live: files, settings, scripts, schedules and messages. The reader looks only for join errors, such as a name that differs, a time zone, a format, a setting that depends on another. Write their name or `MISSING: final reader`.
 7. **Plan a full run-through with a real person.** Write the steps from start to finish, in the real order, with who does each and what they watch. Include a person who acts as the user or operator. State what counts as a pass, and when the launch is called off.
-8. **Score readiness out of 100.** Score six checks, each full (1), half (0.5) or none (0): all joins checked, unique priorities, overload plan, change control, final reader, full run-through done. Readiness score = points divided by 6, times 100, rounded. Show the six marks. A run-through only planned scores none.
+8. **Score readiness out of 100.** Score six checks, each full (1), half (0.5) or none (0): all joins checked, unique priorities, overload plan, change control, final reader, full run-through done. Readiness score = points divided by 6, times 100, rounded. Show the six marks and the sum. For example, marks of 1, 1, 0.5, 1, 0 and 0 add to 3.5, and 3.5 divided by 6, times 100, is 58. A run-through that is only planned scores none; only one done with a real person scores full or half.
 9. **Check it.** Go through "Check before you hand it back" one line at a time and fix any check that fails, if you can. Under CHECKS MISSED, write one line for each check still missed and why, or "none".
 
 ## What you hand back
@@ -49,8 +49,9 @@ The launch. The parts with owners. The joins with what crosses each. The priorit
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Module design coach](https://useaiblocks.com/skills/module-design-coach). It takes the audit report.
 - The [Error alarms and recovery planner](https://useaiblocks.com/skills/error-message-designer). It takes the audit report.
-- The [Module design coach](https://useaiblocks.com/skills/module-design-coach).
+- The [README and decision interviewer](https://useaiblocks.com/skills/readme-and-decision-interviewer). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -60,7 +61,8 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every job has one priority and none tie.
 - An overload plan names what is dropped and what is kept.
 - Every change has a reason and an approver.
-- A full run-through is planned or done with a real person.
+- A full run-through is planned with a real person, and scored none until it has been done.
+- The readiness score shows its six marks and the sum.
 
 ## If something is missing
 

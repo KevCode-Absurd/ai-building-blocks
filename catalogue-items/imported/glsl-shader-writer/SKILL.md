@@ -108,7 +108,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
 }
 ```
 
-This example is fragment-only and written for Shadertoy, where `iResolution` is supplied for you. To run it in WebGL or Three.js, declare `uniform vec3 iResolution;` (or `vec2`) and set it from your code to the canvas size. Add a `void main() { mainImage(gl_FragColor, gl_FragCoord.xy); }` wrapper, and pair it with a simple vertex shader that draws a full-screen quad.
+This example is fragment-only and written for Shadertoy, where `iResolution` is supplied for you. To run it in WebGL or Three.js, declare `uniform vec3 iResolution;` and set it from your code to the canvas width and height, with 1.0 as the third value. The example only uses `iResolution.xy`. Add a `void main() { mainImage(gl_FragColor, gl_FragCoord.xy); }` wrapper, and pair it with a simple vertex shader that draws a full-screen quad.
 
 ## Best Practices
 

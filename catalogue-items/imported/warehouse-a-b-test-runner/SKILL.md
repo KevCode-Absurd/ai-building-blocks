@@ -24,13 +24,15 @@ When to use this skill: deciding between platform vs warehouse-native, building 
 
 This skill spans the operational execution model for warehouse-native experimentation. It does not replace the methodology and interpretation skills; it composes with them.
 
-- `experiment-design` covers methodology: hypotheses, sample size, randomization unit, primary metric. Tool-agnostic. Read it first to design the experiment correctly regardless of where it runs.
+- `experiment-design` (in AI Blocks, the experiment-designer item) covers methodology: hypotheses, sample size, randomization unit, primary metric. Tool-agnostic. Read it first to design the experiment correctly regardless of where it runs.
 - `experimentation-analytics` covers interpretation: confidence intervals, p-values, effect size, decision frameworks. Tool-agnostic. Read it when results land.
 - `experimentation-platform-orchestrator` covers the platform-vs-warehouse decision in detail. Read it to decide whether to use a platform or this skill.
 - `feature-flagging` covers assignment infrastructure when not running through a platform. Read it for the flag-management discipline that this skill assumes.
 - This skill (`data-warehouse-experimentation`) covers the operational execution: SQL-based assignment, exposure logging, metric definitions in dbt, statistical analysis in SQL or Python, variance reduction, sequential testing.
 
 The distinction is between "what to do" (the methodology and interpretation skills) and "how to do it without a vendor platform" (this skill). Read this skill after you have decided warehouse-native is the right call. If you are still deciding, start with `experimentation-platform-orchestrator`.
+
+If you have an experiment plan from the experiment designer, use its hypothesis, metric and sample size here.
 
 ---
 
@@ -264,7 +266,7 @@ adjusted_metric = metric - theta * (pre - pre.mean())
 
 Run the t-test on the adjusted metric instead of the raw metric. The mean is preserved (CUPED does not change the point estimate) but the variance is smaller, so the confidence interval is narrower.
 
-CUPED typically reduces variance by 30 to 50 percent on engagement metrics. That is equivalent to running an experiment 1.5x to 2x longer for the same statistical power. Worth the engineering investment for any team running 5+ experiments per quarter.
+The source reports that CUPED often reduces variance by roughly 30 to 50 percent on engagement metrics. That is a rough range from the author, not a guarantee. Your own pre-test data decides the real gain, so check how well the pre-test metric predicts the test metric before you count on it. A bigger variance cut means you reach the same statistical power in less time.
 
 Other variance reduction techniques.
 
@@ -355,7 +357,7 @@ When designing or running a warehouse-native experiment, walk these 12 considera
 5. **SRM check.** Sample ratio mismatch indicates assignment bugs. Check before computing any metric.
 6. **Metric definition reuse.** Same dbt model for board and experiment. No experiment-specific calculations that drift from canonical metrics.
 7. **Pre-experiment power analysis.** Realistic MDE based on the historical distribution of past observed effects.
-8. **Variance reduction.** CUPED for engagement metrics. 30 to 50 percent variance reduction is worth the engineering for any team running 5+ experiments per quarter.
+8. **Variance reduction.** CUPED for engagement metrics. The author reports roughly 30 to 50 percent variance reduction, but your own data decides the gain.
 9. **Statistical method.** Welch's t-test as default. Bootstrap for skewed distributions. Doubly robust estimation for quasi-experiments.
 10. **Sequential testing.** mSPRT or stop-at-N. Document alpha-spending. If you cannot implement correctly, do not peek.
 11. **Multiple comparisons.** Bonferroni or Benjamini-Hochberg correction across secondary metrics.

@@ -98,6 +98,7 @@ output_shape: |
 
   RETENTION  <cohort read at day 90, 180, 365, or MISSING: cohort data>
   TEST TO RUN  <geo lift or brand holdout, or none needed>
+  CHECKS MISSED  <checks that failed or could not run, or none>
 
   SCORE  <n>/100 (data + structure + creative). Weights are a starting point.
 

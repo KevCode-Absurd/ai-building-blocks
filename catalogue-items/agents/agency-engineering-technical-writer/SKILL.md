@@ -11,8 +11,9 @@ Write developer documentation that is accurate and that readers finish. Bad docs
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Developer docs writer](https://useaiblocks.com/skills/developer-docs-writer). It takes the document.
 - The [Developer documentation reviewer](https://useaiblocks.com/skills/monthly-developer-docs-keeper). It takes the document.
-- The [Developer docs writer](https://useaiblocks.com/skills/developer-docs-writer).
+- The [SOP and runbook checker](https://useaiblocks.com/skills/sop-and-runbook-checker). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -24,10 +25,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Codebase** (yours): a project's code, in a folder or repo the AI can open.
+- **Your API spec** (yours): the API's endpoints, data shapes, sign-in method and errors, such as an OpenAPI file.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for source text, codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for source text, codebase, your API spec. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -36,6 +38,8 @@ How to start:
 <!-- /needs -->
 
 ## What to get from the user
+
+These are the inputs that count. If the generic "Before you start" list above asks for source text such as an article, transcript or book notes, ignore that part. This agent takes code, an OpenAPI file, a spec, issue threads or engineer notes.
 
 1. **What is being documented.** A feature, endpoint, library, setup process or concept.
 2. **The reader.** Who they are and what they already know. If the user does not say, ask once. Do not assume.
@@ -80,6 +84,7 @@ Doc type: <type> | Reader: <who, what they know>
 ## Suggested next pages
 - <related doc>
 ```
+The Accuracy checks table and the Gaps list are also your CHECKS MISSED list: name every check marked not run or still open, or write "none".
 
 ## Rules
 

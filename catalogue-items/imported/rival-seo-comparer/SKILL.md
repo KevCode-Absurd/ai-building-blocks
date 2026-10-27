@@ -33,6 +33,7 @@ Compare a site to its competitors and find the gaps worth closing. Stack-agnosti
 - The user's site
 - 3 to 5 named competitors (or the topic area, if competitors are not yet identified)
 - Access to a keyword tool, a backlink tool, and any crawler. Ahrefs, Semrush and Similarweb are paid services that need their own account or key. Without them, do manual search checks and mark what you could not verify.
+- Keyword or backlink tool exports (CSV or sheet), if the user has them. Use them as the data for the comparison.
 
 If competitors are unknown, start by listing the top 10 ranking domains for the user's top 10 priority keywords. Pick the 3 to 5 that appear most often.
 

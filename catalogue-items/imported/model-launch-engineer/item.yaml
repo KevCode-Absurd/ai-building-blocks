@@ -10,8 +10,10 @@ level: expert
 inputs:
   - type: codebase
     required: true
-  - type: brief
+  - type: question
     required: false
+  - type: ai_model
+    required: true
 outputs:
   - type: deploy_url
     required: true

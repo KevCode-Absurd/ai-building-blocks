@@ -9,7 +9,7 @@ subhead: Show your garment shape in a new fabric before you sew anything. Give i
 explain: |
   A sample image of your garment shape made in a new fabric, before you cut or sew anything. Test eight fabrics for the price of eight image runs, not eight sample garments.
 
-  You give two images: a garment style sheet, which sets the cut, structure and camera angle, and a fabric swatch, which sets material, texture, shine and how it hangs. The skill writes a prompt that keeps the shape fixed and replaces only the cloth, so a chunky knit can become silk satin with a matching drape. A close-up swatch works best. It uses the dlazy command line tool, which needs an account and credits.
+  You give two images: a garment style sheet, which sets the cut, structure and camera angle, and a fabric swatch, which sets material, texture, shine and how it hangs. The skill writes a prompt that keeps the shape fixed and replaces only the cloth, so a chunky knit can become silk satin with a matching drape. A close-up swatch works best. It uses the dlazy command line tool, which needs an account and credits. The skill file is in Chinese, but the prompt templates and commands in it are in English, and those are the parts to copy.
 when:
   - You want to see one design in several fabrics before sampling.
   - A buyer asks how a style would look in a different material.
@@ -35,7 +35,7 @@ how_to_use:
   - Tell your AI the garment type and the fabric name. Ask it to follow the skill. The skill file is in Chinese, so ask your AI to answer in English.
   - Let it write the prompt and make the image. Ask for the high quality setting. The prompt should name the fabric's look and how it hangs, for example "lustrous highlights along the folds, fluid drape" for satin, or "vertical ridges, matte pile" for corduroy. It should also say "same cut, same lengths, same collar, cuff and hem, same camera angle, replace only the material".
   - Check that the outline matches, the colour is right and the seams are still there. If not, ask for the fix lines.
-  - Treat the image as a preview. It does not show real feel or weight.
+  - Treat the image as a preview. It does not show real feel or weight. Do not show it to buyers as a real product photo.
   - Next, save the fabric images you like, compare them with the physical swatch order, and pass the chosen fabric to your maker or pattern maker.
 output_sample:
   input:

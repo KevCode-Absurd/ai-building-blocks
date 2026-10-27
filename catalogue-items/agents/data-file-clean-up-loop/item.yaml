@@ -7,11 +7,13 @@ role: orchestrate
 job: ops
 level: beginner
 inputs:
+  - {type: dataset, required: true}
+  - {type: question, required: false}
   - {type: spreadsheet, required: true}
-  - {type: brief, required: false}
 outputs:
   - {type: spreadsheet}
   - {type: audit_report}
+  - {type: dataset, required: true}
 uses: [data-quality-auditor, messy-spreadsheet-cleaner, data-cleaner, spreadsheet-formula-auditor, data-quality-scorecard-maker]
 steps:
   - uses: data-quality-auditor

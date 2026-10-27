@@ -30,12 +30,13 @@ you_get:
   - What to change, without edits made for you
 how_to_use:
   - Gather the .github/workflows folder from your repo and a list of the AI agent actions you use. For a repo link, install the GitHub CLI and log in first.
+  - Your workflow files and repo link go to the AI tool you choose. If your repo is private or confidential, check your company's rules on sharing code with an AI tool first.
   - Open Claude, ChatGPT or Gemini and paste in the skill text.
   - Add your repo link, or paste the files from .github/workflows. Say which AI agent actions you use.
   - For a repo link, your AI needs the GitHub CLI installed and logged in with read access. Without that, paste the workflow files.
   - Read the findings from High down. Each one shows the path the text takes and what to change.
-  - Make the changes yourself. The skill only reads and reports, and does not edit your files. Fix the High findings first, then run the check again to confirm they are gone.
-  - This version uses built-in checks only. The extra reference files it mentions are not included, so it covers fewer attack types than the full method.
+  - Make the changes yourself. The skill only reads and reports, and does not edit your files. Fix the High findings first, then run the check again to confirm they are gone. After that, review the sandbox settings of any remaining findings.
+  - This version uses built-in checks only. The extra reference files it mentions are not included, so it covers fewer attack types than the full method. The deeper per-action fix notes are missing, so remediation advice is general. Treat any action-version detail as unverified.
 output_sample:
   input:
     - Your repo link, or the text of your workflow files

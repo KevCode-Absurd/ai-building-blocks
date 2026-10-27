@@ -58,9 +58,9 @@ Select the appropriate Actor based on research needs:
 | Comprehensive tracking | `apify/instagram-scraper` | Full data |
 | API-based trends | `apify/instagram-api-scraper` | API access |
 | Engagement trends | `apify/export-instagram-comments-posts` | Comment tracking |
-| Product trends | `apify/facebook-marketplace-scraper` | Marketplace data |
+| Product trends | `apify/facebook-marketplace-scraper` | Marketplace data. Skip unless the data is public and the site's terms allow it |
 | Visual analysis | `apify/facebook-photos-scraper` | Photo trends |
-| Community trends | `apify/facebook-groups-scraper` | Group monitoring |
+| Community trends | `apify/facebook-groups-scraper` | Group monitoring. Skip unless the data is public and the site's terms allow it |
 | YouTube Shorts | `streamers/youtube-shorts-scraper` | Short-form trends |
 | YouTube hashtags | `streamers/youtube-video-scraper-by-hashtag` | Hashtag videos |
 | TikTok hashtags | `clockworks/tiktok-hashtag-scraper` | Hashtag content |
@@ -92,7 +92,7 @@ Before running, ask:
    - **Quick answer** - Display top few results in chat (no file saved)
    - **CSV** - Full export with all fields
    - **JSON** - Full export in JSON format
-2. **Number of results**: Based on character of use case
+2. **Number of results**: Based on character of use case. If the user gives no answer, use 10 results per scraper for the first run, and a spend cap of 1 US dollar of Apify credit. Never go above the default without a yes
 
 ### Step 4: Run the Script
 

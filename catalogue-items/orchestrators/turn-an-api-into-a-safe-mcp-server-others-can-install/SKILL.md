@@ -22,9 +22,12 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **What you need** (use your own material or the linked skill):
 - **Codebase** (yours): a project's code, in a folder or repo the AI can open.
 
+**Makes it better (optional):**
+- **Your API spec** (yours): the API's endpoints, data shapes, sign-in method and errors, such as an OpenAPI file.
+
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for codebase, your API spec. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
@@ -66,6 +69,7 @@ Pause here: Apply every fix marked must-fix, then run the server once more.
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [OAuth API access setup helper](https://useaiblocks.com/skills/sign-in-flow-setup-helper).
 - The [Google Ads OAuth setup planner](https://useaiblocks.com/skills/google-ads-oauth-setup-planner).
+- The [Exposed secrets finder](https://useaiblocks.com/skills/exposed-secrets-finder). It takes the deploy url.
 - The [Google Ads developer access checker](https://useaiblocks.com/skills/google-ads-developer-access-setup-planner).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

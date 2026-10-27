@@ -11,7 +11,7 @@ explain: |
 
   Name the competitor and describe the deal. The skill reads the rival's public pages for launches, pricing changes and news. If you give it your closed deals, loss reasons and call notes, it adds what your own history shows, such as where you tend to win. It says what it could not check, and it tells you when your sample is too small to trust.
 
-  It can also build a team battlecard or a weekly digest of what rivals changed. It works from facts and sources, and it marks a guess as a guess.
+  It can also build a team battlecard or a weekly digest of what rivals changed. It works from facts and sources, and it marks a guess as a guess. This is Anthropic's competitive-intelligence skill, shared under the Apache 2.0 licence.
 when:
   - A prospect says they are also looking at a rival, and you have a call coming up.
   - You keep losing deals to one competitor and want to know why.
@@ -35,8 +35,9 @@ you_get:
   - A battlecard or weekly digest (optional)
 how_to_use:
   - "Open Claude, ChatGPT or Gemini. Turn on web search: the skill reads the rival's public pages."
-  - Paste the skill text into the chat.
-  - "Under it, paste the rival's name and the deal in a few lines. Add a closed-deals export and call notes if you have them."
+  - Add the skill to your AI with the buttons on this page, or paste the skill text into the chat.
+  - "First paste the rival's name. Then paste the deal in three lines: the buyer, the stage and what they care about. A closed-deals export and call notes are optional. With neither, you get the rival's public view only."
+  - In a plain chat in ChatGPT or Gemini, the parts of the skill about connectors, Pages and records do not apply. Skip them. Pasted files and notes are a full input.
   - It reads public pages only. Check a rival site's terms before you lean on its pages in a claim you make to a buyer.
   - Read the plan first, then the sources under it. Check any claim marked unverified before you say it to a buyer.
   - If you use a connected CRM, email or call-recording tool, it needs your own access, and some of these are paid. Files you paste work as well.

@@ -24,7 +24,7 @@ Segments your highest-value customers by order count and total lifetime spend, t
 |-----------|------|----------|---------|-------------|
 | store | string | yes | — | Store domain |
 | format | string | no | human | `human` or `json` |
-| dry_run | bool | no | false | Preview without tagging |
+| dry_run | bool | no | true | Preview without tagging. Set it to false only after the user has seen the preview and says to tag for real |
 | min_orders | integer | no | 3 | Minimum lifetime order count |
 | min_spend | float | no | 200 | Minimum lifetime spend (store currency) |
 | tag | string | no | loyalty-vip | Tag applied to qualifying customers |
@@ -32,11 +32,11 @@ Segments your highest-value customers by order count and total lifetime spend, t
 ## Workflow Steps
 
 1. **OPERATION:** `customers` — query
-   **Inputs:** filter `orders_count:>=(min_orders)`, `total_spent:>=(min_spend)`, `first: 250`, pagination
+   **Inputs:** filter `orders_count:>=(min_orders)`, `total_spent:>=(min_spend)`, `-tag:(tag)` (so customers who already have the tag are skipped), `first: 250`, pagination
    **Expected output:** List with `id`, `defaultEmailAddress { emailAddress }`, `firstName`, `lastName`, `ordersCount`, `totalSpentV2`; paginate until `hasNextPage: false`
 
 2. **OPERATION:** `tagsAdd` — mutation
-   **Inputs:** Customer `id`, tag from `tag` parameter
+   **Inputs:** Customer `id`, tag from `tag` parameter. Run this once for every customer id step 1 returned, so tell the user how many records it will change before a live run
    **Expected output:** Confirmation per customer; collect `userErrors`
 
 ## GraphQL Operations
@@ -125,6 +125,7 @@ CSV `loyalty_segment_<YYYY-MM-DD>.csv` with columns:
 | `userErrors` on tagsAdd | Invalid customer ID | Log, skip, continue |
 
 ## Best Practices
-- Before running, check if customers already have the loyalty tag — add `NOT tag:loyalty-vip` to your query filter to skip already-enrolled customers.
+- The export holds customer names and emails. Tell the user to store and share it under their own privacy rules and customer consent terms.
+- The query in step 1 already skips customers who have the tag. Remove that filter only if the user wants to re-export people already tagged.
 - Export and review the customer list before tagging if you're unsure about the threshold values — use `dry_run: true` to see the count, then adjust `min_orders` and `min_spend` before committing.
 - Combine with `customer-win-back`: tag high-LTV lapsed customers with both `loyalty-vip` and a win-back tag to identify your highest-priority re-engagement targets.

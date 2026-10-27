@@ -10,6 +10,8 @@ explain: |
   An honest estimate of whether AI wrote a document, with the wording clues behind it and a clear "cannot tell" when the document is not suited to testing. It reads style only. It cannot prove who wrote something.
 
   You send a file or pasted text to a detection service. It returns a lean of AI, human or unsure, a probability between 0 and 1, the phrases and patterns it flagged, such as stock openers and sentences of the same length, and its reasoning. Forms, tables and scans are refused instead of guessed. Treat the result as one signal for triage, never a verdict, because people write plainly and AI can too. It needs an API key for the service.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (Sketchjar) says Apache-2.0. Credit goes to Sketchjar and sickn33.
 when:
   - You teach and want a first look at a suspicious student essay.
   - You review inbound articles or guest posts and need to triage them.
@@ -31,7 +33,7 @@ you_get:
 how_to_use:
   - Get consent from the writer first. Your document is sent to a hosted third party, so remove private details you do not need.
   - Open an AI that can run a web request, such as Claude with code tools. Paste the skill instructions.
-  - Add your Stipple API key, then give it your file, link or pasted text.
+  - Add your Stipple API key, then give it your file, link or pasted text. You get a key from the Stipple website (stipple.sh). We do not know if it is free or paid, or what the allowance is, so read Stipple's current terms and privacy rules on that site before you sign up. Keep the key out of the chat and out of shared files.
   - Read the lean, the flagged phrases and the limits note. If it says the document is not prose, stop there.
   - Treat the result as one signal. Talk to the writer before you act on it.
   - If the result is unsure or cannot tell, do not treat it as a no. Talk to the writer, or use a document check that looks at the file itself.

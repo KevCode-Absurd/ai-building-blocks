@@ -10,7 +10,9 @@ level: intermediate
 inputs:
   - type: question
     required: true
-  - type: source_text
+  - type: map_data
+    required: false
+  - type: brand_brain
     required: false
 outputs:
   - type: plan

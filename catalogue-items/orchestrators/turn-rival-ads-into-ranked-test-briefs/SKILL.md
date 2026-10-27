@@ -40,7 +40,9 @@ How to start:
 
 ## What you need
 
-The brand file is read from four files in your brand brain: `00-start-here.md`, `voice-and-look.md`, `offers.md` and `proof-and-claims.md`. The run stops at step 1 if the export has no ads.
+Read the brand brain in two parts. Steps 3 and 4 use `00-start-here.md`, `voice-and-look.md`, `offers.md` and `proof-and-claims.md` for the briefs and the claims you may make. Step 2 also reads `market.md`, `business.md` and `customers.md`, as the general list above says, for the options buyers weigh and the open ground. All of this is optional. The run stops at step 1 if the export has no ads.
+
+What this chain adds over the four skills alone: each step starts from the one before, so the briefs rest on the counts and the gaps, and the layout fits the budget you gave.
 
 - **A rival's ads from the Meta Ad Library** (required). An export or a hand-collected list with ad copy, format, start date and destination link, inactive ads included. Note the date you collected them. Pick a rival a step or two above your size. Use the public library only, no paid scraping tools.
 - **Your brand file** (optional, recommended). Your products, voice and the claims you may make. Without it, the gaps are marked `CANDIDATE` and any claim a brief needs is marked `MISSING:`.

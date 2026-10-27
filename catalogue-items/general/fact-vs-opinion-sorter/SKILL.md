@@ -63,8 +63,8 @@ CHECKS MISSED   <one line each, or none>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Source note summariser](https://useaiblocks.com/prompts/source-note-summariser). It takes the audit report.
-- The [Persuasive claim truth checker](https://useaiblocks.com/skills/persuasive-claim-truth-checker).
 - The [Market research report writer](https://useaiblocks.com/skills/market-research-report-writer). It takes the audit report.
+- The [Scholarly database searcher](https://useaiblocks.com/skills/scholarly-database-searcher). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

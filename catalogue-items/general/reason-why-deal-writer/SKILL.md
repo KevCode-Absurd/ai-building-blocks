@@ -44,7 +44,7 @@ How to start:
 1. **State the plain proposition.** Write the deal in one sentence using the real numbers: the price, the gift or the discount, the terms and the end date. Mark any missing number `MISSING:`.
 2. **List why a stranger would doubt it.** Write four to six doubts, such as "Why is it this cheap?", "What is the catch?" and "Why me?". Draw them from the persona, reviews or common sense.
 3. **Write reasons the buyer already knows.** List true, familiar reasons for a deal: a sale, a clear-out of old stock, the end of a season, a new version arriving, an anniversary. For each, say what must be true for it to be honest.
-4. **Write stronger reasons that single out this reader.** List reasons tied to the person: their name, trade, qualification, town or group; a trade-in; a lower price in return for their honest opinion; a referral from someone they know. Use the shortlist's group. For each, say what fact makes it true.
+4. **Write stronger reasons that single out this reader.** List reasons tied to the person: their name, trade, qualification, town or group; a trade-in; a referral from someone they know. Do not offer a discount or gift in return for a review or an opinion unless the terms are disclosed and the platform allows it, and never in return for a positive one. Use the shortlist's group. For each, say what fact makes it true.
 5. **Pick the reason you can prove and honour.** Test each reason: can you show proof now, will you honour it as written, and does it avoid overstating the saving? Keep one reason for each version and drop any that fail.
 6. **Add a vivid picture.** Replace a vague promise with a concrete scene of what the buyer gets, in the persona's words, in one or two sentences. Use only product facts. Do not invent an outcome.
 7. **Write the exact claim steps.** Number the steps: where to go, what to click or write, what to enter, by when, what happens next and who to contact if there is a problem.
@@ -62,6 +62,7 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Offer limits and deadline planner](https://useaiblocks.com/skills/honest-urgency-planner). It takes the offer.
 - The [Offer checklist reviewer](https://useaiblocks.com/skills/offer-checklist-reviewer). It takes the offer.
 - **Plan what to test** with the [Small test and rollout planner](https://useaiblocks.com/skills/small-test-and-rollout-planner). It takes the offer.
+- The [Discount consistency checker](https://useaiblocks.com/prompts/discount-sanity-checker). It takes the offer.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -81,5 +82,6 @@ Write `MISSING: <fact> for <reason>` and drop that reason. Never make up a reaso
 
 - A reason you could not prove if asked.
 - A fake deadline or invented scarcity.
-- A saving described as bigger than it is.
+- A saving described as bigger than it is, or a "was" price the product did not really sell at.
+- A discount or gift offered in return for a review.
 - A reason that could apply to anyone.

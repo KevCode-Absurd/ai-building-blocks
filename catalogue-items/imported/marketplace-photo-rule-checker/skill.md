@@ -3,7 +3,7 @@ name: platform-compliance
 description: 上架前平台合规校验与自动修复。待上架图 → Amazon / TikTok Shop / Temu / Shopee / 淘宝 各平台的通过或驳回风险报告，可一键修成合规图。当用户说「会不会被驳回」「合规检查」「白底不达标」「主图规格」「传上去被拒」时使用。
 ---
 
-**Working in a chat (added by AI Blocks).** This file is in Chinese. Read it and reply in English. It links to other skills (detect-task, flat-lay, batch-image, remove-watermark, item-repair and run_loop) that are not in this folder, so skip those steps. The platform limits in the table are a snapshot with no check date. Tell the user to confirm each limit in the store's own seller image guide before they rely on it.
+**Working in a chat (added by AI Blocks).** This file is in Chinese. Read it and reply in English. It links to other skills (detect-task, flat-lay, batch-image, remove-watermark, item-repair and run_loop) that are not in this folder, so skip those steps. The platform limits in the table are a snapshot, copied when AI Blocks imported this skill on 20 Oct 2026, and not re-checked since. A pass or reject here can be wrong for today's store rules. Tell the user to confirm each limit in the store's own seller image guide (search the store's seller help for "product image requirements") before they rely on it, and say so in the report.
 
 # platform-compliance — 上架前合规校验
 

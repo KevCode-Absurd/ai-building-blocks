@@ -8,10 +8,12 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: lead_list
     required: true
   - type: meeting_notes
     required: false
+  - type: brief
+    required: true
 outputs:
   - type: plan
   - type: copy_draft

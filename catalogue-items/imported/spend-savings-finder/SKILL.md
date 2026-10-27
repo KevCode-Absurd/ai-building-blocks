@@ -11,7 +11,7 @@ You are an expert in procurement spend analysis and analytics. Your goal is to h
 
 Ask once for: a spend export (supplier, amount, date, and a category if the export has one), the time period it covers, and the goal (cost cuts, fewer suppliers, contract compliance). Mark anything not given as `MISSING: <what>`. Never invent spend, suppliers or savings.
 
-The code below needs a place to run Python with pandas. If your AI cannot run code, do the steps by hand on a pasted sample and say that no code ran. Before you trust any ranking, show a short **cleaning summary**: rows in, duplicates removed, rows dropped for missing supplier, amount or date, credits set aside, and total spend kept. Tell the user to check it.
+The code below needs a place to run Python with pandas. If your AI cannot run code, do the steps by hand on a pasted sample and say that no code ran. Before you trust any ranking, show a short **cleaning summary**: rows in, possible duplicates flagged, rows dropped for missing supplier, amount or date, credits set aside, and total spend kept. Tell the user to check it.
 
 Supplier names are cleaned by trimming and upper-casing. Do not merge different suppliers just because their names end in INC, LLC, CORP or LTD. Strip that ending from a name and keep the rest, so ACME INC and ACME LLC match each other but not ZENITH INC. Flag names that look alike but are not identical and let the user confirm each merge.
 
@@ -142,17 +142,13 @@ def clean_spend_data(df):
     """
     Clean and standardize spend data
 
-    Returns: cleaned DataFrame
+    Returns: (cleaned DataFrame, possible_duplicates table, credits table)
+    Nothing is dropped for being a possible duplicate or a credit. Both are set aside
+    in their own tables for the user to confirm.
     """
 
     df = df.copy()
-
-    # Possible duplicates: same supplier, date and amount. Repeat payments can be real,
-    # so report the count and confirm with the user (or match on invoice number) before trusting this.
     initial_rows = len(df)
-    df = df.drop_duplicates(subset=['supplier_name', 'transaction_date', 'spend_amount'],
-                           keep='first')
-    duplicates_removed = initial_rows - len(df)
 
     # Standardize supplier names
     df['supplier_name'] = df['supplier_name'].str.strip().str.upper()
@@ -167,8 +163,9 @@ def clean_spend_data(df):
     # Ensure numeric spend
     df['spend_amount'] = pd.to_numeric(df['spend_amount'], errors='coerce')
 
-    # Remove negative amounts (credits handled separately)
-    df = df[df['spend_amount'] > 0]
+    # Set credits (negative amounts) aside in their own table. Do not discard them.
+    credits = df[df['spend_amount'] < 0].copy()
+    df = df[df['spend_amount'] >= 0]
 
     # Convert dates
     df['transaction_date'] = pd.to_datetime(df['transaction_date'], errors='coerce')
@@ -181,12 +178,20 @@ def clean_spend_data(df):
     # Remove rows with missing critical fields
     df = df.dropna(subset=['supplier_name', 'spend_amount', 'transaction_date'])
 
-    print(f"Data Cleaning Summary:")
-    print(f"  Duplicates removed: {duplicates_removed:,}")
-    print(f"  Final records: {len(df):,}")
-    print(f"  Total spend: ${df['spend_amount'].sum():,.2f}")
+    # Possible duplicates: same supplier, date and amount. Repeat payments can be real,
+    # so flag them in a separate table. Drop them only if the user agrees or an invoice number matches.
+    dup_mask = df.duplicated(subset=['supplier_name', 'transaction_date', 'spend_amount'], keep='first')
+    possible_duplicates = df[dup_mask].copy()
 
-    return df
+    print(f"Data Cleaning Summary:")
+    print(f"  Rows in: {initial_rows:,}")
+    print(f"  Possible duplicates flagged (kept until you confirm): {len(possible_duplicates):,}")
+    print(f"  Credits set aside: {len(credits):,}")
+    print(f"  Rows dropped for missing supplier, amount or date: {initial_rows - len(df) - len(credits):,}")
+    print(f"  Final records: {len(df):,}")
+    print(f"  Total spend: {df['spend_amount'].sum():,.2f}")
+
+    return df, possible_duplicates, credits
 ```
 
 ### Data Enrichment

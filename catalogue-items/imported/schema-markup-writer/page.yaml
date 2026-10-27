@@ -7,7 +7,7 @@ job: get-found-in-search
 headline: Schema markup writer
 subhead: Tell it what kind of page you have and give it the details that show on that page. It writes schema markup (JSON-LD), checks for missing or badly formatted fields, and gives you code to paste into your page.
 explain: |
-  Schema markup is a block of code that tells Google what your page is about: a product with a price, an article with an author, a list of questions and answers. Search engines can read it, and it can make your page eligible for extras in search results, like a price or a list of steps. Nothing is promised. Google decides what to show.
+  Schema markup is a block of code that tells Google what your page is about: a product with a price, an article with an author, a list of questions and answers. Search engines can read it, and it can make your page eligible for extras in search results, like a price or a list of steps. Nothing is promised. Google decides what to show, and its rules for each rich result type change, so check Google's current rules before you publish. FAQ results in particular are now limited to certain sites.
 
   This schema markup writer starts from your page type. It picks the types that fit, fills a ready-made template with your details, and checks each field Google expects. If something is missing, such as an image or a price currency, it tells you and does not guess.
 

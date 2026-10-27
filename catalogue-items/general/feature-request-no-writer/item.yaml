@@ -8,6 +8,7 @@ role: make
 job: copy
 level: beginner
 inputs:
+  - {type: voc_reviews, required: true}
   - {type: question, required: true}
 outputs:
   - {type: copy_draft}

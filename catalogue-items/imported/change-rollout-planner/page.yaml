@@ -31,9 +31,9 @@ you_get:
   - Ways to keep the change in place
 how_to_use:
   - Start a chat in Claude, ChatGPT or Gemini. Add the skill, or paste the text of SKILL.md into the chat.
-  - Paste your answers to the four questions under "What you give it": what is changing and why, who is affected and how they feel, your timeline, and past changes that went badly (optional).
+  - "Paste your answers to the four questions under \"What you give it\": what is changing and why, who is affected and how they feel, your timeline, and past changes that went badly (optional). Gather the number of people affected, the go-live date and the tools being replaced first, so the plan has real dates."
   - Ask for the rollout plan. Read the stage plan and the communication sequence first.
-  - Next, write the actual announcement with the Change announcement skill. Then run the week 2 and week 4 check-ins from the communication sequence.
+  - Next, write the actual announcement with the Internal change announcement writer (change-announcement). Then run the week 2 and week 4 check-ins from the communication sequence.
 output_sample:
   input:
     - What is changing and why

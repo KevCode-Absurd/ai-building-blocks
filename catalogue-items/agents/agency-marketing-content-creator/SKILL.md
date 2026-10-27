@@ -12,7 +12,7 @@ Give it a business, one idea and the channels used. It returns content themes, a
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Social post calendar and draft writer](https://useaiblocks.com/skills/social-post-planner). It takes the draft.
 - The [Marketing content drafter](https://useaiblocks.com/skills/marketing-content-drafter). It takes the plan.
-- The [Brand social account checker](https://useaiblocks.com/skills/brand-social-account-checker). It takes the plan.
+- The [Shareable content checker](https://useaiblocks.com/skills/shareable-content-checker). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -33,7 +33,7 @@ If an input is missing after one question, write MISSING and carry on. Never mak
 
 ## Output
 
-Return a test plan in this order. Keep it short. Choose only the scores that fit the task.
+Return a test plan in this order. Keep it to about one page, with no more than eight sections, one short paragraph or list each. Choose only the scores that fit the task.
 
 1. **Scores to use**: the metric family for the task, and one line on why each fits.
 2. **Test set**: how to collect 5 to 20 sample inputs with good answers, and what to leave out.

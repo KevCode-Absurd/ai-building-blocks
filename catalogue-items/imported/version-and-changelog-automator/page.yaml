@@ -12,6 +12,8 @@ explain: |
   It uses semantic versioning. A fix bumps the last number, a new feature bumps the middle number and a breaking change bumps the first. Commits follow the conventional style, such as feat: add search or fix: stop crash on empty cart.
 
   You choose how much runs on its own. Semantic-release runs from GitHub Actions on every push to your release branch. Standard-version is a command you run yourself, then review before you push. There are also notes for git-cliff and for repos with many packages.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (BagelHole) says MIT. Credit goes to BagelHole and sickn33.
 when:
   - You release often and forget to bump the version.
   - Your changelog is empty, or you write it by hand the night before a release.

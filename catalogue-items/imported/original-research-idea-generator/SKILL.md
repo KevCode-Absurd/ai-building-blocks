@@ -21,11 +21,11 @@ Eight empirically grounded frameworks from cognitive science, applied to compute
 - Bridging between fields and seeking structural (not superficial) connections
 
 **Do NOT use this skill when**:
-- You need structured project-level brainstorming workflows (use `brainstorming-research-ideas`)
+- You need structured project-level brainstorming workflows (use the Research idea workshop in this library)
 - You have a well-defined problem and need execution help (use domain-specific skills)
-- You need a literature survey (use `scientific-skills:literature-review`)
+- You need a literature survey (use the Literature reviewer in this library)
 
-**Relationship to Brainstorm skill**: The brainstorm skill provides operational workflows (diverge → converge → refine) and practical filters. This skill provides the deeper cognitive engines that power creative leaps. Use them together: creative-thinking to generate raw insight, brainstorm to structure and evaluate it.
+**Relationship to the Research idea workshop**: The workshop provides operational workflows (diverge → converge → refine) and practical filters. This skill provides the deeper cognitive engines that power creative leaps. Use them together: this skill to generate raw insight, the workshop to structure and evaluate it.
 
 ---
 
@@ -186,7 +186,7 @@ Take a core assumption in your field and negate it. This is formalized in De Bon
 2. **Negate each one** and ask: What system would you build?
 3. **Evaluate each negation**:
    - Incoherent → discard
-   - Already explored → check if conditions have changed (see brainstorm skill, Framework 5)
+   - Already explored → check if conditions have changed (see the Research idea workshop)
    - Unexplored and coherent → potential research direction
 
 **Negation Hall of Fame in CS**:
@@ -266,8 +266,8 @@ Stuart Kauffman's concept, popularized by Steven Johnson: innovation happens at 
 
 | Enabler | Newly Possible |
 |---------|---------------|
-| 1M+ token context windows | Full-codebase reasoning, book-length analysis |
-| Inference cost drops (100x in 2 years) | Real-time agentic loops, always-on AI assistants |
+| Very long context windows | Full-codebase reasoning, book-length analysis |
+| Large drops in inference cost | Real-time agentic loops, always-on AI assistants |
 | Open-weight models at GPT-4 level | Reproducible research on frontier capabilities |
 | Multimodal models (vision + language + audio) | Unified perception-reasoning systems |
 | Synthetic data at scale | Training data for domains with no natural data |
@@ -327,7 +327,7 @@ These frameworks are most powerful in combination. Here is a systematic protocol
 8. **Janusian Thinking** (F8): Identify any tensions. Can you synthesize rather than choose?
 
 ### Phase 4: Evaluate (15 min)
-Apply the two-sentence test (from the brainstorm skill):
+Apply the two-sentence test (from the Research idea workshop):
 > "**[Domain] currently struggles with [problem] because [reason].** We [approach] by [mechanism], which works because [insight]."
 
 Any idea that survives all four phases and passes the two-sentence test is worth pursuing.
@@ -357,7 +357,7 @@ When a researcher asks for help with creative thinking or novel ideation:
 4. **Push for structural depth**: If an analogy or combination is surface-level, probe deeper
 5. **Maintain a running list** of all generated ideas, even unusual ones
 6. **Apply the two-sentence test** to candidates that survive exploration
-7. **Hand off to the brainstorm skill** for systematic evaluation (diverge → converge → refine)
+7. **Hand off to the Research idea workshop** for systematic evaluation (diverge → converge → refine)
 
 **Key Principles**:
 - Generative mode first, evaluative mode second — do not filter prematurely

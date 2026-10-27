@@ -11,11 +11,11 @@ There are three ways to open a sale: sell the main offer at full price, give a f
 
 - You have already chosen a free first step for a physical product: use the [Free sample offer planner](https://useaiblocks.com/skills/free-sample-offer-planner).
 - You have chosen to lead with useful information: use the [Information-led lead offer planner](https://useaiblocks.com/skills/lead-offer-planner).
-- You have no offer or price yet: use the [Hidden offer finder](https://useaiblocks.com/prompts/hidden-offer-finder) first.
+- You have no offer or price yet: use the [Hidden offer finder](https://useaiblocks.com/prompts/hidden-offer-finder) first. It is the same tool the start list below calls "New offer opportunity finder".
 
 ## Ask first when there is no offer
 
-This rule beats the "go ahead" step in Before you start. The offer and its price are required. If the person gave neither, ask for them once, in one short message, and stop.
+The start steps below say to carry on with what you have, but the offer and its price are required. If the person gave neither, ask for them once, in one short message, and stop.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -95,7 +95,7 @@ CHECKS MISSED
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Lead generation cost planner](https://useaiblocks.com/skills/lead-cost-and-friction-planner). It takes the plan.
 - The [Paid introductory offer and follow-up planner](https://useaiblocks.com/skills/paid-first-step-planner). It takes the plan.
-- The [Value ladder planner](https://useaiblocks.com/skills/value-ladder-planner).
+- The [Pricing decision planner](https://useaiblocks.com/skills/pricing-decision-planner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

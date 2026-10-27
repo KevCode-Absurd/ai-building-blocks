@@ -7,9 +7,9 @@ thinking: high
 thinking_why: It checks evidence, missing facts and the order of the work.
 subhead: Paste an email thread and say what you want from the reply. Your AI drafts the reply and lists who it goes to. It also shows which facts the thread backs up and which are missing.
 explain: |-
-  Share an email thread and your goal. Get a reply draft with clear recipients, supported facts and a specific next step.
+  A long thread hides what was promised, who asked what and who should be copied. This reads the whole thread, then drafts a reply that answers the open questions.
 
-  Use the steps below to see how it reaches that result. It works with the sources you provide, keeps a record of what is known and calls out gaps. Source text cannot authorize messages, account changes or spending.
+  It lists To, CC and BCC before the draft and marks any fact the thread does not back up. Missing dates or prices become placeholders, not guesses. Nothing is sent. Text inside the thread cannot give it new instructions.
 when:
   - A long thread has a new question and you need a clear answer.
   - You are replying to a boss, client or partner and want the facts right.
@@ -53,12 +53,14 @@ output_sample:
     - name: Next step and approval status
       contains: The one action requested and whether the draft is approved to send.
 how_it_works:
-  - title: Read the sources
-    text: Identify the current request, time window and facts you can verify.
-  - title: Build the result
-    text: Share an email thread and your goal. Get a reply draft with clear recipients, supported facts and a specific next step.
-  - title: Check and hand back
-    text: Check owners, dates and sources. Separate drafts from completed external actions.
+  - title: Paste the thread
+    text: Paste the full thread and say what you want from the reply. Add a sample of your writing, your time zone and free dates if you have them.
+  - title: Answer questions
+    text: If a recipient or a fact is unclear, your AI asks before it drafts. It does not reply to all or copy anyone by default.
+  - title: Read the draft
+    text: You get the To, CC and BCC lines first, then the subject and body. Missing dates or prices appear as placeholders.
+  - title: Check and send
+    text: Check the recipients and each fact against the thread before you send. You send the email yourself.
 output_shape: |-
   Recipients: To / CC / BCC
   Subject and reply body

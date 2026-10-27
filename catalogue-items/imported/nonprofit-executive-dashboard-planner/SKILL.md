@@ -34,6 +34,11 @@ does not install the full system. Writing the strategic plan the dashboard measu
 `nonprofit-strategic-planning`. The CEO's narrative report to the board that *uses* this dashboard
 is `nonprofit-ceo-board-partnership`.
 
+## What you need
+
+Your organisation, its goals, and who will read the dashboard. If you already have a strategic plan or an outcomes measurement plan, take the indicators from it instead of choosing new ones.
+
+
 ## Core Framework: Two Dashboards, Not One
 
 The single most common failure is one dashboard trying to serve both the leadership team and the

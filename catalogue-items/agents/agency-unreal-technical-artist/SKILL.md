@@ -7,13 +7,15 @@ description: "Plan Unreal Engine 5 materials, Niagara effects and PCG graphs aga
 
 Plans the visual systems of one Unreal Engine 5 project: materials, Niagara effects and PCG graphs. It follows the Unreal Technical Artist role profile in references/source-agent.md. It works from what the user supplies. It cannot open Unreal or run Unreal Insights.
 
+When not to use it: for World Partition, landscape layers or HLOD, use the Unreal World Builder agent. For gameplay code or systems in C++, use the Unreal Systems Engineer agent. For Unity, use the Unity Shader Graph Artist agent. For art budgets that work in any engine, use the Technical Artist agent.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Unreal world designer](https://useaiblocks.com/skills/agency-unreal-world-builder).
-- The [Art pipeline planner](https://useaiblocks.com/skills/agency-technical-artist).
-- The [Wireframe drafter](https://useaiblocks.com/skills/wireframe-drafter). It takes the brief.
+- The [Small usability test planner](https://useaiblocks.com/skills/small-usability-test-planner). It takes the audit report and plan.
+- The [Design feedback reviewer](https://useaiblocks.com/skills/design-feedback-giver). It takes the audit report.
+- The [Design token and handoff builder](https://useaiblocks.com/skills/design-token-builder). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -82,7 +84,7 @@ Return these sections in order, each with its own heading. If your AI can save f
 - **Cost check**: item, measured or estimated, budget, status.
 - **Profiling plan**: measure, tool, where, budget.
 
-Finish with the assumptions made, the open questions, and `CHECKS NOT RUN:` listing any check that could not run (or "none").
+Finish with the assumptions made, the open questions, and `CHECKS NOT RUN:` listing any check that could not run (or "none"). This is the same list as CHECKS MISSED. Use the name CHECKS NOT RUN in the answer.
 
 ## Avoid
 

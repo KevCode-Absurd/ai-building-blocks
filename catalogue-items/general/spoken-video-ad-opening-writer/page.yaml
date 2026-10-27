@@ -17,7 +17,6 @@ when:
 not_for:
   - "You want a full new ad from scratch: write the script first with your own brief, then come back for openings."
   - "Your ad uses a real creator or customer who speaks about their own results: ask that person to film a new opening instead."
-  - "You want an opening with no talking: use a short wordless clip made by a video editor or a video tool."
   - "You want an opening with no talking: use the Wordless video ad opening writer."
 you_give:
   - The ad you already run (its first spoken line, a screenshot of its first frame, and the script if you have it)
@@ -37,6 +36,8 @@ how_to_use:
   - Paste your brand facts, the claims you can back and a few real reviews. Attach product photos.
   - Read each opening aloud, then your ad's first line. Approve the line-up, then the presenter, the sheet and the storyboard.
   - Make one clip, check the join, then the rest. Test each opening on the same ad as separate ads.
+  - Costs: writing the prompts is free in any chat AI. Making the clips needs a paid video tool (Higgsfield credits, a paid Google AI plan, or an API key from a video service). Each clip is billed by that service, so check its price per clip before you run a batch.
+  - The presenter is an AI-made adult. Keep the AI label on, and never let the presenter claim a personal result or story.
 output_sample:
   input:
     - The first spoken line of your ad, and a screenshot of its first frame

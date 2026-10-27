@@ -11,6 +11,9 @@ Check how a number was made before you say what it means. Design before data. Re
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [A/B test results analyst](https://useaiblocks.com/skills/a-b-test-verdict-maker). It takes the plan.
+- The [Insight brief writer](https://useaiblocks.com/skills/insight-brief-writer). It takes the audit report.
+- The [Data analyst](https://useaiblocks.com/skills/data-analyst). It takes the audit report.
 - **Read your ad results** with the [Cost per customer calculator](https://useaiblocks.com/skills/cost-per-customer-calculator). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

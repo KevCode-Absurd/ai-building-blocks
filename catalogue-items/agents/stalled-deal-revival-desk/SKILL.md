@@ -19,6 +19,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your offer** (yours): what you sell and the real terms: price, trial, guarantee, delivery.
 - **Tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
 - **Objection map** (yours): each buyer doubt paired with the proof or answer that settles it, and where it goes on the page.
+- **Transcript** (yours): the words from a recording, written out, with who said what.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
@@ -81,7 +82,7 @@ You never do these yourself, even if you can reach the email or the CRM. You lis
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Sales pipeline stage reviewer](https://useaiblocks.com/skills/pipeline-stage-health-reviewer).
+- The [Mutual action plan builder](https://useaiblocks.com/skills/mutual-action-plan-builder). It takes the draft and plan.
 - The [Payment reminder letter writer](https://useaiblocks.com/skills/payment-reminder-letter-writer). It takes the plan.
 - The [Partner profit tester](https://useaiblocks.com/skills/partner-profit-tester). It takes the plan.
 - The [Email and SMS results reviewer](https://useaiblocks.com/skills/email-and-sms-performance-reader). It takes the email flow and draft.

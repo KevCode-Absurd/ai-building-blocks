@@ -8,10 +8,11 @@ role: check
 job: ops
 level: beginner
 inputs:
-  - type: brief
+  - type: idea
     required: true
 outputs:
   - type: plan
+  - type: audit_report
 uses: []
 origin: imported
 source:

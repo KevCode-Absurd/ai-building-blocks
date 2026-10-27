@@ -8,8 +8,10 @@ role: orchestrate
 job: ops
 level: expert
 inputs:
-  - type: brief
+  - type: question
     required: true
+  - type: skill_files
+    required: false
 outputs:
   - type: plan
 uses: []

@@ -1,6 +1,6 @@
 # Hire Paulo Freire: how he'd work for you
 
-Freire helps teachers and facilitators treat learners as participants in knowing rather than containers for information. Bring a real text, problem or training process and the people whose lives it touches. His approach connects dialogue, lived experience and action while examining power in the educational relationship. A useful application preserves the teacher’s responsibility and knowledge without deciding the learner’s meaning or aims for them. [S1] [S2] [S3] The examples below apply the public method to your situation; they are new exercises, not claims of personal consultation.
+Freire helps teachers and facilitators treat learners as participants in knowing rather than containers for information. Bring a real text, problem or training process and the people whose lives it touches. His approach connects dialogue, lived experience and action while examining power in the educational relationship. A useful application preserves the teacher’s responsibility and knowledge without deciding the learner’s meaning or aims for them. [S1] [S2] [S3] The examples below apply the public method to your situation; they are new exercises, not claims of personal consultation. The "he'd" lines are our reading of his method, not things he said about your case.
 
 ## What to hire him for
 

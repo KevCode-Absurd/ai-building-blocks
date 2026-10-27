@@ -12,6 +12,8 @@ date_added: "2026-02-27"
 
 Read [the detailed guide](references/detailed-guide.md) before executing this skill. It retains the complete procedure and reference material. Treat its safety, prerequisites, and validation requirements as mandatory. For focused work, load the relevant sections; for end-to-end work, read the guide completely.
 
+If an earlier speed check gave you a report or a ranked fix list, use its findings as the problems to fix, and measure again to confirm.
+
 ## When to Use This Skill
 
 - Use when website or app is loading slowly
@@ -25,7 +27,7 @@ Read [the detailed guide](references/detailed-guide.md) before executing this sk
 
 ## Examples
 
-**Every number in the examples below is illustrative, not measured on a real site.** Never quote them as results. In a real run, report only the user's own measurements, and write [your LCP] or "unknown" where you have none. The front-matter label `risk: critical` is the original author's tag for skills that change live code. It means: ask before you change production, and test first.
+**The examples below use bracketed placeholders such as [your LCP] where the original had sample numbers. Fill them only with the user's own measurements.** Never quote them as results. In a real run, report only the user's own measurements, and write [your LCP] or "unknown" where you have none. The front-matter label `risk: critical` is the original author's tag for skills that change live code. It means: ask before you change production, and test first.
 
 ### Example 1: Optimizing Core Web Vitals
 
@@ -33,22 +35,22 @@ Read [the detailed guide](references/detailed-guide.md) before executing this sk
 ## Performance Audit Results
 
 ### Current Metrics (Before Optimization, illustrative)
-- **LCP (Largest Contentful Paint):** 4.2s ❌ (should be < 2.5s)
-- **INP (Interaction to Next Paint):** 350ms ❌ (should be ≤ 200ms)
-- **CLS (Cumulative Layout Shift):** 0.25 ❌ (should be < 0.1)
-- **Lighthouse Score:** 62/100
+- **LCP (Largest Contentful Paint):** [your LCP] ❌ (should be < 2.5s)
+- **INP (Interaction to Next Paint):** [your INP] ❌ (should be ≤ 200ms)
+- **CLS (Cumulative Layout Shift):** [your CLS] ❌ (should be < 0.1)
+- **Lighthouse Score:** [your score]/100
 
 ### Issues Identified
 
-1. **LCP Issue:** Hero image (2.5MB) loads slowly
-2. **INP Issue:** Large JavaScript bundle (850KB) blocks main thread
+1. **LCP Issue:** Hero image ([SIZE]) loads slowly
+2. **INP Issue:** Large JavaScript bundle ([SIZE]) blocks main thread
 3. **CLS Issue:** Images without dimensions cause layout shifts
 
 ### Optimization Plan
 
 #### Fix LCP (Largest Contentful Paint)
 
-**Problem:** Hero image is 2.5MB and loads slowly
+**Problem:** Hero image is [SIZE] and loads slowly
 
 **Solutions:**
 \`\`\`html
@@ -71,13 +73,13 @@ Read [the detailed guide](references/detailed-guide.md) before executing this sk
 \`\`\`
 
 **Additional optimizations:**
-- Compress image to < 200KB
+- Compress the image (set a size budget for your page)
 - Use CDN for faster delivery
 - Preload hero image: `<link rel="preload" as="image" href="/hero.avif">`
 
 #### Fix INP (Interaction to Next Paint)
 
-**Problem:** 850KB JavaScript bundle blocks main thread
+**Problem:** [SIZE] JavaScript bundle blocks main thread
 
 **Solutions:**
 
@@ -158,10 +160,10 @@ npm install date-fns
 
 ### Results After Optimization (illustrative, not measured)
 
-- **LCP:** 1.8s ✅ (improved by 57%)
-- **INP:** 150ms ✅ (improved by 57%)
-- **CLS:** 0.05 ✅ (improved by 80%)
-- **Lighthouse Score:** 94/100 ✅
+- **LCP:** [new LCP] ✅ (improved by [PERCENT])
+- **INP:** [new INP] ✅ (improved by [PERCENT])
+- **CLS:** [new CLS] ✅ (improved by [PERCENT])
+- **Lighthouse Score:** [new score]/100 ✅
 ```
 
 ### Example 2: Reducing JavaScript Bundle Size
@@ -170,10 +172,10 @@ npm install date-fns
 ## Bundle Size Optimization
 
 ### Current State (illustrative)
-- **Total Bundle:** 850KB (gzipped: 280KB)
-- **Main Bundle:** 650KB
-- **Vendor Bundle:** 200KB
-- **Load Time (3G):** 8.2s
+- **Total Bundle:** [SIZE] (gzipped: [SIZE])
+- **Main Bundle:** [SIZE]
+- **Vendor Bundle:** [SIZE]
+- **Load Time (3G):** [your load time]
 
 ### Analysis
 
@@ -183,9 +185,9 @@ npx webpack-bundle-analyzer dist/stats.json
 \`\`\`
 
 **Findings:**
-1. Moment.js: 67KB (can replace with date-fns: 12KB)
-2. Lodash: 72KB (using entire library, only need 5 functions)
-3. Unused code: ~150KB of dead code
+1. Moment.js: [SIZE] (can replace with date-fns, usually smaller: check both sizes)
+2. Lodash: [SIZE] (using the entire library when only a few functions are needed)
+3. Unused code: [SIZE] of dead code
 4. No code splitting: Everything in one bundle
 
 ### Optimization Steps
@@ -193,7 +195,7 @@ npx webpack-bundle-analyzer dist/stats.json
 #### 1. Replace Heavy Dependencies
 
 \`\`\`bash
-# Remove moment.js (67KB) → Use date-fns (12KB)
+# Remove moment.js → Use date-fns (compare the sizes in your bundle first)
 npm uninstall moment
 npm install date-fns
 
@@ -206,16 +208,16 @@ import { format } from 'date-fns';
 const formatted = format(date, 'yyyy-MM-dd');
 \`\`\`
 
-**Savings:** 55KB
+**Savings:** [SIZE] (measure it)
 
 #### 2. Use Lodash Selectively
 
 \`\`\`javascript
-// Before: Import entire library (72KB)
+// Before: Import entire library
 import _ from 'lodash';
 const unique = _.uniq(array);
 
-// After: Import only what you need (5KB)
+// After: Import only what you need
 import uniq from 'lodash/uniq';
 const unique = uniq(array);
 
@@ -223,7 +225,7 @@ const unique = uniq(array);
 const unique = [...new Set(array)];
 \`\`\`
 
-**Savings:** 67KB
+**Savings:** [SIZE] (measure it)
 
 #### 3. Implement Code Splitting
 
@@ -283,10 +285,10 @@ module.exports = {
 
 ### Results (illustrative, not measured)
 
-- **Total Bundle:** 380KB ✅ (reduced by 55%)
-- **Main Bundle:** 180KB ✅
-- **Vendor Bundle:** 80KB ✅
-- **Load Time (3G):** 3.1s ✅ (improved by 62%)
+- **Total Bundle:** [new SIZE] ✅ (reduced by [PERCENT])
+- **Main Bundle:** [new SIZE] ✅
+- **Vendor Bundle:** [new SIZE] ✅
+- **Load Time (3G):** [new load time] ✅ (improved by [PERCENT])
 ```
 
 ### Example 3: Image Optimization Strategy
@@ -295,7 +297,7 @@ module.exports = {
 ## Image Optimization
 
 ### Current Issues
-- 15 images totaling 12MB
+- [NUMBER] images totaling [SIZE]
 - No modern formats (WebP, AVIF)
 - No responsive images
 - No lazy loading
@@ -433,9 +435,9 @@ import Image from 'next/image';
 
 | Metric | Before | After | Improvement |
 |--------|--------|-------|-------------|
-| Total Image Size | 12MB | 1.8MB | 85% reduction |
-| LCP | 4.5s | 1.6s | 64% faster |
-| Page Load (3G) | 18s | 4.2s | 77% faster |
+| Total Image Size | [SIZE] | [new SIZE] | [PERCENT] reduction |
+| LCP | [your LCP] | [new LCP] | [PERCENT] faster |
+| Page Load (3G) | [your load time] | [new load time] | [PERCENT] faster |
 ```
 
 ## Limitations

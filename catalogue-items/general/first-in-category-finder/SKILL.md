@@ -35,7 +35,7 @@ How to start:
 
 ## What you need
 
-- **A market map** (required): rivals and what each holds in the buyer's mind.
+- **A market map** (required): rivals and what each holds in the buyer's mind. This is the "audit report" named in the list above. If you have none, make it first with the [Competitor white space mapper](https://useaiblocks.com/skills/competitor-white-space-mapper).
 - **Product facts** (optional): what you sell, to whom, how.
 - **Brand facts** (optional): your name, strengths and limits.
 
@@ -64,8 +64,8 @@ The first-what claim. The branches. The four scores and totals. The top one or t
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Category name writer](https://useaiblocks.com/skills/category-name-writer). It takes the shortlist.
-- The [Product positioning planner](https://useaiblocks.com/skills/product-positioning-planner).
-- The [First market picker](https://useaiblocks.com/skills/first-market-picker).
+- The [First market picker](https://useaiblocks.com/skills/first-market-picker). It takes the shortlist.
+- The [Market expansion roadmap planner](https://useaiblocks.com/skills/market-expansion-sequencer). It takes the shortlist.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

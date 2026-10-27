@@ -5,7 +5,7 @@ description: Use when you have the claims an ad will make and need proof for eac
 
 # Four-kind proof finder
 
-Readers discount ad claims, and they also need reasons to justify a purchase that began with a feeling. This skill finds the facts that settle both. It checks four places for proof of each claim, picks the strongest piece, and flags the claims that have nothing behind them. It does not write the ad. For the body, use "Proof-backed sales copy writer".
+Readers discount ad claims, and they also need reasons to justify a purchase that began with a feeling. This skill finds the facts that settle both. It checks four places for proof of each claim, picks the strongest piece, and flags the claims that have nothing behind them. It does not write the ad. For the body, use the [Evidence-based sales copy writer](https://useaiblocks.com/skills/proof-backed-sales-copy-writer). Once the copy is written, check it against your proof with the [Claim evidence checker](https://useaiblocks.com/skills/claim-and-proof-matcher).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -48,7 +48,7 @@ How to start:
 3. **Search the four kinds of proof.** For each claim, look in the facts for: (a) construction evidence: materials, how it is made, the maker's record; (b) performance evidence: what it did for real users, with a number, a name or a date; (c) testimony: users or experts, ideally personal and local; (d) test evidence: a guarantee, free sample or trial the reader can use.
 4. **Check each piece for credibility.** Keep proof that is specific (a number, a name, a place), checkable (the reader could verify it) and modest in tone. Drop proof that is only praise. A smaller true fact beats a bigger one that sounds like boasting.
 5. **Rank and pair.** Performance evidence and testimony usually persuade more than construction detail, so lead with those where the facts allow. Pair each claim with its single strongest piece, and name a second as backup.
-6. **Dramatize from the buyer's side.** Rewrite each chosen proof as what it means for the reader ("this many people stopped doing X"), keeping the fact itself unchanged.
+6. **Dramatize from the buyer's side.** Rewrite each chosen proof as what it means for the reader, keeping the fact itself unchanged. Use a count, name or phrase only if it appears in the supplied facts. For example, write "[NUMBER] people stopped doing X" only when the facts give that number. If they do not, write MISSING: and name the figure to collect.
 7. **Handle bare claims.** For each claim with no proof, pick one: cut it, shrink it to what the facts support, or add a test offer so the reader can find out for free or with a refund. Write `MISSING:` with the proof to collect.
 8. **Place the proof.** Mark where each piece belongs: beside the headline, in the body next to its claim, or near the ask.
 9. **Check it.** Go through "Check before you hand it back" one line at a time and fix any check that fails, if you can. Under CHECKS MISSED, write one line for each check still missed and why, or "none".
@@ -60,10 +60,10 @@ A proof map with one row per claim: claim, likely doubt, strongest proof, its ki
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Customer needs finder](https://useaiblocks.com/skills/buyer-wants-finder).
 - **Write the landing page** with the [Evidence-based sales copy writer](https://useaiblocks.com/skills/proof-backed-sales-copy-writer). It takes the objection map.
-- The [Selling points writer](https://useaiblocks.com/skills/selling-points-writer).
-- The [Product process fact researcher](https://useaiblocks.com/skills/process-fact-finder).
+- The [Ad headline variation writer](https://useaiblocks.com/skills/typed-headline-batch-writer).
+- The [Closing paragraph writer](https://useaiblocks.com/skills/summing-up-paragraph-writer). It takes the objection map.
+- The [Ad angle planner](https://useaiblocks.com/skills/ad-angle-planner).
 - **Understand your buyers** with the [Customer review evidence checker](https://useaiblocks.com/skills/monthly-review-proof-keeper).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

@@ -21,6 +21,7 @@ Evaluate a vendor with structured analysis covering cost, risk, performance, and
 - **Vendor name**: Who are you evaluating?
 - **Context**: New vendor evaluation, renewal decision, or comparison?
 - **Details**: Contract terms, pricing, proposal document, or current performance data
+- **Earlier work**: A shortlist of vendors or a proposal document from an earlier step. I compare the vendors on it.
 
 ## Evaluation Framework
 

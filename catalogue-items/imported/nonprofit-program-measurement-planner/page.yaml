@@ -57,7 +57,7 @@ output_sample:
     - Your budget and staff time for collecting data
     - How you can reach people for follow-up (optional)
   prerequisites:
-    - An outcomes list from a logic model. If you have none, run nonprofit-program-design first.
+    - An outcomes list from a logic model. If you have none, run the Nonprofit program outcome planner first.
     - Permission or a license for any validated scale you want to use, since some require it
   output:
     - name: Indicator table

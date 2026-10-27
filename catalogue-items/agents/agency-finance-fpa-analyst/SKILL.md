@@ -14,8 +14,8 @@ Read [the original role profile](references/source-agent.md) before you start. U
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Store revenue forecast builder](https://useaiblocks.com/skills/store-revenue-forecast-builder). It takes the plan.
-- The [Startup financial model builder](https://useaiblocks.com/skills/startup-financial-model-builder). It takes the brief.
-- The [Cash flow and expense analyst](https://useaiblocks.com/skills/agency-support-finance-tracker).
+- The [Startup financial model builder](https://useaiblocks.com/skills/startup-financial-model-builder). It takes the plan.
+- The [Nonprofit operating budget planner](https://useaiblocks.com/skills/nonprofit-operating-budget-planner). It takes the plan.
 - **Check the money** with the [Cash versus earnings checker](https://useaiblocks.com/skills/cash-versus-earnings-checker). It takes the plan.
 - **Check the money** with the [Business plan risk buffer reviewer](https://useaiblocks.com/skills/room-for-error-plan-checker). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.

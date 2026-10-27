@@ -48,6 +48,7 @@ output_sample:
     - Screenshots of your live page on a phone and a computer, after you install it
   prerequisites:
     - A Shopify store and a theme you can upload files to (Shopify is a paid service)
+    - Read access to your store for step 3, or your price and variant facts pasted in
     - An AI that can read files, such as Claude Code or a Claude Project
     - Real product photos at full size
   output:

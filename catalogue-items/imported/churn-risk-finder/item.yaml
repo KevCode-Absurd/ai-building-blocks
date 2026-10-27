@@ -8,7 +8,7 @@ role: check
 job: ops
 level: intermediate
 inputs:
-  - type: spreadsheet
+  - type: customer_list
     required: true
 outputs:
   - type: audit_report

@@ -21,7 +21,7 @@ AI Blocks note: you cannot draw or render files. In steps 4 and 5, write the fil
 
 3. **Generate Concept Directions**: Produce 2-3 distinct concept directions, each with a rationale explaining how it reflects the brand. For each direction, describe the symbol or letterform treatment, the color palette (primary, secondary, accent with hex codes), and the recommended typeface pairing. Explain the visual metaphor or design logic behind each concept.
 
-4. **Refine the Selected Concept**: Once the user selects a direction, iterate on it. Adjust proportions, letter-spacing, icon weight, and color balance. Test the design at multiple sizes — a 16x16 favicon, a 48x48 app icon, a 200px web header, and a large-format print version — to confirm legibility and visual impact at every scale.
+4. **Refine the Selected Concept**: Once the user selects a direction, iterate on it. Adjust proportions, letter-spacing, icon weight, and color balance. Write a size-test checklist for a designer or image tool to run: check the design at a 16x16 favicon, a 48x48 app icon, a 200px web header, and a large-format print version, and confirm legibility at every scale. You cannot render these yourself, so do not say you tested them.
 
 5. **Produce Final Deliverables**: Output the complete file specification: SVG (vector master), PNG at 512x512, 256x256, 128x128, and 64x64, plus a 16x16 and 32x32 ICO favicon. Provide light-background and dark-background versions, a monochrome version, and a minimum-size guideline. Include a one-page brand mark usage guide covering clear space, minimum size, and color placement rules.
 
@@ -78,7 +78,7 @@ Three stacked parallelograms forming an upward arrow, representing layered infra
 2. **Stacked combination mark**: Icon centered above the wordmark. Use on social media profiles, signage, and packaging labels where vertical space is available.
 3. **Icon-only mark**: Circle-leaf symbol without text. Use at sizes below 48px, as app icons, and for watermarks. Ensure the icon is recognizable without the wordmark at 32x32.
 4. **Wordmark only**: "GreenLeaf Organics" in the brand typeface without the icon. Use in email signatures, footer text, and inline document references.
-5. **Favicon**: Simplified leaf silhouette (no circle) optimized for 16x16 and 32x32. Remove fine details that disappear at small sizes.
+5. **Favicon**: Simplified leaf silhouette (no circle) specified for 16x16 and 32x32. The designer should remove fine details that disappear at small sizes and check it at those sizes.
 6. **Monochrome versions**: Solid black and solid white versions of all marks above for single-color printing, embossing, and engraving.
 
 **File deliverables per variation**: SVG vector, PNG @1x and @2x, and for the favicon an ICO file containing both 16x16 and 32x32 sizes.

@@ -14,6 +14,8 @@ inputs:
     required: true
   - type: source_text
     required: true
+  - type: financial_statements
+    required: false
 outputs:
   - type: document
     required: true

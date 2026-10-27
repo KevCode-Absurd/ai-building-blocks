@@ -8,9 +8,11 @@ role: check
 job: ops
 level: advanced
 inputs:
-  - type: codebase
+  - type: code_change
     required: true
-  - type: brief
+  - type: question
+    required: false
+  - type: data_model
     required: false
 outputs:
   - type: audit_report

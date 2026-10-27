@@ -9,14 +9,14 @@ subhead: Describe how you sell. Get a discount matrix, approval limits and a cle
 explain: |
   A written discount policy your sales team can follow: who can offer what, when to ask for approval, and what happens when a request breaks the rules. It ends the habit of citing "last quarter's deal" as precedent.
 
-  The skill builds a matrix of maximum discounts across contract size, term length, payment terms and strategic value. A router then sends out-of-matrix requests through a named chain of approvers with the right evidence attached. A linter checks the policy for flaws: approvers ranked backwards, overlapping bands, margin floor breaches and gaps. It starts from your won and lost deals from the last year (four quarters). It uses Python scripts, so it needs a place to run code.
+  The skill builds a matrix of maximum discounts across contract size, term length, payment terms and strategic value. A router then sends out-of-matrix requests through a named chain of approvers with the right evidence attached. A linter checks the policy for flaws: approvers ranked backwards, overlapping bands, margin floor breaches and gaps. It starts from your won and lost deals from the last year (four quarters). It uses Python scripts, so it needs a place to run code. The studies and reports the skill file names are the author's reading list and are not checked here. Your policy numbers come from your own deals. This is the claude-code-skills commercial-policy skill, shared under the MIT licence.
 when:
   - You are writing the company's first formal discount rules.
   - Margins are slipping and reps discount too freely.
   - Exceptions keep rising and you suspect the bands are wrong.
   - Your finance lead raised the margin floor and the policy must be rebuilt.
 not_for:
-  - "You need to rule on one live deal: use the Deal desk skill or ask your finance lead, since this item only writes the rules."
+  - "You need to rule on one live deal: use the Deal desk reviewer or ask your finance lead, since this item only writes the rules."
   - "You are still choosing how to price your product: work on pricing first with a pricing strategist or a person who owns pricing."
   - "You have no way to run code: this item needs Python 3, so write a short rule list by hand instead."
 you_give:
@@ -33,9 +33,10 @@ you_get:
 how_to_use:
   - Open an AI that can run Python 3 code and read files. Paste in the skill instructions or upload the skill folder.
   - Answer the eight questions the skill asks you, one at a time in the chat, about your deals, your margin floor and your approvers. Say if you do not know one.
-  - Add your closed won and lost deals from the last year. Check the AI shows you the fields it read.
+  - Add your closed won and lost deals from the last year. Each deal needs: deal size (annual recurring revenue), discount percent, contract length in months, payment terms in days, a strategic value tier, won or lost, and 12-month net revenue retention (if you have it). A CSV export from your CRM works. Your AI turns it into the JSON file the scripts read. Check the AI shows you the fields it read.
+  - Before you paste the deal file, remove customer names and contact details. The scripts do not need them. Use deal numbers instead.
   - Let the AI build the discount matrix, then run the exception router and the lint report.
-  - Fix every flaw in the lint report, then share the short policy summary with your sales team.
+  - Fix every flaw in the lint report, then share the short policy summary with your sales team. Once the policy is live, use the Deal desk reviewer to apply it to each deal, and re-run this every quarter.
 output_sample:
   input:
     - Your closed won and lost deals from the last year

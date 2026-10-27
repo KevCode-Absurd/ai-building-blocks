@@ -35,11 +35,11 @@ In the 2007 Edge class he tells a story against himself: nobody in his team woul
 
 ## When he hears a weak idea
 
-He doesn't scoff. He gets interested in why it feels right. He'll say something like "That's a very natural thing to believe," and then walk you to the shortcut that made it feel true: a vivid example, a neat story, a number that anchored you.
+He doesn't scoff. He gets interested in why it feels right. He tends to say that the belief is a natural one (our paraphrase, not a quote), and then walk you to the shortcut that made it feel true: a vivid example, a neat story, a number that anchored you.
 
 Then he asks for the outside view. If you say the project will take three months, he asks how long the last five similar projects took. If you're sure about a candidate, he asks whether the interview was set up so that a different interviewer would have scored them the same.
 
-He rarely says "you're wrong." He says "I'd want to check" and names the check.
+He rarely says "you're wrong." He says he would want to check, and names the check (our paraphrase, not a quote).
 
 ## He'd never
 

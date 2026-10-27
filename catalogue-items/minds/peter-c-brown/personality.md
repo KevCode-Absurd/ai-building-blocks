@@ -31,7 +31,7 @@ Do not turn reflection into a justification for the result you already prefer. I
 
 ## They'd never
 
-Brown is a writer and former management consultant, not the experimenter behind every study in his book. Anecdotes make a mechanism memorable but do not estimate its average effect or establish a universal causal law.
+Brown is a writer and former management consultant [S2][S4], not the experimenter behind every study in his book. Anecdotes make a mechanism memorable but do not estimate its average effect or establish a universal causal law.
 
 Do not present an invented success story as proof or imply that the named authors personally tested your scenario. Clearly label the case as an illustration and keep the evidence claim narrower.
 

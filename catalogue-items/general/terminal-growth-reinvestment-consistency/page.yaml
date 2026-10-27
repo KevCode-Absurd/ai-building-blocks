@@ -5,14 +5,14 @@ summary: Build a terminal value from NOPAT, growth, ROC and WACC. You get the re
 job: money-and-investing
 thinking: high
 thinking_why: "Growth needs reinvestment, so the growth rate, the return and the discount rate have to fit together."
-subhead: A terminal reinvestment and FCFF schedule with a return-spread sensitivity. Share first stable-year NOPAT, stable growth, stable ROC and matching WACC.
+subhead: Give it first stable-year NOPAT, a stable growth rate, the return on new investment and a matching WACC. You get the reinvestment that growth needs, the free cash flow, the terminal value and a test with return equal to WACC.
 explain: |-
-  A terminal reinvestment and FCFF schedule with a return-spread sensitivity.
+  A terminal value assumes a business grows at a steady rate forever. Growth is not free: the business has to put part of its profit back in. If a valuation takes the growth but not the reinvestment, the value is too high.
 
-  Public equity valuation. Illustrative figures only. With NOPAT of 100, growth of 3%, ROC of 15% and WACC of 10%, the reinvestment rate is 3%/15% = 20%. Reinvestment is 20, so FCFF is 80. Terminal value = 80 / (10% - 3%) = 1,142.86. If ROC falls to 10%, the reinvestment rate is 30%, FCFF is 70 and the value is 1,000.
+  This skill works the reinvestment out from the growth rate and the return on new investment, takes it off profit to get free cash flow, and divides by the discount rate less growth. It then repeats the sum with the return equal to the discount rate, to show how much of the value rests on a high return. Practice figures only: with NOPAT of 100, growth of 3%, ROC of 15% and WACC of 10%, the reinvestment rate is 3%/15% = 20%. Reinvestment is 20, so FCFF is 80. Terminal value = 80 / (10% - 3%) = 1,142.86. If ROC falls to 10%, the reinvestment rate is 30%, FCFF is 70 and the value is 1,000.
 when:
-  - You need a terminal reinvestment and FCFF schedule with a return-spread sensitivity.
-  - You work on public equity valuation and need traceable calculations.
+  - You are valuing a business and the terminal value looks high for its growth.
+  - You want to know what reinvestment a stable growth rate needs.
   - A reviewer needs to trace the result back to inputs and assumptions.
 not_for:
   - "You need a full company valuation: build a full discounted cash flow model, since this checks only the terminal value part."
@@ -24,7 +24,7 @@ you_give:
   - "The terminal date, plus the currency and scale used for the terminal reinvestment check."
   - "Your spreadsheet tool, if you want the terminal reinvestment check as a workbook."
 you_get:
-  - A terminal reinvestment and FCFF schedule with a return-spread sensitivity.
+  - The reinvestment, free cash flow and terminal value for your growth rate, plus the same with return equal to WACC.
   - "An editable workbook of the terminal reinvestment check, with its inputs, formulas and test cases to rerun."
   - "A tie-out of reinvestment, cash flow and terminal value, the inputs still missing and the checks that ran."
 how_to_use:
@@ -54,12 +54,12 @@ output_sample:
     - name: "MISSING: and CHECKS MISSED"
       contains: Inputs that were not supplied and checks that failed or could not run, or the word none.
 how_it_works:
-  - title: 1. Use first stable-year NOPAT and a WACC matching unlevered operating cash flows, currency and inflation
-    text: Use first stable-year NOPAT and a WACC matching unlevered operating cash flows, currency and inflation.
-  - title: 2. Set reinvestment rate to growth/ROC and subtract required reinvestment from NOPAT
-    text: Set reinvestment rate to growth/ROC and subtract required reinvestment from NOPAT.
-  - title: 3. Divide FCFF by WACC less growth; test ROC equal to WACC, and do not increase growth while holding reinvestment fixed
-    text: Divide FCFF by WACC less growth; test ROC equal to WACC, and do not increase growth while holding reinvestment fixed.
+  - title: Line up the inputs
+    text: Use first stable-year NOPAT and a WACC that matches operating cash flows, currency and inflation.
+  - title: Work out the reinvestment
+    text: Reinvestment rate is growth divided by return on capital. Take that share of NOPAT off to get free cash flow.
+  - title: Value it and test it
+    text: Divide free cash flow by WACC less growth. Repeat with return equal to WACC. Never raise growth while holding reinvestment fixed.
 output_shape: |-
   A terminal reinvestment and FCFF schedule with a return-spread sensitivity.
   Scope and dated sources
@@ -100,3 +100,11 @@ terms:
     meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
   - term: Reconciliation
     meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: NOPAT
+    meaning: Operating profit after tax, before interest.
+  - term: ROC
+    meaning: Return on capital, the profit a business earns on each unit it invests.
+  - term: WACC
+    meaning: The average cost of the money that funds the business, used as the discount rate.
+  - term: FCFF
+    meaning: Free cash flow to the firm, the cash left after the business reinvests.

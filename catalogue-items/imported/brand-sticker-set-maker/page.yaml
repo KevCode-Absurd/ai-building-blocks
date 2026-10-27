@@ -36,6 +36,7 @@ how_to_use:
   - Upload your logo and add your colours, any mascot and what your product does.
   - Ask for the full set. Your AI makes one sticker first, then matches the rest to it.
   - "Check each sticker: is your brand easy to spot, and is the white edge whole? Ask for a redo of any weak one."
+  - If your AI cannot save transparent PNG files, expect prompts only, not finished stickers. Open the first sticker file and check its size and that the background is really clear before you use the set.
   - Next, place the PNG files on your site or in a print mock-up. If your AI cannot make images, you get prompts to use in an image tool.
 output_sample:
   input:

@@ -1,17 +1,17 @@
 new_slug: advertorial-story-and-belief-checker
 name: "Advertorial story and belief checker"
-summary: "Check your advertorial for spots where the story turns into a sales pitch. Get a rewrite for each spot, eight pass or fail checks and a score out of 100."
+summary: "Check your advertorial for spots where the story turns into a sales pitch. Get a rewrite for each spot, eight checks (pass, part or fail) and a score out of 100."
 job: audit-landing-page
 thinking: medium
 thinking_why: "It reads one draft against a fixed list of checks, so a mid-size model is enough. A human read is still needed."
 
 headline: "Advertorial story and belief checker"
-subhead: Paste your advertorial and, if you have them, your foundation docs. It marks every sentence where the story turns into a pitch and checks eight things, from mirror to images. You get a rewrite for each spot, a pass or fail per check and a score out of 100.
+subhead: Paste your advertorial and, if you have them, your foundation docs. It marks every sentence where the story turns into a pitch and checks eight things, from mirror to images. You get a rewrite for each spot, a pass, part or fail per check and a score out of 100.
 
 explain: |
   An advertorial is an ad written like an article. It works while it reads like a story. Each time it slips into a sales pitch, some readers close the tab. The same goes for beliefs: if a buyer must believe three things to buy and the page moves only two, the page stalls.
 
-  This skill reads the draft like a chapter in a book and marks every sentence where the story stops and the selling starts. Then it checks eight things: that it speaks to one person, that the story flows, the before and after, the mechanism, the beliefs, the objections, the buttons and the images. Each check adds up to a score out of 100 that shows what was measured. A separate honesty line checks the ad label and fakes, and any fail there blocks publishing, whatever the score.
+  This skill reads the draft like a chapter in a book and marks every sentence where the story stops and the selling starts. Then it checks eight things: that it speaks to one person, that the story flows, the before and after, the mechanism, the beliefs, the objections, the buttons and the images. Each check adds up to a score out of 100 that shows what was measured. A separate honesty line checks the ad label and fakes, and any fail there blocks publishing, whatever the score. The rules come from health and wellness writers, so for other categories treat them as defaults and test.
 
 when:
   - Your advertorial draft is done and you want a read before you spend on traffic.
@@ -110,7 +110,7 @@ tweaks:
 
 judge:
   - Every story break quotes the exact sentence and gives a rewrite.
-  - Every pass or fail names a reason, not just a mark.
+  - Every pass, part or fail names a reason, not just a mark.
   - The score is the sum of eight marks at 12.5, 6 or 0, and any skipped check is stated.
   - The honesty line is separate, and a fail there says do not publish.
   - No rewrite adds an invented quote, person or proof.

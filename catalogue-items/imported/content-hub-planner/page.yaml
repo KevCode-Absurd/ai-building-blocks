@@ -34,10 +34,10 @@ you_get:
 how_to_use:
   - Gather your main topic, the questions your audience asks and the URLs of any pages you already have.
   - Open Claude, ChatGPT or Gemini and paste in the skill text. It needs no code, files or paid tools.
-  - Paste your topic, audience questions and URLs. Add keyword data if you have it.
+  - Start with this prompt, with your own details filled in. "Plan a content hub for [TOPIC] for [AUDIENCE]. Start with the pillar topic and the cluster pages. My existing pages are [URLS or none]. I have no keyword data, so say where search volume would change the plan." Add keyword data if you have it.
   - "Check the result: one clear pillar, cluster pages that do not overlap, a URL for every page and links in both directions."
   - Ask your AI to put the plan in a table with page, slug, target length, links in, links out and anchor text.
-  - Treat the advice on AI answer tools as opinion, not proven fact. Test it on your own site.
+  - Treat the advice on AI answer tools, such as the summary section and FAQ markup, as the author's opinion, not proven fact. Test it on your own site before you rely on it.
   - The split of 80/15/5, the 100 searches a month and the 10 to 12 cluster pages are rules of thumb, not measured facts. Adjust them to your topic.
   - Next, brief the pillar page first with Content brief writer, then each cluster page in turn. Hand each brief to your writer.
 output_sample:

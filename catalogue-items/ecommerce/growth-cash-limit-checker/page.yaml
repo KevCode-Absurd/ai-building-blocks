@@ -79,27 +79,30 @@ how_it_works:
   - title: Scores it
     text: Shows defined custom components, applicable maximum and unknowns. Partial data cannot clear the plan.
 output_shape: |
-  CASH BRIDGE
-  <opening cash + dated receipts − dated payments = closing cash, or UNRESOLVED>
-  Profit and working-capital reconciliation <evidence or missing>
+  PROFIT VS CASH  profit <$>, opening/closing stock <$>, dated cash bridge <supported figures or UNRESOLVED>
+  CASH CONVERSION CYCLE  <days of stock> + <days sales outstanding> - <days payable> = <days>
 
-  CASH CYCLE
-  <inventory days + collection days − payment days, with basis>
+  STOCK GRADES
+  <product> | grade <A/B/C/D> (custom scheme) | days on hand <n> | value <$> | plan
+  Share of stock value in C and D: <%>
 
-  STOCK REVIEW
-  <product> | custom grade and definition, or unresolved | cover/value/period
-  Implied stockout gap= max(0, lead time−cover), where supported
+  STOCKOUT TEST
+  Lead time <days>, paid up front <%>, cover held when you reorder <days> -> stockout risk <days per reorder>
+  Fixes: <lower upfront share | shorter lead time | other, with its cost and risk>
 
-  GROWTH FUNDING
-  <plan stock funding, available cash/terms, gap and debt cost with assumptions>
-  Verdict <supported finding or UNRESOLVED>
+  GROWTH TEST
+  Plan needs <$> more stock; cash and terms cover <$>; gap <$>
+  Interest and ad return: net margin <%> now -> <%> at plan
+  VERDICT  <cash-limited | ad-limited | neither | both | UNRESOLVED>
 
-  CUSTOM PLANNING RUBRIC
-  <earned/applicable maximum or UNRESOLVED> | checked coverage <basis>
-  <cash cover, stockout, slow stock, debt/margin: amount, N/A or unknown>
-  No safety, cash forecast or borrowing approval follows from points.
-  MISSING / LIMITS
-  <list>
+  SLOW STOCK PLAN  <funnel, break-even target, pages, country if any, platform policy check>
+  BRIEF FOR YOUR AD TEAM  <goal in one line>
+
+  CUSTOM PLANNING RUBRIC  <earned/applicable maximum or UNRESOLVED>; checked coverage <basis>
+  Components: cash cover <value/N/A/unknown>, stockout <...>, slow stock <...>, debt and margin <...>
+  This score does not prove safety, predict cash availability or authorise borrowing.
+  CHECKS MISSED: <none | checks that failed or could not run>
+  MISSING: <what you did not give>
 tweaks:
   - what: Stock by product
     how: List every product with days on hand and value. The grades and the slow-stock share depend on it.

@@ -18,6 +18,7 @@ when:
 not_for:
   - "You want the piece published or scheduled for you: this agent never does that, so use your own site or CMS."
   - "Your draft has no clear point yet: write the one sentence first with a person you trust, then run the check."
+  - "Your piece is an opinion piece or a story: the answer-first step is skipped, so use the Long-form draft editor for the editing alone."
   - "You want a quick spelling and grammar pass only: use your word processor's checker, as this loop is too heavy for that."
 you_give:
   - The finished draft with its title, links and sources
@@ -35,6 +36,7 @@ how_to_use:
   - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents. In ChatGPT or Gemini, paste the agent text first.
   - Paste the draft, or point the agent at the file. Attach your brand brain if you have one.
   - Say what kind of piece it is and, in one line, what it should say.
+  - For the quotable score, put the edited piece on a preview or staging link. Your AI reads that link, so it needs web access. No paid service or API key is needed. If your AI cannot open the link, paste each passage instead.
   - Read the claims list first and fix those yourself. Then read the piece.
   - Publish it yourself. Run the agent again on the next draft.
 output_sample:

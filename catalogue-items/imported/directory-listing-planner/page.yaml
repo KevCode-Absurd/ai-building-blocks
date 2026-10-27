@@ -9,7 +9,7 @@ subhead: A ranked list of directories where your software product should be list
 explain: |
   A ranked list of directories where your software product should be listed, plus listing text ready to submit by hand. Directory links pass authority to your site and put you in front of people who are shopping.
 
-  The skill sets three hard rules. Have a strong landing page live before submitting anywhere. Build destination pages before directories. And treat directories as a base layer, not your whole plan. Before you submit, it checks you have clean headings, a pricing page, policies, logos, real screenshots, a short demo video and structured data. It draws on a catalogue of directories and a set of positioning variants, so the descriptions differ between sites.
+  The skill sets three hard rules. Have a strong landing page live before submitting anywhere. Build destination pages before directories. And treat directories as a base layer, not your whole plan. Before you submit, it checks you have clean headings, a pricing page, policies, logos, real screenshots, a short demo video and structured data. It draws on a catalogue of directories and a set of positioning variants, so the descriptions differ between sites. The figures in the skill file are the original author's estimates and are not checked here. This is Corey Haines' directory-submissions skill, shared under the MIT licence.
 when:
   - You are launching a SaaS or AI product and want backlinks and discovery.
   - You do not know which directories are worth the time.
@@ -38,6 +38,7 @@ how_to_use:
   - Read the readiness check first. Fix any missing items before you submit anywhere.
   - Submit by hand in the order given, using the listing text for each directory.
   - Ask for a review plan only if you will follow each site's rules on asking for and rewarding reviews. Treat any figures in the plan as unsourced estimates and check them.
+  - The core plan needs no paid service. A paid G2 plan, a Product Hunt hunter and any other paid extra are optional, and each must follow that platform's rules. Check prices and rules on the platform's own site, since they change. Never buy upvotes or reviews.
 output_sample:
   input:
     - Your product name and what it does

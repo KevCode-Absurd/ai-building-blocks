@@ -12,8 +12,13 @@ inputs:
     required: false
   - type: codebase
     required: false
+  - type: page_speed_report
+    required: false
+  - type: plan
+    required: false
 outputs:
   - type: code_change
+  - type: audit_report
 uses: []
 origin: imported
 source:

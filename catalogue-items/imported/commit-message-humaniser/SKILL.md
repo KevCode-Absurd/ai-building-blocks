@@ -82,10 +82,10 @@ fix(checkout): ignore stale cart id from localStorage
 Stale cart ids came from tabs that hadn't refreshed after a deploy. Server
 now treats unknown ids as empty cart instead of 500.
 
-Closes #842
+Closes #[ISSUE NUMBER]
 ```
 
-### Breaking change
+### Breaking change (illustrative: the route names, date and issue number are placeholders)
 
 ```
 feat(api)!: rename /v1/orders to /v1/customer-orders
@@ -94,9 +94,9 @@ The old route stays in place until the next major release but logs a
 deprecation warning. Internal services have been migrated.
 
 BREAKING CHANGE: third-party integrations using /v1/orders directly need
-to switch to /v1/customer-orders by 2026-07-01.
+to switch to /v1/customer-orders by [DATE].
 
-Closes #1290
+Closes #[ISSUE NUMBER]
 ```
 
 ## Boundaries

@@ -1,6 +1,6 @@
 ---
 name: competitor-idea-video-script
-description: Use when you have a real ad you admire (the ad, its library ID or link, or a breakdown card of it) and want a new video script that takes one persuasion idea from it and nothing else, built from the brand's own reviews and facts. Works best from a real ad; without one it asks once, then writes from your research and marks the gap. To keep a reference's order and pace, use competitor-video-ad-script. Ends with eight checks and any still missed.
+description: Use when you have a real ad you admire (the ad, its library ID or link, or a breakdown card of it) and want a new video script that takes one persuasion idea from it and nothing else, built from the brand's own reviews and facts. Works best from a real ad; without one it asks once, then writes from your research and marks the gap. To keep a reference's order and pace, use competitor-video-ad-script. Ends with nine checks and any still missed.
 ---
 
 # Video script writer from a competitor ad idea
@@ -51,9 +51,9 @@ Look for at least one real ad: something a person saw, with a library ID, a link
 1. **List the candidate ideas.** Per ad, one sentence on how it wins attention or belief, tied to what you saw ("the first line admits the price is high"). It must still make sense for a product in another category. Run time shows someone kept paying, never that it sold, so each idea is a hypothesis.
 2. **Pick one,** asking in order: does the brand have a true fact or real quote for it to rest on? Does it answer a want or doubt several buyers voice? Does it avoid the category's clichés? If none passes the first question, write `MISSING: an idea this brand can back`, ask once for the fact that would back the best one, then carry on with that idea and mark its proof `MISSING:`. Never invent the fact.
 3. **Name where it acts:** one or two parts. The order of parts comes from the script type or the customer-research method, never from the reference.
-4. **Put the reference away and write** with the method of `quote-video-ad-script`. Every fact and quote comes from the brand's files, with its source.
+4. **Put the reference away and write** with the method of `quote-video-ad-script`. Every fact and quote comes from the brand's files, with its source. Use a vitamin, health, safety or money claim only if it is in the allowed-claims list. Otherwise write `[CHECK: claim against label and local rules]` beside the line. A daily-value percentage counts as a claim.
 5. **Check the distance.** Fix any "no" and check again.
-6. **Run the eight checks:** a real ad is named (with no ID or link, its headline or first line is quoted exactly as written); the idea works for another category; it shapes one or two named parts; every fact and quote has a source; and the five distance lines. Fix what you can, then list each check still missed under CHECKS MISSED, or "none". With no real ad there is no script.
+6. **Run the nine checks:** a real ad is named (with no ID or link, its headline or first line is quoted exactly as written); the idea works for another category; it shapes one or two named parts; every fact and quote has a source; and the five distance lines. Fix what you can, then list each check still missed under CHECKS MISSED, or "none". With no real ad there is no script.
 
 ## What you hand back
 ```
@@ -92,9 +92,8 @@ CHECKS MISSED
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Competitor video script adapter](https://useaiblocks.com/skills/competitor-video-ad-script).
-- **Make video ads** with the [Ad script read-aloud editor](https://useaiblocks.com/skills/ad-script-read-aloud-editor). It takes the script.
 - **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script.
+- **Make video ads** with the [Ad script read-aloud editor](https://useaiblocks.com/skills/ad-script-read-aloud-editor). It takes the script.
 - **Make video ads** with the [Video ad script line checker](https://useaiblocks.com/skills/video-ad-script-line-checker). It takes the script.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

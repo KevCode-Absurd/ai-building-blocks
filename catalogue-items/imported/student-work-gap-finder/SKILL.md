@@ -200,7 +200,7 @@ For each gap:
 **Gap 3: No analysis of specific word choices within the quotation**
 - **Type:** Procedural gap
 - **Evidence:** The student quotes "the sea was a raging beast" as a whole but doesn't zoom in on specific words — "raging" (violence, anger, out of control) and "beast" (animal, dangerous, powerful, inhuman). Effective analysis works at the word level, not just the phrase level.
-- **Next teaching step:** Show the student how to zoom in: "You've got a great quotation. Now let's look at the individual words. What does 'raging' make you think of? What about 'beast'? Why didn't Dickens write 'the sea was a large animal'? What's different about 'raging beast'?" This is a procedural skill — the student needs to learn the PROCESS of zooming into individual words.
+- **Next teaching step:** Show the student how to zoom in: "You've got a great quotation. Now let's look at the individual words. What does 'raging' make you think of? What about 'beast'? Why didn't the writer write 'the sea was a large animal'? What's different about 'raging beast'?" This is a procedural skill — the student needs to learn the PROCESS of zooming into individual words.
 
 ### Priority
 

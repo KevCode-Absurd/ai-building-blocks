@@ -13,9 +13,9 @@ Read [the original role profile](references/source-agent.md) before you start. U
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Sales proposal writer](https://useaiblocks.com/skills/sales-proposal-writer).
 - The [Quote and proposal builder](https://useaiblocks.com/skills/quote-and-proposal-builder). It takes the document.
-- The [Deal payment checker](https://useaiblocks.com/skills/can-they-pay-deal-checker). It takes the plan.
+- The [Deal health reviewer](https://useaiblocks.com/skills/deal-health-reviewer). It takes the document.
+- The [RFP response builder](https://useaiblocks.com/skills/rfp-response-builder). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

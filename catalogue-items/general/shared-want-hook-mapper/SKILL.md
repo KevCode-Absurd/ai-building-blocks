@@ -94,11 +94,8 @@ CHECKS MISSED
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Five-part ad checker](https://useaiblocks.com/skills/five-part-ad-checker). It takes the ad copy.
 - The [Buyer motivation and proof mapper](https://useaiblocks.com/skills/buyer-trigger-and-proof-mapper).
-- The [Customer job mapper](https://useaiblocks.com/skills/customer-job-mapper).
-- The [Customer identity messaging mapper](https://useaiblocks.com/skills/customer-identity-messaging).
-- **Write the ad copy** with the [Ad hook writer](https://useaiblocks.com/prompts/ad-opening-line-batch-writer). It takes the ad copy.
+- **Write the ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It takes the hooks.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

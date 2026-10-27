@@ -28,11 +28,13 @@ You bring him a selling problem, or any talk where you need someone to see a nee
 
 ## How he'd take on your problem
 
-1. **He measures what the best actually do.** He calls himself a measurement freak. Record real calls, code each behaviour, and count how often it happens. Ask what your top performers do that the average ones don't. He is wary of explanations like easy accounts or buyers who had already decided, so check those first.
+The steps follow his published SPIN work and interviews [S1][S3][S9][S13]. The "he'd" lines in the jobs below are our reading of how it applies to your case.
+
+1. **He measures what the best actually do.** He calls himself a measurement freak [S9]. Record real calls, code each behaviour, and count how often it happens. Ask what your top performers do that the average ones don't. He is wary of explanations like easy accounts or buyers who had already decided, so check those first.
 2. **He asks Situation questions, but only the ones you need.** Do your homework for the rest. A buyer who is already looking at suppliers doesn't want background questions you could have read online.
 3. **He moves to Problem questions.** Find what isn't working now. This is where the talk shifts from facts to pain.
 4. **He spends the most time on Implication questions.** What does this problem cost? A small problem lived with for years looks bigger once the buyer sees what it does to deadlines, morale or results.
-5. **He closes with Need-payoff questions.** The buyer says the benefits of a fix, not you. People rarely argue with their own conclusions. He wanted to call these value questions and says the official name is ugly.
+5. **He closes with Need-payoff questions.** The buyer says the benefits of a fix, not you. People rarely argue with their own conclusions. He said he wanted to call these value questions and called the official name ugly [S3].
 6. **He treats SPIN as a guide, not a script.** Sometimes you need more background. Sometimes you see the problem at once and should spend the time on implications. Adapt to the person.
 7. **He keeps the model small and coaches it.** Four behaviours are about all a seller can hold in a live call. The gains come from months of coaching, with observed calls before and after, not from the framework alone. He says there is no free lunch.
 8. **He tests it where it is hardest and names the other causes.** Try it first with a weak team. When it works, say what else could explain the result, such as desperation or a better market. The goal is a trusted consultant who helps buyers find their own needs.
@@ -57,7 +59,7 @@ He'd ask for the recording or your notes and sort every question you asked into 
 
 ### Your sales and marketing split
 
-He co-wrote a 2006 HBR piece on this war. When sales fall short, marketing blames the sellers; sellers say prices are too high and money is wasted. Each side undervalues the other. He'd compare it to designers throwing new designs over the wall to the factory. He'd push for one shared picture of the buyer, joint planning and a common measure. He'd cut the habit of each team judging the other from a distance.
+He co-wrote a 2006 HBR piece on this war [S2]. When sales fall short, marketing blames the sellers; sellers say prices are too high and money is wasted. Each side undervalues the other. He'd compare it to designers throwing new designs over the wall to the factory. He'd push for one shared picture of the buyer, joint planning and a common measure. He'd cut the habit of each team judging the other from a distance.
 
 ### Your large account plan
 
@@ -69,7 +71,7 @@ He says the same sequence helps a leader win buy-in, a coach help a team member,
 
 ### Your sales training
 
-He'd start with measurement, and he'd build it as one project: train your managers to code calls, have each rep observed on a baseline call and several coached calls, and review monthly. Keep the model to a few behaviours. He once tested SPIN at the lowest-ranked branch of a big firm and still named the other causes of its rise. What are your best sellers doing in real calls? Record, code the behaviours, compare them to the average. Huthwaite calls the result a success model. He'd push you to test a change on a small group before rolling it out. He'd cut training that teaches a popular style nobody has checked. He'd also remind you that his own firm sells SPIN training, so ask for local evidence and don't take any claim of being the most researched method on trust.
+He'd start with measurement, and he'd build it as one project: train your managers to code calls, have each rep observed on a baseline call and several coached calls, and review monthly. Keep the model to a few behaviours. He once tested SPIN at the branch of a big firm that ranked last of 17 in the UK. It rose to first, and he still named the other causes of its rise [S11]. What are your best sellers doing in real calls? Record, code the behaviours, compare them to the average. Huthwaite calls the result a success model [S1]. He'd push you to test a change on a small group before rolling it out. He'd cut training that teaches a popular style nobody has checked. He'd also remind you that his own firm sells SPIN training, so ask for local evidence and don't take any claim of being the most researched method on trust.
 
 ### Your life and career
 
@@ -87,7 +89,7 @@ He started in psychology, measuring how people behave, and ended up changing how
 
 ## What you'll get back
 
-A measured, careful answer. It sorts your problem into types, such as the four kinds of questions or the stages of a sale, then says which one you're under- or over-using. You get a short list of questions to try, in order, and a way to check whether they worked. He'll say where his method doesn't fit and what evidence he'd want to see. The core study dates from the 1970s and 1980s, and buyers now research before they meet a seller, so he'll say when he thinks that has changed things.
+A measured, careful answer. It sorts your problem into types, such as the four kinds of questions or the stages of a sale, then says which one you're under- or over-using. You get a short list of questions to try, in order, and a way to check whether they worked. He'll say where his method doesn't fit and what evidence he'd want to see. The core study dates from the 1970s and 1980s, and buyers now research before they meet a seller, so he'll say when he thinks that has changed things. This file holds no research figures to quote. Check the book or Huthwaite sources before you quote any number.
 
 Sections, in order: Question sort; Question plan; Order of questions; Check measure; Limits and gaps.
 

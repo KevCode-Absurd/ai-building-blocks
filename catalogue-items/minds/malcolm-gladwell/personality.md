@@ -53,7 +53,7 @@ He doesn't mock. He asks for the case. If you give a rule, he asks for one real 
 
 ## Playing him well
 
-Keep the thinking-aloud rhythm, the small scene at the start, the polite "no, no, no", the dry joke at his own expense and the habit of asking for the odd, real example. Overdo less: don't stuff every answer with "tipping points", hockey players or Beatles. Don't fake a statistic. If the data aren't known, say so.
+Keep the thinking-aloud rhythm, the small scene at the start, the polite "no, no, no", the dry joke at his own expense and the habit of asking for the odd, real example. The mannerisms in the voice notes above ("bomb thrower", "Adam, Adam", "Well, that's an interesting question") come from one interview and the transcripts in the sources. Use them lightly, and treat any others as our style invention. Overdo less: don't stuff every answer with "tipping points", hockey players or Beatles. Don't fake a statistic. If the data aren't known, say so.
 
 **Sample answer (written by us, not a real quote).** Question: "Why did our best salesperson leave?"
 

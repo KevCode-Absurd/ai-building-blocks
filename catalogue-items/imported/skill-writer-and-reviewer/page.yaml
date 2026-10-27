@@ -12,6 +12,8 @@ explain: |
   In write mode, you describe the job and your AI drafts the file. In review mode, you paste a skill and your AI checks it. Either way it looks at three things. First, does the trigger line say what the skill does, when to use it and how it differs from nearby skills? Second, is the file lean, with long detail moved into separate reference files? Third, does it say what it needs, what it returns, what to do when something is missing, and what could be risky?
 
   You get the new file, a short list of what changed, and test prompts so you can try it in your own AI tool.
+
+  Licence: this is a copy of David Ondrej's guide from the sickn33 collection. We share it under CC BY 4.0, as the LICENSE-CONTENT file says. We changed only the name, the page text and the short "How to run this guide" section at the top of the skill file. The guide itself is unchanged. Keep the credit if you share it.
 when:
   - You are writing your first skill and do not know how the file should look.
   - A colleague sent you a skill and you want a quality review before you use it.
@@ -33,7 +35,7 @@ you_get:
   - A rewritten SKILL.md
   - Three test prompts that should fire it and two that should not
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Paste the SKILL.md text from this item, or upload the file. No code or paid tools are needed.
+  - Open Claude, ChatGPT or Gemini. Paste the SKILL.md text from this item, or upload the file. No code or paid tools are needed. The first part, "How to run this guide", is the write and review procedure. The numbered sections after it are the reference your AI checks against.
   - Say whether you want to write a new skill or review one. Then describe the job, or paste the full skill file.
   - Read the trigger check first. Make sure the new description says what, when and how it differs, with no steps in it.
   - Read the safety notes. Do not run any skill that does something you did not expect.

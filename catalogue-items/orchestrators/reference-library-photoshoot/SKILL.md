@@ -5,15 +5,17 @@ description: Pick photo looks for one real product. Get a shot plan, a pilot and
 
 # Reference library product photoshoot
 
-One run is one named product variant. Brand-wide brainstorming is a separate job. This workflow creates a campaign set from a visual library; it does not publish the source library itself.
+One run is one named product variant. Brand-wide brainstorming is a separate job. This workflow creates a campaign set from a visual library; it does not publish the source library itself. It runs as one method and calls no other skill.
+
+**Image tool needed.** Claude cannot draw the pictures. You need an image tool that can use your real product photo as a reference, such as ChatGPT image generation, Gemini or an image API. Many of these are paid, need credits or an API key. Check that before any generation step. With no image tool, you still get the truth sheet, the look picks and the shot plan.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Marketplace photo rule checker](https://useaiblocks.com/skills/marketplace-photo-rule-checker). It takes the product photos and photo set and audit report.
-- The [Reference-style product photo maker](https://useaiblocks.com/skills/reference-product-photos). It takes the product photos.
-- The [AI product photo inspector](https://useaiblocks.com/skills/ai-product-photo-inspector). It takes the product photos and photo set.
+- The [Marketplace photo rule checker](https://useaiblocks.com/skills/marketplace-photo-rule-checker). It takes the photo set and audit report.
+- The [AI product photo inspector](https://useaiblocks.com/skills/ai-product-photo-inspector). It takes the photo set.
+- The [Product page gallery planner](https://useaiblocks.com/skills/product-page-gallery-planner). It takes the product truth sheet.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

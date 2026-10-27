@@ -13,9 +13,15 @@ inputs:
     required: true
   - type: source_text
     required: false
-outputs:
-  - type: document
   - type: plan
+    required: false
+  - type: brand_brain
+    required: false
+outputs:
+  - type: design_direction
+  - type: document
+  - type: design_tokens
+    required: true
 uses: []
 steps: []
 origin: imported

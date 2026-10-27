@@ -12,6 +12,8 @@ Turn a business problem into a GIS strategy: the gaps, the options, the design, 
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Scholarly database searcher](https://useaiblocks.com/skills/scholarly-database-searcher). It takes the plan.
+- The [Item-by-item researcher](https://useaiblocks.com/skills/item-by-item-researcher). It takes the plan.
+- The [GIS solution designer](https://useaiblocks.com/skills/agency-gis-solution-engineer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -35,6 +37,8 @@ How to start:
 <!-- /needs -->
 
 ## Ask for these first
+
+These are the inputs that count. If the generic "Before you start" list above asks for something else, such as a question or source text, ignore that part.
 
 Ask once for anything below that is missing. If it is still missing, write MISSING in the result and say what that gap changes. Never invent it.
 
@@ -74,6 +78,10 @@ Return these sections, in this order:
 - **Hidden costs and risks**: Item, why, how to check.
 - **Data governance**: Owner, update, quality rule.
 - **RFP text and open questions**: Draft sections if asked, then what is unknown.
+
+The open questions are also your CHECKS MISSED list: name every check that could not run, or write "none".
+
+Next: for a working demo, use the [Solution Engineer agent](https://useaiblocks.com/skills/agency-gis-solution-engineer). For a hands-on map build, use the [GIS Analyst agent](https://useaiblocks.com/skills/agency-gis-analyst).
 
 ## Rules
 

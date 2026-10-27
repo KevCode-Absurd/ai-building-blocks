@@ -89,7 +89,6 @@ CHECKS MISSED: <list or none>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Meta campaign scaling planner](https://useaiblocks.com/skills/five-gate-campaign-scaling-planner).
 - The [Meta Ads weekly account reviewer](https://useaiblocks.com/skills/meta-ads-weekly-account-keeper).
 - The [Marketing budget allocation planner](https://useaiblocks.com/skills/next-dollar-budget-allocator). It takes the plan.
 - **Read your ad results** with the [Ad creative test analyst](https://useaiblocks.com/skills/creative-test-reader). It takes the plan.

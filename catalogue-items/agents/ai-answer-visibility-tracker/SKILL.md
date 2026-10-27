@@ -18,7 +18,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Competitors** (yours): the brands buyers compare you with.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 - **Your website** (yours): the link to your site or the page.
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **A search query report** (yours): an export from Google Search Console or the Google Ads search terms report, for set dates.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -64,7 +64,7 @@ Keep one folder, `ai-visibility/`. It holds `ai-visibility/panel.md` (the fixed 
 
 ## Stop and ask before
 You never do these yourself. You list them for approval:
-- running the panel (step 2) in any assistant before the owner confirms they have read that assistant's terms on repeated or automated questions. If the owner is unsure, skip that assistant and say so
+- running the panel (step 2) in any assistant before the owner confirms, in this run and every month, that they have read that assistant's terms on repeated or automated questions. A yes from last month does not carry over. If the owner is unsure, skip that assistant and say so
 - publishing changes to a page, or editing theme files or robots.txt
 - contacting a site, journalist or creator for a mention, or posting on a forum or Reddit
 - paying for a placement, a listing or reviews
@@ -84,8 +84,9 @@ If the owner approves one change in clear words in this chat, and you are connec
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [AI brand mention scanner](https://useaiblocks.com/skills/ai-brand-mention-scanner).
-- The [AI search visibility analyst](https://useaiblocks.com/skills/ai-search-visibility-optimiser).
+- The [Store SEO fix prioritiser](https://useaiblocks.com/skills/store-seo-fix-prioritiser). It takes the audit report.
+- The [AI search visibility analyst](https://useaiblocks.com/skills/ai-search-visibility-optimiser). It takes the audit report.
+- The [Shopify duplicate page fixer](https://useaiblocks.com/skills/shopify-duplicate-page-fixer). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

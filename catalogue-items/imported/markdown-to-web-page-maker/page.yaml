@@ -9,7 +9,7 @@ subhead: Give it a long markdown file. It builds one HTML page you can share, wi
 explain: |
   One tidy HTML page built from a long markdown file, with a contents bar that follows you, a search box and copy buttons on code. It suits specs, plans, reports and explainers that people will skim.
 
-  Three small Python scripts do the work. One reads the markdown into sections. A second turns them into a styled page using your brand colors and fonts. A third adds the behavior: scroll tracking, filtering and copy buttons. The page needs web fonts and a code highlighter loaded from the internet. Files under 100 lines are refused, since plain markdown reads fine, and slide decks or code reviews go to other tools. You need Python installed.
+  Three small Python scripts do the work. One reads the markdown into sections. A second turns them into a styled page using your brand colors and fonts, or a default look if you have no design setup. A third adds the behavior: scroll tracking, filtering and copy buttons. The page needs web fonts and a code highlighter loaded from the internet. Files under 100 lines are refused, since plain markdown reads fine, and slide decks or code reviews go to other tools. You need Python installed.
 when:
   - Your project spec is a long markdown file that nobody scrolls through.
   - You want a shareable report with a contents bar and search.
@@ -21,7 +21,7 @@ not_for:
   - "Your file is under 100 lines: keep it as plain markdown, it reads fine as it is."
 you_give:
   - A markdown file of 100 lines or more
-  - Your design setup (brand colors and fonts) from the author's /cs:design-system command. That command is in the author's full pack, not in this folder
+  - Your design setup (brand colors and fonts) from the author's /cs:design-system command (optional). That command is in the author's full pack, not in this folder. Without it you get the default look
   - Python 3 installed on your computer
 you_get:
   - One HTML page you can share as a single file
@@ -31,8 +31,8 @@ you_get:
   - Your brand colors and fonts on the page
 how_to_use:
   - Check your file has 100 lines or more. Shorter files are refused.
-  - Install the author's full pack (alirezarezvani/claude-skills) and run /cs:design-system once. This folder holds only the three scripts, so the page will not build without that setup.
-  - Use an AI that can run code, such as Claude Code or Codex. Give it your markdown file and the skill.
+  - Brand colors and fonts come from the author's full pack (alirezarezvani/claude-skills): run its /cs:design-system command once. This folder holds only the three scripts. If you skip the pack, tell your AI to build with the default look (the render step has a --no-config option).
+  - Use an AI that can run code, such as Claude Code or Codex. Give it your markdown file and the skill folder, and run it from the folder's top level, where the scripts folder sits.
   - "Ask it to run the three steps in order: parse the markdown, build the page, then add search and copy buttons."
   - Open document.html in your browser. Check the contents bar, search and a code copy button.
   - Share the single HTML file. To change the look, set a different design style and run it again.
@@ -44,8 +44,9 @@ output_sample:
   prerequisites:
     - An AI that can run code and save files
     - Python 3 installed
-    - Design-system setup finished (run /cs:design-system first)
+    - Design-system setup finished (run /cs:design-system first), or use the default look
     - An internet link when you open the page, for web fonts and the code highlighter
+    - Python 3 (the scripts use only its standard library)
   output:
     - name: sections.json
       contains: Your markdown split into headings, text, code, tables and callouts, ready for the next step.

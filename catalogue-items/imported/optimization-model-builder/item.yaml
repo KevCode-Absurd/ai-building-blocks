@@ -11,7 +11,8 @@ inputs:
   - type: question
     required: true
 outputs:
-  - type: plan
+  - type: code_change
+  - type: document
 uses: []
 origin: imported
 source:

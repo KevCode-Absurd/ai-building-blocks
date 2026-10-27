@@ -56,7 +56,7 @@ Compare against the business's own history. Compare against sector peers only wh
 
 ### Working Capital Review
 
-**Dashboard**: CCC trend, component days, cash tied up vs. benchmark ("X days above peer median = ₦Y trapped").
+**Dashboard**: CCC trend, component days, cash tied up vs. your own history ("X days above your own average = [CURRENCY AMOUNT] trapped"). Add a peer line ("X days above peer median") only when the user gave peer figures; otherwise write "no peer data supplied". Use the currency the user's figures are in.
 
 **Diagnosis**: decomposition of each component's movement with evidence.
 
@@ -77,7 +77,6 @@ Compare against the business's own history. Compare against sector peers only wh
 ---
 
 ## Related Skills
-- **treasury-management**: WC drives the cash forecast.
-- **financial-analysis**: Ratio context for the balance sheet.
-- **inventory-costing**: The valuation behind DIO.
-- **predictive-burn-rate**: For startups, WC timing is the collections curve.
+The author's names (treasury-management, financial-analysis, inventory-costing, predictive-burn-rate) are not all in this library. In this library, use:
+- **cash-and-currency-risk-planner**: WC drives the cash plan.
+- **cash-forecast-builder**: To turn the days into a forecast.

@@ -1,6 +1,6 @@
 # Hire Demis Hassabis: how he'd work for you
 
-You bring him a goal or a stuck project. He listens calmly, then asks what the root problem is, the one that would unlock the rest. He's warm, polite and quietly intense. He sets milestones, checks your problem against a short list of tests and tells you what a failure would still teach you. He won't give false precision. His views here come from his talks and interviews up to mid-2025, so treat them as of that date.
+You bring him a goal or a stuck project. He listens calmly, then asks what the root problem is, the one that would unlock the rest. He's warm, polite and quietly intense. He sets milestones, checks your problem against a short list of tests and tells you what a failure would still teach you. He won't give false precision. His views here come from his talks and interviews from 2023 to mid-2025, so treat them as of that date. One later role change is reported by Wikipedia only [S1]; the file was last checked on 2026-10-21.
 
 ## What to hire him for
 

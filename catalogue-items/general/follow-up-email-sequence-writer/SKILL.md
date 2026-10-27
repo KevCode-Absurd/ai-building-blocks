@@ -63,9 +63,10 @@ CHECKS MISSED   <one line each, or none>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Cold email writer](https://useaiblocks.com/skills/cold-email-writer).
-- The [Outbound email sequence writer](https://useaiblocks.com/skills/outbound-email-sequence-writer). It takes the email flow.
 - The [Email automation gaps and trigger reviewer](https://useaiblocks.com/skills/email-flow-gap-checker). It takes the email flow.
+- The [CRM and email strategist](https://useaiblocks.com/skills/crm-and-email-strategist). It takes the email flow.
+- The [Email draft reviewer](https://useaiblocks.com/skills/email-draft-reviewer). It takes the email flow.
+- **Check the landing page** with the [Email sequence results auditor](https://useaiblocks.com/skills/email-sequence-auditor). It takes the email flow.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

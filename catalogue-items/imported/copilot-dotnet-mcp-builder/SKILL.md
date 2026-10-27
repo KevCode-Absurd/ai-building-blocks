@@ -72,6 +72,7 @@ For multi-primitive tasks, load several at once. For trivial edits in an existin
 
 - **Make minimal, additive changes.** Add a method to the existing tool class rather than restructuring the project.
 - **For non-trivial setups, run `dotnet build`.** Catches missing usings, attribute typos, and TFM mismatches before the user sees them.
+- **If you have a tool set plan, take the tools to expose from it.** Otherwise ask which tools to expose.
 - **Confirm transport + .NET version + primitives before scaffolding** if context doesn't already make them obvious. Default to **.NET 10** for new projects.
 
 ## When the user is stuck

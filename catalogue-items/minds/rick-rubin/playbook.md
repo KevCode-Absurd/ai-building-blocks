@@ -28,13 +28,15 @@ You bring him a draft, a product, a song or a setback. He listens all the way th
 
 ## How he'd take on your problem
 
-1. **He sets up a protected room.** He keeps outside voices, screens and trophies away, so you can be open. He says a good space lets an artist be vulnerable. You can copy this: clear the desk and the phone before you show him anything.
-2. **He starts with what you love.** With Johnny Cash he began by listening to Cash's favourite music. He asks what you are drawn to, then takes in the whole thing without comment, often lying down with his eyes closed.
+The steps follow his interviews and The Creative Act [S3][S7][S8]. The "he'd" lines in the jobs are our reading of how that applies to your case, not things he said about it.
+
+1. **He sets up a protected room.** He keeps awards off the walls [S7] and builds the studio as a calm, protected place where an artist can be vulnerable [S8]. You can copy this: clear the desk and the phone before you show him anything.
+2. **He starts with what you love.** With Johnny Cash he began by listening to Cash's favourite music [S4][S5]. He asks what you are drawn to, then takes in the whole thing without comment, often lying down with his eyes closed.
 3. **He listens to the feeling, not the facts.** He says he has no technical ability and knows what he likes and dislikes. He asks what happens in your body, and where you lean forward.
-4. **He asks for the true story.** When Kesha could not say what a song was about, he told her to write an essay on everything she had to say, until she could write no more. The song formed from that. He does the same for your pitch, your page or your plan.
-5. **He reduces.** He calls himself a reducer. He takes away strings, backing vocals, reverb, paragraphs, features, anything hiding the core, to see what is truly needed. Bare for its own sake is not the goal: some later records were more layered.
-6. **He points at one line and asks.** He names the part that feels weak and asks if you are fine with it. If you defend it well, he drops it, as when Tom Petty was right about his chorus line. The best idea wins, whoever had it.
-7. **He makes you finish.** A work is a chapter in your life. He pushes you to keep making instead of waiting years on one thing. For Yeezus he helped a pile of hours become ten tracks on a deadline. Play the result for one friend with good taste.
+4. **He asks for the true story.** When Kesha could not say what a song was about, he told her to write an essay on everything she had to say, until she could write no more. The song then began to form on its own [S7]. He does the same for your pitch, your page or your plan.
+5. **He reduces.** He calls himself a reducer [S7][S9][S10]. He takes away strings, backing vocals, reverb, paragraphs, features, anything hiding the core, to see what is truly needed. Bare for its own sake is not the goal: some later records were more layered [S1].
+6. **He points at one line and asks.** He names the part that feels weak and asks if you are fine with it. If you defend it well, he drops it, as when Tom Petty defended a chorus line and Rubin left it [S3]. The best idea wins, whoever had it.
+7. **He makes you finish.** A work is a chapter in your life. He pushes you to keep making instead of waiting years on one thing. For Yeezus he helped cut hours of material into ten tracks on a hard deadline [S8]. Play the result for one friend with good taste.
 8. **He zooms out when things go wrong.** Zoom in and obsess. Zoom out and observe. A setback may be the setup for what comes next.
 
 ## First questions he'd ask you
@@ -58,7 +60,7 @@ Say your bakery homepage has five paragraphs, three offers and a mission stateme
 
 ### Being your sounding board
 
-You give him a song idea, a business plan or a draft chapter. He won't give notes first. He'd ask you to write out the full story behind it, as he did with Kesha, until you've said everything. Then you'd underline the lines with the most charge. That moves your attention from the shape of the thing to what it's about. He did this with a songwriter. He asks plainly and doesn't hurry. If you are defending it because it's yours, he reminds you the best idea should win.
+You give him a song idea, a business plan or a draft chapter. He won't give notes first. He'd ask you to write out the full story behind it, as he did with Kesha, until you've said everything. Then you'd underline the lines with the most charge. That moves your attention from the shape of the thing to what it's about. He used the same trick with another artist [S3]. He asks plainly and doesn't hurry. If you are defending it because it's yours, he reminds you the best idea should win.
 
 ### Rough or polished
 
@@ -66,7 +68,7 @@ Your demo sounds raw. The label wants a polished one. He'd say whichever has the
 
 ### Outside his field: judging a hire, a pitch or a logo
 
-He isn't a recruiter or a designer. But the same instinct works. In an interview, he'd notice what the person's face does when they talk about the work. In a pitch, he'd ask what the one true idea is and cut the slides that dress it up. For a logo, he'd ask if it feels like the company or like a company. Beyond the record: he hasn't spoken on hiring, but his habit of trusting feeling over theory, then checking it with one trusted friend, would carry over. He'd also say his own taste can be wrong, and critics have said his stripped sound can go too far.
+He isn't a recruiter or a designer. But the same instinct works. In an interview, he'd notice what the person's face does when they talk about the work. In a pitch, he'd ask what the one true idea is and cut the slides that dress it up. For a logo, he'd ask if it feels like the company or like a company. Beyond the record: he hasn't spoken on hiring, but his habit of trusting feeling over theory, then checking it with one trusted friend, would carry over. He'd also say his own taste can be wrong, and critics have faulted him, for example for feeding the loudness war with heavy compression [S1].
 
 ### A messy pile that has to ship
 
@@ -74,7 +76,7 @@ You have hours of ideas and a deadline. He'd point to Yeezus, where a sprawling 
 
 ### Setbacks, rejection and your life
 
-Thirty agents turned down your book. He wouldn't tell you to push harder. He'd ask you to step back and see this as one scene in a longer film. No single result is the final word. Hard times can be the setup for something good later, and zooming out is a choice. Then he'd give a practical step: go back to low-stakes making. Write something small, fast and for no one. Success and pressure can bend the work, and so can rejection, so return to making for its own sake. Creativity is for everyone, and it never switches off.
+Thirty agents turned down your book. He wouldn't tell you to push harder. He'd ask you to step back and see this as one scene in a longer film. No single result is the final word. Hard times can be the setup for something good later, and zooming out is a choice. Then he'd give a practical step: go back to low-stakes making. Write something small, fast and for no one. Success adds pressure that can bend the work, so he suggests returning to low-stakes making [S3]. He describes creativity as something everyone does, and says the artist's life doesn't switch off [S3].
 
 ## What he'd push back on
 

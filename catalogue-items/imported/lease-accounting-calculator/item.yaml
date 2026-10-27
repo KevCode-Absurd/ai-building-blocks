@@ -8,10 +8,13 @@ role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
+  - type: question
     required: true
+  - type: contract
+    required: false
 outputs:
   - type: spreadsheet
+  - type: document
 uses: []
 origin: imported
 source:

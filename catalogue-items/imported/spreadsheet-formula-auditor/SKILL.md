@@ -25,6 +25,10 @@ If `india-market-conventions`, `india-market-data` or `NOT-ADAPTABLE.md` are not
 What has no Indian equivalent is listed in `NOT-ADAPTABLE.md`. Name the gap —
 never substitute a proxy and present it as the real thing.
 
+Not for one broken formula: that is faster to fix in chat. This skill reports problems and never edits the file unless the user asks. After the report, hand the findings to financial-model-builder if the model needs rebuilding.
+
+For a model that is not Indian, skip the India rules and use the user's own currency and fiscal year.
+
 Audit formulas and data for accuracy and mistakes. Scope determines depth — from quick formula checks on a selection up to full financial-model integrity audits.
 
 ## Step 1: Determine scope

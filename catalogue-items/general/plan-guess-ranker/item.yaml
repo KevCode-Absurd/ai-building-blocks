@@ -7,7 +7,7 @@ role: check
 job: strategy
 level: intermediate
 inputs:
-  - type: question
+  - type: plan
     required: true
 outputs:
   - type: audit_report

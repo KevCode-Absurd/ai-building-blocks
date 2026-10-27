@@ -135,6 +135,10 @@ digraph can_workflow {
 }
 ```
 
+### Before You Transmit (MANDATORY)
+
+Sending frames can change how real equipment behaves. Before the first `transmit`, `transmitPeriodic`, `transmitEvent` or `replay`, ask the user to confirm the bus is a bench bus, a virtual channel or an isolated test network. Never transmit on a vehicle that is in service or on a network that safety systems depend on. If the user is not sure, use a virtual channel or receive only.
+
 ### Post-Transmit Verification (MANDATORY)
 
 After ANY transmit, verify the bus accepted the frame before reporting success:

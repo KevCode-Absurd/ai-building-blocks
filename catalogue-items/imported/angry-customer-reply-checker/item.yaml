@@ -12,6 +12,8 @@ inputs:
     required: true
   - type: voc_reviews
     required: true
+  - type: policy
+    required: false
 outputs:
   - type: copy_draft
   - type: feedback_notes

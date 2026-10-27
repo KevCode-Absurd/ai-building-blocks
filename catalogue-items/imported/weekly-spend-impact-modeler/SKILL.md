@@ -91,6 +91,8 @@ automatic transformation of Hill response levels into modeled contributions.
 
 ## Run, inspect and report
 
+**Check first, in this order** (for someone who does not code): (1) the STATUS line, because `insufficient_input`, `rank_deficient`, `ill_conditioned` or `numerical_failure` means there is no usable result; (2) the scope line, to confirm the weeks, time zone and currency are the ones you meant; (3) the NOT PROVEN line; only then (4) the channel numbers. In plain words, STATUS ok means the model ran on enough data, limited means it ran with named gaps, and no usable result means do not read any channel number. Modeled share is the share of the outcome the model credits to a channel, and CRM share is the share your CRM credits to it. The factor is one divided by the other.
+
 Install the declared `numpy>=2.1,<3` dependency from `requirements.txt` in a compatible Python
 virtual environment. The recorded tested runtime is Python 3.14.2 / NumPy 2.4.4; it is not a
 claim that every permitted version combination has been tested. Response and framing production

@@ -12,9 +12,6 @@ Not for comparing all 19 growth channels: use the Find your SaaS growth channel 
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Tell it as a story** with the [Content growth experiment planner](https://useaiblocks.com/skills/traction-content-marketing).
-- The [Search topic and link planner](https://useaiblocks.com/skills/topic-cluster-mapper).
-- The [Search page brief writer](https://useaiblocks.com/skills/search-page-brief-writer).
-- The [Customer question keyword finder](https://useaiblocks.com/prompts/customer-question-keyword-finder).
 - **Plan your strategy** with the [Growth channel shortlist planner](https://useaiblocks.com/skills/traction-channel-ranker).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

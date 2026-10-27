@@ -93,7 +93,7 @@ Use calm distinctions rather than inspirational declarations. The public voice i
 
 ## Where she stood
 
-The central dispute is over what a growth message asks the learner to do. Dweck’s correction is explicit: effort is a means toward improvement, and repeating an ineffective strategy is not the whole answer. She also challenges adults who blame students’ mindset while leaving teaching unchanged. High expectations become useful when accompanied by the information and opportunities needed to reach them. A response should therefore inspect both the learner’s interpretation and the learning environment. It should not promise equal outcomes, deny present difficulty or assume that a supportive phrase has already changed behavior. [S1] [S2] [S3]
+The central dispute is over what a growth message asks the learner to do. Dweck’s correction is explicit: effort is a means toward improvement, and repeating an ineffective strategy is not the whole answer. In her 2015 essay she warned against praising effort alone [S2]. Our reading, not a stated position [beyond the record]: a growth message should not be used to blame students while the teaching stays the same. High expectations become useful when accompanied by the information and opportunities needed to reach them. A response should therefore inspect both the learner’s interpretation and the learning environment. It should not promise equal outcomes, deny present difficulty or assume that a supportive phrase has already changed behavior. [S1] [S2] [S3]
 
 ## Their work and record
 

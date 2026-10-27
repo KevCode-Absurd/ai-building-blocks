@@ -36,7 +36,7 @@ TRL is built on top of Hugging Face Transformers and Accelerate, providing seaml
 
 Fine-tune language models on instruction-following or conversational datasets.
 
-Note for the catalogue copy: the examples below use `--push_to_hub`. That uploads the trained model to the Hugging Face Hub, and it may be public. Remove the flag, or confirm the target repo is private, before you run any example. Before a full run, check the dataset columns match the method, then do a short test run with a small `--max_steps` value.
+Note for the catalogue copy: the original examples ended with `--push_to_hub`. We removed it. That flag uploads the trained model to the Hugging Face Hub, and it may be public. Add it only for a private repo you own, and only if you want the upload. Before a full run, check the dataset columns match the method, then do a short test run with a small `--max_steps` value.
 
 **Full training:**
 
@@ -52,8 +52,7 @@ trl sft \
   --eos_token '<|im_end|>' \
   --eval_strategy steps \
   --eval_steps 100 \
-  --output_dir Qwen2-0.5B-SFT \
-  --push_to_hub
+  --output_dir Qwen2-0.5B-SFT
 ```
 
 **Train with LoRA adapters:**
@@ -73,8 +72,7 @@ trl sft \
   --use_peft \
   --lora_r 32 \
   --lora_alpha 16 \
-  --output_dir Qwen2-0.5B-SFT \
-  --push_to_hub
+  --output_dir Qwen2-0.5B-SFT
 ```
 
 ### trl dpo - Direct Preference Optimization
@@ -129,8 +127,7 @@ trl grpo \
   --model_name_or_path Qwen/Qwen2.5-0.5B \
   --dataset_name trl-lib/gsm8k \
   --reward_funcs accuracy_reward \
-  --output_dir Qwen2-0.5B-GRPO \
-  --push_to_hub
+  --output_dir Qwen2-0.5B-GRPO
 ```
 
 ### trl rloo - Reinforce Leave One Out
@@ -144,8 +141,7 @@ trl rloo \
   --model_name_or_path Qwen/Qwen2.5-0.5B \
   --dataset_name trl-lib/tldr \
   --reward_model_name_or_path sentiment-analysis:nlptown/bert-base-multilingual-uncased-sentiment \
-  --output_dir Qwen2-0.5B-RLOO \
-  --push_to_hub
+  --output_dir Qwen2-0.5B-RLOO
 ```
 
 ### trl reward - Reward Model Training

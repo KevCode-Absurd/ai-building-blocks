@@ -3,7 +3,7 @@ name: Skin realism image prompt checker
 summary: Check a portrait or image prompt for fake-looking skin, hands and contact. Get one fix that keeps the face and light.
 job: make-images
 headline: Skin realism image prompt checker
-subhead: Share a portrait or prompt. Get focused fixes for skin, hands and contact while keeping identity and light. Bring the brief and any files you want it to use.
+subhead: Paste an image prompt or upload a portrait, and say whether it is a still or part of a video. You get the biggest skin, hand and contact faults ranked, and one revised prompt that keeps the face, age, skin tone and light.
 explain: |-
   Use this when you need a focused skin, hand and contact realism review. Use this for photorealistic adult faces/hands, beauty/UGC stills or portrait-to-video consistency. A stylized brief does not need photoreal skin correction.
 

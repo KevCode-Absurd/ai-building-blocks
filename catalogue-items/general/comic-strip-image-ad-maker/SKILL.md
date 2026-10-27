@@ -90,11 +90,11 @@ If an image tool is connected, offer to make the picture with it, and ask before
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Single image ad planner](https://useaiblocks.com/skills/single-image-ad-planner).
-- The [Clay scene image ad maker](https://useaiblocks.com/skills/clay-scene-image-ad-maker).
-- The [Hand-drawn story image ad maker](https://useaiblocks.com/skills/hand-drawn-story-image-ad-maker). It takes the ad copy.
 - **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy and image prompt.
+- The [Hand-drawn story image ad maker](https://useaiblocks.com/skills/hand-drawn-story-image-ad-maker). It takes the ad copy.
+- The [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker). It takes the ad copy.
 - **Check it before it goes live** with the [Ad awareness stage reviewer](https://useaiblocks.com/skills/ad-awareness-stage-checker). It takes the ad copy.
+- The [Chat screenshot image ad maker](https://useaiblocks.com/skills/chat-screenshot-image-ad-maker). It takes the ad copy.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

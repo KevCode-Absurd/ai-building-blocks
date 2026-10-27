@@ -8,8 +8,10 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: question
     required: true
+  - type: skill_files
+    required: false
 outputs:
   - type: skill_files
 uses: []

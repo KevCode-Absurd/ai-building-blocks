@@ -105,7 +105,6 @@ MISSING: <what, if anything>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Brand style guide writer](https://useaiblocks.com/skills/brand-style-guide-writer). It takes the design direction.
-- The [Brand direction brainstormer](https://useaiblocks.com/skills/brand-direction-brainstormer).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

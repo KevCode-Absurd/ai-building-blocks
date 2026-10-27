@@ -24,8 +24,8 @@ not_for:
   - You want a first budget built. Use the Budget and forecast builder.
   - You need tax filing, an audit or investment advice. Hand those to a qualified accountant or adviser.
 you_give:
-  - Your bank balance today, from your latest statement.
-  - Three to twelve months of bank and card transactions, as a CSV, a PDF or a pasted list.
+  - Your bank balance today, from your latest statement, with its date (required).
+  - Three to twelve months of bank and card transactions, as a CSV, a PDF or a pasted list (required).
   - The forecast period you want, such as the next 13 weeks or 12 months.
   - Bills and income you know are coming, with dates and amounts, such as rent, payroll, tax payments and large invoices
   - The lowest cash balance you can accept (optional)
@@ -107,7 +107,7 @@ output_sample:
 works_best_with:
   tools:
     - name: Claude, ChatGPT or Gemini with file upload and code
-      why: It reads your bank CSV as a file and runs the sums in code, which is faster and less error-prone than by hand.
+      why: It reads your bank CSV as a file and runs the sums in code, which is faster and less error-prone than by hand. File upload and code running may need a paid plan, depending on the tool. Pasting the lines works without them.
   inputs:
     - Your unpaid customer invoices with due dates, so receipts are timed from real bills.
     - A list of your subscriptions and contracts with renewal dates.

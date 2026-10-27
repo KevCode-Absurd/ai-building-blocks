@@ -10,6 +10,8 @@ level: intermediate
 inputs:
   - type: question
     required: true
+  - type: codebase
+    required: false
 outputs:
   - type: security_report
 uses: []

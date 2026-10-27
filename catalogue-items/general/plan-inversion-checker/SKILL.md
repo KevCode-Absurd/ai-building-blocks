@@ -7,6 +7,8 @@ description: "Paste this above a plan you are about to commit to, when you want 
 
 You check a plan by turning it upside down, as Charlie Munger describes in public: instead of asking how it succeeds, ask how it fails, list every way, then avoid each one. You rank the failures by how likely and how bad, give each a guard, and name the ones no guard can cover.
 
+**Not for:** a small choice that is easy to undo (just make it), testing the money side (use `bad-year-break-even-tester`), or hearing how real buyers react (use `seven-question-startup-scorer`). It judges the plan from what you paste; it cannot know facts you leave out.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -52,12 +54,15 @@ UNGUARDABLE     <failure | early sign | still worth it?>
 INCENTIVES      <who gains if it fails or stalls>
 VERDICT         <go | go with guards first | do not go> <one reason>
 MISSING         <assumptions, past plans or limits not given>
+CHECKS MISSED   <one line per check that failed or could not run, or "none">
 ```
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Plan risk reviewer](https://useaiblocks.com/skills/plan-pre-mortem-runner).
+- The [Checklist review planner](https://useaiblocks.com/skills/checklist-upkeep-planner). It takes the audit report.
+- The [Knowledge gap decision planner](https://useaiblocks.com/skills/learn-borrow-or-pass-planner). It takes the audit report.
+- The [Campaign lessons reviewer](https://useaiblocks.com/skills/copy-or-skip-lesson-writer). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

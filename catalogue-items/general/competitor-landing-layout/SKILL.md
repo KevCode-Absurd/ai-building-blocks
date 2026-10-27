@@ -37,7 +37,7 @@ How to start:
 
 **Tools that do this best:**
 - **Any good chat AI that reads images:** It reads the reference screenshot section by section, which the layout map depends on.
-- **Figma Make:** Turns the layout map and your copy into a working page prototype you can adjust before anyone builds it.
+- **Figma Make:** Optional. Turns the layout map and your copy into a working page prototype. It needs a Figma account, and heavier use may need a paid plan.
 <!-- /needs -->
 
 ## What you need
@@ -79,10 +79,10 @@ How to start:
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Landing page design planner](https://useaiblocks.com/skills/landing-page-design-planner). It takes the page.
-- The [Shopify landing page builder](https://useaiblocks.com/skills/shopify-landing-page-builder). It takes the page.
+- The [Shopify landing page builder](https://useaiblocks.com/skills/shopify-landing-page-builder). It takes the page and page layout spec.
 - **Check the landing page** with the [30-point landing page checker](https://useaiblocks.com/prompts/landing-page-30-point-checker). It takes the page.
 - **Check the landing page** with the [Landing page conversion reviewer](https://useaiblocks.com/skills/landing-page-auditor). It takes the page.
-- The [Conversion page writer](https://useaiblocks.com/skills/conversion-page-writer).
+- The [Plain HTML landing page builder](https://useaiblocks.com/skills/static-html-landing-page-builder). It takes the page and page layout spec.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -107,7 +107,7 @@ Write `MISSING: <what>`. Colour jobs not defined: reuse one value for several ro
 
 Use this only when you are asked to build and check a real page, and you can open pages in a browser. In Claude Code that means a browser tool or Playwright. In a plain chat you cannot, so skip this section, work from the screenshot, and write "no browser check run" under CHECKS MISSED.
 
-1. **Capture.** Open the reference at a desktop width and a phone width. Only capture pages you own or may study.
+1. **Capture.** Open the reference at a desktop width and a phone width. Only capture pages you own or may study. Check the site's terms and its robots rules first, and do not capture pages behind a login or that the site tells tools to stay away from. Keep the captures only to read the layout, and delete them once the layout map is made, because the page's images and text belong to its owner.
 2. **Inventory.** List the sections, their order, spacing, image roles and any sticky bar. Mark each measurement you only estimated.
 3. **Build.** Use your own words and cleared images. Put sampled colours and sizes in CSS variables, and give each image a slot ID so no reference image can ship by mistake.
 4. **Compare.** Render your page at the same two widths. Compare section rhythm, reading order, overflow and the phone view. A visual diff finds layout drift. It is not a goal to match the reference.

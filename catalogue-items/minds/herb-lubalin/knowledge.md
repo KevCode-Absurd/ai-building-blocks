@@ -1,6 +1,6 @@
 # Herb Lubalin: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 A note on the record: Lubalin left few long writings. His own words reach us in three places. One is the statement he wrote for a Type Directors Club show, reprinted in a trade magazine in March 1962 [S4]. Another is his written critiques of eight of his own 1966 posters, published in his journal *U&lc* in 1978 and described in detail by Fonts In Use [S5]. The third is a few lines quoted in profiles [S2][S3][S7]. Everything else is career fact from reference and secondary pages [S1][S6]. Three later pieces, two on Adrian Shaughnessy's 2012 book and one blog essay, add dated decisions and what colleagues and family said, but they hold almost none of his own words [S8][S9][S10]. We read them through a summarising tool, so only phrases in quotation marks are exact. His public record in his own voice stays thin. Sources disagree on the year of his AIGA medal, 1980 or 1981 [S2][S3]. He died in 1981 [S1]. A full monograph is not in the set, so his method is read from these statements and from accounts of his work.
 

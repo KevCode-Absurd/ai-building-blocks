@@ -34,7 +34,7 @@ how_to_use:
   - The first time, give it your policies and a few of your own replies. It saves them.
   - Paste or forward the new emails. If your inbox or store is connected, tell it which to read.
   - Read the decide-first list, then the ranked list. Edit and send the replies you agree with yourself.
-  - Run it again tomorrow. It remembers what you approved and which questions repeat.
+  - Run it again tomorrow. It reads the log it saved, so it knows what you approved and which questions repeat. In a plain chat with no saved files, paste the log back in.
 output_sample:
   input:
     - The new customer emails, with the full thread
@@ -116,9 +116,9 @@ improve:
 works_best_with:
   tools:
     - name: Claude Code
-      why: It can keep the inbox folder, read the log and run each weekday morning.
+      why: It can keep the inbox folder and read the log. You start each run yourself, each weekday morning. It does not run on a timer.
     - name: Shopify
-      why: Lets order replies use real order status. Refunds still wait for your yes.
+      why: Lets order replies use real order status. It needs a connection to your store account and may need a paid plan. Without it, paste the order details. Refunds still wait for your yes.
   inputs:
     - Your shipping times by region
     - A list of known issues you are already working on

@@ -11,6 +11,7 @@ inputs:
   - {type: persona, required: false}
 outputs:
   - {type: copy_draft}
+  - {type: plan}
 origin: rebuilt
 version: 1.0.0
 minds: [joe-girard, dale-carnegie]

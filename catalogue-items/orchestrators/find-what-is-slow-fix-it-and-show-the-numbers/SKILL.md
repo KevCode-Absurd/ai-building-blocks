@@ -40,6 +40,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+This list replaces the general one above. The "results" here are your timing logs, not an ad export.
+- **A coding AI that can open your project folder and run commands** (required). Tools such as Claude Code need a paid plan or an API key, so check the cost first.
 - **The slow moment** (required): what is slow, when it happens and about how long it takes.
 - **Your project code** (required): in a folder or repo the AI can open. Say where the slowness is if you know: the browser, the server or the database.
 - **Timing numbers** (optional): logs, timings or a slow-query list, with the slowest runs, not only the average.
@@ -61,14 +63,19 @@ Pause here: Run the timings it planned and note the numbers for the top stage.
 
 2. **Fix the bottleneck and measure again.** Use the skill `slow-code-fixer`. Give it your code, the ranked report from step 1 and the timing numbers from the pause. Before it writes any change to your project, it shows you the change and waits for your yes. It then measures the top stage, finds the cause, fixes it and measures again with the same test. If the target speed is not met, it stops, reports the new number and the next stage in the ranking, and does not keep changing code on its own. Saves the before and after numbers and the code change. Fixes the stage the ranking named, with a before and after number. Hands the code change to step 3.
 3. **Write the pull request.** Use the skill `pull-request-writer`. Give it the code change and the before and after numbers from step 2. It saves a pull request description with the summary, the timings and how risky it is to merge. Describes the speed fix with its before and after timings.
-4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then a `CHECKS MISSED` list (or "none").
 
 ## What you hand back
 3 step files and the summary:
 - **Step 1:** the slow moment in one line, the stages ranked with a number per stage, and the ideas the numbers rule out.
 - **Step 2:** the before number, the cause found, the code change and the after number.
 - **Step 3:** the pull request description: a summary, a before and after table of timings, and the merge risk.
-- **Summary:** each file, any step not run and why, and every `MISSING:` line in one list.
+- **Summary:** each file, any step not run and why, every `MISSING:` line in one list and the `CHECKS MISSED` list.
+
+## After this (for this job)
+Suggest these next steps in one short question:
+- Review and merge the pull request yourself. Nothing here merges it.
+- Keep the timing script in the project, and run the same timing again after the merge to confirm the gain holds.
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.

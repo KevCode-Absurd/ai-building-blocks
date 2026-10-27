@@ -10,6 +10,8 @@ explain: |
   A short report listing the real reasons a release could fail on deploy. You find the missing migration, the absent setting or the wrong rollout order before users do.
 
   It works read-only. It compares your change against a checklist covering database migrations, configuration, secrets, queues, caches, stored files and rollback. Each finding names the module, the evidence, the likely owner, the risk and a fix, sorted from most to least serious. Clean items are left out so the report stays short. Where evidence is unclear but the risk is high, it lists a question to confirm. Secrets are never printed, only their location and name.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (chaunsin) says Apache-2.0. Credit goes to chaunsin and sickn33.
 when:
   - You are about to deploy and want a second pair of eyes on the risks.
   - A pull request touches database tables and config together.
@@ -37,6 +39,7 @@ how_to_use:
   - Confirm each P2 item with its likely owner before you deploy.
   - Next, fix every P0 item and run the review again on the new HEAD. Then confirm the P2 items with their owners before you tag the release.
   - If your AI cannot read files, paste the diff into the chat. Expect more items under Unable to verify.
+  - Usual order: run this review before you tag, then ship-readiness-gate for the go or no-go call, then deploy-verifier after the deploy. If the release is already tagged, run deploy-verifier first and use this review on the tag range.
 next: [ship-readiness-gate, deploy-verifier, release-notes-writer]
 output_sample:
   input:

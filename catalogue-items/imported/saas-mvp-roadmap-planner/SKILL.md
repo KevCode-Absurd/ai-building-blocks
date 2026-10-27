@@ -120,6 +120,8 @@ enum Plan {
 
 ### 5. Authentication Setup (Clerk)
 
+> Check this sample against the current Clerk docs before use. The function names and the `auth().protect()` call change between Clerk versions.
+
 ```typescript
 // middleware.ts
 import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
@@ -146,6 +148,8 @@ export const config = {
 
 ### 6. Stripe Integration (Subscriptions)
 
+> Check this sample against the current Stripe docs before use. The `apiVersion` string and the checkout options are tied to one library version.
+
 ```typescript
 // lib/stripe.ts
 import Stripe from 'stripe';
@@ -166,7 +170,11 @@ export async function createCheckoutSession(userId: string, priceId: string) {
 }
 ```
 
+**Webhook step (required):** the checkout above only starts the payment. Add a Stripe webhook handler at `/api/webhooks/stripe`. When it receives the checkout-completed event, it must write the `Subscription` row (customer ID, price ID, subscription ID, status, period end). Without it, the `Subscription` table is never filled. Verify the webhook signature before trusting the event.
+
 ### 7. Pre-Launch Checklist
+
+**Must finish first (blocking):** payments work end-to-end, the webhook test passes with live keys, authentication works, and Terms and Privacy pages are live. Everything else is nice to have, so finish those items first.
 
 **Technical:**
 - [ ] Authentication works (signup, login, logout, password reset)

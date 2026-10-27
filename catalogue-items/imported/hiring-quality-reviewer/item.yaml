@@ -10,7 +10,7 @@ level: intermediate
 inputs:
   - type: feedback_notes
     required: false
-  - type: brief
+  - type: question
     required: true
 outputs:
   - type: audit_report

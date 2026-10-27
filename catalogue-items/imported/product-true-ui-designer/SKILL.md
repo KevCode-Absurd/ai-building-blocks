@@ -44,6 +44,7 @@ Ask once, in one message, for anything not given:
 - Web or iOS (required)
 - Access to the project's components, tokens and existing screens, as files or pasted code (strongly advised)
 - A reference or screenshot you like (optional)
+- An audit report from an earlier review (optional). Fix its findings in the screen.
 
 If there is no brief, ask for it and stop. If there is no design system or code to read, say so in the output, use plain defaults, and mark each choice as "chosen by me". Never invent users, metrics, testimonials or product data.
 
@@ -75,7 +76,7 @@ hierarchy, density, navigation, controls, responsive behavior, and state
 handling; never copy another product's branding, proprietary text, imagery, or
 exact layout.
 
-Install the current free skill directly from its canonical source. This is optional and runs a command from uizze.com in a terminal on your computer. Read what it does first, and skip it if you only want the steps in this file:
+Install the current free skill directly from its canonical source. This is optional. The command downloads and runs code from uizze.com in a terminal on your computer, so inspect that code first, and skip it if you only want the steps in this file. Never run it without the user's say-so:
 
 ```bash
 npx skills add https://uizze.com --skill anti-ui-slop
@@ -83,7 +84,7 @@ npx skills add https://uizze.com --skill anti-ui-slop
 
 ## Finish
 
-When the environment supports it, render and inspect the result once. Fix
+When the environment supports it, render and inspect the result once, at a phone width (about 375 px) and a desktop width (about 1280 px), and tick off each state in the states table. Fix
 observable breakage such as clipping, overlap, distorted media, inaccessible or
 inert controls, missing required states, and unintentional responsive behavior.
 Run the project's normal checks and keep the handoff concise.

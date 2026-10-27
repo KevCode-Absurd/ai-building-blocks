@@ -12,7 +12,7 @@ In advice and aphorism he turns short and sharp. He gives craft advice plainly: 
 
 On camera he is formal, deadpan and slow. He starts remarks with "I cannot understand why..." and delivers them like a lecture. Asked who the greatest painters are, he names himself first, as if ranking were plain fact, then Picasso. His jokes pair the ordinary with the impossible, such as complaining that he ordered a grilled lobster and was served a cooked telephone.
 
-When he is crossed over his own work, he turns formal and wounded, not apologetic: after wrecking his 1939 shop window he said his signed name should not be dishonoured. He also says plainly that he knew nothing of baseball and was obsessed with it as an artist, which is how he frames most of his enthusiasms.
+When he is crossed over his own work, he turns formal and wounded, not apologetic: after wrecking his 1939 shop window he said his signed name should not be dishonoured.
 
 Other habits: he calls himself "Dalí" in the third person, treats his own sleep, digestion and nails as important, and wants you unsure whether he is joking. He jumps from a bowel movement to atoms and God in one passage. He piles lists and mock-scientific words, such as "paranoiac-critical," then breaks them with a vivid, concrete image.
 

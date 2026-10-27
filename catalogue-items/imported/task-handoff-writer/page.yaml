@@ -10,6 +10,8 @@ explain: |
   A clear brief that lets another AI agent take over a piece of work without losing context, plus a way to check its progress. Handoffs stop failing because the second agent knows what to do, what it owns and what counts as done.
 
   The skill only delegates when you have allowed it. It scopes the job to something bounded, then writes the brief: the goal, the files or areas the agent owns, what is off limits and the check that proves success. For terminal agents it uses safe ways to send long prompts so quotes and symbols do not break. It polls at sensible intervals, reports real progress only, and keeps the final review with you.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (davidondrej) says MIT. Credit goes to davidondrej and sickn33.
 when:
   - You want a second AI agent to take one part of a big job.
   - A long prompt keeps breaking when sent to a terminal agent.
@@ -37,6 +39,7 @@ how_to_use:
   - Tell your AI you approve the handoff, and say how you will know the work is done.
   - Read the brief and the success check before you send anything to the agent.
   - Sending the brief to a terminal agent such as Claude Code or Codex CLI needs that tool installed on your computer, and a paid plan or API key for it. Check your account first. These tools can run commands on your computer, so read the brief and limits before you let one start. Check its progress using the polling plan, then review the report yourself.
+  - Next, read the report and check the open issues yourself. Pair it with a review or checklist skill before you merge or publish any of the agent's work.
 output_sample:
   input:
     - The work you want to pass on

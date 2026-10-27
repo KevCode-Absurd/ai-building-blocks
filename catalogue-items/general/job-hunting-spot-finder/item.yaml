@@ -13,6 +13,10 @@ inputs:
     required: false
   - type: voc_reviews
     required: false
+  - type: feedback_notes
+    required: false
+  - type: customer_needs
+    required: false
 outputs:
   - type: shortlist
 origin: rebuilt

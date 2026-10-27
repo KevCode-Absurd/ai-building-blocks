@@ -18,6 +18,7 @@ when:
   - A picture of today's problem isn't moving people, and the worry about what comes next is what makes them act.
   - Your story already offers a clear step the reader can take.
   - The fear is about money, bills or paperwork, not health. For how daily life changed, use the Empty room image ad maker.
+  - You want one visible flaw on the product or the place, not a feared next step. Use the Circled flaw image ad maker.
 not_for:
   - "Your buyers fear illness, injury or something about the body: use the Empty room image ad maker, which shows how daily life changed."
   - "You only want to show the problem as it is today: use the Problem moment image ad maker."
@@ -138,9 +139,9 @@ example:
     FLAGS               The copy must give the real renewal ($49.99
                         every 4 weeks) and say $29.99 needs the text
                         sign-up. Nothing may suggest the price never
-                        changes. Cancelling is the loudest complaint on
-                        public review sites, so promise no easier
-                        cancel than the site's own words. The guarantee
+                        changes. Buyers in the story worry about
+                        cancelling, so promise no easier cancel than
+                        the site's own words. The guarantee
                         covers the first order only.
     IMAGE PROMPT        Square 1:1 quiet phone photo of a wooden kitchen
                         table in the early evening under an overhead
@@ -190,6 +191,7 @@ works_best_with:
     - {name: "GPT Image", why: "Follows detailed placement of small objects on a table, and keeps print soft when you ask."}
     - {name: "Nano Banana", why: "Follows named light such as 'overhead kitchen light, early evening' for a calm, ordinary scene."}
     - {name: "Any good chat AI", why: "The gate and the brief work the same in any strong chat AI."}
+    - {name: "Cost note", why: "Making the picture in ChatGPT, Gemini or through an API key may hit daily limits on free plans, or bill each picture. The prompt is free."}
   inputs:
     - "Support emails or reviews where buyers describe what they're afraid of, so the fear is theirs and sourced"
     - "The exact wording of your renewal, refund or guarantee terms, so the step in the copy is checkable"

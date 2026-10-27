@@ -10,8 +10,12 @@ level: intermediate
 inputs:
   - type: question
     required: true
+  - type: video_link
+    required: false
 outputs:
   - type: audit_report
+  - type: spreadsheet
+    required: false
 uses: []
 origin: imported
 warnings:

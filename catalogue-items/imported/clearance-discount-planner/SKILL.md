@@ -1,6 +1,6 @@
 ---
 name: markdown-optimization
-description: When the user wants to optimize markdown strategy, price optimization for clearance, or minimize inventory markdowns. Also use when the user mentions "markdown," "clearance pricing," "price elasticity," "promotional pricing," "discount optimization," "sell-through," "inventory liquidation," or "dynamic pricing." For initial allocation, see retail-allocation. For promotional planning, see promotional-planning.
+description: When the user wants to optimize markdown strategy, price optimization for clearance, or minimize inventory markdowns. Also use when the user mentions "markdown," "clearance pricing," "price elasticity," "promotional pricing," "discount optimization," "sell-through," "inventory liquidation," or "dynamic pricing." For initial allocation, see store-stock-allocator in this library (the author calls it retail-allocation). For promotional planning, see promotion-and-stock-planner (the author calls it promotional-planning).
 ---
 
 # Markdown Optimization
@@ -171,7 +171,7 @@ class PriceElasticityAnalyzer:
         return max(0, estimated_quantity)
 
     def find_optimal_markdown(self, sku, cost, current_price, current_inventory,
-                             weeks_remaining=8):
+                             min_margin_pct, weeks_remaining=8):
         """
         Find optimal markdown to maximize revenue recovery
 
@@ -186,7 +186,9 @@ class PriceElasticityAnalyzer:
             return {'error': 'Cannot optimize without elasticity data'}
 
         # Test different price points
-        price_range = np.linspace(cost * 1.1, current_price, 20)  # Floor is cost plus 10%. Replace 1.1 with your own margin limit.
+        # min_margin_pct is required: it is the user's own lowest acceptable margin on cost.
+        # Ask the user for it. Never assume a default.
+        price_range = np.linspace(cost * (1 + min_margin_pct / 100), current_price, 20)
         results = []
 
         for test_price in price_range:
@@ -241,7 +243,7 @@ class PriceElasticityAnalyzer:
 # Example usage
 np.random.seed(42)
 
-# Generate sample historical data
+# Generate made-up sample data to show the layout. These numbers are not real. Use your own sales.
 dates = pd.date_range('2024-01-01', periods=50, freq='W')
 historical_data = []
 
@@ -277,10 +279,11 @@ print(f"R-squared: {elasticity['r_squared']:.2f}")
 
 # Find optimal markdown
 optimization = analyzer.find_optimal_markdown(
-    sku='SKU123',
+    sku='SKU123',  # sample data only: replace every number with your own
     cost=40,
     current_price=80,
     current_inventory=500,
+    min_margin_pct=[YOUR MARGIN LIMIT %],  # the user's own limit, required
     weeks_remaining=6
 )
 

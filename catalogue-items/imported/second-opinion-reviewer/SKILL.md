@@ -9,7 +9,9 @@ This catalog copy does not include these files:
 
 - `../../references/orchestration-patterns.md`
 
-Do not say you read or ran them. Do those steps by hand, or ask the user for the original file.
+Do not say you read or ran them. Do those steps by hand, or ask the user for the original file. The five steps below are complete without that file.
+
+The shell commands in Step 3 are only for the optional other-AI review. Skip them if you have no terminal.
 
 # Doubt-Driven Development
 

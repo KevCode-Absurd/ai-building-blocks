@@ -11,6 +11,8 @@ You are an expert in supply chain compliance and regulatory management. Your goa
 
 ## Initial Assessment
 
+If you already have a rules check for your sector or country, use its findings as the starting list of rules and skip questions it already answers.
+
 Before implementing compliance management, understand:
 
 1. **Regulatory Landscape**
@@ -385,7 +387,7 @@ compliance_mgr.add_regulation(
 compliance_mgr.add_product(
     'PROD001',
     'Electronic Widget',
-    hs_code='8543.70.9900',
+    hs_code='[HS CODE FROM THE OFFICIAL TARIFF]',
     materials=['plastic', 'copper', 'silicon'],
     target_markets=['EU', 'US', 'CN'],
     applicable_regulations=['REG001', 'REG002']
@@ -394,7 +396,7 @@ compliance_mgr.add_product(
 compliance_mgr.add_product(
     'PROD002',
     'Industrial Controller',
-    hs_code='8537.10.9000',
+    hs_code='[HS CODE FROM THE OFFICIAL TARIFF]',
     materials=['aluminum', 'steel', 'lead'],  # Contains restricted substance
     target_markets=['EU'],
     applicable_regulations=['REG001']
@@ -476,6 +478,12 @@ print(f"Certifications: {dashboard['certifications']['active']} active, {dashboa
 ### HS Code Classification
 
 ```python
+# Fee figures: fill these from US Customs and Border Protection's current published rates.
+# They are left empty on purpose so no old rate is used by mistake.
+MPF_RATE, MPF_MIN, MPF_MAX = None, None, None  # [MPF RATE, MINIMUM, MAXIMUM]
+HMF_RATE = None  # [HMF RATE]
+
+
 class TradeComplianceManager:
     """Manage trade compliance including HS codes, duties, and regulations"""
 
@@ -485,14 +493,15 @@ class TradeComplianceManager:
         self.fta_eligibility = {}
 
     def _load_hs_codes(self):
-        """Load HS code database (simplified)"""
+        """Load the user's own HS code and duty data.
+
+        No codes or duty rates are included here. Look each one up in your
+        country's official tariff database and fill the table yourself.
+        Any code you have not looked up stays 'Not verified'.
+        """
         return {
-            '8543.70': {'description': 'Other electrical machines with individual functions',
-                       'typical_duty_us': 0.028},
-            '8537.10': {'description': 'Control panels with voltage ≤1000V',
-                       'typical_duty_us': 0.026},
-            '8471.30': {'description': 'Portable computers',
-                       'typical_duty_us': 0.000},  # Duty-free under ITA
+            # '[HS CODE]': {'description': '[DESCRIPTION FROM THE OFFICIAL TARIFF]',
+            #               'duty_rate': [RATE FROM THE OFFICIAL TARIFF, e.g. 0.05 for 5%]},
         }
 
     def classify_product(self, product_description, material_composition,
@@ -545,26 +554,31 @@ class TradeComplianceManager:
         Simplified calculation
         """
 
-        # Insurance (if not provided, estimate as 1% of product cost)
+        # Insurance: use the user's real quote. If none is given, stop and ask.
         if insurance_cost is None:
-            insurance_cost = product_cost * 0.01
+            raise ValueError('Insurance cost is needed: use a real quote')
 
         # Customs value (FOB + freight + insurance)
         customs_value = product_cost + shipping_cost + insurance_cost
 
-        # Get duty rate
+        # Get duty rate from the user's own checked table. If it is missing,
+        # do not guess: mark the duty as 'Not verified' and leave it out of the total.
         hs_prefix = hs_code[:7]
-        duty_rate = self.hs_code_database.get(hs_prefix, {}).get('typical_duty_us', 0.05)
+        duty_rate = self.hs_code_database.get(hs_prefix, {}).get('duty_rate')
+        duty_verified = duty_rate is not None
+        if not duty_verified:
+            duty_rate = 0.0
 
         # Calculate duty
         duty_amount = customs_value * duty_rate
 
-        # MPF (Merchandise Processing Fee) - US specific
-        mpf = customs_value * 0.003464
-        mpf = max(27.75, min(mpf, 538.40))  # MPF has min and max
+        # MPF (Merchandise Processing Fee) - US specific.
+        # [MPF RATE, MINIMUM AND MAXIMUM]: take the current figures from US Customs and Border Protection.
+        mpf = customs_value * MPF_RATE
+        mpf = max(MPF_MIN, min(mpf, MPF_MAX))
 
-        # Harbor Maintenance Fee (if applicable) - 0.125% of cargo value
-        hmf = customs_value * 0.00125 if dest_country == 'US' else 0
+        # Harbor Maintenance Fee (if applicable): take the current rate from US Customs and Border Protection.
+        hmf = customs_value * HMF_RATE if dest_country == 'US' else 0
 
         # Total landed cost
         total_landed_cost = customs_value + duty_amount + mpf + hmf
@@ -574,7 +588,7 @@ class TradeComplianceManager:
             'shipping_cost': round(shipping_cost, 2),
             'insurance_cost': round(insurance_cost, 2),
             'customs_value': round(customs_value, 2),
-            'duty_rate': round(duty_rate * 100, 2),
+            'duty_rate': round(duty_rate * 100, 2) if duty_verified else 'Not verified',
             'duty_amount': round(duty_amount, 2),
             'mpf': round(mpf, 2),
             'hmf': round(hmf, 2),
@@ -589,7 +603,7 @@ class TradeComplianceManager:
         Simplified - in reality would check specific rules of origin
         """
 
-        # Example FTA relationships
+        # Example FTA relationships (a small illustration only, not a full or current list)
         fta_agreements = {
             ('US', 'MX'): 'USMCA',
             ('MX', 'US'): 'USMCA',
@@ -603,12 +617,12 @@ class TradeComplianceManager:
 
         if agreement:
             # Check rules of origin (simplified)
-            eligible = True  # In reality, would check specific product rules
+            eligible = None  # 'Not verified': the real rules of origin must be checked for this product
 
             return {
                 'fta_eligible': eligible,
                 'agreement': agreement,
-                'duty_savings': 'Potentially duty-free' if eligible else 'N/A',
+                'duty_savings': 'Not verified: check the rules of origin',
                 'documentation_required': ['Certificate of Origin', 'Importer Declaration'],
                 'origin_criteria': 'Must meet regional value content or tariff shift rules'
             }
@@ -661,7 +675,7 @@ classification = trade_mgr.classify_product(
     product_description='Handheld electronic device for industrial control',
     material_composition=['plastic', 'aluminum', 'circuit_board'],
     intended_use='Industrial process control',
-    suggested_hs_code='8537.10.9000'
+    suggested_hs_code='[HS CODE FROM THE OFFICIAL TARIFF]'
 )
 
 print("HS Code Classification:")
@@ -672,7 +686,7 @@ print(f"  Requires Expert Review: {classification['requires_expert_review']}")
 # Calculate landed cost
 landed_cost = trade_mgr.calculate_landed_cost(
     product_cost=1000,
-    hs_code='8537.10.9000',
+    hs_code='[HS CODE FROM THE OFFICIAL TARIFF]',
     origin_country='CN',
     dest_country='US',
     shipping_cost=150,
@@ -688,7 +702,7 @@ print(f"  Total % of Product Cost: {landed_cost['landed_cost_percentage']}%")
 
 # Check FTA eligibility
 fta = trade_mgr.check_fta_eligibility(
-    hs_code='8537.10.9000',
+    hs_code='[HS CODE FROM THE OFFICIAL TARIFF]',
     origin_country='MX',
     dest_country='US'
 )

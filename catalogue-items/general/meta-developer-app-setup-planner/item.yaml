@@ -7,10 +7,12 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: codebase
+  - type: question
     required: true
+  - type: codebase
+    required: false
 outputs:
-  - type: code_change
+  - type: plan
     required: true
 uses: []
 package_files: all

@@ -9,7 +9,7 @@ subhead: Give it your price, costs and ad spend. It shows your profit on each sa
 explain: |
   Your real profit on each sale, after every cost that eats into it, and whether what you pay to win a customer makes sense. Many sellers see revenue and miss how thin the margin is once ads and fees are in.
 
-  You give your price, product cost, shipping both ways, warehouse fees, card fees and ad spend. The skill adds them up item by item: a card fee of a percentage plus a fixed amount, ads often 20 to 40 percent of sales, return costs, and free shipping if you offer it. It then shows margin per order and compares what a customer is worth over time with what it cost to win them.
+  You give your price, product cost, shipping both ways, warehouse fees, card fees and ad spend. The skill adds them up item by item: a card fee of a percentage plus a fixed amount, ads as a share of sales, return costs, and free shipping if you offer it. It then shows margin per order and compares what a customer is worth over time with what it cost to win them.
 when:
   - You want to know if a product is worth selling after ads.
   - Sales are growing but your bank balance is not.
@@ -29,14 +29,14 @@ you_get:
   - A cost breakdown for each order
   - Your net profit and net margin per sale
   - The most you can pay to win one customer
-  - A check of your numbers against typical ranges, which are rules of thumb and not hard rules
+  - A look at your margins next to rules of thumb that have no source, so use them only as a rough prompt to check your own data
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. The calculator script needs an AI that can run Python. If yours cannot, it does the math by hand with the same steps.
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. The skill works the math by hand in this order: card fee, ad cost, return cost, other costs, net profit and margin, then max CAC (price minus every cost except ads). The bundled script was written for Amazon, so your AI should not use it as is."
   - Say what tool you use, so it can pick the script or the hand math.
   - Paste your price, product cost, shipping, fulfillment and ad spend.
   - Replace the example card fee of 2.9% plus $0.30 with your own plan's rate.
-  - Read the net margin and the max affordable CAC. Treat the benchmark ranges as rough rules of thumb with no source, and compare them with your own data.
-  - Run it again with a new price or ad spend to find your break-even. Use the max CAC to set your ad budget.
+  - Read the net margin and the max affordable CAC. Treat any range it mentions as a rough rule of thumb with no source, and compare it with your own data.
+  - Run it again with a new price or ad spend to find your break-even. Use the max CAC to set a small test ad budget, then run it again with your real order data.
 output_sample:
   input:
     - Your selling price
@@ -44,7 +44,7 @@ output_sample:
     - Your ad spend, as a share of the price
     - Your warehouse fulfillment cost (optional)
   prerequisites:
-    - An AI that can run Python code, to use the calculator script
+    - A chat AI is enough. The skill does the math by hand.
   output:
     - name: Profit analysis report
       contains: Each cost as a dollar amount and a share of the selling price, ending in net profit and net margin.
@@ -53,4 +53,4 @@ output_sample:
     - name: Max affordable CAC
       contains: The most you can pay to win one customer before the sale stops making money.
     - name: Health check
-      contains: Your gross margin, ad share, fulfillment share, net margin and LTV to CAC ratio against typical ranges.
+      contains: Your gross margin, ad share, fulfillment share, net margin and LTV to CAC ratio, next to unsourced rules of thumb. LTV to CAC shows only if you gave a repeat rate.

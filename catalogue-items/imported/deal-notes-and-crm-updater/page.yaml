@@ -9,7 +9,7 @@ subhead: "Give it a meeting, call transcript or email thread and pick a mode: lo
 explain: |
   Stop typing into the CRM. Give it a meeting, call transcript or email thread and it logs the activity against the right deal, updates contacts, and queues the next step so nothing sits without an owner.
 
-  It works in four modes. Log records one interaction. Standing sweeps recent activity on a schedule. Follow-up finds deals that went quiet and drafts a message. Hygiene looks for duplicates, stale records and missing fields. If you have no CRM, it builds a simple one in a spreadsheet. It reads your email, calendar and call notes first, then shows what it will change.
+  It works in four modes. Log records one interaction. Standing sweeps recent activity on a schedule. Follow-up finds deals that went quiet and drafts a message. Hygiene looks for duplicates, stale records and missing fields. If you have no CRM, it builds a simple one in a spreadsheet. It reads your email, calendar and call notes first, then shows what it will change. Nothing is deleted, no deal is created on its own, and no follow-up is sent without your yes. This is Anthropic's crm-autopilot skill, shared under the Apache 2.0 licence.
 when:
   - You just finished a sales call and need the notes in the right deal.
   - Your pipeline is out of date and you do not know which deals went quiet.
@@ -36,6 +36,7 @@ how_to_use:
   - Calendar, email and call tools such as Zoom, RingEx, Trello and Notion are optional. They let your AI find activity on its own. Each needs your own account, and some are paid. Without them, paste the notes.
   - Read what it plans to change before you approve. It shows edits first and does not write without your yes.
   - Copy the follow-up drafts and send them yourself.
+  - Next, ask for a standing sweep to run each week, or use the Lead prioritizer to rank new leads.
 output_sample:
   input:
     - A meeting note, call transcript or email thread

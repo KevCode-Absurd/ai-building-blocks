@@ -35,7 +35,7 @@ how_to_use:
   - Put your lessons in one folder with their last-updated dates. Add the month's learner questions, tagged by lesson.
   - Point it at the current docs or code for the tool you teach.
   - Read the stale claims and the rewrites. Publish the ones you approve in your course platform.
-  - Run it again on the first Monday of next month. It tracks questions and review dates over time.
+  - Run it again on the first Monday of next month. It does not start itself, so set a reminder or a recurring task. It tracks questions and review dates over time.
 output_sample:
   input:
     - Your lessons as text, with the date each was last updated

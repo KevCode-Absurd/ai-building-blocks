@@ -15,7 +15,7 @@ This agent runs the workflow `map-journal-reviewer-requests-to-evidence` (steps:
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Manuscript peer review drafter](https://useaiblocks.com/skills/manuscript-peer-review-drafter). It takes the document.
 - The [Manuscript reference change tracker](https://useaiblocks.com/skills/bibliography-revision-review-assistant). It takes the document.
-- The [Journal submission formatter](https://useaiblocks.com/skills/journal-submission-formatter). It takes the document.
+- The [Study and claim evidence reviewer](https://useaiblocks.com/skills/study-claim-checker). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -26,12 +26,12 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
 
 **Makes it better (optional):**
-- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
 - **Meeting notes** (yours): an agenda, notes or decisions from a meeting.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for source text, a brief, meeting notes. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for source text, your question, meeting notes. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -84,6 +84,10 @@ Allow at most two correction passes on any step. After that, stop and name the b
 - `evidence-requests.md`: each missing analysis or data item, the comment it answers, marked as planned.
 - `response-draft-check.md`: issues in the user's draft with fixes. Only written when a draft was given.
 - `next-review-record.md`: the record for the next run.
+
+When not to use: to have the response letter written for you (this agent tracks and checks, and never invents results; use the [Proofreader](https://useaiblocks.com/skills/proofreader) to polish a draft you wrote). For tasks not tied to reviewer comments, use the [Executive action register keeper](https://useaiblocks.com/skills/executive-action-register). For a reference list check, use the [Bibliography revision review assistant](https://useaiblocks.com/skills/bibliography-revision-review-assistant). For one pass with no record, use the [Map journal reviewer requests to evidence workflow](https://useaiblocks.com/workflows/map-journal-reviewer-requests-to-evidence).
+
+Next: attach the revised text for every "Done and not checked" row and run it again. Keep `next-review-record.md` for the next run.
 
 Finish with the evidence used, assumptions, `MISSING:` lines, and `CHECKS MISSED:` listing any check that could not run (or "none"). Say whether this was a first baseline or a comparison with a record.
 

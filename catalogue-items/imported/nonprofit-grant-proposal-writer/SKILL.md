@@ -11,7 +11,7 @@ metadata:
 
 # Grant Writing: LOIs, Proposals & Reports
 
-> Added by AI Blocks: skills named below by their old names are in this library under new names. nonprofit-grant-research is the Nonprofit grant funder researcher. nonprofit-program-design is the Nonprofit program outcome planner. nonprofit-outcomes-measurement is the Nonprofit program measurement planner. nonprofit-storytelling is the Nonprofit ethical impact story writer. nonprofit-cost-allocation is not in this library yet. If a skill is missing, say so and ask finance for the rate and base.
+> Added by AI Blocks: skills named below by their old names are in this library under new names. nonprofit-grant-research is the Nonprofit grant funder researcher. nonprofit-program-design is the Nonprofit program outcome planner. nonprofit-outcomes-measurement is the Nonprofit program measurement planner. nonprofit-storytelling is the Nonprofit ethical impact story writer. nonprofit-cost-allocation is not in this library. Ask finance for the rate and base instead.
 
 ## When to Use This Skill
 
@@ -69,24 +69,16 @@ story.
 A budget narrative justifies every line item in the budget spreadsheet in prose, tied to the
 program description:
 
-- State the basis for each figure (e.g., "0.5 FTE Program Coordinator at $58,000 annual salary +
-  22% fringe = $35,380") rather than a bare number.
+- State the basis for each figure (e.g., "[FTE] Program Coordinator at [ANNUAL SALARY] annual salary +
+  [FRINGE %] fringe = [TOTAL]") rather than a bare number.
 - Separate direct and indirect costs; do not assume every administrative cost is indirect.
-  State the finance-approved rate, base, effective period, and authority. For Federal funding,
-  distinguish a Federal negotiated rate, a pass-through-negotiated rate, and an eligible de minimis
-  election of **up to 15% of MTDC**, not an automatic 15% or a universal 10%. Eligibility requires
-  no current Federal negotiated rate, including a provisional rate. Route rate selection and
-  calculations to `nonprofit-cost-allocation`; do not invent missing approval or eligibility.
-  See [2 CFR 200.414](https://www.law.cornell.edu/cfr/text/2/200.414) and
-  [200.332(b)(4)](https://www.law.cornell.edu/cfr/text/2/200.332).
-- Name the applicable MTDC exclusions and show the arithmetic, not just a percentage of the entire
-  project budget. Under the revised definition, only the first $50,000 of each subaward enters MTDC;
-  other exclusions include equipment, rental costs, and participant support. See
-  [200.1](https://www.law.cornell.edu/cfr/text/2/200.1).
-  Confirm the governing Federal award and amendments before using revised rules: a recent subaward
-  date alone does not update an older Federal award, the increased de minimis rate is not retroactive,
-  and an existing NICRA's approved base must not be silently changed. See
-  [COFFA implementation guidance](https://www.energy.gov/sites/default/files/2025-08/COFFA-FY%202024%20Revisions%20to%202%20CFR-%20Federal%20Agency%20Implementation.pdf).
+  Ask finance for the indirect rate, the base it applies to, the period and the authority for it, and
+  state them as finance gave them. Never choose a rate yourself and never assume one is allowed.
+  For Federal funding, the rules on rates, bases and exclusions are detailed and change, and a
+  recent subaward date alone does not change an older award's terms. Mark every unresolved rate
+  question for finance to settle before submission. Rules change, so finance must confirm them
+  against the current award terms and the source rule text (2 CFR 200.414 and 200.1).
+- Show the arithmetic for each line, not just a percentage of the whole project budget.
 - Flag restricted expense categories and distinguish private-funder caps from Federal requirements.
   For Federal funds, ask finance to verify the legal authority for a conflicting cap; a pass-through's
   preference alone does not override the protections for negotiated or elected rates in
@@ -100,7 +92,7 @@ program description:
    header, word/page/character limit, required attachments, and submission mechanics (portal,
    email, hard deadline time zone).
 2. Confirm the program design/logic model source material exists and is current; if not, route to
-   `nonprofit-program-design` before drafting outcomes language.
+   the Nonprofit program outcome planner before drafting outcomes language.
 3. Draft in the funder's required order and exact section names, even if it differs from the
    skeleton above — reviewers score against their own rubric, not general best practice.
 4. Write the statement of need with locally specific data and named sources.
@@ -112,8 +104,8 @@ program description:
    never cutting the ask amount, outcomes, or evaluation plan.
 8. Route for internal review: program staff check factual/programmatic accuracy, finance checks
    the budget, ED or board chair signs off on institutional commitments before submission.
-   Escalate unresolved Federal rate, base, or applicability questions to the qualified reviewer
-   required by `nonprofit-cost-allocation`; ordinary proposal drafting remains staff-reviewed.
+   Escalate unresolved Federal rate, base, or applicability questions to finance or a qualified grants accountant;
+   ordinary proposal drafting remains staff-reviewed.
 9. Submit ahead of the deadline accounting for portal upload time and required attachments
    (W-9, 501(c)(3) determination letter, board list, audited financials, org chart).
 10. On award, calendar the reporting schedule and build the report from the same
@@ -145,12 +137,11 @@ stories), and specific plans for the next period if renewal is possible.
 
 When brought in to strengthen a client's win rate, first audit 3-5 recent declined proposals for
 pattern failures (funder-fit misses vs. narrative weakness vs. missing evaluation rigor) rather
-than rewriting prose on instinct — that diagnostic belongs partly to `nonprofit-grant-research` if
+than rewriting prose on instinct — that diagnostic belongs partly to the Nonprofit grant funder researcher if
 the pattern is fit, and to this skill if the pattern is narrative/outcomes clarity. Coach staff to
 separate program description from evaluation language, since conflating the two is the most common
 weakness advisors see in client-drafted narratives. Recommend a standing "boilerplate library"
 (mission, org history, capacity statements) maintained centrally so writers spend their drafting
 time on the funder-specific need/outcomes sections that actually move scores.
 
-Targeted federal indirect-cost check: September 16, 2026. Verify current agency and award terms
-at use; this check does not certify the rest of the proposal or authorize submission.
+Federal indirect-cost rules change. Finance must confirm the current agency and award terms before any rate is used; nothing here certifies the proposal or authorizes submission.

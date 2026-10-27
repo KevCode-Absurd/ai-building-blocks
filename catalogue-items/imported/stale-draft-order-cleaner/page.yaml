@@ -9,7 +9,7 @@ subhead: A list of Shopify draft orders older than a set number of days, and a c
 explain: |
   A list of Shopify draft orders older than a set number of days, and a clean-up of them if you say yes. Old drafts pile up from abandoned quotes, half-finished manual orders and retired integrations. They clutter the admin and inflate pending revenue.
 
-  The skill finds open drafts older than your cutoff (30 days by default) and shows them as a dry run first. Only after you confirm does it delete. Deletes are permanent and cannot be undone, so check that none are live B2B quotes waiting on a customer. You need the Shopify command line, a signed-in session and order read and write access.
+  The skill finds open drafts older than your cutoff (30 days by default) and shows them as a dry run first. Only after you confirm does it delete. Deletes are permanent and cannot be undone, so check that none are live B2B quotes waiting on a customer. You need the Shopify command line, a signed-in session and draft order read and write access.
 when:
   - Your draft orders list is full of old items.
   - Pending revenue looks too high because of stale drafts.
@@ -22,16 +22,17 @@ not_for:
 you_give:
   - Your store domain
   - Age in days that counts as stale (optional)
-  - Shopify access to read and write orders
+  - Shopify access to read and write draft orders
 you_get:
   - A dry-run list of stale drafts
   - Deletion of the ones you confirm
   - A summary of what was removed
 how_to_use:
   - Use an AI that can run code and the Shopify command line. A plain chat window can't do this.
-  - Sign in to your store with the Shopify command line, with permission to read and write orders.
+  - Sign in to your store with the Shopify command line, with permission to read and write draft orders.
   - Give your AI the skill and your store domain. Add the number of days if you don't want 30.
-  - Tell your AI which tag marks your live B2B quotes, if you use one. It keeps those drafts out of the delete list.
+  - Tell your AI which tag marks your live B2B quotes (it assumes b2b-quote if you say nothing). It keeps tagged drafts out of the delete list. Drafts with no tag will be listed for deletion, so tag any live quote in Shopify first.
+  - The first run is always a dry run. The delete step runs only after you say yes.
   - Read the dry-run list. It shows what would be deleted and nothing is removed yet. Look for notes, high values and open B2B quotes.
   - Say yes only when the list is right. Deletes are permanent and can't be undone.
   - Open the CSV file to see what was removed. Keep it as a record. Check it against your Shopify admin, and run the clean-up again each month.
@@ -42,7 +43,7 @@ output_sample:
     - Whether to run as a dry run or delete for real (optional, dry run by default)
   prerequisites:
     - An AI that can run code and the Shopify command line
-    - A signed-in Shopify session with permission to read and write orders
+    - A signed-in Shopify session with permission to read and write draft orders
   output:
     - name: Start banner
       contains: The skill name, your store domain and the start time.

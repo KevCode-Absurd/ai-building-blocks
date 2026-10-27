@@ -16,13 +16,14 @@ when:
   - You need to pick between several visual directions fast.
   - You want to see how your idea would look in a different style family.
 not_for:
-  - "You want to build a full brand from scratch with a clear method: use brand-identity."
-  - "You need ideas for what your brand should stand for: use brand-ideation."
-  - "You already have a brand and need to write down its voice or rules: use brand-voice or brand-style-guide."
+  - "You want to build a full brand from scratch with a clear method: start with the Brand discovery researcher, or hire a brand designer."
+  - "You need ideas for what your brand should stand for: use the Brand direction brainstormer."
+  - "You already have a brand and need to write down its voice or rules: use the Brand voice rules writer or the Brand style guide writer."
 you_give:
   - A short description of your business and audience
   - A brand or style you admire (optional)
   - Colours or fonts you must keep (optional)
+  - The references folder in this item (the core-archetypes and by-vertical files), pasted or attached
 you_get:
   - A matched style family
   - Starter colours and font pairings
@@ -30,12 +31,13 @@ you_get:
   - Image direction notes
   - A list of what was adapted from the default
 how_to_use:
-  - Open a chat in Claude, ChatGPT or Gemini. Paste the skill text, and attach the skill's references folder (the core-archetypes and by-vertical files). Without those files the AI may invent palettes and fonts. Have ready your business type, who it serves, your price level, and two or three brands you admire.
+  - Open a chat in Claude, ChatGPT or Gemini. Paste the skill text, and attach the references folder from this item (its core-archetypes and by-vertical files). Without those files the AI may invent palettes and fonts. Some AI tools only take file attachments on a paid plan. If yours does not, paste the one core archetype file and the one vertical file that match your business instead. Have ready your business type, who it serves, your price level, and two or three brands you admire.
   - Describe your business and who it serves in a few lines.
   - Add a brand you admire, or colours and fonts you must keep (optional).
   - Your AI picks the closest style family, or blends two, and adapts the defaults to your brief.
   - Check the list of changes. Ask for another family if the look feels wrong. This is a starting point, so check colour contrast, font licences and any trademark or name clashes before you use it.
-  - Next, refine the result with brand-identity, then write down the voice with brand-voice and the rules with brand-style-guide.
+  - Next, write down the voice with the Brand voice rules writer and the rules with the Brand style guide writer.
+next: [brand-voice-rules-writer, brand-style-guide-writer]
 output_sample:
   input:
     - A short description of your business and who it serves

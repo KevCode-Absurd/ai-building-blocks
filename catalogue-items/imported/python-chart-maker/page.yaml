@@ -7,9 +7,11 @@ job: work-with-files
 headline: Python chart maker
 subhead: A clean chart from your data, saved as an image or built as an animated or interactive plot. You get tidy labels, sensible colours and the right chart for the numbers.
 explain: |
-  A clean chart from your data, saved as an image or built as an animated or interactive plot. You get tidy labels, sensible colours and the right chart for the numbers.
+  You do not have to write any plotting code. Give your AI your numbers and say what the chart should show. It writes the Python, runs it and hands you the chart file. Steps for running the code yourself are below, in case your AI cannot run it.
 
   The skill writes Matplotlib code for line, scatter, bar, histogram, heatmap, contour and 3D plots, and for grids of several panels. It uses the object-based Figure and Axes style for control, with the quick pyplot style as an option. It tunes colours, labels, legends and layout, then exports to PNG, PDF or SVG at print quality. It also fits charts into notebooks or desktop apps. You need Python with Matplotlib installed.
+
+  Licence: the skill text is from the K-Dense collection, shared in the sickn33 collection under CC BY 4.0 (LICENSE-CONTENT). The helper scripts and reference files bundled with it keep their own MIT licence (UPSTREAM-LICENSE.txt). The skill file's header links to the licence of the Matplotlib library itself, which is a separate matter.
 when:
   - You have a spreadsheet of results and need a figure for a paper or report.
   - You want several related charts in one tidy grid.

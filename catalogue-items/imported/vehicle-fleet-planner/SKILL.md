@@ -110,8 +110,9 @@ def fleet_size_peak_demand(daily_demand, vehicle_capacity,
     }
 
 # Example usage
-daily_deliveries = np.random.normal(1200, 250, 365)  # 365 days of data
-result = fleet_size_peak_demand(daily_deliveries, vehicle_capacity=80)
+# daily_deliveries: the user's own daily delivery counts (one per day). Never invent data.
+# capacity_per_vehicle: deliveries one vehicle can do in a day, from the user.
+result = fleet_size_peak_demand(daily_deliveries, vehicle_capacity=capacity_per_vehicle)
 
 print(f"Required fleet size: {result['fleet_size']} vehicles")
 print(f"Peak demand (95th percentile): {result['peak_demand']:.0f} deliveries")
@@ -208,17 +209,16 @@ class FleetSimulation:
             yield self.env.timeout(service_time)
             self.completed_deliveries += 1
 
-def run_fleet_simulation(num_vehicles, num_days=30,
-                        avg_orders_per_day=100,
-                        avg_service_time=2.0):
+def run_fleet_simulation(num_vehicles, avg_orders_per_day, avg_service_time,
+                        num_days=30):
     """
     Run fleet simulation
 
     Parameters:
     - num_vehicles: fleet size to test
     - num_days: simulation duration
-    - avg_orders_per_day: average daily orders
-    - avg_service_time: average hours per delivery
+    - avg_orders_per_day: average daily orders (from the user's own records)
+    - avg_service_time: average hours per delivery (from the user's own records)
     """
 
     env = simpy.Environment()
@@ -265,13 +265,17 @@ def run_fleet_simulation(num_vehicles, num_days=30,
     }
 
 # Find optimal fleet size through simulation
-def find_optimal_fleet_size(target_service_level=0.90):
+def find_optimal_fleet_size(avg_orders_per_day, avg_service_time,
+                            target_service_level=0.90):
     """Test different fleet sizes to find optimal"""
 
     results = []
 
     for fleet_size in range(5, 25):
-        result = run_fleet_simulation(num_vehicles=fleet_size, num_days=30)
+        result = run_fleet_simulation(num_vehicles=fleet_size,
+                                    avg_orders_per_day=avg_orders_per_day,
+                                    avg_service_time=avg_service_time,
+                                    num_days=30)
         results.append(result)
 
         if result['service_level'] >= target_service_level:
@@ -326,7 +330,9 @@ class VehicleTCO:
         self.vehicle_type = vehicle_type
 
     def calculate_purchase_tco(self, purchase_price, useful_life_years,
-                               annual_miles, residual_value_pct=0.20):
+                               annual_miles, residual_value_pct,
+                               fuel_cost_per_mile, maintenance_per_mile,
+                               insurance_annual, registration_annual):
         """
         Calculate TCO for purchased vehicle
 
@@ -334,15 +340,12 @@ class VehicleTCO:
         - purchase_price: initial purchase cost
         - useful_life_years: ownership period
         - annual_miles: expected annual mileage
-        - residual_value_pct: estimated residual value as % of purchase
+        - residual_value_pct: estimated residual value as a fraction of purchase (0 to 1)
+        - fuel_cost_per_mile, maintenance_per_mile, insurance_annual,
+          registration_annual: the user's own figures from invoices and quotes.
+          There are no defaults on purpose. If one is missing, write MISSING and stop.
         """
 
-        # Annual operating costs
-        # PLACEHOLDERS: replace every number in this block with the user's own invoice figures
-        fuel_cost_per_mile = 0.35  # varies by vehicle type
-        maintenance_per_mile = 0.15
-        insurance_annual = 2500
-        registration_annual = 500
         depreciation_annual = purchase_price * (1 - residual_value_pct) / useful_life_years
 
         # Calculate annual cost
@@ -375,7 +378,9 @@ class VehicleTCO:
         }
 
     def calculate_lease_tco(self, monthly_lease_payment, lease_term_years,
-                           annual_miles, excess_mile_charge=0.25):
+                           annual_miles, excess_mile_charge,
+                           lease_allowance_miles, fuel_cost_per_mile,
+                           insurance_annual, registration_annual):
         """
         Calculate TCO for leased vehicle
 
@@ -383,10 +388,11 @@ class VehicleTCO:
         - monthly_lease_payment: monthly lease cost
         - lease_term_years: lease duration
         - annual_miles: expected annual mileage
-        - excess_mile_charge: cost per mile over allowance
+        - excess_mile_charge: cost per mile over allowance (from the lease contract)
+        - lease_allowance_miles: miles per year allowed (from the lease contract)
+        - fuel_cost_per_mile, insurance_annual, registration_annual: the user's
+          own figures. There are no defaults on purpose.
         """
-
-        lease_allowance_miles = 15000  # PLACEHOLDER: use the allowance in the user's lease contract
 
         # Calculate excess miles
         excess_miles_per_year = max(0, annual_miles - lease_allowance_miles)
@@ -394,11 +400,6 @@ class VehicleTCO:
         excess_miles_cost = excess_miles_total * excess_mile_charge
 
         # Annual operating costs (lessee responsible)
-        # PLACEHOLDERS: replace with the user's own invoice figures
-        fuel_cost_per_mile = 0.35
-        insurance_annual = 2500
-        registration_annual = 500
-
         annual_operating = (
             annual_miles * fuel_cost_per_mile +
             insurance_annual +
@@ -426,9 +427,15 @@ class VehicleTCO:
         }
 
     def compare_buy_vs_lease(self, purchase_price, lease_monthly,
-                            years, annual_miles):
+                            years, annual_miles, buy_costs, lease_costs):
         """
         Compare buying vs. leasing
+
+        buy_costs: dict with residual_value_pct, fuel_cost_per_mile,
+            maintenance_per_mile, insurance_annual, registration_annual
+        lease_costs: dict with excess_mile_charge, lease_allowance_miles,
+            fuel_cost_per_mile, insurance_annual, registration_annual
+        Every value comes from the user's invoices, quotes and lease contract.
 
         Returns comparison with recommendation
         """
@@ -436,13 +443,15 @@ class VehicleTCO:
         buy_tco = self.calculate_purchase_tco(
             purchase_price=purchase_price,
             useful_life_years=years,
-            annual_miles=annual_miles
+            annual_miles=annual_miles,
+            **buy_costs
         )
 
         lease_tco = self.calculate_lease_tco(
             monthly_lease_payment=lease_monthly,
             lease_term_years=years,
-            annual_miles=annual_miles
+            annual_miles=annual_miles,
+            **lease_costs
         )
 
         savings = lease_tco['total_cost'] - buy_tco['total_cost']
@@ -457,13 +466,16 @@ class VehicleTCO:
             'lease_cost_per_mile': lease_tco['cost_per_mile']
         }
 
-# Example usage
-tco = VehicleTCO('Delivery Van')
+# Example usage: every value below must come from the user's quote, invoices
+# and lease contract. Do not run this with guessed values.
+tco = VehicleTCO('[VEHICLE TYPE]')
 comparison = tco.compare_buy_vs_lease(
-    purchase_price=45000,
-    lease_monthly=650,
-    years=5,
-    annual_miles=25000
+    purchase_price=PURCHASE_PRICE_FROM_QUOTE,
+    lease_monthly=LEASE_PAYMENT_FROM_QUOTE,
+    years=OWNERSHIP_YEARS,
+    annual_miles=EXPECTED_ANNUAL_MILES,
+    buy_costs=BUY_COSTS_DICT,
+    lease_costs=LEASE_COSTS_DICT
 )
 
 print(f"Recommendation: {comparison['recommendation']}")
@@ -483,7 +495,7 @@ import numpy as np
 from scipy.optimize import minimize_scalar
 
 def optimal_replacement_age(purchase_price, annual_depreciation,
-                           annual_maintenance, discount_rate=0.08):
+                           annual_maintenance, discount_rate):
     """
     Calculate optimal vehicle replacement age
 
@@ -493,7 +505,7 @@ def optimal_replacement_age(purchase_price, annual_depreciation,
     - purchase_price: initial cost
     - annual_depreciation: depreciation schedule (list)
     - annual_maintenance: maintenance cost schedule (list)
-    - discount_rate: discount rate for NPV
+    - discount_rate: discount rate for NPV (ask the user, for example their cost of borrowing)
     """
 
     def equivalent_annual_cost(age):
@@ -542,15 +554,15 @@ def optimal_replacement_age(purchase_price, annual_depreciation,
         'equivalent_annual_cost': min_eac
     }
 
-# Example: Analyze replacement for delivery truck
-purchase_price = 50000
-annual_depreciation = [10000, 8000, 6000, 5000, 4000, 3000, 2000]
-annual_maintenance = [2000, 2500, 3000, 4000, 5500, 7000, 9000]
-
+# Example: Analyze replacement for one vehicle type.
+# purchase_price, annual_depreciation (one value per year), annual_maintenance
+# (one value per year) and discount_rate come from the user's quotes, resale
+# estimates and repair history. Do not run this with guessed values.
 result = optimal_replacement_age(
     purchase_price,
     annual_depreciation,
-    annual_maintenance
+    annual_maintenance,
+    discount_rate
 )
 
 print(f"Optimal replacement age: {result['optimal_replacement_age']} years")
@@ -670,15 +682,12 @@ class FleetReplacementPlanner:
 # Example usage
 import pandas as pd
 
-fleet_data = pd.DataFrame({
-    'vehicle_id': [f'V{i:03d}' for i in range(50)],
-    'age': np.random.randint(1, 12, 50),
-    'type': np.random.choice(['Van', 'Truck', 'Tractor'], 50),
-    'replacement_cost': np.random.randint(35000, 75000, 50),
-    'maintenance_cost': np.random.randint(2000, 8000, 50)
-})
+# fleet_data: the user's own vehicle table with columns vehicle_id, age, type,
+# replacement_cost and maintenance_cost. annual_budget: the user's own budget.
+# Never fill these with random or made-up values.
+fleet_data = pd.read_csv('[PATH TO THE USER FLEET FILE].csv')
 
-planner = FleetReplacementPlanner(fleet_data, annual_budget=500000)
+planner = FleetReplacementPlanner(fleet_data, annual_budget=annual_budget)
 plan = planner.create_replacement_plan(planning_horizon=5)
 summary = planner.summarize_plan(plan)
 
@@ -1042,71 +1051,49 @@ class MaintenanceScheduler:
 
 ### Fleet Analysis Report
 
+Fill every [BRACKET] from the user's own records. If a figure is missing, write MISSING. Never use a made-up number.
+
 **Executive Summary:**
-- Current fleet: 45 vehicles
-- Average utilization: 73%
-- Total annual cost: $3.2M
-- Cost per vehicle: $71,111
-- Recommendation: Reduce by 5 vehicles, replace 8 aging units
+- Current fleet: [NUMBER] vehicles
+- Average utilization: [PERCENT]
+- Total annual cost: [AMOUNT]
+- Cost per vehicle: [AMOUNT]
+- Recommendation: [ONE LINE, for example reduce, keep or replace, with the number of vehicles]
 
 **Fleet Composition:**
 
 | Vehicle Type | Count | Avg Age | Avg Miles | Utilization | Annual Cost |
 |--------------|-------|---------|-----------|-------------|-------------|
-| Box Truck (26') | 20 | 6.2 yrs | 32K | 82% | $1.4M |
-| Cargo Van | 15 | 4.1 yrs | 28K | 68% | $900K |
-| Straight Truck | 10 | 8.5 yrs | 45K | 71% | $900K |
+| [TYPE] | [COUNT] | [AGE] | [MILES] | [PERCENT] | [AMOUNT] |
 
 **Utilization Analysis:**
 
 | Metric | Current | Target | Status |
 |--------|---------|--------|--------|
-| Avg daily utilization | 73% | 80% | ⚠️ Below target |
-| Vehicles <60% utilized | 8 | 0 | ❌ Action needed |
-| Avg daily miles | 125 | 150 | ⚠️ Below target |
-| Empty mile % | 18% | <15% | ⚠️ Above target |
+| Avg daily utilization | [CURRENT] | [TARGET] | [ABOVE OR BELOW TARGET] |
+| Vehicles under [THRESHOLD] utilized | [COUNT] | [TARGET] | [STATUS] |
+| Empty mile share | [CURRENT] | [TARGET] | [STATUS] |
 
 **Cost Breakdown:**
 
 | Cost Category | Annual | Per Vehicle | % of Total |
 |---------------|--------|-------------|------------|
-| Depreciation | $675K | $15K | 21% |
-| Fuel | $945K | $21K | 30% |
-| Maintenance | $495K | $11K | 15% |
-| Insurance | $450K | $10K | 14% |
-| Labor (drivers) | $585K | $13K | 18% |
-| Other | $50K | $1K | 2% |
+| Depreciation, fuel, maintenance, insurance, drivers, other | [AMOUNT] | [AMOUNT] | [PERCENT] |
 
-**Replacement Plan (5 Years):**
+**Replacement Plan (multi-year):**
 
 | Year | Vehicles | Investment | Reason |
 |------|----------|------------|--------|
-| 2026 | 8 | $480K | Age > 8 years, high maintenance |
-| 2027 | 5 | $300K | Age > 7 years |
-| 2028 | 6 | $360K | Scheduled replacement |
-| 2029 | 7 | $420K | Scheduled replacement |
-| 2030 | 5 | $300K | Scheduled replacement |
+| [YEAR] | [COUNT] | [AMOUNT FROM QUOTES] | [REASON, for example age or repair cost] |
 
 **Recommendations:**
 
-1. **Reduce fleet by 5 vehicles**
-   - Remove 5 lowest-utilized cargo vans
-   - Savings: $355K annually
-   - Impact: Minimal (use contract carriers for overflow)
+1. **[ACTION]**
+   - What changes: [WHICH VEHICLES]
+   - Expected saving or payback: [FIGURE AND HOW IT WAS WORKED OUT]
+   - Risk: [WHAT COULD GO WRONG]
 
-2. **Replace 8 aging vehicles immediately**
-   - Target: Units over 8 years old with maintenance >$6K/year
-   - Investment: $480K
-   - Payback: 2.5 years (reduced maintenance + fuel)
-
-3. **Implement telematics system**
-   - Real-time GPS and diagnostics
-   - Investment: $45K (hardware + software)
-   - Benefits: 10% improvement in utilization, reduced maintenance
-
-4. **Optimize backhaul program**
-   - Reduce empty miles from 18% to 12%
-   - Savings: $85K annually in fuel
+**Next steps:** check the replacement table against your repair bills and quotes, then use the van-loading-planner to plan how each van is loaded.
 
 ---
 

@@ -72,10 +72,10 @@ How to start:
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [3D how-it-works video prompt writer](https://useaiblocks.com/skills/3d-explainer-video-prompts). It takes the script.
-- The [Long-form video ad script writer](https://useaiblocks.com/skills/long-form-video-ad-script-writer).
-- The [Paper cutout explainer video ad script writer](https://useaiblocks.com/skills/paper-cutout-ad-script).
+- The [Paper cutout explainer clip prompt writer](https://useaiblocks.com/skills/paper-cutout-video-prompts). It takes the script.
+- The [Video ad script line checker](https://useaiblocks.com/skills/video-ad-script-line-checker). It takes the script.
 - **Check it before it goes live** with the [Sound-off commercial checker](https://useaiblocks.com/skills/sound-off-commercial-checker). It takes the script.
-- **Check it before it goes live** with the [Video ad transition reviewer](https://useaiblocks.com/skills/video-ad-bridge-checker). It takes the script.
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

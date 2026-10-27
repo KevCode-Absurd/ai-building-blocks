@@ -59,7 +59,7 @@ The goal. The edit table with label and undo rating. The steps in order, each ma
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Code maintenance reviewer](https://useaiblocks.com/skills/monthly-tech-debt-keeper).
 - The [Oracle migration risk reviewer](https://useaiblocks.com/skills/copilot-reviewing-oracle-to-postgres-migration). It takes the plan.
-- The [Oracle behavior baseline test writer](https://useaiblocks.com/skills/copilot-creating-oracle-to-postgres-migration-integration-tests). It takes the plan.
+- The [Plan-to-ticket writer](https://useaiblocks.com/skills/ticket-planner). It takes the plan.
 - The [AI coding agent rules writer](https://useaiblocks.com/skills/ai-coding-agent-rules-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

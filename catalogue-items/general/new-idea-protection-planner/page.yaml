@@ -96,7 +96,7 @@ output_shape: |
   Not yet: <list> | Line to say: <words and date>
 
   TIME AND MONEY
-  <people, weeks> | Paid by: <name or fund> | Review: <date>
+  <people, weeks> | Paid by: <name or fund> | Review: <date> | Finance sees spend and risks: <date>
 
   PRESSURE GROUPS
   <group>: gets <what> by <when>; may not <what>

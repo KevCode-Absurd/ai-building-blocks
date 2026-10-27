@@ -70,6 +70,8 @@ read_url_content(url)  →  returns parsed HTML content directly
 ```
 Use this as the baseline evidence for reasoning.
 
+If your AI has no `read_url_content` tool, use `scripts/fetch_page.py` below. If it can run neither, ask the user to paste the page's HTML or text, say the audit is based on pasted content only, and mark every finding that needs a live fetch as unconfirmed.
+
 **Deterministic verification (recommended when script execution is available)**:
 ```bash
 # Fetch/parse raw HTML for structured checks

@@ -96,8 +96,8 @@ MISSING: <metrics | funnel rates | creative data | margin | cash position>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Market category opportunity finder](https://useaiblocks.com/skills/first-in-category-finder). It takes the audit report.
-- The [Growth idea ranker](https://useaiblocks.com/skills/growth-idea-ranker). It takes the audit report.
 - The [Backwards planning checker](https://useaiblocks.com/skills/work-backwards-plan-checker). It takes the plan.
+- The [Product outcome roadmap planner](https://useaiblocks.com/skills/outcome-based-roadmap). It takes the plan and audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

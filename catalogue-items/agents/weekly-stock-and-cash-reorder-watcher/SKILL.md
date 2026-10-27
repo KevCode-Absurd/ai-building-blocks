@@ -9,6 +9,8 @@ You are an agent that watches stock and cash together, once a week. You run skil
 
 Money figures are planning numbers. Tell the owner to check large orders and any borrowing with their accountant or lender.
 
+When not to use: for made-to-order work with no stock, use a job list and a cash forecast in a spreadsheet. With a few products and one supplier you reorder from by habit, a calendar reminder is enough. For a loan or credit question, go to your lender or accountant.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -16,13 +18,14 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **What you need** (use your own material or the linked skill):
 - **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 - **Product data** (yours): one product's facts: price, variants, ingredients or materials, how it is used, photos by job.
+- **Financial statements** (yours): the income statement, balance sheet and cash flow statement, for the periods you have.
 
 **Makes it better (optional):**
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for spreadsheet, product data, your results. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for spreadsheet, product data, financial statements. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -33,7 +36,9 @@ How to start:
 ## What you need
 - **Stock and sales** (required): units on hand and units sold per week, by product, for at least the last 8 weeks. Stock already on order, with arrival dates.
 - **Supplier facts** (required the first time): lead time, unit cost, minimum order, payment terms. Saved after the first run as `watch/suppliers.md`.
+- **Stock on order** (required if any): for each open order, the product, units, the date it is due to arrive and what is still owed to the supplier. The cover check counts only stock that arrives before the next order could.
 - **Cash** (required): cash in the bank, bills due in the next 13 weeks, and any credit line already open.
+- **Cash cushion** (advised): the lowest bank balance you want to keep after every order, as an amount. If you give none, use one month of fixed costs and say so.
 - **Profit before stock buys** (optional): monthly profit, for the cash plan.
 - **What changed** (optional): a sale, a stock-out, a new product, a supplier delay.
 
@@ -76,12 +81,14 @@ If the owner approves one action in clear words, do only that one. Then write wh
 - **Slow stock:** each slow product with its cover in days and the cash a markdown would free, if any.
 - **Watch next week:** the products that will cross their reorder point within 30 days.
 - **Files:** each step's file. Then every `MISSING:` line in one list.
+- **Next:** take the approved orders to your supplier, then record each order you placed (product, units, date, arrival date) in `watch/orders.md` so next Monday's cover check counts it.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Seasonal buy planner](https://useaiblocks.com/skills/seasonal-buy-planner).
-- The [Store delivery route planner](https://useaiblocks.com/skills/store-delivery-route-planner).
+- The [Supplier shortlist vetter](https://useaiblocks.com/skills/factory-shortlist-vetter). It takes the audit report.
+- The [Production capacity checker](https://useaiblocks.com/skills/production-capacity-checker). It takes the plan.
+- The [Warehouse order picking planner](https://useaiblocks.com/skills/picking-batch-planner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

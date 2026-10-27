@@ -76,7 +76,7 @@ how_it_works:
   - title: Compare offer types
     text: Runs a percent off against a two-for-one or a gift on one sheet, and adds the discount to your CAC so you see the true cost of a new customer.
   - title: Check promo rules
-    text: Checks the rules around the sale, such as winning on the first order, the returns policy and tying the deepest discount to a sign-up.
+    text: Checks the rules around the sale, such as winning on the first order and tying the deepest discount to a sign-up. Any returns-policy change is a legal question to check first.
   - title: Score and give a verdict
     text: Scores only a supported positive-CPA case with complete costs. The house checklist is a planning aid, not proof of safety or a launch instruction.
 output_shape: |

@@ -13,6 +13,8 @@ inputs:
 outputs:
   - type: security_report
     required: true
+  - type: code_change
+    required: false
 uses: []
 origin: imported
 source:

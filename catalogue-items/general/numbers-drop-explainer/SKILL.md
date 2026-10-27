@@ -60,8 +60,8 @@ MISSING         <numbers or changes not given>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Metric drop investigator](https://useaiblocks.com/skills/metric-drop-investigator). It takes the audit report.
-- The [Store sales decline investigator](https://useaiblocks.com/skills/store-sales-drop-splitter).
 - The [Metric mismatch tracer](https://useaiblocks.com/skills/metric-mismatch-tracer). It takes the audit report.
+- The [Meta server tracking checker](https://useaiblocks.com/skills/meta-server-tracking-checker). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

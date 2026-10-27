@@ -12,6 +12,10 @@ inputs:
     required: true
   - type: codebase
     required: false
+  - type: code_change
+    required: false
+  - type: data_model
+    required: false
 outputs:
   - type: audit_report
   - type: plan

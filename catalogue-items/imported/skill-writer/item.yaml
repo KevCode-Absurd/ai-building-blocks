@@ -8,10 +8,14 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: question
     required: true
+  - type: skill_files
+    required: false
 outputs:
   - type: skill_files
+  - type: eval_set
+    required: false
 uses: []
 origin: imported
 source:

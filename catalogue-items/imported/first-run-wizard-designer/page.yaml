@@ -37,7 +37,7 @@ how_to_use:
   - List the steps a new user must finish before they see value.
   - Add your drop-off numbers if you have them (optional).
   - Read the wizard decision first. If it says you don't need a wizard, use the hints it suggests instead.
-  - Check that each step asks for one thing, then give the step list to your designer or developer.
+  - Check that each step asks for one thing. Give the step list to your designer or developer, and build it. Compare the drop-off at each step before and after launch.
   - Once it is live, track where people drop off. Then use the onboarding improver to fix the weakest step.
 output_sample:
   input:

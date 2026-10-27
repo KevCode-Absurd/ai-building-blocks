@@ -57,11 +57,13 @@ These are the inputs for this skill. If the section above asks for an ads export
 
 Cost against revenue. The bets that ran ahead. The decision and why. Who is affected, and the support for each. The goal that stays. The draft note, with a line that legal notice and pay rules vary and must be checked with an employment adviser before it is sent. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
+**What next:** if the decision means cutting roles, plan the conversations and timing with the Layoff plan writer. For the new way of working after the reset, use the Process change note writer.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Nonprofit change rollout planner](https://useaiblocks.com/skills/nonprofit-change-rollout-planner). It takes the plan.
-- The [Team decision and dissent note writer](https://useaiblocks.com/skills/disagree-and-commit-note-writer). It takes the plan.
+- The [Layoff plan writer](https://useaiblocks.com/skills/layoff-plan-writer). It takes the plan.
+- The [Process change note writer](https://useaiblocks.com/prompts/process-change-note-writer).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -9,7 +9,7 @@ metadata:
 
 # Project Management
 
-This skill enables an AI agent to serve as a project management co-pilot for software teams. It covers the full lifecycle: breaking high-level goals into actionable tasks with acceptance criteria, estimating effort in story points, organizing work into sprints or Kanban boards, tracking progress with burndown data, identifying blockers and risks, and generating stakeholder-ready status reports. The agent integrates with Jira, Linear, GitHub Issues, and Trello so that all changes are reflected in the team's actual project tracker.
+This skill enables an AI agent to serve as a project management co-pilot for software teams. Beyond a plain prompt, it fixes a Fibonacci story point scale, work-in-progress limits for Kanban and a standard report layout, so plans and reports look the same every sprint. It covers the full lifecycle: breaking high-level goals into actionable tasks with acceptance criteria, estimating effort in story points, organizing work into sprints or Kanban boards, tracking progress with burndown data, identifying blockers and risks, and generating stakeholder-ready status reports. The agent integrates with Jira, Linear, GitHub Issues, and Trello so that all changes are reflected in the team's actual project tracker.
 
 ## Workflow
 
@@ -34,6 +34,8 @@ This skill enables an AI agent to serve as a project management co-pilot for sof
 ## Usage
 
 Provide the agent with your project details and what you need. The agent adapts to your methodology and tooling.
+
+Tracker and Slack or Teams sync need your own account and an access key, and some plans may cost money. Without them, the plan comes back as text to copy into your tracker.
 
 ```
 "Create a sprint plan for the TaskMaster mobile app. We're a team of 4 with a velocity of 34 points. Sprint starts Monday and runs two weeks. Pull from the existing backlog in Linear."
@@ -91,7 +93,8 @@ Both examples use invented data for illustration. The "pushed to Linear" and Sla
   LUM-45 → LUM-44 (history page reads from notification service)
   LUM-46 → LUM-42 (integration tests cover push path)
 
-Sprint pushed to Linear. Slack channel #lumen-dev notified.
+[Only with tracker and Slack access: sprint pushed to Linear, Slack channel notified.]
+[Without access: copy these stories into your tracker.]
 ```
 
 ### Example 2 — Generating a Project Status Report with Burndown Data

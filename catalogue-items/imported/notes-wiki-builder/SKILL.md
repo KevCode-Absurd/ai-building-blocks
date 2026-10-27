@@ -183,3 +183,7 @@ only for today. Close the task without writing anything.
   than record a fact.
 - `@deep-research` - Produces the findings; this skill is what keeps them after the
   session ends.
+
+## Licence note
+
+The header above says MIT (5dive-ai/skills). The collection this copy came from lists its written content as CC BY 4.0 (see `LICENSE-CONTENT`). We share this copy under CC BY 4.0. Keep the credit to 5dive-ai and sickn33.

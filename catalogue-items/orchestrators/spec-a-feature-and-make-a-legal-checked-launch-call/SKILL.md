@@ -45,7 +45,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Steps
 1. **Feature spec writer.** Use the skill `feature-spec-writer`. It takes the person's feature idea and limits. It saves `outputs/step-01-feature-spec-writer.md`: problem, users, goals, non-goals, requirements with acceptance checks, success measures and open questions.
-2. **Launch legal reviewer.** Use the skill `launch-legal-reviewer`. It takes the spec in `outputs/step-01-feature-spec-writer.md` as the product document, plus the launch date, places and AI use from the person. It saves `outputs/step-02-launch-legal-reviewer.md`: what is launching, AI and data flags, risk rated by area, what to fix before launch and who signs off. A first check, not legal advice. Say plainly in the memo that a go call does not replace legal review, and that every high-rated item must be cleared by a lawyer before launch.
+2. **Launch legal reviewer.** Use the skill `launch-legal-reviewer`. It takes the spec in `outputs/step-01-feature-spec-writer.md` as the product document, plus the launch date, places and AI use from the person. It saves `outputs/step-02-launch-legal-reviewer.md`: what is launching, AI and data flags, risk rated high, medium or low by area, what to fix before launch and who signs off. The areas include privacy and data, IP, AI governance and consumer or marketing claims, plus sector rules such as health or education where they apply. The reviewer is written mainly around US rules. For any other country, say so in the memo and send every area to a lawyer there. A first check, not legal advice. Say plainly in the memo that a go call does not replace legal review, and that every high-rated item must be cleared by a lawyer before launch.
 
 Pause here: Fix what the memo flags, or ask a lawyer about the high-rated items, then update your launch plan.
 
@@ -53,7 +53,7 @@ Pause here: Fix what the memo flags, or ask a lawyer about the high-rated items,
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back
-3 step files and the summary. The last file holds the audit report.
+3 step files and the summary. The last file holds the launch call. The legal risk memo is the middle file.
 - Step 1: problem, users, goals, non-goals, requirements with acceptance checks, success measures, open questions.
 - Step 2: what is launching, AI and data flags, risk by area, fix before launch, who signs off.
 - Step 3: plan quoted, six faults, three checks, go, wait or no-go with the reason.
@@ -62,6 +62,7 @@ Pause here: Fix what the memo flags, or ask a lawyer about the high-rated items,
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [First-use onboarding designer](https://useaiblocks.com/skills/first-use-onboarding-designer). It takes the audit report.
 - **Design it** with the [Feature cutting planner](https://useaiblocks.com/skills/feature-cutting-planner). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

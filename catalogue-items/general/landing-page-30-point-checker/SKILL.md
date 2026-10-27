@@ -108,9 +108,9 @@ The checks score measures the share of checks the page passes. Score = checks ma
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Unanswered customer question finder](https://useaiblocks.com/skills/customer-question-finder).
 - The [Sales funnel drop-off finder](https://useaiblocks.com/skills/sales-funnel-drop-off-finder).
 - The [Landing page copy repair reviewer](https://useaiblocks.com/skills/landing-page-fix-loop).
+- The [Unanswered customer question finder](https://useaiblocks.com/skills/customer-question-finder).
 - **Write the ad copy** with the [Article-style image ad writer](https://useaiblocks.com/skills/article-style-image-ad-writer). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

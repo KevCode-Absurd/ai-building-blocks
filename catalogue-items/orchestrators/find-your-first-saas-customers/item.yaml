@@ -11,11 +11,12 @@ job: ops
 level: intermediate
 execution: coordinator
 inputs:
-  - type: brief
+  - type: question
     required: true
   - type: brief
-    required: false
+    required: true
 outputs:
+  - type: plan
   - type: document
 uses:
   - copilot-gtm-positioning-strategy

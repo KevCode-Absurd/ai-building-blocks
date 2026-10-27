@@ -11,6 +11,11 @@ metadata:
 
 Add white Gaussian noise to signals and convert between SNR definitions (SNR, Eb/No, Es/No, per-subcarrier SNR) for communications system simulations.
 
+## What you need
+
+The SNR target or definition you want, and the signal power if it is not unit power. If you already have simulation code from an earlier step, add the noise to that code.
+
+
 ## When to Use
 
 - Adding noise to a signal in a link simulation

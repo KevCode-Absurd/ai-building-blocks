@@ -8,6 +8,8 @@ Viola Spolin built theater training around games with a focus, sidecoaching duri
 
 ## Core ideas
 
+These ideas summarise the opening chapters and the excerpts linked in the sources. We give no page numbers. A book detail not in those excerpts is marked [beyond the record]. The tray, shelf and paper exercises are our own examples.
+
 ### 1. Give attention a shared problem
 
 The opening classroom chapter defines focus as a problem essential to the playing. Players and coach attend to the same problem from different positions. [S1] Our adaptation gives two willing people one imagined tray. The focus is making the same tray apparent through their handling of it, not producing the funniest scene about a tray.

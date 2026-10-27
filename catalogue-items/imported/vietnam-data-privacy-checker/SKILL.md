@@ -165,7 +165,9 @@ The law applies to:
 
 ## Penalties — Decree 330/2026/ND-CP (effective August 19, 2026)
 
-**The sanctions regime is now operative.** Decree No. 330/2026/ND-CP (issued and effective **August 19, 2026**; 82 articles, 33 on personal data protection) implements the penalty framework of Law 91/2025 (Article 8) and Decree 356/2025. State this decree in every penalties answer, and say the fine figures are not checked here against the official decree text and must be confirmed before use.
+**UNVERIFIED SUMMARY.** The decree name, the effective date and every fine figure in the table below come from the skill author's summary. They have not been checked against the official decree text, and this item does not link that text. Never state a fine, percentage or date as fact. Say "the skill's own summary, not checked" each time, and tell the user to read the decree on Vietnam's official legal database (vbpl.vn) or the Official Gazette (congbao.chinhphu.vn), or ask Vietnamese counsel, before they quote any figure to a client, a regulator or a board. If the user has not pasted the official text, do not give exact amounts at all: give the violation types only.
+
+**The sanctions regime is now operative.** Decree No. 330/2026/ND-CP (issued and effective **August 19, 2026**; 82 articles, 33 on personal data protection) implements the penalty framework of Law 91/2025 (Article 8) and Decree 356/2025. State this decree in every penalties answer, and say the fine figures are not checked here against the official decree text and must be confirmed before use. The same goes for the other dates in this file: confirm them against the official text.
 
 | Violation | Penalty (organisations; individuals = half) |
 |---|---|

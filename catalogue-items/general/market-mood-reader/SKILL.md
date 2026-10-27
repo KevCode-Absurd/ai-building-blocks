@@ -51,7 +51,7 @@ One block per holding in the output shape, the count across holdings, the rule c
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Investment business change reviewer](https://useaiblocks.com/skills/holding-value-change-checker). It takes the audit report.
 - The [Investment margin of safety reviewer](https://useaiblocks.com/skills/price-versus-value-gap-judge). It takes the audit report.
-- The [Price drop rules writer](https://useaiblocks.com/skills/price-drop-rules-writer). It takes the audit report.
+- The [Long-run business return calculator](https://useaiblocks.com/skills/long-hold-return-calculator). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

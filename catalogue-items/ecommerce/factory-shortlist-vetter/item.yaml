@@ -11,6 +11,7 @@ inputs:
   - {type: product_data, required: false}
   - {type: spreadsheet, required: false}
   - {type: audit_report, required: false}
+  - {type: contract, required: false}
 outputs:
   - {type: audit_report}
   - {type: shortlist}

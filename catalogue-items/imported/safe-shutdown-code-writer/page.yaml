@@ -12,6 +12,8 @@ explain: |
   The order is fixed. It catches the stop signal and ignores repeats. It tells the load balancer to stop sending traffic, stops accepting new connections, and waits for running work up to a time limit. Then it closes the database and other resources and exits. A hard timeout makes sure the app never hangs forever.
 
   The main examples are Node with TypeScript, Express and a queue worker. A FastAPI example shows how Uvicorn does the draining for you. The same steps apply to other languages.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (Prajeeth-12) says MIT, so the code and the text can be reused with credit. Adapted from a skill by Prajeeth-12, shared by sickn33.
 when:
   - Deploys drop active requests and users see errors.
   - A background worker loses jobs when its container restarts.

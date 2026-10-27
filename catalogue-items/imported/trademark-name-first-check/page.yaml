@@ -9,7 +9,9 @@ subhead: A quick first look at a name you plan to use, so you spot obvious probl
 explain: |
   A quick first look at a name you plan to use, so you spot obvious problems before you pay for a full search. The result is a flag list, never a clearance. It will not tell you a name is safe, and it says so.
 
-  You describe the name, the goods or services, and the countries. It checks if the name is too generic, descriptive, misleading, a place name, a surname or a functional term. It then searches for similar marks through any connected legal database and walks through the confusion factors used in your region, flagging each one. It ends with next steps and a note to take the result to a trademark lawyer.
+  You describe the name, the goods or services, and the countries. It checks if the name is too generic, descriptive, misleading, a place name, a surname or a functional term. It then searches for similar marks through any connected legal database and walks through the confusion factors used in your region, flagging each one. It ends with next steps and a note to take the result to a trademark lawyer. This is not legal advice and never says a name is clear.
+
+  Licence: Apache 2.0, as the LICENSE file in this item says. We gave it a plain name and added a note for use without the original plugin.
 when:
   - You have a brand name idea and want early warning signs before you commit.
   - You are about to buy a domain or print packaging and want a quick sanity check.
@@ -31,6 +33,7 @@ you_get:
   - Recommended next steps
 how_to_use:
   - Open your AI tool and add the skill folder, or paste the skill's instructions into a chat.
+  - If the plugin config folder and the setup interview are not there, you can still run the check. Just type the name, the goods or services, the countries and the flag list you want checked.
   - Gather first: the exact spelling of the name, what you will sell under it, the classes if you know them, the countries, and how the name will look. Type these in.
   - It covers the US, EU and UK well. For another country it will say it has no test for it and tell you to ask a local trademark specialist. It will not apply US rules there.
   - Say if your AI can search trademark registers. Some connectors, such as Solve Intelligence, Descrybe and CourtListener, may cost money or need an API key. Without one, the check only covers the name itself and the risk factors, and skips the similar-marks search.

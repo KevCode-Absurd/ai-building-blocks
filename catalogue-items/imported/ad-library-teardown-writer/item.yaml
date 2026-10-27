@@ -10,6 +10,8 @@ level: intermediate
 inputs:
   - type: question
     required: true
+  - type: competitor_set
+    required: false
 outputs:
   - type: ad_breakdowns
 uses: []

@@ -5,14 +5,14 @@ name: Abandoned cart code maker
 summary: Make one single-use discount code for each shopper who left a cart in your Shopify store, tag them, and get a CSV list to use in an abandoned cart email.
 job: make-offer
 headline: Abandoned cart code maker
-subhead: Give it your Shopify store, how many days back to look, a minimum cart value and the discount. It pulls recent abandoned checkouts, drops small carts and makes one unique code per shopper. You get a preview count, the live codes, a tag on each customer and a summary. Codes cannot be bulk deleted.
+subhead: Give it your Shopify store, how many days back to look, a minimum cart value and the discount. It pulls recent abandoned checkouts, drops small carts and makes one unique code per shopper. You get a preview count, the live codes, a tag on each customer and a summary. To undo a run, delete its discount in Shopify Admin.
 explain: |
-  You get a unique discount code for each shopper who left a cart, and each of them is tagged in your Shopify store so you can message them next. The codes are live as soon as they are made, and they cannot be bulk deleted.
+  You get a unique discount code for each shopper who left a cart, and each of them is tagged in your Shopify store so you can message them next. The codes are live as soon as they are made. To undo a run, delete the discount it made in your Shopify Admin under Discounts. The tags stay on the customers until you remove them.
 
-  It pulls abandoned checkouts from the last few days, filters out carts below your minimum value, then creates one code per person at your chosen percentage with your chosen prefix. It then adds a tag to each customer. A preview mode shows how many people qualify before anything is written. It does not send email, so you need a separate tool for that. It needs the Shopify command line signed in, with the right permissions.
+  It pulls abandoned checkouts from the last few days, filters out carts below your minimum value, keeps one checkout per email, then creates one code per person at your chosen percentage with your chosen prefix. It then adds a tag to each customer. A preview mode shows how many people qualify before anything is written. It does not send email, so you need a separate tool for that. It needs the Shopify command line signed in, with the right permissions.
 when:
   - You want to win back shoppers who left items in their cart.
-  - You need single-use codes so one code is not shared around.
+  - You need a unique code for each shopper so one code is not shared around.
   - You want a tagged list of customers to feed into your email tool.
   - You want to see how many carts qualify before you commit.
 not_for:
@@ -35,7 +35,7 @@ how_to_use:
   - Sign in to your store with the Shopify command line first. Your login needs the permissions listed on this page.
   - Paste this skill. Give your store address, days back, minimum cart value, discount and code prefix.
   - Run it in preview mode first. Turn on dry run, and check how many shoppers qualify.
-  - If the count looks right, ask your AI to run it for real. The codes go live at once and cannot be bulk deleted.
+  - If the count looks right, ask your AI to run it for real. The codes go live at once. If something is wrong, delete the discount in Shopify Admin.
   - Open the CSV and load it into your email tool to send each shopper their code.
 output_sample:
   input:

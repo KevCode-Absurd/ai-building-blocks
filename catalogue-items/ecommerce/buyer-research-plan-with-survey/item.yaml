@@ -9,6 +9,7 @@ level: intermediate
 inputs:
   - {type: question, required: true}
   - {type: voc_reviews, required: false}
+  - {type: customer_list, required: true}
 outputs:
   - {type: plan}
   - {type: document}

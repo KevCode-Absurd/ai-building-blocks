@@ -34,17 +34,17 @@ output_sample:
     - Your budget for prizes and recognition (optional)
   output:
     - name: Campaign timeline
-      contains: Dates for sign-ups, captain deadline, kickoff, midpoint push, final sprint, event day and thank-you window.
+      contains: A one-page list of dates for sign-ups, captain deadline, kickoff, midpoint push, final sprint, event day and thank-you window.
     - name: Team captain toolkit
-      contains: Invite email for teammates, team goal worksheet, message schedule, sample social posts and captain recognition tiers.
+      contains: One invite email for teammates, a one-page team goal worksheet, a message schedule, a few sample social posts and captain recognition tiers.
     - name: Participant coaching emails
-      contains: A nudge to personalize the page, plus launch, midpoint and final-week ask templates and a donor thank-you.
+      contains: One short email each for the nudge to personalize the page, the launch ask, the midpoint ask, the final-week ask and the donor thank-you.
     - name: Leaderboard and incentive plan
       contains: Prize or recognition tiers for people and teams, with the cost set against the extra money expected.
     - name: Revenue target model
       contains: Total raised worked out from sign-ups, share who fundraise and average raised, with your assumptions shown.
     - name: Post-campaign report
-      contains: Total raised, sign-ups, share who became active fundraisers, average per fundraiser, average per team and change from last year.
+      contains: A one-page report of total raised, sign-ups, share who became active fundraisers, average per fundraiser, average per team and change from last year.
 how_it_works:
   - title: Model the target
     text: Calculate revenue from participants, active-fundraiser share and average raised per active fundraiser, keeping assumptions visible.

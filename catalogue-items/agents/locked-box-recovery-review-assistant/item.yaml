@@ -7,11 +7,19 @@ role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: document
+  - type: deal_terms
     required: true
   - type: spreadsheet
     required: false
-outputs: []
+  - type: document
+    required: true
+  - type: question
+    required: true
+  - type: contract
+    required: true
+outputs:
+  - type: audit_report
+  - type: spreadsheet
 needs_mode: manual
 uses:
   - reconcile-a-locked-box-closing-price

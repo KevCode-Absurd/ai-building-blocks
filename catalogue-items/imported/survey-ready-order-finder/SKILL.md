@@ -41,7 +41,7 @@ Builds the recipient list for a post-purchase survey campaign by selecting order
    **Inputs:** `query: "fulfillment_status:fulfilled financial_status:paid -status:cancelled updated_at:>=<earliest_fulfilled_at>"`, `first: 250`, select `displayFulfillmentStatus`, `displayFinancialStatus`, `cancelledAt`, `fulfillments { createdAt, displayStatus, deliveredAt }`, `refunds { id, createdAt }`, `customer { id, defaultEmailAddress { emailAddress, marketingState }, displayName, locale }`, pagination cursor
    **Expected output:** All candidate orders; paginate until `hasNextPage: false`
 
-3. Filter orders to the survey window using the **earliest fulfillment** `createdAt`:
+3. Filter orders to the survey window. `fulfilled_at` means the **earliest** `createdAt` among the order's fulfillments. The Step 2 query keeps only paid orders (`financial_status:paid`) on purpose, so unpaid and partly paid orders never reach the list.
    - Skip if `fulfilled_at` is outside `[earliest_fulfilled_at, latest_fulfilled_at]`
    - Skip if `cancelledAt != null`
    - Skip if any refund was issued (full or partial)

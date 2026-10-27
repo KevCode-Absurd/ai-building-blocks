@@ -93,7 +93,9 @@ output_shape: |
 
 tweaks:
   - what: "Name your platform"
-    how: "Say where it runs so steps match it. Otherwise they stay general."
+    how: "Say where it runs so steps match it. Otherwise they stay general and no commands are written."
+  - what: "Last known-good version"
+    how: "Give the tag, build or backup point you would go back to. The undo steps start from it."
   - what: "Database changes"
     how: "Say if data changes. It changes the undo plan the most."
   - what: "Who is affected"

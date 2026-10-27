@@ -31,10 +31,10 @@ you_get:
   - Tips to keep the product true to the photo
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste this skill. Add your product photo link or file, your product type and your selling points.
-  - "Keep each line short: a headline of 8 characters or fewer, a subhead of 16 or fewer, and icon text of 5 or fewer."
+  - "Keep each line short: a headline of 8 characters or fewer, a subhead of 16 or fewer, and icon text of 5 or fewer. For the size block, give your real measurements. Never let the AI make up a size table."
   - "Ask for one prompt per block: banner, icons, material, details and size. Do not ask for the whole page at once. Each block comes out as a jpg at 3:4, 1:1 or 9:16, at about 2K."
   - "The skill file is in Chinese. Its method gives text that reads cleanly: write each line into the prompt in quote marks, name the font style, say where the text sits, and tell the model the text must be clear and not garbled."
-  - Run each prompt in an image model that draws text well. The skill uses dLazy with a paid account and about 5 credits per image. Another text-friendly model also works. Make 2 or 3 tries per block.
+  - "Use this prompt for each block: Product detail page [block name], [aspect ratio]. Keep the product's colour, [material] and [pattern] exactly as in my photo. Set the text: large text '[HEADLINE]', small subtext '[SUBHEAD]'. Style: [background and tone], clean sans-serif font, aligned layout. All text must be clear and correct. Add no text that was not provided. Run each prompt in an image model that draws text well. The skill uses dLazy with a paid account and about 5 credits per image. Another text-friendly model also works. Make 2 or 3 tries per block."
   - Read every word on each picture. Fix garbled text with the fix lines. Check every claim against your verified product specs before you upload. Do not use any sample selling point as your own.
   - Join the blocks into one long image in a design tool, then upload. The sample text is for illustration only, so replace it with your own.
 output_sample:

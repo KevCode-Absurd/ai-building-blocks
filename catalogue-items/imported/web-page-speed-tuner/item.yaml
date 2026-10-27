@@ -12,6 +12,8 @@ inputs:
     required: true
   - type: codebase
     required: false
+  - type: page_speed_report
+    required: false
 outputs:
   - type: audit_report
   - type: plan

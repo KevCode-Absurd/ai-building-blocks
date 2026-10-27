@@ -8,7 +8,11 @@ role: source
 job: ops
 level: intermediate
 inputs:
+  - type: question
+    required: true
   - type: tool_connection
+    required: false
+  - type: source_text
     required: false
 outputs:
   - type: document

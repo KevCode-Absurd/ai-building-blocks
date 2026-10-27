@@ -5,15 +5,19 @@ description: "Plan a public relations acquisition experiment from a product URL 
 
 # Press outreach experiment planner
 
+Needs no account, API key or paid tool, and no scraping. If your AI can browse, it reads the public pages you point to. If not, paste your page text.
+
+Not for comparing all 19 growth channels: use the Find your SaaS growth channel workflow (or, for a shop or service, Find your business growth channel). Not for a product with no real news to tell: build a story first. Not for sending pitches for you: this plan sends nothing.
+
+Gather first: your product link or pasted pricing text, your growth goal, a dated milestone or customer insight you can back with evidence, and any outlets you already follow.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Plan your strategy** with the [Unconventional PR test planner](https://useaiblocks.com/skills/traction-unconventional-pr).
-- The [Speaking event outreach planner](https://useaiblocks.com/skills/traction-speaking-engagements).
-- The [Offline event experiment planner](https://useaiblocks.com/skills/traction-offline-events).
 - **Plan your strategy** with the [Growth channel shortlist planner](https://useaiblocks.com/skills/traction-channel-ranker).
 - **Plan your strategy** with the [Customer acquisition experiment reviewer](https://useaiblocks.com/skills/traction-experiment-reviewer). It takes the channel experiment.
+- **Plan your strategy** with the [Unconventional PR test planner](https://useaiblocks.com/skills/traction-unconventional-pr).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -70,11 +74,13 @@ Evidence: <source URL, access date, fact, implication>
 Buyer and useful action: <...>
 Channel mechanism: <how the buyer reaches value>
 Pilot: <hypothesis, audience, offer, deliverable, owner>
+Produces: <a reporter research table, newsworthiness check, pitch email and source sheet>
 Limits: <cash, hours, date, proposed or approved>
 Measurement: <events, cohort, denominators, attribution>
 Decision: <continue / revise / stop rule>
 Risks and next action: <...>
 MISSING: <unknowns>
+CHECKS MISSED: <one line each, or none>
 
 ## Check the answer
 

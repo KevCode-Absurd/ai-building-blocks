@@ -64,7 +64,7 @@ CHECKS MISSED   <one line each, or none>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Mixed practice unit planner](https://useaiblocks.com/skills/mixed-practice-unit-planner). It takes the plan.
+- The [Mixed practice unit planner](https://useaiblocks.com/skills/mixed-practice-unit-planner).
 - The [Task marking guide writer](https://useaiblocks.com/prompts/task-rubric-drafter).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

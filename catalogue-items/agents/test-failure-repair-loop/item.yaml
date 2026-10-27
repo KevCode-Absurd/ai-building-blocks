@@ -9,6 +9,7 @@ level: intermediate
 inputs:
   - {type: codebase, required: true}
   - {type: test_report, required: false}
+  - {type: question, required: true}
 outputs:
   - {type: code_change}
   - {type: test_report}

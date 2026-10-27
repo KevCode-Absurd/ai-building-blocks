@@ -16,7 +16,7 @@ when:
   - Your FAQ says 30 days and your refund policy says 14.
   - A payment or ad platform asked you to fix your policies.
 not_for:
-  - "You want to check another store's policies without its owner's permission: ask the owner to paste the text, or skip it."
+  - "You want to check a store you do not own or manage: ask the owner to paste the text, or skip it. This tool is for your own store only."
   - "You need legal advice or a contract review: ask a lawyer, because this tool flags common gaps only."
   - "You need a payment platform or ad platform to approve your store: send your fixed policies to that platform's own review."
 you_give:
@@ -31,6 +31,7 @@ you_get:
   - Notes on region rules
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions. Reading a store link needs an AI that can run the script (scripts/fetch_policies.py), which must sit in the skill folder next to SKILL.md. A store link cannot be read from the text alone. If yours can't, paste your policy text instead.
+  - "Store-link reading works only with the script in this item's scripts folder (fetch_policies.py). It obeys the store's robots.txt. Use its owner option only for a store you own or manage. For any other store, do not read it by link: ask the owner to paste the text."
   - Paste your store link, or paste the text of your refund, shipping, privacy and terms policies. Add your FAQ if it mentions returns or shipping.
   - Add the regions you sell to and any facts your policies leave out (optional).
   - Read the score and the Fix these first list. Check each quote against your store.

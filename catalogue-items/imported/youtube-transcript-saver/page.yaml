@@ -10,6 +10,8 @@ explain: |
   Paste a YouTube link and get the talk saved as a tidy markdown note in your notes folder, ready to search later.
 
   A Python script uses the free yt-dlp tool to list the available subtitles and prefers manual ones over auto captions, because manual ones keep punctuation and speaker names. It then strips the timing marks, removes the doubled lines that auto captions produce, and merges the rest into clean paragraphs. The note is filed by channel and date, with title, channel and date at the top. It also scans for words like framework, decision and lesson, and drops a small idea stub for each hit. You need Python and yt-dlp.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (adelaidasofia) says MIT. Credit goes to adelaidasofia and sickn33.
 when:
   - You watch long talks and want them in your notes.
   - You want to search across what you have learned from videos.
@@ -29,12 +31,12 @@ you_get:
   - A word count and language
   - Idea stubs for key passages
 how_to_use:
-  - Use an AI that can run code and save files, and make sure Python is installed.
+  - Use an AI that can run code and save files, and make sure Python is installed. Put `ingest.py` (it is in this item's folder) in the folder you will run the commands from.
   - "Install the free yt-dlp tool by running: pip3 install --user yt-dlp"
   - "Run: python3 ingest.py <youtube-url> --vault <path> --lang en,es"
-  - Swap in your video link and your notes folder. Change the language codes if you want other captions.
+  - Swap in your video link and your notes folder. Change the language codes if you want other captions. To see which languages a video has, run `yt-dlp --list-subs <youtube-url>` first. If the video has none, you get a note with the video details and link, not a transcript.
   - Open the saved note and check that the title, date and text look right.
-  - yt-dlp pulls YouTube's own captions, and storing or reusing a transcript may breach YouTube's terms or the creator's copyright. Check the terms before you store one. Then search the notes folder for what you need, or pair the note with a summary prompt.
+  - yt-dlp pulls YouTube's own captions, and storing or reusing a transcript may breach YouTube's terms or the creator's copyright. Check the terms before you store one. Then search the notes folder for what you need, or pair the note with youtube-video-summariser.
 output_sample:
   input:
     - One YouTube video link

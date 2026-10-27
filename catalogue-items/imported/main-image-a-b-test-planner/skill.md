@@ -11,10 +11,12 @@ The rest of this file is in Chinese. Follow it as written. In short:
 2. Pick one thing to test per round: background, shot distance, with or without a model, text on the image, model look, or colour tone. If the user wants to change three, queue three rounds.
 3. Write a hypothesis for each version before any image is made, and have the user confirm it.
 4. Make a control (A) and a test (B) with two prompts that differ in one place only. Make 3 images per version and pick the best one.
-5. Check every image against the marketplace's main image rules, so a rejected image does not spoil the test.
+5. Check every image against the marketplace's main image rules, so a rejected image does not spoil the test. Run the bundled check, `python3 scripts/check_listing.py <your images> --platform <marketplace>` (needs Python and the Pillow library). It reads image size, background and other things a program can measure. Its rules are a snapshot, so also read the marketplace's own main image help page before you upload.
 6. Give the user a results sheet to fill in with impressions, clicks and sales. This skill does not connect to a store and cannot say who won. Do not call a winner on low traffic. Wait about two weeks.
 
-Needs before you start: the image commands call a paid image API (OpenAI, Gemini, fal or Replicate), so an API key is needed and each image may cost money. They also need Node and Python. The example paths under docs/flat-lay/ and examples/brand.yaml are placeholders: the user supplies their own photos and brand file. The linked platform-compliance and brand-kit skills are not part of this item. Check main image rules by hand on the marketplace's own help page, and skip the brand-kit step.
+Needs before you start: the image commands call a paid image API (OpenAI, Gemini, fal or Replicate), so an API key is needed and each image may cost money. They also need Node and Python. The user must supply: a product photo (the commands call it `docs/flat-lay/garment-flatlay.jpg`), a pose reference photo for clothing (optional), and a brand file (`examples/brand.yaml` is the bundled sample; the user can edit it or leave it out). Every path and product detail in the commands, such as the olive sweater and SKU A001, is a placeholder to replace with the user's own product. The linked platform-compliance and brand-kit skills are not part of this item, so skip the brand-kit step (the last tip). Use `scripts/check_listing.py` for the automatic check.
+
+How to read the Chinese sections: section 1 says what the skill can and cannot do. Section 2 lists the variables you can test. Section 3 holds the image commands. Section 4 is the review sheet. Section 5 is the step order (the six steps above). Section 6 is a troubleshooting table. Write your replies to the user in English.
 
 ---
 

@@ -46,6 +46,8 @@ Only **11% of domains** are cited by BOTH ChatGPT and Google AI Overviews for th
 ## Platform 1: Google AI Overviews (AIO)
 
 ### How AIO Selects Sources
+
+*Unsourced: the percentages and platform claims in this list are the original author's. Do not quote them as fact. Say "the author reports".*
 - 92% of AIO citations come from pages already ranking in the **top 10 organic results** — traditional SEO is the gateway
 - However, 47% of citations come from pages ranking **below position 5** — AIO has its own selection logic favoring clarity and directness over raw rank
 - AIO strongly favors pages with **clean structure, direct answers, and scannable formatting**
@@ -85,6 +87,8 @@ Only **11% of domains** are cited by BOTH ChatGPT and Google AI Overviews for th
 ## Platform 2: ChatGPT Web Search
 
 ### How ChatGPT Selects Sources
+
+*Unsourced: the percentages and platform claims in this list are the original author's. Do not quote them as fact. Say "the author reports".*
 - Uses **Bing's search index** as its foundation (not Google)
 - Top citation sources by domain share: **Wikipedia (47.9%)**, Reddit (11.3%), YouTube, major news outlets
 - ChatGPT heavily weights **entity recognition** — if your brand exists as a structured entity (Wikipedia, Wikidata, Crunchbase), it is far more likely to be cited
@@ -124,6 +128,8 @@ Only **11% of domains** are cited by BOTH ChatGPT and Google AI Overviews for th
 ## Platform 3: Perplexity AI
 
 ### How Perplexity Selects Sources
+
+*Unsourced: the percentages and platform claims in this list are the original author's. Do not quote them as fact. Say "the author reports".*
 - Top citation sources: **Reddit (46.7%)**, Wikipedia, YouTube, major publications
 - Perplexity places the **heaviest emphasis on community validation** of all AI search platforms
 - Strongly favors **discussion threads** where claims are debated, validated, or expanded by multiple participants
@@ -163,6 +169,8 @@ Only **11% of domains** are cited by BOTH ChatGPT and Google AI Overviews for th
 ## Platform 4: Google Gemini
 
 ### How Gemini Selects Sources
+
+*Unsourced: the percentages and platform claims in this list are the original author's. Do not quote them as fact. Say "the author reports".*
 - Uses **Google's search index** plus strong weighting toward **Google-owned properties**
 - YouTube content is weighted significantly more heavily than in standard Google Search
 - Google Business Profile data is directly accessible to Gemini
@@ -174,7 +182,7 @@ Only **11% of domains** are cited by BOTH ChatGPT and Google AI Overviews for th
 
 1. **Google Knowledge Panel**: Check if the brand has a Google Knowledge Panel. If not, claim it through Google Business Profile or structured data. Ensure all information is accurate.
 2. **Google Business Profile**: Complete and optimize GBP with all fields: hours, services, photos, posts, Q&A. Gemini pulls directly from GBP for local queries.
-3. **YouTube Strategy**: Create YouTube content for every key topic. Optimize titles, descriptions, timestamps, and closed captions. Gemini cites YouTube more than any other AI platform.
+3. **YouTube Strategy**: Create YouTube content for every key topic. Optimize titles, descriptions, timestamps, and closed captions. The author says Gemini cites YouTube more than any other AI platform (unsourced).
 4. **YouTube Chapters and Timestamps**: Use chapters (timestamps in description) so Gemini can reference specific segments of videos.
 5. **Google Merchant Center**: For e-commerce, ensure products are in Google Merchant Center. Gemini references product data directly.
 6. **Structured Data (Schema.org)**: Implement comprehensive Schema.org markup. Gemini uses this for entity understanding more aggressively than other platforms.
@@ -202,6 +210,8 @@ Only **11% of domains** are cited by BOTH ChatGPT and Google AI Overviews for th
 ## Platform 5: Bing Copilot
 
 ### How Copilot Selects Sources
+
+*Unsourced: the percentages and platform claims in this list are the original author's. Do not quote them as fact. Say "the author reports".*
 - Uses **Bing's search index** (shared infrastructure with ChatGPT but different ranking/selection)
 - Supports **IndexNow protocol** for near-instant indexing of new and updated content
 - Copilot tends to cite **fewer sources per answer** (typically 3-5) but gives more prominent attribution

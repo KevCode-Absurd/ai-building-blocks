@@ -127,6 +127,8 @@ const TARGET_URL = 'http://localhost:3001'; // Auto-detected
 
 ### Test Login Flow
 
+Use test accounts only, never real customer or staff logins. The email and password below are placeholders.
+
 ```javascript
 // /tmp/playwright-test-login.js
 const { chromium } = require('playwright');
@@ -180,6 +182,8 @@ const TARGET_URL = 'http://localhost:3001'; // Auto-detected
 
 ### Check for Broken Links
 
+Only run this on sites you own or have permission to test. It sends one request for every external link on the page, so keep a short delay between requests.
+
 ```javascript
 const { chromium } = require('playwright');
 
@@ -195,6 +199,7 @@ const { chromium } = require('playwright');
   for (const link of links) {
     const href = await link.getAttribute('href');
     try {
+      await page.waitForTimeout(250); // short delay between requests
       const response = await page.request.head(href);
       if (response.ok()) {
         results.working++;
@@ -283,6 +288,15 @@ const TARGET_URL = 'http://localhost:3001'; // Auto-detected
   await browser.close();
 })();
 ```
+
+## Results Report
+
+After every run, report these fields, so the result looks the same each time:
+
+- Step name (what the script tried to do)
+- Pass or fail for each step
+- Error text for any step that failed
+- Screenshot file paths
 
 ## Inline Execution (Simple Tasks)
 

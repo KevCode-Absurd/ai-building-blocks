@@ -51,8 +51,6 @@ export function flowFrom(c: Catalogue, name: string, slugs: string[]): Flow {
   return tidy(f) ?? f;
 }
 
-export { planFromGoal, type Plan } from "./goal";
-
 // ---- Share by link ----
 
 // r and o are each step's role and notes; g and gn the Start node's goal and notes; k each step's mind; ov the overseer;

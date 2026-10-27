@@ -8,12 +8,13 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: question
     required: true
   - type: plan
     required: false
 outputs:
   - type: plan
+  - type: offer
 uses: []
 origin: imported
 source:

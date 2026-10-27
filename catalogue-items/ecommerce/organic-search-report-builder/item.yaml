@@ -7,7 +7,7 @@ role: check
 job: analysis
 level: beginner
 inputs:
-  - { type: performance_sheet, required: true }
+  - { type: search_query_report, required: true }
   - { type: brand_brain, required: false }
 outputs:
   - { type: audit_report }

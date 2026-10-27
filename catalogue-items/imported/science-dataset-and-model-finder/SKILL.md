@@ -31,6 +31,8 @@ Engage this skill when the user's task involves AI/ML applied to science. Common
 
 If the task is generic ML (recommendation systems, chatbot RAG, vision on cats and dogs), this skill is **not** the right tool — defer to general HF Hub knowledge instead.
 
+If the user already has a shortlist of research ideas, use the top idea as the field and task.
+
 ## Core workflow
 
 Most invocations follow this five-step loop. Start with the relevant topic, then assess the underlying resource independently.

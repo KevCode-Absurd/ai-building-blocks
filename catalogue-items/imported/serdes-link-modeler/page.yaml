@@ -2,7 +2,7 @@ thinking: high
 thinking_why: Equalizer tuning needs careful analysis.
 new_slug: serdes-link-modeler
 name: SerDes link modeler
-summary: "Build a SerDes link model in MATLAB: tune equalizers, plot eye diagrams and export IBIS-AMI files for PCIe, USB4 or PAM4 links."
+summary: "For MATLAB signal integrity engineers: build a SerDes link model, tune equalizers, plot eye diagrams and export IBIS-AMI files for PCIe, USB4 or PAM4 links."
 job: build-software
 headline: SerDes link modeler
 subhead: Give it a data rate and a channel. Your AI writes MATLAB code that builds the link model and tunes the equalizers. You get eye diagrams, jitter results and IBIS-AMI files.
@@ -10,6 +10,8 @@ explain: |
   A working model of a high-speed serial link, with equalisation tuned and eye diagrams plotted. It uses MATLAB's SerDes Toolbox and covers NRZ and PAM links from PAM3 to PAM16.
 
   Start from a target data rate and channel loss, or from a reference design such as PCIe, USB4, DDR5 or UCIe. Load a Touchstone channel file, or model crosstalk. Then tune FFE, CTLE and DFE settings, sweep parameters, and check eye height, eye width, bathtub curves and jitter parts. The skill also builds IBIS-AMI models for transmitters, receivers, redrivers and retimers, and tests them against the behavioural model. It includes rules that avoid silent setup errors.
+
+  This is MathWorks' skill. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE.md file.
 when:
   - You are designing a PCIe or PAM4 link and must pick equalizer settings.
   - You have measured S-parameters for a channel and want to see the eye.
@@ -40,6 +42,7 @@ how_to_use:
   - Ask for the model, the tuned equalizers and the eye plots. Read the eye height and width it reports.
   - Ask for IBIS-AMI files only when the design looks right. Check that the compiled model matches the behavioural model.
   - Run the script in MATLAB and change the parameters block to test other designs.
+  - Next, decide whether to freeze the equalizer settings or re-run the sweep with other values. When the eye looks right, give the IBIS-AMI files to your partner or EDA team to validate in their own tool.
 output_sample:
   input:
     - Your target data rate and signal type (NRZ or PAM3 to PAM16)
@@ -63,3 +66,4 @@ output_sample:
       contains: The .ami, .ibs and .dll or .so files for a transmitter, receiver, redriver or retimer.
     - name: Validation check
       contains: A test of the compiled model against the behavioural model.
+next: [pcb-signal-loss-analyzer, signal-spectrum-analyzer]

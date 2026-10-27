@@ -12,6 +12,8 @@ explain: |
   Most people can't describe the look they want in words. So the skill saves three small title-slide previews, in different styles, and you pick by sight. It asks first if the deck is for speaking (few words, big type) or for reading (more detail per slide).
 
   Every slide sits on a fixed 16:9 stage that scales to the screen, so layouts never jump around. You can fix text right in the browser. A PDF copy is optional and needs extra tools. The one-click share link from the original skill is not in this copy.
+
+  Licence: this skill text is shared under CC BY-4.0 (the LICENSE-CONTENT file). The helper scripts that come with it (extract-pptx.py and export-pdf.sh) keep their original MIT licence (UPSTREAM-LICENSE.txt). The "MIT" line inside SKILL.md is the original author's own note.
 when:
   - You have a talk next week and want slides that look designed, not default.
   - You have an old PowerPoint file and want it as a web page.
@@ -36,10 +38,11 @@ you_get:
 how_to_use:
   - Open an AI that can write and save files, such as Claude Code or ChatGPT with code tools. Add the skill folder, or paste the skill text into a chat.
   - Tell it your topic, audience, slide count and whether the deck is for speaking or reading. Attach your notes, PowerPoint file or images if you have them.
-  - Open the three style previews it saves. Pick one, or ask it to mix parts of two.
+  - Open the three style previews it saves. Pick one, or ask it to mix parts of two. This copy does not include the style preset file or the bold template pack. If they are missing, it makes the three previews itself: one safe style, one bold style and one wildcard.
   - Open the finished HTML file in your browser. Use the arrow keys to move. Press E to edit text.
   - Click through every slide. Look for cut-off text or crowded slides, and ask for fixes.
-  - For a PDF, it needs Node, Playwright and Chromium already installed. Without them, print the deck to PDF from your browser.
+  - For a PDF, it needs Node, Playwright and Chromium already installed. Without them, print the deck to PDF from your browser. The one-click share step is not in this copy.
+  - When it is done, open the HTML file, check every slide, then send the single file or host it yourself. Before you share it, check names, numbers and images, and read the HTML if it came from someone else.
 output_sample:
   input:
     - Your talk topic, outline or rough notes

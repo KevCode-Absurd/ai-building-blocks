@@ -32,6 +32,7 @@ how_to_use:
   - Under the prompt, paste your ad, then your offer terms, then how people act.
   - Check the reason to act now. If it says none, do not add one.
   - Run version A and version B as two ads and compare.
+  - Before it goes live, check the wording with the Headline promise checker. If your offer touches health or money, also check it against the platform's ad policy.
 output_sample:
   input:
     - Your ad draft
@@ -68,6 +69,7 @@ output_shape: |
   VERSION A: <the full ask>
   VERSION B: <the smaller first step>
   MISSING: <terms you did not give>
+  CHECKS MISSED: <checks that failed or could not run, or none>
 tweaks:
   - what: Offer terms
     how: Paste the exact wording. The prompt will not widen a guarantee.

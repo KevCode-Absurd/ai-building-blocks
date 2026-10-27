@@ -34,7 +34,7 @@ how_to_use:
   - 'Open the skill folder and give your AI the SKILL.md file. Say: "Follow this skill on my data."'
   - Upload your concentration-time file. Tell your AI the units, the dose history, the sample times and your question.
   - Add your assay limit and any covariates, if you have them. Say how to treat values below the limit.
-  - Read the findings first, then the fits. Check the units and assumptions before you use any result.
+  - New to pharmacokinetics? Read the findings write-up first, then the fits. Before you trust any result, check that the units match your file and that the fitted values can be told apart.
   - Treat dose results as research scenarios only. Take clinical questions to a qualified pharmacometrician.
 terms:
   - term: AUC
@@ -69,5 +69,15 @@ output_sample:
       contains: Sample size and design checks for a bioequivalence study.
     - name: Interaction screen
       contains: An early read on drug interaction risk, with assumptions stated.
+    - name: Research monitoring calculator
+      contains: A Bayesian vancomycin example that gives a model-target dose from weight and kidney function. It is a research example only. Its starting values are illustrative, and it must never set a patient's dose.
     - name: Findings and write-up
       contains: A plain account of assumptions, limits and what the data does and does not support.
+output_shape: |
+  <ANALYSIS NAME>  one table of results per analysis you ask for
+  <what each number means, with units>
+
+  FINDINGS AND WRITE-UP
+  Assumptions: <what you told it and what it assumed>
+  Limits: <what the data cannot tell you>
+  What holds: <what the data does support>

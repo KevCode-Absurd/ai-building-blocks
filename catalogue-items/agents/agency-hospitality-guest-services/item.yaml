@@ -8,9 +8,9 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: question
+  - type: voc_reviews
     required: true
-  - type: source_text
+  - type: question
     required: false
 outputs:
   - type: copy_draft

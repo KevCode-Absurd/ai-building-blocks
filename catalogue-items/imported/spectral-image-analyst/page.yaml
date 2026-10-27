@@ -10,6 +10,8 @@ explain: |
   Cleaned hyperspectral or satellite images, with materials separated and targets or odd spots flagged. The skill writes MATLAB code for the full path. It reads files in formats like ENVI, GeoTIFF, Sentinel-2 and Landsat. Then it applies calibration, atmospheric correction, denoising and sharpening, and cuts bands down with PCA.
 
   From there it finds pure materials, unmixes each pixel into their shares, matches known spectra, and flags anomalies. It also computes indices like NDVI, segments scenes, and labels data for deep learning. It needs desktop MATLAB and the Hyperspectral Imaging Library add-on.
+
+  Licence: the LICENSE.md file in this folder applies. It is BSD 2-Clause plus a MathWorks rule: you may use the code only with MathWorks products. The skill file's own header links the MathWorks licence page, which says the same thing in other words.
 when:
   - You have a satellite scene and need to map vegetation or water.
   - You want to find a target material hidden in a hyperspectral image.
@@ -35,7 +37,7 @@ how_to_use:
   - Open a chat with your AI and paste in the skill text.
   - Tell it your file type, the material or feature you want, and any reference spectra you have.
   - "Ask for one processing step at a time: correct, then unmix, then detect. A first run reads the file with imhypercube (you should see the cube size and wavelengths), shows it with colorize (a false-colour image), and then calculates ndvi (a map of plant cover)."
-  - Run each piece of code in MATLAB and check the maps before you move on.
+  - "Run each piece of code in MATLAB and check the result before you move on. After reading, check the band count and wavelengths. After unmixing, check that each abundance map runs from 0 to 1 and that the colours match places you know. After detection, check that flagged pixels sit where you expect them."
   - Save results with enviwrite, or feed the abundance maps into a classifier.
 output_sample:
   input:

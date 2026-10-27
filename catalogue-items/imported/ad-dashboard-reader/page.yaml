@@ -32,11 +32,14 @@ you_get:
   - A suggested incrementality test
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
+  - Remove names, emails and other personal data from anything you paste. Replace customer IDs with made-up labels such as C1, C2.
   - Paste your dashboard numbers from each ad platform, one platform at a time.
   - Add your own sales figures, the date range and each platform's attribution window.
   - Ask your AI to read each metric, then reconcile the totals to your sales.
   - Ask for the noise check, then the scale, hold or cut call and one test to run next.
   - Check the result against your own bank figures before you change any budget.
+  - The percentage ranges for noise and incrementality are the original author's rules of thumb, not sourced figures. Check them against your own test results before you act.
+  - Next, run the suggested geo holdout, and read the result with the A/B test verdict maker.
 output_sample:
   input:
     - Dashboard numbers from each ad platform you run

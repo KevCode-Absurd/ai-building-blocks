@@ -18,10 +18,10 @@ when:
   - An assistant said something wrong about your store, and you want to catch that each month.
   - A rival keeps showing up in AI answers and you want to see how often, and why.
 not_for:
-  - You want a one-off check today. Use the AI search visibility tester, which sets up and reads one run.
-  - You already know which rivals are named and want to know why. Use the AI search recommendation gap finder.
+  - You want a one-off check today. Use the AI recommendation panel runner, which runs one set of questions.
+  - You already know which rivals are named and want to know why. Use the AI recommendation gap finder.
   - Your buyers do not ask AI assistants for picks, for example a very local trade or a custom-order business. A manual spot check each quarter is enough.
-  - You want to check whether Google ranks your pages. Use the Search Console content planner.
+  - You want to check whether Google ranks your pages. Use the Search Console quick-win finder.
 you_give:
   - Your product facts, price range and who the products are for
   - Your 3 to 6 main rivals (optional, but without them it can only report your own share)
@@ -38,9 +38,9 @@ how_to_use:
   - Add the agent to your AI. In Claude Code, save it in .claude/agents or add it as a skill. In Claude, ChatGPT or Gemini, paste it at the start of a chat. It keeps a visibility folder, so Claude Code is easiest; in a plain chat, paste last month's numbers.
   - The first month, give it your product facts and rivals. It builds a list of 10 to 20 shopper questions and saves it. Do not edit the list later, or months cannot be compared.
   - Pick the assistants and use the same ones every month, with web search on. Your AI can only ask the assistant it runs in. For any other, paste each question in yourself and paste the answer back.
-  - The agent stops before step 2 until you confirm you have checked the terms of each assistant for repeated questions. Some limit repeated or automated use. Free versions often skip web search, and some features may need a paid plan. No paid tool is needed.
+  - The agent stops before step 2 every month until you confirm you have checked the terms of each assistant for repeated questions. Some limit repeated or automated use. Free versions often skip web search, and some features may need a paid plan. No paid tool is needed.
   - Read the wrong facts first, then the fix list. Make the fixes you agree with, or say yes to each one and let it make only those.
-  - Run it again next month with the same questions. Pair it with the AI search recommendation gap finder when a rival keeps winning.
+  - Run it again next month with the same questions. Pair it with the AI recommendation gap finder when a rival keeps winning.
 output_sample:
   input:
     - Your product facts, price range and who the products are for
@@ -83,7 +83,7 @@ output_shape: |-
     Share of mentions <x%> vs <x%> last month | per assistant: <name x%, ...> | valid runs <n> each
 
   WHAT MOVED
-    <question> | you: <x> to <x> | rivals who gained: <names>   (changes under 5 points: normal wobble)
+    <question> | you: <x> to <x> | rivals who gained: <names>   (under about 15 valid runs per assistant, or a change under 5 points: normal wobble)
 
   LAST FIXES CHECKED
     <fix> | made <date> | <moved | no change | too early>

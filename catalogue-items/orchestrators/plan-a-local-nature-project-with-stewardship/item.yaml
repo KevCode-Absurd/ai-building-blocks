@@ -9,11 +9,13 @@ level: advanced
 inputs:
   - type: question
     required: true
-  - type: source_text
-    required: true
+  - type: lesson_plan
+    required: false
 outputs:
   - type: plan
   - type: document
+  - type: lesson_plan
+    required: true
 uses:
   - nature-inquiry-cycle
   - intervention-impact-planner

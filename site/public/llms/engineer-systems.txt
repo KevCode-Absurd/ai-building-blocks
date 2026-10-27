@@ -3,7 +3,7 @@
 > 16 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Circuit design and test planner](https://useaiblocks.com/skills/circuit-design-verification-planner): Bring a circuit goal or diagram. Get checked calculations, likely risks and a safe test plan.
-- [Custom PCB shape builder](https://useaiblocks.com/skills/custom-pcb-shape-builder): Describe a custom PCB shape and get MATLAB code that builds it as a pcbComponent, with layers, feeds and cut-outs. For RF engineers.
+- [Custom PCB shape builder](https://useaiblocks.com/skills/custom-pcb-shape-builder): Describe a custom PCB shape and get MATLAB code that builds it as a pcbComponent. Needs paid MATLAB, for MathWorks products only.
 - [MATLAB antenna designer](https://useaiblocks.com/skills/antenna-designer): Share frequency, geometry and design goals. Get MATLAB antenna or array code, with plans to check patterns and electrical performance.
 - [MATLAB antenna system designer](https://useaiblocks.com/skills/antenna-matching-helper): Share an antenna, measurements and system goals. Get MATLAB models for matching, signal coverage or radio exposure checks.
 - [MATLAB large antenna analyzer](https://useaiblocks.com/skills/large-antenna-analyzer): Use antenna shape, size, and frequency to build MATLAB models, plots, and predicted results with units.

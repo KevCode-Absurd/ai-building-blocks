@@ -16,13 +16,14 @@ when:
   - You are preparing an annual vendor review.
   - You want to cut the number of suppliers you manage.
 not_for:
-  - "You want to review how one vendor is performing: use the vendor-management skill or ask the vendor's account owner for a review."
+  - "You want to review how one vendor is performing: use the Supplier scorer, or ask the vendor's account owner for a review."
   - "You have no spend list yet: export one from your accounting tool or card statements first, then come back."
   - "You want to negotiate one renewal: ask your AI to help draft the email, or talk to the vendor directly."
 you_give:
   - A list of software spend lines with vendor and amount
   - Contract renewal dates (optional)
   - Who owns each tool (optional)
+  - "Purchase records with request, approval, order, delivery and payment dates (optional, needed only for the purchasing cycle analysis)"
   - Your savings goal (optional)
 you_get:
   - Spend grouped by category
@@ -35,6 +36,7 @@ how_to_use:
   - Tell your AI to follow the skill, and upload the folder and your spend list.
   - Check the categories first. Fix any line that landed in the wrong group.
   - Read the consolidation plan. Decide which cuts you accept before you talk to any supplier. Then take the keep, merge or drop list to the contract owner or your lawyer to check the terms of the tool you keep.
+  - "The purchasing cycle analysis needs purchase records with request, approval, order, delivery and payment dates. Without them it is skipped, and you still get the categories, the Pareto view and the consolidation plan."
   - If you cannot run code, paste the skill text and your list into a chat. Expect a rougher sort.
 output_sample:
   input:
@@ -51,8 +53,9 @@ output_sample:
     - name: Pareto breakdown
       contains: The few categories that make up most of your cost, ranked by spend.
     - name: Purchasing cycle analysis
-      contains: How long each category takes to buy, and which category slows things down most.
+      contains: How long each category takes to buy, and which category slows things down most. Only when you give purchase records.
     - name: Consolidation plan
       contains: Duplicate tools grouped by job, with a keep, merge or drop call for each supplier.
     - name: Procurement review
       contains: A summary of findings, risk flags, renewal timing and next steps for your review.
+next: [supplier-scorer]

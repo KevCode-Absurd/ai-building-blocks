@@ -33,9 +33,9 @@ Segments lapsed customers — those who placed at least one order but have not p
 ## Workflow Steps
 
 1. **OPERATION:** `customers` — query
-   **Inputs:** a search `query` for orders count of at least `min_orders`, `first: 250`, pagination. Work out the cutoff date as today minus `inactive_days`, then keep only customers whose `lastOrder.processedAt` is before it. Use Shopify's customer search syntax for your `api_version` for any date filter. If you are not sure a filter name is valid, leave it out and apply the date check yourself on the results.
-   **Skip these customers:** anyone who already carries the `tag`, and anyone who has not agreed to marketing email (check the email marketing status on the customer). If you cannot read that status, say so, and tell the person to remove those people before they email the list.
-   **Expected output:** List of customer objects with `id`, `defaultEmailAddress { emailAddress }`, `firstName`, `lastName`, `ordersCount`, `lastOrder.processedAt`; paginate until `hasNextPage: false`
+   **Inputs:** a search `query` for orders count of at least `min_orders` and without the tag (add a `-tag:<tag>` clause using the `tag` parameter), `first: 250`, pagination. Work out the cutoff date as today minus `inactive_days`, then keep only customers whose `lastOrder.processedAt` is before it. Use Shopify's customer search syntax for your `api_version` for any date filter. If you are not sure a filter name is valid, leave it out and apply the date check yourself on the results.
+   **Skip these customers before you tag them:** anyone who already carries the `tag`, and anyone whose `defaultEmailAddress.marketingState` is not `SUBSCRIBED`. Do not tag or list a customer whose consent you could not read. If you cannot read that field at all, say so, and tell the person to remove non-subscribed people before they email the list.
+   **Expected output:** List of customer objects with `id`, `defaultEmailAddress { emailAddress marketingState }`, `firstName`, `lastName`, `ordersCount`, `lastOrder.processedAt`; paginate until `hasNextPage: false`
 
 2. **OPERATION:** `tagsAdd` — mutation
    **Inputs:** Customer `id`, tag string from `tag` parameter
@@ -52,6 +52,7 @@ query LapsedCustomers($first: Int!, $after: String, $query: String) {
         id
         defaultEmailAddress {
           emailAddress
+          marketingState
         }
         firstName
         lastName

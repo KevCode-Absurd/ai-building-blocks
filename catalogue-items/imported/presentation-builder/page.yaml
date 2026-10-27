@@ -7,9 +7,9 @@ job: work-with-files
 headline: Presentation builder
 subhead: Give it your outline, document or meeting notes, plus your audience. It builds the story, writes short slides and suggests a visual for each one. You get a full deck with speaker notes.
 explain: |
-  A finished slide deck made from your outline, document or meeting notes, written for the people who will watch it. Output comes as Marp, reveal.js or PPTX.
+  A finished slide deck made from your outline, document or meeting notes, written for the people who will watch it. Output comes as Marp, reveal.js, PPTX or Google Slides.
 
-  The skill first asks who the audience is and how many slides you want. It builds a story arc with a hook, the problem, the answer and a close. Each slide gets a headline under eight words that states the takeaway, with minimal body text. It suggests the right visual for each point, such as a bar chart for comparisons. A last pass checks no slide is overloaded. Marp and reveal.js decks are plain text files.
+  The skill first asks who the audience is and how many slides you want. It builds a story arc with a hook, the problem, the answer and a close. Each slide gets a headline under eight words that states the takeaway, with minimal body text. It suggests the right visual for each point, such as a bar chart for comparisons. A last pass checks no slide is overloaded. Marp and reveal.js decks are plain text files. Google Slides output is a structured JSON payload for the Slides API, not a file you open directly.
 when:
   - You have a report and a meeting in two hours.
   - You need a pitch deck from rough notes.
@@ -33,7 +33,7 @@ you_get:
 how_to_use:
   - Open your AI and paste in the skill instructions.
   - Paste your notes or document. Say who the audience is, how many slides you want and which format.
-  - Use an AI that can run code and save files if you want a PPTX file. Marp and reveal.js decks are plain text, so a chat is enough.
+  - Use an AI that can run code and save files if you want a PPTX file. Marp and reveal.js decks are plain text, so a chat is enough. Google Slides output is a JSON payload for the Slides API, not a file you open directly.
   - Check every number, name and claim. Every figure must come from your own source. Fill in any bracketed placeholder such as [X%] with a real figure.
   - Run the claims list through the Claim fact checker before you present.
   - Rehearse with the speaker notes, then open the file in your chosen app to check it displays well before you share it.

@@ -62,8 +62,8 @@ The draft in a line. The six ratings, each with its reason from the draft. The s
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Weekly social post writer](https://useaiblocks.com/skills/weekly-social-content-planner).
-- The [Social post ad reviewer](https://useaiblocks.com/skills/organic-post-to-ad-promoter).
-- The [Social media results analyst](https://useaiblocks.com/skills/social-media-results-analyst).
+- The [Social post calendar and draft writer](https://useaiblocks.com/skills/social-post-planner). It takes the audit report.
+- The [Low-performing post reviewer](https://useaiblocks.com/skills/flop-post-diagnoser). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

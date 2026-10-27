@@ -9,7 +9,9 @@ job: ops
 level: intermediate
 inputs:
   - type: audio
-    required: true
+    required: false
+  - type: footage
+    required: false
 outputs:
   - type: audio
   - type: transcript

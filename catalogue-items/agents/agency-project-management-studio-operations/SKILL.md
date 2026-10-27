@@ -13,7 +13,9 @@ Read [the original role profile](references/source-agent.md) before you start. U
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Team routines and ownership planner](https://useaiblocks.com/skills/company-operating-system-setter).
+- The [Action item tracker](https://useaiblocks.com/skills/executive-action-register). It takes the plan.
+- The [Daily executive brief writer](https://useaiblocks.com/skills/executive-daily-digest). It takes the plan.
+- The [Stakeholder update writer](https://useaiblocks.com/skills/stakeholder-update-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -25,10 +27,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, source text, audit report. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -37,11 +40,14 @@ How to start:
 
 ## What you need
 
-Ask once for anything missing. If it is still missing, write `MISSING: <what>`, name the part of the output it limits, and carry on. Never guess a value.
+Ask once for anything missing. If it is still missing, write `MISSING: <what>`, name the part of the output it limits, and carry on. Never guess a value. This list is the intake for this agent. Two things are required: how the team works today, and the one process to write down. Everything else is optional.
+
+When not to use it: to find which step wastes the most time, use the Operations Manager agent. To keep a written process up to date, use the Process doc freshness keeper. For an IT help desk and change process, use the IT Service Manager agent. For a plan across several creative projects, use the Studio Producer agent.
 
 - How the studio or team works today: who does what, which tools they use.
 - Which part is wanted: one procedure, the operating plan, an operations report, or more than one. If the user wants a procedure, which one process. If they name the whole studio, ask them to pick one process first.
 - Optional: tools, equipment and vendors with owners and renewal dates; numbers the user tracks (turnaround times, error counts, support requests); a recent example of the process done well.
+- Optional: a vendor scorecard from an earlier step. Its keep, review or replace calls go into the tools, equipment and vendors list.
 
 ## Rules
 

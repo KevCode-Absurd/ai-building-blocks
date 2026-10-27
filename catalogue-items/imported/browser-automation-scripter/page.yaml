@@ -31,7 +31,7 @@ you_get:
 how_to_use:
   - Use an AI that can run code on your computer, such as Claude Code. A plain chat window cannot run it.
   - Install the skill and run its setup step once. This installs Playwright and a browser.
-  - Tell your AI what to do in the browser and give the web address. If you have a local site running, say so.
+  - Tell your AI what to do in the browser and give the web address. If you have a local site running, say so. Only run it on sites you own or have permission to test. If it must log in, use test accounts, never real customer or staff logins.
   - If it finds more than one local site, pick the one to use.
   - Watch the browser window while the script runs. Then read the results and open the screenshots.
   - Change the web address at the top of the script if you want to run it on another page.

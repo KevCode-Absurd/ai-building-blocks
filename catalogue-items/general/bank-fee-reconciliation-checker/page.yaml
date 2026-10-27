@@ -37,14 +37,14 @@ how_to_use:
   - Read MISSING before you contact the bank. Nothing is sent to the bank for you.
   - The bundled check script needs Node.js 20 or later. Without it, the AI does the sums in the chat.
 how_it_works:
-  - title: 1. Create a dated source map of the stated balances, transaction IDs, currency, units, period boundaries and contractual definitions
-    text: Create a dated source map of the stated balances, transaction IDs, currency, units, period boundaries and contractual definitions. Stop affected lines on missing evidence.
-  - title: 2. Match each service count to account and month; trace contracted unit prices, fixed fees and valid credit allowance
-    text: Match each service count to account and month; trace contracted unit prices, fixed fees and valid credit allowance.
-  - title: 3. Recompute gross service fees then apply only the documented credit capped at gross fees; retain unused credit separately
-    text: Recompute gross service fees then apply only the documented credit capped at gross fees; retain unused credit separately.
-  - title: 4. Compare expected net charges with the actual bank invoice and return evidence questions without changing bank settings
-    text: Compare expected net charges with the actual bank invoice and return evidence questions without changing bank settings.
+  - title: Lists your inputs
+    text: Writes down the agreement price lines, the month's counts, the fixed fee and the bank's invoice, each with its date and currency. Any line without evidence is marked MISSING.
+  - title: Prices each service
+    text: Multiplies each service count by its contracted price. For example, 100 payments at 0.20 is 20. It checks that the count and the price use the same unit and the same month.
+  - title: Adds the fixed fee and applies the credit
+    text: Gross fees are the service lines plus the fixed fee. The allowed credit comes off, capped at the gross fees, and any unused credit is shown on its own line.
+  - title: Compares with the bill
+    text: The gap is the bank's invoice minus the expected charge. For each line that does not tie, it writes one question for the bank. It changes nothing with the bank.
 output_shape: |-
   A service charge bridge and billing difference.
   Scope and dated sources
@@ -57,8 +57,6 @@ tweaks:
     how: "Take the billing month from the bank agreement and the month's service counts. Use one currency and scale on every line."
   - what: "Service counts"
     how: "Change the service counts and have your AI recalculate. Keep the actual figures you supplied."
-  - what: Acceptance
-    how: Every material input has a source location, date, unit, sign and approval status.
 judge:
   - Every material input has a source location, date, unit, sign and approval status.
   - Keep actual records, contractual inputs and scenarios separate; a missing value never becomes zero.

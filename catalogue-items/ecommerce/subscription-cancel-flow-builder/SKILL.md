@@ -26,10 +26,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 - **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
 - **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
-2. **Audit report** with the [Subscription payback checker](https://useaiblocks.com/skills/subscription-payback-checker). Bring your results. It uses your brand brain and your offer.
+2. **Audit report** with the [Subscription payback checker](https://useaiblocks.com/skills/subscription-payback-checker). Bring your results. It uses your brand brain and offer.
 3. This one.
 
 How to start:
@@ -45,6 +46,7 @@ How to start:
 
 ## What you need
 - **Cancel reasons** customers give today, or a survey (required).
+- **A save plan** (optional): if you already have one save per cancel reason, use it as the starting point for step 3.
 - **What the portal can do**: skip, delay, swap product, change frequency, discount, loyalty points, branching, a splash screen.
 - **Subscription orders** with frequency, quantity and use rate per product (optional).
 - **Margin room** for a save discount (the biggest discount that still pays), or the payback check from the Subscription payback checker.
@@ -113,8 +115,9 @@ MISSING: <what you did not give>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Subscription churn auditor](https://useaiblocks.com/skills/subscription-churn-audit). It takes the email flow.
-- The [Subscription signup page reviewer](https://useaiblocks.com/skills/subscription-page-take-rate-checker).
-- The [Subscriber cancellation and retention reviewer](https://useaiblocks.com/skills/subscription-churn-watcher).
+- The [Billing reminder and confirmation writer](https://useaiblocks.com/skills/billing-reminder-and-confirmation-writer). It takes the email flow.
+- The [New customer onboarding sequence writer](https://useaiblocks.com/skills/new-customer-onboarding-sequence-writer). It takes the plan.
+- The [Email automation gaps and trigger reviewer](https://useaiblocks.com/skills/email-flow-gap-checker). It takes the email flow.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

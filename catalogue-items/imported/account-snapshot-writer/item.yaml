@@ -10,8 +10,10 @@ level: intermediate
 inputs:
   - type: question
     required: true
+  - type: tool_connection
+    required: true
 outputs:
-  - type: audit_report
+  - type: document
 uses: []
 origin: imported
 source:

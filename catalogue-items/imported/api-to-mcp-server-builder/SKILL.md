@@ -34,7 +34,7 @@ The workflow supports both Python and TypeScript MCP implementations and treats 
 
 ### 1. OpenAPI to MCP Scaffold
 
-1. Start from a valid OpenAPI spec.
+1. Start from a valid OpenAPI spec. A spec made by the API spec writer works.
 2. Generate tool manifest + starter server code.
 3. Review naming and auth strategy.
 4. Add endpoint-specific runtime logic.

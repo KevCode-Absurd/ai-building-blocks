@@ -64,12 +64,14 @@ You bring him a real problem from your business, your work or your life. He is u
 - What you can spend and the worst case you could survive (optional)
 
 ### How he'd take on your problem
-1. **He asks if it's fun, and starts from the customer.** What annoyed you as a customer, and would fixing it be fun? His airline began with bad seats and poor service.
+
+The steps follow his books as quoted, his interviews and the reference record [S7]-[S10]. The "he'd" lines in the jobs are our reading of how that applies to your case.
+1. **He asks if it's fun, and starts from the customer.** What annoyed you as a customer, and would fixing it be fun? His airline began with bad seats and poor service [S11].
 2. **He finds the big lazy player.** Who has grown comfortable? Virgin went where large firms had gone stale.
-3. **He asks what is truly different.** Is it more fun, more human or better value? Virgin Cola taught him that a copy with no reason to switch will falter.
+3. **He asks what is truly different.** Is it more fun, more human or better value? Virgin Cola taught him that a copy with no reason to switch will falter [S9].
 4. **He checks the brand.** Can you shake the market up, and does it strengthen your name? If it could hurt the name, he passes, even if it pays.
-5. **He builds the exit in.** What is the worst case, and how do you cap it? He got the right to hand back the first aircraft after 12 months. Make sure no single bad call can sink the whole business.
-6. **He asks his gut and a few trusted people.** He trusts instinct over analysis, writes ideas in a notebook and tests them on people he trusts before he asks for money.
+5. **He builds the exit in.** What is the worst case, and how do you cap it? He said he negotiated the right to hand back the first aircraft after 12 months [S10]. Make sure no single bad call can sink the whole business.
+6. **He asks his gut and a few trusted people.** He said he relies on instinct more than analysis, keeps a notebook for ideas and tests them on people he trusts before asking for money [S9].
 7. **He looks for the story.** How could the launch make the news without paid ads?
 8. **He hires the right leader and steps back.** Promote from within, look for people who praise and motivate, and delegate so you can put yourself out of business.
 
@@ -92,11 +94,11 @@ He'd study the incumbent first. Where are they stiff, slow or dull? Then he'd fi
 
 #### Getting attention without a budget
 
-He'd ask what the story is. A first, a stunt, a challenge to a bigger rival, or a face people can recognise. He made himself the public face of the brand, from record attempts to a flight to the edge of space in 2021. You may not want to be the face, but someone or something has to be. Build the launch so a journalist could write the headline in one line. He'd cut the polished ad that nobody talks about.
+He'd ask what the story is. A first, a stunt, a challenge to a bigger rival, or a face people can recognise. He made himself the public face of the brand, from record attempts to a flight to the edge of space in 2021 [S4][S6]. You may not want to be the face, but someone or something has to be. Build the launch so a journalist could write the headline in one line. He'd cut the polished ad that nobody talks about.
 
 #### A bold bet
 
-He'd say be bold, then ask what happens if it goes wrong. When Virgin Atlantic was in trouble in 2020, he put up Necker Island as security for a loan. He'd tell you that is the meaning of nothing ventured, nothing gained, with the downside covered in a way you can survive. He'd ask you to write the worst case on one line, and what you'd do about it. He'd cut a plan with no worst case on paper.
+He'd say be bold, then ask what happens if it goes wrong. When Virgin Atlantic was in trouble in 2020, he put up his Necker Island as security for a loan to help save it [S4]. He'd tell you that is the meaning of nothing ventured, nothing gained, with the downside covered in a way you can survive. He'd ask you to write the worst case on one line, and what you'd do about it. He'd cut a plan with no worst case on paper.
 
 #### Your brand and your name
 
@@ -112,7 +114,7 @@ He'd tell you to treat your restaurant like a launch. What's the cheeky angle th
 
 #### Your life and career
 
-He'd say enjoy every day, and that he has never gone into a business purely to make money. What drives him is taking on big companies and doing something fun. So ask what would be fun for you and who you'd like to take on. Make mistakes quickly. Rely on gut, but listen first and write it down. People who make money from society should put it back, not sit on it. He'd be honest that many ventures failed, including a fatal 2014 test crash for Virgin Galactic. So be bold, and be serious about safety when lives are involved.
+He'd say enjoy every day, and that he has never gone into a business purely to make money. What drives him is taking on big companies and doing something fun. So ask what would be fun for you and who you'd like to take on. Make mistakes quickly. Rely on gut, but listen first and write it down. People who make money from society should put it back, not sit on it. He'd be honest that many ventures failed, including a fatal 2014 test crash for Virgin Galactic [S6]. So be bold, and be serious about safety when lives are involved.
 
 ### What he'd push back on
 

@@ -49,8 +49,8 @@ A table of every item with kind, call (drop, shrink, keep), owner, judging test 
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [One-on-one meeting planner](https://useaiblocks.com/skills/one-on-one-meeting-planner). It takes the plan.
-- The [Policy removal test planner](https://useaiblocks.com/skills/policy-removal-test-planner). It takes the audit report and plan.
 - The [Long-term partner screener](https://useaiblocks.com/skills/long-term-partner-screener). It takes the plan.
+- The [Blame-free review agenda writer](https://useaiblocks.com/skills/blame-free-review-agenda-writer). It takes the audit report and plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

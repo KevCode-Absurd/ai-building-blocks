@@ -45,7 +45,8 @@ How to start:
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
-- **Nano Banana:** Google recommends it for sequential art such as comic panels.
+- **Nano Banana:** Google's image model inside Gemini. Google recommends it for sequential art such as comic panels. Free plans have daily limits and paid plans get more.
+- **Higgsfield:** A paid image and video service that needs an account. Paste the prompt into its image tool.
 - **Pen, paper and your phone camera:** A drawing you or a paid illustrator make, shot on a table, looks the most like a real notebook page.
 - **Any good chat AI:** Planning the panels is reading the story closely, which Claude, ChatGPT and Gemini all do well.
 <!-- /needs -->
@@ -110,10 +111,10 @@ CHECKS MISSED     <one line each, or none>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image prompt.
+- The [Comic strip image ad maker](https://useaiblocks.com/skills/comic-strip-image-ad-maker).
 - The [Fact caption image ad maker](https://useaiblocks.com/skills/fact-caption-image-ad-maker).
 - The [Handwritten warning image ad maker](https://useaiblocks.com/skills/dont-buy-warning-image-ad-maker).
-- The [Tried-before products image ad maker](https://useaiblocks.com/skills/tried-before-image-ad).
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image prompt.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

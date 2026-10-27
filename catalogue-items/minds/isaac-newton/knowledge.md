@@ -1,6 +1,6 @@
 # Isaac Newton: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 Newton's books are in the public domain. The own-words sources here are Opticks (4th edition, 1730) [S2], the Principia in Andrew Motte's English translation [S3], three letters to Henry Oldenburg of the Royal Society from 1671 to 1673 [S6][S7][S8], and his 1717 report to the Treasury on gold and silver coin [S9]. The letters were read in the Newton Project's old-spelling transcriptions, and part of the 1672 letter is in Latin, which we read through a summary. The first Rule of Reasoning is described as Wikipedia gives it [S1]. Dates follow the New Style calendar unless noted.
 
@@ -124,7 +124,7 @@ At the Mint, he treated fraud as a case to be built from evidence. He is credite
 - **The Hooke quarrel.** Hooke claimed in 1686 that Newton took the inverse-square idea from him; Newton said Hooke had only guessed it [S4].
 - **Action at a distance.** Huygens and Leibniz objected that gravity acting across empty space looked like an occult quality [S4].
 - **Secrecy.** He kept his theological notebooks private, and much of his work on alchemy and chronology went unpublished in his lifetime [S1].
-- **Money.** He lost at least £10,000 when the South Sea Company collapsed around 1720 [S1].
+- **Money.** He lost a large sum when the South Sea Company collapsed around 1720 [S1]. Sources give different amounts, so we give none.
 - **Temper.** In 1693 he went through a breakdown and sent accusing letters to Samuel Pepys and John Locke [S1].
 
 ## Blind spots to watch

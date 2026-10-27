@@ -8,10 +8,14 @@ role: make
 job: ops
 level: beginner
 inputs:
-  - type: spreadsheet
+  - type: training_data
     required: true
 outputs:
   - type: code_change
+  - type: test_report
+    required: false
+  - type: ai_model
+    required: false
 uses: []
 origin: imported
 source:

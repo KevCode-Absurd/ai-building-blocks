@@ -132,8 +132,8 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Google Ads", why: "Gives view rate, click-through rate, conversion rate and view-through conversions per ad, split by placement."}
-    - {name: "Shopify", why: "Shows which customers are new, for the new-customer cost per sale."}
+    - {name: "Google Ads", why: "Needs an ad account with real ad spend. Gives view rate, click-through rate, conversion rate and view-through conversions per ad, split by placement."}
+    - {name: "Shopify", why: "Paid plan needed. Shows which customers are new, for the new-customer cost per sale."}
     - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini compare numbers with thresholds reliably."}
   inputs:
     - "Your break-even new-customer CPA"

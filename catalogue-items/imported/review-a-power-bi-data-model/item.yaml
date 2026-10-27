@@ -8,9 +8,9 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: data_model
     required: true
-  - type: document
+  - type: image
     required: false
 outputs:
   - type: audit_report

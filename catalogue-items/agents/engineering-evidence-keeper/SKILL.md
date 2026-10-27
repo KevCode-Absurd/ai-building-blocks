@@ -5,20 +5,25 @@ description: "Share a change and prior review state. Get fresh test and docs gap
 
 # Engineering change evidence agent
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Documentation accuracy reviewer](https://useaiblocks.com/skills/documentation-checker). It takes the document.
-- The [README first-run tester](https://useaiblocks.com/skills/readme-first-run-tester). It takes the document.
+- The [Web accessibility checker](https://useaiblocks.com/skills/accessibility-checker). It takes the audit report.
+- The [Bug root cause finder](https://useaiblocks.com/skills/bug-root-cause-finder). It takes the audit report.
+- The [Live code debugger](https://useaiblocks.com/skills/live-code-debugger). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
+## Goal
+
+Share a change and prior review state. Get fresh test and docs gaps, resolved findings and the next verification step.
+
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+- **Codebase** (yours): a project's code, in a folder or repo the AI can open.
 
 **Makes it better (optional):**
 - **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
@@ -26,17 +31,33 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a brief, document, test report. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for codebase, document, test report. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
-## Goal
+## What you need
 
-Share a change and prior review state. Get fresh test and docs gaps, resolved findings and the next verification step.
+Note: this list replaces the general Before you start list above. This job does not need a brief. It needs a code change.
+
+- **The commit ID or revision** of the change (required).
+- **The list of files the change touches** (required).
+- **Your last agent-state.json and finding IDs** (if this is not the first run). With none, say this is a first baseline.
+- **Test commands and their results** (optional). Without them, no finding can be marked VERIFIED.
+
+If the user has no earlier review, run the test gap audit or the docs sync audit on its own. This agent compares with a saved state. It checks repository changes only, and it does not write the fix.
 
 ## Decide what to run
 
 If the source revision is new, run the relevant test-gap and docs checks. If evidence for a finding has changed, recheck that finding and record the outcome. If a defect was repaired, prepare its receipt with VERIFIED, PARTIAL or BLOCKED based on actual checks. If the revision and evidence are unchanged, reuse the prior findings. Never equate an edited file with a passed test.
+
+| What changed | Branch to run | Skill file it reads |
+| --- | --- | --- |
+| New source revision | Test gap check, then docs check | copilot-test-gap-audit, copilot-docs-sync-audit |
+| Evidence for a finding changed | Recheck that finding only | the skill that raised it |
+| A defect was repaired | Bug receipt | copilot-bug-receipt |
+| Nothing changed | Reuse prior findings, run nothing | none |
+
+In a bug receipt, VERIFIED means the fix was checked directly and the check passed. PARTIAL means some proof exists and the gap is named. BLOCKED means a needed check could not run, and what is missing is named.
 
 Available skills: skills/copilot-test-gap-audit/SKILL.md, skills/copilot-docs-sync-audit/SKILL.md, skills/copilot-bug-receipt/SKILL.md. Read a skill only when the selected branch needs it. A run is manual unless the user separately requests a recurring schedule. Installation does not activate a schedule or create a background process.
 

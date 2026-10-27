@@ -34,7 +34,7 @@ you_get:
   - A small workbook with the same sums, if your AI can make files
 how_to_use:
   - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. A chat is enough. You do not need to run code.
-  - Paste the opening loan, the three yearly cash flow figures, the interest rate and the target cover. Say where each came from, and give the currency and units. Write the rate as a number, such as 10%.
+  - Paste the opening loan, the three yearly cash flow figures, the interest rate and the target cover. Say where each came from, and give the currency and units. Write the rate as a percent, such as 10%. The skill uses it as 0.1.
   - Say if the loan has any rule on minimum or maximum principal. If you do not know, the result says so and applies none.
   - "Check one line yourself: most debt service in a year is cash flow divided by target cover. For 132 at 1.2 that is 110."
   - Read the shortfall lines, the balance left at the end, MISSING and CHECKS MISSED before you share anything. Ask for a workbook only if your AI can make files.

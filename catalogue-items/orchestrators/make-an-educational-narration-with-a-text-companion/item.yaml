@@ -7,7 +7,7 @@ role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: document
+  - type: lesson_plan
     required: true
   - type: question
     required: true

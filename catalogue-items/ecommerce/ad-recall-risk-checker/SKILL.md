@@ -5,9 +5,11 @@ description: Use before spending on an ad or creator brief to check that viewers
 
 # Ad recall risk checker
 
-You predict whether people will remember which brand an ad was for, before money is spent. Many ads are watched and enjoyed, and the brand is forgotten. You test the script, brief or finished ad against five things, score it, and give fixes. Other tools measure recall after the fact. This one works before spend.
+You estimate whether people will remember which brand an ad was for, before money is spent. Many ads are watched and enjoyed, and the brand is forgotten. You test the script, brief or finished ad against five things, score it, and give fixes. Other tools measure recall after the fact. This one works before spend.
 
-The numbers in the sources come from lab studies with small groups. Use them as prompts to test, not laws. Run the recall check before you scale spend.
+The score is a judgement rubric, not a validated predictor of recall. The figures in the steps are as reported in the book Buyology, from lab studies with small groups. We have not checked them against the original studies. Use them as prompts to test, not laws. Run the cheap recall test before you scale spend.
+
+**Not for:** an ad that is already live with recall data (compare branded search and add-to-cart before and after instead), a check of whether Meta would reject the ad (use the Meta ads compliance checker), or a check that your live ads repeat one idea (use the Ad sameness checker).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -50,8 +52,8 @@ The score measures how likely the brand is to be remembered, judged from the ad 
 ## Steps
 1. **Story role (20).** Does the product do something in the plot, solve something or change how a scene ends? A product that sits in a corner or only appears on a logo card is wallpaper. In the book's TV study, the sponsor woven into the show was remembered, and the one that only ran ad spots was remembered less after the show than before. Questions: (a) the product acts in the story, (b) it solves something or changes the ending, (c) it is shown in use, not only on a logo card, (d) the story would lose its point without it.
 2. **Fit (20).** Does the product make sense in the scene? Products that are out of place get tuned out. Questions: (a) the product is used for the job it really does, (b) the scene is a time and place where customers really use it, (c) nothing about the product is stretched or untrue, (d) a viewer would not ask why it is there. Rewrite until the product is used for its real job.
-3. **Distraction (20), the vampire effect.** Flag any element that pulls the eye from the product and brand name, such as sexual content, a very attractive model, a famous face, a big joke or a stunt. In the book's test, recall of the brand roughly halved: about 10 percent of men and 11 percent of women recalled the brand from sexual ads, against about 20 percent and 22 percent for neutral ads. Questions: (a) no famous face or very attractive model draws the eye from the product, (b) no sexual content, (c) no joke, stunt or music overpowers the product, (d) the eye lands on the product and name in the first seconds.
-4. **Identification (20).** Would a normal customer say "that person is like me"? The book cites a study in which women reacted better to wholesome, ordinary models than very sexual ones, and a 2001 survey in which images of love beat images of sex 53 percent to 26 percent for intent to buy. Prefer real customers, ordinary settings and customer-made footage. Questions: (a) people look like real customers, (b) settings are ordinary, (c) customer-made or creator footage is used where possible, (d) a normal customer could say "that is like me". Any creator or customer shown must be real, and paid or gifted content must be disclosed as the platform requires.
+3. **Distraction (20), the vampire effect.** Flag any element that pulls the eye from the product and brand name, such as sexual content, a very attractive model, a famous face, a big joke or a stunt. The book reports that recall of the brand roughly halved: about 10 percent of men and 11 percent of women recalled the brand from sexual ads, against about 20 percent and 22 percent for neutral ads. These are the book's figures, not ours. Questions: (a) no famous face or very attractive model draws the eye from the product, (b) no sexual content, (c) no joke, stunt or music overpowers the product, (d) the eye lands on the product and name in the first seconds.
+4. **Identification (20).** Would a normal customer say "that person is like me"? The book cites a study in which women reacted better to wholesome, ordinary models than very sexual ones, and a 2001 survey it reports in which images of love beat images of sex 53 percent to 26 percent for intent to buy (the book's figures, unchecked). Prefer real customers, ordinary settings and customer-made footage. Questions: (a) people look like real customers, (b) settings are ordinary, (c) customer-made or creator footage is used where possible, (d) a normal customer could say "that is like me". Any creator or customer shown must be real, and paid or gifted content must be disclosed as the platform requires.
 5. **Brand cues (20).** Are the brand name, the product shape or a colour on screen early, again at the end, and in the frame when the hook lands? Run the same-as-everyone test: put the ad next to five competitor ads with the logos hidden. If you cannot tell them apart, the format is the problem. The author could not tell sixty car ads apart because all used the same desert-turn shot. Questions: (a) a brand cue shows early, (b) it shows again at the end, (c) it is in the frame when the hook lands, (d) the ad can be told apart from five rival ads with logos hidden. If it cannot, advise one big change to a visual or story choice.
 6. **Controversy check.** Shock can lift attention but needs a link to the product, and some brands paid for it in boycotts. Mark any shock element as a risk the owner signs off on. It takes no points. Also say the ad must meet the platform's ad policies, and point to the Meta ads compliance checker where the ad runs on Meta.
 7. **Add the sections and show the sum.** Write the score as the five section scores added together. Then give the score the ad would get with all fixes made.
@@ -80,15 +82,15 @@ FIXES (sections under 12)
 <section>: <smallest change>
 
 CHEAP TEST: <ten-person poll next day | head to head with branded search and add-to-cart>
-NOT RUN: <check, and what is needed>
+NOT RUN (CHECKS MISSED): <check, and what is needed, or none>
 MISSING: <what, if anything>
 ```
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Plan what to test** with the [Untried ad idea finder](https://useaiblocks.com/skills/untried-ad-idea-finder). It takes the audit report.
 - **Plan what to test** with the [Ad production brief planner](https://useaiblocks.com/skills/creative-gap-to-brief-queue-planner). It takes the audit report.
+- **Plan what to test** with the [Untried ad idea finder](https://useaiblocks.com/skills/untried-ad-idea-finder). It takes the audit report.
 - **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

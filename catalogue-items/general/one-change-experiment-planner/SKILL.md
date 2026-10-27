@@ -55,8 +55,8 @@ The question as asked and in plain terms with definitions. The factor list. The 
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Experiment plan and results reviewer](https://useaiblocks.com/skills/experiment-readout-desk). It takes the plan.
 - The [Store test evidence reviewer](https://useaiblocks.com/skills/store-test-verdict-maker). It takes the plan.
-- The [Trial and learning log planner](https://useaiblocks.com/skills/trial-log-planner). It takes the plan.
-- The [MVP experiment planner](https://useaiblocks.com/skills/mvp-experiment-planner). It takes the plan.
+- The [Minimum experiment planner](https://useaiblocks.com/skills/smallest-test-picker). It takes the plan.
+- The [Business assumption test planner](https://useaiblocks.com/prompts/plan-guess-ranker). It takes the plan.
 - **Check the landing page** with the [A/B test traffic checker](https://useaiblocks.com/skills/ab-test-traffic-checker). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

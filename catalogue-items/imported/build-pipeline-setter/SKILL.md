@@ -264,7 +264,8 @@ jobs:
     steps:
       - name: Rollback deployment
         run: |
-          # PLACEHOLDER: replace with your host's own rollback command and check it before use.
+          # PLACEHOLDER: replace with your host's own rollback command. Check it in your host's docs and try it on a staging copy before you rely on it.
+          # Keep the host token in GitHub Secrets. Never paste it into a chat.
           # Example for Vercel (confirm the syntax in Vercel's docs first):
           npx vercel rollback ${{ inputs.version }}
 ```

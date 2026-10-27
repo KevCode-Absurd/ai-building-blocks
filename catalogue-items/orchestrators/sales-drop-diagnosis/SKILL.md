@@ -73,8 +73,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Check it before it goes live** with the [Ad response troubleshooter](https://useaiblocks.com/skills/ad-pull-diagnoser). It takes the ad copy.
-- The [Ad performance change investigator](https://useaiblocks.com/skills/six-pattern-ad-performance-diagnoser).
 - **Make image ads** with the [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker). It takes the ad copy.
+- **Plan what to test** with the [Cross-over copy test planner](https://useaiblocks.com/skills/cross-over-copy-test-planner). It takes the ad copy.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

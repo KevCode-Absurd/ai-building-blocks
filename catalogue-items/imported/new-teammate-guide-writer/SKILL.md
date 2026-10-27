@@ -61,6 +61,12 @@ python3 scripts/codebase_analyzer.py /path/to/repo --json
 
 ---
 
+## Before You Share the Guide (added by AI Blocks)
+
+- Read the finished guide for secrets and private details copied from config files: passwords, API keys, tokens, internal hostnames and customer data. Remove them, or point to where the new person gets them.
+- Setup commands are written from code that the AI has only read. Run them on a clean machine before anyone trusts them, and fix what fails.
+- Do not state a setup time or a fact you have not checked.
+
 ## Onboarding Document Template
 
 Detailed template and section examples live in:

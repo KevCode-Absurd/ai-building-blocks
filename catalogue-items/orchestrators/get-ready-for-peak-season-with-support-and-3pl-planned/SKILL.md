@@ -17,6 +17,8 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 - **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
+- **The contract** (yours): the full agreement or terms, with dates and any changes.
+- **Your customer list** (yours): a customer or order export with dates, amounts and what they bought.
 
 **Makes it better (optional):**
 - **Product data** (yours): one product's facts: price, variants, ingredients or materials, how it is used, photos by job.
@@ -67,8 +69,8 @@ Keep the forecast and your real peak result together. Next year they show how fa
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Warehouse stock level planner](https://useaiblocks.com/skills/warehouse-stock-level-planner).
-- The [Stock reorder and cash reviewer](https://useaiblocks.com/skills/weekly-stock-and-cash-reorder-watcher).
+- The [Supplier shortlist vetter](https://useaiblocks.com/skills/factory-shortlist-vetter). It takes the audit report.
+- The [Factory product brief writer](https://useaiblocks.com/skills/product-tech-pack-writer). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

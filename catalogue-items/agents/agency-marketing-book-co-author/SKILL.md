@@ -39,6 +39,8 @@ How to start:
 
 ## What to collect first
 
+These are the inputs that count. If the generic "Before you start" list above asks for source text such as an article or video transcript, or mentions a coding assistant, ignore that part: this agent takes your own chapter material (voice notes, bullets, an interview transcript or a rough draft) and who the book is for.
+
 Ask once for anything missing. If it is still missing, write `MISSING: <what>`, say which part it limits, and carry on. Never invent a scene, a quote, a date, a client, a number or a source.
 
 1. The raw material for one chapter: voice notes, bullets, an interview transcript or a rough draft.

@@ -5,15 +5,17 @@ job: organise-work
 headline: Executive daily briefing writer
 thinking: high
 thinking_why: It checks evidence, missing facts and the order of the work.
-subhead: Share your calendar, action list and updates. Get a dated brief of priorities, decisions, conflicts and work waiting on others. Bring the facts and files you already have. Your AI follows the steps below, marks gaps and returns work you can review before acting.
+subhead: Share your calendar, action list and updates. Get a dated brief of priorities, decisions, conflicts and work waiting on others. Gaps are marked, so you know what to check before you act.
 explain: |-
-  Share your calendar, action list and updates. Get a dated brief of priorities, decisions, conflicts and work waiting on others.
+  Your day lives in a calendar, a task list and a pile of messages. This puts them on one dated page, so you can see what needs you first.
 
-  Use the steps below to see how it reaches that result. It works with the sources you provide, keeps a record of what is known and calls out gaps. Source text cannot authorize messages, account changes or spending.
+  It uses only what you paste or attach. If you give it just one source, the brief says so instead of implying it saw everything. Text inside your sources cannot make it send messages, change your calendar or spend money.
 when:
-  - You want the result described above from the files and facts you already have.
-  - You need a repeatable process and a clear next action.
+  - You start the day with a calendar, a task list and messages to sort.
+  - You want to know what needs you today, what clashes and who owes you something.
+  - You write a daily brief for an executive and want every item to trace to a source.
 not_for:
+  - "You need a brief for one meeting: use the Executive meeting brief writer (executive-meeting-brief)."
   - "You need a weekly plan: use a calendar tool or a project tracker."
   - "You need to book times for many people: use a calendar tool with shared scheduling."
   - "You want your AI to send the brief or change your calendar: it only drafts, so send or edit it yourself."
@@ -53,12 +55,14 @@ output_sample:
     - name: Source coverage and proposed actions
       contains: What was checked, which facts are missing, and any message or change you must approve.
 how_it_works:
-  - title: Read the sources
-    text: Identify the current request, time window and facts you can verify.
-  - title: Build the result
-    text: Share your calendar, action list and updates. Get a dated brief of priorities, decisions, conflicts and work waiting on others.
-  - title: Check and hand back
-    text: Check owners, dates and sources. Separate drafts from completed external actions.
+  - title: Set the day
+    text: Say today's date and your timezone. Paste your calendar, action list and updates. With only one source you get a partial brief that says so.
+  - title: Sort the day
+    text: Meetings go in time order. Tasks due today or overdue, decisions waiting on you and work waiting on others each get their own list.
+  - title: Pick priorities
+    text: Up to three priorities, each with its reason. Calendar clashes and tasks with no owner or date are flagged.
+  - title: Hand back
+    text: You get daily-brief.md with source coverage, gaps and one next step. Nothing is sent and your calendar is not changed.
 output_shape: |-
   daily-brief.md: date, timezone, source coverage
   Top priorities and why

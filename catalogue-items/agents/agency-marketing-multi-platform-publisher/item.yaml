@@ -11,7 +11,7 @@ level: intermediate
 inputs:
   - type: question
     required: true
-  - type: source_text
+  - type: copy_draft
     required: false
 outputs:
   - type: plan

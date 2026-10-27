@@ -26,7 +26,7 @@ Before diagnosing awareness, establish:
 3. **The Output** - a stage diagnosis plus messaging strategy.
 4. **Constraints** - channel, length, trust level, and ethical limits.
 
-If the audience, offer, or channel is unclear, ask before proceeding.
+If the audience, offer, or channel is unclear, ask before proceeding. If you have customer research or interview notes, share them: they are the observed audience research the stage diagnosis relies on.
 
 ## PSYCHOLOGICAL FRAMEWORK: ELM-STAGED BELIEF CHANGE
 

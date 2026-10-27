@@ -8,8 +8,8 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: document
-    required: false
+  - type: question
+    required: true
 outputs:
   - type: plan
 uses: []

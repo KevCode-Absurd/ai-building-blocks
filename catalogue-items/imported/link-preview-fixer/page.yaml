@@ -37,6 +37,8 @@ how_to_use:
   - Read the cause first. Then copy the tag block into your page and fix any image problems on the checklist.
   - Publish the change. Paste your link into each platform's checker to refresh the preview. Check each platform's current docs, as image rules can change.
   - Your AI cannot open links itself unless it has web access. If it cannot, paste your page code in.
+  - The code helper in the skill is for a Next.js site. It stops with an error if you have not set your real site address, so links never point at a placeholder domain. On any other site, your AI writes the same tags by hand.
+  - After every deploy, check the link again in each platform's checker, and note any platform that still shows an old card. X's older card checker may be retired. If it fails, post the link in a draft to see the card.
 output_sample:
   input:
     - Your page link or its code

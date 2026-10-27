@@ -12,6 +12,8 @@ inputs:
     required: true
 outputs:
   - type: design_direction
+  - type: design_tokens
+    required: true
 uses: []
 origin: imported
 source:

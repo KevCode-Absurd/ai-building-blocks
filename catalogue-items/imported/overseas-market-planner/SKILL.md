@@ -66,7 +66,7 @@ Ask your AI assistant naturally. Example prompts:
 - Target market(s) or expansion goals
 - Known constraints (budget, team size, logistics setup)
 
-**Step 2: Ask one follow-up with all remaining questions.** Use multiple-choice format:
+**Step 2: Ask one follow-up with all remaining questions.** Skip any question the user has already answered. If the user wants speed, ask only questions 1, 3, 4 and 7, which change the plan most. Use multiple-choice format:
 
 > Great — [acknowledge what they told you]. To build your expansion plan I need a few more details:
 > 
@@ -163,6 +163,8 @@ Ask your AI assistant naturally. Example prompts:
 ---
 
 ## The 6 Pillars of Cross-Border Expansion
+
+> **About the figures (added by AI Blocks).** Every market size, shipping cost, payment share, tax rate, threshold, fee and timeline in the tables below is the original author's rough figure. None is dated or sourced here. Treat them as examples of the kind of number to look for, not as facts. Check each one on a current official or carrier source before you rely on it. In your plan, mark any figure you could not check as "needs checking" and say when you last checked the others.
 
 ### Pillar 1: Market Selection & Prioritization
 
@@ -492,7 +494,7 @@ Every item you sell internationally has a **landed cost** — the total cost to 
 > **Landed Cost** = Product Cost + International Shipping + Customs Duty + Import Tax (VAT/GST) + Insurance + FX Loss + Payment Processing + Returns Provision
 
 ### Example Calculation
-Selling a $25 product from US to UK:
+Illustration only (made-up numbers to show the method; use your own quotes and rates). Selling a $25 product from US to UK:
 
 | Component | Amount | Notes |
 |-----------|:------:|-------|

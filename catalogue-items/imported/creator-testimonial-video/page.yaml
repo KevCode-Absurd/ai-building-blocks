@@ -34,7 +34,7 @@ you_get:
   - Steps to make the video with your video model
   - Fixes for common problems
 how_to_use:
-  - Paste the skill into Claude, ChatGPT or Gemini. The skill text is in Chinese, so ask your AI to reply in English.
+  - Paste the skill into Claude, ChatGPT or Gemini. The skill text is in Chinese with an English summary at the top, so ask your AI to reply in English. The video is an acted demo. Never present it as a real customer's review.
   - Give it your product, key points, platform and the persona you want.
   - Read the compliance note and the script. Check every claim about the product (washing, warmth, fit, results) is true for your product. The example lines in the skill are placeholders, so replace them with facts you have checked.
   - Edit the script until it sounds like a real person talking.

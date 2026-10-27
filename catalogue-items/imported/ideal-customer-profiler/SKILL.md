@@ -58,6 +58,14 @@ What problems does your product solve?
 - Available budget to solve
 - Competing priorities
 
+## Run order (added by AI Blocks)
+
+1. The user pastes their data and says what they sell. If the data is missing, ask for it. Do not invent customers or numbers.
+2. Work through Steps 1 to 6 below in order, once each.
+3. Write one output section per item in the Output list.
+4. Check the profile against the user's known best customers and fix anything that does not match.
+5. Finish with the disqualification list.
+
 ## How It Works
 
 ### Step 1: Gather Customer Data
@@ -131,6 +139,8 @@ Paste into your chat, or pass as arguments if your tool supports them:
 - Competitive intelligence
 
 ## Output
+Format: one section per item below, then a short summary table of the traits that predict a good fit. Keep it to about one page.
+
 A comprehensive ICP definition including:
 - Firmographic profile (company size, industry, location)
 - Behavioral profile (buying patterns, adoption style)

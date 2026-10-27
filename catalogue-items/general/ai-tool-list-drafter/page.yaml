@@ -85,6 +85,9 @@ output_shape: |
   MISSING
   <gaps>
 
+  CHECKS MISSED
+  <checks that failed or could not run, or none>
+
 tweaks:
   - what: "The never list"
     how: "Be firm on what the AI must not do. It shapes which tools exist."

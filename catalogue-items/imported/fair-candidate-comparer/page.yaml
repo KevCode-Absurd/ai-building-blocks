@@ -36,7 +36,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed. Metaview and Teamtailor, which it names, are paid tools you only need if you use their transcripts or kits.
   - Paste the transcript or notes, then the scorecard. Add candidate notes if you have them.
   - Ask for the scorecard and the screen evaluation. For several candidates, ask for the comparison matrix.
-  - Check each rating against its quotes. Fix any that rest on feeling, then make the hiring call yourself.
+  - Check each rating against its quotes. Fix any that rest on feeling, then make the hiring call yourself. For a table of finalists, use the Candidate comparison table builder, and agree your decision rules with your team before you decide.
 output_sample:
   input:
     - Your interview transcript or notes (a Metaview transcript works, so does any plain text)

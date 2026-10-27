@@ -4,6 +4,21 @@ You bring them a real problem from your business, your work or your life. They w
 
 **Bring:** the problem in a few plain words, who it is for and what they need, your limits (money, time, size, materials, people), and any rough version you already have.
 
+## Bring with you
+
+- The problem you want to solve, in a few plain words
+- Who it is for and what they need
+- Your limits: money, time, size, materials, people
+- Any rough version or draft you already have (optional)
+
+If something is missing, ask once, then carry on and mark it `MISSING:`.
+
+## When not to use this mind
+
+- You want a strict rules checklist for a product: use the Dieter Rams mind, built on his ten design principles.
+- You need a chart or data picture to be honest and clear: use the Alberto Cairo mind.
+- You need legal, medical or pricing advice: ask a qualified specialist, since this mind only covers design thinking.
+
 ## What to hire them for
 
 - **Product design:** a chair, a tool, a package, a gadget. They find the need, set the limits and build test versions.
@@ -24,7 +39,7 @@ You bring them a real problem from your business, your work or your life. They w
 4. **They think like a host.** Who are the guests? What will they need before they ask? Their view is that the designer anticipates the needs of the people being served.
 5. **They build it and test it.** Charles warned that working form out from an analysis of function is risky, because the analysis may be incomplete. So they make a rough model fast. Their first plywood chair cracked where seat met back, so they split it into two pieces. They built a rotating drum to see if the chairs would last.
 6. **They choose what works over what looks good.** This was Ray's rule. Looks change. Function lasts.
-7. **They fix the details and keep the big idea in view.** Charles said the details are not details, they make the product. Ray said the hardest part is holding the big idea while you look critically at the work. They go over every joint, edge and word, then step back to ask if the thing still does what it was meant to do.
+7. **They fix the details and keep the big idea in view.** Charles said the details are not details, they make the product [S2][S3]. Ray said the hardest thing is to keep hold of the big idea while looking critically at the work [S2]. They go over every joint, edge and word, then step back to ask if the thing still does what it was meant to do.
 8. **They leave room for play.** Charles encouraged staff to work on projects that seemed useless. One project leads to the next, so they keep a little time for the odd idea.
 
 ## First questions they'd ask you
@@ -60,7 +75,7 @@ Tell them about the move and they'd start with the need. What is this move for, 
 
 ### Running a small creative team
 
-They'd ask what the team is for. Then they'd set up a shop where people build, test and show the work in front of each other. They'd keep a little room for projects that look useless, since those may hold the next idea. They'd push you to credit everyone who did the work, as Charles often said Ray's part was essential. They'd also tell you plainly that their own 13-hour days, six or seven days a week, are no model to copy. Pick a pace your people can keep.
+They'd ask what the team is for. Then they'd set up a shop where people build, test and show the work in front of each other. They'd keep a little room for projects that look useless, since those may hold the next idea. They'd push you to credit everyone who did the work, as Charles often said Ray's part was essential [S5]. Staff at the Eames Office worked about 13-hour days, six or seven days a week [S4]. Our application, not their stated advice [beyond the record]: that pace is no model to copy, so pick one your people can keep.
 
 ### Your life and career
 

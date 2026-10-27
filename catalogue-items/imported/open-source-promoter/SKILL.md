@@ -1,7 +1,6 @@
 ---
 name: open-source-marketing
 description: When the user wants to market an open source project authentically. Trigger phrases include "open source marketing," "OSS marketing," "GitHub marketing," "promote my library," "grow stars," "launch open source," "open source growth," or "contributor marketing."
-risk: critical
 source: https://github.com/jonathimer/devmarketing-skills/tree/main/skills/open-source-marketing
 source_repo: jonathimer/devmarketing-skills
 source_type: community
@@ -453,7 +452,7 @@ Return the plan in this order:
 
 | Tool | Use Case |
 |------|----------|
-| **[Octolens](https://octolens.com)** | Monitor mentions of your project across GitHub, HN, Reddit, Twitter, and Stack Overflow. Track competitor projects. Find contributors asking questions. |
+| **[Octolens](https://octolens.com)** (paid service, optional; the other tools in this table are free) | Monitor mentions of your project across GitHub, HN, Reddit, Twitter, and Stack Overflow. Track competitor projects. Find contributors asking questions. |
 | **Star History** | Track star growth over time |
 | **npm-stat** | Download statistics |
 | **GitHub Traffic** | Views, clones, referrers |

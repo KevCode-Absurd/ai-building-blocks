@@ -29,7 +29,7 @@ Create production-quality Semgrep rules with proper testing and validation.
 
 Do NOT use this skill for:
 - Running existing Semgrep rulesets
-- General static analysis without custom rules (use `static-analysis` skill)
+- General static analysis without custom rules (use `static-analysis` skill; in this library that is `code-security-scanner`)
 
 ## Rationalizations to Reject
 
@@ -157,6 +157,15 @@ Semgrep Rule Progress:
 - [ ] Step 6: Optimize the rule (remove redundancies, re-test)
 - [ ] Step 7: Final Run
 ```
+
+What each step means in practice (added by AI Blocks, since the original steps file is not in this copy):
+1. **Analyze the Problem.** Write the bug in one sentence, the language, one bad example and one safe example. Decide taint mode or pattern matching.
+2. **Write Tests First.** Make `<rule-id>.<ext>` with `# ruleid: <rule-id>` above each bad case and `# ok: <rule-id>` above each safe case, including edge cases.
+3. **Analyze AST structure.** Dump how Semgrep reads your bad and safe code, for example `semgrep --dump-ast -l <language> <rule-id>.<ext>`. If your Semgrep version uses a different flag, run `semgrep --help` to find it. Check that the pieces your pattern names (the call, its arguments, the source) appear in the dump.
+4. **Write the rule** in `<rule-id>.yaml`, one rule per file.
+5. **Iterate.** Run `semgrep --test --config <rule-id>.yaml <rule-id>.<ext>` until every case passes.
+6. **Optimize.** Remove repeated patterns, then re-run the tests.
+7. **Final Run.** Run the tests once more and report the result. Do not say tests passed unless you ran them.
 
 ## Documentation
 

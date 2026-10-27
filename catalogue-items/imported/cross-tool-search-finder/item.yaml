@@ -10,6 +10,8 @@ level: beginner
 inputs:
   - type: question
     required: true
+  - type: tool_connection
+    required: true
 outputs:
   - type: shortlist
 uses: []

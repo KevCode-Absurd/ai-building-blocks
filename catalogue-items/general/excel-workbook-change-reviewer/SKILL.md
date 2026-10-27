@@ -45,7 +45,7 @@ Read the user's goal, existing conversation and supplied files first. Reuse conf
 Use an actual tool that can read and write the required native format. Plain text, JSON, HTML or a screenshot is not a finished XLSX/PPTX file. Inventory unsupported features before changing an existing file. Preserve macros, pivots, connections, masters and linked objects by using a compatible native engine when required; otherwise stop or return a clearly scoped review/plan. A formula string, cached value or successful export is not proof of recalculation, native refresh, accessibility compliance or layout. Render real output where the method calls for it and record any check that could not run.
 
 ## Method
-1. Hash and preserve both files. Inventory sheets, hidden states, tables, defined names, formulas, links, validations, charts, pivots and macro presence without executing macros or refreshing connections.
+1. Keep both original files unchanged and work on copies. Note each file's name and date. List sheets, hidden sheets, tables, defined names, formulas, links, validations, charts, pivots and whether it contains macros, without running macros or refreshing connections.
 
 2. Match records by confirmed stable keys, not by row position alone. Align changed sheet names and separate added, removed and reordered records.
 
@@ -53,15 +53,16 @@ Use an actual tool that can read and write the required native format. Plain tex
 
 4. Review changed names, validation ranges, hidden sheets, print settings, external links and data connections. State features the inspection tool cannot preserve or compare.
 
-5. Recalculate supported copies and investigate material differences using the agreed tolerance. Report file, sheet and cell or object locations with before/after evidence; make no repairs unless requested.
+5. Recalculate the copies in Excel (or another tool that can, such as LibreOffice) and investigate material differences using the agreed tolerance. Report file, sheet and cell or object locations with before/after evidence; make no repairs unless requested.
 
 ## Acceptance checks
 - Reordering is not reported as every record changing.
 - Formulas and cached values are distinguished.
 - Uninspected native features stay explicit.
-- Keep every failed or unrun check visible in the final report. Repair confirmed issues within scope, then recheck at most twice. Stop if a required gate still fails.
+- Keep every failed or unrun check visible in the final report. Make no repairs unless the user asks; report what you find and stop.
 
 ## Deliverables
+Report sections are SOURCE MAP, CHECKS and OPEN ITEMS. List checks that failed or could not run under CHECKS as "not run" and again under OPEN ITEMS; read "CHECKS MISSED" above as OPEN ITEMS.
 workbook-change-review.xlsx and change-register.md.
 Include a compact run register with the source file/version, action, actual output path, check result and remaining limitations. Record missing prerequisites as MISSING: lines.
 
@@ -69,4 +70,6 @@ Include a compact run register with the source file/version, action, actual outp
 Take each finding to the file owner and ask them to confirm or fix it. If the numbers in the revised workbook feed a deck, check the slides with the [Excel to PowerPoint number checker](https://useaiblocks.com/skills/excel-powerpoint-number-checker).
 
 ## Verification cases
-Read tests/cases.json. These are illustrative test specifications, not evidence that a native application has already run them.
+These are illustrative test cases, not evidence that a native application has already run them.
+- A row moved but its ID, value and relative formula meaning are unchanged: record a reorder, not a fabricated business change.
+- A formula cell is replaced with its current numeric result: flag a formula-to-constant change even if the displayed number is unchanged.

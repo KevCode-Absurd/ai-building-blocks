@@ -13,7 +13,7 @@ description: >
 
 # Generative UI Skill
 
-This skill contains the complete design system for Claude's built-in `show_widget` tool — the generative UI feature that renders interactive HTML/SVG widgets inline in claude.ai conversations. The guidelines below are the skill author's copy of the design rules for that tool (the author says they come from Anthropic's "Imagine — Visual Creation Suite"; we have not verified that), so you can produce high-quality widgets directly without needing the `read_me` setup call.
+This skill contains the complete design system for Claude's built-in `show_widget` tool — the generative UI feature that renders interactive HTML/SVG widgets inline in claude.ai conversations. The guidelines below are the skill author's copy of the design rules for that tool (we have not verified where the author got them, so do not credit them to any company), so you can produce high-quality widgets directly without needing the `read_me` setup call.
 
 **How it works**: On claude.ai, Claude has access to the `show_widget` tool which renders raw HTML/SVG fragments inline in the conversation. This skill provides the design system, templates, and patterns to use it well.
 

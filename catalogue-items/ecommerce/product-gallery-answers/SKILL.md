@@ -97,7 +97,6 @@ If a skill named below isn't added here, do its step yourself from this page, an
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Product page image checker](https://useaiblocks.com/skills/product-page-image-checker). It takes the pdp images and gallery plan.
 - The [Product photo set reviewer](https://useaiblocks.com/skills/product-photo-set-maker).
-- The [Marketplace photo rule checker](https://useaiblocks.com/skills/marketplace-photo-rule-checker).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

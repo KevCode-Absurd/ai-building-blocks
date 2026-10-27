@@ -15,11 +15,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 
 **Makes it better (optional):**
-- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+- **Customer needs** (yours): the problems customers want solved, ranked, each with their own words.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for plan, a brief. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for plan, customer needs. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -56,7 +56,7 @@ The tracked numbers with their tags and trap results. The promises from the job.
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Job name picker](https://useaiblocks.com/skills/job-name-picker). It takes the plan.
 - The [Product outcome roadmap planner](https://useaiblocks.com/skills/outcome-based-roadmap). It takes the plan.
-- The [Content strategy planner](https://useaiblocks.com/skills/content-strategy-planner).
+- The [Learning milestone planner](https://useaiblocks.com/skills/learning-milestone-planner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

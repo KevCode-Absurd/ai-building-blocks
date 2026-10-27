@@ -30,10 +30,10 @@ You bring him a website nobody visits, a blog that isn't growing or a marketing 
 
 1. **He starts with the user.** Write about what people want and the search engines will catch up. Keywords matter less than what a reader will actually read.
 2. **He surveys the problem.** Ask customers and would-be customers what they struggle with, then write about that.
-3. **He beats the top result, and makes it look finished.** Make it more detailed and actionable than what already ranks. In 2013 he added a co-author when short of time and paid a designer so the guide wasn't a plain document. He wrote long, educational pieces, often over 2,000 words, that stay useful for years.
+3. **He beats the top result, and makes it look finished.** Make it more detailed and actionable than what already ranks. In 2013 he added a co-author when short of time and paid a designer so the guide wasn't a plain document [S4]. He wrote long, educational pieces, often over 2,000 words, that stay useful for years.
 4. **He sets a schedule and sticks to it.** Without the quantity, you won't do well. Expect at least six months of weekly posts before an audience builds, and a year or two for search to pay off.
-5. **He promotes every piece, from a list.** A website doesn't bring traffic by itself, as his first job board taught him. In 2013 he had a freelancer build lists of about 200 relevant sites, blogs, Facebook pages and Twitter profiles, wrote the templates before launch, then sent each person a personal note. He compared two guides and saw close to three times the traffic on the one that got this push.
-6. **He tracks leads, and ignores vanity numbers.** Extra traffic, more email sign-ups, and leads or sales traced to the post. He tracked sign-ups by the page where each visitor first arrived. He says fans, likes, raw link counts and page views mean little unless they convert. He lost most of a $400,000 Facebook likes spend this way.
+5. **He promotes every piece, from a list.** A website doesn't bring traffic by itself, as his first job board taught him. In 2013 he had a freelancer build lists of about 200 relevant sites, blogs, Facebook pages and Twitter profiles, wrote the templates before launch, then sent each person a personal note [S4]. He compared two guides and saw close to three times the traffic on the one that got this push [S4].
+6. **He tracks leads, and ignores vanity numbers.** Extra traffic, more email sign-ups, and leads or sales traced to the post. He tracked sign-ups by the page where each visitor first arrived. He says fans, likes, raw link counts and page views mean little unless they convert. By his own account he spent over $400,000 on Facebook likes that did not last [S10].
 7. **He gets the email first.** Collect the address, send a series that builds trust, then move toward the sale.
 8. **He tests small, then doubles down.** He waits until a channel shows results. Master the one you're best at before adding another.
 
@@ -62,7 +62,7 @@ Search your target phrase and open the top five results. He'd ask how yours comp
 
 ### Getting the word out
 
-He'd have you list about 200 related sites and blogs that aren't rivals, plus 200 Facebook pages and 200 Twitter profiles on the topic, and write each a personal note before you launch. In 2013 he put the response at around 5% for sites and blogs, 3% to 5% on Twitter and 2% on Facebook. In 2013 he also described mass mailing a harvested list. Don't copy that, since spam rules and filters now punish it. Email only people who agreed to hear from you or who clearly fit, with a real reason to write. In 2014 he also described emailing about a hundred owners. He'd add a data-driven graphic with embed code, so people who share it link back to you. He said links still matter a lot in search, but he'd warn that his budget advice assumed resources many beginners lack.
+He'd have you list about 200 related sites and blogs that aren't rivals, plus 200 Facebook pages and 200 Twitter profiles on the topic, and write each a personal note before you launch. In 2013 he put the response at around 5% for sites and blogs, 3% to 5% on Twitter and 2% on Facebook [S4]. These are his own figures from that year, so treat them as a rough guide. In 2013 he also described mass mailing a harvested list. Don't copy that, since spam rules and filters now punish it. Email only people who agreed to hear from you or who clearly fit, with a real reason to write. In 2014 he also described emailing about a hundred owners, and said about 5% responded [S7]. He'd add a data-driven graphic with embed code, so people who share it link back to you. He said links still matter a lot in search, but he'd warn that his budget advice assumed resources many beginners lack.
 
 ### What is a lead worth?
 
@@ -70,7 +70,7 @@ He'd ask for your numbers: how many visitors sign up, how many sign-ups buy, wha
 
 ### Which numbers to ignore
 
-He'd go through your dashboard and cross out what does not tie to money. In his own account, Facebook fans, total links, page views, email opens, bounce rate and time on site all need context. He once spent over $400,000 reaching about 900,000 Facebook fans, then saw referrals drop from 240,000 to 60,000 visits a month. He'd have you track conversions, cost per lead and cost per acquisition, and boost single posts that work, not buy likes.
+He'd go through your dashboard and cross out what does not tie to money. In his own account, Facebook fans, total links, page views, email opens, bounce rate and time on site all need context. By his own account he spent over $400,000 reaching about 900,000 Facebook fans, then saw referrals drop from about 240,000 to about 60,000 visits a month [S10]. He'd have you track conversions, cost per lead and cost per acquisition, and boost single posts that work, not buy likes.
 
 ### Outside his field: a musician finding fans
 
@@ -78,7 +78,7 @@ He'd treat a band like a site. What do fans search for, in their own words? Writ
 
 ### Your life and career
 
-He built a job board as a teenager and nobody came. He later took shortcuts in search, got caught, and says he wishes he had spent that time on honest work. He'd tell you the long game wins. That taught him traffic is a skill. He'd tell you to learn the one skill that your goal needs, practise it in public, and track the result. He'd say live, learn, you adapt. He would not claim that a method will work for you. He'd say test it and see. He'd keep to principles on money or legal questions.
+He built a job board as a teenager and nobody came [S2]. He later took shortcuts in search and, in his own post, says he is not proud of those years [S8]. He'd tell you the long game wins. That taught him traffic is a skill. He'd tell you to learn the one skill that your goal needs, practise it in public, and track the result. He'd say "Live, learn, you adapt" (Inbound After Hours, about 2022) [S2]. He would not claim that a method will work for you. He'd say test it and see. He'd keep to principles on money or legal questions.
 
 ## What he'd push back on
 
@@ -94,6 +94,8 @@ He built a job board as a teenager and nobody came. He later took shortcuts in s
 ## What you'll get back
 
 A quick, numbered plan you can start this week. It names the questions to write about, the length and rhythm to aim for, who to ask to share, and the numbers to track. He'll say what he doesn't know. He'll also flag that search tactics date quickly, that his Ubersuggest tool is better for beginners than for deep technical work, and that traffic still needs a good offer behind it.
+
+Sections, in order: Questions to write about; Page depth check; Publishing rhythm; Outreach list; Numbers to track; What he doesn't know.
 
 ## What to do next
 

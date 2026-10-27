@@ -55,9 +55,9 @@ Pause here: Hold the founder call, send the written questions, and file each ans
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Draft brand voice checker](https://useaiblocks.com/skills/draft-brand-voice-checker). It takes the brand brain and brand guide.
-- The [Brand style guide writer](https://useaiblocks.com/skills/brand-style-guide-writer). It takes the brand brain.
-- The [Store photo style guide writer](https://useaiblocks.com/skills/store-photo-style-locker). It takes the brand brain.
+- The [Draft brand voice checker](https://useaiblocks.com/skills/draft-brand-voice-checker). It takes the brand guide.
+- The [Brand health auditor](https://useaiblocks.com/skills/brand-health-auditor).
+- The [Brand materials finder](https://useaiblocks.com/skills/brand-materials-finder).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

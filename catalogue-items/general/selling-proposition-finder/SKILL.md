@@ -61,10 +61,10 @@ The frame. The claims with road, three scores and total. The struck claims with 
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Check it before it goes live** with the [USP claim checker](https://useaiblocks.com/skills/usp-claim-checker). It takes the draft.
-- The [Product process fact researcher](https://useaiblocks.com/skills/process-fact-finder).
 - The [How-it-works copy writer](https://useaiblocks.com/skills/how-it-works-copy-writer). It takes the draft.
-- **Check it before it goes live** with the [Ad distraction checker](https://useaiblocks.com/skills/ad-distraction-checker). It takes the draft.
 - **Check it before it goes live** with the [Ad claims checker](https://useaiblocks.com/prompts/ad-claim-proof-gap-finder). It takes the draft.
+- The [Ad headline variation writer](https://useaiblocks.com/skills/typed-headline-batch-writer). It takes the buying reasons.
+- The [Sales copy editor](https://useaiblocks.com/skills/sales-copy-editor). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

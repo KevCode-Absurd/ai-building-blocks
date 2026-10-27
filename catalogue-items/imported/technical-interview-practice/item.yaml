@@ -8,10 +8,8 @@ role: check
 job: ops
 level: beginner
 inputs:
-  - type: source_text
+  - type: question
     required: true
-  - type: brief
-    required: false
 outputs:
   - type: feedback_notes
   - type: plan

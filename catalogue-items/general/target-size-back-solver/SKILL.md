@@ -54,8 +54,8 @@ The target as yearly earnings. The four-part sum with each figure marked CHECKED
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Repeat purchase habit planner](https://useaiblocks.com/skills/buying-habit-stack-designer). It takes the plan.
-- The [Customer value and spend limit calculator](https://useaiblocks.com/skills/customer-value-spend-limit).
-- The [One-page marketing plan builder](https://useaiblocks.com/skills/one-page-marketing-plan-builder).
+- The [Plan failure reviewer](https://useaiblocks.com/skills/failure-first-plan-check). It takes the plan.
+- The [Competitive strategy planner](https://useaiblocks.com/skills/one-bold-move-picker). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

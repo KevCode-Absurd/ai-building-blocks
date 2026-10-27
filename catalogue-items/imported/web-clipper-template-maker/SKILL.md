@@ -22,6 +22,7 @@ This skill helps you create importable JSON templates for the Obsidian Web Clipp
     - **Action:** Read `Bases/*.base` to find a matching category (e.g., `Recipes.base`).
     - **Action:** Use the properties defined in the Base to structure the Clipper template properties.
     - See [references/bases-workflow.md](references/bases-workflow.md) for details.
+    - A Base file made in an earlier step can be used here in place of one read from the vault.
 3. **Fetch & Analyze Reference URL:** Validate variables against a real page.
     - **Action:** Ask the user for a sample URL of the content they want to clip (if not provided).
     - **Action (REQUIRED):** Use **WebFetch** to retrieve page content; if WebFetch is not available, use a browser DOM snapshot. See [references/analysis-workflow.md](references/analysis-workflow.md).

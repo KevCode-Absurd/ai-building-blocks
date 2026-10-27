@@ -28,7 +28,7 @@ Score and prioritize inbound and outbound leads by combining firmographic fit (h
 Provide your ICP definition, the engagement signals you track, and a list of leads with their attributes. The skill outputs a scoring rubric and scored/ranked lead list.
 
 **Example prompt:**
-> Build a lead scoring model for our B2B analytics platform. ICP: Series A+ SaaS companies, 50–500 employees, US/Canada, using Snowflake or BigQuery. Score these 5 leads and assign Hot/Warm/Cold tiers.
+> Build a lead scoring model for [YOUR PRODUCT]. ICP: [YOUR TARGET COMPANIES, SIZE, REGION AND TECH]. Score these [NUMBER] leads and assign Hot/Warm/Cold tiers.
 
 ## Examples
 
@@ -71,19 +71,18 @@ The signal maximums above add up to 58, but the engagement score is capped at 50
 
 ### Example 2: Scoring a Batch of Leads
 
-**Input:** 5 leads with attributes and recent activity.
+**Input:** [NUMBER] leads with attributes and recent activity.
+
+All names and numbers below are placeholders that show the layout. Work out every score from the Example 1 rubric, and show the points for each row so the reader can check the sum. An industry or tech stack the rubric does not list gets the lowest non-zero row for that criterion (for example "Other tech: 4"), and you say that you did it. Geography is never below 1 point.
 
 **Scored Output:**
 
-| Lead | Company | Employees | Industry | Funding | Tech Stack | Fit Score | Key Engagement | Eng. Score | **Total** | **Tier** |
-|---|---|---|---|---|---|---|---|---|---|---|
-| Rachel M. | StreamOps | 320 | SaaS | Series B | Snowflake | 50 | Demo request + pricing visit + 2 email clicks | 34 | **84** | 🔥 Hot |
-| David K. | PayFlow | 180 | Fintech | Series A | BigQuery | 37 | Webinar + case study download + 3 email clicks | 22 | **59** | 🟡 Warm |
-| Priya S. | HealthBridge | 90 | Healthcare | Series B | Redshift | 21 | Pricing page visit + 1 email click | 11 | **32** | 🔵 Cold |
-| Marcus T. | DevLayer | 450 | SaaS | Series C | Snowflake | 50 | 4 blog visits + 1 email click | 8 | **58** | 🟡 Warm |
-| Lisa C. | TinyML Labs | 30 | AI/ML | Seed | BigQuery | 20 | Demo request + webinar | 27 | **47** | 🟡 Warm |
+| Lead | Company | Employees | Industry | Funding | Geography | Tech Stack | Fit Score (max 50) | Key Engagement | Eng. Score (max 50) | **Total** | **Tier** |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| [LEAD 1] | [COMPANY 1] | [EMPLOYEES] | [INDUSTRY] | [FUNDING] | [REGION] | [TECH STACK] | [FIT POINTS] | [SIGNALS AFTER DECAY] | [ENGAGEMENT POINTS] | **[TOTAL]** | [Hot / Warm / Cold] |
+| [LEAD 2] | [COMPANY 2] | [EMPLOYEES] | [INDUSTRY] | [FUNDING] | [REGION] | [TECH STACK] | [FIT POINTS] | [SIGNALS AFTER DECAY] | [ENGAGEMENT POINTS] | **[TOTAL]** | [Hot / Warm / Cold] |
 
-**Summary:** 1 Hot lead (route to SDR), 3 Warm leads (nurture sequence), 1 Cold lead (automated drip). Marcus T. has a perfect fit score but low engagement — prioritize getting him to a demo.
+**Summary:** [NUMBER] Hot leads (route to SDR), [NUMBER] Warm leads (nurture sequence), [NUMBER] Cold leads (automated drip). Call out any lead with a high fit score and low engagement, and say what would move them forward.
 
 ## Best Practices
 

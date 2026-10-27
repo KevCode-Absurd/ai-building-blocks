@@ -33,6 +33,8 @@ Gather the following from the user. If not provided, ask before proceeding:
    - Brand guidelines or constraints
    - Geographic focus
 
+If you have a brand brain, share it for the brand guidelines and constraints.
+
 ## Campaign Brief Structure
 
 Generate a campaign brief with the following sections:

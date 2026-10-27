@@ -32,6 +32,7 @@ you_get:
   - A confidentiality checklist
 how_to_use:
   - Check first that you are allowed to review the paper and that the venue allows AI help. If you are not sure, stop and ask the editor.
+  - Know what stays local. The bundled checks run on your own computer with no network calls. Your AI chat does not: anything you paste or attach to a hosted chat is sent to that service. Use a local AI, or get the venue's permission first.
   - Open an AI that can run Python and read files. Add the skill folder. Pasting a manuscript into a hosted chat counts as sending it to an outside service, so check the venue rules first.
   - Fill in the intake file with your authorization, conflicts, venue rules and data handling. Run the intake check. Go on only when it says ready.
   - Give your AI the manuscript and ask it to follow the skill. It maps claims to evidence, checks methods, and drafts your comments.

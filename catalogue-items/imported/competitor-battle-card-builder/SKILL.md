@@ -128,7 +128,7 @@ Two agents (or two sequential blocks):
 
 **B1: Review Mining** — Mine G2, Capterra, TrustRadius, Product Hunt, and App Store reviews for each competitor. Extract patterns: what do people praise? What do they complain about? What features do they request? Organize by competitor and by pain theme. Include verbatim quotes only from pages you actually opened, with the link, and check each quote against the live page. Read pages through web search one at a time. Do not bulk-collect reviews, because many review sites forbid it in their terms.
 
-**B2: Forum & Community Mining** — Mine Reddit, Indie Hackers, Hacker News, Quora, and niche communities. Find: complaints about existing tools, "what do you use for X?" threads, migration stories, workaround discussions. Build a **language map** — the exact words customers use to describe their problems and desires. Identify **churn signals** — why people leave each competitor.
+**B2: Forum & Community Mining** — Mine Reddit, Indie Hackers, Hacker News, Quora, and niche communities. Find: complaints about existing tools, "what do you use for X?" threads, migration stories, workaround discussions. Build a **language map** — the exact words customers use to describe their problems and desires. Identify **churn signals** — why people leave each competitor. Read forum and community pages through web search one at a time, as in B1. Do not bulk-collect posts, because Reddit, Quora and similar sites limit it in their terms. Quote a post only if you opened it, link it, and check the quote against the live page. Leave out usernames and personal details.
 
 ### Wave 3: GTM & Strategic Signals
 
@@ -242,7 +242,7 @@ Competitive intelligence is only useful if it's honest. Core rules apply (label 
 
 1. **No cheerleading.** If a competitor is objectively better at something, say so. Battle cards that ignore competitor strengths are useless in real sales conversations.
 2. **Label claims.** Use **[Data]**, **[Estimate]**, **[Assumption]**, **[Opinion]** tags. Never present guesses as facts.
-3. **Quantify.** "$12M ARR growing 40% YoY" not "they're growing fast."
+3. **Quantify.** "[AMOUNT] ARR growing [PERCENT] YoY, [SOURCE AND DATE]" not "they're growing fast." If you have no sourced number, write DATA GAP.
 4. **Date everything.** Flag data older than 12 months.
 5. **Declare gaps.** "DATA GAP: Could not find reliable data on [X]" is always better than fabrication.
 6. **Surface red flags.** If the competitive landscape looks brutal, say so directly.

@@ -9,7 +9,7 @@ subhead: Give it your product or draft docs. Get clear developer documentation t
 explain: |
   Developer documentation that a reader can follow to finish a task, written and checked to the standards of Google's developer style guide.
 
-  The skill starts with the reader: who they are and what they should be able to do afterwards. It checks every fact against your code before it writes a word. Then it applies the style rules: talk to the reader as "you", use active voice and present tense, put prerequisites before step one, and end each how-to with a check that it worked. It removes words like "simply" and "just". It can also audit existing docs and score them out of ten against a short checklist.
+  The skill starts with the reader: who they are and what they should be able to do afterwards. It checks every fact against your code before it writes a word. Then it applies the style rules: talk to the reader as "you", use active voice and present tense, put prerequisites before step one, and end each how-to with a check that it worked. It removes words like "simply" and "just". It can also audit existing docs and score them out of ten against a short checklist. The style rules for spelling, word choice and contractions apply to English text only. For other languages you get structure, voice and fact checks only. The score counts how many checks the page passes. It is a guide, not a measurement of quality.
 when:
   - Your README lists features but never says how to get a first result.
   - You need to rewrite old docs so they match what the code does today.
@@ -35,6 +35,7 @@ how_to_use:
   - Say who will read the docs and how much they know. Add your own style guide if you have one. This skill is Wondel.ai's technical-documentation skill (MIT licence), renamed only.
   - Ask for an audit, a rewrite or a new doc. For an audit you get a score out of 10 and a fix list.
   - Check the result against your code, then pass it to a reviewer before you publish. Work through the fix list from an audit one item at a time.
+  - Next, run the audit again on the fixed page to see the score rise. For comments inside your source code, use the Code comment cleaner.
 output_sample:
   input:
     - Your product, API or draft docs

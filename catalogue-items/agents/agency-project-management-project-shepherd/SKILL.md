@@ -14,8 +14,7 @@ Read [the original role profile](references/source-agent.md) before you start. U
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Project risk portfolio planner](https://useaiblocks.com/skills/project-risk-portfolio). It takes the plan.
-- The [Software project manager](https://useaiblocks.com/skills/software-project-manager).
-- The [Studio producer agent](https://useaiblocks.com/skills/agency-project-management-studio-producer).
+- The [Project delay test reviewer](https://useaiblocks.com/skills/weekly-project-delay-evidence-assistant). It takes the plan.
 - The [Internal update writer](https://useaiblocks.com/skills/internal-update-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

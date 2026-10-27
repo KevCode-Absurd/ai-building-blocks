@@ -19,7 +19,10 @@ The user will provide an interview transcript — either as an attached file (te
 
 2. **Fill in the summary template** below. Use "-" if information is unavailable. For each job, write importance and satisfaction as "not stated" unless the customer said it or clearly implied it, and add the supporting quote. Replace numeric values with qualitative descriptions if needed (e.g., "not satisfied").
 
-3. **Check every quote against the transcript, then write the action items.** Use clear, simple language — a primary school graduate should be able to understand the summary.
+3. **Check the quotes, then write the action items.**
+   1. Check every quote against the transcript.
+   2. Write each action item with a date, an owner and the action. Use "-" for a date or owner nobody gave.
+   3. Use clear, simple language — a primary school graduate should be able to understand the summary.
 
 ### Output Template
 

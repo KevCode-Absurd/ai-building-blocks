@@ -10,9 +10,11 @@ inputs:
   - {type: spreadsheet, required: true}
   - {type: performance_sheet, required: true}
   - {type: document, required: false}
+  - {type: financial_statements, required: true}
 outputs:
   - {type: spreadsheet}
   - {type: audit_report}
+  - {type: financial_statements, required: true}
 uses: [build-a-monthly-p-and-l-and-know-your-real-margin, landed-cost-allocator, cogs-line-sorter, store-pl-builder, variance-commentary, store-sales-drop-splitter, product-margin-checker, new-and-returning-pl-splitter, cash-lever-ranker]
 steps:
   - {uses: build-a-monthly-p-and-l-and-know-your-real-margin, note: "Once, in the first month: sets the unit costs, the COGS rule and the P&L layout that every later month reuses. Uses your invoices and sales. Passes on the saved rules."}

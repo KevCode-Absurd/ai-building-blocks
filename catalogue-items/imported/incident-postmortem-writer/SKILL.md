@@ -77,17 +77,17 @@ Quarterly: Review patterns across incidents
 **Authors**: @alice, @bob
 **Status**: Draft | In Review | Final
 **Incident Severity**: SEV2
-**Incident Duration**: 47 minutes
+**Incident Duration**: [DURATION]
 
 ## Executive Summary
 
-On January 15, 2024, the payment processing service experienced a 47-minute outage affecting approximately 12,000 customers. The root cause was a database connection pool exhaustion triggered by a configuration change in deployment v2.3.4. The incident was resolved by rolling back to v2.3.3 and increasing connection pool limits.
+On [DATE], the [SERVICE] experienced a [DURATION] outage affecting approximately [CUSTOMERS] customers. The root cause was [ROOT CAUSE], triggered by [TRIGGER]. The incident was resolved by [FIX].
 
 **Impact**:
-- 12,000 customers unable to complete purchases
-- Estimated revenue loss: $45,000
-- 847 support tickets created
-- No data loss or security implications
+- [CUSTOMERS] customers unable to complete purchases
+- Revenue loss: [AMOUNT from your finance records, or TBD]
+- [TICKET COUNT] support tickets created
+- [Data loss or security implications: state what is confirmed, or TBD]
 
 ## Timeline (All times UTC)
 
@@ -162,20 +162,20 @@ The deployment completed at 14:23, but the first alert didn't fire until 14:31 (
 ### What Could Be Improved
 - Took 10 minutes to correlate issue with recent deployment
 - Had to manually check deployment history
-- Rollback took 12 minutes (could be faster)
+- Rollback took [MINUTES] (could be faster)
 
 ## Impact
 
 ### Customer Impact
-- 12,000 unique customers affected
-- Average impact duration: 35 minutes
-- 847 support tickets (about 7.1% of the affected-user count; not necessarily unique users)
-- Customer satisfaction score dropped 12 points
+- [CUSTOMER COUNT] unique customers affected
+- Average impact duration: [MINUTES]
+- [TICKET COUNT] support tickets (not necessarily unique users)
+- Customer satisfaction change: [FROM YOUR SURVEY DATA, or TBD]
 
 ### Business Impact
-- Estimated revenue loss: $45,000
-- Support cost: ~$2,500 (agent time)
-- Engineering time: ~8 person-hours
+- Revenue loss (from your finance records, or TBD): [AMOUNT]
+- Support cost: [AMOUNT, or TBD]
+- Engineering time: [PERSON-HOURS, or TBD]
 
 ### Technical Impact
 - Database primary experienced elevated load
@@ -236,7 +236,7 @@ The deployment completed at 14:23, but the first alert didn't fire until 14:31 (
 # 5 Whys Analysis: [Incident]
 
 ## Problem Statement
-Payment service experienced 47-minute outage due to database connection exhaustion.
+[SERVICE] experienced a [DURATION] outage due to [IMMEDIATE CAUSE].
 
 ## Analysis
 

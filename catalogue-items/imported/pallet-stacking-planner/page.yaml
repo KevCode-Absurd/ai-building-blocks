@@ -35,6 +35,7 @@ how_to_use:
   - Paste in your details. Add any fragile or no-stack rules (optional).
   - Ask your AI to plan the pallet. It works best when your AI can run code (Python), but a plain chat can try too.
   - Check each layer against the weight and height results. These are rough estimates from simple rules. Compare them with the box maker's stacking strength, the pallet's load rating and your carrier's rules before you use them.
+  - Give your AI the box maker's stacking strength and the pallet's load rating. If you cannot, it marks them MISSING. The centre-of-gravity result is a rough screen, not a safety pass.
   - Have a qualified person check the pallet before it ships.
   - Once the layout is set, plan how the pallets go onto the truck. Compare carriers with the Freight mode and carrier picker.
 output_sample:
@@ -44,14 +45,15 @@ output_sample:
     - Maximum pallet height and weight
     - Fragile or no-stack rules (optional)
   prerequisites:
-    - An AI that can run code (Python) works best, but you can also use a plain chat
+    - An AI that can run code (Python) works best. The code needs the Python packages pulp, numpy and matplotlib. A plain chat can skip the code and work the layers out in words
+    - The box maker's stacking strength and the pallet's load rating. Your AI marks them MISSING if you do not give them
   output:
     - name: Summary
-      contains: Pallet type, boxes loaded, total weight, total height, how full the pallet is, and a stability result.
+      contains: Pallet type, boxes loaded, total weight, total height, how full the pallet is, and a rough centre-of-gravity screen.
     - name: Loading pattern
       contains: Each layer from the bottom up, with box count, box direction, layer height and layer weight.
     - name: Stability analysis
-      contains: Where the load's center of gravity sits, how far it is off center, and whether it is stable.
+      contains: Where the load's center of gravity sits, how far it is off center, and whether it looks centred. The cut-offs for this screen are rough and arbitrary. It is not a safety pass.
     - name: Shipping instructions
       contains: Wrapping advice, forklift entry sides, whether pallets can be double-stacked, and labeling.
 next: [freight-mode-and-carrier-picker]

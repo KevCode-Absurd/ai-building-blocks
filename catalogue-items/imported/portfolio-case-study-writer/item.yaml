@@ -14,7 +14,6 @@ inputs:
     required: false
 outputs:
   - type: document
-  - type: plan
 uses: []
 origin: imported
 source:

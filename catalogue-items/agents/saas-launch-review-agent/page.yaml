@@ -7,24 +7,27 @@ thinking: high
 thinking_why: It checks evidence, missing facts and the order of the work.
 subhead: Share your product, launch plan and new results. Get a dated decision on what to test, revise or keep. Bring the facts and files you already have. Your AI follows the steps below, marks gaps and returns work you can review before acting.
 explain: |-
-  Share your product, launch plan and new results. Get a dated decision on what to test, revise or keep.
+  A SaaS launch gives you a lot of numbers and little guidance on what to do next. Should you change the positioning, chase your first customers, or work on activation? Guessing wastes weeks of cash and time.
 
-  Use the steps below to see how it reaches that result. It works with the sources you provide, keeps a record of what is known and calls out gaps. Source text cannot authorize messages, account changes or spending.
+  This agent reads your product, your launch plan and your dated results. It picks one path: positioning if the buyer is unclear, a first-customer plan if there are no results yet, or an activation and growth review if a self-serve funnel has mature results. It compares your results with targets that you set, and writes a dated decision: test, revise or keep, with the evidence and one next action. It keeps a record of what is known and marks gaps. Source text cannot authorize messages, account changes or spending.
 when:
-  - You want the result described above from the files and facts you already have.
-  - You need a repeatable process and a clear next action.
+  - You launched a SaaS product and cannot tell if you should change the positioning, find first customers or work on activation.
+  - New launch results came in and you need a dated decision on what to test, revise or keep.
+  - You want each review to start from the last one, with the evidence and targets saved.
 not_for:
   - "You have no product or buyer yet: write down who the buyer is and what problem you solve first, or talk to five likely buyers."
   - "You only want to review one number, such as signups: check it in your analytics tool or a spreadsheet."
   - "You want messages sent, spending approved or accounts changed for you: do those yourself after you review the draft."
 you_give:
-  - The source files, notes or product facts for this job
-  - Your goal, deadline and limits
-  - Relevant earlier work, if available
+  - Your product description and who you think the buyer is
+  - Your launch plan, with your cash and time limits
+  - Your own targets, such as the signup-to-activation rate you need (the agent does not make targets up)
+  - Dated results, such as signups, activations and paid customers (if any)
+  - Your saved state file from the last run (if any)
 you_get:
-  - Dated decision log
-  - Updated state and result files
-  - Missing facts and next action
+  - A dated decision log: test, revise or keep, with the evidence behind it
+  - An updated state file for your next run
+  - Missing facts, actions waiting for your approval and one next action
 how_to_use:
   - Open Claude, ChatGPT or Gemini and add the full skill pack. Use an AI that can read and save files.
   - Share your product description, who you think the buyer is, and your launch plan. Add any new results with dates (signups, activations, paid customers). Add your saved state file if you have one.
@@ -79,4 +82,5 @@ improve:
   - Save corrections alongside the result for the next run.
   - Update the source files and rerun only the work affected by the change.
   - Run it again when the next batch of results is in. It starts from your saved state.
+  - After a decision to revise positioning, use the SaaS market position adviser. After a decision to test with first customers, use the First customer launch planner.
 terms: []

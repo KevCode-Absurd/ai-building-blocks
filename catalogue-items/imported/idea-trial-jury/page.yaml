@@ -10,6 +10,8 @@ explain: |
   A verdict on your plan, argued like a court case, for the times when Claude agrees with everything you say. A prosecutor builds the case against it, a defender builds the case for it and a jury of twelve independent Claudes votes without seeing each other.
 
   You play no part in the argument. The skill acts as clerk, keeps the record and never softens the result. A Python script handles the bookkeeping, with a quick mode and a juror count. You get the vote count, the reasons and what facts or changes would flip the verdict. It suits a plan, a purchase, a post, a code approach or a claim. It needs Python and the ability to run subagents.
+
+  Licence: the written text of this skill is shared under CC BY-4.0 (the LICENSE-CONTENT file). The "MIT" line in the SKILL.md header is the original author's own note (Alex Chen). Keep the credit to the author.
 when:
   - You keep getting yes from AI and want a real challenge.
   - You are deciding whether to make a big purchase or change.
@@ -28,7 +30,6 @@ you_get:
   - A jury vote count with reasons
   - A clear verdict
   - What would flip the decision
-next: []
 how_to_use:
   - Open Claude Code and add this skill. It needs Python 3 and the ability to start helper agents.
   - Type /court, then your idea. Add facts such as numbers, budget and what you have tried.

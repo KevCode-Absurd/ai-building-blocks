@@ -1,6 +1,6 @@
 # Keep your code secure: AI Blocks
 
-> 94 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 93 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Agent injection evidence review assistant](https://useaiblocks.com/agents/track-agent-injection-controls-and-retest-evidence): Get safe prompt injection test cases for your AI agent, a control gap list and retest records. Tests run only with the owner's written approval.
 - [AI agent attack tester](https://useaiblocks.com/skills/ai-agent-attack-tester): Share the agent and authorised test scope. Get a test plan, evidence-backed findings and retest results for checks that actually run.
@@ -31,7 +31,6 @@
 - [CrowdSec protection checker](https://useaiblocks.com/skills/crowdsec-protection-checker): Bring CrowdSec settings and status. Get a check of protection gaps, including whether the bouncer can block traffic.
 - [Dependency security and licence scanner](https://useaiblocks.com/skills/dependency-risk-scanner): Share authorised project files and a licence policy. Check package versions against public advisories and get risk flags, a package list and fix options.
 - [Django access control reviewer](https://useaiblocks.com/skills/django-access-control-auditor): Trace who can read, change or delete Django data. Get supported access-control findings, enforcement fixes and clearly marked gaps in the review.
-- [EU AI Act readiness checker](https://useaiblocks.com/skills/eu-ai-act-readiness-checker): Check AI system details and records for possible gaps under the EU AI Act.
 - [EU Cyber Resilience Act reviewer](https://useaiblocks.com/skills/iot-security-check): A product description, role and EU market scope lead to a preliminary CRA scope and class check, duties, routes and gaps.
 - [Exposed secrets finder](https://useaiblocks.com/skills/exposed-secrets-finder): Share a site you own. Get a report of keys and private files visitors can read, with fixes.
 - [Federal security controls planner](https://useaiblocks.com/skills/federal-security-controls): Describe your system and security needs. Get a NIST control baseline, tailoring notes and draft control write-ups.

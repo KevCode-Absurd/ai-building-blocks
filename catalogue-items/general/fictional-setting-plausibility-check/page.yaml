@@ -12,7 +12,7 @@ explain: >-
   This is one pass over the setting sheet you paste in. It looks at your world through three lenses: land and resources, daily life and institutions, and technology and history. One prompt does all three, so you do not need three separate tools.
 
 
-  This task uses selected methods from Anthropologist, Geographer, Historian. It is a focused adaptation. The original agents remain available: [Anthropologist agent](https://useaiblocks.com/agents/agency-academic-anthropologist), [Geographer agent](https://useaiblocks.com/agents/agency-academic-geographer), [Historian agent](https://useaiblocks.com/agents/agency-academic-historian).
+  This task uses selected methods from Anthropologist, Geographer, Historian. It is a focused adaptation. The original agents remain available: [Anthropologist agent](https://useaiblocks.com/agents/agency-academic-anthropologist), [Geographer agent](https://useaiblocks.com/agents/agency-academic-geographer), [Historian agent](https://useaiblocks.com/agents/agency-academic-historian). Those roles come from Agency Agents under the MIT licence, which this item's LICENSE file carries.
 when:
   - You have a map, a setting sheet or world notes and want to catch weak links before you write scenes.
   - A reader or editor said something in your world does not add up, such as where the food or trade comes from.
@@ -46,12 +46,14 @@ output_sample:
     - name: Unresolved questions
       contains: Real-world claims left unverified and open questions for you to answer.
 how_it_works:
-  - title: 1. A short, prioritized list of plausibility questions with quoted setting details
-    text: Issues quote actual supplied setting details.
-  - title: 2. Small revision options and their downstream effects
-    text: Intentional fantasy rules are preserved rather than labelled impossible.
-  - title: 3. Explicit fantasy liberties and unresolved factual claims
-    text: Material/cultural links are conditional, with uncertainty and alternatives.
+  - title: Paste your setting
+    text: Add your setting sheet or map notes, your genre, the rules you chose to break and any real time or place you borrow from. Add your own references if you want real history checked.
+  - title: Follow three chains
+    text: It follows land and resources to settlement, daily life to institutions, and technology to history. It quotes the exact line of yours that each concern rests on.
+  - title: Keep your rules
+    text: Magic and other rules you chose are kept as they are. They are listed as liberties, not errors.
+  - title: Get up to five issues
+    text: Each issue has the quote, the missing link, a small fix and what the fix changes. Real-world claims it cannot check are marked unverified.
 judge:
   - Issues quote actual supplied setting details.
   - Intentional fantasy rules are preserved rather than labelled impossible.

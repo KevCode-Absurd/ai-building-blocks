@@ -7,7 +7,7 @@ role: check
 job: analysis
 level: intermediate
 inputs:
-  - {type: spreadsheet, required: true}
+  - {type: customer_list, required: true}
   - {type: voc_reviews, required: false}
   - {type: performance_sheet, required: false}
 outputs:

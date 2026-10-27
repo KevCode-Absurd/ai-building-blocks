@@ -8,8 +8,10 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: product_data
+  - type: question
     required: true
+  - type: web_page
+    required: false
 outputs:
   - type: plan
 uses: []

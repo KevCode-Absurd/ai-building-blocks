@@ -9,9 +9,9 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: job_description
     required: true
-  - type: document
+  - type: resume
     required: false
   - type: source_text
     required: false
@@ -19,6 +19,8 @@ outputs:
   - type: document
   - type: copy_draft
   - type: feedback_notes
+  - type: resume
+    required: true
 uses:
   - resume-job-application-builder
   - plain-english-editor

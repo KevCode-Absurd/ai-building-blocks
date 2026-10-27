@@ -36,6 +36,7 @@ how_to_use:
   - Copy the code into your project and make sure the selectors match your HTML.
   - Open the page in a browser and confirm one element animates as you described. Check it on a phone too.
   - This works best when your AI can run code and open a browser. Otherwise, test it yourself. Next, turn on reduced motion in your device settings and check the page still works, then run a landing page check before you publish.
+next: [animated-landing-page-builder, accessible-ui-builder]
 output_sample:
   input:
     - A description of the motion you want

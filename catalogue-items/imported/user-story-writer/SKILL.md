@@ -49,6 +49,8 @@ Backlog management and sprint execution toolkit for product owners, including us
 
 ## User Story Generation Workflow
 
+If you already have a plan or roadmap that lists the features, give it too and the stories are written for those features.
+
 Create INVEST-compliant user stories from requirements:
 
 1. Identify the persona (who benefits from this feature)

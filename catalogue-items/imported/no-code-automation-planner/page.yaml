@@ -30,7 +30,7 @@ you_get:
   - Test and naming tips
   - A sign for when to switch to code
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. No code running, files or web access is needed.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. No code running, files or web access is needed for a plan. The detailed guide in the skill folder is optional for a plan-only run. Your AI reads its sections on branching, errors, loops and schedules when you ask for those.
   - Describe the task in plain words. Name the apps, how often it runs and how much data moves.
   - Add your budget if you have one (optional). Check current prices on the Zapier or Make pricing page before you decide. They change.
   - Read the tool choice and the trigger, filter and action layout.
@@ -46,7 +46,7 @@ output_sample:
     - A free or paid Zapier or Make account to build the plan (the AI only plans it, you build it)
   output:
     - name: Tool choice
-      contains: Whether Zapier or Make fits your task better, with the reasons.
+      contains: Whether Zapier or Make fits your task better, with the reasons. Every plan comes back under the same headings - Tool choice, Trigger and filters, Actions in order, Tests and first runs, Switch-to-code check.
     - name: Trigger and filter layout
       contains: The trigger, the filters that stop unwanted runs, and the actions in order.
     - name: Naming and test tips

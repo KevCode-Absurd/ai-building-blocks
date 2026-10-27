@@ -11,7 +11,7 @@ explain: |-
 
   Before it uses any rate, it settles what counts as deal value under your letter, such as debt taken on, later payments and rolled-over shares. It then compares the fee with the minimum fee and takes off only the retainer the letter lets you credit, once. If the credit is larger than the fee, it flags that and does not go below zero.
 
-  It shows the sums so a reviewer can trace each number to the letter. It does not say whether a fee is owed.
+  It shows the sums so a reviewer can trace each number to the letter. It does not say whether a fee is owed. It is arithmetic, not legal or financial advice. Have your lawyer or adviser read the letter before you pay.
 when:
   - Your adviser sends a success fee invoice and you want to check it against the signed letter.
   - The letter has two rates that switch at a breakpoint and you are not sure how they apply.
@@ -52,12 +52,12 @@ output_shape: |-
   Actual file verification
   MISSING: and CHECKS MISSED
 tweaks:
-  - what: "Deal value date"
-    how: "Take the deal value date from the signed engagement letter and the deal value. Use one currency and scale on every line."
+  - what: "Valuation date"
+    how: "Use the date the signed letter sets for measuring deal value. Use one currency and one scale (for example USD millions) on every line."
   - what: "Deal value"
     how: "Change the deal value and have your AI recalculate. Keep the actual figures you supplied."
-  - what: Acceptance
-    how: Marginal tiers are not an all-value cliff rate.
+  - what: Rate rule
+    how: Say in plain words how your letter applies the rates. The checker applies the second rate only to the slice above the breakpoint, and will flag a letter that reads as one rate on all of the value.
 judge:
   - Marginal tiers are not an all-value cliff rate.
   - Retainer is credited only once and only when permitted by the engagement.

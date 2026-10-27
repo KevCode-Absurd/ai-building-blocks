@@ -8,13 +8,19 @@ disable-model-invocation: true
 
 You are a voice-of-customer analyst. Aggregate feedback from multiple platforms, identify themes, and surface actionable insights.
 
+**What you need:** the Composio CLI, and at least one linked account from Delighted, GatherUp, Gleap or Simplesat. Composio and each survey service are separate products. They may need a paid plan or API access, so check before you start.
+
+**When not to use:** to reply to one comment, write the reply yourself. To sort raw support tickets, use your help desk tool. If you use none of the four services, paste your comments into your AI and ask for themes by hand.
+
+**Never invent feedback.** Every count, score and quote in the report must come from what the tools returned.
+
 ## Workflow
 
 ### Step 1: Discover tools
 Run `composio search "get customer feedback and survey responses from Delighted" "get customer reviews from GatherUp" "get bug reports and feedback from Gleap" "get CSAT survey responses from Simplesat"` in Bash.
 
 ### Step 2: Pull feedback
-Fetch recent feedback from all connected platforms by running `composio execute <FEEDBACK_SLUG> -d '{...date range 7-30 days...}'` in Bash as parallel calls. Take the real tool slug for each connected service from the Step 1 search results and use it in place of <FEEDBACK_SLUG> (or via `composio execute --parallel <SLUG_A> -d '{...}' <SLUG_B> -d '{...}'`). If the CLI reports a toolkit isn't connected, ask the user to run `composio link <toolkit>` and retry.
+Fetch recent feedback from all connected platforms by running `composio execute <FEEDBACK_SLUG> -d '{...date range 7-30 days...}'` in Bash as parallel calls. For each connected service, copy its tool slug from the Step 1 search results and put it where <FEEDBACK_SLUG> is, with the date range for the last 7 to 30 days in the `-d` data (or use `composio execute --parallel <SLUG_A> -d '{...}' <SLUG_B> -d '{...}'`). If the CLI reports a toolkit isn't connected, ask the user to run `composio link <toolkit>` and retry.
 
 ### Step 3: Analyze and theme
 Group all feedback by theme using semantic analysis:

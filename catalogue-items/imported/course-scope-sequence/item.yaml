@@ -9,8 +9,10 @@ role: make
 job: ops
 level: advanced
 inputs:
-  - type: document
+  - type: question
     required: true
+  - type: document
+    required: false
 outputs:
   - type: plan
     required: true

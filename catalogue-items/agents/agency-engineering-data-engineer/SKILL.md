@@ -13,9 +13,9 @@ Read [the original role profile](references/source-agent.md) before you start. I
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Data pipeline builder](https://useaiblocks.com/skills/data-pipeline-builder).
-- The [Spatial data engineer agent](https://useaiblocks.com/skills/agency-gis-spatial-data-engineer).
-- The [MATLAB signal data cleaner](https://useaiblocks.com/skills/signal-data-cleaner).
+- The [Data pipeline builder](https://useaiblocks.com/skills/data-pipeline-builder). It takes the plan.
+- The [Oracle migration risk reviewer](https://useaiblocks.com/skills/copilot-reviewing-oracle-to-postgres-migration). It takes the plan.
+- The [AI coding task brief writer](https://useaiblocks.com/skills/coding-agent-handoff-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -39,6 +39,8 @@ How to start:
 <!-- /needs -->
 
 ## What to collect first
+
+These are the inputs that count. If the generic "Before you start" list above asks for something else, such as a question or source text, ignore that part.
 
 Ask once for anything missing. Never invent it. Mark each gap `MISSING:`, or label a stand-in `ASSUMED:` and say what to replace it with.
 
@@ -74,6 +76,8 @@ Use these headings, in this order:
 6. Recovery plan
 7. Tool options
 8. Open questions and checks still needed
+
+Heading 8 is also your CHECKS MISSED list: name every check that failed or could not run, or write "none".
 
 If you show code or config, label it an example to adapt and test on the user's own data.
 

@@ -70,7 +70,7 @@ how_it_works:
   - title: Builds the segments
     text: Engaged groups for 14, 30, 60 and 90 days, made of people who opened or clicked and are still subscribed with no bounces.
   - title: Plans the ramp
-    text: Pause all flows except welcome, browse, cart, checkout and post-purchase. Send 3 strong campaigns a week to the 14-day group for two weeks.
+    text: Keep welcome and post-purchase flows on and pause the rest. Cart and checkout flows stay on only if their own open rate is 40 percent or more. Send 3 strong campaigns a week to the 14-day group for two weeks.
   - title: Sets the gates
     text: Widen to 30, 60, then 90 days when opens reach about 50 percent. If not, repeat the stage for two more weeks, then drop site activity from the segment.
   - title: Improves the emails
@@ -136,7 +136,7 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Klaviyo", why: "Its segments build the 14 to 90 day groups, and its delivery reports show opens by inbox provider."}
+    - {name: "Klaviyo", why: "Paid service with an account. Its segments build the 14 to 90 day groups, and its delivery reports show opens by inbox provider."}
     - {name: "Google Postmaster Tools", why: "It shows your domain reputation and spam rate for Gmail, which tells you if the problem is real."}
   inputs:
     - "Delivery reports by inbox provider and country"

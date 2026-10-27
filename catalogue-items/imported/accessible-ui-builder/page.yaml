@@ -33,11 +33,11 @@ you_get:
 how_to_use:
   - Gather three things first, the screen description, your design rules and your framework with its version. Then open your AI in a chat, or in a coding tool that can see your project files.
   - Paste the skill text, then describe the screen you want.
-  - Add your design system rules, your framework and any components to reuse.
+  - Add your design system rules (paste them as tokens or a file, not a loose description), your framework and any components to reuse.
   - Let your AI build the components, then ask for tests if you want them.
   - Tab through the screen with your keyboard and check it at phone and desktop widths.
-  - Fix anything on the checklist that fails before you use the code. The full checklist file is not in this copy, so check labels, focus and contrast by hand.
-  - Next, run the Accessibility checker on the finished screen, then ask a designer to review it.
+  - Fix anything on the checklist that fails before you use the code. The skill carries a short checklist covering keyboard use, labels, contrast of 4.5 to 1, and widths of 320, 768, 1024 and 1440 pixels.
+  - Next, run your tests and merge the code into your component library. Then run the Accessibility standards checker on the finished screen and ask a designer to review it.
 output_sample:
   input:
     - A description of the screen you want

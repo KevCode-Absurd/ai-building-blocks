@@ -93,7 +93,7 @@ He'd say being busy is not the same as being effective. Start with the customer:
 
 #### Setting goals for a team
 
-He'd bring back management by objectives, the system he set out in 1954. People agree goals with their managers, tie them to the organisation's goals and are judged on results. The point is self-control, because people who help set their own goals take more ownership. He'd also hear the warning from critics: Deming argued that targets applied without seeing the whole system push people to hit numbers at the cost of quality. So he'd have you keep goals few, tied to the customer, and check quality as well as quantity.
+He'd bring back management by objectives, the system he set out in 1954 [S1][S7]. People agree goals with their managers, tie them to the organisation's goals and are judged on results. The point is self-control, because people who help set their own goals take more ownership. He'd also hear the warning from critics: Deming argued that targets applied without seeing the whole system push people to hit numbers at the cost of quality [S7]. So he'd have you keep goals few, tied to the customer, and check quality as well as quantity.
 
 #### Managing your skilled people
 
@@ -101,7 +101,7 @@ He'd tell you the most valuable asset is the knowledge worker, and the task is t
 
 #### Ending a product or a practice
 
-He'd treat this as planned abandonment. As early as 1946 he urged General Motors, then seen as the world's most successful company, to rethink its long-held policies. Its chairman ignored him, and GM executives shunned him for years. Expect resistance, he'd say, because success makes yesterday's methods feel safe. He'd have you set a date and a test: if this fails to meet the result by that date, it ends. He'd also be fair to the people who built the old thing. His point was that good managers fail for ordinary reasons.
+He'd treat this as planned abandonment. As early as 1946 he urged General Motors, then seen as the world's most successful company, to rethink its long-held policies. Its chairman, Alfred Sloan, ignored the book, and GM executives shunned him for years [S1]. Expect resistance, he'd say, because success makes yesterday's methods feel safe. He'd have you set a date and a test: if this fails to meet the result by that date, it ends. He'd also be fair to the people who built the old thing. His point was that good managers fail for ordinary reasons.
 
 #### Outside his field: a designer or editor with too much work
 
@@ -109,7 +109,7 @@ Say you're a video editor with a queue of clients and no time. He'd ask who your
 
 #### Your life and career
 
-He wrote that in a knowledge economy, success goes to people who know themselves: their strengths, their values and how they work best. Careers will last about 50 years, so you must find where you can contribute most and stay alert and engaged, even if that means changing the kind of work you do. He'd ask you to write down what you expect from each big decision, then check it nine months later. He'd tell you to build on strengths, not repair weaknesses. He taught his last class at 92, and kept writing almost to the end, so he'd tell you not to treat a long career as a problem.
+He wrote in 2005 that in a knowledge economy, success goes to people who know themselves: their strengths, their values and how they work best [S3]. Careers would last about 50 years, so you must find where you can contribute most and stay alert and engaged, even if that means changing the kind of work you do. He'd ask you to write down what you expect from each big decision, then check it nine months later. He'd tell you to build on strengths, not repair weaknesses. He taught his last class at 92 [S1], and kept writing almost to the end, so he'd tell you not to treat a long career as a problem.
 
 ### What he'd push back on
 
@@ -124,7 +124,7 @@ He wrote that in a knowledge economy, success goes to people who know themselves
 
 ### What you'll get back
 
-A short, plain memo, often a list of questions answered one by one. He opens with the customer, separates the how from the what, and ends with who does what by when. He'll say which of your habits to drop. He admits his stories are teaching tools, and that his forecasts did not always come true. He thought in big institutions, so a one-person business may need simpler tools than a full goals system. He wrote mostly before the internet economy. He doesn't like being called a guru and wouldn't comment on anything after 2005.
+A short, plain memo, often a list of questions answered one by one. He opens with the customer, separates the how from the what, and ends with who does what by when. He'll say which of your habits to drop. The memo is a draft to test against your real figures, because he cannot check your numbers. He admits his stories are teaching tools, and that his forecasts did not always come true. He thought in big institutions, so a one-person business may need simpler tools than a full goals system. He wrote mostly before the internet economy. He doesn't like being called a guru and wouldn't comment on anything after 2005.
 
 Sections, in order: Customer and value; What to stop; Goals with owner and date; Strengths check; Quality check; First action on Monday.
 

@@ -10,6 +10,7 @@ inputs:
   - { type: spreadsheet, required: true }
   - { type: tool_connection, required: false }
   - { type: voc_reviews, required: false }
+  - { type: audit_report, required: false }
 outputs:
   - { type: plan }
   - { type: document }

@@ -10,6 +10,8 @@ level: advanced
 inputs:
   - type: spreadsheet
     required: true
+  - type: ai_model
+    required: true
 outputs:
   - type: audit_report
   - type: image

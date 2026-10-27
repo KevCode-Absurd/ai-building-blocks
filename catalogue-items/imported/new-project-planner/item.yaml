@@ -8,10 +8,17 @@ role: make
 job: ops
 level: beginner
 inputs:
-  - type: brief
+  - type: idea
     required: true
+  - type: plan
+    required: false
 outputs:
   - type: plan
+  - type: document
+  - type: product_spec
+    required: true
+  - type: data_model
+    required: true
 uses: []
 origin: imported
 source:

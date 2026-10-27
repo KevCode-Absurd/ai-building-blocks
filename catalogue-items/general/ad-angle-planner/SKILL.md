@@ -101,8 +101,8 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It takes the brief.
 - The [Ad opening writer and reviewer](https://useaiblocks.com/skills/ad-first-line-writer-and-scorer). It takes the brief.
 - The [Conversational video ad script writer](https://useaiblocks.com/skills/conversational-ad-script). It takes the brief.
-- **Plan what to test** with the [Untried ad idea finder](https://useaiblocks.com/skills/untried-ad-idea-finder).
 - **Make video ads** with the [Selfie-style video ad script writer](https://useaiblocks.com/skills/selfie-style-ad-script). It takes the brief.
+- **Plan what to test** with the [Untried ad idea finder](https://useaiblocks.com/skills/untried-ad-idea-finder).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

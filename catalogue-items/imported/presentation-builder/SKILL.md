@@ -17,7 +17,7 @@ This skill enables an AI agent to transform raw content — outlines, documents,
 
 2. **Structure the narrative arc.** Organize the content into a logical story: opening hook, problem statement, solution or key message, supporting evidence, and closing call to action. Map this arc onto a slide-by-slide outline. A typical 15-minute presentation uses 10-15 slides. Each slide should convey a single idea — if a slide needs two headings, it should be two slides. Add transition beats between sections to maintain narrative flow.
 
-3. **Write slide content with minimal text.** For each slide, write a concise headline (under 8 words) that states the takeaway, not the topic. Use "Revenue grew 40% YoY" instead of "Revenue Overview." Keep body text to 3-5 bullet points or a single short paragraph. Where possible, replace text with visuals — a chart, diagram, screenshot, or image that communicates the point faster. Write speaker notes for each slide with the full talking points the presenter should deliver verbally.
+3. **Write slide content with minimal text.** For each slide, write a concise headline (under 8 words) that states the takeaway, not the topic. Use "Revenue grew [X%] YoY" (with the real figure from the source) instead of "Revenue Overview." Keep body text to 3-5 bullet points or a single short paragraph. Where possible, replace text with visuals — a chart, diagram, screenshot, or image that communicates the point faster. Write speaker notes for each slide with the full talking points the presenter should deliver verbally.
 
 4. **Suggest visual elements and layout.** For each slide, recommend the appropriate visual treatment: bar chart for comparisons, line chart for trends, flow diagram for processes, screenshot for product demos, icon grid for feature lists, or a full-bleed image for emotional impact. Specify layout as title-only, title-and-body, two-column, image-left, or full-image. Suggest a consistent color palette and font pairing (e.g., Inter for headings, Source Sans for body).
 
@@ -41,20 +41,20 @@ Output format: [marp / revealjs / pptx / google-slides]
 
 ## Examples
 
-The two examples below are fictional. Every company, customer, number and result in them is made up to show the format. Never present them as real. In a real deck, use only figures that come from the user's source. Where one is missing, write a bracketed placeholder such as [X%] or [Customer] and ask for it.
+The two examples below show the format only. Every value in brackets is a placeholder. In a real deck, use only figures that come from the user's source. Where one is missing, write a bracketed placeholder such as [X%] or [Customer] and ask for it.
 
 ### Example 1: Product Launch Slide Deck (Marp Format)
 
 **Input:**
 
 ~~~
-Create a presentation for the launch of "Nimbus," a cloud cost optimization tool.
-Audience: Engineering managers and VPs at mid-size SaaS companies.
+Create a presentation for the launch of "[PRODUCT NAME]", [WHAT IT DOES IN A FEW WORDS].
+Audience: [WHO WILL WATCH].
 Slide count: 7
 Output format: marp
 ~~~
 
-**Output:**
+**Output (shape only; every bracketed value must come from the user's source, or stay a placeholder and be flagged as missing):**
 
 ~~~markdown
 ---
@@ -63,98 +63,75 @@ theme: default
 paginate: true
 ---
 
-# Nimbus
-## Cut your cloud bill by 35% — automatically
+# [PRODUCT NAME]
+## [THE PROMISE, WITH THE USER'S REAL NUMBER IF THEY GAVE ONE]
 
-![bg right:40%](cloud-hero.png)
+![bg right:40%](hero-image.png)
 
-<!-- Speaker notes: Welcome everyone. Today I'm excited to introduce Nimbus,
-our new cloud cost optimization platform. By the end of this presentation,
-you'll see how Nimbus can save your team six figures annually without any
-code changes. -->
+<!-- Speaker notes: [Welcome line. State what the audience will have learned by the end.] -->
 
 ---
 
-# The Problem: Cloud Spend Is Out of Control
+# The Problem: [ONE-LINE PROBLEM]
 
-- 73% of engineering leaders say cloud costs exceeded budget last quarter
-- Idle resources, oversized instances, and forgotten dev environments
-- Manual cost reviews happen quarterly at best — waste compounds daily
+- [EVIDENCE FROM THE USER'S SOURCE, WITH ITS SOURCE NAMED]
+- [SECOND POINT ABOUT THE PROBLEM]
+- [THIRD POINT ABOUT THE PROBLEM]
 
-<!-- Speaker notes: Let's start with the pain. If you're like most teams we
-talk to, your cloud bill is a source of constant surprise. The problem isn't
-that you're using too much cloud — it's that nobody can see where the waste
-is in real time. -->
+<!-- Speaker notes: [Talking points for the problem slide.] -->
 
 ---
 
-# How Nimbus Works
+# How [PRODUCT NAME] Works
 
-1. **Connect** — Link your AWS, GCP, or Azure accounts in under 5 minutes
-2. **Analyze** — Nimbus scans utilization, traffic patterns, and billing data
-3. **Optimize** — Get prioritized recommendations ranked by savings impact
-4. **Automate** — Enable auto-scaling rules and scheduled shutdowns
+1. **[STEP 1]**: [WHAT THE USER DOES]
+2. **[STEP 2]**: [WHAT HAPPENS NEXT]
+3. **[STEP 3]**: [WHAT THEY GET]
 
-<!-- Speaker notes: Nimbus works in four simple steps. The onboarding is
-read-only and non-invasive. No agents to install, no IAM changes beyond
-read access. -->
+<!-- Speaker notes: [Talking points for how it works.] -->
 
 ---
 
-# Results: What Our Beta Customers Achieved
+# Results: [WHAT CUSTOMERS ACHIEVED]
 
-| Company       | Monthly Savings  | Time to ROI |
-|---------------|-----------------|-------------|
-| Acme Corp     | $42,000 (31%)   | 2 weeks     |
-| DataFlow Inc  | $67,000 (38%)   | 3 days      |
-| Bright SaaS   | $28,000 (29%)   | 1 week      |
+| Customer | Result | Time to result |
+|----------|--------|----------------|
+| [CUSTOMER 1] | [RESULT] | [TIME] |
+| [CUSTOMER 2] | [RESULT] | [TIME] |
 
-Average: **35% cost reduction** within the first month.
+Average: **[X%]** [MEASURE] within [TIMEFRAME].
 
-<!-- Speaker notes: [Only say "these are real numbers" if they come from your own beta data.]
-Example only: these figures are fictional. DataFlow saw results in 3 days because they had a large
-cluster of dev instances running 24/7. -->
+<!-- Speaker notes: [Only use this slide if the user supplied real customer results. Otherwise write MISSING: customer results and ask for them.] -->
 
 ---
 
-# Built for Engineering Teams, Not Finance
+# Built for [AUDIENCE]
 
-- No code changes required — works at the infrastructure layer
-- Slack and PagerDuty integration for real-time alerts
-- Granular controls per team, environment, or service
-- Full audit log — every optimization is logged and reversible
+- [FEATURE OR BENEFIT 1, FROM THE USER'S SOURCE]
+- [FEATURE OR BENEFIT 2]
+- [FEATURE OR BENEFIT 3]
 
-<!-- Speaker notes: We built Nimbus for engineering managers, not CFOs. You
-get full control over what gets optimized and what stays untouched. Every
-action is reversible with a single click. -->
+<!-- Speaker notes: [Talking points.] -->
 
 ---
 
 # Pricing
 
-- **Starter:** Free for accounts under $10K/month cloud spend
-- **Pro:** 5% of realized savings (you only pay when you save)
-- **Enterprise:** Custom pricing with dedicated support and SLAs
+- **[PLAN 1]:** [PRICE AND TERMS FROM THE USER]
+- **[PLAN 2]:** [PRICE AND TERMS FROM THE USER]
 
-No upfront commitment. Cancel anytime.
-
-<!-- Speaker notes: Our pricing is aligned with your success. On the Pro
-plan, we take 5% of the savings we actually generate — if Nimbus doesn't
-save you money, you pay nothing. -->
+<!-- Speaker notes: [Talking points. If the user gave no prices, write MISSING: pricing.] -->
 
 ---
 
 # Get Started Today
 
-**Start your free trial at nimbus.io/start**
+**[NEXT STEP AND LINK OR CONTACT FROM THE USER]**
 
-- 5-minute setup, no credit card required
-- See your first savings recommendations within 24 hours
-- Questions? Email founders@nimbus.io
+- [WHAT HAPPENS FIRST]
+- [WHAT THEY SEE AND WHEN]
 
-<!-- Speaker notes: Thank you for your time. The setup takes 5 minutes and
-you'll see your first recommendations within a day. Happy to take
-questions now. -->
+<!-- Speaker notes: [Close and invite questions.] -->
 ~~~
 
 ### Example 2: Converting a Technical Document to a Presentation Outline
@@ -163,68 +140,64 @@ questions now. -->
 
 ~~~
 Convert the following technical document summary into a presentation outline.
-Source: "Our API gateway handles 2.3M requests/day. Current P99 latency is
-450ms, target is under 200ms. Root cause: synchronous auth middleware. Proposed
-fix: move auth to async verification with JWT caching. Expected impact: 60%
-latency reduction. Rollout plan: canary 5% then 25% then 100% over 3 weeks."
-Audience: Backend engineering team
+Source: "[CURRENT STATE WITH THE USER'S REAL NUMBERS]. [TARGET]. Root cause: [CAUSE].
+Proposed fix: [FIX]. Expected impact: [IMPACT, IF THE USER GAVE ONE]. Rollout plan: [PLAN]."
+Audience: [WHO WILL WATCH]
 Output format: outline
 ~~~
 
-**Output:**
+**Output (shape only; every bracketed value must come from the user's source):**
 
 ~~~
 Slide 1: Title
-  Headline: "Cutting API Gateway Latency by 60%"
-  Subtitle: Backend Architecture Proposal — February 2026
+  Headline: "[THE TAKEAWAY IN UNDER 8 WORDS]"
+  Subtitle: [DOCUMENT TYPE] - [DATE]
   Visual: None (clean title slide)
 
 Slide 2: Current State
-  Headline: "Our P99 Latency Is 2x Over Target"
+  Headline: "[WHAT IS WRONG TODAY, IN UNDER 8 WORDS]"
   Bullets:
-    - 2.3M requests/day through the API gateway
-    - Current P99: 450ms | Target: under 200ms
-    - Latency spikes correlate with auth middleware execution
-  Visual: Line chart showing P99 latency over past 30 days with 200ms target
+    - [CURRENT FIGURE FROM THE SOURCE]
+    - [TARGET FROM THE SOURCE]
+    - [WHAT THE SOURCE SAYS CORRELATES WITH THE PROBLEM]
+  Visual: Line chart of [METRIC] over [PERIOD] with the target marked
 
 Slide 3: Root Cause
-  Headline: "Synchronous Auth Is the Bottleneck"
+  Headline: "[CAUSE IN UNDER 8 WORDS]"
   Bullets:
-    - Every request performs a synchronous token validation round-trip
-    - Auth middleware adds 180-250ms per request at P99
-    - Blocking call prevents connection reuse under load
-  Visual: Request waterfall showing auth middleware segment highlighted
+    - [WHY IT HAPPENS, FROM THE SOURCE]
+    - [WHAT IT COSTS, ONLY IF THE SOURCE GIVES A FIGURE]
+  Visual: [DIAGRAM OF WHERE THE CAUSE SITS]
 
 Slide 4: Proposed Solution
-  Headline: "Async Auth with JWT Caching"
+  Headline: "[FIX IN UNDER 8 WORDS]"
   Bullets:
-    - Replace synchronous token validation with async JWT verification
-    - Cache validated tokens in Redis with 5-minute TTL
-    - Fall back to synchronous validation on cache miss
-  Visual: Before/after architecture diagram showing the request flow
+    - [WHAT CHANGES]
+    - [HOW IT WORKS]
+    - [WHAT HAPPENS IF IT FAILS]
+  Visual: Before/after diagram
 
 Slide 5: Expected Impact
-  Headline: "60% Latency Reduction, Zero Downtime"
+  Headline: "[IMPACT IN UNDER 8 WORDS]"
   Bullets:
-    - Projected P99: ~180ms (under the 200ms target)
-    - Cache hit rate expected at 92%+ based on token reuse patterns
-    - No API contract changes — fully backward compatible
-  Visual: Bar chart comparing current vs. projected P99 latency
+    - [PROJECTED RESULT, MARKED "projected" AND ONLY IF THE SOURCE GIVES IT]
+    - MISSING: [ANY FIGURE THE SOURCE DID NOT GIVE]
+  Visual: Bar chart of current vs projected [METRIC]
 
 Slide 6: Rollout Plan
-  Headline: "Canary Rollout Over 3 Weeks"
+  Headline: "[ROLLOUT IN UNDER 8 WORDS]"
   Bullets:
-    - Week 1: 5% canary with real-time latency monitoring
-    - Week 2: 25% rollout if P99 stays under 200ms
-    - Week 3: 100% rollout with automated rollback trigger
-  Visual: Timeline graphic showing the three rollout phases
-  CTA: "Review the RFC by Friday — link in Slack #backend-arch"
+    - [PHASE 1 FROM THE SOURCE]
+    - [PHASE 2 FROM THE SOURCE]
+    - [PHASE 3 FROM THE SOURCE]
+  Visual: Timeline of the phases
+  CTA: "[THE NEXT STEP AND DEADLINE FROM THE USER]"
 ~~~
 
 ## Best Practices
 
 - **One idea per slide.** If you need two headings on a slide, make two slides. Cognitive overload kills retention. Audiences remember single, clear takeaways.
-- **Use headlines that state the takeaway, not the topic.** "Revenue grew 40% YoY" is better than "Revenue Overview." The audience should understand the slide's point from the headline alone.
+- **Use headlines that state the takeaway, not the topic.** "Revenue grew [X%] YoY" (with the real figure from the source) is better than "Revenue Overview." The audience should understand the slide's point from the headline alone.
 - **Follow a 3:1 visual-to-text ratio.** For every three slides with charts, images, or diagrams, allow at most one text-heavy slide. Visual variety sustains attention.
 - **Write speaker notes for every slide.** The slides are the audience's experience; the speaker notes are the presenter's script. Never put on the slide what should be said aloud.
 - **Keep the deck under 1 slide per minute of speaking time.** A 15-minute slot means 12-15 slides max. Rushing through dense slides is worse than cutting content.

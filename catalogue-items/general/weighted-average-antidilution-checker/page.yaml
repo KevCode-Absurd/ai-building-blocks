@@ -5,7 +5,7 @@ summary: Check a weighted-average antidilution reset. Give it your charter claus
 job: money-and-investing
 thinking: high
 thinking_why: "The formula changes with the charter's own definitions, so the clause must be read before any number is used."
-subhead: Revised conversion price and protected-series conversion ratio. Share actual charter formula, old conversion price, defined A shares, qualifying C shares, cash consideration and trigger/exemption confirmation.
+subhead: Paste your charter clause, the old conversion price, the share counts and the cash paid. You get the revised conversion price and ratio for one series after one cash issuance, with the sums shown.
 explain: |-
   Revised conversion price and protected-series conversion ratio.
 
@@ -24,8 +24,8 @@ explain: |-
 
   If the cash paid were 400, B would be 40, which equals C, and the price stays 10. This is arithmetic only. Ask your lawyer to confirm how the charter reads before you rely on it.
 when:
-  - You need revised conversion price and protected-series conversion ratio.
-  - You work on venture financing and need traceable calculations.
+  - A company sold new shares below the old conversion price and you need the revised price.
+  - You have the charter clause and want the arithmetic checked.
   - A reviewer needs to trace the result back to inputs and assumptions.
 not_for:
   - "You have a full-ratchet clause, several series or linked instruments: ask your startup lawyer, because this checks one cash issuance and one series."
@@ -33,11 +33,13 @@ not_for:
   - "You want to know who is legally owed shares or votes: ask counsel, because this only does the arithmetic."
   - "You need the conversion price of a note with a cap or discount: use the Cap and discount conversion checker instead."
 you_give:
-  - Actual charter formula, old conversion price, defined A shares, qualifying C shares, cash consideration and trigger/exemption confirmation.
+  - The charter clause that sets the reset, and the old conversion price
+  - The A share count the clause defines, and the qualifying new shares (C)
+  - The cash paid, and confirmation that the issue triggers the reset
   - "The issue date, plus the currency and scale used for the antidilution reset."
   - "Your spreadsheet tool, if you want the antidilution reset as a workbook."
 you_get:
-  - Revised conversion price and protected-series conversion ratio.
+  - The revised conversion price and ratio for the protected series, or the old price if no reset applies.
   - "An editable workbook of the antidilution reset, with its inputs, formulas and test cases to rerun."
   - "A tie-out of the old and revised conversion price, the inputs still missing and the checks that ran."
 how_to_use:
@@ -70,12 +72,12 @@ output_sample:
     - name: MISSING and CHECKS MISSED
       contains: Inputs that were not supplied and checks that failed or could not run, or none.
 how_it_works:
-  - title: 1. Map actual A, B and C definitions including outstanding options and deemed issuances; verify exemptions and trigger
-    text: Map actual A, B and C definitions including outstanding options and deemed issuances; verify exemptions and trigger.
-  - title: 2. Calculate B as qualifying consideration divided by old price, then old price times (A plus B)/(A plus C)
-    text: Calculate B as qualifying consideration divided by old price, then old price times (A plus B)/(A plus C).
-  - title: 3. Retain the old price when there is no qualifying downward reset; document required contractual rounding separately
-    text: Retain the old price when there is no qualifying downward reset; document required contractual rounding separately.
+  - title: Read A, B and C from the clause
+    text: Take the share counts exactly as the charter defines them, including options and deemed issuances. Check the trigger and any exemptions.
+  - title: Work out the new price
+    text: B is the cash paid divided by the old price. The new price is the old price times (A plus B) divided by (A plus C).
+  - title: Keep the old price if nothing resets
+    text: If there is no qualifying fall, the price stays. Note any rounding the charter requires separately.
 output_shape: |-
   Revised conversion price and protected-series conversion ratio.
   Scope and dated sources

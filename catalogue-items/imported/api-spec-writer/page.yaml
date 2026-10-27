@@ -10,6 +10,8 @@ explain: |
   A full, valid OpenAPI or Swagger file for your API, ready to feed your docs and client libraries. Describe the API in words, or paste your route code, and the file is written for you with no placeholders left.
 
   The skill asks a few questions first: OpenAPI 3 or Swagger 2, YAML or JSON, what the API does, the endpoints, the sign-in type and the main data shapes. If you paste code from Express, FastAPI, Django or Spring, it reads the endpoints itself and does not ask what you already showed. It then builds the paths, parameters, request and response shapes, security schemes, tags and example servers. A partial spec is merged, not overwritten.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (LambdaTest) says MIT. Credit goes to LambdaTest and sickn33.
 when:
   - You have working endpoints but no documentation file.
   - You need a spec so tools can generate client libraries.
@@ -36,6 +38,8 @@ how_to_use:
   - Check the endpoint table at the end against your real API. Fix any wrong path or field name.
   - Save the spec as a .yaml or .json file. This skill needs no code running. To check the file, paste it into a validator such as Spectral.
   - The spec is a draft. Check it against the live API before you send it to partners or publish it.
+  - "At the end the skill offers to write API test cases. That offer needs the separate API Test Case Generator skill, which is not in this item. If you say yes without it, your AI will tell you it is missing. Stop after the spec, or use the API test suite builder for tests."
+next: [api-test-suite-builder, api-contract-tester]
 output_sample:
   input:
     - A plain description of your API, or your route code

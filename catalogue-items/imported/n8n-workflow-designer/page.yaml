@@ -29,6 +29,7 @@ you_get:
   - Where error handling goes
   - Examples of the same pattern in use
 how_to_use:
+  - "This skill plans the workflow in any chat. Building, checking and launching it in n8n through your AI needs the n8n MCP tools and the related n8n skills. Without them, take the plan and build it by hand in n8n."
   - Gather first what starts the workflow, the apps or databases involved, and one example of the input data.
   - Open a chat in Claude, ChatGPT or Gemini and paste in the skill text.
   - Describe what should happen, what starts it, and which apps or databases are involved.

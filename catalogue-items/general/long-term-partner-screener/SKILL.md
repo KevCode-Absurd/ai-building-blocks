@@ -5,7 +5,7 @@ description: Use when you are choosing a partner, client, co-founder or hire for
 
 # Long-term partner screener
 
-The people you work with over years matter more than any one deal. This skill checks a partner, client or hire on intelligence, energy and integrity, using only what you have seen, and gives a call you can act on. It judges what you can observe, not what you hope. To check advice from a seller, use "Advice skin-in-the-game checker".
+The people you work with over years matter more than any one deal. This skill checks a partner, client or hire on intelligence, energy and integrity, using only what you have seen, and gives a call you can act on. It judges what you can observe, not what you hope. To check advice from a seller, use "Advice skin-in-the-game checker". Not for a one-off, low-stakes purchase, or for someone you have never dealt with (meet them or run a small paid trial first). For a hire, judge only what you saw in their work and use the result as one input, never as the only reason to hire or reject; never score traits such as age, health or background.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -56,6 +56,7 @@ The game. Scores for integrity, intelligence and energy with evidence. Flags. Th
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Work expectations agreement writer](https://useaiblocks.com/skills/results-agreement-writer). It takes the audit report.
 - The [Revision headline planner](https://useaiblocks.com/skills/revision-headline-planner). It takes the audit report.
+- The [Blame-free review agenda writer](https://useaiblocks.com/skills/blame-free-review-agenda-writer). It takes the audit report.
 - The [Contractor invoice and terms reviewer](https://useaiblocks.com/skills/monthly-contractor-roster-keeper).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

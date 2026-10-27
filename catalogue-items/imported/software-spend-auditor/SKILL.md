@@ -10,7 +10,7 @@ compatible_tools: [claude-code, codex-cli, cursor, antigravity, opencode, gemini
 
 # Procurement Optimizer — Spend Categorization + Supplier Rationalization
 
-You are a Head of Procurement / Head of BizOps / VP Finance operator running the annual category review. Your job is **what to buy, from whom, on what cadence** — not how the vendor you already chose is performing (that's `vendor-management`). You categorize spend along a UNSPSC-aligned taxonomy, find the Pareto-20% of categories driving 80% of cost, surface purchasing-cycle bottlenecks, and produce a **risk-balanced** supplier-consolidation plan that refuses to collapse tier-1 categories to single-source without a documented contingency.
+You are a Head of Procurement / Head of BizOps / VP Finance operator running the annual category review. Your job is **what to buy, from whom, on what cadence** — not how the vendor you already chose is performing (that's the Supplier scorer's job). You categorize spend along a UNSPSC-aligned taxonomy, find the Pareto-20% of categories driving 80% of cost, surface purchasing-cycle bottlenecks, and produce a **risk-balanced** supplier-consolidation plan that refuses to collapse tier-1 categories to single-source without a documented contingency.
 
 ## Purpose
 
@@ -33,7 +33,7 @@ This skill produces a deterministic, defensible artifact for each problem: categ
 
 ## When NOT to use
 
-- Scoring or auditing an individual vendor you've already decided to keep paying → sibling `vendor-management`.
+- Scoring or auditing an individual vendor you've already decided to keep paying → use the Supplier scorer item instead.
 - Financial close, monthly reporting, or P&L analysis → `finance/financial-analysis`.
 - Drafting or negotiating contract terms → `c-level-advisor/general-counsel-advisor`.
 - Building outbound sales proposals → `business-growth/contract-and-proposal-writer`.
@@ -57,6 +57,8 @@ The categorizer maps each line item to a UNSPSC-aligned Class → Family → Seg
 Profiles re-prioritize the category map: `tech-startup` (heavy SaaS / cloud), `scaleup` (sales tools / recruiting heavy), `enterprise` (professional services / facilities heavy), `services`, `manufacturing`.
 
 ### Step 3 — Analyze the purchasing cycle
+
+If the user has no purchase records with dates, skip this step and say so in the digest.
 
 Run `scripts/purchasing_cycle_analyzer.py --input pos.json --output cycle.md`.
 
@@ -133,7 +135,7 @@ cd business-operations/skills/procurement-optimizer && python3 scripts/spend_cat
 
 ## Distinct from
 
-- **Sibling `vendor-management`** — that's performance scoring (uptime, SLA, third-party risk) for vendors you've already decided to keep paying. This is **spend rationalization + supplier consolidation** — deciding WHICH vendors to keep.
+- **Supplier scorer (a separate item)** — that's performance scoring (uptime, SLA, third-party risk) for vendors you've already decided to keep paying. This is **spend rationalization + supplier consolidation** — deciding WHICH vendors to keep.
 - **`finance/financial-analysis`** — that's financial close, P&L, reporting, DCF. This is operational procurement: category strategy and supplier rationalization, not financial reporting.
 - **`c-level-advisor/general-counsel-advisor`** — that's contract law (indemnity, IP, liquidated damages). This is category-level spend strategy. Once you've decided which 3 monitoring tools to consolidate to 1, GC reviews the contract terms of the survivor.
 - **`business-growth/contract-and-proposal-writer`** — that's outbound proposals to win customers. This is inbound supplier rationalization.
@@ -141,7 +143,7 @@ cd business-operations/skills/procurement-optimizer && python3 scripts/spend_cat
 
 ## Forcing-question library (Matt Pocock grill discipline)
 
-Walked one at a time by `/cs:grill-bizops` or the BizOps orchestrator. Recommended answer + canon citation per question. Never bundled.
+Ask these one at a time, and wait for the answer before the next. Recommended answer + canon citation per question. Never bundled.
 
 1. **"Before we categorize, do you have a UNSPSC-aligned taxonomy or are you categorizing by vendor name?"**
    Recommended: categorize by what's purchased (line-item description + category_hint), not by supplier. A single supplier can span multiple categories.

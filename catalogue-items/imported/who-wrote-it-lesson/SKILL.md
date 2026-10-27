@@ -11,7 +11,7 @@ skill_id: "historical-thinking/sourcing-skill-builder"
 skill_name: "Sourcing Skill Builder"
 domain: "historical-thinking"
 version: "1.0"
-contributor: "Sean Hu"
+contributor: "Sean Hu"  # contributor named in the original file. The source author is Gareth Manning (GarethManning/education-agent-skills).
 evidence_strength: "strong"
 evidence_sources:
   - "Wineburg (1991) — Historical problem solving: cognitive processes in the evaluation of documentary and pictorial evidence"
@@ -93,7 +93,7 @@ Wineburg (2007) explained why sourcing is cognitively "unnatural" through the me
 
 Gottlieb and Wineburg (2012) refined the picture by showing that the quantity of sourcing references was similar between historians and PhD scientists/engineers — both groups noticed and mentioned source information. The difference was qualitative. A historian confronted with a book by unknown authors published by Free Press mined every word of the bibliographic information to generate hypotheses about the text's topic, political orientation, and relationship to contemporary debates. Scientists noted the same information and moved on. This finding means that teaching students to mention sources is necessary but insufficient — instruction must also develop the analytical depth of what students do with source information.
 
-Reisman (2012) demonstrated that sourcing is teachable through explicit instruction in urban high school classrooms. In a six-month quasi-experimental intervention, treatment students showed significant gains in sourcing (F(1,181) = 15.89, p < .001, ηp² = .08). Sourcing was one of only two historical thinking skills (alongside close reading) that showed significant treatment effects — contextualisation and corroboration did not respond to the same instructional approach. Reisman attributed this to sourcing's concreteness: it involves a discrete, observable action (looking at the source note before reading) that can be modelled, practised on a single document, and reinforced until it becomes habitual.
+Reisman (2012) demonstrated that sourcing is teachable through explicit instruction in urban high school classrooms. In a six-month quasi-experimental intervention, treatment students showed significant gains in sourcing, according to the original skill's summary (the statistics it gave are left out because they were not checked against the paper). Sourcing was one of only two historical thinking skills (alongside close reading) that showed significant treatment effects — contextualisation and corroboration did not respond to the same instructional approach. Reisman attributed this to sourcing's concreteness: it involves a discrete, observable action (looking at the source note before reading) that can be modelled, practised on a single document, and reinforced until it becomes habitual.
 
 Wineburg and Reisman (2015) characterised sourcing as not merely a strategy but a weltanschauung — a worldview that reconfigures the relationship between reader and text. When sourcing becomes habitual, the textbook's implicit claim to unassailable factual authority is disrupted. Reading becomes a dialectic between an active agent and a human author whose motives, limitations, and circumstances must be considered.
 

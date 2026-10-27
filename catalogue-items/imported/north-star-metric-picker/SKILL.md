@@ -30,6 +30,11 @@ Before identifying your North Star, classify your business into one of these thr
 - **Transaction Game**: How many transactions occur between customers and your platform? (Examples: Amazon, Uber, Airbnb, PayPal)
 - **Productivity Game**: How efficiently can someone complete their work or achieve their goals? (Examples: Canva, Dropbox, Loom, Notion)
 
+## What you need
+
+A short description of your product and who uses it. If you already have a metrics plan from an earlier step, use its stage and chosen metrics as the business context.
+
+
 ## Prompt
 
 You are a metrics strategist specializing in North Star metrics and growth measurement frameworks.

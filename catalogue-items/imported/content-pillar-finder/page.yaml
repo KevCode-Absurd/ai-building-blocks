@@ -9,7 +9,7 @@ subhead: Three to five subjects you can post about again and again, chosen from 
 explain: |
   Three to five subjects you can post about again and again, chosen from what you have already published and what you know first-hand. That ends the weekly question of what to post, and it keeps your feed from sounding like everyone else's.
 
-  You share your past posts, your work history and the questions people ask you. The skill groups them into themes, then tests each theme with four questions, such as whether you have real experience in it and whether your audience cares. It narrows the list to subjects that are specific, not broad labels like marketing. It also names what to drop, so you stop spending time on posts that do not fit any pillar.
+  You share your past posts, your work history and the questions people ask you. The skill groups them into themes, then tests each theme with four questions, such as whether you have real experience in it and whether your audience cares. It narrows the list to subjects that are specific, not broad labels like marketing. It also names what to drop, so you stop spending time on posts that do not fit any pillar. The core skill runs with no accounts, tools or connectors. A hosted VoiceMoat connector is mentioned at the end of the skill file as an optional extra that needs a paid plan. Licence: the collection's LICENSE-CONTENT file puts written content under CC BY 4.0, so we follow that, with credit to the author. The skill file's own header says MIT.
 when:
   - You have run out of ideas and post whatever comes to mind.
   - You have posted for months and cannot say what you are known for.

@@ -8,8 +8,10 @@ role: source
 job: ops
 level: advanced
 inputs:
-  - type: brief
+  - type: question
     required: true
+  - type: job_description
+    required: false
 outputs:
   - type: plan
 uses: []

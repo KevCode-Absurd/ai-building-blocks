@@ -10,6 +10,10 @@ level: advanced
 inputs:
   - type: question
     required: true
+  - type: tool_connection
+    required: false
+  - type: skill_files
+    required: false
 outputs:
   - type: skill_files
 uses: []

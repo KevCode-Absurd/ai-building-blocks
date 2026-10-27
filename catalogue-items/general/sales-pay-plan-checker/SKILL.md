@@ -63,9 +63,11 @@ What the plan pays for and ignores. Reps by churn with earnings. The gap. One ch
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Sales team pipeline report writer](https://useaiblocks.com/skills/team-pipeline-roll-up-writer).
-- The [Early project progress reviewer](https://useaiblocks.com/skills/early-or-broken-checker). It takes the audit report.
+- The [Blame-free review agenda writer](https://useaiblocks.com/skills/blame-free-review-agenda-writer). It takes the audit report.
+- The [Early idea protection planner](https://useaiblocks.com/skills/new-idea-protection-planner). It takes the audit report.
+- The [Problem response planner](https://useaiblocks.com/skills/proportional-fix-planner). It takes the audit report.
 - **Test the idea with real people** with the [Customer success milestone planner](https://useaiblocks.com/skills/customer-success-signals). It takes the audit report.
+- The [People cost budget builder](https://useaiblocks.com/skills/people-cost-budget-builder). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

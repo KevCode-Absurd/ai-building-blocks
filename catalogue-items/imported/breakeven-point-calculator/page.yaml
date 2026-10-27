@@ -37,10 +37,29 @@ you_get:
   - Notes on the assumptions used
 how_to_use:
   - "Gather three things first: your selling price per unit, your variable cost per unit, and a list of fixed costs by line item for the period. Add 12 months of sales by product if you have them."
-  - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. The skill works as pasted text alone. The Python script (scripts/calculate.py) and the reference file (references/cvp-patterns.md) are in this item, and they are optional extras. If your chat cannot run code, your AI does the sums itself and shows each formula. Check them in a spreadsheet.
   - Paste your numbers. Say whether you want the breakeven, a target profit, or the effect of a price or cost change.
   - Read the breakeven in units and in revenue, then the margin of safety. Check that the costs are split fairly between variable and fixed.
   - Ask for a price or cost change, and compare the new breakeven with the old one.
+  - Next, check your margin on each order with the Store profit margin calculator, or compare products with the Product profit analyst.
+next: [store-profit-margin-calculator, product-profit-analyst]
+output_sample:
+  input:
+    - Selling price per unit
+    - Variable cost per unit
+    - Fixed costs for the period, by line item
+    - Target profit (optional)
+  prerequisites:
+    - A chat AI. Running code is optional and only needed for the Python script
+  output:
+    - name: Cost structure
+      contains: Your costs split into fixed, variable and step costs, with how each split was decided.
+    - name: Breakeven
+      contains: Breakeven in units and in revenue, with a description of the profit against volume chart, including any steps.
+    - name: Decision answer
+      contains: The specific question you asked, answered with the working shown.
+    - name: Risk profile
+      contains: Margin of safety, operating leverage and a table of what happens if price, volume or variable cost move.
 terms:
   - term: contribution margin
     meaning: What each sale leaves after its own variable costs, to pay fixed costs and then profit.

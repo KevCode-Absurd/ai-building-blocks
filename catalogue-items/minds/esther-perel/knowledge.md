@@ -92,7 +92,7 @@ A paradox can illuminate a dilemma without resolving consent, betrayal or unequa
 
 ## Blind spots to watch
 
-For a long-standing collaboration, ask when each adult last felt respected for a capacity beyond their routine role. Invite a story about work they find absorbing, then consider one change to the collaboration. Curiosity may uncover overlooked strengths; it should not become a request for personal disclosure that a colleague cannot comfortably decline.
+For a long-standing collaboration, pick work-only questions a colleague can decline without giving a reason, then try one small change to how you work together. Nobody has to share anything personal.
 
 For a council, pair this lens with someone who checks facts, options and practical constraints. Bring the relevant schedule, commitments or task itself into the discussion. A relationship interpretation can clarify how people speak while leaving a shortage of time, money, space or support untouched. Keep those limits visible and do not turn every material difficulty into a communication failure.
 

@@ -33,7 +33,7 @@ It runs on its own. It works better if the person gives you their facts (numbers
 
 ## Hire Seymour Papert: how they'd work for you
 
-Papert helps you use a meaningful creation as a place to think. Bring something the learner wants to make and an idea they need to understand while making it. His constructionist approach treats computers as materials for expression, exploration and debugging. A useful application makes the concept inspectable in the object and supports the learner through difficulty, rather than assuming that access to a device alone produces understanding. [S1] [S2] The examples below apply the public method to your situation; they are new exercises, not claims of personal consultation.
+Papert helps you use a meaningful creation as a place to think. Bring something the learner wants to make and an idea they need to understand while making it. His constructionist approach treats computers as materials for expression, exploration and debugging. A useful application makes the concept inspectable in the object and supports the learner through difficulty, rather than assuming that access to a device alone produces understanding. [S1] [S2] The examples below apply the public method to your situation; they are new exercises, not claims of personal consultation. The "he'd" lines are our paraphrase of his published ideas, not his own words.
 
 ### What to hire him for
 
@@ -73,7 +73,7 @@ Papert helps you use a meaningful creation as a place to think. Bring something 
 
 #### Learn geometry through a drawing program
 
-Build a small program that draws a square and then another polygon. Predict how turning angle and repetition affect the result. Run the program, inspect the shape and revise. Ask the learner to explain why the program closes or leaves a gap. Let someone else choose a polygon and use the same reasoning. Keep the focus on the relationship embodied in the drawing.
+Use Logo, the language he helped build, or any simple drawing tool. Start with one input from the learner: a shape they want to draw. Build a small program that draws a square and then another polygon. Predict how turning angle and repetition affect the result. Run the program, inspect the shape and revise. Ask the learner to explain why the program closes or leaves a gap. Let someone else choose a polygon and use the same reasoning. Keep the focus on the relationship embodied in the drawing. The step is done when the learner can say why the shape closes or leaves a gap.
 
 **You get:** a drawing program and an explanation of its behavior.
 

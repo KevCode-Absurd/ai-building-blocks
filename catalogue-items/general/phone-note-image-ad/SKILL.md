@@ -17,6 +17,7 @@ You write the brief for a screenshot of a phone note: a few lines typed to nobod
 - Leave the product out. The note never names it.
 - The screen is generic: no real phone's or app's icons, fonts, colours or layout.
 - Nothing says what the reader has. No result, no claim.
+- A note written for the image is a re-creation. Never invent a person's name, real dates or a result to make it feel real.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -84,24 +85,24 @@ If an image tool is connected, offer to make the picture with it, and ask before
 4. **Words on the image**: title and lines, exactly, with the word count.
 5. **Blank version**: the note with its title only.
 6. **Line under the image**: about 27 characters. A plain caption, a question about the thing, the buyer's own line or the swap. Never the product name.
-7. **Flags**: lifted from a real note, or written for the image. If written for the image, say it must not be presented as a real customer's or the narrator's own record, and that the ad needs a dramatisation label if your platform requires one. Also flag anything inferred, such as the time.
+7. **Flags**: lifted from a real note, or written for the image. If written for the image, this is a hard stop: say the note is a re-creation, must not be presented as a real customer's or the narrator's own record, and the ad needs a dramatisation label if your platform requires one. Do not hand the brief back as ready to run until that flag is there. Also flag anything inferred, such as the time.
 8. **How to make it**: the design-tool build, or the image prompt (60 to 120 words).
 9. **Checks missed**: one line per check still missed, or "none".
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Chat screenshot image ad maker](https://useaiblocks.com/skills/chat-screenshot-image-ad-maker).
-- The [Fact caption image ad maker](https://useaiblocks.com/skills/fact-caption-image-ad-maker).
-- The [Tracker chart image ad maker](https://useaiblocks.com/skills/tracker-chart-image-ad-maker).
 - **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image prompt.
+- The [Chat screenshot image ad maker](https://useaiblocks.com/skills/chat-screenshot-image-ad-maker).
+- The [Twelve-pattern static ad brief maker](https://useaiblocks.com/skills/twelve-pattern-static-ad-brief-maker).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
 ## Check before you hand it back
-- **Stop:** a plain note stands out among photos.
-- **Sort:** only someone who has kept a note like this recognises it.
-- **Follow:** the story's first lines say where the note came from.
+- The note stands out among photos because it is plain.
+- Only someone who has kept a note like this would recognise it.
+- The story's first lines say where the note came from.
+- If the note was written for the image, the Flags line says it is a re-creation and must not run as a real person's note.
 - The note agrees with the story and is the narrator's own. No product, no result.
 - 30 words at most, and it doesn't read as written for an audience.
 - The house rules hold.

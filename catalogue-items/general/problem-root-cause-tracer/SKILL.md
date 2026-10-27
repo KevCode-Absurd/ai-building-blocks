@@ -65,8 +65,8 @@ A table of problems with the spot-alone result. The causes found, grouped, each 
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Revision headline planner](https://useaiblocks.com/skills/revision-headline-planner). It takes the audit report.
+- The [Problem response planner](https://useaiblocks.com/skills/proportional-fix-planner). It takes the audit report.
 - The [Policy removal test planner](https://useaiblocks.com/skills/policy-removal-test-planner). It takes the audit report.
-- The [Early project progress reviewer](https://useaiblocks.com/skills/early-or-broken-checker). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

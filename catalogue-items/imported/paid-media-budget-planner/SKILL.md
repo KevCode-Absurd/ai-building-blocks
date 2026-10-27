@@ -14,6 +14,8 @@ The default state of paid media is wasted spend. Most accounts have campaigns ru
 
 This skill is the discipline that produces those gains. It assumes you have a paid media platform (Google Ads, Meta, LinkedIn, TikTok, or aggregators like Synter) connected. It assumes you have working analytics and conversion tracking. The hard part is the strategic discipline behind the spend, and that is what is here.
 
+> **Check before use (added by AI Blocks).** Every platform figure, split and cap in this file (for example the 1.3 to 1.5x gap between Google Ads and GA conversions, the 20 to 30% test budget, the frequency caps and the 30-conversion rule) is the original author's rule of thumb. None is dated or sourced here, and platforms change often. Check each against the platform's current help pages and your own data, and label it "rule of thumb" in the plan. Ads for health, money, housing, jobs and similar topics are restricted on most platforms, so read each platform's ad policy before you spend.
+
 When to use this skill: any time you are designing a paid media plan, evaluating whether to scale or kill a campaign, allocating budget across channels, or auditing an existing account.
 
 ---

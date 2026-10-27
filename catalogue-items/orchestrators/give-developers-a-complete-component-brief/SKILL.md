@@ -12,8 +12,8 @@ Write one component brief from a design. Three steps run in order: check what yo
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Design handoff completeness reviewer](https://useaiblocks.com/skills/design-handoff-completeness-assistant). It takes the document.
-- The [Design handoff specification writer](https://useaiblocks.com/skills/developer-handoff-spec-writer).
-- The [Project design rules writer](https://useaiblocks.com/skills/design-rules-file-writer).
+- The [Design handoff specification writer](https://useaiblocks.com/skills/developer-handoff-spec-writer). It takes the design tokens.
+- The [Colour contrast checker](https://useaiblocks.com/skills/colour-contrast-checker). It takes the design tokens.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -27,6 +27,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Design file** (yours): a design in a design tool, such as a Figma file, with its parts and styles.
 - **Codebase** (yours): a project's code, in a folder or repo the AI can open.
 - **Brand guide** (yours): a printable brand guide: voice, look, do and don't, with examples.
+- **A design direction** (yours): the page's type, colours and layout rules.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
@@ -37,7 +38,7 @@ How to start:
 - **A capable chat AI with file support:** Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
 <!-- /needs -->
 
-## Before you start
+## What you need
 
 Use what is attached or pasted first. If something is missing, say what you can finish and what must wait, and mark each gap `MISSING:`. Never invent a state, value or behavior to fill a gap.
 
@@ -71,7 +72,7 @@ Lead with the one-page component brief: component, reuse, variants, state table,
 
 Write `MISSING: <what>` next to the affected result. Carry on with work that does not depend on it. If no component design is given, stop and ask for it once.
 
-## After this
+## Next steps
 
 Suggest one next step in a short question, and say they can type their own:
 - **Check the built component** with the [Design handoff completeness assistant](https://useaiblocks.com/agents/design-handoff-completeness-assistant), once developers change it.

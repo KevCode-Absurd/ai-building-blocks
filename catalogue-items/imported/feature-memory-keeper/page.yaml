@@ -10,6 +10,8 @@ explain: |
   A set of short files in your repo, one per feature, so the next person or AI session knows what was decided and what is still risky. Nothing has to be re-explained.
 
   The skill keeps a global index plus one markdown file per feature under a docs folder. Before you change anything, it reads the index and the feature's file, and follows links to current sources. If they are missing, it creates the smallest useful structure with a lowercase feature id. After the work it records the status, decisions, risks, rollout limits and the checked outcome. It stays short on purpose. It is not a log of every edit or a replacement for an issue tracker.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (JunsW) says MIT. Credit goes to JunsW.
 when:
   - You come back to a feature after a month and cannot recall why it works that way.
   - A new AI session keeps asking questions you already answered.
@@ -20,7 +22,7 @@ not_for:
   - "You need to track tasks, owners and due dates: use your issue tracker, such as Jira or GitHub Issues."
   - "You need a formal spec written before coding: write the spec first, then use this skill to record what was built."
 you_give:
-  - Access to your project folder
+  - Access to your project folder, and whether a docs/features folder already exists
   - The feature name
   - Existing docs and tickets (optional)
   - What changed in this session
@@ -36,7 +38,7 @@ how_to_use:
   - Tell your AI the feature name and what changed in this session. Point it to any old docs or tickets (optional).
   - Ask it to read the index and the feature file first, then do the work, then update both files.
   - Check the new feature file. Make sure the status, decisions and risks are true, and that no link is broken.
-  - Commit the files with your code so the next session starts with them.
+  - Commit the files with your code so the next session starts with them. If the feature has no written plan yet, run the README and decision interviewer first. For a big choice, write it up with the Decision record writer and link it from the feature file.
 output_sample:
   input:
     - Access to your project folder

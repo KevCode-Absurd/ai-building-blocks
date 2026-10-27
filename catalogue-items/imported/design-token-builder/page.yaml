@@ -9,7 +9,7 @@ subhead: A full set of design tokens built from one brand colour, with the files
 explain: |
   A full set of design tokens built from one brand colour, with the files your developers can drop straight into code. It saves the hand work of picking shades, sizes and gaps that all need to fit together.
 
-  The skill runs in four passes. First, it turns your brand colour and style (modern, classic or playful) into a palette, a type scale and a spacing scale on an 8-point grid, and exports them as JSON, CSS variables or SCSS. Second, it sets up a component structure. Third, it works out responsive breakpoints. Fourth, it writes a handoff note. It also checks colour pairs against WCAG contrast rules. It uses small Python scripts, so it needs a place to run code.
+  The skill runs in four passes. First, it turns your brand colour and style (modern, classic or playful) into a palette, a type scale and a spacing scale on an 8-point grid, and exports them as JSON, CSS variables or SCSS. Second, it sets up a component structure. Third, it works out responsive breakpoints. Fourth, it writes a handoff note. It also checks colour pairs against WCAG contrast rules. It uses small Python scripts, so it needs a place to run code. Colours come from your brand colour by a fixed rule, so they are a starting point for a designer to approve. This is Alireza Rezvani's ui-design-system skill, shared under the MIT licence.
 when:
   - You have one brand colour and need a whole palette that passes contrast checks.
   - Your developers keep asking for exact spacing and type sizes you never wrote down.
@@ -25,18 +25,19 @@ you_give:
   - Fonts you want to use (optional)
   - The output format you need, such as JSON, CSS or SCSS
 you_get:
-  - A colour palette with contrast checks
+  - A colour palette with contrast checks. Each colour has steps from 50 (lightest) to 900 (darkest)
   - A type scale and an 8-point spacing scale
-  - Token files in CSS, SCSS or JSON
+  - Token files named design-tokens.css, _design-tokens.scss or design-tokens.json. The JSON has keys for colors, typography, spacing, sizing, borders, shadows, animation, breakpoints and z-index
   - Responsive breakpoint values
   - A developer handoff note
 how_to_use:
-  - Use an AI that can run Python code, or install Python 3 on your computer. Add the skill's generator script to your chat or folder.
+  - Use an AI that can run Python code, or install Python 3 on your computer. Add the whole skill folder to your AI, or at least the generator script scripts/design_token_generator.py.
   - "Tell your AI your brand colour as a hex code, your style (modern, classic or playful) and the format you want: CSS, SCSS or JSON. If you do not pick, you get JSON."
   - "Ask it to run the generator with your colour, for example with #0066CC and modern, then save the CSS or JSON result."
-  - Check the palette for contrast. Text should pass WCAG AA, which means 4.5 to 1 for normal text and 3 to 1 for large text.
+  - Check the palette for contrast. Text should pass WCAG AA, which means 4.5 to 1 for normal text and 3 to 1 for large text. Confirm the pairs you will use in a free online contrast checker before handoff. The script's numbers are a first check, not a sign-off.
   - Ask for the component map, the breakpoints and the handoff note. Send the files and the note to your developer. Small buttons (32px high) are below the 44px touch size, so ask them to enlarge the tap area or drop that size.
   - To sync with Figma, the skill suggests the Tokens Studio plugin, which has a paid tier. Check its current pricing, and test the sync on one token first.
+  - To capture a look from designs you like before you pick your brand colour, use the Design style analyst.
 output_sample:
   input:
     - Your main brand colour as a hex code

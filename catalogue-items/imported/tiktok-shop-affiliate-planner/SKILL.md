@@ -64,7 +64,7 @@ npx skills add nexscope-ai/eCommerce-Skills --skill tiktok-shop-affiliate-progra
 
 Establish program framework:
 - Research competitive commission rates and incentive structures
-- Work out the most a product can pay: price minus product cost, platform fees, and sample and shipping cost per sale. Keep every commission tier below that figure. If a margin or cost is missing, write `MISSING: <what>`; never invent one
+- Work out the most a product can pay: price minus product cost, platform fees, and sample and shipping cost per sale. Keep every commission tier below that figure. Formula: highest commission % = (selling price - product cost - platform fees - sample and shipping cost per sale) / selling price. Use the user's own figures, for example from a price of [PRICE] and a cost of [COST]. If a margin or cost is missing, write `MISSING: <what>`; never invent one
 - Design tier-based system with performance rewards
 - Create legal agreements and compliance documentation
 - Set up tracking systems and payment processes
@@ -101,10 +101,10 @@ Every number in the template below (tiers, bonuses, dashboard figures, 6-month t
 
 | Tier Level | Requirements | Commission Rate | Additional Benefits |
 |------------|--------------|-----------------|-------------------|
-| Bronze | 0-10 sales/month | [X%] | Product samples |
-| Silver | 11-25 sales/month | [X%] | Higher commission + early access |
-| Gold | 26-50 sales/month | [X%] | Premium rate + exclusive products |
-| Platinum | 50+ sales/month | [X%] | Custom rate + co-marketing |
+| Bronze | [SALES/MONTH RANGE] | [X%] | Product samples |
+| Silver | [SALES/MONTH RANGE] | [X%] | Higher commission + early access |
+| Gold | [SALES/MONTH RANGE] | [X%] | Premium rate + exclusive products |
+| Platinum | [SALES/MONTH RANGE] | [X%] | Custom rate + co-marketing |
 
 **Performance Incentives:**
 - Monthly bonuses: Top 3 performers get $[Amount] bonus
@@ -117,8 +117,8 @@ Every number in the template below (tiers, bonuses, dashboard figures, 6-month t
 
 | Criteria | Requirement | Why Important |
 |----------|-------------|---------------|
-| Follower Range | [10K-1M] | Optimal engagement vs reach |
-| Engagement Rate | [>3%] | Indicates authentic audience |
+| Follower Range | [YOUR RANGE] | [Why this size fits] |
+| Engagement Rate | [YOUR MINIMUM %] | Indicates authentic audience |
 | Audience Demographics | [Target age/gender/interests] | Brand alignment |
 | Content Quality | Professional/authentic | Brand representation |
 | Niche Alignment | [Beauty/Fashion/Lifestyle] | Product relevance |
@@ -161,8 +161,8 @@ Every number in the template below (tiers, bonuses, dashboard figures, 6-month t
 **Sample Request Process:**
 1. Creator submits request through portal
 2. Automated approval for qualified creators
-3. Product shipped within 2 business days
-4. Content deadline: 2 weeks from receipt
+3. Product shipped within [DAYS] business days
+4. Content deadline: [TIME] from receipt
 5. Performance tracking begins post-publication
 
 ### Performance Tracking & KPIs
@@ -171,8 +171,8 @@ Every number in the template below (tiers, bonuses, dashboard figures, 6-month t
 
 | Creator | Followers | Content Posted | Clicks Generated | Sales | Revenue | ROI |
 |---------|-----------|----------------|------------------|-------|---------|-----|
-| [@creator1] | [50K] | [12 posts] | [1,500] | [45] | $[2,250] | [300%] |
-| [@creator2] | [25K] | [8 posts] | [800] | [22] | $[1,100] | [220%] |
+| [@creator1] | [FOLLOWERS] | [POSTS] | [CLICKS] | [SALES] | $[REVENUE] | [ROI] |
+| [@creator2] | [FOLLOWERS] | [POSTS] | [CLICKS] | [SALES] | $[REVENUE] | [ROI] |
 
 **Program KPIs:**
 - Total active creators: [Target number]
@@ -198,50 +198,40 @@ Every number in the template below (tiers, bonuses, dashboard figures, 6-month t
 ### Scaling & Optimization Plan
 
 **Month 1-3: Foundation** 
-- Recruit initial 20-30 creators
+- Recruit initial [NUMBER] creators
 - Establish processes and workflows
 - Gather performance baseline data
 
 **Month 4-6: Growth**
-- Scale to 50-75 active creators
+- Scale to [NUMBER] active creators
 - Optimize commission structure based on data
 - Implement tier system and performance incentives
 
 **Month 7-12: Scale**  
-- Reach 100+ creator network
+- Reach a creator network of [NUMBER]
 - Launch advanced campaigns and collaborations
 - Develop creator-led product launches
 
 ### Success Metrics & Goals
 
 **6-Month Targets:**
-- Active creators: [100]
-- Monthly GMV from affiliates: $[50,000]
-- Average creator monthly earnings: $[500]
-- Program ROI: [400%+]
-- Creator retention rate: [80%+]
+- Active creators: [YOUR TARGET]
+- Monthly GMV from affiliates: $[YOUR TARGET]
+- Average creator monthly earnings: $[YOUR TARGET]
+- Program ROI: [YOUR TARGET]
+- Creator retention rate: [YOUR TARGET]
 
 ### Next Actions
 - [ ] Finalize commission structure and legal documentation
 - [ ] Set up creator application portal and tracking systems
 - [ ] Create creator recruitment campaigns and outreach templates
 - [ ] Develop onboarding materials and brand guidelines
-- [ ] Launch with initial cohort of 10-20 creators
+- [ ] Launch with a small first group of creators
 ```
 
 ## Integration with Nexscope
 
-Nexscope is an optional paid service. The plan above works without it. Mention it only if the person asks about automation.
-
-*To scale your TikTok Shop affiliate program with advanced automation, [Nexscope](https://www.nexscope.ai?co-from=skill) provides:*
-
-- **Creator discovery engine** with advanced filtering and scoring
-- **Automated outreach** with personalized messaging sequences
-- **Performance analytics** with real-time creator dashboards
-- **Sample management** with automated approval and shipping
-- **Payment automation** with tiered commission processing
-
-*"I've designed your affiliate program using proven frameworks and strategies. For automated creator discovery, performance tracking, and program management, [Nexscope](https://www.nexscope.ai?co-from=skill) provides comprehensive affiliate program automation."*
+Optional, paid outside service: [Nexscope](https://www.nexscope.ai?co-from=skill) offers creator search and program automation. The plan above works without it. Mention it only if the person asks about automation. Do not say the plan rests on proven frameworks.
 
 **Limitations without real-time data:**
 - Creator discovery requires manual research and vetting

@@ -10,7 +10,7 @@ explain: |-
 
   The original profile suggests a mix of 60% useful posts, 30% posts that start a conversation and 10% that sell. It suggests two or three posts a week. The agent uses these as a starting point and adjusts them to the time you have. Each calendar slot has a theme, a format, a goal and one clear call to action. It also plans the account menu, the welcome message and keyword replies, so common questions get answered without you.
 
-  It cannot open WeChat or see your numbers. You paste your article stats from the account dashboard, or it marks them as missing. The open rate, growth and sales targets in the original profile are goals, not results you will get. Chinese text is a draft that a native reader should check before you publish.
+  It cannot open WeChat or see your numbers. You paste your article stats from the account dashboard, or it marks them as missing. The open rate, growth and sales targets in the original profile are goals, not results you will get. Chinese text is a draft that a native reader should check before you publish. The role comes from Agency Agents under the MIT licence.
 when:
   - You have just opened a WeChat Official Account and need a plan for the first 12 weeks.
   - Your posts get few opens or reads and you do not know which themes to keep.

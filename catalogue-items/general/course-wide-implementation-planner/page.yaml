@@ -80,6 +80,9 @@ output_shape: |-
 
   NEXT STEP
   <the smallest useful step>
+
+  CHECKS MISSED
+  <one line per check that failed or could not run, or none>
 output_sample:
   input:
     - Your project folder, or its package file and main folders
@@ -102,6 +105,8 @@ output_sample:
       contains: Thirty checks, each marked pass, fail or not checked, with the evidence.
     - name: Test plan
       contains: Tests on made-up data, such as Redis down or a command from a blocked channel.
+    - name: Checks missed
+      contains: One line for each check that failed or could not run, or none.
 works_best_with:
   tools:
     - name: Claude Code

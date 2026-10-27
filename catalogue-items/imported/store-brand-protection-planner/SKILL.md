@@ -36,6 +36,8 @@ npx skills add nexscope-ai/eCommerce-Skills --skill brand-protection-shopify -g
 
 ## Risk Levels
 
+The detector checks listing details that you collect by hand against your brand info. It does not search the web, and it does not monitor ads or prices on its own. The 24-hour figure below is a suggested internal target, not a legal deadline. A lawyer should confirm any notice before you send it.
+
 | Level | Description | Action |
 |-------|-------------|--------|
 | 🔴 High | Active infringement | DMCA within 24h |

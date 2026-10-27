@@ -7,7 +7,7 @@ role: make
 job: ops
 level: beginner
 inputs:
-  - type: question
+  - type: job_description
     required: true
   - type: document
     required: false

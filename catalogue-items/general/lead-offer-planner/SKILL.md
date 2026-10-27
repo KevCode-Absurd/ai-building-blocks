@@ -57,10 +57,9 @@ The costly problem. The offer: name, format, why they want it. What counts as a 
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Funnel flow planner](https://useaiblocks.com/skills/funnel-flow-planner). It takes the offer.
-- The [Offer bonus package builder](https://useaiblocks.com/skills/bonus-stack-builder). It takes the offer and plan.
-- The [Paid introductory offer and follow-up planner](https://useaiblocks.com/skills/paid-first-step-planner). It takes the plan and offer.
+- The [Offer checklist reviewer](https://useaiblocks.com/skills/offer-checklist-reviewer). It takes the offer.
+- The [Offer price-comparison reviewer](https://useaiblocks.com/skills/commodity-trap-checker). It takes the offer.
 - **Write the ad copy** with the [Sales follow-up email writer](https://useaiblocks.com/skills/almost-buyer-follow-up-writer). It takes the offer.
-- **Read your ad results** with the [Lead magnet reviewer](https://useaiblocks.com/skills/lead-offer-tuner). It takes the offer.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

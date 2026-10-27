@@ -18,6 +18,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Design file** (yours): a design in a design tool, such as a Figma file, with its parts and styles.
 - **Your website** (yours): the link to your site or the page.
 - **Codebase** (yours): a project's code, in a folder or repo the AI can open.
+- **Image** (yours): a finished picture.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
@@ -62,8 +63,9 @@ Use these sections, in this order: DESIGN CONTRACT, FINISH GATE with the decisio
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Interface polish reviewer](https://useaiblocks.com/skills/interface-polish-reviewer).
-- The [Product-specific interface designer](https://useaiblocks.com/skills/product-true-ui-designer).
+- The [Product-specific interface designer](https://useaiblocks.com/skills/product-true-ui-designer). It takes the audit report.
+- The [Design feedback reviewer](https://useaiblocks.com/skills/design-feedback-giver). It takes the audit report.
+- The [Small usability test planner](https://useaiblocks.com/skills/small-usability-test-planner). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

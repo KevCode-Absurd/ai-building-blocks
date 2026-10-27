@@ -15,6 +15,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your customer list** (yours): a customer or order export with dates, amounts and what they bought.
 
 **Makes it better (optional):**
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
@@ -91,9 +92,9 @@ If the owner approves one in clear words, make only that change and log it in `o
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Customer offer builder](https://useaiblocks.com/skills/offer-builder).
-- The [Offer name writer](https://useaiblocks.com/skills/offer-name-writer).
-- The [After-sale offer planner](https://useaiblocks.com/skills/after-sale-offer-planner).
+- The [Lead generation cost planner](https://useaiblocks.com/skills/lead-cost-and-friction-planner). It takes the plan.
+- The [Paid introductory offer and follow-up planner](https://useaiblocks.com/skills/paid-first-step-planner). It takes the plan.
+- The [Pricing decision planner](https://useaiblocks.com/skills/pricing-decision-planner). It takes the audit report and plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

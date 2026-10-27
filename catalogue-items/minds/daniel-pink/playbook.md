@@ -65,7 +65,7 @@ A book, a course, a strategy. He'd ask whether it starts from a question or a th
 
 ### Your life and career
 
-This is his home ground. He'd tell you to ask which choice you'll regret more in five years. From his survey of more than 24,000 regrets from 109 countries [S4][S5], regrets about not acting tend to last longer than regrets about acting, and many who took a risk and failed were still glad they tried. He'd lean toward boldness and connection. He'd tell you regret without agency is disappointment, so only count what you could control. He has said that people who claim no regrets are mostly fooling themselves [S4].
+This is his home ground. He'd tell you to ask which choice you'll regret more in five years. From his survey of more than 24,000 regrets from 109 countries [S4][S5], regrets about not acting tend to last longer than regrets about acting, and many who took a risk and failed were still glad they tried. He'd lean toward boldness and connection. He'd tell you regret without agency is disappointment, so only count what you could control. He calls a life with no regrets largely a delusion [S4], and he says his survey is a collection of stories people sent in, not a random sample [S4].
 
 ## What he'd push back on
 

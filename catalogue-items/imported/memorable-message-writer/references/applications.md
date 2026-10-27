@@ -1,5 +1,7 @@
 # Applications: Applying SUCCESs Across Contexts
 
+AI Blocks note: every number, customer name and result in the examples in this file is made up to show the technique. Never reuse them. Proof in a real message comes only from the user, and anything missing is marked `[PROOF NEEDED]`.
+
 The SUCCESs framework is not theoretical — it is a practical toolkit that can be applied to any communication context. This reference provides step-by-step guidance for applying all six principles to landing pages, product demos, onboarding flows, presentations, email campaigns, internal communications, and documentation. Each section includes templates, checklists, and before/after examples.
 
 ## Applying SUCCESs to Landing Pages

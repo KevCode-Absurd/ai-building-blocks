@@ -9,7 +9,9 @@ subhead: Interface parts such as buttons, forms, tables and sidebars added to yo
 explain: |
   Interface parts such as buttons, forms, tables and sidebars added to your project the right way, with setup done and example usage included. You build screens from parts that already exist instead of hand-coding them.
 
-  The skill uses the shadcn/ui command line. It reads your project setup first, then searches registries before writing anything custom. It adds components as source files you own, shows the docs for each one, and follows rules: use built-in variants, use semantic colours, use gap instead of space utilities, and put layout in className, not colours. A settings page becomes tabs plus cards plus form controls. It needs a JavaScript project with a package manager.
+  The skill uses the shadcn/ui command line. It reads your project setup first, then searches registries before writing anything custom. It adds components as source files you own, shows the docs for each one, and follows rules: use built-in variants, use semantic colours, use gap instead of space utilities, and put layout in className, not colours. A settings page becomes tabs plus cards plus form controls. It needs a JavaScript project with a package manager and a React-based framework. Name the registry you want (for example @shadcn) before any block is added.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. Credit goes to the shadcn/ui authors and sickn33.
 when:
   - You need a dialog, table or sidebar and want a ready, accessible one.
   - You are starting a new project and want to set up shadcn/ui.

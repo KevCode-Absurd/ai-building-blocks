@@ -5,7 +5,7 @@ description: Use when you manage someone and want a regular one-on-one that work
 
 # One-on-one meeting planner
 
-A one-on-one should be the other person's meeting, with you asking questions and writing things down. This skill sets the rhythm from their experience, the time and place, and an outline they own. It adds the warning signs and vague worries that usually get left out, and the follow-up that makes the meeting count. For goals to bring to it, use "Objectives and key results writer".
+A one-on-one should be the other person's meeting, with you asking questions and writing things down. This skill sets the rhythm from their experience, the time and place, and an outline they own. It adds the warning signs and vague worries that usually get left out, and the follow-up that makes the meeting count. For goals to bring to it, use "Objectives and key results writer". Not for a performance review or a termination talk (use your HR process and talk to HR first), or for a one-off team meeting.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -58,9 +58,9 @@ The person and your judgment of their experience. The rhythm, length and place. 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [One-on-one agenda and feedback planner](https://useaiblocks.com/skills/weekly-one-on-one-prep-keeper). It takes the plan.
 - The [Team decision ownership planner](https://useaiblocks.com/skills/informed-captain-decisions). It takes the plan.
-- The [Feedback request script writer](https://useaiblocks.com/skills/feedback-request-script-writer).
+- The [One-on-one agenda and feedback planner](https://useaiblocks.com/skills/weekly-one-on-one-prep-keeper). It takes the plan.
+- The [Process and meeting cleanup planner](https://useaiblocks.com/skills/process-and-meeting-cull-planner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

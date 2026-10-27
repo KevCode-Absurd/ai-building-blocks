@@ -10,6 +10,8 @@ level: beginner
 inputs:
   - type: brief
     required: true
+  - type: image
+    required: false
 outputs:
   - type: image
 uses: []

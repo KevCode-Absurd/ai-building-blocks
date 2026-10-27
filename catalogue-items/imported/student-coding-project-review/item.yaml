@@ -10,7 +10,7 @@ level: beginner
 inputs:
   - type: codebase
     required: true
-  - type: brief
+  - type: question
     required: true
 outputs:
   - type: feedback_notes

@@ -9,7 +9,7 @@ subhead: "Your numbers turn into a story a room can follow: what happened, why i
 explain: |
   Your numbers turn into a story a room can follow: what happened, why it matters and what to do next. The aim is a decision, not a pile of charts.
 
-  The skill sets the structure first: a setup, a rising tension where the data surprises, and a resolution with a clear ask. It matches chart choices to the point of each slide, puts the main finding in the headline, and uses comparisons and annotations so readers see the shift without squinting. It adjusts the depth for executives, investors or non technical staff. All figures are checked against your source data before they go in. Useful for quarterly reviews, board decks and written reports.
+  The skill sets the structure first: a setup, a rising tension where the data surprises, and a resolution with a clear ask. It matches chart choices to the point of each slide, puts the main finding in the headline, and uses comparisons and annotations so readers see the shift without squinting. It adjusts the depth for executives, investors or non technical staff. All figures are checked against your source data before they go in. Useful for quarterly reviews, board decks and written reports. The example stories in the skill file use placeholders, never real figures, so any number in your result comes from your data. This is sickn33's data-storytelling skill, shared under the CC BY 4.0 licence.
 when:
   - You must present quarterly results to executives.
   - Your analysis is correct but nobody acts on it.
@@ -30,12 +30,12 @@ you_get:
   - Chart suggestions
   - Recommendation and next step
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page. Any figures in the skill's example stories are invented teaching numbers. Replace them with your own data.
-  - Gather the metric, the time period, the baseline or target, and the decision you want from the audience. Paste your numbers, or attach your spreadsheet if your AI can read files.
+  - Add the skill to your AI with the buttons on this page, or paste the full skill file into a chat. The example stories in the skill use [bracketed] placeholders instead of real figures. Your AI fills them only from your data.
+  - Gather the metric, the time period, the baseline or target, and the decision you want from the audience. Paste your numbers, or attach your spreadsheet if your AI can read files. Tell your AI which columns hold the dates, the values and the groups.
   - Tell your AI who the audience is and the decision you want from them.
   - "Ask for a deck outline or a written report. Your AI picks a story shape: problem and solution, trend, or comparison."
   - Read the draft. Your AI should flag any number it cannot trace to your data. Fix or cut those before you present.
-  - Use the "Call to Action" section as the close of your deck, then build the slides in your presentation tool.
+  - Use the "Call to Action" section as the close of your deck, then build the slides in your presentation tool. For live charts, move to a BI tool.
 output_sample:
   input:
     - Your numbers or analysis, pasted or as a spreadsheet

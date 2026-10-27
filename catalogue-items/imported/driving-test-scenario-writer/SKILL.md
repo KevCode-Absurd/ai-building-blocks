@@ -7,7 +7,7 @@ description: >
   follow scenarios, or any programmatic scenario creation in RoadRunner.
   Triggers on: roadrunnerAPI, scenario authoring, add actor, create route,
   phase logic, cut-in scenario, pedestrian crossing, scenario from MATLAB.
-license: https://www.mathworks.com/content/dam/mathworks/license/pmrl/license.md
+license: BSD-2-Clause plus MathWorks products-only clause (see LICENSE.md in this folder)
 metadata:
   author: MathWorks
   version: "1.0"
@@ -28,11 +28,11 @@ Programmatically create RoadRunner scenarios from MATLAB: actors, routes, phase 
 
 ## When NOT to Use
 
-- Connecting to or launching RoadRunner → use `roadrunner-core`
+- Connecting to or launching RoadRunner → use `roadrunner-core` (not in this library; open RoadRunner from MATLAB yourself)
 - Building scenarios from recorded sensor data → use `matlab-use-scenario-builder`
-- Authoring road geometry (lanes, junctions) → use `roadrunner-rrhd-authoring`
-- Importing maps or scenes → use `roadrunner-import-scene`
-- Simulating or exporting scenarios → use `roadrunner-scenario-simulating`
+- Authoring road geometry (lanes, junctions) → use `roadrunner-rrhd-authoring` (in AI Blocks: Road map author)
+- Importing maps or scenes → use `roadrunner-import-scene` (in AI Blocks: Road scene importer)
+- Simulating or exporting scenarios → use `roadrunner-scenario-simulating` (in AI Blocks: Driving scenario simulator)
 
 ## Workflow
 
@@ -52,6 +52,8 @@ addpath('<path-to-skill>/scripts');
 ```
 
 ### 2. Initialize Scenario
+
+If an earlier step built or changed the scene in code, open that scene and place the actors on it.
 
 ```matlab
 openScene(rrApp, sceneName);

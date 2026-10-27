@@ -10,6 +10,7 @@ inputs:
   - {type: question, required: true}
   - {type: product_data, required: false}
   - {type: voc_reviews, required: false}
+  - {type: customer_list, required: false}
 outputs:
   - {type: plan}
 origin: rebuilt

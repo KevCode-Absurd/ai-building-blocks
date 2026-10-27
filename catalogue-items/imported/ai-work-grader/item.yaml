@@ -9,7 +9,7 @@ job: ops
 level: beginner
 inputs:
   - type: question
-    required: true
+    required: false
 outputs:
   - type: audit_report
 uses: []

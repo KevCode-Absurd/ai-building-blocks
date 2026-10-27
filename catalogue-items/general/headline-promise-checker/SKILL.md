@@ -59,11 +59,11 @@ The score out of 100 with how it was worked out. The reader. The reward and its 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Headline relevance checker](https://useaiblocks.com/prompts/headline-reader-and-reward-checker). It takes the ad copy.
 - **Plan what to test** with the [Headline test tracking planner](https://useaiblocks.com/skills/keyed-headline-test-planner). It takes the hooks.
-- The [Five-part ad checker](https://useaiblocks.com/skills/five-part-ad-checker). It takes the ad copy.
-- The [Brand voice editor](https://useaiblocks.com/skills/brand-voice-editor). It takes the ad copy.
-- **Write the ad copy** with the [Ad evidence planner](https://useaiblocks.com/skills/four-kind-proof-finder).
+- The [Headline relevance checker](https://useaiblocks.com/prompts/headline-reader-and-reward-checker).
+- The [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the audit report.
+- The [Video hook scorer](https://useaiblocks.com/skills/video-hook-scorer). It takes the hooks.
+- **Write the ad copy** with the [Headline and cover test planner](https://useaiblocks.com/skills/headline-cover-test-ranker). It takes the hooks.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

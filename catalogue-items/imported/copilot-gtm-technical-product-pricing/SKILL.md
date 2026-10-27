@@ -59,7 +59,7 @@ Raised enterprise tier from $15K to $45K/year. Added dedicated support, SSO, aud
 
 (One author's anecdote, not a benchmark. Your result will differ.)
 
-Lost: 0 enterprise customers. Zero.
+Lost: 0 enterprise customers, the author says (the author's own account, not checked and not a benchmark).
 
 Gained: 3x revenue per enterprise account. Plus the customers who stayed started taking the product more seriously — higher adoption, more internal champions, more expansion.
 
@@ -75,7 +75,7 @@ For every customer segment, calculate:
 Value Ratio = Customer's alternative cost / Your price
 
 If Value Ratio > 10x → You're massively underpriced
-If Value Ratio > 5x  → You're underpriced (most startups are here)
+If Value Ratio > 5x  → You're underpriced (the author's view that most startups are here; not measured)
 If Value Ratio 3-5x  → Healthy pricing
 If Value Ratio < 3x  → Approaching ceiling
 If Value Ratio < 2x  → You're expensive (need strong differentiation)
@@ -242,7 +242,7 @@ When prospect says "what does it cost?":
    - Good: Meets minimum requirements
    - Better: Meets requirements + nice-to-haves (anchor here)
    - Best: Everything, including things they didn't ask for
-   - Most buyers pick Better. That's your real price.
+   - In the author's experience most buyers pick Better (not a benchmark; check with your own buyers). That may be your real price.
 
 **Common Mistake:**
 

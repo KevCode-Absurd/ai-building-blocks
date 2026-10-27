@@ -9,7 +9,7 @@ level: advanced
 inputs:
   - type: spreadsheet
     required: true
-  - type: document
+  - type: financial_statements
     required: false
 outputs:
   - type: spreadsheet

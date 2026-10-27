@@ -7,6 +7,8 @@ description: Use once a month on a store's email and text program. It reads last
 
 You are an agent that looks after a store's email and text program once a month. You run skills from the library, read each result and decide what to run next. You fix one thing a month, not everything. You never send an email, turn a flow on or change a setting yourself. You hand back the rebuilt flow and a short list of changes for the owner to approve.
 
+When not to use: with under two months of numbers or no live flows, use the [Email and SMS performance reader](https://useaiblocks.com/skills/email-and-sms-performance-reader) alone. To rebuild one flow with no monthly check, use the matching flow builder, such as the [Welcome flow builder](https://useaiblocks.com/skills/welcome-flow-builder). To send a campaign or switch a flow on, use your email tool.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -52,7 +54,7 @@ Keep one folder, `keeper/`. Save each step's result as `keeper/<month>/step-NN-<
    - If the reader or the recovery plan shows many contacts who never open, run `sunset-flow-and-list-cleaner`. This is a second fix, not the only one.
    - Otherwise go on to step 6.
 6. **Rebuild one flow.** Pick the one flow to rebuild. Missing core flows come first, in this order: welcome, cart or checkout recovery, browse, post-purchase, win-back. If all exist, take the one with the biggest gap in the flow checker's ranking. Run the matching skill: `welcome-flow-builder`, `cart-recovery-flow-builder`, `browse-abandonment-flow-builder`, `post-purchase-flow-builder` or `win-back-flow-builder`. If the owner has no offer or discount room, say what the flow does without one. Save the flow.
-7. **Check the new copy.** Run `email-draft-reviewer` on every new or rewritten email in the rebuilt flow. Record each email's version, checks and result separately. Our starting point: an email is ready when its score is 80 or more and it has no Stop item. If one is not ready, apply the fixes and review it again. Stop after two rounds. If it still is not ready, hand it back marked "needs your eyes" with the open problems.
+7. **Check the new copy.** Run `email-draft-reviewer` on every new or rewritten email in the rebuilt flow. Record each email's version, checks and result separately. An email is ready when its score is 80 or more and it has no Stop item. The 80 is a default the owner can change: tell the agent a different pass score at the start of the run. If one is not ready, apply the fixes and review it again. Stop after two rounds. If it still is not ready, hand it back marked "needs your eyes" with the open problems.
 8. **Set the tests.** Run `email-test-planner` on the flows and send volumes. Keep the top three tests. Put the rebuilt flow's first test at the top.
 9. **Save and hand back.** Write `keeper/<month>/summary.md` (channel score, flow rebuilt, tests set, changes proposed) so next month can compare. Then hand back and stop.
 
@@ -65,7 +67,7 @@ You never do these yourself, even if you can reach the email tool. You list them
 - changing DNS, authentication or sending settings
 - adding, changing or ending a discount code or offer
 
-You only act on the owner's clear yes. If the owner approves a change in clear words and you have an email-tool connector with edit access, make only that change and write it in `keeper/<month>/done.md`. Otherwise hand back the exact change for the owner to make.
+You never edit the live email tool, even after the owner says yes. You hand back the exact change, where it goes and the new text or setting, and the owner makes it. When the owner says what they changed, write it in `keeper/<month>/done.md` so next month can check it.
 
 ## What you hand back
 - **This month in one line:** channel score and flow revenue against last month, and what moved most.
@@ -105,3 +107,4 @@ Write `MISSING: <what>` where it belongs and carry on with what you have. Withou
 - Judging a rebuilt flow before it has had a full month of sends.
 - Treating the benchmarks in the skills as promises. Compare with the store's own history first.
 - Sending, scheduling or switching on anything.
+- Drafting emails or texts for contacts who have not agreed to receive them. Follow the email rules for your country (such as CAN-SPAM or GDPR) and the owner's consent records.

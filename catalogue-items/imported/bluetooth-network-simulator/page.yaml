@@ -12,6 +12,8 @@ explain: |
   It first picks the right Bluetooth type for your case. That can be a Low Energy data link, LE Audio streams for speakers or hearing aids, connection setup with advertising and scanning, classic earbuds with voice links, or Low Energy and classic devices sharing the air. It then follows one fixed order: start the simulator, set traffic and movement, add statistics, add the devices, run, then read the results. It also avoids the usual mistakes, such as using the wrong device type or reading delay from the wrong layer.
 
   You need MATLAB R2026a or later with the Bluetooth Toolbox. MATLAB and its toolboxes are paid products from MathWorks, so check your licence first.
+
+  Licence: this copy is under BSD 2-Clause (see LICENSE.md). The skill file also links MathWorks' own reuse licence, which means you may use it only with MathWorks products such as MATLAB. Credit goes to MathWorks.
 when:
   - You want to know how many devices one Bluetooth link can carry.
   - You are testing LE Audio for stereo earbuds or hearing aids.
@@ -35,7 +37,8 @@ you_get:
   - A plain summary of what the numbers say
 how_to_use:
   - Check that you have MATLAB R2026a or later with the Bluetooth Toolbox. Both are paid MathWorks products.
-  - Open an AI that can run MATLAB code, or one that writes the script for you to run yourself. Paste this skill.
+  - Open an AI that can run MATLAB code, or one that writes the script for you to run yourself. Paste this skill. Also add the Wireless network simulator item, which this skill leans on for the general setup. If you do not, your AI follows the short order written in this skill: start the simulator, set traffic, set movement, add statistics, add the devices, run.
+  - For a first run, pick the simplest case, one Low Energy data link between a central and one peripheral. Try LE Audio, classic or mixed setups after that works.
   - Describe your devices, links and traffic. Give the data rate in kilobits per second and say how long to run.
   - Read the setup it proposes before it runs. Check the device types, the number of links and the traffic.
   - Run the script. Check throughput, delay and packet loss against what you expected.
@@ -99,6 +102,7 @@ works_best_with:
     - A target for each link, such as a minimum data rate or a maximum delay
     - The number of devices you expect at the busiest time
     - Whether other radios share the space
+next: [wireless-network-simulator]
 terms:
   - term: Central and peripheral
     meaning: The central starts and manages a link. The peripheral is the device it connects to.

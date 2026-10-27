@@ -69,7 +69,7 @@ how_it_works:
   - title: 2. Divide the after-tax numerator adjustment by added weighted shares and compare incremental EPS with the continuing-operations control EPS
     text: Divide the after-tax numerator adjustment by added weighted shares and compare incremental EPS with the continuing-operations control EPS.
   - title: 3. Recalculate EPS with both adjusted numerator and denominator; label dilutive or anti-dilutive only after the accounting control test and instrument sequencing
-    text: Recalculate EPS with both adjusted numerator and denominator; label dilutive or anti-dilutive only after the accounting control test and instrument sequencing.
+    text: "Recalculate EPS with both adjusted numerator and denominator; label it dilutive or anti-dilutive only after two checks. First, the control test: compare incremental EPS with EPS from continuing operations (profit before one-off items); the convertible is dilutive only if it lowers that figure. Second, sequencing: with one convertible there is no order to set, so write \"single instrument, no sequencing\". With two or more instruments, stop and ask an accountant."
 output_shape: |-
   A single-instrument if-converted comparison showing basic EPS, candidate EPS and incremental EPS.
   Scope and dated sources

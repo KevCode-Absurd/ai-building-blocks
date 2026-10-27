@@ -46,7 +46,7 @@ Determine the revenue model to tailor the analysis:
 #### Customer Economics
 - **CAC (Customer Acquisition Cost)**: Total S&M spend / new customers acquired
 - **LTV (Lifetime Value)**: (ARPU × Gross Margin) / Churn Rate
-- **LTV:CAC ratio**: Target >3x for healthy businesses
+- **LTV:CAC ratio**: Target >3x for healthy businesses (a rule of thumb, not a sourced figure)
 - **CAC payback period**: Months to recover acquisition cost
 - **Blended vs. segmented**: Break down by customer segment (enterprise vs. SMB vs. mid-market)
 
@@ -62,12 +62,14 @@ Build a cohort matrix showing:
 
 | Cohort | Year 0 | Year 1 | Year 2 | Year 3 | Year 4 |
 |--------|--------|--------|--------|--------|--------|
-| 2020 | $1.0M | $1.1M | $1.2M | $1.1M | |
-| 2021 | $1.5M | $1.7M | $1.8M | | |
-| 2022 | $2.0M | $2.3M | | | |
-| 2023 | $3.0M | | | | |
+| [YEAR] | [REVENUE] | [REVENUE] | [REVENUE] | [REVENUE] | |
+| [YEAR] | [REVENUE] | [REVENUE] | [REVENUE] | | |
+| [YEAR] | [REVENUE] | [REVENUE] | | | |
+| [YEAR] | [REVENUE] | | | | |
 
-Show both absolute $ and indexed (Year 0 = 100%) views.
+Fill every cell from the user's own data. Show both absolute amounts and indexed (Year 0 = 100%) views.
+
+Formulas: cohort index for a year = that year's revenue from the cohort / the cohort's Year 0 revenue × 100. Net retention (NDR) for a period = (beginning ARR + expansion − contraction − churn) / beginning ARR. Gross retention = (beginning ARR − contraction − churn) / beginning ARR. Use the same period (one fiscal year) for each.
 
 #### Margin Waterfall
 - Revenue → Gross Profit → Contribution Margin → EBITDA

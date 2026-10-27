@@ -35,7 +35,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions from this page.
   - Paste your report. Say how you can reach your files (SFTP, host file manager or WP-CLI) and whether you have a full backup.
   - Know that the commands need WP-CLI or SFTP access, and that you run them yourself. Your AI shows the rollback command before any delete or edit.
-  - Make the backup your AI asks for before you change any file. Some commands, such as the UpdraftPlus backup or Redis cache steps, only work if that plugin is installed.
+  - Make the backup your AI asks for before you change any file. Some commands, such as the UpdraftPlus backup or Redis cache steps, only work if that plugin is installed. Host-level changes, such as PHP settings or an object cache, may need a paid host plan or a support ticket.
   - Make one change at a time. Check that your home page and wp-admin still load after each one.
   - Run Site Health again to see which warnings have cleared.
   - If the site breaks after a change, restore the backed-up file using the rollback command, then contact your host. Tier 2 items may need your host's support.

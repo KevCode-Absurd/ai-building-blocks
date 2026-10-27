@@ -10,6 +10,8 @@ explain: |
   When someone asks for a copy of their data or asks you to delete it, you get a step by step plan and a draft reply. It is a first check, not legal advice, and a person reviews before anything is sent.
 
   Paste the request. The skill sorts the type: access, deletion, correction or portability. It checks for triggers that need a lawyer first. Then it walks the path: confirm who is asking, go through your list of systems that hold their data, weigh any exemptions, and draft an acknowledgement and a full response. It never sends anything. The request holds personal details, so redact what you do not need.
+
+  The skill is built to use a legal research tool such as Westlaw. Most people will not have one, and such tools are usually paid. Without one, it tags every legal reference "verify", so a person must check each deadline and exemption against the law itself before relying on it. This is Anthropic's dsar-response skill from its claude-for-legal collection, shared under the Apache 2.0 licence.
 when:
   - A customer emails asking for all the data you hold on them.
   - Someone demands you delete their account and records.
@@ -31,12 +33,13 @@ you_get:
   - Draft acknowledgement and reply
 how_to_use:
   - Remove what you do not need from the request first, such as ID scans and unrelated email threads. Do not put the person's name in file names.
-  - Open Claude, ChatGPT or Gemini. Paste the skill instructions from the download.
+  - Open Claude, ChatGPT or Gemini. Add the skill with the buttons on this page, or paste the full skill file into the chat. You do not need any saved setup file.
   - Paste your systems list, your reply deadline rules and how you check identity. If your AI cannot read your saved privacy setup notes, paste these into the chat.
   - Say which privacy law applies to you, such as GDPR or a US state law. Deadlines and exemptions in the draft depend on it, so confirm them before you rely on them.
   - Paste the request text and ask your AI to follow the skill.
   - Read the request type and risk flags first. If a flag says to see a lawyer, stop and do that.
   - Check the letters and the system list with a person. Send nothing until they approve. The skill never sends anything.
+  - Keep the exemption review and the drafts together as the brief for your privacy lawyer. Write the request and what you did in your own request log.
 output_sample:
   input:
     - The request text, pasted from the email
@@ -46,6 +49,7 @@ output_sample:
   prerequisites:
     - Your saved privacy setup notes, or your systems list, deadline and identity check method pasted into the chat
     - Redacted request text, with ID scans and unrelated emails removed
+    - A legal research tool is optional. It is usually a paid service, and without one the legal references must be checked by a person
   output:
     - name: Request type and risk flags
       contains: Whether it is an access, deletion, correction or portability request, and any signs that a lawyer should look first.

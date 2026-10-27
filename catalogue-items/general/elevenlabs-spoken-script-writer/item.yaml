@@ -11,6 +11,8 @@ inputs:
     required: true
   - type: copy_draft
     required: false
+  - type: prompt
+    required: false
 outputs:
   - type: script
     required: true

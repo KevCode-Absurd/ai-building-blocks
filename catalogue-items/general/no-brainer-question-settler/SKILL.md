@@ -50,8 +50,8 @@ The target in one line. The big questions, split into settled (each with a reaso
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Decision checklist reviewer](https://useaiblocks.com/skills/mental-model-checklist-runner). It takes the question and plan.
+- The [Decision checklist runner](https://useaiblocks.com/skills/decision-checklist-runner). It takes the plan and question.
 - The [Decision bias checker](https://useaiblocks.com/skills/decision-bias-pileup-checker). It takes the question and plan.
-- The [Incentive checker](https://useaiblocks.com/skills/incentive-checker). It takes the plan and question.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

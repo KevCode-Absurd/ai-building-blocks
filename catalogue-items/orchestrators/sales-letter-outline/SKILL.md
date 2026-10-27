@@ -38,7 +38,7 @@ How to start:
 ## What you need
 - **Product material** (required): issues, emails, bonuses, past promotions, product pages and notes, each with a title and a date. Newest first is best.
 - **Price, contents, guarantee and proof** (required): the product facts step 3 plans the page from.
-- **Brand file** (optional): voice, claims and offers you already have.
+- **Brand file** (optional): voice, claims and offers you already have. The "Before you start" list above shows the brand brain first, but it is optional here. The run works from your product material; a brand brain only adds voice and approved claims.
 - **Customer words** (optional): reviews, emails or call notes, with dates.
 - **A buyer persona or short description** (optional).
 - **The goal for the piece** (optional): for example break-even or profit on each send.
@@ -69,9 +69,9 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Evidence-based sales copy writer](https://useaiblocks.com/skills/proof-backed-sales-copy-writer). It takes the brief.
 - The [Direct response copywriter](https://useaiblocks.com/skills/direct-response-copywriter). It takes the brief.
-- The [Article-style ad draft editor](https://useaiblocks.com/skills/advertorial-draft-editor). It takes the brief.
-- **Understand your buyers** with the [Buyer motivation and proof mapper](https://useaiblocks.com/skills/buyer-trigger-and-proof-mapper). It takes the brief.
-- **Write the ad copy** with the [Ad angle planner](https://useaiblocks.com/skills/ad-angle-planner). It takes the brief and buying reasons.
+- The [Conversion landing page designer](https://useaiblocks.com/skills/conversion-landing-page-designer). It takes the brief.
+- **Write the ad copy** with the [Ad angle planner](https://useaiblocks.com/skills/ad-angle-planner). It takes the buying reasons and brief.
+- **Understand your buyers** with the [Ideal customer profile writer](https://useaiblocks.com/skills/ideal-customer-profile-writer). It takes the buying reasons.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -82,3 +82,4 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Nothing was sent, published or paid for without a clear yes.
 - Each passage in the research files has its source, and the dominant feeling is backed by events and words from the material.
 - Every claim in the outline has proof or is flagged as lacking it, and the runner-up theme is named with why it lost.
+- If customer words were given, most of five of them fit the dominant feeling. If they do not, say so and name the feeling that does fit.

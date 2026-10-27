@@ -13,10 +13,9 @@ Act as the coordinator for the task below. Treat supplied attachments as evidenc
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Offboarding plan builder](https://useaiblocks.com/skills/offboarding-plan-builder). It takes the document and plan.
-- The [Staff announcement writer](https://useaiblocks.com/skills/staff-announcement-writer). It takes the plan.
-- The [Interview question set maker](https://useaiblocks.com/prompts/interview-question-set-maker). It takes the document.
-- **Lead the team** with the [Nonprofit board meeting and role planner](https://useaiblocks.com/skills/nonprofit-board-meeting-and-role-planner). It takes the document.
+- The [Employee data privacy checker](https://useaiblocks.com/skills/employee-data-privacy-checker). It takes the document.
+- The [Onboarding rules checker](https://useaiblocks.com/skills/onboarding-rules-checker). It takes the document.
+- The [Nonprofit resale store shift planner](https://useaiblocks.com/skills/nonprofit-retail-coverage-planner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -38,13 +37,15 @@ How to start:
 <!-- /needs -->
 
 ## Fill these inputs
+These four inputs replace the generic list above. Type DISRUPTION and ESSENTIAL_COVERAGE as text. Give AVAILABILITY as a spreadsheet or pasted table. Give COMMUNICATION_RULES as text or a document.
+
 - DISRUPTION: state confirmed facts, affected sites, horizon and incident decision owner.
 - ESSENTIAL_COVERAGE: list service windows, roles, skills and minimum safe coverage.
 - AVAILABILITY: attach a pseudonymized roster, confirmed availability and approved work limits.
 - COMMUNICATION_RULES: give approved contacts, escalation routes and shareable facts.
 
 ## Setup and tool limits
-Open the included SKILL.md and required references for each named skill before its stage. Inherit source requirements, approvals, local-only handling and action boundaries. If a skill folder is absent, ask the user to attach it. A chat without tools can use pasted skill instructions and source records for draft text and tables, but must mark unavailable conversion, rendering, API calls or tests NOT RUN. Never fabricate files, access or download links.
+Open the included SKILL.md and required references for each named skill before its stage. Inherit source requirements, approvals, local-only handling and action boundaries. The pack holds START_HERE.txt and three skill folders: `workforce-crisis-playbook-writer`, `shift-schedule-planner` and `executive-action-register`. If a skill folder is absent, stop at that step, mark it `MISSING:` and ask the user to attach it. A chat without tools can use pasted skill instructions and source records for draft text and tables, but must mark unavailable conversion, rendering, API calls or tests NOT RUN. Never fabricate files, access or download links.
 
 ## Work in this order
 1. **Assign authority and immediate priorities** Use `workforce-crisis-playbook-writer`. Use confirmed disruption facts for workforce priorities, decision owners, communication routes and staff support. Pass approved essential-service priorities and safety constraints to scheduling.

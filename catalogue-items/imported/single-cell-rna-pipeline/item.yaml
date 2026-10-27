@@ -9,7 +9,7 @@ role: make
 job: ops
 level: expert
 inputs:
-  - type: spreadsheet
+  - type: dataset
     required: true
 outputs:
   - type: spreadsheet

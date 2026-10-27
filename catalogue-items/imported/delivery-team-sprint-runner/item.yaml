@@ -8,8 +8,12 @@ role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: question
     required: true
+  - type: spreadsheet
+    required: false
+  - type: tool_connection
+    required: false
 outputs:
   - type: plan
   - type: document

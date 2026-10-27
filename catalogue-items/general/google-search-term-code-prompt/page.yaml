@@ -7,7 +7,7 @@ subhead: Give your coding assistant your project and your Google Ads API access.
 explain: |-
   A Google Ads search term report shows what people typed before they saw your ad. Some of those searches make money. Some burn spend with no sale. Reading hundreds of rows by hand is slow, and a bad negative keyword can block a search that was paying for itself. This prompt gives a coding assistant a brief to build a search term classifier and a negative keyword analyzer that do the sorting for you.
 
-  The classifier puts each term in one of four groups: a profitable match, a wasteful match, a question mark that needs more data, or a new theme worth its own ad group. Your brand terms are filtered out first, as a hard rule, so you never get told to block your own name. The analyzer then drafts negative keywords, skips ones you already have, groups them into account-wide and campaign-level lists and flags any negative that would block a keyword that earns. The cut-offs for what counts as wasted spend are yours to set. The brief starts with the old course values as examples only.
+  The classifier puts each term in one of four groups: a profitable match, a wasteful match, a question mark that needs more data, or a new theme worth its own ad group. Your brand terms are filtered out first, as a hard rule, so you never get told to block your own name. The analyzer then drafts negative keywords, skips ones you already have, groups them into account-wide and campaign-level lists and flags any negative that would block a keyword that earns. The cut-offs for what counts as wasted spend are yours to set. The brief starts with example values only.
 
   The assistant writes code and tests. It does not change your account. Negative keywords come out as rows you paste into Google Ads Editor after you read them. Any weekly schedule is a proposal until you approve it. For a no-code review of one search term export, use the Search Query Analyst agent. To check API access first, use the Google Ads token and access check planner.
 when:
@@ -80,6 +80,9 @@ output_shape: |-
 
   NEXT STEP
   <the smallest useful step>
+
+  CHECKS MISSED
+  <one line per check that failed or could not run, or none>
 output_sample:
   input:
     - Your code project, or its package file and main folders
@@ -104,6 +107,8 @@ output_sample:
       contains: Made-up search terms covering brand protection, all four groups and negatives that conflict.
     - name: Schedule proposal
       contains: A weekly run you approve or decline, and what must be set up first.
+    - name: Checks missed
+      contains: One line for each check that failed or could not run, or none.
 works_best_with:
   tools:
     - name: Claude Code

@@ -10,6 +10,8 @@ explain: |
   A term-by-term review of a data processing agreement, with the edits to ask for. It is a first check and not legal advice.
 
   The first question is direction: are you the processor (reviewing a customer's DPA) or the controller (reviewing a vendor's)? The advice is nearly opposite for each, so the skill asks if it is unclear. It then compares each clause with your own playbook, which you set up in advance, and checks that the DPA matches what your privacy policy says. It looks at prior work on the same counterparty for risks already flagged. The output is a memo with suggested redlines. Jurisdiction rules depend on your setup.
+
+  The skill also asks whether the data falls under US federal rules for money, health, school or children's data (GLBA, HIPAA, FERPA, COPPA). It only checks those if you say yes, and a lawyer must confirm any such check. Legal citations in the memo come from the AI's general knowledge unless you connect a legal research tool, so each is tagged for checking. This is Anthropic's dpa-review skill from its claude-for-legal collection, shared under the Apache 2.0 licence.
 when:
   - A customer sent you their own agreement and you need to know what to push back on.
   - You are about to sign a vendor's agreement for handling personal data.
@@ -19,6 +21,7 @@ not_for:
   - "You need to review a contract that is not a data processing agreement: ask a lawyer, or use a general contract review step."
   - "Your data subjects sit outside the places set in your playbook: ask a privacy lawyer for those rules."
   - "You need legal advice or a final sign-off: have a qualified lawyer read the agreement before you sign."
+  - "Your data crosses borders and the transfer rules are not settled: the review flags this, but a privacy lawyer must decide the transfer mechanism."
 you_give:
   - The data processing agreement, as a file, link or pasted text
   - Whether you are the processor (you handle data for a customer) or the controller (you hire a vendor)
@@ -30,7 +33,7 @@ you_get:
   - A check that the agreement matches your privacy policy
   - Open points to raise with the other side
 how_to_use:
-  - Set up your DPA playbook first. Run the setup-interview folder in this skill so your positions are saved. Keep the result as a note you can paste in each time.
+  - Plain chat with no saved setup? That is fine. Paste your DPA playbook (the positions you will accept) and your privacy policy into the chat before the agreement. If you have no playbook yet, run the setup-interview folder in this skill first and keep the result as a note to paste each time. If your AI cannot find a saved setup, it asks you to paste these.
   - Open your AI tool. It works best where it can read your saved setup notes and files. If it cannot, paste your playbook and your privacy policy into the chat.
   - Paste the skill, then add the agreement as a file, link or pasted text. A paid legal research tool is optional. Without one, the AI works from general knowledge and tags its citations "verify".
   - Say whether you are the processor or the controller. If you skip this, your AI will ask.

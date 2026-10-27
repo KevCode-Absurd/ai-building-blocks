@@ -5,7 +5,7 @@ name: Lead owner router
 summary: Route a new lead to the right owner by your own rules. You get a routing card to accept or override, plus a handoff note for the rep.
 job: sell-and-negotiate
 headline: Lead owner router
-subhead: Give it a new lead. Get who should own it by your rules, a routing card to accept and a handoff note. Bring the lead or the unrouted queue. Use the result to plan your next step.
+subhead: Give it a new lead, or your whole unrouted queue, and your routing rules. You get who should own each lead, a routing card to accept and a handoff note.
 explain: |
   For each new lead, a named owner chosen by your own routing rules, plus a card you can accept or override. The skill reads your CRM, checks which rep already owns the account or open deals, and applies your territory and assignment rules the same way every time. You stay the decider. Every override feeds back into the rules.
 

@@ -11,6 +11,8 @@ inputs:
     required: true
   - type: question
     required: true
+  - type: voc_reviews
+    required: false
 outputs:
   - type: plan
     required: true

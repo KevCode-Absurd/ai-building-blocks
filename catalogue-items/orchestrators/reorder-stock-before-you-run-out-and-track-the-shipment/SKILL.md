@@ -53,7 +53,7 @@ Pause here: Check the drafts with your supplier, place the orders and note the p
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Stock and reorder planner](https://useaiblocks.com/skills/stock-and-reorder-planner). It takes the spreadsheet.
 - The [3PL bill auditor](https://useaiblocks.com/skills/3pl-bill-auditor). It takes the spreadsheet and document.
-- The [Late order and shipment tracker](https://useaiblocks.com/skills/daily-order-and-shipping-watcher). It takes the spreadsheet.
+- The [Support hiring date planner](https://useaiblocks.com/prompts/support-hiring-date-planner). It takes the spreadsheet.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

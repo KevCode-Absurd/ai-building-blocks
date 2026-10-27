@@ -9,6 +9,10 @@ subhead: "Describe your video. Get the right way to make it chosen first: genera
 explain: |
   Choose how a video will be made before you spend anything: generate it with AI, build it from code and assets, or edit footage you already have. 
   You describe the video. The skill looks at three things: where the visuals come from, how the pieces get assembled, and whether you supplied footage. Then it picks one main route, or a combined plan when a brief mixes types. Generation suits new scenes. Composition suits exact text, charts and repeatable layouts. Editing suits cutting, trimming and finishing your own clips. If production tools or paid services are not available, it still returns a full written package: script, timed storyboard, exact on-screen text, audio direction and export target.
+
+  The skill also has an AUTO route. AUTO means one plan that mixes methods, such as your own footage plus a new opener plus designed text. Its helper steps, stage-plan and stage-assemble, belong to a separate video tool. In a chat you get the written plan and skip them.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (Orkas-AI) says MIT. Credit goes to Orkas-AI and sickn33.
 when:
   - You are not sure if AI generation or editing is the right approach.
   - Your brief mixes screen recordings, motion graphics and new scenes.
@@ -30,7 +34,7 @@ you_get:
   - Notes on assets, rights and export
 how_to_use:
   - "Write down four things: what the video is about, its length and shape, footage you already have, and any tools or budget."
-  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page. No code, files or paid tools are needed. If the skill mentions stage-plan or stage-assemble, those need a separate video tool, so in a chat you get the written plan only.
+  - Open Claude, ChatGPT or Gemini. Paste in the full SKILL.md text, or add the skill to your AI. No code, files or paid tools are needed. If the skill mentions stage-plan or stage-assemble, those need a separate video tool, so in a chat you get the written plan only.
   - "Add this line, then your four details: Pick the route for this video and lock it. Give me the full plan."
   - Check the reply. It should name one route (or a mixed plan), give reasons, and list the script, storyboard, on-screen text and export target.
   - If the route looks wrong, say why and ask your AI to pick again before you start work.

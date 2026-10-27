@@ -10,6 +10,8 @@ explain: |
   Text out of PDFs, Office files and scanned images, with the position of every line on the page, processed on your own computer. The first time you use a language, its OCR files download from GitHub. If you set up an HTTP OCR server, it receives your page images.
 
   A tool called LiteParse reads the file and returns layout-aware text, structured JSON or rough markdown. For scans it runs OCR with a bundled engine, so pages with no real text still come out. Each piece of text carries a bounding box, so you can cite exactly where something was found. It can also save page images so another model can look at charts or handwriting, and it runs on whole folders. You need Python, and LibreOffice for Office formats.
+
+  Licence: this copy is under the MIT licence, as the LICENSE.md file in this item says. The skill file's own header says Apache-2.0. Both allow reuse with credit. Credit goes to K-Dense.
 when:
   - You have scanned contracts and need text you can search.
   - You want to feed a folder of papers into a search tool and keep page positions.
@@ -32,6 +34,7 @@ you_get:
   - Page images for charts or handwriting (optional)
   - A list of any pages that failed
 how_to_use:
+  - Have ready the file or folder path, the output type you want (text, JSON or Markdown), any page range, and the OCR language code if the scan is not in English.
   - Open an AI that can run Python code and save files, such as Claude with code tools. Paste this skill in.
   - "Ask it to run: uv pip install liteparse==2.15.0. For Word, Excel or PowerPoint files, install LibreOffice too."
   - "Upload your file and ask it to run: lit parse yourfile.pdf --format json -o out.json."

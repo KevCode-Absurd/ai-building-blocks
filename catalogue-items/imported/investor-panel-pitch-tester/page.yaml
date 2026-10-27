@@ -10,6 +10,8 @@ explain: |
   Hear the no before a real investor says it. Paste your business idea and a panel of up to ten simulated investors, five by default, grill it one at a time. Each is built to doubt, and a founder agent answers only from your pitch file, so gaps in your story show up.
 
   The skill sizes the session first and tells you how many calls it will make. Panelists question the idea, you see the exchanges, and each investor votes in or out with reasons. The host never invests and never answers for you. It needs Python and a folder where it can save session files. Use it to practice, not as real funding advice.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (Alex Chen) says MIT. Credit goes to Alex Chen and sickn33.
 when:
   - Claude keeps telling you every idea is great and you want honest pushback.
   - You have an investor meeting soon and want to practise answering hard questions.
@@ -36,6 +38,7 @@ how_to_use:
   - Read the one-line size check. Five investors means 11 helper calls, and each counts toward your plan usage.
   - Let the panel run. Then read BOARD.md and start with the first item on the homework list.
   - Rewrite your pitch file with the new answers and run a fresh session. Check whether the panel's votes change.
+  - Before a real investor meeting, take the revised pitch and BOARD.md to a mentor or advisor and ask them to test it again.
 output_sample:
   input:
     - Your business idea in a few lines

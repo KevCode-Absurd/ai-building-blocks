@@ -10,7 +10,14 @@ not_for:
   - "You need an academic CV or a creative portfolio: ask a human resume writer, as these follow different rules."
   - "You apply through a required online form that asks for each field: fill in the form fields and skip a resume file."
   - "You want stronger wording for your bullets or a new summary: ask a career coach or a friend in your field to read it."
-explain: Share your resume and the way you plan to apply. It checks section order, spacing, fonts and details that may confuse hiring software. You get layout changes, a cleaner text structure and a checklist to review before sharing the file.
+explain: |
+  Share your resume and the way you plan to apply. It checks section order, spacing, fonts and details that may confuse hiring software. You get layout changes, a cleaner text structure and a checklist to review before sharing the file.
+
+  Licence: this copy is under the MIT licence (see the LICENSE file in this item). It is adapted from the resume-formatter skill by Daniel (San) Ávila, and the skill text is unchanged.
+when:
+  - Your resume gets no replies and you suspect hiring software cannot read it.
+  - Your resume looks messy and you want a cleaner layout.
+  - You are about to apply through an online form or email and want a final layout check.
 you_give:
   - Your resume file or its current layout details.
   - The role, career stage and how you will submit it.
@@ -31,7 +38,7 @@ how_to_use:
   - Paste your resume text, or attach the file if your AI accepts files. Pasted text loses tables, columns and text boxes, so describe those parts in your own words, for example "two columns with skills on the left", so the layout checks can work.
   - Tell it the role, your career stage and how you will send the resume.
   - Read the Current Issues list first, then make the changes in your own document.
-  - Save the file as .docx or a text-based PDF and check the file name before you send it.
+  - Check the employer's own application instructions before you pick .docx or .pdf. Some portals ignore attached files and ask you to fill in fields. Then save the file as .docx or a text-based PDF and check the file name before you send it.
   - Paste the revised text back into the chat to recheck the section order and the fixes. Then pair it with a cover letter or an application tracker.
 output_sample:
   input:

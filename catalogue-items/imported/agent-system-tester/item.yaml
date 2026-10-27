@@ -8,10 +8,14 @@ role: check
 job: ops
 level: expert
 inputs:
-  - type: brief
+  - type: question
     required: true
+  - type: document
+    required: false
 outputs:
   - type: test_report
+  - type: eval_set
+    required: true
 uses: []
 origin: imported
 source:

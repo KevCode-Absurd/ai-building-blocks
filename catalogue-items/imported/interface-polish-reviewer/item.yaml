@@ -12,6 +12,8 @@ inputs:
     required: false
   - type: codebase
     required: false
+  - type: image
+    required: false
 outputs:
   - type: feedback_notes
 uses: []

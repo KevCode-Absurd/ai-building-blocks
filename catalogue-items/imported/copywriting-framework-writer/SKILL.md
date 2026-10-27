@@ -59,14 +59,14 @@ The examples below show layout only. Every figure, name and quote in them is a p
 > **Headline:** One Crashed Hard Drive Away from Losing Everything?
 > **Subheadline:** Freelancers lose [real figure, with its source] of work per data loss incident.
 > **Body:** You have spent months building your portfolio and client deliverables. One spilled coffee, one ransomware email, and it can all vanish. CloudSync backs up every file change automatically to encrypted cloud storage. If disaster strikes, restore everything in minutes.
-> **CTA:** Start Your Free 14-Day Backup — No Credit Card Needed
+> **CTA:** Start Your Free [Trial Length] Backup — [Only say "No Credit Card Needed" if true]
 >
 > **Variant B (Aspiration-driven):**
 >
 > **Headline:** Work Fearlessly. Every File, Backed Up Automatically.
 > **Subheadline:** Enterprise-grade backup for freelancers — without the enterprise price.
-> **Body:** CloudSync watches your folders and syncs every change in real time. Version history, AES-256 encryption, and setup in under two minutes.
-> **CTA:** Protect Your Work Free for 14 Days
+> **Body:** CloudSync watches your folders and syncs every change in real time. [Real features, such as version history], [real security detail] and [real setup time].
+> **CTA:** Protect Your Work Free for [Trial Length]
 >
 > **A/B Hypothesis:** Variant A tests loss aversion; Variant B tests aspirational confidence. Compare signup rates to determine which emotional angle resonates.
 
@@ -77,16 +77,16 @@ The examples below show layout only. Every figure, name and quote in them is a p
 **Output:**
 
 > **Email 1 — Attention + Interest (Day 0)**
-> **Subject:** Your 20% off code is inside (expires in 48 hours)
-> **Body:** Hi {first_name}, here is your code: **FIT20**. FitTrack tracks heart rate, sleep, and activity, then gives you a single weekly health score — no complicated dashboards. **[Shop FitTrack — 20% Off]**
+> **Subject:** Your [X]% off code is inside (expires [real deadline])
+> **Body:** Hi {first_name}, here is your code: **[CODE]**. FitTrack tracks heart rate, sleep, and activity, then gives you a single weekly health score — no complicated dashboards. **[Shop FitTrack — [X]% Off]**
 >
 > **Email 2 — Desire (Day 1)**
 > **Subject:** "I finally sleep through the night" — here is what changed
-> **Body:** [Real customer name and role, used with their permission] was [their real situation]. [What they found and changed, in their words]. [Their real result.] [A real figure about all users, only if you have the survey or data to back it.] Code **FIT20** still active. **[Get Your FitTrack Now]**
+> **Body:** [Real customer name and role, used with their permission] was [their real situation]. [What they found and changed, in their words]. [Their real result.] [A real figure about all users, only if you have the survey or data to back it.] Code **[CODE]** still active. **[Get Your FitTrack Now]**
 >
 > **Email 3 — Action (Day 2)**
-> **Subject:** Last call — your 20% code expires tonight
-> **Body:** Your code **FIT20** expires at midnight. Free shipping. 30-day money-back guarantee. **[Claim Your Discount Before Midnight]**
+> **Subject:** Last call — your [X]% code expires [real deadline]
+> **Body:** Your code **[CODE]** expires [real deadline]. [Shipping terms, only if true.] [Guarantee, only if you offer one.] **[Claim Your Discount Before Midnight]**
 
 ## Best Practices
 

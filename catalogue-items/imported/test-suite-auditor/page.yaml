@@ -10,6 +10,8 @@ explain: |
   A verdict on whether your Python tests would actually catch broken code, with the weak, flaky, slow and useless tests listed. A passing suite stops being a comfort and becomes a number you can trust.
 
   A pinned runner measures the suite. The key check is mutation testing: it makes small deliberate breaks in your code and sees whether any test fails. Tests that never catch a break are weak. It also reruns tests to find flaky ones, times each test to find slow ones, and spots tests that duplicate others without adding detection. Quick mode runs one baseline with timings and coverage and no mutants. Deep mode adds the mutation checks. The skill reports only and changes none of your tests. It needs Python and pytest.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (Tim Richardson) says MIT. Credit goes to Tim Richardson and sickn33.
 when:
   - Your tests pass but bugs still reach production.
   - The test run takes so long that people skip it.
@@ -18,7 +20,7 @@ when:
   - You let AI write tests and need to check how useful they are.
 not_for:
   - Your project is not written in Python or does not use pytest. Use the test tools for your own language, or ask a developer.
-  - You only want to check one code change. Use agentic-verify, a separate skill that runs every mutant of the changed lines.
+  - You only want to check one code change. Use the agentic-verify skill from the same author, which is not in this library yet. It runs every mutant of the changed lines.
   - You want your tests fixed or deleted for you. This audit only reports, so ask your AI for a specific change after you read the report.
 you_give:
   - Your Python project
@@ -37,6 +39,7 @@ how_to_use:
   - Quick takes about 5 minutes. Deep takes 30 minutes by default and runs the mutation checks. Say how long you can spare.
   - Read report.md first. A surviving mutant is a gap to look at, not proof of a bug.
   - If the deep audit lists tests to remove, ask for the removal check before you delete anything.
+  - Next, replay one surviving mutant with the replay command in the report. Then ask your AI to draft a test that catches it, and add that test yourself if it looks right.
 output_sample:
   input:
     - Your Python project folder

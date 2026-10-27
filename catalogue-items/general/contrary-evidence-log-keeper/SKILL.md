@@ -55,7 +55,6 @@ The belief in one line, split into numbered parts if needed. The log table with 
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Plan assumptions and evidence tracker](https://useaiblocks.com/skills/monthly-belief-evidence-keeper). It takes the lessons.
 - The [Decision checklist builder](https://useaiblocks.com/skills/decision-checklist-builder). It takes the lessons.
-- The [Decision process reviewer](https://useaiblocks.com/skills/decision-checklist-keeper). It takes the lessons.
 - **Test the idea with real people** with the [Idea evidence reviewer](https://useaiblocks.com/skills/idea-evidence-review). It takes the lessons.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

@@ -68,6 +68,14 @@
 /support-chat.css
   Cache-Control: public, max-age=0, must-revalidate
 
+# The feeds of new and changed items (scripts/build-index.mjs): any feed reader or AI may read them.
+/feed.json
+  Cache-Control: public, max-age=900, stale-while-revalidate=86400
+  Access-Control-Allow-Origin: *
+/feed.xml
+  Cache-Control: public, max-age=900, stale-while-revalidate=86400
+  Access-Control-Allow-Origin: *
+
 # Preview images change rarely.
 /og/*
   Cache-Control: public, max-age=86400

@@ -39,12 +39,12 @@ All free sources are EOD or delayed — not real-time. Carry source + retrieval 
 
 ## Workflow
 
-1. **Set the market and date.** Use the country or currency area named by the user and an official source that identifies the instrument, units and observation date. Do not load India-specific conventions for another market or use US series as an India proxy.
+1. **Set the market and date.** Use the country or currency area named by the user and an official source that identifies the instrument, units and observation date. Do not load India-specific conventions for another market or use US series as an India proxy. Keep the source's period labels and units, and do not claim one source covers every market. For the US, tell Treasury par yields, zero rates and TIPS real yields apart. For euro-area curves, use the identified ECB series.
 2. **Record nominal points.** Preserve whether the source reports par yields, zero rates or security quotes. List requested tenors; leave unavailable points blank with a reason.
-3. **Calculate requested slopes.** State formula and sign convention next to each result. Use same-date values from the same curve. Calculate `10Y−2Y`, `30Y−5Y`, or another slope only when both inputs exist. Do not label a curve flat unless a threshold was defined in advance.
+3. **Calculate requested slopes.** State formula and sign convention next to each result. Use same-date values from the same curve. Calculate `10Y−2Y` (the 2s10s slope), `30Y−5Y`, or another slope only when both inputs exist. By default a positive 10Y−2Y is upward sloping and a negative one is inverted. Do not label a curve flat unless a threshold was defined in advance; otherwise report the number only. The butterfly is 2×5Y−2Y−10Y, with units and sign stated. Real yield is an observed series where available; do not also call it nominal minus an unrelated inflation series. Never interpolate missing points. Report source, observation date, retrieval date and delayed or end-of-day status.
 4. **Compare real yields only when supplied comparably.** For US Treasury data, TIPS real yields are observations for their stated dates and tenors. A breakeven is nominal Treasury yield minus same-date, same-tenor TIPS real yield; it is not a pure inflation forecast. For other markets, use the source's real-rate series only when its definition and horizon match.
 5. **Add history only from the same series.** State the comparison window and method. Do not infer percentiles or direction from a different instrument or a partial history.
-6. **Summarize neutrally.** Separate observed values, calculations and interpretation. Identify missing or incomparable data. Do not frame, size or recommend trades.
+6. **Summarize neutrally.** Separate observed values, calculations and interpretation. Identify missing or incomparable data. Do not frame, size or recommend trades. This is a description of data, not investment advice.
 
 ## Output format
 
@@ -80,9 +80,3 @@ Explain what the reported slopes and available real-rate observations show. Stat
 - Live pricing.
 
 Say so rather than approximating. A labelled gap is a useful answer; a fabricated swap spread is not.
-
-## Repaired method and market scope
-
-Follow the market named by the user. The workflow below applies only where a named official source supplies the requested instrument and date. Preserve local period labels and units, and do not substitute another country's yield series. For India, use official Indian curve data only when its source definition and permitted use are established. For the US, distinguish Treasury par yields from zero rates and TIPS real yields. For euro-area curves, use the identified ECB series. Do not claim one source covers every market.
-
-The rules in this section control the whole method above. Use same-date, same-instrument tenor pairs. State slope formula and sign: 10Y−2Y; positive is upward by this convention, negative is inverted. Define a flat threshold before using that label; otherwise report the number only. Butterfly=2×5Y−2Y−10Y, with units and sign stated. Real yield is an observed series where available; do not also call it nominal minus an unrelated inflation series. Breakeven=nominal minus real only for matched instruments, tenors and dates, and is not a pure inflation forecast. Never fabricate or interpolate missing points. Report source, observation date, retrieval date and delayed/EOD status. Do not give trade advice or position sizing.

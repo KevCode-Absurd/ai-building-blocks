@@ -29,7 +29,7 @@ Background reference: `library/claude-code/claude-and-agents-md.md`.
 ## Process
 
 ### Step 1: Confirm the target folder + sanity-check it deserves a file
-Ask the user which folder. Use absolute path under `~/Documents/code/workspace/`.
+Ask the user which folder. Use the absolute path of whichever folder the user names (for example `~/Documents/code/workspace/[FOLDER]` is only the author's own layout).
 
 **Only create a file if the folder has context needed across multiple sessions** — active evolving work, specific conventions, ongoing decisions. A folder of static reference files does NOT need one (agents can read on demand). If unsure, ask the user.
 
@@ -74,7 +74,7 @@ cd <folder> && ln -s CLAUDE.md AGENTS.md
 Verify with `ls -la CLAUDE.md AGENTS.md`.
 
 ### Step 7: Commit only when asked
-Do NOT stage or push unless the user says to. When they do: `git add -A`, commit with a `Day N:` style message, push.
+Do NOT stage, commit or push unless the user says to. When they do, tell them first that the push goes to their remote repository and ask them to confirm. Then: `git add -A`, commit with a clear message, push. Prefer adding only the files you wrote over `git add -A` if the folder has other changes.
 
 ## Rules
 

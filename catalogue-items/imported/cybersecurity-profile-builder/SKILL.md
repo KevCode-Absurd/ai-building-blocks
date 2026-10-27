@@ -200,11 +200,9 @@ Different sectors have developed **Community Profiles** built on CSF. When the u
 
 ---
 
-## Recent NIST Companion Publications (August 2026 — cite when relevant)
+## Newer NIST publications
 
-- **NIST IR 8576** (final, Aug 5, 2026): **Transit Cybersecurity Framework Community Profile** — CSF 2.0 community profile for US transit agencies (bus/subway/commuter rail) with OT/cyber-physical emphasis; complements rather than replaces agency programmes.
-- **NIST SP 1353** (initial public draft, Aug 19, 2026; comments due Oct 15): quick-start guide on **using generative AI for CSF analysis, planning and reporting** — three notional use cases (governance/policy review, Current State Profile drafting, Target State Profile drafting); illustrative, not a prescriptive assessment methodology.
-- **NIST SP 1347** (final, Aug 25, 2026): **Informative References quick-start** — how CSF 2.0 crosswalks work and the tools for using them (CSF 2.0 Reference Tool, OLIR programme).
+NIST adds companion guides, community profiles and quick-start guides to CSF 2.0 over time. Do not cite a publication number, date or comment deadline unless the user gives it to you or you can open the source on nist.gov. If you are not sure a publication exists, say so and tell the user to check nist.gov/cyberframework.
 
 ---
 

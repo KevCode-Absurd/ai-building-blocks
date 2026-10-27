@@ -3,19 +3,22 @@ name: Reference-frame transformation planner
 summary: Share before and after ideas. Get image and video prompts for a drawing-to-3D or mechanical-toy change with scene locks.
 job: make-video-ads
 headline: Reference-frame transformation planner
-subhead: Share before and after ideas. Get image and video prompts for a drawing-to-3D or mechanical-toy change with scene locks. Bring the brief and any files you want it to use.
+subhead: Give it the before image, a few lines on the after idea and which change you want. You get an edit prompt for the after frame and a timed video prompt, plus a table of what must stay the same in both frames (the scene locks).
 explain: |-
-  Use this when you need a controlled before/after image-to-video transformation. Choose illustration-to-3D or mechanical-object-to-toy. Both start with approved before and after frames, but their transformation mechanics are different.
+  A before and after clip works when only one thing changes. This workflow keeps everything else the same. You choose one of two changes: a flat drawing that turns into a 3D version, or a mechanical object that turns into a toy.
 
-  List properties shared by both endpoints: camera position/crop, room/page/desk, lighting/color, scale, placement and unchanged text. State the single permitted transformation.
+  First it lists the scene locks: the camera crop, the page or desk, the lighting, the scale and any text that must not change. Then it writes a prompt for the after frame that allows one change, and a timed prompt for the video. It checks the plan for drift, damaged text and mismatched frames.
+
+  It writes prompts only. It makes no images or video, and image and video tools may be paid or need credits.
 when:
   - You need a controlled before/after image-to-video transformation.
   - You want a clear draft and checks from the material you already have.
   - You have a before image and an idea for the after, and you want the two frames to match except for the one change.
 you_give:
-  - brief
-  - "Optional: approved image"
-  - "Optional: reference set"
+  - A few lines on your idea for the before and after
+  - Which change you want, drawing to 3D or mechanical object to toy
+  - The before image you will start from (optional)
+  - Reference images for the look and the object (optional)
 you_get:
   - "An endpoint lock table: what the before and after frames share and what must not change"
   - "An after-frame edit prompt: one prompt that allows a single change"
@@ -23,8 +26,8 @@ you_get:
   - "Checks, and a not-run list of anything that was not generated or inspected"
 how_to_use:
   - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Give it your before image, your after idea and the change you want.
+  - Check the lock table against your before image before you use anything.
   - Make the after frame in an image tool, approve it against the lock table, then run the transition prompt in a video tool. If the endpoints do not match, fix the after frame first. More motion words will not repair it.
   - Image and video tools may need a paid plan or credits. This workflow makes prompts and checks only.
 how_it_works:

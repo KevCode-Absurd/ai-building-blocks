@@ -83,6 +83,8 @@ You list them for the owner to approve. Prices and comparison prices are covered
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Price ending picker](https://useaiblocks.com/prompts/price-ending-picker). It takes the plan.
+- The [Discount wording and price display planner](https://useaiblocks.com/skills/discount-wording-planner). It takes the plan and audit report.
 - The [SaaS pricing designer](https://useaiblocks.com/skills/saas-pricing-designer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

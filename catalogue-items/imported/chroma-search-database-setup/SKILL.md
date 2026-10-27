@@ -10,7 +10,7 @@ dependencies: [chromadb, sentence-transformers]
 
 # Chroma - Open-Source Embedding Database
 
-The AI-native database for building LLM applications with memory.
+The AI-native database for building LLM applications with memory. If an earlier step gave you a plan for the search (how to split the text, which embeddings, what labels to store), follow it when you set up the store.
 
 ## When to use Chroma
 
@@ -85,7 +85,7 @@ collection = client.create_collection("my_docs")
 from chromadb.utils import embedding_functions
 
 openai_ef = embedding_functions.OpenAIEmbeddingFunction(
-    api_key="your-key",
+    api_key=os.environ["OPENAI_API_KEY"],  # keep keys in an environment variable, never in code
     model_name="text-embedding-3-small"
 )
 
@@ -104,7 +104,7 @@ client.delete_collection("my_docs")
 ### 2. Add documents
 
 ```python
-# Add with auto-generated IDs
+# Add several documents at once (you supply the IDs)
 collection.add(
     documents=["Doc 1", "Doc 2", "Doc 3"],
     metadatas=[
@@ -115,7 +115,8 @@ collection.add(
     ids=["id1", "id2", "id3"]
 )
 
-# Add with custom embeddings
+# Add with custom embeddings (placeholder: replace the lists with real vectors from your
+# own embedding model, all with the same length. This snippet will not run as written.)
 collection.add(
     embeddings=[[0.1, 0.2, ...], [0.3, 0.4, ...]],
     documents=["Doc 1", "Doc 2"],

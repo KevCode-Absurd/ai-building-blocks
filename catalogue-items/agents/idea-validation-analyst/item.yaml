@@ -7,7 +7,7 @@ role: orchestrate
 job: strategy
 level: intermediate
 inputs:
-  - {type: brief, required: true}
+  - {type: idea, required: true}
   - {type: feedback_notes, required: false}
   - {type: performance_sheet, required: false}
 outputs:

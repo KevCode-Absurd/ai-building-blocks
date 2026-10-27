@@ -10,7 +10,7 @@ explain: >
   Communities die quietly, a few months after launch. A question sits unanswered for a week and that member never asks again. The same five people get thanked every Friday. The weekly note becomes a list of links. The thousandth member joins on a Tuesday and nobody marks it.
 
 
-  This agent reads the week every Friday. It lists every thread unanswered after two days first, because that is the fastest way to lose a member. It finds the themes with quotes and the questions asked most. It checks who reached a level in a recognition plan anyone can see the path to, and holds back anyone thanked in the last four weeks, so recognition is earned and not favourites. When a milestone is coming it designs one peak and keeps the rest simple. Then it drafts the weekly note with one core idea at the top. It never posts or messages anyone.
+  This agent reads the week every Friday. It lists every thread unanswered after two days first, because that is the fastest way to lose a member. It finds the themes with quotes and the questions asked most. It checks who reached a level in a recognition plan anyone can see the path to, and holds back anyone thanked in the last four weeks for the same level, so recognition is earned and not favourites. When a milestone is coming it designs one peak and keeps the rest simple. Then it drafts the weekly note with one core idea at the top. It never posts or messages anyone.
 when:
   - You run a community for customers, members or learners and the launch energy has faded.
   - Threads go unanswered and you only notice when a member leaves.
@@ -70,7 +70,7 @@ how_it_works:
   - title: Read the week
     text: Adds the week's numbers, finds the themes with quotes and lists every thread unanswered after two days.
   - title: Pick the recognitions
-    text: Members who reached a level this week, with anyone thanked in the last four weeks held back unless they reached a new one.
+    text: Members who reached a level this week, with anyone thanked in the last four weeks for the same level held back. A new level can be recognised sooner.
   - title: Design the moment when one is near
     text: For a first, a launch or a milestone in the next month, the one peak to build and what stays simple.
   - title: Draft the weekly note

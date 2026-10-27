@@ -33,12 +33,13 @@ you_get:
   - "For an existing agent, the problems found, each with a check to confirm the fix"
   - "A PDF report with a diagram of the design"
 how_to_use:
+  - Have these ready if you can. A spec or notes for the agent, any limits you know (budget, time, who must approve actions), and the files or code of an existing agent if you want a review. If you have none of these, a few lines on the job are enough. The skill asks the rest.
   - Open your AI tool. Use one that can read files and make a PDF with a diagram if you want the report. If yours cannot, you get the report as text with the diagram source instead.
   - "Paste the skill text or upload the skill folder, then say: Follow this skill."
   - "First paste a few lines on the job the agent must do, or paste your spec, or the setup of an agent you already have. The first reply is a short question, not a design."
   - Answer the questions one at a time. If you do not know, ask for a suggested option. It will be marked as an assumption.
   - Read the first design sketch and say what is wrong. Say when you have given enough, and you get the full design.
-  - Check the PDF report and diagram. Read the open decisions and the limits on steps, time and cost first. Hand the design to a developer to build, since this skill does not write code.
+  - Check the PDF report and diagram. Read the open decisions and the limits on steps, time and cost first. Hand the design to a developer or a build tool to build, since this skill does not write code. Ask the developer to check the open decisions and the stopping limits first, and to test the agent against the checks the report lists before anyone relies on it.
 output_sample:
   input:
     - A short description of the agent you need and its job

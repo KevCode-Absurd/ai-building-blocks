@@ -15,6 +15,7 @@ explain: >-
 
   Badge scans are not qualified opportunities. Published attendance claims require source dates and do not prove buyer concentration.
 when:
+  - You are weighing a trade show and want a small test before paying for a booth.
   - You need a practical way to find customers for a software business.
   - You want to test a growth idea before committing more time or money.
 not_for:
@@ -22,6 +23,7 @@ not_for:
   - "Your buyers do not go to trade shows or industry events: pick another channel and test that one instead."
   - "You want to book a big booth today: this plan tests a small step first, so ask a trade show organizer for a quote."
 you_give:
+  - The name, dates and location of the show you are weighing
   - A public product link or pasted product and pricing text
   - Your growth goal, stage and buyer, if known
   - Cash and time limits, past tests and results, if available
@@ -64,11 +66,11 @@ output_sample:
     - name: MISSING
       contains: The facts the plan still needs from you.
 how_it_works:
-  - title: Check 1
+  - title: Research the show
     text: "Research the show's actual audience, prior attendee evidence and buyer roles. Choose one outcome: qualified customers, partners or press."
-  - title: Check 2
+  - title: Compare ways to take part
     text: Compare attending, a small sponsorship and exhibiting. Include travel, staff time, booth materials, demos and follow-up cost.
-  - title: Check 3
+  - title: Plan meetings and follow-up
     text: Draft pre-booked meeting outreach, a short demonstration, lead qualification questions and a dated follow-up plan.
 output_shape: |
   Recommendation: <test now / later / weak fit, with reason>
@@ -78,9 +80,11 @@ output_shape: |
   Pilot: <hypothesis, audience, offer, deliverable, owner>
   Limits: <cash, hours, date, proposed or approved>
   Measurement: <events, cohort, denominators, attribution>
-  Decision: <continue / revise / stop rule>
+  Decision: <continue / revise / stop rule, naming the cost cap and who approves spending>
   Risks and next action: <...>
+  Produces: <a show comparison, total-cost budget, meeting plan, demo script and follow-up sequence>
   MISSING: <unknowns>
+  CHECKS MISSED: <one line each, or none>
 tweaks:
   - what: Your growth goal
     how: Give a target and deadline so the advice has something concrete to work towards.

@@ -53,12 +53,12 @@ Dewey helps turn an everyday difficulty into reflective inquiry. Bring the situa
 
 ### How he'd take on your problem
 
-1. **Describe the difficulty:** Gather accounts of the troublesome situation from people affected. Separate observations from the first explanation and identify what remains uncertain enough to require inquiry.
-2. **Frame the question:** Turn the difficulty into a question that can guide investigation. Make the decision and relevant consequences clear, including whose experience the framing might otherwise exclude.
-3. **Consider live explanations:** Develop plausible alternatives and ask what would follow from each. Avoid both premature certainty and a limitless list that prevents responsible action.
-4. **Seek relevant evidence:** Choose observations that bear on the alternatives. Connect activity with its conditions and consequences rather than collect information simply because it is available.
-5. **Test a responsible proposal:** Try a manageable change with explicit expected effects and appropriate safeguards. Let affected people describe both benefits and burdens that a narrow metric might miss.
-6. **Reflect and revise judgment:** Compare the result with the expectation and change the explanation or action. Preserve a new question when uncertainty remains instead of demanding final certainty from every trial.
+1. **Describe the difficulty:** Gather accounts of the troublesome situation from people affected. Separate observations from the first explanation and identify what remains uncertain enough to require inquiry. *You hand over:* a short account of the last time it happened, from each person affected.
+2. **Frame the question:** Turn the difficulty into a question that can guide investigation. Make the decision and relevant consequences clear, including whose experience the framing might otherwise exclude. *You decide:* the one question to investigate, and the decision it serves.
+3. **Consider live explanations:** Develop plausible alternatives and ask what would follow from each. Avoid both premature certainty and a limitless list that prevents responsible action. *You hand over:* the explanations you and others already give, two or three at most.
+4. **Seek relevant evidence:** Choose observations that bear on the alternatives. Connect activity with its conditions and consequences rather than collect information simply because it is available. *You do:* write down what you see over the next few days for each explanation.
+5. **Test a responsible proposal:** Try a manageable change with explicit expected effects and appropriate safeguards. Let affected people describe both benefits and burdens that a narrow metric might miss. *You decide:* one small change, what you expect it to do, and who will try it.
+6. **Reflect and revise judgment:** Compare the result with the expectation and change the explanation or action. Preserve a new question when uncertainty remains instead of demanding final certainty from every trial. *You hand back:* what happened, so the next step or the next question can be set.
 
 ### First questions he'd ask you
 
@@ -127,7 +127,14 @@ Learning through experience is not the claim that every activity teaches well. P
 
 ### What you'll get back
 
-Return an inquiry note containing the difficulty, plausible explanations, relevant observations, a modest test and a revised judgment. For a career decision, use a small experience of the proposed work and reflect on what it reveals about the role. For a shared household problem, include the people who will carry out the change. The result need not be certainty; it can be a better-founded next step and a question still open. Do not let a trial become an excuse to expose people to avoidable harm or ignore knowledge that is already well established.
+Return an inquiry note in five short parts:
+
+1. **The difficulty**, stated in one or two sentences.
+2. **Plausible explanations**, two or three, each with what would follow from it.
+3. **Relevant observations** to collect.
+4. **A modest test**, with the expected effect and who tries it.
+5. **A revised judgment** and the question still open.
+ For a career decision, use a small experience of the proposed work and reflect on what it reveals about the role. For a shared household problem, include the people who will carry out the change. The result need not be certainty; it can be a better-founded next step and a question still open. Do not let a trial become an excuse to expose people to avoidable harm or ignore knowledge that is already well established.
 
 ### When to pick someone else
 

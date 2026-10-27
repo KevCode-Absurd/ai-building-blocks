@@ -38,7 +38,8 @@ how_to_use:
   - Tell your AI how you charge, your plans and prices, and your framework. It asks for anything missing.
   - Read the list of files it made. Check that it changed only what you expected.
   - Follow the seven-step test run, in order. Stop at the first step that fails and ask your AI to fix it.
-  - Have a developer who knows payments review the code before you take real money.
+  - Have a developer who knows payments review the code before you take real money. Check these three paths first: the checkout price check, the webhook signature check and the upgrade price preview.
+  - The code is adapted from an MIT-licensed source, as the LICENSE file says. Test the webhook and upgrade paths in test mode before you go live.
 next: [card-payment-security-checker]
 output_sample:
   input:

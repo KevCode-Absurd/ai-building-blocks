@@ -104,7 +104,7 @@ MISSING: <what was not given>
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Answer-first page rewriter](https://useaiblocks.com/skills/answer-first-page-rewriter). It takes the plan.
 - The [AI recommendation mention tracker](https://useaiblocks.com/skills/ai-answer-visibility-tracker).
-- The [Product page SEO builder](https://useaiblocks.com/skills/product-page-seo-builder).
+- The [AI search visibility tester](https://useaiblocks.com/skills/ai-recommendation-panel-runner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

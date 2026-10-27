@@ -8,11 +8,11 @@ import { pathToFileURL } from 'node:url';
 export const REQUIRED_PRODUCTION_PUBLIC_CHECKS = [
   'production_status_no_hosted_execution_or_model_calls', 'production_openapi', 'client_neutral_connection_docs', 'production_oauth_discovery',
   'personal_anonymous_rejected_with_oauth_challenge', 'company_anonymous_rejected_with_oauth_challenge',
-  'official_sdk_public_initialize_and_five_tools', 'public_skill_complete_resource_hash_verified',
+  'official_sdk_public_initialize_and_nine_tools', 'public_skill_complete_resource_hash_verified',
   'public_workflow_preparation_not_execution', 'public_rest_mcp_preparation_parity',
 ];
 export const REQUIRED_PRODUCTION_PERSONAL_CHECKS = [
-  'production_real_account_oauth_and_nine_tools', 'production_personal_saved_library_rest_mcp_parity',
+  'production_real_account_oauth_and_fourteen_tools', 'production_personal_saved_library_rest_mcp_parity',
   'production_personal_token_denied_company_resource', 'production_temporary_canary_grant_revoked_and_access_rejected',
 ];
 const origin = 'https://useaiblocks.com';

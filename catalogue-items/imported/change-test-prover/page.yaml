@@ -9,18 +9,18 @@ subhead: Tests that fail whenever your Python change is broken, proven by delibe
 explain: |
   Tests that fail whenever your Python change is broken, proven by deliberately breaking the code. Give it a change and the skill checks it is actually tested, not just passing.
 
-  It works in a clear order. It defines what should be true before coding, then makes small edits, called mutants, to each changed line. If your tests still pass, the mutant survived and the test is weak. It adds tests until every mutant is caught, then reports which tests fail on the old code. Passing tests alone prove little, as many deletable calls sat inside well-tested functions. It needs Python, pytest, git and a runner.
+  It works in a clear order. It defines what should be true before coding, then makes small edits, called mutants, to each changed line. If your tests still pass, the mutant survived and the test is weak. It adds tests until every mutant is caught, then reports which tests fail on the old code. Passing tests alone prove little, because a change can be wrong and the tests still pass. The author gives a figure for this that has not been checked, so we leave it out. It needs Python, pytest, git, a runner fetched from GitHub (so internet access on the first run) and pytest-cov. Licence: this copy is from sickn33's collection, whose written content is CC BY 4.0 (see LICENSE-CONTENT). The skill file's own header says MIT, set by the original author Tim Richardson. Both let you reuse it if you keep the credit.
 when:
   - You finished a Python fix and want proof it is tested before saying done.
   - Coverage looks high but you do not trust the tests.
   - A reviewer asks if your change is covered.
   - You want to know which new tests would have failed before the fix.
 not_for:
-  - "You want to review a whole test suite for gaps, flaky tests and slow tests: use the Agentic test audit."
+  - "You want to review a whole test suite for gaps, flaky tests and slow tests: use the Test suite auditor (test-suite-auditor)."
   - "Your project is not Python, or it does not use pytest: use a mutation testing tool made for your language."
   - "You want to know if the code is correct. Killed mutants only show the tests notice a change: ask a person to review the logic."
 you_give:
-  - A Python project with pytest
+  - A Python project with pytest, on a computer with internet access for the first run (the runner is fetched from GitHub)
   - The change, as uncommitted work or a branch
   - The base revision to compare with (optional)
   - A time budget for the check (optional)
@@ -43,6 +43,7 @@ output_sample:
     - A time limit in minutes for the check (optional)
   prerequisites:
     - An AI that can run code and read your project files
+    - Internet access on the first run, to fetch the runner from GitHub
     - Python 3.12 or newer, git, and pytest-cov in your project
     - pytest-randomly, to check that test order does not matter
   output:

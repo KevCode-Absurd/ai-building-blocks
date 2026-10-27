@@ -12,24 +12,24 @@ Tailor a job application to one job post using only real evidence. Three steps r
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+- **The job description** (yours): the role's title, team, duties and level, as a job post or plain notes.
 
 **Makes it better (optional):**
-- **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+- **Your resume** (yours): your resume or CV, pasted or attached.
 - **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a brief, document, source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for the job description, your resume, source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Any good chat AI that reads files, such as Claude, ChatGPT or Gemini:** It must hold the job post, your resume and your notes at once.
 <!-- /needs -->
 
-## Before you start
+## What you need
 
-Use what is attached or pasted first. If something is missing, say what you can finish and what must wait, and mark each gap `MISSING:`. Never invent it. Ask once, in one short message, for only what you cannot work without.
+This list replaces the general "Before you start" list above for this workflow. The "brief" is the job post, and the "document" is your resume. Ask once, then use what is attached or pasted first. If something is missing, say what you can finish and what must wait, and mark each gap `MISSING:`. Never invent it. Ask once, in one short message, for only what you cannot work without.
 
 **What you need**
 - **The job post**: the full text.
@@ -81,9 +81,11 @@ Keep the user's original files as they are. Give each new file its own name.
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Job application evidence reviewer](https://useaiblocks.com/skills/job-application-evidence-review-assistant). It takes the document.
-- The [Resume editor](https://useaiblocks.com/skills/agency-resume-tailor).
-- **Tell it as a story** with the [Text proofreader](https://useaiblocks.com/skills/proofreader). It takes the document and draft.
+- The [Job application evidence reviewer](https://useaiblocks.com/skills/job-application-evidence-review-assistant). It takes the resume and draft and document.
+- The [Resume version organizer](https://useaiblocks.com/skills/resume-version-organizer). It takes the resume.
+- The [Product manager resume reviewer](https://useaiblocks.com/skills/product-manager-resume-reviewer). It takes the resume.
+- The [Resume parsing checker](https://useaiblocks.com/skills/agency-engineering-ats-validator-architect). It takes the resume.
+- The [Applicant shortlist builder](https://useaiblocks.com/skills/applicant-shortlist-builder). It takes the resume.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -101,9 +103,9 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 Write `MISSING: <what>` next to the affected result. Carry on with work that does not depend on it. Stop the affected step when a source or check it needs is absent. Return the partial files and the exact input needed to carry on.
 
-## After this
+## Next steps to offer
 
-Suggest the user check the gap list and apply themselves. Nothing is sent. If an interview follows, suggest Prepare work examples for a job interview.
+Use these instead of the general "After this" list above. Suggest the user check the gap list and apply themselves. Nothing is sent. If an interview follows, suggest the [Prepare work examples for a job interview](https://useaiblocks.com/workflows/prepare-work-examples-for-a-job-interview) workflow.
 
 ## Avoid
 

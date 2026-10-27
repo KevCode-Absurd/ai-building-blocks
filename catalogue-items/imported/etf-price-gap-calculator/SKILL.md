@@ -288,6 +288,8 @@ After gathering data, explain the premium/discount using this diagnostic framewo
 
 ## Sub-Skill E: Premium Surge Decomposition (Gamma Squeeze Analysis)
 
+**In plain words:** use this only when an ETF has just jumped or dropped hard and you want to know how much of the move comes from the fund's holdings and how much from other forces, such as options trading. It gives a rough, upper-bound estimate with stated assumptions. It cannot predict price, and it cannot show what dealers actually hold. For a normal premium or discount check, use Sub-Skill A.
+
 **Goal**: When an ETF has just experienced a dramatic intraday move that diverges from its underlying holdings, decompose the move into (1) a fundamental NAV-driven component and (2) an "excess premium" driven by structural forces — most commonly options dealer gamma hedging, AP arbitrage breakdowns, or sentiment surges. Then assess how long the premium will likely take to converge.
 
 This sub-skill is appropriate when the user reports or asks about:

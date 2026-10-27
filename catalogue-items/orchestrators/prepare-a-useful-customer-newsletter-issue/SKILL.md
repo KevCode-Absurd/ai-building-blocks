@@ -26,7 +26,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
 3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and a buyer brief.
-4. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and your offer and buying reasons.
+4. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and offer and buying reasons.
 5. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
@@ -67,7 +67,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 2. **Campaign email writer.** Use the skill `campaign-email-writer` in value-email mode: it helps first and asks softly, with one core message. Give it the question, the quote, the approved news and the voice notes. Get two subject and preview options under 50 characters, an email of about 100 words, a plain-text version, two A/B variants that each change one thing, and its claims check. Add no offer. Save `outputs/step-02-campaign-email-writer.md`. Hand to step 3: the full draft with the subject lines and the plain-text version.
 
-3. **Brand voice editor.** Use the skill `brand-voice-editor` in `fix` mode. It was written for ad copy, so tell it the text is a newsletter email and give it the subject lines, preview lines, email and plain-text version as numbered lines. Give it the owner's past emails or voice note in place of voice rules. Change wording only. Keep every fact, number, price, date and promise exactly as it was. Save `outputs/step-03-brand-voice-editor.md`.
+3. **Brand voice editor.** Use the skill `brand-voice-editor` in `fix` mode. It was written for ad copy, so tell it the text is a newsletter email and give it the subject lines, preview lines, email and plain-text version as numbered lines. Give it the owner's past emails or voice note in place of voice rules. Change wording only. Keep every fact, number, price, date and promise exactly as it was. Because the skill is built for ads, compare its result line by line with step 2. If a line changed meaning, gained an ad-style claim or drifted off the customer's question, put the step 2 line back. Save `outputs/step-03-brand-voice-editor.md`.
 
 4. **Check and hand back.** Compare the final email with the sources. Every statement must match an approved fact, and any step 3 wording change must leave the meaning as it was. Build the pre-send checklist: each date and link to confirm, the unsubscribe link, the sender name and address, the audience, the send date and the consent rule for the owner's region. End with a section headed `HAND-BACK SUMMARY`: each file saved, any step not run and why, every `MISSING:` line in one list, and CHECKS MISSED (or "none").
 
@@ -111,13 +111,12 @@ When you've handed it back, suggest what they could do next in one short questio
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
-## After this
+## What to do with the draft
 
-Offer one next step and say they can type their own:
+Offer one of these and say they can type their own:
 
 - Read the draft once more with the [Email draft reviewer](https://useaiblocks.com/skills/email-draft-reviewer) before it goes out.
 - After sending, note which subject line and which question got replies. Bring the notes back for next month's issue.
-- Plan the following months with [Plan a month of campaign emails that sell without discounts](https://useaiblocks.com/workflows/plan-a-month-of-campaign-emails-that-sell-without-discounts).
 
 ## Check before you hand it back
 

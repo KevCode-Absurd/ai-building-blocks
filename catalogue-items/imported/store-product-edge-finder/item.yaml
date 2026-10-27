@@ -14,6 +14,8 @@ inputs:
     required: false
 outputs:
   - type: angle_library
+  - type: customer_needs
+    required: true
 uses: []
 origin: imported
 source:

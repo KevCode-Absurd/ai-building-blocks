@@ -5,11 +5,13 @@ name: Page design gate
 summary: Check your page design in a real browser at phone and desktop width. Describe the page and get a built page that looks designed, not generic.
 job: build-websites
 headline: Page design gate
-subhead: Describe your page. Get one that looks designed, checked in a real browser at phone and desktop width. Bring what the page is for and who visits. Use the result to plan your next step.
+subhead: Describe your page. Get one that looks designed, checked in a real browser at phone and desktop width. Bring what the page is for and who visits. You get a built page, two screenshots and a pass or fail line.
 explain: |
   A page that looks designed instead of generic, and that has been opened in a real browser at phone and desktop width before it is called done.
 
   It starts by reading the room: who visits, what feel suits them, and one signature detail to make the page memorable. It then builds on a set floor of rules for type, colour, layout, buttons states and motion, and bans familiar AI looks like purple glow gradients and emoji icons. The last step renders the page at both sizes and keeps the work open while any hard problem remains, such as overlapping text or sideways scrolling. It needs a browser it can control.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (stas4000) says MIT. Credit goes to stas4000 and sickn33.
 when:
   - You asked an AI for a landing page and it looks like every other one.
   - You want proof the page works on a phone, not a guess.
@@ -35,6 +37,7 @@ how_to_use:
   - Add your brand fonts or colours if you have them (optional). They override the skill's design rules.
   - Let your AI write the direction line, build the page, then run the browser check. The first run installs Playwright and Chromium.
   - Ask it to fix every failed finding and run the check again. Then open the two screenshots yourself and judge the look.
+  - The result is a built page, two PNG screenshots (desktop.png and mobile.png) and a final pass or fail line from the check.
   - Hand the checked page to your developer to ship, or run a check with real visitors before launch.
 output_sample:
   input:

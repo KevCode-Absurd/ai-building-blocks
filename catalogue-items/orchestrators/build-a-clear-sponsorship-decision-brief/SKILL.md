@@ -13,9 +13,9 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
 
 **Makes it better (optional):**
-- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 How to start:
@@ -83,8 +83,8 @@ CHECKS MISSED     <one line each, or none>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Go or no-go launch checker](https://useaiblocks.com/skills/go-or-no-go-launch-checker). It takes the plan and audit report.
-- The [Brand name fit checker](https://useaiblocks.com/skills/brand-name-stretch-checker). It takes the plan and audit report.
-- The [Weekly big task sorter](https://useaiblocks.com/skills/weekly-big-task-sorter). It takes the plan.
+- The [Plan failure reviewer](https://useaiblocks.com/skills/failure-first-plan-check). It takes the plan and audit report.
+- The [Long-term strategy impact reviewer](https://useaiblocks.com/skills/long-run-effects-checker). It takes the plan and audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

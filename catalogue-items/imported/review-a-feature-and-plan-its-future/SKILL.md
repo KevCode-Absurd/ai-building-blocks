@@ -29,6 +29,8 @@ decisions — including full retirement lifecycles. It produces a durable retain
 learning record that feeds back into roadmap, analytics, adoption, experimentation,
 and future specifications.
 
+If the feature has a written spec or requirements document, use it as the source of what was expected.
+
 ## Loading Guide
 
 Load only the reference or template relevant to the task. Do not load every file at once.

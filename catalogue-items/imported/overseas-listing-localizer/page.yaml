@@ -37,7 +37,8 @@ how_to_use:
   - Let it make the text-free main image first. Then ask for each country's version.
   - Check all foreign text with a native speaker. Confirm current platform rules and label rules on each platform's own seller help page before you upload. The rules in the skill are the author's notes and may be out of date.
   - Upload the images that pass and the approved copy for each region. Check again whenever a platform changes its rules. To write the listing text itself first, use the Product listing writer.
-  - Image making and checks need an AI that can run code and your own image model key (OpenAI, Gemini, fal or Replicate). Copy and size tables work in any chat.
+  - Image making and checks need an AI that can run code on your computer, such as Claude Code, Codex or Cursor, with Python 3 and Node.js installed. You also need your own image model key (OpenAI, Gemini, fal or Replicate), which is a paid service. Copy and size tables work in any chat.
+  - The size table in the skill is a rough guide. Swap in your brand's own size chart before you publish.
 output_sample:
   input:
     - Your product images

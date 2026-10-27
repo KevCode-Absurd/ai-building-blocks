@@ -8,8 +8,10 @@ role: check
 job: ops
 level: intermediate
 inputs:
-  - type: document
+  - type: contract
     required: true
+  - type: deal_terms
+    required: false
 outputs:
   - type: audit_report
 uses: []

@@ -470,7 +470,7 @@ Some of these are paid or need an account. Check each one's pricing yourself.
 
 | Tool | Use case |
 |------|----------|
-| **[Octolens](https://octolens.com)** | Monitor GitHub for mentions of your project, competitors, and relevant discussions. Get alerts when people talk about problems you solve. |
+| **[Octolens](https://octolens.com)** (paid service) | Monitor GitHub for mentions of your project, competitors, and relevant discussions. Get alerts when people talk about problems you solve. |
 | **Shields.io** | Generate status badges |
 | **GitHub Readme Stats** | Dynamic stats for profile |
 | **Carbon** | Beautiful code screenshots |

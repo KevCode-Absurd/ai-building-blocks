@@ -11,6 +11,8 @@ This catalog copy does not include these files:
 
 Do not say you read or ran them. Do those steps by hand, or ask the user for the original file.
 
+This copy does include `references/optimization-patterns.md`. Use it.
+
 # Performance Optimization
 
 ## Overview

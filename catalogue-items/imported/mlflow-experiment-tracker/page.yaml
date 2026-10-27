@@ -5,7 +5,7 @@ name: MLflow experiment tracker
 summary: Add MLflow experiment tracking to your training code. Every run is logged and compared, so you can repeat your best model.
 job: track-numbers
 headline: MLflow experiment tracker
-subhead: Every training run you do gets saved with its settings, scores and files, so you can see which one won and repeat it. No more folders named finalv2reallyfinal.
+subhead: Every training run you do gets saved with its settings, scores and files, so you can see which one won and repeat it. No more folders named final_v2_really_final.
 explain: |
   Every training run you do gets saved with its settings, scores and files, so you can see which one won and repeat it. No more folders named final_v2_really_final.
 
@@ -31,12 +31,12 @@ you_get:
   - A promotion path from test to production
   - Steps to repeat your best run
 how_to_use:
-  - Before you start, check you have a recent Python, run pip install mlflow, and install the machine learning library your script uses. Pick a small training script you already have.
+  - Before you start, check you have a recent Python, run pip install mlflow, and install the machine learning library your script uses. Pick a small training script you already have. Tell your AI the MLflow version you installed (run pip show mlflow), because some registry commands changed between versions.
   - Paste the skill into your AI, then paste your script. Say which scores you care about and which library you use.
   - Ask your AI to add MLflow logging. It should name the experiment and give each run a clear name.
   - Run the script a few times with different settings. This needs an AI that can run Python, or you run it yourself.
   - Start the MLflow screen with the command mlflow ui and open http://localhost:5000. Sort runs by score and compare two.
-  - Only if you need it, ask for the registry or deploy steps. Cloud deploy needs your own AWS or Azure account and may cost money.
+  - After you compare runs, pick the best one and give its model a name in the model registry. Only if you need it, ask for the registry or deploy steps. Cloud deploy needs your own AWS or Azure account and may cost money.
 output_sample:
   input:
     - Your training script

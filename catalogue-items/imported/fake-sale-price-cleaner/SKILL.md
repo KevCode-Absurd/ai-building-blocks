@@ -14,7 +14,7 @@ compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ## Purpose
 Identifies variants with a `compareAtPrice` that no longer represents a genuine discount and clears it, so storefront strikethrough pricing reflects real savings rather than legacy noise. Two conditions are flagged: (a) `compareAtPrice <= price` (no discount, often left over from a price increase), and (b) `compareAtPrice` set for longer than `max_age_days` (stale "always on sale" optics that hurt long-term price perception and can violate advertising standards in some regions). Defaults to dry-run.
 
-Limit: the "stale" rule uses the variant's `updatedAt` date as a stand-in for when the compare-at price was set. Any product edit resets that date, so a live sale price can be cleared by mistake. Tell the user this before every run, and to turn off `clean_stale` during sales.
+Limit: the "stale" rule is off by default. When it is turned on, it uses the variant's `updatedAt` date as a stand-in for when the compare-at price was set. Any product edit resets that date, so a live sale price can be cleared by mistake. Tell the user this before every run, and to keep `clean_stale` off during sales. Restoring a cleared price is manual: the CSV is the only record, and the user must enter the old value by hand in Shopify admin.
 
 ## Prerequisites
 - Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_products,write_products`
@@ -27,7 +27,7 @@ Limit: the "stale" rule uses the variant's `updatedAt` date as a stand-in for wh
 | store | string | yes | — | Store domain (e.g., mystore.myshopify.com) |
 | dry_run | bool | no | true | Preview the cleanup without executing mutations |
 | clean_no_discount | bool | no | true | Clear `compareAtPrice` when `price >= compareAtPrice` |
-| clean_stale | bool | no | true | Clear `compareAtPrice` set longer than `max_age_days` |
+| clean_stale | bool | no | **false** | Opt-in. Clear `compareAtPrice` set longer than `max_age_days`. Turn it on on purpose, only after you have read the dry-run CSV |
 | max_age_days | integer | no | 90 | Age threshold in days for the stale rule (uses variant `updatedAt` as proxy) |
 | collection_id | string | no | — | Optional collection GID to scope the cleanup |
 | tag_filter | string | no | — | Optional product tag to scope the cleanup |
@@ -35,7 +35,7 @@ Limit: the "stale" rule uses the variant's `updatedAt` date as a stand-in for wh
 
 ## Safety
 
-> ⚠️ Step 2 executes `productVariantsBulkUpdate` mutations that overwrite `compareAtPrice` to null. The original strikethrough value is not preserved server-side — record the dry-run CSV before committing if you want a restore path. Always start with `dry_run: true` and review the CSV before running with `dry_run: false`.
+> ⚠️ Step 3 executes `productVariantsBulkUpdate` mutations that overwrite `compareAtPrice` to null. The original strikethrough value is not preserved server-side — record the dry-run CSV before committing if you want a restore path. Always start with `dry_run: true` and review the CSV before running with `dry_run: false`.
 
 ## Workflow Steps
 
@@ -43,7 +43,7 @@ Limit: the "stale" rule uses the variant's `updatedAt` date as a stand-in for wh
    **Inputs:** `first: 250`, `query: <built from collection_id or tag_filter>`, select `price`, `compareAtPrice`, `updatedAt`, `product { id, title, vendor }`, `sku`, pagination cursor
    **Expected output:** All variants in scope with current pricing; paginate until `hasNextPage: false`
 
-2. Filter to variants meeting either rule: `clean_no_discount` AND `compareAtPrice != null` AND `parseFloat(compareAtPrice) <= parseFloat(price)`, OR `clean_stale` AND `compareAtPrice != null` AND `(now - updatedAt) > max_age_days`. Group by `product.id` for batched mutation.
+2. Filter to variants that meet either rule, with the grouping written out: `(clean_no_discount AND compareAtPrice != null AND parseFloat(compareAtPrice) <= parseFloat(price)) OR (clean_stale AND compareAtPrice != null AND (now - updatedAt) > max_age_days)`. `clean_stale` is false unless the user turned it on. Group by `product.id` for batched mutation.
 
 3. **OPERATION:** `productVariantsBulkUpdate` — mutation (skipped when `dry_run: true`)
    **Inputs:** Per product, `productId` plus `[{ id: variantId, compareAtPrice: null }]`
@@ -51,7 +51,7 @@ Limit: the "stale" rule uses the variant's `updatedAt` date as a stand-in for wh
 
 4. Write the CSV (always, even on dry run) for audit trail and revert capability.
 
-The filter in step 2 is the only check before a live run. Do not set `dry_run` to false until the user has reviewed the CSV row by row and said yes.
+The filter in step 2 is the only check before a live run in step 3. Do not set `dry_run` to false until the user has reviewed the CSV row by row and said yes.
 
 ## GraphQL Operations
 
@@ -165,7 +165,7 @@ CSV file `compare_at_cleanup_<YYYY-MM-DD>.csv` with columns:
 
 ## Best Practices
 1. Always run with `dry_run: true` first and review the CSV. There is no bulk undo for compareAtPrice clearing.
-2. Disable `clean_stale` (set `clean_stale: false`) during long planned promotions — your "stale" sale is actually intentional.
+2. Leave `clean_stale` off (its default is `false`) during long planned promotions — your "stale" sale is actually intentional.
 3. Use `collection_id` to scope the cleanup to evergreen products and exclude an active sale collection.
 4. After running live, spot-check 5–10 variants in the storefront to confirm strikethrough pricing is gone.
 5. Schedule a quarterly run as part of catalog hygiene.

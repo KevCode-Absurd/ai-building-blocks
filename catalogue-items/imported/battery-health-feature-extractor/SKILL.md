@@ -134,7 +134,7 @@ featureTable = extract(extractor, parser);
 Features are only meaningful for degradation trending when extracted from phases with a consistent protocol (same C-rate, same voltage limits) across all cycles.
 
 **Agent should:**
-1. After determining column mappings, run `checkCyclingProtocol` to assess protocol consistency. This helper ships with the skill at `scripts/checkCyclingProtocol.m`. Make it callable by setting the MATLAB current folder to that `scripts/` directory (pass its absolute path as the MCP tool's `project_path`) — do **not** call `addpath`. Reference the user's data by absolute path.
+1. After determining column mappings, run `checkCyclingProtocol` to assess protocol consistency. This helper ships with the skill at `scripts/checkCyclingProtocol.m`. Make it callable by running it from that `scripts/` folder: set the MATLAB current folder to `scripts/` (for example with `cd`), or tell the user to open MATLAB in that folder. Do not change the saved MATLAB path. Reference the user's data by absolute path.
    ```matlab
    result = checkCyclingProtocol(data, ...
        CurrentVariable="<mapped>", VoltageVariable="<mapped>", ...
@@ -359,7 +359,7 @@ a raw unnamed matrix, or a time/required column is genuinely ambiguous. If the g
 ### Workflow 1: Track degradation across cycles
 ```matlab
 % Check protocol consistency first (run with the MATLAB current folder set to the
-% skill's scripts/ directory via the MCP project_path — do not use addpath)
+% skill's scripts/ directory, for example with cd — do not change the saved path)
 result = checkCyclingProtocol(cyclingData, ...
     CurrentVariable="I", VoltageVariable="V", ...
     TimeVariable="t", CycleIndexVariable="Cycle", ...

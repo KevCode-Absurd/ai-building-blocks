@@ -245,9 +245,13 @@ See `references/ofdm-system-guide.md` for:
 - **SNR conversion** — see `matlab-add-awgn` skill for all `convertSNR` patterns
 - **Noise variance for soft demodulation** — scaling after `ofdmdemod`
 
+## Output format (added by AI Blocks)
+
+Return the answer in this order: (1) a numbered list of questions for any missing setup detail, before any code; (2) a parameter section with comments showing how each value was worked out; (3) transmitter and receiver code; (4) noise and SNR handling; (5) channel and equalisation, only if asked for; (6) synchronisation and coding, only if asked for.
+
 ## Cross-References
 
-- **`matlab-add-awgn`** — when you need to add noise and calculate SNR conversions, use this skill. It covers all `convertSNR` patterns, `awgn` usage, and noise variance capture.
+- **`matlab-add-awgn`** (in this library: the Noise level code helper, a separate item that is not in this folder) — when you need to add noise and calculate SNR conversions, use this skill. If it is not available, use the SNR notes in `references/ofdm-system-guide.md`. It covers all `convertSNR` patterns, `awgn` usage, and noise variance capture.
 
 ## Reference Loading
 

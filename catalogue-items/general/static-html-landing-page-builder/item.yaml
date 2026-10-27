@@ -8,9 +8,11 @@ job: page
 task: write-landing-page
 level: intermediate
 inputs:
-  - {type: brief, required: true}
+  - {type: landing_page, required: true}
+  - {type: page_layout_spec, required: false}
+  - {type: brief, required: false}
 outputs:
-  - {type: code_change}
+  - {type: web_page}
 uses: []
 origin: original
 version: 1.0.0

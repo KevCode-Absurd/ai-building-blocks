@@ -11,8 +11,10 @@ level: advanced
 inputs:
   - type: question
     required: true
+  - type: spreadsheet
+    required: false
 outputs:
-  - type: audit_report
+  - type: document
 uses: []
 origin: imported
 source:

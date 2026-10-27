@@ -35,7 +35,8 @@ how_to_use:
   - Paste the skill and give your store domain. Turn dry run on. Use a dated tag such as win-back-2026-11, so you can tell each run apart and not tag the same people twice.
   - Check the count and the preview. Change the cutoff or minimum orders if the list looks wrong.
   - Run it again with dry run off. It tags up to 500 customers per run.
-  - The skill leaves out anyone who already has the tag or has not agreed to marketing email. If it cannot see that status, remove those people yourself before you email the CSV.
+  - The skill leaves out anyone who already has the tag or is not subscribed to marketing email. If it cannot see that status, remove those people yourself before you email the CSV.
+  - Next, import the CSV into Klaviyo or Shopify Email, filter on the win-back tag, and send the campaign only to customers who agreed to marketing email.
 output_sample:
   input:
     - Your store domain

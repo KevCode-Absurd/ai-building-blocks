@@ -10,9 +10,9 @@ Give it a customer's message and the policy that applies. It returns a reply dra
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Customer support response writer](https://useaiblocks.com/skills/agency-support-support-responder).
 - The [Angry customer reply checker](https://useaiblocks.com/skills/angry-customer-reply-checker). It takes the draft.
 - The [Customer reply promise checker](https://useaiblocks.com/prompts/complaint-reply-promise-checker). It takes the draft.
+- The [Customer reply drafter](https://useaiblocks.com/skills/customer-reply-drafter). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -29,10 +29,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Business profile** (yours): a sourced business profile with buyer, offer, activation, growth goal, stage and limits; missing private metrics remain unknown.
+- **The policy** (yours): the written policy or rules, with the date they start.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for source text, business profile. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for source text, business profile, the policy. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -41,6 +42,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+
+These are the inputs that count. If the generic "Before you start" list above asks for something else, such as source text or a business profile, ignore that part.
 
 - The customer's message, as written (required)
 - The channel: email, chat, text message, social post or phone (required)
@@ -71,6 +74,8 @@ Return these sections in order.
 4. Steps for your team
 5. Record note
 6. Missing and checks
+
+The list under heading 6 is also your CHECKS MISSED list: name every check that failed or could not run, or write "none".
 
 ## Guard rails
 

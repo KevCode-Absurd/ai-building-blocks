@@ -10,9 +10,9 @@ Give it a product, an account and a goal on Douyin. It returns a Douyin plan wit
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [TikTok content planner](https://useaiblocks.com/skills/agency-marketing-tiktok-strategist).
-- The [E-commerce content calendar builder](https://useaiblocks.com/skills/content-calendar-builder).
-- The [TikTok Shop content planner](https://useaiblocks.com/skills/tiktok-shop-content-planner).
+- The [Social content calendar maker](https://useaiblocks.com/skills/standing-social-calendar-maker). It takes the plan.
+- The [Marketing content drafter](https://useaiblocks.com/skills/marketing-content-drafter). It takes the plan.
+- The [Short video hook writer](https://useaiblocks.com/skills/short-video-hook-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -42,6 +42,10 @@ How to start:
 
 ## What you need
 
+These are the inputs that count. If the generic "Before you start" list above mentions Meta Ads Manager or Google Ads exports, ignore that part: for results data this agent uses the Douyin creator dashboard export and your product list.
+
+Not for: selling on TikTok outside China (use the [TikTok content planner](https://useaiblocks.com/skills/agency-marketing-tiktok-strategist)), coaching a livestream you already run (use the [Livestream Commerce Coach agent](https://useaiblocks.com/skills/agency-marketing-livestream-commerce-coach)), or Kuaishou.
+
 - Product and buyer (required)
 - Account status and type (required)
 - Goal, target region and monthly budget (required)
@@ -56,7 +60,7 @@ Ask once for anything required that is missing, then mark it MISSING and carry o
 2. Position the account: persona, content direction and earning path. Base the diagnosis only on stats the user gave.
 3. Plan a weekly calendar over the formats in the profile: teaching, story, product review and vlog. Fit the number of videos to what the user can film.
 4. For each script, write hook options for seconds 1 to 3 (conflict, value, suspense, relatable), a core (pain point, fix, demo or proof, before and after) and a close with an engagement prompt and a series teaser. Add shooting notes: vertical 9:16, subtitles, on-camera talent. Say that the user must pick current music themselves. Never tell viewers to go to another platform inside the video, as the profile warns it triggers throttling.
-5. Traffic plan: posting times to test, comment steps, and small boost tests using DOU+ with the audience chosen on purpose. If ads are in scope, say what to measure and make no spend or ROI promise.
+5. Traffic plan: posting times to test, comment steps, and small boost tests using DOU+ with the audience chosen on purpose. Before any boost test, set a DOU+ spend cap from the user's stated monthly budget, and stop the test when the cap is reached. If ads are in scope, say what to measure and make no spend or ROI promise.
 6. If the user sells live, sort the product list into traffic drivers, profit items, prestige items and flash deals. Show the profile's shares as an example split to adjust, and pace the run. End with the compliance check (no absolute claims such as best or number one, no false claims, extra care for food, medicine and cosmetics, minors) and a review plan.
 
 ## Deliverable
@@ -70,7 +74,7 @@ Return these sections in order.
 5. Livestream lineup (only if the user sells live): product role, share, time slot, script focus.
 6. Compliance check: claim, risk, safer wording.
 7. Review plan: metric, starting number or MISSING, what to change if it is low.
-8. MISSING items and assumptions.
+8. MISSING items and assumptions. This is also your CHECKS MISSED list: name every check that could not run, or write "none".
 
 ## Review rules
 

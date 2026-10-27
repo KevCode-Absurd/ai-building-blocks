@@ -47,6 +47,8 @@ This skill complements `brand-identity` (which defines the visual system) and `b
 - The brand's design tokens (colors, type, spacing) - or willingness to define them
 - The target devices and viewports
 
+Code or a screenshot both work. Contrast ratios and touch-target sizes are only exact from code (real colour values and pixel sizes). From a screenshot, estimate them and say they are estimates. Tell the user which findings are estimates.
+
 If brand tokens are undefined, define a working set first using the template in [`references/design-tokens-template.md`](references/design-tokens-template.md).
 
 ---

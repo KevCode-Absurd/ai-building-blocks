@@ -3,9 +3,6 @@ name: dossier
 description: "Decision-grade entity research skill — produces a hypothesis-tested dossier on a specific company, person, nonprofit, or government org, not a generic profile. Forcing intake makes the user state their hypothesis upfront (what they already believe and want to verify or disprove) so the dossier tests it rather than confirms it. Output is an editable Word document (.docx) with verdict on the hypothesis, identity facts, 12-month activity timeline, network and reputation signals, red flags, conversation hooks tied to specific findings, and source-provenance audit log. Uses WebSearch + WebFetch + free APIs (SEC EDGAR, GitHub, ProPublica) as workhorses; optional BYOK MCPs enhance coverage. Use when the user asks for background research, diligence, or meeting prep on a specific entity (e.g., 'prep me for a meeting with [person/company]', 'due diligence on [company]'). Honors sensitivity exclusions for journalism + personal-vetting contexts."
 license: MIT
 metadata:
-  source_spec: "megaprompts/12-dossier-megaprompt.md"
-  build_pattern: "Path B (direct conversion)"
-  research_pack_convention: "Agent Integrity Rules verbatim per PR #657 audit; hypothesis-testing variant"
   version: 1.0.0
 ---
 
@@ -29,9 +26,9 @@ The forcing Q4 — the hypothesis question — is the non-generic anchor. Skip i
 
 See [`references/hypothesis_testing_discipline.md`](references/hypothesis_testing_discipline.md) for the canon.
 
-## Agent Integrity Rules (Research-Pack Convention)
+## Agent Integrity Rules
 
-Locked verbatim per PR #657 audit.
+These rules keep every claim tied to a source.
 
 - **Execution discipline.** Sequential search calls. WebSearch + WebFetch have looser rate limits than Consensus but still apply 1 q/sec etiquette. Confirm response received before next call.
 - **Source discipline.** Cite only sources returned by this session's tool calls. Wikipedia / training knowledge labeled `[Background — verify before quoting]` and excluded from primary findings count.
@@ -127,7 +124,7 @@ Routed by Q2 subject type. See [`references/subject_type_source_matrix.md`](refe
 
 - LinkedIn (manual fetch or LinkedIn MCP if BYOK)
 - Personal website
-- Twitter/X (rate-limited; degrade gracefully)
+- Twitter/X (rate-limited; if blocked, skip it and say so)
 - GitHub (if technical subject)
 - Google Scholar (if academic)
 - News (WebSearch + WebFetch)
@@ -140,7 +137,7 @@ Routed by Q2 subject type. See [`references/subject_type_source_matrix.md`](refe
 - Crunchbase free tier (or Crunchbase MCP if BYOK)
 - News (WebSearch + WebFetch)
 - GitHub (for tech orgs)
-- Glassdoor + Comparably (sentiment; degrade gracefully if scraping blocked)
+- Glassdoor + Comparably (sentiment; check each site's terms first. If automated access is blocked or forbidden, do not work around it: use web search results instead and say so)
 - LinkedIn company page
 
 ### Nonprofit
@@ -314,5 +311,4 @@ new ExternalHyperlink({
 ---
 
 **Version:** 1.0.0
-**Source spec:** `megaprompts/12-dossier-megaprompt.md` (maintainer-local draft spec — gitignored, not present in the public repository)
-**Build pattern:** Path B (direct conversion). Research-pack sibling, hypothesis-testing variant.
+**Needs:** web search and web page reading, plus Node.js for the Word file.

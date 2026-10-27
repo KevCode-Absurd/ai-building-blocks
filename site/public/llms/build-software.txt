@@ -317,7 +317,7 @@
 - [Search embedding and reranking trainer](https://useaiblocks.com/skills/embedding-model-trainer): Train text search or matching models from supplied data and source templates. Compare results with a baseline and save the model.
 - [Search relevance engineer agent](https://useaiblocks.com/agents/agency-engineering-search-relevance-engineer): Fix poor site search with a tested plan for Elasticsearch or OpenSearch, so each change is scored on real queries before it goes live.
 - [Sentence Transformers embedding maker](https://useaiblocks.com/skills/text-embedding-maker): Share text and a search goal. Get Python code that turns sentences into vectors for similarity search.
-- [SerDes link modeler](https://useaiblocks.com/skills/serdes-link-modeler): Build a SerDes link model in MATLAB: tune equalizers, plot eye diagrams and export IBIS-AMI files for PCIe, USB4 or PAM4 links.
+- [SerDes link modeler](https://useaiblocks.com/skills/serdes-link-modeler): For MATLAB signal integrity engineers: build a SerDes link model, tune equalizers, plot eye diagrams and export IBIS-AMI files for PCIe, USB4 or PAM4 links.
 - [Serverless Redis cache builder](https://useaiblocks.com/skills/copilot-upstash-redis): Share your serverless app. Get Redis cache or rate-limit code. Requires an Upstash database, REST URL, token and usage-based account.
 - [Service capacity and cost planner](https://useaiblocks.com/skills/technical-capacity-cost-planner): Bring demand, speed goals and prices. Get capacity estimates, unit costs and tests to run.
 - [Session to script exporter](https://useaiblocks.com/skills/session-to-script-exporter): Turn your MATLAB session into one clean .m script. Ask to export it and get a file that reruns your work from start to end.

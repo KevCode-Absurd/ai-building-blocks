@@ -3,13 +3,13 @@ thinking_why: Rules depend on role, scope and risk class, so it reasons through 
 new_slug: eu-ai-act-readiness-checker
 name: EU AI Act readiness checker
 summary: Check your AI systems against the EU AI Act. Get a first read of your risk level, duties and gaps, plus a 90 day plan. Not legal advice.
-job: secure-code
+job: check-contracts
 headline: EU AI Act readiness checker
 subhead: Describe your AI systems. Get a first read of your risk level, duties and gaps under the EU AI Act. Bring list of AI systems and what each is used for. Use the result to plan your next step.
 explain: |
   A first-pass readiness review of your AI systems against the EU AI Act: what you run, your role for each, which duties may apply and where evidence is missing. It is triage, not a legal opinion.
 
-  It builds an inventory with one row per system, then checks the rows for gaps with a small Python script. It screens for banned uses, checks transparency rules, high-risk categories and rules for general-purpose models. It notes its sources and the date it checked them. The output is a gap register with owners and target dates, a 30, 60 and 90 day plan, and a list of questions that need a qualified lawyer.
+  It builds an inventory with one row per system, then checks the rows for gaps with a small Python script. It screens for banned uses, checks transparency rules, high-risk categories and rules for general-purpose models. It notes its sources and the date it checked them. The amending act number and the as-of date written in the skill (2026-08-09) come from the original author and have not been checked here. Your AI must confirm them on EUR-Lex before you rely on any date. The output is a gap register with owners and target dates, a 30, 60 and 90 day plan, and a list of questions that need a qualified lawyer.
 when:
   - You use AI in products or HR and need to know what the EU Act means for you.
   - You have no inventory of the AI tools your company runs.
@@ -31,11 +31,13 @@ you_get:
   - 30, 60 and 90 day plan
   - Questions for counsel
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Use one that can browse the web and run Python code.
+  - Open an AI that can browse the web and run Python code, such as Claude with code and web search turned on, or ChatGPT with code running and browsing on. Without both, it cannot check the law or run the inventory checker.
   - Upload the whole skill folder, not just the text. The AI needs the checklist, the sources file and the checker script. Say you want an EU AI Act readiness check.
   - Fill in the blank inventory template in the folder (assets/ai-system-inventory-template.csv) with your AI systems, your role for each, and the countries where they are used.
-  - Add your risk, privacy and security documents if you have them (optional).
+  - Run the checker on the filled inventory. It flags missing fields only, and does not classify anything.
+  - Add your risk, privacy and security documents if you have them (optional). Then ask for the gap register and the 30, 60 and 90 day plan.
   - Check the inventory and gap register with each system owner. Fix any wrong facts.
+  - Ask your AI to confirm every legal date and the amending act on EUR-Lex before you plan around them.
   - Send the questions list to a qualified EU lawyer before you act on any risk class.
 output_sample:
   input:

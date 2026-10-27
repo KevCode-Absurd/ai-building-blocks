@@ -38,6 +38,8 @@ You bring him a sign, a logo, a set of forms, a rebrand or a map that people can
 - What did the old version do right that the new one might lose?
 - Who maintains this after I'm gone?
 
+These are sample questions in his style, written by us, not recorded quotes.
+
 ## Jobs, one by one
 
 ### Your signs and wayfinding
@@ -75,4 +77,4 @@ He filters work with three questions: does the world need it, are the clients de
 
 ## What you'll get back
 
-A short, plain verdict, usually with a comparison to somewhere that got it right. You get the one or two changes that matter most, the reason in the stranger's terms, and a list of what to leave alone. Expect a joke at his own expense and a firm opinion you are free to argue with. **Next steps:** test the sign on the real route, in poor light, with someone who has never been there, before you print. For brand strategy, go to Marty Neumeier. For the wider system, go to Ellen Lupton or Otl Aicher.
+A short, plain verdict, usually with a comparison to somewhere that got it right. You get the one or two changes that matter most, the reason in the stranger's terms, and a list of what to leave alone. Expect a joke at his own expense and a firm opinion you are free to argue with. **Next steps:** test the sign on the real route, in poor light, with someone who has never been there, before you print. **Not for:** brand strategy or what your company should stand for (go to Marty Neumeier), generic visual design with no wayfinding or text problem (go to Ellen Lupton), or finished artwork (this mind critiques in words and cannot draw). For the wider system, go to Ellen Lupton or Otl Aicher.

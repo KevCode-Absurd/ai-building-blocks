@@ -5,11 +5,13 @@ name: YouTube playlist reader
 summary: Turn a YouTube playlist into a full video list, plus transcripts for the videos you pick. Bring a playlist link and a TranscriptAPI key.
 job: research-topics
 headline: YouTube playlist reader
-subhead: Give it a playlist. Get every video listed, with transcripts for the ones you want. Collects data from websites. Bring a playlist link or ID. Use the result to plan your next step.
+subhead: Give it a playlist. Get every video listed, with transcripts for the ones you want. It reads YouTube through TranscriptAPI, a paid service with a small free allowance, and needs your key. Bring a playlist link or ID.
 explain: |
   Give it a YouTube playlist and get back every video in it, with transcripts for the ones you pick.
 
-  It accepts a playlist link or ID, including a channel's uploads list. Results come in pages of 100 videos, and the skill follows the continuation token until the list is complete. Each page costs one credit on TranscriptAPI, which has a free tier of 100 credits and needs a key. Listing costs one credit per page; check TranscriptAPI's price page for what each transcript costs, so the credit count makes sense. The transcripts come from YouTube through a third-party service, so check you have the right to quote or share any text. From the list you choose which videos matter, and it fetches their transcripts one by one. That makes a course, a conference series or a creator's best-of list something you can read, search and quote without watching hours of video.
+  It accepts a playlist link or ID, including a channel's uploads list. Results come in pages of 100 videos, and the skill follows the continuation token until the list is complete. Each page costs one credit on TranscriptAPI, which has a free tier of 100 credits and needs a key. Listing costs one credit per page, and each transcript costs one credit, so a 100-video playlist with 10 transcripts uses 11 credits. Check TranscriptAPI's price page in case this has changed. The transcripts come from YouTube through a third-party service. Before you publish or share any transcript text, check YouTube's terms and the video owner's rights. Short quotes with a link to the video are the safe default. From the list you choose which videos matter, and it fetches their transcripts one by one. That makes a course, a conference series or a creator's best-of list something you can read, search and quote without watching hours of video.
+
+  Licence: we share this copy under the MIT licence, as the LICENSE file says.
 when:
   - You found a course playlist and want it as a text list.
   - You need transcripts from a conference series.
@@ -26,14 +28,14 @@ you_give:
 you_get:
   - A full list of videos with titles and IDs
   - Transcripts for the videos you choose
-  - A count of credits used
+  - A count of credits used (one per page of 100 videos, one per transcript)
 how_to_use:
   - Make a free TranscriptAPI account yourself and copy your key. It starts with sk_. Your AI should ask you before it signs up for anything.
   - Open an AI that can run code and reach the internet. Paste this skill into the chat.
   - Paste your playlist link or ID and your key.
   - Read the video list your AI returns, then name the videos you want transcripts for.
-  - Check the credit count. Each page of 100 videos uses one credit.
-  - Use the transcripts to search for a topic, write a summary or add quotes to a research note.
+  - Check the credit count. Each page of 100 videos uses one credit, and so does each transcript.
+  - Use the transcripts to search for a topic, write a summary or add quotes to a research note, with a link to each video. Do not republish whole transcripts. For one video, use youtube-transcript-reader instead.
 output_sample:
   input:
     - A YouTube playlist link or ID
@@ -50,4 +52,4 @@ output_sample:
     - name: Transcripts
       contains: The full text of each video you choose, with timestamps and video details.
     - name: Credit count
-      contains: How many credits the pages and transcripts used, one credit per page of 100 videos.
+      contains: How many credits the pages and transcripts used, one credit per page of 100 videos and one per transcript.

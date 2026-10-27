@@ -36,7 +36,7 @@ Ask only what's missing:
 3. **Secondary audiences** — are there 1–2 additional audiences (e.g. investors, partners)?
 4. **Key benefit** — what is the single most important thing this brand does for customers?
 5. **Proof points** — what facts, data, or features back up the brand's claims?
-6. **Current tagline** — is there one? What's working/not working about it?
+6. **Current tagline** — is there one? What's working/not working about it? If you have tagline test results, share them to judge the current tagline.
 
 ---
 

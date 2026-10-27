@@ -34,6 +34,7 @@ works_best_with:
       why: Live lookups need Composio CLI access and connected accounts for these services.
 how_to_use:
   - Use an AI that can run commands in a terminal, and install the Composio CLI first. Composio, Gorgias and Gmail may need paid plans, so check their pricing before you start.
+  - Gather these first. The time window for closed tickets, the team name to sign off with, and a check that your company's own rules allow emailing these customers.
   - Connect your Gorgias account. Connect Gmail too if you want your AI to send the emails.
   - Ask for the Gorgias satisfaction follow-up writer by name, or ask your AI to read SKILL.md and follow it.
   - Ask for tickets closed in the last 24 to 48 hours. Your AI reads each ticket for the customer, issue and fix.

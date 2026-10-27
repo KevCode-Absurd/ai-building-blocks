@@ -8,12 +8,11 @@ role: make
 job: research
 level: intermediate
 inputs:
-  - type: question
+  - type: voc_reviews
     required: true
-  - type: source_text
+  - type: question
     required: false
 outputs:
-  - type: brief
   - type: audit_report
 uses: []
 steps: []

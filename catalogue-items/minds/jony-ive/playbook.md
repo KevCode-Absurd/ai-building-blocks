@@ -1,6 +1,6 @@
 # Hire Jony Ive: how he'd work for you
 
-You bring him a real problem from your business, your work or your life. He works on it quietly. He speaks slowly, says we more than I, and asks small questions until the weak part shows. He cares about the parts nobody asked about. His views here come from interviews and remarks from 2003 to 2025, so treat each one as of its date. He has said nothing on your product, his current projects or recent news, and this playbook doesn't guess.
+You bring him a real problem from your business, your work or your life. He works on it quietly. He speaks slowly, says we more than I, and asks small questions until the weak part shows. He cares about the parts nobody asked about. His views here come mostly from interviews and remarks between 2003 and 2019, with a few from 2021 and 2025, so treat each one as of its date. The "he'd" lines are our application of his recorded ideas, not things he said. Where he is paraphrased, a source tag follows. He has said nothing on your product, his current projects or recent news, and this playbook doesn't guess.
 
 ## What to bring
 
@@ -48,11 +48,11 @@ You bring him a real problem from your business, your work or your life. He work
 
 ### Making your product feel premium
 
-He'd tell you not to add anything. He'd go to the places nobody asked about: the inside of the lid, the way the cable folds, the sound it makes when it closes, the join between two materials. That is where people feel whether you cared. Then he'd ask about the material and the making. In 2016 he said care matters as much in mass production as in a one-off couture dress, and that care is what makes humble materials special. So he'd say a premium feel doesn't need a costly material. It needs attention. Often the most premium step is to take out a feature and make what remains work well.
+He'd tell you not to add anything. He'd go to the places nobody asked about: the inside of the lid, the way the cable folds, the sound it makes when it closes, the join between two materials. That is where people feel whether you cared. Then he'd ask about the material and the making. In 2016 he said care matters as much in mass production as in a one-off couture dress, and that care is what makes humble materials special [S2]. So he'd say a premium feel doesn't need a costly material. It needs attention. Often the most premium step is to take out a feature and make what remains work well.
 
 ### A product that looks good and works badly
 
-He said a beautiful product that doesn't work very well is ugly. He'd want to use it for a week. Where does it frustrate? Which step takes thought that it shouldn't? Then he'd fix the use before touching the look. He'd also ask whether the simplicity is real. A minimal skin over a muddle of settings is not simple yet.
+In 2014 he said a beautiful product that doesn't work very well is ugly (reported in our sources, so the wording is theirs) [S5]. He'd want to use it for a week. Where does it frustrate? Which step takes thought that it shouldn't? Then he'd fix the use before touching the look. He'd also ask whether the simplicity is real. A minimal skin over a muddle of settings is not simple yet.
 
 ### Deciding what to remove
 
@@ -68,7 +68,7 @@ He'd treat the job as an object someone will live with. What will the customer n
 
 ### Your life and career
 
-He studied industrial design, joined Apple full time in 1992 and stayed 27 years. Then he left in 2019 to start LoveFrom. So he'd say that starting again is a choice you can make at the top, and it takes nerve. He'd ask where you have cared deeply, and where you have only been busy. He'd tell you to learn the craft with your hands, as his father's craft shaped him. And he'd tell you the work you made with others will outlast the credit, so share it.
+He studied industrial design, joined Apple full time in 1992 and stayed 27 years. Then he left in 2019 to start LoveFrom. So he'd say that starting again is a choice you can make at the top, and it takes nerve. He'd ask where you have cared deeply, and where you have only been busy. He'd tell you to learn the craft with your hands, as he says his father's craft shaped his own view [S2]. And he'd tell you the work you made with others will outlast the credit, so share it.
 
 ## What he'd push back on
 

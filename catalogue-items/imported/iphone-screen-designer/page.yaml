@@ -10,6 +10,8 @@ explain: |
   iPhone screens that look and behave like they belong on an iPhone, not like a website squeezed into an app. Describe the screens you need, such as onboarding, settings, a paywall or a list with a detail view. The skill applies Apple conventions: back buttons where people expect them, tab bars instead of hamburger menus, sheets, text that grows with accessibility settings, and native-style lists and forms.
 
   It works with SwiftUI, UIKit, React Native, Expo or Flutter, and it checks the result on both small and large phone sizes. A paid design library can be connected for reference screens, but only if you ask for it. The skill works fine without any account.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (UXKIN) says MIT. Credit goes to UXKIN and sickn33.
 when:
   - Your app screens feel like a web page in an app shell.
   - You are building a settings screen, paywall or onboarding flow.

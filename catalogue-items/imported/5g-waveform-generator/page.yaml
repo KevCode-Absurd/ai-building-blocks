@@ -16,6 +16,7 @@ when:
   - You need to play an IQ signal into an RF instrument.
   - You are setting up several bandwidth parts in one waveform.
 not_for:
+  - "You do not use MATLAB. The licence (BSD 2-Clause plus MathWorks reuse terms, see the LICENSE file) allows use only with MathWorks products."
   - "You need to model a radio channel or signal fading: use MATLAB's nrCDLChannel or nrTDLChannel instead."
   - "You need to decode or receive a 5G signal: use MATLAB's nrPDSCHDecode or nrDLSCHDecoder instead."
   - "You want a full end-to-end link simulation: build that in MATLAB 5G Toolbox with your own link-level setup."
@@ -24,7 +25,7 @@ you_give:
   - A test model or reference channel name, or your own settings
   - Bandwidth, subcarrier spacing and modulation
   - Which channels and signals to include
-  - MATLAB with 5G Toolbox
+  - MATLAB with 5G Toolbox (paid MathWorks products, so you need your own licence for both)
 you_get:
   - MATLAB code that builds the waveform
   - The generated IQ samples

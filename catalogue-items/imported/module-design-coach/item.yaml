@@ -10,6 +10,8 @@ level: expert
 inputs:
   - type: codebase
     required: true
+  - type: audit_report
+    required: false
 outputs:
   - type: plan
 uses: []

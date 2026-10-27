@@ -8,13 +8,11 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: source_text
-    required: true
-  - type: brief
+  - type: product_spec
     required: true
 outputs:
+  - type: spreadsheet
   - type: document
-  - type: plan
 uses: []
 origin: imported
 source:

@@ -41,7 +41,7 @@ output_sample:
     - The failing output or failed check (optional)
     - A list of tests you know are flaky (optional)
   prerequisites:
-    - An AI that can run code and edit files, such as Claude Code
+    - An AI that can run code and edit files, such as Claude Code (needs a paid plan or an API key)
     - Your tests must run on your machine, with any services or secrets they need
   output:
     - name: RESULT
@@ -60,7 +60,7 @@ how_it_works:
   - title: Take a baseline
     text: Runs the full suite and saves the failing tests, so every later round is compared with the start.
   - title: Set the limits
-    text: Five rounds in total and three tries on any one group of failures.
+    text: Five rounds in total and three tries on any one group of failures. It also stops if two rounds in a row make no progress.
   - title: Choose a path
     text: A failure only in the pull request check gets the cause found first. A flaky browser test gets a flaky-test fix. The rest are grouped and fixed by cause.
   - title: Fix one group, then check

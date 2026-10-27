@@ -9,6 +9,8 @@ description: Records decisions and documentation. Use when you need to document 
 
 Document decisions, not just code. The most valuable documentation captures the *why* — the context, constraints, and trade-offs that led to a decision. Code shows *what* was built; documentation explains *why it was built this way* and *what alternatives were considered*. This context is essential for future humans and agents working in the codebase.
 
+If an earlier step gave you a design plan, take its choices and reasons as the starting point for the decision record.
+
 ## When to Use
 
 - Making a significant architectural decision

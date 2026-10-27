@@ -63,14 +63,14 @@ output_sample:
     - name: MISSING and CHECKS MISSED
       contains: Inputs that were not supplied and checks that failed or could not run, or none.
 how_it_works:
-  - title: 1. Map dated source records, actual units, period cutoffs, currency, definitions and missing evidence before computing
-    text: Map dated source records, actual units, period cutoffs, currency, definitions and missing evidence before computing.
-  - title: 2. Compare continued use with replacement on the same workload; include only incremental cash and source old-vehicle sale evidence
-    text: Compare continued use with replacement on the same workload; include only incremental cash and source old-vehicle sale evidence.
-  - title: 3. Place replacement purchase less immediate old-vehicle sale at time zero and annual operating differences at their year ends
-    text: Place replacement purchase less immediate old-vehicle sale at time zero and annual operating differences at their year ends. At the horizon add new-vehicle sale proceeds minus the foregone terminal sale proceeds of the retained old vehicle; source both alternatives and allow a negative difference.
-  - title: 4. Discount future incremental cash at the approved comparable cash-flow rate and reconcile undiscounted and discounted totals separately
-    text: Discount future incremental cash at the approved comparable cash-flow rate and reconcile undiscounted and discounted totals separately.
+  - title: List the five inputs
+    text: Notes each input with its date and currency. A missing input is marked MISSING and never treated as zero.
+  - title: Put cash out at time zero
+    text: The replacement price minus what the old vehicle sells for today. The old vehicle's sale is counted once, here.
+  - title: Add the yearly savings
+    text: Years 1 and 2 hold the annual saving. Year 3 holds the saving plus the end-of-term difference, which can be negative.
+  - title: Discount and compare
+    text: Discounts each future line at your rate, shows undiscounted and discounted totals side by side, and gives the net benefit.
 output_shape: |-
   An incremental replacement cash schedule and present value.
   Scope and dated sources

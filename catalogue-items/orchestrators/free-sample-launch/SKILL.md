@@ -75,6 +75,7 @@ One file for each step, plus the summary. Step 1 saves the sample offer. Step 2 
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Offer profit-per-session checker](https://useaiblocks.com/skills/offer-profit-per-session-checker). It takes the audit report.
 - The [Offer test planner](https://useaiblocks.com/skills/offer-test-planner). It takes the audit report.
+- The [Sale offer ladder planner](https://useaiblocks.com/skills/sale-offer-ladder-planner). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

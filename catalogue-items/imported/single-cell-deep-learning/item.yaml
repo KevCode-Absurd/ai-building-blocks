@@ -9,7 +9,7 @@ role: make
 job: ops
 level: expert
 inputs:
-  - type: codebase
+  - type: dataset
     required: false
 outputs:
   - type: document

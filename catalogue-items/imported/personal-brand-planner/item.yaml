@@ -10,6 +10,8 @@ level: beginner
 inputs:
   - type: brief
     required: true
+  - type: brand_brain
+    required: false
 outputs:
   - type: plan
 uses: []

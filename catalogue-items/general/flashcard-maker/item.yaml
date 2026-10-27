@@ -10,11 +10,11 @@ level: beginner
 inputs:
   - type: source_text
     required: true
+  - type: feedback_notes
+    required: false
 outputs:
   - type: document
     required: true
-  - type: copy_draft
-    required: false
 origin: own
 version: 1.0.0
 next:

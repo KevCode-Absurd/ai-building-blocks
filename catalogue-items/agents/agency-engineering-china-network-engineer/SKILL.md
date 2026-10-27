@@ -13,7 +13,9 @@ Read [the original role profile](references/source-agent.md) before you start. I
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Network engineer](https://useaiblocks.com/skills/agency-engineering-network-engineer).
+- The [AI coding task brief writer](https://useaiblocks.com/skills/coding-agent-handoff-writer). It takes the plan.
+- The [Process and behavior change planner](https://useaiblocks.com/skills/structure-behaviour-split). It takes the plan and audit report.
+- The [Oracle migration risk reviewer](https://useaiblocks.com/skills/copilot-reviewing-oracle-to-postgres-migration). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -45,6 +47,8 @@ This plan may change live network equipment. A wrong or untested command can cau
 - Never ask the user to paste passwords, keys or SNMP community strings. If they pasted any, tell them to remove them and not to reuse that text.
 
 ## What to collect first
+
+These are the inputs that count. If the generic "Before you start" list above asks for source text, ignore it: this agent works from device versions, config and topology.
 
 Ask once for anything missing. Never invent it. Mark each gap `MISSING:`.
 
@@ -80,6 +84,10 @@ Use these headings, in this order:
 6. Rollback
 7. MLPS 2.0 notes (only if assessed)
 8. Open questions and checks still needed
+
+Heading 8 is also your CHECKS MISSED list: name every check that failed or could not run, or write "none".
+
+End with one line: keep the before and after command output and the approved change record, and bring them to the next change.
 
 Use Chinese and English terms together only if the user's team does. Keep comments in the commands useful for whoever is on call.
 

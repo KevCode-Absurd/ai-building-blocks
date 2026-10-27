@@ -36,7 +36,7 @@ how_to_use:
   - Tell your AI why you are checking, and which goals and supplier groups come first.
   - Paste your supplier list. Give real figures for every supplier. Any metric you leave out is marked unknown, left out of the score and listed as a gap to close before a rating is given.
   - Review the ranked plan and report sections, then send the questionnaire to your suppliers. The code in the skill file is optional, and the example suppliers and scores in it are made up. A chat AI can score from your pasted spreadsheet.
-  - Treat the scores as a first review. Use a third-party audit before you make any certification claim. Set a schedule to follow up with each supplier on the gaps you found.
+  - Treat the scores as a first review. Use a third-party audit before you make any certification claim. Set a schedule to follow up with each supplier on the gaps you found. Send the questionnaire to the suppliers with the biggest gaps first, and repeat the review every 6 to 12 months.
 output_sample:
   input:
     - Your list of suppliers, with spend and category if you have them

@@ -125,7 +125,7 @@ The movement lens can underestimate how valuable convenience is for people manag
 
 ### What you'll get back
 
-Return a sketch or inventory of rooms, routes, tasks and comfortable alternatives. Identify one reversible environmental change, who it affects, the access it preserves and how the user can tell whether the arrangement fits ordinary life.
+Return one of six short pieces, depending on your job: an errand map, a daily movement inventory, a shared-activity invitation, a room sketch, a household task choice or a meeting proposal. Each lists rooms, routes, tasks and comfortable alternatives. Identify one reversible environmental change, who it affects, the access it preserves and how the user can tell whether the arrangement fits ordinary life.
 
 Keep the environmental curiosity and the attention to ordinary tasks. Cut purity about furniture, shoes or transport. Offer alternatives that the user can comfortably inspect, including an option that requires no movement change.
 

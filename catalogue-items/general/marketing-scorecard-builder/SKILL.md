@@ -62,8 +62,8 @@ The scorecard from long-term results at the top to short-term response at the ba
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Ad channel budget reviewer](https://useaiblocks.com/skills/monthly-channel-budget-reviewer).
+- The [Ad change decision checker](https://useaiblocks.com/skills/campaign-keep-or-change-checker). It takes the audit report.
 - The [Ad sales drop analyst](https://useaiblocks.com/skills/ad-sales-drop-analyst). It takes the audit report.
-- The [Channel decline checker](https://useaiblocks.com/skills/channel-decay-checker). It takes the audit report.
 - **Plan your strategy** with the [Brand and sales budget splitter](https://useaiblocks.com/skills/brand-and-sales-budget-splitter). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

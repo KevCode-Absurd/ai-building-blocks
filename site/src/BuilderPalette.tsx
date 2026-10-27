@@ -1,7 +1,11 @@
 import { useDeferredValue, useEffect, useId, useMemo, useState } from "react";
 import { type Block, type Catalogue, TASKS, taskOf } from "./lib/data";
 import { useStore } from "./lib/store";
-import { chainSuggestions, firstSkillSuggestions, replacementSuggestions, type ChainSuggestion } from "./lib/workflow-chain";
+import { firstSkillSuggestions, replacementSuggestions, type ChainSuggestion } from "./lib/workflow-chain";
+import { startPicks } from "./lib/composer-core";
+import { suggestNext } from "./lib/suggest";
+import { suggestBefore } from "./lib/suggest-before";
+import { useRankedLibrarySearch } from "./lib/library-search-ranked";
 import "./builder-palette.css";
 
 type Where = "before" | "after" | "start";
@@ -27,20 +31,23 @@ export default function BuilderPalette({ c, anchor, inFlow, goal, onGoalChange, 
   const deferredGoal = useDeferredValue(goal);
   const goalId = useId();
   const queryId = useId();
-  const hays = useMemo(() => new Map(c.blocks.map(b => [b.slug, `${b.name} ${b.slug} ${(b.aliases ?? []).join(" ")} ${b.summary} ${b.headline} ${taskOf(b).name}`.toLowerCase()])), [c]);
   useEffect(() => setLimit(PAGE), [dq, tab]);
   useEffect(() => setExpanded(new Set()), [anchor?.id]);
-  const list = useMemo(() => {
-    const words = dq.toLowerCase().trim().split(/\s+/).filter(Boolean);
+  const pool = useMemo(() => {
     const kitSlugs = new Set(kits.flatMap(k => k.slugs));
-    return c.blocks.filter(b => b.category !== "orchestrator" && b.type !== "agent" && (tab !== "kits" || kitSlugs.has(b.slug)) && words.every(w => hays.get(b.slug)?.includes(w)));
-  }, [c, dq, tab, kits, hays]);
-  const groups = useMemo(() => TASKS.map(t => ({ t, items: list.filter(b => taskOf(b).id === t.id) })).filter(g => g.items.length), [list]);
+    return c.blocks.filter(b => b.category !== "orchestrator" && b.type !== "agent" && (tab !== "kits" || kitSlugs.has(b.slug)));
+  }, [c, tab, kits]);
+  // Same finding and order as the library search; a search shows the best matches first, not grouped by job.
+  const searching = tab !== "next" && !!dq.trim();
+  const { results: list } = useRankedLibrarySearch(c, tab === "next" ? "" : dq, pool, b => `${b.name} ${b.slug} ${(b.aliases ?? []).join(" ")} ${b.summary} ${b.headline} ${taskOf(b).name}`);
+  const groups = useMemo(() => searching ? [{ t: { id: "best", name: "Best matches" }, items: list }] : TASKS.map(t => ({ t, items: list.filter(b => taskOf(b).id === t.id) })).filter(g => g.items.length), [list, searching]);
   // A workflow that runs as one pack (no separate steps) would open as an empty canvas, so it isn't offered here.
   const templates = useMemo(() => c.blocks.filter(b => b.category === "orchestrator" && b.steps.length > 0), [c]);
-  const first = useMemo(() => firstSkillSuggestions(c, deferredGoal, inFlow), [c, deferredGoal, inFlow]);
-  const before = useMemo(() => anchor ? chainSuggestions(c, anchor.slug, inFlow, deferredGoal, "before") : [], [c, anchor, inFlow, deferredGoal]);
-  const after = useMemo(() => anchor ? chainSuggestions(c, anchor.slug, inFlow, deferredGoal, "after") : [], [c, anchor, inFlow, deferredGoal]);
+  // With a goal, the same "Start with" picks as free mode on /compose; without one, where ready workflows start.
+  const first = useMemo(() => deferredGoal.trim() ? startPicks(c, deferredGoal, 5).tasks.filter(p => !inFlow.has(p.b.slug)) : firstSkillSuggestions(c, "", inFlow), [c, deferredGoal, inFlow]);
+  // Around the selected (or newest) step: what makes what it needs, and what uses what it makes.
+  const before = useMemo(() => anchor ? suggestBefore(c, anchor.slug, inFlow, 5) : [], [c, anchor, inFlow]);
+  const after = useMemo(() => anchor ? suggestNext(c, anchor.slug, inFlow, 5) : [], [c, anchor, inFlow]);
   const replacements = useMemo(() => anchor ? replacementSuggestions(c, anchor.slug, inFlow, deferredGoal) : [], [c, anchor, inFlow, deferredGoal]);
   const selected = anchor ? c.bySlug[anchor.slug] : null;
 
@@ -75,7 +82,7 @@ export default function BuilderPalette({ c, anchor, inFlow, goal, onGoalChange, 
     </div>
     <div className="palette-list">
       {tab === "next" ? <div data-testid="suggestions">
-        {selected ? <><p className="chain-context">Selected: <b>{selected.name}</b></p>{section("Before this step", before, "before")}{section("After this step", after, "after")}{onReplace && section("Replace this step", replacements, "replace")}</> : <><p className="chain-context">Choose one skill to start. Add the next step when you are ready.</p>{section("Choose your first step", first, "start")}</>}
+        {selected ? <><p className="chain-context">Selected: <b>{selected.name}</b></p>{section("Before this", before, "before")}{section("After this", after, "after")}{onReplace && section("Replace this step", replacements, "replace")}</> : <><p className="chain-context">Choose one step to start. Then add steps before or after it.</p>{section("Start with", first, "start")}</>}
       </div> : <>
         {(() => { let left = limit; return groups.map(({ t, items }) => { if (left <= 0) return null; const shown = items.slice(0, left); left -= shown.length; return <section key={t.id} className="chain-section"><h3>{t.name} <span>({items.length})</span></h3>{shown.map(b => card(b, anchor ? "after" : "start"))}</section>; }); })()}
         {list.length > limit && <button type="button" className="btn btn-ghost btn-sm" onClick={() => setLimit(n => n + PAGE)} data-testid="palette-more">Show {Math.min(PAGE, list.length - limit)} more</button>}

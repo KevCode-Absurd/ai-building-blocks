@@ -100,10 +100,10 @@ CHECKS MISSED: <none, or list>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Study competitor ads** with the [Competitor brand association mapper](https://useaiblocks.com/skills/owned-word-mapper). It takes the competitors.
-- The [Premium product positioning planner](https://useaiblocks.com/skills/premium-positioning-mapper).
 - **Plan your strategy** with the [Positioning statement writer](https://useaiblocks.com/skills/positioning-statement-writer). It takes the competitors.
-- The [Store name tester](https://useaiblocks.com/skills/store-name-tester). It takes the competitors.
+- The [Premium product positioning planner](https://useaiblocks.com/skills/premium-positioning-mapper). It takes the competitors.
 - **Write the landing page** with the [Competitor comparison page writer](https://useaiblocks.com/skills/alternative-page-writer). It takes the competitors.
+- The [Store name tester](https://useaiblocks.com/skills/store-name-tester). It takes the competitors.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

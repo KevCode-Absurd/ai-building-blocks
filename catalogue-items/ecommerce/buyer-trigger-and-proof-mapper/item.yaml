@@ -7,8 +7,12 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: product_data
     required: true
+  - type: voc_reviews
+    required: false
+  - type: ad_copy
+    required: false
 outputs:
   - type: persona
     required: true

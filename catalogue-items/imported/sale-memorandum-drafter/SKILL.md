@@ -104,7 +104,7 @@ Standard CIM table of contents:
 
 - **Tone**: Professional, factual, compelling but not hyperbolic
 - **Narrative**: Tell a story — why this business is attractive, defensible, and positioned for growth
-- **Data-driven**: Support every claim with data. "Strong growth" → "Revenue grew at a 15% CAGR from 2021-2024"
+- **Data-driven**: Support every claim with data. "Strong growth" → "Revenue grew at a [X]% CAGR from [YEAR] to [YEAR]" (use only the figure the accounts give)
 - **Visuals**: Charts and graphs for financial trends, market size, competitive positioning
 - **Length**: 40-60 pages total — enough detail to inform first-round bids, not so long buyers won't read it
 - **Confidentiality**: Include a disclaimer page. Anonymize sensitive customer data unless seller approves

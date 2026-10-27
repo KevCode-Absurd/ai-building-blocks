@@ -57,8 +57,8 @@ The BASELINE pitch. The belief, the how and who it is for. The inside-out messag
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Persuasion and claim editor](https://useaiblocks.com/skills/honest-persuasion-editor). It takes the draft.
-- The [Pitch arc planner](https://useaiblocks.com/skills/pitch-arc-planner).
 - The [Pitch objection and answer writer](https://useaiblocks.com/skills/hardest-objections-answer-writer). It takes the draft.
+- The [Pitch feedback and revision tracker](https://useaiblocks.com/skills/pitch-revision-log). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -49,7 +49,7 @@ output_sample:
     - name: ANSWERS
       contains: Each point the customer raised, marked Answered, Dodged or Missed.
     - name: PROMISES
-      contains: Each promise or offer in your draft, marked Backed or Not backed by your policy.
+      contains: Each promise or offer in your draft, marked Backed, Not backed or Not checked (no policy given).
     - name: TONE FLAGS
       contains: Quoted lines that blame the customer, use jargon, apologise emptily or sound defensive, with the reason.
     - name: REPAIRED DRAFT
@@ -61,7 +61,7 @@ how_it_works:
   - title: "Check it answers them"
     text: "List what the customer asked or complained about. Mark each Answered, Dodged or Missed."
   - title: "Check every promise"
-    text: "List each promise or offer in the draft. Mark it Backed (my policy says so) or Not backed. With no policy given, mark all \"not checked\"."
+    text: "List each promise or offer in the draft. Mark it Backed (my policy says so), Not backed (my policy does not say so or says no), or Not checked (no policy was given)."
   - title: "Check the tone"
     text: "Quote each line that blames the customer, uses jargon, apologises emptily (\"sorry for any inconvenience\") or sounds defensive."
   - title: "Repair the draft"
@@ -70,7 +70,7 @@ how_it_works:
 output_shape: |
   VERDICT: <send | send after fixes | do not send>, because <reason>
   ANSWERS: <point> - <Answered | Dodged | Missed>
-  PROMISES: <promise> - <Backed | Not backed>
+  PROMISES: <promise> - <Backed | Not backed | Not checked>
   TONE FLAGS: "<my words>" - <why>
   REPAIRED DRAFT
   <reply>

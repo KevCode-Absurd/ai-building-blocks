@@ -9,7 +9,7 @@ subhead: Give it your campaign or channel numbers, the period and last period's 
 explain: |
   A clear marketing report you can send to a boss or client, built from your raw campaign numbers. It tells them what moved, what worked, what fell short and what to do next, without making them read a spreadsheet.
 
-  You say which kind of report you need (campaign, email, social, paid, search or overall), the time period and your numbers. The skill then writes it in a fixed order: a short summary, a table of the key numbers for that channel, trends against the last period, wins, problems, insights and next steps. It checks your figures against common benchmarks for each channel, so a 2% click rate is judged fairly.
+  You say which kind of report you need (campaign, email, social, paid, search or overall), the time period and your numbers. The skill then writes it in a fixed order: a short summary, a table of the key numbers for that channel, trends against the last period, wins, problems, insights and next steps. It compares your figures with your own last period first. It also quotes common ranges for each channel as a rough guide, so you can see roughly where a figure sits. Those ranges have no source or date, so do not treat them as a standard.
 when:
   - Your monthly marketing report is due and the numbers are still in exports.
   - A boss wants a one-page summary of how a campaign did.
@@ -31,7 +31,7 @@ you_get:
   - Wins and problems listed plainly
   - A list of next steps
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed. The skill mentions connecting analytics tools. That step is optional. It works on the numbers you paste.
   - "Say which report you want: campaign, email, social, paid, search, content or overall."
   - Paste your numbers and the reporting period. Add last period's numbers if you have them.
   - Tell it who will read the report, if you want the tone matched to them.

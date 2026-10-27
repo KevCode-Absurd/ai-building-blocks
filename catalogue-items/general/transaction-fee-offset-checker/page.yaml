@@ -5,16 +5,15 @@ summary: Check your private fund transaction fee offset. Give it the gross fee a
 job: money-and-investing
 thinking: high
 thinking_why: "Which fees qualify, and how much carries forward, both come from the agreement, so each must be read from it."
-subhead: Offset used, net management fee and carryforward roll-forward. Share gross management fee, eligible received transaction fees, contractual offset percentage and verified beginning offset carryforward.
+subhead: Give it the gross management fee, the transaction fees your fund received, the offset percentage from the fund agreement and the credit brought forward. You get the offset used, the net fee due and the credit carried forward.
 explain: |-
-  Offset used, net management fee and carryforward roll-forward.
+  Some private fund agreements let transaction fees paid by portfolio companies cancel part of the management fee. Any credit not used in one period may carry to the next. Getting this wrong means the fund over- or under-charges its investors.
 
-  Private fund fees. Illustrative figures only. The gross fee is 10 and the offset is 100%. Eligible fees of 6 plus a prior credit of 2 give an offset of 8, so the net fee is 2 and no credit is left. With eligible fees of 12 plus the 2 credit, 14 is available, the offset used is 10, the net fee is 0 and 4 carries forward.
+  This skill checks the arithmetic for one fund and one period. It lists each fee against the agreement’s eligible categories, applies the offset percentage, adds the credit brought forward, caps the offset at the gross fee, and rolls the unused credit forward. It does not read the contract for legal meaning. Practice figures only: the gross fee is 10 and the offset is 100%. Eligible fees of 6 plus a prior credit of 2 give an offset of 8, so the net fee is 2 and no credit is left. With eligible fees of 12 plus the 2 credit, 14 is available, the offset used is 10, the net fee is 0 and 4 carries forward.
 when:
   - You need the offset used, the net management fee and the carryforward for one fund and one period.
   - A reviewer wants to trace the fee result back to the LPA terms and your inputs.
   - You hold transaction fees from portfolio companies and need to know how much of the management fee they cover.
-  - Do not use this for several funds, refunds, expiring credits or tax gross-ups. Ask your fund accountant instead.
 not_for:
   - "You need to split fees across several funds or apply a tax gross-up: ask your fund accountant or counsel, because this checks one fund and one period only."
   - "You need refunds or expiring credits handled: ask your fund administrator, because this only covers carryforward that the LPA allows."
@@ -25,7 +24,7 @@ you_give:
   - "The fee period, plus the currency and scale used for the management fee offset."
   - "Your spreadsheet tool, if you want the management fee offset as a workbook."
 you_get:
-  - Offset used, net management fee and carryforward roll-forward.
+  - The offset used, the net management fee due and the ending carryforward.
   - "An editable workbook of the management fee offset, with its inputs, formulas and test cases to rerun."
   - "A tie-out of gross fee, offset used and net fee, the inputs still missing and the checks that ran."
 how_to_use:
@@ -57,12 +56,12 @@ output_sample:
     - name: "MISSING: and CHECKS MISSED"
       contains: Inputs that were not supplied and checks that failed or could not run, or none.
 how_it_works:
-  - title: 1. Map every received fee to the LPA eligible categories and fund allocation; separate prohibited or excluded interest and broken-deal costs
-    text: Map every received fee to the LPA eligible categories and fund allocation; separate prohibited or excluded interest and broken-deal costs.
-  - title: 2. Apply the actual offset percentage to eligible fees and add beginning carryforward
-    text: Apply the actual offset percentage to eligible fees and add beginning carryforward.
-  - title: 3. Use offsets only up to gross fee; carry unused credit forward only if the LPA allows it and reconcile the ending balance
-    text: Use offsets only up to gross fee; carry unused credit forward only if the LPA allows it and reconcile the ending balance.
+  - title: Sort the fees
+    text: Match every fee received to the agreement’s eligible categories and the right fund. Set aside excluded items such as broken-deal costs.
+  - title: Work out the offset available
+    text: Apply the offset percentage to the eligible fees and add the credit brought forward.
+  - title: Cap it and carry forward
+    text: Use the offset only up to the gross fee. Carry unused credit forward only if the agreement allows it, and check that the roll-forward ties.
 output_shape: |-
   Offset used, net management fee and carryforward roll-forward.
   Scope and dated sources

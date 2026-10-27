@@ -32,10 +32,10 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text.
   - Describe your site, app or document. Say who uses it and who buys it.
-  - Add any earlier audit results and your deadline if you have them. Have ready: the site or document address, who uses it, which agency buys it, and any earlier audit.
-  - "Say what you want: a gap list, an audit table, a fix plan, VPAT notes or purchase wording."
+  - Add any earlier audit results and your deadline if you have them. Have ready the site or document address, who uses it, which agency buys it, and any earlier audit.
+  - "Say what you want: a gap list, an audit table, a fix plan, VPAT notes or purchase wording. If you are not sure, ask for the gap list first, then the fix plan."
   - Read the result and check each criterion against your real product. Your AI works from your description and does not run tests.
-  - Treat any suggested fix deadlines as examples. Agree the real ones with the agency. Check any law dates the result gives on the government's own site before you use them.
+  - Treat any suggested fix deadlines as examples. Agree the real ones with the agency. Check any law dates the result gives on ada.gov or section508.gov before you use them. The skill says its dates and its note on how much automated tools catch are not sourced.
   - Then fix the gaps with the WCAG accessibility fixer, and run a scan with a tool such as axe or WAVE.
 output_sample:
   input:

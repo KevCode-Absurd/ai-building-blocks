@@ -7,7 +7,7 @@ role: make
 job: organic
 level: beginner
 inputs:
-  - {type: brief, required: true}
+  - {type: question, required: true}
 outputs:
   - {type: copy_draft}
 uses: []

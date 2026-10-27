@@ -12,6 +12,8 @@ explain: |
   It starts by naming that moment for your product: a response with real data, a live preview link or a test payment. Then it writes the shortest path to it. Prerequisites come first, each step has one action, and the page shows what the reader should see at the end.
 
   After the quickstart you get a tutorial outline for the second visit and a plan for a sample app that developers can copy. It also flags the onboarding mistakes your product is most likely to make, such as hidden keys or sign-up wizards that cannot be skipped.
+
+  The licence that applies to this copy is the one in the LICENSE-CONTENT file in this item, CC BY 4.0. It comes from sickn33's collection. The skill file's header names its original author jonathimer and his MIT licence, and a "risk: critical" tag that is the collection's own label and does not mean this skill is dangerous. Both licences allow reuse with credit.
 when:
   - You are launching an API or SDK and need a getting started guide.
   - Your quickstart has many steps before anything works.

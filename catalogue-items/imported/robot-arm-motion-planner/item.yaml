@@ -8,8 +8,10 @@ role: make
 job: ops
 level: advanced
 inputs:
-  - type: codebase
+  - type: question
     required: true
+  - type: code_change
+    required: false
 outputs:
   - type: code_change
 uses: []

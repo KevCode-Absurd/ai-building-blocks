@@ -8,13 +8,14 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
-    required: true
   - type: question
-    required: false
+    required: true
+  - type: document
+    required: true
 outputs:
   - type: document
   - type: plan
+  - type: audit_report
 uses:
   - employee-survey-designer
   - people-risk-register-builder

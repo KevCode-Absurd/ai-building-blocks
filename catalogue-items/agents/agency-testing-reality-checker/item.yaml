@@ -8,9 +8,11 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: question
+  - type: document
     required: true
-  - type: source_text
+  - type: web_page
+    required: false
+  - type: test_report
     required: false
 outputs:
   - type: audit_report

@@ -7,8 +7,9 @@ role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - {type: brief, required: true}
+  - {type: idea, required: true}
 outputs:
+  - {type: codebase}
   - {type: test_report}
 uses: [saas-starter-builder, stripe-payments-builder, transactional-email-builder, logging-and-alerts-setter, test-suite-writer]
 steps:

@@ -12,6 +12,8 @@ inputs:
     required: true
   - type: question
     required: false
+  - type: story_outline
+    required: false
 outputs:
   - type: audit_report
   - type: document

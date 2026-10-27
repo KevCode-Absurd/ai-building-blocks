@@ -5,6 +5,8 @@ description: Build and maintain a calendar of upcoming catalysts across a covera
 
 # Catalyst Calendar
 
+**Planning aid, not investment advice.** This calendar lists dates so the user can plan their reviews. It does not say what to buy or sell, and it does not predict how a share price will move.
+
 ## India
 
 This skill operates on **Indian markets**. The helper files `india-market-conventions`, `india-market-data` and `NOT-ADAPTABLE.md` are not in this copy. Do not say you read them. The key rules are written out here. For sources, use each company's investor relations page and the NSE and BSE announcement pages. Two rules cause
@@ -64,26 +66,25 @@ For each company, identify upcoming events:
 
 ### Step 3: Calendar View
 
-| Date | Event | Company/Sector | Type | Impact (H/M/L) | Our Positioning | Notes |
+| Date | Event | Company/Sector | Type | Impact (H/M/L) | Date source and status (verified/unverified) | Notes for my review |
 |------|-------|---------------|------|-----------------|----------------|-------|
-| | | | Earnings/Corp/Industry/Macro | | Long/Short/Neutral | |
+| | | | Earnings/Corp/Industry/Macro | | | |
 
 ### Step 4: Weekly Preview
 
 Each week, generate a forward-looking summary:
 
 **This Week's Key Events:**
-1. [Day]: [Company] Q[X] earnings — consensus [₹X EPS], our estimate [₹X], quarter [Q3 FY26 (Oct–Dec 25)], key focus: [metric]
+1. [Day]: [Company] Q[X] earnings — quarter [Q3 FY26 (Oct–Dec 25)], key focus: [metric]. Add consensus EPS or an estimate only if the user gives it or you found it in a named source. Otherwise write "unverified".
 2. [Day]: [Event] — why it matters for [stocks]
 3. [Day]: [Macro release] — expectations and positioning
 
 **Next Week Preview:**
-- Early heads-up on important events coming
+- Early heads-up on important events coming. Mark each date verified or unverified.
 
-**Position Implications:**
-- Events that could move specific positions
-- Any pre-positioning recommended
-- Risk management ahead of binary events
+**Events to plan reviews around:**
+- Events the user may want to review a holding before or after
+- Dates where a decision is due (binary events), so the user can set a review reminder
 
 ### Step 5: Output
 

@@ -7,10 +7,14 @@ role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: document
+  - type: deal_terms
     required: true
   - type: spreadsheet
     required: false
+  - type: document
+    required: true
+  - type: question
+    required: true
 outputs:
   - type: spreadsheet
     required: true

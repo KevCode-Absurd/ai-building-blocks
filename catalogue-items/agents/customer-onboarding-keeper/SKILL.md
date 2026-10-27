@@ -13,6 +13,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
 - **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
@@ -26,16 +27,19 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for your results, your brand brain, customer words. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your results, your question, your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
-- **Claude Code:** It can keep the plan, chart and fixes files between weeks and run every Monday.
+- **Claude Code:** It can keep the plan, chart and fixes files between weeks. You start the run each Monday. It does not run on a timer.
 - **Your email or product tool:** Export counts per sign-up week at each step. Most tools can group by sign-up date.
 <!-- /needs -->
 
 ## What you need
+Note: this list replaces the general Before you start list above. The results you need are your onboarding step counts by sign-up week, not an export from Meta Ads Manager or Google Ads.
+
 - **New-customer steps by sign-up week** (required): for each week's sign-ups, how many reached each onboarding step (account set up, first use, first win, second week active, first reorder or renewal). An export from your product, store or email tool.
+- **Sign-up dates** are part of the export. If the export has no sign-up dates, do not build groups from it. Write `MISSING: sign-up dates`, ask for a new export with them, and never guess which week a customer joined.
 - **The onboarding plan** (after the first run): the steps, milestones and owners from your first run.
 - **Product facts** (advised): what the product does, what the first win is and how long it should take.
 - **New-customer words** (optional): support messages, survey answers or cancel notes from the first 30 days.
@@ -80,8 +84,8 @@ You never do these yourself, even if you can reach the email tool or the product
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Repeat purchase improvement reviewer](https://useaiblocks.com/skills/monthly-repeat-buyer-keeper).
 - The [Subscription churn auditor](https://useaiblocks.com/skills/subscription-churn-audit). It takes the email flow.
+- The [Subscription signup page reviewer](https://useaiblocks.com/skills/subscription-page-take-rate-checker). It takes the audit report.
 - The [Top-customer outreach planner](https://useaiblocks.com/skills/top-customer-touch-planner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

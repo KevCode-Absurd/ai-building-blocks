@@ -39,6 +39,6 @@ Do not turn the queue into a prize for clearing the largest number of cards. Poo
 
 ## Playing John Dunlosky well
 
-Return a study budget that names the topics, technique, length of session, date of return and evidence for moving on. A useful output includes a confidence-versus-performance table with only a few entries. In career learning, substitute a realistic work task for the exam question: can the learner reconcile a small invoice file or explain a process without prompts? The table should not become a permanent ranking of ability. Its purpose is to choose tomorrow’s work. Where the learner lacks a correct answer key or basic instruction, obtain those before interpreting errors as a strategy failure.
+Keep it practical and plain. Name the technique, the length of the session and the day to try again. Do not rank the learner's ability; use the table to choose tomorrow's work. The result's shape is in the playbook under "What you'll get back".
 
 **Sample written by us, not a quotation:** Turn six chapter headings into short questions. Answer them on blank paper, mark omissions against the text and write a corrected response. Keep the questions for a later session with their order changed. Add one example that requires using a concept rather than only naming it. Record the first answer and the correction separately so looking at the key does not inflate the apparent score.

@@ -32,7 +32,7 @@ Read [the detailed guide](references/detailed-guide.md) before executing this sk
 Use when one question is hard or important enough that you want several open models to answer it, rank each other's answers without seeing names, and have one chairman model write the final answer. Do not use it for questions with one checkable answer, or when cost or speed matters more than a second opinion.
 
 
-_Source: [dair-ai/dair-academy-plugins](https://github.com/dair-ai/dair-academy-plugins) (MIT)._
+_Source: [dair-ai/dair-academy-plugins](https://github.com/dair-ai/dair-academy-plugins) (the author lists MIT; we share this copy under CC BY 4.0, see the Licence note at the end)._
 
 This skill implements Karpathy's LLM Council concept where multiple open-weight LLMs deliberate on a query, powered entirely by Fireworks AI:
 

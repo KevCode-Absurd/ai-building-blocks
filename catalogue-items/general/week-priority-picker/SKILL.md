@@ -59,7 +59,7 @@ MISSING: <hours or effort not given>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Weekly big task sorter](https://useaiblocks.com/skills/weekly-big-task-sorter). It takes the plan.
-- The [Values-based weekly planner](https://useaiblocks.com/skills/values-to-week-planner). It takes the plan.
+- The [Plan failure reviewer](https://useaiblocks.com/skills/failure-first-plan-check). It takes the plan.
 - The [Workday wrap-up planner](https://useaiblocks.com/skills/daily-shutdown-planner). It takes the plan.
 - The [Customer success metric planner](https://useaiblocks.com/skills/customer-progress-measure-picker). It takes the plan.
 - The [Daily executive brief writer](https://useaiblocks.com/skills/executive-daily-digest). It takes the plan.

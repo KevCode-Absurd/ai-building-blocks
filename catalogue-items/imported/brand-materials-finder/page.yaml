@@ -35,7 +35,9 @@ how_to_use:
   - Paste the skill into your AI and say you want to find your brand materials. Give your company name.
   - Read the plan it shows and confirm which tools to search. It waits for your go-ahead.
   - Read the report. Confirm or change each open question, and note any conflicts between documents.
-  - Pick a next step. To write guidelines, ask your AI to run generate-guidelines with the report. Nothing is saved until you approve.
+  - Pick a next step. To write guidelines, give the report to the Brand voice guide builder. The skill's own generate-guidelines command is not included here. Nothing is saved until you approve.
+  - The skill hands the search to a helper agent that is not included either. If your AI has none, it does the search itself in the same chat.
+next: [brand-voice-guide-builder]
 output_sample:
   input:
     - The tools to search, such as Notion, Google Drive or Slack
@@ -43,7 +45,7 @@ output_sample:
     - Places you already know hold brand files (optional)
     - Whether to include call transcripts or only documents
   prerequisites:
-    - An AI with access to your connected work tools
+    - An AI with access to your connected work tools. Gong, Granola, Slack and similar call or chat tools may need a paid plan or API access on your side
     - At least one document tool connected, such as Google Drive, SharePoint, Notion, Confluence or Box
   output:
     - name: Plan and scope check

@@ -13,6 +13,8 @@ inputs:
 outputs:
   - type: audit_report
     required: true
+  - type: customer_needs
+    required: true
 uses: []
 origin: imported
 source:

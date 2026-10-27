@@ -27,7 +27,9 @@ If not set, inform the user how to get them from [browserstack.com/accounts/sett
 > register the server in your own user/project MCP config). Setting the env vars
 > alone is not sufficient.
 
-The `integrations/browserstack-mcp` folder is not in this catalogue copy. Get it from the original plugin repo. If you do not have it, skip steps 3 and 4 below (they use the `browserstack_*` tools), run the tests as in step 2, and read the results in the terminal or your BrowserStack dashboard.
+The `integrations/browserstack-mcp` folder is not in this catalogue copy. Get it from the original plugin repo.
+
+**Default route (no MCP tools):** do sections 1, 2 and 5. Skip sections 3 and 4, because they use the `browserstack_*` tools. Read the pass and fail result for each browser from the terminal output and your BrowserStack dashboard, and build the results table from that. Never say you called a `browserstack_*` tool if it was not available.
 
 The `/pw:browserstack ...` lines are names for each step. If your AI has no such command, ask for the step in plain words.
 
@@ -83,6 +85,7 @@ export default defineConfig({
       },
     },
     {
+      // WebKit is the engine Safari uses; BrowserStack runs it on macOS here
       name: "webkitlatestos-x-ventura",
       use: {
         connectOptions: {
@@ -117,7 +120,7 @@ Steps:
    ```bash
    BROWSERSTACK_USERNAME=$BROWSERSTACK_USERNAME \
    BROWSERSTACK_ACCESS_KEY=$BROWSERSTACK_ACCESS_KEY \
-   npx playwright test --project='chrome*' --project='firefox*'
+   npm run test:e2e:cloud
    ```
 3. Monitor execution
 4. Report results per browser
@@ -158,8 +161,16 @@ Steps:
 
 For testing localhost or staging behind firewall:
 1. Install BrowserStack Local: `npm install -D browserstack-local`
-2. Add local tunnel to config
-3. Provide setup instructions
+2. Start the tunnel before the tests and stop it after. In a Playwright global setup file:
+   ```typescript
+   import browserstack from 'browserstack-local';
+   const bsLocal = new browserstack.Local();
+   // start: bsLocal.start({ key: process.env.BROWSERSTACK_ACCESS_KEY }, callback)
+   // stop:  bsLocal.stop(callback)
+   ```
+3. Add `'browserstack.local': 'true'` to each project's caps object in the config.
+4. Point `baseURL` at the local address (for example `http://localhost:3000`).
+5. Run `npm run test:e2e:cloud`. Check BrowserStack's current docs if the tunnel will not start, since options change.
 
 ## MCP Tools Used
 

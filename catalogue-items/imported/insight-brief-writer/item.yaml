@@ -10,7 +10,7 @@ level: intermediate
 inputs:
   - type: document
     required: true
-  - type: brief
+  - type: question
     required: false
   - type: audit_report
     required: false

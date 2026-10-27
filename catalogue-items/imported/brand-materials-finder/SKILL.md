@@ -35,7 +35,7 @@ Wait for the user to confirm before proceeding. If they have questions about the
 
 Ask for the company name and any places the user already knows hold brand files before you search.
 
-Read `.claude/brand-voice.local.md` if it exists. Extract:
+Read `.claude/brand-voice.local.md` if it exists. It is an optional settings file that a user may have made earlier. Most people do not have one, so skip this if it is missing. Extract:
 - Company name
 - Which platforms are enabled (notion, confluence, google-drive, box, microsoft-365, figma, gong, granola, slack)
 - Search depth preference (standard or deep)
@@ -60,7 +60,7 @@ Apply these rules:
 
 2. **If no Google Drive AND no Microsoft 365 AND no Box**: **Warn** (but proceed): "None of your primary file storage platforms (Google Drive, SharePoint, Box) are connected. Brand documents frequently live on these platforms. Discovery will proceed with [connected platforms], but results may have significant gaps. Consider connecting Google Drive or SharePoint."
 
-3. **If only one platform total is connected**: **Warn** (but proceed): "Only [platform] is connected. Discovery works best with 2+ platforms for cross-source validation. Results from a single platform will have lower confidence scores."
+3. **If only one platform total is connected**: **Warn** (but proceed): "Only [platform] is connected. Discovery works best with 2+ platforms for cross-source validation. Results from a single platform are less certain, so mark them 'low confidence' in the report."
 
 ### 3. Confirm Scope with User
 
@@ -73,7 +73,7 @@ Keep this brief — one question, not a questionnaire.
 
 ### 4. Delegate to Discover-Brand Agent
 
-Launch the discover-brand agent via the Task tool. Provide:
+Launch the discover-brand agent via the Task tool. That agent file is not part of this item. If your AI has no such agent, do the four phases below yourself in the same chat. Provide:
 - Company name (from settings or user input)
 - Enabled platforms
 - Search depth
@@ -98,7 +98,7 @@ The report has these sections: sources found, ranked by usefulness; conflicts be
 ### 6. Offer Next Steps
 
 After presenting the report, offer:
-1. **Generate guidelines now** — chain to `/brand-voice:generate-guidelines` using discovery report as input
+1. **Generate guidelines now** — chain to `/brand-voice:generate-guidelines` using discovery report as input. That command is not part of this item. On AI Blocks, use the Brand voice guide builder and give it the report.
 2. **Resolve open questions first** — work through high-priority questions before generating
 3. **Save report** — store the discovery report to Notion or as a local file
 4. **Expand search** — search additional platforms or deeper if coverage is low

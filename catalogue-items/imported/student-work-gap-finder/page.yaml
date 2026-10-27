@@ -7,7 +7,7 @@ job: teach-and-train
 headline: Student work gap finder
 subhead: A piece of student work, checked against your criteria, with the exact gaps named. You see what is strong, what is missing, and which gap to tackle first.
 explain: |
-  A piece of student work, checked against your criteria, with the exact gaps named. You see what is strong, what is missing, and which gap to tackle first.
+  A mark scheme gives a grade, not a next step. This skill names the exact gap between the work and your criteria, says what type it is (idea, method or writing) and picks the first one to fix.
 
   Paste the work or describe it, then add the criteria and the learning goal. The skill compares what the student did with what the criteria ask for. It lists strengths, then each gap with a plain reason it matters, and ranks the gaps so you fix the biggest one first. For each priority gap it suggests a next teaching step. It also drafts a short feedback script you can read to the student, pitched to their level.
 when:
@@ -20,7 +20,7 @@ not_for:
   - "You want to check whether the student wrote it themselves: talk with the student or use your school's plagiarism check."
   - "You have no criteria or learning goal yet: write them first, even as three short bullet points, then come back."
 you_give:
-  - The student work, pasted or described
+  - "The student work, pasted or described. Check your school's data-protection and AI-use rules first, and remove the student's name and any details that identify them."
   - The assessment criteria
   - The learning goal
   - Year level and subject
@@ -32,8 +32,7 @@ you_get:
   - Next teaching steps
   - A feedback script to say aloud
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tools are needed.
-  - Check your school's data-protection and AI-use rules before you paste any student work. Remove the student's name and any other details that identify them.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. It is plain prompt text, so it runs in any chat AI. No code or paid tools are needed. Before you paste student work, remove the student's name and check your school's data-protection and AI-use rules.
   - Paste the student's work.
   - Add your criteria and the learning goal. Add year level and subject if you can.
   - Read the strengths and gaps. Check each gap against the work itself.

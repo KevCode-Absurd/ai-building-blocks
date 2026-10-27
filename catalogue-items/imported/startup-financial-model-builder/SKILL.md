@@ -29,6 +29,7 @@ Ask once for anything missing, then mark what stays missing as `MISSING: <what>`
 - Team size and hiring plan, with pay
 - Current cash and any money coming in
 - Optional: costs already known, payment terms, a planned raise
+- Optional: a plan with a raise or hiring plan, such as one from the Startup finance advisor. Use it as the starting assumptions for those lines.
 
 If the user has no history, build from stated assumptions and label each one `assumption`. Do not fill a gap with a benchmark and present it as their number.
 

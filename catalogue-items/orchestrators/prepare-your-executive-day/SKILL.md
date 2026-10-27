@@ -1,6 +1,6 @@
 ---
 name: prepare-your-executive-day
-description: "Share your calendar and open work. Get meeting briefs, an action register and a plan for the day."
+description: "Share one day's calendar and open work. Get a brief for each meeting, an action register and a plan for that day."
 ---
 
 # Prepare your executive day
@@ -10,8 +10,8 @@ description: "Share your calendar and open work. Get meeting briefs, an action r
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Work commitment and follow-up writer](https://useaiblocks.com/skills/executive-work-keeper). It takes the document.
-- The [Note organizer](https://useaiblocks.com/skills/note-organizer).
-- The [Meeting minutes writer](https://useaiblocks.com/skills/meeting-minutes-writer).
+- The [Cross-tool status briefing writer](https://useaiblocks.com/skills/copilot-roundup). It takes the document.
+- The [Weekly work review planner](https://useaiblocks.com/skills/weekly-review-guide). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -19,7 +19,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
 - **Meeting notes** (yours): an agenda, notes or decisions from a meeting.
@@ -27,15 +27,19 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a brief, meeting notes, plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, meeting notes, plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
 ## Goal
 
-Share your calendar and open work. Get meeting briefs, an action register and a plan for the day.
+Share one day's calendar and open work. Get a brief for each meeting, an action register and a plan for that day.
 
-Scope: one day only. Give the date and the calendar window first. For a whole week, use Prepare your weekly executive review.
+This is for one day only. Give the date and the calendar window first.
+
+## When not to use
+- For a whole week, use Prepare your weekly executive review (`prepare-your-weekly-executive-review`).
+- To turn one meeting's notes into minutes, use the Meeting minutes writer (`meeting-minutes-writer`).
 
 ## Gather first
 
@@ -71,10 +75,10 @@ Save run-state.md with the input revision or date window, completed steps, resul
 
 ## Deliver
 
-Meeting briefs
-Action register
-Daily brief with priorities and gaps
+- **Meeting briefs:** one block per meeting, in calendar order. Each has the goal, open decisions, questions and preparation gaps.
+- **Action register:** one row per action with action, owner, deadline, status and source link.
+- **Daily brief:** one page dated for the day, with priorities, decisions, conflicts and work waiting on others.
 
-Next step: after the daily brief, name the first item to act on and list the approvals needed before any external action, such as sending a message, changing a calendar or spending money. Wait for a clear yes on each one.
+Next step: after the daily brief, name the first item to act on. List each proposed outside action with the approval it needs: a message needs your yes to send it, a calendar change needs your yes to make it, and spending needs your yes on the amount. Wait for a clear yes on each one.
 
 Include source coverage, unresolved findings, missing facts and one next action.

@@ -10,6 +10,8 @@ metadata:
 
 Helps HR and compliance teams govern the responsible, compliant use of AI tools across the employee lifecycle, from hiring algorithms to performance analytics and employee monitoring.
 
+Source: copied from tuanductran/hr-skills under the MIT licence. This catalogue copy may include small notes added by AI Blocks, such as the "What you get" section below.
+
 ## Supported tasks
 
 - Drafting an AI use policy for HR processes
@@ -50,6 +52,10 @@ Helps HR and compliance teams govern the responsible, compliant use of AI tools 
 3. "Create talking points for a manager asked about AI use in performance reviews."
 4. "Summarize regulatory requirements for automated employment decision tools in [jurisdiction]." (Replace [jurisdiction] with your country or state.)
 5. "Draft a candidate notice required before using an AI assessment tool in hiring."
+
+## What you get
+
+Write the draft as plain text that can be pasted into a Word file. Use these sections, in order, and keep each to about one page or less: 1. Purpose and scope. 2. Allowed and banned uses of AI. 3. Human review of big decisions. 4. Bias and risk check plan, with how often to repeat it. 5. Review before adopting a new tool. 6. Vendor questions. 7. Notice to candidates and staff. 8. How to challenge a decision, and who handles it. 9. Records HR must keep. 10. Training points for HR staff. Mark anything you could not fill from the user's facts as MISSING. Never invent a law, a tool name or a vendor claim. End with a reminder that this is not legal advice.
 
 ## How to run it
 

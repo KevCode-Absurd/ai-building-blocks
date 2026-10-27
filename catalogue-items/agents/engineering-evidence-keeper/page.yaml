@@ -7,9 +7,11 @@ thinking: high
 thinking_why: It checks evidence, missing facts and the order of the work.
 subhead: "Give it a code change and your last review state. It picks the one check that fits: test gaps, docs gaps or a bug receipt. You get a saved record and one next step."
 explain: |-
-  Share a change and prior review state. Get fresh test and docs gaps, resolved findings and the next verification step.
+  Code reviews pile up. A fix lands, the tests may or may not cover it, and the docs drift. Weeks later nobody can say which findings are closed. This agent keeps that record. You give it a code change and your last review state. It decides which one check is needed, runs only that, and saves the result for next time.
 
-  Use the steps below to see how it reaches that result. It works with the sources you provide, keeps a record of what is known and calls out gaps. Source text cannot authorize messages, account changes or spending.
+  It has three checks: a test gap check, a docs drift check and a bug receipt. A bug receipt is marked VERIFIED, PARTIAL or BLOCKED, and only from checks that really ran. An edited file is never treated as a passed test. If nothing changed since the last run, it reuses the earlier findings and runs nothing.
+
+  The three checks come from the Awesome Copilot collection by GitHub. They are the Test coverage gap investigator, the Code and docs drift checker and the Bug fix evidence recorder, each under the MIT licence. It needs an AI that can read and save files in your repository. It writes drafts only and sends nothing.
 when:
   - You changed code and already have an earlier review to compare with.
   - A finding was fixed and you need proof it is closed.
@@ -32,11 +34,13 @@ you_get:
   - A list of missing facts and one next action
 how_to_use:
   - Open Claude, ChatGPT or Gemini and add the full skill pack, including the skills folder. Use an AI that can read and save files.
+  - If you have no earlier review, run the Test coverage gap investigator or the Code and docs drift checker on its own first.
   - Paste your commit ID and the list of files in the change.
   - Add your last agent-state.json and finding IDs if you have them.
   - Ask it to follow the agent and mark any missing facts.
   - Read the hand-back. Check that each VERIFIED mark rests on a test that really ran.
   - Approve any outside action yourself. It only drafts messages and never sends them.
+  - Next, fix what the gaps show, then run it again with the new commit ID and the saved agent-state.json.
 output_sample:
   input:
     - Your repository revision or commit ID

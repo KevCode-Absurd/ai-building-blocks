@@ -1,6 +1,6 @@
 ---
 name: progressive-estimation
-description: "Estimate AI-assisted and hybrid human+agent development work with research-backed PERT statistics and calibration feedback loops"
+description: "Estimate AI-assisted and hybrid human+agent development work with PERT statistics and calibration feedback loops"
 category: project-management
 risk: safe
 source: community
@@ -36,7 +36,7 @@ Progressive Estimation adapts to your team's working mode — human-only, hybrid
 
 1. **Mode Detection** — Determines if the team works human-only, hybrid, or agent-first
 2. **Task Classification** — Categorizes by size (XS–XL), complexity, and risk
-3. **Formula Application** — Applies default speed multipliers. The original author says these come from research, but the files give no figures or sources. Treat them as rough starting assumptions and replace them with your team's own figures once you have a few finished tasks.
+3. **Formula Application** — Applies default speed multipliers. The original author says these come from research, but the files give no figures or sources. Treat them as rough starting assumptions and replace them with your team's own figures once you have a few finished tasks. Show the user the multiplier you use for each mode before you estimate, so they can change it.
 4. **PERT Calculation** — Produces expected values using three-point estimation
 5. **Confidence Bands** — Generates P50, P75, P90 intervals
 6. **Output Formatting** — Formats for Linear, JIRA, ClickUp, GitHub Issues, Monday, or GitLab

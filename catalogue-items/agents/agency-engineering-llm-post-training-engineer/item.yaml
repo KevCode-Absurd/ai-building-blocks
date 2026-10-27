@@ -13,6 +13,10 @@ inputs:
     required: true
   - type: source_text
     required: false
+  - type: training_data
+    required: false
+  - type: eval_set
+    required: false
 outputs:
   - type: plan
   - type: audit_report

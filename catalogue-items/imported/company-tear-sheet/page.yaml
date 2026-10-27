@@ -35,12 +35,14 @@ you_get:
   - A source and date on every figure
   - Not disclosed marks wherever data was missing
 how_to_use:
+  - The free price and snapshot data comes from yfinance, an unofficial reader for personal use. For a sheet that goes to a client, check the figures against filings or use a licensed data source, or label the sheet internal.
   - Use an AI that can run code and reach the web, such as Claude Code. The skill builds the Word file with a command line tool called officecli, which must be installed. In a plain chat, ask for the sheet as text and paste it into Word.
   - Open the skill and name the company. Say who the reader is. If you skip this, it will ask. Consensus estimates need a free Alpha Vantage key, which allows 25 requests a day. Without one, that row says Not disclosed.
   - For an Indian or private company, paste the annual report figures. Free sources have little on them.
   - Read the Not disclosed marks first. Fill them from the company's filings if you need them.
   - Check the figures and dates against the latest results. Note that the price data is delayed.
   - Put the sheet in your pack only after you have checked it.
+  - The run order is: confirm the reader, pull the filings and price data, save each figure with its source and date, build the Word file, then check every figure against its source.
 output_sample:
   input:
     - The company name or ticker

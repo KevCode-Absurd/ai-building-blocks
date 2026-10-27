@@ -8,10 +8,13 @@ role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
+  - type: question
     required: true
+  - type: codebase
+    required: false
 outputs:
   - type: code_change
+  - type: codebase
 uses: []
 origin: imported
 source:

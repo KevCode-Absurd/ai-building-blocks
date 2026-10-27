@@ -12,6 +12,7 @@ inputs:
     required: true
 outputs:
   - type: photo_set
+  - type: image_prompt
 uses: []
 origin: imported
 source:

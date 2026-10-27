@@ -11,12 +11,13 @@ job: ops
 level: intermediate
 execution: coordinator
 inputs:
-  - type: brief
+  - type: question
     required: true
-  - type: brief
+  - type: spreadsheet
     required: false
 outputs:
   - type: document
+  - type: plan
 uses:
   - copilot-gtm-product-led-growth
   - copilot-gtm-operating-cadence

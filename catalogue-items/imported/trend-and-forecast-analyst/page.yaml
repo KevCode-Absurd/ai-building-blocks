@@ -7,9 +7,11 @@ job: track-numbers
 headline: Trend and forecast analyst
 subhead: "Turn a column of numbers over time into a clear story: where it is heading, what repeats, what looks odd and what comes next. You get a forecast with a stated range of error, not a single guess."
 explain: |
-  Turn a column of numbers over time into a clear story: where it is heading, what repeats, what looks odd and what comes next. You get a forecast with a stated range of error, not a single guess.
+  You read it to decide what to do next: staff up, order stock, or check an odd spike against what really happened. It also shows if a rise is real or just the season.
 
-  The skill checks that dates are regular and the data is clean, then tests whether trend or seasons are present. It splits the series into trend, season and leftover noise and measures how strong each is. It flags points far from the usual range and checks them against your event log. It then fits an ARIMA forecast, tests it on the last fifth of your data, and reports the error with a 95% range. It needs two full seasonal cycles of data.
+  The skill checks that dates are regular and the data is clean, then tests whether trend or seasons are present. It splits the series into trend, season and leftover noise and measures how strong each is. It flags points far from the usual range and checks them against your event log. It then fits an ARIMA forecast, tests it on the last fifth of your data, and reports the error with a 95% range. It needs two full seasonal cycles of data. For monthly data that means at least 24 rows, for daily data with a weekly pattern at least 14 days.
+
+  Licence: MIT, as the LICENSE file in this item says. Credit goes to Nimrod Fisher.
 when:
   - You need a staffing or stock forecast from past monthly numbers.
   - You want to know if a rise is real or just the season.
@@ -30,7 +32,7 @@ you_get:
   - A forecast table with ranges
   - A plain-language summary
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Pick one that can run code and read files.
+  - Open Claude, ChatGPT or Gemini. Pick one that can run code and read files. On some plans, running code and reading uploaded files needs a paid tier. On a free plan, ask your AI to explain the steps and use a spreadsheet trend line instead.
   - Paste the skill instructions, then upload your data as a CSV with a date column and one number column.
   - Tell your AI how often the data is recorded and how far ahead to forecast. Add your event log if you have one.
   - Check that your AI wrote the CSV, the charts and the report. If the script fails, ask it to show the error and fix it. If it still fails, fall back to a trend line in a spreadsheet.

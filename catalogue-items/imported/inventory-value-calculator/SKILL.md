@@ -44,7 +44,7 @@ Item-by-item (or similar-item groups); raw materials written down only if the fi
 ## Technical Analysis Steps
 
 1. **Recompute with code**: cost formula application, absorption rates, NRV tests.
-2. **Obsolescence provision matrix**: aging × movement (e.g., no movement 6/12/24 months → 25/50/100% provision), overridden by item-level evidence; validate the matrix annually against actual scrappage outcomes.
+2. **Obsolescence provision matrix**: aging × movement (e.g., no movement [6/12/24] months → [X/Y/Z]% provision; set your own months and rates), overridden by item-level evidence; validate the matrix annually against actual scrappage outcomes.
 3. **Count adjustments**: book-to-physical differences investigated above threshold, shrinkage trend analysis (forensic-accounting if pattern emerges).
 
 ---

@@ -99,23 +99,22 @@ Output format: [markdown / html / pdf]
 
 ## Executive Summary
 
-Sprint 14 delivered 85% of committed story points (29 of 34), slightly below
-the team's rolling average velocity of 30.5. The primary sprint goal was
-partially met: the checkout redesign shipped ahead of schedule, but two
-analytics stories carried over due to mid-sprint scope changes and a QA
-bottleneck. Zero P1 bugs were introduced, reflecting strong code quality.
+Sprint 14 delivered 85% of committed story points (29 of 34), below
+the average of the four earlier sprints (30.5 completed). The primary sprint goal was
+partially met: the checkout redesign shipped 2 days early, but two
+stories carried over. Mid-sprint scope changes and a QA bottleneck were
+noted. Zero P1 bugs were reported in the production release.
 
 ## Velocity
 
 | Metric               | Sprint 14 | 4-Sprint Average |
 |----------------------|-----------|------------------|
-| Committed            | 34 pts    | 31.0 pts         |
+| Committed            | 34 pts    | [not in the data] |
 | Completed            | 29 pts    | 30.5 pts         |
-| Commitment accuracy  | 85%       | 98%              |
+| Commitment accuracy  | 85%       | [not in the data] |
 
-The team over-committed by 3 points relative to the historical average.
-The shortfall is attributable to 3 unplanned tickets added mid-sprint,
-which consumed approximately 5 story points of capacity.
+The team completed 5 points less than it committed. 3 unplanned tickets
+were added mid-sprint. Their size in points is [not in the data].
 
 ## Story Completion
 
@@ -124,33 +123,30 @@ which consumed approximately 5 story points of capacity.
   - CHECKOUT-142: Edge case handling for international addresses
   - ANALYTICS-89: Cross-domain tracking for subdomain events
 
-Both carried-over stories are estimated at 2-3 points each and will be
-prioritized at the top of Sprint 15.
+Estimates and the plan for the next sprint: [not in the data].
 
 ## What Went Well
 
 - Checkout redesign shipped 2 days ahead of the sprint end date, allowing
   extra time for integration testing.
-- Zero P1 bugs in the production release — the team's pairing sessions
-  caught issues early in development.
-- Cross-functional pairing sessions were cited by 3 team members as the
-  highlight of the sprint.
+- Zero P1 bugs in the production release.
+- Effective pairing sessions between frontend and backend teams.
 
 ## What Could Improve
 
 - **Mid-sprint scope creep:** 3 unplanned tickets were added after sprint
   planning, consuming capacity and contributing to the 2 carried-over stories.
-- **QA bottleneck:** All completed stories landed in QA on Thursday, creating
-  a pileup that left 2 developers idle on Friday morning.
+- **QA bottleneck:** A QA bottleneck on Thursday caused idle time for 2
+  developers.
 - **Standup duration:** Standups exceeded 15 minutes on 3 of 10 days.
 
 ## Action Items
 
-| Owner | Action                                           | Target Date |
-|-------|--------------------------------------------------|-------------|
-| Priya | Add a mid-sprint scope freeze policy             | Feb 10      |
-| James | Schedule a dedicated QA window on Wednesdays     | Feb 10      |
-| Dana  | Implement timekeeper rotation for standups       | Feb 10      |
+| Owner | Action                                           | Target Date   |
+|-------|--------------------------------------------------|---------------|
+| Priya | Add a mid-sprint scope freeze policy             | [not in data] |
+| James | Schedule a dedicated QA window on Wednesdays     | [not in data] |
+| Dana  | Timekeeper rotation for standups                 | [not in data] |
 
 ---
 
@@ -168,80 +164,55 @@ Time period: January 2026
 Output format: markdown
 ~~~
 
-**Output:**
+**Output (shape only, every [BRACKET] is filled from the data file, never invented):**
 
 ~~~markdown
-# Website Analytics Report — January 2026
+# Website Analytics Report — [MONTH YEAR]
 
-**Reporting period:** January 1–31, 2026
-**Compared to:** December 2025
+**Reporting period:** [START DATE] to [END DATE]
+**Compared to:** [PREVIOUS PERIOD, or "not in the data"]
 
 ---
 
 ## Executive Summary
 
-Website traffic increased 12% month-over-month to 284,000 sessions, driven
-primarily by organic search growth (+18%). However, overall conversion rate
-declined from 4.0% to 3.2%, with the sharpest drop on mobile devices. The
-pricing page continues to be the highest-converting entry point, while the
-blog showed strong traffic growth but low conversion intent.
+[ONE PARAGRAPH: the main change in [METRIC] versus [COMPARISON], the main
+cause only if the data shows it, and the one thing to do about it.]
 
 ## Traffic Overview
 
-| Metric             | January 2026 | December 2025 | Change  |
-|--------------------|-------------|---------------|---------|
-| Total sessions     | 284,000     | 253,500       | +12.0%  |
-| Unique visitors    | 198,600     | 179,400       | +10.7%  |
-| Pages per session  | 3.2         | 3.4           | -5.9%   |
-| Avg session dur.   | 2m 48s      | 3m 05s        | -9.2%   |
-| Bounce rate        | 42%         | 38%           | +4pp    |
+| Metric         | [PERIOD] | [PREVIOUS PERIOD] | Change   |
+|----------------|----------|-------------------|----------|
+| Total sessions | [N]      | [N]               | [+/-N%]  |
+| Bounce rate    | [N%]     | [N%]              | [+/-Npp] |
 
 ## Traffic by Channel
 
-| Channel        | Sessions | Share | MoM Change |
-|----------------|----------|-------|------------|
-| Organic Search | 142,000  | 50%   | +18.3%     |
-| Direct         | 62,500   | 22%   | +5.1%      |
-| Paid Search    | 39,800   | 14%   | +8.7%      |
-| Social         | 25,600   | 9%    | +2.3%      |
-| Referral       | 14,100   | 5%    | -3.8%      |
+| Channel   | Sessions | Share | Change   |
+|-----------|----------|-------|----------|
+| [CHANNEL] | [N]      | [N%]  | [+/-N%]  |
 
-**Insight:** Organic search growth (+18.3%) was the primary traffic driver,
-likely attributable to the 6 new blog posts published in January. However,
-the drop in pages-per-session and increased bounce rate suggest this new
-organic traffic has lower engagement intent than existing visitors.
+**Insight:** [WHAT THE TABLE SHOWS. Say "cause not in the data" when the data
+does not explain it.]
 
 ## Conversion Funnel
 
-| Stage                  | Visitors | Rate   | MoM Change |
-|------------------------|----------|--------|------------|
-| Homepage to Pricing    | 84,200   | 29.6%  | -1.2pp     |
-| Pricing to Signup      | 15,400   | 18.3%  | -2.1pp     |
-| Signup to Activation   | 9,100    | 59.1%  | +0.8pp     |
-| **Overall conversion** | **9,100**| **3.2%** | **-0.8pp** |
-
-**Insight:** The conversion drop is concentrated in the Pricing to Signup
-step (-2.1pp). A/B test data shows the new pricing page variant (launched
-Jan 15) underperforms the control by 1.8pp. Recommendation: revert to the
-control pricing page and redesign the variant.
+| Stage   | Visitors | Rate | Change   |
+|---------|----------|------|----------|
+| [STAGE] | [N]      | [N%] | [+/-Npp] |
 
 ## Recommendations
 
-1. **Revert the pricing page A/B test.** The new variant is underperforming
-   by 1.8pp on the key Pricing to Signup conversion step.
-2. **Add conversion-intent CTAs to blog posts.** The 18% organic traffic
-   growth is not converting. Embed contextual product CTAs within blog
-   content to capture high-intent readers.
-3. **Investigate mobile conversion drop.** Mobile sessions grew 15% but
-   mobile conversion fell 1.2pp. Audit the mobile signup flow for UX
-   friction, particularly form field usability and page load speed.
-4. **Double down on organic content.** The SEO investment is paying off
-   in traffic. Publish 8 posts in February targeting mid-funnel keywords
-   with stronger commercial intent.
+1. [ACTION that follows from a number in the tables above, with that number named.]
+2. [ACTION ...]
+
+## Data gaps
+
+- [FIELD OR COMPARISON NOT IN THE DATA]
 
 ---
 
-*Report generated from website-analytics-jan-2026.json. Data: Google Analytics.*
+*Report generated from [SOURCE FILE]. Data: [SOURCE SYSTEM, only if named in the data].*
 ~~~
 
 ## Best Practices

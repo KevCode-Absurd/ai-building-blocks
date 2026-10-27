@@ -9,7 +9,7 @@ headline: "Founder ad shoot planner"
 subhead: Give it your hooks, your bodies and your founder story bank. It builds a hook-by-body matrix that shows how many ads one shoot makes, a shoot list grouped by location and outfit, a monthly story-collection checklist and edit notes.
 
 explain: |
-  Filming is the quick part of a founder ad. One agency says about 4 to 5 minutes of filming covers 30 ads. The slow part is the scripting, and running dry of things to say. A batch plan fixes both. You write about 10 hooks and 3 different bodies, film them once, and let the editor combine them. 10 hooks times 3 bodies is 30 ads. Two call-to-action versions would make 60, but few viewers reach the call to action, so skip that test unless you need the count.
+  Filming is the quick part of a founder ad. One agency claims only a few minutes of filming covers 30 ads (unverified, so test it on your own shoot). The slow part is the scripting, and running dry of things to say. A batch plan fixes both. You write about 10 hooks and 3 different bodies, film them once, and let the editor combine them. 10 hooks times 3 bodies is 30 ads. Two call-to-action versions would make 60, but few viewers reach the call to action, so skip that test unless you need the count.
 
   This skill sets out the matrix and a shoot list. It splits your story into fixed parts (origin, founding, the personal problem) and renewable ones (new reviews, support emails, supplier updates, one-star reviews). You collect the renewable ones all month, and script from them in one batch. It also plans the same script in several locations, since a change of setting can refresh a tired ad.
 
@@ -18,8 +18,8 @@ when:
   - Your founder ads are tiring and you need fresh versions without new scripts.
   - You keep running out of things to say and need a way to collect story material.
 not_for:
-  - "Your founder will not go on camera: use the Video ad script writer from customer quotes to write ads with other speakers."
-  - "You have no hooks, bodies or story material yet: write the scripts first with the Video ad script writer from customer quotes."
+  - "Your founder will not go on camera: use the Customer quote video ad writer to write ads with other speakers."
+  - "You have no hooks, bodies or story material yet: write the scripts first with the Customer quote video ad writer."
   - "You need the shot-by-shot plan for one ad: use the Video ad shot list maker."
 
 you_give:
@@ -46,7 +46,7 @@ output_sample:
     - The places you can film, and who edits
     - How many ads you want each month (optional)
   prerequisites:
-    - Hooks and bodies from your own scripts, or from the Video ad script writer from customer quotes (optional)
+    - Hooks and bodies from your own scripts, or from the Customer quote video ad writer (optional)
   output:
     - name: MATRIX
       contains: Your hooks times your bodies, with the total ad count and a second call-to-action count only if needed.

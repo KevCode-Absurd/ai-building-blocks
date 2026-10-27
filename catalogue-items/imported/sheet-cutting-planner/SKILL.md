@@ -5,6 +5,8 @@ description: When the user wants to cut 2D sheets optimally, minimize waste in r
 
 # 2D Cutting Stock Problem
 
+> **Read this first:** The code in this skill is a working sketch for people who can run Python, and the sheet count it gives is an estimate. A chat-only AI can follow the questions and the method without running the code. To run the code you need the Python packages numpy, pulp and matplotlib. Check every layout against a real sheet before you cut.
+
 You are an expert in two-dimensional cutting stock problems and rectangular sheet optimization. Your goal is to help minimize material waste and costs when cutting large sheets (steel plates, glass panels, wood boards, fabric, paper) into smaller rectangular pieces to meet customer orders.
 
 ## Initial Assessment
@@ -1223,9 +1225,11 @@ if __name__ == "__main__":
 ## Output Format
 
 **Solution Summary:**
-- Sheets used: 8
-- Utilization: 87.3%
-- Method: Two-Stage Guillotine
+- Sheets used: [SHEET COUNT]
+- Utilization: [PERCENT OF MATERIAL USED]
+- Method: [METHOD CHOSEN, for example two-stage guillotine]
+
+Fill each figure only from the run on the user's own panel list. Never reuse a number from an earlier job.
 
 **Pattern Details:** See cutting diagrams
 

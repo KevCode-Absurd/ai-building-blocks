@@ -24,13 +24,13 @@ Reorders products in a manual Shopify collection by inventory level without navi
 |-----------|------|----------|---------|-------------|
 | store | string | yes | — | Store domain (e.g., mystore.myshopify.com) |
 | format | string | no | human | Output format: `human` or `json` |
-| dry_run | bool | no | false | Preview operations without executing mutations |
+| dry_run | bool | no | true | Preview operations without executing mutations. Default is a preview. Set to false only when the user clearly asks to change the live store, after they have seen the preview |
 | collection_id | string | yes | — | GID of the manual collection (e.g., `gid://shopify/Collection/123`) |
 | sort_by | string | no | inventory_desc | `inventory_desc` (highest stock first) or `inventory_asc` (lowest stock first) |
 
 ## Safety
 
-> ⚠️ Step 2 executes `collectionReorderProducts` which changes the product display order immediately. Running again with the opposite `sort_by` only reverses the stock order. The original custom order cannot be recovered once overwritten. The `moves` array passed to the mutation must be complete; partial moves produce undefined ordering. Always run with `dry_run: true` first to review the computed sort order before committing.
+> ⚠️ Step 2 executes `collectionReorderProducts` which changes the product display order immediately. Running again with the opposite `sort_by` only reverses the stock order. The original custom order cannot be recovered once overwritten. The `moves` array passed to the mutation must be complete; partial moves produce undefined ordering. The skill runs as a preview (`dry_run: true`) unless the user clearly says to apply it. Show the preview, remind the user that the old custom order cannot be restored and that this skill keeps no copy of it, and only then run with `dry_run: false` on their explicit yes.
 
 `collectionReorderProducts` only works on manual (custom) collections. If the collection has `sortOrder` other than `MANUAL`, the skill must abort with a clear message: "Cannot reorder: collection sort order is not MANUAL. Switch the collection to manual sorting in the Shopify admin first."
 

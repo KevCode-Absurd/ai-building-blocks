@@ -9,11 +9,11 @@ Give it your product and buyer. Get headlines sorted by type, ranked with a cove
 
 The headline types and the idea of testing headlines with a code for each are inspired by John Caples's Tested Advertising Methods. The four-step order is this workflow's own design. Each step is its own skill. They run one after another, and each result is saved and passed to the next.
 
-How it differs from the workflow Write a headline that fits what your buyers already know: that one fits a headline to how aware your buyers are. This one writes twenty or more headlines in three types, ranks them with a cover test and plans a keyed test with a winner rule set in advance. For one headline and no test, use the Ad headline writer.
+How it differs from the workflow Write a headline that fits what your buyers already know: that one fits a headline to how aware your buyers are. This one starts from the buying reason, writes twenty or more headlines in three types (self-interest, news, curiosity), ranks them with a cover test and plans a keyed test with a winner rule set in advance. For one headline and no test, use the Ad headline writer.
 
 Length: the 700-word limit in the setup applies to step 1, step 4 and the hand-back summary only. The headline list in step 2 and the five-rule scoring in step 3 may run as long as they need.
 
-Not for: no buyer evidence or no offer yet (use the Buyer brief writer first).
+Not for: no buyer evidence or no offer yet (use the Buyer brief writer first). Use only facts you supply. The headlines add no claim, price or result your offer does not state.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -62,8 +62,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## Steps
 1. **Pick the buying reason to lead with.** Use the skill `what-you-really-sell-finder`. Give it the product facts, the offer, the buyer and the customer words. It lists the basic reasons people buy, drops any that only help you, scores the rest for fit, belief and evidence, and keeps three. The reason goes in the headline, so it has to be chosen first. Saves outputs/step-01-what-you-really-sell-finder.md.
 2. **Write headlines in the tested types.** Use the skill `typed-headline-batch-writer`. Give it the three buying reasons in outputs/step-01-what-you-really-sell-finder.md, the product facts and what is new. It writes twenty or more headlines, each labelled self-interest, news or curiosity, with the buying reason it uses and a real detail in it.
-3. **Rank them with the cover test.** Use the skill `headline-cover-test-ranker`. Give it the headline list in outputs/step-02-typed-headline-batch-writer.md and where the headline will run. It reads each headline alone, with the copy hidden, scores it on five rules and cuts the weak ones. It keeps three that differ in type or reason and hands them to step 4.
-4. **Plan a small keyed test of the best three.** Use the skill `keyed-headline-test-planner`. Give it the three that passed the cover test in step 3, the full headline list from step 2 and your offer. Turns the three into a keyed test with a winner rule.
+3. **Rank them with the cover test.** Use the skill `headline-cover-test-ranker`. Give it the headline list in outputs/step-02-typed-headline-batch-writer.md and where the headline will run. It reads each headline alone, with the copy hidden, scores it on five rules (reader gain, news, curiosity with a promise, positive tone, quick and easy but believable) and cuts the weak ones. It keeps three that differ in type or reason and hands them to step 4.
+4. **Plan a small keyed test of the best three.** Use the skill `keyed-headline-test-planner`. Give it the three that passed the cover test in step 3, the full headline list from step 2 and your offer. It turns the three into a keyed test with a winner rule set before the test runs. To run the test you need a way to give each version its own code, link, phone number or form field, such as an email tool or an ad platform that can tag each version. It does not run the test or call a winner without counts.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back
@@ -72,9 +72,9 @@ Four step files and the summary: the top three buying reasons, the typed headlin
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Ad headline writer](https://useaiblocks.com/skills/ad-headline-writer).
-- The [Headline option writer](https://useaiblocks.com/skills/headline-option-writer).
+- The [Product weakness line writer](https://useaiblocks.com/skills/candid-line-writer). It takes the shortlist.
 - The [Call-to-action writer](https://useaiblocks.com/skills/call-to-action-writer). It takes the plan.
+- The [Story image ad writer](https://useaiblocks.com/skills/story-image-ad-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -44,7 +44,7 @@ Read the user's goal, existing conversation and supplied files first. Reuse conf
 ## Required inputs
 1. The actual deck (.pptx).
 2. The audience and the talk length in minutes.
-3. The source documents behind your figures and claims.
+3. The source documents behind your figures and claims. If none are supplied, still write the notes, but mark every figure and claim `MISSING: source` and do not add facts of your own.
 4. The speaker’s preferred style, such as warm or formal (optional).
 
 ## Runtime requirements
@@ -57,7 +57,7 @@ Use an actual tool that can read and write the required native format. Plain tex
 
 3. Link claims and figures to supplied sources in the notes. Keep uncertain material labeled, and do not invent anecdotes, user stories or audience reactions.
 
-4. Allocate a draft timing budget across slides, questions and transitions. Label it as a rehearsal estimate until a real timed run is available.
+4. Allocate a draft timing budget. Set aside about 10 to 20 percent of the talk length for questions and about 5 percent for transitions. Split the rest across slides by how much each one has to carry; title and closing slides get the least. Show the minutes per slide and check that they add up to the talk length. Label the plan a rehearsal estimate until a real timed run is available.
 
 5. Save native speaker notes without changing visible slide content unnecessarily. Reopen the PPTX, verify note-to-slide alignment and remove private presenter-only material from any requested audience copy.
 
@@ -68,11 +68,11 @@ Use an actual tool that can read and write the required native format. Plain tex
 - Keep every failed or unrun check visible in the final report. Repair confirmed issues within scope, then recheck at most twice. Stop if a required gate still fails.
 
 ## Deliverables
-deck-with-notes.pptx and a rehearsal timing sheet.
+deck-with-notes.pptx and a rehearsal timing sheet (slide, minutes, cumulative time, transition line). Include a source map (file and version, slide, what it supports), a list of checks marked passed, failed or not run, and open items (missing fact, next action).
 Include a short run log with the source file/version, action, actual output path, check result and remaining limitations. Record missing prerequisites as MISSING: lines.
 
 ## What to do next
 Do a timed run-through with the notes, using a real timer, then a question-and-answer practice pass. If you also need a take-home copy, use "PowerPoint audience handout builder", which keeps these notes out of the audience file.
 
 ## Verification cases
-Read tests/cases.json. These are illustrative test specifications, not evidence that a native application has already run them.
+These are illustrative test cases, not evidence that a native application has already run them (they are also in `tests/cases.json`). Example: an eight-minute talk on a ten-slide deck should give a timing sheet that sums to eight minutes, with room for questions, and notes that cite only the supplied sources.

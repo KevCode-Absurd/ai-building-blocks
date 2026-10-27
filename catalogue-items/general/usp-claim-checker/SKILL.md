@@ -60,7 +60,6 @@ The claim in one sentence. A pass, fail or unknown for each test with a reason. 
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Make video ads** with the [Product claim demo planner](https://useaiblocks.com/skills/claim-demonstration-planner). It takes the audit report.
 - **Write the ad copy** with the [Product promise finder](https://useaiblocks.com/skills/selling-proposition-finder). It takes the audit report.
-- **Write the ad copy** with the [Video hook review checklist writer](https://useaiblocks.com/skills/winning-hook-rubric-builder). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

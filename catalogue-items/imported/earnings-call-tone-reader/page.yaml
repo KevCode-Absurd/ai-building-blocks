@@ -11,6 +11,8 @@ explain: |
 
   It cleans the transcript, strips the legal disclaimers and treats the Q&A as the most revealing part. It scores tone with finance-aware word lists, because general tools mark routine words like cost and tax as negative. It compares the mix of positive and negative words with the last few quarters, so you see the change, not just the level. It counts hedging words such as uncertain, might and assume per 100 words. Last, it compares management's tone with the analysts' questions to spot friction.
 
+  In a plain chat, with no code run, the tone score and the hedging counts are your AI's careful reading of the text, with a quote behind each one. They are approximate, not model output. A finance-tuned model such as FinBERT gives a firmer score, but needs Python.
+
   Rising hedging can signal caution. It does not predict a price move, and the report does not claim it does. It is research input, not advice.
 when:
   - You want a read beyond the numbers before you make a decision.
@@ -37,7 +39,7 @@ how_to_use:
   - Get the transcript from the company's investor page or the exchange filing. Open Claude, ChatGPT or Gemini and paste in this skill.
   - Paste the transcript and name the company and quarter. Paste older transcripts too if you have them. Without them you get a level, not a shift.
   - Say whether you care most about the prepared remarks or the Q&A.
-  - Read the Key Findings first. Check each quote against the transcript.
+  - Read the Key Findings first. Check each quote against the transcript. If your AI did not run code, treat the tone score and the hedging counts as approximate. Ask it to list the phrases it counted.
   - Then read the Check against the numbers section. Look up those numbers in the results.
   - Use the result as one input. Do not trade on it alone.
 output_sample:

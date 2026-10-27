@@ -18,7 +18,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Audit report** with the [Business track record checker](https://useaiblocks.com/skills/steady-track-record-checker). Bring audit report, your question (optional).
+1. **Audit report** with the [Business track record checker](https://useaiblocks.com/skills/steady-track-record-checker). Bring your question, your results (optional), audit report (optional).
 2. **Audit report** with the [Business value capture reviewer](https://useaiblocks.com/skills/who-keeps-the-gain-tester). Bring your question, audit report (optional).
 3. This one.
 

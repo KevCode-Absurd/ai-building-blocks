@@ -9,7 +9,7 @@ subhead: A clean Jupyter notebook, ready to run, for either an experiment or a t
 explain: |
   A clean Jupyter notebook, ready to run, for either an experiment or a tutorial. It gives you a good starting structure so you spend time on the work, not the layout.
 
-  The skill asks which kind you need. Experiment notebooks follow a hypothesis-led flow for exploring and analysing data. Tutorial notebooks go step by step for a named audience. It first locks the goal, the reader and what done looks like. Then a helper script scaffolds the notebook from a template, which avoids hand-editing the raw file and breaking it. It can also turn rough notes or scripts into a notebook, or tidy an old one so it runs top to bottom. You need Python and Jupyter.
+  The skill asks which kind you need. Experiment notebooks follow a hypothesis-led flow for exploring and analysing data. Tutorial notebooks go step by step for a named audience. It first locks the goal, the reader and what done looks like. Then a helper script scaffolds the notebook from a template, which avoids hand-editing the raw file and breaking it. It can also turn rough notes or scripts into a notebook, or tidy an old one so it runs top to bottom. You need Python 3.12 or newer, a terminal, uv (a Python tool installer), Jupyter and an AI that can run code. If you do not write code, ask a developer to set it up once.
 when:
   - You have a loose script and want it as a readable notebook.
   - You are writing a tutorial and want a clear structure.
@@ -31,12 +31,12 @@ you_get:
   - A tidied version of an old notebook (optional)
 how_to_use:
   - Install Python 3.12 or newer, Jupyter and uv (uv pip install jupyterlab ipykernel). Use an AI that can run code and save files.
-  - Give your AI the whole skill folder, or at least SKILL.md and the files in assets, references and scripts. It should run scripts/new_notebook.py first to make the starting notebook.
+  - Give your AI the whole skill folder, or at least SKILL.md and the files in assets, references and scripts. Tell it where you saved scripts/new_notebook.py. It sets JUPYTER_NOTEBOOK_CLI to that path, then runs the script first to make the starting notebook. The skill's own example paths are for the Codex CLI, so other AI tools use their own path.
   - Say whether you want an experiment or a tutorial. Add the topic, the goal and who will read it.
   - Add your notes, scripts or old notebook if you have them (optional).
   - Let your AI build the notebook and fill in each step. Ask it to run the notebook top to bottom.
-  - Open the .ipynb file in Jupyter and check that it runs. The setup paths in the skill are written for the Codex CLI, so other AI tools may need their own install step.
-  - Share the file, or export it to HTML or PDF for readers who do not use code.
+  - Open the .ipynb file in Jupyter and check that it runs from top to bottom.
+  - Next, send the notebook to a data person for review, or export it to HTML or PDF for readers who do not use code.
 output_sample:
   input:
     - Your topic and goal

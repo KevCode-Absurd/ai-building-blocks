@@ -9,7 +9,7 @@ subhead: Describe a result that surprised you with the numbers you have. It rule
 explain: |
   When something does far better or worse than normal, the usual explanation is a story that fits. A better way is to work from both ends. Guess the cause, ask what would have to be true if it were right, and cross out what the facts cannot support.
 
-  This workflow does that. The order of its steps comes from Poor Charlie's Almanack by Charlie Munger. It rules causes out by fact and tests four patterns that explain extreme results: one or two things pushed far, many factors adding up past a tipping point, steady excellence on many fronts, and a big wave. It checks the ranked causes through several fields and through the rewards behind the behaviour. It ends by sorting each cause into copy, adapt, skip or luck, with a small test for each idea you keep.
+  This workflow does that. It draws on ideas from Poor Charlie's Almanack by Charlie Munger, such as checking a cause through many fields and checking rewards. The order of the steps is this library's own design. It rules causes out by fact and tests four patterns that explain extreme results: one or two things pushed far, many factors adding up past a tipping point, steady excellence on many fronts, and a big wave. It checks the ranked causes through several fields and through the rewards behind the behaviour. It ends by sorting each cause into copy, adapt, skip or luck, with a small test for each idea you keep.
 when:
   - A store, product or person is doing far better than the rest and you want to know why.
   - Something failed and the stories you hear do not add up.

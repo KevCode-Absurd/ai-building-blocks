@@ -39,7 +39,7 @@ Analyzes price-to-velocity relationships across the product catalog to identify 
    **Expected output:** All active products with pricing data
 
 2. **OPERATION:** `orders` — query
-   **Inputs:** `query: "created_at:>='<NOW - days_back days>'"`, `first: 250`, select `lineItems { variant { id }, originalUnitPriceSet { shopMoney { amount } }, quantity }` (use the price at the time of sale, not the current variant price, so past price changes are counted correctly), pagination cursor
+   **Inputs:** `query: "created_at:>='<NOW - days_back days>'"`, `first: 250`, select `lineItems { variant { id }, originalUnitPriceSet { shopMoney { amount } }, quantity }` (`originalUnitPriceSet` is the price at order time before any discount. Use it, not the current variant price, so past price changes are counted correctly), pagination cursor
    **Expected output:** Sales data per variant for velocity calculation
 
 3. For each product/variant, calculate:
@@ -48,11 +48,12 @@ Analyzes price-to-velocity relationships across the product catalog to identify 
    - **Current price point**
    - **Has compare-at price?** (on sale indicator)
    - **Sale discount %** = (compareAtPrice - price) / compareAtPrice × 100
+   - Variants with no sales in the window are kept at velocity 0 for comparison
 
 4. Within each group (product_type or vendor):
    - Sort by price ascending
    - Calculate velocity at each price tier
-   - Identify price-velocity correlation (negative = price-sensitive, flat = price-insensitive). Fit a straight line of daily velocity against price across the products in the group, and report the correlation value so the reader can judge how strong it is. "Velocity drops X% per $10" = slope × 10 ÷ group average velocity × 100.
+   - Identify price-velocity correlation (negative = price-sensitive, flat = price-insensitive). Fit a straight line of daily velocity against price across the products in the group, and report the correlation value so the reader can judge how strong it is. This is a pattern in past sales, not proof that price caused the change. Show the "drops X% per $10" figure only for groups with 5 or more products, and say so next to it. "Velocity drops X% per $10" = slope × 10 ÷ group average velocity × 100.
    - Groups with fewer than 5 products are listed as "too few products to compare" and are not scored
    - Compare sale items velocity vs. full-price velocity
    - Flag products where small price changes could significantly change volume

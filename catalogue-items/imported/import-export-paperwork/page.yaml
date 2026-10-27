@@ -10,6 +10,8 @@ explain: |
   Share the product, origin, route and value. The skill checks current official sources and shows supported codes, duties and unknowns. Confirm shipment decisions with a licensed broker.
 
   The skill sorts your goods by the Harmonized System, working through the General Rules of Interpretation in strict order. It points out common mistakes, such as classing a multi-function device by its priciest part. It picks a fitting Incoterm and lists the documents: commercial invoice, packing list, certificate of origin, bill of lading, and the US security filing and entry summary where they apply.
+
+  Source note: shared by sickn33 in agentic-awesome-skills. The skill file says it began in ai-evos/agent-skills. Licence: CC BY-4.0 (LICENSE-CONTENT). Dollar amounts, rates and deadlines in the skill are indicative examples, so check each one with the customs authority.
 when:
   - You are shipping a new product abroad and need its tariff code.
   - You are unsure which trade terms to put in a sales contract.

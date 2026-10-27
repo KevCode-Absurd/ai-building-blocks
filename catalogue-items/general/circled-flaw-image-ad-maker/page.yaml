@@ -184,8 +184,8 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "GPT Image", why: "Makes the plain photo, and lets you point at one spot to change it without remaking the rest."}
-    - {name: "Nano Banana", why: "A good second choice for the plain photo, and it holds the scene steady while you ask for small fixes."}
+    - {name: "GPT Image", why: "Makes the plain photo, and lets you point at one spot to change it without remaking the rest. Comes with ChatGPT: free plans are limited, paid plans give more."}
+    - {name: "Nano Banana", why: "A good second choice for the plain photo, and it holds the scene steady while you ask for small fixes. Comes with Gemini: free plans are limited, paid plans give more."}
     - {name: "iPhone Markup, or any phone photo editor", why: "Lets you draw the rough mark with a fingertip. Image models tend to draw it too neat."}
   inputs:
     - "A real phone photo of the flaw, if you have one, so the made photo copies its true size and look"

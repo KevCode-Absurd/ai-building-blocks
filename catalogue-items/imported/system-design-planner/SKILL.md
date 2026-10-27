@@ -7,6 +7,8 @@ description: This skill should be used when the user asks to "design system arch
 
 Architecture design and analysis tools for making informed technical decisions.
 
+You need a description of what you are building, or a project folder. If you have a plan for the system from an earlier step, use it as that description.
+
 ## Table of Contents
 
 - [Quick Start](#quick-start)
@@ -70,7 +72,7 @@ python scripts/architecture_diagram_generator.py ./project --format ascii
 python scripts/architecture_diagram_generator.py ./project -o architecture.md
 ```
 
-**Example output (Mermaid):**
+**Example output (Mermaid, made-up names to show the format):**
 ```mermaid
 graph TD
     A[API Gateway] --> B[Auth Service]
@@ -117,20 +119,20 @@ python scripts/dependency_analyzer.py ./project --check circular
 python scripts/dependency_analyzer.py ./project --verbose
 ```
 
-**Example output:**
+**Example output (layout only: every value in square brackets is a placeholder, not a real result):**
 ```
 Dependency Analysis Report
 ==========================
-Total dependencies: 47 (32 direct, 15 transitive)
-Coupling score: 72/100 (moderate)
+Total dependencies: [N] ([N] direct, [N] transitive)
+Coupling score: [SCORE]/100 ([LEVEL])
 
 Issues found:
-- CIRCULAR: auth → user → permissions → auth
-- OUTDATED: lodash 4.17.15 → 4.17.21 (security)
+- CIRCULAR: [module A] → [module B] → [module A]
+- OUTDATED: [package] [current version] → [latest version] ([reason])
 
 Recommendations:
-1. Extract shared interface to break circular dependency
-2. Update lodash to fix CVE-2020-8203
+1. [How to break the circular dependency]
+2. [Which package to update and why]
 ```
 
 ---
@@ -165,11 +167,11 @@ python scripts/project_architect.py ./project --output json
 python scripts/project_architect.py ./project --check layers
 ```
 
-**Example output:**
+**Example output (layout only: the names, counts and scores below are made up to show the format, not results from any real project):**
 ```
 Architecture Assessment
 =======================
-Detected pattern: Layered Architecture (confidence: 85%)
+Detected pattern: Layered Architecture (confidence: [PERCENT]%)
 
 Structure analysis:
   ✓ controllers/  - Presentation layer detected
@@ -178,7 +180,7 @@ Structure analysis:
   ⚠ models/       - Mixed domain and DTOs
 
 Issues:
-- LARGE FILE: UserService.ts (1,847 lines) - consider splitting
+- LARGE FILE: [file name] ([N] lines) - consider splitting
 - MIXED CONCERNS: PaymentController contains business logic
 
 Recommendations:
@@ -204,7 +206,7 @@ Use when choosing a database for a new project or migrating existing data.
 | Document-oriented data | | ✓ |
 | Time-series data | | ✓ (specialized) |
 
-**Step 2: Evaluate scale requirements**
+**Step 2: Evaluate scale requirements** (rough rules of thumb, not tested limits. Check them against your own load.)
 - <1M records, single region → PostgreSQL or MySQL
 - 1M-100M records, read-heavy → PostgreSQL with read replicas
 - >100M records, global distribution → CockroachDB, Spanner, or DynamoDB

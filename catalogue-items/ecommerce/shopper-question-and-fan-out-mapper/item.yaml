@@ -9,7 +9,7 @@ level: intermediate
 inputs:
   - {type: product_data, required: true}
   - {type: voc_reviews, required: false}
-  - {type: performance_sheet, required: false}
+  - {type: search_query_report, required: false}
 outputs:
   - {type: plan}
 uses: []

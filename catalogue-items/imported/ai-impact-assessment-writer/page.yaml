@@ -16,6 +16,7 @@ when:
   - You need to know which AI rules apply in each place you operate.
   - You want a list of conditions the team must meet before launch.
 not_for:
+  - "You are reviewing a general AI tool and no decision affects people: this is for AI systems that make or help make decisions about people, so a simple tool review is enough."
   - "You only have a privacy question: run a privacy impact assessment with your privacy lead instead."
   - "The system runs in places you did not list: redo the places check first, or ask a lawyer who knows those rules."
   - "You need legal advice or a sign-off: ask your own lawyer to review the result. Do not rely on a risk tier or a cited rule until you have checked it against the source."
@@ -32,9 +33,9 @@ you_get:
   - A list of conditions to meet
   - Flags for privacy and vendor review
 how_to_use:
-  - Open your AI tool. Use one that can search the web, so it can check current rules.
+  - Open your AI tool. Use one that can search the web, so it can check current rules. A legal research connection such as Westlaw or EUR-Lex is better. Without one, every citation stays unverified and you must check it yourself.
   - Paste the skill, or upload the skill folder if your tool takes files.
-  - Tell it the AI use you are assessing, such as AI résumé screening for HR.
+  - Tell it the AI use you are assessing, such as AI résumé screening for HR. If you have no saved company profile, also tell it your countries, your AI policy and whether you are a provider or a deployer.
   - Answer its questions about what the system does, who is affected and who checks its results.
   - Add your AI policy and a past assessment if you have them. Without them it uses a default format.
   - Check every cited rule against the source before you rely on it. Then ask a lawyer to review.

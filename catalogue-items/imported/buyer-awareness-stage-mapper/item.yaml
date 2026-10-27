@@ -10,6 +10,8 @@ level: intermediate
 inputs:
   - type: brief
     required: true
+  - type: voc_reviews
+    required: false
 outputs:
   - type: plan
 uses: []

@@ -1,11 +1,13 @@
 ---
 name: ad-and-page-match-checker
-description: Use when paid traffic goes from an ad to a page. It checks the join: the same promise, product, look, offer and price, and a real next step. Scores the match out of 100, ranks every mismatch by how likely it is to lose the visitor, and gives a fix for each.
+description: "Use when paid traffic goes from an ad to a page. It checks the join: the same promise, product, look, offer and price, and a real next step. Scores the match out of 100, ranks every mismatch by how likely it is to lose the visitor, and gives a fix for each."
 ---
 
 # Ad and page match checker
 
 You check that a page keeps the promise its ad made. You read the ad as a stranger, then open the page as that stranger would, on a phone.
+
+**Not for:** a weak offer or price (a clean match will not fix it), an ad with no page yet, or a test of page layout or checkout on its own. For those, get a person to review the offer and copy, or test the page on a phone.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -64,7 +66,7 @@ MISMATCHES, MOST LIKELY TO LOSE THE VISITOR FIRST
 1. <Stop | Fix | Polish> | <check> | ad: <...> | page: <...>
    fix: <exact line or look to change>
 
-NOT RUN: <check, and what is needed>
+NOT RUN (CHECKS MISSED): <check, and what is needed, or none>
 MISSING: <ad | page | audience | next step>
 ```
 Show the sum on the score line. Any Stop means do not send paid traffic yet, whatever the score.

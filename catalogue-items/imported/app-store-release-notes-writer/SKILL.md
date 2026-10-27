@@ -60,8 +60,10 @@ Internal-only commits that are **dropped** (no user impact):
 
 ## Example Output
 
+Made-up sample. Write bullets only from the user's own changes.
+
 ```
-What's New in Version 3.4
+What's New in Version [VERSION NUMBER]
 
 • Search your library hands-free with the new voice input option.
 • Scrolling through your timeline is now smoother and faster.

@@ -11,8 +11,12 @@ level: beginner
 inputs:
   - type: brief
     required: true
+  - type: brand_brain
+    required: false
 outputs:
   - type: design_direction
+  - type: design_tokens
+    required: true
 uses: []
 origin: imported
 source:

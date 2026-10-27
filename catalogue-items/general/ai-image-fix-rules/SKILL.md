@@ -7,6 +7,10 @@ description: Use when you're about to plan, prompt or check AI-made ads, images 
 
 You keep a running list of mistakes people have caught in AI work, and the rule each one became. Before a job, you hand over the rules that apply. After feedback, you add or update rules. The aim is that nobody pays twice for the same fault.
 
+When not to use: for one person's taste on one image, just edit the prompt and run it again. With no finished piece or feedback yet and only a brief to write, use the Product image ad prompt writer. For your brand facts, claims and voice in one place, use the Brand profile builder first.
+
+The "Typical cause" lines in the any-product list are common patterns, not logged incidents.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -56,20 +60,20 @@ How to start:
 ## The any-product list
 
 **The product**
-- **Used the real way.** (copy, images, video) Prompt: show it opened, worn, poured or used exactly as the brand file describes. Check: it opens where the real one opens, and the contents leave from that spot. With no steps on file, it stays closed or at rest. *Why: sachets were drawn split at the side and corner, spilling from the wrong place.*
-- **The whole action, in words.** (images, video) Prompt: name the part, where it opens, how, what comes out, which way it moves and where it lands. Check: nothing happens that the prompt didn't describe. *Why: "being opened" left the tool to guess, and it guessed wrong.*
-- **One look across a set.** (images) Prompt: write one description of the product and its parts, and reuse it word for word across the set. Check: one shape, size and design in every image. *Why: one sachet came back as a stick, a square and a bar in the same set.*
+- **Used the real way.** (copy, images, video) Prompt: show it opened, worn, poured or used exactly as the brand file describes. Check: it opens where the real one opens, and the contents leave from that spot. With no steps on file, it stays closed or at rest. *Typical cause: tools can draw a sachet split at the side or corner, so it spills from the wrong place.*
+- **The whole action, in words.** (images, video) Prompt: name the part, where it opens, how, what comes out, which way it moves and where it lands. Check: nothing happens that the prompt didn't describe. *Typical cause: a vague line like "being opened" leaves the tool to guess.*
+- **One look across a set.** (images) Prompt: write one description of the product and its parts, and reuse it word for word across the set. Check: one shape, size and design in every image. *Typical cause: without one fixed description, the same sachet can come back as a stick, a square and a bar in one set.*
 
 **People and bodies**
-- **Hands described in full.** (images, video) Prompt: name the hand, place the thumb and each finger, say which side of the product faces out, and give the free hand a job. Check: a grip a real hand can make, no floating hands, no hand over the label, no more hands than people. *Why: a grip looked impossible.*
-- **No generated children.** (copy, images, video) Prompt: show a child's product with the product, an adult's hands, and where it lives (lunchbox, school bag, shelf). Check: nobody shown is or looks under 18. *Why: house rule.*
-- **No made-up face for a real person.** (copy, images, video) Prompt: a founder, customer, expert or reviewer appears only from their own supplied photo or video; otherwise their words appear as text with no face. Check: no generated face is presented as a real person. *Why: it's a false endorsement.*
-- **Numbers aren't counted on fingers.** (video) Prompt: numbers are spoken or added as text in editing. Check: no finger counting. *Why: "one, two, three" came out as 1, 3 and 4 fingers.*
+- **Hands described in full.** (images, video) Prompt: name the hand, place the thumb and each finger, say which side of the product faces out, and give the free hand a job. Check: a grip a real hand can make, no floating hands, no hand over the label, no more hands than people. *Typical cause: tools often draw a grip a real hand cannot make.*
+- **No generated children.** (copy, images, video) Prompt: show a child's product with the product, an adult's hands, and where it lives (lunchbox, school bag, shelf). Check: nobody shown is or looks under 18. *Reason: a standing rule for all AI ad work.*
+- **No made-up face for a real person.** (copy, images, video) Prompt: a founder, customer, expert or reviewer appears only from their own supplied photo or video; otherwise their words appear as text with no face. Check: no generated face is presented as a real person. *Reason: a made-up face on a real person is a false endorsement.*
+- **Numbers aren't counted on fingers.** (video) Prompt: numbers are spoken or added as text in editing. Check: no finger counting. *Typical cause: tools often show the wrong number of fingers for a spoken count.*
 
 **Scene and time**
-- **A scene a camera could shoot.** (images, video) Prompt: everything rests on or is held by something, and the sizes of product, contents and hands agree. Check: nothing floats by accident; a styled frame (pieces mid-air) is stated in the plan. *Why: images matched the pack photo and still made no physical sense.*
-- **In view from the start.** (video) Prompt: everything a clip uses is visible when it opens, or arrives on a cut. Check: nothing is fetched from a cupboard, bag or off screen within a shot. *Why: a cupboard opened and its plates became a basket of supplements.*
-- **One name and one state per object.** (video) Prompt: each object keeps one name, and starts each clip open, closed, full or empty exactly as the last clip left it. Check: no lid appears or vanishes between clips. *Why: a closed tub came back without its lid.*
+- **A scene a camera could shoot.** (images, video) Prompt: everything rests on or is held by something, and the sizes of product, contents and hands agree. Check: nothing floats by accident; a styled frame (pieces mid-air) is stated in the plan. *Typical cause: an image can match the pack photo and still make no physical sense.*
+- **In view from the start.** (video) Prompt: everything a clip uses is visible when it opens, or arrives on a cut. Check: nothing is fetched from a cupboard, bag or off screen within a shot. *Typical cause: when an object is fetched mid-shot, a tool can change what it is.*
+- **One name and one state per object.** (video) Prompt: each object keeps one name, and starts each clip open, closed, full or empty exactly as the last clip left it. Check: no lid appears or vanishes between clips. *Typical cause: a lid can appear or vanish between clips.*
 
 ## What you hand back
 - **Before a job:** the prompt lines that apply, grouped by kind of work, ready to paste, plus any `MISSING` product facts.
@@ -81,6 +85,7 @@ How to start:
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Make image ads** with the [Product image ad prompt writer](https://useaiblocks.com/prompts/accurate-product-image-ad-maker). It takes the lessons.
 - **Decide what to do** with the [Decision checklist builder](https://useaiblocks.com/skills/decision-checklist-builder). It takes the lessons.
+- **Sell it** with the [Objection answer sheet writer](https://useaiblocks.com/skills/objection-answer-sheet-writer). It takes the lessons.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

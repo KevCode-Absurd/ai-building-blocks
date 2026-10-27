@@ -74,7 +74,7 @@ Ask the user:
 
 | Type | Jurisdiction | Template |
 |------|-------------|----------|
-| Dev contract fixed | Any | Template A |
+| Dev contract fixed | US, EU/UK or DACH | Template A (keep only the IP and dispute wording for your jurisdiction) |
 | Consulting retainer | Any | Template B |
 | SaaS partnership | Any | Template C |
 | NDA mutual | US/EU/UK/DACH | NDA-M |
@@ -92,7 +92,7 @@ Fill all [BRACKETED] placeholders. Flag missing data as "REQUIRED".
 brew install pandoc        # macOS
 apt install pandoc         # Ubuntu
 
-# Basic conversion
+# Basic conversion (reference.docx is optional: it is a Word file with your styles that you make yourself. Leave out the --reference-doc line if you have none)
 pandoc contract.md -o contract.docx \
   --reference-doc=reference.docx \
   -V geometry:margin=1in
@@ -103,7 +103,7 @@ pandoc contract.md -o contract.docx \
   -V documentclass=article \
   -V fontsize=11pt
 
-# With custom company template
+# With custom company template (company-template.docx is also a file you create yourself; skip this step if you have none)
 pandoc contract.md -o contract.docx \
   --reference-doc=company-template.docx
 ```
@@ -112,11 +112,11 @@ pandoc contract.md -o contract.docx \
 
 ## Jurisdiction Notes
 
-These notes are a short general summary. They may be out of date or incomplete. Check them against current law for the country where the contract will be signed, and have a lawyer confirm before anyone signs.
+These notes are a short general summary. We have not checked them against current law, and there is no "last checked" date, so treat every rule here as possibly out of date or incomplete. Check them against current law for the country where the contract will be signed, and have a lawyer confirm before anyone signs. A draft from this skill is not ready to sign.
 
 ### US (Delaware)
 - Governing law: State of Delaware
-- Work-for-hire doctrine applies (Copyright Act 101)
+- Work-for-hire doctrine exists (Copyright Act 101), but a freelancer's work is often not a work made for hire. Use a written assignment, as in Template A, and do not rely on the doctrine alone
 - Arbitration: AAA Commercial Rules
 - Non-compete: enforceable with reasonable scope/time
 
@@ -176,7 +176,7 @@ Developer agrees to design, develop, and deliver:
 | Beta delivery | 25% | [DATE] |
 | Final acceptance | 25% | Within 5 days of acceptance |
 
-Late payments accrue interest at 1.5% per month.
+Late payments accrue interest at [RATE]% per month. (Check the legal limit on late-payment interest where you work.)
 Client has [10] business days to accept or reject deliverables in writing.
 
 ## 3. INTELLECTUAL PROPERTY

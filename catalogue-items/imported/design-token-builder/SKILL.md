@@ -55,6 +55,7 @@ Use this skill when you need to:
 1. **Identify brand color and style**
    - Brand primary color (hex format)
    - Style preference: `modern` | `classic` | `playful`
+   - If you have a rule sheet with hex codes, take the brand colour and style from it. If you have a contrast report, swap any colour that failed for its passing alternative.
 
 2. **Generate tokens using script**
    ```bash
@@ -294,6 +295,8 @@ python scripts/design_token_generator.py "#FF6B6B" playful summary
 
 ### Color Scale Generation
 
+"Original × 0.8" means the shade keeps the hue of your brand colour and its brightness is 80% of your colour's brightness, so it is darker. Each step down the table gets darker.
+
 | Step | Brightness | Saturation | Use Case |
 |------|------------|------------|----------|
 | 50 | 95% fixed | 30% | Subtle backgrounds |
@@ -371,7 +374,8 @@ Detailed reference guides in `references/`:
 ### Accessibility
 - [ ] Color contrast meets WCAG AA
 - [ ] Focus indicators visible
-- [ ] Touch targets ≥ 44×44px
+- [ ] Touch targets ≥ 44×44px (the `sm` button is 32px high, so enlarge its tap area or leave `sm` out on touch screens)
+- [ ] Contrast values from the script are re-checked in a separate contrast checker before handoff
 - [ ] Semantic HTML elements used
 
 ### Developer Handoff

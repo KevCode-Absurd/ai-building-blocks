@@ -30,13 +30,14 @@ you_get:
   - Confidence checks on each result
   - MATLAB code to repeat the job
 how_to_use:
-  - Check you have paid MATLAB, the Computer Vision Toolbox, and the two support packages for text detection and OCR language data.
+  - Check you have paid MATLAB, the Computer Vision Toolbox, and the two support packages for text detection and OCR language data. Licence: this skill is BSD 2-Clause, and you may use it only with MathWorks products.
   - Open an AI tool that can run MATLAB code and paste in this skill.
   - Give it your image or folder. Add the text area and language if you know them (optional).
   - Read the short plan it writes first. It looks at your image before any code runs.
-  - Type in what the text really says if you can. The error figures are only reliable against text you give.
+  - Type in what the text really says if you can. Without it, the error figures (CER and WER) only show that MATLAB agrees with the AI's own reading of the image. They do not prove the text is right.
+  - Treat any word with a confidence below 0.6 as unverified until you have checked it against the image.
   - If it is unsure, it asks you to confirm the text. Answer so it can tune the cleanup.
-  - Next, re-run the saved MATLAB file on a whole folder of images, and compare the decision log between runs.
+  - Next, re-run the saved MATLAB file on a whole folder of images, and compare the decision log between runs. The decision log records how the image was judged and what cleanup was chosen. Send the checked text to a spreadsheet or your records.
 output_sample:
   input:
     - Your image, or a folder of images

@@ -8,10 +8,11 @@ role: make
 job: ops
 level: beginner
 inputs:
-  - type: source_text
+  - type: audit_report
     required: true
 outputs:
   - type: web_app
+  - type: web_page
 uses: []
 origin: imported
 source:

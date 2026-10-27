@@ -10,6 +10,8 @@ explain: |
   A shorter, easier version of a primary source that still works as evidence. Paste a document and say how old your learners are. You get a version they can read, with the parts they need for analysis left in.
 
   The skill keeps the full source note: author, date and where it came from. It keeps the writer's voice and any loaded words, then shortens sentences instead of swapping vocabulary. Hard words go in a word bank at the bottom with plain definitions, never explanations of what the writer meant. Every cut is marked with brackets, and the note says the text is adapted. Key passages can appear in both forms side by side.
+
+  Credit: Gareth Manning, education-agent-skills. The skill file also names Sean Hu as contributor. Licence: CC BY-SA 4.0. We renamed it (the skill file calls it "historical-source-adapter") and rewrote the page text. The prompt itself is unchanged.
 when:
   - A source is too hard or long for your class.
   - You want to keep loaded words so learners can analyse them.

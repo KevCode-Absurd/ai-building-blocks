@@ -6,7 +6,7 @@ argument-hint: "[yesterday | today | blockers]"
 
 # /standup
 
-> Placeholders like ~~source control, ~~project tracker and ~~chat mean the tool you use for that job, if it is connected. The original pointed to a CONNECTORS.md that is not included here.
+> Placeholders like ~~source control, ~~project tracker and ~~chat mean the tool you use for that job, if it is connected. If a tool is not connected, ask the user to type or paste what they did instead.
 
 Generate a standup update by pulling together recent activity across your tools.
 
@@ -16,7 +16,9 @@ Generate a standup update by pulling together recent activity across your tools.
 2. I format it as yesterday, today and blockers, short and action-focused.
 3. If you connect your tools, I also pull in recent commits and PRs (source control), ticket changes (project tracker), relevant discussions (chat), and build and deploy status (CI/CD).
 
-Connectors depend on your AI platform. To use them, connect source control, a project tracker and chat first. Without them, just type your notes.
+Connectors depend on your AI platform. Some platforms do not support them, and some need a paid plan or an access key to set up. Without them, just type your notes.
+
+If there is no recorded activity for the day and the user gave no notes, do not write an empty update. Ask what they worked on, or write Yesterday: nothing logged and ask them to fill it in.
 
 ## What I Need From You
 

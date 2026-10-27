@@ -7,7 +7,6 @@ description: Share group cash-pool records, agreed rates and bank charges. Get e
 
 Interest by company, the pool residual and a bank fee check, set side by side in one bridge.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -16,18 +15,26 @@ When you've handed it back, suggest what they could do next in one short questio
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
+## When not to use
+- To split interest by company only, use the Group cash pool interest calculator (`cash-pool-interest-allocator`).
+- For one bank bill with no pool, use the Bank service fee checker (`bank-fee-reconciliation-checker`).
+- To see how much cash the group can reach and when, use the Treasury liquidity and payment timing checker (`reconcile-treasury-settlement-liquidity`).
+- For tax or transfer pricing advice on the pool, ask your tax adviser. This does the sums only.
+
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+- **The contract** (yours): the full agreement or terms, with dates and any changes.
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
 - **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for source text, spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for the contract, your question, spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -35,6 +42,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+
+These items replace the generic source text and spreadsheet inputs above.
 
 - Each company's deposit and loan balances for the period, with dates.
 - The signed pool agreement: agreed rates, day-count basis, period start and end.
@@ -56,21 +65,27 @@ If an item is missing, ask once. If it cannot be supplied, write MISSING: with w
 
 ## Steps
 
-Read each step's own SKILL.md if it is attached. If it is not, follow the step as written here and say so in the hand-back. Build a short input map first: each source, its date, units, period and what is missing.
+Read each step's own SKILL.md if it is attached. If it is not, follow the step as written here, use the inputs and formulas listed under it, and say so in the hand-back. Build a short input map first: each source, its date, units, period and what is missing.
 
 1. **Group cash pool interest calculator** (`cash-pool-interest-allocator`). Build the entity interest schedule from the approved internal rates and actual principal-days. Pass the center residual and accrual window as one component of pool economics, not a cash balance or accounting profit.
+   - Takes: each company's balance, annual rate, days and the day-count basis (360 or 365) from the agreement.
+   - Works: interest = balance x annual rate x days / day-count basis. Residual = interest paid by borrowers minus interest paid to depositors.
+   - Returns: the INTEREST BY COMPANY and POOL RESIDUAL lines.
    - Check before moving on: Borrower interest minus depositor interest equals the residual. Every company uses the same days and basis.
    - Hands to step 2: the pool residual and the accrual window, labelled as one part of pool economics.
    - Save `outputs/step-1-cash-pool-interest-allocator.md` and any real file. With no file access, give it as a labelled section. If a needed input is missing, stop this step and write MISSING:.
 
 2. **Bank service fee checker** (`bank-fee-reconciliation-checker`). Recompute external fees using matching account-period activity. Compare the bank-fee amount with the pool residual in a separate summary bridge; disclose bank interest, taxes and other costs not included before describing a net result.
+   - Takes: the fee contract prices, the real count of payments and receipts for the invoice period, the invoice and the step 1 residual.
+   - Works: expected fee = count x unit price for each fee line. Difference = billed minus expected.
+   - Returns: the BANK FEE CHECK and BRIDGE lines.
    - Check before moving on: Counts and prices match the invoice period. Costs not supplied are named before any net result.
    - Goes into the result: expected fees, unused credit and any billing difference, for the bridge.
    - Save `outputs/step-2-bank-fee-reconciliation-checker.md` and any real file. With no file access, give it as a labelled section. If a needed input is missing, stop this step and write MISSING:.
 
-## Workbook
+## Workbook (only if asked)
 
-If they ask for a workbook and you can make files, build one linked workbook: inputs, calculations, checks and a summary on separate sheets. Mark inputs in blue, same-sheet formulas in black and cross-sheet links in green. Show units and put negatives in parentheses. Recalculate, look for errors, change one input to test the links, put the case back, and reopen the saved file. If you cannot make files, give each schedule as a table and say no workbook was built. Report any check that could not run.
+Only if they ask for a workbook and you can make files, build one linked workbook: inputs, calculations, checks and a summary on separate sheets. Mark inputs in blue, same-sheet formulas in black and cross-sheet links in green. Show units and put negatives in parentheses. Recalculate, look for errors, change one input to test the links, put the case back, and reopen the saved file. If you cannot make files, give each schedule as a table and say no workbook was built. Report any check that could not run.
 
 ## Acceptance
 

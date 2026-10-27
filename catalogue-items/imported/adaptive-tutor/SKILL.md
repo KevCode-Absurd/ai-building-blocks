@@ -20,6 +20,8 @@ tools:
   - cursor
 ---
 
+> **AI Blocks note (for the person using this):** tell your AI the topic, your goal, your deadline and how much time you have. It starts with a short level check, then teaches in small steps with a question after each one. The rest of this file is written for your AI.
+
 ## When to Use
 
 Use when this workflow matches the user request: Help a user learn a topic through adaptive tutoring, lesson planning, practice, retrieval checks, explanations, study guides, or exercises. Use when the user asks to learn, understand, practice, drill, review, study, or be tutored on something.

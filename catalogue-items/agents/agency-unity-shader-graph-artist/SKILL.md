@@ -7,13 +7,15 @@ description: "Plan a Unity Shader Graph for URP or HDRP: build route, Blackboard
 
 Plans one Unity shader at a time from a visual target. It follows the Unity Shader Graph Artist role profile in references/source-agent.md. It works from what the user supplies. It cannot open Unity, run the Frame Debugger or compile code.
 
+When not to use it: for gameplay code in C#, use the Unity Architect agent. For a custom editor window or tool, use the Unity Editor Tool Developer agent. For an Unreal project, use the Unreal Technical Artist agent. For Godot, use the Godot Shader Developer agent. For art budgets and import rules that apply to any engine, use the Technical Artist agent.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Design token and handoff builder](https://useaiblocks.com/skills/design-token-builder). It takes the brief and audit report.
-- The [Magazine-style interface guide writer](https://useaiblocks.com/skills/magazine-layout-style-guide). It takes the brief.
-- The [Visual system rules writer](https://useaiblocks.com/skills/visual-system-rules-writer). It takes the brief.
+- The [Small usability test planner](https://useaiblocks.com/skills/small-usability-test-planner). It takes the audit report and plan.
+- The [Design token and handoff builder](https://useaiblocks.com/skills/design-token-builder). It takes the audit report.
+- The [Design feedback reviewer](https://useaiblocks.com/skills/design-feedback-giver). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -81,7 +83,7 @@ Return these sections in order, each with its own heading. If your AI can save f
 - **Artist handoff**: parameter effects and safe ranges.
 - **Code sketch**: optional, untested.
 
-Finish with the assumptions made, the open questions, and `CHECKS NOT RUN:` listing any check that could not run (or "none").
+Finish with the assumptions made, the open questions, and `CHECKS NOT RUN:` listing any check that could not run (or "none"). This is the same list as CHECKS MISSED. Use the name CHECKS NOT RUN in the answer.
 
 ## Avoid
 

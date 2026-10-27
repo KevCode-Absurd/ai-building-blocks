@@ -19,6 +19,7 @@ not_for:
   - "You want live news or the latest headlines: use a normal news search or a news site."
   - "You already have one link and only need to read it: open the page yourself or paste its text into your AI."
   - "You cannot run code or get an Exa key: ask your AI to search the web in chat, or ask a librarian for help."
+  - "You need citations formatted or a reference list built: use your reference manager after you pick your sources."
 you_give:
   - A research topic or question
   - Links to pages or PDFs to read (optional)
@@ -30,12 +31,14 @@ you_get:
   - Sources sorted by how scholarly they are
   - Full text of batches of URLs
 how_to_use:
-  - Get an Exa API key at dashboard.exa.ai. Exa is a paid service, so check its pricing first.
+  - Get an Exa API key at dashboard.exa.ai. Exa is a paid service. Each search and each page fetch is billed to your account, so check its pricing and your usage limit before you run a big batch.
   - Use an AI that can run code, with Python 3.11 or newer. Add the skill folder and set your key as EXA_API_KEY.
   - "Read SKILL.md first, then references/web-search.md. Then tell your AI: \"Search Exa for [your topic], using the publication category and the two-pass academic search, and give me the ranked list with the text.\""
   - If you have links, ask it to fetch the text from all of them in one batch.
   - Check each source's type and date before you rely on it. Peer-reviewed work is stronger than preprints or blogs.
   - Next, keep the sources you trust and ask your AI to pull the full text for those. Read them before you cite anything.
+  - The scripts tag every request to Exa with a header that names the K-Dense skills repo, so Exa can count usage from it. Your key and your queries still go to Exa.
+  - Then add the sources you keep to your own reference manager or notes. This skill finds and reads sources. It does not format citations.
 output_sample:
   input:
     - Your research topic or question

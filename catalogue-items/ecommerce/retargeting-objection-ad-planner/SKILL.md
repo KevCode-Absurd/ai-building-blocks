@@ -13,9 +13,9 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
+- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 
 **Makes it better (optional):**
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 - **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
@@ -57,8 +57,8 @@ Does not fit:
    - **Not ready yet:** stay in view with education or lifestyle content.
    - One claim per ad. The example was a single line on hair shedding, and a warranty contrast with rivals' short warranties. A warranty claim is only fine if it is true and written down.
 5. **Set up the audiences.** Turn on catalog retargeting for people who viewed products. Keep the objection ads in their own ad sets so they can be read apart from cold ads. Exclude existing customers and retarget them separately.
-6. **Set the mix.** Aim for 60/40 to 70/30 pain-led performance ads to desire-led brand ads across the account. One practitioner's view is that many large retailers sit near 90/10 toward desire because they grew up on campaign shoots. That is a view, not a finding. Do not use it as a benchmark.
-7. **Write the test order.** Test the largest objection first, one ad per objection, so you can see which one moves sales. Keep dynamic product ads small. There is no fixed share: it is a judgement call to test, so start with a small slice of the retargeting budget and raise it only if 7-day click or incremental results hold. Judge them only on 7-day click or incremental ROAS, because their reported ROAS is inflated.
+6. **Set the mix.** Aim for 60/40 to 70/30 pain-led performance ads to desire-led brand ads across the account.
+7. **Write the test order.** Test the largest objection first, one ad per objection, so you can see which one moves sales. Keep dynamic product ads small. There is no fixed share that suits every store. Ask the owner to set a starting daily cap they can afford to lose, written as a fixed amount (for example [DAILY CAP]) taken from their own budget, and raise it only if 7-day click or incremental results hold for two weeks. Judge them only on 7-day click or incremental ROAS, because their reported ROAS is inflated.
 8. **Say what to expect and measure.** Top-of-funnel ads should scale and carry a lower return. Bottom-of-funnel objection ads should convert better and spend less. Judge each on its own role. Measure per ad set: purchases from people who saw the ad, cost per purchase on 7-day click or incremental, and whether the share of visitors who buy rises. Do not use the return Meta reports for retargeting.
 
 ## What you hand back
@@ -82,8 +82,10 @@ MISSING: <what would sharpen this>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Retargeting ad sequence planner](https://useaiblocks.com/skills/retargeting-ad-sequence-planner). It takes the objection map.
-- The [Experiment designer](https://useaiblocks.com/skills/experiment-designer).
 - The [Meta test campaign planner](https://useaiblocks.com/skills/meta-test-campaign-planner). It takes the plan.
+- The [Ad response incentive planner](https://useaiblocks.com/skills/test-reply-offer-planner). It takes the plan.
+- The [Ad reach planner](https://useaiblocks.com/skills/reach-before-repeat-planner). It takes the plan.
+- **Sell it** with the [Objection answer sheet writer](https://useaiblocks.com/skills/objection-answer-sheet-writer). It takes the objection map.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

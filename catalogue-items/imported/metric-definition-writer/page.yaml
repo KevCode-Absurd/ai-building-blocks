@@ -5,7 +5,7 @@ name: Metric definition writer
 summary: Write one agreed metric definition as checked YAML. Give it the calculation and who uses it. You get a checked YAML file for dbt that your teams can share.
 job: document-work
 headline: Metric definition writer
-subhead: One agreed definition for a metric, written as YAML that a tool can check and your team can reuse. It gives your teams one written definition to check against when two teams run different queries for the same number.
+subhead: Give it a metric name, how it is calculated and who uses it. You get a filled YAML definition for dbt, a validation report and notes on edge cases, so two teams stop arguing over the same number.
 explain: |
   One agreed definition for a metric, written as YAML that a tool can check and your team can reuse. It gives your teams one written definition to check against when two teams run different queries for the same number.
 
@@ -36,7 +36,7 @@ how_to_use:
   - Add your source tables and any YAML you already have (optional). Say if you need dbt Semantic Layer field names, and which dbt version.
   - Let your AI run the template script, fill in the YAML, then run the checking script.
   - Read the validation report and the edge case notes. Fix anything flagged, then get the data owner to confirm the definition.
-  - Save the final files in your dbt project or data catalog, and name who signs them off. Deploying to the dbt Semantic Layer needs a dbt Cloud plan, which may be paid, so check yours first.
+  - Save the final files in your dbt project or data catalog. The data owner signs off the definition before anyone uses it, and the signed-off file is shared where both teams look up metrics, such as the dbt project or data catalog.
 output_sample:
   input:
     - The metric or model name
@@ -47,7 +47,7 @@ output_sample:
   prerequisites:
     - An AI that can run code, so it can run the template and checking scripts
     - The skill folder, which holds the scripts and reference notes
-    - A dbt Cloud plan, only if you deploy to the dbt Semantic Layer. It may be paid
+    - Optional and possibly paid: a dbt Cloud plan, needed only if you deploy to the dbt Semantic Layer. Check yours before you plan to deploy
   output:
     - name: assets/metric_definition.yaml
       contains: The filled metric definition, with its calculation, business context, edge cases and known traps.

@@ -5,6 +5,10 @@ description: This skill should be used when the user asks to "map the talent lan
 
 # Talent Mapping for Recruiting Sourcing
 
+## Before you start
+
+Gather these first: the role spec, your industry and company stage, the places you can hire, and the competitors you already know. Without them the map will be too broad to use.
+
 ## Purpose
 
 Systematically map the talent landscape for a given function, role, or skill set. Identify where target candidates work, how large the available pools are, which companies are competitors for talent, and where geographic concentrations exist. Talent maps inform sourcing strategy by answering: "Where are the people we want, and how do we reach them?"
@@ -37,7 +41,7 @@ Companies where relevant skills exist but context differs significantly. Candida
 
 For each identified pool, assess:
 
-- **Size** - Estimated number of potential candidates (use LinkedIn headcount data or any other reliable source, company size, team estimates)
+- **Size** - Estimated number of potential candidates (read LinkedIn headcount by hand from your own account, never scrape it, or use any other reliable source, company size, team estimates)
 - **Accessibility** - How reachable are these candidates? (Public profiles, community activity, event attendance)
 - **Fit probability** - What percentage likely match the role requirements?
 - **Competition intensity** - How many other companies target this same pool?
@@ -50,8 +54,8 @@ Map the internal structure of target companies:
 
 1. **Identify the relevant department/team** - Engineering, Data, Product, etc.
 2. **Map the leadership chain** - VP → Director → Manager → IC levels
-3. **Estimate team size** - Use LinkedIn headcount, job postings, and engineering blog signals
-4. **Identify key individuals** - Team leads, prolific contributors, conference speakers
+3. **Estimate team size** - Read LinkedIn headcount by hand from your own account (never scrape it), and use job postings and engineering blog signals
+4. **Identify key individuals** - Team leads, prolific contributors, conference speakers. Name only people with a public work profile, and keep only what the role search needs. Do not store personal details such as home address, family or health. Check the data protection rules where you hire.
 5. **Note recent changes** - New leadership, reorgs, layoffs, acquisitions
 
 ## Talent Mapping Process
@@ -79,7 +83,7 @@ Use multiple signals to build the target company list:
 ### Step 3: Size the Pools
 
 For each target company, estimate:
-- Total employees in the relevant function (LinkedIn company page)
+- Total employees in the relevant function (read the LinkedIn company page by hand from your own account, never scrape it)
 - Breakdown by seniority level
 - Growth trend (hiring vs. stagnating vs. shrinking)
 - Geographic distribution of team
@@ -113,9 +117,9 @@ A talent map deliverable should include:
 
 | Company | Circle | Est. Pool Size | Seniority Fit | Accessibility | Priority |
 |---------|--------|---------------|---------------|---------------|----------|
-| Acme Co | 1 | ~45 | High | Medium | A |
-| Beta Inc | 2 | ~120 | Medium | High | A |
-| Gamma Ltd | 3 | ~200 | Low | High | B |
+| [COMPANY 1] | 1 | [ESTIMATE + SOURCE] | [High/Medium/Low] | [High/Medium/Low] | [A/B/C] |
+| [COMPANY 2] | 2 | [ESTIMATE + SOURCE] | [High/Medium/Low] | [High/Medium/Low] | [A/B/C] |
+| [COMPANY 3] | 3 | [ESTIMATE + SOURCE] | [High/Medium/Low] | [High/Medium/Low] | [A/B/C] |
 
 ### 3. Geographic Distribution
 - Pool concentration by city/region

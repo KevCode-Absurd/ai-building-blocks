@@ -80,7 +80,7 @@ how_it_works:
   - title: Gives the buyer real options
     text: Offers real choices so the buyer helps shape the product, with your recommendation first.
   - title: Plans supply
-    text: Overproduces so no purchase order is missed, and checks the cash this needs.
+    text: Holds safety stock so no purchase order is missed, only as far as your cash allows after your bills.
   - title: Builds the proof sheet
     text: Tracks what you did for the buyer in the last three months.
   - title: Plans the next retailer
@@ -135,7 +135,7 @@ improve:
   - Add the retailers you know and who decides at each.
   - Add your own on-time fill rate target.
   - Add your sell-through by region, so the proof sheet names where you sell best.
-  - Pair it with the supplier payment terms planner and the growth cash limit checker for the cash side.
+  - Pair it with the Supplier terms and float planner and the growth cash limit checker for the cash side.
 
 works_best_with:
   tools:

@@ -10,6 +10,8 @@ explain: |
   A script for saying your thinking out loud as you read a history source, so learners can see how a historian reads. Students often copy a checklist without knowing why each step matters. A good think-aloud shows the reasoning behind it.
 
   You give the document and the thinking moves you want to model. The skill writes a short spoken script with pauses where you ask yourself who wrote this, when, why and for whom, what words stand out and what is missing. It labels each move so you know what you are showing. It lists pitfalls, like talking too long or giving away the answer, and ends with a handoff so learners try the same moves on their own source.
+
+  Credit: Gareth Manning, education-agent-skills. The skill file also names Sean Hu as contributor. Licence: CC BY-SA 4.0. We renamed it and rewrote the page text. The prompt itself is unchanged.
 when:
   - Students follow your checklist but do not know why each step matters.
   - You want to show historical reading before students try it alone.
@@ -27,7 +29,7 @@ you_give:
   - A second source, if you want to model corroboration (optional)
   - What your students struggle with now (optional)
 you_get:
-  - A think-aloud script to say out loud
+  - A think-aloud script to say out loud (about 300 to 500 words)
   - Notes that name each thinking move in the script
   - A list of common mistakes to avoid
   - A way to move students into practice on their own
@@ -36,7 +38,7 @@ how_to_use:
   - Paste your source note and the key passage from the document.
   - Say which skills to model and your students' year group.
   - Add a second source if you picked corroboration. The skill needs it.
-  - Read the script aloud once. Change any line that does not sound like you.
+  - Read the script aloud once. Change any line that does not sound like you. The script is generated text, so check every quotation, date and source detail against the original edition before class.
   - Use the practice step at the end to set students their own source.
 output_sample:
   input:

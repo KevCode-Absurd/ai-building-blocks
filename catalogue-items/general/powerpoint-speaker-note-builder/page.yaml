@@ -88,7 +88,7 @@ output_shape: |-
   <missing fact or unsupported check> | <next action>
 tweaks:
   - what: Your source files
-    how: Actual deck, audience, talk duration, source evidence and the speaker’s preferred style.
+    how: Give the real deck, the audience, the talk length in minutes, the sources behind your figures, and your preferred style.
   - what: The result you need
     how: Name the file format, audience and parts that must stay editable. State any page or slide limit.
   - what: The app used to check it
@@ -103,9 +103,9 @@ test:
   - "Try this case: A slide number changed during reordering. Check that it does this: Attach the note to the actual slide identity, not the old ordinal alone."
   - Reopen the saved result and compare it with the source. Keep any failed or unrun check in the report.
 improve:
-  - Add your confirmed field names, file rules and target app version to the required-input section.
-  - Add a small test case with a known answer to the acceptance checks. Keep made-up records separate from real work.
-  - Save the working rules with the file guide so the next run uses the same meanings and checks.
+  - Add your target PowerPoint version and your speaking style to the required-input section.
+  - Time yourself on one slide and tell your AI your real words per minute so the plan fits you.
+  - Save your own timing split (for example, how much of the talk you keep for questions) with the skill.
 warnings:
   - Requires tools for the requested native file format. Checks requiring an unavailable native application must remain marked not run.
 tests:

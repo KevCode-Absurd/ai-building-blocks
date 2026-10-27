@@ -178,21 +178,21 @@ canon citation per question. Never bundled. Lock 1-3 before opening 4-6.
 3. **"What's the joint value proposition in one sentence, and who is the named end-customer it serves?"**
    Recommended: if there is no joint value prop distinct from either party's solo offering,
    there is no partnership — there is co-marketing at best.
-   Canon: Geoffrey Moore (*Crossing the Chasm*) — whole-product partnerships exist when
+   Canon (author's attribution, not verified): Geoffrey Moore (*Crossing the Chasm*) — whole-product partnerships exist when
    neither party alone delivers the customer outcome.
 
 4. **"At what % discount / revshare does this partnership beat the direct-sale economics, and at what scale?"**
    Recommended: model break-even pipeline volume. If partner-sourced deals must exceed
    30% of channel volume to beat direct, and partner can plausibly deliver 5%, you have
    built a losing program.
-   Canon: Pradeep Chintagunta (Chicago Booth) on channel economics — channel partnerships
+   Canon (author's attribution, not verified): Pradeep Chintagunta (Chicago Booth) on channel economics — channel partnerships
    without volume floor break even in theory and lose money in practice.
 
 5. **"What are the named kill criteria for unwinding this partnership, and are they in the contract?"**
    Recommended: minimum pipeline floor by quarter, minimum certified resources, minimum
    joint deals closed, 90-day cure period. Unwinding without pre-agreed criteria becomes
    a 2-year legal battle.
-   Canon: IBM channel-conflict case studies (1990s post-divestiture) — undocumented kill
+   Canon (author's attribution, not verified): IBM channel-conflict case studies (1990s post-divestiture) — undocumented kill
    criteria converted bad partners into permanent obligations.
 
 6. **"If this partner sells to one of YOUR direct accounts, who wins — your rep or them?"**
@@ -206,7 +206,7 @@ canon citation per question. Never bundled. Lock 1-3 before opening 4-6.
    Recommended: if the partner has independent moat you cannot replicate AND the
    partnership requires multi-year exclusivity AND the partnership requires equity-like
    alignment, you're describing an acquisition. Re-route to `ma-playbook`.
-   Canon: HP channel post-mortems (Indigo, EDS partial integrations) — partnerships
+   Canon (author's attribution, not verified): HP channel post-mortems (Indigo, EDS partial integrations) — partnerships
    structured as acquisitions-without-equity destroy more value than either pure path.
 
 Walk depth-first. Lock 1-3 (is this a real partner?) before opening 4-7 (is the structure

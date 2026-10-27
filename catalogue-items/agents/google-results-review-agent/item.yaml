@@ -9,7 +9,7 @@ level: intermediate
 inputs:
   - type: performance_sheet
     required: true
-  - type: brief
+  - type: question
     required: true
   - type: document
     required: false

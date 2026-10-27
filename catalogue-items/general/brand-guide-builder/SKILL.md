@@ -41,7 +41,7 @@ How to start:
 2. **Write the reason for each topic** in one or two sentences, drawn from the brand file, never from taste: what the colours stand for and each one's job; which font speaks and which explains; how the voice sounds. Values without reasons get used wrongly. Each reason must come from a line in the brand file. A reason the file doesn't state is either dropped or written as "the guide's reading, not on file". The same holds for rules: never add a "never show or say" rule, or any other do or don't, that the file doesn't give.
 3. **Check every colour pair you plan to show.** Work out the contrast ratio for each text colour on each background it will sit on. Normal text needs at least 4.5 to 1, large text (about 24 px, or 19 px bold) at least 3 to 1. Show passing pairs as the allowed ones and name the failing ones as "never for text".
 4. **Build `brand-guide.html`:** one self-contained file, CSS inside, the brand's own fonts as the only outside link, set in the brand's colours. Use `@page { size: A4; margin: 0 }` and `break-after: page` so each topic prints on its own page, with the brand name and date in a footer after the cover. Pages, skipping empty ones:
-   1. **Cover:** name, "Brand guide", the one-line description from `business.md`, date.
+   1. **Cover:** name, "Brand guide", the one-line description from `00-start-here.md` (or from the person's own words if there is no brand file), date.
    2. **Quick sheet:** colour chips with hex and job, the allowed text-on-background pairs, fonts and their jobs, the voice in five words, one copy rule, one picture rule, and "Not yet captured" (each gap with the question that fills it).
    3. **Colour:** the reason, then a large swatch per colour with name, hex and job, the contrast table, and how backgrounds follow each other down a page.
    4. **Type:** the reason, each font set in the brand's own lines (never filler text), a size scale, type on light and on dark.
@@ -62,10 +62,10 @@ How to start:
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Draft brand voice checker](https://useaiblocks.com/skills/draft-brand-voice-checker). It takes the brand brain and brand guide.
-- The [Voice and tone guide writer](https://useaiblocks.com/skills/voice-and-tone-guide-writer). It takes the brand brain.
-- The [Brand style guide writer](https://useaiblocks.com/skills/brand-style-guide-writer). It takes the brand brain.
-- **Design it** with the [Design token and handoff builder](https://useaiblocks.com/skills/design-token-builder). It takes the brand guide.
+- The [Draft brand voice checker](https://useaiblocks.com/skills/draft-brand-voice-checker). It takes the brand guide.
+- The [Brand health auditor](https://useaiblocks.com/skills/brand-health-auditor).
+- **Design it** with the [Colour contrast checker](https://useaiblocks.com/skills/colour-contrast-checker). It takes the design tokens.
+- The [Founder interview planner](https://useaiblocks.com/skills/founder-interview-planner).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

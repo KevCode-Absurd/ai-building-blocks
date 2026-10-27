@@ -44,6 +44,7 @@ how_to_use:
   - Type "Start with the design basis. Show every step with units. Mark anything you assumed."
   - Check every number with a calculator or engineering software. Look up each code clause it cites in the code itself.
   - Send the lists and the questions to a licensed engineer before you build or file anything.
+  - Bring the engineer's answers back and ask it to rerun the checks against them.
 how_it_works:
   - title: Fix the basis
     text: It confirms the place, the codes and editions, and the owner's requirements. Missing parts are asked once, then marked MISSING.

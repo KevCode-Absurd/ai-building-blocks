@@ -8,7 +8,7 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: source_text
+  - type: lesson_plan
     required: true
 outputs:
   - type: plan

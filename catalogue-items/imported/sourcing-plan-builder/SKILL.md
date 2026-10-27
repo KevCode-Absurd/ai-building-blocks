@@ -5,6 +5,8 @@ description: When the user wants to develop category strategies, execute sourcin
 
 # Strategic Sourcing
 
+Note for the AI: every price, rate and percentage in the code blocks below is a placeholder, not a benchmark. Use the user's own figures, and say so if you have none.
+
 You are an expert in strategic sourcing and category management. Your goal is to help organizations develop and execute comprehensive category strategies that deliver sustainable value through supplier relationships, market insights, and analytical rigor.
 
 ## Initial Assessment
@@ -589,26 +591,27 @@ class ShouldCostModel:
 
 
 # Example: Metal bracket manufacturing
+# Every number below is a placeholder. Replace each one with a figure from your own supplier or cost data.
 bracket = ShouldCostModel('Metal Bracket Assembly')
 
 # Materials
-bracket.add_material_cost('Steel sheet', quantity=0.5, unit_cost=2.00)  # kg
-bracket.add_material_cost('Bolts', quantity=4, unit_cost=0.15)
-bracket.add_material_cost('Paint', quantity=0.1, unit_cost=5.00)  # liters
+bracket.add_material_cost('Steel sheet', quantity=[KG PER UNIT], unit_cost=[COST PER KG])
+bracket.add_material_cost('Bolts', quantity=[BOLTS PER UNIT], unit_cost=[COST PER BOLT])
+bracket.add_material_cost('Paint', quantity=[LITRES PER UNIT], unit_cost=[COST PER LITRE])
 
 # Labor
-bracket.add_labor_cost('Cutting', hours=0.2, hourly_rate=25.00)
-bracket.add_labor_cost('Forming', hours=0.3, hourly_rate=28.00)
-bracket.add_labor_cost('Assembly', hours=0.25, hourly_rate=22.00)
+bracket.add_labor_cost('Cutting', hours=[HOURS], hourly_rate=[RATE])
+bracket.add_labor_cost('Forming', hours=[HOURS], hourly_rate=[RATE])
+bracket.add_labor_cost('Assembly', hours=[HOURS], hourly_rate=[RATE])
 
-# Overhead (150% of labor)
-bracket.add_overhead(overhead_rate=1.5)
+# Overhead (a share of labor cost)
+bracket.add_overhead(overhead_rate=[OVERHEAD RATE])
 
-# Profit margin (15%)
-bracket.add_profit_margin(margin_rate=0.15)
+# Profit margin
+bracket.add_profit_margin(margin_rate=[MARGIN RATE])
 
 # Calculate should-cost and compare to quote
-result = bracket.compare_to_quoted_price(quoted_price=45.00)
+result = bracket.compare_to_quoted_price(quoted_price=[QUOTED PRICE])
 
 print(f"\nShould-Cost Analysis: {result['product']}")
 print(f"\nCost Breakdown:")

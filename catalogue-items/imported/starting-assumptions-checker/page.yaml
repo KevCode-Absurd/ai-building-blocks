@@ -10,6 +10,15 @@ explain: |
   Starting assumptions for a statistical model, stated in real units and tested to see if they make sense. A prior is a scientific assumption, not a default setting, so the skill begins with what the quantity means, its units and its limits, and asks for your quantiles and probabilities rather than inventing them.
 
   It turns your answers into a distribution using formulas or PreliZ, then checks the result met your stated numbers. It simulates what the prior predicts for the data in PyMC and compares that to what you consider plausible. Finally it varies the scale and tails to see how much the choice matters. It needs Python.
+terms:
+  - term: maxent
+    meaning: A way to pick the distribution that assumes the least beyond the ranges you gave.
+  - term: CDF
+    meaning: A curve that shows the chance a value falls below each point.
+  - term: prior predictive check
+    meaning: Simulating fake data from your assumptions to see if it looks plausible (in PyMC, pm.sample_prior_predictive).
+  - term: DataTree
+    meaning: The container (from ArviZ) that holds those simulated results.
 when:
   - You are building a Bayesian model and not sure what prior to use.
   - Default priors give odd predictions.

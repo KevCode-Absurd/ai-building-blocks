@@ -9,6 +9,9 @@ source: community
 date_added: "2026-09-04"
 ---
 
+
+> Licence note (added by AI Blocks): the written text of this copy is shared under CC BY-4.0 (see `LICENSE-CONTENT`). The `license: MIT` line in the header above is the original author's own declaration for their repo. Keep the credit to the author either way.
+
 # Plotly
 
 Python graphing library for creating interactive, publication-quality visualizations with 40+ chart types.
@@ -254,7 +257,7 @@ app.layout = html.Div([
     dcc.Graph(figure=fig)
 ])
 
-app.run_server(debug=True)
+app.run(debug=True)
 ```
 
 ## Reference Files

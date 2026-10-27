@@ -7,7 +7,7 @@ role: make
 job: strategy
 level: intermediate
 inputs:
-  - {type: brief, required: true}
+  - {type: business_plan, required: true}
   - {type: question, required: false}
 outputs:
   - {type: plan, required: true}

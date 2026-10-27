@@ -23,7 +23,7 @@ you_give:
   - Your Neuropixels recording files
   - The probe type and file format (SpikeGLX, Open Ephys or NWB)
   - Your choice of spike sorter (optional)
-  - An Anthropic API key for AI-assisted review (optional)
+  - An Anthropic API key for AI-assisted review (optional; paid, and it sends images of your units to Anthropic, so only use it if your data rules allow that)
 you_get:
   - A cleaned and filtered recording
   - Spikes sorted into units
@@ -31,13 +31,15 @@ you_get:
   - Curated units ready to export to Phy
   - A figure report you can read through
 how_to_use:
+  - "Before you start: this is a research-grade neuroscience tool. It needs Python, lab recording files, and a computer that can run a spike sorter (a graphics card for Kilosort4, or a CPU sorter). If you are not a lab data person, pass it to one."
   - Check you have Python 3.10 or newer and SpikeInterface installed. This skill needs an AI that can run code and read your files.
   - Open your AI tool and paste in the skill, or add the skill folder if your tool takes files.
   - Tell your AI where your recording folder is and which probe and format you used.
-  - Ask it to load the recording, preprocess it and check drift before it sorts.
+  - "Ask it to work in this order, using the skill's scripts: explore_recording.py, then preprocess_recording.py, then run_sorting.py, then compute_metrics.py, then export_to_phy.py. It should check drift before it sorts."
   - Review the quality table (quality_metrics.csv, one row per unit) and the figure report, then ask it to keep only the good units.
   - If you use model-based curation, it downloads trained models from Hugging Face. Only load models from a source you trust.
   - Export to Phy if you want to check units by hand. Note that Kilosort4 needs its own CUDA install, and native sorters and pretrained models were not tested in the source.
+  - "Next: if you need an NWB file, SpikeInterface 0.105.0 has no NWB exporter. The skill points to the NeuroConv converter for that step, and says it was not run."
 output_sample:
   input:
     - Your Neuropixels recording folder (SpikeGLX, Open Ephys or NWB)

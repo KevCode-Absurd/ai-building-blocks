@@ -130,8 +130,8 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Competitor-inspired video script writer](https://useaiblocks.com/skills/competitor-idea-video-script). It takes the ad breakdowns and brief.
 - The [Competitor brand association mapper](https://useaiblocks.com/skills/owned-word-mapper). It takes the ad breakdowns.
 - The [Competitor ad change reviewer](https://useaiblocks.com/skills/monthly-competitor-watcher).
-- **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the brief.
 - **Write the ad copy** with the [Image ad copy writer](https://useaiblocks.com/skills/image-ad-copy-writer). It takes the brief.
+- **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the brief.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

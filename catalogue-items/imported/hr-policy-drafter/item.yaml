@@ -10,8 +10,10 @@ level: intermediate
 inputs:
   - type: question
     required: true
-outputs:
   - type: document
+    required: false
+outputs:
+  - type: policy
     required: true
 uses: []
 origin: imported

@@ -129,7 +129,7 @@ app.preferences.rulerUnits = Units.PIXELS;
 var doc = app.activeDocument;
 
 // Open watermark as smart object layer
-app.open("https://example.com/watermark.png", null, true);
+app.open("[YOUR LOGO URL]", null, true);  // placeholder: use a link to your own logo
 var wm = doc.activeLayer;
 
 // Resize to 20% of document width

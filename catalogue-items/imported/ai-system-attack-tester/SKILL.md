@@ -122,6 +122,8 @@ Prompt injection occurs when adversarial input overrides the model's system prom
 
 The injection score (0.0–1.0) measures what proportion of in-scope injection signatures were matched across the tested prompts. A score above 0.5 indicates broad injection surface coverage and warrants immediate guardrail deployment.
 
+> **AI Blocks note:** the 0.5 threshold and the risk numbers in the tables below (such as 0.9, 0.85, 0.6 and 0.3) come from fixed tables in the scanner. They are the original author's judgement calls, not measured results. Report them as "table values". A low score does not mean the app is safe, and a score alone should not decide whether to deploy.
+
 ### Indirect Injection via External Content
 
 For RAG-augmented LLMs and web-browsing agents, external content retrieved from untrusted sources is a high-risk injection vector. Attackers embed injection payloads in:

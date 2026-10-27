@@ -26,6 +26,7 @@ works_best_with:
     - name: A chat AI that can read the bundled reference files
       why: Use the supplied references and templates for the chosen task. Scripts are optional unless that task specifically needs them.
 how_to_use:
+  - "Before you start, gather: your research question, your notes and source files (text, links, data), who will read the work, and a folder to save into."
   - Download the skill folder. In Claude, open Customize → Skills, then choose + → Create skill → Upload a skill. In ChatGPT, add the files to a project's Sources. In Gemini, make a Gem and paste the instructions. Or paste the instructions into a chat. The skill reads four reference files in its folder, so keep the folder together.
   - Give your AI your research question, your notes and sources, who will read the work, and a folder to save into.
   - Ask your AI to follow this skill. It drafts the one-file summary first, links it to one file per topic, and links each topic file to evidence files (source excerpts, data, method notes). It repeats until no gaps are left.

@@ -8,10 +8,13 @@ role: check
 job: ops
 level: advanced
 inputs:
-  - type: brief
+  - type: question
     required: true
+  - type: document
+    required: false
 outputs:
   - type: audit_report
+  - type: plan
 uses: []
 origin: imported
 source:

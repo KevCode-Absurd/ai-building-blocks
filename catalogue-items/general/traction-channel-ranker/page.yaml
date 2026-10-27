@@ -15,13 +15,13 @@ not_for:
   - "You run a shop, a service firm or another non-software business: the questions assume software buyers, so use Find your business growth channel instead."
   - "You already know your channel and need to run it: this picks tests, it does not send, spend or publish anything."
 you_give:
-  - A public product link or pasted product and pricing text
+  - Your business profile, or a public product link or pasted product and pricing text
   - Your growth goal, stage and buyer, if known
   - Cash and time limits, past tests and results, if available
 you_get:
-  - A recommendation with its evidence and missing facts
-  - A small test with an owner, cost cap and decision rule
-  - The next action and what needs approval
+  - channel-matrix.csv, with all 19 channels and one idea and rationale each
+  - shortlist.md, with up to three small tests, shared cash and hour limits and what ruled out the close contenders
+  - The facts still missing and the next step
 how_to_use:
   - Open your AI and paste in the skill text.
   - Paste your product link. Add your goal, buyer, cash limit and weekly hours if you know them.
@@ -49,12 +49,12 @@ output_sample:
     - name: MISSING and next step
       contains: The facts still needed and the one action to take next.
 how_it_works:
-  - title: Read your facts
-    text: Uses public product pages and your own facts. Labels anything it could not check.
-  - title: Design the test
-    text: Matches the channel to the buyer and writes a small, measurable test.
-  - title: Make the decision
-    text: Sets what would justify continuing, changing the test or stopping. Results stay pending until there is evidence.
+  - title: Read your profile
+    text: Uses your business profile or public product pages and your own facts. Labels anything it could not check.
+  - title: Compare all 19 channels
+    text: Gives each channel a reasoned idea for your business and rates fit and confidence as high, medium or low.
+  - title: Pick up to three small tests
+    text: Chooses the cheapest tests your cash and hours can support, says what ruled out the close contenders, and names the biggest unknown.
 output_shape: |-
   channel-matrix.csv: 19 rows with one idea and rationale each
   shortlist.md: up to three pilots, shared limits, exclusions and missing facts

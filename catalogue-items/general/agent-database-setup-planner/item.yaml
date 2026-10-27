@@ -9,8 +9,12 @@ level: intermediate
 inputs:
   - type: codebase
     required: true
+  - type: data_model
+    required: false
 outputs:
-  - type: code_change
+  - type: plan
+    required: true
+  - type: data_model
     required: true
 uses: []
 package_files: all

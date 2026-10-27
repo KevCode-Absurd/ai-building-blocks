@@ -18,6 +18,8 @@ license_source: "https://github.com/cruisekkk/time-ledger/blob/main/LICENSE"
 
 ## Overview
 
+> Why this is marked `risk: critical`: the skill writes and updates rows in the user's Notion. It only touches the one database the user shares, and it asks before it guesses.
+
 Conversational time tracking. The user reports time in plain language — *"read papers 2h, gym 1h, did a leetcode"* — and the agent parses it into structured rows (activity, minutes, date, an optional compounding tag) and writes them to the user's own Notion database through the official Notion connector. The core design is an honesty contract: **anything uncertain becomes a `To-confirm` row and gets batch-asked — never fabricated.** A log that quietly invents durations is worse than no log.
 
 ## When to Use This Skill

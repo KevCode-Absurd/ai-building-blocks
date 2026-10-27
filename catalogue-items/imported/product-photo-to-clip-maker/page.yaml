@@ -9,7 +9,7 @@ subhead: A 3 to 5 second video for the video slot on your listing, made from a m
 explain: |
   A 3 to 5 second video for the video slot on your listing, made from a main product photo you already have. Many stores leave that slot empty because filming feels like too much work.
 
-  Claude picks a camera move such as push in, pull out, orbit or a slow macro sweep, and a material motion like cloth moving, a metal glint or liquid swaying. It writes the video prompt and runs a script against the video model you name. Fix wrinkles first, as video makes photo flaws worse. For clips over 8 seconds use a multi-shot ad flow. You need a video model and, for stitching, ffmpeg.
+  Claude picks a camera move such as push in, pull out, orbit or a slow macro sweep, and a material motion like cloth moving, a metal glint or liquid swaying. It writes the video prompt. You give it to a video tool, or use the optional paid script in the skill folder to run it on a video model you name. Fix wrinkles first, as video makes photo flaws worse. For clips over 8 seconds use a multi-shot ad flow. You need a video model and, for stitching, ffmpeg.
 when:
   - Your listing has a video slot you have not filled.
   - You want your main image to move.
@@ -31,10 +31,11 @@ you_get:
   - Setup steps for the video model
   - Notes on what the clip cannot do
 how_to_use:
-  - Check your photo first. Fix wrinkles, blur or flaws, because video makes them worse.
-  - Get a video model ID and a paid API key from fal or Replicate. Each clip costs much more than an image.
-  - Paste this skill into an AI that can run code. Add your photo, your camera move and your model ID.
-  - Run the dry run first. It shows what will be sent and costs nothing.
+  - Check your photo first. Fix wrinkles, blur or flaws, because video makes them worse. Use a tall 3:4 or square photo, as sharp as you can get.
+  - "Gather these before you start: the photo, the camera move you want (push in, pull back, orbit or macro sweep), and your brand colours if you have them."
+  - Paste this skill into Claude, ChatGPT or Gemini with your photo. Ask for the video prompt. It has four parts. The camera move, how the product moves, how the scene moves, and a rule to keep the product identical.
+  - "Free route. Give that prompt and your photo to a video tool you already use. Check its price and limits first, because many charge per clip."
+  - "Optional paid route. The skill folder has a script that calls a video model for you. It needs Node, a video model ID and a paid API key from fal or Replicate, and each clip costs much more than an image. Run its dry run first, because it shows what will be sent and costs nothing."
   - Make one 3 second clip and check the motion. If the product bends, ask for slower, smaller movement.
   - Only then make more clips. Check the video length, shape and file size against your store's rules by hand.
   - Save the MP4 and upload it to your listing's video slot.
@@ -60,3 +61,7 @@ output_sample:
       contains: A 3 to 5 second MP4 saved at the path you choose, ready for your listing's video slot.
     - name: Fix notes
       contains: Short advice if the product bends, the image is blurry or a face breaks.
+output_shape: |-
+  Video prompt: <camera move>. <what the product does>. <what the scene does>. Keep the product identical to the photo. No cuts, no text, no watermark.
+  Fix notes: <what to change if the product bends, the image is blurry or a face breaks>
+  Next: <make one 3 second test clip, then upload the MP4 to the video slot>

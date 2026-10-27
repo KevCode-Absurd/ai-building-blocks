@@ -9,7 +9,7 @@ subhead: Give it a customer search or a list of customer IDs, plus the tags to a
 explain: |
   Hundreds of customers can be tagged or untagged in one pass instead of one by one in the admin. Tags drive your discounts, email groups and support rules, so getting them right in bulk saves hours.
 
-  You choose who to change, either with a search such as total spent over 500 or with a list of customer IDs. You say which tags to add and which to remove. The skill first shows who matches and what each tag set will become. It stops if more people match than your size cap, so a wrong filter cannot touch the whole store. Merge mode keeps existing tags. Replace mode overwrites them, so check the preview closely. Needs access to your Shopify store.
+  You choose who to change, either with a search such as total spent over 500 or with a list of customer IDs. You say which tags to add and which to remove. The skill first shows who matches and what each tag set will become. It stops if more people match than your size cap, so a wrong filter cannot touch the whole store. Merge mode keeps existing tags. Replace mode overwrites them, so check the preview closely. Needs access to your Shopify store. The CSV lists customer names and emails, so keep it private. This is 40rty AI's bulk tag skill, shared under the MIT licence.
 when:
   - You want everyone who joined your newsletter to get a tag for a campaign.
   - A tag was misspelled and must be swapped on hundreds of customers.
@@ -32,13 +32,15 @@ you_get:
   - A CSV file with one row per customer and its status
 how_to_use:
   - Use an AI that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot change your store.
-  - "Install the Shopify CLI if you do not have it. Then sign in to your store first with this command: shopify store auth --store <your-store>.myshopify.com --scopes read_customers,write_customers"
+  - "Install the Shopify CLI if you do not have it. Then sign in to your store first, for example: shopify store auth --store <your-store>.myshopify.com --scopes read_customers,write_customers. If your CLI version does not know that command, check the Shopify CLI docs for the current sign-in."
+  - Customer names and emails are protected customer data. If your AI gets no emails or a refusal, ask the store owner to approve protected customer data access in Shopify's app settings. Try it on a development store first if you have one.
   - Paste the skill into your AI. Give it your store address, your search or ID list, and the tags to add or remove.
   - Let it run the preview. It is on by default and changes nothing. Check the match count and a few before and after tag sets.
   - Check the spelling and case of each tag. Shopify tags are case sensitive, so VIP and vip are different.
   - Keep the default merge mode, which keeps existing tags. Replace mode wipes a customer's current tags, so use it only if you have a backup. Then ask your AI to run it for real.
-  - Open the CSV to check each status. To undo a run, run it again with the tags to remove.
-next: [customer-segment-builder, customer-note-bulk-adder]
+  - Open the CSV to check each status. Keep it as the record of the run. Open the Shopify customer list and check a few customers show the tags you expect.
+  - To undo a merge run, ask your AI to run it again with the added tags removed and the removed tags added back. Use the previous_tags column in the CSV to check each customer. A replace run cannot be undone by the skill alone. The previous_tags column in the CSV is then your only record, so keep that file.
+next: [customer-segment-builder, customer-spend-tier-tagger, customer-note-bulk-adder]
 output_sample:
   input:
     - Your store address

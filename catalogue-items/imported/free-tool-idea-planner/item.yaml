@@ -8,10 +8,12 @@ role: make
 job: ops
 level: beginner
 inputs:
-  - type: brief
+  - type: question
     required: true
 outputs:
   - type: plan
+  - type: idea
+    required: true
 uses: []
 origin: imported
 source:

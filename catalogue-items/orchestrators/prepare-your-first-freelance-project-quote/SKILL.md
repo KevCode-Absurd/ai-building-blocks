@@ -12,11 +12,15 @@ Turn a client's website request into a scoped quote, price assumptions and a con
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+- **Your idea** (yours): the product, app, business or project idea, in a line or a short paragraph.
+
+**Makes it better (optional):**
+- **The deal terms** (yours): the price, payment terms, discounts, fees and dates of the deal.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a brief. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, your idea, the deal terms. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -24,9 +28,9 @@ How to start:
 - **A lawyer or a contract template you trust:** The contract review list says what to ask. A qualified person decides what to change.
 <!-- /needs -->
 
-## Before you start
+## What to gather first
 
-Use what is attached or pasted first. Ask once, in one short message, for only what you cannot work without.
+These four items replace the generic brief above. Use what is attached or pasted first. Ask once, in one short message, for only what you cannot work without.
 
 **You need:**
 - The client's request: an email, call notes or a short brief.
@@ -77,6 +81,9 @@ State plainly that nothing was sent to the client.
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Price test planner](https://useaiblocks.com/skills/price-test-planner). It takes the plan and audit report.
 - The [Online store pricing planner](https://useaiblocks.com/skills/price-position-planner). It takes the plan and audit report.
+- The [Price ending picker](https://useaiblocks.com/prompts/price-ending-picker). It takes the plan.
+- **Check the money** with the [Currency forward payment checker](https://useaiblocks.com/skills/currency-forward-settlement-checker). It takes the the deal terms.
+- The [Pre-shipment inspection brief writer](https://useaiblocks.com/skills/pre-shipment-inspection-brief-writer). It takes the the deal terms and document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -85,6 +92,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every price line shows hours, rate and cost, or a `MISSING:` line.
 - The total adds up. Currency is stated once.
 - Exclusions and the revision limit appear in both the scope and the quote.
+- A missing rate line or a revision limit that differs between the scope and the quote is flagged, not fixed silently.
 - Each contract concern names a question for a qualified person. None claims the terms are legal or safe.
 - No claim about the client, past work or results that the user did not supply.
 - CHECKS MISSED lists any check that did not run, or says none.
@@ -93,9 +101,9 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 Write `MISSING: <what>` next to the affected line. Carry on with work that does not depend on it. Stop the quote when hours or rate are absent for most lines, and say exactly what to add. Never use a typical market rate in place of the user's.
 
-## After this
+## What to do with the result
 
-Suggest one next step as a short question, and say the user can type their own:
+Suggest one next step as a short question, and say the user can type their own. These fit a first quote better than the generic suggestions above:
 - **Price tiers.** If the client wants options, offer the [Three-tier price ladder drafter](https://useaiblocks.com/skills/three-tier-price-ladder-drafter).
 - **A change after signing.** When the client later asks for more, use the [Prepare a client scope change brief](https://useaiblocks.com/workflows/prepare-a-client-scope-change-brief) workflow.
 Nothing is sent for them. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

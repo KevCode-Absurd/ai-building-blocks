@@ -33,6 +33,7 @@ you_give:
   - The priced scope, such as the bill of quantities or rate schedule
   - Evidence for any time impact, such as a program or delay notice
   - Your delegated approval rules, showing who may approve what amount
+  - The contract form and the country or state it applies in
   - Your last review and any approval received (optional)
 
 you_get:
@@ -51,6 +52,7 @@ how_to_use:
   - Read "Changed since last version" first. Check each change against the new request.
   - Check one line of the cost table against the priced scope by hand. Then read the brief and its open questions.
   - When an approval arrives, paste it and run it again. The agent approves and sends nothing.
+  - Have a qualified quantity surveyor and your contract adviser check the cost table and clauses before anyone approves or pays. The check is arithmetic on your figures, not advice.
 
 how_it_works:
   - title: Compare with the last review

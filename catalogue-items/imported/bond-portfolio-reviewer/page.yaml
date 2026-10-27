@@ -41,6 +41,7 @@ how_to_use:
   - It works in this order, prices, weighted measures, cash flows, rate shocks, then data notes. A bond with no price is marked n/a and left out of the weighted figures.
   - Then read the rate shock table. Look at the top contributors and check those bonds' terms in the issuer documents.
   - Treat the result as research, not advice.
+next: [yield-curve-explainer, bond-safety-check]
 output_sample:
   input:
     - Your bond holdings with amount, price, coupon and maturity for each

@@ -78,7 +78,7 @@ how_it_works:
   - title: Checks timing and flow fit
     text: Best windows, spacing after the email, and the right timing for welcome, browse, cart, post-purchase and win-back texts.
   - title: Scores send readiness
-    text: Starts at 100 and takes points off for each fault, with the sum shown. Any rule flag means do not send.
+    text: Starts at 100 and takes points off for each fault, with the sum shown. Any Stop flag means do not send.
 
 output_shape: |
   SMS SEND CHECK  <campaign or flow>
@@ -123,7 +123,7 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Klaviyo", why: "It shows segments, smart sending and the cost of each SMS send."}
+    - {name: "Klaviyo", why: "Paid. Needs an account, and texts cost extra per send. It shows segments, smart sending and the cost of each SMS send."}
     - {name: "Any good chat AI", why: "Any current chat AI can count and apply the checks to a pasted text."}
   inputs:
     - "Revenue and send cost of your last image text and plain text"

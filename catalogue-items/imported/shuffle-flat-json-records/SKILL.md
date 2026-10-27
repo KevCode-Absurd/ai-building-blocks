@@ -114,22 +114,23 @@ data.
 Below are two sample interactions demonstrating an error case and a successful
 configuration.
 
-These examples show a command-style start. In Claude, ChatGPT or Gemini, paste the array and your rules into the chat instead.
+These examples are written for any chat AI. Paste the array and your rules into the chat.
 
 ### Missing File
 
 ```text
 [user]
-> /shuffle-json-data
+> Shuffle this JSON.
 [agent]
-> Please provide a JSON file to shuffle. Preferably as chat variable or attached context.
+> Please paste the JSON array or attach the file to shuffle.
 ```
 
 ### Custom Configuration
 
 ```text
 [user]
-> /shuffle-json-data #file:funFacts.json ignoreProperties = "year", "category"; requiredProperties = "fact"
+> Shuffle the JSON array below. Ignore the keys "year" and "category" when you compare keys. Every record must have "fact".
+> [paste your JSON array here]
 ```
 
 ## Default State
@@ -139,7 +140,7 @@ input as follows:
 
 - fileName = **REQUIRED**
 - ignoreProperties = none
-- requiredProperties = first set of properties from the first object
+- requiredProperties = the exact set of keys of the first object in the array (every other object must have that same set)
 - nesting = false
 
 ## Variables

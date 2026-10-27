@@ -68,7 +68,7 @@ how_it_works:
   - title: Sets the spend limit
     text: Spend 3 times your target cost per sale before judging, or 5 times if you want one clear yes or no.
   - title: Writes the keep rule
-    text: At 3 times, 4 sales is good, 3 is fine, 2 earns another $50 to $100 of spend and 0 or 1 is cut.
+    text: At 3 times, 4 sales is good, 3 is fine, 2 earns another small top-up (the source's example is $50 to $100; set your own) and 0 or 1 is cut.
   - title: Picks the read window
     text: About one week for most stores. Three to four days for large stable stores. Ten to fourteen days for tiny budgets or long buying paths.
   - title: Guards against early cuts
@@ -91,7 +91,7 @@ output_shape: |
 
   JUDGE AT (pick 3x or 5x)
   Spend limit: <3 or 5> x <target> = <$>
-  3x rule: <4+ sales good | 3 fine | 2 add $50 to $100 | 0 or 1 cut>
+  3x rule: <4+ sales good | 3 fine | 2 add a small top-up (example $50 to $100) | 0 or 1 cut>
   5x rule: yes or no at the limit, no wait
 
   READ WINDOW

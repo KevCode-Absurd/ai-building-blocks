@@ -122,13 +122,14 @@ fig = px.scatter(
 fig.update_traces(marker=dict(opacity=0.7, line=dict(width=1, color="DarkSlateGrey")))
 
 # Add a note only after you have checked the pattern in your own data.
-# The position and text here are placeholders, not a finding.
-fig.add_annotation(
-    x=45000, y=320000,
-    text="<your checked finding here>",
-    showarrow=True, arrowhead=2,
-    font=dict(size=12, color="darkblue")
-)
+# The lines below are left commented out on purpose. Remove the # marks only
+# after you have your own checked finding, and replace the x, y and text values.
+# fig.add_annotation(
+#     x=[X VALUE], y=[Y VALUE],
+#     text="[YOUR CHECKED FINDING]",
+#     showarrow=True, arrowhead=2,
+#     font=dict(size=12, color="darkblue")
+# )
 
 fig.write_html("interactive_scatter.html")
 fig.show()

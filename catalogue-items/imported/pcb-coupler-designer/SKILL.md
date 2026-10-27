@@ -32,6 +32,8 @@ metadata:
 3. **Check mesh/memory:** `memoryEstimate(obj, fc, 'RetainMesh', true)` — inspect auto-mesh density before committing to a full solve
 4. **After:** `matlab-analyze-em` — validate S-parameters → `matlab-optimize-pcb-design` — tune dimensions → `matlab-integrate-pcb-circuit` — cascade into larger network
 
+If you already have the substrate and conductor set up as code, build the coupler on them.
+
 ## Quick Reference — Component Selection
 
 | Object | Type | Ports | Best For |

@@ -22,6 +22,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Brand brain** (its buyers part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Your lessons**, made by the [AI visual feedback editor](https://useaiblocks.com/skills/ai-image-fix-rules): what past ads taught you: what worked, what failed and why.
+- **A video link** (yours): the link to the video, playlist, channel or post.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -57,7 +58,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Steps
 1. **Thumbnail and title planner.** Use the skill `thumbnail-and-title-planner`. It receives your video idea, channel and any past results. It saves the single promise, a base pair, 12 or more title and thumbnail pairs that each change one thing, a phone-size check, a plan for the first minute and an empty result log.
-2. **Headline cover test ranker.** Use the skill `headline-cover-test-ranker`. It receives the titles from the step 1 pairs. It scores each title on five rules with the video hidden, cuts the weak ones with reasons, and saves the three picks that differ in type or reason, with a way to test each. You publish the top pair.
+2. **Headline cover test ranker.** Use the skill `headline-cover-test-ranker`. It receives the titles from the step 1 pairs. It scores each title on five rules with the video hidden, cuts the weak ones with reasons, and saves the three picks that differ in type or reason, with a way to test each. To pick the top pair, read the three picks and their test method in the step 2 file, then match the top-ranked title with its thumbnail from the step 1 pairs. You publish that pair.
 
 Pause here: Publish the top pair. After a week or more, export the audience retention report from YouTube Studio for that video. You publish and export.
 
@@ -72,9 +73,9 @@ Four step files and the summary. The step 4 file holds the retention findings.
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [YouTube title and thumbnail checker](https://useaiblocks.com/skills/youtube-title-thumbnail-check).
-- The [YouTube standout video finder](https://useaiblocks.com/skills/youtube-viral-video-finder).
-- The [YouTube channel growth planner](https://useaiblocks.com/skills/youtube-channel-growth-kit).
+- The [YouTube upload planner](https://useaiblocks.com/skills/youtube-upload-planner). It takes the audit report.
+- The [Low-performing post reviewer](https://useaiblocks.com/skills/flop-post-diagnoser). It takes the audit report.
+- The [Short video format picker](https://useaiblocks.com/skills/short-video-format-picker). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -5,6 +5,18 @@ description: 材质质感增强与纹理重建。糊掉的图 + 高清商品图 
 
 # material-enhancement — 优化服装材质和细节质感
 
+## English summary (added by AI Blocks)
+
+The rest of this file is in Chinese. Read this summary first and answer the user in English.
+
+**What it does.** It rebuilds blurry fabric texture on a garment photo, using a sharp product photo of the same item as the guide. The model, pose, colour and background stay the same.
+
+**Warning: the image model can invent texture.** It may add weave, relief or fuzz that the real garment does not have. Do not use the result as proof of fabric quality, and do not put it on a product page without checking it against the real item.
+
+**Where the result is saved.** The commands save to `docs/material-enhancement/output-<sku>-enhanced.jpg` (the page's name), or to `output/material-enhancement-<sku>.jpg` if you use the unified `scripts/gen.mjs` entry. Use one of these and keep the original apart so you can compare.
+
+**Cost.** Each run costs dlazy credits. Use `--dry-run` first.
+
 把一张**面料糊掉的商拍图**修成**面料清晰真实**的图，构图和人一动不动。
 
 这是一个**后处理技能**：AI 生成的服装图最容易崩的就是面料——远看还行，放大一看针织变成一片糊。给它一张真实的高清商品图当参照，把表面重建回来。
@@ -48,7 +60,7 @@ dlazy gpt-image-2 \
 | --- | --- |
 | 面料表面纹理、微观细节、褶皱阴影层次、纤维光泽 | 构图、模特（脸/发/手/姿势）、其他服饰、背景、色调、服装轮廓与颜色 |
 
-**不做**：不改服装轮廓与颜色；不改模特与背景；不把一种面料换成另一种（换面料请用 [fabric-on-body](../fabric-on-body/skill.md)）。
+**不做**：不改服装轮廓与颜色；不改模特与背景；不把一种面料换成另一种（换面料请用 [fabric-on-body](../fabric-on-body/skill.md)（this catalogue's Fabric swap sample maker））。
 
 ---
 

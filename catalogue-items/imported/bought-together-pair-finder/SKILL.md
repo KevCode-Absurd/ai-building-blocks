@@ -110,6 +110,8 @@ OUTCOME SUMMARY
   Unique products:      <n>
   Pairs evaluated:      <n>
   Pairs above threshold:<n>
+  Orders cut at 50 line items: <n>
+  Orders skipped (over 20 distinct products): <n>
   Date range:           <start> to <end>
   Sort by:              <lift|confidence|support>
   Errors:               0
@@ -139,6 +141,8 @@ For `format: json`, emit:
     "unique_products": 0,
     "pairs_evaluated": 0,
     "pairs_above_threshold": 0,
+    "orders_cut_at_50_line_items": 0,
+    "orders_skipped_over_20_products": 0,
     "date_range_start": "<date_range_start>",
     "date_range_end": "<date_range_end>",
     "sort_by": "lift",
@@ -166,13 +170,16 @@ CSV file `product_affinity_<YYYY-MM-DD>.csv` with one row per qualifying pair:
 | `lift` | How much more likely than random co-occurrence |
 | `recommendation_type` | `bundle_candidate` if lift > 2, else `cross_sell` |
 
+## Next steps
+After the ranked table, tell the user: take `bundle_candidate` rows to product bundle setup, and `cross_sell` rows to post-purchase email flows or "frequently bought together" widgets.
+
 ## Error Handling
 | Error | Cause | Recovery |
 |-------|-------|----------|
 | `THROTTLED` | API rate limit from paginating large order history | Wait 2 s, retry up to 3 times; narrow date range if persistent |
 | `product` is null on line item | Product was deleted after purchase | Skip that item from pair analysis; count the order in the total |
 | Zero pairs above threshold | Store has few multi-item orders or thresholds too strict | Lower `min_support` to 2 and `min_confidence` to 0.05, or widen date range |
-| Combinatorial explosion | Stores with very large line item counts per order | The pair-enumeration loop skips orders with > 20 distinct products to cap O(n²) growth |
+| Combinatorial explosion | Stores with very large line item counts per order | Two limits apply and both drop data. The query reads at most 50 line items per order. The pair loop then skips any order with more than 20 distinct products to cap O(n²) growth. Count the orders hit by each limit and report both numbers in the outcome summary |
 
 ## Best Practices
 1. Use at least 90 days of order history — short windows produce noisy lift scores because the probability denominators are small.

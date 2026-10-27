@@ -1,0 +1,35 @@
+slug: me-md-refresher
+name: me.md refresher
+summary: Give it your me.md and recent chats or a chat export. Get dated edits to approve and a list of stale sections.
+category: general
+type: skill
+role: compress
+job: ops
+level: beginner
+inputs:
+  - type: me_file
+    required: true
+  - type: document
+    required: false
+outputs:
+  - type: me_file
+    required: true
+uses: []
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-27
+example_pending: true
+needs_mode: manual
+credits:
+  - title: Effective context engineering for AI agents
+    by: Anthropic Applied AI team
+    url: https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents
+    used: Keep saved context small and current, and check live facts at the source
+  - title: How do I export my ChatGPT history and data?
+    by: OpenAI Help Center
+    url: https://help.openai.com/en/articles/7260999-how-do-i-export-my-chatgpt-history-and-data
+    used: Reading a chat export the person downloads themselves
+  - title: Memory FAQ
+    by: OpenAI Help Center
+    url: https://help.openai.com/en/articles/8590148-memory-faq
+    used: Asking before using what the AI remembers

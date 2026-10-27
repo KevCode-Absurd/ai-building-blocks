@@ -20,7 +20,7 @@ Use what is attached or pasted first. If something is missing, say what you can 
 
 **Only if another holder or an ownership change was reported:** the rollover ownership records, with the issue price and share class.
 
-**The pieces it uses:** the [Management award and investor cash return checker](https://useaiblocks.com/workflows/check-management-payout-and-sponsor-receipts) workflow (the governing method) and the [Seller rollover ownership calculator](https://useaiblocks.com/skills/rollover-equity-ownership-checker) (only when another holder appears). If either is missing from the pack, ask for it. Do not rebuild a missing step from memory.
+**The pieces it uses:** the [Check management payout and sponsor receipts](https://useaiblocks.com/workflows/check-management-payout-and-sponsor-receipts) workflow (the governing method) and the [Rollover equity ownership checker](https://useaiblocks.com/skills/rollover-equity-ownership-checker) (only when another holder appears). If either is missing from the pack, ask for it. Do not rebuild a missing step from memory.
 
 **Tools that do this best:**
 - **A spreadsheet engine and file-capable AI:** builds and reopens a workbook and can save the record file. In plain chat, return the same tables as text and print the record for the user to keep.
@@ -36,12 +36,14 @@ This is a portable review method. Installing it connects no account and sets no 
 
 ## Method
 
+The payout and return steps below (steps 4 and 5) are the two steps of the governing workflow `check-management-payout-and-sponsor-receipts`: `management-equity-hurdle-checker` for the payout and `dividend-recap-timing-checker` for the return. Read them from the workflow pack or from `https://useaiblocks.com/skills/<slug>`. If you cannot open them, use the formulas written out in steps 4 and 5, and mark `MISSING: step file not opened, formulas used as written`.
+
 1. **Find the last record.** With file access, read `reviews/sponsor-receipt-timing-review-assistant/state.json`, which this agent writes on each run. In a chat-only tool, ask the user to paste the record from last time. Use it only if the deal and currency match. With no record, say "first run" and set a dated baseline. The record holds only: sponsor entry amount, ownership evidence, award and hurdle version, vesting date, distribution dates, exit receipt and the timing flag (exact years or irregular).
 2. **List what changed.** A new trigger is an actual sponsor distribution, new vesting evidence, an exit receipt or a change in who holds the equity. For each, write old to new with the source and date. A file that was not supplied is unknown coverage, not "no change". If nothing changed, say so, keep the earlier work and stop.
 3. **Check who holds the equity.** This review covers one sponsor and a simple management award. If another rollover holder or a preference appears, read `rollover-equity-ownership-checker` in full and check same-class ownership: seller proceeds times the rollover fraction is the rollover contribution, and each holder's share is their contribution over total same-class equity. Then stop the payout and return steps and write `MISSING: full holder allocation`. Do not guess the split.
 4. **Work out the management payout.** Read `management-equity-hurdle-checker` in full. Net distributable equity (the sponsor's exit receipt is the other holder's share, not gross company value) less the fixed hurdle, floored at zero, times the participation share, times the vested share. Show an unmet hurdle and an unvested part on their own lines. The management payout plus the other holder's residual must equal net equity.
 5. **Work out the sponsor return.** Read `dividend-recap-timing-checker` in full. Use the entry cash as the first outflow, the first-anniversary distribution as a first-year inflow and the exit receipt as the second-year inflow. Use cash after financing, leakage and fees. Do not add the distribution to the exit. Compute the IRR and the cash multiple (total received over entry) only if both dates are exact years from entry. If a date is irregular, write "no annual IRR given: dates are not exact years", say a date-based IRR tool such as XIRR is needed, and give the cash multiple only.
-6. **Retry once, then stop.** If a check fails, correct only the affected line after a concrete fix and rerun it. Allow at most two correction passes. Then stop and report the blocker.
+6. **Correct at most twice, then stop.** If a check fails, correct only the affected line after a concrete fix and rerun it. Allow at most two correction passes in all. After the second, stop and report the blocker.
 7. **Save and hand back.** With file access, save to `reviews/sponsor-receipt-timing-review-assistant/<YYYY-MM-DD>/`: `review-summary.md`, `management-payout.md`, `sponsor-return.md` (only if it ran) and `state.proposed.json`. Keep the old record. With no file access, print the new record at the end and say nothing was saved.
 
 ## Acceptance
@@ -62,7 +64,7 @@ Say whether this was a first baseline or a comparison. A return worked out from 
 
 ## After this
 Suggest one next step in a short question, and say they can type their own:
-- **Check the management payout on its own** with the [Management equity payout checker](https://useaiblocks.com/skills/management-equity-hurdle-checker).
+- **Check the management payout on its own** with the [Management equity hurdle checker](https://useaiblocks.com/skills/management-equity-hurdle-checker).
 - **Compare preferred share terms** with the [Preferred share payout reviewer](https://useaiblocks.com/workflows/compare-preferred-exit-payout-terms), when there is more than one class of equity.
 - **Check a fund distribution** with the [No-catchup fund payout checker](https://useaiblocks.com/workflows/check-a-no-catchup-fund-distribution).
 Nothing here pays anyone. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

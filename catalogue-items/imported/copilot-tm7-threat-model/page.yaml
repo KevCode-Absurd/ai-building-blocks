@@ -11,6 +11,7 @@ not_for:
   - "You use a different threat modeling tool: use that tool's own file format, since this one only writes .tm7."
   - "You only want to read or review a model: open it in the Microsoft Threat Modeling Tool itself, which runs on Windows."
 how_to_use:
+  - This is the MIT-licensed tm7-threat-model skill from github/awesome-copilot, copied here with a plainer name.
   - Use an AI that can create a file you can download. Paste the skill into the chat, or upload the skill folder.
   - Describe your system in a few lines. Name each part, each data store, each outside party and each data flow.
   - Ask your AI to build the .tm7 file. Add your trust boundaries if you have them.
@@ -29,7 +30,7 @@ output_sample:
     - An AI that can save a file you can download
   output:
     - name: The .tm7 file
-      contains: One continuous XML file with no XML declaration, ready to open in the Microsoft Threat Modeling Tool.
+      contains: One continuous XML file with no XML declaration, built to open in the Microsoft Threat Modeling Tool. We have not tested it in every version, so check it opens.
     - name: Stencils
       contains: Each process, data store and outside party as a shape with a unique ID and a place on the diagram.
     - name: Trust boundaries
@@ -53,7 +54,7 @@ you_give:
   - Your trust boundaries (optional)
   - An existing .tm7 file to change (optional)
 you_get:
-  - A .tm7 file that opens in the Microsoft Threat Modeling Tool v7.3 or newer
+  - A .tm7 file built for the Microsoft Threat Modeling Tool v7.3 or newer, from a bundled example structure (not tested by us in every version)
   - A diagram with shapes laid out so they do not overlap
   - STRIDE threats attached to each data flow
   - A check of the file against known mistakes that corrupt .tm7 files

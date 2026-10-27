@@ -47,7 +47,7 @@ The keystone distinction. Three categories of content in any program.
 
 The pathology (a rule of thumb from the author, not a measured fact). Most content programs are 80% orphans, 15% accidental clusters, 5% accidental pillars. The discipline is moving toward 70% intentional clusters, 20% intentional pillars, 10% standalone-by-design. Same total content volume; different architectural outcome.
 
-The reading model. Search engines and AI engines both read internal-link graphs to infer topical authority. A pillar with 12 well-linked cluster pieces signals depth on a topic. 12 orphans on the same topic signal scattered, less-authoritative coverage. The architecture is the signal.
+The reading model (the author's view, not a proven rule). Search engines and AI engines are believed to read internal-link graphs to infer topical authority. A pillar with 12 well-linked cluster pieces signals depth on a topic. 12 orphans on the same topic signal scattered, less-authoritative coverage. The architecture is the signal.
 
 Detail and decision tree in [`references/pillar-cluster-decision.md`](references/pillar-cluster-decision.md).
 
@@ -124,7 +124,7 @@ Detail in [`references/url-structure-patterns.md`](references/url-structure-patt
 A pillar page does specific work. The standard sections:
 
 - **Hero.** Defines the topic, signals scope ("The complete guide to X for Y audience"), establishes authority quickly.
-- **TL;DR or executive summary.** 150 to 250 words at the top. AI engines often cite this section verbatim. Treat it as the citation-ready summary, not as a marketing intro.
+- **TL;DR or executive summary.** 150 to 250 words at the top. The author's view is that AI answer tools often quote a section like this, which has not been proven. Write it as a clear summary, not a marketing intro.
 - **Comprehensive body.** Covers the topic's major facets, with internal-link callouts to cluster pieces for deep dives. The body is not a comprehensive treatment of every facet; it is a guided tour with depth links.
 - **Use cases or examples.** Anchor the abstract topic to concrete instances.
 - **Common mistakes / FAQ.** AI-citation friendly section with structured Q&A. Pair with FAQ schema markup.
@@ -169,10 +169,10 @@ Signals that make hub architecture compound into authority. The two-engine view:
 **AEO and GEO signals:**
 
 - Answer-paragraph format directly under H2 headings (40 to 60 words, citation-ready)
-- TL;DR section on pillars (highly citable; AI engines extract it verbatim)
-- FAQ schema (still cited heavily by AI engines including Perplexity and ChatGPT)
+- TL;DR section on pillars (the author believes AI answer tools quote it; test this on your own site)
+- FAQ schema (the author believes AI answer tools still use it; this is not proven, so test it)
 - Specific statistics with cited sources
-- Named experts and named methods (entities AI engines weight heavily for citation)
+- Named experts and named methods (the author believes AI answer tools favour these; unproven)
 - Distinctive POV that AI engines can attribute to your brand
 
 The two-engine optimization is complementary, not competing. Both reward depth, structure, and entity coverage. The hub architecture creates more surface area for both signal types than scattered orphan content can.

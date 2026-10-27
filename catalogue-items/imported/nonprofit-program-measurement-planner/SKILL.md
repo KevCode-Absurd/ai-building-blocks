@@ -89,8 +89,8 @@ Screen every candidate indicator against:
    `nonprofit-program-design` should run first if there is no outcomes chain to measure against).
 2. **Draft 1–3 indicators per outcome**, screened against SMART/CREAM. Reject indicators that are
    only "nice to know" and don't map to a stated outcome.
-3. **Set a baseline and target for each indicator** — a percentage or count with a timeframe (e.g.,
-   "70% of participants employed at 90 days, up from a 45% historical baseline"). An indicator with
+3. **Set a baseline and target for each indicator** — a percentage or count with a timeframe (for example,
+   "[TARGET %] of participants employed at [N] days, up from a [BASELINE %] baseline". Use your own numbers, never these). An indicator with
    no target is not yet actionable.
 4. **Name the evaluation design** (pre/post, comparison, developmental, etc.) explicitly and match it
    to what the organization can realistically resource — do not recommend a comparison-group or RCT
@@ -99,8 +99,8 @@ Screen every candidate indicator against:
    existing validated instruments before building a custom survey from scratch.
 6. **Build the collection calendar**: who collects what, at what touchpoint (intake, midpoint, exit,
    follow-up), using what tool (paper form, CRM field, survey platform), and who owns data entry.
-7. **Set a response-rate/completion floor** for follow-up data collection up front (e.g., "we need
-   ≥60% follow-up response to consider this data reportable") — this prevents cherry-picked
+7. **Set a response-rate/completion floor** for follow-up data collection up front (for example, "we need
+   at least [MINIMUM %] follow-up response to consider this data reportable". Set the floor with your evaluator or funder, not from this example) — this prevents cherry-picked
    retrospective spin on incomplete data later.
 8. **Calculate rates correctly and show the denominator**: define whether an "outcome rate" is of
    all enrolled, all completers, or all with follow-up data — and report the definition every time,

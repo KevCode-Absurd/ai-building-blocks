@@ -13,7 +13,9 @@ Read [the original role profile](references/source-agent.md) before you start. U
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [China ecommerce operations planner](https://useaiblocks.com/skills/agency-marketing-china-ecommerce-operator).
+- The [Purchase order and reorder drafter](https://useaiblocks.com/skills/purchase-order-reorder). It takes the plan.
+- The [Order hold manager](https://useaiblocks.com/skills/order-hold-manager). It takes the plan.
+- The [Product listing localizer](https://useaiblocks.com/skills/overseas-listing-localizer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

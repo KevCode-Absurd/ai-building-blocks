@@ -13,6 +13,7 @@ inputs:
 outputs:
   - type: feedback_notes
     required: true
+  - type: audit_report
 uses: []
 origin: imported
 source:

@@ -46,7 +46,7 @@ To capture the ALGORITHMIC essence, express how this philosophy manifests throug
 
 **CRITICAL GUIDELINES:**
 - **Avoid redundancy**: Each algorithmic aspect should be mentioned once. Avoid repeating concepts about noise theory, particle dynamics, or mathematical principles unless adding new depth.
-- **Emphasize craftsmanship REPEATEDLY**: The philosophy MUST stress multiple times that the final algorithm should appear as though it took countless hours to develop, was refined with care, and comes from someone at the absolute top of their field. This framing is essential - repeat phrases like "meticulously crafted algorithm," "the product of deep computational expertise," "painstaking optimization," "master-level implementation."
+- **Aim for careful craft, and describe it honestly**: The philosophy should say the algorithm is built with care and tuned parameter by parameter. Do not claim hours of work, years of expertise or master-level skill that did not happen. Describe what the code does, not how impressive its maker is.
 - **Leave creative space**: Be specific about the algorithmic direction, but concise enough that the next Claude has room to make interpretive implementation choices at an extremely high level of craftsmanship.
 
 The philosophy must guide the next version to express ideas ALGORITHMICALLY, not through static images. Beauty lives in the process, not the final frame.
@@ -81,7 +81,7 @@ Algorithmic expression: Randomized circle packing or Voronoi tessellation. Start
 - **PARAMETRIC EXPRESSION**: Ideas communicate through mathematical relationships, forces, behaviors - not static composition
 - **ARTISTIC FREEDOM**: The next Claude interprets the philosophy algorithmically - provide creative implementation room
 - **PURE GENERATIVE ART**: This is about making LIVING ALGORITHMS, not static images with randomness
-- **EXPERT CRAFTSMANSHIP**: Repeatedly emphasize the final algorithm must feel meticulously crafted, refined through countless iterations, the product of deep expertise by someone at the absolute top of their field in computational aesthetics
+- **CAREFUL CRAFTSMANSHIP**: The final algorithm should feel carefully made and tuned. Describe the choices you made. Do not claim countless iterations or expert status.
 
 **The algorithmic philosophy should be 4-6 paragraphs long.** Fill it with poetic computational philosophy that brings together the intended vision. Avoid repeating the same points. Output this algorithmic philosophy as a .md file.
 
@@ -200,7 +200,7 @@ function draw() {
 
 ### CRAFTSMANSHIP REQUIREMENTS
 
-**CRITICAL**: To achieve mastery, create algorithms that feel like they emerged through countless iterations by a master generative artist. Tune every parameter carefully. Ensure every pattern emerges with purpose. This is NOT random noise - this is CONTROLLED CHAOS refined through deep expertise.
+**CRITICAL**: Create algorithms that feel considered and refined. Tune every parameter carefully. Ensure every pattern emerges with purpose. This is NOT random noise - this is CONTROLLED CHAOS. Do not describe the result as the work of a master or as the product of countless hours.
 
 - **Balance**: Complexity without visual noise, order without rigidity
 - **Color Harmony**: Thoughtful palettes, not random RGB values

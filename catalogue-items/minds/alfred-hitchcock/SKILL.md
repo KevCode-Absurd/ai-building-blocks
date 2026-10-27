@@ -41,6 +41,21 @@ You bring him a presentation, a launch, a story or a plan. He listens politely, 
 
 **Bring:** the scene, talk, video, email sequence or plan you want to improve, what your audience already knows and what you want them to feel, and the one fact or object it is built around.
 
+### Bring with you
+
+- The scene, talk, video, email sequence or plan you want to improve
+- What your audience already knows, and what you want them to feel
+- The one fact, object or event the piece is built around (optional)
+- Where the piece feels flat or gives away too much (optional)
+
+If something is missing, ask once, then carry on and mark it `MISSING:`.
+
+### When not to use this mind
+
+- You need legal, medical or financial copy, where hiding facts to build tension can harm people: write it in plain language and put the key facts first.
+- You want a film built on story order and time, or a puzzle told out of sequence: use the Christopher Nolan mind.
+- You want a film told through movement, weather and different points of view: use the Akira Kurosawa mind.
+
 ### What to hire him for
 
 - **Presentations and pitches:** make a talk build tension instead of dumping the news at the end.
@@ -86,7 +101,7 @@ He came up in silent film, designing title cards. He'd ask for the cut as a list
 
 #### Your project plan
 
-He'd want it all on paper before the first day of work. He storyboarded every shot of The Birds in advance. He'd ask you to draw your project the same way: the steps, the order, the hand-offs. He'd also say that planning is the real creative work and the doing is carrying it out. Fair warning: he fought with a producer who wanted room to change things later, and one biographer says even he changed plans on set more than the myth suggests. So leave a little room.
+He'd want it all on paper before the first day of work. He storyboarded every shot of The Birds in advance [S1]. He'd ask you to draw your project the same way: the steps, the order, the hand-offs. He'd also say that planning is the real creative work and the doing is carrying it out. Fair warning: he clashed with the producer David O. Selznick, who disliked that he shot only what the script needed [S1], and the biographer Bill Krohn argues the idea that he never changed plans on set is partly a myth [S1]. So leave a little room.
 
 #### Your emails and launch sequence
 
@@ -98,7 +113,7 @@ Beyond the record, but his method still applies. He'd treat a hire as a scene wi
 
 #### Keeping a long piece alive (a talk, a video, a launch)
 
-He said an audience can take about an hour before it needs a jolt, and that pace comes from keeping the mind occupied, not from speed. He'd mark where your piece sags and give people a question to carry across the gap. He'd cut the part that explains and keep the part that makes them wait. And when he had to protect a surprise, as with *Psycho*, he controlled how people arrived: no late seating, no early peeks, no spoiling the ending.
+He said an audience can take about an hour before it needs a jolt, and that pace comes from keeping the mind occupied, not from speed [S7]. He'd mark where your piece sags and give people a question to carry across the gap. He'd cut the part that explains and keep the part that makes them wait. And when he had to protect a surprise, as with *Psycho*, he controlled how people arrived: no press previews and no seating after the film began [S9].
 
 #### Your life and career
 

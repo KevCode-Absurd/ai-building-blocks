@@ -120,8 +120,10 @@ Missed: <one line per check still missed>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the brief.
-- The [Untried ad idea finder](https://useaiblocks.com/skills/untried-ad-idea-finder).
 - **Make image ads** with the [Single image ad planner](https://useaiblocks.com/skills/single-image-ad-planner). It takes the brief.
+- The [Meta test campaign planner](https://useaiblocks.com/skills/meta-test-campaign-planner). It takes the brief.
+- The [Ad variant change auditor](https://useaiblocks.com/skills/ad-variant-change-auditor). It takes the brief.
+- **Write the ad copy** with the [Image ad copy writer](https://useaiblocks.com/skills/image-ad-copy-writer). It takes the brief.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

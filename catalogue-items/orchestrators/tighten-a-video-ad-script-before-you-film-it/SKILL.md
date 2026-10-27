@@ -20,6 +20,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Brand brain** (its buyers and products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **A draft** (yours): the ad, page, email or script you want checked or improved.
 - **Hooks** (yours): opening lines, each with the angle and persona it targets.
+- **A shot list**, made by the [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker): the video broken into shots, with timing and on-screen text.
 - **Your video ads** (yours): the video ads, attached or linked.
 - **Your image ads** (yours): the image ads, attached as pictures.
 - **Ad copy**, made by the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer): the headline and text of the ad.
@@ -28,9 +29,10 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and your offer and buying reasons.
-3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and a buyer brief.
-4. This one.
+2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and offer and buying reasons.
+3. **A shot list** with the [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker). It uses your brand brain and a video ad script and a character sheet.
+4. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and a buyer brief.
+5. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `proof-and-claims.md`, `offers.md`, `voice-and-look.md`. Take the claims list with each claim's status, the offer terms word for word, and the voice rules. Source notes and rejected ideas never go into the result.
 
@@ -41,7 +43,10 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+The "Before you start" list above is general. For this workflow bring: the beat-by-beat script, your one claim in one sentence, your brand facts file if you have one, and ten viewers who match your buyer for the pause.
 - **A video ad script, beat by beat, with on-screen text and shots** (required)
+- **Your one claim, in one sentence** (required for step 3): step 3 scores the viewers' answers against it, so write it before they watch.
+- **Ten viewers who match your buyer** (required for step 3): friends who know your product give the wrong answers.
 - **A buyer grounded in real review language: problem, trigger, wants, doubts, words they use** (optional)
 - **One product's facts: price, variants, ingredients or materials, how it is used, photos by job** (optional)
 - **A draft of any copy (ad, page, email or script) that a check or edit pass works on** (optional)
@@ -59,14 +64,20 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 1. **Check the bridge and the pacing.** Use the skill `video-ad-bridge-checker`. Starts the chain: scores the script and returns a tighter version.
 2. **Check it sells with the sound off.** Use the skill `sound-off-commercial-checker`. Give it the script from the steps before. Reads the tighter script from the step before and checks the picture alone carries the claim.
 
-Pause here: Fix the script with both reports. Show it to ten people, ask each what the ad said, and write their answers down.
+Pause here: Fix the script with both reports. Paste the fixed script back with a list of the lines you changed. Show it to ten people, ask each only "What did that ad say?", and write their words down without telling them your claim.
 
 3. **Count what viewers heard.** Use the skill `ad-distraction-checker`. Give it the script from the steps before. Compares what the ten viewers said with the one claim in the fixed script.
 4. **Run the stop-ship check.** Use the skill `pre-launch-ad-checker`. Give it the script from the steps before. Runs the last check on the script after the fixes from the earlier reports.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
+## Next steps to offer
+
+Use these instead of the general "After this" list above:
+- If the script needs a rewrite, not just fixes, write a new one with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script).
+- Before you pay to run it, check the ad against Meta rules with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker).
+
 ## What you hand back
-4 step files and the summary. The last file holds the audit report.
+4 step files and the summary. The last file holds the stop-ship check and the ship call.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

@@ -86,7 +86,7 @@ output_shape: |
   Reach: <n> (<source or assumption>)
   Cost per thousand: <amount>
   Profit per order: <price> - <delivery cost> = <amount>
-  Break-even response: <percent>, shown as <calculation>
+  Break-even response: <percent> = cost per thousand / (profit per order x 1,000)
   Low / middle / high case: <responses>
 
   THE TEST

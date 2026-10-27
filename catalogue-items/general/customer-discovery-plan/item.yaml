@@ -8,7 +8,8 @@ role: make
 job: research
 level: intermediate
 inputs:
-  - {type: plan, required: true}
+  - {type: idea, required: false}
+  - {type: plan, required: false}
   - {type: question, required: true}
 outputs:
   - {type: plan, required: true}

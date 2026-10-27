@@ -9,7 +9,7 @@ level: intermediate
 inputs:
   - {type: question, required: true}
 outputs:
-  - {type: plan}
+  - {type: automation_workflow}
 needs_mode: manual
 uses: [n8n-workflow-designer, n8n-failure-handler, n8n-sub-workflow-builder]
 steps:

@@ -151,18 +151,22 @@ Collect data from available sources:
 
 ## Data Presentation
 
-When presenting compensation data, use clear ranges. The figures below show the layout only. They are not real data, so never reuse them. Fill every figure from a source you can name, or write "not found":
+When presenting compensation data, use clear ranges. The layout below uses placeholders only. Fill every figure from a source you can name, or write "not found":
 
 ```
-Senior Data Engineer - San Francisco Bay Area
+[ROLE] - [LOCATION]
 ┌─────────────────────────────────────────────┐
 │ Base Salary                                 │
-│ P25: €165,000  P50: €185,000  P75: €210,000│
+│ P25: [figure from named source]             │
+│ P50: [figure from named source]             │
+│ P75: [figure from named source]             │
 │                                             │
 │ Total Compensation (incl. equity + bonus)   │
-│ P25: €220,000  P50: €280,000  P75: €350,000│
+│ P25: [figure from named source]             │
+│ P50: [figure from named source]             │
+│ P75: [figure from named source]             │
 └─────────────────────────────────────────────┘
-Sources: Levels.fyi, Glassdoor, etc. posted ranges (2026)
+Sources: [named sources and the year of each]
 ```
 
 Always note:

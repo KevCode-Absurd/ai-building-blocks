@@ -10,7 +10,6 @@ inputs:
   - {type: question, required: true}
   - {type: performance_sheet, required: true}
   - {type: feedback_notes, required: false}
-  - {type: brief, required: false}
 outputs:
   - {type: audit_report}
   - {type: plan}

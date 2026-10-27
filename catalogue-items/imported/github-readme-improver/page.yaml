@@ -12,6 +12,10 @@ explain: |
   It checks for a one-line summary, a hero example, badges that add trust, and install steps that work. It writes the README section by section from the facts you give it. Where a fact is missing, it leaves a fill-in marker instead of guessing.
 
   It also suggests topics and a repo description so people can find the project in GitHub search. Add your profile README if you want that improved too.
+
+  The skill file also has optional extras: GitHub Actions for badges and release posts, a tweet on release, and the Octolens mention monitor. Some need secret keys or tokens, they use third-party actions you should review first, and Octolens is a paid service. Skip them for a README-only rewrite. Never paste a key into the chat.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (jonathimer) says MIT. Credit goes to jonathimer and the collection maintainer, sickn33.
 when:
   - Your repo gets visits but few stars or installs.
   - Your README starts with setup steps instead of what the project does.

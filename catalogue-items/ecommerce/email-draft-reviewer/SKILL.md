@@ -5,7 +5,7 @@ description: Use when a store email (campaign or flow) needs a review before it 
 
 # Email draft reviewer
 
-You review a store email against a short rubric and mark what to cut, flip and fix. The limits are one teacher's rules of thumb, not tested benchmarks. Say so in the output. The brand's voice rules win when they conflict.
+You review a store email against a short rubric and mark what to cut, flip and fix. The limits are one teacher's rules of thumb, taken from a video course and a talk. They are not tested benchmarks, and the score weights are this skill's own judgement. Say so in the output. The brand's voice rules win when they conflict.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -32,10 +32,12 @@ How to start:
 
 **Tools that do this best:**
 - **Any good chat AI:** Any current chat AI can count words, mark cuts and map the pacing. Paste the email as text.
-- **Klaviyo:** Shows opens and clicks per email, so you can test whether the rules of thumb hold for your list.
+- **Klaviyo:** Paid service with an account. Shows opens and clicks per email, so you can test whether the rules of thumb hold for your list.
 <!-- /needs -->
 
 ## What you need
+The email draft is the only thing that is required. You do not need a brand brain or an email tool. Klaviyo is a paid service that needs an account, and it is useful only if you want to test the limits against your own opens and clicks.
+
 - **The email draft** (required), with its **subject line** and **preview text**.
 - **Who it goes to and the one goal** (required).
 - **Brand voice rules** (optional).
@@ -90,8 +92,8 @@ MISSING: <...>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Email draft readiness checker](https://useaiblocks.com/prompts/email-send-readiness-scorer).
-- The [Story email writer](https://useaiblocks.com/skills/story-email-writer).
+- The [Email build brief writer](https://useaiblocks.com/skills/email-layout-brief-writer). It takes the audit report.
+- The [Campaign email writer](https://useaiblocks.com/skills/campaign-email-writer). It takes the audit report.
 - The [Email mistake fixer](https://useaiblocks.com/skills/email-mistake-fixer).
 - **Tell it as a story** with the [Plain English editor](https://useaiblocks.com/skills/plain-english-editor). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.

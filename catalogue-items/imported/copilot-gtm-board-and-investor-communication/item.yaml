@@ -8,8 +8,14 @@ role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
+  - type: question
     required: true
+  - type: spreadsheet
+    required: false
+  - type: business_profile
+    required: false
+  - type: audit_report
+    required: false
 outputs:
   - type: plan
 uses: []

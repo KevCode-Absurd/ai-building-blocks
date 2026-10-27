@@ -10,11 +10,9 @@ level: intermediate
 inputs:
   - type: question
     required: true
-  - type: source_text
-    required: false
 outputs:
-  - type: brief
-  - type: audit_report
+  - type: plan
+  - type: document
 uses: []
 steps: []
 origin: imported

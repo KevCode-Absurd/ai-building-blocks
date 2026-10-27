@@ -102,7 +102,7 @@ Before entering the loops, understand the landscape. Keep this efficient — the
 
 1. **Search literature** for the research question. Use multiple sources — never stop at one:
    - **Exa MCP** (`web_search_exa`) if available — best for broad discovery and finding relevant papers quickly
-   - **Semantic Scholar** (`pip install semanticscholar`) — best for ML/AI papers, citation graphs, and specific paper lookup. See `20-ml-paper-writing` skill's `references/citation-workflow.md` for complete API code examples
+   - **Semantic Scholar** (`pip install semanticscholar`) — best for ML/AI papers, citation graphs, and specific paper lookup. That reference file is not included in this library. Use the library's own documentation for the API calls
    - **arXiv** (`pip install arxiv`) — best for recent preprints and open-access papers
    - **CrossRef** — best for DOI lookup and BibTeX retrieval
    - Keep searching until you have good coverage. If one source comes up empty, try another with different keywords
@@ -343,6 +343,8 @@ When the outer loop decides to CONCLUDE:
 
 Proceed autonomously through the writing process. If the ml-paper-writing skill suggests human collaboration points, adapt and keep going — produce the best draft you can. The human will review and provide feedback.
 
+**Every claim must trace to a file.** Each result, number and claim in a draft or report must trace to a file in `data/` or `experiments/` before it goes to `to_human/`. Never invent results, numbers or citations. Mark anything you cannot trace as "unverified". If any limit set at the start is reached, stop the loop, remove the scheduled check-in, and send the final report.
+
 ## Research Discipline
 
 Principles to enforce continuously — not tied to any specific phase:
@@ -397,7 +399,7 @@ Investigate, don't ignore. Return to literature — your protocol might have an 
 Ensure research-state.yaml and findings.md are updated after every action. These files are your memory across sessions.
 
 **Can't find relevant papers**
-Try multiple approaches in order: Exa MCP for broad search, Semantic Scholar for specific ML/AI paper lookup (`pip install semanticscholar`), arXiv for preprints (`pip install arxiv`). Check `20-ml-paper-writing` skill's `references/citation-workflow.md` for complete API code. Note: Google Scholar has no official API — use Semantic Scholar instead for programmatic search.
+Try multiple approaches in order: Exa MCP for broad search, Semantic Scholar for specific ML/AI paper lookup (`pip install semanticscholar`), arXiv for preprints (`pip install arxiv`). The `references/citation-workflow.md` file named by the other skill is not included in this library, so read the API's own docs. Note: Google Scholar has no official API — use Semantic Scholar instead for programmatic search.
 
 **No GPU available**
 Use CPU and scale experiments down. Many research tasks (analysis, interpretability, small model training) run fine on CPU. Adjust experiment design to fit available compute rather than blocking.

@@ -1,6 +1,6 @@
 new_slug: static-ad-critic
 name: "Static ad critic"
-summary: "Check your static ad before you spend. Attach the image and headline. You get a score out of 100, ranked fixes and two rewritten headlines."
+summary: "Check your static ad before you spend. Attach the image, headline and primary text. You get a score out of 100, ranked fixes and two rewritten headlines."
 job: check-ads
 thinking: high
 thinking_why: "It reads an image and judges how the picture, words and page work together, so a stronger model sees more."

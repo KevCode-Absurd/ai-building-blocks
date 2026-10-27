@@ -384,11 +384,14 @@ risk_treatment:
 Optional. The Threat Dragon, Docker and CI/CD sections need a terminal. Chat-only users can skip them and use the worksheet and the risk scoring above.
 
 ```bash
-# Run Threat Dragon locally with Docker
+# Run Threat Dragon locally with Docker.
+# First make your own random encryption key (for example with: openssl rand -hex 32)
+# and put it in place of [YOUR_OWN_RANDOM_KEY]. Never use a sample key, and never
+# commit your key to a repo.
 docker run -d \
   --name threat-dragon \
   -p 3000:3000 \
-  -e ENCRYPTION_KEYS='["threat-dragon-encryption-key-change-me"]' \
+  -e ENCRYPTION_KEYS='["[YOUR_OWN_RANDOM_KEY]"]' \
   -e NODE_ENV=production \
   owasp/threat-dragon:v2.2.0
 

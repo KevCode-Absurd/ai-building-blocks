@@ -19,7 +19,7 @@ This skill prepares an app to be translated. It finds text written straight into
 Ask once for anything missing. Never guess.
 
 1. **The project folder.** If you cannot read it, stop and ask for the files.
-2. **Languages to support.** The source language and each new one, such as English to Turkish and Arabic. If the user has none yet, set up the structure for the source language only.
+2. **Languages to support.** The source language and each new one, such as English to Turkish and Arabic. If the user has none yet, set up the structure for the source language only. If you have a plan from the multi-language site planner, take the languages from it.
 3. **Framework.** React, Next.js, Vue or Python. Look at `package.json` or the imports to find out. If it is something else, say so and give the closest pattern.
 4. **Existing translation files (optional).** Read them first and keep their key style.
 

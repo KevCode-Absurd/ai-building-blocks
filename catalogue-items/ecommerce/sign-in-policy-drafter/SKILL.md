@@ -26,6 +26,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+List the platform and the account list first. These four inputs are the whole job. Any general "your question" prompt above means these four items.
+
 - **Platform** (required): Shopify, WooCommerce, headless or custom.
 - **Staff and admin accounts** (required): who has them and which second step each uses.
 - **Key accounts** (required): email, ad accounts, domain registrar. Who has access, and with what second step.

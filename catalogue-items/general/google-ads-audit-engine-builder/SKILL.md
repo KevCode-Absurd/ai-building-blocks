@@ -13,9 +13,9 @@ This skill plans a rule-based Google Ads audit engine that fits your own code. T
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Meta and Google comparison code planner](https://useaiblocks.com/prompts/build-the-cross-channel-analyzer-meta-google-builder-prompt).
-- The [Google Ads Quality Score tool planner](https://useaiblocks.com/prompts/build-the-quality-score-triage-module-builder-prompt).
-- The [Video ad analysis code planner](https://useaiblocks.com/prompts/build-the-video-performance-analyzer-builder-prompt).
+- The [Simple code coach](https://useaiblocks.com/skills/simple-code-coach). It takes the code change.
+- The [Pull request writer](https://useaiblocks.com/skills/pull-request-writer). It takes the code change.
+- The [Breaking change reviewer](https://useaiblocks.com/skills/breaking-change-reviewer). It takes the code change.
 - The [Lint and type check runner](https://useaiblocks.com/skills/lint-and-type-check-runner). It takes the code change.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
@@ -104,6 +104,9 @@ ASSUMPTIONS AND OPEN QUESTIONS
 
 NEXT STEP
 <the smallest useful step>
+
+CHECKS MISSED
+<one line per check that failed or could not run, or none>
 ```
 
 Before the counts are filled in, they are planned counts only. Show evaluated and failed only if the engine was actually run on data.
@@ -125,4 +128,4 @@ Before the counts are filled in, they are planned counts only. Show evaluated an
 
 ## Final check
 
-Give the deliverables, the evidence used, the assumptions, the missing inputs and the smallest next step. Keep an idea, a calculation, a proposed action and a completed action apart. Keep the previous approved settings so a revision can be compared and rolled back.
+Give the deliverables, the evidence used, the assumptions, the missing inputs and the smallest next step. Keep an idea, a calculation, a proposed action and a completed action apart. Keep the previous approved settings (the check registry file and its thresholds) in your project's version control, so a revision can be compared and rolled back.

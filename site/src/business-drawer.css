@@ -1,0 +1,18 @@
+/* The me.md drawer: three choices, loaded with BusinessDrawer.tsx only when the drawer opens. */
+.me-drawer .me-private { margin: -6px 0 0; color: var(--text-2); }
+.me-choice { display: grid; gap: 10px; padding: 16px 0 4px; border-top: 1px solid var(--line); min-width: 0; }
+.me-choice h3 { margin: 0; font: 600 15px/1.3 var(--sans); color: var(--text); }
+.me-choice p { margin: 0; }
+.me-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; font-size: 14px; }
+.me-file { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+.me-upload { position: relative; cursor: pointer; }
+.me-upload input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; }
+.me-upload:focus-within { outline: 2px solid var(--focus); outline-offset: 2px; }
+.me-error { padding: 10px 12px; border: 1px solid var(--warn); border-radius: 8px; color: var(--text); font-size: 14px; }
+.me-fallback { width: 100%; padding: 10px 12px; border: 1px solid var(--line-2); border-radius: 8px; background: var(--bg-2); color: var(--text); font: 400 12.5px/1.5 var(--mono); }
+.me-basics > summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 8px; }
+.me-basics > summary::-webkit-details-marker { display: none; }
+.me-basics > summary::after { content: "+"; margin-left: auto; font: 500 16px var(--mono); color: var(--muted); }
+.me-basics[open] > summary::after { content: "−"; }
+.me-basics[open] { gap: 14px; }
+.me-drawer textarea[aria-invalid="true"] { border-color: var(--warn); }

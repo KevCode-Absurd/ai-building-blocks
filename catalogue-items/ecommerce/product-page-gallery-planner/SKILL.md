@@ -65,7 +65,7 @@ This skill runs on its own. All it needs to start is the product's facts; everyt
 4. **Fill the slots, highest score first,** with these fixed rules:
    - Slot 1 is the main image. Slot 2 answers the biggest doubt, in a customer's words.
    - The set holds at least one scale image. Shoppers judge size from pictures, and a size they misjudge loses the sale.
-   - Each question is answered once. Default 8 images; stop sooner when proof runs out.
+   - Each question is answered once. Default 8 images; the person can ask for a different count, such as 6 or 10. Stop sooner when proof runs out.
 5. **Bend the types to the kind of product:**
    - In or on the body: Made of shows actives or ingredients with amounts; How often matters; a visible result comes only from the brand's own photos with their conditions, otherwise show the old routine beside the new one.
    - Worn: Scale is on a body, with the model's height and size stated; Fit guide is a must; Range uses each colour's own photo.
@@ -74,7 +74,7 @@ This skill runs on its own. All it needs to start is the product's facts; everyt
    - Fits with something: Works with is a must, with the connection shown up close.
 6. **Write one card per image.** Words are fixed now: a headline of 3 to 7 words, at most 3 points of 6 words or fewer, at most 5 table rows. Longer panels are left blank for a designer to set from the label. Describe the layout in words ("product centre, filling most of the frame"); give no percentages, sizes or other numbers unless the inputs or the marketplace rules state them. A study figure keeps its conditions on the card (against what, over how long, in whom).
 7. **Marketplace gallery:** slot 1 follows that marketplace's current main-image rules (for example plain white, the product filling most of the frame, no added words or props). Your slot 1 moves to slot 2. Tell the person to check the rules on the marketplace's own page before upload.
-8. **Check it.** Check the plan against the 6 checks under "Check before you hand it back". Fix any failed check you can, then check again. List any you couldn't fix on a `CHECKS MISSED:` line, or write "none". A card whose figure still has a `NEED:` for its source or conditions counts as a miss on the figure check.
+8. **Check it.** Check the plan against the 7 checks under "Check before you hand it back". Fix any failed check you can, then check again. List any you couldn't fix on a `CHECKS MISSED:` line, or write "none". A card whose figure still has a `NEED:` for its source or conditions counts as a miss on the figure check.
 
 ## What you hand back
 The score table, then one card per image in upload order, then the gaps list, then a `CHECKS MISSED:` line, one line per check still missed, or "none".
@@ -113,7 +113,6 @@ CHECKS MISSED: <one line each, or none>
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Product page image checker](https://useaiblocks.com/skills/product-page-image-checker). It takes the gallery plan.
 - The [Product photo set reviewer](https://useaiblocks.com/skills/product-photo-set-maker).
-- The [Marketplace photo rule checker](https://useaiblocks.com/skills/marketplace-photo-rule-checker).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -123,6 +122,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Reviews are copied exactly, with the reviewer's published name.
 - A comparison names no brand and has a source for both sides.
 - Every close-up or inset comes from a real photo, or is left out.
+- Any health, nutrition or medical claim (including absorption or nutrient-level results) is flagged on its card for the seller to check against local advertising and health-claim rules, and a qualified person, before the image is published.
 - Any person is a made-up adult shown for use or size. A founder, expert or named customer appears only from their own photo. No children.
 
 ## If something is missing

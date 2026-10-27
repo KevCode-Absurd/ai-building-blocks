@@ -7,7 +7,9 @@ role: make
 job: copy
 level: beginner
 inputs:
-  - {type: question, required: true}
+  - {type: product_data, required: true}
+  - {type: keyword_list, required: false}
+  - {type: competitor_set, required: false}
 outputs:
   - {type: copy_draft}
 uses: []

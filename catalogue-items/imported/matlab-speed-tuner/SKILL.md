@@ -143,7 +143,7 @@ speedup = baseline / optimized;
 fprintf('Optimized: %.4f s (%.2fx speedup)\n', optimized, speedup);
 ```
 
-A speedup of 1.2x or more is considered significant. Below that, measurement noise makes it hard to be confident the change helped.
+A speedup of 1.2x or more is considered significant. Below that, measurement noise makes it hard to be confident the change helped. Report a result below 1.2x as "no clear gain". Do not claim a speedup and do not treat the attempt as a failure: say the change is within measurement noise.
 
 ### Step 6: Verify Correctness
 

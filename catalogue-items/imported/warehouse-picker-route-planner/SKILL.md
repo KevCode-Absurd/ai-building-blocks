@@ -20,9 +20,11 @@ This skill works in a plain chat. Python is optional: the code blocks show the m
 
 The random-number code in this file is demo data. Never show its output as a result. The percentages beside each method are rough rules of thumb with no source. Do not quote them to the person as facts.
 
-The code blocks are sketches of the method, not tested tools. Two known gaps: in the largest-gap code, `dist1` and `dist2` come out the same and are never used. And the cross-aisle step uses the first aisle's width for every aisle. Before you run any of it, use each aisle's own width and position from the person's layout. Check a route by hand on a small example first, and treat every distance as an estimate until it is measured on the floor.
+The code blocks are sketches of the method, not tested tools. The cross-aisle step uses each aisle's own width through the helper `aisle_gap_distance`, which counts only the aisles between two aisle numbers, and ignores aisle 0 (the depot side). Before you run any of it, put the person's real aisle widths, lengths and positions into `aisles`. Check each route by hand on a small example first, and treat every distance as an estimate until it is measured on the floor.
 
 Out of scope: grouping orders into batches (use the Picking batch planner), and moving products to better slots (use the Warehouse slot assigner).
+
+If a warehouse layout plan from an earlier step gives the aisles and zones, use it as the layout.
 
 ---
 
@@ -204,6 +206,13 @@ for i,j not adjacent:
 import numpy as np
 import pandas as pd
 
+def aisle_gap_distance(aisles, from_aisle, to_aisle):
+    """Walking distance across the aisles between two aisle numbers,
+    using each aisle's own width. Aisle 0 is the depot side and has no width."""
+    lo, hi = sorted((from_aisle, to_aisle))
+    return sum(aisles[k]['width'] for k in range(lo, hi) if k in aisles)
+
+
 def s_shape_routing(picks, aisles, cross_aisle_locations):
     """
     S-Shape routing algorithm
@@ -237,7 +246,7 @@ def s_shape_routing(picks, aisles, cross_aisle_locations):
         aisle_picks = picks_by_aisle.get_group(aisle_id).sort_values('position_in_aisle')
 
         # Move to aisle (cross-aisle travel)
-        cross_aisle_distance = abs(aisle_id - current_aisle) * aisles[0].get('width', 10)
+        cross_aisle_distance = aisle_gap_distance(aisles, current_aisle, aisle_id)
         total_distance += cross_aisle_distance
 
         # Determine entry point (front or back)
@@ -275,7 +284,7 @@ def s_shape_routing(picks, aisles, cross_aisle_locations):
 
     # Return to depot
     total_distance += abs(current_position - 0)
-    total_distance += abs(current_aisle - 0) * aisles[0].get('width', 10)
+    total_distance += aisle_gap_distance(aisles, current_aisle, 0)
 
     return {
         'route': pd.DataFrame(route),
@@ -377,13 +386,8 @@ def largest_gap_routing(picks, aisles):
             # Enter from front, exit from back (or vice versa)
             # Choose direction that minimizes total travel
 
-            # Option 1: Front to back
-            dist1 = aisle_length - largest_gap['gap_size']
-
-            # Option 2: Back to front
-            dist2 = aisle_length - largest_gap['gap_size']
-
-            # Both same for middle gaps, so use S-shape logic
+            # Walking front to back or back to front covers the same ground,
+            # so use S-shape logic: go the way that starts nearer to the picker
             if current_position < aisle_length / 2:
                 entry_position = 0
                 exit_position = aisle_length
@@ -394,7 +398,7 @@ def largest_gap_routing(picks, aisles):
                 picks_order = aisle_picks.sort_values('position_in_aisle', ascending=False)
 
         # Move to aisle
-        cross_aisle_distance = abs(aisle_id - current_aisle) * aisles[0].get('width', 10)
+        cross_aisle_distance = aisle_gap_distance(aisles, current_aisle, aisle_id)
         total_distance += cross_aisle_distance
 
         # Move to entry point
@@ -425,7 +429,7 @@ def largest_gap_routing(picks, aisles):
 
     # Return to depot
     total_distance += abs(current_position - 0)
-    total_distance += abs(current_aisle - 0) * aisles[0].get('width', 10)
+    total_distance += aisle_gap_distance(aisles, current_aisle, 0)
 
     return {
         'route': pd.DataFrame(route) if route else pd.DataFrame(),

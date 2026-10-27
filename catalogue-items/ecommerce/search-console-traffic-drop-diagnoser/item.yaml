@@ -7,7 +7,7 @@ role: check
 job: analysis
 level: intermediate
 inputs:
-  - {type: performance_sheet, required: true}
+  - {type: search_query_report, required: true}
   - {type: store_capture, required: false}
 outputs:
   - {type: audit_report}

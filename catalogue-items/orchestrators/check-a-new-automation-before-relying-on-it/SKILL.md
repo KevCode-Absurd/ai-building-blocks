@@ -12,14 +12,14 @@ Audit an automation on paper, repair what is weak, then write the procedure peop
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+- **The automation** (yours): the n8n, Zapier or Make workflow, exported or described step by step.
 
 **Makes it better (optional):**
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a brief, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for the automation, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -31,7 +31,7 @@ How to start:
 
 Use what is attached or pasted first. Ask once, in one short message, for only what you cannot work without.
 
-**You need:**
+**You need for this job.** This list replaces the general one above.
 - The automation as it stands: its prompt, steps or settings, pasted in. If you only get a description in words, use that and say so.
 - What starts it, what data it reads and where results go.
 
@@ -75,7 +75,7 @@ State plainly that nothing was run and no test has happened yet.
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Site reliability engineer](https://useaiblocks.com/skills/agency-engineering-sre). It takes the document.
+- The [n8n failure handler](https://useaiblocks.com/skills/n8n-failure-handler). It takes the the automation.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -92,9 +92,9 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 Write `MISSING: <what>` next to the affected part. Carry on with the parts that do not depend on it. If no description of the automation is given, stop and ask for it.
 
-## After this
+## After this (for this job)
 
-Suggest one next step as a short question, and say the user can type their own:
-- **Run the checklist** on one small real case, then bring back the results to update the procedure.
+Use these first. They follow from the test checklist, which is the main thing this workflow hands back. Suggest one next step as a short question, and say the user can type their own:
+- **Run the checklist** on one small real case, then bring back the pass and fail marks to update the procedure.
 - **Hand it over.** For a task that people do by hand, use the [Make a recurring process easier to hand over](https://useaiblocks.com/workflows/make-a-recurring-process-easier-to-hand-over) workflow.
-If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.
+If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring. If the automation has a live system behind it that needs ongoing monitoring, the Site reliability engineer skill above is the one to offer, with the procedure and the recovery steps.

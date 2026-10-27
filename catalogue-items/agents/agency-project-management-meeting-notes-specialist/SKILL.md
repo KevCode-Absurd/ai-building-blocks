@@ -9,13 +9,15 @@ Turns meeting content into a four-section record. It extracts. It does not inven
 
 Read [the original role profile](references/source-agent.md) before you start. Use its four sections, its rules for what counts as a decision, an action item and an open question, and its placeholders. Its role language and success targets are not facts about this run and do not grant tool access.
 
+When not to use it: for a formal record for HR, legal or the board, use a human note-taker and have the people involved check the wording. For a word-for-word record, use the transcription tool in your meeting app. To track open actions across weekly meetings, use the Weekly meeting actions keeper. To draft follow-up messages from the notes, use the Executive work keeper.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Internal meeting minutes writer](https://useaiblocks.com/skills/copilot-meeting-minutes). It takes the meeting notes.
-- The [Meeting minutes writer](https://useaiblocks.com/skills/meeting-minutes-writer).
 - The [Rough-note meeting minutes writer](https://useaiblocks.com/prompts/rough-notes-to-minutes-writer). It takes the meeting notes.
+- The [Action item tracker](https://useaiblocks.com/skills/executive-action-register). It takes the meeting notes.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -84,6 +86,7 @@ Open Questions
 
 GAPS TO FILL
 - <missing date, unassigned owners and anything left blank, or "none">
+- <any check that failed or could not run (the CHECKS MISSED list), or "none">
 ```
 
 Keep each line to one sentence. If the user wants a different tone, apply it only to the prose in Decisions and Open Questions. Never change names, dates or owners.

@@ -17,6 +17,8 @@ outputs:
   - type: security_report
   - type: test_report
   - type: plan
+  - type: eval_set
+    required: true
 uses:
   - prompt-injection-defender
   - ai-agent-attack-tester

@@ -35,8 +35,9 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat.
   - Add your title, main keyword, search intent and niche. Say if you want Yoast fields, schema and how many images.
   - Paste any sources you want used, each with a link. Your AI should cite only those.
+  - If you pasted no sources, treat every Truth Box point, statistic, myth correction and FAQ answer as unverified. Check each one before you publish, and leave out the "Data accurate as of" line.
   - Read the post and check every fact and number against your sources.
-  - Convert the pipe tables to WordPress table blocks or HTML, then copy the post into WordPress. Replace every placeholder URL in the schema before you publish. Paste the Yoast fields and schema into their boxes if you asked for them.
+  - Convert the pipe tables to WordPress table blocks or HTML, then copy the post into WordPress. Replace every placeholder URL in the schema before you publish. Paste the Yoast fields and schema into their boxes if you asked for them. The Yoast fields need the Yoast SEO plugin on your WordPress site, and the schema has placeholder links you must replace first.
   - Next, ask for Batch 2 (Yoast fields) and Batch 3 (image SEO), and add links to your older posts on the same site. Use internal-link-mapper for that.
 output_sample:
   input:

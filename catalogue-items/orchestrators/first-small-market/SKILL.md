@@ -37,9 +37,10 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-- **What your product does and the problem it solves** (required)
-- **Groups of buyers you think could use it** (optional)
-- **Places and people you can reach now**, such as lists, communities and events (optional)
+This list replaces the general one above. The four skills are in the library at `https://useaiblocks.com/skills/<slug>`. Get any that is not in your folder from there. If one is missing and you cannot browse, stop at that step and say so.
+- **What your product does and the problem it solves** (required): the product description for step 1.
+- **Groups of buyers you think could use it** (optional): the buyer groups step 1 scores.
+- **Places and people you can reach now**, such as lists, communities and events (optional): the reach lists step 1 uses.
 - **How many new markets you can take on per year** (optional; step 3 sets dates from it)
 - **Customer words about why they bought** (optional)
 
@@ -56,7 +57,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 2. **Check the market is real, not drawn to flatter you.** Use the skill `market-boundary-checker`. Give it the picked group and the ranked list in outputs/step-01-first-market-picker.md. It works out your share at four market sizes and finds the market buyers compare you in. It ends with a call: own, reach, sliver or fiction. If the call is sliver or fiction, say so in the hand-back and go back to the next group on the step 1 list before step 3.
 3. **Order the markets after it.** Use the skill `market-expansion-sequencer`. Give it the picked market from step 1, the call from outputs/step-02-market-boundary-checker.md and how many markets you can take on per year. It lists the markets next door, scores how near each is, checks what could stop each move, and gives the order, nearest first, with a number that says when to move.
 4. **Write the pitch without a rival in it.** Use the skill `rival-free-pitch-rewriter`. Give it your current pitch if you have one, what only you do, and the first market. It rewrites the pitch around the thing only you do, with no rival, "cheaper" or fight word left: one line, three sentences and thirty seconds.
-5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then a `CHECKS MISSED` list (or "none").
 
 ## What you hand back
 Four step files and the summary: the ranked first markets with the pick, the reality check with your share and a call, the order of the next markets with a sign to move on, and the rewritten pitch.
@@ -64,8 +65,8 @@ Four step files and the summary: the ranked first markets with the pick, the rea
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [New country expansion planner](https://useaiblocks.com/skills/new-country-expansion-planner).
 - The [Business activity metric planner](https://useaiblocks.com/skills/input-metric-picker). It takes the draft.
+- The [New country expansion planner](https://useaiblocks.com/skills/new-country-expansion-planner).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

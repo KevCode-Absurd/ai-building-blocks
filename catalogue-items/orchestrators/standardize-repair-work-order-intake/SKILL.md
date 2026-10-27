@@ -12,15 +12,14 @@ Give every repair job the same start. Two skills run in order. The first writes 
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Your question** (yours): the decision or problem, and what a good outcome looks like.
 - **Meeting notes** (yours): an agenda, notes or decisions from a meeting.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a brief, your question, meeting notes. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, meeting notes. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -28,6 +27,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+
+The "Before you start" list above is general (it mentions a brief and meeting notes). This list replaces it for this workflow. Your own work orders take the place of meeting notes.
 
 - **Sample work orders** (required): a few real ones, with customer names and contact details removed.
 - **Authorization rules** (required): what the customer must agree to before diagnosis, quote and repair.
@@ -51,7 +52,7 @@ Ask once, in one short message, for only what you cannot work without. Do not us
 
 1. **Process and SOP writer** (`process-and-sop-writer`). Write the intake procedure from the existing process only. Cover identifying the item, recording what the customer reports, authorization evidence, quote acceptance and when to pass a job to a technician. Give each step a role, a trigger and what it produces. Technical assessment stays with qualified staff. Then run the **field check**: for each sample work order, mark each required field present or missing, with a short note. **Stop rule:** if no sample work orders were supplied, write the procedure and mark the field check `MISSING: samples`. Save `outputs/step-01-process-and-sop-writer.md`. **Hand to step 2:** the field list, the field check and the authorization rules. **Gate:** no step diagnoses a fault, assumes consent or clears safety, and every field in the check came from your list or is marked as a proposal.
 
-2. **Executive action register keeper** (`executive-action-register`). Build the register from step 1's field check and authorization rules, plus the open work orders and explicit commitments in your sources (your own work orders take the place of meeting notes here). Use these columns: work order, item, what is unresolved (missing field, authorization or customer decision), owner, due date, status and source. A missing authorization or customer decision stays unresolved. It is never marked done. Never assign an owner by guess. Put owner and date gaps in a clarification list. Save `outputs/step-02-executive-action-register.md`. **Gate:** every unresolved item names what is missing and who can supply it, and no row says a customer agreed without a source.
+2. **Executive action register keeper** (`executive-action-register`). Build the register from step 1's field check and authorization rules, plus the open work orders and explicit commitments in your sources (your own work orders take the place of meeting notes here). Use these columns: work order, item, what is unresolved (missing field, authorization or customer decision), owner, due date, status and source. A missing authorization or customer decision stays unresolved. It is never marked done. Never assign an owner by guess. Put owner and date gaps in a clarification list. If step 1 is complete but no open jobs were supplied, do not make up rows: write the register as `MISSING: open jobs`, hand back step 1, and say what to bring. Save `outputs/step-02-executive-action-register.md`. **Gate:** every unresolved item names what is missing and who can supply it, and no row says a customer agreed without a source.
 
 3. **Check and hand back.** Run the checks below, then hand back the files and one suggested next step.
 
@@ -79,11 +80,11 @@ End with a HAND-BACK SUMMARY: each saved file, each step run or skipped and why,
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [SOP and runbook checker](https://useaiblocks.com/skills/sop-and-runbook-checker). It takes the document and plan.
 - The [Recurring task procedure writer](https://useaiblocks.com/skills/repeat-task-step-guide-writer). It takes the document.
-- The [Nonprofit grant proposal writer](https://useaiblocks.com/skills/nonprofit-grant-proposal-writer). It takes the document.
 - The [Campaign change impact reviewer](https://useaiblocks.com/skills/campaign-change-impact-mapper). It takes the document.
-- The [Resale store daily procedure planner](https://useaiblocks.com/skills/resale-store-daily-procedure-planner). It takes the document.
-- The [Donated goods intake planner](https://useaiblocks.com/skills/donated-goods-intake-planner). It takes the document.
+- The [Handover note writer](https://useaiblocks.com/prompts/handover-note-writer). It takes the document and plan.
+- The [Obsidian Web Clipper template maker](https://useaiblocks.com/skills/web-clipper-template-maker). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -91,9 +92,9 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 Write `MISSING: <what>` beside the affected line and carry on with the rest. Stop a step only when its required source is absent, and return what you finished with the exact input needed to resume.
 
-## After this
+## Next steps to offer
 
-Suggest one next step in a short question, and say they can type their own:
+Use these instead of the general "After this" list above. Suggest one next step in a short question, and say they can type their own:
 - **Check the procedure** with the [SOP and runbook checker](https://useaiblocks.com/skills/sop-and-runbook-checker), which takes the finished document.
 - **Keep the open list moving** with the [Executive action register keeper](https://useaiblocks.com/skills/executive-action-register).
 Nothing here contacts a customer or starts a repair. A person does that.

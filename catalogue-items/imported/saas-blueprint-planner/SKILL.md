@@ -46,7 +46,7 @@ After stage 8, generate `README.md` from `templates/blueprint-readme.md` linking
 - **Use the Write tool** for each output file. Don't dump full content into the chat — only show the user a short summary (3-5 lines per stage) and the file path.
 - **Read each pipeline prompt file fresh** before generating that stage. Don't try to remember it.
 - **Quality > speed.** A real founder will read these. No placeholders, no Lorem Ipsum, no "[TODO]". Every section must be specific to the user's idea.
-- **No made-up numbers.** Do not invent a stat (TAM, competitor count, growth rate). If you give a market figure, label it "directional estimate, verify before use" and say where it came from, or skip it.
+- **No made-up numbers.** Do not invent a stat (TAM, competitor count, growth rate). If you give a market figure, label it "directional estimate, verify before use" and name the source it came from. If you cannot name a source, write "unverified" next to the figure or leave it out.
 - **One JSON-ish summary** goes after the final message below, as a separate comment block, so future tools (or the PlanMySaaS web app) can ingest the blueprint. The final message itself keeps the exact format.
 
 ## Final summary message

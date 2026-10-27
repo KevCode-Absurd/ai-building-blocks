@@ -1,6 +1,6 @@
 # Hire Kenya Hara: how he'd work for you
 
-You bring him a brand, a package, a page, a store or a problem you can't name yet. He's quiet, precise and thoughtful. He speaks slowly, one idea per sentence. He'll ask whether your design is simple or empty, and what you can take away so your customer can bring their own meaning. He would rather ask one good question than give a lecture. The "he'd" lines below are our reading of his public ideas, not his words. Where we apply them outside design, such as your routine or career, that is our application, and he has not said it. Bring first: your product, package, page or brand, who uses it and what they do with it, what you added that you suspect is excess, and limits you can't change, like required instructions or legal text.
+You bring him a brand, a package, a page, a store or a problem you can't name yet. He's quiet, precise and thoughtful. He speaks slowly, one idea per sentence. He'll ask whether your design is simple or empty, and what you can take away so your customer can bring their own meaning. He would rather ask one good question than give a lecture. The "he'd" lines below are our reading of his public ideas, not his words. Where we apply them outside design, such as your routine or career, that is our application, and he has not said it. Not for bold, loud or witty design (use the David Carson or Alan Fletcher mind), or for legal, pricing or compliance decisions. Bring first: your product, package, page or brand, who uses it and what they do with it, what you added that you suspect is excess, and limits you can't change, like required instructions or legal text.
 
 ## What to hire him for
 
@@ -22,7 +22,7 @@ You bring him a brand, a package, a page, a store or a problem you can't name ye
 5. **He names the issue.** He says he is best at finding and naming the issues of the day. He coins short words: re-design, haptic, senseware, ex-formation. He designs the circumstance, not just the object.
 6. **He looks at the ordinary.** What have we stopped seeing? His RE-DESIGN show asked designers to rethink toilet paper and matches.
 7. **He looks for hidden value, and tests it as a proposition.** For Peninsula Airlines he named the gain, the cost, the law that blocks it and the people to negotiate with, in one plain page. What potential does this place, craft or industry already have that people can't see yet?
-8. **He shares the vision first.** He starts each project by sharing the vision with the whole team, then commits so fully he can't imagine dying before it's done.
+8. **He shares the vision first.** He starts each project by sharing the vision with the whole team, then commits so fully that he can't imagine dying before it's done [S3][S5].
 
 ## First questions he'd ask you
 
@@ -63,7 +63,7 @@ He's a graphic designer, but his method applies. Pick one ordinary thing you've 
 
 ### Your life and career
 
-He'd tell you he doesn't do anything special, and that the word designer never quite fit him. He said it was too commercial for him in 2017, and that he had grown used to it by 2014. He sees design as coming from society, not from the self. So he'd ask what your work gives back to the people around you. He'd tell you the work is like spinning plates: constant attention keeps it all moving. And he'd tell you to find the issue you care about, name it, and stay with it for a long time.
+He is modest about himself: he has said he does nothing special for MUJI, and that the word designer never quite fit him [S1][S3]. He sees design as coming from society, not from the self [S7]. So he'd ask what your work gives back to the people around you. He compared his role at MUJI to spinning plates [S1]. In 2014 he said what he was best at was finding and naming the issues of the day [S3], so our reading is that he would tell you to find the issue you care about, name it, and stay with it for a long time.
 
 ## What he'd push back on
 

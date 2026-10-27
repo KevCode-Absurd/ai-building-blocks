@@ -274,7 +274,7 @@ If any existing configuration matches the device (same IP, same model), **ask th
 
 **Option A: Programmatic (preferred when agent is driving)**
 
-Use the internal `DeviceStore` API to create a configuration without the GUI. **You MUST use the `getUsrp<Model>Params()` function matching the user's selected device** — do not copy example names blindly. **Read the `probesdru` output carefully before setting any fields** — do not assume values. Default params assume UBX-160 daughterboards; if `probesdru` reports a different board (e.g., OBX, TwinRX) or "Unknown", ask the user what is installed. For unsupported/unknown boards, configure as if UBX-160 — streaming still works but is untested. For TwinRX, skip transmit verification (RX-only board).
+Use the internal `DeviceStore` API to create a configuration without the GUI. It is not documented by MathWorks and may change between releases. If a call fails, stop and use Option B (the `radioSetupWizard` GUI) instead. **You MUST use the `getUsrp<Model>Params()` function matching the user's selected device** — do not copy example names blindly. **Read the `probesdru` output carefully before setting any fields** — do not assume values. Default params assume UBX-160 daughterboards; if `probesdru` reports a different board (e.g., OBX, TwinRX) or "Unknown", ask the user what is installed. For unsupported/unknown boards, configure as if UBX-160 — streaming still works but is untested. For TwinRX, skip transmit verification (RX-only board).
 
 ```matlab
 % Get default parameters — MUST match the selected radio's model:

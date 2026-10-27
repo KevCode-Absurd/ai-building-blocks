@@ -63,7 +63,7 @@ output_shape: |-
     Opening goal | Halfway method check | Closing reflection | Status: not yet observed
 
   HAND-BACK SUMMARY
-    Files | MISSING lines | checks not done | one next step
+    Files | MISSING lines | CHECKS MISSED | one next step
 output_sample:
   input:
     - Your goal and your date

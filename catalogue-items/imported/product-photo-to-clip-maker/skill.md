@@ -3,7 +3,7 @@ name: main-image-video
 description: 静态主图转主图视频。一张商品图 → 3–5 秒可上架的主图短视频。当用户说「主图视频」「图转视频」「让图动起来」「加个视频」时使用。
 ---
 
-> **Read this first (added by AI Blocks).** This file is written in Chinese. Follow the same steps and answer the user in English. The `dlazy` commands, `scripts/gen.mjs` and the `docs/` paths are not included here. They need a paid dLazy account and a way to run commands, so treat them as optional. The free route: write the prompt, then give it and the user's photo to the image tools in ChatGPT or Gemini. Do not claim a picture was made unless an image tool made it. The clip step needs a paid video model API key (fal or Replicate), so run the dry run first. ffmpeg is only for captions or joining clips. The skills it names (product-video-ad, item-repair, material-enhancement, platform-compliance, batch-image) are not in this library; for photo fixes use the Product photo retoucher, and check video length, shape and file size against the store's own current rules.
+> **Read this first (added by AI Blocks).** This file is written in Chinese. Follow the same steps and answer the user in English. The `docs/` example photos are not included. The scripts in `scripts/` need Node, ffmpeg for captions or joining, and a paid video model API key, so treat them as optional. The default route: write the video prompt, then the user gives it and their photo to a video tool they already use (for example Veo in Gemini or Kling; check each tool's price and limits first). Do not claim a clip was made unless a video tool made it. The clip step needs a paid video model API key (fal or Replicate), so run the dry run first. ffmpeg is only for captions or joining clips. The skills it names (product-video-ad, item-repair, material-enhancement, platform-compliance, batch-image) are not in this library; for photo fixes use the Product photo retoucher, and check video length, shape and file size against the store's own current rules.
 
 # main-image-video — 主图视频
 
@@ -19,13 +19,13 @@ description: 静态主图转主图视频。一张商品图 → 3–5 秒可上�
 | 图生视频 | 一张商品图 → 3–5 秒运动镜头 |
 | 运镜控制 | 推、拉、环绕、俯仰、微距扫过 |
 | 材质动态 | 面料飘动、金属反光扫过、液体晃动 |
-| 批量 | 配合 [batch-image](../batch-image/skill.md) 整批出 |
+| 批量 | 配合 Product photo batch maker 整批出 |
 
 | 不能做 | 说明 |
 | --- | --- |
-| 长视频 | 超过 8 秒请用 [product-video-ad](../product-video-ad/skill.md) 分镜串联 |
-| 口播 | 用 [ugc-testimonial](../ugc-testimonial/skill.md) |
-| 改商品 | 视频模型会放大原图的瑕疵，先用 [item-repair](../item-repair/skill.md) 修好 |
+| 长视频 | 超过 8 秒请用多镜头视频广告流程分镜串联（product-video-ad 技能不在本库中） |
+| 口播 | 用真人口播视频的流程（ugc-testimonial 技能不在本库中） |
+| 改商品 | 视频模型会放大原图的瑕疵，先用 Product photo retoucher 修好 |
 
 ---
 
@@ -105,7 +105,7 @@ No cuts, no text overlay, no watermark. Photorealistic.
 3. **单张试跑**。视频比图贵得多，先跑一条 3 秒的看运镜对不对。
 4. **确认后再批量**。
 5. **过一遍平台规格**。视频也有规格要求（时长、比例、体积），
-   目前 [platform-compliance](../platform-compliance/skill.md) 只校验静态图，视频请人工对照平台文档。
+   本库的平台检查只校验静态图，视频请人工对照平台文档。
 
 ---
 
@@ -114,7 +114,7 @@ No cuts, no text overlay, no watermark. Photorealistic.
 | 现象 | 原因 | 怎么办 |
 | --- | --- | --- |
 | 商品在动的过程中变形 | 运动幅度给太大 | 换成 `slow` / `subtle` 系的词，缩短时长 |
-| 画面糊 | 原图分辨率不够 | 先用 [material-enhancement](../material-enhancement/skill.md) 提清晰度 |
+| 画面糊 | 原图分辨率不够 | 先换一张更清晰的原图（material-enhancement 技能不在本库中） |
 | 模特脸在动的时候崩 | 人脸是视频模型的重灾区 | 改用不露脸的景别，或改成商品特写 |
 | 时长对不上 | 多数模型的时长是档位不是连续值 | 按模型支持的档位取，别硬凑 |
 | 报错说没指定模型 | `DLAZY_VIDEO_MODEL` 没设 | 见「先配后端」 |
@@ -124,5 +124,5 @@ No cuts, no text overlay, no watermark. Photorealistic.
 ## Tips
 
 - **3 秒够用**。主图位视频不是广告片，讲清楚一个卖点就行。
-- **别加文字**。主图视频的文字规则和主图一样严，字幕留给 [product-video-ad](../product-video-ad/skill.md)。
+- **别加文字**。主图视频的文字规则和主图一样严，字幕留给多镜头视频广告流程。
 - **首帧就是封面**。用商品最好看的角度做输入图，因为它大概率是静止时显示的那一帧。

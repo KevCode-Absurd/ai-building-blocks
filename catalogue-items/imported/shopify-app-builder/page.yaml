@@ -35,7 +35,10 @@ how_to_use:
   - Paste the skill into the chat, or upload the skill folder.
   - Describe what your app should do, and say if it is public, custom or a sales channel.
   - "Let your AI run the first commands: shopify app init, then shopify app dev. Sign in to your Partner account yourself when asked. Never give your password or API secret to the AI, and use a development store, not your live store."
-  - Check the admin pages and webhook handler on a development store before you go further. The skill is written for Shopify API version 2025-01, so check the current CLI and API version before you start.
+  - Confirm your app type with your AI before it builds anything. The code should match it. A public app and a custom app use different distribution settings.
+  - Check the current Shopify CLI template and API version in Shopify's docs before you start. The skill is written for API version 2025-01 and the Remix template, which may be out of date.
+  - The prisma folder in the project needs its own setup step before the app can save sign-in sessions. Ask your AI to run it and tell you what it did.
+  - Check the admin pages and webhook handler on a development store before you go further.
   - When it works, run shopify app deploy. For a public app, then send it for App Store review.
 output_sample:
   input:

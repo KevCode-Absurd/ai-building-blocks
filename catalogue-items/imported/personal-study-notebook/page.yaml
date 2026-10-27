@@ -29,7 +29,7 @@ how_to_use:
   - Open your AI tool and use one that can read and write files in a folder. Add the skill's instructions to the chat or project.
   - Tell it the subject you want to learn, your goal, your level and how many hours a week you have.
   - Name the folder where your notes should go. Add any books or articles you want it to teach from (optional).
-  - Answer its short questions about how you like things explained. It builds your learner profile and study plan from your answers.
+  - Answer its short questions about how you like things explained. It builds your learner profile and study plan from your answers. One question is whether you want your dashboard and logs as plain Markdown tables or as a web page (HTML). Markdown is the default and needs nothing extra. The web page opens in any browser. The HTML Reader plugin for Obsidian is optional and only needed to view it inside Obsidian.
   - Read each lesson note, then take the quiz. Read the feedback and fix weak spots before moving on.
   - Come back on your review dates. Open the dashboard to see what to study next. Review the notes that are due, then move to the next topic. The progress picture in the dashboard is made by the skill in your own folder as you go, so it is not in the download.
 output_sample:

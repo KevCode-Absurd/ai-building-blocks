@@ -10,7 +10,9 @@ level: intermediate
 inputs:
   - type: question
     required: true
-  - type: source_text
+  - type: spreadsheet
+    required: false
+  - type: document
     required: false
 outputs:
   - type: audit_report

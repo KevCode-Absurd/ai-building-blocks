@@ -60,18 +60,20 @@ date,amount,description,cardholder
 
 **Output:**
 
-| Date       | Amount    | Merchant         | Category              | Department  | Tax Deductible | Notes                         |
+| Date       | Amount    | Merchant         | Category              | Department  | Tax Deductible (first pass) | Notes                         |
 |------------|-----------|------------------|-----------------------|-------------|----------------|-------------------------------|
-| 2024-11-02 | $249.00   | GitHub           | Software & SaaS       | Engineering | Yes (100%)     |                               |
-| 2024-11-03 | $1,450.00 | United Airlines  | Travel & Lodging      | Engineering | Yes (100%)     | Business travel               |
-| 2024-11-03 | $189.50   | Marriott         | Travel & Lodging      | Engineering | Yes (100%)     | Business travel               |
-| 2024-11-05 | $42.67    | Uber             | Travel & Lodging      | Engineering | Yes (100%)     | Ground transport              |
-| 2024-11-08 | $156.00   | Google Ads       | Advertising           | Marketing   | Yes (100%)     |                               |
-| 2024-11-12 | $89.99    | Zoom             | Software & SaaS       | Engineering | Yes (100%)     |                               |
-| 2024-11-14 | $67.32    | DoorDash         | Meals & Entertainment | Operations  | Yes (50%)      | Needs business purpose memo   |
-| 2024-11-18 | $4,200.00 | Dell             | Equipment             | Engineering | Depreciation   | Section 179 eligible          |
-| 2024-11-22 | $350.00   | Coursera         | Training & Education  | Engineering | Yes (100%)     |                               |
-| 2024-11-25 | $23.45    | Staples          | Office Supplies       | Operations  | Yes (100%)     |                               |
+| 2024-11-02 | $249.00   | GitHub           | Software & SaaS       | Engineering | Likely deductible (check) |                               |
+| 2024-11-03 | $1,450.00 | United Airlines  | Travel & Lodging      | Engineering | Likely deductible (check) | Business travel               |
+| 2024-11-03 | $189.50   | Marriott         | Travel & Lodging      | Engineering | Likely deductible (check) | Business travel               |
+| 2024-11-05 | $42.67    | Uber             | Travel & Lodging      | Engineering | Likely deductible (check) | Ground transport              |
+| 2024-11-08 | $156.00   | Google Ads       | Advertising           | Marketing   | Likely deductible (check) |                               |
+| 2024-11-12 | $89.99    | Zoom             | Software & SaaS       | Engineering | Likely deductible (check) |                               |
+| 2024-11-14 | $67.32    | DoorDash         | Meals & Entertainment | Operations  | Likely deductible, 50% limit (check)| Needs business purpose memo   |
+| 2024-11-18 | $4,200.00 | Dell             | Equipment             | Engineering | Possibly depreciable (check) | Possible Section 179; ask your accountant          |
+| 2024-11-22 | $350.00   | Coursera         | Training & Education  | Engineering | Likely deductible (check) |                               |
+| 2024-11-25 | $23.45    | Staples          | Office Supplies       | Operations  | Likely deductible (check) |                               |
+
+The tax column is a first pass using US federal rules, not a ruling. The names, amounts and dates in this example are made up.
 
 **Summary:**
 | Category              | Total     | % of Spend |

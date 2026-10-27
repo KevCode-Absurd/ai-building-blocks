@@ -62,7 +62,7 @@ See [references/roles.md](references/roles.md) when defining a new role or org c
 
 ## Cold Calling 2.0
 
-**Outbound prospecting that replaces traditional cold calling**, which fails on every front: 1-3% connection rate, gatekeepers, brand damage, no scalability.
+**Outbound prospecting that replaces traditional cold calling**, which, in the author's view, fails on every front: low connection rate, gatekeepers, brand damage, no scalability.
 
 ```
 1. Build list → 2. Send mass email → 3. Get referral → 4. Call the referral → 5. Qualify
@@ -70,11 +70,11 @@ See [references/roles.md](references/roles.md) when defining a new role or org c
 
 ### Step 1: Build Target Account List
 
-Define your Ideal Customer Profile (company size, industry, tech stack, geography, pain points), then build the list via LinkedIn Sales Navigator, ZoomInfo/Apollo/Clearbit, or industry directories. Target 200-500 accounts per SDR per quarter.
+Define your Ideal Customer Profile (company size, industry, tech stack, geography, pain points), then build the list via LinkedIn Sales Navigator, ZoomInfo, Apollo or Clearbit (all paid plans), or free industry directories. Target 200-500 accounts per SDR per quarter.
 
 ### Step 2: The Referral Email
 
-**The core innovation: don't email the decision maker — email above them and ask for a referral down.** Senior people forward emails, and referrals get 3-5x higher response because the introduction comes from inside the company. The email asks one thing — "who is the right person?" — under 100 words, no pitch, no attachments, no links, easy to forward. Response rate: 9-15% vs. 1-3% for traditional cold emails. For the verbatim template, subject-line open-rate table, and the full Day 1/3/7/14/30 sequence bodies, open [references/cold-calling-2.md](references/cold-calling-2.md).
+**The core innovation: don't email the decision maker — email above them and ask for a referral down.** Senior people forward emails, and referrals tend to get a higher response because the introduction comes from inside the company (the author's rule of thumb, not tested here). The email asks one thing — "who is the right person?" — under 100 words, no pitch, no attachments, no links, easy to forward. The author claims a response rate of 9-15% vs. 1-3% for traditional cold emails. These are the author's figures, not tested here. Your results will differ. For the verbatim template, subject-line open-rate table, and the full Day 1/3/7/14/30 sequence bodies, open [references/cold-calling-2.md](references/cold-calling-2.md).
 
 ### Step 3: Follow Up
 
@@ -86,7 +86,7 @@ Define your Ideal Customer Profile (company size, industry, tech stack, geograph
 | 14 | Break-up email ("Should I close your file?") |
 | 30 | Re-engage (new trigger event or content) |
 
-The **break-up email** on Day 14 often draws the highest response in the sequence — people respond to losing the opportunity (scarcity).
+The **break-up email** on Day 14 is said by the author to draw the highest response in the sequence — people respond to losing the opportunity (scarcity). Treat this as a rule of thumb and check it on your own list.
 
 ### Step 4: Qualify with ANUM
 
@@ -118,7 +118,7 @@ Opportunities Needed ÷ SDR Conversion = Prospects Needed
 Prospects Needed ÷ Response Rate = Emails Needed
 ```
 
-**Example:** $1M ARR ÷ $20K deals = 50 deals; ÷ 25% win rate = 200 opportunities; at 10% response rate and 10% response-to-qualified conversion = 20,000 emails ≈ 2-3 SDRs (each sends 300-500/month).
+**Example (made-up numbers to show the method; use your own):** $1M ARR ÷ $20K deals = 50 deals; ÷ 25% win rate = 200 opportunities; at 10% response rate and 10% response-to-qualified conversion = 20,000 emails ≈ 2-3 SDRs (each sends 300-500/month).
 
 These benchmarks and the response rates above are the author's rules of thumb. They are not tested here and depend on your market. Use them as a starting guess and replace them with your own numbers as soon as you have them.
 
@@ -207,4 +207,4 @@ For the complete system:
 
 ## About the Author
 
-**Aaron Ross** built the outbound sales process at Salesforce.com that added $100M+ in recurring revenue, and co-founded Predictable Revenue Inc. His book *Predictable Revenue* — known as "The Bible of Outbound Sales" — made Cold Calling 2.0 the standard for B2B outbound prospecting.
+**Aaron Ross** says he built the outbound sales process at Salesforce.com that added $100M+ in recurring revenue (his claim, not checked here), and co-founded Predictable Revenue Inc. His book *Predictable Revenue* — known as "The Bible of Outbound Sales" — made Cold Calling 2.0 the standard for B2B outbound prospecting.

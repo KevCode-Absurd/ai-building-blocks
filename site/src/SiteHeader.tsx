@@ -37,6 +37,9 @@ export default function SiteHeader() {
           <Link to="/tools" aria-current={inTools ? "page" : undefined} data-testid="nav-tools">Tools</Link>
           <Link to="/space" aria-current={current("/space")} data-testid="nav-space">My space</Link>
         </section>
+        <section aria-label="Your AI">
+          <Link to="/api-and-mcp" aria-current={current("/api-and-mcp")} data-testid="nav-api-mcp">Connect your AI</Link>
+        </section>
         <section className="site-menu-account" aria-label="My account">
           <Link to="/account?view=settings" aria-current={current("/account")} className="site-menu-account-link">My Account{problem && <span className="account-alert-dot" aria-label="Saving needs attention" />}</Link>
           <p className="small">{account.state === "signed-in" ? "Signed in" : account.state === "loading" ? "Opening your account…" : "Your account and browser saves"}</p>

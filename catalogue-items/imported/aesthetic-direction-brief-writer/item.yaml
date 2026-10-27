@@ -10,6 +10,10 @@ level: intermediate
 inputs:
   - type: brief
     required: true
+  - type: reference_set
+    required: false
+  - type: brand_brain
+    required: false
 outputs:
   - type: design_direction
 uses: []

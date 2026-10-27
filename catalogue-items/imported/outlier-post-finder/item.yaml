@@ -10,6 +10,8 @@ level: intermediate
 inputs:
   - type: question
     required: true
+  - type: video_link
+    required: false
 outputs:
   - type: reference_set
 uses: []

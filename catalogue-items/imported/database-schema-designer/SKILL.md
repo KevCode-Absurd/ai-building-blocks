@@ -33,7 +33,7 @@ This skill enables an AI agent to design robust, normalized relational database 
 
 ## Usage
 
-Provide a description of your application domain and its data requirements. Include the main entities, their attributes, and how they relate to each other. The agent will produce a normalized schema with full DDL. You can request specific databases (e.g., PostgreSQL vs. MySQL syntax) or ask for schema modifications such as adding audit columns or soft deletes.
+Provide a description of your application domain and its data requirements. Include the main entities, their attributes, and how they relate to each other. The agent will produce a normalized schema with full DDL. You can request specific databases (e.g., PostgreSQL vs. MySQL syntax) or ask for schema modifications such as adding audit columns or soft deletes. If an earlier step gave you a database plan or schema outline, use it as the specification.
 
 ## Examples
 

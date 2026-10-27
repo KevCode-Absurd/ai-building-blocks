@@ -69,9 +69,9 @@ Pause here: Pick the lapse points the audit flagged and export the orders of sub
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Subscription cancellation response planner](https://useaiblocks.com/prompts/cancel-reason-save-planner).
-- The [Subscriber cancellation and retention reviewer](https://useaiblocks.com/skills/subscription-churn-watcher).
 - The [Unboxing insert and gift planner](https://useaiblocks.com/skills/unboxing-insert-and-gift-planner). It takes the plan.
+- The [New customer onboarding sequence writer](https://useaiblocks.com/skills/new-customer-onboarding-sequence-writer). It takes the plan.
+- The [Top-customer outreach planner](https://useaiblocks.com/skills/top-customer-touch-planner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

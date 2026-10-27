@@ -102,9 +102,9 @@ Which mode?
 |-------|----------|---------|
 | `product_name` | ✅ | Portable blender |
 | `platform` | ✅ | Etsy |
-| `brand` | ✅ | BlendJet |
-| `key_features` | ✅ | USB-C, 6 blades, BPA-free |
-| `specs` | ✅ | 380ml, 175W motor |
+| `brand` | ✅ | [YOUR BRAND] |
+| `key_features` | ✅ | [FEATURE 1], [FEATURE 2], [FEATURE 3] (only features the user can prove) |
+| `specs` | ✅ | [SPEC 1], [SPEC 2] (taken from the user's own documents) |
 | `target_audience` | 👍 | Gym-goers, travelers |
 | `use_cases` | 👍 | Smoothies, protein shakes |
 | `competitor_urls` | 👍 | 1-3 URLs to analyze |
@@ -113,6 +113,8 @@ Which mode?
 ### Step 2: Gather Keywords
 
 > **No web tools?** `web_fetch` below means "open the page and read it", and `web_search` means "search the web". If your AI cannot do either (some ChatGPT or Gemini chats), ask the user to open each competitor page and paste its title, bullets and description into the chat. Work from that text.
+
+> **Rules for facts and for reading competitor pages.** Every number, certification, test result and review claim in the listing must come from the user's own documents. If you cannot confirm one, write it as [confirm] and never as fact. Open competitor pages only where the marketplace's terms allow it. If they do not, or your AI cannot browse, ask the user to paste the title, bullets and description by hand. This is not a scraping tool.
 
 **If competitor URLs provided:**
 

@@ -8,10 +8,12 @@ role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
+  - type: document
     required: true
-  - type: source_text
-    required: true
+  - type: financial_statements
+    required: false
+  - type: question
+    required: false
 outputs:
   - type: document
 uses: []

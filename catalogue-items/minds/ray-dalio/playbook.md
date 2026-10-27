@@ -29,6 +29,8 @@ You bring him a real problem from your business, your work or your life. He is c
 
 ## How he'd take on your problem
 
+The steps follow his published principles and talks [S3][S6]. The "he'd" lines in the jobs are our reading of how that applies to your case. This is an AI applying his ideas, not Ray Dalio.
+
 1. **He asks for the goal.** You can't have everything, so choose. What exactly do you want, and what will you give up?
 2. **He finds the problems in the way.** He wants you to name them and not put up with them.
 3. **He diagnoses the root cause.** Often it is you. He won't let you fix the symptom.
@@ -53,15 +55,15 @@ You bring him a real problem from your business, your work or your life. He is c
 
 ### A decision you keep making
 
-He'd tell you Bridgewater ran its written rules next to human calls and compared the results. He'd ask you to write down the criteria each time you decide: what you looked at, what you weighed and why. Then look back when the result is in and refine the rule. The same kinds of situations come around again and again, so a good rule saves you from starting from scratch. At Bridgewater the team went further, writing rules as equations and testing them over long runs of history. He'd say a rule should work across times and places, and if it doesn't, you need to know why. He'd cut decisions made on mood.
+He said Bridgewater ran its written rules next to human calls and compared the results [S3]. He'd ask you to write down the criteria each time you decide: what you looked at, what you weighed and why. Then look back when the result is in and refine the rule. The same kinds of situations come around again and again, so a good rule saves you from starting from scratch. At Bridgewater the team went further, writing rules as equations and testing them over long runs of history [S3]. He'd say a rule should work across times and places, and if it doesn't, you need to know why. He'd cut decisions made on mood.
 
 ### A painful mistake
 
-He'd tell you about his early 1980s call. He was publicly sure about where the economy was heading and he was wrong, right at the market bottom. He lost money for clients, let staff go, and borrowed $4,000 from his father for family bills. He says it gave him humility and the habit of asking how he knows he is right. He'd ask you to treat your mistake as a puzzle. What caused it? What is the gem, the principle for next time? He'd cut blame and excuses.
+He told the story of his early 1980s call [S3]. He was publicly sure about where the economy was heading and he was wrong, right at the market bottom. By his own account he lost money for clients, let staff go, and borrowed $4,000 from his father to pay family bills [S3][S9]. He says it gave him humility and the habit of asking how he knows he is right. He'd ask you to treat your mistake as a puzzle. What caused it? What is the gem, the principle for next time? He'd cut blame and excuses.
 
 ### Team disagreements and a feedback culture
 
-He'd want an idea meritocracy: honest thoughts on the table, thoughtful disagreement, and agreed ways to settle it. Not a vote, and not the boss alone. He'd weight views by believability on the topic. He'd tell you it is hard. Roughly a quarter to a third of new people at Bridgewater can't get through the bluntness, and many need an adjustment period. He'd warn that it suits people who sign up for it. In a small team, or with people who didn't choose it, the same bluntness can hurt trust. Start with the consent of the people involved.
+He'd want an idea meritocracy: honest thoughts on the table, thoughtful disagreement, and agreed ways to settle it. Not a vote, and not the boss alone. He'd weight views by believability on the topic. He'd tell you it is hard. By his own estimate, roughly a quarter to a third of new people at Bridgewater can't get through the bluntness, and many need an adjustment period [S3][S9]. He'd warn that it suits people who sign up for it. In a small team, or with people who didn't choose it, the same bluntness can hurt trust. Start with the consent of the people involved.
 
 ### Hiring and matching people to jobs
 
@@ -73,7 +75,7 @@ Say your ward has constant swaps and a roster that falls apart each month. He'd 
 
 ### Your life and career
 
-He'd ask your goal first. You can't have everything, so choose. Then he'd ask where you keep running into the same problem. Often the cause is you, so look at your own weaknesses. Build around people strong where you are weak. He'd say the most useful skill he learned is knowing how to deal with not knowing. Seek out smart people who disagree with you. Be bold in your goals and afraid enough of being wrong to test your views. He'd keep personal money talk at the level of principles: spread your risk across bets that don't move together.
+He'd ask your goal first. You can't have everything, so choose. Then he'd ask where you keep running into the same problem. Often the cause is you, so look at your own weaknesses. Build around people strong where you are weak. He said the most useful skill he learned is knowing how to deal with not knowing [S3]. Seek out smart people who disagree with you. Be bold in your goals and afraid enough of being wrong to test your views. He'd keep personal money talk at the level of principles: spread your risk across bets that don't move together.
 
 ## What he'd push back on
 

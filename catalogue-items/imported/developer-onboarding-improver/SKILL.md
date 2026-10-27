@@ -492,7 +492,7 @@ Perform this audit quarterly (or after any onboarding changes):
 
 ## Related Skills
 
-These skills are named by the original author and are not all in this library. If one is missing, do the step in plain text or tell the person it is a next step they can ask for.
+These skills are named by the original author. None of the five is in this library yet. In AI Blocks, use the Developer quickstart writer for quickstart documentation. For the rest, do the step in plain text or tell the person it is a next step they can ask for. Never say you ran a skill you do not have.
 
 - **docs-as-marketing**: Quickstart documentation
 - **sdk-dx**: SDK that reduces onboarding complexity

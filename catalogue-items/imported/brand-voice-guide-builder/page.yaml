@@ -10,6 +10,8 @@ explain: |
   Turn the way your company already talks into a voice guide anyone can follow. The raw material is your own documents and call recordings, so the guide sounds like you, not like a template.
 
   You supply brand PDFs, decks, notes or sales call transcripts. The skill sorts the sources, pulls out repeated voice traits, preferred terms, tone by situation and phrases that work or backfire. Each finding gets a confidence score, so you can see what is solid and what is a guess. It ends with a list of open questions for you to settle. If a discovery report from an earlier step exists, it starts there.
+
+  Licence: MIT (see LICENSE). This is a Claude plugin skill written by Tribe AI and shared by Anthropic. Its helper agents (document analysis, conversation analysis, quality check) and its slash commands are not included in this copy.
 when:
   - You have sales calls and brand decks but no written voice rules.
   - New writers keep producing copy that does not sound like the company.
@@ -36,8 +38,10 @@ how_to_use:
   - The skill names helper steps (document analysis, conversation analysis, a quality check) and a /brand-voice:discover-brand command. They are not in this item. In ChatGPT or Gemini, ask your AI to do the same steps one after another in the chat.
   - Paste in a few lines on how you want your brand to sound (optional).
   - Read the guide. It has an executive summary, a We Are / We Are Not list, personality, a messaging framework, a tone-by-situation table and a terminology list. Check the confidence scores first, then answer each open question or accept the suggested answer.
-  - Saving to a file needs a working folder. Without one, the guide stays in the chat, so copy it out.
+  - Saving to a file needs a working folder (the skill saves under a .claude folder there). Without one, the guide stays in the chat, so copy it out.
+  - "Next: paste the finished guide into your AI as a standing brief before you write copy. The skill's own enforce-voice command is not included. The Brand voice rewriter does the same job."
   - Gong, Granola and Notion are optional. They need your own accounts. If you do not have them, export or paste your transcripts as text files.
+next: [brand-voice-rewriter, brand-voice-rules-writer]
 output_sample:
   input:
     - Your brand documents, such as PDFs, decks or notes

@@ -9,7 +9,7 @@ subhead: Paste the weekly spend and return of an ad that is fading, its script, 
 explain: |
   A winning ad fades. The usual response is to make a whole new ad, which costs more and may not work. Often the body of the ad still works, and only the first few seconds have gone stale.
 
-  This prompt reads the weekly numbers, names where the ad is in its life, and calls the cause: stale creative or an audience that is too small. It sets the pace from your stock and cash so you do not sell faster than you can ship. Then it keeps the body and writes new openings, each changing one thing: the angle, the offer, who says it, or the format. The figures it cites come from one agency's reports and are not promises.
+  This prompt reads the weekly numbers, names where the ad is in its life, and calls the cause: stale creative or an audience that is too small. It sets the pace from your stock and cash so you do not sell faster than you can ship. Then it keeps the body and writes new openings, each changing one thing: the angle, the offer, who says it, or the format.
 when:
   - Your best ad is slipping and you do not want to start over.
   - You have stock to sell and want to keep a winner running.

@@ -43,7 +43,7 @@ not_for:
   - You need a ruling on customs, tax, contracts or product certification. Ask a customs broker or a lawyer.
 you_give:
   - What you buy, with the specification and your yearly volume
-  - Your current suppliers, spend, and their late-delivery and defect record (optional)
+  - Your current suppliers with 12 months of spend, late orders and rejected units, and the part specification (optional, but the diagnosis and risk register stay general without them)
   - Your limits on cost, quality standard and lead time
   - Where you buy now, such as China only or other countries too
   - Quotes or factory answers you want weighed against each other (optional)
@@ -60,7 +60,8 @@ how_to_use:
   - Write a short brief. Cover what you buy, your volume, your current suppliers and what worries you most. Paste a spreadsheet of suppliers and spend if you have one.
   - Type "Make a sourcing plan", "Compare total cost for these options" or "Write this period's supply chain report", and paste the numbers.
   - Check the risk register first. Then check each sum against your own sheet. In a plain chat the AI does the arithmetic by hand and cannot run code.
-  - Verify every supplier you pick through a business record check, a sample order and a factory audit. The AI contacts no one and signs nothing.
+  - Verify every supplier you pick through a business record check, a sample order and a factory audit. The AI contacts no one and signs nothing, and it names no real supplier.
+  - Next, turn the plan into factory messages with the Supplier quote request writer, then compare the answers with the Supplier quote comparer.
 how_it_works:
   - title: Diagnose the position
     text: It reviews your suppliers, spend, stock and weak points, and marks anything it needs but was not given.

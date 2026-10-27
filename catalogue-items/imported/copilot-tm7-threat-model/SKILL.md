@@ -1,6 +1,6 @@
 ---
 name: tm7-threat-model
-description: 'Creates valid Microsoft Threat Modeling Tool (.tm7) files compatible with the Microsoft Threat Modeling Tool v7.3+. Use this skill whenever asked to create, generate, or modify a .tm7 threat model file, or when performing STRIDE threat modeling that should output a .tm7 file that opens cleanly in the Microsoft Threat Modeling Tool.'
+description: 'Creates Microsoft Threat Modeling Tool (.tm7) files built to the structure that the Microsoft Threat Modeling Tool v7.3+ expects. The files are generated from the bundled example structure and have not been tested by us in every tool version. Use this skill whenever asked to create, generate, or modify a .tm7 threat model file, or when performing STRIDE threat modeling that should output a .tm7 file.'
 ---
 
 # Microsoft Threat Modeling Tool (.tm7) Generator
@@ -304,7 +304,7 @@ Use the standard STRIDE categories for `UserThreatCategory`: **S**poofing, **T**
 
 Always use [`assets/example-minimal.tm7`](./assets/example-minimal.tm7) in this skill's
 directory as the structural reference. It is a fully synthetic, sanitized export (no personal or
-project data) that opens cleanly in the tool: two stencils connected by one data flow, with one
+project data) that the original author says opens in the tool (we have not checked this): two stencils connected by one data flow, with one
 STRIDE threat whose every reference resolves. Adapt the stencil types, names, properties,
 coordinates, data flows, and threats to the user's architecture, but **never** change the
 serialization format or namespace structure, and only use stencil `TypeId` values that already

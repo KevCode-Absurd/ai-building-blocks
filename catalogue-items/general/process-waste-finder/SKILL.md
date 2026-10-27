@@ -58,8 +58,8 @@ The step table with times. The time line total and work share. Value or waste wi
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Waste and by-product finder](https://useaiblocks.com/skills/waste-and-by-product-finder). It takes the audit report and plan.
-- The [Step cost tracker](https://useaiblocks.com/skills/step-cost-tracker).
-- The [Values-based weekly planner](https://useaiblocks.com/skills/values-to-week-planner). It takes the plan.
+- The [Plan failure reviewer](https://useaiblocks.com/skills/failure-first-plan-check). It takes the plan and audit report.
+- The [Market category opportunity finder](https://useaiblocks.com/skills/first-in-category-finder). It takes the audit report.
 - **Decide what to do** with the [Root cause finder](https://useaiblocks.com/skills/root-cause-finder). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

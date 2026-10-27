@@ -10,6 +10,8 @@ explain: |
   A short list of skills worth adding to your project, picked from how you really work rather than a generic wish list. Updating an existing skill comes before inventing a new one.
 
   The skill reads your project guidance files, then checks your AI's memory notes and past session summaries for jobs you repeat. It scans the skills you already have so it does not suggest duplicates. For each recommendation it gives the evidence, such as the repeated task and where it showed up, and says whether to update or add. Past sessions are read in order, starting with summaries and only falling back to raw logs when needed.
+
+  Licence: this copy comes from the sickn33 collection under CC BY 4.0 (LICENSE-CONTENT). The skill file's own header names Dimillian/Skills as its source, under MIT. Both are open licences, so you may use and share it with credit.
 when:
   - You suspect you keep doing the same task by hand that a skill could do.
   - You have skills already but are not sure which are worth improving.
@@ -28,7 +30,8 @@ you_get:
   - Evidence for each pick
   - Notes on existing skills that nearly fit
 how_to_use:
-  - Open your AI tool in the project folder, so it can read your files. This works best with Codex or a similar coding assistant.
+  - Gather these first. The path to your project folder, a list of the skills you already have, and any memory notes or past session summaries you can paste.
+  - Open your AI tool in the project folder, so it can read your files. This works best with Codex or a similar coding assistant. If you do not use Codex, paste your session summaries into the chat and skip the ~/.codex steps.
   - Paste the skill text into the chat, or add the skill folder to your project.
   - "Ask: Audit this project and tell me which skills to add or update."
   - Add your memory notes and past session summaries if you have them. The skill looks for them in the ~/.codex folder, which is where Codex keeps them. Other assistants do not use that folder, so paste your summaries instead. Those notes can hold private details, so check them and remove anything sensitive first.

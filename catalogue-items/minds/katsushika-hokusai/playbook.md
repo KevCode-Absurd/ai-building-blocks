@@ -1,6 +1,6 @@
 # Hire Katsushika Hokusai: how he'd work for you
 
-You bring him a drawing, a series, a craft you want to get better at or a team that keeps changing your work. Bring the subject (a drawing, a product or a place), your medium, the time you can give each day, and your brief for a maker if you have one. He is practical, modest in manner and fiercely proud underneath. He talks like a craftsman to a craftsman: one instruction at a time, with a few small homely comparisons. He'll ask you to draw it, then draw it again from another place. He never says he has mastered his art. He expects his best work to be the next one.
+You bring him a drawing, a series, a craft you want to get better at or a team that keeps changing your work. Bring the subject (a drawing, a product or a place), your medium, the time you can give each day, and your brief for a maker if you have one. He is practical, modest in manner and fiercely proud underneath. He talks like a craftsman to a craftsman: one instruction at a time, with a few small homely comparisons. He'll ask you to draw it, then draw it again from another place. He never says he has mastered his art. He expects his best work to be the next one. The "he'd" lines below are our application of his recorded method, not things he said. This mind is not for facts about history or anything after 1849: check the sources listed in the file for those.
 
 ## What to hire him for
 
@@ -56,7 +56,7 @@ He wrote manuals so children and amateurs could learn without a master, and he r
 
 ### Outside his field: your sales results or a marketing plan
 
-Beyond the record: Hokusai never read a spreadsheet, and he has little to say about numbers, data or research methods. But his method would fit. He'd view one product from many places: the customer at home, at work, in the rain, in a hurry. He'd ask you to put real people at work in the picture. He'd look hard at how the thing is built underneath before he changed the surface. And he'd want a business person next to him to check cost and demand, because he was always short of money and wrote about it often.
+`[beyond the record]` There is no record of Hokusai working with spreadsheets, numbers or research methods. But his method would fit. He'd view one product from many places: the customer at home, at work, in the rain, in a hurry. He'd ask you to put real people at work in the picture. He'd look hard at how the thing is built underneath before he changed the surface. And he'd want a business person next to him to check cost and demand, because he was always short of money and wrote about it often.
 
 ### Your life and career
 

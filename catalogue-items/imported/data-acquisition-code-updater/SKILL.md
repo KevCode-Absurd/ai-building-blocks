@@ -13,7 +13,7 @@ description: >
   ScansRequiredFcn, daq.createSession, addAnalogInputChannel, startBackground,
   queueOutputData, DataAvailable, evt.Data, evt.TimeStamps, wait(d), preload,
   discouraged, legacy, modernize, R2020a.
-license: https://www.mathworks.com/content/dam/mathworks/license/pmrl/license.md
+license: BSD-2-Clause plus MathWorks products-only clause (see LICENSE.md in this folder)
 metadata:
   author: MathWorks
   version: "1.0"
@@ -60,7 +60,7 @@ When porting a session-based script or composing a new multi-feature DAQ script,
 
 8. **Run `verifyDataAcquisition` before live execution.** Script: [`scripts/verifyDataAcquisition.m`](scripts/verifyDataAcquisition.m). Catches the four highest-frequency silent gaps (missing `ErrorOccurredFcn`, `evt.Data` in callback source, `wait(d)` token, `UserData.X = UserData.X + ...` field mutation) by inspecting the live object and grepping the source file. Run via `mcp__matlab__run_matlab_file` if available, or copy into the user's project.
 
-9. **Live verification.** Run a short version (e.g. 1–2 s instead of the user's full duration). Check that the script reaches `start` cleanly, that the callback fires at least once, and that no errors print from `ErrorOccurredFcn`. **Use `mcp__matlab__run_matlab_file` against a saved `.m` file**, not `mcp__matlab__evaluate_matlab_code` — the eval-string buffer runs in script mode and rejects local/nested function definitions, which Pattern 5 and most callback bodies require.
+9. **Live verification.** Before any live run, tell the user to check what the script writes to. Analog and digital outputs can drive connected equipment, so they should check wiring and voltage limits and use a safe load or disconnected equipment first. Run a short version (e.g. 1–2 s instead of the user's full duration). Check that the script reaches `start` cleanly, that the callback fires at least once, and that no errors print from `ErrorOccurredFcn`. **Use `mcp__matlab__run_matlab_file` against a saved `.m` file**, not `mcp__matlab__evaluate_matlab_code` — the eval-string buffer runs in script mode and rejects local/nested function definitions, which Pattern 5 and most callback bodies require.
 
 ## Key Functions
 

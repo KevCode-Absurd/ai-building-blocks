@@ -74,9 +74,9 @@ Pause here: Answer its questions about why the code is shaped this way. Fifteen 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Engineering documentation writer](https://useaiblocks.com/skills/agency-engineering-technical-writer).
-- The [Developer documentation reviewer](https://useaiblocks.com/skills/monthly-developer-docs-keeper). It takes the document.
-- The [Documentation system planner](https://useaiblocks.com/skills/documentation-system-planner).
+- The [Developer docs writer](https://useaiblocks.com/skills/developer-docs-writer). It takes the document.
+- The [Documentation system planner](https://useaiblocks.com/skills/documentation-system-planner). It takes the document.
+- The [SOP and runbook checker](https://useaiblocks.com/skills/sop-and-runbook-checker). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

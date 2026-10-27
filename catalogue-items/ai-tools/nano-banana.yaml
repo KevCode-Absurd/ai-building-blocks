@@ -22,9 +22,10 @@ best_for:
 not_for:
   - Long runs of images when you need a fixed monthly allowance.
   - Exact brand colours and fonts, which you still need to check by eye.
+  - "Paid ads before you read Google's terms. Check what the terms say about using generated images in ads and on your own plan."
 pricing:
   model: freemium
-  from: Check the maker's site
+  from: "Free with a Google account; paid plan prices not confirmed (see gemini.google/subscriptions)"
   note: Free with a Google account, on a shared allowance with no published image count. Google AI Plus, Pro and Ultra raise the limits. Google lists prices in your local currency.
 works_with:
   - gemini
@@ -52,7 +53,7 @@ first_result:
   - "To make a set, upload one reference picture and describe each new scene."
   - "Compare each result to the original. Check the product, the colours and any text."
   - "Ask for one change at a time."
-  - "You end with image files you can download."
+  - "You end with one image per request, which you can download. Download format and resolution options were not verified, so check them in the app."
   - "Next: plan the set with the Single image ad planner, or use the Accurate product image ad maker when packaging must be exact."
 needs:
   - "A Google account."

@@ -10,6 +10,8 @@ explain: |
   A lesson series that teaches learners to read a history source for how it says things, not only what it says. Students often summarise a document and stop. Here they learn to treat word choice, tone and claims as clues to the writer's view.
 
   The plan lays out three levels: a learner who just pulls out facts, one who spots emotive words but does not connect them to the author, and one who ties specific language to the writer's position and purpose. It then gives a modelled think-aloud, a shared practice task and an independent task. It adds prompts for analysing language, typical mistakes, and marking indicators. It also explains how history reading differs from literary reading.
+
+  Credit: Gareth Manning, education-agent-skills. The skill file also names Sean Hu as contributor. Licence: CC BY-SA 4.0. We renamed it and rewrote the page text. The prompt itself is unchanged.
 when:
   - Students summarise sources without commenting on the language.
   - You want learners to notice loaded words and what they reveal.
@@ -25,6 +27,7 @@ you_give:
   - What students do now when they read sources
   - Documents you plan to use (optional)
   - Prior close reading teaching (optional)
+  - Your curriculum framework (optional). If you give none, the skill uses its own default, called DIG in the skill file.
 you_get:
   - Three levels of close reading with signs of each
   - A modelled, shared and independent teaching sequence
@@ -36,7 +39,7 @@ how_to_use:
   - Add the documents you plan to use, or describe them (optional).
   - Read the three levels first. Check they match what you see in your class.
   - "Use the teaching sequence in order: model it, practise together, then set the independent task."
-  - Mark student work against the assessment indicators.
+  - Mark student work against the assessment indicators. Use them to decide which level each student has reached before you pick the next lesson, such as the think-aloud or quiz items.
 output_sample:
   input:
     - Your history topic, period or question

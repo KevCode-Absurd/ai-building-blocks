@@ -9,6 +9,10 @@ subhead: "Before you ship a product, share code or send a technical file abroad,
 explain: |
   Before you ship a product, share code or send a technical file abroad, you need to know if US export rules apply. This skill walks you to an answer: the product's export class, whether you need a licence, and which exceptions might cover you.
   Then it searches the Commerce Control List for a matching code, or lands on EAR99 if none fits. Next it checks the destination against the country chart and screens the buyer against restricted party lists. It tests the available licence exceptions one by one and flags rules such as deemed exports and the foreign direct product rule. It is guidance, not legal advice, so confirm with counsel.
+
+  Limits: the dated 2026 rule notes in the skill file (the drone rule, a settlement and the AI-chip framework) were not re-checked when we imported it. Verify each against the Federal Register and the BIS website before you use it. An export mistake can bring serious penalties.
+
+  Licence: MIT, as the LICENSE file in this item says. Credit goes to the original author.
 when:
   - You plan to sell hardware, software or encryption products to a buyer outside the US.
   - A foreign engineer joins your team and will see controlled technology.
@@ -19,9 +23,12 @@ not_for:
   - "You need a binding ruling on your product's class: ask BIS for a formal classification (CCATS) or advisory opinion. This gives guidance only."
   - "You need legal advice on a penalty, a past breach or a self-disclosure: talk to an export control lawyer."
 you_give:
-  - A description of the product, software or technology. Gather any ECCN you already have, and the product spec sheet.
-  - The destination country and the buyer's full name and address
-  - How the buyer will use it
+  - A description of the product, software or technology, with its technical specs
+  - Any ECCN you already have
+  - The destination country
+  - The buyer's full name and address, and any intermediate parties such as a distributor or freight forwarder
+  - How the buyer will use it (the end use)
+  - Gather these before you start
   - Any earlier classification (optional)
 you_get:
   - A step by step classification result
@@ -33,9 +40,10 @@ how_to_use:
   - Describe your product, the destination country, the buyer and how they will use it.
   - Add any earlier export class you were given (optional).
   - Read the jurisdiction and export class first. Check they match your product before you trust the rest.
-  - Check the buyer against the official Consolidated Screening List yourself. Web access helps your AI do this, but confirm it.
+  - Check the buyer and every intermediate party against the official Consolidated Screening List yourself, before you ship anything. Web access helps your AI do this, but confirm it.
   - The skill includes notes on 2026 rule changes. Check each one against the Federal Register and the BIS website before you rely on it.
   - Take the result to your export counsel before you ship. This is guidance, not legal advice.
+  - The report has this shape, in order: jurisdiction, ECCN or EAR99, country chart result, exceptions with conditions, buyer and end-use screening, special rules, and next steps.
 output_sample:
   input:
     - A description of your product, software or technology

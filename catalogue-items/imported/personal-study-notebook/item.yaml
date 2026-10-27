@@ -8,9 +8,9 @@ role: make
 job: ops
 level: beginner
 inputs:
-  - type: source_text
+  - type: question
     required: true
-  - type: brief
+  - type: source_text
     required: false
 outputs:
   - type: document

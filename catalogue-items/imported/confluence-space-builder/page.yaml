@@ -32,6 +32,7 @@ you_get:
 how_to_use:
   - Make an empty space in Confluence first. Your AI cannot create the space itself.
   - Paste the skill into your AI chat. Turn on the Atlassian connector if you want pages created for you.
+  - The two Python scripts in the skill folder (space_structure_generator.py and content_audit_analyzer.py) are optional and need Python 3 on your computer. The first reads a JSON file with name, size, type (engineering, product, marketing or project) and projects. The second reads a JSON list of pages with title, last_modified, view_count, author, labels and word_count. Without Python, your AI plans the tree and reviews the page list by hand.
   - Describe what your team documents. Add your team and group names, and any pages you want to reorganise (optional).
   - Read the page tree plan your AI shows you. Ask for changes, then say yes before it creates any page.
   - Set the permissions in your space settings in Confluence. Your AI cannot do this step.

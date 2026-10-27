@@ -2,10 +2,10 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-gtm-enterprise-onboarding
 name: Enterprise customer onboarding planner
-summary: Plan your enterprise customer onboarding from signed contract to first value. Get stages, owners and checks that stop Week 4 ghosting and Week 12 drop-off.
+summary: Plan your enterprise customer onboarding from signed contract to first value. Get stages, owners and checks for the Week 4 and Week 12 risk points.
 job: plan-strategy
 headline: Enterprise customer onboarding planner
-subhead: "Give your AI the signed customer and their success goals. It builds an onboarding plan with stages, owners and checks. It also flags the two points where enterprise customers often drift away: Week 4 and Week 12."
+subhead: "Give your AI the signed customer and their success goals. It builds an onboarding plan with stages, owners and checks. It also flags two points where, in the author's experience, enterprise customers often drift away: Week 4 and Week 12. These are one author's patterns, not measured data."
 not_for:
   - "Your customer is self-serve or has a single seat: use a simple welcome email and a short setup guide, not a full plan."
   - "You want to grow through free trials and product-led sign-ups: use Self serve product growth planner."
@@ -36,7 +36,7 @@ output_sample:
     - name: Risk checks
       contains: Questions that show if onboarding is at risk and if adoption is holding after go-live.
     - name: Common mistakes and quick reference
-      contains: A short list of traps to avoid and a one-page summary to keep nearby.
+      contains: A short list of traps to avoid and a one-page summary to keep nearby. The whole result runs about two to four pages.
 when:
   - A big customer has just signed and you need a plan for the first 90 days.
   - A customer went live but few people use the product.

@@ -103,4 +103,4 @@ Invoke this skill when you want to:
 - Get a prioritized remediation plan with concrete next steps
 - Health-check a workflow after significant changes
 
-Provide the workflow description, prompt text, tool list, or agent configuration as context. The more detail you provide, the more precise the findings. If the user did not share something a dimension needs (for example, no tool list or settings), mark that dimension "not assessed" and say what is missing. Do not score it from guesses.
+Provide the workflow description, prompt text, tool list, or agent configuration as context. If you have test cases or checks from an earlier step, add them and use them as evidence for each score. The more detail you provide, the more precise the findings. If the user did not share something a dimension needs (for example, no tool list or settings), mark that dimension "not assessed" and say what is missing. Do not score it from guesses.

@@ -10,6 +10,8 @@ explain: |
   A clear folder layout for your React or React Native app, plus simple rules for what may import what. Any contributor can then answer where code lives without asking anyone.
 
   It organises the app into feature modules. Each module owns its own pages, components, hooks, state, types and one public entry point. Pages are folders, not single files, holding the code only they use. The skill also sorts state into server state and UI state, so you know where each belongs. The structure fits Next.js, Vite, Remix and Expo with any state or styling library. Point it at an existing app and it shows how to move toward this layout.
+
+  This is a copied community skill by stareezy-1. It is shared in the sickn33 collection under CC BY 4.0 (LICENSE-CONTENT), and the skill file's own header says MIT. Both let you reuse it. The "risk: critical" tag in the skill file is a label from the source, not a warning about this use.
 when:
   - Your React project has become a tangle of folders.
   - New team members keep asking where code should go.
@@ -34,7 +36,7 @@ how_to_use:
   - Say which framework you use, and add your pain points if you have any.
   - Read the folder layout and import rules first. Check them against your real app.
   - Ask for the migration steps. Move one feature at a time, not the whole app.
-  - Try the import rules as a review checklist on one feature first. Once they hold, roll them out to the rest. Pair the layout with a design system file for how the screens should look.
+  - Try the import rules as a review checklist on one feature first. Once they hold, roll them out to the rest. Pair the layout with a file of design rules for how the screens should look, such as the output of the Design rules file writer.
 output_sample:
   input:
     - Your app folder or a short description of it
@@ -59,4 +61,4 @@ output_sample:
       contains: A list of checks to run in code review so the structure holds.
     - name: Migration steps
       contains: Steps to move an existing app toward this layout.
-next: [code-refactor-planner]
+next: [code-refactor-planner, design-rules-file-writer]

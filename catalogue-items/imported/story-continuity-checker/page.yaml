@@ -10,6 +10,8 @@ explain: |
   A list of continuity slips in your novel or long story: names that drift, ages that do not add up, objects from the wrong era and clues that are planted but never paid off. Re-reading will not catch these, because the memory that wrote the draft is the same memory that reads it.
 
   The fix is a story bible, which is the facts of your story as a list, plus a mechanical check of the prose against it. For each hit, the skill asks one question: is the manuscript wrong, or is the bible out of date? It does not write, outline or polish. It checks and reports. It works on long manuscripts and comes with a small script.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The skill file itself says Apache-2.0. Credit goes to jiawood2006 and sickn33.
 when:
   - Your manuscript passes about 10 chapters or 30,000 characters and a re-read no longer catches slips.
   - Your character is 18 in chapter one and 23 in chapter twelve with no time passing.
@@ -33,9 +35,10 @@ you_get:
   - "A verdict on each: fix the text or the notes"
 how_to_use:
   - Put each chapter in one folder as its own .md or .txt file, with the chapter number in the file name.
-  - Open an AI that can run code and read files. Upload the skill and your folder. The checker is the Python block in references/sbc-checker.md. It uses only the standard library, and your AI saves it as sbc.py beside your story bible.
+  - Open an AI that can run code and read files. Upload the whole skill folder (including references/sbc-checker.md) and your chapters. The checker is the Python block in references/sbc-checker.md. It uses only the standard library, and your AI copies it into a file named sbc.py beside your story bible.
   - Ask it to build a story bible from your existing chapters, or upload yours. Check the names, birth years and clues it lists.
   - Ask it to run the check and group each hit as a prose fix, a bible update or a retcon.
+  - "If your AI cannot run code or read files, copy the Python block from references/sbc-checker.md into sbc.py yourself and run it on your computer with Python 3.8 or newer. Or skip the script and ask your AI to check each chapter against your story bible by reading."
   - Fix the prose, update the bible where you changed a fact on purpose, then ask it to run the check again.
 output_sample:
   input:

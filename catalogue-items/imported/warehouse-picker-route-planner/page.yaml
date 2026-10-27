@@ -40,6 +40,7 @@ how_to_use:
   - Paste a pick list as a table with order or batch ID, SKU, aisle and position in the aisle.
   - Say where pickers start and finish, and how they walk today.
   - Read the layout check first. If it reports a dead end, fix the layout or add the missing access before you trust any route.
+  - The code in the skill is a sketch, not a tested tool. Check each route by hand on a small layout before you trust it, and treat every distance and every efficiency figure as an estimate or a rule of thumb.
   - Walk one route on the floor and time it. Compare it with the estimate before you change the whole floor.
 how_it_works:
   - title: Collect the layout

@@ -11,6 +11,7 @@ inputs:
   - {type: competitor_set, required: false}
   - {type: persona, required: false}
   - {type: plan, required: false}
+  - {type: idea, required: true}
 outputs:
   - {type: audit_report}
   - {type: shortlist}

@@ -11,6 +11,7 @@ inputs:
   - {type: voc_reviews, required: true}
 outputs:
   - {type: shortlist}
+  - {type: keyword_list, required: true}
 uses: []
 origin: own
 version: 1.0.0

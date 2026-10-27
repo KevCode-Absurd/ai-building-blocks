@@ -5,7 +5,7 @@ name: Headless store builder
 summary: Build a custom Shopify storefront with Hydrogen. Get the project, home, product and collection pages, product queries and Oxygen deploy steps.
 job: build-websites
 headline: Headless store builder
-subhead: Give it your Shopify store domain, API token, design idea and page list. It sets up a Hydrogen project, a custom React storefront that talks to your Shopify store behind the scenes. You get the project, pages for home, product and collection, the product queries and deploy steps for Oxygen.
+subhead: Give it your Shopify store domain, design idea and page list. Your Storefront API token goes only in your .env file. It sets up a Hydrogen project, a custom React storefront that talks to your Shopify store behind the scenes. You get the project, pages for home, product and collection, the product queries and deploy steps for Oxygen.
 explain: |
   A custom online storefront that loads fast and looks exactly how you want, connected to your Shopify store behind the scenes. Instead of using a theme, you build the front end yourself with React and Shopify's Hydrogen framework, then host it free on Shopify's Oxygen.
 
@@ -21,7 +21,7 @@ not_for:
   - "You only want to change a few words or colors: edit your current theme in Shopify admin."
 you_give:
   - Your Shopify store domain
-  - Your Storefront API token
+  - Your Storefront API token (keep it in your .env file, never in the chat)
   - Your design idea and page list
   - Whether you use JavaScript or TypeScript
 you_get:
@@ -33,13 +33,13 @@ how_to_use:
   - Before you start, get your Storefront API token. In Shopify admin, install the Headless channel and create a storefront. Copy the token from there.
   - Keep the token in your .env file. Never paste it into a chat.
   - Paste this skill into Claude, ChatGPT or Gemini. Add your store domain, design idea, page list and JavaScript or TypeScript.
-  - Run the commands your AI gives you. This needs Node.js 18 or newer, so use an AI that can run code or run them yourself.
+  - Read each command before you run it, and run it only inside your project folder. This needs Node.js 18 or newer, so use an AI that can run code or run them yourself.
   - Check that the home, product and collection pages load. If a code sample fails, ask your AI to match it to the router package your project uses.
   - Run the deploy steps to put your storefront on Oxygen.
 output_sample:
   input:
     - Your Shopify store domain
-    - Your Storefront API token
+    - Your Storefront API token (kept in .env, not pasted)
     - Your design idea and page list
     - JavaScript or TypeScript (your pick)
   prerequisites:

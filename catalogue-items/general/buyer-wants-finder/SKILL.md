@@ -69,6 +69,7 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Ad evidence planner](https://useaiblocks.com/skills/four-kind-proof-finder). It takes the brief.
 - The [Ad headline writer](https://useaiblocks.com/skills/ad-headline-writer). It takes the brief.
 - The [Selling points writer](https://useaiblocks.com/skills/selling-points-writer). It takes the brief.
+- **Write the landing page** with the [Evidence-based sales copy writer](https://useaiblocks.com/skills/proof-backed-sales-copy-writer). It takes the brief.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

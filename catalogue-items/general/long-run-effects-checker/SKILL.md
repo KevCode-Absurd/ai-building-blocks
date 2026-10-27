@@ -56,8 +56,8 @@ The tactics with both effects. The discount sums. The fad or trend calls and wha
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Competitive strategy planner](https://useaiblocks.com/skills/one-bold-move-picker). It takes the audit report.
-- The [Marketing plan order checker](https://useaiblocks.com/skills/marketing-plan-order-checker).
 - The [Competitive business model planner](https://useaiblocks.com/skills/counter-positioning-finder). It takes the audit report.
+- The [Competitive advantage development planner](https://useaiblocks.com/skills/power-stage-build-planner). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

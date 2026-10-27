@@ -241,13 +241,15 @@ if (disallows.some((d) => "/example-app/".startsWith(d) || d.startsWith("/exampl
 const files = new Set();
 const listFiles = (dir, rel) => { for (const e of fs.readdirSync(dir, { withFileTypes: true })) { const r = `${rel}/${e.name}`; if (e.isDirectory()) { files.add(r); listFiles(path.join(dir, e.name), r); } else files.add(r); } };
 for (const e of fs.readdirSync(DIST, { withFileTypes: true })) { if (e.isDirectory()) { files.add(`/${e.name}`); if (!["data", "metadata", "assets", "fonts", "example-app-shots", "mini-tools"].includes(e.name)) listFiles(path.join(DIST, e.name), `/${e.name}`); } else files.add(`/${e.name}`); }
-const APP_ROUTES = new Set(["/s", "/community"]); // and /api/..., which the worker answers
+const APP_ROUTES = new Set(["/s", "/community", "/mcp", "/mcp/server-card", "/.well-known/ai-catalog.json"]); // and /api/..., which the worker answers
+// Markdown and JSON twins of a page (/<kind>/<slug>.md|.json): the worker builds them from the page data (src/server/twins.ts).
+const twinOf = p => { const m = p.match(/^(\/[a-z-]+\/[^/]+)\.(?:md|json)$/); return m && byUrl.has(m[1]); };
 let linkCount = 0;
 for (const pg of indexable) {
   for (const href of new Set(pg.links)) {
     linkCount++;
     const p = (href.split(/[?#]/)[0] || "/").replace(/(.)\/$/, "$1");
-    const resolved = p === "/" || p.startsWith("/api/") || byUrl.has(p) || files.has(p) || files.has(`${p}.html`) || files.has(`${p}/index.html`) || APP_ROUTES.has(p);
+    const resolved = p === "/" || p.startsWith("/api/") || byUrl.has(p) || files.has(p) || files.has(`${p}.html`) || files.has(`${p}/index.html`) || APP_ROUTES.has(p) || twinOf(p);
     // A supporting file the page lists (references/...): the release step copies it out of the skill's zip.
     const support = p.match(/^\/skills\/([^/]+)\/(.+)$/);
     if (!resolved && support && (readPage(support[1])?.files ?? []).includes(support[2])) { warn("a link to a supporting file that exists only after the release step unpacks the zip", `${pg.url} -> ${p}`); continue; }

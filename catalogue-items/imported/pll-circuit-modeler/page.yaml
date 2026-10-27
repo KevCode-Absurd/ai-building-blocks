@@ -9,7 +9,9 @@ subhead: A working model of a phase-locked loop chip built from its datasheet or
 explain: |
   A working model of a phase-locked loop chip built from its datasheet or your system targets, with the solver set up correctly. You can then check whether the loop locks fast enough and has low enough phase noise.
 
-  The skill works in Simulink with the Mixed-Signal Blockset. It asks one question at a time, picks between integer-N, fractional-N and dual-modulus designs, extracts parameters from the datasheet and builds the loop from library blocks. A companion guide covers loop filter design, checks against datasheet phase noise, measurement and common mistakes. It needs MATLAB, Simulink and the blockset.
+  The skill works in Simulink with the Mixed-Signal Blockset. It asks one question at a time, picks between integer-N, fractional-N and dual-modulus designs, extracts parameters from the datasheet and builds the loop from library blocks. A companion guide covers loop filter design, checks against datasheet phase noise, measurement and common mistakes. It needs MATLAB, Simulink and the blockset, which are paid products.
+
+  This is MathWorks' skill. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE.md file.
 when:
   - You have a PLL datasheet and want a simulation of it.
   - You are designing a synthesizer for a set output and reference frequency.
@@ -30,7 +32,7 @@ you_get:
   - Loop filter design
   - Phase noise check against targets
 how_to_use:
-  - Open your AI tool and paste in the skill instructions. Also add the companion guide if you can.
+  - Open your AI tool and paste in the skill instructions. Also paste in the companion file, modeling-pll-datasheet-validate.md, if it is in your copy. It holds the loop filter, phase noise, measurement and common-mistake steps, so those steps are missed without it.
   - Tell it you want a PLL model. Add your datasheet or your output and reference frequencies.
   - Answer its questions. It asks one at a time.
   - Let it build and run the model. This needs an AI that can run MATLAB with Simulink and the Mixed-Signal Blockset.
@@ -47,6 +49,7 @@ output_sample:
     - An AI that can run MATLAB code
     - MATLAB and Simulink
     - Mixed-Signal Blockset
+    - Control System Toolbox, release R2026b or later, only for the phase noise estimate (estimatePLLPhaseNoise)
   output:
     - name: Extracted parameters
       contains: "The key numbers pulled from your datasheet, plus the PLL type it found: integer-N, fractional-N or dual modulus."

@@ -7,6 +7,8 @@ description: Use when a form, screen, menu or set of steps is full of codes, lab
 
 People follow instructions best in words they already use. This skill rewrites a form, screen text, menu or process in the words your users say, and tests it by reading it aloud and by asking what a new person would still need. It works for software, forms, manuals and support scripts.
 
+**Not for:** legal, regulated or safety wording that must stay exact (have a compliance reviewer or lawyer approve it; use this only for the plain notes beside it), or error messages alone (use `error-message-rewriter`). You need the text itself and who uses it. Real user messages or call notes make the word choices much better.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -20,7 +22,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **Plan** with the [First-use onboarding designer](https://useaiblocks.com/skills/first-use-onboarding-designer). Bring audit report (optional). It uses your a buyer brief.
+2. **Plan** with the [First-use onboarding designer](https://useaiblocks.com/skills/first-use-onboarding-designer). Bring your question, audit report (optional).
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
@@ -46,7 +48,7 @@ How to start:
 
 1. **Name the groups.** List each group who uses the text, such as new customers, staff or suppliers. For each, mark whether they prefer symbols and icons or words, and give the evidence. If you have none, mark `MISSING:` and assume words.
 2. **Collect their words.** From messages, calls, reviews or the profile, list the exact words each group uses for each thing in the text: the actions, the objects and the problems. Where groups use different words for the same thing, list both and choose one for the page, or use the one that suits the main group. If you have no source, ask for one. Do not invent what users say.
-3. **Replace the jargon.** Go through the text from top to bottom. Replace every code, label, abbreviation and vendor term with the user's word. Keep a table of old term, new word and where it appears. If a term must stay, such as a legal name or the name of a law, keep it and add a short plain explanation next to it.
+3. **Replace the jargon.** Go through the text from top to bottom. Replace every code, label, abbreviation and vendor term with the user's word. Keep a table of old term, new word and where it appears. If a term must stay, such as a legal name, the name of a law or regulated wording, keep it word for word, add a short plain note next to it, and flag it for a compliance reviewer or lawyer to approve.
 4. **Start with a verb.** Rewrite each instruction so that it opens with one clear verb and addresses the reader, such as "Enter", "Choose" or "Send". Put one action in each step. Split any step that holds two actions. Keep the order the original used unless it is wrong, and then say why you changed it.
 5. **Keep every step.** Count the steps in the original and in the rewrite. Do not drop one. If you merged two, name them and say why.
 6. **Read it aloud.** Read each sentence out loud as a person would say it. Mark any sentence where the tongue stumbles, where a word is long or formal, or where you run out of breath. Rewrite those sentences shorter, with simpler words. List each change.

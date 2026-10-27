@@ -7,7 +7,7 @@ job: write-ad-copy
 headline: Headline option writer
 subhead: Tell it who the headline is for, what they should do next, the channel and your provable facts. It writes several headlines for that reader, each from a different angle. You get the headlines, why each should work, a pick, and a check that no claim goes past your facts.
 explain: |
-  A set of headline options aimed at one reader, each using a different angle, so you can pick or test the best. Headlines tend to get noticed when they feel relevant and leave a small gap the reader wants to close. Bad ones promise too much. Treat the reasons it gives as ideas to test, not proven rules.
+  A set of headline options aimed at one reader, each using a different angle, so you can pick or test the best. Headlines tend to get noticed when they feel relevant and leave a small gap the reader wants to close. Bad ones promise too much. The studies the skill cites are background for the ideas. Treat the reasons it gives as ideas to test, not proof that a headline will lift clicks or sales.
 
   The skill first asks who the reader is, how aware they are of the problem, what you want them to do, where the headline will run, and any length limit. It then picks the mental state needed and writes headlines using different mechanisms, such as contrast, a specific number, a question or a surprising fact. Every line is checked against what you can prove, so there is no clickbait.
 when:
@@ -31,7 +31,7 @@ you_get:
   - A pick for the best fit
   - A check that no claim goes beyond your facts
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page. It needs no code, files or paid tools.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy the full SKILL.md text and paste it into Claude, ChatGPT or Gemini. It needs no code, files or paid tools.
   - Tell it who the headline is for, what you want them to do, and where it will run.
   - Add the facts you can prove about your offer. Add your brand voice and length limit if you have them.
   - Ask for headline options. If your goal or channel is unclear, it will ask you before it writes.

@@ -168,12 +168,12 @@ interface WelcomeEmailProps {
   trialDays?: number
 }
 
-export function WelcomeEmail({ name, confirmUrl, trialDays = 14 }: WelcomeEmailProps) {
+export function WelcomeEmail({ name, confirmUrl, trialDays }: WelcomeEmailProps) {  // trialDays: pass your real trial length, or leave it out if you have no trial
   return (
     <EmailLayout preview={`Welcome to MyApp, ${name}! Confirm your email to get started.`}>
       <Heading style={styles.h1}>Welcome to MyApp, {name}!</Heading>
       <Text style={styles.text}>
-        We're excited to have you on board. [REPLACE WITH YOUR REAL PLAN DETAILS, for example your trial length and whether a card is needed.] Trial length: {trialDays} days.
+        We're excited to have you on board. [REPLACE WITH YOUR REAL PLAN DETAILS, for example your trial length and whether a card is needed.] {trialDays ? `Trial length: ${trialDays} days.` : null}
       </Text>
       <Text style={styles.text}>
         First, confirm your email address to activate your account:
@@ -190,9 +190,9 @@ export function WelcomeEmail({ name, confirmUrl, trialDays = 14 }: WelcomeEmailP
         Once confirmed, you can:
       </Text>
       <ul style={styles.list}>
-        <li>Connect your first project in 2 minutes</li>
+        <li>[Your first step. State only what is true for your product, and how long it really takes.]</li>
         <li>[Invite your team. State your real free-seat limit, or remove this line.]</li>
-        <li>Set up Slack notifications</li>
+        <li>[Another step that is true for your product, or remove this line.]</li>
       </ul>
     </EmailLayout>
   )
@@ -368,7 +368,7 @@ export const en = {
   welcome: {
     preview: (name: string) => `Welcome to MyApp, ${name}!`,
     heading: (name: string) => `Welcome to MyApp, ${name}!`,
-    body: (days: number) => `You've got ${days} days to explore everything.`,
+    body: (days: number) => `[Your real trial text, for example: you've got ${days} days to explore.]`,
     cta: "Confirm Email Address",
   },
 }
@@ -378,7 +378,7 @@ export const de = {
   welcome: {
     preview: (name: string) => `Willkommen bei MyApp, ${name}!`,
     heading: (name: string) => `Willkommen bei MyApp, ${name}!`,
-    body: (days: number) => `Du hast ${days} Tage Zeit, alles zu erkunden.`,
+    body: (days: number) => `[Your real trial text in German, for example: Du hast ${days} Tage Zeit.]`,
     cta: "E-Mail-Adresse bestätigen",
   },
 }
@@ -391,6 +391,8 @@ const t = locale === "de" ? de : en
 ---
 
 ## Spam Score Optimization Checklist
+
+This checklist lowers the chance your mail lands in spam. No setup guarantees inbox delivery.
 
 - [ ] Sender domain has SPF, DKIM, and DMARC records configured
 - [ ] From address uses your own domain (not gmail.com/hotmail.com)

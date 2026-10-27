@@ -15,6 +15,7 @@ explain: >-
 
   Paying for existing demand or refunded customers can erase margin. Do not assume recurring commissions are affordable from headline subscription revenue.
 when:
+  - You want a small, capped test of paying partners for referred customers.
   - You need a practical way to find customers for a software business.
   - You want to test a growth idea before committing more time or money.
 not_for:
@@ -66,11 +67,11 @@ output_sample:
     - name: MISSING
       contains: Facts the AI could not find and you need to supply.
 how_it_works:
-  - title: Check 1
+  - title: Find partners with real buyer overlap
     text: Choose a verified audience or customer base with buyer overlap. Distinguish independent affiliates from users referring friends and from strategic distribution partners.
-  - title: Check 2
+  - title: Check the commission economics
     text: Model one-time versus recurring commissions using collected revenue, gross margin, expected retention and support cost. State unknown retention instead of promising lifetime payments.
-  - title: Check 3
+  - title: Write the attribution and payout rules
     text: Define the attribution window, payout trigger, refunds, self-referrals, brand bidding, disclosures, fraud review and dispute handling.
 output_shape: |
   Recommendation: <test now / later / weak fit, with reason>
@@ -82,7 +83,9 @@ output_shape: |
   Measurement: <events, cohort, denominators, attribution>
   Decision: <continue / revise / stop rule>
   Risks and next action: <...>
+  Produces: <a partner profile, commission model, attribution rules and recruitment draft>
   MISSING: <unknowns>
+  CHECKS MISSED: <one line each, or none>
 tweaks:
   - what: Your growth goal
     how: Give a target and deadline so the advice has something concrete to work towards.

@@ -12,6 +12,8 @@ inputs:
 outputs:
   - {type: shortlist}
   - {type: voc_reviews}
+  - {type: customer_needs, required: true}
+  - {type: idea, required: true}
 uses: []
 origin: rebuilt
 example_pending: true

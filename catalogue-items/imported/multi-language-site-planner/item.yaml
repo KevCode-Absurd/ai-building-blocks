@@ -10,7 +10,7 @@ level: intermediate
 inputs:
   - type: web_app
     required: false
-  - type: brief
+  - type: question
     required: true
 outputs:
   - type: plan

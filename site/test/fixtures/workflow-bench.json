@@ -1,0 +1,5408 @@
+{
+ "version": 1,
+ "written": "2026-10-27",
+ "note": "Independent labels; split dev/test by id parity; never tune on test. Odd ids (wb001, wb003, ...) are dev, even ids are test. Requests are written the way people talk, not in catalogue words. anchor: 1-3 slugs that do the core of the ask (best first). steps: ordered groups; any slug in a group satisfies that position. before/after: acceptable slugs that would come right before/after the anchor. user_supplies: input types the person already has (port types from blocks.json portTypes). coverage: full | partial (catalogue can only do part of it well) | none (catalogue cannot do it; anchor and steps are empty and tools should decline rather than force a fit). ready_workflow: the closest ready workflow, or null. Self-check treats these input types as interchangeable: see type_compat.",
+ "type_compat": {
+  "source_text": [
+   "transcript",
+   "document",
+   "copy_draft",
+   "meeting_notes"
+  ],
+  "copy_draft": [
+   "ad_copy",
+   "landing_page",
+   "pdp_copy",
+   "script",
+   "email_flow",
+   "document"
+  ],
+  "spreadsheet": [
+   "performance_sheet"
+  ],
+  "product_photos": [
+   "photo_set",
+   "approved_image",
+   "image"
+  ],
+  "image": [
+   "approved_image",
+   "upscaled_image"
+  ],
+  "approved_image": [
+   "image",
+   "upscaled_image"
+  ],
+  "document": [
+   "copy_draft"
+  ],
+  "codebase": [
+   "web_app",
+   "code_change"
+  ]
+ },
+ "goals": [
+  {
+   "id": "wb001",
+   "request": "landing page for my facebook ad",
+   "area": "marketing-ads",
+   "style": "keyword",
+   "coverage": "full",
+   "anchor": [
+    "ad-matched-landing-page-writer",
+    "ad-landing-page"
+   ],
+   "steps": [
+    [
+     "website-brand-brain-builder"
+    ],
+    [
+     "ad-matched-landing-page-writer",
+     "article-landing-page"
+    ],
+    [
+     "landing-page-design-planner"
+    ],
+    [
+     "landing-page-30-point-checker",
+     "landing-page-auditor"
+    ]
+   ],
+   "ready_workflow": "ad-landing-page",
+   "before": [
+    "website-brand-brain-builder",
+    "brand-messaging-builder"
+   ],
+   "after": [
+    "landing-page-design-planner",
+    "landing-page-30-point-checker",
+    "landing-page-auditor",
+    "shopify-landing-page-builder",
+    "ad-and-page-match-checker"
+   ],
+   "user_supplies": [
+    "web_page",
+    "offer",
+    "ad_copy"
+   ],
+   "why": "Site becomes a brand file, which plus the offer and the ad feeds the matched page; design direction and the 30-point review need the finished page."
+  },
+  {
+   "id": "wb002",
+   "request": "Can you write a few Facebook ads for my handmade soap? Mostly women over 30 who like that it's gentle on skin.",
+   "area": "marketing-ads",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "meta-ad-copywriter",
+    "image-ad-copy-writer"
+   ],
+   "steps": [
+    [
+     "marketing-brief-writer"
+    ],
+    [
+     "meta-ad-copywriter",
+     "image-ad-copy-writer"
+    ],
+    [
+     "pre-launch-ad-checker",
+     "meta-ads-compliance-checker"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [
+    "marketing-brief-writer",
+    "creative-brief-writer",
+    "ad-angle-planner"
+   ],
+   "after": [
+    "pre-launch-ad-checker",
+    "meta-ads-compliance-checker",
+    "article-headline-image-ad-maker",
+    "story-ad-picture-brief-writer"
+   ],
+   "user_supplies": [
+    "question",
+    "product_data"
+   ],
+   "why": "Ad writers need a brief, so the buyer notes become a brief first; the drafted ads then go through a pre-launch or policy check."
+  },
+  {
+   "id": "wb003",
+   "request": "our facebook ads were fine then the last 2 weeks cost per sale basically doubled, we didn't change anything?? what happened",
+   "area": "marketing-ads",
+   "style": "messy",
+   "coverage": "full",
+   "anchor": [
+    "ad-performance-diagnoser",
+    "ad-sales-drop-analyst",
+    "meta-delivery-troubleshooter"
+   ],
+   "steps": [
+    [
+     "ad-performance-diagnoser",
+     "ad-sales-drop-analyst",
+     "meta-delivery-troubleshooter"
+    ],
+    [
+     "campaign-keep-or-change-checker"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "campaign-keep-or-change-checker",
+    "meta-optimization-of-existing-ad-campaigns-planner",
+    "fatigued-ad-reviver"
+   ],
+   "user_supplies": [
+    "performance_sheet",
+    "question"
+   ],
+   "why": "Diagnosis needs only the exported results; its audit report is what the keep-or-change checker turns into a decision."
+  },
+  {
+   "id": "wb004",
+   "request": "get more customers",
+   "area": "marketing-ads",
+   "style": "vague",
+   "coverage": "full",
+   "anchor": [
+    "find-your-business-growth-channel",
+    "traction-channel-ranker"
+   ],
+   "steps": [
+    [
+     "traction-business-profiler"
+    ],
+    [
+     "traction-channel-ranker"
+    ],
+    [
+     "traction-search-engine-marketing",
+     "traction-social-and-display-ads",
+     "traction-content-marketing",
+     "traction-search-engine-optimization",
+     "traction-email-marketing",
+     "traction-sales",
+     "traction-business-development",
+     "traction-community-building",
+     "traction-existing-platforms",
+     "traction-targeting-blogs",
+     "traction-public-relations",
+     "traction-offline-events",
+     "traction-affiliate-programs",
+     "traction-offline-ads",
+     "traction-viral-marketing",
+     "traction-unconventional-pr",
+     "traction-engineering-as-marketing",
+     "traction-trade-shows",
+     "traction-speaking-engagements"
+    ],
+    [
+     "traction-experiment-reviewer"
+    ]
+   ],
+   "ready_workflow": "find-your-business-growth-channel",
+   "before": [
+    "traction-business-profiler"
+   ],
+   "after": [
+    "traction-search-engine-marketing",
+    "traction-social-and-display-ads",
+    "traction-content-marketing",
+    "traction-experiment-reviewer",
+    "first-customers-by-hand-planner"
+   ],
+   "user_supplies": [
+    "web_page"
+   ],
+   "why": "Vague growth ask: profile the business, rank channels from the profile, plan one small channel test, then review results against the profile. Any one channel planner is fine in step 3."
+  },
+  {
+   "id": "wb005",
+   "request": "google ads for my plumbing business",
+   "area": "marketing-ads",
+   "style": "keyword",
+   "coverage": "full",
+   "anchor": [
+    "agency-paid-media-ppc-strategist",
+    "traction-search-engine-marketing"
+   ],
+   "steps": [
+    [
+     "agency-paid-media-ppc-strategist",
+     "traction-search-engine-marketing"
+    ],
+    [
+     "conversion-tracking-fixer"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "conversion-tracking-fixer",
+    "search-term-junk-sorter",
+    "google-ads-account-auditor"
+   ],
+   "user_supplies": [
+    "question",
+    "web_page"
+   ],
+   "why": "Most Google Ads items here are built for online stores; the generic search-ads planner fits a local service, then call and form tracking is checked on the site before spending. Mediocre fit for local-service specifics."
+  },
+  {
+   "id": "wb006",
+   "request": "I want to run two versions of my ad against each other and actually know which one won.",
+   "area": "marketing-ads",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "ad-ab-test",
+    "split-run-test-planner",
+    "split-run-result-reader"
+   ],
+   "steps": [
+    [
+     "split-run-test-planner"
+    ],
+    [
+     "test-reply-offer-planner"
+    ],
+    [
+     "split-run-result-reader",
+     "two-version-result-reader"
+    ]
+   ],
+   "ready_workflow": "ad-ab-test",
+   "before": [
+    "split-run-test-planner"
+   ],
+   "after": [
+    "split-run-result-reader",
+    "two-version-result-reader",
+    "keyed-ad-results-log-keeper"
+   ],
+   "user_supplies": [
+    "copy_draft",
+    "performance_sheet"
+   ],
+   "why": "The test plan comes from the two drafts; the reply offer is built from that plan; the result reader needs the live numbers the test produces."
+  },
+  {
+   "id": "wb007",
+   "request": "meta keeps rejecting my ad for a hair growth serum, says something about personal attributes?? how do i reword it so it runs",
+   "area": "marketing-ads",
+   "style": "messy",
+   "coverage": "full",
+   "anchor": [
+    "meta-ads-compliance-checker",
+    "ad-and-page-policy-checker"
+   ],
+   "steps": [
+    [
+     "meta-ads-compliance-checker",
+     "ad-and-page-policy-checker"
+    ],
+    [
+     "pre-launch-ad-checker"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "pre-launch-ad-checker",
+    "claim-and-proof-matcher"
+   ],
+   "user_supplies": [
+    "ad_copy",
+    "copy_draft"
+   ],
+   "why": "The policy checker finds the flagged wording and rewrites it; a final pre-launch check reviews the rewritten ad before resubmitting."
+  },
+  {
+   "id": "wb008",
+   "request": "ugc style tiktok script for my skincare product",
+   "area": "marketing-ads",
+   "style": "keyword",
+   "coverage": "full",
+   "anchor": [
+    "five-part-creator-ad-script-writer",
+    "phone-video-ad-scriptwriter"
+   ],
+   "steps": [
+    [
+     "marketing-brief-writer"
+    ],
+    [
+     "five-part-creator-ad-script-writer",
+     "phone-video-ad-scriptwriter"
+    ],
+    [
+     "creator-filming-brief-writer"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [
+    "marketing-brief-writer",
+    "creative-brief-writer"
+   ],
+   "after": [
+    "creator-filming-brief-writer",
+    "ad-script-read-aloud-editor",
+    "tighten-a-video-ad-script-before-you-film-it"
+   ],
+   "user_supplies": [
+    "question",
+    "product_data"
+   ],
+   "why": "Script writers take a brief; the script plus product facts make the filming brief a creator can shoot from."
+  },
+  {
+   "id": "wb009",
+   "request": "Give me like 20 different angles I could test in ads for my sleep gummies.",
+   "area": "marketing-ads",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "ad-angle-multiplier",
+    "seven-bucket-ad-concept-brainstormer"
+   ],
+   "steps": [
+    [
+     "marketing-brief-writer"
+    ],
+    [
+     "ad-angle-multiplier",
+     "seven-bucket-ad-concept-brainstormer"
+    ],
+    [
+     "typed-headline-batch-writer"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [
+    "marketing-brief-writer",
+    "creative-brief-writer"
+   ],
+   "after": [
+    "typed-headline-batch-writer",
+    "ad-concept-matrix-builder",
+    "meta-test-campaign-planner"
+   ],
+   "user_supplies": [
+    "question",
+    "product_data"
+   ],
+   "why": "Angle writers need a brief; the angle library they return is what the headline batch writer turns into testable hooks."
+  },
+  {
+   "id": "wb010",
+   "request": "launching an online course, have maybe $500 for ads total, no clue how to split it or what to test first",
+   "area": "marketing-ads",
+   "style": "messy",
+   "coverage": "full",
+   "anchor": [
+    "ad-test-budget-calculator",
+    "small-budget-ad-test-planner",
+    "small-test-and-rollout-planner"
+   ],
+   "steps": [
+    [
+     "marketing-brief-writer"
+    ],
+    [
+     "ad-test-budget-calculator",
+     "small-budget-ad-test-planner",
+     "small-test-and-rollout-planner"
+    ],
+    [
+     "meta-test-campaign-planner"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [
+    "marketing-brief-writer"
+   ],
+   "after": [
+    "meta-test-campaign-planner",
+    "split-run-result-reader"
+   ],
+   "user_supplies": [
+    "question",
+    "product_data",
+    "offer"
+   ],
+   "why": "Budget split and staging come from the question and product; the test campaign planner needs the brief from step 1. The small-budget planner is store-flavoured, so the calculator is the safer anchor for a course. The small test and rollout planner is the non-store option: it sizes a test you can afford to lose from the course price."
+  },
+  {
+   "id": "wb011",
+   "request": "ad fatigue fix",
+   "area": "marketing-ads",
+   "style": "keyword",
+   "coverage": "full",
+   "anchor": [
+    "fatigued-ad-reviver",
+    "tired-ad-hook-refresher"
+   ],
+   "steps": [
+    [
+     "fatigued-ad-reviver",
+     "tired-ad-hook-refresher"
+    ],
+    [
+     "meta-adding-new-ads-to-an-existing-campaign-planner"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "meta-adding-new-ads-to-an-existing-campaign-planner",
+    "video-hook-scorer",
+    "headline-cover-test-ranker"
+   ],
+   "user_supplies": [
+    "performance_sheet"
+   ],
+   "why": "The fading ad's numbers give the cause and fresh hook briefs; adding the new ads into the running campaign is planned from the same results."
+  },
+  {
+   "id": "wb012",
+   "request": "I need a simple report for my client showing how their ads did this month compared to last month.",
+   "area": "marketing-ads",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "ad-results-report-writer",
+    "marketing-performance-report"
+   ],
+   "steps": [
+    [
+     "ad-results-report-writer",
+     "ad-dashboard-reader"
+    ],
+    [
+     "marketing-performance-report"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "marketing-performance-report",
+    "campaign-keep-or-change-checker"
+   ],
+   "user_supplies": [
+    "performance_sheet"
+   ],
+   "why": "Two periods of numbers give the what-changed analysis first; the report writer turns the same sheet into the client document."
+  },
+  {
+   "id": "wb013",
+   "request": "people add stuff to cart then vanish. want ads that follow them and bring them back, we sell dog beds",
+   "area": "marketing-ads",
+   "style": "messy",
+   "coverage": "full",
+   "anchor": [
+    "win-back-visitors-who-did-not-buy-on-meta",
+    "retargeting-ad-sequence-planner"
+   ],
+   "steps": [
+    [
+     "retargeting-objection-ad-planner"
+    ],
+    [
+     "retargeting-ad-sequence-planner"
+    ],
+    [
+     "next-dollar-budget-allocator"
+    ]
+   ],
+   "ready_workflow": "win-back-visitors-who-did-not-buy-on-meta",
+   "before": [
+    "retargeting-objection-ad-planner"
+   ],
+   "after": [
+    "next-dollar-budget-allocator",
+    "cart-recovery-flow-builder"
+   ],
+   "user_supplies": [
+    "voc_reviews",
+    "performance_sheet",
+    "product_data"
+   ],
+   "why": "Reviews give the objections the retargeting ads answer; the objection map feeds the sequence; the budget cap is set last from store results."
+  },
+  {
+   "id": "wb014",
+   "request": "just run my facebook ads for me and change the budgets every day automatically",
+   "area": "marketing-ads",
+   "style": "sentence",
+   "coverage": "partial",
+   "anchor": [
+    "meta-manage-ads-on-a-daily-basis-planner",
+    "meta-ads-weekly-account-keeper"
+   ],
+   "steps": [
+    [
+     "meta-manage-ads-on-a-daily-basis-planner",
+     "meta-ads-weekly-account-keeper"
+    ],
+    [
+     "next-dollar-budget-allocator"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "next-dollar-budget-allocator",
+    "meta-adjusting-and-scaling-bid-caps-in-meta-ads-planner"
+   ],
+   "user_supplies": [
+    "performance_sheet",
+    "product_data"
+   ],
+   "why": "Nothing in the catalogue logs into an ad account or changes budgets; the best fit is a daily keep/pause review the person applies by hand, then a budget split from the same results."
+  },
+  {
+   "id": "wb015",
+   "request": "here's my ad copy, is it any good before I put money behind it?",
+   "area": "marketing-ads",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "five-part-ad-checker",
+    "pre-launch-ad-checker",
+    "headline-promise-checker"
+   ],
+   "steps": [
+    [
+     "five-part-ad-checker",
+     "pre-launch-ad-checker",
+     "headline-promise-checker"
+    ],
+    [
+     "reply-getting-fix-writer"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "reply-getting-fix-writer",
+    "pre-launch-ad-check-and-fix-loop",
+    "winning-ad-variant-writer"
+   ],
+   "user_supplies": [
+    "ad_copy"
+   ],
+   "why": "The check produces an audit report; the fix writer needs that report plus the original ad to rewrite it."
+  },
+  {
+   "id": "wb016",
+   "request": "welcome email series for new subscribers",
+   "area": "email",
+   "style": "keyword",
+   "coverage": "full",
+   "anchor": [
+    "write-a-welcome-email-sequence-that-teaches-then-sells",
+    "email-sequence-writer"
+   ],
+   "steps": [
+    [
+     "email-sequence-writer"
+    ],
+    [
+     "email-draft-reviewer"
+    ],
+    [
+     "plain-english-editor"
+    ],
+    [
+     "email-send-readiness-scorer"
+    ]
+   ],
+   "ready_workflow": "write-a-welcome-email-sequence-that-teaches-then-sells",
+   "before": [
+    "brand-messaging-builder",
+    "website-brand-brain-builder"
+   ],
+   "after": [
+    "email-draft-reviewer",
+    "email-send-readiness-scorer",
+    "email-flow-gap-checker"
+   ],
+   "user_supplies": [
+    "brief"
+   ],
+   "why": "The sequence writer turns the brief into five drafts; review, plain-English edit and the send-readiness score all work on those drafts in that order."
+  },
+  {
+   "id": "wb017",
+   "request": "tons of people get all the way to checkout on my shopify store and then just leave. want emails that pull them back without being annoying",
+   "area": "email",
+   "style": "messy",
+   "coverage": "full",
+   "anchor": [
+    "cart-recovery-flow-builder",
+    "store-email-flow-writer"
+   ],
+   "steps": [
+    [
+     "cart-recovery-flow-builder",
+     "store-email-flow-writer"
+    ],
+    [
+     "email-flow-gap-checker"
+    ],
+    [
+     "email-and-sms-performance-reader"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "email-flow-gap-checker",
+    "email-and-sms-performance-reader",
+    "checkout-page-auditor"
+   ],
+   "user_supplies": [
+    "product_data",
+    "performance_sheet"
+   ],
+   "why": "The flow is built from product facts; the gap checker reviews that flow's triggers and timing; the results reader needs send data once it runs."
+  },
+  {
+   "id": "wb018",
+   "request": "I want to send a monthly newsletter for my yoga studio but I never know what to write about.",
+   "area": "email",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "content-topic-planner",
+    "email-topic-bank-builder",
+    "campaign-email-writer"
+   ],
+   "steps": [
+    [
+     "content-topic-planner",
+     "email-topic-bank-builder"
+    ],
+    [
+     "campaign-email-writer",
+     "marketing-content-drafter"
+    ],
+    [
+     "subject-line-writer"
+    ],
+    [
+     "email-send-readiness-scorer"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "campaign-email-writer",
+    "subject-line-writer",
+    "email-send-readiness-scorer"
+   ],
+   "user_supplies": [
+    "brief",
+    "product_data"
+   ],
+   "why": "The real gap is topics, so a topic plan comes first; each issue is drafted from the brief, then subject lines and a send check work on the draft. The weekly newsletter agent covers the same chain."
+  },
+  {
+   "id": "wb019",
+   "request": "better subject lines so people actually open my emails",
+   "area": "email",
+   "style": "keyword",
+   "coverage": "full",
+   "anchor": [
+    "subject-line-writer"
+   ],
+   "steps": [
+    [
+     "subject-line-writer"
+    ],
+    [
+     "email-send-readiness-scorer",
+     "email-draft-reviewer"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "email-send-readiness-scorer",
+    "email-draft-reviewer"
+   ],
+   "user_supplies": [
+    "brief",
+    "copy_draft"
+   ],
+   "why": "Subject options come from the brief and the email body; the readiness check scores the email with its chosen subject."
+  },
+  {
+   "id": "wb020",
+   "request": "got about 4000 emails on my list but haven't sent anything in over a year. scared if i blast them now i'll land in spam. how do i restart",
+   "area": "email",
+   "style": "messy",
+   "coverage": "full",
+   "anchor": [
+    "sunset-flow-and-list-cleaner",
+    "email-segment-builder"
+   ],
+   "steps": [
+    [
+     "email-segment-builder"
+    ],
+    [
+     "sunset-flow-and-list-cleaner"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [
+    "email-segment-builder"
+   ],
+   "after": [
+    "inbox-delivery-fixer",
+    "welcome-flow-builder",
+    "email-and-sms-performance-reader"
+   ],
+   "user_supplies": [
+    "question"
+   ],
+   "why": "Split the old list first so the safest group is mailed first; the re-engagement and suppression flow runs on that segment. A domain check (inbox delivery fixer) is a sensible add-on."
+  },
+  {
+   "id": "wb021",
+   "request": "I'm releasing an ebook next month. Write the emails that announce it and get people to actually buy.",
+   "area": "email",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "launch-email-sequence-planner"
+   ],
+   "steps": [
+    [
+     "launch-email-sequence-planner"
+    ],
+    [
+     "email-draft-reviewer",
+     "email-send-readiness-scorer"
+    ]
+   ],
+   "ready_workflow": "price-a-course-or-ebook-and-write-its-launch-emails",
+   "before": [],
+   "after": [
+    "email-draft-reviewer",
+    "email-send-readiness-scorer",
+    "email-flow-gap-checker"
+   ],
+   "user_supplies": [
+    "product_data",
+    "offer"
+   ],
+   "why": "The launch sequence is built from the ebook facts and the launch offer; the review checks the drafted emails."
+  },
+  {
+   "id": "wb022",
+   "request": "when someone buys from my shop I want them added to my email list and sent a thank-you automatically. can you set that up?",
+   "area": "email",
+   "style": "sentence",
+   "coverage": "partial",
+   "anchor": [
+    "post-purchase-flow-builder",
+    "no-code-automation-planner"
+   ],
+   "steps": [
+    [
+     "post-purchase-flow-builder"
+    ],
+    [
+     "no-code-automation-planner",
+     "n8n-workflow-designer"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "no-code-automation-planner",
+    "n8n-workflow-designer"
+   ],
+   "user_supplies": [
+    "product_data",
+    "brief"
+   ],
+   "why": "The catalogue can write the after-order emails and map the automation, but nothing here connects the person's shop and email tool for them."
+  },
+  {
+   "id": "wb023",
+   "request": "Can you check this email before I send it to my whole list?",
+   "area": "email",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "email-draft-reviewer",
+    "email-send-readiness-scorer"
+   ],
+   "steps": [
+    [
+     "email-draft-reviewer",
+     "email-send-readiness-scorer"
+    ],
+    [
+     "email-mistake-fixer",
+     "one-ask-email-tightener"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "email-mistake-fixer",
+    "one-ask-email-tightener",
+    "plain-english-editor"
+   ],
+   "user_supplies": [
+    "copy_draft"
+   ],
+   "why": "Review the draft first; the fix pass works on the same draft guided by what the review found."
+  },
+  {
+   "id": "wb024",
+   "request": "instagram posts for my bakery for the next month",
+   "area": "social",
+   "style": "keyword",
+   "coverage": "full",
+   "anchor": [
+    "platform-native-content-planner",
+    "agency-marketing-instagram-curator",
+    "standing-social-calendar-maker"
+   ],
+   "steps": [
+    [
+     "brand-messaging-builder",
+     "website-brand-brain-builder"
+    ],
+    [
+     "platform-native-content-planner",
+     "agency-marketing-instagram-curator",
+     "standing-social-calendar-maker"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [
+    "brand-messaging-builder",
+    "website-brand-brain-builder"
+   ],
+   "after": [
+    "social-post-planner",
+    "social-media-results-analyst"
+   ],
+   "user_supplies": [
+    "question",
+    "web_page"
+   ],
+   "why": "The platform content planner needs a brand file (made from the site, or from scratch with the messaging builder); it then returns the month of posts and openings."
+  },
+  {
+   "id": "wb025",
+   "request": "I post on LinkedIn every week and get like 3 likes each time. what am i doing wrong",
+   "area": "social",
+   "style": "messy",
+   "coverage": "full",
+   "anchor": [
+    "flop-post-diagnoser",
+    "post-flop-reason-finder",
+    "linkedin-results-reader"
+   ],
+   "steps": [
+    [
+     "flop-post-diagnoser",
+     "post-flop-reason-finder",
+     "linkedin-results-reader"
+    ],
+    [
+     "linkedin-content-strategy"
+    ],
+    [
+     "linkedin-hook-post-writer",
+     "linkedin-post-writer"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "linkedin-content-strategy",
+    "linkedin-hook-post-writer",
+    "linkedin-post-writer"
+   ],
+   "user_supplies": [
+    "copy_draft",
+    "performance_sheet",
+    "brief"
+   ],
+   "why": "Diagnose the old posts first; a strategy with pillars comes next; new posts are written once the angle is set."
+  },
+  {
+   "id": "wb026",
+   "request": "Turn my hour-long YouTube video into a handful of shorts and some posts.",
+   "area": "social",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "shorts-clip-finder",
+    "content-repurposer"
+   ],
+   "steps": [
+    [
+     "youtube-transcript-reader"
+    ],
+    [
+     "shorts-clip-finder"
+    ],
+    [
+     "content-repurposer",
+     "long-form-post-repurposer",
+     "x-thread-writer"
+    ]
+   ],
+   "ready_workflow": "cut-chapter-and-clip-a-long-video-into-five-shorts",
+   "before": [
+    "youtube-transcript-reader"
+   ],
+   "after": [
+    "social-video-edit-planner",
+    "cross-platform-post-writer"
+   ],
+   "user_supplies": [
+    "question"
+   ],
+   "why": "Both the clip finder and the post writers need the transcript, so it is pulled first; clips are chosen, then the same transcript is repurposed into posts. The long-video workflow takes a transcript and ends in the clip finder, so it covers the shorts half."
+  },
+  {
+   "id": "wb027",
+   "request": "tiktok hooks for my product",
+   "area": "social",
+   "style": "keyword",
+   "coverage": "full",
+   "anchor": [
+    "short-video-hook-writer",
+    "agency-marketing-tiktok-strategist"
+   ],
+   "steps": [
+    [
+     "short-video-hook-writer",
+     "agency-marketing-tiktok-strategist"
+    ],
+    [
+     "headline-cover-test-ranker"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "headline-cover-test-ranker",
+    "short-video-format-picker",
+    "video-hook-scorer"
+   ],
+   "user_supplies": [
+    "product_data",
+    "question"
+   ],
+   "why": "Hooks come from product facts; the ranker picks which ones to test first."
+  },
+  {
+   "id": "wb028",
+   "request": "I'd like to send free product to some smaller creators so they post about it.",
+   "area": "social",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "influencer-gifting-planner",
+    "influencer-shortlist-builder"
+   ],
+   "steps": [
+    [
+     "website-brand-brain-builder"
+    ],
+    [
+     "influencer-shortlist-builder"
+    ],
+    [
+     "influencer-gifting-planner"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [
+    "influencer-shortlist-builder",
+    "website-brand-brain-builder"
+   ],
+   "after": [
+    "creator-filming-brief-writer",
+    "tiktok-creator-outreach-planner",
+    "selfie-style-ad-script"
+   ],
+   "user_supplies": [
+    "web_page",
+    "question",
+    "product_data"
+   ],
+   "why": "The gifting planner needs a brand file and benefits from a creator list, so both come first. The creator-gifting workflow also needs returned footage, so it is a later fit."
+  },
+  {
+   "id": "wb029",
+   "request": "grow my following",
+   "area": "social",
+   "style": "vague",
+   "coverage": "full",
+   "anchor": [
+    "agency-marketing-social-media-strategist",
+    "social-post-planner"
+   ],
+   "steps": [
+    [
+     "agency-marketing-social-media-strategist"
+    ],
+    [
+     "social-post-planner"
+    ],
+    [
+     "social-media-results-analyst"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "social-post-planner",
+    "social-media-results-analyst",
+    "organic-format-tester"
+   ],
+   "user_supplies": [
+    "question",
+    "performance_sheet"
+   ],
+   "why": "Strategy turns the vague goal into a brief; posts are planned from that brief; results are read once posts have run."
+  },
+  {
+   "id": "wb030",
+   "request": "schedule and auto-post my stuff to instagram, facebook and tiktok every morning",
+   "area": "social",
+   "style": "keyword",
+   "coverage": "partial",
+   "anchor": [
+    "multi-platform-post-planner",
+    "no-code-automation-planner"
+   ],
+   "steps": [
+    [
+     "cross-platform-post-writer",
+     "multi-platform-post-planner"
+    ],
+    [
+     "no-code-automation-planner",
+     "n8n-workflow-designer"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "n8n-workflow-designer",
+    "no-code-automation-planner"
+   ],
+   "user_supplies": [
+    "brief"
+   ],
+   "why": "No item posts or schedules for the person; the catalogue can write platform versions and design a Zapier/Make/n8n automation they then set up themselves."
+  },
+  {
+   "id": "wb031",
+   "request": "my youtube channel has been stuck around 200 subscribers for months. is it my titles and thumbnails or something else?",
+   "area": "social",
+   "style": "messy",
+   "coverage": "full",
+   "anchor": [
+    "pick-a-title-and-thumbnail-then-fix-where-viewers-leave",
+    "youtube-channel-auditor",
+    "thumbnail-and-title-planner"
+   ],
+   "steps": [
+    [
+     "thumbnail-and-title-planner"
+    ],
+    [
+     "headline-cover-test-ranker"
+    ],
+    [
+     "youtube-transcript-reader"
+    ],
+    [
+     "youtube-retention-reader",
+     "youtube-channel-auditor"
+    ]
+   ],
+   "ready_workflow": "pick-a-title-and-thumbnail-then-fix-where-viewers-leave",
+   "before": [],
+   "after": [
+    "youtube-channel-auditor",
+    "youtube-channel-growth-kit"
+   ],
+   "user_supplies": [
+    "question",
+    "performance_sheet"
+   ],
+   "why": "Title and thumbnail pairs are generated then ranked; the transcript is pulled so the retention reader can tie the viewer drop to what was said. The channel auditor answers the \"titles or something else?\" question directly (titles as a set, thumbnails, first 15 seconds) and can run once the transcripts are in."
+  },
+  {
+   "id": "wb032",
+   "request": "seo audit for my website",
+   "area": "seo",
+   "style": "keyword",
+   "coverage": "full",
+   "anchor": [
+    "audit-your-sites-seo-and-fix-titles-tags-and-markup-first",
+    "seo-site-auditor",
+    "seo-auditor"
+   ],
+   "steps": [
+    [
+     "seo-site-auditor",
+     "seo-auditor"
+    ],
+    [
+     "technical-seo-auditor"
+    ],
+    [
+     "on-page-seo-tuner"
+    ],
+    [
+     "title-and-meta-tag-writer"
+    ],
+    [
+     "schema-markup-writer"
+    ]
+   ],
+   "ready_workflow": "audit-your-sites-seo-and-fix-titles-tags-and-markup-first",
+   "before": [],
+   "after": [
+    "technical-seo-auditor",
+    "on-page-seo-tuner",
+    "title-and-meta-tag-writer",
+    "schema-markup-writer"
+   ],
+   "user_supplies": [
+    "web_page",
+    "question",
+    "brief"
+   ],
+   "why": "The site review ranks problems first; technical and on-page passes follow; titles, descriptions and structured data are written last for the pages that need them."
+  },
+  {
+   "id": "wb033",
+   "request": "Why did my Google traffic drop by half last month?",
+   "area": "seo",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "search-console-traffic-drop-diagnoser",
+    "traffic-drop-investigator"
+   ],
+   "steps": [
+    [
+     "search-console-traffic-drop-diagnoser",
+     "traffic-drop-investigator"
+    ],
+    [
+     "seo-change-tracker"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "seo-change-tracker",
+    "technical-seo-auditor",
+    "old-content-refresher"
+   ],
+   "user_supplies": [
+    "performance_sheet",
+    "web_page"
+   ],
+   "why": "The drop is diagnosed from the search data export; once fixes are made the change tracker watches whether traffic recovers."
+  },
+  {
+   "id": "wb034",
+   "request": "I run a small dental clinic and want to show up when people nearby search for a dentist, like on google maps",
+   "area": "seo",
+   "style": "messy",
+   "coverage": "full",
+   "anchor": [
+    "local-search-listing-manager"
+   ],
+   "steps": [
+    [
+     "local-search-listing-manager"
+    ],
+    [
+     "on-page-seo-tuner"
+    ],
+    [
+     "testimonial-request-writer"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "on-page-seo-tuner",
+    "testimonial-request-writer",
+    "schema-markup-writer"
+   ],
+   "user_supplies": [
+    "brief",
+    "web_page",
+    "question"
+   ],
+   "why": "The local listing audit is the core; site pages are tuned for the area next; asking happy patients for reviews feeds the listing. Only one local-search item exists, so depth is limited."
+  },
+  {
+   "id": "wb035",
+   "request": "blog post ideas that will actually rank",
+   "area": "seo",
+   "style": "keyword",
+   "coverage": "full",
+   "anchor": [
+    "keyword-research-planner",
+    "keyword-researcher",
+    "search-intent-keyword-mapper"
+   ],
+   "steps": [
+    [
+     "keyword-research-planner",
+     "keyword-researcher",
+     "search-intent-keyword-mapper"
+    ],
+    [
+     "content-brief-writer",
+     "keyword-to-post-outline-writer"
+    ],
+    [
+     "search-blog-post-writer",
+     "wordpress-blog-writer"
+    ]
+   ],
+   "ready_workflow": "plan-a-topic-cluster-from-keywords-to-post-briefs-and-links",
+   "before": [],
+   "after": [
+    "content-brief-writer",
+    "keyword-to-post-outline-writer",
+    "topic-cluster-mapper"
+   ],
+   "user_supplies": [
+    "brief",
+    "web_page"
+   ],
+   "why": "Keywords come first; each chosen keyword becomes a post brief; the post is written from that brief. The topic-cluster workflow covers steps 1-2."
+  },
+  {
+   "id": "wb036",
+   "request": "How do I get ChatGPT and the other AI assistants to recommend my business when people ask for the best one?",
+   "area": "seo",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "ai-search-visibility-audit",
+    "ai-search-audit",
+    "ai-search-platform-checker"
+   ],
+   "steps": [
+    [
+     "ai-search-visibility-audit",
+     "ai-search-audit",
+     "ai-search-platform-checker"
+    ],
+    [
+     "ai-recommendation-gap-finder"
+    ],
+    [
+     "llms-txt-writer",
+     "agency-marketing-aeo-foundations"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "ai-recommendation-gap-finder",
+    "llms-txt-writer",
+    "ai-citation-source-finder"
+   ],
+   "user_supplies": [
+    "web_page"
+   ],
+   "why": "Audit how AI answers see the site first; the gap finder ranks fixes from that audit; then publish machine-readable guidance. The store workflow needs product data, so the generic audit fits a non-store business better. The agentic search optimizer checks whether AI agents can complete tasks on the site, not whether assistants recommend it, so it is not a fit."
+  },
+  {
+   "id": "wb037",
+   "request": "we have like 300 old blog posts and traffic keeps sliding. should we delete some of them??",
+   "area": "seo",
+   "style": "messy",
+   "coverage": "full",
+   "anchor": [
+    "find-old-posts-losing-traffic-refresh-or-cut-them-and-track-it",
+    "page-keep-or-cut-auditor",
+    "content-gap-and-decay-finder"
+   ],
+   "steps": [
+    [
+     "content-gap-and-decay-finder"
+    ],
+    [
+     "page-keep-or-cut-auditor"
+    ],
+    [
+     "old-content-refresher"
+    ],
+    [
+     "search-title-and-snippet-writer"
+    ],
+    [
+     "seo-change-tracker"
+    ]
+   ],
+   "ready_workflow": "find-old-posts-losing-traffic-refresh-or-cut-them-and-track-it",
+   "before": [],
+   "after": [
+    "old-content-refresher",
+    "seo-change-tracker"
+   ],
+   "user_supplies": [
+    "web_page",
+    "spreadsheet",
+    "brief"
+   ],
+   "why": "Decay is found first, each page gets keep/refresh/cut from the traffic sheet, kept pages are refreshed and retitled, then the change tracker watches results."
+  },
+  {
+   "id": "wb038",
+   "request": "meta titles and descriptions for 40 product pages",
+   "area": "seo",
+   "style": "keyword",
+   "coverage": "full",
+   "anchor": [
+    "product-page-seo-builder",
+    "title-and-meta-tag-writer"
+   ],
+   "steps": [
+    [
+     "product-page-seo-builder",
+     "title-and-meta-tag-writer",
+     "search-title-and-snippet-writer"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [
+    "product-page-seo-builder"
+   ],
+   "after": [
+    "schema-markup-writer",
+    "on-page-seo-tuner"
+   ],
+   "user_supplies": [
+    "product_data",
+    "brief"
+   ],
+   "why": "A single-step job: the writer takes product facts and returns titles and descriptions. Schema markup is a reasonable follow-on once the pages are live."
+  },
+  {
+   "id": "wb039",
+   "request": "get me backlinks from big sites, happy to pay for them",
+   "area": "seo",
+   "style": "sentence",
+   "coverage": "partial",
+   "anchor": [
+    "link-and-pr-outreach-planner",
+    "backlink-builder"
+   ],
+   "steps": [
+    [
+     "link-and-pr-outreach-planner",
+     "backlink-builder"
+    ],
+    [
+     "press-outreach-planner"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "press-outreach-planner",
+    "journalist-query-answer-writer"
+   ],
+   "user_supplies": [
+    "brief",
+    "web_page"
+   ],
+   "why": "Nothing buys links; the catalogue only plans earned links and PR outreach, which is the honest alternative."
+  },
+  {
+   "id": "wb040",
+   "request": "Help me write a cold email to local gyms offering my bookkeeping services.",
+   "area": "sales",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "cold-email-writer",
+    "prospect-outreach-drafter"
+   ],
+   "steps": [
+    [
+     "ideal-customer-profile-writer"
+    ],
+    [
+     "cold-email-writer",
+     "prospect-outreach-drafter"
+    ],
+    [
+     "cold-email-pre-send-checker"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [
+    "ideal-customer-profile-writer",
+    "ideal-buyer-profiler"
+   ],
+   "after": [
+    "cold-email-pre-send-checker",
+    "cold-email-claim-checker",
+    "prospecting-block-planner"
+   ],
+   "user_supplies": [
+    "offer",
+    "question"
+   ],
+   "why": "The cold email writer needs a buyer profile, so the gym-owner profile is written first; the draft then gets a pre-send check."
+  },
+  {
+   "id": "wb041",
+   "request": "sales call script",
+   "area": "sales",
+   "style": "keyword",
+   "coverage": "full",
+   "anchor": [
+    "sales-call-plan",
+    "buyer-matched-argument-planner",
+    "cold-call-script-writer"
+   ],
+   "steps": [
+    [
+     "buyer-matched-argument-planner"
+    ],
+    [
+     "ten-second-opener-writer",
+     "cold-call-script-writer"
+    ],
+    [
+     "objection-answer-sheet-writer"
+    ],
+    [
+     "ask-which-closing-planner"
+    ]
+   ],
+   "ready_workflow": "sales-call-plan",
+   "before": [],
+   "after": [
+    "live-objection-responder",
+    "call-follow-up-drafter"
+   ],
+   "user_supplies": [
+    "product_data",
+    "offer",
+    "question"
+   ],
+   "why": "The lead argument (angle library) feeds the short opener; objection answers come next; the closing questions use the offer."
+  },
+  {
+   "id": "wb042",
+   "request": "had a great call with a prospect 3 weeks ago, sent the proposal, now total silence. do i chase? how without being pushy",
+   "area": "sales",
+   "style": "messy",
+   "coverage": "full",
+   "anchor": [
+    "get-a-quiet-deal-moving-again-without-pressure",
+    "stalled-deal-indecision-checker"
+   ],
+   "steps": [
+    [
+     "stalled-deal-indecision-checker"
+    ],
+    [
+     "yes-ladder-question-writer"
+    ],
+    [
+     "disagreement-calming-line-writer"
+    ]
+   ],
+   "ready_workflow": "get-a-quiet-deal-moving-again-without-pressure",
+   "before": [],
+   "after": [
+    "mutual-action-plan-builder",
+    "stalled-deal-revival-desk"
+   ],
+   "user_supplies": [
+    "question"
+   ],
+   "why": "The stall check produces a next-step plan; the yes-ladder turns that plan into low-pressure questions; calm reply lines are drafted from the plan."
+  },
+  {
+   "id": "wb043",
+   "request": "I just finished a discovery call, here's the transcript. Can you turn it into a proposal?",
+   "area": "sales",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "turn-a-sales-call-into-a-checked-proposal-and-a-plan-to-signature",
+    "sales-proposal-writer"
+   ],
+   "steps": [
+    [
+     "call-follow-up-drafter"
+    ],
+    [
+     "sales-proposal-writer",
+     "quote-and-proposal-builder"
+    ],
+    [
+     "deal-desk-reviewer"
+    ],
+    [
+     "mutual-action-plan-builder"
+    ]
+   ],
+   "ready_workflow": "turn-a-sales-call-into-a-checked-proposal-and-a-plan-to-signature",
+   "before": [
+    "call-follow-up-drafter"
+   ],
+   "after": [
+    "deal-desk-reviewer",
+    "mutual-action-plan-builder",
+    "quote-and-proposal-builder"
+   ],
+   "user_supplies": [
+    "transcript",
+    "offer",
+    "brief"
+   ],
+   "why": "Call notes become the follow-up and proposal inputs; the proposal document is then margin-checked and turned into a dated plan to signature."
+  },
+  {
+   "id": "wb044",
+   "request": "list of leads to reach out to",
+   "area": "sales",
+   "style": "keyword",
+   "coverage": "full",
+   "anchor": [
+    "build-a-prospect-list-rank-it-and-send-first-messages",
+    "prospect-list-builder"
+   ],
+   "steps": [
+    [
+     "prospect-list-builder"
+    ],
+    [
+     "lead-prioritizer"
+    ],
+    [
+     "prospect-outreach-drafter"
+    ],
+    [
+     "cold-email-pre-send-checker"
+    ],
+    [
+     "prospecting-block-planner"
+    ]
+   ],
+   "ready_workflow": "build-a-prospect-list-rank-it-and-send-first-messages",
+   "before": [
+    "ideal-customer-profile-writer"
+   ],
+   "after": [
+    "lead-prioritizer",
+    "stranger-first-message-writer"
+   ],
+   "user_supplies": [
+    "persona",
+    "offer",
+    "question"
+   ],
+   "why": "The list is built from the buyer profile, ranked, then first messages are drafted and checked, and a daily outreach block is planned. List building may need paid data access."
+  },
+  {
+   "id": "wb045",
+   "request": "client says my price is too high and wants 30% off. I honestly can't afford to drop that much, what do I say to them",
+   "area": "sales",
+   "style": "messy",
+   "coverage": "full",
+   "anchor": [
+    "negotiate-from-the-weaker-side-and-still-get-fair-terms",
+    "prepare-a-price-talk-with-a-sum-they-can-pay",
+    "weak-position-negotiation"
+   ],
+   "steps": [
+    [
+     "other-person-view-mapper",
+     "win-win-stance-planner"
+    ],
+    [
+     "weak-position-negotiation",
+     "can-they-pay-deal-checker"
+    ],
+    [
+     "negotiation-call-prep-planner"
+    ],
+    [
+     "disagreement-calming-line-writer",
+     "how-question-counter-writer"
+    ]
+   ],
+   "ready_workflow": "negotiate-from-the-weaker-side-and-still-get-fair-terms",
+   "before": [],
+   "after": [
+    "live-objection-responder",
+    "paid-work-case-writer",
+    "how-question-counter-writer"
+   ],
+   "user_supplies": [
+    "question"
+   ],
+   "why": "Understand the client's side, set limits and a counter, prep the call, then draft calm replies. Either negotiation workflow fits; the weaker-side one matches a solo seller best."
+  },
+  {
+   "id": "wb046",
+   "request": "customers keep saying 'let me think about it' at the end of my calls. how do I handle that better?",
+   "area": "sales",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "objection-answer-sheet-writer",
+    "live-objection-responder"
+   ],
+   "steps": [
+    [
+     "objection-answer-sheet-writer",
+     "live-objection-responder",
+     "stalled-deal-indecision-checker"
+    ],
+    [
+     "ask-which-closing-planner"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "ask-which-closing-planner",
+    "sales-agent-training-planner",
+    "stalled-deal-indecision-checker"
+   ],
+   "user_supplies": [
+    "offer",
+    "voc_reviews",
+    "question"
+   ],
+   "why": "The stall line is an unspoken doubt, so build the objection sheet first; the closing questions are then planned around the offer."
+  },
+  {
+   "id": "wb047",
+   "request": "find me the personal cell numbers of CEOs at 500 companies in my niche",
+   "area": "sales",
+   "style": "sentence",
+   "coverage": "none",
+   "anchor": [],
+   "steps": [],
+   "ready_workflow": null,
+   "before": [],
+   "after": [],
+   "user_supplies": [
+    "question"
+   ],
+   "why": "No item gathers personal phone numbers, and it should not; prospect list builders work from company-level data. Tools should decline rather than force a list builder."
+  },
+  {
+   "id": "wb048",
+   "request": "product descriptions for my etsy candles",
+   "area": "store",
+   "style": "keyword",
+   "coverage": "full",
+   "anchor": [
+    "product-description-writer"
+   ],
+   "steps": [
+    [
+     "product-description-writer"
+    ],
+    [
+     "concrete-copy-rewriter"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [
+    "product-and-variant-setup-planner"
+   ],
+   "after": [
+    "concrete-copy-rewriter",
+    "overseas-listing-localizer",
+    "product-page-seo-builder"
+   ],
+   "user_supplies": [
+    "product_data"
+   ],
+   "why": "Descriptions are written from product facts; a concrete-copy pass then sharpens vague lines using the same facts."
+  },
+  {
+   "id": "wb049",
+   "request": "we sell candles on shopify and returns are eating our margin, help",
+   "area": "store",
+   "style": "messy",
+   "coverage": "full",
+   "anchor": [
+    "monthly-returns-and-refunds-reviewer",
+    "return-reason-finder",
+    "refund-rate-analyzer"
+   ],
+   "steps": [
+    [
+     "return-reason-finder",
+     "refund-rate-analyzer"
+    ],
+    [
+     "return-cost-calculator"
+    ],
+    [
+     "returns-policy-designer"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "return-cost-calculator",
+    "returns-policy-designer",
+    "product-description-writer"
+   ],
+   "user_supplies": [
+    "tool_connection",
+    "performance_sheet",
+    "product_data"
+   ],
+   "why": "Find which products are returned and why from the store data, cost the returns, then set a policy with the return costs in hand. The returns reviewer agent bundles steps 1-2."
+  },
+  {
+   "id": "wb050",
+   "request": "I want to open my first Shopify store this month. What do I actually need to do?",
+   "area": "store",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "open-a-shopify-store-and-take-your-first-order",
+    "shopify-store-setup-planner"
+   ],
+   "steps": [
+    [
+     "shopify-store-setup-planner"
+    ],
+    [
+     "product-and-variant-setup-planner"
+    ],
+    [
+     "collections-and-menu-planner"
+    ],
+    [
+     "shipping-rate-planner"
+    ],
+    [
+     "store-tax-setup-planner"
+    ],
+    [
+     "store-go-live-checker"
+    ]
+   ],
+   "ready_workflow": "open-a-shopify-store-and-take-your-first-order",
+   "before": [],
+   "after": [
+    "store-go-live-checker",
+    "pre-launch-store-checker",
+    "payments-and-checkout-settings-checker"
+   ],
+   "user_supplies": [
+    "question",
+    "product_data"
+   ],
+   "why": "Setup plan first; products and variants feed the collections and menu; shipping and tax are set before the go-live check and test order."
+  },
+  {
+   "id": "wb051",
+   "request": "find a winning product to sell online",
+   "area": "store",
+   "style": "keyword",
+   "coverage": "full",
+   "anchor": [
+    "find-a-product-that-sells-and-a-gap-rivals-leave-open",
+    "proven-product-scout",
+    "pain-point-niche-finder"
+   ],
+   "steps": [
+    [
+     "proven-product-scout",
+     "pain-point-niche-finder"
+    ],
+    [
+     "crowded-category-white-space-finder"
+    ],
+    [
+     "winning-product-scorer"
+    ],
+    [
+     "mvp-experiment-planner"
+    ]
+   ],
+   "ready_workflow": "find-a-product-that-sells-and-a-gap-rivals-leave-open",
+   "before": [],
+   "after": [
+    "winning-product-scorer",
+    "mvp-experiment-planner",
+    "new-product-line-checker"
+   ],
+   "user_supplies": [
+    "question",
+    "product_data"
+   ],
+   "why": "The scout returns candidates plus a competitor set, which the white-space finder needs; the chosen product is scored on costs, then a small test is planned."
+  },
+  {
+   "id": "wb052",
+   "request": "My product page gets visitors but hardly anyone buys. Can you take a look at it?",
+   "area": "store",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "product-page-auditor",
+    "product-page-screenshot-auditor"
+   ],
+   "steps": [
+    [
+     "store-page-conversion-reader"
+    ],
+    [
+     "product-page-auditor",
+     "product-page-screenshot-auditor"
+    ],
+    [
+     "product-description-writer"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [
+    "store-page-conversion-reader"
+   ],
+   "after": [
+    "product-description-writer",
+    "customer-question-finder",
+    "run-one-store-test-and-know-whether-to-ship-the-change"
+   ],
+   "user_supplies": [
+    "performance_sheet",
+    "web_page",
+    "store_capture",
+    "product_data"
+   ],
+   "why": "The numbers show where buyers drop; the page audit explains why; the description is rewritten from product facts to fix what the audit found."
+  },
+  {
+   "id": "wb053",
+   "request": "keep running out of my best sellers and then sitting on boxes of stuff nobody wants. how do i get stock right",
+   "area": "store",
+   "style": "messy",
+   "coverage": "full",
+   "anchor": [
+    "stock-and-reorder-planner",
+    "restock-rule-designer"
+   ],
+   "steps": [
+    [
+     "stock-and-reorder-planner"
+    ],
+    [
+     "restock-rule-designer"
+    ],
+    [
+     "purchase-order-reorder"
+    ]
+   ],
+   "ready_workflow": "reorder-stock-before-you-run-out-and-track-the-shipment",
+   "before": [],
+   "after": [
+    "purchase-order-reorder",
+    "dead-stock-finder",
+    "clearance-discount-planner"
+   ],
+   "user_supplies": [
+    "spreadsheet"
+   ],
+   "why": "Reorder points come from sales and lead times; restock rules are set per product group; the purchase order drafter uses the rules plan to say what to order and what to clear."
+  },
+  {
+   "id": "wb054",
+   "request": "amazon listing for my product",
+   "area": "store",
+   "style": "keyword",
+   "coverage": "full",
+   "anchor": [
+    "amazon-listing-first-draft-writer",
+    "amazon-keyword-picker"
+   ],
+   "steps": [
+    [
+     "amazon-keyword-picker"
+    ],
+    [
+     "amazon-listing-first-draft-writer"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [
+    "amazon-keyword-picker"
+   ],
+   "after": [
+    "amazon-ppc-launch-builder",
+    "amazon-fee-and-margin-checker"
+   ],
+   "user_supplies": [
+    "product_data",
+    "spreadsheet",
+    "question"
+   ],
+   "why": "Search phrases are picked from the keyword export first so the listing draft can place them in the title, bullets and backend."
+  },
+  {
+   "id": "wb055",
+   "request": "Should I even start selling on Amazon? Will I make any money after all their fees?",
+   "area": "store",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "amazon-fee-and-margin-checker",
+    "amazon-unit-profit-checker"
+   ],
+   "steps": [
+    [
+     "amazon-fee-and-margin-checker",
+     "amazon-unit-profit-checker"
+    ],
+    [
+     "amazon-product-viability-scorer"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "amazon-product-viability-scorer",
+    "amazon-keyword-picker"
+   ],
+   "user_supplies": [
+    "product_data",
+    "question"
+   ],
+   "why": "Unit profit after fees answers the money question first; the viability score adds demand and competition before committing."
+  },
+  {
+   "id": "wb056",
+   "request": "my store is super slow on phones, google gives it a speed score of 28",
+   "area": "store",
+   "style": "messy",
+   "coverage": "full",
+   "anchor": [
+    "store-speed-report-reader",
+    "speed-report-translator"
+   ],
+   "steps": [
+    [
+     "store-speed-report-reader",
+     "speed-report-translator"
+    ],
+    [
+     "app-script-auditor"
+    ],
+    [
+     "speed-fix-ranker",
+     "speed-fix-week-planner"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "app-script-auditor",
+    "speed-fix-ranker",
+    "store-image-prep-checker",
+    "layout-shift-fixer",
+    "speed-fix-week-planner"
+   ],
+   "user_supplies": [
+    "source_text",
+    "question",
+    "store_capture",
+    "performance_sheet"
+   ],
+   "why": "The speed report is read first; its findings plus the app list let the app auditor mark what to remove; the ranker orders fixes by impact."
+  },
+  {
+   "id": "wb057",
+   "request": "Lately we're getting a bunch of fake orders with stolen cards. How do I stop them?",
+   "area": "store",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "stop-fake-orders-card-testing-and-bot-abuse",
+    "fraud-rules-setter"
+   ],
+   "steps": [
+    [
+     "fraud-rules-setter"
+    ],
+    [
+     "bot-and-ai-agent-access-planner"
+    ]
+   ],
+   "ready_workflow": "stop-fake-orders-card-testing-and-bot-abuse",
+   "before": [],
+   "after": [
+    "risky-order-flagger",
+    "chargeback-customer-tagger"
+   ],
+   "user_supplies": [
+    "question",
+    "performance_sheet"
+   ],
+   "why": "Fraud rules come first from the order pattern; bot access limits follow to stop card testing at the source."
+  },
+  {
+   "id": "wb058",
+   "request": "I want to A/B test my product page and find out if a new layout really sells more.",
+   "area": "store",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "run-one-store-test-and-know-whether-to-ship-the-change",
+    "store-test-readiness-checker"
+   ],
+   "steps": [
+    [
+     "store-test-readiness-checker"
+    ],
+    [
+     "big-swing-test-picker"
+    ],
+    [
+     "shopify-test-setup-picker"
+    ],
+    [
+     "one-change-experiment-planner"
+    ],
+    [
+     "store-test-verdict-maker"
+    ]
+   ],
+   "ready_workflow": "run-one-store-test-and-know-whether-to-ship-the-change",
+   "before": [],
+   "after": [
+    "store-test-verdict-maker",
+    "read-a-finished-store-test-and-pick-the-next-one"
+   ],
+   "user_supplies": [
+    "performance_sheet",
+    "question"
+   ],
+   "why": "Check there is enough traffic to test, choose the change, pick the test setup, plan one change, then read the verdict from the test results."
+  },
+  {
+   "id": "wb059",
+   "request": "move my 2,000 products from woocommerce over to shopify",
+   "area": "store",
+   "style": "keyword",
+   "coverage": "partial",
+   "anchor": [
+    "business-data-move-runbook"
+   ],
+   "steps": [
+    [
+     "business-data-move-runbook"
+    ],
+    [
+     "product-and-variant-setup-planner"
+    ],
+    [
+     "website-content-mover"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "product-and-variant-setup-planner",
+    "shopify-duplicate-page-fixer",
+    "store-go-live-checker",
+    "website-content-mover"
+   ],
+   "user_supplies": [
+    "source_text",
+    "brief",
+    "product_data",
+    "web_page"
+   ],
+   "why": "Only a generic migration planner exists: it maps fields and test imports; the product setup planner checks the Shopify side; website-content-mover plans URL redirects from the old site. No item performs the import itself."
+  },
+  {
+   "id": "wb060",
+   "request": "What should I charge per hour as a freelance designer?",
+   "area": "pricing",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "hourly-rate-calculator"
+   ],
+   "steps": [
+    [
+     "hourly-rate-calculator",
+     "client-fee-and-cap-setter"
+    ],
+    [
+     "paid-work-case-writer"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "paid-work-case-writer",
+    "prepare-your-first-freelance-project-quote",
+    "price-rise-letter-writer"
+   ],
+   "user_supplies": [
+    "question"
+   ],
+   "why": "The rate is worked out from costs and billable hours first; the pricing case then explains that rate to clients and answers pushback."
+  },
+  {
+   "id": "wb061",
+   "request": "pretty sure I'm undercharging for my candles but scared raising prices will kill sales. how do I raise them without losing everyone",
+   "area": "pricing",
+   "style": "messy",
+   "coverage": "full",
+   "anchor": [
+    "price-rise-readiness-checker",
+    "price-test-planner",
+    "waterfall-price-setter"
+   ],
+   "steps": [
+    [
+     "waterfall-price-setter",
+     "price-position-planner"
+    ],
+    [
+     "price-rise-readiness-checker"
+    ],
+    [
+     "price-test-planner"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "price-test-planner",
+    "price-test-keeper",
+    "sale-price-wording-picker"
+   ],
+   "user_supplies": [
+    "product_data",
+    "offer",
+    "performance_sheet"
+   ],
+   "why": "Work out the floor and target price from costs, check readiness to raise, then plan a small reversible price test before rolling out."
+  },
+  {
+   "id": "wb062",
+   "request": "saas pricing tiers",
+   "area": "pricing",
+   "style": "keyword",
+   "coverage": "full",
+   "anchor": [
+    "price-your-software-in-tiers-people-pick-then-test-it",
+    "saas-pricing-designer"
+   ],
+   "steps": [
+    [
+     "traction-business-profiler"
+    ],
+    [
+     "revenue-model-picker"
+    ],
+    [
+     "saas-pricing-designer",
+     "copilot-gtm-technical-product-pricing"
+    ],
+    [
+     "price-presentation-planner"
+    ],
+    [
+     "price-test-planner"
+    ]
+   ],
+   "ready_workflow": "price-your-software-in-tiers-people-pick-then-test-it",
+   "before": [
+    "traction-business-profiler"
+   ],
+   "after": [
+    "price-presentation-planner",
+    "price-test-planner"
+   ],
+   "user_supplies": [
+    "web_page",
+    "brief",
+    "offer",
+    "performance_sheet"
+   ],
+   "why": "The workflow needs a business profile, so it is built first; revenue model, tiers, pricing-page layout and a price test follow in order."
+  },
+  {
+   "id": "wb063",
+   "request": "I'm about to launch an online course and have no clue what price to put on it.",
+   "area": "pricing",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "price-a-course-or-ebook-and-write-its-launch-emails",
+    "digital-product-pricer"
+   ],
+   "steps": [
+    [
+     "digital-product-pricer"
+    ],
+    [
+     "price-ending-picker"
+    ],
+    [
+     "discount-wording-planner"
+    ],
+    [
+     "launch-email-sequence-planner"
+    ]
+   ],
+   "ready_workflow": "price-a-course-or-ebook-and-write-its-launch-emails",
+   "before": [],
+   "after": [
+    "launch-email-sequence-planner",
+    "willingness-to-pay-survey"
+   ],
+   "user_supplies": [
+    "product_data",
+    "offer"
+   ],
+   "why": "Price format and level first, then price ending and launch discount wording; the launch emails use the priced offer."
+  },
+  {
+   "id": "wb064",
+   "request": "price increase email to my clients",
+   "area": "pricing",
+   "style": "keyword",
+   "coverage": "full",
+   "anchor": [
+    "price-rise-letter-writer"
+   ],
+   "steps": [
+    [
+     "price-rise-readiness-checker"
+    ],
+    [
+     "price-rise-letter-writer"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [
+    "price-rise-readiness-checker",
+    "hourly-rate-calculator"
+   ],
+   "after": [
+    "email-send-readiness-scorer",
+    "tense-email-softener"
+   ],
+   "user_supplies": [
+    "offer"
+   ],
+   "why": "Check the new price is ready to announce, then write the letter from the same offer."
+  },
+  {
+   "id": "wb065",
+   "request": "I need to send my books to the accountant for year end. What do they need and can you help me tidy it up first?",
+   "area": "finance",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "prepare-expenses-for-your-bookkeeper",
+    "expense-sorter"
+   ],
+   "steps": [
+    [
+     "expense-sorter",
+     "spreadsheet-checker"
+    ],
+    [
+     "account-reconciler"
+    ]
+   ],
+   "ready_workflow": "prepare-expenses-for-your-bookkeeper",
+   "before": [],
+   "after": [
+    "account-reconciler",
+    "financial-statement-builder"
+   ],
+   "user_supplies": [
+    "spreadsheet",
+    "brief"
+   ],
+   "why": "Transactions are sorted and checked first; the reconciler then matches them and lists gaps the accountant will ask about."
+  },
+  {
+   "id": "wb066",
+   "request": "my bank statements and my spreadsheet never match, off by like $400 and I can't find where",
+   "area": "finance",
+   "style": "messy",
+   "coverage": "full",
+   "anchor": [
+    "reconcile-the-bank-to-your-books-and-issue-a-clean-p-and-l",
+    "bank-and-ledger-matcher",
+    "reconciliation-break-tracer"
+   ],
+   "steps": [
+    [
+     "bank-and-ledger-matcher",
+     "account-reconciler"
+    ],
+    [
+     "reconciliation-break-tracer"
+    ],
+    [
+     "p-l-and-balance-sheet-writer"
+    ]
+   ],
+   "ready_workflow": "reconcile-the-bank-to-your-books-and-issue-a-clean-p-and-l",
+   "before": [],
+   "after": [
+    "reconciliation-break-tracer",
+    "p-l-and-balance-sheet-writer"
+   ],
+   "user_supplies": [
+    "spreadsheet"
+   ],
+   "why": "Match bank lines to the ledger, trace the unmatched $400, then produce clean statements once corrections are confirmed."
+  },
+  {
+   "id": "wb067",
+   "request": "cash flow forecast",
+   "area": "finance",
+   "style": "keyword",
+   "coverage": "full",
+   "anchor": [
+    "cash-forecast-builder"
+   ],
+   "steps": [
+    [
+     "cash-forecast-builder"
+    ],
+    [
+     "cash-lever-ranker",
+     "cash-tied-up-finder"
+    ]
+   ],
+   "ready_workflow": "prepare-a-seasonal-cash-buffer",
+   "before": [],
+   "after": [
+    "cash-lever-ranker",
+    "cash-tied-up-finder",
+    "budget-and-forecast-builder"
+   ],
+   "user_supplies": [
+    "spreadsheet"
+   ],
+   "why": "The forecast comes from the cash and sales sheet; levers to improve cash are ranked from the same data once the gap is visible."
+  },
+  {
+   "id": "wb068",
+   "request": "How much should I put aside for taxes each month now that I'm self-employed?",
+   "area": "finance",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "tax-set-aside-planner"
+   ],
+   "steps": [
+    [
+     "tax-set-aside-planner"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "self-assessment-tax-return-checklist",
+    "personal-budget-builder"
+   ],
+   "user_supplies": [
+    "question"
+   ],
+   "why": "A single step: the planner turns the tax share into a per-payment rule. It needs the rate from an accountant; the catalogue does not calculate tax law."
+  },
+  {
+   "id": "wb069",
+   "request": "clients keep paying late. I have 6 overdue invoices, a couple 60+ days. need the money without burning bridges",
+   "area": "finance",
+   "style": "messy",
+   "coverage": "full",
+   "anchor": [
+    "get-a-late-invoice-paid-and-keep-the-customer",
+    "payment-reminder-letter-writer",
+    "weekly-invoice-and-cash-chaser"
+   ],
+   "steps": [
+    [
+     "payment-reminder-letter-writer"
+    ],
+    [
+     "can-they-pay-deal-checker"
+    ],
+    [
+     "payment-reminder-letter-writer"
+    ]
+   ],
+   "ready_workflow": "get-a-late-invoice-paid-and-keep-the-customer",
+   "before": [],
+   "after": [
+    "weekly-invoice-and-cash-chaser"
+   ],
+   "user_supplies": [
+    "question",
+    "brief"
+   ],
+   "why": "A polite reminder goes first; payment options are reviewed for clients who can't pay in full; a firmer second note follows. The cash-chaser agent fits if they want a weekly routine."
+  },
+  {
+   "id": "wb070",
+   "request": "monthly P&L for my online shop",
+   "area": "finance",
+   "style": "keyword",
+   "coverage": "full",
+   "anchor": [
+    "build-a-monthly-p-and-l-and-know-your-real-margin",
+    "store-pl-builder"
+   ],
+   "steps": [
+    [
+     "landed-cost-allocator"
+    ],
+    [
+     "cogs-line-sorter"
+    ],
+    [
+     "store-pl-builder"
+    ],
+    [
+     "new-and-returning-pl-splitter"
+    ],
+    [
+     "daily-contribution-margin-tracker"
+    ]
+   ],
+   "ready_workflow": "build-a-monthly-p-and-l-and-know-your-real-margin",
+   "before": [],
+   "after": [
+    "daily-contribution-margin-tracker",
+    "cash-forecast-builder"
+   ],
+   "user_supplies": [
+    "spreadsheet",
+    "performance_sheet"
+   ],
+   "why": "Unit costs are built from invoices, sorted into cost of goods, then the P&L is built and split by new vs returning buyers before daily margin tracking."
+  },
+  {
+   "id": "wb071",
+   "request": "Help me make a budget. I want to pay off my credit card this year.",
+   "area": "finance",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "personal-budget-builder",
+    "debt-payoff-planner",
+    "get-your-personal-money-in-order-with-room-for-error"
+   ],
+   "steps": [
+    [
+     "personal-budget-builder"
+    ],
+    [
+     "debt-payoff-planner"
+    ]
+   ],
+   "ready_workflow": "get-your-personal-money-in-order-with-room-for-error",
+   "before": [],
+   "after": [
+    "spending-story-reviewer",
+    "retirement-savings-projector"
+   ],
+   "user_supplies": [
+    "brief",
+    "question"
+   ],
+   "why": "The budget shows what can go to debt each month; the payoff plan uses that amount."
+  },
+  {
+   "id": "wb072",
+   "request": "which stocks should I buy with my $10k savings",
+   "area": "finance",
+   "style": "keyword",
+   "coverage": "partial",
+   "anchor": [
+    "investment-or-speculation-sorter"
+   ],
+   "steps": [
+    [
+     "investment-or-speculation-sorter"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "investing-policy-page-writer"
+   ],
+   "user_supplies": [
+    "question"
+   ],
+   "why": "No item gives personal stock picks, and tools should not; the closest honest help is a check of whether an idea is investing or speculation. Expect tools to decline the pick."
+  },
+  {
+   "id": "wb073",
+   "request": "We're a 5-person startup. How many months of cash do we have left, and what happens if sales slow down?",
+   "area": "finance",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "startup-runway-forecaster",
+    "forecast-your-startup-runway-and-prepare-a-finance-pack"
+   ],
+   "steps": [
+    [
+     "startup-runway-forecaster",
+     "startup-finance-advisor"
+    ],
+    [
+     "bad-year-plan-stress-tester"
+    ],
+    [
+     "cash-lever-ranker"
+    ]
+   ],
+   "ready_workflow": "forecast-your-startup-runway-and-prepare-a-finance-pack",
+   "before": [
+    "startup-financial-model-builder"
+   ],
+   "after": [
+    "startup-finance-advisor",
+    "cash-lever-ranker"
+   ],
+   "user_supplies": [
+    "spreadsheet",
+    "question"
+   ],
+   "why": "Runway comes from the cash sheet; the bad-case test answers the slowdown question; the cash lever ranker lists what to change first."
+  },
+  {
+   "id": "wb074",
+   "request": "Can you research the market for mobile dog grooming in my city and tell me if it's worth starting?",
+   "area": "research",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "size-a-market-and-separate-facts-from-guesses",
+    "market-size-estimator",
+    "market-research-report-writer"
+   ],
+   "steps": [
+    [
+     "market-size-estimator"
+    ],
+    [
+     "public-database-fact-finder"
+    ],
+    [
+     "findings-and-guesses-separator"
+    ],
+    [
+     "market-research-report-writer"
+    ]
+   ],
+   "ready_workflow": "size-a-market-and-separate-facts-from-guesses",
+   "before": [],
+   "after": [
+    "startup-idea-tester",
+    "mvp-experiment-planner"
+   ],
+   "user_supplies": [
+    "brief",
+    "question"
+   ],
+   "why": "Estimate the market bottom-up, pull public facts, separate proven from guessed, then write the report the go/no-go rests on."
+  },
+  {
+   "id": "wb075",
+   "request": "competitor analysis",
+   "area": "research",
+   "style": "keyword",
+   "coverage": "full",
+   "anchor": [
+    "map-your-rivals-and-write-a-message-they-cannot-answer",
+    "competitor-battle-card-builder",
+    "positioning-grid-builder"
+   ],
+   "steps": [
+    [
+     "positioning-grid-builder",
+     "competitor-battle-card-builder"
+    ],
+    [
+     "owned-word-mapper",
+     "competitor-white-space-mapper"
+    ],
+    [
+     "rival-weakness-message-finder"
+    ]
+   ],
+   "ready_workflow": "map-your-rivals-and-write-a-message-they-cannot-answer",
+   "before": [],
+   "after": [
+    "rival-weakness-message-finder",
+    "sales-battlecard-builder",
+    "competitor-site-audit"
+   ],
+   "user_supplies": [
+    "question"
+   ],
+   "why": "Both first-step options return a competitor set; the word map and white-space map read that set; the message finder turns the gaps into angles."
+  },
+  {
+   "id": "wb076",
+   "request": "I keep reading conflicting stuff about whether intermittent fasting is good for women over 40. can you dig into the actual studies and tell me what holds up",
+   "area": "research",
+   "style": "messy",
+   "coverage": "full",
+   "anchor": [
+    "research-a-question-and-write-a-cited-report",
+    "cited-research-report-writer",
+    "compare-conflicting-research-findings"
+   ],
+   "steps": [
+    [
+     "research-question-outliner"
+    ],
+    [
+     "scholarly-database-searcher"
+    ],
+    [
+     "cited-research-report-writer"
+    ],
+    [
+     "unsupported-claim-spotter"
+    ]
+   ],
+   "ready_workflow": "research-a-question-and-write-a-cited-report",
+   "before": [],
+   "after": [
+    "unsupported-claim-spotter",
+    "compare-conflicting-research-findings",
+    "study-claim-checker"
+   ],
+   "user_supplies": [
+    "question"
+   ],
+   "why": "Scope the question, find studies, write a cited report, then check each claim against its source. Research summary only, not medical advice."
+  },
+  {
+   "id": "wb077",
+   "request": "What are people actually complaining about in reviews of products like mine?",
+   "area": "research",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "review-insight-finder",
+    "forum-and-review-avatar-digger"
+   ],
+   "steps": [
+    [
+     "forum-and-review-avatar-digger",
+     "rating-gap-product-finder"
+    ],
+    [
+     "review-insight-finder",
+     "star-rating-review-miner"
+    ],
+    [
+     "objection-answer-sheet-writer"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [
+    "forum-and-review-avatar-digger",
+    "rating-gap-product-finder"
+   ],
+   "after": [
+    "objection-answer-sheet-writer",
+    "product-angle-finder",
+    "pain-point-ad-builder"
+   ],
+   "user_supplies": [
+    "question"
+   ],
+   "why": "Collect reviews of similar products first (both collectors return review quotes); the insight finder ranks the complaints; the objection sheet turns them into answers."
+  },
+  {
+   "id": "wb078",
+   "request": "questions to ask potential customers before I build anything",
+   "area": "research",
+   "style": "keyword",
+   "coverage": "full",
+   "anchor": [
+    "customer-interview-questions",
+    "customer-interview-coach",
+    "buying-story-interview-guide"
+   ],
+   "steps": [
+    [
+     "customer-interview-questions",
+     "customer-interview-coach",
+     "buying-story-interview-guide"
+    ]
+   ],
+   "ready_workflow": "idea-worth-building",
+   "before": [],
+   "after": [
+    "customer-research-analyst",
+    "customer-interview-notes",
+    "job-based-avatar-builder"
+   ],
+   "user_supplies": [
+    "brief",
+    "question"
+   ],
+   "why": "Questions come from the idea brief; nothing has been interviewed yet, so there are no transcripts. After the interviews, the analyst or notes sorter turns answers into themes. idea-worth-building runs customer-interview-questions inside a before-you-build validation."
+  },
+  {
+   "id": "wb079",
+   "request": "alert me every time someone mentions my brand anywhere online, in real time",
+   "area": "research",
+   "style": "sentence",
+   "coverage": "partial",
+   "anchor": [
+    "social-listening-brief-writer",
+    "ai-brand-mention-scanner",
+    "brand-mention-tracker"
+   ],
+   "steps": [
+    [
+     "social-listening-brief-writer",
+     "ai-brand-mention-scanner",
+     "brand-mention-tracker"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "social-comment-and-reply-desk"
+   ],
+   "user_supplies": [
+    "question"
+   ],
+   "why": "The catalogue can scan for mentions on request, but nothing runs continuously or sends real-time alerts."
+  },
+  {
+   "id": "wb080",
+   "request": "about us page for my small business",
+   "area": "writing",
+   "style": "keyword",
+   "coverage": "full",
+   "anchor": [
+    "write-your-founder-story-and-cut-it-to-what-moves",
+    "brand-origin-story-writer",
+    "hero-story-mapper"
+   ],
+   "steps": [
+    [
+     "hero-story-mapper",
+     "brand-origin-story-writer"
+    ],
+    [
+     "story-shape-mapper"
+    ],
+    [
+     "ten-percent-cutter"
+    ],
+    [
+     "plain-english-editor"
+    ]
+   ],
+   "ready_workflow": "write-your-founder-story-and-cut-it-to-what-moves",
+   "before": [],
+   "after": [
+    "plain-english-editor",
+    "brand-messaging-builder"
+   ],
+   "user_supplies": [
+    "question",
+    "brief"
+   ],
+   "why": "The true-story outline gives a first draft; its shape is checked, then it is cut and edited into plain language for the page."
+  },
+  {
+   "id": "wb081",
+   "request": "Can you make this paragraph sound less robotic? I wrote it with ChatGPT.",
+   "area": "writing",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "anti-ai-slop-copy-editor",
+    "plain-english-editor"
+   ],
+   "steps": [
+    [
+     "anti-ai-slop-copy-editor"
+    ],
+    [
+     "plain-english-editor"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "plain-english-editor",
+    "brand-voice-editor"
+   ],
+   "user_supplies": [
+    "copy_draft"
+   ],
+   "why": "The AI-style check names the tells; the plain-English pass rewrites the paragraph with those notes."
+  },
+  {
+   "id": "wb082",
+   "request": "giving a toast at my brother's wedding in 2 weeks and i'm terrible at speeches, help",
+   "area": "writing",
+   "style": "messy",
+   "coverage": "full",
+   "anchor": [
+    "funny-speech-planner",
+    "read-aloud-speech-shaper"
+   ],
+   "steps": [
+    [
+     "funny-speech-planner"
+    ],
+    [
+     "witty-line-punch-up"
+    ],
+    [
+     "read-aloud-speech-shaper"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "read-aloud-speech-shaper",
+    "witty-line-punch-up"
+   ],
+   "user_supplies": [
+    "question"
+   ],
+   "why": "One true story becomes the toast draft; the jokes are sharpened; then it is shaped to be spoken with pauses marked."
+  },
+  {
+   "id": "wb083",
+   "request": "I want to write a book about my 20 years as a nurse but I don't know where to start.",
+   "area": "writing",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "agency-marketing-book-co-author",
+    "book-writing-project-coach"
+   ],
+   "steps": [
+    [
+     "book-writing-project-coach"
+    ],
+    [
+     "idea-fragment-miner"
+    ],
+    [
+     "agency-marketing-book-co-author"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [
+    "book-writing-project-coach",
+    "idea-fragment-miner"
+   ],
+   "after": [
+    "story-continuity-checker",
+    "plain-english-editor"
+   ],
+   "user_supplies": [
+    "question"
+   ],
+   "why": "A project plan comes first; stories and notes are gathered into source text; the co-author turns that material into the first chapter."
+  },
+  {
+   "id": "wb084",
+   "request": "press release for our launch",
+   "area": "writing",
+   "style": "keyword",
+   "coverage": "full",
+   "anchor": [
+    "marketing-content-drafter",
+    "agency-marketing-pr-communications-manager"
+   ],
+   "steps": [
+    [
+     "agency-marketing-pr-communications-manager",
+     "marketing-content-drafter"
+    ],
+    [
+     "press-outreach-planner"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "press-outreach-planner",
+    "journalist-query-answer-writer"
+   ],
+   "user_supplies": [
+    "question",
+    "brief"
+   ],
+   "why": "The PR planner sets key messages and a release outline, or the content drafter writes the press release itself (it has a press-release format); outreach to journalists is planned after."
+  },
+  {
+   "id": "wb085",
+   "request": "Turn these meeting notes into a clear summary I can send to the team.",
+   "area": "writing",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "rough-notes-to-minutes-writer",
+    "agency-project-management-meeting-notes-specialist",
+    "turn-meetings-into-owned-actions"
+   ],
+   "steps": [
+    [
+     "rough-notes-to-minutes-writer",
+     "agency-project-management-meeting-notes-specialist"
+    ],
+    [
+     "executive-action-register"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "executive-action-register",
+    "executive-due-task-drafts"
+   ],
+   "user_supplies": [
+    "meeting_notes"
+   ],
+   "why": "Rough notes become clean minutes first; the action register pulls owners and dates from the cleaned notes."
+  },
+  {
+   "id": "wb086",
+   "request": "blog post announcing our new feature",
+   "area": "writing",
+   "style": "keyword",
+   "coverage": "full",
+   "anchor": [
+    "search-blog-post-writer",
+    "marketing-content-drafter",
+    "blog-post-producer"
+   ],
+   "steps": [
+    [
+     "content-brief-writer"
+    ],
+    [
+     "search-blog-post-writer",
+     "marketing-content-drafter",
+     "blog-post-producer"
+    ],
+    [
+     "plain-english-editor"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [
+    "content-brief-writer"
+   ],
+   "after": [
+    "plain-english-editor",
+    "x-and-linkedin-post-pair-writer",
+    "roadmap-update-writer"
+   ],
+   "user_supplies": [
+    "brief"
+   ],
+   "why": "The feature notes become a post brief; the post is drafted from it; a plain-English edit finishes it."
+  },
+  {
+   "id": "wb087",
+   "request": "translate my 300 page novel into Japanese",
+   "area": "writing",
+   "style": "keyword",
+   "coverage": "partial",
+   "anchor": [
+    "article-translator",
+    "translator"
+   ],
+   "steps": [
+    [
+     "article-translator",
+     "translator"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "story-continuity-checker"
+   ],
+   "user_supplies": [
+    "source_text"
+   ],
+   "why": "General translators exist (article-translator chunks long texts) but a 300-page literary translation still needs a human translator and review. Partial fit."
+  },
+  {
+   "id": "wb088",
+   "request": "logo for my coffee shop",
+   "area": "design-media",
+   "style": "keyword",
+   "coverage": "full",
+   "anchor": [
+    "brand-mark-design",
+    "logo-concept-generator"
+   ],
+   "steps": [
+    [
+     "design-brief-rules-writer"
+    ],
+    [
+     "brand-mark-system-planner",
+     "logo-concept-generator"
+    ],
+    [
+     "logo-strength-tester"
+    ]
+   ],
+   "ready_workflow": "brand-mark-design",
+   "before": [],
+   "after": [
+    "brand-guide-builder",
+    "visual-system-rules-writer"
+   ],
+   "user_supplies": [
+    "question"
+   ],
+   "why": "A logo brief first; the mark plan is built from it; the strength test reviews the resulting direction. Claude plans the logo; drawing it needs an image tool."
+  },
+  {
+   "id": "wb089",
+   "request": "I have photos of my jewelry taken on my kitchen table. Can you make them look professional for my shop?",
+   "area": "design-media",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "product-photo-retoucher",
+    "product-background-swapper",
+    "product-photo-set-maker"
+   ],
+   "steps": [
+    [
+     "product-photo-retoucher",
+     "product-background-swapper",
+     "reference-product-photos"
+    ],
+    [
+     "marketplace-photo-rule-checker",
+     "ai-product-photo-inspector"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "marketplace-photo-rule-checker",
+    "ai-product-photo-inspector",
+    "photo-product-gallery"
+   ],
+   "user_supplies": [
+    "product_photos"
+   ],
+   "why": "Retouch or swap backgrounds from the home photos, then check the new set against marketplace rules and for AI artifacts. Image edits need a connected image service."
+  },
+  {
+   "id": "wb090",
+   "request": "need a little explainer video for our app for the homepage, maybe 60 sec, no budget for an agency",
+   "area": "design-media",
+   "style": "messy",
+   "coverage": "full",
+   "anchor": [
+    "product-demo-video-maker",
+    "motion-graphics-ad-script",
+    "motion-graphics-build-plan"
+   ],
+   "steps": [
+    [
+     "website-brand-brain-builder"
+    ],
+    [
+     "motion-graphics-ad-script"
+    ],
+    [
+     "motion-graphics-build-plan",
+     "product-demo-video-maker"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [
+    "website-brand-brain-builder"
+   ],
+   "after": [
+    "motion-graphics-build-plan",
+    "video-ad-text-overlays"
+   ],
+   "user_supplies": [
+    "web_page",
+    "brief",
+    "product_data"
+   ],
+   "why": "The script writer needs a brand file, so the site is read first; the script plus product facts drive the build plan and clip prompts. Items are written for ads, so it is a fair but not perfect fit for a homepage explainer. product-demo-video-maker is the closest single item: a 30-60s product demo/explainer with scene plan and narration."
+  },
+  {
+   "id": "wb091",
+   "request": "infographic from my blog post",
+   "area": "design-media",
+   "style": "keyword",
+   "coverage": "full",
+   "anchor": [
+    "infographic-maker"
+   ],
+   "steps": [
+    [
+     "infographic-maker"
+    ],
+    [
+     "image-compressor"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "image-compressor",
+    "article-cover-maker"
+   ],
+   "user_supplies": [
+    "source_text"
+   ],
+   "why": "The infographic is made from the post text; the image is then compressed for the web."
+  },
+  {
+   "id": "wb092",
+   "request": "Make me a set of matching images for my Instagram posts this month.",
+   "area": "design-media",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "marketing-image-prompt-writer",
+    "nano-banana-image-prompt-planner",
+    "visual-system-rules-writer"
+   ],
+   "steps": [
+    [
+     "visual-system-rules-writer"
+    ],
+    [
+     "marketing-image-prompt-writer",
+     "nano-banana-image-prompt-planner"
+    ],
+    [
+     "multi-provider-image-maker"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [
+    "visual-system-rules-writer"
+   ],
+   "after": [
+    "multi-provider-image-maker",
+    "social-post-photo-maker"
+   ],
+   "user_supplies": [
+    "brief"
+   ],
+   "why": "Matching means shared visual rules first; prompts are written within those rules; an image tool renders them from the prompts."
+  },
+  {
+   "id": "wb093",
+   "request": "the colors on my website look kind of off and the text is hard to read. can someone check?",
+   "area": "design-media",
+   "style": "messy",
+   "coverage": "full",
+   "anchor": [
+    "accessibility-checker",
+    "quarterly-accessibility-keeper",
+    "colour-contrast-checker"
+   ],
+   "steps": [
+    [
+     "quarterly-accessibility-keeper",
+     "accessibility-checker"
+    ],
+    [
+     "mood-colour-palette-planner"
+    ],
+    [
+     "colour-contrast-checker"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "colour-contrast-checker",
+    "plain-page-type-checker"
+   ],
+   "user_supplies": [
+    "web_page",
+    "question"
+   ],
+   "why": "The site is reviewed for readability first; a calmer palette is planned; the contrast checker tests that palette before it goes live."
+  },
+  {
+   "id": "wb094",
+   "request": "clean up the background noise in my podcast episode and cut out the long pauses",
+   "area": "design-media",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "cut-a-raw-recording-and-get-chapters-and-short-clips",
+    "noisy-audio-cleaner"
+   ],
+   "steps": [
+    [
+     "noisy-audio-cleaner"
+    ],
+    [
+     "subtitle-and-transcript-maker",
+     "recording-transcriber"
+    ],
+    [
+     "dead-air-and-retake-cutter"
+    ]
+   ],
+   "ready_workflow": "cut-a-raw-recording-and-get-chapters-and-short-clips",
+   "before": [],
+   "after": [
+    "youtube-chapter-writer",
+    "shorts-clip-finder"
+   ],
+   "user_supplies": [
+    "audio"
+   ],
+   "why": "Noise is removed from the audio; the clean audio is transcribed; the transcript drives the cut list for pauses and retakes. Noise removal needs an ElevenLabs account."
+  },
+  {
+   "id": "wb095",
+   "request": "Can you design a flyer for our bake sale on Saturday?",
+   "area": "design-media",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "make-a-readable-event-poster",
+    "poster-designer",
+    "type-led-poster-planner"
+   ],
+   "steps": [
+    [
+     "type-led-poster-planner"
+    ],
+    [
+     "poster-designer"
+    ],
+    [
+     "colour-contrast-checker"
+    ]
+   ],
+   "ready_workflow": "make-a-readable-event-poster",
+   "before": [],
+   "after": [
+    "colour-contrast-checker",
+    "image-compressor"
+   ],
+   "user_supplies": [
+    "brief"
+   ],
+   "why": "Layout and type plan from the event facts, then the poster is made, then its contrast is checked."
+  },
+  {
+   "id": "wb096",
+   "request": "stabilize my shaky drone footage and color grade it in premiere for me",
+   "area": "design-media",
+   "style": "sentence",
+   "coverage": "none",
+   "anchor": [],
+   "steps": [],
+   "ready_workflow": null,
+   "before": [],
+   "after": [],
+   "user_supplies": [
+    "footage"
+   ],
+   "why": "No item stabilizes or color grades video or drives Premiere; edit planners only plan cuts. Tools should say so rather than offer an edit planner."
+  },
+  {
+   "id": "wb097",
+   "request": "I have an idea for an app that helps roommates split rent. How do I know if anyone actually wants it before I build it?",
+   "area": "product",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "idea-worth-building",
+    "customer-interview-questions",
+    "idea-evidence-review"
+   ],
+   "steps": [
+    [
+     "first-customer-group-picker"
+    ],
+    [
+     "customer-interview-request"
+    ],
+    [
+     "customer-interview-questions"
+    ],
+    [
+     "customer-interview-notes"
+    ],
+    [
+     "commitment-ask-planner"
+    ],
+    [
+     "idea-evidence-review"
+    ]
+   ],
+   "ready_workflow": "idea-worth-building",
+   "before": [],
+   "after": [
+    "mvp-experiment-planner",
+    "pre-sell-your-idea-to-three-buyers-then-launch-in-thirty-days"
+   ],
+   "user_supplies": [
+    "brief",
+    "voc_reviews"
+   ],
+   "why": "Pick who to talk to, ask them, prepare questions, sort the notes, plan a commitment ask, then review the evidence for a go/change/stop call."
+  },
+  {
+   "id": "wb098",
+   "request": "product roadmap",
+   "area": "product",
+   "style": "keyword",
+   "coverage": "full",
+   "anchor": [
+    "build-an-outcome-based-roadmap-and-write-the-update",
+    "quarterly-roadmap-builder"
+   ],
+   "steps": [
+    [
+     "opportunity-solution-tree"
+    ],
+    [
+     "outcome-based-roadmap"
+    ],
+    [
+     "quarterly-roadmap-builder"
+    ],
+    [
+     "roadmap-update-writer"
+    ]
+   ],
+   "ready_workflow": "build-an-outcome-based-roadmap-and-write-the-update",
+   "before": [],
+   "after": [
+    "roadmap-update-writer",
+    "feature-priority-scorer"
+   ],
+   "user_supplies": [
+    "brief",
+    "question",
+    "voc_reviews"
+   ],
+   "why": "Customer problems become an opportunity tree; it is turned into outcomes, then a quarter plan; the update explains the choices."
+  },
+  {
+   "id": "wb099",
+   "request": "users sign up for our saas and then never come back after day 1. what do we fix first",
+   "area": "product",
+   "style": "messy",
+   "coverage": "full",
+   "anchor": [
+    "find-where-new-users-leave-and-prove-the-fix-works",
+    "new-user-drop-off-finder"
+   ],
+   "steps": [
+    [
+     "new-user-drop-off-finder"
+    ],
+    [
+     "small-usability-test-planner"
+    ],
+    [
+     "product-metrics-review-writer"
+    ]
+   ],
+   "ready_workflow": "find-where-new-users-leave-and-prove-the-fix-works",
+   "before": [],
+   "after": [
+    "first-use-onboarding-designer",
+    "new-customer-onboarding-sequence-writer"
+   ],
+   "user_supplies": [
+    "performance_sheet",
+    "question"
+   ],
+   "why": "Find the biggest drop-off from the numbers, test the leak with a small usability test, then review metrics after the change."
+  },
+  {
+   "id": "wb100",
+   "request": "Write a PRD for a feature that lets customers schedule their deliveries.",
+   "area": "product",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "product-requirements-writer",
+    "feature-spec-writer"
+   ],
+   "steps": [
+    [
+     "product-requirements-writer",
+     "feature-spec-writer"
+    ],
+    [
+     "user-story-writer"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "user-story-writer",
+    "idea-to-dev-brief-writer"
+   ],
+   "user_supplies": [
+    "brief",
+    "question"
+   ],
+   "why": "The PRD defines the feature; user stories with acceptance criteria are broken out from the same brief for the team."
+  },
+  {
+   "id": "wb101",
+   "request": "prioritize all these feature requests",
+   "area": "product",
+   "style": "keyword",
+   "coverage": "full",
+   "anchor": [
+    "feature-priority-scorer",
+    "yes-later-no-request-sorter",
+    "weekly-product-feedback-triager"
+   ],
+   "steps": [
+    [
+     "agency-product-feedback-synthesizer"
+    ],
+    [
+     "feature-priority-scorer",
+     "yes-later-no-request-sorter"
+    ],
+    [
+     "roadmap-update-writer"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [
+    "agency-product-feedback-synthesizer",
+    "feature-request-screener"
+   ],
+   "after": [
+    "roadmap-update-writer",
+    "quarterly-roadmap-builder"
+   ],
+   "user_supplies": [
+    "question",
+    "source_text"
+   ],
+   "why": "Requests are grouped into themes first (giving a brief); the scorer ranks them; the update explains what made the cut."
+  },
+  {
+   "id": "wb102",
+   "request": "people don't seem to love our product",
+   "area": "product",
+   "style": "vague",
+   "coverage": "full",
+   "anchor": [
+    "product-market-fit-checker",
+    "must-have-survey-planner"
+   ],
+   "steps": [
+    [
+     "product-market-fit-checker"
+    ],
+    [
+     "must-have-survey-planner"
+    ]
+   ],
+   "ready_workflow": "product-miss-growth-tests",
+   "before": [],
+   "after": [
+    "must-have-survey-planner",
+    "agency-product-feedback-synthesizer"
+   ],
+   "user_supplies": [
+    "question"
+   ],
+   "why": "Score fit first to find the weak lever; the must-have survey then measures how disappointed users would be."
+  },
+  {
+   "id": "wb103",
+   "request": "I need a simple website for my photography business with a gallery and a contact form.",
+   "area": "software",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "website-art-director",
+    "editorial-web-designer"
+   ],
+   "steps": [
+    [
+     "site-map-planner"
+    ],
+    [
+     "website-art-director",
+     "editorial-web-designer"
+    ],
+    [
+     "netlify-publisher",
+     "cloudflare-publisher",
+     "vercel-publisher"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [
+    "site-map-planner"
+   ],
+   "after": [
+    "netlify-publisher",
+    "cloudflare-publisher",
+    "web-form-designer",
+    "seo-site-auditor"
+   ],
+   "user_supplies": [
+    "brief"
+   ],
+   "why": "Pages and menu are planned from the brief; the site is built with that plan; the built code is then published."
+  },
+  {
+   "id": "wb104",
+   "request": "my wordpress site got hacked, there are weird spam links everywhere, what do i do",
+   "area": "software",
+   "style": "messy",
+   "coverage": "partial",
+   "anchor": [
+    "wordpress-code-checker",
+    "wordpress-health-fixer"
+   ],
+   "steps": [
+    [
+     "wordpress-code-checker"
+    ],
+    [
+     "wordpress-health-fixer"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [
+    "security-incident-triager"
+   ],
+   "after": [
+    "wordpress-health-fixer"
+   ],
+   "user_supplies": [
+    "codebase"
+   ],
+   "why": "No item handles malware cleanup or a hacked-site recovery; the closest is reviewing theme/plugin code for security issues and turning the findings into a backup-first fix plan. A human or host security service is still needed."
+  },
+  {
+   "id": "wb105",
+   "request": "fix this python error",
+   "area": "software",
+   "style": "keyword",
+   "coverage": "full",
+   "anchor": [
+    "bug-diagnoser",
+    "live-code-debugger"
+   ],
+   "steps": [
+    [
+     "bug-diagnoser",
+     "live-code-debugger"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "pull-request-reviewer",
+    "fix-loop-breaker",
+    "test-failure-repair-loop"
+   ],
+   "user_supplies": [
+    "codebase",
+    "question"
+   ],
+   "why": "A single step: the debugger reads the code and the error and returns a fix. The bug-proof workflow needs a written bug brief and is heavier than asked."
+  },
+  {
+   "id": "wb106",
+   "request": "Can you review my pull request before I merge it?",
+   "area": "software",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "review-a-pull-request-fix-the-comments-and-sign-off",
+    "pull-request-reviewer",
+    "pull-request-risk-reviewer"
+   ],
+   "steps": [
+    [
+     "pull-request-risk-reviewer",
+     "two-model-pull-request-reviewer",
+     "bug-and-security-code-reviewer"
+    ],
+    [
+     "review-comment-fixer"
+    ],
+    [
+     "human-review-gate"
+    ]
+   ],
+   "ready_workflow": "review-a-pull-request-fix-the-comments-and-sign-off",
+   "before": [],
+   "after": [
+    "review-comment-fixer",
+    "human-review-gate"
+   ],
+   "user_supplies": [
+    "code_change",
+    "codebase"
+   ],
+   "why": "Risks are ranked from the change, comments are fixed in the codebase, then a named person signs off on the fixed change."
+  },
+  {
+   "id": "wb107",
+   "request": "our app is getting really slow as more users join, pages take 5+ seconds to load. where do i even start",
+   "area": "software",
+   "style": "messy",
+   "coverage": "full",
+   "anchor": [
+    "find-what-is-slow-fix-it-and-show-the-numbers",
+    "measure-first-slowdown-finder"
+   ],
+   "steps": [
+    [
+     "measure-first-slowdown-finder"
+    ],
+    [
+     "slow-code-fixer",
+     "speed-tuner"
+    ],
+    [
+     "pull-request-writer"
+    ]
+   ],
+   "ready_workflow": "find-what-is-slow-fix-it-and-show-the-numbers",
+   "before": [],
+   "after": [
+    "production-stability-reviewer",
+    "page-speed-fixer"
+   ],
+   "user_supplies": [
+    "question",
+    "codebase"
+   ],
+   "why": "Measure first to find the slow path; the fix uses that finding; the pull request reports before-and-after timings."
+  },
+  {
+   "id": "wb108",
+   "request": "deploy my next.js app",
+   "area": "software",
+   "style": "keyword",
+   "coverage": "full",
+   "anchor": [
+    "vercel-publisher",
+    "vercel-deployer",
+    "release-a-new-version-and-prove-it-is-live"
+   ],
+   "steps": [
+    [
+     "vercel-publisher",
+     "vercel-deployer",
+     "netlify-publisher",
+     "cloudflare-publisher"
+    ],
+    [
+     "deploy-verifier",
+     "release-proof-checker"
+    ]
+   ],
+   "ready_workflow": "release-a-new-version-and-prove-it-is-live",
+   "before": [],
+   "after": [
+    "deploy-verifier",
+    "release-proof-checker"
+   ],
+   "user_supplies": [
+    "codebase"
+   ],
+   "why": "Publish from the codebase, then verify the live build matches. The release workflow adds versioning and a readiness gate first."
+  },
+  {
+   "id": "wb109",
+   "request": "I want to add Stripe payments to my web app.",
+   "area": "software",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "stripe-payments-builder"
+   ],
+   "steps": [
+    [
+     "stripe-payments-builder"
+    ],
+    [
+     "bug-and-security-code-reviewer"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "bug-and-security-code-reviewer",
+    "build-a-paid-app-with-billing-emails-alerts-and-tests"
+   ],
+   "user_supplies": [
+    "brief",
+    "codebase"
+   ],
+   "why": "The Stripe code is drafted from the billing rules; payment code then gets a security review before going live."
+  },
+  {
+   "id": "wb110",
+   "request": "build me a full uber-style ride app for iphone and android by next week",
+   "area": "software",
+   "style": "sentence",
+   "coverage": "partial",
+   "anchor": [
+    "agency-engineering-mobile-app-builder",
+    "saas-blueprint-planner",
+    "web-project-scoper"
+   ],
+   "steps": [
+    [
+     "agency-engineering-mobile-app-builder",
+     "web-project-scoper",
+     "saas-blueprint-planner"
+    ],
+    [
+     "launch-scope-cutter"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "launch-scope-cutter",
+    "mobile-app-release-shipper"
+   ],
+   "user_supplies": [
+    "brief",
+    "question"
+   ],
+   "why": "Nothing builds a two-sided mobile marketplace in a week; the honest help is scoping the project and cutting it to a small first launch."
+  },
+  {
+   "id": "wb111",
+   "request": "I exported my sales data to a spreadsheet. Can you tell me what's interesting in it?",
+   "area": "data",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "turn-a-raw-dataset-into-a-checked-brief-of-top-insights",
+    "data-analyst"
+   ],
+   "steps": [
+    [
+     "dataset-profiler"
+    ],
+    [
+     "data-analyst"
+    ],
+    [
+     "analysis-checker"
+    ],
+    [
+     "insight-brief-writer"
+    ]
+   ],
+   "ready_workflow": "turn-a-raw-dataset-into-a-checked-brief-of-top-insights",
+   "before": [],
+   "after": [
+    "data-chart-drawer",
+    "insight-brief-writer"
+   ],
+   "user_supplies": [
+    "spreadsheet",
+    "question"
+   ],
+   "why": "Profile the file first, analyse it with the profile in hand, check the analysis document, then rank the insights."
+  },
+  {
+   "id": "wb112",
+   "request": "dashboard for my weekly numbers",
+   "area": "data",
+   "style": "keyword",
+   "coverage": "full",
+   "anchor": [
+    "build-a-weekly-kpi-report-with-a-forecast-and-dashboard",
+    "dashboard-builder"
+   ],
+   "steps": [
+    [
+     "recurring-kpi-report-maker",
+     "kpi-dashboard-designer"
+    ],
+    [
+     "trend-and-forecast-analyst"
+    ],
+    [
+     "dashboard-builder"
+    ]
+   ],
+   "ready_workflow": "build-a-weekly-kpi-report-with-a-forecast-and-dashboard",
+   "before": [
+    "kpi-dashboard-designer"
+   ],
+   "after": [
+    "dashboard-builder",
+    "weekly-store-numbers-watcher"
+   ],
+   "user_supplies": [
+    "brief",
+    "spreadsheet"
+   ],
+   "why": "Define and build the weekly report, add trend and forecast, then put both on one dashboard."
+  },
+  {
+   "id": "wb113",
+   "request": "this spreadsheet is a disaster. duplicate rows, dates in 3 different formats, names spelled differently. need it clean before I can do anything",
+   "area": "data",
+   "style": "messy",
+   "coverage": "full",
+   "anchor": [
+    "messy-spreadsheet-cleaner",
+    "data-cleaner",
+    "data-file-clean-up-loop"
+   ],
+   "steps": [
+    [
+     "dataset-profiler",
+     "data-quality-auditor"
+    ],
+    [
+     "messy-spreadsheet-cleaner",
+     "data-cleaner"
+    ],
+    [
+     "spreadsheet-checker"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [
+    "dataset-profiler",
+    "data-quality-auditor"
+   ],
+   "after": [
+    "spreadsheet-checker",
+    "data-analyst"
+   ],
+   "user_supplies": [
+    "spreadsheet"
+   ],
+   "why": "Find the problems first, clean the sheet, then check the cleaned file before using it."
+  },
+  {
+   "id": "wb114",
+   "request": "Write me a SQL query that shows our top 10 customers by revenue last quarter.",
+   "area": "data",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "plain-words-sql-writer",
+    "sql-query-writer"
+   ],
+   "steps": [
+    [
+     "plain-words-sql-writer",
+     "sql-query-writer"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "data-chart-drawer",
+    "analysis-checker"
+   ],
+   "user_supplies": [
+    "question"
+   ],
+   "why": "A single step: the question becomes a query. Running it needs the person's database."
+  },
+  {
+   "id": "wb115",
+   "request": "chart from my excel data",
+   "area": "data",
+   "style": "keyword",
+   "coverage": "full",
+   "anchor": [
+    "chart-maker",
+    "data-chart-drawer",
+    "interactive-chart-maker"
+   ],
+   "steps": [
+    [
+     "chart-maker",
+     "data-chart-drawer",
+     "interactive-chart-maker"
+    ],
+    [
+     "data-story-writer"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "data-story-writer",
+    "dashboard-builder"
+   ],
+   "user_supplies": [
+    "spreadsheet"
+   ],
+   "why": "The chart is made from the sheet; the data story explains what it shows."
+  },
+  {
+   "id": "wb116",
+   "request": "google analytics says one number, shopify says another, facebook says a third. which one is right??",
+   "area": "data",
+   "style": "messy",
+   "coverage": "full",
+   "anchor": [
+    "conversion-reconciliation",
+    "set-up-tracking-you-can-trust-before-you-scale"
+   ],
+   "steps": [
+    [
+     "conversion-reconciliation"
+    ],
+    [
+     "ga4-store-setup-checker",
+     "meta-server-tracking-checker"
+    ],
+    [
+     "platform-roas-reality-check"
+    ]
+   ],
+   "ready_workflow": "set-up-tracking-you-can-trust-before-you-scale",
+   "before": [],
+   "after": [
+    "platform-roas-reality-check",
+    "campaign-link-tracker"
+   ],
+   "user_supplies": [
+    "performance_sheet",
+    "question"
+   ],
+   "why": "Lay the three reports side by side and explain each gap; then check the tracking setup that causes it; finally compare reported returns with real store totals."
+  },
+  {
+   "id": "wb117",
+   "request": "job description for a part-time barista",
+   "area": "hr-team",
+   "style": "keyword",
+   "coverage": "full",
+   "anchor": [
+    "problem-first-job-description-writer",
+    "plain-job-post-drafter",
+    "job-post-writer"
+   ],
+   "steps": [
+    [
+     "problem-first-job-description-writer",
+     "plain-job-post-drafter",
+     "job-post-writer",
+     "inclusive-job-post-writer"
+    ],
+    [
+     "interview-question-set-maker"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "interview-question-set-maker",
+    "new-hire-first-week-planner"
+   ],
+   "user_supplies": [
+    "question",
+    "brief"
+   ],
+   "why": "The role is written up first; interview questions follow from the same role description."
+  },
+  {
+   "id": "wb118",
+   "request": "first time hiring. I have 40 applications for an assistant role and no idea how to pick, help",
+   "area": "hr-team",
+   "style": "messy",
+   "coverage": "full",
+   "anchor": [
+    "applicant-shortlist-builder",
+    "run-fair-interviews-and-choose-on-evidence"
+   ],
+   "steps": [
+    [
+     "applicant-shortlist-builder"
+    ],
+    [
+     "structured-interview-guide",
+     "interview-question-set-maker"
+    ],
+    [
+     "fair-candidate-comparer"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "fair-candidate-comparer",
+    "offer-letter-drafter",
+    "reference-check-question-writer"
+   ],
+   "user_supplies": [
+    "document",
+    "brief",
+    "question",
+    "feedback_notes"
+   ],
+   "why": "The resumes are scored against the job to make a shortlist; an interview guide is prepared; interview notes are compared fairly to choose."
+  },
+  {
+   "id": "wb119",
+   "request": "I need to give someone on my team feedback about always being late, without making it awkward.",
+   "area": "hr-team",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "give-criticism-well",
+    "hard-feedback-message-writer",
+    "plan-a-difficult-feedback-conversation"
+   ],
+   "steps": [
+    [
+     "behaviour-and-fix-notes-writer"
+    ],
+    [
+     "hard-feedback-message-writer"
+    ],
+    [
+     "order-to-request-rewriter"
+    ],
+    [
+     "small-win-praise-planner"
+    ]
+   ],
+   "ready_workflow": "give-criticism-well",
+   "before": [],
+   "after": [
+    "small-win-praise-planner",
+    "attendance-policy-writer"
+   ],
+   "user_supplies": [
+    "question"
+   ],
+   "why": "Notes on the behaviour and fix come first; the feedback message uses them; it is rewritten as a request rather than an order; a plan to recognise progress follows."
+  },
+  {
+   "id": "wb120",
+   "request": "Write interview questions for a junior developer role.",
+   "area": "hr-team",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "interview-question-set-maker",
+    "structured-interview-guide"
+   ],
+   "steps": [
+    [
+     "ideal-candidate-profiler"
+    ],
+    [
+     "interview-question-set-maker",
+     "structured-interview-guide",
+     "hiring-interview-designer"
+    ],
+    [
+     "work-sample-test-designer"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [
+    "ideal-candidate-profiler"
+   ],
+   "after": [
+    "work-sample-test-designer",
+    "interview-scorecard-builder"
+   ],
+   "user_supplies": [
+    "brief",
+    "question"
+   ],
+   "why": "A profile of the ideal hire guides the questions; a small work test checks what questions can't."
+  },
+  {
+   "id": "wb121",
+   "request": "one of my 3 employees is underperforming and I think I need to let them go. how do I do it legally and decently",
+   "area": "hr-team",
+   "style": "messy",
+   "coverage": "full",
+   "anchor": [
+    "let-someone-go-fairly-and-tell-the-team-well",
+    "termination-risk-checker"
+   ],
+   "steps": [
+    [
+     "layoff-plan-writer"
+    ],
+    [
+     "termination-risk-checker"
+    ],
+    [
+     "offboarding-plan-builder"
+    ],
+    [
+     "staff-announcement-writer"
+    ]
+   ],
+   "ready_workflow": "let-someone-go-fairly-and-tell-the-team-well",
+   "before": [
+    "plan-a-difficult-feedback-conversation",
+    "feedback-conversation-planner"
+   ],
+   "after": [
+    "termination-risk-checker",
+    "offboarding-plan-builder"
+   ],
+   "user_supplies": [
+    "question",
+    "brief"
+   ],
+   "why": "Draft the exit plan, flag legal risks against it, plan the handover, then tell the team. Risk flags are not legal advice; local rules need checking."
+  },
+  {
+   "id": "wb122",
+   "request": "employee onboarding checklist",
+   "area": "hr-team",
+   "style": "keyword",
+   "coverage": "full",
+   "anchor": [
+    "new-hire-plan-builder",
+    "30-60-90-day-onboarding-planner",
+    "new-hire-first-week-planner"
+   ],
+   "steps": [
+    [
+     "new-hire-plan-builder",
+     "30-60-90-day-onboarding-planner",
+     "new-hire-first-week-planner"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [
+    "hiring-packet-builder"
+   ],
+   "after": [
+    "training-program-builder",
+    "new-hire-onboarding-keeper",
+    "agency-hr-onboarding"
+   ],
+   "user_supplies": [
+    "brief",
+    "question"
+   ],
+   "why": "new-hire-plan-builder is literally the onboarding checklist (pre-start tasks, week 1, 30/60/90); the other planners give the first-week or 90-day plan. hiring-packet-builder (job post, interview guide, offer letter) is hiring work that comes before onboarding, not part of the checklist."
+  },
+  {
+   "id": "wb123",
+   "request": "run payroll for my 4 employees this month",
+   "area": "hr-team",
+   "style": "sentence",
+   "coverage": "partial",
+   "anchor": [
+    "first-employee-payroll-setup-planner"
+   ],
+   "steps": [
+    [
+     "first-employee-payroll-setup-planner"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [],
+   "user_supplies": [
+    "question"
+   ],
+   "why": "No item runs payroll or files payroll taxes; only a set-up plan and questions for an accountant exist. Tools should not imply payroll gets run."
+  },
+  {
+   "id": "wb124",
+   "request": "I need to get my product made by a factory overseas but I've never done it. Where do I start?",
+   "area": "operations",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "get-a-product-made-right-from-tech-pack-to-inspected-shipment",
+    "product-tech-pack-writer"
+   ],
+   "steps": [
+    [
+     "product-tech-pack-writer"
+    ],
+    [
+     "factory-shortlist-vetter"
+    ],
+    [
+     "landed-cost-calculator"
+    ],
+    [
+     "sample-approval-gatekeeper"
+    ],
+    [
+     "pre-shipment-inspection-brief-writer"
+    ]
+   ],
+   "ready_workflow": "get-a-product-made-right-from-tech-pack-to-inspected-shipment",
+   "before": [
+    "product-tech-pack-writer"
+   ],
+   "after": [
+    "supplier-quote-request-writer",
+    "pre-shipment-inspection-brief-writer"
+   ],
+   "user_supplies": [
+    "product_photos",
+    "product_data",
+    "spreadsheet"
+   ],
+   "why": "The tech pack is the shared spec every later step reads; factories are vetted, costs landed, samples approved, then the shipment inspection brief is written."
+  },
+  {
+   "id": "wb125",
+   "request": "compare supplier quotes",
+   "area": "operations",
+   "style": "keyword",
+   "coverage": "full",
+   "anchor": [
+    "compare-supplier-prices-on-the-same-basis",
+    "supplier-quote-comparer",
+    "supplier-quote-table-builder"
+   ],
+   "steps": [
+    [
+     "supplier-quote-comparer",
+     "supplier-quote-table-builder",
+     "supplier-scorer"
+    ],
+    [
+     "supplier-risk-scorecard-builder"
+    ]
+   ],
+   "ready_workflow": "compare-supplier-prices-on-the-same-basis",
+   "before": [],
+   "after": [
+    "supplier-risk-scorecard-builder",
+    "factory-price-break-negotiator"
+   ],
+   "user_supplies": [
+    "question",
+    "spreadsheet",
+    "document"
+   ],
+   "why": "Put the quotes on the same basis first, then score supplier risk before choosing."
+  },
+  {
+   "id": "wb126",
+   "request": "busy season's coming (black friday) and last year we were drowning in orders and support emails. how do we prep",
+   "area": "operations",
+   "style": "messy",
+   "coverage": "full",
+   "anchor": [
+    "get-ready-for-peak-season-with-support-and-3pl-planned",
+    "support-capacity-planner"
+   ],
+   "steps": [
+    [
+     "store-revenue-forecast-builder"
+    ],
+    [
+     "support-capacity-planner",
+     "support-hiring-date-planner"
+    ],
+    [
+     "3pl-bid-and-agreement-builder"
+    ],
+    [
+     "inbound-shipment-tracker-builder"
+    ],
+    [
+     "3pl-bill-auditor"
+    ]
+   ],
+   "ready_workflow": "get-ready-for-peak-season-with-support-and-3pl-planned",
+   "before": [],
+   "after": [
+    "3pl-bill-auditor",
+    "speed-budget-and-sale-check"
+   ],
+   "user_supplies": [
+    "performance_sheet",
+    "spreadsheet",
+    "question"
+   ],
+   "why": "Forecast peak orders, size support from that forecast, line up warehouse terms and inbound stock, then audit the warehouse bill after the season."
+  },
+  {
+   "id": "wb127",
+   "request": "Plan the fastest delivery route for my 12 stops tomorrow.",
+   "area": "operations",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "multi-stop-route-planner",
+    "shortest-stop-order-finder"
+   ],
+   "steps": [
+    [
+     "multi-stop-route-planner",
+     "shortest-stop-order-finder"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [],
+   "user_supplies": [
+    "spreadsheet"
+   ],
+   "why": "A single step from the list of stops."
+  },
+  {
+   "id": "wb128",
+   "request": "write an SOP for opening the cafe each morning",
+   "area": "operations",
+   "style": "keyword",
+   "coverage": "full",
+   "anchor": [
+    "process-and-sop-writer"
+   ],
+   "steps": [
+    [
+     "process-and-sop-writer"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "training-program-builder",
+    "standards-sheet-writer"
+   ],
+   "user_supplies": [
+    "question"
+   ],
+   "why": "The SOP is the whole ask; staff training on it is a natural next step, not part of the request."
+  },
+  {
+   "id": "wb129",
+   "request": "track my shipping container live on a map and text me when it lands",
+   "area": "operations",
+   "style": "sentence",
+   "coverage": "partial",
+   "anchor": [
+    "inbound-shipment-tracker-builder"
+   ],
+   "steps": [
+    [
+     "inbound-shipment-tracker-builder"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [],
+   "user_supplies": [
+    "question"
+   ],
+   "why": "Only a shared tracker sheet and warehouse notice exist; no live map or text alerts."
+  },
+  {
+   "id": "wb130",
+   "request": "Can you check this freelance contract before I sign it?",
+   "area": "legal",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "review-a-contract-and-get-edits-and-a-plain-summary",
+    "contract-reviewer"
+   ],
+   "steps": [
+    [
+     "contract-reviewer",
+     "contract-risk-reviewer"
+    ],
+    [
+     "ip-clause-checker"
+    ],
+    [
+     "contract-plain-summary"
+    ]
+   ],
+   "ready_workflow": "review-a-contract-and-get-edits-and-a-plain-summary",
+   "before": [],
+   "after": [
+    "contract-plain-summary",
+    "negotiate-from-the-weaker-side-and-still-get-fair-terms"
+   ],
+   "user_supplies": [
+    "document"
+   ],
+   "why": "Clause risks first, then who owns the work, then a plain summary to take to a lawyer. Not legal advice."
+  },
+  {
+   "id": "wb131",
+   "request": "privacy policy for my website",
+   "area": "legal",
+   "style": "keyword",
+   "coverage": "full",
+   "anchor": [
+    "privacy-policy-drafter",
+    "policy-page-drafter"
+   ],
+   "steps": [
+    [
+     "privacy-policy-drafter",
+     "policy-page-drafter"
+    ],
+    [
+     "launch-legal-reviewer"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "launch-legal-reviewer",
+    "privacy-policy-drift-checker"
+   ],
+   "user_supplies": [
+    "brief"
+   ],
+   "why": "The draft comes from business facts; a launch review flags gaps for a lawyer."
+  },
+  {
+   "id": "wb132",
+   "request": "a former client is threatening to sue me over a late delivery, what do I do",
+   "area": "legal",
+   "style": "messy",
+   "coverage": "partial",
+   "anchor": [
+    "incoming-demand-letter-reviewer",
+    "legal-risk-rater"
+   ],
+   "steps": [
+    [
+     "incoming-demand-letter-reviewer",
+     "legal-risk-rater"
+    ],
+    [
+     "dispute-timeline-builder"
+    ],
+    [
+     "legal-inquiry-reply-drafter"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "dispute-timeline-builder",
+    "legal-inquiry-reply-drafter"
+   ],
+   "user_supplies": [
+    "document",
+    "question"
+   ],
+   "why": "The catalogue can read the threat, build a dated timeline and draft a reply flagged for counsel, but this needs a lawyer; tools should say so."
+  },
+  {
+   "id": "wb133",
+   "request": "Can you check whether the health claims on my supplement ads are going to get me in trouble?",
+   "area": "legal",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "marketing-claims-checker",
+    "ad-claim-sorter"
+   ],
+   "steps": [
+    [
+     "marketing-claims-checker",
+     "ad-claim-sorter",
+     "ad-claim-proof-gap-finder"
+    ],
+    [
+     "claim-and-proof-matcher"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "claim-and-proof-matcher",
+    "meta-ads-compliance-checker"
+   ],
+   "user_supplies": [
+    "copy_draft"
+   ],
+   "why": "Claims are flagged first; each kept claim is then matched to its proof."
+  },
+  {
+   "id": "wb134",
+   "request": "is it ok to use pictures I found on google in my ads?",
+   "area": "legal",
+   "style": "sentence",
+   "coverage": "partial",
+   "anchor": [
+    "infringement-first-look-sorter",
+    "quick-legal-sanity-checker"
+   ],
+   "steps": [
+    [
+     "infringement-first-look-sorter",
+     "quick-legal-sanity-checker"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [],
+   "user_supplies": [
+    "question"
+   ],
+   "why": "Only a first-look screen with questions for a lawyer exists; no rights clearance or licensed-image sourcing."
+  },
+  {
+   "id": "wb135",
+   "request": "Draft an NDA for a contractor I'm bringing on.",
+   "area": "legal",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "nda-drafter"
+   ],
+   "steps": [
+    [
+     "nda-drafter"
+    ],
+    [
+     "nda-quick-checker",
+     "nda-traffic-light-checker"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "nda-quick-checker",
+    "nda-traffic-light-checker"
+   ],
+   "user_supplies": [
+    "brief"
+   ],
+   "why": "Draft from the deal facts, then run a quick check on the draft."
+  },
+  {
+   "id": "wb136",
+   "request": "someone left a nasty comment on our facebook page about a bad order and people are piling on. how do i respond",
+   "area": "support",
+   "style": "messy",
+   "coverage": "full",
+   "anchor": [
+    "angry-customer-reply-writer",
+    "angry-customer-reply-checker"
+   ],
+   "steps": [
+    [
+     "angry-customer-reply-writer",
+     "customer-reply-drafter"
+    ],
+    [
+     "angry-customer-reply-checker",
+     "complaint-reply-promise-checker"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "angry-customer-reply-checker",
+    "complaint-to-story-planner"
+   ],
+   "user_supplies": [
+    "question",
+    "voc_reviews"
+   ],
+   "why": "Draft the public reply first; check it for tone and promises the business can't keep before posting."
+  },
+  {
+   "id": "wb137",
+   "request": "reply to bad google reviews",
+   "area": "support",
+   "style": "keyword",
+   "coverage": "full",
+   "anchor": [
+    "reply-to-your-reviews-safely-and-plan-how-to-get-more",
+    "public-review-reply-drafter",
+    "review-reply-batch-writer"
+   ],
+   "steps": [
+    [
+     "customer-review-reply-writer",
+     "public-review-reply-drafter",
+     "review-reply-batch-writer"
+    ],
+    [
+     "angry-customer-reply-checker"
+    ],
+    [
+     "review-request-and-reply-planner"
+    ]
+   ],
+   "ready_workflow": "reply-to-your-reviews-safely-and-plan-how-to-get-more",
+   "before": [],
+   "after": [
+    "review-request-and-reply-planner",
+    "public-review-reply-desk"
+   ],
+   "user_supplies": [
+    "question",
+    "voc_reviews"
+   ],
+   "why": "Draft replies, check them for overpromising, then plan how to ask happy customers for reviews."
+  },
+  {
+   "id": "wb138",
+   "request": "We get the same 20 questions by email over and over. Can we turn them into a help center?",
+   "area": "support",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "turn-repeat-customer-questions-into-help-pages-people-understand",
+    "solved-ticket-help-page-writer",
+    "help-article-writer"
+   ],
+   "steps": [
+    [
+     "customer-question-researcher"
+    ],
+    [
+     "solved-ticket-help-page-writer",
+     "help-article-writer"
+    ],
+    [
+     "text-difficulty-checker"
+    ],
+    [
+     "plain-english-editor"
+    ],
+    [
+     "documentation-checker"
+    ]
+   ],
+   "ready_workflow": "turn-repeat-customer-questions-into-help-pages-people-understand",
+   "before": [],
+   "after": [
+    "monthly-help-centre-keeper"
+   ],
+   "user_supplies": [
+    "question",
+    "source_text"
+   ],
+   "why": "Find and group the repeat questions, write help pages, check reading level, simplify, then check against real product steps."
+  },
+  {
+   "id": "wb139",
+   "request": "Customer wants a refund way outside our 30-day window. How do I say no nicely?",
+   "area": "support",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "refund-request-reply-writer"
+   ],
+   "steps": [
+    [
+     "refund-request-reply-writer"
+    ],
+    [
+     "support-reply-tone-editor"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "support-reply-tone-editor"
+   ],
+   "user_supplies": [
+    "question"
+   ],
+   "why": "Draft the reply from the case facts, then soften its tone."
+  },
+  {
+   "id": "wb140",
+   "request": "support inbox has 300 unread emails and it's just me answering them. drowning",
+   "area": "support",
+   "style": "messy",
+   "coverage": "full",
+   "anchor": [
+    "clear-your-support-inbox-and-turn-fixes-into-help-pages",
+    "customer-inbox-triage-and-reply-drafter",
+    "support-ticket-sorter"
+   ],
+   "steps": [
+    [
+     "support-ticket-sorter",
+     "email-backlog-clearer"
+    ],
+    [
+     "customer-reply-drafter"
+    ],
+    [
+     "angry-customer-reply-checker"
+    ],
+    [
+     "solved-ticket-help-page-writer"
+    ]
+   ],
+   "ready_workflow": "clear-your-support-inbox-and-turn-fixes-into-help-pages",
+   "before": [],
+   "after": [
+    "solved-ticket-help-page-writer",
+    "support-desk-automation-builder"
+   ],
+   "user_supplies": [
+    "source_text",
+    "question",
+    "voc_reviews"
+   ],
+   "why": "Sort and prioritise the backlog, draft replies, check the hard ones, then turn repeat fixes into help pages so the queue shrinks."
+  },
+  {
+   "id": "wb141",
+   "request": "put a chatbot on my website that answers customer questions 24/7",
+   "area": "support",
+   "style": "keyword",
+   "coverage": "partial",
+   "anchor": [
+    "chatbot-conversation-designer",
+    "support-desk-automation-builder"
+   ],
+   "steps": [
+    [
+     "chatbot-conversation-designer"
+    ],
+    [
+     "support-desk-automation-builder"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [],
+   "user_supplies": [
+    "brief",
+    "question"
+   ],
+   "why": "The catalogue designs the conversation flows and builds support scripts, but nothing hosts or installs a live website chatbot."
+  },
+  {
+   "id": "wb142",
+   "request": "I have way too much on my plate this week. Help me figure out what to do first.",
+   "area": "productivity",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "make-a-realistic-plan-for-a-busy-week",
+    "week-priority-picker",
+    "weekly-big-task-sorter"
+   ],
+   "steps": [
+    [
+     "weekly-time-audit-planner"
+    ],
+    [
+     "week-priority-picker",
+     "weekly-big-task-sorter",
+     "week-plan-from-task-list-maker"
+    ],
+    [
+     "executive-daily-digest"
+    ]
+   ],
+   "ready_workflow": "make-a-realistic-plan-for-a-busy-week",
+   "before": [
+    "brain-dump-sorter"
+   ],
+   "after": [
+    "executive-daily-digest",
+    "deep-work-day-planner"
+   ],
+   "user_supplies": [
+    "brief",
+    "question"
+   ],
+   "why": "See where the hours really go, pick priorities that fit those hours, then turn the plan into a first-day brief."
+  },
+  {
+   "id": "wb143",
+   "request": "inbox zero",
+   "area": "productivity",
+   "style": "keyword",
+   "coverage": "full",
+   "anchor": [
+    "clear-an-email-backlog-and-set-triage-rules-that-stick",
+    "email-backlog-clearer"
+   ],
+   "steps": [
+    [
+     "inbox-rules-interviewer"
+    ],
+    [
+     "email-backlog-clearer"
+    ],
+    [
+     "email-mistake-fixer"
+    ]
+   ],
+   "ready_workflow": "clear-an-email-backlog-and-set-triage-rules-that-stick",
+   "before": [],
+   "after": [
+    "email-mistake-fixer",
+    "inbox-triager"
+   ],
+   "user_supplies": [
+    "question",
+    "source_text"
+   ],
+   "why": "Set sorting rules first, clear the backlog with them, then fix names, dates and promises in the reply drafts."
+  },
+  {
+   "id": "wb144",
+   "request": "i keep procrastinating on my side project. every evening i say i'll work on it and just end up scrolling",
+   "area": "productivity",
+   "style": "messy",
+   "coverage": "full",
+   "anchor": [
+    "habit-plan-builder"
+   ],
+   "steps": [
+    [
+     "habit-plan-builder"
+    ],
+    [
+     "deep-work-day-planner"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "deep-work-day-planner",
+    "stop-doing-list-writer"
+   ],
+   "user_supplies": [
+    "question",
+    "brief"
+   ],
+   "why": "A tiny-habit plan with a cue tackles the evening slip; a protected focus block is planned around it."
+  },
+  {
+   "id": "wb145",
+   "request": "plan my 10 day trip to japan in april",
+   "area": "productivity",
+   "style": "keyword",
+   "coverage": "full",
+   "anchor": [
+    "personal-trip-guide-builder"
+   ],
+   "steps": [
+    [
+     "personal-trip-guide-builder"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [],
+   "user_supplies": [
+    "question"
+   ],
+   "why": "personal-trip-guide-builder builds a sourced day-by-day itinerary from dates, group, budget and needs. It does not book anything."
+  },
+  {
+   "id": "wb146",
+   "request": "book me a dentist appointment next week and put it in my calendar",
+   "area": "productivity",
+   "style": "sentence",
+   "coverage": "none",
+   "anchor": [],
+   "steps": [],
+   "ready_workflow": null,
+   "before": [],
+   "after": [],
+   "user_supplies": [
+    "question"
+   ],
+   "why": "Booking and calendar actions are outside the catalogue; no item books appointments."
+  },
+  {
+   "id": "wb147",
+   "request": "I have a statistics exam in 3 weeks and I'm way behind. Make me a study plan.",
+   "area": "study-learning",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "choose-a-study-plan-you-can-keep",
+    "study-revision-coach",
+    "topic-learning-roadmap"
+   ],
+   "steps": [
+    [
+     "topic-learning-roadmap",
+     "study-revision-coach"
+    ],
+    [
+     "study-strategy-picker"
+    ],
+    [
+     "study-session-planner-and-review"
+    ]
+   ],
+   "ready_workflow": "choose-a-study-plan-you-can-keep",
+   "before": [],
+   "after": [
+    "flashcard-maker",
+    "study-understanding-check",
+    "study-review-scheduler"
+   ],
+   "user_supplies": [
+    "brief",
+    "source_text"
+   ],
+   "why": "Map the syllabus into a learning roadmap, choose practice methods, then fit sessions with recall checks into the 3 weeks."
+  },
+  {
+   "id": "wb148",
+   "request": "flashcards from my lecture notes",
+   "area": "study-learning",
+   "style": "keyword",
+   "coverage": "full",
+   "anchor": [
+    "flashcard-maker"
+   ],
+   "steps": [
+    [
+     "flashcard-maker"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "study-review-scheduler",
+    "recall-quiz-writer"
+   ],
+   "user_supplies": [
+    "source_text"
+   ],
+   "why": "Cards are made from the notes; spaced review is a natural next step, not part of the ask."
+  },
+  {
+   "id": "wb149",
+   "request": "been on duolingo for a year learning spanish and i still can't hold a real conversation",
+   "area": "study-learning",
+   "style": "messy",
+   "coverage": "partial",
+   "anchor": [
+    "spanish-and-turkish-writing-tutor"
+   ],
+   "steps": [
+    [
+     "spanish-and-turkish-writing-tutor"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "study-gap-tracker"
+   ],
+   "user_supplies": [
+    "source_text"
+   ],
+   "why": "Only a Spanish writing tutor exists; nothing practises speaking or conversation, which is what was asked."
+  },
+  {
+   "id": "wb150",
+   "request": "Explain how compound interest works like I'm 12.",
+   "area": "study-learning",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "guided-reasoning-tutor",
+    "socratic-explainer"
+   ],
+   "steps": [
+    [
+     "guided-reasoning-tutor",
+     "socratic-explainer"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "explain-it-first-tutor",
+    "recall-quiz-writer"
+   ],
+   "user_supplies": [
+    "brief",
+    "question"
+   ],
+   "why": "A single tutoring step; a plain chat answer would also do. Investing-advice items do not fit."
+  },
+  {
+   "id": "wb151",
+   "request": "create an online course about watercolor painting that I can sell",
+   "area": "study-learning",
+   "style": "sentence",
+   "coverage": "partial",
+   "anchor": [
+    "mini-course-builder"
+   ],
+   "steps": [
+    [
+     "mini-course-builder"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "price-a-course-or-ebook-and-write-its-launch-emails",
+    "digital-product-pricer"
+   ],
+   "user_supplies": [
+    "brief"
+   ],
+   "why": "Only a mini-course web page builder and classroom lesson planners exist; there is no full paid-course design and production chain. Pricing and launch emails are available after."
+  },
+  {
+   "id": "wb152",
+   "request": "need to write a grant application for our community garden, due friday, never done one before",
+   "area": "nonprofit",
+   "style": "messy",
+   "coverage": "full",
+   "anchor": [
+    "nonprofit-grant-proposal-writer",
+    "nonprofit-grant-funder-researcher"
+   ],
+   "steps": [
+    [
+     "nonprofit-grant-funder-researcher"
+    ],
+    [
+     "nonprofit-grant-proposal-writer"
+    ],
+    [
+     "plain-english-editor"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [
+    "nonprofit-grant-funder-researcher"
+   ],
+   "after": [
+    "plain-english-editor",
+    "nonprofit-program-outcome-planner"
+   ],
+   "user_supplies": [
+    "question"
+   ],
+   "why": "Check the funder's priorities first so the proposal answers them; draft the proposal; tighten it in plain English. If the funder is already chosen, start at step 2."
+  },
+  {
+   "id": "wb153",
+   "request": "We want to thank our donors after year end and get them to give again next year.",
+   "area": "nonprofit",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "nonprofit-donor-thank-you-and-renewal-planner"
+   ],
+   "steps": [
+    [
+     "nonprofit-donor-thank-you-and-renewal-planner"
+    ],
+    [
+     "nonprofit-annual-appeal-planner"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "nonprofit-annual-appeal-planner",
+    "nonprofit-donor-relationship-planner"
+   ],
+   "user_supplies": [
+    "question"
+   ],
+   "why": "Thank-yous and a renewal plan come first; the next annual appeal builds on them."
+  },
+  {
+   "id": "wb154",
+   "request": "recruit volunteers for our food bank",
+   "area": "nonprofit",
+   "style": "keyword",
+   "coverage": "full",
+   "anchor": [
+    "nonprofit-volunteer-program-planner"
+   ],
+   "steps": [
+    [
+     "nonprofit-volunteer-program-planner"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "build-a-volunteer-induction-checklist",
+    "process-and-sop-writer",
+    "training-program-builder"
+   ],
+   "user_supplies": [
+    "question"
+   ],
+   "why": "The volunteer program planner covers roles, recruitment channels and the sign-up funnel. Induction steps and training (the induction workflow) come after people sign up."
+  },
+  {
+   "id": "wb155",
+   "request": "Write a business plan for my food truck so I can show it to the bank.",
+   "area": "strategy",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "startup-business-planner"
+   ],
+   "steps": [
+    [
+     "startup-business-planner"
+    ],
+    [
+     "startup-financial-model-builder"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "startup-financial-model-builder",
+    "bold-bet-downside-checker"
+   ],
+   "user_supplies": [
+    "question",
+    "brief"
+   ],
+   "why": "The plan sets the story and assumptions; a bank also wants numbers, so the financial model follows from the same brief."
+  },
+  {
+   "id": "wb156",
+   "request": "thinking about quitting my job to go full-time on my etsy shop. making about $2k a month from it right now. is that crazy?",
+   "area": "strategy",
+   "style": "messy",
+   "coverage": "full",
+   "anchor": [
+    "bold-bet-downside-checker",
+    "job-exit-plan-writer"
+   ],
+   "steps": [
+    [
+     "bold-bet-downside-checker"
+    ],
+    [
+     "job-exit-plan-writer"
+    ],
+    [
+     "room-for-error-plan-checker"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "room-for-error-plan-checker",
+    "personal-budget-builder"
+   ],
+   "user_supplies": [
+    "question"
+   ],
+   "why": "Size the worst case first; that plan feeds the job-exit plan; then check the plan leaves room for error."
+  },
+  {
+   "id": "wb157",
+   "request": "SWOT analysis for my business",
+   "area": "strategy",
+   "style": "keyword",
+   "coverage": "full",
+   "anchor": [
+    "swot-analyst"
+   ],
+   "steps": [
+    [
+     "swot-analyst"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "check-your-strategy-then-turn-it-into-a-90-day-plan",
+    "okr-writer"
+   ],
+   "user_supplies": [
+    "brief"
+   ],
+   "why": "A single step from the business description."
+  },
+  {
+   "id": "wb158",
+   "request": "Should we switch from selling to consumers to selling to businesses? Consumer sales have been flat for a year.",
+   "area": "strategy",
+   "style": "sentence",
+   "coverage": "full",
+   "anchor": [
+    "pivot-or-persevere",
+    "pivot-or-persevere-decider"
+   ],
+   "steps": [
+    [
+     "cohort-funnel-reader"
+    ],
+    [
+     "pivot-or-persevere-decider"
+    ],
+    [
+     "customer-interview-questions"
+    ]
+   ],
+   "ready_workflow": "pivot-or-persevere",
+   "before": [],
+   "after": [
+    "customer-interview-questions",
+    "size-up-an-industry-before-you-enter-it"
+   ],
+   "user_supplies": [
+    "performance_sheet",
+    "brief"
+   ],
+   "why": "Read real progress by customer group, decide change or continue from that read, then interview business buyers before switching."
+  },
+  {
+   "id": "wb159",
+   "request": "where should my business go next",
+   "area": "strategy",
+   "style": "vague",
+   "coverage": "full",
+   "anchor": [
+    "find-your-growth-lever-and-set-dated-milestones",
+    "check-your-strategy-then-turn-it-into-a-90-day-plan"
+   ],
+   "steps": [
+    [
+     "growth-lever-audit",
+     "growth-option-mapper"
+    ],
+    [
+     "growth-idea-ranker"
+    ],
+    [
+     "learning-milestone-planner"
+    ]
+   ],
+   "ready_workflow": "find-your-growth-lever-and-set-dated-milestones",
+   "before": [],
+   "after": [
+    "check-your-strategy-then-turn-it-into-a-90-day-plan",
+    "okr-writer"
+   ],
+   "user_supplies": [
+    "performance_sheet",
+    "question",
+    "brief"
+   ],
+   "why": "Vague ask: find which lever (new buyers, order size, repeat) matters from the numbers, rank ideas, then set dated milestones."
+  },
+  {
+   "id": "wb160",
+   "request": "find me an investor who will put $200k into my bakery this month",
+   "area": "strategy",
+   "style": "sentence",
+   "coverage": "partial",
+   "anchor": [
+    "investor-pitch-scriptwriter",
+    "pitch-arc-planner"
+   ],
+   "steps": [
+    [
+     "pitch-arc-planner"
+    ],
+    [
+     "investor-pitch-scriptwriter"
+    ],
+    [
+     "investor-panel-pitch-tester"
+    ]
+   ],
+   "ready_workflow": null,
+   "before": [],
+   "after": [
+    "startup-financial-model-builder"
+   ],
+   "user_supplies": [
+    "brief",
+    "question"
+   ],
+   "why": "No item finds or contacts investors; the catalogue can only shape and test the pitch."
+  }
+ ]
+}

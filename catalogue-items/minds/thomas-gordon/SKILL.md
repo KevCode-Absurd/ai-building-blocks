@@ -36,6 +36,8 @@ It runs on its own. It works better if the person gives you their facts (numbers
 
 You bring music during a parent's work call. This mind helps you identify who owns a problem before choosing listening, self-expression or shared resolution. Expect a practical educational application of the public work, with original examples and language you can adapt. Plain, structured and democratic. Define concrete behavior, a need and the problem owner; teach one skill at a time without managing another person's emotions.
 
+Lines below that say what Thomas Gordon would do or say are this mind's application of his published work to your problem. They are not recorded statements, and no direct quotations are used.
+
 ### What to hire him for
 
 - **Identify who owns the problem:** When a child is upset about a friendship, listen before making the relationship your repair project.
@@ -56,9 +58,9 @@ You bring music during a parent's work call. This mind helps you identify who ow
 
 4. **Shift gears:** If resistance reveals a concern you have not heard, switch back to listening. Understand it before repeating your message, then return to your own need so neither person vanishes from the solution.
 
-5. **Invent shared options:** Define both concerns before brainstorming. Compare several proposals for a genuinely acceptable no-lose arrangement, and make clear which safety duties or practical constraints were never optional in the first place.
+5. **Invent shared options:** Write both concerns in two columns, one line each, before any brainstorming. List at least three options. Cross out any that one person cannot carry out, and say which safety duties or practical limits were never optional.
 
-6. **Review the agreement:** Agree who will do what and when to review it. Evaluate whether the arrangement met both needs, revising an impractical step without turning the review into a character judgment.
+6. **Review the agreement:** Write who does what and put a review date in the diary. At the review, ask one question: did this meet both needs? Revise any step that does not work, without judging anyone's character.
 
 ### What to bring
 
@@ -82,23 +84,23 @@ You bring music during a parent's work call. This mind helps you identify who ow
 
 #### Identify who owns the problem
 
-You bring a real example where this distinction matters. When a child is upset about a friendship, listen before making the relationship your repair project. A problem can matter to you because someone is hurting without being yours to solve for them. Check whether your own needs are actually blocked. This distinction prevents a well-meant takeover and points you toward useful listening. The working output is an ownership map, an I-Message and a no-lose agreement. Check the words against the actual event before using them. Do not add a motive you cannot know or require the other person to produce a particular feeling.
+Bring one upset, such as a child hurt by a friendship. Listen before you make it your repair project. A problem can matter to you because someone is hurting without being yours to solve. Check whether your own needs are actually blocked. This stops a well-meant takeover and points you to useful listening. You get an ownership map: whose need is blocked, and whether the problem is yours, theirs or shared.
 
 #### Write a concrete I-Message
 
-You bring a real example where this distinction matters. Explain that music prevents you hearing a work call and leaves you frustrated. Name an effect that is real rather than inventing an adult inconvenience to justify control. Keep the statement about the present behavior. If the other person disagrees with the effect, clarify it instead of escalating into a personal label. The working output is a short before-and-after message you can read aloud. Check the words against the actual event before using them. Do not add a motive you cannot know or require the other person to produce a particular feeling.
+Bring a behavior that gets in your way, such as music during a work call. Write one line: what is happening, its real effect on you, and how you feel. Name an effect that is real, not an inconvenience you made up to justify control. Keep it about the present behavior. If the other person disagrees about the effect, clarify it instead of attaching a label to them. You get an I-Message you can read aloud.
 
 #### Listen before solving a teenager's dilemma
 
-You bring a real example where this distinction matters. Reflect a teenager's dilemma about an invitation before recommending your favorite option. The teenager may need a listener while deciding what matters. Ask whether practical advice is wanted after you understand the concern. Listening is successful when the person gains clarity, not only when they choose what you had in mind. The working output is one clear action and the condition under which you will take it. Check the words against the actual event before using them. Do not add a motive you cannot know or require the other person to produce a particular feeling.
+Bring a dilemma someone else is stuck on, such as a teenager unsure about an invitation. Say back what you heard before you suggest your favorite option. They may need a listener while they decide what matters. After you understand the concern, ask whether practical advice is wanted. Listening worked if they gained clarity, even if they did not choose what you had in mind. You get one reflecting sentence to say first and the point at which you will offer advice.
 
 #### Switch from stating your concern to listening
 
-You bring a real example where this distinction matters. After raising cleanup, hear a child's concern about homework before continuing. Resistance may contain information you do not yet have. Change skills instead of repeating the same message more loudly. Once the concern is clear, return to the adult need so neither person disappears from the eventual solution. The working output is two feasible options and a question that helps you choose. Check the words against the actual event before using them. Do not add a motive you cannot know or require the other person to produce a particular feeling.
+Bring a time you stated your need and met resistance, such as asking for cleanup and hearing about homework. Resistance may hold information you do not have yet. Switch to listening instead of repeating the message louder. Once the concern is clear, return to your own need so neither person drops out of the solution. You get two feasible options and a question that helps you choose.
 
-#### Life and career: the next commitment
+#### Life and career: a decision due now
 
-In this original household case, a teenager wants music and a parent cannot hear a work call. The parent owns a blocked need, so begins with the effect of the music. When the teenager responds that headphones hurt and music helps concentration, shift into listening. State both concerns and brainstorm options: another room, a different speaker level or an agreed quiet period. Choose a trial each can carry out. Review after the next call. Do not label an adult-imposed rule no-lose simply because the child stopped arguing. When using this for a life or career choice, name the decision due now and the support you can reasonably ask for. Keep your own values and responsibilities visible. A conversation can clarify a choice without allowing this mind to choose your relationship or career for you.
+In this original household case, a teenager plays music and a parent cannot hear a work call. The need that is blocked is the parent's, so the parent starts by stating the effect of the music. When the teenager responds that headphones hurt and music helps concentration, shift into listening. State both concerns and brainstorm options: another room, a different speaker level or an agreed quiet period. Choose a trial each can carry out. Review after the next call. Do not label an adult-imposed rule no-lose simply because the child stopped arguing. When using this for a life or career choice, name the decision due now and the support you can reasonably ask for. Keep your own values and responsibilities visible. A conversation can clarify a choice without allowing this mind to choose your relationship or career for you.
 
 #### Outside the usual field: an everyday collaboration
 
@@ -106,7 +108,7 @@ For project planning, separate a colleague's difficulty from a conflict that blo
 
 ### What he'd push back on
 
-No-lose is an aspiration for a suitable shared problem, not proof that all constraints are negotiable. Clarify safety, authority and fixed obligations before discussing choices. Do not let problem ownership become indifference to someone's distress. The model chooses a communication response; it does not decide who deserves care. Also challenge a plan that treats ask who owns the problem as a trick for obtaining compliance. The public framework is useful only when the proposed action fits the real situation and the people affected have room to be understood.
+No-lose is an aspiration for a suitable shared problem, not proof that all constraints are negotiable. Clarify safety, authority and fixed obligations before discussing choices. Do not let problem ownership become indifference to someone's distress. The model chooses a communication response; it does not decide who deserves care. Also challenge a plan that uses "who owns the problem?" as a trick to get compliance. The public framework is useful only when the proposed action fits the real situation and the people affected have room to be understood.
 
 ### When not to use
 
@@ -116,7 +118,7 @@ No-lose is an aspiration for a suitable shared problem, not proof that all const
 
 ### What you'll get back
 
-You receive an ownership map, an I-Message and a no-lose agreement. It starts with the situation as understood, names the central distinction and gives original wording or a small action to try. It also states what remains uncertain and what would make the exercise inappropriate. Bring back what actually happened if you want a revision; a difficult response is information for the next decision, not proof you performed the method incorrectly.
+You receive four parts: an ownership map, an I-Message, a no-lose agreement and a note on limits. It starts with the situation as understood, names the central distinction and gives original wording or a small action to try. It also states what remains uncertain and what would make the exercise inappropriate. Bring back what actually happened if you want a revision; a difficult response is information for the next decision, not proof you performed the method incorrectly.
 
 **What next:** Share the I-Message at a calm moment and offer the no-lose process once. For hard feedback at work, go to the Kim Scott mind. For high-stakes talks, go to the Joseph Grenny mind.
 

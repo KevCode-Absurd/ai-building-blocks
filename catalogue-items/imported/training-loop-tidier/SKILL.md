@@ -337,10 +337,9 @@ trainer = L.Trainer(accelerator='gpu', devices=1)
 ## Resources
 
 - Docs: https://lightning.ai/docs/pytorch/stable/
-- GitHub: https://github.com/Lightning-AI/pytorch-lightning ⭐ 29,000+
-- Version: 2.5.5+
+- GitHub: https://github.com/Lightning-AI/pytorch-lightning
+- Version: the skill was written for 2.5.5. Check the current release before you install.
 - Examples: https://github.com/Lightning-AI/pytorch-lightning/tree/master/examples
 - Discord: https://discord.gg/lightning-ai
-- Used by research labs and production teams
 
 

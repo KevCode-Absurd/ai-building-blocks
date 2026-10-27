@@ -11,7 +11,7 @@ explain: |-
 
   First, the Contract risk reviewer reads the signed agreement and the amendment as separate documents. It pairs each changed clause by section and version, then rates what the change does to duties, dates, payment, liability and dependencies. Second, the Plain-words contract summary explains each version in everyday words and lists the approval questions still open.
 
-  Proposed wording never counts as agreed. A change that only appears in your business goal stays marked as intent. This is a prep pack for your reviewer, not legal advice, and a person with authority decides whether to sign.
+  Proposed wording never counts as agreed. A change that only appears in your business goal stays marked as intent. This is a prep pack for your reviewer, not legal advice. Tell it the country or state the contract names. Without that, it marks every comment on legal effect as missing. A qualified reviewer must confirm anything consequential, and a person with authority decides whether to sign.
 when:
   - Your supplier or customer sends a draft amendment and you need to know what it really changes.
   - You hold the signed contract, two amendments and a long email thread, and cannot tell which clause is current.
@@ -22,7 +22,7 @@ not_for:
   - You have one contract and no amendment. Use the Contract risk reviewer, or the Contract reviewer to rate clauses against your own negotiation rules.
   - You need a lawyer's opinion or a redline ready to send. This pack prepares your reviewer. It does not replace them.
 you_give:
-  - The signed agreement (PDF, Word or pasted text)
+  - The signed agreement as pasted text, Word or a PDF you can select text in (convert scanned pages to text first)
   - The proposed amendment, or each draft with its date
   - Which party you are, and the country or state the contract names
   - What you want from the change, in one or two lines (optional)

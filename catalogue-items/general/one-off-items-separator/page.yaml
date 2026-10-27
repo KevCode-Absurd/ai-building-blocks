@@ -101,7 +101,7 @@ output_shape: |
 
 tweaks:
   - what: Tax rate
-    how: Give the real rate for the company. Without it the skill uses a stated estimate and flags it.
+    how: "Give the real rate for the company, or the tax line from the notes. Without it, an item shown before tax stays before tax and is marked MISSING: tax rate."
   - what: More years
     how: Give ten if you have them. A one-off that appears often is not a one-off.
   - what: Your view of an item

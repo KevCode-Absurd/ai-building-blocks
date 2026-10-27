@@ -12,8 +12,8 @@ assert.equal((await status.json()).model_calls, false);
 const client = new Client({ name: 'ai-blocks-local-smoke', version: '1.0.0' });
 try {
   await client.connect(new StreamableHTTPClientTransport(new URL('/mcp', base)));
-  assert.equal((await client.listTools()).tools.length, 5);
-  const search = await client.callTool({ name: 'search_library', arguments: { query: 'report', type: 'skill', limit: 1 } });
+  assert.equal((await client.listTools()).tools.length, 9);
+  const search = await client.callTool({ name: 'search_library', arguments: { query: 'report', type: 'skill', limit: 1, response_format: 'detailed' } });
   assert.ok(!search.isError, JSON.stringify(search));
   const selected = search.structuredContent.items[0]; assert.ok(selected);
   const skill = await client.callTool({ name: 'get_skill', arguments: { slug: selected.slug, revision_sha256: selected.revision_sha256 } });

@@ -78,9 +78,9 @@ CHECKS MISSED: <list or none>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Chat export need finder](https://useaiblocks.com/skills/chat-export-need-finder).
-- The [Competitor review insight finder](https://useaiblocks.com/skills/star-rating-review-miner).
-- The [Unmet customer need researcher](https://useaiblocks.com/skills/job-hunting-spot-finder).
+- The [Unmet customer need researcher](https://useaiblocks.com/skills/job-hunting-spot-finder). It takes the customer needs.
+- The [Customer alternatives researcher](https://useaiblocks.com/skills/job-rival-mapper). It takes the customer needs.
+- The [Product launch FAQ writer](https://useaiblocks.com/skills/hard-questions-faq-writer). It takes the customer needs.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

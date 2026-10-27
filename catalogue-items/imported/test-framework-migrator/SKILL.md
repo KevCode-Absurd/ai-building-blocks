@@ -121,6 +121,10 @@ After generating migrated code:
 
 > Use @test-framework-migration-skill for this task: Migrates and converts test automation scripts between Selenium, Playwright, Puppeteer, and Cypress.
 
+## Next steps
+
+After the manual review list is cleared, run the converted suite in CI. For patterns the migration does not cover, write new tests in the target framework (see the browser-test-writer item).
+
 ## Limitations
 
 - Use this skill only when the task clearly matches its upstream source and local project context.

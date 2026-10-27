@@ -59,7 +59,7 @@ This triage assumes the jurisdictional scope specified in your configuration. Pr
 
 ## Read the config first
 
-> Added by AI Blocks: if you are in a chat that cannot read local files, ask the person to paste their privacy practice setup (regulatory footprint, PIA house style, privacy policy commitments) before you triage. Other commands named in this skill, such as pia-generation, ai-governance-legal and product-legal, are not included. Skip any handoff to them and tell the person they can start the full assessment in a separate chat.
+> Added by AI Blocks: if you are in a chat that cannot read local files, ask the person to paste their privacy practice setup (regulatory footprint, PIA house style, privacy policy commitments) before you triage. Other commands named in this skill, such as pia-generation, ai-governance-legal and product-legal, are not included. Skip any handoff to them and tell the person they can start the full assessment in a separate chat. If a full assessment is needed and pia-generation is not available, write a short manual checklist from the conditions table and tell the person to take it to their privacy counsel. In a chat, the person's pasted setup replaces the reads of the `~/.claude` files in the steps below. The laws and triggers you name come from memory or search, so tag them for checking and tell the person that counsel must confirm them before anyone relies on them. This is not legal advice.
 
 Before triaging, always read `~/.claude/plugins/config/claude-for-legal/privacy-legal/CLAUDE.md`. The PIA trigger criteria, regulatory
 footprint, and privacy policy commitments there are authoritative. Generic privacy
@@ -74,6 +74,8 @@ If the file is missing or contains `[PLACEHOLDER]`, surface this bounce:
 > - Say **"provisional"** and I'll triage against generic defaults — US jurisdiction, middle risk appetite, lawyer role, no playbook — and tag every output `[PROVISIONAL — configure your profile for tailored output]` so you can see what I do before committing.
 
 ### Provisional mode
+
+**Warning (added by AI Blocks):** provisional mode assumes US rules only. If the business has customers in the EU or UK, or you do not know, a provisional call can be wrong. Say so at the top of the answer and tell the person to finish setup first.
 
 If the user says "provisional," run triage normally using these generic defaults: middle risk appetite, lawyer role, US jurisdiction (CCPA + common federal sectoral baselines), no playbook (classify from general privacy-law principles rather than matching to configured commitments). Tag the reviewer note and every finding block with `[PROVISIONAL]`. At the end of the output, append:
 

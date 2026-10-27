@@ -10,6 +10,8 @@ level: advanced
 inputs:
   - type: brief
     required: true
+  - type: codebase
+    required: false
 outputs:
   - type: web_app
 uses: []

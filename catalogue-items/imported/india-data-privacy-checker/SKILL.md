@@ -66,7 +66,7 @@ timeline.
    Under the Rules notice, Rules 1, 2 and 17–21 start on publication, Rule 4 after one
    year, and Rules 3, 5–16, 22 and 23 after eighteen months. Check both Gazette notices
    and later amendments before applying a date.
-   Official notices checked 2026-10-24: [Act commencement notification](https://www.meity.gov.in/static/uploads/2025/11/c56ceae6c383460ca69577428d36828b.pdf) and [DPDP Rules 2025](https://www.meity.gov.in/static/uploads/2025/11/53450e6e5dc0bfa85ebd78686cadad39.pdf).
+   Official notices (you have not checked them yourself: record the URL and the date you check each one before relying on it): [Act commencement notification](https://www.meity.gov.in/static/uploads/2025/11/c56ceae6c383460ca69577428d36828b.pdf) and [DPDP Rules 2025](https://www.meity.gov.in/static/uploads/2025/11/53450e6e5dc0bfa85ebd78686cadad39.pdf).
 
 7. **Flag unnotified items.** Several elements depend on future Central Government
    notifications: SDF designations, cross-border transfer restrictions, startup exemptions,
@@ -376,6 +376,8 @@ The Board is **not a traditional regulator.** It is primarily an **adjudicatory 
 ---
 
 ## Penalties (Section 33 and Schedule)
+
+The penalty figures and start dates in this skill are the author's reading of the Act and Rules. Present them as "to confirm against the Gazette text", not as settled law. Record the source URL and the date checked.
 
 | Violation | Maximum Penalty |
 |-----------|----------------|

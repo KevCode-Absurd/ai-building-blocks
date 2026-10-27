@@ -31,6 +31,10 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+Note: this list replaces the general Before you start list above. This job does not need a buyer brief. It needs the role brief and the resumes.
+
+Resumes hold personal details. Tell the user to check their AI tool's data terms and their local privacy rules before pasting them, and to take out names, photos and contact details where they can.
+
 - **The role** (required the first time): what the job is, what the team needs, pay range if known, where and how it works. A short brief is enough.
 - **New applications** (required each run): resumes or application forms received since the last run.
 - **Interview notes** (optional, later): your notes from each interview, written against the scoring guide.

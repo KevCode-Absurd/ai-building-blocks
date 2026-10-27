@@ -33,6 +33,8 @@ A comprehensive database design skill that provides expert-level analysis, optim
 - **Rollback Strategy**: Complete reversal capabilities with validation
 - **Execution Planning**: Ordered migration steps with dependency resolution
 
+If an earlier step gave you SQL for a schema, use it as the user's `schema.sql` below.
+
 ## Tool Workflow (run these — do not analyze schemas by hand)
 
 All paths relative to this skill folder; sample inputs in `assets/`.

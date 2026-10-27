@@ -2,12 +2,12 @@ thinking: low
 thinking_why: It sends your file to a set tool and saves the result.
 new_slug: subtitle-and-transcript-maker
 name: Subtitle and transcript maker
-summary: Turn a meeting, interview or video into a written transcript with speaker names and timing. Uses ElevenLabs speech to text and your own API key.
+summary: Turn a meeting, interview or video into a written transcript with speaker names and word timing. Uses ElevenLabs speech to text and your own API key.
 job: work-with-audio
 headline: Subtitle and transcript maker
-subhead: Turn a recording into a written transcript with who said what, the time of each word, and subtitles ready to use. It handles meetings, interviews and videos.
+subhead: Turn a recording into a written transcript with who said what and the time of each word. You then turn that word timing into a subtitle file. It handles meetings, interviews and videos.
 explain: |
-  Turn a recording into a written transcript with who said what, the time of each word, and subtitles ready to use. It handles meetings, interviews and videos.
+  Turn a recording into a written transcript with who said what and the time of each word. You can turn that timing into subtitles. It handles meetings, interviews and videos.
 
   The skill sends audio or video to ElevenLabs speech to text, which needs an account and an API key, with Python or JavaScript code. You can switch on speaker labels, word-level timestamps, language detection and key term hints for names and jargon. It handles files with separate audio channels, lists the formats it accepts, and explains how to read the response and handle errors. It also covers live transcription and how to watch your costs.
 when:
@@ -31,12 +31,13 @@ you_get:
   - Word timing you can turn into a subtitle file
   - A request ID to track usage
 how_to_use:
-  - Get an ElevenLabs account and an API key. Keep the key private. If your AI runs npx @elevenlabs/cli onboard init, read the command first. It signs you in and stores a key for the project.
+  - Get an ElevenLabs account and an API key. Keep the key private. Your AI may offer to run npx @elevenlabs/cli onboard init. It signs you in and stores a key for the project, so make it show you the command and say yes only if you agree. The steps need someone who can run Python or JavaScript. If that is not you, use a no-code transcription tool instead.
   - Open an AI that can run code, and paste in this skill. If yours can't run code, ask a developer to run the steps for you.
   - Add your audio or video file. Say if you want speaker labels, word timing or a set language.
   - List any names or jargon your AI should spell right (optional).
   - Run it and read the transcript. Check names and numbers against the recording.
-  - Ask your AI to turn the word timing into a subtitle file, or to summarise the text. ElevenLabs charges for each file, so check your plan first.
+  - "Ask your AI to turn the word timing into an SRT or VTT subtitle file. The skill gives word timing only. It does not write the subtitle file by itself."
+  - Ask your AI to summarise the text if you want minutes. ElevenLabs charges for each file, so check your plan first.
 output_sample:
   input:
     - An audio or video file

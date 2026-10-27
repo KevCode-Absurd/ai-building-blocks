@@ -9,8 +9,10 @@ level: intermediate
 inputs:
   - {type: question, required: true}
   - {type: document, required: true}
+  - {type: contract, required: false}
 outputs:
   - {type: copy_draft}
+  - {type: document}
 uses: [demand-letter-fact-gatherer, dispute-timeline-builder, demand-letter-drafter]
 steps:
   - {uses: demand-letter-fact-gatherer, note: "Starts from your answers. Makes the fact sheet the next steps check and write from."}

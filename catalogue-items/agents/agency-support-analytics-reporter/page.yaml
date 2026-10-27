@@ -125,7 +125,7 @@ terms:
 works_best_with:
   tools:
     - name: Claude, ChatGPT or Gemini
-      why: A pasted table or CSV is enough. An AI that can run code checks the sums more closely. The agent cannot reach your live accounts.
+      why: A pasted table or CSV is enough, and works in the free plans. Uploading a large file or running code to check sums may need a paid plan, depending on the tool. The agent cannot reach your live accounts.
   inputs:
     - A second period to compare with, such as last month or the same month last year.
     - A short note on what each column means and which orders to leave out, such as refunds.

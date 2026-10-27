@@ -47,19 +47,17 @@ Run a DAST scan against our staging application at https://staging.example.com. 
 
 ### Example 1: OWASP ZAP Scan Against a Web Application
 
-**ZAP Docker command with authentication:**
+**ZAP Docker command (unauthenticated baseline):**
 
 ```bash
 # The old owasp/zap2docker-stable image is retired. Check ZAP's docs for the current image name.
 docker run --rm -v $(pwd)/report:/zap/wrk ghcr.io/zaproxy/zaproxy:stable zap-full-scan.py \
   -t https://staging.example.com \
   -r zap-report.html \
-  -J zap-report.json \
-  -z "-config formhandler.fields.field(0).fieldId=username \
-      -config formhandler.fields.field(0).value=<TEST_USERNAME> \
-      -config formhandler.fields.field(1).fieldId=password \
-      -config formhandler.fields.field(1).value=<TEST_PASSWORD>"
+  -J zap-report.json
 ```
+
+Login is not set by flags here. For a login, set up authentication in ZAP itself (an authentication context or an automation plan) as ZAP's current docs describe, and check every flag against those docs before you run it. Use a throwaway test account on staging, with the username and password from your own secret store.
 
 **Findings Report (excerpt):**
 
@@ -84,7 +82,7 @@ Request:
 
 Response:
   HTTP/1.1 200 OK
-  [returned all 4,892 records instead of matching records]
+  [returned every record instead of only the matching records]
 
 Remediation: Use parameterized queries or ORM methods. Validate and sanitize
 all user input before including it in database queries.
@@ -137,7 +135,7 @@ http:
 nuclei -u https://staging.example.com -t exposed-debug-endpoints.yaml -t cves/ -severity high,critical -json -o nuclei-results.json
 ```
 
-**Sample output:**
+**Sample output (an invented illustration of the layout, not real scan results; your scan must show only what it found):**
 
 ```
 [exposed-debug-endpoints] [http] [high] https://staging.example.com/actuator/env

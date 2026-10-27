@@ -58,7 +58,7 @@ Your ten-year position. Where the value sits, with the sums. Copiers and months 
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Plan your strategy** with the [Competitive advantage development planner](https://useaiblocks.com/skills/power-stage-build-planner). It takes the audit report.
 - The [Seven-question startup scorer](https://useaiblocks.com/skills/seven-question-startup-scorer). It takes the audit report.
-- The [Business idea payment test planner](https://useaiblocks.com/skills/three-buyer-idea-test-planner).
+- The [Idea evidence reviewer](https://useaiblocks.com/skills/idea-evidence-review). It takes the audit report.
 - The [Product alternative comparison reviewer](https://useaiblocks.com/skills/ten-times-better-checker). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

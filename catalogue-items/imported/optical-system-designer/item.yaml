@@ -8,8 +8,10 @@ role: make
 job: ops
 level: expert
 inputs:
-  - type: brief
+  - type: question
     required: true
+  - type: spreadsheet
+    required: false
 outputs:
   - type: code_change
   - type: test_report

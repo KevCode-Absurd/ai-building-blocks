@@ -19,6 +19,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **What you need** (use your own material or the linked skill):
 - **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -28,7 +29,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for your brand brain, your results. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your brand brain, your results, your question. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
@@ -36,7 +37,8 @@ How to start:
 - **Your product facts and what it does for buyers** (required): price today, variants, what it is made of, how it is used and the problem it solves.
 - **People you can send a short survey to** (required, at the first pause): at least 30 for each price in the survey.
 - **Your last 90 days of sales** (required, at the second pause): an export for a closed date window.
-- **Your cost for each product** (required, at the second pause), and which product to test first.
+- **Your cost for each product** (required, at the second pause), and which product to test first. The cost floor comes from your own books: what it costs you to make or buy one unit, plus shipping and payment fees. Do not estimate it.
+- **A valid survey answer** is a price chosen or typed by a real or likely buyer who saw the same product text as everyone else. Leave out blank answers and answers that do not fit the question.
 - **Your rivals' prices** (optional).
 
 The survey answers do not exist at the start. The person collects them at the first pause and puts them in a sheet.
@@ -59,7 +61,7 @@ Pause here: Send the survey to at least 30 people per price. Put the answers int
 
 Pause here: Pull your last 90 days of sales and the cost of each product. Pick the product you will test first.
 
-3. **Plan a price test you can undo.** Use the skill `price-test-planner`. It takes the 90 days of sales and the costs from the person, and the tier prices in `outputs/step-02-pricing-model-designer.md`. It saves `outputs/step-03-price-test-planner.md`: a data check, unit costs and cost floor, candidate prices, three outcome cases, a controlled test on one product and the roll-back rule.
+3. **Plan a price test you can undo.** Use the skill `price-test-planner`. It takes the 90 days of sales and the costs from the person, and the tier prices in `outputs/step-02-pricing-model-designer.md`. It saves `outputs/step-03-price-test-planner.md`: a data check, unit costs and cost floor, candidate prices, three outcome cases, a controlled test on one product and the roll-back rule. The test plan must state the test length in weeks, the fewest orders to collect at each price before reading it, and the roll-back trigger as a number (for example, orders or profit per visitor falling below a line you set). If the skill does not give one of these, write `MISSING: <which>` and ask the person to choose it. Do not invent a figure. Check local rules on price changes and "was" prices before any new price goes live.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back
@@ -73,8 +75,8 @@ Pause here: Pull your last 90 days of sales and the cost of each product. Pick t
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [SaaS pricing designer](https://useaiblocks.com/skills/saas-pricing-designer). It takes the plan.
-- The [Willingness-to-pay pricing planner](https://useaiblocks.com/skills/willingness-to-pay-pricing).
-- The [SaaS pricing strategist](https://useaiblocks.com/skills/pricing-strategist).
+- The [Price layout planner](https://useaiblocks.com/skills/price-presentation-planner). It takes the plan.
+- The [Online store pricing planner](https://useaiblocks.com/skills/price-position-planner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

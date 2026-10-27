@@ -13,11 +13,15 @@ Ask once for what you do not have. Never invent it.
 
 - Project name (used for the module, folder and server name).
 - Go module path. If the person has none, use `github.com/yourusername/<name>` and say it is a placeholder.
-- The tools wanted: for each, a name, its inputs and what it returns. If none are given, build two sample tools and label them SAMPLE so they are replaced.
+- The tools wanted: for each, a name, its inputs and what it returns. If you have a tool set plan, take them from it. If none are given, build two sample tools and label them SAMPLE so they are replaced.
 - Where the data comes from (file, database, API). If it needs a key or password, read it from an environment variable. Never write a secret into a file.
 - The Go version installed, if known. The template uses 1.23.
 
 This skill needs a Go install and a way to create files and run commands. If the AI cannot run commands, write each file out in full, then give the person the commands to run (below) and ask them to paste any error back.
+
+## Read this first: the templates are untested
+
+The code templates below were written against go-sdk v1.0.0. They have not been compiled by us. The calls most likely to need changes in a newer SDK are `mcp.NewServer`, `mcp.Options` and the capability types, `mcp.AddTool`, `mcp.CallToolRequest` and `mcp.CallToolResult`, and `mcp.StdioTransport`. After generating the files, run `go mod tidy` and `go build ./...`, read any error against the SDK's own documentation, and fix the call. Tell the user the project may need these fixes before it runs.
 
 ## Project Requirements
 
@@ -41,7 +45,7 @@ myserver/
 ├── tools/
 │   ├── tool1.go
 │   └── tool2.go
-├── resources/
+├── resources/            (optional: only if the user wants MCP resources; skip it otherwise)
 │   └── resource1.go
 ├── config/
 │   └── config.go

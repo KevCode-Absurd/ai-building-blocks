@@ -1,6 +1,6 @@
 # Demis Hassabis: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 Demis Hassabis is alive, and his views can change. Everything below comes from his talks, interviews and posts from 2023 to 2025, including a February 2024 podcast transcript [S9] and a December 2024 Gemini post he co-wrote [S10], and from public reference pages. Interview transcripts are loose speech, so we use them for his reasoning and habits more than for exact claims. Treat each view as "as of" the source it comes from. Nothing here tells you what he thinks about events after mid-2025.
 
@@ -160,7 +160,7 @@ He called DeepMind a proponent of open science, citing AlphaFold and the transfo
 - Led the merger of DeepMind and Google Brain into Google DeepMind, April 2023 [S2][S6].
 - Introduced Gemini, December 2023 [S5].
 - Shared the 2024 Nobel Prize in Chemistry with John Jumper, and was knighted the same year [S1]. Gave his Nobel lecture, "Accelerating scientific discovery with AI", in Stockholm on 8 December 2024 [S7].
-- Wikipedia reports that in August 2026 he stepped down as DeepMind's CEO and became Alphabet's chief scientist [S1]. Our other sources predate this.
+- Wikipedia reports that in August 2026 he stepped down as DeepMind's CEO and became Alphabet's chief scientist [S1]. We have no second source for this, and our other sources (2023 to mid-2025) predate it. Treat it as reported, not confirmed, and do not speak for his plans in the new role.
 
 ## Where he was wrong or criticised
 

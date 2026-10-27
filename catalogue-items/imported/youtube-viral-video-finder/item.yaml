@@ -8,10 +8,16 @@ role: source
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: question
     required: true
+  - type: spreadsheet
+    required: false
+  - type: shortlist
+    required: false
 outputs:
-  - type: reference_set
+  - type: shortlist
+    required: true
+  - type: video_link
     required: true
 uses: []
 origin: imported

@@ -33,11 +33,15 @@ Queries recent orders and surfaces those with high or medium fraud risk scores, 
 
 ## Workflow Steps
 
-1. **OPERATION:** `orders` — query
-   **Inputs:** `query: "risk_level:<risk_level> created_at:>='<NOW - days_back days>'"`, `first: 250`, select `riskLevel`, `riskFacts`, `totalPriceSet`, `customer`, pagination cursor
-   **Expected output:** Orders with risk data; paginate until `hasNextPage: false`
+1. **Build the search.** Use `created_at:>='<NOW - days_back days>'` as the base query. Filter on risk level in the query with `risk_level:high` (for `high`), or `risk_level:high OR risk_level:medium` (for `medium`). For `all`, leave the risk filter out and keep every level. If the store rejects the `risk_level` filter, fetch the orders without it and keep the ones with a matching `riskLevel` in code. Say which approach you used.
+2. **Fetch the orders.** Run the `orders` query below with `first: 250`. Repeat with the `endCursor` as `after` until `hasNextPage` is false.
+3. **Handle missing scores.** If `riskLevel` is null (the order is too new for analysis), leave it out and count how many you left out.
+4. **Apply the minimum order value.** Drop orders whose `totalPriceSet.shopMoney.amount` is below `min_order_value`. The default is 0, so nothing is dropped unless the user sets a number.
+5. **Sort.** Put high risk first, then medium, then low. Within a level, put the larger order value first.
+6. **Write the file.** Save `risk_report_<YYYY-MM-DD>.csv` with the columns listed under Output Format. Join the `riskFacts` messages into the `risk_indicators` column.
+7. **Report.** Print the summary in the Session Tracking format, and say how many orders were left out in step 3.
 
-2. Sort by risk level (high first), then by order value descending
+The CSV holds customer names and email addresses. Tell the user to keep it private and not paste it anywhere public.
 
 ## GraphQL Operations
 

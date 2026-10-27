@@ -25,7 +25,7 @@ Issues Shopify native gift cards to customers programmatically — as goodwill f
 |-----------|------|----------|---------|-------------|
 | store | string | yes | — | Store domain (e.g., mystore.myshopify.com) |
 | format | string | no | human | Output format: `human` or `json` |
-| dry_run | bool | no | false | Preview operations without executing mutations |
+| dry_run | bool | no | true | Preview operations without executing mutations. Set to false only after the user has seen the preview and says to go ahead |
 | customer_email | string | yes* | — | Customer email to look up and associate with the gift card |
 | customer_id | string | yes* | — | Customer GID (alternative to email) |
 | amount | float | yes | — | Gift card value in the store's default currency |
@@ -39,7 +39,7 @@ Issues Shopify native gift cards to customers programmatically — as goodwill f
 
 > ⚠️ Step 2 executes `giftCardCreate` which issues real monetary value against your store. Gift cards cannot be deleted once created — they can only be disabled. Run with `dry_run: true` to confirm the customer, amount, and expiry before committing. Verify the amount carefully — issued value is immediately redeemable at checkout.
 >
-> `dry_run` defaults to false, so always run a `dry_run: true` pass first, show the user the customer, amount and expiry, and issue live cards only after the user says to go ahead.
+> `dry_run` defaults to true. Always run the preview first, show the user the customer, amount and expiry, and set `dry_run: false` and issue live cards only after the user says to go ahead.
 
 ## Workflow Steps
 
@@ -104,7 +104,7 @@ mutation GiftCardCreate($input: GiftCardCreateInput!) {
 **On start**, emit:
 ```
 ╔══════════════════════════════════════════════╗
-║  SKILL: gift-card-issuance                   ║
+║  SKILL: shopify-admin-gift-card-issuance     ║
 ║  Store: <store domain>                       ║
 ║  Started: <YYYY-MM-DD HH:MM UTC>             ║
 ╚══════════════════════════════════════════════╝
@@ -137,11 +137,11 @@ OUTCOME SUMMARY
 For `format: json`, emit:
 ```json
 {
-  "skill": "gift-card-issuance",
+  "skill": "shopify-admin-gift-card-issuance",
   "store": "<domain>",
   "started_at": "<ISO8601>",
   "completed_at": "<ISO8601>",
-  "dry_run": false,
+  "dry_run": true,
   "steps": [
     { "step": 1, "operation": "CustomerByEmail", "type": "query", "params_summary": "email <email>", "result_summary": "customer <id>", "skipped": false },
     { "step": 2, "operation": "GiftCardCreate", "type": "mutation", "params_summary": "amount <amount>, customer <id>", "result_summary": "gift card <code>", "skipped": false }
@@ -178,11 +178,11 @@ Gift card issued:
 | Customer not found | Email doesn't match any customer | Verify email; guest checkout customers may not have a customer record |
 | `userErrors` from giftCardCreate | Invalid amount (≤ 0) or missing required field | Verify `amount` is a positive number |
 | Gift cards not enabled | Store settings don't allow gift cards | Enable in Shopify admin → Settings → Gift cards |
-| `write_gift_cards` scope missing | Auth was done without this scope | Re-run `shopify store auth` with `write_gift_cards` scope |
+| `write_gift_cards` scope missing | Auth was done without this scope | Re-run `shopify auth login --store <domain>` and approve the `write_gift_cards` scope |
 
 ## Best Practices
 1. Always run `dry_run: true` to confirm customer lookup succeeds and amount is correct before issuing.
 2. Always include a `reason` note — it appears in the gift card record and helps your team audit issuances later.
-3. Set `tag_customer: goodwill-issued` to track which customers have received goodwill gift cards — combine with `loyalty-segment-export` to monitor their subsequent purchase behavior.
+3. Set `tag_customer: goodwill-issued` to track which customers have received goodwill gift cards — combine with the Loyalty customer list builder (`loyalty-customer-list-builder`) to monitor their subsequent purchase behavior.
 4. Use `expires_on` for promotional gift cards (e.g., holiday campaigns) to create urgency; omit for goodwill issuances so the customer feels the gesture is genuine.
 5. For batch issuances (e.g., a service outage affecting 100 customers), loop through a customer list using `format: json` to capture each gift card code for your records.

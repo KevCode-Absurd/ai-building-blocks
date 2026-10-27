@@ -9,6 +9,8 @@ level: intermediate
 inputs:
   - {type: spreadsheet, required: true}
   - {type: document, required: true}
+  - {type: contract, required: true}
+  - {type: customer_list, required: true}
 outputs:
   - {type: audit_report}
 uses: []

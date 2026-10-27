@@ -19,7 +19,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Plan** with the [Product range reviewer](https://useaiblocks.com/skills/product-line-cutter). Bring your results (optional), a brief (optional). It uses your brand brain.
+1. **Plan** with the [Product range reviewer](https://useaiblocks.com/skills/product-line-cutter). Bring your results (optional), your question (optional). It uses your brand brain.
 2. This one.
 
 How to start:
@@ -61,8 +61,8 @@ The program table with cost, return, cash, earnings and new cash needed. Custome
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Quarterly business plan reviewer](https://useaiblocks.com/skills/quarterly-strategy-reviewer).
-- The [Brand focus trade-off planner](https://useaiblocks.com/skills/give-up-list-planner).
-- The [Product range reviewer](https://useaiblocks.com/skills/product-line-cutter).
+- The [Product pivot decision reviewer](https://useaiblocks.com/skills/pivot-or-persevere-decider). It takes the audit report.
+- The [Brand and sales budget splitter](https://useaiblocks.com/skills/brand-and-sales-budget-splitter). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

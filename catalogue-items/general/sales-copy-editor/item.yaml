@@ -16,9 +16,17 @@ inputs:
     required: false
   - type: ad_copy
     required: false
+  - type: product_data
+    required: false
+  - type: offer
+    required: false
+  - type: persona
+    required: false
 outputs:
   - type: audit_report
     required: true
+  - type: copy_draft
+    required: false
 uses:
   - anti-ai-slop-copy-editor
   - sales-copy-readiness-checker

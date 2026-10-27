@@ -9,7 +9,7 @@ subhead: A build, test and release pipeline for your project, so code goes from 
 explain: |
   Hand deploys break in small ways, like a skipped test or a forgotten step. A pipeline runs the same steps in the same order on every push.
 
-  It picks a platform that suits you, such as GitHub Actions or GitLab. It sets up stages in order: check style, run tests, build, then release. API keys and passwords go into the platform's secret storage, never into the code. It adds caching so runs are faster and test matrices so you cover several versions. You choose a release style such as rolling or blue and green, with staging before production. Alerts post to Slack or email when something fails.
+  It picks a platform that suits you, such as GitHub Actions or GitLab. It sets up stages in order: check style, run tests, build, then release. API keys and passwords go into the platform's secret storage, never into the code. It adds caching so runs are faster and test matrices so you cover several versions. You choose a release style such as rolling or blue and green, with staging before production. Alerts post to Slack or email when something fails. This is a general starter adapted from an MIT-licensed public skill by Burhan Sebin. You must adapt the cloud and host parts to your own setup. For AWS deploys, ask for an OIDC role instead of stored access keys.
 when:
   - You still deploy by hand and it keeps going wrong.
   - You need tests to run on every pull request.
@@ -32,13 +32,14 @@ you_get:
   - Caching to speed runs up
   - Failure alerts
 how_to_use:
+  - "Gather first: access to your code repository, a login for your container registry (if you ship Docker images), a deploy role or key for your cloud host, and a Slack webhook if you want chat alerts."
   - Open Claude, ChatGPT or Gemini and paste this skill.
   - Say which language, framework, Git host and deploy target you use. Add your test tools and release style if you have them.
   - Check the platform it picks and the stages it lists.
   - Copy each config file into your repo on a new branch. Set the secrets it names in your platform's settings.
   - Push the branch and watch the first run. Fix any failing step, then merge.
   - Your AI only writes the files. It does not need to run code, but you must add them to your repo yourself.
-  - After the first green run, add a way to undo a bad release with the Release day rollback planner, and check each deploy with the Deploy verifier.
+  - After the first green run, add a way to undo a bad release with release-day-rollback-planner, and check each deploy with deploy-verifier.
 output_sample:
   input:
     - Your language and framework

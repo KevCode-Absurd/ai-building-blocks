@@ -8,14 +8,14 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: source_text
+  - type: lesson_plan
     required: true
   - type: plan
     required: false
 outputs:
   - type: copy_draft
     required: true
-  - type: brief
+  - type: lesson_plan
     required: false
 uses: []
 origin: imported

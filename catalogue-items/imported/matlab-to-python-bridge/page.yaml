@@ -10,6 +10,8 @@ explain: |
   MATLAB code that calls a Python library and works, with the setup problems fixed. Tell it which library you need, such as pandas or scikit-learn, and it writes the calls and gets the environment right.
 
   It follows firm rules. It never uses pyargs or pyversion, runs pip installs and virtual environment steps in the shell, and always asks before it ends a running Python session. It wraps numbers in integer types where Python expects whole numbers, and uses string arrays on newer releases. When a run fails it sorts the error: a missing module, an unresolved py name, an empty Python path, or an unsupported environment. Each type has its own fix. You need MATLAB and a Python install.
+
+  This is MathWorks' skill. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE.md file.
 when:
   - You want to use a Python library that MATLAB does not have.
   - MATLAB says it cannot find your Python module.
@@ -19,7 +21,7 @@ not_for:
   - "You want to call MATLAB from Python: use the MATLAB Engine API for Python, which MathWorks provides."
   - "You want to build MEX files or Python C extensions: ask a developer who knows C or C++."
   - "You only write Python and never use MATLAB: use a plain Python guide or ask your AI for help with Python alone."
-  - "You want to use the code outside MATLAB or other MathWorks products: the licence does not allow it."
+  - "You want to use the code outside MATLAB or other MathWorks products: the LICENSE.md file in this item allows use only in conjunction with MathWorks products and service offerings."
 you_give:
   - The Python library or function
   - Your MATLAB code to connect
@@ -31,12 +33,13 @@ you_get:
   - Error fixes
   - Notes on data type conversion
 how_to_use:
-  - Open your AI tool and give it the skill folder. You need an AI with a MATLAB connection that can run code, and a Bash tool for the pip and virtual environment steps. It must read references/environment-setup.md before it installs anything, so include that file.
+  - Open your AI tool and give it the skill folder. You need an AI with a MATLAB connection that can run code, and a Bash tool for the pip and virtual environment steps. It must read references/environment-setup.md before it installs anything, so include that file. That file covers how to find the Python MATLAB is using, install a supported Python, create a virtual environment and pip install your packages. You approve each install before it runs.
   - Tell it the Python library you want and paste your MATLAB code. Add your MATLAB release.
   - If a run failed, paste the full error message too.
   - Let it set up the Python environment first. It asks before it restarts a running Python session, so read that warning.
   - Run the new code on a small test input before you use real data.
   - Once the test run passes on small input, move to your real data. For each new Python call, ask for notes on the data types that call expects.
+  - Keep the virtual environment pinned to the library versions that worked. If a later run fails, paste the new error and ask your AI to run the error triage again.
   - To go the other way and call MATLAB from Python, use the MATLAB Engine API for Python.
 output_sample:
   input:

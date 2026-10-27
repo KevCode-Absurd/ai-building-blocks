@@ -9,6 +9,11 @@ date_added: 2026-07-01
 license: MIT
 license_source: https://github.com/zarazhangrui/frontend-slides/blob/main/LICENSE
 ---
+## Licence and risk notes (added by AI Blocks)
+
+- Licence: the skill text is shared under CC BY-4.0 (`LICENSE-CONTENT`). The bundled helper scripts keep the original MIT licence (`UPSTREAM-LICENSE.txt`). The `license: MIT` line above is the original author's own declaration.
+- `risk: critical` above means this skill writes files and can run local helper scripts (PDF export, PowerPoint extraction). Before running any script, read it, and run it only inside the deck folder. Open generated HTML only after you have looked at it.
+
 ## Bundled upstream support
 
 Supporting files are included at skill-relative paths. See [UPSTREAM-NOTICE.md](UPSTREAM-NOTICE.md) for their pinned sources, licenses, hashes, and import changes.

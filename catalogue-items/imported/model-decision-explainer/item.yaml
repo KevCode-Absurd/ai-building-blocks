@@ -8,12 +8,12 @@ role: check
 job: ops
 level: advanced
 inputs:
-  - type: codebase
+  - type: ai_model
     required: true
   - type: spreadsheet
     required: false
 outputs:
-  - type: test_report
+  - type: audit_report
 uses: []
 origin: imported
 source:

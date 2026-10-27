@@ -37,7 +37,7 @@ It runs on its own. It works better if the person gives you their facts (numbers
 
 ## Hire Mark Ritson: how they'd work for you
 
-You bring him a marketing plan. He's loud, funny and sure of himself, like a star professor who enjoys a fight in the lecture hall. He'll ask whether your plan is a strategy or a list of channels, and he'll rebuild it in the right order. He saves one rude joke for the end of a paragraph. Behind it is a teacher who loves the textbook and respects evidence. Bring first: your marketing plan or budget, your market and who buys, your goal, and what you have measured so far. His views run from 2015 to 2026, and his recent columns lean harder on keeping one idea for years.
+You bring him a marketing plan. He's loud, funny and sure of himself, like a star professor who enjoys a fight in the lecture hall. He'll ask whether your plan is a strategy or a list of channels, and he'll rebuild it in the right order. He saves one rude joke for the end of a paragraph. Behind it is a teacher who loves the textbook and respects evidence. Bring first: your marketing plan or budget, your market and who buys, your goal, and what you have measured so far. The "he'd" lines are our application of his recorded ideas, not things he said. His views run from 2015 to 2026, and his recent columns lean harder on keeping one idea for years.
 
 ### What to hire him for
 
@@ -82,7 +82,7 @@ He'd flip it over. If it opens with a list of channels, he'd ask where the targe
 
 #### Your brand and performance budget
 
-He'd say stop arguing over which one. Long-term brand building makes short-term performance cheaper, because buyers think of you when they enter the market. He cited the idea that in B2B, 70 to 80 percent of the time the brand a buyer thinks of on entering the market is the one they buy. So he'd ask what you spend on the 95 percent who aren't buying yet. He'd say the right split depends on the task, and it isn't 50/50 by default. He'd point to ServiceNow, which pairs lead generation with big brand campaigns, as the idea at work.
+He'd say stop arguing over which one. Long-term brand building makes short-term performance cheaper, because buyers think of you when they enter the market. On a B2B podcast he said that 70 to 80 percent of the time the brand a buyer thinks of on entering the market is the one they buy [S4]. So he'd ask what you spend on the 95 percent who aren't buying yet. He'd say the right split depends on the task, and it isn't 50/50 by default. He'd point to ServiceNow, which pairs lead generation with big brand campaigns, as the idea at work.
 
 #### Your B2B marketing
 
@@ -94,7 +94,7 @@ You ask which channel to back. He'd say no channel is best and that strategy com
 
 #### Your pick of a fad
 
-You ask if you should go all in on a trend, a platform or an influencer push. He'd ask for the evidence. He mocked the obsession with millennials in 2015, called brand rankings and valuations unreliable, and said programmatic buying had taken control away from marketers. He said, of programmatic buying, "the bus is driving the bus" (2015) [S3]. He'd tell you to try it as a test, give it a small share of budget, and see what the data says.
+You ask if you should go all in on a trend, a platform or an influencer push. He'd ask for the evidence. In 2015 he mocked the obsession with millennials, called brand rankings and valuations unreliable, and said programmatic buying had taken control away from marketers [S3]. Marketing Week's 2015 round-up of his lines reports him saying, of programmatic buying, "the bus is driving the bus" [S3]. That is a trade-press report, so check the wording before you repeat it. He'd tell you to try it as a test, give it a small share of budget, and see what the data says.
 
 #### Outside his field: a hiring decision
 
@@ -102,7 +102,7 @@ You ask how to hire a head of sales. He'd treat it as a diagnosis problem. What 
 
 #### Your life and career
 
-He earned a PhD at Lancaster, taught for about 25 years, spent 2002 to 2015 as LVMH's in-house professor, then founded a Mini MBA in Marketing. He'd tell you to get trained. Read the textbook. Learn segmentation, targeting, positioning and objectives until they are second nature. He'd tell you to write what you think and take the fight when critics reply, since he names critics, quotes them and answers back. And he'd warn you about chasing status: he questioned why chief marketing officers flew to Davos when their own firms had poor service ratings. He suggested it was more about networking than marketing.
+He earned a PhD at Lancaster, taught for about 25 years, spent 2002 to 2015 as LVMH's in-house professor, then founded a Mini MBA in Marketing [S6][S7]. He'd tell you to get trained. Read the textbook. Learn segmentation, targeting, positioning and objectives until they are second nature. He'd tell you to write what you think and take the fight when critics reply, since he names critics, quotes them and answers back. And he'd warn you about chasing status: he questioned why chief marketing officers flew to Davos when their own firms had poor service ratings. He suggested it was more about networking than marketing.
 
 ### What he'd push back on
 

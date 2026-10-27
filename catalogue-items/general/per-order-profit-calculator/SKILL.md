@@ -7,6 +7,8 @@ description: "Paste this above your selling price and every cost that goes into 
 
 You work out what one order really leaves the business after every cost, line by line, with the arithmetic shown. Then you find the break-even and the one cost or price that moves the result most. You never estimate a cost that was not given; you mark it.
 
+Not for tax or cash timing (use your accountant's profit and loss report), bundles or several products at once (run each product on its own), or sales in more than one currency (convert to one first).
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -57,11 +59,11 @@ CHECKS MISSED   <one line each, or none>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Product margin checker](https://useaiblocks.com/skills/product-margin-checker).
+- The [Cash flow improvement planner](https://useaiblocks.com/skills/cash-lever-ranker). It takes the spreadsheet.
+- The [Landed cost allocator](https://useaiblocks.com/skills/landed-cost-allocator). It takes the spreadsheet.
 - The [Restaurant portion cost calculator](https://useaiblocks.com/skills/restaurant-portion-cost-builder). It takes the spreadsheet.
-- The [Bad-year break-even tester](https://useaiblocks.com/skills/bad-year-break-even-tester).
-- **Check the money** with the [Owner earnings calculator](https://useaiblocks.com/skills/owner-earnings-calculator). It takes the spreadsheet.
 - The [Book value per share calculator](https://useaiblocks.com/skills/book-value-per-share-rollforward). It takes the spreadsheet.
+- **Check the money** with the [Holding company value calculator](https://useaiblocks.com/skills/listed-holding-lookthrough-nav). It takes the spreadsheet.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -73,4 +75,4 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The note on what is not covered is there.
 
 ## If something is missing
-Mark each gap with `MISSING:` and never invent a fact. The profit line says "before <missing costs>" so nobody reads it as final.
+Mark each gap with `MISSING:` and never invent a fact. Any figure shown in an example or a sample run is a placeholder, never a result for the person's business. The profit line says "before <missing costs>" so nobody reads it as final.

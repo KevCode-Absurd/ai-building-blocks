@@ -153,7 +153,7 @@ Check if the `Agent` tool is available (Claude Code) or not (Claude.ai, other en
 
 ### Web Search Availability
 
-Phase 3 requires WebSearch. In Claude Code, the tool is always available — if the user hasn't pre-approved it, the system will prompt them for each search. If the user denies permission, or in environments where WebSearch doesn't exist at all, fall back to **Knowledge-Based Research Mode**: use your training data, clearly mark all findings with **[Knowledge-Based — not live data, verify independently]**, reduce confidence ratings by one level, and recommend the founder verify key claims manually. Note the mode in PROGRESS.md so future sessions know the research wasn't web-sourced.
+Phase 3 requires WebSearch. In Claude Code, the tool is always available — if the user hasn't pre-approved it, the system will prompt them for each search. If the user denies permission, or in environments where WebSearch doesn't exist at all, fall back to **Knowledge-Based Research Mode**: use your training data, clearly mark all findings with **[Knowledge-Based — not live data, verify independently]**, reduce confidence ratings by one level, and recommend the founder verify key claims manually. Note the mode in PROGRESS.md so future sessions know the research wasn't web-sourced. In this mode, never state a market size, growth rate, price or competitor figure as fact. Give a range, say it is from memory, and list it under figures the founder must check before showing anyone.
 
 > **References** — Read the relevant file for each wave:
 > - `references/research-principles.md` — Cross-cutting rules (source quality, cross-referencing, quantification, handling search failures). Read this FIRST.

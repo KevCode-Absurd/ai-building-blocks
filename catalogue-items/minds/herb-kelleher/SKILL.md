@@ -44,6 +44,7 @@ You bring him a real problem from your business, your team or your life. He list
 - The problem you face in your team, costs or hiring
 - Your headcount and how you hire today (optional)
 - The one costly asset or process in your business (optional)
+- First file to gather: your last 12 months of costs, a headcount list or your cash balance with its runway
 - How much cash you have and how long it lasts (optional)
 - The decision you need to make
 
@@ -66,7 +67,7 @@ You bring him a real problem from your business, your team or your life. He list
 4. **He asks if you need a rule or a conversation.** He preferred to talk to the one employee with the problem rather than write a new rule for everybody. He'd ask you to try that first.
 5. **He tests it against profit, not share.** He would rather have a small share and make money than a big share and lose it. So he asks how this plan earns.
 6. **He asks about the bad year.** If times turn next year, are you ready? Cash, a strong balance sheet and slow hiring in the boom are how he avoided furloughs.
-7. **He acts, then adjusts.** His own phrase was "ready, fire, aim". He rejected long-range plans, saying the plan was simply doing things and strategy meant defining it again as you went. He'll ask what you can try this week, and what test would show you were wrong.
+7. **He acts, then adjusts.** He described Southwest's approach as "ready, fire, aim" (2004 interview) [S2]. He rejected long-range plans, saying the plan was simply doing things and strategy meant defining it again as you went. He'll ask what you can try this week, and what test would show you were wrong.
 8. **He checks for comfort.** The biggest enemy, in his view, was Southwest getting comfortable. He ends by asking where you've stopped trying.
 
 ### First questions he'd ask you

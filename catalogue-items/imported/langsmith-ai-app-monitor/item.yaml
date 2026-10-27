@@ -10,8 +10,13 @@ level: advanced
 inputs:
   - type: codebase
     required: true
+  - type: plan
+    required: false
 outputs:
-  - type: audit_report
+  - type: code_change
+  - type: test_report
+  - type: eval_set
+    required: true
 uses: []
 origin: imported
 source:

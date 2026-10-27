@@ -19,7 +19,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **Email flow** with the [Customer email journey planner](https://useaiblocks.com/skills/customer-stage-flow-mapper). Bring email flow, your results (optional). It uses your brand brain and your offer.
+2. **Email flow** with the [Customer email journey planner](https://useaiblocks.com/skills/customer-stage-flow-mapper). Bring email flow, your results (optional). It uses your brand brain and offer.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
@@ -87,8 +87,8 @@ MISSING: <what was not given>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Email and SMS results reviewer](https://useaiblocks.com/skills/email-and-sms-performance-reader). It takes the email flow.
+- The [Email automation gaps and trigger reviewer](https://useaiblocks.com/skills/email-flow-gap-checker). It takes the email flow.
 - The [Email draft reviewer](https://useaiblocks.com/skills/email-draft-reviewer). It takes the email flow.
-- The [Customer email journey planner](https://useaiblocks.com/skills/customer-stage-flow-mapper). It takes the email flow.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

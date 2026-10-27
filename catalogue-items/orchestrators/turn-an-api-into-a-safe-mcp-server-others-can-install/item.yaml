@@ -8,6 +8,7 @@ job: ops
 level: advanced
 inputs:
   - {type: codebase, required: true}
+  - {type: api_spec, required: false}
 outputs:
   - {type: deploy_url}
 uses: [api-to-mcp-server-builder, mcp-server-sign-in-builder, mcp-server-hardener, mcp-server-publisher]

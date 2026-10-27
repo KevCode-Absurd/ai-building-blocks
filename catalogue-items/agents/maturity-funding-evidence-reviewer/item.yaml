@@ -11,7 +11,9 @@ inputs:
     required: true
   - type: document
     required: true
-outputs: []
+outputs:
+  - type: audit_report
+  - type: spreadsheet
 needs_mode: manual
 uses:
   - review-maturity-funding-and-credit-limits

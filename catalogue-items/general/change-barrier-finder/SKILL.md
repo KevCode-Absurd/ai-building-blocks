@@ -65,7 +65,8 @@ The change and who must make it. The five barrier checks, each with evidence fro
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Sales agreement question planner](https://useaiblocks.com/skills/yes-ladder-question-writer). It takes the plan.
-- The [Sales call question planner](https://useaiblocks.com/skills/sales-call-question-planner). It takes the plan.
+- The [Disagreement response writer](https://useaiblocks.com/skills/disagreement-calming-line-writer). It takes the plan.
+- The [Mutual action plan builder](https://useaiblocks.com/skills/mutual-action-plan-builder). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

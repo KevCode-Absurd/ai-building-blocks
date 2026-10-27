@@ -13,9 +13,9 @@ Read [the original role profile](references/source-agent.md) before you plan. Us
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Code performance planner](https://useaiblocks.com/skills/code-speed-planner). It takes the brief.
-- The [MATLAB audio plugin builder](https://useaiblocks.com/skills/audio-plugin-writer). It takes the brief.
-- The [Single-task agent heartbeat builder](https://useaiblocks.com/skills/the-10-step-heartbeat-protocol-implementation-planner). It takes the brief.
+- The [AI coding task brief writer](https://useaiblocks.com/skills/coding-agent-handoff-writer). It takes the plan.
+- The [Software developer from specifications](https://useaiblocks.com/skills/spec-builder). It takes the plan.
+- The [Developer tools engineer](https://useaiblocks.com/skills/agency-engineering-developer-tooling-engineer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

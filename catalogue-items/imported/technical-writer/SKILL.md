@@ -29,7 +29,7 @@ This skill enables an AI agent to produce high-quality technical documentation a
    Insert a table of contents for long documents, anchor links between related sections, and links to prerequisite or follow-up documentation. Add "Next steps" sections at the end of tutorials.
 
 6. **Review for Accuracy and Completeness**
-   Verify all code examples compile or run correctly. Confirm API endpoint paths, parameters, and response schemas match the actual implementation. Check that every tutorial step produces the described result. No placeholder text or TODO items should remain.
+   Compare every code example, endpoint path, parameter and response schema against the code or schema the user gave you. You cannot run code unless you have a way to, so do not say an example was tested. List anything you could not check under "Gaps and facts to confirm". Ask the user to run each tutorial step and confirm it gives the described result. Replace placeholder text and TODO items, or list them as open gaps.
 
 ## Usage
 
@@ -44,6 +44,8 @@ Provide the agent with:
 Example prompt: "Write an API reference for the /users endpoint. The audience is third-party developers. Here is the OpenAPI spec: [attached file]."
 
 ## Examples
+
+The two examples below show layout only. Their names, URLs and values are made up.
 
 ### Example 1: API Endpoint Reference
 
@@ -63,12 +65,12 @@ Example prompt: "Write an API reference for the /users endpoint. The audience is
 >
 > ```bash
 > curl -X POST https://api.example.com/api/v1/webhooks \
->   -H "Authorization: Bearer sk_live_abc123" \
+>   -H "Authorization: Bearer [YOUR_API_KEY]" \
 >   -H "Content-Type: application/json" \
 >   -d '{"url":"https://myapp.com/hooks","events":["order.created"]}'
 > ```
 >
-> **201 Created:** `{"id":"wh_9a8b7c6d","url":"https://myapp.com/hooks","events":["order.created"],"active":true}`
+> **201 Created:** `{"id":"[WEBHOOK_ID]","url":"https://myapp.com/hooks","events":["order.created"],"active":true}`
 >
 > **422 Error:** `{"error":{"code":"validation_error","details":[{"field":"url","message":"URL must use HTTPS."}]}}`
 
@@ -90,7 +92,7 @@ Example prompt: "Write an API reference for the /users endpoint. The audience is
 >
 > ## Step 2: Set Your API Key
 > ```bash
-> export ACME_API_KEY="sk_live_your_key_here"
+> export ACME_API_KEY="[YOUR_API_KEY]"
 > ```
 >
 > ## Step 3: List Your Projects
@@ -103,10 +105,9 @@ Example prompt: "Write an API reference for the /users endpoint. The audience is
 >     print(f"{project.id}: {project.name}")
 > ```
 >
-> Expected output:
+> Expected output (show real output only if the user gave you some, otherwise write the shape):
 > ```
-> proj_abc123: My First Project
-> proj_def456: Marketing Site
+> [PROJECT_ID]: [PROJECT NAME]
 > ```
 >
 > ## Next Steps

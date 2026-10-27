@@ -54,8 +54,8 @@ The place. What is within reach. A table of exits: exit, why it is shut, what wo
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Antagonist behavior planner](https://useaiblocks.com/skills/volatile-antagonist-mood-mapper). It takes the plan.
-- The [Scene turn checker](https://useaiblocks.com/skills/scene-turn-checker). It takes the plan.
 - The [Fair escape checker](https://useaiblocks.com/skills/fair-escape-checker). It takes the plan.
+- The [Story conflict escalation planner](https://useaiblocks.com/skills/rising-cost-ladder-builder). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

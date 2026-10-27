@@ -15,6 +15,8 @@ description: 商品换背景。白底商品图 → 逼真场景图，光影与�
 
 ## 生成效果示例
 
+> **Example from the source author, not made by AI Blocks.** The photos named below are not included here, and no picture has been made by this copy. Treat the command and the description as an example of a prompt only.
+
 | 输入：商品图 |
 | --- |
 | <img src="../../docs/item-change-background/product-shoes.jpg" width="280"> |

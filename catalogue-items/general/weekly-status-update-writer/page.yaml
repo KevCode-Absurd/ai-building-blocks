@@ -65,6 +65,7 @@ output_shape: |-
   DECISIONS NEEDED (question, by when, recommendation)
   NEXT (top three)
   MISSING
+  CHECKS MISSED (one line each, or none)
 tweaks:
   - what: Reader
     how: Name leaders, customers or your team and the depth changes.

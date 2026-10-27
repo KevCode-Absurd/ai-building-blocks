@@ -36,6 +36,13 @@ how_to_use:
   - If you have design notes or a component list, paste them in. If not, say so and your AI will use common patterns.
   - Read the flow diagram first. Check that each screen has a way in, a way out and a way back from errors.
   - Ask for the page files only if your project uses the same parts. This step needs your AI to write code files.
+output_shape: |
+  Flow diagram: a text diagram from the first screen to the exit, with a way back from each error
+  Navigation pattern: hub and spoke, straight line or tabs, and why it fits
+  Screen inventory: each screen, its purpose and its main parts
+  Edge cases: empty, error and loading states for each screen, with a way to recover
+  Page files: only if your project already has matching parts
+next: [interface-microcopy-writer, accessible-ui-builder]
 output_sample:
   input:
     - The goal your user wants to reach

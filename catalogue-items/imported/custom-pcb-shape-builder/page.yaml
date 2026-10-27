@@ -2,7 +2,7 @@ thinking: medium
 thinking_why: It follows a set build pattern with exact geometry.
 new_slug: custom-pcb-shape-builder
 name: Custom PCB shape builder
-summary: Describe a custom PCB shape and get MATLAB code that builds it as a pcbComponent, with layers, feeds and cut-outs. For RF engineers.
+summary: Describe a custom PCB shape and get MATLAB code that builds it as a pcbComponent. Needs paid MATLAB, for MathWorks products only.
 job: build-software
 headline: Custom PCB shape builder
 subhead: Some RF structures are not in any catalog, so you have to build them from shapes. Describe the board shape you want and you get MATLAB code that builds it as a pcbComponent, with metal layers, feeds and cut-outs in place.
@@ -31,10 +31,11 @@ you_get:
   - Feed and via placement
   - A note on the next steps, such as EM analysis
 how_to_use:
+  - You need paid MATLAB with the Antenna Toolbox or PCB Toolbox, and the skill's licence lets you use it only with MathWorks products. Without them, stop here.
   - Open a chat with an AI that can write MATLAB code. Paste in the skill text.
   - Describe the shape you want, or paste a sketch. Add substrate, conductor, feed type and position, dimensions and layer order.
   - Copy the MATLAB script it writes into MATLAB. You need the Antenna Toolbox or PCB Toolbox to run it.
-  - Check the layer numbers and feed settings against the list it gives you.
+  - Check the layer numbers and feed settings against the list it gives you. Also check the returned script's layer count and feed positions against your substrate before you run any EM analysis, because that list is the only guard.
   - Run your EM analysis once the shape looks right.
 output_sample:
   input:

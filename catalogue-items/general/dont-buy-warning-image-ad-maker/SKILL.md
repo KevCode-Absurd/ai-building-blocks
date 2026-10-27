@@ -19,6 +19,7 @@ The picture gives the warning. The story gives the reason. That gap is what make
 - Leave the product out unless asked. If asked, it's the real one, small and off to one side, and the picture still works without it.
 - No person, or a hand at the edge at most. No children.
 - Nothing says what the reader has. No before-and-after.
+- The card is the narrator's voice, not a real customer's note. Never present it as one unless that customer agreed in writing. A line under the image taken from a review needs the reviewer's permission on file.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -114,10 +115,10 @@ CHECKS MISSED     <one line each, or none>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image prompt.
+- The [Review quote ad card planner](https://useaiblocks.com/prompts/review-quote-ad-card-planner).
 - The [Handwritten note ad photo planner](https://useaiblocks.com/skills/handwritten-note-image-ad-maker).
 - The [Sticky-note image ad maker](https://useaiblocks.com/skills/sticky-note-image-ad-maker).
-- The [Hand-drawn story image ad maker](https://useaiblocks.com/skills/hand-drawn-story-image-ad-maker).
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image prompt.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

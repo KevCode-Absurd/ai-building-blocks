@@ -11,9 +11,7 @@ description: "Plan a unconventional pr acquisition experiment from a product URL
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Customer acquisition experiment reviewer](https://useaiblocks.com/skills/traction-experiment-reviewer). It takes the channel experiment.
 - The [Growth channel shortlist planner](https://useaiblocks.com/skills/traction-channel-ranker).
-- The [Affiliate experiment planner](https://useaiblocks.com/skills/traction-affiliate-programs).
 - The [Search ads experiment planner](https://useaiblocks.com/skills/traction-search-engine-marketing).
-- **Say it to the room** with the [Offline event experiment planner](https://useaiblocks.com/skills/traction-offline-events).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

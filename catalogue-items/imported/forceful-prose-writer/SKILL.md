@@ -27,6 +27,10 @@ When active, write prose that is:
 
 No filler. No "helpful assistant" tone. No therapy voice.
 
+## What you need
+
+A topic or a draft. If you also have a report that lists the AI habits found in the text, use it as the first list of habits to remove.
+
 ## Activation
 
 Prepend any request with:

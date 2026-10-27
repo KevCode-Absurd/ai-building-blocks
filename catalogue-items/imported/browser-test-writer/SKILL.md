@@ -26,6 +26,8 @@ Generate production-ready Playwright tests from a user story, URL, component nam
 - `"src/components/UserProfile.tsx"`
 - `"the search page with filters"`
 
+You can also share a document of test scenarios or user stories. Each one becomes a test.
+
 ## Steps
 
 ### 1. Understand the Target
@@ -38,7 +40,7 @@ Parse `$ARGUMENTS` to determine:
 
 ### 2. Explore the Codebase
 
-Use the `Explore` subagent to gather context:
+Use the `Explore` subagent to gather context. If your AI has no such subagent, read the same files yourself:
 
 - Read `playwright.config.ts` for `testDir`, `baseURL`, `projects`
 - Check existing tests in `testDir` for patterns, fixtures, and conventions
@@ -53,7 +55,7 @@ Check `templates/` in this plugin for matching patterns:
 
 | If testing... | Load template from |
 |---|---|
-| Login/auth flow | `../pw/templates/auth/login.md` |
+| Login/auth flow | `../pw/templates/auth/login.md` (not in this copy: write the login step from the project's own `auth.setup.ts` or a test that already logs in) |
 | CRUD operations | `templates/crud/` |
 | Checkout/payment | `templates/checkout/` |
 | Search/filter UI | `templates/search/` |

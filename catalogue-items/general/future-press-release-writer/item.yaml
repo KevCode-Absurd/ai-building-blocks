@@ -7,8 +7,10 @@ role: make
 job: copy
 level: intermediate
 inputs:
-  - type: brief
+  - type: idea
     required: true
+  - type: customer_needs
+    required: false
 outputs:
   - type: copy_draft
 origin: rebuilt

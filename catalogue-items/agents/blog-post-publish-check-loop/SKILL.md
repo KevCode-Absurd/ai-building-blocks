@@ -41,6 +41,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+- **A buyer brief is not needed.** If the Before you start list above asks for one, skip it.
 - **The draft** (required): the full text, with its title and any links or sources the writer used.
 - **Brand brain** (advised): voice, facts and claims register. Without it the voice check is skipped and claims are checked only against the sources in the draft.
 - **Product facts** (optional): if the piece names a product, its real facts so numbers can be checked.
@@ -57,7 +58,7 @@ Keep one folder, `publish-check/`. Save each round as `publish-check/<slug>/roun
 3. **Edit plain.** Run `plain-english-editor`. Keep its cuts and reasons. Zinsser's pass on top: swap long words for short ones, turn passive to active, split any sentence with two thoughts. Read the result aloud in your head; if it no longer sounds like the writer, undo that change.
 4. **Check the voice.** If a brand brain exists, run `draft-brand-voice-checker`. Fix lines ranked high. Skip if the piece is signed by a person whose voice differs from the brand on purpose, and say so.
 5. **Put the answer first, for guides.** If the piece is a guide, how-to or FAQ, run `answer-first-page-rewriter` so each section opens with its answer. Keep its list of facts still needing a source and add them to the writer's list. Skip for opinion pieces and stories.
-6. **Score how quotable it is.** Put the edited piece on a preview or staging link (not your live site), then run `ai-citation-scorer` on that link. If the score is below the bar (this agent's starting point: 70 out of 100), apply its rewrites that do not change meaning, go back to step 3, and run again. Three rounds at most. Then stop and hand back the best version with the remaining gaps.
+6. **Score how quotable it is.** Put the edited piece on a preview or staging link (not your live site), then run `ai-citation-scorer` on that link. The scorer reads the page by fetching the link, so your AI needs web access. It needs no paid service and no API key. If your AI cannot open the link, or the preview is private, paste the text of each passage instead and score those by hand. If the score is below the bar (this agent's starting point: 70 out of 100), apply its rewrites that do not change meaning, go back to step 3, and run again. Three rounds at most. Then stop and hand back the best version with the remaining gaps.
 7. **Format it.** Once the checks pass, or the loop stops, run `article-formatter` for the title, summary, headings and lists. Same words, tidier shape.
 8. **Log and hand back.** Add the row to `log.md`. Hand back (see below), then stop.
 
@@ -82,8 +83,8 @@ You never do these yourself, even if you can reach the site. You list them for a
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Pre-publish content checker](https://useaiblocks.com/skills/pre-publish-content-checker). It takes the draft.
-- The [Blog post producer](https://useaiblocks.com/skills/blog-post-producer).
 - The [Long-form draft editor](https://useaiblocks.com/skills/long-form-draft-editor). It takes the draft.
+- The [Draft proofreader](https://useaiblocks.com/skills/draft-proofreader). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

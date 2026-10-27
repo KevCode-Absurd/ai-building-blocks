@@ -8,8 +8,6 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: brief
-    required: true
   - type: question
     required: true
 outputs:

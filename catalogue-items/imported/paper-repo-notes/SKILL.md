@@ -66,7 +66,7 @@ Adapt to whatever you receive:
 2. REASON through the 4-stage epistemic protocol (see below)
 3. GENERATE all ARA files using Write tool
 4. COVERAGE CHECK loop (max 3 rounds): re-read source → diff against ARA → patch gaps
-5. VALIDATE by running Seal Level 1
+5. VALIDATE by reading (check each Seal Level 1 item against the files; no script is run)
 6. FIX any failures, re-validate
 7. REPORT summary to user
 ```
@@ -190,7 +190,7 @@ before structural checks run.
 
 ### Step 5: Validate
 
-Run ARA Seal Level 1 validation. There is no validator script in this folder. You run the checks yourself by reading `references/validation-checklist.md` and testing each item against the files you wrote. Perform these checks:
+Check the folder against the ARA Seal Level 1 list (the author's own list of structure checks). There is no validator script in this folder. You do the checks yourself, by reading `references/validation-checklist.md` and testing each item against the files you wrote. Perform these checks:
 - All mandatory dirs exist: `logic/`, `logic/solution/`, `src/`, `src/configs/`, `trace/`, `evidence/`
 - All mandatory files exist and are non-empty
 - PAPER.md has YAML frontmatter with title, authors, year

@@ -100,9 +100,10 @@ HAND-BACK SUMMARY
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Prospect outreach drafter](https://useaiblocks.com/skills/prospect-outreach-drafter).
-- The [Sales lead priority ranker](https://useaiblocks.com/skills/who-to-call-first-ranker). It takes the spreadsheet.
-- The [Sales outreach writer](https://useaiblocks.com/skills/agency-sales-outreach).
+- The [Sales lead priority ranker](https://useaiblocks.com/skills/who-to-call-first-ranker). It takes the lead list.
+- The [Lead grader](https://useaiblocks.com/skills/lead-grader). It takes the lead list.
+- The [Lost deal pitch reviewer](https://useaiblocks.com/skills/monthly-lost-deal-reviewer). It takes the lead list and draft.
+- The [Outreach writer in your voice](https://useaiblocks.com/skills/own-voice-outreach-writer). It takes the lead list.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

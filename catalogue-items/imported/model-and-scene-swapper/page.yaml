@@ -16,7 +16,7 @@ when:
   - You need an older or younger model without a new shoot.
   - An ad test needs ten looks from one source photo.
 not_for:
-  - "You only have a flat photo of the clothes and no model: use a flat-lay to model tool, or book a shoot."
+  - "You only have a flat photo of the clothes and no model: use the Virtual try-on photo maker, or book a shoot."
   - "The garment is cropped, hidden by arms or bags, or too small in the photo: reshoot it first, because the swap will guess the missing parts."
   - "You want a real person's face or likeness on the photo: this is not for that, so get written consent and use a real photo shoot."
 you_give:
@@ -36,9 +36,10 @@ how_to_use:
   - Paste the skill into your AI and add your model photo. Say who or what the new look should be.
   - Your AI writes the prompt. It also writes the command for the image tool.
   - Run it in your image tool. This needs a dLazy account or API key, and it costs money for each image. Use the dry-run option first to see the cost.
-  - Make 3 or 4 versions and pick the best one. Check the garment, the hands and the light.
+  - Make 3 or 4 versions and pick the best one. Check the garment, the hands and the light against your real garment before you post anything.
   - If you run ads with AI models, check your local ad rules. You may need to say the models are AI-made.
   - Next, if the fabric texture looks flat, ask for a higher quality run and compare it with the first version.
+next: [ai-product-photo-inspector, marketplace-photo-rule-checker]
 output_sample:
   input:
     - Your model or mannequin photo

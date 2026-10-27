@@ -5,7 +5,7 @@ description: Use when you must ask something of a person, change their mind or s
 
 # Other person's view mapper
 
-People act for reasons that make sense to them. This skill finds those reasons before you plan what to say. It starts from what the person wants, writes the fair case for their behaviour, and marks what you know apart from what you only guess. It is not for judging the person or finding a weak spot. If you would not be willing to show them the view, rewrite it.
+People act for reasons that make sense to them. This skill finds those reasons before you plan what to say. It starts from what the person wants, writes the fair case for their behaviour, and marks what you know apart from what you only guess. It is not for judging the person or finding a weak spot. If you would not be willing to show them the view, rewrite it. Not for planning what to say (use "Buy-in conversation planner" once you have their view), or for a real conflict that needs a mediator or manager.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

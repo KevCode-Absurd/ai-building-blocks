@@ -71,7 +71,7 @@ how_it_works:
   - title: Applies the one-third split
     text: A third of ads from AI for fast, cheap angle tests, a third from creators for volume and authenticity, a third in-house for founder and behind-the-scenes trust.
   - title: Sets stage balance
-    text: A third each at top, middle and bottom of the funnel, with 70 to 90 percent of assets at the early stages and about 20 percent at product aware and most aware.
+    text: About 80 percent of assets at the early awareness stages (1 to 3, unaware to solution aware) and about 20 percent at the late stages (4 and 5, product aware and most aware). The source's range for early stages is 70 to 90 percent.
   - title: Balances pain and desire
     text: Many brands are 90/10 desire. The source moves toward 60/40 and perhaps 70/30 pain-led ads.
   - title: Sets the production mix
@@ -86,7 +86,7 @@ output_shape: |
 
   TARGET MIX (starting point, adjust to your capacity)
   Source: AI <n>% | creators <n>% | in-house <n>%
-  Stage: early <n>% | middle <n>% | late <n>%
+  Stage: early (stages 1 to 3) <n>% | late (stages 4 and 5) <n>%
   Pain vs desire: <n>/<n>
   Production: replicate <n>% | iterate <n>% | net new <n>%
 
@@ -142,6 +142,8 @@ works_best_with:
 terms:
   - term: Funnel stage
     meaning: How much the buyer knows about the problem and about you, from not at all to ready to buy.
+  - term: Pain-led and desire-led
+    meaning: A pain-led ad starts from a problem the buyer has. A desire-led ad starts from what the buyer wants.
   - term: Format
     meaning: The shape of the ad, such as a talking head, a demo, a list or a text-on-screen image.
   - term: Partnership ad

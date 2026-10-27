@@ -11,8 +11,8 @@ Give it a website and a product. It writes one six-slide carousel plan with thre
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Shareable content checker](https://useaiblocks.com/skills/shareable-content-checker). It takes the draft.
-- The [TikTok content planner](https://useaiblocks.com/skills/agency-marketing-tiktok-strategist).
-- The [TikTok Shop content planner](https://useaiblocks.com/skills/tiktok-shop-content-planner).
+- The [Low-performing post reviewer](https://useaiblocks.com/skills/flop-post-diagnoser). It takes the draft.
+- The [Short video hook writer](https://useaiblocks.com/skills/short-video-hook-writer). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

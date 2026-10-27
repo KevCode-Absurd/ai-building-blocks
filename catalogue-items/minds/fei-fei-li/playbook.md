@@ -16,10 +16,12 @@ You bring her a project, a tool or a plan. She listens first and finds what is g
 
 ## How she'd take on your problem
 
+Before you start, gather three things: the people affected (and a way to ask them), the data sources the tool will learn from, and the test you will judge it by. Lines that say "she'd" apply her recorded views to your case. They are our reading, not things she said. Facts about her carry a source tag.
+
 1. **She starts with the people.** Who is affected, and have you asked them? Her 2018 testimony opened on this: there's nothing artificial about artificial intelligence.
 2. **She looks at the data.** What will it learn from? How was it gathered and labelled? Who is missing? She spent years on ImageNet, with about 49,000 online workers sorting over 160 million candidate images [S3], so she asks about labels and quality early.
 3. **She asks for a fair, shared test.** The ImageNet challenge used the same 1,000 categories and the same scoring for everyone. She'd ask what your test is, who made it and whether it can flatter you. She also knows tests have limits: a model beating people on 1,000 categories says little about the rest.
-4. **She looks at tasks, not jobs.** Break a role into tasks. Which drain people, or put them at risk? Aim the tool there first. Her example was a nurse spending much of a shift on charting.
+4. **She looks at tasks, not jobs.** Break a role into tasks. Which drain people, or put them at risk? Aim the tool there first. Her example was a hospital nurse spending much of a shift on charting [S5].
 5. **She keeps people in charge.** The tool should add to what people can do and respect their agency and dignity.
 6. **She asks who built it.** A narrow team can let bias into things like face recognition or loan decisions. Machines carry our values, not their own.
 7. **She defines the words, then sorts by output.** In 2026 she cut through a muddled term by going back to a classic frame, separating state from observation, and grouping systems by what they produce. She'd do that with your jargon. She also asks whether it needs the physical world. Does the problem need a sense of space, size and direction, or is text enough?
@@ -46,7 +48,7 @@ She'd ask what each label means and who decides. She'd want a clear category lis
 
 ### Rolling out an AI helper at work
 
-She'd sit with the people who would use it. Which of their tasks eat their time? A nurse, a support agent or a bookkeeper each has a list. She'd start the tool on those tasks only and keep the person in charge of the decisions. She'd set a small, fair pilot and measure what changes before you scale. She'd ask what happens to the people whose tasks shrink, and she'd want an answer. She'd cut any plan whose main aim is to remove people from the loop.
+She'd sit with the people who would use it [S5]. Which of their tasks eat their time? A nurse, a support agent or a bookkeeper each has a list. She'd start the tool on those tasks only and keep the person in charge of the decisions. She'd set a small, fair pilot and measure what changes before you scale. She'd ask what happens to the people whose tasks shrink, and she'd want an answer. She'd cut any plan whose main aim is to remove people from the loop.
 
 ### Hiring and building your team
 
@@ -64,7 +66,7 @@ She'd start with the people who walk through the door. Who is the library for, a
 
 ### Your life and career
 
-She'd tell you to pick a problem that is large, even if others are looking elsewhere. When she began ImageNet in 2007, most researchers were focused on models rather than data [S1][S3]. She'd say to ask who your work is for. She'd tell you to teach and to bring others in, since that is part of the work. She'd tell you hope and caution can sit together, and to avoid both hype and doom.
+When she began ImageNet in 2007, most researchers were focused on models rather than data [S1][S3]. She helped start AI4ALL to bring in newcomers [S1][S8]. [beyond the record] Applying that to your career: pick a problem that is large even if others are looking elsewhere, ask who your work is for, teach and bring others in, and let hope and caution sit together.
 
 ## What she'd push back on
 

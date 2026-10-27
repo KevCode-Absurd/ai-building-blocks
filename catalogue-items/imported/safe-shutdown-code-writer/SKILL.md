@@ -351,8 +351,9 @@ async function processJobs(queue: JobQueue): Promise<void> {
   }
 }
 
-// Start the loop and keep its promise so the handler can wait for it:
-// loopDone = processJobs(queue);
+// Start the loop and keep its promise so the handler can wait for it.
+// This line is required, or the shutdown handler waits on an already-finished promise:
+loopDone = processJobs(queue);
 ```
 
 ## Best Practices

@@ -9,7 +9,7 @@ subhead: One long document that an AI coding agent can build your product from, 
 explain: |
   One long document that an AI coding agent can build your product from, epic by epic, without stopping to guess. It starts from an idea that may be only two or three lines.
 
-  The skill asks intake questions, then researches the web and benchmarks competitors. It writes a single markdown blueprint with the design approach, a tech stack with pinned versions and evidence, a quality gate, user personas, flows, screen copy and edge cases. Work is split into epics and stories with Given, When, Then checks and tests. A built-in session routine tells Claude Code or Codex to build one epic per fresh session.
+  The skill asks intake questions, then researches the web and benchmarks competitors. It writes a single markdown blueprint with the design approach, a tech stack with pinned versions and evidence, a quality gate, user personas, flows, screen copy and edge cases. Work is split into epics and stories with Given, When, Then checks and tests. A built-in session routine tells Claude Code or Codex to build one epic per fresh session. Needs web search and, for a full run, a paid plan of your AI. Legal, tax and rules questions (including sanctions and blocked services) come back as open questions for a professional, not answers. This is an MIT-licensed copy of the upstream idea-to-blueprint skill, with our name and page text.
 when:
   - You have a product idea and want a full spec before building.
   - You want competitor research and a tech stack recommendation with reasons.
@@ -31,11 +31,11 @@ you_get:
   - Epics and stories with acceptance criteria
   - A build protocol for AI agents
 how_to_use:
-  - Open an AI that can search the web and save files, such as Claude Code or Codex. Set it to its highest thinking setting. A full run takes 20 to 60 searches, so a paid plan may be needed.
+  - Open an AI that can search the web and save files, such as Claude Code or Codex. Set it to its highest thinking setting. A full run takes 20 to 60 searches, so a paid plan may be needed. If your AI cannot search the web, it marks every outside fact UNVERIFIED and warns you on the cover. Treat those as guesses until you check them.
   - Add this skill's instructions to your AI, or upload the skill folder.
   - Tell your AI your product idea in a few lines. Add your budget, platform, deadline and known competitors if you have them.
   - Answer the intake questions. Then check the decision brief and approve it or ask for changes.
-  - Read the finished blueprint. Open the Sources list and check every claim tagged VERIFIED before you trust a competitor or market figure. Fix anything that is wrong for your product.
+  - Read the finished blueprint. Open the Sources list and check every claim tagged VERIFIED before you trust a competitor or market figure. Fix anything that is wrong for your product. Ask a lawyer or accountant about any rules, tax or availability-by-country question it flags.
   - Start a fresh session for each epic and tell your AI to build the next one.
 output_sample:
   input:

@@ -81,7 +81,7 @@ how_it_works:
   - title: Finds the root cause
     text: If the same junk keeps showing in Shopping, the fix is the product title or description, not another negative.
   - title: Scores the waste
-    text: Shows the share of spend that went to terms that should be blocked, and the score that follows.
+    text: Shows the share of spend that went to terms that should be blocked, and the score that follows. Terms under YOUR CALL are not counted as waste until you decide.
 
 output_shape: |
   DATA CHECK  <conversions per month>, <days covered>, <early read? yes/no>

@@ -5,11 +5,11 @@ summary: Work out treasury stock method dilution from your option terms and aver
 job: money-and-investing
 thinking: high
 thinking_why: "Options only dilute when they are in the money, and the assumed proceeds depend on the plan terms."
-subhead: A treasury-stock-method option schedule with out-of-money and diluted-EPS checks. Share weighted options, exercise proceeds including applicable assumed proceeds, average market price, basic weighted shares and continuing ordinary earnings.
+subhead: Give it the number of options, the exercise price, the average share price, basic weighted shares and earnings. You get the extra shares the options add, and a check that diluted earnings per share really falls.
 explain: |-
-  A treasury-stock-method option schedule with out-of-money and diluted-EPS checks.
+  Employee options can add shares to a company’s count if they are exercised. The treasury stock method estimates how many: it assumes the money paid to exercise buys back shares at the average price, and only the net new shares count.
 
-  Public equity and share counts. Illustrative figures. Ten million options × $6 yields $60 million proceeds, buying six million shares at $10. Four million incremental shares produce 208 / 104 = $2 EPS. At $10 exercise price there is no incremental dilution.
+  This skill works that out for one option class, counts out-of-the-money options as zero, and checks that including them really lowers earnings per share. Practice figures: Ten million options × $6 yields $60 million proceeds, buying six million shares at $10. Four million incremental shares produce 208 / 104 = $2 EPS. At $10 exercise price there is no incremental dilution.
 when:
   - You need to find the extra shares that stock options add to a diluted share count.
   - You must show a reviewer how diluted EPS was reached, from the option terms to the result.
@@ -20,11 +20,14 @@ not_for:
   - "You only need basic EPS with no options or other dilutive items: divide earnings by basic weighted shares in a simple spreadsheet."
   - "Your dilution comes from a convertible, not options: use the Convertible EPS inclusion test instead."
 you_give:
-  - Weighted options, exercise proceeds including applicable assumed proceeds, average market price, basic weighted shares and continuing ordinary earnings.
+  - Number of options (weighted for the period) and the exercise price
+  - Average share price for the period
+  - Basic weighted shares and continuing earnings
+  - Any extra assumed proceeds your accounting standard adds, as a separate figure (optional)
   - "The average price period, plus the currency and scale used for the option dilution."
   - "Your spreadsheet tool, if you want the option dilution as a workbook."
 you_get:
-  - A treasury-stock-method option schedule with out-of-money and diluted-EPS checks.
+  - The extra shares the options add, the diluted share count and a diluted EPS check against basic EPS.
   - "An editable workbook of the option dilution, with its inputs, formulas and test cases to rerun."
   - "A tie-out of options, assumed repurchases and added shares, the inputs still missing and the checks that ran."
 how_to_use:
@@ -58,12 +61,12 @@ output_sample:
     - name: MISSING and CHECKS MISSED
       contains: Inputs that were not supplied and checks that failed or could not run, or the word none.
 how_it_works:
-  - title: 1. Read the option terms and identify instruments eligible for the treasury-stock method; determine all assumed proceeds required by the applicable standard
-    text: Read the option terms and identify instruments eligible for the treasury-stock method; determine all assumed proceeds required by the applicable standard.
-  - title: 2. Divide assumed proceeds by average period market price to obtain hypothetical repurchases; incremental shares are the positive excess of options over repurchases
-    text: Divide assumed proceeds by average period market price to obtain hypothetical repurchases; incremental shares are the positive excess of options over repurchases.
-  - title: 3. Add eligible incremental shares to basic weighted shares, calculate candidate EPS and check anti-dilution and time weighting before inclusion
-    text: Add eligible incremental shares to basic weighted shares, calculate candidate EPS and check anti-dilution and time weighting before inclusion.
+  - title: Check the options and the proceeds
+    text: Keep only options the method applies to. Options priced at or above the average share price add nothing. Assumed proceeds are exercise price times options, plus anything your standard adds, entered as its own input.
+  - title: Work out the extra shares
+    text: Divide the proceeds by the average share price to get the shares bought back. The extra shares are the options minus the shares bought back, if that is above zero.
+  - title: Test the effect on EPS
+    text: Add the extra shares to basic weighted shares and work out the new EPS. Include the options only if EPS goes down, and check the timing of options granted or lapsed in the year.
 output_shape: |-
   A treasury-stock-method option schedule with out-of-money and diluted-EPS checks.
   Scope and dated sources

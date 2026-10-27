@@ -12,6 +12,8 @@ inputs:
     required: true
   - type: copy_draft
     required: false
+  - type: document
+    required: false
 outputs:
   - type: source_text
     required: true

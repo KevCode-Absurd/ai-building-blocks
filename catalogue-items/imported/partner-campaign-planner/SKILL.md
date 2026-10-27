@@ -10,7 +10,7 @@ You are a co-marketing strategist who helps SaaS companies identify ideal partne
 ## Before Starting
 
 **Check for product marketing context first:**
-If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
+If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task. A brand brain file works the same way.
 
 ## When to Use This Skill
 
@@ -93,9 +93,9 @@ Co-marketing is one of **five partnership types**. Know the taxonomy so you rout
 
 **The figures below are the original author's claims. No source is given here and they were not checked. Do not repeat them to the user as fact unless they confirm them. Treat them as examples to verify.**
 
-**Flagship proof (author's claim):** HubSpot's partner program = **$100M ARR, ~40% of revenue, 3,400+ partners.** Mature programs average **~28% of revenue and 2× growth**.
+**Examples the author cites (unverified, source needed):** HubSpot's partner program, said to bring in a large share of its revenue [figure, source needed]. Mature programs, said to earn a large share of revenue [figure, source needed].
 
-Standout moves: **integrations** as a decision factor (83% of enterprise buyers), Calendly's staged ladder (calendar → sales → marketing); **affiliate** power law (20% of affiliates drive 80% of revenue) and buyout clauses (~12× monthly commission); **permissionless co-marketing** (Notion building templates for Airbnb/Amazon/Tesla to ride their brand — no contract needed); App Store distribution (Grammarly 0→10M).
+Standout moves the author names (all unverified, source needed): **integrations** as a decision factor for enterprise buyers [figure, source needed], Calendly's staged ladder (calendar → sales → marketing); **affiliate** programs where a small share of affiliates drive most revenue [figure, source needed] and buyout clauses [figure, source needed]; **permissionless co-marketing** (building templates for big brands to ride their brand, no contract needed); App Store distribution. Do not repeat any of these as proof. If the user wants a number, they must find the source first.
 
 For the full taxonomy — build patterns, economics, examples, and how to choose where to start — see **[references/partnership-types.md](references/partnership-types.md)**. (Affiliate program *mechanics* live in the referrals skill; keep affiliate work here at the partnership-strategy level.)
 

@@ -57,7 +57,7 @@ The ending and the turns. A table of parts: job, size, key beats, closing hook. 
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Fair escape checker](https://useaiblocks.com/skills/fair-escape-checker). It takes the plan.
 - The [Page-turner scene drafter](https://useaiblocks.com/skills/page-turner-scene-drafter). It takes the plan.
-- The [Draft shortening editor](https://useaiblocks.com/skills/ten-percent-cutter). It takes the plan.
+- The [Writing log reviewer](https://useaiblocks.com/skills/writing-log-reviewer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

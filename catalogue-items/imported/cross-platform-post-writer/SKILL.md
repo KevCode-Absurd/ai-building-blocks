@@ -65,8 +65,16 @@ Read both back and look for the specific tells:
 
 ## Step 4: hand over both, and say what differs
 
-Give both posts, then one line on what you changed and why. People cross-post
-badly because they think the difference is length. Show them it is structure.
+Hand back, in this order:
+
+1. The idea in one plain sentence.
+2. The X post (under 280 characters, unless the user has a longer-post account).
+3. The LinkedIn post.
+4. One line on what changed between them and why.
+
+People cross-post badly because they think the difference is length. Show them it is structure.
+
+Next step: after posting, compare which post got more replies and tell the AI. Use that shape as the sample for next time.
 
 ## Example
 

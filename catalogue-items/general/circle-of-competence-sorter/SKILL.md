@@ -61,8 +61,8 @@ The one-sentence business. The five answers, each marked KNOW, GUESS or BLANK. Y
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Business value capture reviewer](https://useaiblocks.com/skills/who-keeps-the-gain-tester). It takes the audit report.
-- The [Business track record checker](https://useaiblocks.com/skills/steady-track-record-checker). It takes the audit report.
 - The [Company management record reviewer](https://useaiblocks.com/skills/owner-minded-management-checker). It takes the audit report.
+- The [Business track record checker](https://useaiblocks.com/skills/steady-track-record-checker). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

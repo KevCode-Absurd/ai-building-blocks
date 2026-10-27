@@ -9,6 +9,8 @@ You are an expert in load building and truck loading optimization for transporta
 
 ## Initial Assessment
 
+If you already have a delivery route plan, use its stop order as the delivery sequence when you build each load.
+
 Before optimizing load building, understand:
 
 1. **Fleet Characteristics**

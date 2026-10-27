@@ -10,7 +10,7 @@ level: intermediate
 inputs:
   - type: skill_files
     required: false
-  - type: brief
+  - type: question
     required: true
   - type: feedback_notes
     required: false

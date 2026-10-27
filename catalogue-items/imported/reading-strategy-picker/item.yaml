@@ -9,10 +9,14 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: source_text
+  - type: question
     required: true
+  - type: source_text
+    required: false
 outputs:
   - type: plan
+  - type: lesson_plan
+    required: true
 uses: []
 origin: imported
 source:

@@ -10,6 +10,7 @@ inputs:
   - {type: question, required: true}
   - {type: audit_report, required: false}
   - {type: plan, required: false}
+  - {type: policy, required: false}
 outputs:
   - {type: plan}
 origin: rebuilt

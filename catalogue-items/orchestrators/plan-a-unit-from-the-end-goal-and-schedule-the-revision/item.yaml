@@ -7,9 +7,10 @@ role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - {type: question, required: true}
+  - {type: lesson_plan, required: true}
 outputs:
   - {type: plan}
+  - {type: lesson_plan, required: true}
 uses: [backwards-unit-planner, mixed-practice-unit-planner, revision-schedule-planner]
 steps:
   - {uses: backwards-unit-planner, note: "Starts from the standards and works back from the end result to the lessons."}

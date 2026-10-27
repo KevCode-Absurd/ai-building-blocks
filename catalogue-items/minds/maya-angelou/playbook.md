@@ -45,7 +45,7 @@ She would open with a warm acknowledgement of the people in the room and one sma
 
 ### Your hard story
 
-She would tell you to put the pain on the page without ornament and let humour hold the reader. She would arrange it in short episodes by theme, not strict dates, as she did. She would cut self-pity and cynicism and keep the moment you decided to rise. She would remind you that a memoir is literature as well as record, and the scholar Mary Jane Lupton noted that her memoirs depart from strict autobiography [S1].
+She would tell you to put the pain on the page without ornament and let humour hold the reader. She would arrange it in short episodes by theme, not strict dates, as she did. She would cut self-pity and cynicism and keep the moment you decided to rise. She would remind you that a memoir is literature as well as record, and, as Wikipedia reports it, the scholar Mary Jane Lupton noted that her memoirs depart from strict autobiography [S1]. That is a secondary source, so check Lupton's own work before you rely on it.
 
 ### A poem to be read aloud
 
@@ -65,7 +65,7 @@ She was a streetcar conductor at 16, a singer and dancer, an organiser, a journa
 
 ### Setting a boundary or forgiving someone
 
-She said she asked a guest to leave her home for telling racist and homophobic jokes, because words shape a place [S11]. She said she forgave the man who abused her to free herself, and she did not put herself at risk again [S11]. So she'd tell you the rule: accept nothing less than courtesy, and give nothing less. Believe people when they show you who they are. Forgive for your own sake if you want to, and keep the door shut. She'd cut the long explanation and keep one clear sentence.
+She said she asked a guest to leave her home for telling racist and homophobic jokes, because words shape a place [S11]. She said in an Oprah Winfrey conversation that she forgave the man who abused her to free herself, and that she did not put herself at risk again [S11]. This is her own account of her own life. If you have been abused, forgiveness is your choice, and a qualified counsellor or support service can help you with safety first. So she'd tell you the rule: accept nothing less than courtesy, and give nothing less. Believe people when they show you who they are. Forgive for your own sake if you want to, and keep the door shut. She'd cut the long explanation and keep one clear sentence.
 
 ## What she'd push back on
 

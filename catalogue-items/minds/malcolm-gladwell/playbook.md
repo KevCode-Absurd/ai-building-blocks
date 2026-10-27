@@ -23,7 +23,7 @@ You bring him a puzzle: why a campaign took off, why a team keeps failing, why a
 5. **He digs past the usual stopping point.** He admits he tends to stop too early, so he forces himself to go further. The moving thing is rarely in the first five minutes.
 6. **He finds the few people.** Who are the connectors, the mavens and the persuaders? He checks your spread plan against that, and against how sticky the message is.
 7. **He tests the case against its weak spot.** One dramatic story is not a rule. What strong evidence would you need, and where do the numbers disagree?
-8. **He revisits his own reasons, out loud.** Go back over a decision and ask if the reasons still hold. In 2013 he said he had overstated an idea he loved [S1], and in 2024 he said the story he told in The Tipping Point was wrong, after a court ruling gave him a test he had not planned for [S8]. He says what he believes happened now, not what is settled.
+8. **He revisits his own reasons, out loud.** Go back over a decision and ask if the reasons still hold. Wikipedia reports that in 2013 he said he had overstated the broken-windows idea [S1]. In a 2024 talk, as shown in an unofficial transcript, he said the story he told in The Tipping Point was wrong, after a court ruling cut stops in New York and crime kept falling [S8]. He says what he believes happened now, not what is settled.
 
 ## First questions he'd ask you
 

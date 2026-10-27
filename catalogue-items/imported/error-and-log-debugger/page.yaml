@@ -21,6 +21,7 @@ not_for:
   - "You have no error, log or clear description of the problem: first write down what you expected and what happened."
 you_give:
   - Full error message or stack trace
+  - The language and runtime version (required)
   - Code file or snippet involved
   - What you expected versus what happened
   - Steps that trigger the bug (optional)
@@ -32,8 +33,9 @@ you_get:
   - Steps to confirm the fix
 how_to_use:
   - Download the skill folder. In Claude, open Customize → Skills, then choose + → Create skill → Upload a skill. In ChatGPT, add the files to a project's Sources. In Gemini, make a Gem and paste the instructions. Or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - Ask your AI to follow this skill. Include the files and details listed on this page, and always name the language and runtime version (for example Python 3.12 or Node 22), because the fix depends on them.
   - It works best when your AI can run code and read your project files.
+  - When the regression test passes, run your full test suite, for example in your CI. If the same failure keeps coming back, add logging or monitoring so you see it earlier.
 output_sample:
   input:
     - The full error message or stack trace
@@ -56,3 +58,4 @@ output_sample:
       contains: A test that fails before the fix and passes after it.
     - name: Verification steps
       contains: How to re-run the failing case and confirm the fix and existing tests still pass.
+next: [failing-test-fixer, flaky-test-fixer, ci-failure-fixer]

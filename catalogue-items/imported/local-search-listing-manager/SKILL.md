@@ -88,7 +88,7 @@ You control relevance and prominence. Proximity is fixed.
 - [ ] Logo uploaded (400x400px min)
 - [ ] Cover photo uploaded (1024x576px min)
 - [ ] At least 10 interior/exterior/team/work photos
-- [ ] Photos geotagged before upload (use GeoImgr.com)
+- [ ] Photos geotagged before upload, only with the real location where the photo was taken (for example with GeoImgr.com). Never tag a photo with a place it was not taken, as that can break Google's listing rules
 - [ ] New photos added monthly
 
 **Posts (Google Posts):**
@@ -149,7 +149,7 @@ Generate pages using `scripts/service_area_generator.py`, then customize:
 H1: [Appliance Repair] in [Neighborhood Name]
 
 [Opening paragraph — 150 words]
-Mention: neighborhood name, services offered, years in business, why locals choose you.
+Mention: neighborhood name, services offered, years in business [VERIFY: use the owner's real figure], why locals choose you [VERIFY: from the owner's real reasons].
 DO NOT use: "we are proud to offer", "look no further", "your one-stop shop"
 
 H2: [Appliance Brands We Service in [Neighborhood]]
@@ -204,7 +204,7 @@ The script checks known directory listings and outputs a consistency report with
 |---|---|---|
 | 1 | Google Business Profile | Highest weight local signal |
 | 1 | Apple Maps | iOS users — major traffic source |
-| 1 | Bing Places | Another major search engine's map listings (the original's "25% of desktop search" figure is unsourced) |
+| 1 | Bing Places | Another major search engine's map listings |
 | 2 | Yelp | High DA, frequent appearing in Map Pack vicinity |
 | 2 | BBB | Trust signal for home services |
 | 2 | Angi (formerly Angie's List) | High-intent home service searches |

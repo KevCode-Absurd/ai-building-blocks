@@ -32,7 +32,7 @@ How to start:
 **Tools that do this best:**
 - **Any good chat AI:** Planning and diagnosis from a few inputs works in any current chat AI.
 - **Canva:** Makes the plain-text-bar image test in minutes, with no designer.
-- **Meta Ads Manager:** Gives the clicks, spend and sales that the diagnosis table reads.
+- **Meta Ads Manager:** Needs an ad account and real ad spend. Gives the clicks, spend and sales that the diagnosis table reads.
 <!-- /needs -->
 
 ## What you need
@@ -43,18 +43,25 @@ This skill runs on its own. All it needs to start is a product, a price and a te
 - **Three reasons to buy** (strongly advised): a few words each. Each must be a claim the store can back up. If a reason is a health, money or legal claim (for example "reduces anxiety"), tell the person to check the claim with a qualified person and against the platform's ad rules before using it in an ad.
 - **Product photo on a plain background** (optional): attach it.
 - **Tracking status** (strongly advised): do purchase events and the store page work?
+- **Brand brain** (optional): if the person has one, read its products part for the price, cost and claims. If not, ask for them. Do not stop to build one.
+
+## When not to use
+- Not for a store already spending six figures a month. The doubling rules fit small spend only. Talk to an ads manager or agency.
+- Not to size or split your test cash. Use the [Ad test budget calculator](https://useaiblocks.com/skills/ad-test-budget-calculator) first, then come back.
+- Not to write the ad copy or script. Use the [Creative brief writer](https://useaiblocks.com/skills/creative-brief-writer), then bring the winning reason to buy back here.
+- Running ads needs an ad account (for example Meta Ads Manager) and real money. This plan does not run them for you.
 
 ## How to do it
 1. **Frame the pot.** Treat the budget as a pot with one question: what do I want to learn with this cash? Price, channel, product or message. A smaller pot teaches the same things as a bigger one, only more slowly.
 2. **Check tracking first.** The plan needs working tracking and a page that can convert. If either is broken, fix that before spending. Put it at the top of the plan.
-3. **Check price before the ad.** If cost per click and CPM are normal for the niche (CPMs vary a lot by niche, from the teens to the thirties of dollars), and many people reach the cart and leave, change the price or the offer before you change the ad. If people are not reaching the cart, the ad or page is the problem.
-4. **Stage 1: the image smoke test.** Use the same product-on-white image each time. Add a plain white bar of bold text naming one reason to buy per version. The source's example for a simple fidget toy was reduce anxiety, increase focus, and calm. The one that draws the clearest clicks or interest points to the angle. Image ads are the easiest thing to get live.
+3. **Check price before the ad.** If cost per click and CPM are normal for the niche (compare with your own earlier CPM and click cost in Meta Ads Manager, since CPMs vary a lot by niche and season; with no earlier ads, mark the check `estimate`), and many people reach the cart and leave, change the price or the offer before you change the ad. If people are not reaching the cart, the ad or page is the problem.
+4. **Stage 1: the image smoke test.** Use the same product-on-white image each time. Add a plain white bar of bold text naming one reason to buy per version. The source's example for a simple fidget toy was reduce anxiety, increase focus, and calm. The one that draws the clearest clicks or interest points to the angle. Image ads are the easiest thing to get live. Write each stage's go and stop rule as a number the person can read, for example: stop a version after it has spent [SPEND AMOUNT] with no clicks; go with the version that gets the most clicks at the lowest cost per click after [DAYS] days.
 5. **Stage 2: video for the winning angle.** Make a longer video that explains why it works. Test a man and a woman, or show hands only, so more buyers can see themselves using it. Do not fake customers, testimonials or experts.
 6. **Run it as a test campaign.** $10 to $50 a day, adding 1 to 3 new ads every few days.
 7. **Read two things.** Does the ad get spend? Does the spend come back? Build the diagnosis table. Spend with no sales means people find the ad interesting but the page or offer is weak, or the ad and landing page do not match. No spend means no interest, so change the angle. Spend with sales means it works.
 8. **Double while it holds.** If it works, go $50, $100, $200 a day, until the return falls. Then ask: do I need more ads, or is this audience used up? Say clearly that doubling works at small spend and the source says it does not work at six figures. Expect a $150 product to take about two weeks to validate at $10 a day (one example, not a rule).
 9. **Stage 3: grow the tree.** After the image and the video work, branch into creators, colours and regions, in order of expected gain. Each branch is its own test with one change.
-10. **Optional free first step.** Post the idea as organic video first. If one post gets well above your usual views (for example 4,000 against a usual 800), turn that post or its opening into an ad. This is one consultant's practice.
+10. **Optional free first step.** Post the idea as organic video first. If one post gets well above your usual views (for example [VIEWS ON THE POST] against your usual [USUAL VIEWS]), turn that post or its opening into an ad. This is one consultant's practice.
 
 ## What you hand back
 Use this layout.
@@ -94,6 +101,7 @@ MISSING: <what was not supplied>
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Ad reach planner](https://useaiblocks.com/skills/reach-before-repeat-planner). It takes the plan.
 - The [Meta test campaign planner](https://useaiblocks.com/skills/meta-test-campaign-planner). It takes the plan.
+- The [Ad response incentive planner](https://useaiblocks.com/skills/test-reply-offer-planner). It takes the plan.
 - The [Marketing budget allocation planner](https://useaiblocks.com/skills/next-dollar-budget-allocator). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

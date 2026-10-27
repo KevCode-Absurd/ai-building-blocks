@@ -5,7 +5,9 @@ description: Use when you must teach how something works, such as a formula, a p
 
 # Small working example explainer
 
-People learn a mechanism fastest from an example so small that every step can be seen. A real case has too many moving parts, and a theory has none you can touch. This skill finds the smallest version, works it through with every value named, and gives the learner questions to predict before they look. It then checks the example against something trusted and says what the small version leaves out. It works for software, finance, science, a process at work or a rule in a game.
+People learn a mechanism fastest from an example so small that every step can be seen. A real case has too many moving parts, and a theory has none you can touch. This skill finds the smallest version, works it through with every value named, and gives the learner questions to predict before they look. It then checks the example against something trusted and says what the small version leaves out. It works for software, finance, science, a process at work or a rule in a game. The approach is inspired by Andrej Karpathy's public micrograd project; he has not reviewed or endorsed this skill.
+
+**Not for:** a big real dataset or full case (use a walkthrough with a subject expert), a proof or deep theory (use a textbook or teacher), or a draft that only needs cleaning up (use `plain-english-editor`).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -47,8 +49,10 @@ What the learner will be able to do. The small example with named values. The tr
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Usability test audience planner](https://useaiblocks.com/skills/expert-and-newcomer-test-planner). It takes the draft.
-- The [Course lesson update reviewer](https://useaiblocks.com/skills/monthly-course-lesson-keeper).
+- The [Story rules checker](https://useaiblocks.com/skills/story-rules-checker). It takes the draft.
+- The [Pre-publish content checker](https://useaiblocks.com/skills/pre-publish-content-checker). It takes the draft.
 - The [Email and SMS results reviewer](https://useaiblocks.com/skills/email-and-sms-performance-reader). It takes the draft.
+- The [Course lesson update reviewer](https://useaiblocks.com/skills/monthly-course-lesson-keeper).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

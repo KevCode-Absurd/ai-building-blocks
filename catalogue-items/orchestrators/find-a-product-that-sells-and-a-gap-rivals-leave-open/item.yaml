@@ -11,6 +11,7 @@ inputs:
   - {type: product_data, required: true}
   - {type: store_capture, required: false}
   - {type: voc_reviews, required: false}
+  - {type: idea, required: true}
 outputs:
   - {type: plan}
 uses: [proven-product-scout, crowded-category-white-space-finder, winning-product-scorer, mvp-experiment-planner]

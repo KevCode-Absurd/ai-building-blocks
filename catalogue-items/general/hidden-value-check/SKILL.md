@@ -55,6 +55,7 @@ The job in one sentence. Hidden parts, each with who gains, marked known or gues
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Decision consequence planner](https://useaiblocks.com/skills/second-order-effects-tracer). It takes the audit report.
 - The [Investment decision brief writer](https://useaiblocks.com/skills/yes-no-too-hard-call-writer). It takes the audit report.
+- The [Checklist review planner](https://useaiblocks.com/skills/checklist-upkeep-planner). It takes the audit report.
 - The [AI creative workflow handoff planner](https://useaiblocks.com/skills/ai-workflow-handoff-planner). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

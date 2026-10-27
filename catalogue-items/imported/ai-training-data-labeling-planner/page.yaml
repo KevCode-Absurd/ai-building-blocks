@@ -10,6 +10,13 @@ explain: |
   This is for anyone preparing data to teach an AI a task, such as sorting support tickets or tagging photos. Labeling means a person marks each example with the right answer, so the AI can learn from it.
 
   The skill sets out what each label means, with clear examples and rules for odd cases. It plans how to pick fair samples and how to train and check your reviewers. It keeps real disagreement visible instead of hiding it. It also records where the data came from and what rights you have. You get a plan you can hand to reviewers.
+
+  Four terms. A held-out sample is a set of records you keep aside to check quality later. Adjudication is a named person settling a disagreement by a stated rule. Abstention is an "unsure" label reviewers may pick. Out-of-distribution means unlike the examples the AI has seen.
+when:
+  - You are about to have people label examples to teach an AI a task.
+  - Your reviewers disagree and you do not know why.
+  - You need a written record of where your data came from and what rights you have.
+  - You want a plan you can hand to a team of reviewers.
 not_for:
   - "You need statistical power or sample size maths: ask a data scientist or a stats tool."
   - "You want to train or test a model: use your machine-learning engineer or a training tool."
@@ -32,10 +39,12 @@ works_best_with:
     - name: A chat AI that can read the bundled reference files
       why: Use the supplied references and templates for the chosen task. Scripts are optional unless that task specifically needs them.
 how_to_use:
-  - Before you start, write down: the task the AI will learn, 10 to 20 example records, where the data came from and what you may do with it, who will review, and your budget and deadline.
+  - Before you start, write down the task the AI will learn, 10 to 20 example records, where the data came from and what you may do with it, who will review, and your budget and deadline.
+  - Remove names, contact details and other personal fields from your example records before you paste them into any AI tool. Note which fields are sensitive.
   - Add the downloaded folder to an AI that can read the included references and templates.
   - Give the task, example records, rights limits, reviewers, budget, and what a useful label means.
-  - Ask for label rules, reviewer guidance, sampling, and quality checks. The label rules come as a table: label, meaning, a good example, a bad example and a rule for edge cases. Keep proposed roles and unresolved rights clear.
+  - Ask for label rules, reviewer guidance, sampling, and quality checks. The label rules come as a table with these columns. Label, meaning, a good example, a bad example and a rule for edge cases.
+  - Ask it to end with a short list headed "Open questions" that names each unresolved rights issue and each reviewer issue.
   - The source also names separate jobs for statistics, data storage, model training, and interface design. Those optional specialist skills are not required for labeling and are not included.
 output_sample:
   input:

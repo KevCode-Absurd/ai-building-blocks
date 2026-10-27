@@ -7,11 +7,9 @@ job: build-software
 headline: Setup wizard builder
 subhead: A bash script that walks you through a tedious manual job one stage at a time. It opens each web page, tells you what to click and copy, and saves what you enter in the right place.
 explain: |
-  Never paste real keys into the chat. Your AI reads your repo, so move or hide live secrets in env files first. The wizard asks for keys in your own terminal instead.
+  Use it for setting up outside services, a one-off migration, or moving a project to a new state. Doing these by hand means clicking through many dashboards and copying values into the right files.
 
-  A bash script that walks you through a tedious manual job one stage at a time. It opens each web page, tells you what to click and copy, and saves what you enter in the right place. Use it for setting up outside services, a one-off migration, or moving a project to a new state.
-
-  Claude reads your repo first, including env files, workflow secrets and config, and lists each stage and value needed. You approve that list. For each stage it writes the exact path, such as Dashboard, Developers, API keys, copy. A fixed template handles progress, hidden entry for secrets, env updates and GitHub secrets. You delete the script afterward unless you keep it.
+  Your AI reads your repo first, including config and workflow files, and lists each stage and value needed. You approve that list. For each stage it writes the exact path, such as Dashboard, Developers, API keys, copy. A fixed template, template.sh, handles progress, hidden entry for secrets, env updates and GitHub secrets. The wizard asks for keys in your own terminal, never in the chat. You delete the script afterward unless you keep it.
 when:
   - Setting up a project means copying keys from five dashboards into env files.
   - You do the same setup for each new client and it takes an hour of clicking.
@@ -32,8 +30,8 @@ you_get:
   - Values saved to .env or GitHub secrets
   - A closing summary
 how_to_use:
-  - Never paste real keys into the chat. Move or redact any live secrets in your env files first. Your AI reads your repo, so it can see what is in them.
-  - Open your AI in a tool that can read your repo and run code, such as Claude Code. Paste in the skill text.
+  - Never paste real keys into the chat. First list which env files hold live values (for example .env and .env.local). Move those values out or replace them with dummy text before your AI reads the repo. Your AI can see everything it opens. Real values belong only in the wizard, in your own terminal.
+  - Open your AI in a tool that can read your repo and run code, such as Claude Code. Paste in the skill text, and keep template.sh from the skill folder in your project, because the wizard is built from it. You need a bash terminal (on Windows, use WSL).
   - Describe the manual job and name the services involved. Some may be paid or need their own API key. You will need the GitHub command line tool too if you want GitHub secrets written. The wizard only walks you through getting keys; it never pays for anything.
   - Check the stage list your AI shows you. Add, drop or reorder stages, then approve it.
   - Run the script it builds in your terminal. Follow each prompt, then delete the script when the job is done unless you want to keep it.

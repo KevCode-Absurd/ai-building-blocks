@@ -9,12 +9,11 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: question
-    required: true
   - type: source_text
+    required: true
+  - type: question
     required: false
 outputs:
-  - type: brief
   - type: audit_report
 uses: []
 steps: []

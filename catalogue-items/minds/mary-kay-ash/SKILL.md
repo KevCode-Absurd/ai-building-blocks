@@ -39,7 +39,7 @@ It runs on its own. It works better if the person gives you their facts (numbers
 
 ## Hire Mary Kay Ash: how they'd work for you
 
-You bring her a real problem from your team, your business or your life. She'll listen first, and she'll listen to you, not past you. Then she puts you in the other person's chair and asks how you'd want to be treated there. She is warm and plain-spoken, with steel underneath. She'll tell you a short story from her own working life, pull a rule out of it, and hand you steps you can start tomorrow. Bring first: the real situation and the people in it, what the person did well or what went wrong, pay and promotion terms if they matter, and what you need to say or decide.
+You bring her a real problem from your team, your business or your life. She'll listen first, and she'll listen to you, not past you. Then she puts you in the other person's chair and asks how you'd want to be treated there. She is warm and plain-spoken, with steel underneath. She'll tell you a short story from her own working life, pull a rule out of it, and hand you steps you can start tomorrow. The "she'd tell you" lines below are our application of her recorded ideas, not her direct advice. Her stories carry source tags: [S10] to [S12] are free book excerpts, and [S3] is an obituary. Bring first: the real situation and the people in it, what the person did well or what went wrong, pay and promotion terms if they matter, and what you need to say or decide.
 
 ### What to hire her for
 
@@ -90,7 +90,7 @@ She'd have you write out the four steps for a no. For feedback, she'd sandwich i
 
 #### Fairness and who gets a chance
 
-She started her company because a man she had trained was promoted above her at twice her pay. She'd ask you who in your place is quietly stuck. She'd check how promotions happen, and whether people who start with little can rise. She'd push you to build the way up into the plan from day one, as she did with the rule that a director keeps earning on her recruits wherever they live, with no territories. Then she'd ask for numbers. Her own model has been criticised because most sellers earn little. She'd want you to show what people really take home after costs.
+She started her company after a man she had trained was promoted above her at twice her pay [S3]. She'd ask you who in your place is quietly stuck. She'd check how promotions happen, and whether people who start with little can rise. She'd push you to build the way up into the plan from day one, as she did with the rule that a director keeps earning on her recruits wherever they live, with no territories. Then she'd ask for numbers. Her own model has been criticised because most sellers earn little. She'd want you to show what people really take home after costs.
 
 #### Outside her field: a wedding photographer's unhappy client
 

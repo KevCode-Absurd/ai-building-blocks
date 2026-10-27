@@ -8,10 +8,12 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: spreadsheet
+  - type: dataset
     required: true
   - type: document
     required: false
+  - type: spreadsheet
+    required: true
 outputs:
   - type: document
   - type: audit_report

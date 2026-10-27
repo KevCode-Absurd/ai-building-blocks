@@ -55,7 +55,7 @@ Run SAST on the Python application in /app using Semgrep and Bandit. Flag any SQ
 semgrep scan --config=p/owasp-top-ten --config=p/python --json --output=semgrep-results.json /app
 ```
 
-**Findings (excerpt):**
+**Findings (illustrative output made up to show the layout, not a real scan; file names, line numbers and values are examples only):**
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -76,8 +76,8 @@ semgrep scan --config=p/owasp-top-ten --config=p/python --json --output=semgrep-
 │ /app/config.py:11                                               │
 │                                                                 │
 │   10│   class Config:                                           │
-│   11│       DB_PASSWORD = "SuperSecret123!"                     │
-│   12│       JWT_SECRET = "my-jwt-secret"                        │
+│   11│       DB_PASSWORD = "[EXAMPLE VALUE]"                      │
+│   12│       JWT_SECRET = "[EXAMPLE VALUE]"                        │
 │                                                                 │
 │ Fix: Load secrets from environment variables or a secrets       │
 │      manager, never hardcode them in source files.              │
@@ -102,7 +102,7 @@ def search_users(name):
 
 ### Example 2: CodeQL Query for Insecure Deserialization in Java
 
-This query is a sketch. Class names such as `UnsafeDeserializationConfig` depend on your CodeQL library version. Test it against your current CodeQL libraries before you rely on it.
+This query is a sketch. Class names such as `UnsafeDeserializationConfig` depend on your CodeQL library version. Test it against your current CodeQL libraries before you rely on it, and say in your report that it is untested. See the CodeQL docs for current query names.
 
 **Custom CodeQL query (`insecure-deserialization.ql`):**
 
@@ -137,7 +137,7 @@ codeql database create java-db --language=java --source-root=/app
 codeql database analyze java-db insecure-deserialization.ql --format=sarif-latest --output=codeql-results.sarif
 ```
 
-**Sample finding:**
+**Sample finding (illustrative, not a real result):**
 
 ```
 /app/src/main/java/com/example/api/ImportController.java:35

@@ -20,7 +20,7 @@ Use what is attached or pasted first. If something is missing, say what you can 
 
 **Only if the adviser fee changed:** the signed fee amendment (the two rates, the breakpoint, any minimum fee) and the record of the retainer already paid.
 
-**The pieces it uses:** the [Seller closing proceeds and retained cash checker](https://useaiblocks.com/workflows/reconcile-seller-closing-cash) workflow (the governing method) and the [Deal adviser fee checker](https://useaiblocks.com/skills/adviser-fee-tier-checker) (only when the fee changed). If either is missing from the pack, ask for it. Do not rebuild a missing step from memory.
+**The pieces it uses:** the [Seller closing proceeds and retained cash checker](https://useaiblocks.com/workflows/reconcile-seller-closing-cash) workflow (the governing method) and the [Deal adviser fee checker](https://useaiblocks.com/skills/adviser-fee-tier-checker) (only when the fee changed). Both must be installed with this agent: `reconcile-seller-closing-cash` and `adviser-fee-tier-checker`. If either is missing from the pack, ask for it, mark `MISSING: <slug>` and stop the step that needs it. Do not rebuild a missing step from memory.
 
 **Tools that do this best:**
 - **A spreadsheet engine and file-capable AI:** builds, recalculates and reopens a workbook and can save the record file. In plain chat, return the same tables as text and print the record for the user to keep.
@@ -48,7 +48,7 @@ This is a portable review method. Installing it connects no account and sets no 
    - Fee: the fee leaves seller proceeds once. The paid retainer is not taken off again, and the fee is not in both seller expenses and debt-like items.
    - Baseline: the approved figures are still shown beside any new or scenario figure and are not overwritten.
    - Basis: one cutoff, one currency and one scale throughout.
-6. **Retry once, then stop.** If a test fails, correct only the affected line after a concrete fix, and rerun that test. Allow at most two correction passes. Then stop and report the blocker.
+6. **Correct at most twice, then stop.** If a test fails, correct only the affected line after a concrete fix, and rerun that test. Allow at most two correction passes in all. After the second, stop and report the blocker.
 7. **Save and hand back.** With file access, save to `reviews/seller-closing-revision-assistant/<YYYY-MM-DD>/`: `review-summary.md`, the three step files, `fee-check.md` (only if the fee branch ran) and `state.proposed.json`. Keep the old record. With no file access, print the new record at the end and say nothing was saved.
 
 ## Acceptance

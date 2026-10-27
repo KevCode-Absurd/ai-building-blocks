@@ -11,9 +11,7 @@ Plan the user's game audio system before it is built: every sound event, how the
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Suno music prompt writer](https://useaiblocks.com/skills/suno-song-and-music-bed-prompt-writer). It takes the brief.
 - The [Voice AI integration planner](https://useaiblocks.com/skills/agency-engineering-voice-ai-integration-engineer).
-- The [ElevenLabs spoken script writer](https://useaiblocks.com/skills/elevenlabs-spoken-script-writer). It takes the brief.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

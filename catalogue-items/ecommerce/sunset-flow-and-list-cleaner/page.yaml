@@ -127,8 +127,8 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Klaviyo", why: "Its profile properties, segments and suppression import match these steps, and billing is per active profile."}
-    - {name: "Shopify", why: "Order data keeps recent buyers out of the segment."}
+    - {name: "Klaviyo", why: "Paid email service; the sunset steps need an account. Its profile properties, segments and suppression import match these steps, and billing is per active profile."}
+    - {name: "Shopify", why: "Paid plan needed. Order data keeps recent buyers out of the segment."}
     - {name: "Any good chat AI", why: "Any current chat AI can write the conditions from your description."}
   inputs:
     - "A list of at least a few thousand profiles, for the price saving to matter"

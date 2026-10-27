@@ -8,10 +8,12 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: idea
     required: true
 outputs:
   - type: plan
+  - type: business_plan
+    required: true
 uses: []
 origin: imported
 source:

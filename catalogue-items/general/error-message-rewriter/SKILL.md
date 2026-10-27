@@ -7,6 +7,13 @@ description: "Use when error messages are codes, stock phrases or blame. Lists e
 
 A bad error message leaves people stuck at the worst moment. This skill rewrites each one so it says what went wrong and what to do next, in the user's words and without blame. It also asks whether the error should show at all, and puts the costliest mistakes first.
 
+## When not to use
+
+- You want to check a whole flow, not just the errors. Use the Usability heuristic reviewer.
+- You have one error that no user will ever see. Fix it in the code, not with a rewrite.
+- You need the system to stop the error from happening. Ask your developer to fix it, then rewrite what is left.
+- You need legal or payment provider text that must keep fixed wording. Check with the provider or a lawyer first.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -25,6 +32,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+
+The "draft" named above is your list of error messages. Before pasting, gather the exact text of each message, what triggers it and the screen or step where it shows.
 
 - **Your error messages** (required): the exact text, one per line.
 - **What triggers each** (required if known): the user action or system failure behind it.
@@ -60,6 +69,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every message offers a next step.
 - Blame is never placed on the user.
 - High-cost errors are listed first.
+- If a check fails, fix that rewrite. If you cannot tell the cause from the trigger, ask once for it. If it is still unknown, keep the message and mark `MISSING: trigger`.
 
 ## If something is missing
 

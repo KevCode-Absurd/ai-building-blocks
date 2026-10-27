@@ -8,7 +8,7 @@ job: analysis
 level: advanced
 inputs:
   - {type: question, required: true}
-  - {type: document, required: true}
+  - {type: financial_statements, required: true}
 outputs:
   - {type: audit_report}
 uses: [investment-or-speculation-sorter, owner-earnings-calculator, business-value-range-calculator, bad-year-break-even-tester, price-versus-value-gap-judge]

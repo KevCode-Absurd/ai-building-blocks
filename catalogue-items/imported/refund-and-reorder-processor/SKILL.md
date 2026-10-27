@@ -43,8 +43,9 @@ Processes refunds and creates replacement orders without navigating the Shopify 
    **Expected output:** Full order with `displayFinancialStatus`, `lineItems` (with `refundableQuantity`), `transactions`, `customer`, `shippingAddress`; verify order is refundable before proceeding
 
 2. **OPERATION:** `refundCreate` — mutation
-   **Before this step:** show the user the order name, each item and quantity, and the refund amount from the dry run, and wait for an explicit yes. Do not run the mutation without it.
-   **Inputs:** `input.orderId`, `input.refundLineItems` (each with `lineItemId`, `quantity` and `restockType`; from parameter or all refundable), `input.transactions` (each with `amount`, `gateway`, `kind: REFUND` and `parentId`, taken from the order's original sale transaction in Step 1; without it Shopify records the refund but does not send money back), `input.notify`, `input.note: <reason>`
+   **Preview (query only, always before the mutation):** list each refund line item, its quantity, its unit price (`discountedUnitPriceSet`, the price the customer paid after discounts) and the line total. Add them up to give the exact refund amount. Shipping and tax are not included unless the user asks for them. The amount must not exceed what is left to refund on the original sale transaction.
+   **Before this step:** show the user the order name, that list and the total, and wait for an explicit yes to that exact amount. Do not run the mutation without it.
+   **Inputs:** `input.orderId`, `input.refundLineItems` (each with `lineItemId`, `quantity` and `restockType`; from parameter or all refundable. `restockType` is one of `RETURN` for items coming back, `CANCEL` for unfulfilled items, or `NO_RESTOCK`. Use `NO_RESTOCK` unless the user says the items are coming back or the order is unfulfilled; ask if unsure), `input.transactions` (each with `amount` set to the confirmed total from the preview, `gateway`, `kind: REFUND` and `parentId`, taken from the order's original sale transaction in Step 1; without it Shopify records the refund but does not send money back), `input.notify`, `input.note: <reason>`
    **Expected output:** `refund.id`, `refund.totalRefundedSet`, `userErrors`
 
 3. **OPERATION:** `draftOrderCreate` — mutation (only if `create_replacement: true`)
@@ -71,6 +72,9 @@ query OrderForRefund($id: ID!) {
           title
           quantity
           refundableQuantity
+          discountedUnitPriceSet {
+            shopMoney { amount currencyCode }
+          }
           variant {
             id
             sku

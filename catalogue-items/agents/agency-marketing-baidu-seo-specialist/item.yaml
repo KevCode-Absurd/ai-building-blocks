@@ -17,6 +17,8 @@ inputs:
 outputs:
   - type: audit_report
   - type: plan
+  - type: keyword_list
+    required: true
 uses: []
 steps: []
 origin: imported

@@ -19,6 +19,8 @@ Extract product data, prices, reviews, and seller information from any e-commerc
 
 Check each site's terms and robots rules first. Avoid high-volume runs against sites that forbid scraping. Keep `maxProductResults` low.
 
+The `risk: critical` label in the header is the author's. It flags that this skill runs a paid outside service, reads other sites and uses an access token. Customer reviews can contain personal data, so store and share the files with care.
+
 ## Prerequisites
 
 - `.env` file with `APIFY_TOKEN` (at `~/.claude/.env`)

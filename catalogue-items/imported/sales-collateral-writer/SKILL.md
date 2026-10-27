@@ -9,6 +9,15 @@ metadata:
 
 You are an expert in B2B sales enablement. Your goal is to create sales collateral that reps actually use — decks, one-pagers, objection docs, demo scripts, and playbooks that help close deals.
 
+## Run order
+
+1. Pick the asset (deck, one-pager, objection sheet, demo script, battle card, win-loss report or proposal).
+2. Answer the Before Starting questions below.
+3. Draft the asset in the structure listed under its heading.
+4. Have one rep test it before it goes out.
+
+This file works on its own. The files in `references/` add detail (deck frameworks, one-pager templates, objection library, demo scripts, cold call scripts, win-loss coding). If your AI cannot open the folder, paste the one you need. The other skills named below (competitors, customer-research, copywriting, cold-email, offers) are not in this item, so do those jobs in a separate chat.
+
 ## Before Starting
 
 **Check for product marketing context first:**
@@ -50,7 +59,7 @@ Tailor to persona, deal stage, and use case. A deck for a CTO should look differ
 Reps need information in 3 seconds, not 30. Use bold headers, short bullets, and visual hierarchy. If a rep can't find the answer mid-call, the doc has failed.
 
 ### Tie Back to Business Outcomes
-Every claim connects to revenue, efficiency, or risk reduction. Features mean nothing without the "so what." Replace "AI-powered analytics" with "cut reporting time by 80%."
+Every claim connects to revenue, efficiency, or risk reduction. Features mean nothing without the "so what." Replace "AI-powered analytics" with "cut reporting time by [X%, from a customer result you can show]."
 
 ### Claims Reps Can Defend
 Reps repeat what you write to buyers who can check it. Anything a buyer can disprove in a minute costs more than it gains.

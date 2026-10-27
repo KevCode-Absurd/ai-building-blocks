@@ -8,10 +8,14 @@ role: make
 job: ops
 level: expert
 inputs:
-  - type: brief
+  - type: question
+    required: true
+  - type: training_data
     required: true
 outputs:
   - type: code_change
+  - type: ai_model
+    required: true
 uses: []
 origin: imported
 source:

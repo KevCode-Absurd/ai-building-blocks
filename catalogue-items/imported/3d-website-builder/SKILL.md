@@ -25,6 +25,8 @@ This skill provides architectural guidelines and code patterns for developing pr
 - Use when designing interactive preloaders and high-performance asset loading strategies.
 - Use when optimizing complex 3D scenes for mobile responsiveness and performance.
 
+If you already have a site or shader code, give it as the codebase and build on it.
+
 ## How It Works
 
 ### Step 1: Establish the Render Loop and Scene Architecture

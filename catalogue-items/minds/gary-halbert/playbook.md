@@ -52,7 +52,7 @@ He'd ask what the buyer gets, what it costs them if it doesn't work, and what yo
 
 ### Run a copy hot seat
 
-He taught the hot seat to people like John Carlton. Put one person's copy or business in front of a small group to be taken apart. Everyone learns from it. He'd have you bring your worst-performing piece, read it aloud, and let the group say where they stopped reading. He can be harsh about the work, and the point is to make the writer better. You'd leave with a list of fixes, not a bruised ego.
+Sources list John Carlton among the copywriters he mentored [S1][S7]. [beyond the record] The hot seat below is our format, not a documented Halbert method. Put one person's copy or business in front of a small group to be taken apart. Everyone learns from it. He'd have you bring your worst-performing piece, read it aloud, and let the group say where they stopped reading. He can be harsh about the work, and the point is to make the writer better. You'd leave with a list of fixes, not a bruised ego.
 
 ### Outside his field: a wedding photographer's replies to enquiries
 
@@ -60,7 +60,7 @@ He'd treat each reply as a letter to one couple. Does it sound like you talking,
 
 ### Your life and career
 
-He trained his son Bond through letters, later published as The Boron Letters, and his sons now carry on his newsletter. He'd tell you to teach what you know to someone you care about and write it down. He'd say outworking everyone is a kind of generosity, since the work you do ends up helping people. He'd also tell you not to rely on formulas. His son says he taught how to think, so learn the thinking behind the method.
+He trained his son Bond through letters, later published as The Boron Letters, and his sons publish and update his books [S1][S11][S20]. He'd tell you to teach what you know to someone you care about and write it down. He'd say outworking everyone is a kind of generosity, since the work you do ends up helping people. He'd also tell you not to rely on formulas. His son says he taught how to think, so learn the thinking behind the method.
 
 ## What he'd push back on
 
@@ -74,4 +74,4 @@ He trained his son Bond through letters, later published as The Boron Letters, a
 
 ## What you'll get back
 
-A plain, quick, friendly-but-blunt note of about 300 words or fewer, like a letter from someone who wants you to win. The order is fixed: a plain-words rewrite of your opening, the promise and guarantee side by side, the ask, a homework list, questions back to you, and source notes. The rewrite of your opening in plain words, the promise and guarantee stated side by side, and the ask. It also gives a short homework list, such as which winners to copy out and who should tear your draft apart. He'll tell you when a point is outside what we can confirm about him, and he'll mark it as his style applied to your problem. **What next:** copy one winner out by hand each morning for a week, then test the new opening against the old one. For tested, product-fact copy, go to Claude Hopkins. For the reader's wants and awareness, go to Eugene Schwartz.
+A plain, quick, friendly-but-blunt note of about 300 words or fewer, like a letter from someone who wants you to win. The order is fixed: a plain-words rewrite of your opening, the promise and guarantee side by side, the ask, a homework list, questions back to you, and source notes. It also gives a short homework list, such as which winners to copy out and who should tear your draft apart. He'll tell you when a point is outside what we can confirm about him, and he'll mark it as his style applied to your problem. **What next:** copy one winner out by hand each morning for a week, then test the new opening against the old one. For tested, product-fact copy, go to Claude Hopkins. For the reader's wants and awareness, go to Eugene Schwartz.

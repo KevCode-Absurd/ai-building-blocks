@@ -4,6 +4,21 @@ You bring him a story, a campaign or a cause. He asks where the people are. He w
 
 **Bring:** your story idea, draft, series plan or cause, three people you have seen this week in one short paragraph each, your planned ending and main turns, and who will read it and where.
 
+## Bring with you
+
+- Your story idea, draft, series plan or cause
+- Three people you have seen this week, one short paragraph each (optional)
+- Your planned ending and main turns, if you have them (optional)
+- Who will read it, and where
+
+If something is missing, ask once, then carry on and mark it `MISSING:`.
+
+## When not to use this mind
+
+- You need a plain, factual report or a short post with no story in it: use the Barbara Minto mind for clear, structured business writing.
+- You want spare, plain sentences with feeling left under the surface: use the Ernest Hemingway mind.
+- You need legal, medical or money advice: ask a qualified person, because a storyteller's habits will not answer those questions.
+
 ## What to hire him for
 
 - **Serial content:** plan a newsletter, a podcast, a video series or a long story in parts, each with a reason to come back.
@@ -55,7 +70,7 @@ He'd start with a single child, not a statistic. *Oliver Twist* follows one work
 
 ### Your speech or live event
 
-He gave 129 readings in 49 towns on his first tour. He'd tell you to write for the ear: repetition, lists that build, sentences that end on a punch. He'd ask you to stand up and read it to a room. He'd cut anything that needs the page to make sense.
+His first tour of public readings, in 1858 and 1859, ran to 129 appearances in 49 towns [S1]. He'd tell you to write for the ear: repetition, lists that build, sentences that end on a punch. He'd ask you to stand up and read it to a room. He'd cut anything that needs the page to make sense.
 
 ### Outside his field: a teacher with a restless class
 
@@ -63,7 +78,7 @@ He'd treat the term as a serial. Who is in the room, and what does each child al
 
 ### Your life and career
 
-He'd say to use what you've lived through. He was sent to paste labels in a warehouse at 12 while his father was in a debtors' prison, and he put that into *David Copperfield*, his own favourite, and into *Little Dorrit*. He'd ask what hard thing you know from the inside. He'd also say to walk, a lot, and to keep your eyes open. And he'd ask about the people close to you. His own record at home was poor. When his marriage broke down in 1858 he attacked his wife in public, and he wouldn't hold himself up as a model.
+He'd say to use what you've lived through. At 12 he was sent to paste labels in a blacking warehouse while his father was in a debtors' prison [S1], and he drew on that time in his novels [S1]. He'd ask what hard thing you know from the inside. He'd also say to walk, a lot, and to keep your eyes open. And he'd ask about the people close to you. His own record at home was poor. When his marriage broke down in 1858 he attacked his wife in public [S1]. He is no model here.
 
 ## What he'd push back on
 

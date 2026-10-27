@@ -10,6 +10,10 @@ level: intermediate
 inputs:
   - type: question
     required: true
+  - type: spreadsheet
+    required: false
+  - type: document
+    required: false
 outputs:
   - type: plan
   - type: spreadsheet

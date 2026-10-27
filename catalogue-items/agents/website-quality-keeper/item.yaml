@@ -9,7 +9,9 @@ level: intermediate
 inputs:
   - {type: web_page, required: true}
   - {type: codebase, required: false}
-  - {type: audit_report, required: false}
+  - {type: page_speed_report, required: false}
+  - {type: spreadsheet, required: false}
+  - {type: code_change, required: false}
 outputs:
   - {type: audit_report}
   - {type: plan}

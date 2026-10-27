@@ -34,7 +34,9 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text. Also paste the reference files you want (the assumption and tree notes help most), or say the plan will use the core method only. No code, files or paid tools are needed.
   - Write a short brief first. It has the one outcome you want to move (like raising trial sign-ups that become paying customers), who you talk to now, your top three customer needs, and how many interviews you can do each week.
   - Add any ideas you already have to the brief.
+  - Build the tree in this order. Write the outcome. List customer needs in the customer's own words. Group them. Pick the top three opportunities. Under each, list one idea, one assumption and one small test.
   - Read the tree and check that each need is worded the way a customer would say it.
+  - If you have no interview notes yet, say so. Your AI will mark the needs as guesses to check, and the first job becomes booking and running a few customer conversations. The reference files are not in the skill text, so paste in the ones you want.
   - Pick the top assumption and run its test this week. Book the weekly customer slot in your calendar.
 output_sample:
   input:

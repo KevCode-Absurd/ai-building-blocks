@@ -11,6 +11,8 @@ date_added: "2026-02-27"
 Build tools that agents can use effectively, including architectural reduction patterns
 
 Use this skill when you are writing, reviewing or cutting down the tools an AI agent can call, so that the agent picks the right tool and uses it correctly. You get fewer, clearer tool definitions with better error messages.
+
+If you already have a list of the tools the agent needs, give it as the plan and use it as the starting set to cut down and define.
 # Tool Design for Agents
 
 Tools are the primary mechanism through which agents interact with the world. They define the contract between deterministic systems and non-deterministic agents. Unlike traditional software APIs designed for developers, tool APIs must be designed for language models that reason about intent, infer parameter values, and generate calls from natural language requests. Poor tool design creates failure modes that no amount of prompt engineering can fix. Effective tool design follows specific principles that account for how agents perceive and use tools.
@@ -66,7 +68,7 @@ Consolidation is not universally correct. Tools with fundamentally different beh
 
 ### Architectural Reduction
 
-The consolidation principle, taken to its logical extreme, leads to architectural reduction: removing most specialized tools in favor of primitive, general-purpose capabilities. Production evidence shows this approach can outperform sophisticated multi-tool architectures.
+The consolidation principle, taken to its logical extreme, leads to architectural reduction: removing most specialized tools in favor of primitive, general-purpose capabilities. The original author says production use shows this approach can outperform sophisticated multi-tool architectures. This copy gives no checkable source for that, so treat it as an idea to test on your own agent.
 
 **The File System Agent Pattern**
 Instead of building custom tools for data exploration, schema lookup, and query validation, provide direct file system access through a single command execution tool. The agent uses standard Unix utilities (grep, cat, find, ls) to explore, understand, and operate on your system.
@@ -98,7 +100,7 @@ The question to ask: are your tools enabling new capabilities, or are they const
 **Build for Future Models**
 Models improve faster than tooling can keep up. An architecture optimized for today's model may be over-constrained for tomorrow's. Build minimal architectures that can benefit from model improvements rather than sophisticated architectures that lock in current limitations.
 
-See Architectural Reduction Case Study for production evidence.
+The case study the original author points to is not included in this copy. Test the idea on a small set of real requests before you remove any tools.
 
 ### Tool Description Engineering
 
@@ -164,6 +166,7 @@ Claude can optimize its own tools. When given a tool and observed failure modes,
 **The Tool-Testing Agent Pattern**:
 
 ```python
+# Pseudocode: get_agent_response stands for a call to your own AI. It is not defined here.
 def optimize_tool_description(tool_spec, failure_examples):
     """
     Use an agent to analyze tool failures and improve descriptions.
@@ -294,9 +297,9 @@ This skill connects to:
 
 ## References
 
-Internal references:
+Internal references (named by the original author, not included in this copy):
 - Best Practices Reference - Detailed tool design guidelines
-- Architectural Reduction Case Study - Production evidence for tool minimalism
+- Architectural Reduction Case Study - Evidence for tool minimalism
 
 Related skills in this collection:
 - context-fundamentals - Tool context interactions
@@ -306,7 +309,7 @@ External resources:
 - MCP (Model Context Protocol) documentation
 - Framework tool conventions
 - API design best practices for agents
-- Vercel d0 agent architecture case study
+- Vercel d0 agent architecture case study (named by the original author, no link given here)
 
 ---
 

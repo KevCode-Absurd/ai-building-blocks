@@ -33,8 +33,9 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste the skill text into a new chat.
   - Describe your product, your audience and the tone you want. Add your brand colours if you have them (optional).
   - Send it. No code, files or paid tools are needed. The skill starts from fixed defaults, the colours #DD614C and #DAA144 and the Darker Grotesque and JetBrains Mono fonts. Replace them with your own brand colours and fonts if you have them.
-  - Read the accessibility section first. Check that the harsh look still has enough contrast and clear focus. The default primary colour is only about 3.6 to 1 on white, which fails for normal-size text, so test your own pairs.
+  - Read the accessibility section first. Check that the harsh look still has enough contrast and clear focus. The default primary colour #DD614C is only about 3.6 to 1 on white, which fails for normal-size text. The guide adds a text colour, #B8422F (about 5.4 to 1), for normal text on white, and keeps #DD614C for large text and fills. Test your own pairs too.
   - Hand the tokens to your developer and run the QA checklist in code review.
+  - To revise, send the AI the change, such as a new product description or colour, and ask it to write the guide again.
 output_sample:
   input:
     - Your product description

@@ -16,7 +16,7 @@ You are a customer satisfaction specialist. Identify recently resolved [Gorgias]
 Run `composio search "list recently closed tickets from Gorgias" "get ticket details from Gorgias" "send email via Gmail"` in Bash.
 
 ### Step 2: Fetch resolved tickets
-Run `composio execute GORGIAS_LIST_TICKETS -d '{...filter for tickets closed in the last 24-48 hours...}' (before you run it, check `composio execute GORGIAS_LIST_TICKETS --help` for the exact field names, such as the status and closed-date range, and never run a command that still has `...` in it)` in Bash. If the CLI reports the toolkit is not connected, ask the user to run `composio link gorgias` and retry.
+First run `composio execute GORGIAS_LIST_TICKETS --help` in Bash and read the exact field names for the ticket status and the closed-date range. Then write the full command with those real field names and a filter for tickets closed in the last 24-48 hours (or the window the user named), and run it with `composio execute GORGIAS_LIST_TICKETS -d '<JSON>'`. Never run a command that still has a placeholder in it. If the CLI reports the toolkit is not connected, ask the user to run `composio link gorgias` and retry.
 
 ### Step 3: Get ticket details
 For each resolved ticket, run `composio execute GORGIAS_GET_TICKET -d '{"ticket_id":"<ID>"}'` in Bash (in parallel) to get:
@@ -26,6 +26,8 @@ For each resolved ticket, run `composio execute GORGIAS_GET_TICKET -d '{"ticket_
 - Agent who handled it
 
 ### Step 4: Generate personalized follow-ups
+Before you write, ask the user for the time window, the team sign-off name, and whether the company's own rules allow emailing these customers. If a ticket has no clear resolution, skip it and list it as "skipped: no clear resolution" rather than guessing the issue. If one customer has several tickets, write one email that names the latest one and list the others in the review table.
+
 For each ticket, draft a CSAT email that:
 - Thanks the customer by name
 - References their specific issue (not generic)
@@ -64,4 +66,4 @@ Send all / Select specific ones / Edit first?
 ```
 
 ### Step 6: Send via Gmail
-After confirmation, send each email by running `composio execute GMAIL_SEND_EMAIL -d '{"to":"...","subject":"...","body":"..."}'` in Bash (use parallel Bash calls, or `composio execute --parallel GMAIL_SEND_EMAIL -d '{...}' GMAIL_SEND_EMAIL -d '{...}'` for a batch). Report delivery status for each. Then tell the user to log replies in Gorgias, and note any customer who asked to reopen so the follow-up feeds a next action.
+After confirmation, send each email by running `composio execute GMAIL_SEND_EMAIL -d '{"to":"<customer email>","subject":"<subject>","body":"<approved email text>"}'` in Bash (use parallel Bash calls, or run `composio execute --help` to see how to send a batch). Report delivery status for each. Then tell the user to log replies in Gorgias, and note any customer who asked to reopen so the follow-up feeds a next action.

@@ -119,6 +119,8 @@ The following optional context may or may not be provided. Use whatever is avail
 **Community expertise:** {{community_expertise}} — if not provided, suggest who might help.
 **Student prior experience:** {{student_prior_experience}} — if not provided, assume limited but not absent nature experience.
 
+**Safety (added by AI Blocks).** If the plan involves a pond, water, soil or handling animals, add a short safety line to the investigation activities: adults supervise all water-edge work, pupils wash hands after contact, and the school completes its own risk assessment before any pond-dipping or water-edge work. Never say an activity is safe. Prices and tools you mention are approximate and unchecked.
+
 Return your output in this exact format:
 
 ## Ecological Inquiry: [Ecosystem] × [Curriculum Objective]
@@ -166,6 +168,8 @@ Return your output in this exact format:
 
 ## Example Output
 
+> This scenario is made up to show the layout. The pond, its size, its age and its problems are not real. Use only your own place and facts.
+
 **Scenario:** *Local ecosystem: "The school pond — about 2m × 3m, dug 5 years ago by a previous Year 6 class. It has pond plants (water lilies, iris, water mint), frogspawn appears in spring, dragonflies are seen in summer, there's a growing algae problem (green water), and we've noticed fewer frogs this year than last. It's in the school conservation area, which also has a log pile, a wildflower strip, and a bird feeder." / Curriculum objective: "Year 7 Science: ecosystems — food chains, food webs, interdependence, and the impact of changes to the ecosystem" / Time frame: "One term — approximately 12 weeks, with one session per week (plus the regular Science lessons where concepts are taught)"*
 
 ---
@@ -199,7 +203,7 @@ Expected questions: "Why is the water green?" "Where are the frogs?" "What's tha
 The green water and missing frogs are genuine hooks — students notice them immediately. The inquiry question emerges from observation, not from the teacher.
 
 *Week 2: Baseline survey.*
-Students conduct a biodiversity survey. Using pond-dipping nets and identification keys, they sample invertebrates, identify species (or species groups), and record what they find. They also note: water colour, water clarity (can they see the bottom?), plant coverage, and any visible animals. This is the baseline against which change will be measured.
+Students conduct a biodiversity survey. Using pond-dipping nets and identification keys (adults supervise all water-edge work, pupils wash hands afterwards, and the school completes its own risk assessment first), they sample invertebrates, identify species (or species groups), and record what they find. They also note: water colour, water clarity (can they see the bottom?), plant coverage, and any visible animals. This is the baseline against which change will be measured.
 
 **Phase 2 — Investigating (Weeks 3–8)**
 
@@ -208,7 +212,7 @@ Using the species found in Week 2, students construct the ACTUAL food web of THI
 
 *Weeks 4–5: The algae investigation.*
 The driving question narrows: "Why is our pond going green?" Students design and conduct an investigation:
-- Test water quality: pH, nitrate levels (using simple test strips, £5 from an aquarium shop), water clarity (Secchi disk — students can make one from a weighted white disc on a string)
+- Test water quality: pH, nitrate levels (using simple test strips from an aquarium shop (price approximate, check it yourself)), water clarity (Secchi disk — students can make one from a weighted white disc on a string)
 - Compare: take a water sample from the pond and from the school tap. What's different? The nitrate test will likely show elevated nitrates in the pond (the cause of algae growth)
 - Hypothesis: "If nitrates are high, what's producing them?" Students investigate: leaf litter decomposing in the pond, soil runoff from adjacent garden beds, bird droppings from the feeder nearby. Each is a testable hypothesis.
 

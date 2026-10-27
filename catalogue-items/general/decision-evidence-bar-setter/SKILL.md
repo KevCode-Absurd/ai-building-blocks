@@ -60,7 +60,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Decision checklist runner](https://useaiblocks.com/skills/decision-checklist-runner). It takes the plan.
 - The [Decision bias checker](https://useaiblocks.com/skills/decision-bias-pileup-checker). It takes the plan.
 - The [Decision process reviewer](https://useaiblocks.com/skills/decision-checklist-keeper). It takes the plan.
-- **Lead the team** with the [Team decision and dissent note writer](https://useaiblocks.com/skills/disagree-and-commit-note-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

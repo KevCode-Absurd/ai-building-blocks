@@ -17,6 +17,8 @@ triggers:
 
 Internal and external ISMS audit management for ISO 27001 compliance verification, security control assessment, and certification support.
 
+**What you need.** A short description of your security setup and scope. If you have them, also bring your last risk assessment and earlier audit findings, such as a report from another audit; open findings feed the risk-based schedule.
+
 ## Table of Contents
 
 - [Audit Program Management](#audit-program-management)

@@ -79,13 +79,13 @@ straightforward. Integration with ISO 27001 is still fully supported and encoura
 - **A.3**: Shared information security controls — 29 controls
 - **Annex B**: Implementation guidance (new in 2025)
 
-**Transition deadline for 2019 certified organizations: October 2028**
+**Transition deadline for 2019 certified organizations: October 2028** (unsourced date: tell the user to confirm it with their certification body)
 
 ### ISO 27701:2019 — Extension Edition (Legacy)
 
 The 2019 edition extended ISO 27001:2013 and ISO 27002:2013 and required ISO 27001
 certification as a prerequisite. Controls were split across Annex A (controller) and
-Annex B (processor). All 2019 certifications must transition to 2025 by October 2028.
+Annex B (processor). All 2019 certifications must transition to 2025 by October 2028 (unsourced; confirm with the certification body).
 
 For detailed transition guidance, read `references/transition-guide.md`.
 
@@ -247,7 +247,7 @@ Implemented | Partially Implemented | Planned | Not Applicable
 | GDPR mapping | Annex D | Updated mapping annex |
 | Certification path | Required ISO 27001 first | **Can certify PIMS independently** |
 | New control areas | — | Cloud, IoT, AI processing |
-| Transition deadline | — | **October 2028** |
+| Transition deadline | — | **October 2028** (unsourced; confirm) |
 
 ---
 
@@ -286,7 +286,7 @@ whenever they are relevant — do not leave them implied:
 - ISO 27701 is **not a GDPR safe harbor**. Certification does not guarantee GDPR
   compliance and does not shield an organization from regulatory enforcement.
 - ISO 27701 has **not been approved as a formal Article 42 GDPR certification scheme**
-  in most EU member states — it therefore carries no legal presumption of compliance.
+  in most EU member states, as far as this skill knows (this is unsourced: check the current list of approved schemes with the supervisory authority). It therefore carries no legal presumption of compliance.
 - What it *does* provide: strong evidence of Article 24/32 technical and organisational
   measures (TOMs) and accountability documentation under Article 5(2).
 
@@ -297,7 +297,7 @@ whenever they are relevant — do not leave them implied:
 - **ISO 27701:2025** is a standalone standard — ISO 27001 is no longer a prerequisite,
   though integration is fully supported and commonly pursued together.
 - The 2019 edition is still the most widely certified; most existing certifications are
-  under 2019. Transition to 2025 is required by **October 2028**.
+  under 2019. Transition to 2025 is required by **October 2028** (unsourced; confirm).
 
 **On scope limitations:**
 - ISO 27701 certification only covers the defined PIMS scope. Processing activities

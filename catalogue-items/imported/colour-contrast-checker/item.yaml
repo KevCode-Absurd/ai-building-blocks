@@ -8,11 +8,13 @@ role: check
 job: ops
 level: beginner
 inputs:
+  - type: design_tokens
+    required: false
   - type: design_direction
-    required: true
+    required: false
   - type: image
     required: false
-  - type: document
+  - type: codebase
     required: false
 outputs:
   - type: audit_report

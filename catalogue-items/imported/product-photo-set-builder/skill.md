@@ -15,6 +15,8 @@ description: 一张商品图裂变成整套素材。商品图 + 卖点 → 多�
 
 ## 生成效果示例
 
+> **Example from the source author, not made by AI Blocks.** The photo and result named below are not included. Every `dlazy` command in this file is paid and optional. Use the free route in the note at the top.
+
 | 输入：商品图 |
 | --- |
 | <img src="../../docs/fission-pattern/product-watch.jpg" width="280"> |
@@ -73,7 +75,7 @@ dlazy gpt-image-2 \
 | ✅ 主视角 + 纯净背景 | 越干净，整套图的商品一致性越高 |
 | ✅ 卖点写具体 | `防水防汗` 会带出运动场景，`法式复古` 会带出咖啡馆场景 |
 | ✅ 商品结构完整可见 | 套图里的细节图要靠这张图推断结构 |
-| ❌ 已经带营销文字的图 | 文字会被复制到每张套图里，先用 [remove-watermark](../remove-watermark/skill.md) 洗干净 |
+| ❌ 已经带营销文字的图 | 文字会被复制到每张套图里，先用任意修图工具去掉文字（原作者的 remove-watermark 技能不在本库中） |
 | ❌ 商品被手/道具遮挡 | 遮住的部分在每张套图里都会不一样 |
 
 ---
@@ -112,7 +114,7 @@ dlazy gpt-image-2 \
 | 亲肤 / 婴童 | `soft nursery bedding, pastel palette, very soft diffused light` |
 | 精密 / 工艺 | `dark navy blueprint paper with a brass ruler, cool directional side light` |
 
-**姿势套图**用的是另一组：正面站姿 / 侧身转头 / 背面回头 / 自然行走 / 坐姿——每条只换姿势段，模特与穿搭段逐字不变（写法可直接复用 [creative-scene](../creative-scene/skill.md) 的改姿势句式）。
+**姿势套图**用的是另一组：正面站姿 / 侧身转头 / 背面回头 / 自然行走 / 坐姿——每条只换姿势段，模特与穿搭段逐字不变（原作者的 creative-scene 技能不在本库中，改姿势时只替换姿势段即可）。
 
 ---
 
@@ -223,7 +225,7 @@ Photorealistic commercial product photography, no text, no watermark.
 
 ## 7、执行流程
 
-1. **洗干净输入**：商品图上如有营销文字，先走 [remove-watermark](../remove-watermark/skill.md)。
+1. **洗干净输入**：商品图上如有营销文字，先用任意修图工具去掉文字（remove-watermark 技能不在本库中）。
 2. **写商品保真段**：把商品的关键识别特征列全（外形 / 颜色 / 材质 / 五金 / 缝线 / logo 位置）——这段整套复用。
 3. **卖点 → 氛围段**：查第四节表格，把卖点翻译成场景与色调，整套复用。
 4. **列镜位清单**：查第三节，按平台主图位数量取 5 条（或详情页取 8~12 条）。

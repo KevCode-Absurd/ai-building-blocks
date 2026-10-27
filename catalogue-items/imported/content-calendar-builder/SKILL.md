@@ -156,7 +156,7 @@ The searches and page fetches below need an AI with web access. Some sites (Amaz
 
 **If product URL or ASIN provided:**
 ```
-Use web_fetch on product page to extract visible reviews.
+Optional: if the site allows it, open the product page and read the visible reviews one at a time. If it does not, ask the user to paste the reviews. Do not guess what the reviews say.
 Also search: site:amazon.com "[product name]" reviews
 Focus on: 3-star reviews (balanced), 5-star (what they love), 1-star (pain points).
 ```
@@ -176,26 +176,22 @@ web_search: "[product category]" TikTok comments "love this" OR "hate this"
 - **Feature highlights**: What customers praise most
 - **Objections**: Hesitations before buying
 
-Compile into **Customer Voice Bank**:
+Compile into **Customer Voice Bank**. The rows are placeholders for layout only. Use only words from reviews you actually read, and never invent a customer quote:
 ```
 ## Customer Voice Bank
 
 ### Pain Points (Content Opportunities)
 | Pain Point | Frequency | Content Angle |
 |------------|-----------|---------------|
-| "Hard to clean" | High | "How to clean your blender in 30 seconds" |
-| "Battery anxiety" | Medium | "Real battery test: X hours of use" |
+| "[phrase from a real review]" | [High/Medium/Low] | [content idea] |
 
 ### Use Cases (Lifestyle Content)
 | Use Case | Frequency | Content Angle |
 |----------|-----------|---------------|
-| Post-gym smoothies | High | "Gym bag essentials" content series |
-| Office lunch | Medium | "Desk lunch upgrade" trend hook |
+| [use case from reviews] | [High/Medium/Low] | [content idea] |
 
 ### Emotional Language (Copy Bank)
-- "Game changer for my mornings"
-- "Finally a blender that actually works"
-- "My kids love it"
+- "[phrase from a real review]"
 ```
 
 ### Step 3: Trend & Topic Research
@@ -205,8 +201,10 @@ Discover trending topics and seasonal content opportunities.
 **Google Trends analysis:**
 ```
 web_search: "[product category]" Google Trends seasonal demand
-web_search: "[product category]" trending topics 2024 2025
+web_search: "[product category]" trending topics [current month and year]
 ```
+
+Trends change fast. Check them for the month you run this, and keep only what you saw in sources you opened.
 
 **Platform-specific trends:**
 ```
@@ -225,10 +223,11 @@ Compile into **Trend Opportunities**:
 ## Trend Opportunities
 
 ### Currently Trending
+(Layout only. The rows are placeholders, not current trends. Replace them with trends you found, with the source and date.)
 | Trend | Platform | Relevance | Content Idea |
 |-------|----------|-----------|--------------|
-| "That girl" morning routine | TikTok | High | Product in aesthetic routine |
-| ASMR unboxing | TikTok/YouTube | Medium | Satisfying product sounds |
+| [trend you found] | [platform] | [High/Medium/Low] | [idea] |
+| [trend you found] | [platform] | [High/Medium/Low] | [idea] |
 
 ### Upcoming Seasonal Opportunities
 | Event/Season | Timing | Content Angle |
@@ -276,7 +275,7 @@ web_search: "[competitor name]" YouTube most popular videos
 web_search: "[competitor name]" marketing strategy case study
 ```
 
-If possible, `web_fetch` their profile pages or recent posts.
+Optional: open their profile pages or recent posts only if the site allows it. If a page will not load, ask the user to paste the posts or describe them, and write "unknown" for any number you could not see.
 
 **Step 4.3: Extract Strategy Insights**
 

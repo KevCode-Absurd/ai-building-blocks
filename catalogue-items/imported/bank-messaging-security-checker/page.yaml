@@ -30,11 +30,13 @@ you_get:
   - A control gap list
   - What your attestation needs
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Paste the skill text from this page into a new chat. Keep your KYC-SA login and the current control list from the SWIFT Knowledge Centre open, as the skill cannot confirm the latest version.
+  - "Verify before acting: the skill was last checked by its author on 14 September 2026. Dates, the 32-control list and the consequences it states are the author's reading. Confirm each one in the SWIFT Knowledge Centre (swift.com) and the KYC-SA portal."
+  - Open Claude, ChatGPT or Gemini. Paste the skill text from this page into a new chat. Also paste the two reference files from this item, references/swift-controls.md and references/swift-assessment.md. Without them the chat will be missing control detail. Keep your KYC-SA login and the current control list open, as the skill cannot confirm the latest version.
   - Describe how you connect to SWIFT. Say who runs the messaging and communication interfaces. Add your current security controls and the back-office systems that send messages.
   - Ask for your architecture type first. Check it is right before you go on.
   - Ask for a gap assessment, then an attestation checklist.
-  - Check the control list and dates against the SWIFT Knowledge Centre before you act. Then book your independent assessor and fix the red controls first. This tool needs no code or files.
+  - Check the control list and dates against the SWIFT Knowledge Centre before you act. Then book your independent assessor and fix the red controls first. This tool needs no code running, but it does need the reference files above.
+next: [financial-it-resilience-checker, it-controls-audit-planner]
 output_sample:
   input:
     - How you connect to SWIFT, in plain words

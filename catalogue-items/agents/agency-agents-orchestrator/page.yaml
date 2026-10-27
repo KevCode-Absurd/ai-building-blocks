@@ -26,15 +26,15 @@ not_for:
   - You need a final go or no-go on a release. Use the Reality Checker agent.
   - You have no written spec. Write one first. Without it the plan is a guess.
 you_give:
-  - A written project spec: what to build, for whom and what done looks like. Any document works.
-  - Where you will run it: a plain chat, or Claude Code with agents installed.
+  - A written project spec that says what to build, for whom and what done looks like. Any document works.
+  - Where you will run it, either a plain chat or Claude Code with agents installed.
   - Your limits, such as tools to use, a deadline and what must not change.
   - The agents or roles you already have, such as project manager, designer, builder and tester (optional)
 you_get:
-  - A pipeline plan with the phases in order: task list, design foundation, build and test loop, final check
+  - A pipeline plan with the phases in order, from task list and design foundation to the build and test loop and the final check
   - Who does each phase and what each one hands to the next
   - Pass or fail rules for each phase, with the proof required
-  - Retry rules: send back with feedback, and stop after 3 tries and tell you
+  - Retry rules that send a failed task back with feedback and stop after 3 tries to tell you
   - A status report you can reuse after each phase
   - A final report layout that shows what passed, what is blocked and what is left
 how_to_use:

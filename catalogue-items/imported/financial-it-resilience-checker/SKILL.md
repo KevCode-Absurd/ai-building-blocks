@@ -81,15 +81,15 @@ Start with the table that matches the task below (for a gap analysis, the gap ta
 
 ---
 
-## Status Update — September 2026 (state where relevant)
+## Topics to check before you advise (no figures given)
 
-> **Unsourced and dated.** The figures and dates below came with the skill and have no source links here. They go stale quickly. Before you repeat any of them, check it against the official EU or regulator page, give the link and the date you checked, and say "as of September 2026".
+> **No sourced figures here.** The author's September 2026 notes gave specific counts, dates and circular numbers with no source links. AI Blocks removed them so they cannot be repeated as fact. For each topic below, find the current figure or date on the official EU or regulator page, give the link and the date you checked, and say "as of [DATE]". If you cannot find it, say so. Never state a count, date or circular number from memory.
 
-- **CTPP oversight is operational**: the ESAs designated the first **critical ICT third-party providers on November 18, 2025** (19 providers including the major cloud hyperscalers); 2026 is the **first full oversight cycle** — Lead Overseers and Joint Examination Teams are conducting risk assessments and initial examinations, with first recommendations possible this year.
-- **Art. 31(12) deadline approaching**: financial entities may only use a third-country-established CTPP if it has **established an EU subsidiary within 12 months of designation** — for the November 2025 cohort that lands **~November 2026**. Verify vendor subsidiary status now and prepare exit options.
-- **Third-country branches are in scope**: the Commission's Q&A of December 17, 2025 confirmed DORA applies to third-country branches; Luxembourg operationalised this on **August 27, 2026** (Circular CSSF 26/915 — TCBs moved from the legacy ICT/outsourcing circulars into the DORA circular suite, including 25/882 on ICT third-party use and 25/893 on incident reporting).
-- **First ESAs incident-report data** (June 3, 2026): **3,383 major ICT incidents** reported in 2025 (~0.18 per entity; ~⅓ cross-border; ⅔ with no or minor client disruption) — useful benchmarking for classification answers.
-- **Register of Information**: the 2026 cycle (reference date December 31, 2025) closed via NCA windows in Q1 2026 (most deadlines March 31); maintain the register continuously for the next cycle.
+- **Critical ICT third-party providers (CTPPs)**: the ESAs have designated a first group of providers. Check the current list, the date of designation and what the oversight cycle means for the firm's suppliers.
+- **Art. 31(12) and third-country CTPPs**: a third-country CTPP may need an EU subsidiary within a set time after designation. Check the exact period and the date it falls due for each supplier, verify the supplier's status, and prepare exit options.
+- **Third-country branches**: check the Commission's Q&A and the national regulator's circulars on whether DORA applies to third-country branches in the country concerned.
+- **Incident-report data**: if the user wants benchmarks, point them to the ESAs' latest published incident-report figures and quote only what you can link to.
+- **Register of Information**: check the current reporting window and reference date with the national regulator, and keep the register up to date between cycles.
 
 ## DORA Structure at a Glance
 

@@ -25,7 +25,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your customer list** (yours): a customer or order export with dates, amounts and what they bought.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
@@ -35,7 +35,7 @@ How to start:
 
 ## What you need
 
-This is a sales job. Ignore any ad results, Meta or Google exports or image fix rules mentioned above. This workflow needs the sales and customer data below.
+This is a sales job. The "Before you start" list above is general, and its "Your results" line is about ad exports, which this workflow does not use. Use only the sales and customer data below.
 
 - **Your sale** (required): what you sell, who buys it, how hard it is to explain and how long a sale takes.
 - **Your pay plan** (required): rates, bonuses, targets and when pay is earned, in words or a table.
@@ -62,10 +62,11 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Next steps to offer
 
-Ignore the suggestions in "After this" if they do not fit. Offer these instead:
+Use these instead of the general "After this" list above. Offer them in one short question, and say the person can type their own:
 - Put the pay change you chose into practice, and check it again after two quarters.
 - Use the early sign in onboarding. See [Customer success leading-sign definer](https://useaiblocks.com/skills/customer-success-signals) to redo it with new data.
-- Score your next candidates on the scorecard, then compare it with how they do in the job.
+- Score your next candidates on the scorecard, then compare it with how they do in the job. The [Interview scorecard builder](https://useaiblocks.com/skills/interview-scorecard-builder) can turn the traits into interview questions.
+- Cost the team you plan to build with the [People cost budget builder](https://useaiblocks.com/skills/people-cost-budget-builder).
 
 ## What you hand back
 3 step files and the summary. The last file holds the early sign.
@@ -76,10 +77,10 @@ Ignore the suggestions in "After this" if they do not fit. Offer these instead:
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Early project progress reviewer](https://useaiblocks.com/skills/early-or-broken-checker). It takes the audit report.
 - The [Long-term partner screener](https://useaiblocks.com/skills/long-term-partner-screener). It takes the plan.
-- The [Policy removal test planner](https://useaiblocks.com/skills/policy-removal-test-planner). It takes the audit report and plan.
-- The [People cost budget builder](https://useaiblocks.com/skills/people-cost-budget-builder). It takes the plan.
+- The [Early project progress reviewer](https://useaiblocks.com/skills/early-or-broken-checker). It takes the audit report.
+- The [Early idea protection planner](https://useaiblocks.com/skills/new-idea-protection-planner). It takes the audit report.
+- The [People cost budget builder](https://useaiblocks.com/skills/people-cost-budget-builder). It takes the plan and audit report.
 - The [Interview scorecard builder](https://useaiblocks.com/skills/interview-scorecard-builder). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

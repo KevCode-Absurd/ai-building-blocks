@@ -58,8 +58,9 @@ Pause here: Make the corrections in your books. Then export the updated ledger a
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Account reconciler](https://useaiblocks.com/skills/account-reconciler). It takes the spreadsheet.
 - The [Ledger to subledger reconciler](https://useaiblocks.com/skills/ledger-to-subledger-reconciler). It takes the spreadsheet.
-- The [Financial statement preparer](https://useaiblocks.com/skills/financial-statement-preparer). It takes the spreadsheet.
-- The [Financial statement and budget reviewer](https://useaiblocks.com/skills/financial-statement-analyst). It takes the spreadsheet.
+- The [Book value per share calculator](https://useaiblocks.com/skills/book-value-per-share-rollforward). It takes the financial statements and spreadsheet.
+- **Check the money** with the [Company financial health reviewer](https://useaiblocks.com/skills/company-financial-health). It takes the financial statements and spreadsheet.
+- The [Financial statement and budget reviewer](https://useaiblocks.com/skills/financial-statement-analyst). It takes the financial statements.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

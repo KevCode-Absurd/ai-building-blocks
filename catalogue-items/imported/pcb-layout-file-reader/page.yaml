@@ -5,11 +5,12 @@ name: PCB layout file reader
 summary: Read a PCB layout file in MATLAB and list its nets, layers and parts. Works with Gerber, ODB++ and Allegro board files.
 job: build-software
 headline: PCB layout file reader
-subhead: Give it a Gerber, ODB++ or Allegro file. Get its nets, layers and stack listed and ready to use. Bring a Gerber, ODB++ or Allegro file. Use the result to plan your next step.
+subhead: Give it a Gerber, ODB++ or Allegro file. Get its nets, layers and stack listed and ready to use. It needs paid MATLAB and the RF PCB Toolbox, and Allegro .brd files also need paid Cadence software.
 explain: |
   A circuit board file you can finally open and inspect: its nets, layers, components, pins and copper shapes, listed in MATLAB and ready for analysis. Handy when a colleague or fab house sends a layout and you need to see what is inside before testing it.
 
-  The skill picks the right reader by file type. Gerber files go through a layer-by-layer import with a stackup you define. ODB++ archives and Allegro board files use the board file reader, which also handles chip packages such as BGA substrates. Once loaded, you query nets and components, pull out metal polygons, or turn the board into a component for S-parameter work. It needs MATLAB and the RF PCB Toolbox. It is written for RF and board engineers. This is a MathWorks skill, copied under a licence that lets you use it only with MathWorks products.
+  The skill picks the right reader by file type. Gerber files go through a layer-by-layer import with a stackup you define. ODB++ archives and Allegro board files use the board file reader, which also handles chip packages such as BGA substrates. Once loaded, you query nets and components, pull out metal polygons, or turn the board into a component for S-parameter work. It needs MATLAB and the RF PCB Toolbox. It is written for RF and board engineers. 
+  This is MathWorks' skill. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE.md file.
 when:
   - A fab house sends you Gerber files and you need to check the copper layers before analysis.
   - You received an Allegro board file and want a list of its nets and components.
@@ -30,7 +31,7 @@ you_get:
   - The right reader call for your file type
 how_to_use:
   - Open an AI that can run MATLAB code, with the RF PCB Toolbox installed. Allegro .brd files also need a licensed Cadence install, which is paid software.
-  - Paste the skill text into the chat, or add the skill folder if your tool takes files.
+  - Paste the skill text into the chat, or add the skill folder if your tool takes files. The skill may be used only with MathWorks products such as MATLAB.
   - Give your AI the board file. Add your stackup if it is a Gerber file. For an Allegro .brd file, give the path to extracta.exe.
   - Ask it to read the file and list the nets, layers and parts.
   - Check the lists against what you expect from the board before you go on.

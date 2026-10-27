@@ -112,10 +112,10 @@ Next: paste the IMAGE PROMPT into ChatGPT or Gemini to make the photo, add the L
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image prompt.
 - The [Fact caption image ad maker](https://useaiblocks.com/skills/fact-caption-image-ad-maker).
 - The [Problem moment image ad maker](https://useaiblocks.com/skills/problem-moment-image-ad-maker).
-- The [Story ad image brief writer](https://useaiblocks.com/prompts/story-ad-picture-brief-writer).
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image prompt.
+- The [Watercolor image ad maker](https://useaiblocks.com/skills/watercolor-image-ad-maker).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

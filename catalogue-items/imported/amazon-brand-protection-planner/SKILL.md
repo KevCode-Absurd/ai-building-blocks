@@ -1,7 +1,7 @@
 ---
 name: brand-protection-amazon
 version: 1.0.0
-description: "Amazon brand protection toolkit. Detect hijackers, counterfeits, and unauthorized sellers. Includes MAP violation monitoring, trademark abuse detection, complaint templates for Brand Registry, and test buy evidence collection guides. No API key required."
+description: "Amazon brand protection toolkit. Detect hijackers, counterfeits, and unauthorized sellers. Includes MAP price checks on data you supply, trademark abuse checks, complaint templates for Brand Registry, and test buy evidence collection guides. No API key required."
 metadata: {"nexscope":{"emoji":"🛡️","category":"ecommerce"}}
 ---
 
@@ -21,7 +21,7 @@ This skill has no live data feed and does not watch Amazon. You supply the selle
 
 - **Hijacker Detection** — Spot unauthorized sellers in the seller list you supply
 - **Price Check** — Flag prices below MAP in the prices you supply
-- **Counterfeit Signals** — Review-based fake detection
+- **Counterfeit Signals** — Flags reviews that use words like fake or not authentic. A keyword match is weak evidence. Confirm with a test buy before you send any complaint
 - **Trademark Abuse** — Title/keyword infringement detection
 - **Complaint Templates** — Brand Registry, C&D letters
 - **Test Buy Guide** — Evidence collection procedure
@@ -30,7 +30,7 @@ This skill has no live data feed and does not watch Amazon. You supply the selle
 
 | Dimension | Method | Risk Level |
 |-----------|--------|------------|
-| Hijackers | Seller count monitoring | 🔴 High |
+| Hijackers | Seller count check | 🔴 High |
 | Price Violations | Below MAP detection | 🔴 High |
 | Counterfeit | Review keyword analysis | 🔴 High |
 | Trademark | Title pattern matching | ⚠️ Medium |
@@ -40,8 +40,8 @@ This skill has no live data feed and does not watch Amazon. You supply the selle
 | Level | Description | Action |
 |-------|-------------|--------|
 | 🔴 High | Immediate threat to brand | Take action within 24h |
-| ⚠️ Medium | Potential concern | Monitor and investigate |
-| ✅ Low | Normal activity | Continue monitoring |
+| ⚠️ Medium | Potential concern | Investigate with fresh data |
+| ✅ Low | Normal activity | Check again when you next collect data |
 
 ## Input Configuration
 
@@ -55,6 +55,10 @@ This skill has no live data feed and does not watch Amazon. You supply the selle
   "min_price": 29.99
 }
 ```
+
+## Using your own data
+
+The detector reads built-in sample data. To check your own listings, open `scripts/detector.py`, find `get_demo_data()` and replace the brand details, the listings (ASIN, title, price, seller list) and the review text with yours. Then run `python3 scripts/detector.py`. Do not send a complaint or letter based on the sample output.
 
 ## Usage
 

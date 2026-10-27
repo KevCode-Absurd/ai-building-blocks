@@ -10,6 +10,8 @@ level: intermediate
 inputs:
   - type: source_text
     required: true
+  - type: story_outline
+    required: false
 outputs:
   - type: feedback_notes
 uses: []

@@ -9,10 +9,14 @@ description: "This skill should be used when the user asks to evaluate candidate
 
 Synthesize multi-interviewer feedback into evidence-based hiring recommendations. Reduce bias, surface gaps, and produce structured candidate comparisons that hiring managers can act on.
 
+## Before you start
+
+You need a written scorecard for the role (questions, follow-ups, green and red flags) and the interview transcript or notes. If there is no written scorecard, stop and ask the user to write one first. If you work in a plain chat, ask the user to paste both.
+
 ## Use with care
 
 - The AI scores evidence and shows gaps. A person makes every hiring decision. Never let the AI pick who to hire or reject.
-- Candidate transcripts and notes are personal data. Before you paste them, check your employment-law and data-protection rules, and your AI tool's data policy.
+- Candidate transcripts and notes are personal data. Before you paste them, check your employment-law and data-protection rules, and your AI tool's data policy. Remove or anonymise candidate names and personal details first (use "Candidate A" and "Candidate B"), and only use a tool your company has approved for candidate data. Rating people with AI carries hiring-bias and legal risk, so never use the ratings as the only basis for a decision.
 - If you work in a plain chat with no folders, paste the transcript, the scorecard and any candidate notes into the chat. Ignore the `roles/...` file paths below and ask for the results in the chat.
 - The Teamtailor and Metaview parts are paid tools. Skip them if you do not use them. The scorecards work without them.
 

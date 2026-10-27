@@ -8,10 +8,10 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: question
     required: true
 outputs:
-  - type: tool_connection
+  - type: document
 uses: []
 origin: imported
 source:

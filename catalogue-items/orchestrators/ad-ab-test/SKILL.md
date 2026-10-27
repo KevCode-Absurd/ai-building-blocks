@@ -60,20 +60,20 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 Pause here: Run both versions at the same time and count the replies by key.
 
-3. **Read the result.** Use the skill `split-run-result-reader`. Give it the plan and the offer from the steps before. A plain call on the winner and a record of what it taught. Uses the counts you bring after the test, step 1's plan and step 2's offer.
+3. **Read the result.** Use the skill `split-run-result-reader`. Give it the plan and the offer from the steps before. A plain call on the winner and a record of what it taught. Uses the counts you bring after the test, step 1's plan and step 2's offer. For each version, bring: its key, the audience size, the replies, the sales (if tracked) and the dates it ran. Without counts, stop and say the test has not been read yet.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back
-3 step files and the summary. The last file holds the audit report and the lessons register.
+3 step files and the summary. Step 3's file holds the audit report and the lessons register.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Untried ad idea finder](https://useaiblocks.com/skills/untried-ad-idea-finder). It takes the audit report.
-- The [Ad testing manager](https://useaiblocks.com/skills/ad-test-sprint-runner).
+- The [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the audit report.
+- The [Ad production brief planner](https://useaiblocks.com/skills/creative-gap-to-brief-queue-planner). It takes the audit report.
+- **Test the idea with real people** with the [Idea evidence reviewer](https://useaiblocks.com/skills/idea-evidence-review). It takes the lessons and audit report.
 - **Read your ad results** with the [Ad creative test analyst](https://useaiblocks.com/skills/creative-test-reader). It takes the audit report.
-- The [Creative brief writer](https://useaiblocks.com/skills/creative-brief-writer). It takes the lessons.
-- **Read your ad results** with the [TikTok ad test reader](https://useaiblocks.com/skills/tiktok-ad-test-reader). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

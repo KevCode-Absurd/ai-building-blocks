@@ -11,7 +11,7 @@ explain: |
 
   The skill sends your description to the ElevenLabs music service and saves the result as an MP3. For more control, it first builds a composition plan: a list of sections, each with its own style and length. You can edit the plan before any audio is made. It can also stream the track as it renders. You need an ElevenLabs account and API key, and some features need a paid plan.
 when:
-  - You need background music for a video and have no licence budget.
+  - You need background music for a video, and your ElevenLabs plan allows commercial use (check this before you use a track in an ad or sell it).
   - You want a short jingle for a podcast intro or an ad.
   - You have lyrics and want to hear them sung as a rough demo.
   - You want a track with a set structure, such as a calm intro that builds to a loud finish.
@@ -35,7 +35,8 @@ how_to_use:
   - Describe the mood, genre, instruments and length. Add lyrics if you have them.
   - For more control, ask for a composition plan first. Edit the sections, then ask for the audio.
   - Listen to the MP3. Change the description or plan and run it again until it fits.
-  - Before you use a track in an ad or sell it, read what your ElevenLabs plan says about commercial use. Then add the MP3 to your video or podcast editor.
+  - Before you use a track in an ad or sell it, read what your ElevenLabs plan says about commercial use. A free or low plan may not allow it.
+  - Next, add the MP3 to your video or podcast editor. If a section does not fit the picture, edit the composition plan and run it again.
 output_sample:
   input:
     - A description of the mood, genre and instruments

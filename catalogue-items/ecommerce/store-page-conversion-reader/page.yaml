@@ -134,7 +134,7 @@ improve:
 works_best_with:
   tools:
     - {name: "Google Analytics 4", why: "Source of the traffic acquisition, landing page and funnel reports."}
-    - {name: "A heatmap and recording tool", why: "Shows what shoppers do on the page the skill flags."}
+    - {name: "A heatmap and recording tool (optional, often paid)", why: "Shows what shoppers do on the page the skill flags. You can read the report without it."}
   inputs:
     - "The same reports for the previous period"
     - "Checkout funnel counts by browser"

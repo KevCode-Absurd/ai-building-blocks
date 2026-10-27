@@ -68,9 +68,8 @@ The stage brief from step 6, the claim timeline from step 3, the `MISSING:` line
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Write the ad copy** with the [Ad headline writer](https://useaiblocks.com/skills/ad-headline-writer). It takes the brief.
 - The [Buyer awareness stage mapper](https://useaiblocks.com/skills/buyer-awareness-stage-mapper). It takes the brief.
-- The [Quiz response ad angle writer](https://useaiblocks.com/skills/quiz-answers-to-ad-angles-reader).
 - **Write the ad copy** with the [Buyer awareness ad planner](https://useaiblocks.com/skills/awareness-stage-ad-framework-chooser). It takes the brief.
-- The [Customer path mapper](https://useaiblocks.com/skills/customer-path-mapper). It takes the brief.
+- **Write the ad copy** with the [Product weakness messaging planner](https://useaiblocks.com/skills/product-handicap-reframer). It takes the brief.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

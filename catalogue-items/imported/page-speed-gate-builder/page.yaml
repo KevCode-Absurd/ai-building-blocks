@@ -9,7 +9,9 @@ subhead: A speed check that runs on every code change and blocks pages that get 
 explain: |
   A speed check that runs on every code change and blocks pages that get slow or weak, so a slow page cannot slip into your live site unnoticed.
 
-  It writes one Lighthouse config file holding every limit, with a set of budgets for load time, layout jumps and blocking time, plus minimum scores for performance, search, accessibility and best practice. It tests the real production build, never the dev server, and takes the median of several runs so the check does not fail at random. A workflow file runs the same setup locally and in your build pipeline and saves reports. It needs Node and a build pipeline.
+  It writes one Lighthouse config file holding every limit, with a set of budgets for load time, layout jumps and blocking time, plus minimum scores for performance, search, accessibility and best practice. It tests the real production build, never the dev server, and takes the median of several runs so the check does not fail at random. A workflow file runs the same setup locally and in your build pipeline and saves reports. It needs Node and a build pipeline. The 200 ms limit for click response (INP) is checked through Total Blocking Time, a lab stand-in. It is not a measure of real visitors.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (stareezy-1) says MIT. Credit goes to stareezy-1 and sickn33.
 when:
   - You keep shipping changes that quietly slow the site.
   - You want a failing check when load time passes a set limit.
@@ -34,7 +36,7 @@ how_to_use:
   - Paste this skill and tell it to add the page speed gate to your app.
   - Give it your build and start commands. List every page you want checked, not just the home page, such as a product page and a blog post. The app must build and start with those commands before the check can run.
   - Run the check on your computer first and read the report.
-  - Commit the config and workflow file, then open a pull request to see the check run in your pipeline. When the gate fails, open the saved report and fix the audit it flags. Do not raise the limit to make it pass.
+  - Commit the config and workflow file, then open a pull request to see the check run in your pipeline. When the gate fails, open the saved report and fix the audit it flags. Do not raise the limit to make it pass. A failed gate means a real slowdown: fix the cause the report names, push again, and keep the limit. Once it passes, use the Page metadata fixer and the Page SEO optimizer for the search side.
 output_sample:
   input:
     - Your web app code
@@ -56,3 +58,4 @@ output_sample:
       contains: The @lhci/cli package added to your project to run the check.
     - name: Saved reports
       contains: HTML and JSON speed reports uploaded from each run.
+next: [page-metadata-fixer]

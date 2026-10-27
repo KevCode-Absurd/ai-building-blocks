@@ -17,7 +17,7 @@ when:
   - You are starting a project and need colour and spacing rules first.
 not_for:
   - "You need a brand look from scratch: build the brand identity first with a brand designer or a brand identity skill, then come back to check pages."
-  - "You need a full accessibility audit against legal rules: use a dedicated accessibility audit with a specialist, as this checks contrast only."
+  - "You need a full accessibility audit against legal rules: use the Accessibility standards checker or a specialist, as this checks contrast only."
   - "You need a full component library: use a design system skill or ask a designer, as this only reviews single pages and parts."
 you_give:
   - The page, component or code to check
@@ -33,7 +33,7 @@ how_to_use:
   - Paste your page code, or attach a screenshot. Start with the code if you have it, since the checks are more exact. Say which screen sizes matter most.
   - Add your brand colours, fonts and spacing if you have them. If not, ask your AI to make a starter set first.
   - Read the findings. Fix the contrast and mobile problems first.
-  - Ask your AI to run the pre-ship checklist before you publish.
+  - Ask your AI to run the pre-ship checklist before you publish. For a deeper look at your whole set of styles, use the Design system auditor next.
 output_sample:
   input:
     - Your page, component or code to check

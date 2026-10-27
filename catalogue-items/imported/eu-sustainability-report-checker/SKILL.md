@@ -15,7 +15,7 @@ description: >
 
 # CSRD Compliance Skill
 
-> **Last verified:** 2026-10-03
+> **Currency:** The original author dated this skill October 2026. AI Blocks has not checked it. Every legal reference and date below is unverified. Mark each one "unverified, confirm against the Official Journal" in your result.
 
 > ⚠️ **The Omnibus changed this framework materially in 2026.** Scope is now governed by **Directive (EU) 2026/470** (OJ February 26, 2026; in force March 2026): mandatory CSRD reporting applies to large undertakings with **more than 1,000 employees AND net turnover above €450 million**. Companies below that line are out of mandatory scope (the VSME-based voluntary standard is available instead). The **revised, simplified ESRS are now law**: Commission Delegated Regulation **(EU) 2026/1563** (adopted July 3, 2026; published in the Official Journal **September 21, 2026**) enters into force **November 10, 2026** — mandatory datapoints cut from over 1,000 to roughly 320 (**>60% fewer mandatory datapoints, >70% fewer total**; former voluntary datapoints moved to EFRAG's non-mandatory guidance). Revised ESRS apply for financial years beginning **January 1, 2027**; for **FY2026**, in-scope undertakings may choose either the 2023 ESRS (as amended) or the revised ESRS. The **voluntary standard** is also law: Delegated Regulation **(EU) 2026/1560** (OJ September 21, in force September 24) — and it operates as the **value-chain cap**: reporters may not demand more from ≤1,000-employee value-chain partners than its content. Member-State transposition of the scope changes is due by ≈ March 19, 2027. **Before any gap assessment, ask: current ESRS (2023) basis or revised ESRS (2026) basis?**
 
@@ -46,15 +46,15 @@ This is the one scope rule for this skill. It replaces any older size test below
 - In mandatory scope: more than 1,000 employees AND net turnover above €450 million.
 - Anything at or below either line: out of mandatory scope. The voluntary standard is the route if customers ask for data.
 - Non-EU companies: undetermined until confirmed.
-- The Implementation Timelines table below shows the older wave structure as history. Do not use it to give a first reporting year. Give the first reporting year from the Omnibus note, and label it "to confirm with counsel".
+- Do not use any older wave or phase-in dates to give a first reporting year. Give the first reporting year from the Omnibus note in "Implementation Timelines" below, and label it "to confirm with counsel".
 
-**Dates and citations.** The legal references, dates and the "last verified 2026-10-03" note in this file come from the skill's author. You cannot check them from inside this skill. Put them in the result as "to confirm against the Official Journal", and put the "not legal advice" line next to the scope verdict, not only at the end.
+**Dates and citations.** The legal references, dates and the currency note at the top of this file come from the skill's author. You cannot check them from inside this skill. Put them in the result as "to confirm against the Official Journal", and put the "not legal advice" line next to the scope verdict, not only at the end.
 
 ## Output (added by AI Blocks)
 
 Return these parts, in this order:
 
-1. **Scope verdict.** The criteria with the figures the person gave, the verdict (in scope, out of scope or undetermined), the first reporting year or "to confirm", and the "not legal advice, confirm with counsel" line.
+1. **Scope verdict.** The criteria with the figures the person gave, the verdict (in scope, out of scope or undetermined), the first reporting year or "to confirm", and the "not legal advice, confirm with counsel" line. Mark every dated legal reference in the result (directive and regulation numbers, Official Journal dates, deadlines) as "unverified, confirm against the Official Journal".
 2. **Double materiality steps.** The eight-step process, with what the company must do at each step.
 3. **Gap table.** ESRS topic, current state, gap, priority, action. Use "none given" where the person provided nothing.
 4. **Draft disclosures.** Draft text only for topics the person's data supports. Mark any datapoint without data as MISSING; never invent a figure.
@@ -105,7 +105,7 @@ Post-Omnibus scope (Directive (EU) 2026/470 — supersedes the original wave str
 |----------|----------|--------|
 | **In mandatory scope** | Large undertakings with **>1,000 employees AND net turnover >€450M** | Wave-one NFRD-era reporters continue; others report per the amended timeline as transposed |
 | **Below the threshold (≤1,000 employees or ≤€450M)** | Formerly wave 2/3 companies and listed SMEs | **Out of mandatory scope** — the VSME-based voluntary standard — now Delegated Regulation (EU) 2026/1560, in force September 24, 2026 — is the reporting vehicle if stakeholders request data, and caps what in-scope reporters may demand of ≤1,000-employee value-chain partners |
-| **Non-EU companies** | Undetermined until confirmed with counsel | Thresholds are under review in the Omnibus package. Confirm current Art. 40a status before advising — do not rely on the pre-2026 €150M construct without checking |
+| **Non-EU companies** | Undetermined until confirmed with counsel | Thresholds are under review in the Omnibus package. Confirm current Art. 40a status before advising. Do not state a non-EU threshold from memory |
 
 **Stop-the-clock (Directive (EU) 2025/794, April 2025):** wave 2/3 reporting was deferred two years before the scope cut landed; companies that relied on it and are now under the 1,000-employee line simply exit mandatory scope.
 
@@ -133,14 +133,14 @@ The DMA is the **cornerstone** of CSRD compliance. Every company must conduct a 
 **A topic is material if it meets either or both criteria.** Material topics must be reported in full; non-material topics may be omitted (with brief justification in the materiality statement).
 
 ### DMA Process (ESRS 1, paras. 45–56)
-1. **Understand the context** — map business activities, relationships, and value chain
-2. **Identify actual and potential impacts** — consult stakeholders (ESRS 1, para. 22)
-3. **Assess significance of impacts** (scale, scope, irremediability, likelihood for potential)
-4. **Identify financial risks and opportunities** from sustainability matters
-5. **Assess financial significance** (magnitude, likelihood, time horizon)
-6. **Determine materiality** — topic by topic, using both lenses
-7. **Document the DMA** — disclose the process (ESRS 2 SBM-3)
-8. **Validate and update** — at least annually
+1. **Understand the context** — map business activities, relationships, and value chain. Proof to keep: the value chain map and its date.
+2. **Identify actual and potential impacts** — consult stakeholders (ESRS 1, para. 22). Proof to keep: stakeholder list and notes of who was asked.
+3. **Assess significance of impacts** (scale, scope, irremediability, likelihood for potential). Proof to keep: the scoring sheet and the scale you used.
+4. **Identify financial risks and opportunities** from sustainability matters. Proof to keep: the risk and opportunity register.
+5. **Assess financial significance** (magnitude, likelihood, time horizon). Proof to keep: the scoring sheet and who approved the ratings.
+6. **Determine materiality** — topic by topic, using both lenses. Proof to keep: the list of material and non-material topics, with the reason for each.
+7. **Document the DMA** — disclose the process (ESRS 2 SBM-3). Proof to keep: the written method and the final materiality statement.
+8. **Validate and update** — at least annually. Proof to keep: review notes and the date of each update.
 
 ---
 
@@ -236,16 +236,7 @@ Where value chain data is unavailable, companies may use:
 
 ## Implementation Timelines
 
-> Superseded history. This table shows the older wave structure. Do not use it to give a first reporting year. Use the Omnibus note below, and label every date "unverified, to confirm with counsel".
-
-| Milestone | Date |
-|-----------|------|
-| CSRD in force | 5 January 2023 |
-| ESRS published | 22 December 2023 |
-| Large PIEs first report | FY 2024 → published 2025 |
-| Other large companies first report | FY 2025 → published 2026 |
-| Listed SMEs first report | FY 2026 → published 2027 |
-| Non-EU companies first report | FY 2028 → published 2029 |
+> All dates in this section are unverified. Label each one "unverified, to confirm with counsel". The older wave-by-wave schedule has been removed because it no longer applies.
 
 **Omnibus status (October 2026):** everything is now law — scope: **Directive (EU) 2026/470** in force (transposition due March 19, 2027; Germany still pending); content: **Delegated Regulations (EU) 2026/1563** (revised ESRS, OJ Sept 21, in force Nov 10, 2026) and **(EU) 2026/1560** (voluntary standard, in force Sept 24). Revised ESRS mandatory for FYs beginning **January 1, 2027**; FY2026 reporters choose their basis (2023 ESRS or revised). **Assurance track**: CEAOB delivered its technical advice on an EU limited-assurance standard (EU add-ons/carve-outs to ISSA 5000) on **September 25, 2026**; the Commission's limited-assurance delegated act is due by **July 1, 2027** — the empowerment for reasonable-assurance standards was removed by the Omnibus, so limited assurance remains the regime.
 

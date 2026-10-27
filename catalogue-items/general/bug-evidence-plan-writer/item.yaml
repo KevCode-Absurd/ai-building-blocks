@@ -7,9 +7,9 @@ role: check
 job: ops
 level: intermediate
 inputs:
-  - {type: source_text, required: true}
+  - {type: question, required: true}
 outputs:
-  - {type: plan}
+  - {type: audit_report}
 uses: []
 origin: own
 credits:

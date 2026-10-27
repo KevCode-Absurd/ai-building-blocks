@@ -12,6 +12,8 @@ explain: |
   It follows the council idea from Andrej Karpathy, in three rounds. Round one: each model answers alone. Round two: each model ranks all the answers, with the model names removed, so none can favour its own brand. Round three: a chairman model reads every answer and every ranking, then writes one final answer.
 
   You pick the models and the chairman. Every raw answer is saved to a file and shown unedited. The models run on Fireworks AI, a paid service that hosts open AI models. It needs a Fireworks account and key, and you pay per use.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (DAIR.AI) says MIT. Credit goes to DAIR.AI and sickn33.
 when:
   - You face a hard choice and want more than one AI opinion before you act.
   - You want to see where different models disagree on the same question.
@@ -37,7 +39,7 @@ how_to_use:
   - Make a Fireworks AI account and set your key as FIREWORKS_API_KEY on your own machine. Do not paste the key into a chat.
   - Open your AI tool that can run code, such as Claude Code, and add the whole skill folder. The exact commands are in references/detailed-guide.md, so keep it with the skill. Chat windows that cannot run code can only do the manual version.
   - Type your question. Say which 3 to 5 models sit on the council and which one is chairman. The skill lists the choices if you do not know.
-  - Let it run all three rounds. Check the cost on the Fireworks pricing page first, because each round makes one call per model.
+  - Let it run all three rounds. Check the cost on the Fireworks pricing page first. A run makes two calls per council model (one to answer, one to rank) plus one for the chairman. With 4 council models that is 9 calls.
   - Read the rankings before the final answer. If the models disagree, read the split first. The final answer should say where they agreed.
 how_it_works:
   - title: Check the key

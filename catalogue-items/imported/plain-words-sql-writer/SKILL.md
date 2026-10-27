@@ -84,6 +84,8 @@ Follow these best practices:
 - Use dialect-appropriate date functions, string functions, and window syntax
 - Note any dialect-specific performance features (e.g., Snowflake clustering, BigQuery partitioning)
 
+Write read-only queries (SELECT) unless the user clearly asks for a change. Before any query that changes data (INSERT, UPDATE, DELETE, DROP), say so plainly and tell the user to test it on a copy first.
+
 ### 5. Present the Query
 
 Provide:

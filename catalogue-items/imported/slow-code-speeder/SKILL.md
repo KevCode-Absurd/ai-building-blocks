@@ -28,7 +28,7 @@ Use **complexity-cuts** when refactoring existing code that has poor Big-O:
 - N+1 query patterns in ORMs (Prisma, Drizzle, SQLAlchemy, Django, ActiveRecord).
 - `await` inside `for` over independent items causing serial latency.
 
-For *preventing* bad complexity before code is written, use **`lemmaly`**. For math-level optimizations (Bloom, HLL, FFT, JL projection), escalate to **`mathguard`**.
+For *preventing* bad complexity before code is written, plan the approach before you write any code (the original used a separate `lemmaly` skill, which is not in this library). For math-level optimizations (Bloom filter, HLL, FFT, JL projection), ask a developer (the original used a separate `mathguard` skill, which is not in this library).
 
 ## The Iron Law
 
@@ -54,7 +54,7 @@ If the code has no tests, you write a characterization test first (golden input 
    1. Apply exactly one transformation from the playbook.
    2. Run the existing test suite (or the characterization test you wrote per the Iron Law).
    3. If any test breaks: **revert immediately.** Do not patch the test. Do not patch around the failure. Revert.
-   4. Count reverts on this piece of code. If **3 reverts in a row**, STOP optimizing. The bottleneck is wrong, the transformation is wrong, or the code has invariants you have not modeled. Escalate to `invariant-guard` and write the missing contract — do not try a fourth transformation.
+   4. Count reverts on this piece of code. If **3 reverts in a row**, STOP optimizing. The bottleneck is wrong, the transformation is wrong, or the code has invariants you have not modeled. Stop and tell the user. Ask a developer to write down the missing contract (what the function must always do), then start again. Do not try a fourth transformation.
    5. Only after a transformation lands green: pick the next one.
 
    Stacked changes hide regressions. Patched tests hide regressions louder.
@@ -173,7 +173,7 @@ export function getOrdersWithUsers(orders, users) {
 }
 ```
 
-One transformation. Existing tests stay untouched. Run them. If green, ship. If red, revert (don't patch). After 3 reverts, stop and load `invariant-guard` — the bottleneck is wrong, or the function has a contract no one wrote down.
+One transformation. Existing tests stay untouched. Run them. If green, ship. If red, revert (don't patch). After 3 reverts, stop and ask a developer to write the missing contract — the bottleneck is wrong, or the function has a contract no one wrote down.
 
 ## Output discipline
 
@@ -239,7 +239,7 @@ Cannot check every box? The optimization is not done. Either revert or finish th
 - **Requires existing tests or a written characterization test.** Without one, you cannot detect silent semantic regressions; the Iron Law refuses to skip this.
 - **Asymptotic wins only; constant-factor work is a separate mode** (clearly labeled). The playbook will not improve cache locality or SIMD utilization on its own.
 - **Single-process scope.** Distributed-system bottlenecks (consensus latency, replication lag, queue backpressure) are out of scope.
-- **3-revert rule is firm.** If three transformations failed, the skill explicitly forces escalation to `invariant-guard`; it does not let you try a fourth.
+- **3-revert rule is firm.** If three transformations failed, the skill forces you to stop and ask a developer to write the missing contract; it does not let you try a fourth.
 - **Measurement is on the author.** complexity-cuts requires the ratio to be reported but does not run the benchmark for you — you must produce a representative input.
 - **Won't help I/O-bound code.** If the dominant term is network latency or disk, the playbook will not move the needle — fix the I/O pattern instead.
 

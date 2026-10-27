@@ -60,8 +60,11 @@ Four step files and the summary:
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Web page designer](https://useaiblocks.com/skills/page-design-gate).
-- The [Font pair shortlist maker](https://useaiblocks.com/prompts/font-pair-shortlist-maker).
+- The [Web performance checker](https://useaiblocks.com/skills/web-page-speed-tuner). It takes the website.
+- The [Website speed tuner](https://useaiblocks.com/skills/website-speed-tuner). It takes the website.
+- The [Full-page screenshot taker](https://useaiblocks.com/skills/full-page-screenshot-taker). It takes the website.
+- **Design it** with the [Logo strength tester](https://useaiblocks.com/skills/logo-strength-tester). It takes the design direction.
+- **Design it** with the [Website accessibility reviewer](https://useaiblocks.com/skills/quarterly-accessibility-keeper). It takes the design direction and website.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

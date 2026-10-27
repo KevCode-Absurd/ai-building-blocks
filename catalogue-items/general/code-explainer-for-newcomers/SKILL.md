@@ -17,11 +17,11 @@ Rewrites working code as a short guide for people, big picture first, with a rea
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+- **Codebase** (yours): a project's code, in a folder or repo the AI can open.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -29,9 +29,9 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-The code is the only input this skill needs. Ignore any request above for a source text, article or transcript.
+The code is the only input this skill needs. Pasted code counts as the codebase. Ignore any request above for a source text, article or transcript.
 
-- **The code** (required): pasted in full.
+- **The code** (required): pasted in full, one script or formula set at a time. If it is too long to paste, split it by file or feature and explain one part per run. If your AI cuts it off, write `MISSING: rest of the code` and explain only what was received. No developer tool or paid service is needed unless you want the code run.
 - **The reader** (optional): who will read it and what they already know.
 - **Purpose and doubts** (optional): what it is for and parts you are unsure of.
 

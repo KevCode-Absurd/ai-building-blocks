@@ -73,8 +73,9 @@ Four step files and the summary. The last file holds the price and the reason it
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Offer name batch writer](https://useaiblocks.com/prompts/offer-name-batch-writer). It takes the offer.
-- The [Guarantee and refund plan writer](https://useaiblocks.com/skills/guarantee-designer). It takes the offer and plan.
 - The [Offer checklist reviewer](https://useaiblocks.com/skills/offer-checklist-reviewer). It takes the offer.
+- The [Offer profit-per-session checker](https://useaiblocks.com/skills/offer-profit-per-session-checker). It takes the offer.
+- The [Price rise readiness checker](https://useaiblocks.com/prompts/price-rise-readiness-checker). It takes the offer.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

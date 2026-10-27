@@ -20,6 +20,8 @@ audit_signals:
 ## Purpose
 AI agents answer constrained queries — "squat-proof leggings under $60", "eucalyptus slip-ons", "machine-washable wool" — by filtering on structured attributes. If those attributes live only in prose (or nowhere), the agent can't filter and your products drop out of the result set. This skill establishes a small, standard set of **agentic metafield definitions** (material, key features, care, fit, specs) and populates them across the catalog from existing product signals, so agents can match products to requirements. Fixes `listing-metafields`, `variant-metadata`, and `sizing-specs-structured`.
 
+If you have a product data gap report from an earlier step, use it to choose which products and attributes to fill.
+
 ## Prerequisites
 - Authenticated Shopify CLI session (`shopify auth login --store <domain>`)
 - Required API scopes: `read_products`, `write_products`, `read_metaobject_definitions`, `write_metaobject_definitions` (for definitions)

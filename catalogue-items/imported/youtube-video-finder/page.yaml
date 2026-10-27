@@ -9,7 +9,9 @@ subhead: Give it a topic and any filters you want. It searches YouTube and lists
 explain: |
   Name a topic and get matching YouTube videos, channels or playlists, then pull transcripts for the ones you pick.
 
-  It searches YouTube through TranscriptAPI, a service that needs your key and gives a small free allowance. Each search page costs one credit. You can filter by video, channel, playlist or movie, sort by relevance or views, limit to the past hour, day, week, month or year, and set a short, medium or long length. Results come in pages of up to 50. For a recent best-performing video on a subject, you sort by views and filter by month. Then you choose the winners and get their transcripts, which saves you from watching a dozen videos to find two that matter.
+  It searches YouTube through TranscriptAPI, a paid service that needs your key and gives a small free allowance. It collects data from YouTube pages, so check YouTube's terms before you reuse what it returns. Each search page costs one credit, and each transcript costs one credit. You can filter by video, channel, playlist or movie, sort by relevance or views, limit to the past hour, day, week, month or year, and set a short, medium or long length. Results come in pages of up to 50. For a recent best-performing video on a subject, you sort by views and filter by month. Then you choose the winners and get their transcripts, which saves you from watching a dozen videos to find two that matter.
+
+  This is a copy of ZeroPoint's youtube-search skill, with only the name changed. Licence: we share it under the MIT licence, as the LICENSE file says.
 when:
   - You are researching a topic and want the best recent videos on it.
   - You need to find channels that cover a niche.
@@ -32,8 +34,8 @@ how_to_use:
   - Make a free account at transcriptapi.com. It gives you 100 credits and needs no card. Copy your key.
   - Save the key as TRANSCRIPT_API_KEY in your AI tool. Use an AI that can run code and reach the internet.
   - "Paste this skill into your AI, then say: Search YouTube for your topic, sort by views, past month, top 10."
-  - Check the list. Each search page costs 1 credit, and pulling a transcript costs credits too, so check your credit count before you pull many.
-  - This searches YouTube through a third-party service. Check YouTube's terms and your own policy before you use the results commercially.
+  - Check the list. Each search page costs 1 credit and each transcript costs 1 credit, so check your credit count before you pull many.
+  - Before you start: this collects data from YouTube pages through a third-party service. Check YouTube's terms and your own policy before you use the results commercially, and quote briefly with a link to the video.
   - Tell your AI which videos you want, and ask for their transcripts.
   - Next, summarise the transcripts with youtube-video-summariser, or use them to plan videos with video-content-planner.
 output_sample:

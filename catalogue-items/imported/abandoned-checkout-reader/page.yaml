@@ -36,6 +36,7 @@ how_to_use:
   - Add your own cart value bands if the default ones do not fit your prices (optional).
   - Read both tables. Hours are in UTC, so convert them to your local time before you act.
   - For a busy store, use a shorter date range such as 7 to 14 days. It runs faster.
+  - Use the hour table to time a reminder email. Use the cart value table to choose which checkout fix to test first. To email the shoppers with a code, use the abandoned cart code maker.
 output_sample:
   input:
     - Your Shopify store address

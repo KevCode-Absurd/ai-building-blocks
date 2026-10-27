@@ -7,7 +7,7 @@ role: make
 job: strategy
 level: advanced
 inputs:
-  - type: brief
+  - type: customer_needs
     required: true
   - type: audit_report
     required: false

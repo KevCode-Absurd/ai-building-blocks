@@ -10,7 +10,7 @@ level: beginner
 inputs:
   - type: source_text
     required: true
-  - type: brief
+  - type: question
     required: false
 outputs:
   - type: feedback_notes

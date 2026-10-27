@@ -91,7 +91,7 @@ She'd read your alarms, error messages or runbooks as an astronaut would. Is the
 
 #### A post-mortem that actually changes things
 
-She'd ask for the record: the change log, what the alarms showed, who approved what. Then she'd sort the errors by kind, not by person. Which were at interfaces? Which were changes with no reason? She'd ask what in your method lets the whole class in, and change that. She said she made plenty of the errors she later studied. On the SAGE computer she photographed each programmer next to their bug with a Polaroid, with humour [S10]. She'd cut blame.
+She'd ask for the record: the change log, what the alarms showed, who approved what. Then she'd sort the errors by kind, not by person. Which were at interfaces? Which were changes with no reason? She'd ask what in your method lets the whole class in, and change that. She said she made plenty of the errors she later studied. On the SAGE computer she photographed each programmer next to their bug with a Polaroid, with humour [S2][S10]. She'd cut blame.
 
 #### Outside her field: your film, event or brand launch
 

@@ -2,7 +2,7 @@ thinking: medium
 thinking_why: Setup needs matching dialects and ports.
 new_slug: drone-autopilot-connector
 name: Drone autopilot connector
-summary: Connect MATLAB to a PX4 or ArduPilot drone over MAVLink. Get working code, a heartbeat timer and a check that your drone is found.
+summary: Connect MATLAB to a PX4 or ArduPilot drone over MAVLink. Get working code and a check that your drone is found. Needs paid MATLAB.
 job: build-software
 headline: Drone autopilot connector
 subhead: MATLAB talking to your drone in a few minutes. You name the flight controller, such as PX4 or ArduPilot, and get a working MAVLink link over UDP, with MATLAB acting as the ground station.
@@ -10,6 +10,8 @@ explain: |
   MATLAB talking to your drone in a few minutes. You name the flight controller, such as PX4 or ArduPilot, and get a working MAVLink link over UDP, with MATLAB acting as the ground station.
 
   The skill gives a fixed order of steps, because getting the order wrong fails without any error. First create the message dialect. Then open the UDP link. Then run a timer that sends heartbeats so the autopilot keeps listening. Finally find the connected client and confirm data is arriving. It suits simulators (SITL) and real hardware on a network. Reading parameters, mission upload and offline log parsing are outside it.
+
+  This is MathWorks' skill. The licence that applies is the LICENSE file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE file.
 when:
   - You want MATLAB to connect to a PX4 simulator.
   - Your ground station code never gets a reply from the autopilot.
@@ -19,6 +21,7 @@ not_for:
   - "You only want to read a flight log file offline: use MATLAB's ulogreader directly."
   - "You work with Simulink MAVLink blocks: this is a different setup, so use the MathWorks Simulink docs."
   - "You only want to read or set parameters, or upload missions, on a link that already works: ask your AI directly."
+  - "You do not use MATLAB: the licence allows use only with MathWorks products."
 you_give:
   - Which autopilot you use, PX4 or ArduPilot
   - IP address and UDP port
@@ -30,20 +33,25 @@ you_get:
   - Confirmation that the client is found
   - A link ready for reading flight data (the skill shows how to subscribe to messages such as GLOBAL_POSITION_INT or ATTITUDE)
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste the skill text from this page.
+  - Open Claude, ChatGPT or Gemini and add the skill with the buttons on this page, or paste the full SKILL.md file from the skill folder into the chat. The page only summarises it. The steps and code are in that file.
   - Tell your AI which autopilot you use, PX4 or ArduPilot, and give the IP address and UDP port.
   - Say if your drone already sends heartbeats. If you are not sure, say so and your AI can pick the right path.
   - Run the code in MATLAB. Your AI cannot run it unless it has MATLAB access, so paste any errors back to it.
   - Check that the client list shows more than one row. The extra row is your drone.
   - Test arm commands only in a simulator, or with propellers removed and people clear of the vehicle.
   - Next, read flight data with the skill's "Subscribing to Specific Messages" pattern. MATLAB is paid software, and the skill's licence allows use only with MathWorks products (see its LICENSE.md).
+output_shape: |
+  MATLAB code in order: <dialect, link, UDP, heartbeat message, heartbeat timer, client check>
+  CLIENT LIST: <a table of connected clients; your drone is the extra row>
+  RESULT: <success message once your drone appears, or an error if it does not appear in time>
+  CLEAN UP: <steps that stop the timer and close the link>
 output_sample:
   input:
     - Which autopilot you use, PX4 or ArduPilot
     - Your simulator or drone IP address and UDP port
     - Whether your drone already sends heartbeats (optional)
   prerequisites:
-    - MATLAB with MAVLink support
+    - MATLAB with MAVLink support (MATLAB is paid software, and the licence allows use only with MathWorks products)
     - An AI that can run MATLAB code, or you paste the code in yourself
     - A PX4 or ArduPilot simulator or drone on your network
   output:

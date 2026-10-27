@@ -11,6 +11,7 @@ inputs:
   - type: question
     required: true
 outputs:
+  - type: competitor_set
   - type: document
 uses: []
 origin: imported

@@ -11,7 +11,13 @@ inputs:
     required: true
   - type: spreadsheet
     required: false
-outputs: []
+  - type: question
+    required: true
+  - type: financial_statements
+    required: true
+outputs:
+  - type: audit_report
+  - type: spreadsheet
 needs_mode: manual
 uses:
   - stock-split-eps-restatement

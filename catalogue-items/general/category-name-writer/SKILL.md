@@ -69,8 +69,8 @@ The category in plain words. The ten names and their scores. The top three. The 
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Publicity-first launch planner](https://useaiblocks.com/skills/publicity-first-launch-planner). It takes the plan.
-- The [Market category opportunity finder](https://useaiblocks.com/skills/first-in-category-finder).
-- The [Product positioning planner](https://useaiblocks.com/skills/product-positioning-planner).
+- The [Plan failure reviewer](https://useaiblocks.com/skills/failure-first-plan-check). It takes the plan.
+- The [Business target calculator](https://useaiblocks.com/skills/target-size-back-solver). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

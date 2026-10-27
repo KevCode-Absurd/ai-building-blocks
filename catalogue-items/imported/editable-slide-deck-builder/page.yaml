@@ -10,13 +10,17 @@ explain: |
   A PowerPoint file where every title, label, table and chart can be edited, not pasted in as a picture. You give your story and sources, and you get a deck plus a quality check.
 
   The skill plans the story first, then picks a design direction, then writes an exact layout for each slide. It builds the file from real PowerPoint objects. Images may support a slide but never replace text, data or diagrams. You can show it a reference deck to learn the structure, without copying its files. A final review checks layout, file structure and accessibility. For changing an existing file, another skill is better.
+
+  When it looks up a design style, it may fetch public design pages over the internet. It reads them as reference only and never sends your files or text out. It falls back to a built-in style if a page looks wrong.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (kimtth) says MIT. Credit goes to kimtth and sickn33.
 when:
   - You need a new deck that colleagues can edit later.
   - You have data and a story and want slides with real charts.
   - You want an existing deck reviewed for layout and access problems.
   - You want a deck planned before any slides are made.
 not_for:
-  - "You want to change, fill in or fix an existing PowerPoint file: use a skill that edits existing PowerPoint files, such as the PowerPoint template populator."
+  - "You want to change, fill in or fix an existing PowerPoint file: use a skill that edits existing PowerPoint files, such as @pptx-official, the PowerPoint skill this one points to."
   - "You only need a quick outline or talking points: ask your AI for a plain list and skip building a file."
   - "You want a deck made of slide pictures or screenshots: this builds real text, tables and charts, not images."
 you_give:

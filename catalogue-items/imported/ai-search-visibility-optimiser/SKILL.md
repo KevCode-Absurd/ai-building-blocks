@@ -45,6 +45,8 @@ Gather this context (ask if not provided):
 - Have you checked ChatGPT, Perplexity, or Google AI Overviews for your key queries?
 - What queries matter most to your business?
 
+If you already have a report on where AI assistants name your brand, use it to answer these instead of asking again.
+
 ### 2. Content & Domain
 - What type of content do you produce? (Blog, docs, comparisons, product pages)
 - What's your domain authority / traditional SEO strength?

@@ -27,13 +27,17 @@ Two jobs live here and they share the same evidence. The public one is reviews a
 
 Gather first: pasted or exported reviews are the best input (a CSV or copied text with dates and ratings). Optional extras are complaints, tickets, the owner's writing samples and order history from a CRM, payments tool or storefront.
 
-When fetching review pages from the web, respect each site's terms of service and robots rules. Use pasted text or an export first, and fetch only what the site allows.
+**Gather first:** a review export or pasted reviews with dates and ratings; complaints or tickets (optional); two or three samples of the owner's own writing (optional); the date range.
+
+**Not for:** one upset customer with no review text. Use the Angry customer reply writer for that.
+
+When fetching review pages from the web, fetch only public pages whose terms of service and robots rules allow it. Never log in, get around a block, or collect personal details. If a site does not allow it, or you cannot tell, ask the owner for an export or pasted text instead. Use pasted text or an export first.
 
 Default to the last 90 days. Reviews move slowly, and a 30-day window on a business with six reviews a quarter produces a report with nothing in it.
 
 Read `reference/sources.md` for the query detail and the fallbacks. Pull in one pass:
 
-- **Public reviews** — Google, Yelp, Facebook, and industry sites. Fetch what is visible on the web when no connector reads them, and accept a pasted or exported file whenever the owner has one. Exports are the better source: they carry dates and ratings the page may not.
+- **Public reviews** — Google, Yelp, Facebook, and industry sites. When no connector reads them, ask for a pasted or exported file. Fetch a public page only under the fetching rule above. Exports are the better source: they carry dates and ratings the page may not.
 - **Disputes and tickets** — disputes from the payments connector (PayPal, Square, or Stripe), tickets and feedback from the CRM, and tickets from a support desk (Zoho Desk). A CRM, a payments connector, or a storefront (Shopify or Square — order history is who bought what and when) is the required backbone; the desk deepens it.
 - **Email** — threads carrying complaint or praise language.
 - **Shopify orders** — fulfillment and refund patterns, covered in Step 3.
@@ -108,7 +112,7 @@ Alongside the chat summary, deliver the report per the owner's stored output pre
 
 ## Closing offer
 
-Close with one line on what was found — the rating picture and the top theme. Then offer the most relevant next step with its exact trigger phrase, usually "win back quiet customers" (`/reactivate`) when the quiet list is worth working. At most two others from the router's table fit here, such as "a customer is upset" (`ticket-deflector`) or "weekly growth brief" (`/marketing-monday`). Never more than three offers, and never repeat one the owner declined earlier in the session.
+Close with one line on what was found — the rating picture and the top theme. Then offer the most relevant next step, usually a win-back message for the quiet customers (the Win-back flow builder) when the quiet list is worth working. At most two others fit here, such as the Angry customer reply writer for an upset customer or the Complaint reply promise checker before a reply goes out. Never more than three offers, and never repeat one the owner declined earlier in the session.
 
 ## What not to do
 

@@ -9,7 +9,7 @@ subhead: Point it at your source code. Get security flaws found with static tool
 explain: |
   Security flaws found in your source code without running the app, with a clean list of real problems and rules you can add to CI so they stay fixed.
 
-  It checks which languages you use, then picks the right scanners: Semgrep for patterns across languages, CodeQL for deeper checks, Bandit for Python and ESLint security plugins for JavaScript. It runs them with the right rule sets, then sorts true problems from false alarms, so you do not wade through noise. The results cover issues like SQL injection, cross-site scripting, hardcoded secrets and weak crypto. Finally it shows how to run the scan on every pull request.
+  It checks which languages you use, then picks the right scanners: Semgrep for patterns across languages, CodeQL for deeper checks, Bandit for Python and ESLint security plugins for JavaScript. It runs them with the right rule sets, then sorts true problems from false alarms, so you do not wade through noise. The results cover issues like SQL injection, cross-site scripting, hardcoded secrets and weak crypto. Finally it shows how to run the scan on every pull request. The example findings and the CodeQL query in the skill file are illustrations. The CodeQL class names depend on your CodeQL version, so test the query before you rely on it. This is an MIT-licensed copy of Burhan Sebin's skill.
 when:
   - You want to catch injection bugs before release.
   - You suspect secrets are hardcoded in the repo.
@@ -30,7 +30,7 @@ you_get:
   - A CI step to run on every change
 how_to_use:
   - Open Claude, ChatGPT or Gemini with a tool that can run code and read files. A plain chat can only review code you paste.
-  - Install the scanners you need first, such as Semgrep, Bandit or ESLint security plugins. CodeQL is optional.
+  - Install the scanners you need first, such as Semgrep, Bandit or ESLint security plugins. These are free to run. CodeQL is optional, and it may need a licence for private repositories.
   - Paste the skill, then give the path to your repository. Add your languages and CI platform if you know them.
   - Say you own the code or have permission to test it.
   - Read the report. Check the false alarms the AI dropped, then fix the high-severity flaws first.

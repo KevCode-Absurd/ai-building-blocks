@@ -31,12 +31,12 @@ you_get:
   - Backend search keywords
   - A keyword gap report when optimising
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Pick one that can browse the web, or paste competitor text yourself.
+  - Open Claude, ChatGPT or Gemini. Pick one that can browse the web, or paste competitor text yourself. Paste by hand if a marketplace's terms do not allow automated page reading. The skill works from pasted text just as well.
   - Paste the skill text into the chat.
   - Tell it the platform, your product name, brand, features and specs. Add the tone you want.
   - Add competitor links, or your current listing if you want it improved (optional).
-  - Read the result. Check every number and claim against your real product. Fix any line marked [confirm].
-  - Copy the title, bullets, description and tags into your listing.
+  - Read the result. Check every number, certification and review claim against your real product papers. It must not state a claim you cannot prove. Fix any line marked [confirm].
+  - Copy the title, bullets, description and tags into your platform's own listing editor.
   - After a few weeks of sales data, run the skill again in Optimize mode with your live listing.
 output_sample:
   input:

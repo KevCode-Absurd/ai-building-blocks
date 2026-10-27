@@ -20,11 +20,15 @@ Keep the recap to about one page, under 400 words, with a small table for the qu
 
 Generates a post-earnings analysis using Yahoo Finance data via [yfinance](https://github.com/ranaroussi/yfinance). Covers the actual vs estimated numbers, surprise magnitude, stock price reaction, and financial context — a complete picture of what happened.
 
-**Important**: Data is for research and educational purposes only. Not financial advice. yfinance is not affiliated with Yahoo, Inc.
+**Important**: Data is for research and educational purposes only. Not financial advice. yfinance is not affiliated with Yahoo, Inc. It is an unofficial package that reads Yahoo's web pages. It can be blocked or break without notice, and using it may not suit Yahoo's terms. Tell the user this before you fetch anything.
+
+**Not for**: companies that are not US-listed, or private companies. The reaction window below assumes US Eastern report times and Yahoo coverage. For those, ask the user to use the company's own filing.
 
 ---
 
 ## Step 1: Ensure yfinance Is Available
+
+Installing yfinance runs `pip install` on the user's computer. The check below only tests whether it is installed. Ask before you install, and the user can run `pip install yfinance` by hand instead.
 
 **Current environment status:**
 
@@ -45,7 +49,7 @@ If already installed, skip to the next step.
 
 ## Step 2: Identify the Ticker and Gather Data
 
-Extract the ticker from the user's request. Fetch all relevant post-earnings data in one script.
+Extract the ticker from the user's request. Fetch all relevant post-earnings data in one script. If Yahoo blocks the request or returns empty tables, say so plainly and ask the user to paste the figures from the company's filing. Do not estimate or recall them.
 
 ```python
 import yfinance as yf

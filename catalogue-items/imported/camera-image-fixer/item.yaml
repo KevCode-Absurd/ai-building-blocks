@@ -8,10 +8,11 @@ role: check
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: question
     required: true
 outputs:
   - type: code_change
+  - type: image
 uses: []
 origin: imported
 source:

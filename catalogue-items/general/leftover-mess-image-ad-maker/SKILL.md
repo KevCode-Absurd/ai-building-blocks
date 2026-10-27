@@ -17,6 +17,7 @@ You write the brief and image prompt for one patch of residue, shot close on the
 - Leave the product out unless asked. If asked, it's the real one, small and off to one side, and the picture still works without it.
 - Nobody in the frame except, at most, one hand at the edge. Any screen is generic.
 - Nothing says what the reader has. No before-and-after, no second clean photo.
+- The picture only looks like a phone photo. It is a made image of the residue, not a real customer's or friend's photo. Never add a caption, name or quote that says a real person took or sent it, and never present it as a testimonial.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -55,7 +56,7 @@ How to start:
 
 If you can make images in this chat (ChatGPT and Gemini can), make the picture from your prompt once the prompt passes its checks, then check the picture against the same list and say what to fix. If you can't (Claude can't draw unless an image tool is connected), say that once, in one line, before you start, so nobody waits for a picture that won't come. Hand back the prompt, and at the end tell them how to finish it:
 - **ChatGPT or Gemini:** paste the image prompt into a chat and ask for the picture, or paste this whole skill there so it writes the prompt and makes the picture in one go. ChatGPT uses GPT Image, Gemini uses Nano Banana. Free plans have tight daily limits. Codex on a paid ChatGPT plan can make it too.
-- **Higgsfield:** paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
+- **Higgsfield:** paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there. Higgsfield is a paid service: you need an account, and each picture uses your credits.
 - **Claude Code:** with an OpenAI or Google key saved as `OPENAI_API_KEY` or `GEMINI_API_KEY`, offer to send the prompt to that image API and save the file. Keys: platform.openai.com/api-keys (OpenAI) or aistudio.google.com/apikey (Google). OpenAI or Google bills each picture.
 
 If an image tool is connected, offer to make the picture with it, and ask before you spend credits.
@@ -89,10 +90,10 @@ If an image tool is connected, offer to make the picture with it, and ask before
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image prompt.
 - The [Story ad image brief writer](https://useaiblocks.com/prompts/story-ad-picture-brief-writer).
 - The [Problem moment image ad maker](https://useaiblocks.com/skills/problem-moment-image-ad-maker).
 - The [Fact caption image ad maker](https://useaiblocks.com/skills/fact-caption-image-ad-maker).
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image prompt.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

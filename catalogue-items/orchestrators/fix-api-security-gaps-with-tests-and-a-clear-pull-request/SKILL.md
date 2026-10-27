@@ -52,9 +52,10 @@ Pause here: Add the tests it proposes, run your whole test suite and fix any fai
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Code change security reviewer](https://useaiblocks.com/prompts/diff-security-skimmer).
-- The [Live app security tester](https://useaiblocks.com/skills/live-app-security-tester).
-- The [Software interface security reviewer](https://useaiblocks.com/skills/risky-design-reviewer).
+- The [ISO 27001 audit planner](https://useaiblocks.com/skills/iso-27001-audit-planner). It takes the document.
+- The [Code intent mismatch auditor](https://useaiblocks.com/skills/code-intent-gap-auditor). It takes the document.
+- The [ISO 27001 audit prep coach](https://useaiblocks.com/skills/iso-27001-audit-prep-coach). It takes the document.
+- **Build it** with the [API and tool design reviewer](https://useaiblocks.com/skills/design-principles-checker). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -38,6 +38,7 @@ Queries all return requests within a date window and aggregates them by return r
    **Expected output:** Return objects with `returnLineItems { returnReason, refundableQuantity, fulfillmentLineItem { lineItem { product { title } variant { sku } } } }`; paginate until `hasNextPage: false`
 
 2. Aggregate by: return reason → product → SKU; calculate return count and % of total returns per bucket
+   Then apply `min_returns`: leave out of the product and SKU lists any product with fewer returns than `min_returns` (default 3). Totals and the reason counts still include every return. Say how many products were left out.
 
 3. **OPERATION:** `orders` — query (for return rate context)
    **Inputs:** Same date window (`created_at` on orders, matching the returns query), `first: 250`, pagination cursor; page through until `hasNextPage: false` and add up the orders on every page. That total is the denominator for the return rate. Do not stop after the first page.
@@ -189,4 +190,4 @@ CSV file `return_reasons_<YYYY-MM-DD>.csv` with columns:
 - Cross-reference high-return products with their listing descriptions and images — "not as described" returns often indicate a copy or photography issue.
 - Use `min_returns: 10` for larger stores to focus on statistically significant patterns rather than one-off complaints.
 - Run monthly and compare period-over-period to track whether merchandising or product quality improvements are reducing specific return reasons.
-- Pair with `exchange-vs-refund-ratio` to understand whether high-return products are recovering revenue via exchanges.
+- To see whether high-return products recover revenue through exchanges, check your Shopify admin by hand. No exchange-ratio item is in this library yet.

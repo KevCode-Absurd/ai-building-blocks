@@ -9,8 +9,10 @@ role: make
 job: ops
 level: expert
 inputs:
-  - type: brief
+  - type: question
     required: true
+  - type: deal_terms
+    required: false
 outputs:
   - type: plan
 uses: []

@@ -8,10 +8,10 @@ role: source
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: question
     required: true
 outputs:
-  - type: document
+  - type: spreadsheet
 uses: []
 origin: imported
 source:

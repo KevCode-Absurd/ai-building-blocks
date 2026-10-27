@@ -34,6 +34,7 @@ you_get:
   - A checklist to judge finished work
   - Licensing and usage rights set out before work starts
 how_to_use:
+  - If you have no approved brand look yet, make one first with Brand guide builder. It gives you the visual style and voice this brief needs.
   - Open Claude, ChatGPT or Gemini. It works as a chat, with no code or paid tool needed.
   - Paste the skill text. Then paste your brand look, goal, audience, budget and deadline.
   - "Say which kind of work you need: photo, illustration, video or mixed. Add reference images if your AI can read them."
@@ -41,6 +42,7 @@ how_to_use:
   - Fix any vague words like modern or clean. Ask your AI to name real references instead.
   - Send the brief to your vendor in writing. Walk them through it and take questions before work starts.
   - When the first work comes back, judge it with the brief's quality checklist before you pay for more.
+  - Next, use Aesthetic direction brief writer to set one look across several jobs, or Product shoot brief writer for a product photo shoot.
 next: [aesthetic-direction-brief-writer, product-shoot-brief-writer]
 output_sample:
   input:

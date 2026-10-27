@@ -13,7 +13,7 @@ inputs:
     required: true
   - type: spreadsheet
     required: false
-  - type: brief
+  - type: question
     required: false
 outputs:
   - type: audit_report

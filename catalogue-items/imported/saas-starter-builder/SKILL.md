@@ -185,6 +185,7 @@ export async function POST(req: Request) {
 
   const { priceId } = await req.json()
   const [user] = await db.select().from(users).where(eq(users.id, session.user.id))
+  if (!user) return NextResponse.json({ error: "User not found" }, { status: 404 })
 
   let customerId = user.stripeCustomerId
   if (!customerId) {
@@ -200,6 +201,7 @@ export async function POST(req: Request) {
     line_items: [{ price: priceId, quantity: 1 }],
     success_url: `${process.env.NEXT_PUBLIC_APP_URL}/dashboard?upgraded=true`,
     cancel_url: `${process.env.NEXT_PUBLIC_APP_URL}/pricing`,
+    // The 14-day trial is a sample default. Change it or remove it before launch.
     subscription_data: { trial_period_days: 14 },
   })
 

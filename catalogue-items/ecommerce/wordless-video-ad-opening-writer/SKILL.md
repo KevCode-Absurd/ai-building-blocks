@@ -7,6 +7,10 @@ description: Use when you need a 4 to 6 second wordless opening to put in front 
 
 You write two or three openings, each built on a different finish, and take them through the video process. There is no person: the product is the avatar. An opening has one job: keep the right people watching long enough to reach the ad behind it. Judge each one on three moments: a first frame already in motion, a finish the eye waits for, and a last frame that hands over to the ad without a jump. Stop for approval after stages 1, 3 and 4.
 
+**When not to use:** not for an opening with someone talking to camera (use the [Spoken video ad opening writer](https://useaiblocks.com/skills/spoken-video-ad-opening-writer)), not for a product that only turns on a stand in its sealed pack, and not for a product that cannot be shown in motion. This skill writes plans and prompts. It does not make the video.
+
+**Cost before you start:** writing the plan is free in any chat. Making the pictures and clips is not. Higgsfield runs on paid credits, Gemini's Veo video needs a paid Google AI plan, and a key for an OpenAI, Google or video service bills each picture or clip. See "Making the video" below, and ask before spending anything.
+
 **All stages at once.** If the person asks for every stage in one go, or already gives the approvals in their message, write stages 0 to 5 in one reply in the layout under "What you hand back": carry the strongest row through, mark each approval point "(approve)", and end by asking for their yes on each. If they change something at a point, redo the stages after it. At a normal stop, hand back the stages done so far in that same layout, then the stop question.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
@@ -137,11 +141,11 @@ CHECKS MISSED: <one line each, or none>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Spoken video ad opening writer](https://useaiblocks.com/skills/spoken-video-ad-opening-writer). It takes the video ads.
-- The [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker).
-- The [Video ad on-screen text planner](https://useaiblocks.com/skills/video-ad-text-overlays). It takes the video ads.
+- The [Spoken video ad opening writer](https://useaiblocks.com/skills/spoken-video-ad-opening-writer).
+- The [Video caption maker in your brand font](https://useaiblocks.com/skills/branded-video-captions). It takes the edit plan.
+- The [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker). It takes the shot list.
 - **Check it before it goes live** with the [Video hook scorer](https://useaiblocks.com/skills/video-hook-scorer). It takes the hooks.
-- **Make image ads** with the [Hand-drawn story image ad maker](https://useaiblocks.com/skills/hand-drawn-story-image-ad-maker). It takes the ad copy.
+- **Check it before it goes live** with the [Video ad transition reviewer](https://useaiblocks.com/skills/video-ad-bridge-checker). It takes the hooks.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -32,9 +32,9 @@ you_get:
   - Products with missing costs flagged
 how_to_use:
   - Check that your products have unit costs filled in on Shopify. Without them, margins cannot be worked out.
-  - Open an AI that can connect to your Shopify admin or run code. Paste in this skill.
+  - "Open an AI that can run the Shopify command line, such as Claude Code. Sign in with read access to orders, products and stock: shopify store auth --store <your store domain> --scopes read_orders,read_products,read_inventory. Then paste in this skill."
   - Give it your store link. Add the look-back days and grouping if you want something other than 30 days by order.
-  - Let it read your orders. It changes nothing in your store.
+  - Let it read your orders. It changes nothing in your store. Orders are read 250 at a time with up to 50 line items each, so for a very large store or very big orders, check that the totals include every page before you trust them.
   - Open the report. Check the list of products with missing costs first.
   - Look at the bottom margin products. Decide which to reprice or drop.
   - To change prices, use the bulk price changer. To check a price against what buyers get, use the price against value checker.

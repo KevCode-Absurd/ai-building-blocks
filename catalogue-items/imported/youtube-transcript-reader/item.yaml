@@ -11,6 +11,10 @@ level: intermediate
 inputs:
   - type: question
     required: true
+  - type: shortlist
+    required: false
+  - type: video_link
+    required: false
 outputs:
   - type: transcript
 uses: []

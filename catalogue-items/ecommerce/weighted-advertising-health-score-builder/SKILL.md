@@ -178,8 +178,8 @@ CHECKS MISSED: <none, or list>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Google Ads scaling readiness reviewer](https://useaiblocks.com/skills/google-ads-scale-gate-checker). It takes the audit report.
-- **Read your ad results** with the [Meta campaign purpose checker](https://useaiblocks.com/skills/meta-campaign-purpose-checker). It takes the audit report.
+- **Fill the gaps in your brand brain** with the [Brand health auditor](https://useaiblocks.com/skills/brand-health-auditor). It takes the audit report.
+- The [Store SEO fix prioritiser](https://useaiblocks.com/skills/store-seo-fix-prioritiser). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

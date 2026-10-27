@@ -12,6 +12,27 @@ allowed-tools: Bash, Read, Write, Glob, WebSearch, Task
 
 ## Workflow
 
+## Inputs
+
+Two files, in a folder in your working directory. The names and values below are placeholders.
+
+`outline.yaml`:
+```yaml
+topic: [YOUR TOPIC]
+items:
+  - name: [ITEM NAME]
+    category: [CATEGORY]
+    description: [ONE LINE]
+execution:
+  batch_size: [HOW MANY ITEMS PER BATCH]
+  items_per_agent: [HOW MANY ITEMS EACH AGENT TAKES]
+  output_dir: ./results
+```
+
+`fields.yaml`: one entry for each fact to fill in for every item, such as [FIELD NAME] with a short description of what to put there.
+
+Batch size is optional. If you leave it out, the skill asks you.
+
 ### Step 1: Auto-locate Outline
 Find `*/outline.yaml` file in current working directory, read items list, execution config (including items_per_agent).
 The outline needs a topic, a list of items (name, category, description) and an execution block (batch_size, items_per_agent, output_dir). If a setting is missing, ask the user for it. Do not invent one.
@@ -33,7 +54,7 @@ The outline needs a topic, a list of items (name, category, description) and an 
 - `{fields_path}`: absolute path to {topic}/fields.yaml
 - `{output_path}`: absolute path to {output_dir}/{item_name_slug}.json (slugify item_name: replace spaces with _, remove special chars)
 
-**Hard Constraint**: The following prompt must be strictly reproduced, only replacing variables in {xxx}, do not modify structure or wording.
+**Hard Constraint**: The following prompt must be strictly reproduced, only replacing variables in {xxx}, do not modify structure or wording. The one exception: if `validate_json.py` is not on the machine, use the by-hand check described in the note below the template.
 
 **Prompt Template**:
 ```python
@@ -63,12 +84,12 @@ Note for the catalogue copy: validate_json.py is not in this folder, and its pat
 
 Before agents fetch pages, tell the user which sites will be read, and check each site's terms and robots.txt.
 
-**One-shot Example** (assuming researching GitHub Copilot):
+**One-shot Example** (the item name, category and description below are placeholders; use your own):
 ```
 ## Task
-Research name: GitHub Copilot
-category: International Product
-description: Developed by Microsoft/GitHub, first mainstream AI coding assistant, ~40% market share, output structured JSON to {project_dir}/results/GitHub_Copilot.json
+Research name: [ITEM NAME]
+category: [CATEGORY]
+description: [ONE LINE ABOUT THE ITEM FROM YOUR OUTLINE], output structured JSON to {project_dir}/results/[ITEM_NAME].json
 
 ## Field Definitions
 Read {project_dir}/fields.yaml to get all field definitions
@@ -80,11 +101,11 @@ Read {project_dir}/fields.yaml to get all field definitions
 4. All field values must be in English
 
 ## Output Path
-{project_dir}/results/GitHub_Copilot.json
+{project_dir}/results/[ITEM_NAME].json
 
 ## Validation
 After completing JSON output, run validation script to ensure complete field coverage:
-python ~/.claude/skills/research/validate_json.py -f {project_dir}/fields.yaml -j {project_dir}/results/GitHub_Copilot.json
+python ~/.claude/skills/research/validate_json.py -f {project_dir}/fields.yaml -j {project_dir}/results/[ITEM_NAME].json
 Task is complete only after validation passes.
 ```
 
@@ -98,6 +119,11 @@ After all complete, output:
 - Completion count
 - Failed/uncertain marked items
 - Output directory
+
+## Next steps
+
+- Merge the JSON files into one spreadsheet or CSV to compare items side by side.
+- Re-run for any item with fields marked `[uncertain]`, or check those fields by hand.
 
 ## Agent Config
 - Background execution: Yes

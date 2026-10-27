@@ -27,70 +27,57 @@ This skill enables an AI agent to systematically verify claims and statements. R
 
 ## Usage
 
-Provide the agent with a statement, paragraph, or full article to fact-check. You can optionally specify which claims to prioritize or request a particular output format.
+Provide the agent with a statement, paragraph, or full article to fact-check. A finished document from an earlier step works too. You can optionally specify which claims to prioritize or request a particular output format.
 
 ```
 Fact-check the following statement:
-"Python is the most popular programming language in 2025 according to the TIOBE Index,
-and it was created by James Gosling at Sun Microsystems in 1991."
+"[A CLAIM ABOUT A RANKING, WITH ITS SOURCE AND YEAR], and [A CLAIM ABOUT WHO CREATED IT AND WHEN]."
 ```
 
 ## Examples
 
-The claims, figures and sources in these examples only show the format. They were not checked for this page, so do not read them as real findings.
+The examples below show the format only, with bracketed placeholders. They hold no real findings. Never copy a verdict, figure or source from an example into a real report.
 
-### Example 1: Fact-Checking a Technical Blog Post
+### Example 1: Fact-Checking a Short Post (format only)
 
 **User Request:**
-> Fact-check the key claims in this blog excerpt:
-> "Rust has zero runtime overhead compared to C, making it the fastest systems language available. The Linux kernel adopted Rust as its primary development language in 2024, replacing C entirely. According to Stack Overflow's 2024 survey, Rust has been the most admired language for nine consecutive years."
+> Fact-check the key claims in this excerpt:
+> "[CLAIM ABOUT A COMPARISON]. [CLAIM ABOUT AN EVENT AND ITS DATE]. [CLAIM ABOUT A SURVEY RESULT AND ITS YEAR]."
 
 **Extracted Claims:**
 
 | # | Claim | Type |
 |---|---|---|
-| 1 | Rust has zero runtime overhead compared to C | Scientific/Technical |
-| 2 | Rust is the fastest systems language available | Comparative |
-| 3 | The Linux kernel adopted Rust as its primary language in 2024 | Historical |
-| 4 | Rust replaced C entirely in the Linux kernel | Historical |
-| 5 | Rust has been the most admired language for 9 consecutive years per Stack Overflow | Statistical |
+| 1 | [Comparison claim] | Comparative |
+| 2 | [Event claim, with date] | Historical |
+| 3 | [Survey claim, with year] | Statistical |
 
 **Fact-Check Results:**
 
 | # | Verdict | Confidence | Evidence |
 |---|---|---|---|
-| 1 | **Mostly True** | 0.80 | Rust's zero-cost abstractions compile to machine code comparable to C. However, some runtime components (bounds checking, panic unwinding) introduce marginal overhead. Source: [Rust Performance Book](https://nnethercote.github.io/perf-book/) |
-| 2 | **Half True** | 0.50 | Benchmarks show Rust and C performing within 0-5% of each other on most tasks, but neither consistently "wins." Fortran outperforms both in certain numerical workloads. Source: [Benchmarks Game](https://benchmarksgame-team.pages.debian.net/) |
-| 3 | **Mostly False** | 0.90 | Rust was accepted for driver and module development in Linux 6.1 (2022) and expanded in later releases, but it supplements C — it was never adopted as the "primary" language. Source: [LWN.net kernel Rust coverage](https://lwn.net/) |
-| 4 | **False** | 0.95 | C remains the dominant language of the Linux kernel. Rust is used in select new modules only. Source: [kernel.org Git stats](https://git.kernel.org/) |
-| 5 | **Mostly True** | 0.85 | Stack Overflow renamed "Most Loved" to "Most Admired" in 2023. Rust topped "Most Loved" from 2016-2022 (7 years) and "Most Admired" in 2023-2024 (2 years), totaling 9 years. Source: [Stack Overflow Developer Survey Archives](https://survey.stackoverflow.co/) |
+| 1 | **[Verdict from the scale]** | [0.0-1.0] | [What the source says, in your own words]. Source: [PAGE YOU ACTUALLY OPENED, with link] |
+| 2 | **[Verdict]** | [0.0-1.0] | [What two independent sources say]. Sources: [PAGE 1], [PAGE 2] |
+| 3 | **Unverifiable** | [low score] | [Why no source could be opened or confirmed]. No link is made up. |
 
-**Overall Assessment:** The blog post contains a mix of approximately true technical claims and significantly exaggerated statements about Rust's role in the Linux kernel. Readers should be cautious about the kernel-related claims.
+**Overall Assessment:** [One or two sentences on how accurate the whole text is, and which claims to fix first.]
 
 ---
 
-### Example 2: Fact-Checking Statistical Claims
+### Example 2: Fact-Checking Statistical Claims (format only)
 
 **User Request:**
-> Verify: "Global AI spending reached $200 billion in 2024, with 75% of Fortune 500 companies deploying generative AI in production. The average ROI for enterprise AI projects is 3.5x within the first year."
-
-**Extracted Claims:**
-
-| # | Claim | Type |
-|---|---|---|
-| 1 | Global AI spending reached $200 billion in 2024 | Statistical |
-| 2 | 75% of Fortune 500 companies deployed generative AI in production | Statistical |
-| 3 | Average ROI for enterprise AI projects is 3.5x in the first year | Statistical |
+> Verify: "[A TOTAL AMOUNT IN A GIVEN YEAR]. [A PERCENTAGE OF A NAMED GROUP]. [AN AVERAGE RETURN FIGURE]."
 
 **Fact-Check Results:**
 
 | # | Verdict | Confidence | Evidence |
 |---|---|---|---|
-| 1 | **Mostly True** | 0.75 | IDC estimated global AI spending at $184 billion for 2024, with Gartner projecting $196 billion. The $200 billion figure is within range of the higher estimates but not exact. Sources: IDC Worldwide AI Spending Guide (Oct 2024), Gartner AI Forecast (Nov 2024) |
-| 2 | **Half True** | 0.60 | McKinsey's 2024 survey found 72% of organizations surveyed (not specifically Fortune 500) had adopted AI in some form, with 65% using generative AI. "In production" vs. "piloting" is a meaningful distinction the original claim does not make. Source: McKinsey Global AI Survey 2024 |
-| 3 | **Unverifiable** | 0.30 | No credible large-scale study has published a generalizable "average ROI" figure for enterprise AI. Individual case studies vary wildly (0.5x to 10x+). BCG and MIT Sloan have cautioned against generalized ROI claims. Source: MIT Sloan Management Review (2024) |
+| 1 | **[Verdict]** | [score] | [Compare the claimed figure with the figure in the source, and say whether it is exact or only close]. Source: [PAGE YOU OPENED, with date] |
+| 2 | **[Verdict]** | [score] | [Check that the group in the source is the same group the claim names]. Source: [PAGE YOU OPENED] |
+| 3 | **[Verdict]** | [score] | [If no credible study gives a general figure, say so and mark Unverifiable]. |
 
-**Overall Assessment:** The spending figure is approximately correct, the adoption statistic is in the right ballpark but imprecise, and the ROI claim lacks credible sourcing and should not be cited without qualification.
+**Overall Assessment:** [Say which figures hold, which are imprecise, and which should not be cited without a source.]
 
 ## Best Practices
 

@@ -11,6 +11,8 @@ metadata:
 
 Extracts all MATLAB code executed during the current conversation, assembles it into a well-documented, runnable `.m` script, and saves it to the working directory.
 
+If an earlier step handed you MATLAB code, give it too. It is treated as part of the session, and any part that was never run is marked as untested in the script.
+
 ## Quick Reference
 
 | Step | Action |

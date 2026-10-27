@@ -8,9 +8,9 @@ role: check
 job: ops
 level: beginner
 inputs:
-  - type: source_text
+  - type: document
     required: true
-  - type: brief
+  - type: codebase
     required: false
 outputs:
   - type: feedback_notes

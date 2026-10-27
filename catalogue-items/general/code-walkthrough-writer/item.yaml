@@ -9,7 +9,7 @@ level: intermediate
 inputs:
   - {type: codebase, required: true}
 outputs:
-  - {type: copy_draft}
+  - {type: document}
 origin: rebuilt
 version: 1.0.0
 minds: [donald-knuth]

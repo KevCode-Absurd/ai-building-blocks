@@ -8,8 +8,10 @@ role: make
 job: ops
 level: expert
 inputs:
-  - type: spreadsheet
+  - type: question
     required: true
+  - type: training_data
+    required: false
   - type: codebase
     required: false
 outputs:

@@ -7,7 +7,7 @@ role: orchestrate
 job: analysis
 level: advanced
 inputs:
-  - {type: document, required: true}
+  - {type: financial_statements, required: true}
 outputs:
   - {type: audit_report}
 uses: [one-off-items-separator, earnings-padding-detector, earnings-reliability-check, normal-earnings-estimator]

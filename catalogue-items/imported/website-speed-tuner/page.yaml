@@ -31,12 +31,14 @@ you_get:
   - Target numbers for each fix
   - Re-test plan
 how_to_use:
+  - Gather these first: a PageSpeed Insights or Lighthouse report for your top three pages (a saved or copied export is fine), your hosting provider, your framework and its version, and the top three pages that matter most.
   - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
   - Add your site address, or paste your code. Add your hosting, your framework and the pages that matter most.
   - Paste your current speed scores if you have them (optional). If your AI cannot run code or open a browser, these give it numbers to start from.
   - Read the ranked causes first. Ask your AI to explain any fix you do not follow.
   - Make the changes one at a time, starting with the biggest cause.
   - Test again and compare with the target numbers. Treat the example numbers in the skill as illustrations, not promises.
+  - Re-run the same speed test after each change, and write the result next to the target in a simple log. PageSpeed Insights is a free tool that works for this re-test.
   - If a target is still missed, run the audit again on that page only, or ask your host to check how fast your server answers.
 output_sample:
   input:
@@ -59,5 +61,5 @@ output_sample:
     - name: Image Optimization
       contains: How to convert, resize and lazy load images, and which image to load first.
     - name: Results After Optimization
-      contains: Target numbers for each fix, so you can re-test and see if it worked. The examples in the skill are illustrative, not measured.
+      contains: Target numbers for each fix, so you can re-test and see if it worked. The examples in the skill use placeholders, not measured numbers.
 next: [web-page-speed-tuner, page-speed-fixer]

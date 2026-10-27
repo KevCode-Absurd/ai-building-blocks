@@ -28,7 +28,8 @@ works_best_with:
 how_to_use:
   - Add the skill to an AI that can read it and run its helper script. The folder includes the helper.
   - The bundled helper needs Python 3.8 or later, the requests package, and internet access for live catalog lookups.
-  - Give a title, author, ISBN, or record number. Say whether you want a work, one edition, all editions, or author details.
+  - Check the setup first. Ask your AI to run the helper with --help. If that fails, Python or the requests package is missing.
+  - Give a title, author, ISBN, or record number. Say whether you want a work, one edition, all editions, or author details. A work is a book as an idea, an edition is one printing of it, and each has its own ID.
   - Ask for source record links and missing details. An offline plan does not mean a lookup has run.
   - Next, use the work key it finds to list every edition or read the ratings. Or take the ISBN and cover links to your library or bookshelf tool.
 output_sample:

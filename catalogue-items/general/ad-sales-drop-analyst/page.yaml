@@ -14,7 +14,7 @@ explain: |
   This skill reads your export like a careful analyst. It recalculates every rate from the raw totals (never averaging percentages) and checks the tracking first. Then it splits the rise in cost per sale into its links: what it costs to be seen, how many viewers click, how many clickers buy, and how much they spend. You see, in numbers, which link did most of the damage. Each finding comes with the reasons for and against, the next thing to check, and a proposed action. It never changes a budget or pauses an ad, even if a tool is connected to your account. You approve and make every change.
 
 when:
-  - Your cost per sale went from $28 to $50 over two fortnights at the same spend, and you want the reason before you touch anything.
+  - Your cost per sale rose over two periods at the same spend, and you want the reason before you touch anything.
   - A few ads cost far more per sale than the rest and you can't tell what's different about them.
   - Someone on the team says "the algorithm changed" and you want to see whether the numbers back that up.
   - Sales dropped but clicks didn't, and you suspect something after the click, such as the page, the stock or the counting.
@@ -37,7 +37,7 @@ you_get:
   - The chain split, showing each link's share of the change in cost per sale
   - A ranked list of findings, tracking problems first, each with possible reasons, what to check and a proposed action
   - A list of the data that was missing and what it would have told you
-  - A score out of 100 for each period, showing how close cost per sale is to your target
+  - A score out of 100 for each period, showing how close cost per sale is to your target (only when you give a target)
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -61,7 +61,7 @@ how_it_works:
   - title: Ranks the findings
     text: Puts tracking problems first, then the problems with the most money behind them, and drops anything that wouldn't change a decision.
   - title: Scores both periods
-    text: Divides your target cost per sale by the real one, times 100, for each period, so the drop shows as two numbers.
+    text: When you give a target, divides it by the real cost per sale, times 100, for each period, so the drop shows as two numbers. With no target, it says so and gives no score.
   - title: Proposes, never changes
     text: Gives a proposed action and when to revisit it, one change at a time. It never changes a budget or pauses an ad; you approve each change.
 
@@ -181,6 +181,8 @@ example:
     NOT CONCLUDED
     - Profit. First-order return leaves out $49.99 renewals.
       MISSING: renewal rate and margin.
+
+    SCORE: not given, no target.
 
     Proposals only. Nothing has been changed.
 

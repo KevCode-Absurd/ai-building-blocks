@@ -9,7 +9,7 @@ subhead: Give it a new AI law or guidance and a record of how you use AI today. 
 explain: |
   A list of what a new AI law or guidance means for your company, set against what you already do. Instead of reading a hundred pages, you see the gaps and a plan to close them.
 
-  The skill first asks whether the rule applies to you at all, based on place, size, your role as builder or user, and sector. If it does, it pulls out the actual requirements and compares each one with your recorded AI uses, vendor positions, impact checks and published commitments. Gaps are sorted into must do, should do, already met and accepted risks. It says so where the law is unclear. This is not legal advice.
+  The skill first asks whether the rule applies to you at all, based on place, size, your role as builder or user, and sector. If it does, it pulls out the actual requirements and compares each one with your recorded AI uses, vendor positions, impact checks and published commitments. Gaps are sorted into must do, should do, already met and accepted risks. It says so where the law is unclear. This is not legal advice. The skill depends on the ai-governance-legal plugin from claude-for-legal and its CLAUDE.md file. Without that file, it will not run as intended.
 when:
   - A new AI law is announced and you need to know if it affects you.
   - Your legal team needs a gap list before a compliance deadline.
@@ -36,7 +36,10 @@ how_to_use:
   - Read the scope answer first. If the rule does not apply, it stops with one line.
   - Check the gap table against what you really do. Fix anything wrong.
   - Without a legal research tool, citations come from web search or the AI's memory and carry tags like [web search - verify]. Check every tagged citation against the official source before anyone relies on it.
+  - "The tags mean: settled is a well-known reference that is unlikely to have changed. Verify is a real reference that still needs a check. Verify-pinpoint is an exact article or paragraph number, which is the most likely to be wrong, so check those first."
   - Have your lawyer check every citation, then save the dated plan and track items as they close.
+  - Next, take the must-do items to your lawyer for sign-off. Run the check again when the rule is amended or its phase-in dates arrive.
+next: [ai-impact-assessment-writer, new-data-use-screener]
 output_sample:
   input:
     - The AI law or guidance, as a name or pasted text

@@ -28,11 +28,12 @@ you_get:
   - Original files kept if you choose
   - Size savings per image
 how_to_use:
-  - Open an AI that can run code and save files, such as Claude with code tools. The script runs on your own computer and needs Bun, or Node with npx. Check the script before you run it on a whole folder.
+  - "Warning first: by default the original file is replaced. Back up your images, or ask for the keep option (--keep) so your originals stay."
+  - Check you have Bun or Node. Type bun --version or npx --version in a terminal. If both fail, install one. Have the file or folder path ready.
+  - Open an AI that can run code and save files, such as Claude with code tools. The script runs on your own computer. Check the script before you run it on a whole folder.
   - Paste in this skill and tell your AI the path to your image or folder.
-  - Say which format and quality you want. The default is WebP at quality 80. Add the keep option to keep your originals.
-  - "Warning: by default the original file is replaced. Back up your images first, or ask your AI to keep the originals."
-  - Check the size report, then open a few images to confirm they still look right.
+  - Say which format and quality you want. The default is WebP at quality 80.
+  - Check the size report, then open a few images to confirm they still look right. Keep the smaller files only after you have checked a sample.
   - Next, put the images on your page and test how fast it loads.
 output_sample:
   input:

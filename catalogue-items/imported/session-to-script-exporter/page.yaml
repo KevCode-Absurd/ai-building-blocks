@@ -10,6 +10,8 @@ explain: |
   One clean MATLAB script that reruns your whole session from start to finish. Ask to export it and Claude walks back through the conversation, collects each MATLAB block that ran, and builds a single .m file.
 
   It keeps only the final working version of any block that was retried, and drops shell commands, tool wrapper text, debugging one-liners and helper print lines meant for the assistant. Blocks are ordered as setup, model, configuration, analysis and plots, with %% section headings and parameters moved to the top. Figure settings that hid windows are removed, so the script works when you run it by hand. The file is saved in a Results folder with a descriptive name.
+
+  This is MathWorks' skill. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE.md file.
 when:
   - You finished an analysis with Claude and want to rerun it yourself.
   - You need a script to hand to a colleague after a MATLAB session.
@@ -30,12 +32,13 @@ you_get:
   - Parameters gathered at the top
   - A saved file in the Results folder
 how_to_use:
-  - Before you start, you need a licensed MATLAB installation (paid) and an AI tool that can run MATLAB code, for example through MCP or matlab -batch.
+  - Before you start, you need a licensed MATLAB installation (paid) and an AI tool that can run MATLAB code, for example through MCP or matlab -batch. The licence lets you use this skill and its scripts only with MathWorks products, so do not hand the script to someone who will run it elsewhere.
   - Finish your MATLAB work in a chat with an AI that can run MATLAB code.
   - Paste the skill text into the chat, or add the skill in your AI tool.
   - "Say: export this session as a script. Add a script name if you want one."
   - Open the new file in the Results folder and check the toolboxes listed at the top.
   - Run it in the MATLAB Editor, or with matlab -batch, to confirm it works from start to end.
+  - Next, compare what the script prints with the results from the original session. Then save the .m file in version control or send it to your colleague, who also needs MATLAB.
 output_sample:
   input:
     - A chat session where MATLAB code already ran

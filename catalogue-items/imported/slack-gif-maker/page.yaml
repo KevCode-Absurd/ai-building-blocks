@@ -30,9 +30,10 @@ you_get:
   - A smaller version, only if you ask for one
 how_to_use:
   - Open your AI tool. Use one that can run Python code and save files. This is not a plain-chat job: if you cannot run Python, ask someone who can.
-  - Paste the skill text, or upload the skill folder.
+  - Upload the whole skill folder, including core/. The code in SKILL.md imports core.gif_builder and core.validators, so it fails if you paste only the text.
   - Describe the animation, like a star spinning. Say if it is for emoji or a message.
-  - Add an image or colour notes if you have them.
+  - Fill in this brief: what moves (for example a spin, a bounce or a pulse), how long it runs and how many frames, the size (128 by 128 for emoji, 480 by 480 for messages), how many colours, and your colours or style notes.
+  - Add an image if you have one.
   - Your AI follows these steps. It makes a GIF builder, draws each frame, saves the file, then runs the Slack check on it.
   - Check the GIF and the Slack check result. Ask for a smaller file if it is too big.
   - To use it, upload the GIF as a custom emoji in Slack's emoji settings, or post it in a message.
@@ -49,6 +50,6 @@ output_sample:
     - name: Animated GIF
       contains: The finished animation, drawn frame by frame at 128 by 128 for emoji or 480 by 480 for messages.
     - name: Slack check
-      contains: A pass or fail check of the file against Slack's size, frame and colour limits.
+      contains: A pass or fail check of the file against Slack's limits. It reports the file name, the pixel size, the file size in KB and the frame count, and notes anything too large. A pass means the checker found no problem.
     - name: Smaller version
       contains: "Only if you ask for it: a lighter file with fewer frames, fewer colours or smaller dimensions."

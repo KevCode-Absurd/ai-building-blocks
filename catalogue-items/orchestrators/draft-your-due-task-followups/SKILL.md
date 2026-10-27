@@ -5,21 +5,25 @@ description: "Share due tasks and their threads. Get checked follow-up drafts in
 
 # Draft your due task follow ups
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Executive email reply writer](https://useaiblocks.com/skills/executive-email-draft).
-- The [Outreach writer in your voice](https://useaiblocks.com/skills/own-voice-outreach-writer).
-- The [Cold email writer](https://useaiblocks.com/skills/cold-email-writer).
+- The [Inbox triage and reply writer](https://useaiblocks.com/skills/email-backlog-clearer). It takes the document.
+- The [Nonprofit annual appeal planner](https://useaiblocks.com/skills/nonprofit-annual-appeal-planner). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
+## Goal
+Share due tasks and their threads. Get checked follow-up drafts in your voice, ready for review.
+
+The result: one follow-up email draft for each due task, with To, CC, subject, body, the linked task ID and thread ID, and the send status. A second pass checks each draft against your voice and shows every fix as before and after. Nothing is sent until you say yes.
+
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
 - **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
@@ -28,21 +32,22 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-3. This one.
+2. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for a buyer brief, your brand brain, plan. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, your brand brain, plan. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
-## Goal
-Share due tasks and their threads. Get checked follow-up drafts in your voice, ready for review.
+## What you need for this job
 
-The result: one follow-up email draft for each due task, with To, CC, subject, body, the linked task ID and thread ID, and the send status. A second pass checks each draft against your voice and shows every fix as before and after. Nothing is sent until you say yes.
+This list replaces the general one above. You do not need a buyer brief or a brand brain.
+- **The due task list** (required): each task with its due date, owner and status, as an export or paste.
+- **The matching email threads** (required): the thread for each task, with the recipient.
+- **Voice notes or a few past emails** (optional): step 2 checks the drafts against them. Without them it checks clarity and tone only.
 
 ## Before starting
 
@@ -81,4 +86,8 @@ Save run-state.md with the input revision or date window, completed steps, resul
 - **Recipient and fact checks:** tasks with no thread or recipient, missing facts, and drafts waiting for your yes.
 
 Include source coverage, unresolved findings, missing facts and one next action.
+
+## After this (for this job)
+
+Use this first. Read each edited draft, fix any fact, and send the ones you approve yourself. Nothing here sends them. Then update the task list with what you sent. The general suggestions above are for writing new outreach, not follow-ups on existing tasks.
 

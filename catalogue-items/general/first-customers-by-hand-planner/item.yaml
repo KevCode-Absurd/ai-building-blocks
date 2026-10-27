@@ -9,8 +9,6 @@ level: beginner
 inputs:
   - type: persona
     required: false
-  - type: brief
-    required: false
   - type: question
     required: false
   - type: offer

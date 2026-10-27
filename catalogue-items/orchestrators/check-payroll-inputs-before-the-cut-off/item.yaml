@@ -8,9 +8,11 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: question
     required: true
   - type: spreadsheet
+    required: false
+  - type: policy
     required: false
 outputs:
   - type: audit_report

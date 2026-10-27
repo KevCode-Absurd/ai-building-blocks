@@ -2,7 +2,7 @@ thinking: high
 thinking_why: Debugging missed detections takes careful technical reasoning.
 new_slug: radar-detection-simulator
 name: Radar detection simulator
-summary: Turn a radar datasheet into a simulated radar scene in MATLAB. You get detections, plots and fixes for missed targets, checked by hand.
+summary: Turn a radar datasheet into a simulated radar scene in MATLAB. You get detections, plots and fixes, checked by hand. Needs paid MATLAB.
 job: build-software
 headline: Radar detection simulator
 subhead: A simulated radar scene built from your datasheet, with the detections it produces, plots, and fixes if some targets are missed. You can trust the result because it is checked against a hand calculation of what the radar should see.
@@ -10,6 +10,8 @@ explain: |
   A simulated radar scene built from your datasheet, with the detections it produces, plots, and fixes if some targets are missed. You can trust the result because it is checked against a hand calculation of what the radar should see.
 
   It sets up a radar data generator inside a radar scenario in MATLAB. From the specs it works out reference range through a link budget. It handles scan modes: mechanical, electronic and hybrid. It explains which coordinate frame each output is in, a common source of confusion. If your code misses detections, it checks configuration errors one by one. It is for detection-level work, not signal-level work. MATLAB with the toolboxes is needed.
+
+  Licence: BSD 2-Clause plus one MathWorks term (clause 3 in LICENSE.md). You may use this skill only with MathWorks products and services, so you need your own paid MATLAB licence and the Radar Toolbox.
 when:
   - You have a radar datasheet and want to see what it would detect.
   - Your simulation misses targets and you do not know why.
@@ -30,7 +32,7 @@ you_get:
   - Fixes for missed detections
   - Check against expected range
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text from the skill folder. Use an AI that can run MATLAB code if you can. The skill's licence lets you use it only with MathWorks products, so it needs your own paid MATLAB licence.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from the skill folder. Use an AI that can run MATLAB code if you can. The skill's licence lets you use it only with MathWorks products, so it needs your own paid MATLAB licence and the Radar Toolbox.
   - Paste your radar datasheet, or describe the range and coverage you need. Include power, gain, noise figure, bandwidth and scan mode.
   - "Describe your targets: their paths and radar cross section. Paste your old code too if it misses detections."
   - Answer the questions your AI asks about scan mode, targets and run time. Then read the requirements sheet it writes.

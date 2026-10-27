@@ -30,7 +30,7 @@ you_get:
   - Load test results
   - Security hardening steps
 how_to_use:
-  - Open a chat with an AI that can run code and read your files, and add the skill folder.
+  - Open a chat with an AI that can run code and read your files, and add the skill folder. The scripts need Python. The agent file, the sibling engineering skills and the slash commands the skill names are not included, so skip any step that uses them.
   - Paste your API plan or describe what your service must do. Say which framework you use.
   - Ask for routes first. Read the files it writes before you use them.
   - Add your database schema as a .sql file if you want a speed check. The tool reads the file, not a live database. Ask for migration files, then try them on a copy first.

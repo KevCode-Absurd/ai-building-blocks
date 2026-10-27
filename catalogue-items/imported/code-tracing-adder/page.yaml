@@ -30,12 +30,12 @@ you_get:
   - Recorded exceptions
   - Timed events inside slow steps
 how_to_use:
-  - Install the OpenTelemetry-MATLAB package, version 1.11.0 or newer. You need MATLAB R2022b or newer, and a MATLAB licence. This is MathWorks' skill, shared under a BSD 2-Clause licence that allows use only with MathWorks products.
+  - "Install the OpenTelemetry-MATLAB package, version 1.11.0 or newer. You need MATLAB R2022b or newer, and a MATLAB licence. Licence: the LICENSE.md in this folder applies. It is BSD 2-Clause with an added MathWorks term: use it only with MathWorks products such as MATLAB. The skill file header links MathWorks' own licence page, which is where that term comes from."
   - Open a chat in Claude, ChatGPT or Gemini and paste in the skill text.
   - Paste your MATLAB functions. Say where you want traces sent, if you know.
   - Read the changed code. Check that your function signatures are the same.
   - Run your code once in MATLAB yourself, unless your AI is connected to MATLAB. Open your tracing tool and confirm the spans show up.
-  - Next, open the slowest span and compare its time and status with the function it wraps. Fix the biggest cost first.
+  - Next, open the slowest span and compare its time and status with the function it wraps. Fix the biggest cost first. To time one slow part of your code without tracing, use matlab-speed-tuner. Tracing does not work inside parfor loops.
 output_sample:
   input:
     - Your MATLAB functions or script files

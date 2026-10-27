@@ -7,12 +7,17 @@ job: test-and-fix-code
 headline: Live screen debugger
 subhead: Describe the screen bug and give your local app's address. Your AI opens the app in a real browser window, repeats your steps, changes the code and checks the screen again. It tests desktop and phone sizes. Electron apps are supported.
 explain: |
+  Before you start: this skill needs your AI run with its safety sandbox turned off. Use it only in a disposable setup, on a local app you trust.
+
   Most screen bugs need you to look at the screen. A button does nothing, a menu is cut off, or a layout breaks on a phone. Your AI cannot see any of this by reading code alone, so it guesses.
 
   This skill gives your AI a browser window that stays open between edits. It works in a loop: change the code, reload only when needed, repeat your steps with real clicks and typing, then look at the screen. Each pass has a function check and a separate visual check, so a working button on a broken layout does not pass.
 
   Before it starts, your AI writes a short list of what you asked for and what it changed, and every item must be tested before it says it is done. It also does a short free-form test to find weak spots you did not list. It uses Playwright, a tool that drives a browser, and for Electron it needs the app project itself.
+
+  Licence: this is an unmodified copy of OpenAI's playwright-interactive skill, shared under the Apache 2.0 licence.
 when:
+  - You can run your AI with its safety sandbox turned off, in a disposable setup. This skill needs that.
   - A button, menu or form does nothing on your local site and you cannot see why.
   - A page layout breaks or gets clipped on a phone screen.
   - You are fixing a desktop app built with Electron.

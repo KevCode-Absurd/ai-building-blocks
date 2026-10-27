@@ -44,6 +44,10 @@ Use this skill to optimize configurable systems against a measurable scalar obje
 8. Stop when the budget is exhausted, the improvement plateaus, or the next trial cannot be justified from evidence.
 9. Report the recommended configuration, measured gain, tradeoffs, and any validation still needed before production use.
 
+**Trial log columns** (use the same columns on every run): trial number, settings changed, score, change from baseline, failed (yes or no), failure reason, and a note on why the next trial was chosen.
+
+**Spend check:** before the first trial, estimate the cost of one trial (time, compute or paid API calls) and the total for the budget. Show it to the user and get a yes. Stop the loop if the running total reaches the cap.
+
 ## Examples
 
 ### Example 1: Hyperparameter optimization

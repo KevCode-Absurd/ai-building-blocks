@@ -7,9 +7,11 @@ job: test-and-fix-code
 headline: Slow system investigator
 subhead: A short list of checked causes and a clear incident report when a server, container or app is slow or failing. Instead of running whatever commands come to mind, the skill follows a fixed method from performance expert Brendan Gregg.
 explain: |
-  A short list of checked causes and a clear incident report when a server, container or app is slow or failing. Instead of running whatever commands come to mind, the skill follows a fixed method from performance expert Brendan Gregg.
+  When a server is slow, people often guess and change things. This skill checks one part at a time instead (processor, memory, disk, network) and writes down the proof for each, so you know what to fix. It gives a short list of checked causes and a clear incident report. It follows a fixed method from performance expert Brendan Gregg.
 
   First it uses the USE method: for each resource such as CPU, memory, disk and network, check use, saturation and errors. Then the TSA method looks at where each thread spends its time. Each finding is tied to evidence, such as command output, so you can see why a cause was ruled in or out. The last step writes a root cause report or postmortem. It works best on Linux systems where you can run the commands.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (thecsdoctor) says MIT. Credit goes to thecsdoctor and sickn33.
 when:
   - A server is slow and nobody knows why.
   - Latency jumped after a deploy or a config change.
@@ -32,7 +34,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste the skill text into the chat.
   - "Describe the problem: what is slow, since when, and what changed."
   - Some checks need root access, perf or sysstat. Tracing adds load, so on a live server start with short, read-only checks and ask your ops team first.
-  - Run the commands the AI lists on your server and paste the output back. If your AI can run commands itself, let it, but only for read-only checks.
+  - Run the commands the AI lists on your server and paste the output back. If your AI can run commands itself, make it show you each command first and wait for your yes before it runs it. Allow read-only checks only. Some checks need root access, so do not give it more access than you are happy with.
   - Check the causes it ruled out and the evidence for each one.
   - Approve any fix yourself before it is applied, then ask it to re-measure.
   - "Ask for the report you need: a triage note, root cause report or postmortem."

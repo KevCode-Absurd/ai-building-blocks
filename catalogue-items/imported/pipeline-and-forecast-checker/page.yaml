@@ -12,7 +12,7 @@ subhead: Give it your deals and quota. Get pipeline cover, forecast accuracy and
 explain: |
   Three numbers a sales leader needs: is there enough pipeline to hit quota, how accurate were past forecasts, and what does each sale cost to win. You get them from your own deal data.
 
-  The skill runs scripts on JSON files. The pipeline analyzer measures coverage against quota (healthy is three to four times), stage conversion, sales velocity, deal age beyond twice the usual stage time, and concentration when over 40 percent sits in one deal. The forecast tracker scores accuracy over several periods. The efficiency calculator covers go-to-market cost. Output is plain text or JSON. It needs Python.
+  The skill runs scripts on JSON files. The pipeline analyzer measures coverage against quota (healthy is three to four times), stage conversion, sales velocity, deal age beyond twice the usual stage time, and concentration when over 40 percent sits in one deal. Sales velocity is how fast pipeline turns into revenue. MAPE is the average miss between forecast and actual, as a percent. The forecast tracker scores accuracy over several periods. The efficiency calculator covers go-to-market cost. Output is plain text or JSON. It needs Python.
 when:
   - You must say if next quarter's quota is covered.
   - Forecasts keep missing and you need to measure by how much.
@@ -29,10 +29,10 @@ you_get:
   - Forecast accuracy by period
   - Risk flags for aged or concentrated deals
 how_to_use:
-  - Export your open deals from your CRM or a sheet. You need stage, value, close date, owner and age in days for each deal, plus your quota.
+  - Export your open deals from your CRM or a sheet. You need stage, value, close date, owner and age in days for each deal, plus your quota. The scripts read a JSON file, not a plain list. Ask your AI to convert your export into the layout in the skill: quota, stages, average_cycle_days, and a deals list with id, stage, value, close_date, owner and age_days.
   - Export past forecast periods with the forecast and the actual result for each.
   - In an AI that can run Python, upload the skill folder and the files. Ask it to run the pipeline analyzer, the forecast tracker and the cost calculator.
-  - In a plain chat, paste the skill text and your tables. Ask it to work out the same numbers step by step and show its sums.
+  - In a plain chat, paste the skill text and your tables. Ask it to work out the same numbers step by step and show its sums. Working out forecast error and coverage by hand across many deals is easy to get wrong, so check the totals against your CRM before you act.
   - Read the coverage ratio first, then the flagged deals. Check two or three flags against your CRM before you act on them.
   - Take the forecast accuracy and the aged deals to your next pipeline review.
 not_for:

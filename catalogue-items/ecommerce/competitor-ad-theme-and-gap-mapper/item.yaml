@@ -7,11 +7,17 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: ad_breakdowns
     required: true
+  - type: competitor_set
+    required: false
+  - type: brand_brain
+    required: false
 outputs:
   - type: ad_breakdowns
     required: true
+  - type: brief
+    required: false
 uses: []
 package_files: all
 origin: own

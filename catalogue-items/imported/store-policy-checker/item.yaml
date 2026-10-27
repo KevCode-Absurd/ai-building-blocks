@@ -10,7 +10,7 @@ level: beginner
 inputs:
   - type: web_page
     required: false
-  - type: source_text
+  - type: policy
     required: false
   - type: copy_draft
     required: false

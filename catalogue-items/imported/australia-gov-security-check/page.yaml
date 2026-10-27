@@ -31,6 +31,7 @@ you_get:
   - What assessors will ask for
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill instructions into a new chat. No code or paid tool is needed.
+  - "Before you start, open cyber.gov.au and copy the ISM chapter or control list that matches your system. Paste it in too, so the gap table is built from real text and not from the skill's own summary."
   - "Describe your system, where it is hosted and the data level, such as OFFICIAL: Sensitive. If you skip the level, the AI assumes OFFICIAL: Sensitive."
   - Say your role, such as agency or supplier. Add your current controls and documents if you have them.
   - "Say what you want: a gap table, an authorisation plan, an IRAP checklist or a security document."

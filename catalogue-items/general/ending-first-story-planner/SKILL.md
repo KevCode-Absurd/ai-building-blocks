@@ -48,7 +48,7 @@ The effect in a sentence. The length and why. The tone. The repeating device and
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Page-turner scene drafter](https://useaiblocks.com/skills/page-turner-scene-drafter). It takes the plan.
 - The [Fair escape checker](https://useaiblocks.com/skills/fair-escape-checker). It takes the plan.
-- The [Emotional arc mapper](https://useaiblocks.com/skills/emotional-arc-mapper).
+- The [Story conflict escalation planner](https://useaiblocks.com/skills/rising-cost-ladder-builder). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

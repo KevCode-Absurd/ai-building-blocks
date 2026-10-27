@@ -1,0 +1,39 @@
+slug: me-md-builder
+name: me.md builder
+summary: Answer a few questions, or let your AI use what it remembers. Get one private file that tells any AI who you are.
+category: general
+type: skill
+role: source
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: false
+  - type: document
+    required: false
+outputs:
+  - type: me_file
+    required: true
+uses: []
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-27
+example_pending: true
+needs_mode: manual
+credits:
+  - title: How Claude remembers your project
+    by: Anthropic, Claude Code docs
+    url: https://code.claude.com/docs/en/memory
+    used: Keep the always-loaded file short, specific and grouped under headings, and load the detail only when needed
+  - title: Effective context engineering for AI agents
+    by: Anthropic Applied AI team
+    url: https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents
+    used: Give each task only the smallest set of facts it needs, and point to live sources instead of copying them
+  - title: Custom instructions for ChatGPT
+    by: OpenAI Help Center
+    url: https://help.openai.com/en/articles/8096356-custom-instructions-for-chatgpt
+    used: A short core that fits the custom instructions box
+  - title: Memory FAQ
+    by: OpenAI Help Center
+    url: https://help.openai.com/en/articles/8590148-memory-faq
+    used: Asking before using what the AI remembers, and treating remembered facts as things to check

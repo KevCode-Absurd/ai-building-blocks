@@ -24,6 +24,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
+- **Your customer list** (yours): a customer or order export with dates, amounts and what they bought.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -67,9 +68,9 @@ The frame. The observation day with its log sheet and slots. The exit questions 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Customer buying reasons finder](https://useaiblocks.com/skills/customer-buying-reasons-finder).
 - The [Customer switching journey mapper](https://useaiblocks.com/skills/switch-story-mapper). It takes the plan.
 - The [Customer discovery interview planner](https://useaiblocks.com/skills/customer-discovery-plan). It takes the plan.
+- The [Customer buying reasons finder](https://useaiblocks.com/skills/customer-buying-reasons-finder).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

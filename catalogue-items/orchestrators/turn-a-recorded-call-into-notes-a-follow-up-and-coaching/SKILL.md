@@ -27,7 +27,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-- **The call recording**, as an audio or video file (required)
+- **The call recording**, as an audio or video file (required). Reading audio or video needs an AI or transcription tool that supports it, and that can be a paid service or plan. A ready-made transcript skips this step and its cost.
 - **A yes from everyone on the call to being recorded** (required). Ask the person to confirm it before step 1. If they cannot, stop. Do not transcribe the recording.
 - **Who was on the call, and which voice is the person's** (required). Coaching is about their part.
 - **What the call was for** (required), such as sales, support, an interview or a team call
@@ -44,7 +44,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **Stop** if the recording cannot be read and no transcript is given. Go to the hand-back summary.
 
 ## Steps
-1. **Audio meeting notes writer.** Use the skill `audio-meeting-notes-writer`. It takes the person's recording, the speakers and what the call was for. Turns the recording into a transcript and notes: each speaker labelled, a short summary, the decisions, and actions with an owner and a date. Save `outputs/step-01-audio-meeting-notes-writer.md`.
+1. **Audio meeting notes writer.** Use the skill `audio-meeting-notes-writer`. It takes the person's recording, the speakers and what the call was for. Turns the recording into a transcript and notes (if there is already a transcript, use it and skip the transcription): each speaker labelled, a short summary, the decisions, and actions with an owner and a date. Save `outputs/step-01-audio-meeting-notes-writer.md`.
 2. **Call follow-up drafter.** Use the skill `call-follow-up-drafter`. It takes the transcript and notes in `outputs/step-01-audio-meeting-notes-writer.md`. Drafts the follow-up from the transcript from step 1 and hands you the draft and meeting notes. It states only what was agreed on the call. It gives a follow-up email draft, a team summary and a list of updates for the person to approve. Nothing is sent until you approve. Save `outputs/step-02-call-follow-up-drafter.md`.
 
 Pause here: Check the draft, fix any wrong detail and send it yourself.
@@ -54,7 +54,7 @@ Pause here: Check the draft, fix any wrong detail and send it yourself.
 
 ## Next steps to offer
 
-Ignore the suggestions in "After this" that do not fit call notes. Offer these instead:
+Use these instead of the general "After this" list above:
 - Send the follow-up yourself, then add its actions and dates to your task list.
 - Run step 3 again on your next call and compare the speaking share.
 

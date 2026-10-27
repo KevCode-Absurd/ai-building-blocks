@@ -10,7 +10,7 @@ explain: |-
 
   It builds the plan around Sub-Graphs, so repeated logic lives in one place. It sorts nodes into groups for texturing, lighting, effects and output. It lists only the parameters artists should touch, each with a range and a tooltip. It says when a hand-written HLSL version is worth the effort.
 
-  It follows the Unity Shader Graph Artist profile from Agency Agents. It cannot open Unity or run the Frame Debugger. It gives you the checks to run. The profile's limits, such as texture samples, are starting values. Unity's render code changes between versions, so treat any code as a sketch to test on yours.
+  It follows the Unity Shader Graph Artist profile from Agency Agents, shared under the MIT licence. It cannot open Unity or run the Frame Debugger. It gives you the checks to run. The profile's limits, such as texture samples, are starting values. Unity's render code changes between versions, so treat any code as a sketch to test on yours.
 when:
   - You have a reference for water, dissolve, outline or glow and need to know how to build it in Shader Graph.
   - A shader runs fine on PC but slowly on mobile.

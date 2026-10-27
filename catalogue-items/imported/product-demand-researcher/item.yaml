@@ -8,10 +8,12 @@ role: source
 job: ops
 level: intermediate
 inputs:
-  - type: question
+  - type: idea
     required: true
 outputs:
   - type: voc_reviews
+  - type: customer_needs
+    required: true
 uses: []
 origin: imported
 warnings:

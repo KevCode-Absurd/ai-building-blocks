@@ -22,7 +22,7 @@ not_for:
 you_give:
   - Your project folder with the routes
   - Your test tool preference
-  - Auth method and test accounts
+  - Auth method and test accounts. Keep their passwords and tokens in environment variables or a file your repo ignores, never in the test files you commit
   - Routes to skip (optional)
 you_get:
   - Test files for each route
@@ -32,7 +32,7 @@ you_get:
 how_to_use:
   - Open your AI tool and paste this skill, or upload it with your project folder.
   - Tell it which test tool you use and how sign-in works. Add test accounts and any routes to skip.
-  - Ask it to list your routes first. Check the list against what you expect.
+  - Ask it to list your routes first. The skill's route-finding commands are starting points and were not checked against every framework version. Check the list against your code before you trust the tests.
   - Let it write the test files. Save them in your project and run them with Vitest or Pytest.
   - Run the injection and burst tests only on a test copy of your API, never your live site.
   - Fix any failing test or real bug, then run the suite again.

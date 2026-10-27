@@ -30,8 +30,9 @@ address spaces in MATLAB using the Industrial Communication Toolbox.
 ## Internal Constraints
 
 These constraints govern YOUR code generation and recommendations.
-Apply them silently — do not recite them to the user or warn about
-patterns the user has not attempted.
+Apply them silently — do not recite them to the user. Do warn the user
+before any step that lowers security (trusting a certificate by hand,
+security mode None) or touches live equipment (calling a method).
 
 1. **`connect` has exactly three valid signatures — no others exist:**
    - `connect(uaClient)` — anonymous

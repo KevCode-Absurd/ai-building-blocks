@@ -8,10 +8,12 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: spreadsheet
+  - type: lead_list
     required: true
 outputs:
   - type: spreadsheet
+    required: true
+  - type: lead_list
     required: true
 uses: []
 origin: imported

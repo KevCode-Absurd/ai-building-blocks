@@ -7,9 +7,9 @@ job: run-your-store
 headline: Old discount code cleaner
 subhead: Give it your Shopify store domain. It lists codes that have expired or were never used. You review the list first, and it deletes only after you say so.
 explain: |
-  A tidy list of discount codes in your Shopify store that are expired, never used or near-duplicates, with the option to switch them off or remove them. Old codes pile up after campaigns and make the admin hard to read.
+  A tidy list of discount codes in your Shopify store that are expired or have never been used, with the option to delete the ones you approve. Old codes pile up after campaigns and make the admin hard to read.
 
-  The skill connects to your store through the Shopify command line and reads all discounts. It flags codes past their end date, codes with zero redemptions, and families of codes with repeating prefixes. You choose what to flag and what to act on. By default it only reports, and it changes things only after you confirm. Deleting is permanent and cannot be undone, so deactivating is the safer first step. It needs a signed-in Shopify session with discount access.
+  The skill connects to your store through the Shopify command line and reads all discounts. It flags codes past their end date and codes with zero redemptions that are older than the age you set. It does not look for duplicate codes. You choose what to flag and what to act on. By default it only reports, and it deletes only after you confirm the list and confirm that no flagged code sits in an unsent campaign. Deleting is permanent and cannot be undone. This skill cannot switch codes off, so for a softer first step, turn them off by hand in your Shopify admin. It needs a signed-in Shopify session with discount access.
 when:
   - Your discount list has hundreds of codes and you cannot tell which are live.
   - A campaign ended and you want its old codes gone.

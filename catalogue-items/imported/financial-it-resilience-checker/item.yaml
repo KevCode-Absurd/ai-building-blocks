@@ -8,8 +8,10 @@ role: check
 job: ops
 level: expert
 inputs:
-  - type: brief
+  - type: question
     required: true
+  - type: contract
+    required: false
 outputs:
   - type: audit_report
   - type: plan

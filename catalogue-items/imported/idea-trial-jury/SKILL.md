@@ -15,6 +15,9 @@ license_source: "https://github.com/alexyc9381/court-skill/blob/main/LICENSE"
 argument-hint: "[--jury N | --quick] [--seed S] <the idea, plan or claim>"
 ---
 
+
+> Licence note (added by AI Blocks): the written text of this copy is shared under CC BY-4.0 (see `LICENSE-CONTENT`). The `license: MIT` line in the header above is the original author's own declaration for their repo. Keep the credit to the author either way.
+
 # court
 
 For when Claude agrees with everything you say. Instead of one polite answer, the idea goes on trial:

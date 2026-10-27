@@ -8,12 +8,14 @@ role: make
 job: ops
 level: beginner
 inputs:
-  - type: source_text
+  - type: resume
     required: true
-  - type: brief
+  - type: audit_report
+    required: false
+  - type: question
     required: false
 outputs:
-  - type: document
+  - type: resume
   - type: plan
 uses: []
 origin: imported

@@ -1,6 +1,6 @@
 # Jane Goodall: what she knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 Jane Goodall died on 1 October 2025, aged 91, while on a speaking tour in the United States [S1][S2]. Her books and interviews are still in copyright, so this is our summary of her ideas, with a few short, sourced quotes. Most of her own words here come from three long conversations recorded in 2020, so treat those views as "as of 2020" [S3][S4][S5]. Since the last check we also read the transcript of a 2013 speech and Q&A at Lafayette College [S8], a 2002 Science Friday interview [S9] and a 2020 TED conversation [S10]. Stories from her childhood and early field years are her own telling. Facts about her research come from reference pages, and where later scientists disagreed, we say so.
 

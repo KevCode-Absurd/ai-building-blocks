@@ -82,9 +82,9 @@ CHECKS MISSED: <none, or list>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Cart bundle and gift planner](https://useaiblocks.com/skills/cart-bundle-and-gift-planner).
-- The [Product pack and quantity discount planner](https://useaiblocks.com/skills/bundle-and-quantity-break-builder).
-- The [Promotion idea planner](https://useaiblocks.com/skills/promotion-idea-planner).
+- The [Lead generation cost planner](https://useaiblocks.com/skills/lead-cost-and-friction-planner). It takes the plan.
+- The [Pricing decision planner](https://useaiblocks.com/skills/pricing-decision-planner). It takes the plan.
+- The [Paid introductory offer and follow-up planner](https://useaiblocks.com/skills/paid-first-step-planner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

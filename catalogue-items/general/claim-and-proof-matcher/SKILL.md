@@ -7,6 +7,8 @@ description: Use when you have ad or page copy and want every claim checked agai
 
 Readers doubt claims, and what a line makes them think can be bigger than what it says. A claim with real proof beside it gets believed, and one without costs trust across the page. This skill lists every claim, matches it to the proof you hold, and tells you where the claim is bigger than its proof. It fixes by shrinking the claim, adding real proof or moving the proof, and never by inventing evidence. To plan an offer from the results, use "Offer checklist reviewer".
 
+**When not to use it:** it does not give legal or platform sign-off (ask a compliance reviewer), it does not plan your offer (use "Offer checklist reviewer"), and with no proof yet every claim will come back as a gap, so collect results, reviews and numbers first.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 This skill runs on its own. What's below makes the result better, but none of it is required.

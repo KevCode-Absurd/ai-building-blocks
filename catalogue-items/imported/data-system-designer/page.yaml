@@ -10,6 +10,8 @@ explain: |
   A reasoned set of choices for how your app stores, copies, splits and protects its data, with the trade-off behind each. It is based on the ideas in the book Designing Data-Intensive Applications.
 
   You describe what you store, how it is read and written, and what must never go wrong. The skill covers seven areas: data models, storage engines, copies across servers, splitting data across machines, transactions and isolation, derived data such as caches and search, and failure handling. It scores your design from 0 to 10 using seven yes or no checks (each pass is worth about 1.4 points), shows which failed, such as unknown isolation level or an untested failover, and lists what to fix to reach 10.
+
+  The score is a judgement against those seven checks, based on the answers you give. It is not a benchmark or a measurement of your system. Test any pick on your own data and have an experienced engineer review it before you rely on it. This is Wondel.ai's Designing Data-Intensive Applications skill, shared under the MIT licence.
 when:
   - You are choosing between SQL and NoSQL for a new product.
   - You worry about replication lag or hot spots in your database.
@@ -31,11 +33,12 @@ you_get:
   - Fix list to improve
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
-  - Write your brief first as a short list: the data you store, your top three read and write patterns, and the one failure that must never happen.
-  - Describe what your app stores, how it is read and written, and what must never go wrong.
-  - Add your current design if you have one, and your uptime needs.
+  - Write your brief first as a short list: the data you store, your top three read and write patterns, and the one failure that must never happen. Add your uptime needs and your current design if you have one.
+  - Give your AI the brief. It asks for anything missing, such as how much you read compared with write, or what your database does by default.
+  - It then marks each of the seven checks pass or fail, with one line of evidence from your brief.
+  - It gives its picks for storage, copies, splitting and consistency, with the trade-off for each.
   - Read the score and the failed checks first.
-  - Work through the fix list, starting with the checks that failed.
+  - Work through the fix list, starting with the checks that failed. Ask your AI to score again after each change.
 output_sample:
   input:
     - What your app stores, in plain words
@@ -50,8 +53,8 @@ output_sample:
     - name: Isolation and consistency
       contains: The transaction isolation level and consistency choices that suit your needs, with the trade-off for each.
     - name: Score out of 10
-      contains: A score from seven yes or no checks on data model, storage, copies, splitting, isolation, derived data and failures.
+      contains: A score from 0 to 10 from seven yes or no checks on data model, storage, copies, splitting, isolation, derived data and failures. About 1.4 points for each pass, shown as a table of pass or fail with one line of evidence for each check.
     - name: Failed checks
-      contains: Which checks failed, such as an unknown isolation level or an untested failover.
+      contains: Each failed check in one or two lines, such as an unknown isolation level or an untested failover, with why it matters.
     - name: Fix list
-      contains: The changes needed to reach 10 out of 10.
+      contains: A short numbered list of changes, in order, needed to reach 10 out of 10.

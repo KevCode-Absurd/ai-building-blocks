@@ -31,7 +31,8 @@ you_get:
   - A ranked list of top posts
   - A short summary of what worked
 how_to_use:
-  - "Check setup first: you need Node.js 20.6 or newer, the mcpc tool and a .env file with your Apify token."
+  - "Check setup first: you need Node.js 20.6 or newer, the mcpc tool, a .env file with your Apify token, and the run_actor.js script in the skill folder."
+  - Before any run, confirm two things. You have read each platform's terms, because scraping may break them. And you have checked your Apify plan and usage limit, because each run is billed. Stop if you have not.
   - Open an AI that can run code and add this skill.
   - Say which public accounts, posts or hashtags to check.
   - Pick quick answer, CSV or JSON, and how many results you want.

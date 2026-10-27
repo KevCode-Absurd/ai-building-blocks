@@ -31,11 +31,12 @@ you_get:
   - Dock assignment rules
   - Handling time and cost targets
 how_to_use:
+  - Before you start, gather your lane volumes (pallets or cases a day, in and out), your number of dock doors, the size of your staging area and your time window from arrival to departure.
   - Open Claude, ChatGPT or Gemini and paste in the skill text. The plan works as prose. The skill text also holds Python examples that need pandas, numpy, pulp and matplotlib. You can skip the code and ask for the plan in words.
   - Describe your products, case or pallet size, and inbound and outbound volumes.
   - Add your dock doors, staging space, time window and any temperature or inspection needs.
   - Answer any questions your AI asks. Say so if you do not know a figure.
-  - Check the numbers in the plan against your own figures before you act on it. Sample figures in the skill are placeholders.
+  - Check the numbers in the plan against your own figures before you act on it. Sample figures in the skill, such as pallets per door and space per pallet, are placeholders. Swap in your own door throughput and pallet footprint. The result has a type pick, a door assignment table, a staging summary and handling rules.
   - Take the dock assignment rules to your yard or warehouse system team to set up.
 next: [warehouse-layout-planner, warehouse-slot-assigner]
 output_sample:

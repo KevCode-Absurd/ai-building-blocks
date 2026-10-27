@@ -6,7 +6,7 @@ thinking: medium
 thinking_why: "It follows three checks and a score sheet, but needs sound judgment on your numbers."
 
 headline: "New product line checker"
-subhead: Name a product you want to add to your store, with its price, margin and what your buyers already own. It labels the product CAC or LTV, scores it on three checks out of 100, and gives go or no-go. You also get a capped test plan with kill rules.
+subhead: Name a product you want to add to your store, with its price, margin and what your buyers already own. It labels the product CAC or LTV, scores it on three checks out of 100, and gives GO, TEST FIRST or NO-GO. You also get a capped test plan with kill rules.
 
 explain: |
   Adding a product is a bet. Some new products win new customers with ads. Others only sell to people who already bought from you. Mixing the two up is how stores waste ad money on a product that no cold buyer wants.
@@ -104,7 +104,7 @@ output_shape: |
   KILL RULE: <what ends the test; no rescue>
 
   TRACK: <share of revenue from new lines; returning-customer revenue>
-  NOT CHECKED: <...>
+  CHECKS MISSED: <list, or none>
   MISSING: <price | margin | buyer data | cash cap>
 
 tweaks:

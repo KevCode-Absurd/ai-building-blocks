@@ -44,7 +44,8 @@ output_sample:
     - Your brand file and buyer notes (optional)
   prerequisites:
     - An AI that can read the handoff folder, such as Claude Code or a Claude Project
-    - An image tool to make the pictures yourself when the workflow pauses
+    - An image tool to make the pictures yourself when the workflow pauses. Free plans have tight limits, and some services are paid.
+    - A small ad budget for the picture test, an amount you can afford to lose
   output:
     - name: Flaw-first ad
       contains: Your true weaknesses, the one buyers see, a flat and a plain version, the ad copy and hooks.

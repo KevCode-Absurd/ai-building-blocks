@@ -48,8 +48,8 @@ The frame used. The twelve sentences, grouped by speaker. The being list and the
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Roles and long-term goals mapper](https://useaiblocks.com/skills/roles-and-goals-mapper). It takes the shortlist.
-- The [Personal goal reflection coach](https://useaiblocks.com/skills/personal-goal-reflection-coach).
 - The [Root cause finder](https://useaiblocks.com/skills/root-cause-finder). It takes the shortlist.
+- The [Vendor comparison writer](https://useaiblocks.com/skills/vendor-comparison-writer). It takes the shortlist.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

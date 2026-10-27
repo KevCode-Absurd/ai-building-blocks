@@ -9,6 +9,7 @@ level: intermediate
 inputs:
   - {type: spreadsheet, required: true}
   - {type: codebase, required: false}
+  - {type: question, required: true}
 outputs:
   - {type: audit_report}
   - {type: plan}

@@ -100,7 +100,7 @@ Your branch has a lovely building and a flat sign that says "Join Today." He wou
 
 #### Your life and career
 
-He came to advertising late, at about 36, after being a Navy pilot. He would tell you it is not too late to switch. He ran a small shop from an old firehouse and turned away work so he could keep thinking. Stay small enough to think. Fill your days with people from outside your field, as he did with writers and scientists. Take the work that interests you and refuse the work that bores you. He died young, at 52. Beyond the record, he never gave career advice in our sources, but this is the shape of how he lived.
+He came to advertising late, at about 36, after being a Navy pilot [S3]. He ran a small San Francisco agency from an old firehouse, with a staff under 13 [S3]. [beyond the record] Applying that: it is not too late to switch. He turned away work to stay small [S3][S8], so stay small enough to think. Fill your days with people from outside your field, as he did with writers and scientists. Take the work that interests you and refuse the work that bores you. He died in 1969 [S3]. Our sources hold no career advice from him; the lines above are our reading of how he lived.
 
 ### What he'd push back on
 

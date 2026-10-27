@@ -16,7 +16,9 @@ Applies bulk tag changes (add, remove, or both) to customers selected by a query
 
 ## Prerequisites
 - Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_customers,write_customers`
+- If that sign-in command is not found, check the Shopify CLI docs for the current one that gives these scopes.
 - API scopes: `read_customers`, `write_customers`
+- Customer names and emails are protected customer data. If the query is refused or emails come back empty, ask the store owner to approve protected customer data access in Shopify's app settings.
 
 ## Parameters
 
@@ -183,6 +185,7 @@ The `status` column reports `updated`, `noop`, or `error: <message>`.
 - Prefer `mode: merge` (the default) for almost all use cases — `mode: replace` is appropriate only when fully resetting a customer's tag taxonomy and you have an audited backup of prior tags.
 - Tags are case-sensitive: `VIP` and `vip` are distinct in Shopify. Standardize casing in your taxonomy.
 - For ongoing operational segments, prefer date-stamped tag names (e.g., `cohort-2026-Q2`) so historical cohorts remain identifiable as new tags accumulate.
-- Pair with `vip-customer-identifier` or `customer-spend-tier-tagger` to feed segment tags from analytics outputs into the customer record.
+- Pair with `customer-spend-tier-tagger` or `customer-segment-builder` to feed segment tags from analytics outputs into the customer record.
+- To undo a `merge` run, run it again with the added tags removed and the removed tags added back. A `replace` run can only be undone from the `previous_tags` column of the CSV, so keep that file.
 - Use `remove_tags` as the cleanup pass after a campaign — leaving stale campaign tags clutters segmentation in marketing tools.
 - When `customer_ids` is supplied directly (e.g., from another skill's CSV), the run is fully deterministic — no filter ambiguity.

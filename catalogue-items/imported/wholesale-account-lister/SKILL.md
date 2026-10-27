@@ -16,7 +16,7 @@ Queries all B2B company accounts and their associated locations, price lists, an
 
 ## Prerequisites
 - Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_customers`
-- API scopes: `read_customers`
+- API scopes: `read_customers`. This is the scope the skill was written for. Before the first run, check the current Shopify Admin API docs for the `companies` and `companyLocations` queries at your `api_version`. If they name a different or extra scope, use that one in the auth command above.
 - Store must be on Shopify Plus with B2B enabled
 
 ## Parameters
@@ -147,7 +147,7 @@ B2B COMPANY OVERVIEW
 
   Company: <name>
     Locations: <n>  |  Last order: <date>
-    Payment terms: Net 30
+    Payment terms: <terms name, or none>
   Output: b2b_companies_<date>.csv
 ══════════════════════════════════════════════
 ```
@@ -167,6 +167,8 @@ For `format: json`, emit:
 ## Output Format
 CSV file `b2b_companies_<YYYY-MM-DD>.csv` with columns:
 `company_id`, `company_name`, `locations_count`, `contacts_count`, `last_order_date`, `last_order_value`, `currency`, `payment_terms`, `has_catalog`
+
+A company with no orders still gets a row. Its `last_order_date`, `last_order_value` and `currency` are left empty.
 
 ## Error Handling
 | Error | Cause | Recovery |

@@ -30,6 +30,8 @@ Comprehensive guide to using Meta's AudioCraft for text-to-music and text-to-aud
 - **Stereo support**: Full stereo audio generation
 - **Style conditioning**: MusicGen-Style for reference-based generation
 
+**Licence check:** the skill text is MIT, but the MusicGen and AudioGen model weights have their own licence and may be non-commercial only. Check the licence of the code and the weights before any paid or commercial use.
+
 **Use alternatives instead:**
 - **Stable Audio**: For longer commercial music generation
 - **Bark**: For text-to-speech with music/sound effects

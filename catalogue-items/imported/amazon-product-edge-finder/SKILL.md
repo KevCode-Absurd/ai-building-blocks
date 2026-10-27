@@ -74,17 +74,17 @@ python3 scripts/analyzer.py --demo
 {
   "your_product": {
     "asin": "B08XXXXXX1",
-    "title": "Wireless Earbuds Pro",
-    "price": 49.99,
-    "rating": 4.2,
-    "features": ["Bluetooth 5.0", "30h battery", "IPX5"]
+    "title": "[YOUR PRODUCT TITLE]",
+    "price": 0.00,
+    "rating": 0.0,
+    "features": ["[FEATURE 1]", "[FEATURE 2]", "[FEATURE 3]"]
   },
   "competitors": [
     {
       "asin": "B08XXXXXX2",
-      "title": "Competitor Earbuds A",
-      "price": 39.99,
-      "rating": 4.0
+      "title": "[RIVAL PRODUCT TITLE]",
+      "price": 0.00,
+      "rating": 0.0
     }
   ],
   "negative_reviews": [...],
@@ -94,62 +94,61 @@ python3 scripts/analyzer.py --demo
 
 ## Output Example
 
-This is made-up sample output. The impact figures (such as +15% CVR) are illustrations, not predictions. Do not promise them.
+This is made-up sample output. Every name, number and price below is a placeholder. Fill them from the user's own data only. Impact figures are guesses to test, never predictions. Do not promise them.
 
 ```
 🎯 Product Differentiation Report
 
-Product: Wireless Earbuds Pro
-Category: Electronics
-Competitors Analyzed: 3
+Product: [YOUR PRODUCT]
+Category: [CATEGORY]
+Competitors Analyzed: [COUNT]
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 📊 COMPETITOR COMPARISON MATRIX
 
-Feature         | You  | Comp A | Comp B | Comp C
+Feature         | You     | Comp A  | Comp B  | Comp C
 ─────────────────────────────────────────────────
-Bluetooth       | 5.0  | 5.0    | 4.2    | 5.0
-Battery Life    | 30h  | 24h    | 20h    | 28h
-Water Resist    | IPX5 | IPX4   | None   | IPX5
-Noise Cancel    | ❌   | ❌     | ❌     | ✅
-Price           | $50  | $40    | $30    | $70
+[FEATURE 1]     | [VALUE] | [VALUE] | [VALUE] | [VALUE]
+[FEATURE 2]     | [VALUE] | [VALUE] | [VALUE] | [VALUE]
+[FEATURE 3]     | [VALUE] | [VALUE] | [VALUE] | [VALUE]
+Price           | [PRICE] | [PRICE] | [PRICE] | [PRICE]
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 😤 TOP PAIN POINTS (from competitor reviews)
 
-1. 🔴 Battery dies quickly (mentioned 45x)
-2. 🔴 Poor Bluetooth connection (mentioned 32x)
-3. 🟡 Uncomfortable fit (mentioned 28x)
-4. 🟡 Case quality issues (mentioned 15x)
+1. 🔴 [COMPLAINT 1] (mentioned [COUNT]x)
+2. 🔴 [COMPLAINT 2] (mentioned [COUNT]x)
+3. 🟡 [COMPLAINT 3] (mentioned [COUNT]x)
+4. 🟡 [COMPLAINT 4] (mentioned [COUNT]x)
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ✨ YOUR UNIQUE SELLING POINTS
 
-1. ⭐ Superior battery life (30h vs avg 24h)
-2. ⭐ Better water resistance (IPX5)
-3. ⭐ Stable connection (highlighted in reviews)
+1. ⭐ [STRENGTH 1] ([YOUR VALUE] vs rival average [VALUE])
+2. ⭐ [STRENGTH 2] ([YOUR VALUE])
+3. ⭐ [STRENGTH 3] (praised in your reviews)
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 🎯 DIFFERENTIATION OPPORTUNITIES
 
-1. Add noise cancellation (gap in mid-range)
-2. Improve comfort messaging
-3. Highlight battery advantage in listing
+1. [FEATURE GAP rivals leave open]
+2. [MESSAGING GAP in your listing]
+3. [STRENGTH to put first in your listing]
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 📋 ACTION PLAN
 
-Priority | Action                    | Impact
+Priority | Action                    | Effect to test
 ─────────────────────────────────────────────
-HIGH     | Update listing bullets    | +15% CVR
-HIGH     | Add battery comparison    | +10% CVR
-MEDIUM   | Request comfort reviews   | +5% rating
-LOW      | Consider ANC version      | New SKU
+HIGH     | [ACTION 1]                | [EFFECT TO TEST, not a promise]
+HIGH     | [ACTION 2]                | [EFFECT TO TEST, not a promise]
+MEDIUM   | [ACTION 3]                | [EFFECT TO TEST, not a promise]
+LOW      | [ACTION 4]                | [EFFECT TO TEST, not a promise]
 ```
 
 ## Strategy Framework

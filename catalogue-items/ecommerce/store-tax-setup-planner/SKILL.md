@@ -31,8 +31,8 @@ How to start:
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
-- **Shopify:** It calculates sales tax from your store location and the buyer's address, and has its own settings under taxes and duties.
-- **WooCommerce:** Tax classes and rate rows are built in. An automated tax plugin can handle many states.
+- **Shopify:** Paid plan needed. It calculates sales tax from your store location and the buyer's address, and has its own settings under taxes and duties.
+- **WooCommerce:** Free to install, but you host it yourself. Tax classes and rate rows are built in. An automated tax plugin can handle many states, and most of those plugins are paid.
 - **Any good chat AI:** Any current chat AI can plan the settings and write the tests.
 <!-- /needs -->
 
@@ -49,7 +49,7 @@ Limits: the sources teach how to enter rates, not whether you owe tax in a place
 
 ## Steps
 1. **Turn taxes on.** In the store's general settings, enable tax rates and calculations first. The tax tab only appears after you save.
-2. **Choose how prices are entered.** The WooCommerce masterclass default is prices entered without tax, so the shop shows 100 and checkout adds tax for the buyer's location. The final price is the same either way. Only the display differs.
+2. **Choose how prices are entered.** Decide once, then keep steps 3 and 4 in line with it. A store that shows prices without tax (the US norm) enters prices without tax and shows them without tax. A store that shows tax-inclusive prices (common in the EU and UK) enters them with tax and shows them with tax. The WooCommerce masterclass default is prices entered without tax, so the shop shows 100 and checkout adds tax for the buyer's location. The final price is the same either way. Only the display differs.
 3. **Flag the mixed setting.** One source entered 1,000 as tax-inclusive while displaying it exclusive, and the shop showed 833 at a 20 percent rate. The host called that a bad setting. Entered and displayed must match.
 4. **Pick inclusive or exclusive.** For a store where every visible price includes tax (the EU style one source copies), set entered inclusive, shop display inclusive, and cart and checkout display inclusive. Otherwise stay exclusive, which is the US norm. Tax-inclusive pricing is often expected in places such as Japan and much of the EU; confirm the rule for your market with an accountant. On Shopify, one source's example is 100 tax-included in the UK but 90.91 plus tax in the US, set per market.
 5. **Set the tax base.** Keep "calculate tax based on the customer's shipping address". Both WooCommerce sources use it. One speaker says about ten US states are origin-based (for example California) and most are destination-based. That is one speaker's summary, so say the owner must confirm theirs with an adviser or an official source before relying on it.
@@ -60,7 +60,7 @@ Limits: the sources teach how to enter rates, not whether you owe tax in a place
 10. **Shipping tax.** Turn it on only if your state or country taxes shipping, or you sell to companies.
 11. **Shopify path.** Settings, then taxes and duties. Pick your country, collect in the right state or province, and add your sales tax ID if you have one. Then set up duties and import taxes for your markets so buyers do not pay on delivery, and say so in your shipping policy. Use automatic tax calculation, and consult a professional.
 12. **Product settings.** On every product set tax status to taxable and choose the class. Variations can inherit the class from the parent.
-13. **Test.** In the cart, use the default customer location first, then change the shipping address to another state and country. In the demo, moving the address from California to Canada changed the tax from 166 to 250 on a 1,000 item. Give the owner addresses and the total to expect each time, and have them confirm it.
+13. **Test.** In the cart, use the default customer location first, then change the shipping address to another state and country. In the demo, moving the address from California to Canada changed the tax amount. Give the owner addresses and the total to expect each time, and have them confirm it.
 14. **Manual or automated.** Manual rows for every state are a lot of work, and both sources say so. A paid automated tax plugin exists. Use it when you sell in many states. Stay manual when you sell in one or two.
 15. **Records and advice.** Keep records of tax registrations and talk to a local tax professional, because rules change often. End with a short list of questions for them: where the store must register, whether shipping and digital goods are taxed in each place, and how to file.
 

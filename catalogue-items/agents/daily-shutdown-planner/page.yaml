@@ -147,7 +147,7 @@ improve:
 works_best_with:
   tools:
     - name: Claude Code
-      why: It can read the task file and calendar export, keep the daily files and log, and run at shutdown time.
+      why: It can read the task file and calendar export and keep the daily files and log. You start it at shutdown time. It does not run on a timer.
     - name: Any good chat AI
       why: Paste the agent, today's list and tomorrow's calendar. Keep the log in a note.
   inputs:

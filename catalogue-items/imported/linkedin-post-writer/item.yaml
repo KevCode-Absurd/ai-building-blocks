@@ -10,6 +10,10 @@ level: beginner
 inputs:
   - type: brief
     required: true
+  - type: source_text
+    required: false
+  - type: copy_draft
+    required: false
 outputs:
   - type: copy_draft
 uses: []

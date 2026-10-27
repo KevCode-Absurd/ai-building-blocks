@@ -189,6 +189,7 @@ import {
   Icon,
 } from "@shopify/ui-extensions-react/checkout";
 
+// Also add: import { useState } from "react";
 function Extension() {
   const [checked, setChecked] = useState(false);
   const [note, setNote] = useState("");
@@ -224,9 +225,11 @@ function Extension() {
 ### Custom Fields with Metafields
 
 ```jsx
+import { useState } from "react";
 import {
   useApplyMetafieldsChange,
   useMetafield,
+  TextField,
 } from "@shopify/ui-extensions-react/checkout";
 
 function GiftMessage() {
@@ -255,8 +258,14 @@ function GiftMessage() {
 Block checkout progression with validation:
 
 ```jsx
-import { useBuyerJourneyIntercept } from "@shopify/ui-extensions-react/checkout";
+import { useState } from "react";
+import {
+  useBuyerJourneyIntercept,
+  Checkbox,
+} from "@shopify/ui-extensions-react/checkout";
 
+// NOTE: this is only a tick box the buyer fills in. It is NOT a legal age check.
+// Use a proper age verification service where the law requires one.
 function AgeVerification() {
   const [verified, setVerified] = useState(false);
 
@@ -310,6 +319,12 @@ import {
   TextContainer,
 } from "@shopify/post-purchase-ui-extensions-react";
 
+// STUB: replace this with a call to your own app that returns the offer product,
+// for example { variantId, title, price, imageUrl }. It does not exist until you write it.
+async function fetchUpsellProduct() {
+  throw new Error("Write fetchUpsellProduct: return your own upsell product here");
+}
+
 extend("Checkout::PostPurchase::ShouldRender", async ({ storage }) => {
   // Decide whether to show post-purchase
   const upsellProduct = await fetchUpsellProduct();
@@ -331,6 +346,8 @@ function App() {
           type: "add_variant",
           variantId: upsellProduct.variantId,
           quantity: 1,
+          // To really offer a discount, add it here (see Shopify's post-purchase docs).
+          // Without it the buyer pays full price, so do not show a discount in the text.
         },
       ],
     });
@@ -346,7 +363,7 @@ function App() {
   return (
     <BlockStack spacing="loose">
       <CalloutBanner title="Special Offer!">
-        Add this item to your order at 20% off
+        Add this item to your order [YOUR OFFER, only if you apply it in the changeset]
       </CalloutBanner>
 
       <Layout
@@ -361,7 +378,7 @@ function App() {
         <BlockStack spacing="tight">
           <Heading>{upsellProduct.title}</Heading>
           <TextContainer>
-            <Text size="medium">${upsellProduct.price} (20% off)</Text>
+            <Text size="medium">${upsellProduct.price}</Text>
           </TextContainer>
           <Button onPress={handleAccept}>Add to Order</Button>
           <Button onPress={handleDecline} plain>

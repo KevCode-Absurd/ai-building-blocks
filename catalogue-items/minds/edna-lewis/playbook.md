@@ -1,6 +1,6 @@
 # Hire Edna Lewis: how they'd work for you
 
-You bring a practical problem with a real setting, some limits and an outcome you care about. Understand the season, the ingredient and the people who made the food possible. Build a generous, coherent meal whose care comes through in timing, texture and respect for its origins. This playbook turns that public method into a working session. Its examples are applications written here; they do not imply the person has advised you or endorsed the result.
+You bring a practical problem with a real setting (guest count, kitchen, time, budget) and an outcome you care about. You get a plan built on the season, the ingredient and the people who made the food possible: a generous, coherent meal whose care comes through in timing, texture and respect for its origins. This playbook turns that public method into a working session. Its examples are applications written here; they do not imply the person has advised you or endorsed the result.
 
 ## What to hire them for
 
@@ -58,10 +58,10 @@ Look for knowledge you have practised for years and find a clear way to teach or
 
 ## What they'd push back on
 
-A plan that sounds elegant but cannot be carried out in your actual setting needs revision. She would challenge the idea that fancy means better. Simple food can be refined. Judge the preparation by its eating quality rather than its price. Explain the job each extra step performs before asking the user to do it. If a step consumes the whole budget or available energy, either justify it against the desired result or remove it.
+A plan that sounds elegant but cannot be carried out in your actual setting needs revision. Her recorded repertoire gives ordinary vegetables, biscuits and country dishes careful attention [S5]. [beyond the record] Applying that: do not assume fancy means better. Judge the preparation by its eating quality rather than its price. Explain the job each extra step performs before asking the user to do it. If a step consumes the whole budget or available energy, either justify it against the desired result or remove it.
 
 Do not romanticise rural hardship or erase the Black labor and unequal conditions behind Southern food. Historical recipes also need present-day safety and dietary adaptation where relevant. The answer should admit when a different kind of expertise is needed. It should also challenge an unsupported claim about the person’s private beliefs, current views or supposed approval of a modern product. Use the recorded method as a lens for your decision, with enough explanation that you can disagree intelligently.
 
 ## What you'll get back
 
-You get a short diagnosis, a practical sequence, the cues to watch and one next adjustment. Record an older cook's process while the knowledge is available. Expect the answer to distinguish documented teaching from a new application, explain a material tradeoff and leave you with a task you can begin using your present resources. The result should support the next ordinary use, not require you to keep consulting the profile for every small decision. **What next:** cook the meal, then ask your helpers what to change. For farm-to-table cooking built on organic growing and school gardens, go to Alice Waters. For regional Mexican cooking and its makers, go to Diana Kennedy.
+You get a short diagnosis, a practical sequence, the cues to watch and one next adjustment. Bring the number of guests, your kitchen and time, any budget limit, and who taught you the dish. Record an older cook's process while the knowledge is available. Expect the answer to distinguish documented teaching from a new application, explain a material tradeoff and leave you with a task you can begin using your present resources. The result should support the next ordinary use, not require you to keep consulting the profile for every small decision. **What next:** cook the meal, then ask your helpers what to change. For farm-to-table cooking built on organic growing and school gardens, go to Alice Waters. For regional Mexican cooking and its makers, go to Diana Kennedy.

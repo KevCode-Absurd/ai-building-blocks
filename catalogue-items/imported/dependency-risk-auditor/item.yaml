@@ -12,6 +12,7 @@ inputs:
     required: true
 outputs:
   - type: security_report
+  - type: plan
 uses: []
 origin: imported
 source:

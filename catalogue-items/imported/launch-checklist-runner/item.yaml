@@ -8,8 +8,10 @@ role: check
 job: ops
 level: intermediate
 inputs:
-  - type: codebase
+  - type: question
     required: true
+  - type: codebase
+    required: false
 outputs:
   - type: plan
 uses: []

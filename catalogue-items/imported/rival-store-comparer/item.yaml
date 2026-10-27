@@ -8,8 +8,10 @@ role: compress
 job: ops
 level: intermediate
 inputs:
-  - type: product_data
+  - type: competitor_set
     required: true
+  - type: product_data
+    required: false
 outputs:
   - type: competitor_set
 uses: []

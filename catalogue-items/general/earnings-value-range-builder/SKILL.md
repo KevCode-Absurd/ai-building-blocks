@@ -29,6 +29,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+The "audit report" named above is the result of the Normal earnings estimator: the earnings range below. No long source text is needed; ignore a request for one.
 
 - **The normal earnings range** from "Normal earnings estimator" (required): low, normal and high earnings per share.
 - **The share price and share count** (required): or the price asked for a private business.

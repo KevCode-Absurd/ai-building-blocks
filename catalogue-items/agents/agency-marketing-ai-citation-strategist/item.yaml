@@ -8,9 +8,15 @@ role: make
 job: organic
 level: intermediate
 inputs:
-  - type: source_text
+  - type: business_profile
     required: true
+  - type: competitor_set
+    required: false
+  - type: source_text
+    required: false
   - type: web_page
+    required: false
+  - type: audit_report
     required: false
 outputs:
   - type: audit_report

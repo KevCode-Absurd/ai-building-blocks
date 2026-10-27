@@ -23,7 +23,7 @@ Ask the user to share:
 2. **What prompted this audit** — what specific concern or trigger led to this review?
 3. **Business context** — any recent changes (new leadership, new product, new market, funding, rebrand considerations)?
 4. **Internal perception** — how does the internal team describe the brand?
-5. **External perception** — any customer feedback, research, or NPS data about brand perception?
+5. **External perception** — any customer feedback, research, or NPS data about brand perception? If you have a brand perception audit report, share it here.
 6. **Key competitors** — who should the brand be benchmarked against?
 
 ---

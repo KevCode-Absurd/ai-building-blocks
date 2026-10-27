@@ -18,6 +18,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Product data** (yours): one product's facts: price, variants, ingredients or materials, how it is used, photos by job.
 - **Store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
+- **Ad breakdowns** (yours): what each reference ad does: opening, angle, format, offer and proof.
 - **Reference ads** (yours): ads you like and want to learn from, as screenshots or links.
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 
@@ -79,6 +80,7 @@ You list them as steps for the owner to approve.
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Amazon product viability scorer](https://useaiblocks.com/skills/amazon-product-viability-scorer). It takes the idea and shortlist.
 - The [Product page section planner](https://useaiblocks.com/skills/product-page-section-planner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

@@ -9,7 +9,9 @@ job: ops
 level: advanced
 inputs:
   - type: codebase
-    required: true
+    required: false
+  - type: spreadsheet
+    required: false
 outputs:
   - type: audit_report
 uses: []

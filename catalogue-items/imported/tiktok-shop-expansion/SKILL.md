@@ -60,33 +60,33 @@ Before any analysis, ask the user for: the product list with prices and weights,
 ### Step 1: Market Research & Prioritization
 *Strategic market selection and opportunity analysis*
 
-Analyze expansion opportunities:
-- Research TikTok Shop availability and market maturity by country
-- Evaluate market size, competition levels, and consumer behavior
-- Assess regulatory requirements and barriers to entry
-- Calculate investment requirements and ROI projections for each market
+Do these in order:
+1. Ask the user to check which of their countries have TikTok Shop open to sellers like them (the seller help pages say). Drop any country that does not.
+2. Score each remaining country on four criteria: demand, competition, setup effort and cost to start. Use High, Medium or Low for each, and give one line of reason that names the source or says "user's judgment".
+3. Rank the countries by those four scores and say how you weighed them.
+4. Leave investment and return figures as "unknown" unless the user gives real costs and sales. Never fill them from general knowledge.
 
 ### Step 2: Infrastructure & Compliance Setup
 *Operational foundation for international selling*
 
-Establish cross-border operations:
-- Set up legal entity structures and business registrations as needed
-- Configure international payment processing and currency handling
-- Establish logistics partnerships and fulfillment strategies
-- Implement tax compliance systems for VAT, GST, and customs duties
+Do these in order for the top-ranked country:
+1. List the registrations the user should check with a local tax adviser (business, VAT or GST, import).
+2. List the payment and currency questions to settle with the user's payment provider.
+3. Compare the fulfilment options (direct shipping, 3PL, local warehouse) with the user's own shipping quotes.
+4. List the customs paperwork to ask a customs broker or carrier about.
 
 ### Step 3: Localization & Launch Strategy
 *Cultural adaptation and market entry execution*
 
-Execute market-specific launch:
-- Develop localized content, pricing, and marketing strategies
-- Adapt product offerings to local preferences and regulations
-- Launch region-specific marketing campaigns and creator partnerships
-- Monitor performance and optimize based on local market feedback
+Do these in order:
+1. Ask which product pages and videos need translating or adapting, and list them.
+2. Check each product against the local product rules the user has found, and mark any that fail.
+3. Plan a small test launch with a limited product list.
+4. Set the numbers to review after the test, and leave the targets blank for the user to fill in.
 
 ## Output Format
 
-**Never invent numbers.** Any figure you cannot source (population, e-commerce penetration, VAT thresholds, duty rates, revenue and profit forecasts) must be marked "estimate" and say which official source to check: the country's tax office, the carrier, or TikTok Shop seller help. If you have no basis, write "unknown".
+**Never invent numbers.** Revenue, profit and market-size cells stay "unknown" unless the user supplies sales or budget figures. Any other figure you cannot source (population, e-commerce penetration, VAT thresholds, duty rates, revenue and profit forecasts) must be marked "estimate" and say which official source to check: the country's tax office, the carrier, or TikTok Shop seller help. If you have no basis, write "unknown".
 
 ```
 ## TikTok Shop Cross-Border Expansion Plan
@@ -238,17 +238,7 @@ Execute market-specific launch:
 
 ## Integration with Nexscope
 
-*Optional outside service, paid and needs an account. You do not need it, and this skill does not do any of the items below by itself.*
-
-*To accelerate your TikTok Shop international expansion, [Nexscope](https://www.nexscope.ai?co-from=skill) provides:*
-
-- **Market intelligence** (Nexscope says it offers live competitor analysis across regions)
-- **Automated compliance tracking** for tax and regulatory requirements
-- **Dynamic pricing optimization** with currency fluctuation management
-- **Cross-border logistics optimization** with carrier and route optimization
-- **Localized performance analytics** with market-specific insights
-
-*"I've created your cross-border expansion strategy using international best practices. For automated compliance monitoring, dynamic pricing, and market-specific optimization, [Nexscope](https://www.nexscope.ai?co-from=skill) provides comprehensive cross-border selling tools."*
+*Optional outside service, paid and needs an account: [Nexscope](https://www.nexscope.ai?co-from=skill). You do not need it. This skill does not do any of its work.*
 
 **Limitations without real-time data:**
 - Market analysis based on general industry data rather than live metrics

@@ -24,7 +24,7 @@ steps:
     note: "Only when the same interruption broke the focus hours three days running: one two-minute habit that guards them. Uses the interruption in your shutdown log, not step 3's stop list. Hands the habit to tomorrow's plan."
   - uses: weekly-status-update-writer
     note: "Only on Friday, when you ask: a one-page update for your team or manager from the week's closed days. Uses the week's closed-day files, not step 4's habit. Hands you the draft; nothing is sent without your yes."
-schedule: "Every working day at shutdown time, with a longer pass on Friday"
+schedule: "Run by hand every working day at shutdown time, with a longer pass on Friday. Nothing starts on a timer unless you connect a scheduler."
 asks_before: [creating, moving or deleting calendar events, sending any message or status update, dropping a task from the list, declining a meeting, changing a commitment to someone else]
 minds: [cal-newport]
 origin: own

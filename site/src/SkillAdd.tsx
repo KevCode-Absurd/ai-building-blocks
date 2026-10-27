@@ -2,6 +2,7 @@ import { useDeferredValue, useEffect, useMemo, useRef, useState } from "react";
 import { type Catalogue, portLabel, taskOf } from "./lib/data";
 import { type Ordered } from "./lib/handoff";
 import { suggestNext } from "./lib/suggest";
+import { useRankedLibrarySearch } from "./lib/library-search-ranked";
 import "./skill-add.css";
 
 export default function SkillAdd({ c, order, initialPosition, onAdd, onClose }: {
@@ -16,12 +17,13 @@ export default function SkillAdd({ c, order, initialPosition, onAdd, onClose }: 
   const [error, setError] = useState("");
   const pool = useMemo(() => c.blocks.filter(b => b.type !== "mind" && b.type !== "agent" && b.category !== "orchestrator"), [c]);
   const index = useMemo(() => new Map(pool.map(b => [b.slug, `${b.name} ${b.slug} ${b.summary} ${taskOf(b).name} ${b.outputs.map(p => portLabel(p.type)).join(" ")}`.toLowerCase()])), [pool]);
+  // Same finding and order as the library search.
+  const search = useRankedLibrarySearch(c, deferredQuery, pool, b => index.get(b.slug)!);
   const matches = useMemo(() => {
-    const words = deferredQuery.toLowerCase().trim().split(/\s+/).filter(Boolean);
-    if (words.length) return pool.filter(b => words.every(w => index.get(b.slug)!.includes(w)));
+    if (deferredQuery.trim()) return search.results;
     const suggested = suggestNext(c, order[at - 1]?.node.slug ?? null, new Set(order.map(o => o.node.slug)), 12).map(s => s.b).filter(b => index.has(b.slug));
     return suggested.length ? suggested : pool.slice(0, 12);
-  }, [pool, c, order, at, deferredQuery, index]);
+  }, [pool, c, order, at, deferredQuery, index, search.results]);
   const next = c.bySlug[selected];
   const supplied = new Set(order.slice(0, at).flatMap(o => c.bySlug[o.node.slug]?.outputs.map(p => p.type) ?? []));
   const missing = next?.inputs.filter(p => p.required && !supplied.has(p.type)) ?? [];

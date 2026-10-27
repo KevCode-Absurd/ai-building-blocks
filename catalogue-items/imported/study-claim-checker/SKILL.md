@@ -74,16 +74,9 @@ Only add figures when the **user explicitly requests** a diagram (for example, a
 - **Preferred:** Use the **scientific-schematics** skill for AI-generated diagrams from a natural-language description
 - **Alternative:** Build figures in your usual tools (draw.io, PowerPoint, matplotlib, etc.)
 
-This script is not in this catalogue copy, and it needs a paid OpenRouter key and sends your prompt to a third party. Skip it by default. If the user wants a figure, draw it by hand or with their own tools. Only run the command if the user has the original skill and a key.
+The original schematic script is not in this catalogue copy. It needs a paid OpenRouter key and sends your prompt to a third party. Skip it. If the user wants a figure, draw it by hand or with their own tools.
 
-Run from the repository root, with `OPENROUTER_API_KEY` set:
-
-```bash
-python skills/scientific-schematics/scripts/generate_schematic.py "Illustrative GRADE appraisal: define outcome and comparison, assess certainty domains with reasons; keep recommendation decisions separate" -o figures/grade_flowchart.png --doc-type report
-```
-
-This optional command's CLI was checked with `--help`; paid generation was not exercised
-for this example. Follow that skill's current dependencies and review every generated label.
+The schematic script is not included here, so there is no command to run. Draw any figure by hand or in your own tool (draw.io, PowerPoint, matplotlib).
 
 **Disclosure:** AI schematic generation sends your prompt to [OpenRouter](https://openrouter.ai/) (a third-party API). Do not include unpublished sensitive details unless that transmission is appropriate for your project.
 

@@ -8,13 +8,14 @@ role: make
 job: ads
 level: intermediate
 inputs:
-  - type: question
+  - type: search_query_report
     required: true
-  - type: source_text
+  - type: question
     required: false
 outputs:
-  - type: brief
   - type: audit_report
+  - type: keyword_list
+    required: true
 uses: []
 steps: []
 origin: imported

@@ -12,6 +12,8 @@ inputs:
     required: true
   - type: audit_report
     required: false
+  - type: question
+    required: false
 outputs:
   - type: code_change
 uses: []

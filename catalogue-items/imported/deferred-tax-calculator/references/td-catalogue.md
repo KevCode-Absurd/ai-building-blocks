@@ -1,6 +1,6 @@
 # Temporary Difference Catalogue (worked examples)
 
-Assume 30% corporate rate (Nigeria CIT for large companies; substitute local rate).
+Assume a 30% corporate rate for these worked examples only. Substitute your own enacted rate.
 
 ## 1. PP&E — Capital Allowances Faster Than Depreciation
 Asset cost 100M. Year 1: book depreciation 10M (carrying 90M); capital allowances 35M (tax base 65M).

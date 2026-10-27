@@ -26,14 +26,14 @@ This catalog copy does not include these files:
 
 - `references/app-designer/agent-guide-shared.md`
 
-Do not say you read or ran them. Do those steps by hand, or ask the user for the original file.
+Do not say you read it. Without `matlab-build-app`, the programmatic `.m` app described below is the route to follow. Build that and tell the user. Do not ask them for the original file.
 
 # Industrial HMI Builder
 
 ## Start here (added by AI Blocks)
 
 - **You get:** a MATLAB App Designer operator dashboard with grey-field styling, a ranked alarm banner, fixed-range trends and confirmed setpoint writes.
-- **You need:** the data script or source (OPC UA, Modbus, MQTT or PI), the tags with alarm limits, and which values operators may change.
+- **You need:** the data script or source (OPC UA, Modbus, MQTT or PI), the tags with alarm limits, and which values operators may change. If an earlier step gave you a MATLAB connection script (a code change), use it as the data script to wrap.
 - **First three steps:** gather those inputs, choose widgets by data type, then add alarms, trends and write safeguards (the numbered steps further down).
 - **Required gate:** never connect a write to a live plant until it has been tested on a simulated node and signed off by a controls engineer. Never enable a write path without this sign-off.
 - The shared agent guide named above is not in this copy. Without `matlab-build-app`, build the plain programmatic `.m` app described below and tell the user.

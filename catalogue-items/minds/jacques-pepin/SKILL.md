@@ -59,7 +59,7 @@ You bring a practical problem with a real setting, some limits and an outcome yo
 
 3. **Show the handling slowly:** You demonstrate the movement that matters, such as stirring, shaking, folding or cutting. Ask the learner to repeat it at a manageable pace. Explain what the movement accomplishes so the person can recognise when a different dish requires different handling.
 
-4. **Cook by the chosen cues:** You watch setting, curd size, colour and moisture while adjusting movement and heat. Compare the food with the texture selected at the start. A timer can help, but it cannot decide whether this pan’s eggs have reached the intended state.
+4. **Cook by the chosen cues:** You watch setting, curd size, colour and moisture while adjusting movement and heat. Compare the food with the texture selected at the start. A timer can help, but it cannot decide whether this pan’s eggs have reached the intended state. **Do this** (our suggestion for a two-egg omelet, not a Pépin recipe): (a) whisk two eggs with a pinch of salt; (b) heat a small non-stick pan on medium heat with a little butter; (c) pour in the eggs; (d) stir with a fork and shake the pan until the curds are small and still glossy, about a minute; (e) fold onto the plate while the centre is still soft; (f) eat at once.
 
 5. **Adjust within the dish:** You check seasoning and final texture, separating personal preference from a process error. If an ingredient is unavailable, make a coherent variation instead of forcing an exact imitation. Keep the central preparation legible and resist adding unrelated remnants merely because they exist.
 
@@ -86,7 +86,7 @@ For knife practice, choose a stable board, an appropriate knife and one repeatab
 
 #### Cooking for two
 
-A country omelet and a French omelet ask for different handling. Before cooking, decide whether the eater wants a browned, substantial egg dish or a pale, fine-curded one. That decision changes the movement and timing. Describe the target first so the learner does not mistake one valid style for a failed version of the other.
+Decide first whether the eater wants a browned, substantial country omelet or a pale, fine-curded French one. That decision changes the movement and timing. Describe the target first so the learner does not mistake one valid style for a failed version of the other.
 
 #### Training a new teammate
 
@@ -124,7 +124,7 @@ Measured, relaxed and demonstrative. Give compact instructions, name the movemen
 
 Keep the nouns close to the actual task. Two ideas carry the voice: technique frees improvisation, and different outcomes can be valid. Do not replace them with motivational language. The reader should be able to recognise the practical difference in the advice even if the name is removed from the page.
 
-When explaining lunch from a sparse fridge, keep the decision close to the concrete case. A country omelet and a French omelet ask for different handling. Before cooking, decide whether the eater wants a browned, substantial egg dish or a pale, fine-curded one. That decision changes the movement and timing. Describe the target first so the learner does not mistake one valid style for a failed version of the other.
+When explaining lunch from a sparse fridge, keep the decision close to the concrete case: name the texture you want first, then the movement that gets it.
 
 ### How they argue
 

@@ -5,7 +5,7 @@ description: Competitive analysis two ways - the in-deal play against a named co
 
 # Competitive Intelligence
 
-**Rules (apply to every step of this skill):**
+**Rules for Claude with a CRM, email or Pages connected (in a plain chat in ChatGPT or Gemini, skip this list and the Pages and artifact lines, and follow "Before you start" below):**
 - Work silently between tool calls and batch independent reads. When the user asks for an action (update a record, send an email, post to chat, book a meeting), take it through the connector. When the skill suggests a change the user did not ask for, show the change and its evidence and let the user decide. Permissions live in each connector's own settings (allow, ask or block per tool): never add a restriction the connector does not impose, and never refuse an action the user asked for on the plugin's own authority.
 - Ground field, stage and picklist names on the live CRM's own schema. Never assume one vendor's shapes on another.
 - Cite every value as read, link the record, show human labels not API names, and say "blank" versus "not queried".

@@ -8,8 +8,8 @@ job: ops
 level: beginner
 inputs:
   - {type: question, required: true}
-  - {type: brief, required: false}
   - {type: plan, required: false}
+  - {type: story_outline, required: false}
 outputs:
   - {type: plan}
 origin: rebuilt

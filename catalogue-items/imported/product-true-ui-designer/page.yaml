@@ -36,7 +36,7 @@ how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your product brief and say what the screen is for. Say web or iOS, and give your AI your components and tokens, as files or pasted code.
   - Read the screen job and the states table first. Add any state it missed, and cut ones that cannot happen.
-  - Check the screen it builds. It works best when your AI can read your project files and open a browser to look at the result.
+  - Check the screen it builds. It works best when your AI can read your project files and open a browser to look at the result. If yours cannot, open the screen yourself at a phone width and a desktop width, and tick off each state in the table.
   - Fix the items under "Fix before shipping". Then run your normal tests and an accessibility check, because this skill does not replace them.
 how_it_works:
   - title: Find the screen job
@@ -48,7 +48,7 @@ how_it_works:
   - title: Use real content
     text: It uses your labels and data, and never invents numbers, users or quotes to fill space.
   - title: Look up references
-    text: If a visual question is open, it can use UIZZE screens, and it learns from them without copying.
+    text: If a visual question is open, it can use UIZZE screens, which need a UIZZE account (the price is not stated in the source). It learns from them without copying. The skill works without them.
   - title: Render and fix
     text: It builds the screen, looks at the result once and fixes clipping, overlap and dead controls.
 output_shape: |-

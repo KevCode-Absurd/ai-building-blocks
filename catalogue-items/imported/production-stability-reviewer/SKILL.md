@@ -184,6 +184,10 @@ See [references/chaos-engineering.md](references/chaos-engineering.md) when desi
 | **Alerting on causes, not symptoms** | CPU alerts fire while users suffer silently | Alert on user-facing SLIs: errors, latency, availability |
 | **No capacity model** | System falls over at 2x load | Model bottlenecks; load test to 3x expected peak |
 
+## Safety for live systems
+
+This review gives advice, not changes. Any change to a live system should be reviewed by an engineer, tested in staging first, and rolled out with a rollback plan before it reaches production. Say this next to the rollout order.
+
 ## Quick Diagnostic
 
 Plain-English notes for advanced terms (added by AI Blocks): *Universal Scalability Law* is a model of why adding servers gives less and less extra speed. *Expand-contract* is a way to change a database in two safe steps, so old and new code both keep working. *SLI, SLO, SLA* are the measure (SLI), the target for it (SLO) and the promise to customers (SLA).
@@ -205,7 +209,7 @@ Audit any production system:
 
 For the complete methodology, war stories, and implementation details:
 
-- [*"Release It! Design and Deploy Production-Ready Software"* (2nd Edition)](https://www.amazon.com/Release-Design-Deploy-Production-Ready-Software/dp/1680502395?tag=wondelai00-20) by Michael T. Nygard
+- [*"Release It! Design and Deploy Production-Ready Software"* (2nd Edition)](https://www.amazon.com/Release-Design-Deploy-Production-Ready-Software/dp/1680502395) by Michael T. Nygard
 
 ## About the Author
 

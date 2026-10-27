@@ -10,6 +10,8 @@ level: intermediate
 inputs:
   - type: persona
     required: true
+  - type: job_description
+    required: true
 outputs:
   - type: plan
 uses: []

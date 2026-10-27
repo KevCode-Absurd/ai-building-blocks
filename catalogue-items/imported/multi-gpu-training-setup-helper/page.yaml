@@ -25,7 +25,7 @@ you_give:
   - Whether the model fits on one GPU
   - Precision preference (optional)
 you_get:
-  - The script with the added lines marked
+  - The script with each added line marked + and each removed line marked -, as in the skill's example
   - A launch command
   - A config file for your setup
   - Memory-saving options for large models
@@ -37,8 +37,9 @@ how_to_use:
   - Ask your AI to add the Accelerate lines, mark them, and give you a launch command and a config.
   - Check that the old lines moving data to the GPU are gone.
   - Run the script on your own machines. Your AI can only test it if it can run Python code.
-  - Next, run a short test on one GPU first. Then scale to all your GPUs, and compare speed and loss with the one-GPU run.
+  - Next, run a short test on one GPU first. Then scale to all your GPUs, and compare speed and loss with the one-GPU run. If you need callbacks, use PyTorch Lightning instead. If you need to manage many machines, use Ray Train.
   - The skill is an imported copy under the MIT licence. It was written for Hugging Face Accelerate 1.11.0 or newer, so check your version.
+next: [rented-gpu-server-setup-helper]
 output_sample:
   input:
     - Your PyTorch training script
@@ -47,12 +48,12 @@ output_sample:
     - Your precision choice (optional)
   prerequisites:
     - An AI that can run Python code, if you want it to test the script
-    - The accelerate, torch and transformers packages installed
+    - The accelerate (version 1.11.0 or newer), torch and transformers packages installed
     - DeepSpeed installed with pip, only if you pick DeepSpeed
     - PyTorch 1.12 or newer, only if you pick FSDP
   output:
     - name: Marked script
-      contains: Your script with the added Accelerate lines marked and the manual move-to-GPU lines removed.
+      contains: Your script with the added Accelerate lines marked + and the manual move-to-GPU lines marked -.
     - name: Launch command
       contains: One command to run the script on one GPU, many GPUs or several machines.
     - name: Config file

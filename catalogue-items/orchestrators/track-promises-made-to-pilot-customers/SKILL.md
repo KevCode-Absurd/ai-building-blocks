@@ -12,29 +12,25 @@ Track promises made to pilot customers. Two steps run in order: a register of ac
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+- **The contract** (yours): the full agreement or terms, with dates and any changes.
 
 **Makes it better (optional):**
 - **Meeting notes** (yours): an agenda, notes or decisions from a meeting.
 - **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 - **Tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
 
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-2. This one.
-
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a buyer brief, meeting notes, document. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for the contract, meeting notes, document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Any good chat AI that reads files, such as Claude, ChatGPT or Gemini:** It needs agreements, notes and delivery records at once.
 <!-- /needs -->
 
-## Before you start
+## What you need
 
-Use what is attached or pasted first. If something is missing, say what you can finish and what must wait, and mark each gap `MISSING:`. Never invent it. Ask once, in one short message, for only what you cannot work without.
+This list replaces the general "Before you start" list above for this workflow. It needs no buyer brief. The "brief" there means your pilot agreements, and the "document" means your delivery records. Use what is attached or pasted first. If something is missing, say what you can finish and what must wait, and mark each gap `MISSING:`. Never invent it. Ask once, in one short message, for only what you cannot work without.
 
 **What you need**
 - **Pilot agreements or order forms.**
@@ -100,9 +96,9 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 Write `MISSING: <what>` next to the affected result. Carry on with work that does not depend on it. Stop the affected step when a source or check it needs is absent. Return the partial files and the exact input needed to carry on.
 
-## After this
+## Next steps to offer
 
-Suggest the user decide on each not-yet-accepted request, fill each missing owner and date, then send the updates themselves.
+Use these instead of the general "After this" list above. Suggest the user decide on each not-yet-accepted request, fill each missing owner and date, then send the updates themselves. If a customer message is still to be written, the [Customer reply promise checker](https://useaiblocks.com/prompts/complaint-reply-promise-checker) checks a draft for promises you cannot keep.
 
 ## Avoid
 

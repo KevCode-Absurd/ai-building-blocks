@@ -5,7 +5,7 @@ description: "Paste this above a rough description of a task you repeat, when yo
 
 # Repeat task how-to writer
 
-Turns a rough description of a repeat task into numbered steps with expected results, fixes and an undo.
+Turns a rough description of a repeat task into numbered steps with expected results, fixes and an undo. It is for one task done by one person, with no roles or branches. Write down no passwords: use "[PASSWORD, ask the owner]" and say where it is kept. If a step could hurt someone or lose money if done wrong, write `MISSING: who must approve` beside it.
 
 ## When not to use it
 - Your task has many roles or branches: use "Repeat task step guide writer".
@@ -43,7 +43,7 @@ After the how-to is written, ask someone who has never done the task to follow i
 3. **Number the steps.** One action each, starting with a verb. After each, add "You should see:" with the result to expect.
 4. **Add fixes.** For each step that can fail, add "If not:" with what to try.
 5. **Close the loop.** Add a line to check it worked, a way to undo it, and who to ask if stuck. If you did not give a name, write `MISSING: who to ask`.
-6. **Test it.** Could a new person follow it with no questions? Mark any step that assumes knowledge with `MISSING:`.
+6. **Test it.** Could a new person follow it with no questions? Mark any step that assumes knowledge with `MISSING:`. Never invent a result a step "should" show if the user did not describe it; write `MISSING: expected result`.
 
 ## What you hand back
 PURPOSE. BEFORE YOU START. STEPS (each with You should see and If not). CHECK IT WORKED. UNDO IT. WHO TO ASK. `MISSING:` lines.

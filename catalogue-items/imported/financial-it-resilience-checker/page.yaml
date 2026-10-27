@@ -10,6 +10,10 @@ explain: |
   Share your firm, systems and supplier details. The skill checks current DORA sources, maps evidence and lists missing incident facts.
 
   You describe your firm and the IT suppliers you use. The skill checks current DORA texts and standards, separates DORA from NIS2, and records source links and dates. Incident classification stays open when required facts are missing.
+
+  This is a copy of a third-party DORA skill. Its answers are not legal advice. The skill points to current EUR-Lex texts and tells you to check them, so confirm each source and date it gives before you use it.
+
+  Licence: MIT, as the LICENSE file says. Credit goes to Hemant Naik.
 when:
   - You run a bank, insurer or payments firm in the EU and must meet DORA.
   - A cloud supplier contract needs checking against the required clauses.

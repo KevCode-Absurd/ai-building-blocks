@@ -1,6 +1,6 @@
 ---
 name: ecommerce-growth-strategy
-description: "E-commerce growth strategy advisor. Diagnoses current business health using unit economics (CAC, LTV, AOV, contribution margin), identifies the highest-impact growth opportunities across 5 levers (traffic, conversion, AOV, retention, expansion), and builds a prioritized 90-day growth roadmap. Uses the Ansoff Matrix adapted for e-commerce to evaluate market penetration, channel expansion, product expansion, and new market entry. Includes multichannel readiness assessment (Amazon, Walmart, TikTok Shop, Etsy, DTC/Shopify/Shopify) and product line expansion analysis. No API key required. Use when: (1) planning next phase of e-commerce growth, (2) deciding whether to expand to new channels or products, (3) diagnosing why growth has stalled, (4) prioritizing what to fix or build next."
+description: "E-commerce growth strategy advisor. Diagnoses current business health using unit economics (CAC, LTV, AOV, contribution margin), identifies the highest-impact growth opportunities across 5 levers (traffic, conversion, AOV, retention, expansion), and builds a prioritized 90-day growth roadmap. Uses the Ansoff Matrix adapted for e-commerce to evaluate market penetration, channel expansion, product expansion, and new market entry. Includes multichannel readiness assessment (Amazon, Walmart, TikTok Shop, Etsy, DTC/Shopify) and product line expansion analysis. No API key required. Use when: (1) planning next phase of e-commerce growth, (2) deciding whether to expand to new channels or products, (3) diagnosing why growth has stalled, (4) prioritizing what to fix or build next."
 metadata:
   nexscope:
     emoji: "🚀"
@@ -11,21 +11,15 @@ metadata:
 
 Your strategic growth advisor for e-commerce. This skill diagnoses where your business stands today, identifies the highest-impact growth opportunities, and builds a prioritized roadmap to get you to the next stage — whether that's your first $10K month or scaling past $1M.
 
-This is the strategy layer above marketing execution. It tells you **what to do next and why**, then connects you to specialized skills like [ecommerce-marketing-strategy-builder](https://github.com/nexscope-ai/eCommerce-Skills/tree/main/ecommerce-marketing-strategy-builder) for **how to do it**.
-
-```bash
-npx skills add nexscope-ai/eCommerce-Skills --skill ecommerce-marketing-strategy-builder -g
-```
+This is the strategy layer above marketing execution. It tells you **what to do next and why**. For **how to do it**, use a separate marketing strategy skill.
 
 **Supported platforms:** Shopify, WooCommerce, Amazon, Walmart, TikTok Shop, Etsy, eBay, BigCommerce, and multi-channel sellers.
 
 Built by [Nexscope](https://www.nexscope.ai/?co-from=skill) — your AI assistant for smarter e-commerce decisions.
 
-## Install
+## How to use it
 
-```bash
-npx skills add nexscope-ai/eCommerce-Skills --skill ecommerce-growth-strategy -g
-```
+Paste this whole file into Claude, ChatGPT or Gemini, then add your shop details. No install is needed.
 
 ## Usage
 
@@ -50,7 +44,7 @@ subscribers and 5K Instagram followers. What's my best path to $10K/month?
 - Growth opportunity identification across 5 levers: traffic, conversion, AOV, retention, expansion
 - Ansoff Matrix adapted for e-commerce — evaluates 4 growth paths: penetrate, expand channels, expand products, enter new markets
 - Growth Opportunity Matrix — maps each opportunity by impact vs effort for prioritization
-- Multichannel readiness assessment — when and where to expand (Amazon, Walmart, TikTok Shop, Etsy, DTC/Shopify/Shopify)
+- Multichannel readiness assessment — when and where to expand (Amazon, Walmart, TikTok Shop, Etsy, DTC/Shopify)
 - Product line expansion analysis — adjacent categories, timing, launch strategy
 - Retention and LTV growth strategies — RFM segmentation, repeat purchase drivers, loyalty tactics
 - Conversion rate optimization priorities — identifies biggest conversion leaks
@@ -501,25 +495,12 @@ Revenue = Traffic × Conversion × AOV × Frequency
 
 For detailed execution of specific growth initiatives:
 
-**Paid advertising:**
-```bash
-npx skills add nexscope-ai/eCommerce-Skills --skill ecommerce-ppc-strategy-planner -g
-```
+These are separate skills from the same author. They are not part of this copy. Ask your AI to plan them in plain chat, or use a matching skill from the library:
 
-**Email marketing system:**
-```bash
-npx skills add nexscope-ai/eCommerce-Skills --skill ecommerce-email-marketing-builder -g
-```
-
-**Full marketing strategy:**
-```bash
-npx skills add nexscope-ai/eCommerce-Skills --skill ecommerce-marketing-strategy-builder -g
-```
-
-**Product descriptions:**
-```bash
-npx skills add nexscope-ai/eCommerce-Skills --skill product-description-generator -g
-```
+- Paid advertising: a PPC strategy planner
+- Email marketing system: an email marketing builder
+- Full marketing strategy: a marketing strategy builder
+- Product descriptions: a product description writer
 
 More e-commerce skills: [nexscope-ai/eCommerce-Skills](https://github.com/nexscope-ai/eCommerce-Skills)
 

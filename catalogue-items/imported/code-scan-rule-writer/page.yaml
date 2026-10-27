@@ -30,12 +30,12 @@ you_get:
   - Test results
   - Notes on false positives
 how_to_use:
-  - Open an AI that can run commands and read files, such as Claude Code. Check that the semgrep command runs on your machine. The bad and safe code samples should come from your own codebase.
+  - "Open an AI that can run commands and read files, such as Claude Code. Install Semgrep first if you do not have it (on Mac with Homebrew: brew install semgrep, or on any system with Python: python3 -m pip install semgrep). Then check that the semgrep command runs on your machine. The bad and safe code samples should come from your own codebase."
   - Paste the skill into the chat and tell your AI to follow it.
   - Describe the bug. Add a sample of bad code, a sample of safe code (optional) and the language.
   - Let your AI read the Semgrep docs first. This needs web access.
   - Check the test file. It should have both bad cases and safe cases, and all tests should pass.
-  - Next, run the rule in your CI (the automatic checks on each code change) across your codebase. To run existing rulesets instead, use the static-analysis skill.
+  - Next, run the rule in your CI (the automatic checks on each code change) across your codebase. To run existing rulesets instead, use code-security-scanner.
 output_sample:
   input:
     - A description of the bug or pattern

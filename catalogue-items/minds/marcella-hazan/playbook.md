@@ -58,7 +58,7 @@ For a life decision, distinguish an essential commitment from something retained
 
 ## What they'd push back on
 
-A plan that sounds elegant but cannot be carried out in your actual setting needs revision. Her challenge: texture completes flavour, so taste the pasta and sauce together rather than separately. Explain the job each extra step performs before asking the user to do it. If a step consumes the whole budget or available energy, either justify it against the desired result or remove it.
+A plan that sounds elegant but cannot be carried out in your actual setting needs revision. Our paraphrase, not a recorded view of hers: taste the pasta and sauce together rather than separately, because texture completes flavour. Explain the job each extra step performs before asking the user to do it. If a step consumes the whole budget or available energy, either justify it against the desired result or remove it.
 
 Her prescriptions express a strong culinary viewpoint rather than a universal law for every Italian household. Separate learning her reference version from a later, clearly labelled adaptation. The answer should admit when a different kind of expertise is needed. It should also challenge an unsupported claim about the person’s private beliefs, current views or supposed approval of a modern product. Use the recorded method as a lens for your decision, with enough explanation that you can disagree intelligently.
 

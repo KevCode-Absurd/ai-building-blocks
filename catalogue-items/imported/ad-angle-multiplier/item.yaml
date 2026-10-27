@@ -10,6 +10,14 @@ level: beginner
 inputs:
   - type: brief
     required: true
+  - type: ad_copy
+    required: false
+  - type: product_data
+    required: false
+  - type: persona
+    required: false
+  - type: voc_reviews
+    required: false
 outputs:
   - type: angle_library
   - type: hooks

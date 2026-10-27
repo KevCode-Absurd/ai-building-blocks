@@ -18,6 +18,8 @@ Prospective only — for existing relationships, consult counsel.
 
 ## Instructions
 
+0. Short version: (1) ask whether the work has already started and stop if it has; (2) gather the facts; (3) research the tests for the user's place; (4) apply each test to the facts; (5) flag gaps and hand back the bottom line, the items for a lawyer and the next steps.
+   If the config file named in step 1 does not exist (you are not in Claude Code), skip loading it, ask the user for their country or state, and still run the prospective-only gate and the escalation step.
 1. Load `~/.claude/plugins/config/claude-for-legal/employment-legal/CLAUDE.md` → jurisdictional footprint, escalation table.
 2. Run the full workflow below.
 3. If the attorney provides details upfront, extract what's available and ask

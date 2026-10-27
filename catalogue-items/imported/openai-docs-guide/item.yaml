@@ -10,8 +10,12 @@ level: beginner
 inputs:
   - type: question
     required: true
+  - type: codebase
+    required: false
 outputs:
   - type: document
+  - type: code_change
+    required: false
 uses: []
 origin: imported
 source:

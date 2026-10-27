@@ -35,6 +35,8 @@ how_to_use:
   - Add the skill to your AI tool, then type /research-deep in the folder.
   - Check the first batch of files. Look at the fields marked [uncertain] before you say yes to the next batch.
   - If the run stops, start it again. It skips items that already have a file.
+  - When it finishes, merge the JSON files into one spreadsheet. Re-run or check by hand any item with uncertain fields.
+  - This skill scrapes websites. Some sites forbid that, so respect their terms.
   - Before the first batch, check the terms of the sites it will read. Use the files only if the sites allow it.
 output_sample:
   input:

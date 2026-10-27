@@ -8,7 +8,7 @@ job: page
 level: intermediate
 inputs:
   - {type: product_data, required: true}
-  - {type: spreadsheet, required: true}
+  - {type: keyword_list, required: true}
   - {type: performance_sheet, required: false}
   - type: audit_report
     required: false

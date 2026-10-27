@@ -9,11 +9,13 @@ Reads sales workbooks or CSV files the user attaches or pastes and extracts the 
 
 Read [the original role profile](references/source-agent.md) before you start. It holds the method: flexible column matching, sheet-type detection, matching reps by email or full name, logging every import and never overwriting earlier figures without a new version. The profile is a task reference. Its folder watching, PostgreSQL storage and speed targets describe an automated system and do not give you tool access.
 
+When not to use it: for a report by territory and rep from one clean table, use the Sales data consolidation agent (the next step after this one). For deal health or a quarter forecast from a CRM export, use the Sales pipeline health and forecast agent. To log a call note into a CRM record, use the CRM activity logger. For a folder watcher that writes to a database, ask for a script and have a developer run and check it.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Weekly store ad performance reviewer](https://useaiblocks.com/skills/weekly-store-ad-pulse-checker). It takes the spreadsheet.
+- The [Metric drop investigator](https://useaiblocks.com/skills/metric-drop-investigator). It takes the spreadsheet and audit report.
 - The [Customer value and payback reviewer](https://useaiblocks.com/skills/store-ltv-payback-reader). It takes the spreadsheet.
 - The [Conversion funnel analyst](https://useaiblocks.com/skills/conversion-funnel-analyst). It takes the spreadsheet.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
@@ -67,7 +69,7 @@ Use these headings, in this order.
 2. Extracted metrics
 3. Import log
 4. Unmatched rows
-5. Open checks
+5. Open checks (also list every check that failed or could not run, the CHECKS MISSED list, or write "none")
 
 Name the source file and sheet in every extracted row. If the user asks, give the table as CSV text.
 

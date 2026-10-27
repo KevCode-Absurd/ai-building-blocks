@@ -42,19 +42,25 @@ brew install llama.cpp
 # Or build from source
 git clone https://github.com/ggerganov/llama.cpp
 cd llama.cpp
-make
+
+# CPU only
+cmake -B build
+cmake --build build --config Release
 
 # With Metal (Apple Silicon)
-make LLAMA_METAL=1
+cmake -B build -DGGML_METAL=ON
+cmake --build build --config Release
 
 # With CUDA (NVIDIA)
-make LLAMA_CUDA=1
+cmake -B build -DGGML_CUDA=ON
+cmake --build build --config Release
 
 # With ROCm (AMD)
-make LLAMA_HIP=1
+cmake -B build -DGGML_HIP=ON
+cmake --build build --config Release
 ```
 
-AI Blocks note: the `make LLAMA_...` flags above are from older llama.cpp releases. Current releases build with CMake, for example `cmake -B build -DGGML_METAL=ON` or `-DGGML_CUDA=ON`, then `cmake --build build --config Release`. Check the llama.cpp build docs for your version before you run these commands. If the build fails, report the exact error and do not guess a fix.
+AI Blocks note: the original skill used older `make LLAMA_...` flags. We replaced them with the CMake commands current releases use. The built programs are in `build/bin/`. Check the llama.cpp build docs for your version before you run these commands. If the build fails, report the exact error and do not guess a fix.
 
 ### Download model
 
@@ -140,19 +146,19 @@ Q3_K_M or Q4_K_S  # Lower bits to fit in memory
 
 ```bash
 # Build with Metal
-make LLAMA_METAL=1
+cmake -B build -DGGML_METAL=ON && cmake --build build --config Release
 
 # Run with GPU acceleration (automatic)
 ./llama-cli -m model.gguf -ngl 999  # Offload all layers
 
-# Performance: M3 Max 40-60 tokens/sec (Llama 2-7B Q4_K_M)
+# Speed varies a lot by chip, model and settings. The original author's example figure is not a promise for your computer.
 ```
 
 ### NVIDIA GPUs (CUDA)
 
 ```bash
 # Build with CUDA
-make LLAMA_CUDA=1
+cmake -B build -DGGML_CUDA=ON && cmake --build build --config Release
 
 # Offload layers to GPU
 ./llama-cli -m model.gguf -ngl 35  # Offload 35/40 layers
@@ -165,7 +171,7 @@ make LLAMA_CUDA=1
 
 ```bash
 # Build with ROCm
-make LLAMA_HIP=1
+cmake -B build -DGGML_HIP=ON && cmake --build build --config Release
 
 # Run with AMD GPU
 ./llama-cli -m model.gguf -ngl 999

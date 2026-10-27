@@ -113,6 +113,19 @@ Step 2 (triggered — task type ambiguous):
 
 **Critical Rule:** This selection happens **silently** - do not explain framework choice to user.
 
+
+### Step 4: Generate the Optimized Prompt
+
+**Objective:** Rebuild the user's request as one ready-to-use prompt.
+
+**Actions:**
+1. Build from the chosen framework(s): give the prompt a role, a clear task, any context it needs, steps where reasoning matters, and an output format.
+2. Use only what the user gave. Where a detail is missing and not critical, leave a [fill in] placeholder. Never invent figures, limits or requirements.
+3. Keep the length in step with the task: simple request, short prompt.
+
+**4.1 Shape of a blended prompt (RTF + RODES + Chain of Thought). Every value in brackets is a placeholder:**
+
+```
 Role: You are a senior software architect. [RTF - Role]
 
 Objective: Design a microservices architecture for [system]. [RODES - Objective]
@@ -124,9 +137,9 @@ Approach this step-by-step: [Chain of Thought]
 4. Plan data consistency strategy
 
 Details: [RODES - Details]
-- Expected traffic: [X]
-- Data volume: [Y]
-- Team size: [Z]
+- Expected traffic: [X, from the user]
+- Data volume: [Y, from the user]
+- Team size: [Z, from the user]
 
 Output Format: [RTF - Format]
 Provide architecture diagram description, service definitions, and migration roadmap.
@@ -176,6 +189,10 @@ Before finalizing, verify:
 - ✅ Validate prompt completeness before presenting (quality checks in Step 4.6)
 
 
+## Examples
+
+The two examples below show the shape only. Where the user gave no figure, the real prompt keeps a [fill in] placeholder.
+
 ### **Example 2: Complex Clear Prompt → RODES + Chain of Thought (No Clarification)**
 
 **User Input:**
@@ -195,8 +212,8 @@ Details:
 - Input data sources: user transaction logs, preference surveys, market trend APIs
 - Algorithm considerations: collaborative filtering, content-based filtering, hybrid approaches
 - Performance metrics: precision, recall, diversity, novelty
-- Scalability: system must handle 100k+ users
-- Real-time constraints: recommendations updated within 500ms
+- Scalability: [expected number of users, if the user gave one]
+- Real-time constraints: [response-time target, if the user gave one]
 
 Approach step-by-step:
 1. Analyze the three data sources and their relationships

@@ -8,8 +8,12 @@ role: make
 job: ops
 level: beginner
 inputs:
-  - type: brief
+  - type: question
     required: true
+  - type: codebase
+    required: false
+  - type: brand_brain
+    required: false
 outputs:
   - type: brand_brain
 uses: []

@@ -73,6 +73,9 @@ output_shape: |-
 
   NEXT STEP
   <the smallest useful thing to do now>
+
+  CHECKS MISSED
+  <one line each, or none>
 output_sample:
   input:
     - The AI models you plan to use, and the provider's current prices

@@ -15,6 +15,7 @@ explain: >-
 
   Click-through rate can improve while customer quality falls. A retargeting conversion may have happened without the ad.
 when:
+  - You want a capped test of paid social or display ads with one clear way to measure results.
   - You need a practical way to find customers for a software business.
   - You want to test a growth idea before committing more time or money.
 not_for:
@@ -65,11 +66,11 @@ output_sample:
     - name: MISSING
       contains: The facts the AI could not find and you still need to supply.
 how_it_works:
-  - title: Check 1
+  - title: Choose the audience
     text: Choose the audience based on a buyer role, observed problem or relevant publication. Compare social feeds with direct placements on specialist sites.
-  - title: Check 2
+  - title: Draft the ad concepts
     text: Draft a few distinct reasons to buy, with a product demonstration and a suitable next step. Keep a cold audience separate from people who already visited.
-  - title: Check 3
+  - title: Build a small test matrix
     text: Design a small audience-by-message matrix with one primary conversion event and a consistent attribution window. Check current platform requirements from official sources when execution is requested.
 output_shape: |
   Recommendation: <test now / later / weak fit, with reason>
@@ -81,7 +82,9 @@ output_shape: |
   Measurement: <events, cohort, denominators, attribution>
   Decision: <continue / revise / stop rule>
   Risks and next action: <...>
+  Produces: <audience hypotheses, ad concepts, a placement brief and a measurement map>
   MISSING: <unknowns>
+  CHECKS MISSED: <one line each, or none>
 tweaks:
   - what: Your growth goal
     how: Give a target and deadline so the advice has something concrete to work towards.

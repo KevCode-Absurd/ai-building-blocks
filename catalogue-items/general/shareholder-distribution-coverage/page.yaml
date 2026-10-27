@@ -5,28 +5,32 @@ summary: Check if dividends and net buybacks fit within equity free cash flow. Y
 job: money-and-investing
 thinking: high
 thinking_why: "Only executed buybacks count and the cash flow measure must match the owners paid, so each line needs its source."
-subhead: A distribution-to-equity-cash-flow bridge with the funding surplus or shortfall. Share cash dividends, actual repurchases, equity issuance proceeds and a sourced free-cash-flow-to-equity schedule for matching periods.
+subhead: Give it cash dividends, executed share repurchases, equity issuance proceeds and a sourced free-cash-flow-to-equity (FCFE) schedule for the same periods. It works out net distributions and compares them with FCFE, so you see the surplus or the shortfall.
 explain: |-
-  A distribution-to-equity-cash-flow bridge with the funding surplus or shortfall.
+  Companies pay out cash to shareholders as dividends and buybacks. This skill checks whether that cash was covered by the free cash flow that belongs to shareholders (FCFE) in the same period.
 
-  Public equity and share counts. Illustrative figures. $40 dividends + $100 repurchases - $10 issuance = $130 distributions, exceeding $120 FCFE by $10. Reducing repurchases to $70 leaves $20 after $100 distributions.
+  It adds dividends and executed buybacks, takes off money raised by issuing shares, and compares the result with FCFE. It keeps the gross buybacks and issuance visible. It then ties out the cash, with debt movements and the change in cash, before it reads any shortfall. Announced buybacks that have not been carried out are left out. It covers one period at a time. It does not say whether a dividend is safe and it gives no buy or sell view.
+
+  Illustrative figures: $40 dividends + $100 repurchases - $10 issuance = $130, which is $10 more than FCFE of $120. Cutting repurchases to $70 leaves $20 after $100 of distributions.
 when:
-  - You need a distribution-to-equity-cash-flow bridge with the funding surplus or shortfall.
-  - You work on public equity and share counts and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - You want to know if dividends and buybacks were covered by equity free cash flow in a given period.
+  - You need to see how much was funded from cash on hand or new debt.
+  - A reviewer needs to trace each figure to a filing page.
 not_for:
   - "You want to know if a dividend is sustainable or whether to buy or sell: ask a licensed financial adviser, as this tool only checks one period."
   - "You need coverage based on FCFF or EBITDA: build that in your own spreadsheet, as this tool uses equity free cash flow only."
   - "You only have announced buybacks that have not been carried out: wait for the cash-flow statement, as only executed repurchases count."
   - "You need EPS before and after a cash-funded buyback: use the Cash-funded buyback EPS bridge instead."
 you_give:
-  - Cash dividends, actual repurchases, equity issuance proceeds and a sourced free-cash-flow-to-equity schedule for matching periods.
-  - "The fiscal period, plus the currency and scale used for the distribution coverage."
-  - "Your spreadsheet tool, if you want the distribution coverage as a workbook."
+  - Cash dividends paid in each period
+  - Executed share repurchases (not announced ones)
+  - Equity issuance proceeds
+  - A sourced FCFE schedule for the same periods, with its definition
+  - The fiscal period, currency and scale; and your spreadsheet tool if you want a workbook
 you_get:
-  - A distribution-to-equity-cash-flow bridge with the funding surplus or shortfall.
-  - "An editable workbook of the distribution coverage, with its inputs, formulas and test cases to rerun."
-  - "A tie-out of distributions, issuance and equity cash flow, the inputs still missing and the checks that ran."
+  - A bridge from net distributions to FCFE, with the surplus or shortfall
+  - An editable workbook with inputs, formulas and test cases to rerun
+  - A cash tie-out, the inputs still missing and the checks that ran
 how_to_use:
   - "Download the pack and give your AI its SKILL.md. Then add the cash flow statement and an equity free cash flow schedule."
   - "Tell it what you need: dividends plus net buybacks against equity free cash flow, with the surplus or shortfall."
@@ -63,19 +67,21 @@ how_it_works:
   - title: 3. Show cash retained or external funding required; reconcile debt movements and cash-balance changes before interpreting the shortfall
     text: Show cash retained or external funding required; reconcile debt movements and cash-balance changes before interpreting the shortfall.
 output_shape: |-
-  A distribution-to-equity-cash-flow bridge with the funding surplus or shortfall.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  SCOPE AND DATED SOURCES
+  INPUTS AND ASSUMPTIONS (FCFE definition, periods)
+  NET DISTRIBUTIONS: dividends, repurchases, issuance
+  FCFE and the surplus or shortfall
+  CASH TIE-OUT: change in cash = FCFE - net distributions (plus net debt issued if FCFE excludes it)
+  FILE CHECKS: what ran
+  MISSING:
+  CHECKS MISSED:
 tweaks:
-  - what: "Fiscal period"
-    how: "Take the fiscal period from the cash flow statement and an equity free cash flow schedule. Use one currency and scale on every line."
-  - what: "Free cash flow definition"
-    how: "Change the free cash flow definition and have your AI recalculate. Keep the actual figures you supplied."
-  - what: Acceptance
-    how: FCFE definition and debt cash flows are disclosed and not confused with FCFF or EBITDA.
+  - what: Fiscal period
+    how: Take the fiscal period from the cash flow statement. Use one currency and scale on every line.
+  - what: Free cash flow definition
+    how: Change the FCFE definition and have your AI recalculate. Keep the actual figures you supplied.
+  - what: Buyback size
+    how: Try a smaller repurchase to see what level the cash covers.
 judge:
   - FCFE definition and debt cash flows are disclosed and not confused with FCFF or EBITDA.
   - Gross buybacks and issuance proceeds remain visible behind the net figure.

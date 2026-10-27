@@ -9,7 +9,7 @@ subhead: A sales forecast you can trust, with a measure of how wrong it tends to
 explain: |
   A sales forecast you can trust, with a measure of how wrong it tends to be. Give it your past sales and you get a projection, the method that fits best, and a way to track error over time.
 
-  It starts by asking what decisions depend on the forecast, how far ahead you plan, and how much history you have. Two years is ideal. Then it looks at patterns: steady, seasonal, trending, intermittent or driven by promotions, and treats new and mature products differently. It tests several methods against held-back data, compares their error, and picks one. It explains what to do with outside factors such as weather and events.
+  It starts by asking what decisions depend on the forecast, how far ahead you plan, and how much history you have. Two years is ideal. Then it looks at patterns: steady, seasonal, trending, intermittent or driven by promotions, and treats new and mature products differently. It tests several methods against held-back data, compares their error, and picks one. It explains what to do with outside factors such as weather and events. The error ranges in the skill are generic starting points, not benchmarks, and a forecast is never certain. Use your own past error to set targets. This is Kishor Kukreja's demand-forecasting skill, shared under the MIT licence.
 when:
   - You plan purchasing from a gut feel and want numbers behind it.
   - Sales are seasonal and last year's total is a poor guide.
@@ -35,8 +35,8 @@ how_to_use:
   - Tell your AI how far ahead you plan and what decisions the forecast feeds. Add promotion dates if you have them.
   - Answer any questions it asks about your sales pattern, such as seasonal or one-off spikes.
   - Check the method it picked and the error figures. Treat any target accuracy numbers as starting points to test against your own history.
-  - If you want it to test several methods on held-back data, use an AI that can run code. It uses free Python packages such as statsmodels. The skill also names paid planning software, which you do not need.
-  - Next, use the forecast in your reorder and purchasing plan. Each month, compare the forecast with what sold and track the error.
+  - If you want it to test several methods on held-back data, use an AI that can run code. It uses free Python packages such as statsmodels. The skill also names paid planning software, which you do not need. If your AI cannot run code, ask for a simple moving average or smoothing forecast you can build in a spreadsheet, and check the sums yourself.
+  - Next, use the forecast in your reorder and purchasing plan, for example with the Reorder quantity planner. Each month, compare the forecast with what sold and track the error.
 output_sample:
   input:
     - Your past sales by product and period

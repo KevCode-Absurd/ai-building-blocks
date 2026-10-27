@@ -9,7 +9,7 @@ subhead: Before you ship a change, you learn what it could break outside its own
 explain: |
   Before you ship a change, you learn what it could break outside its own diff, and you get one piece of proof that it is safe. Describe the change and the skill goes past listing callers, which a search does in a second.
 
-  It asks you to doubt your own write-up and rate each key fact on a ladder: you said so, you pointed to the file and line, you traced it, you ran it, you saw it live. It then looks for hidden users such as stored data, payloads, config, other apps reading a client, and prompt files. Run it before design, since a claim like "this already handles that" is only a guess until checked.
+  It asks you to doubt your own write-up and rate each key fact on a ladder: you said so, you pointed to the file and line, you traced it, you ran it, you saw it live. It then looks for hidden users such as stored data, payloads, config, other apps reading a client, and prompt files. Run it before design, since a claim like "this already handles that" is only a guess until checked. Licence: this copy is from sickn33's collection, whose written content is CC BY 4.0 (see LICENSE-CONTENT). The skill file's own header says MIT, set by the original author stas4000. Both let you reuse it if you keep the credit.
 when:
   - You are about to edit a shared API, config file or stored data format.
   - A small diff feels risky and you cannot say why.
@@ -30,10 +30,11 @@ you_get:
   - A note on where checking stopped
 how_to_use:
   - Open your AI tool. Use one that can read your project files, and run code if you want the proof step.
+  - "Gather first: the diff or commit range, the path to your lockfile, and the paths of any other repos or apps that use this code."
   - Paste the skill text, or upload the skill folder.
   - Describe the change, or paste the diff. Add the claim it depends on, if you have one.
   - Let your AI list the risks and rate each key fact. Check that every risk names a real file and line.
-  - Run the proof script in a local or test setup, never on live data. Then fix what it found and run the proof again on the final change. Note the result in your pull request.
+  - Run the proof script in a local or test setup, never on live data. Then fix what it found and run the proof again on the final change. Note the result in your pull request. Next, fix the risks that were confirmed, then attach the proof result to the pull request. To check the tests themselves, use test-suite-auditor.
 output_sample:
   input:
     - A short description of the change, or the diff itself

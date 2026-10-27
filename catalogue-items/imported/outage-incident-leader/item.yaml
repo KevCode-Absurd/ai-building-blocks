@@ -10,8 +10,12 @@ level: advanced
 inputs:
   - type: question
     required: true
+  - type: incident_record
+    required: false
 outputs:
   - type: document
+  - type: incident_record
+    required: true
 uses: []
 origin: imported
 source:

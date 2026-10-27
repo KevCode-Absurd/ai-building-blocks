@@ -12,6 +12,7 @@ inputs:
     required: true
 outputs:
   - type: audit_report
+  - type: spreadsheet
 uses: []
 origin: imported
 warnings:

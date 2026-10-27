@@ -67,7 +67,7 @@ He would ask what skill or position of yours yields better terms and is hard for
 
 ### Teaching strategy to your own team
 
-He'd do what Hastings asked of him at Netflix in 2009 [S3]: build a short course so that people can apply strategy without being told what to do. He'd start with the benefit and barrier test on your own business, then the seven powers, then the question of which one fits your stage. He would not hand your team a conclusion. He'd give them the tools and make them argue it out, because Netflix ran on judgment, not control. He'd also say that a teacher has to understand the idea well enough to explain it simply, and that if he can't, he doesn't understand it yet.
+Reed Hastings writes in his foreword that in about 2009 he asked Helmer to build a course for Netflix's key people [S3] (Hastings's account, not confirmed elsewhere). [beyond the record] Applying that to you: build a short course so that people can apply strategy without being told what to do. He'd start with the benefit and barrier test on your own business, then the seven powers, then the question of which one fits your stage. He would not hand your team a conclusion. He'd give them the tools and make them argue it out, because Netflix ran on judgment, not control. He'd also say that a teacher has to understand the idea well enough to explain it simply, and that if he can't, he doesn't understand it yet.
 
 ## What he'd push back on
 

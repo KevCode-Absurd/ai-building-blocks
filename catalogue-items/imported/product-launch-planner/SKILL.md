@@ -22,7 +22,7 @@ If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or 
 5. Draft the announcement messages.
 6. Finish with the launch checklist and the one thing to do first.
 
-**About the examples below:** the company stories and results (Superhuman, Notion, TRMNL, SavvyCal, Reform) are the skill author's reports of public events. We have not checked them. Use them as illustrations, never repeat the numbers as fact, and never invent results for the user's own launch.
+**About the examples below:** the company stories and results (Superhuman, Notion, TRMNL, SavvyCal, Reform) are the skill author's reports of public events. We have not checked them, and we removed the specific figures and ranks that we could not link to a public source. Use them as illustrations, never repeat the numbers as fact, and never invent results for the user's own launch.
 
 ---
 
@@ -64,7 +64,7 @@ You own the channel (though not the audience). Direct access without algorithms 
 - Engagement matters → Build a community
 
 **Example - Superhuman (reported, not verified):**
-Built demand through an invite-only waitlist and one-on-one onboarding sessions. Every new user got a 30-minute live demo. This created exclusivity, FOMO, and word-of-mouth—all through owned relationships. Years later, their original onboarding materials still drive engagement.
+Built demand through an invite-only waitlist and one-on-one onboarding sessions. Every new user got a live demo. This created exclusivity, FOMO, and word-of-mouth—all through owned relationships. Years later, their original onboarding materials still drive engagement.
 
 ### Rented Channels
 Platforms that provide visibility but you don't control. Algorithms shift, rules change, pay-to-play increases.
@@ -106,7 +106,7 @@ Tap into someone else's audience to shortcut the hardest part—getting noticed.
 4. Set up affiliate/referral incentives (for channel partner launches, use [Introw](https://github.com/coreyhaines31/marketingskills/blob/main/tools/integrations/introw.md) to manage deal registration and commissions)
 
 **Example - TRMNL (reported, not verified):**
-Sent a free e-ink display to YouTuber Snazzy Labs—not a paid sponsorship, just hoping he'd like it. He created an in-depth review that racked up 500K+ views and drove $500K+ in sales. They also set up an affiliate program for ongoing promotion.
+Sent a free e-ink display to YouTuber Snazzy Labs—not a paid sponsorship, just hoping he'd like it. He made an in-depth review that reportedly drove many views and sales (figures not verified, so none are given here). They also set up an affiliate program for ongoing promotion.
 
 Borrowed channels give instant credibility, but only work if you convert borrowed attention into owned relationships.
 
@@ -258,7 +258,7 @@ Product Hunt can be powerful for reaching early adopters, but it's not magic—i
 - Optimized landing page and onboarding before launch
 - Built relationships with productivity/SaaS influencers in advance
 - Responded to every comment on launch day
-- Result: #2 Product of the Month
+- Result: reported as a high Product Hunt ranking (rank not verified)
 
 **Reform** (Form builder):
 - Studied successful launches and applied insights
@@ -266,7 +266,7 @@ Product Hunt can be powerful for reaching early adopters, but it's not magic—i
 - Engaged in communities before launch (provided value first)
 - Treated launch as all-day engagement event
 - Directed traffic to capture signups
-- Result: #1 Product of the Day
+- Result: reported as a top Product Hunt ranking (rank not verified)
 
 ---
 
@@ -334,7 +334,7 @@ Continue using email, social, and in-app messaging to highlight improvements.
 Even small changelog updates remind customers your product is evolving. This builds retention and word-of-mouth—customers feel confident you'll be around.
 
 **Turn shipped code into announcements:**
-If you can read the product repo, generate the week's changelog, announcement drafts, and pages-to-update list straight from merged PRs. See [references/shipped-changes.md](references/shipped-changes.md).
+If you can read the product repo, generate the week's changelog, announcement drafts, and pages-to-update list straight from merged PRs. In a plain chat the AI cannot read your repo, so ask the user to paste their changelog or the list of merged changes first. See [references/shipped-changes.md](references/shipped-changes.md).
 
 ---
 

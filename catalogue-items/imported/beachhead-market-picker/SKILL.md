@@ -151,9 +151,11 @@ See: [references/positioning.md](references/positioning.md) when filling in the 
 | Early Adopter Messaging | Early Majority Messaging |
 |-------------------------|--------------------------|
 | "Revolutionary new approach" | "Proven solution for [problem]" |
-| "Be the first" | "Join 500 companies like yours" |
-| "Change everything" | "Improve [specific metric] by X%" |
+| "Be the first" | "Join [N] companies like yours" |
+| "Change everything" | "Improve [specific metric] by [X]%" |
 | "Visionary" | "Pragmatic" |
+
+Fill the brackets only with numbers you can verify from your own customers. Never invent a customer count or a result.
 
 See: [references/go-to-market.md](references/go-to-market.md) when building the launch plan -- it details channel selection by buyer type, the reference-and-case-study engine, and pricing/pilot tactics for pragmatists.
 

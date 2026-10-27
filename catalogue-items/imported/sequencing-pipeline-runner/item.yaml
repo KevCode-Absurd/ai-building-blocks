@@ -12,6 +12,8 @@ inputs:
     required: false
   - type: question
     required: true
+  - type: dataset
+    required: false
 outputs:
   - type: code_change
 uses: []

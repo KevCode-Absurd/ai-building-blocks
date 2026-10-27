@@ -12,7 +12,7 @@ import crypto from 'node:crypto';
 import { buildLibrarySearchIndex, searchLibraryIndex } from '../src/lib/library-search-core.ts';
 import { makeSearchDocument } from '../src/lib/search-document.mjs';
 import { classificationText } from '../src/lib/catalogue-taxonomy.mjs';
-import { decodeCatalogue, freeSelection, candidatesFor } from '../src/lib/composer-core.ts';
+import { decodeCatalogue, freeSelection, candidatesFor, startPicks } from '../src/lib/composer-core.ts';
 
 const SITE = path.resolve(import.meta.dirname, '..');
 const arg = name => { const i = process.argv.indexOf(name); return i < 0 ? undefined : process.argv[i + 1] ?? true; };
@@ -166,25 +166,25 @@ if (wants('next')) {
 // ---------------- Composer ----------------
 if (wants('composer')) {
   const lib = decodeCatalogue(raw);
-  const { planFromGoal } = await bundle('src/lib/goal.ts');
   // A ready workflow or coordinator kept as one node runs its own steps, so those count as covered.
   const expand = steps => [...new Set(steps.flatMap(s => [s, ...(bySlug[s]?.steps ?? []).map(x => x.uses)]))];
   const cover = (steps, item) => { const all = expand(steps); return item.steps.filter(group => group.some(s => all.includes(s))).length / item.steps.length; };
-  const agg = { builder: 0, free: 0, candidates: 0, builderFull: 0, freeFull: 0, builderNull: 0, freeGeneral: 0 }, rows = [];
+  // "Start with" (free mode): does a labelled step lead the picks (top1), or appear among the first five (top5)?
+  const agg = { start1: 0, start5: 0, noPicks: 0, free: 0, candidates: 0, freeFull: 0, freeGeneral: 0 }, rows = [];
   for (const item of fixture.goals) {
-    const plan = planFromGoal(catalogue, item.goal);
-    const builderSteps = plan?.slugs ?? [];
+    const picks = startPicks(catalogue, item.goal, 5).tasks.map(p => p.b.slug), good = new Set(item.steps.flat());
     let freeSteps = [];
     try { freeSteps = freeSelection(lib, item.goal).steps.map(s => s.slug); } catch { /* counted as zero coverage */ }
     const cands = candidatesFor(lib, item.goal).map(b => b.slug);
-    const b = cover(builderSteps, item), f = cover(freeSteps, item), c = cover(cands, item);
-    agg.builder += b; agg.free += f; agg.candidates += c; agg.builderFull += b === 1; agg.freeFull += f === 1; agg.builderNull += !plan; agg.freeGeneral += freeSteps.includes('request-deliverable-drafter');
-    rows.push({ id: item.id, goal: item.goal, builder: round(b, 2), free: round(f, 2), candidates: round(c, 2), builderSteps, builderFrom: plan ? ('workflow' in plan.from ? 'workflow:' + plan.from.workflow.slug : 'target:' + plan.from.target.slug) : null, freeSteps });
+    const f = cover(freeSteps, item), c = cover(cands, item);
+    agg.start1 += good.has(picks[0]); agg.start5 += picks.some(s => good.has(s)); agg.noPicks += !picks.length;
+    agg.free += f; agg.candidates += c; agg.freeFull += f === 1; agg.freeGeneral += freeSteps.includes('request-deliverable-drafter');
+    rows.push({ id: item.id, goal: item.goal, startPicks: picks, free: round(f, 2), candidates: round(c, 2), freeSteps });
   }
   const n = fixture.goals.length;
   report.composer = {
     goals: n,
-    builderPlanFromGoal: { stepCoverage: round(agg.builder / n), fullyCovered: agg.builderFull, noPlan: agg.builderNull },
+    startPicks: { top1: round(agg.start1 / n), top5: round(agg.start5 / n), noPicks: agg.noPicks, note: 'Free mode: a labelled step first, or among the first five "Start with" picks (composer-core startPicks).' },
     freeAssembly: { stepCoverage: round(agg.free / n), fullyCovered: agg.freeFull, usedGeneralTemplate: agg.freeGeneral },
     aiCandidatePool: { stepRecall: round(agg.candidates / n), note: 'Share of expected steps present in the deterministic candidate list sent to the model (no model call made).' },
     rows,
@@ -194,5 +194,5 @@ if (wants('composer')) {
 const out = arg('--out');
 const text = JSON.stringify(report, null, 2);
 if (typeof out === 'string') { fs.mkdirSync(path.dirname(path.resolve(out)), { recursive: true }); fs.writeFileSync(path.resolve(out), text + '\n'); }
-const brief = { keywords: report.keywords && { hit1: report.keywords.hit1, hit5: report.keywords.hit5, queries: report.keywords.n, byType: report.keywords.byType, byKind: report.keywords.byKind, medianQueryMs: report.keywords.medianQueryMs }, search: report.search && { top1: report.search.top1, top5: report.search.top5, mrr10: report.search.mrr10, medianQueryMs: report.search.medianQueryMs, misses: report.search.misses.length }, next: report.next && { page: report.next.pageNext, builder: report.next.builderSuggestNext, finance: report.next.financeExpansion }, composer: report.composer && { builder: report.composer.builderPlanFromGoal, free: report.composer.freeAssembly, candidates: report.composer.aiCandidatePool.stepRecall } };
+const brief = { keywords: report.keywords && { hit1: report.keywords.hit1, hit5: report.keywords.hit5, queries: report.keywords.n, byType: report.keywords.byType, byKind: report.keywords.byKind, medianQueryMs: report.keywords.medianQueryMs }, search: report.search && { top1: report.search.top1, top5: report.search.top5, mrr10: report.search.mrr10, medianQueryMs: report.search.medianQueryMs, misses: report.search.misses.length }, next: report.next && { page: report.next.pageNext, builder: report.next.builderSuggestNext, finance: report.next.financeExpansion }, composer: report.composer && { start: report.composer.startPicks, free: report.composer.freeAssembly, candidates: report.composer.aiCandidatePool.stepRecall } };
 console.log(JSON.stringify(brief, null, 2));

@@ -264,6 +264,7 @@ import { Link } from "expo-router";
     </Pressable>
   </Link.Trigger>
   <Link.Menu>
+    {/* handleSharePress and handleBlockPress are not defined here: write them, or replace them with real actions */}
     <Link.MenuAction
       title="Share"
       icon="square.and.arrow.up"

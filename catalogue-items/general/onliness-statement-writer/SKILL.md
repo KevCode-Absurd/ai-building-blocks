@@ -67,9 +67,9 @@ The six prompts. The versions. The rival swap test for each. The chosen sentence
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Brand positioning sentence writer](https://useaiblocks.com/prompts/one-line-position-writer).
 - The [Positioning idea generator](https://useaiblocks.com/skills/positioning-idea-generator). It takes the brief.
-- The [Rival-free pitch rewriter](https://useaiblocks.com/skills/rival-free-pitch-rewriter).
+- The [SaaS market position adviser](https://useaiblocks.com/skills/copilot-gtm-positioning-strategy). It takes the brief.
+- The [Content topic planner](https://useaiblocks.com/skills/content-topic-planner). It takes the brief.
 - **Say it to the room** with the [Internal proposal pitch planner](https://useaiblocks.com/skills/idea-buy-in-pitch-planner). It takes the brief.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

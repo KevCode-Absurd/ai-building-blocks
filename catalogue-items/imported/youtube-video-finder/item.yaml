@@ -12,6 +12,8 @@ inputs:
     required: true
 outputs:
   - type: shortlist
+  - type: video_link
+    required: true
 uses: []
 origin: imported
 warnings:

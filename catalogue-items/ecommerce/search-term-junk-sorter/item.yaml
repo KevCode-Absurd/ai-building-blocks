@@ -7,9 +7,10 @@ role: check
 job: ads
 level: beginner
 inputs:
-  - {type: question, required: true}
+  - {type: search_query_report, required: true}
 outputs:
   - {type: audit_report}
+  - {type: keyword_list, required: true}
 uses: []
 origin: own
 version: 1.0.0

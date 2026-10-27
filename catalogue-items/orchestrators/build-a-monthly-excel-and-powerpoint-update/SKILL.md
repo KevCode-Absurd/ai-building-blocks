@@ -49,11 +49,11 @@ Save each step's result as `outputs/step-NN-<skill>.md` (or the file it names) b
 
 2. **PowerPoint template populator.** Use the skill `powerpoint-template-populator`. Fill the supplied template, not a look-alike, with the results from step 1. Keep charts and tables editable. Save `populated-template.pptx`, a source map (which sheet and cell each slide number comes from) and slide previews. Hand to step 3: the deck and the source map.
 
-3. **Excel to PowerPoint number checker.** Use the skill `excel-powerpoint-number-checker`. Match every number on every slide to the workbook. Fail stale periods, swapped categories and mixed units. Save `slide-number-checks.csv` and `number-review.md`. If a number fails, tell the person which slide and which cell. Repair only if the person asked, then recheck, at most twice. Hand to step 4: the checked deck.
+3. **Excel to PowerPoint number checker.** Use the skill `excel-powerpoint-number-checker`. Match every number on every slide to the workbook. Fail stale periods, swapped categories and mixed units. Save `slide-number-checks.csv` and `number-review.md`. If a number fails, tell the person which slide and which cell. Repair only if the person asked, then recheck, at most twice. Hand to step 4: the checked deck and `number-review.md`. Step 4 waits until every failed number is fixed or listed under OPEN ITEMS.
 
 4. **PowerPoint speaker notes builder.** Use the skill `powerpoint-speaker-note-builder`. Add short speaker notes, each tied to its source, and a time budget for the talk length given. Do not change a checked figure. Save `deck-with-notes.pptx` and the timing sheet.
 
-5. **Check and hand back.** End with a section headed `HAND-BACK SUMMARY`: each file saved with its path, each step run or skipped and why, the source map, every `MISSING:` line, and CHECKS MISSED (the checks that failed or could not run, such as a layout check in PowerPoint, or "none").
+5. **Check and hand back.** End with a section headed `HAND-BACK SUMMARY`, in the shape under "What you hand back": FILES (each file saved with its path), SOURCE MAP, CHECKS (mark any check that failed or could not run, such as a layout check in PowerPoint, as `failed` or `not run`) and OPEN ITEMS (every `MISSING:` line, and each step skipped and why).
 
 ## If something is missing
 

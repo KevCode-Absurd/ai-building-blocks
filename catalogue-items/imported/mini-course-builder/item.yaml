@@ -10,7 +10,7 @@ level: intermediate
 inputs:
   - type: source_text
     required: false
-  - type: brief
+  - type: lesson_plan
     required: true
 outputs:
   - type: web_app

@@ -92,7 +92,7 @@ def predict(request: PredictionRequest):
 
 ### Example 2: Docker + Kubernetes Deployment
 
-> Sample code, not tested here. The `LoadBalancer` service below is open to the internet. Before you expose a model API, add an API key check or keep it on a private network.
+> Sample code, not tested here. The `ClusterIP` service below is reachable only inside your cluster. If you change it to `LoadBalancer` or add an ingress, the API is open to the internet, so add an API key check first.
 
 **Dockerfile:**
 
@@ -155,11 +155,12 @@ spec:
   ports:
     - port: 80
       targetPort: 8000
-  type: LoadBalancer
+  type: ClusterIP
 ```
 
 ## Best Practices
 
+- **Check the model file before you load it.** `joblib.load` and pickle files can run code when opened. Only load a file from a source you trust, and check its checksum (for example SHA-256) against the one the author gave you.
 - **Pin all dependency versions** in `requirements.txt` and use deterministic Docker builds to guarantee reproducibility across environments.
 - **Separate model artifacts from code** so you can update models without rebuilding the entire container image. Use a model registry or cloud storage with versioned paths.
 - **Implement input validation** with Pydantic or JSON Schema to reject malformed requests before they reach the model and produce confusing errors.

@@ -9,7 +9,7 @@ subhead: Each morning you see every unshipped order sorted by how long it has wa
 explain: |
   Each morning you see every unshipped order sorted by how long it has waited, with stuck ones called out. No more scrolling the Orders page to find what is going late.
 
-  The skill pulls all unfulfilled and partly fulfilled orders from Shopify, oldest first. It sorts them into age groups, by default up to 1 day, 1 to 3 days, 3 to 7 days and over 7 days, and you can change those cut points. For each order it checks whether the shipment is on hold and lists those in their own section. It only reads data and changes nothing, so it is safe to run daily. Your AI needs access to your Shopify store.
+  The skill pulls all unfulfilled and partly fulfilled orders from Shopify, oldest first. It sorts them into age groups, by default up to 1 day, 1 to 3 days, 3 to 7 days and over 7 days, and you can change those cut points. For each order it checks whether the shipment is on hold and lists those in their own section. It only reads data and changes nothing, so it is safe to run daily. Your AI needs access to your Shopify store. Shopify may only return orders from the last 60 days unless your sign-in also has the read_all_orders permission, so very old open orders can be missing. This is 40rty AI's fulfillment digest skill, shared under the MIT licence.
 when:
   - You start your day wanting to know which orders are overdue.
   - A customer asks where their order is and you need to spot delays fast.
@@ -22,7 +22,7 @@ not_for:
 you_give:
   - Your store address
   - Age cut points in days (optional)
-  - Whether to include held orders (optional)
+  - Whether to include held orders (optional, on by default)
 you_get:
   - Open orders grouped by age
   - Held orders section
@@ -51,6 +51,6 @@ output_sample:
     - name: Fulfillment Age Digest
       contains: A table of order counts for each age group, with the oldest order in each group.
     - name: Orders On Hold
-      contains: A table of held orders with their hold status, shown only when you ask for holds.
+      contains: A table of held orders with their age and hold status. It shows by default and can be turned off with include_holds set to false.
     - name: Outcome summary
       contains: Total open orders, counts per age group, number on hold and number of errors.

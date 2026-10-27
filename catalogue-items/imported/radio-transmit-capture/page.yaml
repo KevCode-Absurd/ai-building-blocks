@@ -10,6 +10,8 @@ explain: |
   First you choose your radio setup, the signal and the frequency. You get back a MATLAB script that sends the signal and records the IQ data the radio receives, ready for you to study.
 
   It works with NI USRP radios using MATLAB Wireless Testbench. You pick the signal: a test tone, a standard-style waveform or your own samples. The skill sets sample rate, gain and antennas, then chooses transmit once or continuous, and foreground or background capture. It also helps when samples drop or gain is wrong. You need MATLAB, the Wireless Testbench add-on and a set-up USRP radio. First-time radio setup is a separate task.
+
+  Licence: BSD 2-Clause plus one MathWorks term (clause 3 in LICENSE.md). You may use this skill only with MathWorks products and services, so you need MATLAB and Wireless Testbench, which are paid. The skill file also links MathWorks' own reuse licence.
 when:
   - You want to confirm a radio chain works with a loopback test.
   - You need to capture a slice of spectrum as IQ data.
@@ -63,3 +65,19 @@ output_sample:
     - name: Troubleshooting
       contains: Fixes for dropped samples and wrong gain.
 next: [triggered-radio-capture-helper, usrp-radio-setup-helper]
+terms:
+  - term: IQ data
+    meaning: The raw samples a radio records. Software turns them into a signal you can study.
+  - term: USRP
+    meaning: A software defined radio made by NI. You control it from MATLAB.
+  - term: Wireless Testbench
+    meaning: A paid MATLAB add-on that connects MATLAB to radios such as the USRP.
+  - term: Loopback
+    meaning: A test that sends a signal and captures it on the same radio to check the chain works.
+output_shape: |-
+  One MATLAB script with these sections, in order:
+  1. Radio setup: <radio, frequency, sample rate, gain, antennas>
+  2. Transmit: <signal, once or continuous>
+  3. Capture: <foreground or background, length>
+  4. Loopback check: <send and capture on the same radio>
+  Fixes: <for dropped samples or wrong gain>

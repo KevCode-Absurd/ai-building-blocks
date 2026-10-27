@@ -28,9 +28,9 @@ OpenAI's multilingual speech recognition model.
 - MIT License
 
 **Use alternatives instead**:
-- **AssemblyAI**: Managed API, speaker diarization
-- **Deepgram**: Real-time streaming ASR
-- **Google Speech-to-Text**: Cloud-based
+- **AssemblyAI**: Managed API (paid cloud service), speaker diarization
+- **Deepgram**: Real-time streaming ASR (paid cloud service)
+- **Google Speech-to-Text**: Cloud-based (paid cloud service)
 
 ## Quick start
 
@@ -107,6 +107,9 @@ result = model.transcribe("audio.mp3", language="en")
 result = model.transcribe("audio.mp3", task="transcribe")
 
 # Translation to English
+# Load a model that translates first: medium or large. The turbo model is not
+# trained for translation, so do not use it with task="translate".
+model = whisper.load_model("medium")
 result = model.transcribe("spanish.mp3", task="translate")
 # Input: Spanish audio → Output: English text
 ```
@@ -165,8 +168,8 @@ whisper audio.mp3 --output_format json    # JSON with timestamps
 # Language
 whisper audio.mp3 --language Spanish
 
-# Translation
-whisper spanish.mp3 --task translate
+# Translation (use --model medium or --model large, not turbo)
+whisper spanish.mp3 --task translate --model medium
 ```
 
 ## Batch processing
@@ -233,7 +236,7 @@ whisper video.mp4 --output_format srt --language English
 # Output: video.srt
 ```
 
-### With LangChain
+### With LangChain (optional, and the embeddings step needs a paid OpenAI API key)
 
 ```python
 from langchain.document_loaders import WhisperTranscriptionLoader
@@ -260,7 +263,7 @@ whisper audio.wav
 
 ## Best practices
 
-1. **Use turbo model** - Best speed/quality for English
+1. **Use turbo model** - Best speed/quality for transcription (not for translation: use medium or large)
 2. **Specify language** - Faster than auto-detect
 3. **Add initial prompt** - Improves technical terms
 4. **Use GPU** - 10-20× faster

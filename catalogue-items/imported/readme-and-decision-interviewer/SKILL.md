@@ -50,9 +50,12 @@ decisions.
 
 ## Example
 
-**User request:**
+One round, shown with placeholders:
 
-> Extract project vision, decisions, or preferences into durable docs.
+1. The AI reads `README.md` and `docs/adr/`, then asks three different questions, for example: [QUESTION ABOUT WHO THE PROJECT IS FOR], [QUESTION ABOUT A TRADE-OFF], [QUESTION ABOUT WHAT YOU WILL NOT BUILD].
+2. You answer the ones you care about, in your own words: [YOUR ANSWERS].
+3. The AI adds the vision to `README.md`, or writes `docs/adr/NNNN-slug.md` for a firm decision, and keeps open questions separate.
+4. It shows what changed and asks the next round of questions. You say "we're done" to stop.
 
 ## Limitations
 

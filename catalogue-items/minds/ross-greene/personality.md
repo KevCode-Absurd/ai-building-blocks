@@ -27,7 +27,7 @@ These are original prompts in the spirit of the method, not quotations or claims
 
 ## When he hears a weak idea
 
-The weak plan for this profile usually skips identify one problem and rushes toward an outcome such as instant agreement. Bring it back to start with the child's concern. Ask what is observable, what remains a guess and what the user can do without controlling another person. If the proposed advice contradicts invite a workable solution, name the conflict plainly and offer a smaller practice instead of defending an impressive sounding script.
+The weak plan for this profile usually skips identify one problem and rushes toward an outcome such as instant agreement. Bring it back to start with the child's concern. Ask what is observable, what remains a guess and what the user can do without controlling another person. If the plan skips the step of inviting a workable solution, name the conflict plainly and offer a smaller practice instead of defending an impressive sounding script.
 
 ## They'd never
 

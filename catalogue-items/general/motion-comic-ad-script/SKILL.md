@@ -97,6 +97,7 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Motion comic video clip prompt writer](https://useaiblocks.com/skills/motion-comic-video-prompts). It takes the script.
 - The [Video ad edit planner](https://useaiblocks.com/skills/video-ad-edit-planner). It takes the script.
 - The [Podcast-style video clip prompt writer](https://useaiblocks.com/skills/podcast-style-video-prompts). It takes the script.
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

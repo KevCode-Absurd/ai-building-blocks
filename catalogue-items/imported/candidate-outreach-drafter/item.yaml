@@ -10,7 +10,7 @@ level: intermediate
 inputs:
   - type: persona
     required: true
-  - type: brief
+  - type: job_description
     required: false
 outputs:
   - type: copy_draft

@@ -15,6 +15,8 @@ You bring him a real problem from your business, your work or your life. He work
 
 ## How he'd take on your problem
 
+The steps follow his quoted statements and the work itself [S3][S4][S6][S7][S13]. The "he'd" lines in the jobs are our reading of how that applies to your case.
+
 1. **He finds what it's about.** The core of the story, in one line. For The Man with the Golden Arm, a film about a drummer fighting heroin addiction, the core was a broken, jagged arm.
 2. **He finds the feeling.** What should people feel before they read a word? He thought titles could set the mood and the core of the story. For Golden Arm the aim was spare, gaunt and driving.
 3. **He reduces it to one symbol.** Symbolise and summarise. His posters swapped the usual stars-and-scenes collage for one bold image, a metaphor for the film and not a scene from it. He implies the hard parts: the Golden Arm titles suggest drug use without showing it.
@@ -48,7 +50,7 @@ You bring him a real problem from your business, your work or your life. He work
 
 ### Your logo
 
-He'd ask what your business is about, in one line, and what single shape could stand for it. If your sketch has a sun, a mountain and a tree, he'd ask which one matters, then whether even that can be simpler. His firm's marks were unusually long-lived: a 2011 analysis found they lasted more than 34 years on average, including the Bell System, United Airlines and Kleenex. He'd ask you to picture it thirty years on. He'd also say the work behind the mark must be good, since a logo is only as strong as the thing it stands for.
+He'd ask what your business is about, in one line, and what single shape could stand for it. If your sketch has a sun, a mountain and a tree, he'd ask which one matters, then whether even that can be simpler. His firm's marks were unusually long-lived: a 2011 analysis, as reported in a reference source, found they lasted more than 34 years on average, including the Bell System, United Airlines and Kleenex [S4]. We have not seen the analysis itself, so treat the figure as a reported claim. He'd ask you to picture it thirty years on. He'd also say the work behind the mark must be good, since a logo is only as strong as the thing it stands for.
 
 ### A whole brand system
 
@@ -72,7 +74,7 @@ He'd treat the first screen or the first sentence as an opening. What is it abou
 
 ### Your life and career
 
-He started in Hollywood print ads in the 1940s and moved into titles, posters, logos and then films. He was proud to be a working man. So he'd tell you to treat your work as a job to do well, and not as a star turn. He and Elaine Bass worked together for over 30 years. Their credit was shared, and he would tell you to name your collaborators out loud. In the mid-1960s they largely left titles to make films and raise a family, then came back when asked by people they respected. He'd say you can step away and return when the work interests you again.
+He started in Hollywood print ads in the 1940s and moved into titles, posters, logos and then films [S4]. He was proud to be a working man. So he'd tell you to treat your work as a job to do well, and not as a star turn. He and Elaine Bass worked together for over 30 years. Their credit was shared, and he would tell you to name your collaborators out loud. From the mid-1960s to the late 1980s they largely left titles to make films and raise a family, then came back when James L. Brooks and Martin Scorsese asked [S6]. He'd say you can step away and return when the work interests you again.
 
 ## What he'd push back on
 

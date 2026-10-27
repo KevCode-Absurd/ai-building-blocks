@@ -7,6 +7,8 @@ description: Get a coding brief that sorts Google Ads keywords into five tiers b
 
 Paste this into a coding assistant that can open your project (Claude Code, Codex or similar). It plans and builds a read-only module that sorts every Google Ads Search keyword into one of five tiers, from "hero" to "zombie", and compares each run with the last one to show which keywords moved. It never changes your ad account.
 
+Not for: reading search terms people typed (use the Google search term coding prompt), or doing the work without writing software.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -30,7 +32,7 @@ How to start:
 Ask once for anything missing. If it is still missing, write `MISSING:` for it in the setup gaps and carry on with placeholders. Never invent a target, a brand term or a result.
 
 1. **Your project** (required for code): the repository, or its main folders and database schema, including where past audit runs are saved. With no repository, write a self-contained specification with placeholder paths and say no code was written.
-2. **Google Ads read access** (required to run it later): the customer ID, the manager account ID if there is one, and the names of the credentials the project uses. Never ask for or repeat a secret. If one is pasted, say so and advise rotating it.
+2. **Google Ads read access** (required to run it later, set up in your Google Ads account and developer settings): the customer ID, the manager account ID if there is one, and the names of the credentials the project uses. Never ask for or repeat a secret. If one is pasted, say so and advise rotating it.
 3. **Target ROAS or CPA** (needed for two tiers): without it the "hero" and "volume driver" tiers cannot be tested. Skip those two, list them as not evaluated, and say what the target is needed for.
 4. **Brand terms** (needed to protect brand keywords): the words that make a keyword "branded". Without them, mark every keyword's brand status as unknown and say the zombie list may include brand keywords.
 5. **Date range** (optional): default 30 days.
@@ -159,14 +161,15 @@ KEYWORD_TIER_CONFIG, in the account's currency:
 
 ## What you hand back
 
-The assistant returns these, in this order: setup gaps and anything it could not check, the plan and files changed, the five items under "When you are done", and the smallest next step. If it ran nothing, it says so.
+The assistant returns these, in this order: SETUP GAPS and anything it could not check, FUNCTION SIGNATURE, SAMPLE DiagnosticOutput (labelled as made-up rows), DISTRIBUTION AND SPEND SHARE, TEST RESULTS and NEXT STEP. If it ran nothing, it says so.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Shopping feed audit prompt writer](https://useaiblocks.com/prompts/build-the-shopping-feed-auditor-builder-prompt).
-- The [Google search term code planner](https://useaiblocks.com/prompts/google-search-term-code-prompt).
-- The [Google Ads Quality Score tool planner](https://useaiblocks.com/prompts/build-the-quality-score-triage-module-builder-prompt).
+- The [Simple code coach](https://useaiblocks.com/skills/simple-code-coach). It takes the code change.
+- The [Pull request writer](https://useaiblocks.com/skills/pull-request-writer). It takes the code change.
+- The [Breaking change reviewer](https://useaiblocks.com/skills/breaking-change-reviewer). It takes the code change.
+- The [Code change reviewer](https://useaiblocks.com/skills/code-change-reviewer). It takes the code change.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

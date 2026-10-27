@@ -138,6 +138,8 @@ Free tier limits should:
 
 ### Example: Good Limit Structure
 
+> The company limits and prices in the examples below are from the author's source date and are not checked. Do not quote them as current. Check each vendor's pricing page.
+
 **Vercel:**
 - Unlimited personal projects
 - 100GB bandwidth/month
@@ -247,7 +249,7 @@ You've used 8,000 of 10,000 free API calls this month.
 
 Options:
 - Wait for reset on March 1st
-- Upgrade to Pro ($29/mo) for 100,000 calls
+- Upgrade to Pro ([PRICE]/mo) for [N] calls
 - Request temporary limit increase (for launches)
 ```
 
@@ -396,6 +398,8 @@ Every pricing page needs:
 - "Do I need a credit card for free tier?"
 
 ### Pricing Page Examples
+
+> Same note: these descriptions are the author's, from an unstated date, and may have changed. Check each vendor's page.
 
 **Excellent: Vercel**
 - Clear free tier description

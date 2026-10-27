@@ -78,8 +78,8 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Check the landing page** with the [Unanswered customer question finder](https://useaiblocks.com/skills/customer-question-finder). It takes the page.
 - **Check the landing page** with the [Landing page conversion reviewer](https://useaiblocks.com/skills/landing-page-auditor). It takes the page.
 - **Check the landing page** with the [30-point landing page checker](https://useaiblocks.com/prompts/landing-page-30-point-checker). It takes the page.
-- The [Store hero section writer](https://useaiblocks.com/skills/store-hero-section-writer).
-- The [Landing page and email copywriter](https://useaiblocks.com/skills/honest-conversion-copywriter).
+- **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the page.
+- The [Shopify landing page builder](https://useaiblocks.com/skills/shopify-landing-page-builder). It takes the page.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

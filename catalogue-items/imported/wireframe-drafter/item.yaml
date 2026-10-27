@@ -8,10 +8,12 @@ role: make
 job: ops
 level: beginner
 inputs:
-  - type: brief
+  - type: question
     required: true
+  - type: design_direction
+    required: false
 outputs:
-  - type: design_file
+  - type: page_layout_spec
     required: true
 uses: []
 origin: imported

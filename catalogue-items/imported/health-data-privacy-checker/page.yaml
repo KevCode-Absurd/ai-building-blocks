@@ -7,6 +7,8 @@ job: check-contracts
 headline: Health data privacy checker
 subhead: A first check of whether your handling of patient information meets HIPAA, with gaps listed and fixes drafted. Say how your app, clinic or process uses health data.
 explain: |
+  This is an imported copy of a community HIPAA skill by Hemant Naik, released under the MIT licence. We gave it a plain name.
+
   A first check of whether your handling of patient information meets HIPAA, with gaps listed and fixes drafted. Say how your app, clinic or process uses health data. The skill works out whether you are a covered entity or a business associate, then checks the privacy rule, the security rule and breach notification.
 
   For software, it reviews technical safeguards such as encryption, access control and audit logs. For paperwork, it reviews policies and consent forms. It can then draft privacy notices, business associate agreements, risk assessments, policies and breach letters. Plain-language explanations are available for any rule. Every answer carries a reminder that this is information, not legal advice, so check with a HIPAA attorney before you rely on it.
@@ -19,6 +21,7 @@ not_for:
   - "You need a formal risk analysis or a legal ruling on compliance: use a HIPAA attorney or an accredited assessor."
   - "You need to test your system for technical flaws: use a security scanning tool or a penetration tester."
   - "Your data has no link to health care or patients: use a general privacy policy template or ask a privacy lawyer."
+  - "Your rules are not US HIPAA, such as EU or UK health data: use the GDPR privacy checker instead."
 you_give:
   - A description of your health data use or system
   - Existing policies, notices or architecture notes
@@ -31,7 +34,7 @@ you_get:
   - Plain explanations of the rules that apply
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
-  - Describe your app, clinic or process. Say your role and who handles the health data.
+  - Describe your app, clinic or process. Say your role and who handles the health data. Use placeholders such as [PATIENT NAME] or [RECORD ID]. Never paste real patient names, IDs or record numbers into Claude, ChatGPT or Gemini.
   - Paste any policies, notices or architecture notes you have (optional).
   - Read the gap table first. Fix the high risk items before the rest.
   - Ask for any drafts you need, such as a business associate agreement or privacy notice.

@@ -10,6 +10,10 @@ explain: |
   A messy folder becomes a clear plan for how it should be organised, with duplicates listed. Nothing moves until you approve it.
 
   It first asks which folder, what annoys you most, and what to leave alone. Then it scans file types, dates and names, finds exact duplicates, and spots old files you may not need. It suggests a folder structure that fits what you actually have, plus a naming pattern. You see the full list of planned moves and renames. After you say yes, it carries them out and gives a summary. You can choose a light tidy or a full clean-up.
+
+  This is a renamed copy of the community file-organizer skill, with a backup step and a move log added. It has no code-project rules, so do not use it on a live code project.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. Credit goes to the original authors.
 when:
   - Your Downloads folder is full of files you cannot find.
   - You suspect many duplicates are taking up space.
@@ -38,7 +42,7 @@ how_to_use:
   - Read the duplicate list and the planned moves. Ask for changes until you are happy.
   - Say yes to start the moves. Deleting needs its own separate yes.
   - The skill writes each move to a log file in the folder, as old path and new path. If something lands in the wrong place, use the log to move it back by hand.
-  - Check the summary at the end, then keep up the habits it suggests.
+  - Check the summary at the end, then keep up the habits it suggests. Pair the tidy with a backup tool, and set a monthly reminder to run the maintenance habits.
 output_sample:
   input:
     - The folder you want to tidy

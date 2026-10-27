@@ -1,0 +1,20 @@
+slug: workflow-diagram-and-change-planner
+name: "Workflow diagram and change planner"
+summary: "Share a workflow. Get it drawn as a diagram, each hand-off checked, and changes you can approve."
+category: general
+type: skill
+role: orchestrate
+job: ops
+level: beginner
+inputs:
+  - {type: plan, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - {title: "Flowcharts syntax", by: "Mermaid", url: "https://mermaid.js.org/syntax/flowchart.html", used: "The diagram format, with quoted labels and entity codes for quotes and brackets"}
+  - {title: "AI Blocks API and MCP", by: "AI Blocks", url: "https://useaiblocks.com/api-and-mcp", used: "get_workflow, plan_workflow and prepare_workflow, which return the diagram, the hand-off check and suggested changes"}

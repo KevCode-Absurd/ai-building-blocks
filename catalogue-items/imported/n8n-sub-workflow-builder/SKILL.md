@@ -269,3 +269,7 @@ Before shipping a sub-workflow:
 - Validation does not detect every caller contract mismatch, side effect, or item-linking error.
 - Tags and some workflow settings remain UI-only and may not be discoverable through the connected MCP server.
 - Refactoring shared logic requires checking every caller; this skill cannot prove that external callers were migrated.
+
+## Licence note
+
+The upstream author (Romuald Czlonkowski, czlonkowski/n8n-skills) lists this skill as MIT. The collection it was copied from lists its written content as CC BY 4.0 unless an upstream notice says otherwise (see `LICENSE-CONTENT`). We share this copy under CC BY 4.0. Keep the credit to Romuald Czlonkowski and sickn33 either way.

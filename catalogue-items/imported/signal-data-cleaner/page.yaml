@@ -10,14 +10,16 @@ explain: |
   A MATLAB script that turns a raw signal into clean, labelled data ready for analysis. It saves you from inventing filters that are wrong or functions that do not exist.
 
   The skill follows one order: condition the signal, load files into a datastore, label, split and frame, then hand off to training. For cleaning, it uses the standard tools: fill short gaps with interpolation, fill long gaps in oscillating signals with an AR method, and remove slow drift with a polynomial detrend, raising the order step by step. It also handles outliers and noise. It needs MATLAB with the Signal Processing Toolbox.
+
+  This is MathWorks' skill. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE.md file.
 when:
   - Your sensor data has holes and spikes before you can analyse it.
   - The signal drifts slowly and hides what you want to see.
   - You need to label recordings for machine learning.
   - You have a folder of signal files and need one clean dataset.
 not_for:
-  - "You need to design a filter for a set band, a notch or a custom FIR or IIR: use the matlab-design-digital-filter skill."
-  - "You want features from a clean signal, such as RMS or spectral values: use the matlab-extract-signal-features skill."
+  - "You need to design a filter for a set band, a notch or a custom FIR or IIR: use the digital filter designer."
+  - "You want features from a clean signal, such as RMS or spectral values: use the signal feature extractor."
   - "You want to classify raw .wav audio and have Audio Toolbox: use audioDatastore in MATLAB instead."
 you_give:
   - Your signal data, or a folder of signal files
@@ -31,10 +33,11 @@ you_get:
   - Labelled, split data for training
 how_to_use:
   - "This suits people who already work in MATLAB. If you do not use MATLAB, do not start here. MATLAB and the Signal Processing Toolbox are paid products, so check you have both. Your AI must be able to run MATLAB code, or you run the script yourself."
-  - Paste the skill into your AI. Add its reference files, since the steps depend on them.
+  - Paste the skill into your AI, and also give it the reference files in the skill folder, since the steps depend on them. Open wf-repair-missing.md for gaps, wf-detrend-smooth-deoutlier.md for drift, spikes and noise, wf-align-channels.md to line up channels, and wf-load-and-split.md for a folder of files. Without them your AI may guess function names.
   - Share your data, the sample rate and the file format. Say which problem to fix first.
   - Ask for a runnable .m script with one section per step.
   - Run the script. Check a plot of the signal before and after each step.
+  - "The steps, in order: 1. Repair gaps (wf-repair-missing). 2. Remove outliers and spikes. 3. Remove drift with a detrend. 4. Smooth noise (steps 2 to 4 are in wf-detrend-smooth-deoutlier). 5. Optional: put channels on one time base, then load, label and split the files."
   - "Keep this order, and fix it if a later step looks worse: fill gaps (fillmissing, or fillgaps for long gaps in a wave-like signal), then remove spikes (filloutliers or hampel), then remove drift (detrend), then smooth (smoothdata)."
 output_sample:
   input:
@@ -58,3 +61,4 @@ output_sample:
       contains: Builds a datastore from your files, adds labels from filenames or folders, and makes train, validation and test sets.
     - name: Frame and hand-off step
       contains: Cuts long signals into frames with labels and shapes the data for training.
+next: [signal-spectrum-analyzer, signal-feature-extractor, digital-filter-designer]

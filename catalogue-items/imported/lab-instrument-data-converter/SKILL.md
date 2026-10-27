@@ -7,9 +7,7 @@ description: Convert laboratory instrument output files (PDF, CSV, Excel, TXT) t
 
 Convert instrument files into standardized Allotrope Simple Model (ASM) format for LIMS upload, data lakes, or handoff to data engineering teams.
 
-> **Note: This is an Example Skill**
->
-> This skill demonstrates how skills can support your data engineering tasks—automating schema transformations, parsing instrument outputs, and generating production-ready code.
+> **Note from the original author:** this skill can be adapted to your lab.
 >
 > **To customize for your organization:**
 > - Modify the `references/` files to include your company's specific schemas or ontology mappings
@@ -33,8 +31,8 @@ Convert instrument files into standardized Allotrope Simple Model (ASM) format f
 ## Quick Start
 
 ```python
-# Install requirements first
-pip install allotropy pandas openpyxl pdfplumber --break-system-packages
+# Install requirements first, inside a virtual environment
+pip install allotropy pandas openpyxl pdfplumber
 
 # Core conversion
 from allotropy.parser_factory import Vendor
@@ -262,7 +260,8 @@ Claude:
 
 ### Installing allotropy
 ```bash
-pip install allotropy --break-system-packages
+# inside a virtual environment
+pip install allotropy
 ```
 
 ### Handling parse failures

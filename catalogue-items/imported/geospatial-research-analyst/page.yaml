@@ -7,7 +7,9 @@ job: research-topics
 headline: Geospatial research analyst
 subhead: Give it map files, satellite images or location data, and a question. It checks your data first, picks a method, runs it and saves the maps and tables. You get results and code you can rerun.
 explain: |
-  Maps and satellite data turned into a worked analysis you can follow. Give it location data, rasters, vector files or satellite imagery and a question, such as how land cover changed or where terrain gets steep, and it builds the workflow and runs it.
+  Maps and satellite data turned into a worked analysis you can follow. Give it location data, rasters, vector files or satellite imagery and a question, such as how land cover changed or where terrain gets steep, and it builds the workflow and runs it on your files. The code in the skill is a template for your own data. Steps that use Earth Engine, CDS, desktop GIS or a graphics card are not run by default.
+
+  A few terms: a CRS (coordinate reference system) says how map positions are measured. A raster is a grid of values, like a photo or an elevation map. A vector file holds points, lines and shapes. Nodata marks cells with no valid reading. Earth observation means data from satellites.
 
   It starts by checking where each input came from and what coordinate system it uses. Then it picks the right path: vector or raster GIS, remote sensing, spatial statistics, terrain, road or network analysis, or machine learning on Earth observation data. Reference notes are loaded only for the task at hand. It needs Python with GeoPandas and Rasterio, and some paths need extra packages or service logins.
 when:
@@ -32,7 +34,7 @@ you_get:
   - Python code you can rerun
 how_to_use:
   - Use an AI that can run Python code and save files. A plain chat window can only plan the steps.
-  - Install the Python packages the skill lists, in a fresh environment. Add extra tools only if your task needs them.
+  - Install Python 3.12 or newer (the skill's install notes use 3.13) and the packages the skill lists, in a fresh environment. Add extra tools only if your task needs them. The skill's code is a template for your own files. Earth Engine, CDS, desktop GIS and graphics-card steps are not run unless you set them up and ask for them.
   - Upload your files and describe your question, area and dates. Say which coordinate system each file uses, if you know.
   - Ask your AI to check each input's source, coordinate system and units before it runs anything.
   - Review the results table and the limits note. Check the maps against what you know of the area.
@@ -46,7 +48,7 @@ output_sample:
     - Logins for imagery services (optional)
   prerequisites:
     - An AI that can run Python code and save files
-    - Python with GeoPandas, Rasterio, NumPy and PyProj installed
+    - Python 3.12 or newer (the skill's install notes use 3.13) with GeoPandas, Rasterio, NumPy and PyProj installed
     - A login for Earth Engine, CDS or paid imagery, only if you use those sources
   output:
     - name: Data record

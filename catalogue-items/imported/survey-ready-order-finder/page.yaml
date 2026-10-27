@@ -31,7 +31,7 @@ you_get:
   - A read-only session log. Nothing in your store changes
 how_to_use:
   - Use an AI that can run code, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot reach your store.
-  - Sign in with the Shopify CLI and give read access to orders, customers and fulfilments.
+  - Install the Shopify CLI, then sign in with it and give read access to orders, customers and fulfilments. The CLI is free. An AI that can run code may need a paid plan.
   - Paste the skill into your AI and give it your store domain.
   - Change the 7 and 14 day window, or the consent setting, if you need to.
   - Check the counts, then open the CSV.

@@ -10,6 +10,10 @@ explain: |
   Tell it what to find or tidy in your Zotero library and get the references searched, tagged, sorted or exported as citations.
 
   It uses Pyzotero, a Python wrapper for the Zotero web API. You set up your library ID and an API key from your Zotero settings, and store them in environment variables. From there it can read items and collections, search by keyword, add or edit entries, apply tags, move items between collections, and export in citation formats. It can work on your own library or a group library. You need Python, the Pyzotero package and a Zotero account. Be careful with write actions, because they change your real library, so check the plan first.
+
+  The skill text you paste is developer documentation, written for people who code. You do not need to read it. If you want to know what a step does, ask your AI to explain it in plain words first.
+
+  Licence: we share this copy under the MIT licence, as the LICENSE.md file says.
 when:
   - Your library has hundreds of untagged papers and you want order.
   - You need a reading list exported as citations.
@@ -33,7 +37,7 @@ how_to_use:
   - Get your library ID and make an API key in your Zotero account settings. Say if it is a personal or group library.
   - Open an AI that can run Python code. Add the Pyzotero package and keep your key in an environment variable, not in the chat.
   - Paste this skill and say what to find or tidy, such as tagging untagged papers or exporting a reading list.
-  - Read the matched items and the proposed changes. Writes change your real library, so fix the plan first.
+  - Before any write, ask your AI to list every tag, move and new entry it plans, and to wait for your yes. Read that list and fix the plan first, because writes change your real library.
   - Approve the plan to apply it, then save the exported citations where you need them.
   - Next, import the exported BibTeX into your word processor or reference manager, and clean up any broken entries with citation-and-bibtex-fixer.
 output_sample:
@@ -52,7 +56,7 @@ output_sample:
     - name: Proposed changes
       contains: The tags, collection moves or new entries it plans to make, shown for your review.
     - name: Write result
-      contains: Which items were created or changed, and any that failed, after you approve.
+      contains: Which items were created or changed after you approve. Any that failed are listed apart, and only those are retried after you review them.
     - name: Citation export
       contains: Your chosen references as BibTeX or another citation format.
 next: [citation-and-bibtex-fixer, literature-review-finder]

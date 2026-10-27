@@ -134,7 +134,7 @@ works_best_with:
   tools:
     - {name: "TikTok Pixel Helper", why: "A Chrome add-on that shows which events fire as you walk through your store."}
     - {name: "TikTok Events Manager", why: "Shows pixel status and each event's count, and has a test events tool."}
-    - {name: "Shopify", why: "The official TikTok app installs the pixel and sends purchase events."}
+    - {name: "Shopify", why: "Paid plan needed. The official TikTok app installs the pixel and sends purchase events."}
   inputs:
     - "A screenshot of your TikTok account health page"
     - "Your privacy policy text, so the data sharing choice matches what you tell buyers"

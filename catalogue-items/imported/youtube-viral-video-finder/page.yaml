@@ -9,7 +9,9 @@ subhead: Name your niche. It reads public YouTube pages and ranks videos that be
 explain: |
   A ranked list of videos in your niche that beat their own channel's usual views, so you copy ideas, not channel size.
 
-  Raw view counts only show which channels are big. This skill ranks each video by how many times it beat the median views for its channel. It needs at least four videos per channel, or the median means nothing, and it skips channels that fall short. You collect the data from public listings only, never a logged-in session, using yt-dlp, the public page or a hand-made list. A Python tool then ranks them. You get the top five with their multiples, the title formula each used, what they share, and which one you could make this week.
+  Raw view counts only show which channels are big. This skill ranks each video by how many times it beat the median views for its channel. It needs at least four videos per channel, or the median means nothing, and it skips channels that fall short. You collect the data from public listings only, never a logged-in session. A hand-made list is the default; yt-dlp is faster but may breach YouTube's terms of service. A Python tool then ranks them. You get the top five with their multiples, the title pattern each used, what they share, and which one you could make this week.
+
+  Licence: we share this copy under the MIT licence, as the LICENSE file says. Credit goes to Jake Schincariol.
 when:
   - You want video ideas that worked beyond a channel's own audience.
   - You are choosing a topic and want proof it can outperform.
@@ -31,11 +33,12 @@ you_get:
   - The ones you could make this week
 how_to_use:
   - Pick five or more channels in your niche. Open each channel's public video list.
-  - "Collect at least four videos per channel: the title, views, link and length. Use yt-dlp, copy them by hand, or ask your AI to help."
+  - "Collect at least four videos per channel: the title, views, link and length. Copying them by hand is the default. Using yt-dlp is faster, but it reads YouTube automatically and may breach YouTube's terms of service."
   - Paste the skill into a chat with an AI that can run Python code (Python 3), then add your list. Keep swipe.py in the same folder as collected.json. The command is python3 swipe.py collected.json --min 2.0, and the 2.0 is your minimum multiple.
-  - Check the top five and their multiples. Remember the title formula is a guess about the title, not proof of why it worked.
+  - Check the top five and their multiples. Remember the title pattern is a guess about the title, not proof of why it worked.
   - "Pick the video you could make this week. Then answer the last question: ship it, or change it?"
   - Read only public pages, never log in. Check YouTube's terms of service and keep your requests few and slow.
+  - Next, turn the video you picked into a script with youtube-script-writer, or sharpen its title with youtube-title-and-tags-writer.
 output_sample:
   input:
     - A list of channels in your niche
@@ -48,10 +51,11 @@ output_sample:
     - name: Top five videos
       contains: The five videos that beat their own channel's median views by the most, each with its multiple.
     - name: Title formula
-      contains: The title pattern each video used, matched against a set of 21 formulas. It is a guess about the title, not proof.
+      contains: The title pattern each video used, named in plain words, such as a number, a question or a before-and-after. It is a guess about the title, not proof.
     - name: Shared trait
       contains: The one structural thing the top videos have in common.
     - name: Make this week
       contains: Which of these you could make this week, in your voice, with what you have.
     - name: Ship or change
       contains: A last question asking whether you want to use the result or change it.
+next: [youtube-script-writer, youtube-title-and-tags-writer]

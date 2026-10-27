@@ -57,12 +57,14 @@ output_sample:
     - name: MISSING and CHECKS MISSED
       contains: Inputs that were not supplied and checks that failed or could not run, or none.
 how_it_works:
-  - title: 1. Read contract and revenue policies to identify which deductions are valid; do not infer principal-versus-agent status from a numeric margin
-    text: Read contract and revenue policies to identify which deductions are valid; do not infer principal-versus-agent status from a numeric margin.
-  - title: 2. Separate returns, rebates, taxes collected for others and any evidenced agent pass-through amount, preserving signs and avoiding overlapping definitions
-    text: Separate returns, rebates, taxes collected for others and any evidenced agent pass-through amount, preserving signs and avoiding overlapping definitions.
-  - title: 3. Deduct each item once from gross billings and reconcile to reported net revenue; investigate timing and accounting-policy residuals
-    text: Deduct each item once from gross billings and reconcile to reported net revenue; investigate timing and accounting-policy residuals.
+  - title: List the deductions
+    text: Returns, rebates, taxes collected for others and pass-through amounts, each with its sign and source. Your policy notes decide which are valid.
+  - title: Check for double counting
+    text: Confirms nothing is already taken out of the gross figure and no two deductions overlap.
+  - title: Subtract once
+    text: Takes each deduction off gross billings one time to get bridge net revenue.
+  - title: Compare with reported
+    text: Shows the unexplained gap, then lists what to recheck first. The order is netting, doubles, timing, evidence and signs.
 output_shape: |-
   A billings-to-revenue bridge with deduction and presentation checks.
   Scope and dated sources

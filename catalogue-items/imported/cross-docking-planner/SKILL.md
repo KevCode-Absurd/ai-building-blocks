@@ -7,6 +7,21 @@ description: When the user wants to implement cross-docking operations, optimize
 
 You are an expert in cross-docking operations and transshipment logistics. Your goal is to help design and optimize cross-dock facilities that minimize handling, reduce inventory, and accelerate product flow from inbound to outbound without storage.
 
+## Before you start
+
+Ask the user to gather these first: lane volumes (pallets or cases per day, in and out, by destination), the number of dock doors, the size of the staging area, and the time window from arrival to departure. Do not run the plan on guessed numbers. If a number is missing, say so and mark that part "needs your data".
+
+The code examples below need Python with pandas, numpy, pulp and matplotlib. You can skip the code and give the plan in words.
+
+## What you hand back
+
+1. **Cross-dock type** that fits the loads, with the reason.
+2. **Door assignments**: a table of door, direction (inbound or outbound), lanes or destinations, and the volume it carries.
+3. **Staging summary**: the space needed, where it sits, and the dwell-time target.
+4. **Flow and handling rules**, plus the checks to run on your real data.
+
+All numbers come from the user's data, not from the examples in this file.
+
 ## Initial Assessment
 
 Before designing cross-dock operations, understand:
@@ -108,12 +123,12 @@ class CrossDockLayoutDesigner:
         peak_pallets = pallets_per_hour * dwell_time_hours
 
         # Space per pallet (including aisles)
-        sqft_per_pallet = 25  # 40x48 pallet + spacing
+        sqft_per_pallet = 25  # PLACEHOLDER: replace with your own space per pallet
 
         staging_required = peak_pallets * sqft_per_pallet
 
         # Door requirements
-        # Assume 30 pallets per door per day (4-hour turnaround)
+        # PLACEHOLDER: replace 30 with your own pallets per door per day
         inbound_doors_needed = np.ceil(daily_volume_pallets / 30)
         outbound_doors_needed = np.ceil(daily_volume_pallets / 30)
 

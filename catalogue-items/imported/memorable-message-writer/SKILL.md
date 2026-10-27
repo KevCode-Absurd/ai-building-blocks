@@ -107,13 +107,15 @@ See [references/concrete.md](references/concrete.md) when a message stays abstra
 
 ### 4. Credible
 
+**Proof rule (AI Blocks):** proof comes only from the user. Every number, customer name, logo, quote, endorsement and result in the message must be something the user gave you. Where proof is missing, write `[PROOF NEEDED: <what kind>]` and move on. Never invent a logo, a customer count, a study or an endorsement. All the example claims in this section and in "Applying SUCCESs to Product" are illustrations of a technique, not facts to reuse.
+
 **Core concept:** Help people believe your idea using external credibility (authorities, credentials) and internal credibility (vivid details, human-scale statistics, testable claims)—internal is more powerful.
 
 **External credibility:**
 
 | Source | How It Works | Example |
 |--------|-------------|---------|
-| **Authorities** | Expert endorsement | "Recommended by Harvard Business Review" |
+| **Authorities** | Expert endorsement | "Recommended by [a real, named source]" |
 | **Anti-authorities** | Real people with experience | "Here's what a customer with the same problem found" |
 | **Credentials** | Verifiable achievements | "10 years experience, SOC 2 certified" |
 
@@ -126,7 +128,7 @@ See [references/concrete.md](references/concrete.md) when a message stays abstra
 | **The Sinatra Test** | One example so good it proves everything | "If I can make it there, I can make it anywhere" |
 | **Testable credential** | Let them verify | "Try it free for 14 days" |
 
-**The Sinatra Test:** one reference so impressive it handles all objections—"We secured the White House" (security), "We handle Super Bowl traffic" (scalability), "Used by Apple, Google, and Microsoft" (quality).
+**The Sinatra Test:** one reference so impressive it handles all objections—"We secured the White House" (security), "We handle Super Bowl traffic" (scalability), "Used by [real customers the user can name]" (quality).
 
 **Making statistics stick:** put them in a context people understand—not "37 grams of saturated fat" but "more saturated fat than a Big Mac, fries, and milkshake combined."
 
@@ -192,7 +194,7 @@ See [references/curse-of-knowledge.md](references/curse-of-knowledge.md) when yo
 - **Simple:** one clear value proposition above the fold
 - **Unexpected:** counterintuitive claim or statistic
 - **Concrete:** specific outcome ("save 4 hours/week" not "save time")
-- **Credible:** customer logos, specific testimonials
+- **Credible:** customer logos and testimonials the user really has ([PROOF NEEDED] if none)
 - **Emotional + Stories:** customer pain point and transformation narrative
 
 ### Product Demos
@@ -206,7 +208,7 @@ See [references/curse-of-knowledge.md](references/curse-of-knowledge.md) when yo
 - **Simple:** one action per screen
 - **Unexpected:** delight with a quick win early
 - **Concrete:** show real results, not abstract promises
-- **Credible:** "Join 5,000 teams already using..."
+- **Credible:** "Join [real team count] teams already using..." (only if the user has the count)
 - **Emotional + Stories:** celebrate first success; "here's how [user] got started..."
 
 See [references/applications.md](references/applications.md) when applying SUCCESs to a specific format—it has element-by-element tables, fill-in templates, and before/after examples for landing pages, demos, onboarding, presentations, email campaigns, internal comms, and documentation. See [references/case-studies.md](references/case-studies.md) for full worked teardowns (JFK's moonshot, the Subway diet, Don't Mess with Texas) when you want to see all six traits operating together in a famous message.

@@ -11,6 +11,12 @@ inputs:
     required: true
   - type: spreadsheet
     required: false
+  - type: question
+    required: true
+  - type: contract
+    required: true
+  - type: deal_terms
+    required: true
 outputs:
   - type: spreadsheet
     required: true

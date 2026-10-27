@@ -7,9 +7,9 @@ role: check
 job: strategy
 level: advanced
 inputs:
-  - {type: audit_report, required: true}
+  - {type: idea, required: true}
+  - {type: audit_report, required: false}
   - {type: plan, required: false}
-  - {type: question, required: false}
 outputs:
   - {type: audit_report, required: true}
 origin: rebuilt

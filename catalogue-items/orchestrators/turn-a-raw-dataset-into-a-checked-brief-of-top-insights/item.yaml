@@ -7,8 +7,9 @@ role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - {type: spreadsheet, required: true}
+  - {type: dataset, required: true}
   - {type: question, required: true}
+  - {type: spreadsheet, required: true}
 outputs:
   - {type: document}
 uses: [dataset-profiler, data-analyst, analysis-checker, insight-brief-writer]

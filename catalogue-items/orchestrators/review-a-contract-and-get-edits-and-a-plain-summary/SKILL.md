@@ -14,18 +14,19 @@ This workflow chains skills from the library. Each step is its own skill. You ru
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+- **The contract** (yours): the full agreement or terms, with dates and any changes.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for the contract. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
 ## What you need
-- **The contract** (required): as a file (Word or PDF) or pasted text.
+These replace the generic document input above.
+- **The contract** (required): as a file (Word or PDF with selectable text) or pasted text. A scanned PDF cannot be read reliably. Convert it to text first, or write `MISSING:` for the pages you cannot read.
 - **Which side you are on** (required): buyer, seller, licensor, licensee or partner. The same clause can be good for one side and bad for the other.
-- **Your deadline and the points that worry you** (needed): the deadline sets what gets raised first.
+- **Your deadline and the points that worry you** (needed): the deadline sets what gets raised first. If the deadline is only a few days away, go to a lawyer for the signing decision now and use this only to prepare your questions.
 - **Your rules for contracts** (optional): terms you always want, such as payment days and liability limits. Without them, step 1 uses common market terms and says so.
 - **Who reads the summary** (optional): such as finance or a department head. The summary leaves out what they do not need.
 - **The country or state that governs the contract** (optional): so step 2 can note local rules on ownership and work for hire.
@@ -58,9 +59,9 @@ Pause here: Take the summary, the suggested edits and the flagged clauses to a q
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [AI vendor terms checker](https://useaiblocks.com/skills/ai-vendor-terms-checker). It takes the document.
-- The [Contract plain-language summary writer](https://useaiblocks.com/prompts/plain-words-contract-summary). It takes the document.
-- The [Contract clause risk reviewer](https://useaiblocks.com/skills/contract-intake-reviewer). It takes the document.
+- The [Contract plain-language summary writer](https://useaiblocks.com/prompts/plain-words-contract-summary). It takes the audit report.
+- The [Policy change impact reviewer](https://useaiblocks.com/skills/rule-change-policy-comparer). It takes the document.
+- The [Policy redraft proposer](https://useaiblocks.com/skills/policy-redraft-proposer). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

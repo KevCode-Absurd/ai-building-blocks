@@ -10,6 +10,8 @@ level: intermediate
 inputs:
   - type: spreadsheet
     required: true
+  - type: financial_statements
+    required: false
 outputs:
   - type: plan
 uses: []

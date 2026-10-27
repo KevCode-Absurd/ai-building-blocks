@@ -12,6 +12,8 @@ Proven architectural patterns for building n8n workflows.
 
 **Working in a chat (added by AI Blocks).** Steps that name n8n MCP tools (such as `search_nodes` or `n8n_create_workflow`) and the related skills (n8n MCP Tools Expert, n8n Expression Syntax, n8n Node Configuration, n8n Validation Expert) need those tools and skills, which are not in this folder. Without them, plan the workflow here and build it by hand in n8n. The `risk: critical` tag in the header is the source repo's label. A workflow can send messages and change data, so show each effect and get approval before you switch one on.
 
+If you have a no-code automation plan from an earlier step, start from its trigger and steps.
+
 ## When to Use
 - You need to choose an architectural pattern for an n8n workflow before building it.
 - The task involves webhook processing, API integration, scheduled jobs, database sync, or AI-agent workflow design.
@@ -21,9 +23,9 @@ Proven architectural patterns for building n8n workflows.
 
 ## The 5 Core Patterns
 
-Based on analysis of real workflow usage:
+Five patterns (no usage data is given for them in this file):
 
-1. **Webhook Processing** (Most Common)
+1. **Webhook Processing**
    - Receive HTTP requests → Process → Output
    - Pattern: Webhook → Validate → Transform → Respond/Notify
 
@@ -314,7 +316,7 @@ The five patterns below are the most common starting points. This file gives no 
 
 ## Detailed Pattern Files
 
-For comprehensive guidance on each pattern:
+These five files are not included in this folder. Plan from the pattern outlines in this file, or check the n8n docs:
 
 - **webhook_processing.md** - Webhook patterns, data structure, response handling
 - **http_api_integration** - REST APIs, authentication, pagination, retries
@@ -326,24 +328,24 @@ For comprehensive guidance on each pattern:
 
 ## Real Template Examples
 
-From n8n template library:
+Example from the n8n template library (the ID is from the source file and may have changed, so search for it in the library before you rely on it):
 
 **Template #2947**: Weather to Slack
 - Pattern: Scheduled Task
 - Nodes: Schedule → HTTP Request (weather API) → Set → Slack
 - Complexity: Simple (4 nodes)
 
-**Webhook Processing**: Most common pattern
-- Most common: Form submissions, payment webhooks, chat integrations
+**Webhook Processing**
+- Typical uses: Form submissions, payment webhooks, chat integrations
 
-**HTTP API**: Common pattern
-- Most common: Data fetching, third-party integrations
+**HTTP API**
+- Typical uses: Data fetching, third-party integrations
 
-**Database Operations**: Common pattern
-- Most common: ETL, data sync, backup workflows
+**Database Operations**
+- Typical uses: ETL, data sync, backup workflows
 
-**AI Agents**: Growing in usage
-- Most common: Chatbots, content generation, data analysis
+**AI Agents**
+- Typical uses: Chatbots, content generation, data analysis
 
 Use `search_templates` and `get_template` from n8n-mcp tools to find examples!
 
@@ -401,3 +403,7 @@ Use `search_templates` and `get_template` from n8n-mcp tools to find examples!
 - Use this skill only when the task clearly matches the scope described above.
 - Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
 - Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.
+
+## Licence note
+
+We share this copy under CC BY 4.0, as the `LICENSE-CONTENT` file says. Keep the credit to sickn33, whose collection it was copied from.

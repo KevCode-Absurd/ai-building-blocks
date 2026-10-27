@@ -9,7 +9,7 @@ subhead: "A built web page with a chosen look, checked in a real browser, not a 
 explain: |
   A built web page with a chosen look, checked in a real browser, not a stock template. It stops pages from all looking the same: centred headline, icon cards, soft gradient.
 
-  The skill deals out three design directions from a library drawn from 247 award-winning sites. You pick the one that fits the idea behind your subject. A script then supplies type, palette and layouts for it. After building, a browser script measures the page against strict rules with no decorative filler. You then view screenshots at three widths, score them against a rubric, fix what falls short and look again. It works for landing pages and for app screens such as dashboards.
+  The skill deals out three design directions from a library the author built from a study of 247 gallery sites. The study and its scores are the author's own claims, run with AI reviewers, and have not been checked independently. You pick the one that fits the idea behind your subject. A script then supplies type, palette and layouts for it. After building, a browser script measures the page against strict rules with no decorative filler. You then view screenshots at three widths, score them against a rubric, fix what falls short and look again. It works for landing pages and for app screens such as dashboards.
 when:
   - Your page looks like every other AI-made page.
   - You are building a landing page or portfolio and want a real concept.
@@ -46,6 +46,7 @@ output_sample:
   prerequisites:
     - An AI that can run code and open a browser
     - Your project files, if you are redesigning an existing page
+    - Internet access, because the picture search needs the network. Any found picture must be credited before launch.
   output:
     - name: Direction sheet
       contains: The look your AI chose from three dealt options, with its type, palette, hero and section layouts.

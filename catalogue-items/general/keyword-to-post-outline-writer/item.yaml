@@ -7,7 +7,7 @@ role: make
 job: research
 level: beginner
 inputs:
-  - {type: brief, required: true}
+  - {type: keyword_list, required: true}
   - {type: plan, required: false}
 outputs:
   - {type: brief}

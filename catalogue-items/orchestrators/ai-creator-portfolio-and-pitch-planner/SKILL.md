@@ -26,7 +26,7 @@ How to start:
 
 ## What you need
 
-Read what the user already provided before asking anything. Ask once, in one short message, only for what changes the result.
+The inputs are the six items below, not a general "question". Read what the user already provided before asking anything. Ask once, in one short message, only for what changes the result.
 
 - **The one deliverable** (required): product images, ad visuals, creator-style content or short video.
 - **The one customer type** (required): for example small ceramic makers.
@@ -78,7 +78,9 @@ CHECKS MISSED             <one line each, or none>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Nonprofit sponsor package planner](https://useaiblocks.com/skills/nonprofit-sponsor-package-planner). It takes the document.
+- The [Mutual action plan builder](https://useaiblocks.com/skills/mutual-action-plan-builder). It takes the document and plan.
+- The [Deal health reviewer](https://useaiblocks.com/skills/deal-health-reviewer). It takes the document.
+- The [Deal payment checker](https://useaiblocks.com/skills/can-they-pay-deal-checker). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -95,9 +97,9 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 Write `MISSING: <what>` next to the affected line and carry on with the parts that do not depend on it. Without a customer type, stop after step 1 and ask for one. Without brands, plan the pitch around the customer type and say the shortlist is empty. Never fill a gap with an invented fact.
 
-## After this
+## Next steps for this workflow
 
-Suggest one next step as a short question, and say the user can type their own:
+Use this list, not the generic list above. Suggest one next step as a short question, and say the user can type their own:
 - **A client asked for a price.** Use the [Prepare your first freelance project quote](https://useaiblocks.com/workflows/prepare-your-first-freelance-project-quote) workflow.
 - **A client wants more after signing.** Use the [Prepare a client scope change brief](https://useaiblocks.com/workflows/prepare-a-client-scope-change-brief) workflow.
 - **Polish one pitch.** Use the [Capability pitch letter writer](https://useaiblocks.com/skills/capability-pitch-letter-writer).

@@ -10,6 +10,8 @@ explain: |
   A PM resume reviewed line by line against ten best practices, with suggestions taken straight from your own bullet points. If you add a job posting, the feedback and rewrite are tuned to that role.
 
   Claude opens by naming what already works. It then goes through each practice in turn, covering things like the XYZ+S formula for bullets (what you achieved, how much, how, and the scale), keyword match, tailoring to the job and structure. For each it says what is working, what is not, and shows a better version. It finishes with a tailored resume draft you can edit.
+
+  This is an MIT-licensed skill imported from Pawel Huryn's pm-skills collection. We gave it a plain name and page text. The method is the author's.
 when:
   - You are applying for product manager roles.
   - Your bullets list duties and show no results.
@@ -29,10 +31,11 @@ you_get:
   - Keyword gaps against the posting
   - A tailored resume version
 how_to_use:
+  - Before you start, gather three things. Your resume as plain text, the job posting if you have one, and the level you are aiming for.
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code, files or paid tools are needed.
   - Paste your resume text. Add the job posting and your target level if you have them.
   - Read the feedback on all ten points. Each one shows your current text and a better version.
-  - Check every number before you use it. Example figures in the skill, like percentages and dollar amounts, are placeholders. Only use figures you can prove.
+  - Check every number before you use it. The skill's examples use bracketed placeholders such as [X%], so no sample figure is real. Only use figures you can prove.
   - Before you send it, list each number in the draft and confirm it against your own records.
   - Ask for the tailored draft, edit it, then paste it back for a second pass.
 output_sample:

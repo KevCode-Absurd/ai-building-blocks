@@ -12,6 +12,10 @@ inputs:
     required: true
   - type: document
     required: false
+  - type: api_spec
+    required: false
+  - type: question
+    required: true
 outputs:
   - type: audit_report
   - type: test_report

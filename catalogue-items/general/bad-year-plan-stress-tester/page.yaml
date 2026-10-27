@@ -73,7 +73,9 @@ output_shape: |-
   MISSING
 tweaks:
   - what: Bad year
-    how: Set your own fall in income, like 40 percent.
+    how: Set your own fall in income, like 40 percent. If you give none, the prompt tests one third as a placeholder, not a typical bad year.
+  - what: Score points
+    how: The points taken off for each failure, risky debt and thin cushion are a simple rule, not a benchmark. Swap in your own values.
   - what: Cushion
     how: Say how many months you want to hold.
   - what: Debts

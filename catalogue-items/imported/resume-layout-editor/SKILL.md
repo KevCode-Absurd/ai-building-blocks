@@ -14,6 +14,8 @@ Use this skill when the user:
 - Needs a clean, professional design
 - Mentions: "format resume", "resume layout", "resume design", "clean resume", "professional format"
 
+If you also have an ATS check report for the resume, read it first and fix the problems it names.
+
 ## Core Capabilities
 
 - Structure resumes for optimal readability
@@ -206,7 +208,7 @@ Frameworks: React, Node.js, Django, Flask
 Tools: AWS, Docker, Kubernetes, Git, Jenkins
 ```
 
-### Option 3: Columns (Careful with ATS)
+### Option 3: Columns (Not recommended: see the DON'T list above, which says not to use columns)
 ```
 SKILLS
 Languages        Frameworks       Tools
@@ -215,7 +217,7 @@ JavaScript       Node.js          Docker
 SQL              Django           Git
 ```
 
-**Note:** Multi-column layouts may cause ATS issues. Test before using.
+**Note:** Multi-column layouts may cause ATS issues. Prefer Option 1 or 2. Use this only if the user insists, and tell them to test it first.
 
 ## Education Section Formatting
 

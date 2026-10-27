@@ -7,9 +7,9 @@ job: product-photos
 headline: Product shoot brief writer
 subhead: Give it your product and where the pictures will run. It writes a shot list you can hand to a photographer. Each shot comes with the reason behind it.
 explain: |
-  A shot list for photos and video where every shot has a reason behind it. Instead of taste, the brief follows findings on what moves sales and willingness to pay.
+  A shot list for photos and video where every shot has a reason behind it. Instead of taste, the brief draws on research on what moves sales and willingness to pay. Each effect comes from one study, so treat it as a guide, not a promise.
 
-  Claude first asks if your product can be held and if it is premium, whether it has one main function, and who wears it. It then sets format choices, like stills versus video, plus gaze, the sense of touching the product, and composition details such as shine, spacing, side and props. Most shots cite a measured effect. A few are marked as practitioner tips. The brief is written to hand to a photographer.
+  The skill collects, or states as an assumption, whether your product can be held and if it is premium, whether it has one main function, and who wears it. It then sets format choices, like stills versus video, plus gaze, the sense of touching the product, and composition details such as shine, spacing, side and props. Most shots cite a measured effect. A few are marked as practitioner tips. The brief is written to hand to a photographer.
 when:
   - You are briefing a photographer or video team.
   - You must decide whether a product needs video.

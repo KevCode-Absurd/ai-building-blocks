@@ -37,15 +37,25 @@ Get-MgPolicyAuthorizationPolicy | Select-Object AllowInvitesFrom, DefaultUserRol
 
 ```powershell
 # CSV columns: DisplayName, UserPrincipalName, Department, LicenseSku
-# Temporary passwords are saved to .\temp_passwords.csv. Hand them over safely, then delete the file.
+# Same pattern as Workflow 1, Step 4: one failed row must not stop the rest, and each user gets a licence.
+# Temporary passwords are saved to .\temp_passwords.csv, a file only you can open. Hand them over safely, then delete the file.
+$licenseSku = (Get-MgSubscribedSku | Where-Object { $_.SkuPartNumber -eq "[LICENCE SKU PART NUMBER]" }).SkuId
 $results = Import-Csv .\new_users.csv | ForEach-Object {
-    $tempPassword = (New-Guid).ToString().Substring(0,16) + "!"
-    $passwordProfile = @{ Password = $tempPassword; ForceChangePasswordNextSignIn = $true }
-    New-MgUser -DisplayName $_.DisplayName -UserPrincipalName $_.UserPrincipalName `
-               -Department $_.Department -AccountEnabled -PasswordProfile $passwordProfile | Out-Null
-    [pscustomobject]@{ UserPrincipalName = $_.UserPrincipalName; TempPassword = $tempPassword }
+    try {
+        $tempPassword = (New-Guid).ToString().Substring(0,16) + "!"
+        $passwordProfile = @{ Password = $tempPassword; ForceChangePasswordNextSignIn = $true }
+        $user = New-MgUser -DisplayName $_.DisplayName -UserPrincipalName $_.UserPrincipalName `
+                   -Department $_.Department -AccountEnabled -PasswordProfile $passwordProfile
+        Set-MgUserLicense -UserId $user.Id -AddLicenses @(@{ SkuId = $licenseSku }) -RemoveLicenses @()
+        [pscustomobject]@{ UserPrincipalName = $_.UserPrincipalName; TempPassword = $tempPassword }
+    } catch {
+        Write-Warning "Failed $($_.UserPrincipalName): $_"
+    }
 }
 $results | Export-Csv .\temp_passwords.csv -NoTypeInformation
+# Limit the file to your own Windows account:
+icacls .\temp_passwords.csv /inheritance:r /grant:r "$($env:USERNAME):F"
+# Check the warnings above, and compare the row count of new_users.csv with the number of users created.
 ```
 
 ### Create a Conditional Access Policy (MFA for Admins)
@@ -151,6 +161,8 @@ $results = Import-Csv .\employees.csv | ForEach-Object {
     }
 }
 $results | Export-Csv .\temp_passwords.csv -NoTypeInformation
+# Limit the file to your own Windows account, hand the passwords over safely, then delete it:
+icacls .\temp_passwords.csv /inheritance:r /grant:r "$($env:USERNAME):F"
 ```
 
 **Validation:** Spot-check 3–5 accounts in the M365 admin portal; confirm licenses show "Active."
@@ -231,7 +243,7 @@ Invoke-MgInvalidateAllUserRefreshToken -UserId $user.Id
 Write-Host "Sign-in blocked and sessions revoked for $upn"
 ```
 
-**Step 3: Execute Offboarding**
+**Step 3: Execute Offboarding (only after the admin says yes a second time; licence removal and group removal are hard to undo)**
 
 ```powershell
 # Remove licenses

@@ -94,7 +94,7 @@ output_shape: |
   COLD ADS WITH FREQUENCY ABOVE 2 (30 to 60 days): <ids and values>
   WHOLE-AUDIENCE CALLS: <ids>
   HOOK-LEVEL NEW (body overlaps): <ids>
-  NOT RUN: <check, and what is needed>
+  NOT RUN (CHECKS MISSED): <check, and what is needed, or none>
   MISSING: <what, if anything>
 
 tweaks:

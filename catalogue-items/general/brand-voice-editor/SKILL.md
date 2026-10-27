@@ -21,7 +21,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and your offer and buying reasons.
+2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and offer and buying reasons.
 3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and a buyer brief.
 4. This one.
 
@@ -47,10 +47,11 @@ How to start:
    - **Wrong word.** Jargon, marketing talk, a clinical or technical term outside a line that states a fact, a word above the buyer's everyday vocabulary, or a word the voice notes rule out. If customers say "gritty", the ad must not say "unpleasant texture".
    - **Wrong tone.** The line sits at the wrong end of one of the brand's scales (formal or casual, serious or funny, respectful or cheeky, calm or excited), or takes a tone the notes rule out: salesy, preachy, guilt-tripping.
    - **Talks past the buyer.** Slang they don't use, stiff wording for a casual audience, or a voice rule the line dodges. Match the real customer quotes, not an imagined audience.
-3. **Leave these alone.** A plain, clear line a person would say. Product, ingredient or material names. Numbers, prices, legal or disclosure wording. Lines that only state a term (price, guarantee). Anything about how persuasive the ad is or how it's structured (other checks handle that). A missing catchphrase, rhythm or emoji the brand sometimes uses.
-4. **Fix in `fix` mode.** Replace the smallest piece you can. Prefer the customer's own word, then a phrase from the brand's list if it fits naturally. Keep the meaning, every number, claim, offer term and bracketed placeholder exactly as they were. The result must still be a whole sentence a person would say aloud. Use contractions. Never paste in a tagline, add a claim, or make a claim softer or stronger.
-5. **Keep the order of priority.** For every word: natural first, then it sells, then it tells a story, then it uses the brand's language, and the brand's own tricks of style last and optional. Never make a line stranger or cleverer to sound more like the brand.
-6. **Score it.** The voice score measures the share of lines that sound like the brand. Score = lines with no issue / lines checked x 100, rounded. In `fix` mode, give it again after your fixes. In `report` mode, give it once. Show each sum.
+3. **Flag any claim that is not approved.** This skill changes wording only. It does not judge whether a claim is true. But if a line makes a product claim that is not on the approved-claims list, do not rewrite it. Report it under NOT FLAGGED as "not on the approved list, check the fact before it runs".
+4. **Leave these alone.** A plain, clear line a person would say. Product, ingredient or material names. Numbers, prices, legal or disclosure wording. Lines that only state a term (price, guarantee). Anything about how persuasive the ad is or how it's structured (other checks handle that). A missing catchphrase, rhythm or emoji the brand sometimes uses.
+5. **Fix in `fix` mode.** Replace the smallest piece you can. Prefer the customer's own word, then a phrase from the brand's list if it fits naturally. Keep the meaning, every number, claim, offer term and bracketed placeholder exactly as they were. The result must still be a whole sentence a person would say aloud. Use contractions. Never paste in a tagline, add a claim, or make a claim softer or stronger.
+6. **Keep the order of priority.** For every word: natural first, then it sells, then it tells a story, then it uses the brand's language, and the brand's own tricks of style last and optional. Never make a line stranger or cleverer to sound more like the brand.
+7. **Score it.** The voice score measures the share of lines that sound like the brand. Score = lines with no issue / lines checked x 100, rounded. In `fix` mode, give it again after your fixes. In `report` mode, give it once. Show each sum.
 
 ## What you hand back
 - **Verdict:** `on_voice` or `needs_fixes`.
@@ -88,9 +89,9 @@ After the fixes: <lines on voice> / <lines checked> x 100 = <score>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Fill the gaps in your brand brain** with the [Brand guide builder](https://useaiblocks.com/skills/brand-guide-builder).
 - **Make video ads** with the [Ad script read-aloud editor](https://useaiblocks.com/skills/ad-script-read-aloud-editor). It takes the audit report.
 - **Write the ad copy** with the [Article-style image ad writer](https://useaiblocks.com/skills/article-style-image-ad-writer). It takes the audit report.
+- **Fill the gaps in your brand brain** with the [Brand guide builder](https://useaiblocks.com/skills/brand-guide-builder).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

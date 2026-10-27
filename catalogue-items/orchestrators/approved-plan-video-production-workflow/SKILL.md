@@ -127,10 +127,9 @@ Add a HAND-BACK SUMMARY: each step run or skipped and why, and which tools were 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Video caption maker in your brand font](https://useaiblocks.com/skills/branded-video-captions). It takes the video ads and edit plan.
-- The [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker).
-- The [Video ad on-screen text planner](https://useaiblocks.com/skills/video-ad-text-overlays). It takes the video ads.
-- **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the video ads and audit report.
+- The [Video caption maker in your brand font](https://useaiblocks.com/skills/branded-video-captions). It takes the edit plan.
+- The [Ad script read-aloud editor](https://useaiblocks.com/skills/ad-script-read-aloud-editor). It takes the audit report.
+- The [Talking object video clip prompt writer](https://useaiblocks.com/skills/talking-object-video-prompts). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

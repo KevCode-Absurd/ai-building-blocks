@@ -31,10 +31,11 @@ you_get:
   - Follow-up sequence per path
   - Offer placement
   - Tests to run next
+  - Laid out as labelled sections (segments, entry points, tool map, sequence per path, offer placement, tests), each as a short list or table
 how_to_use:
   - Open a chat in Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
-  - Paste the skill text from this page into the chat.
-  - Add your audience groups, your offer and price, your tools and pages, and your traffic sources.
+  - Paste the skill text from this page into the chat. The SKILL.md text alone is enough. The reference files in the skill folder add detail, so paste one only if your AI asks for it.
+  - Give your inputs in this order. First your audience groups, then your offer and price, then the tools and pages you already have, then your traffic sources. For example, you could write "My audiences are [AUDIENCE 1] and [AUDIENCE 2]. I sell [OFFER] for [PRICE]. I have [TOOLS]. Visitors come from [SOURCES]. Map one path per audience."
   - Add your current conversion numbers if you have them.
   - For a quick first pass, name only your two or three biggest audiences. Ask your AI to map those first and add the rest later.
   - "Check each path: does each audience get its own entry point and its own emails? Ask your AI to fix any that share one path."

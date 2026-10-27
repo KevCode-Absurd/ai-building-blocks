@@ -11,7 +11,7 @@ Use it when: a store, product or person is doing far better than the rest and yo
 
 Not for: a result with no fair comparison or no numbers (do a plain review of the data first), why ad sales fell (use the Ad sales drop analyst), or checking whether advice can be trusted (use the Advice credibility checker).
 
-This workflow follows the method in Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger by Charlie Munger. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+This workflow draws on the mental-model ideas in Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger by Charlie Munger, such as checking a cause through many fields and checking rewards. The four-step order is this library's own design, not a method set out in the book. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -42,9 +42,9 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Steps
 1. **Rank the likely causes.** Use the skill `surprise-cause-ranker`. Give it the surprising result, the numbers, what is normal and what you believe. It saves `outputs/step-01-surprise-cause-ranker.md`: the causes the facts rule out, four to six ranked causes each with what else must be true and a cheap check, the first test and what stays unexplained.
-2. **Check the causes through many fields.** Use the skill `mental-model-checklist-runner`. Give it the ranked causes from `outputs/step-01-surprise-cause-ranker.md`. An answer from each field about the ranked causes, and where they stack or clash. Reads the plan from the step before. It saves `outputs/step-02-mental-model-checklist-runner.md`.
-3. **Check who was rewarded for what.** Use the skill `incentive-checker`. Give it the people involved, how each was paid or rewarded (or `MISSING:`), and the ranked causes from `outputs/step-01-surprise-cause-ranker.md`. Whether pay or rewards explain the result. Reads the plan from step one. It saves `outputs/step-03-incentive-checker.md`: each person, their reward, what it encouraged and whether it explains the result.
-4. **Decide what to copy and what to skip.** Use the skill `copy-or-skip-lesson-writer`. Give it your own situation, the field answers from `outputs/step-02-mental-model-checklist-runner.md`, the reward check from `outputs/step-03-incentive-checker.md` and the ranked causes from step 1. What carries over to your case, what was luck, and small tests. Reads the checks from the steps before. It saves `outputs/step-04-copy-or-skip-lesson-writer.md`: each cause sorted as copy, adapt, skip or luck with a reason, and a small test with a pass number and a fail number for each idea kept.
+2. **Check the causes through many fields.** Use the skill `mental-model-checklist-runner`. Give it the ranked causes from `outputs/step-01-surprise-cause-ranker.md`. An answer from each field about the ranked causes, and where they stack or clash. It saves `outputs/step-02-mental-model-checklist-runner.md`.
+3. **Check who was rewarded for what.** Use the skill `incentive-checker`. Give it the people involved, how each was paid or rewarded (or `MISSING:`), and the ranked causes from `outputs/step-01-surprise-cause-ranker.md`. Whether pay or rewards explain the result. It saves `outputs/step-03-incentive-checker.md`: each person, their reward, what it encouraged and whether it explains the result.
+4. **Decide what to copy and what to skip.** Use the skill `copy-or-skip-lesson-writer`. Give it your own situation, the field answers from `outputs/step-02-mental-model-checklist-runner.md`, the reward check from `outputs/step-03-incentive-checker.md` and the ranked causes from step 1. What carries over to your case, what was luck, and small tests. It saves `outputs/step-04-copy-or-skip-lesson-writer.md`: each cause sorted as copy, adapt, skip or luck with a reason, and a small test with a pass number and a fail number for each idea kept.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back
@@ -58,9 +58,9 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Lessons learned principle writer](https://useaiblocks.com/skills/mistake-to-principle-writer). It takes the plan.
-- The [Plan objection writer](https://useaiblocks.com/skills/case-against-writer). It takes the plan.
-- The [Decision checklist runner](https://useaiblocks.com/skills/decision-checklist-runner). It takes the plan.
+- The [Lessons learned principle writer](https://useaiblocks.com/skills/mistake-to-principle-writer). It takes the plan and audit report.
+- The [Plan objection writer](https://useaiblocks.com/skills/case-against-writer). It takes the plan and audit report.
+- The [Decision checklist runner](https://useaiblocks.com/skills/decision-checklist-runner). It takes the plan and audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

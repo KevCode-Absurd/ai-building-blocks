@@ -57,11 +57,13 @@ If they correct something, apply it and go. Do not re-confirm a second time.
 
 ## Step 4 — Pull the data
 
+Every connector below is a paid service: it needs the owner's own paid account, and may need an API key or a plan that allows API access. Use only what is already connected, and never ask the owner to buy or connect one just for this report. A CSV or XLSX export needs none of this.
+
 Dispatch every source call in a single parallel batch. See `reference/data_sources.md` for the metric-to-tool mapping.
 
 Sources, tried simultaneously:
 
-- **The ledger** — MYOB, NetSuite, QuickBooks, Xero, or Zoho Books, whichever is connected; peers per `../../shared/connector-neutrality.md`. P&L lines, revenue, expenses, AR aging, AP, class and location splits. MYOB is P&L, AR, and payables only, three financial years back. If two ledgers are connected, ask which is the source of record and take totals from that one
+- **The ledger** — MYOB, NetSuite, QuickBooks, Xero, or Zoho Books, whichever is connected; peers per `shared/connector-neutrality.md`. P&L lines, revenue, expenses, AR aging, AP, class and location splits. MYOB is P&L, AR, and payables only, three financial years back. If two ledgers are connected, ask which is the source of record and take totals from that one
 - **HubSpot** — deals, stages, owners, close dates, pipeline value
 - **PayPal, Square, Stripe** — settlements, fees, refunds, transaction detail
 - **Shopify** — orders, SKU-level revenue, fulfillment status
@@ -97,11 +99,11 @@ Writing rules, same as every reporting skill in this plugin:
 
 **Then the XLSX.** One tab per metric group, a summary tab first, raw pulled data on a final tab so the owner can check your math. Build it with a script rather than by hand.
 
-**Then the report page, per the owner's stored output preference — never default to a markdown file.** Check the `## Business context` block's `Output preference` (shared style guide rule, `../../shared/artifact-style.md`):
+**Then the report page.** If the owner has told you a preferred format (in a business context note, or in this chat), use it. If not, use the visual artifact below. Never default to a markdown file. Style rules are in `shared/artifact-style.md`:
 
 - **Visual artifact (the default):** render the report as an HTML page in the house style — each headline metric is a stat tile with its comparison as the context line; the grouped rows (by location, product, rep) are a table with right-aligned tabular-nums; any metric versus target carries a status pill (good on target, warn slipping, critical missed); the three findings open the page in their own panel; "n/a" sources go in one quiet footer line. Additive to the chat summary and the workbook, never a replacement.
 - **docx / md / notion / canva preference:** deliver the same content in that form — a DOCX or markdown file, a Notion page created via the connector (named destination, never overwriting), or a Canva Doc created via the Canva connector (a new design each run, named with the date; tables become lists); fall back to the visual artifact if Notion or Canva is not connected — and say that is why. The XLSX still ships alongside.
-- **Best for skill:** use the visual artifact — a report is read on screen and compared week to week.
+- **No preference given:** use the visual artifact — a report is read on screen and compared week to week.
 
 ## Step 7 — Save the definition
 
@@ -116,8 +118,8 @@ If the owner asked for a cadence, confirm it in one line: "Saved. I can't run th
 One line: the report ran and the definition is saved. Then the single most relevant next step, with at most two others nearby:
 
 - "The weekly pack, on schedule" runs `/report-pack` to wrap this in context on a cadence. This is a separate command from the author's full pack and is not in this item, so leave this offer out unless the user has it.
-- "How's the business doing?" runs `business-pulse` for the picture around these numbers.
-- "Cash forecast" runs `cash-flow-snapshot` when the report raised a cash question.
+- "How's the business doing?" runs `business-snapshot-writer` for the picture around these numbers.
+- "Cash forecast" runs `cash-forecast-builder` when the report raised a cash question.
 
 Max three offers. Never repeat an offer the owner declined this session.
 
@@ -139,4 +141,4 @@ Max three offers. Never repeat an offer the owner declined this session.
 
 ## Using a tool that isn't listed
 
-The connectors named in this skill are the tested paths, not a wall. If the owner wants this flow to use a tool that isn't connected or listed, offer `build-connector` — it checks the connector directory first and connects through Zapier otherwise, never hand-building against a raw API. Once the connection exists, the tool joins this skill like any other optional connector, under the same approval gates.
+The connectors named in this skill are the tested paths, not a wall. If the owner wants this flow to use a tool that isn't connected or listed, tell them it needs a connector that is not in this item. Either they export a CSV or XLSX from that tool and upload it here, or they set up the connection in their own AI tool (Zapier is one option, and needs its own paid account). Never hand-build calls against a raw API. Once the connection exists, the tool joins this skill like any other optional connector, under the same approval gates.

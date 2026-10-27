@@ -58,7 +58,7 @@ output_sample:
     - name: Help to add
       contains: Where short help is needed, how short it should be and why.
     - name: Score
-      contains: A score out of 100 with the working, and the score if the rewrites are used.
+      contains: A score out of 100 with the working, and an estimated score if the rewrites are used (to confirm with real visitors).
     - name: Missing
       contains: What facts you left out that would change a rating.
     - name: Checks missed
@@ -99,7 +99,7 @@ output_shape: |
   <where, how short, why it is needed>
 
   SCORE
-  <n> out of 100 = 100 x <clear choices> / <all choices>. Score with the rewrites: <n>
+  <n> out of 100 = 100 x <clear choices> / <all choices>. Score with the rewrites: <n> (estimate, not tested: confirm with a few first-time visitors)
 
   MISSING
   <what would change a rating>

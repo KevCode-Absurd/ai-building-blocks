@@ -72,10 +72,11 @@ Five step files and the summary. The step 5 file holds the priced offer.
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Offer bonus package builder](https://useaiblocks.com/skills/bonus-stack-builder). It takes the offer and plan.
-- The [Guarantee and refund plan writer](https://useaiblocks.com/skills/guarantee-designer). It takes the offer and plan.
 - The [Offer checklist reviewer](https://useaiblocks.com/skills/offer-checklist-reviewer). It takes the offer.
+- The [Offer profit-per-session checker](https://useaiblocks.com/skills/offer-profit-per-session-checker). It takes the offer.
+- The [Offer bonus package builder](https://useaiblocks.com/skills/bonus-stack-builder). It takes the offer and plan.
 - The [Price rise readiness checker](https://useaiblocks.com/prompts/price-rise-readiness-checker). It takes the offer.
+- **Write the landing page** with the [Reasons-to-switch page writer](https://useaiblocks.com/skills/reasons-to-switch-page-writer). It takes the offer.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

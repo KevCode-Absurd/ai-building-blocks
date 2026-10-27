@@ -2,7 +2,7 @@ thinking: medium
 thinking_why: Rules follow a set pattern, but each needs testing.
 new_slug: ai-app-guardrails-builder
 name: AI app guardrails builder
-summary: Set up guardrails for your AI chatbot with NeMo Guardrails. Get rules that refuse jailbreaks and private data, plus a test plan to check each rule.
+summary: Set up guardrails for your AI chatbot with NeMo Guardrails. Get rules set to refuse jailbreaks and private data, with a test plan to confirm each one.
 job: build-software
 headline: AI app guardrails builder
 subhead: Tell it what your AI app must never say or do. You get guardrail rules for what users send in and what the app sends back, refusal messages and a test plan. It labels any check you must still write yourself.
@@ -10,6 +10,8 @@ explain: |
   AI chatbot guardrails are rules that sit outside the prompt. They check what a user sends before the model sees it, and what the model says before the user sees it. Because they sit outside the prompt, they are harder to talk your way around.
 
   This skill uses NeMo Guardrails, a free Python package from NVIDIA. You describe what the app must never do. The skill turns that into short rules: the phrases users might send, the reply the app should give, and the flow that links them. It covers jailbreak attempts, toxic text, private data such as emails, and unsupported facts.
+
+  The rules are written in the older Colang 1.0 style. Check them against the Colang version your NeMo Guardrails install uses.
 
   It is honest about limits. A phrase rule only catches the phrases you list. A fact check needs a source you trust, and the skill gives you a placeholder for it, not a fake check. Every test is marked NOT RUN until you run it.
 when:

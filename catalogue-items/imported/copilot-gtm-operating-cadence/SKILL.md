@@ -11,6 +11,8 @@ metadata:
 
 The meeting structure that worked at 30 people collapses at 100. What worked at 100 collapses at 300. The failure mode is always the same: too many people in too many meetings making too few decisions.
 
+Start from your team size, stage and goals. If you have a board update or plan that lists the metrics and decisions to review, add it and build the review rhythm around them.
+
 ## When to Use
 
 **Triggers:**
@@ -116,16 +118,17 @@ This Week: [Value] | Last Week: [Value] | Change: [+/-] [↑↓]
 Context: [One sentence — why this trend matters]
 
 Functional Metrics:
-  Product:  7-Day Retention: 34% | Last: 33% | +1% ↑
-            Feature Adoption: 18% | Last: 16% | +2% ↑
-            Context: Onboarding improvements showing impact
+  Product:  [Metric]: [value] | Last: [value] | [change] [↑↓]
+            [Metric]: [value] | Last: [value] | [change] [↑↓]
+            Context: [one sentence]
 
-  GTM:      Pipeline: $8.2M | Last: $7.8M | +$400K ↑
-            New POCs: 3 | Last: 2
-            Context: Partner pipeline adding deals
+  GTM:      [Metric]: [value] | Last: [value] | [change] [↑↓]
+            Context: [one sentence]
 
-  Health:   Team Morale: 7.2/10 (down from 7.5)
-            Context: Org restructure causing uncertainty
+  Health:   [Metric]: [value] | Last: [value] | [change] [↑↓]
+            Context: [one sentence]
+
+(Every value above is a placeholder. Use only the metrics and numbers the user gives you.)
 ```
 
 **The Discipline Rules:**
@@ -221,17 +224,17 @@ At 20 people, the CEO makes every decision in real-time. Fast. At 100 people, de
 
 **The fix isn't more meetings. It's clear decision rights.**
 
-**Decision Authority Matrix:**
+**Decision Authority Matrix:** (the timelines and amounts below are generic defaults. Replace each with your own thresholds)
 
 | Decision | Who Decides | Timeline | Escalation |
 |----------|------------|----------|------------|
 | Company strategy | CEO | 1 week | Board if strategic |
-| Feature priority | Product lead | 1 week | CEO if >3 eng weeks |
+| Feature priority | Product lead | 1 week | CEO if >[N] eng weeks |
 | Customer support issue | CSM | Immediately | CS lead if escalated |
-| Marketing campaign | Marketing lead | 2 weeks | CMO if >$10K budget |
+| Marketing campaign | Marketing lead | 2 weeks | CMO if >[AMOUNT] budget |
 | Hiring | Function leader | 2 weeks | CEO if role not approved |
 | New partnership | CEO | 2 weeks | Board if strategic |
-| Vendor selection | Function leader | 1 week | CEO if >$50K/year |
+| Vendor selection | Function leader | 1 week | CEO if >[AMOUNT]/year |
 
 **The Problem:**
 

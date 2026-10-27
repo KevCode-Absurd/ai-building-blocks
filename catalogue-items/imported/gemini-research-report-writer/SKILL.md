@@ -100,7 +100,7 @@ python3 scripts/research.py --list
 | Metric | Value |
 |--------|-------|
 | Time | 2-10 minutes per task |
-| Cost | $2-5 per task (varies by complexity) |
+| Cost | $2-5 per task (the author's estimate, from an unstated date; check Google's current Gemini API prices before approving a run) |
 | Token usage | ~250k-900k input, ~60k-80k output |
 
 ## Best Use Cases

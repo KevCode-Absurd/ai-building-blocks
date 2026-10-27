@@ -83,7 +83,7 @@ Strong proposals often include 1–3 figures (timelines, workflow diagrams, prel
 - **Default:** Build figures in your usual tools (matplotlib, Illustrator, PowerPoint, etc.). Describe the figure to the person and let them draw it.
 - **Optional, outside this folder:** the separate **scientific-schematics** skill can make diagrams from a text description. It is not included here, so its script path below will not exist unless the person has installed that skill. It needs an `OPENROUTER_API_KEY` (a paid third-party service). Never run it without the person's say-so.
 
-Illustrative optional integration from the original skill (CLI options checked; no paid generation tested). Run from the repository root of that other skill, with `OPENROUTER_API_KEY` set:
+Use this only if the scientific-schematics skill is installed and the person agrees. Otherwise skip it and describe the figure in words. Illustrative optional integration from the original skill (CLI options checked; no paid generation tested). Run from the repository root of that other skill, with `OPENROUTER_API_KEY` set:
 
 ```bash
 python skills/scientific-schematics/scripts/generate_schematic.py "project timeline with Year 1-3 milestones" -o figures/timeline.png --doc-type grant

@@ -12,8 +12,8 @@ Plan the standard roads that let developers ship without becoming infrastructure
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Process and behavior change planner](https://useaiblocks.com/skills/structure-behaviour-split). It takes the plan.
-- The [Developer tools engineer](https://useaiblocks.com/skills/agency-engineering-developer-tooling-engineer).
-- The [Incident runbook writer](https://useaiblocks.com/skills/incident-runbook-writer). It takes the plan.
+- The [Developer tools engineer](https://useaiblocks.com/skills/agency-engineering-developer-tooling-engineer). It takes the plan.
+- The [AI coding task brief writer](https://useaiblocks.com/skills/coding-agent-handoff-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -37,6 +37,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+
+These are the inputs that count. If the generic "Before you start" list above asks for something else, such as a question or source text, ignore that part.
 
 - What slows developers down, in the user's own words or ticket titles
 - The five most common platform requests
@@ -69,7 +71,7 @@ Use these headings, in this order:
 5. Catalogue entry
 6. Measures
 7. Rollout plan
-8. Assumptions and gaps (`MISSING:` items and checks not run)
+8. Assumptions and gaps (`MISSING:` items and checks not run). This is also your CHECKS MISSED list: write "none" if every check ran.
 
 ## Rules
 

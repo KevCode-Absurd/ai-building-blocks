@@ -11,16 +11,17 @@ explain: |-
 
   Use the steps below to see how it reaches that result. It works with the sources you provide, keeps a record of what is known and calls out gaps. Source text cannot authorize messages, account changes or spending.
 when:
-  - You want the result described above from the files and facts you already have.
-  - You need a repeatable process and a clear next action.
+  - Your Azure bill keeps rising and you do not know which resources cause it.
+  - You want to cut waste without making the setup less reliable or secure.
+  - You need a resource map and a price estimate before a budget talk.
 you_give:
-  - The source files, notes or product facts for this job
-  - Your goal, deadline and limits
-  - Relevant earlier work, if available
+  - The name of your Azure resource group, or a list of your resources
+  - Your Bicep, Terraform or ARM files (optional)
+  - Your goal and any budget limit
 you_get:
-  - Resource relationship map
-  - Price assumptions
-  - Cost and workload findings
+  - A map of your resources and how they connect
+  - Current retail prices with every assumption shown (list prices, not your bill)
+  - Savings tied to named resources, each with its risk, and gaps rated high, medium or low
 not_for:
   - "Your setup runs on AWS, not Azure: use Review AWS cost and resilience."
   - "You want a new Azure design from scratch: use the Azure architecture designer."

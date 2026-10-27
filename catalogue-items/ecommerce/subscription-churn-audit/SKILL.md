@@ -28,12 +28,14 @@ How to start:
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
-- **Skio or Recharge:** Their exports give cancel dates, order numbers and reasons.
-- **Klaviyo:** It gives sends and the cancels that follow each one when you connect your subscription app.
+- **Skio or Recharge:** Paid subscription apps; use the one you already have. Their exports give cancel dates, order numbers and reasons.
+- **Klaviyo:** Paid email service that needs an account. It gives sends and the cancels that follow each one when you connect your subscription app.
 - **Any good chat AI:** Any current chat AI that reads a spreadsheet can run the audit.
 <!-- /needs -->
 
 ## What you need
+In the box above, "Your results" means the subscription app export below, not an ad export.
+
 - **Cancels** with date, order number and reason (required).
 - **First-order subscription flag** and revenue per customer by month.
 - **Emails sent to subscribers** (a billing and reminder flow works), with cancels and starts after each send.
@@ -43,11 +45,11 @@ Needs at least a few hundred subscribers for the day-by-day chart to be readable
 
 ## Steps
 1. **Chart cancels by days since the first order.** Group them: day 0 to 1 (deal seekers who were never going to stay), days 2 to 6 (quiet, the product has not arrived), days 7 to 14 (first delivery window, product try-out), around day 28 (the billing reminder), the first rebill (the confirmation; in one audited store this was the biggest spike, about double the reminder day) and days 31 to 45. A second source names three peaks on a healthy subscription: day 1, day 28 and a window of 31 to 45. Label each spike with a likely cause, not a certainty.
-2. **Value gap.** Compare month-6 and month-12 value per customer for those whose first order was a subscription against everyone else. One brand saw $195 against $130 at month 6 (+50 percent), about 2 times by month 12 and 3 times by month 24. That is one store. The gap is the value of pushing take rate. Do not repeat cost-to-win or lifetime value work here; point to the Subscription payback checker.
-3. **Reminder and receipt.** Count cancels per 100 billing reminders sent. One example sat at 8.6 before a redesign. Check whether the first-rebill day is the biggest spike.
+2. **Value gap.** Compare month-6 and month-12 value per customer for those whose first order was a subscription against everyone else. One brand reported that subscription-first customers were worth clearly more per customer at month 6, and the gap grew by months 12 and 24. That is one store, not a benchmark. Use your own numbers. The gap is the value of pushing take rate. Do not repeat cost-to-win or lifetime value work here; point to the Subscription payback checker.
+3. **Reminder and receipt.** Count cancels per 100 billing reminders sent. Use your own count as the baseline and see how it moves after a redesign. Check whether the first-rebill day is the biggest spike.
 4. **Campaign cancels.** Count cancels within a few days of each campaign sent to subscribers. Flag any send where cancels exceed starts.
 5. **Save rate.** 15 percent or more is good, 20 percent strong, and under 10 percent is a red flag.
-6. **Monthly churn.** Show it but do not score it. One practitioner called 24 percent a month terrible, and got one brand to 17 percent. Their goal of under 5 percent is a target, not a result. As a starting line to adjust, which is ours and not a source's, look hard at anything above about 15 percent a month.
+6. **Monthly churn.** Show it but do not score it. One practitioner called very high monthly churn terrible and reported getting one brand's churn down. Their goal of a low single-digit rate is a target, not a result. As a starting line to adjust, which is ours and not a source's, look hard at anything above about 15 percent a month.
 7. **Route each finding:** New customer onboarding sequence writer for days 0 to 14; Billing reminder and confirmation writer for the reminder and receipt spikes; Subscriber retention calendar for campaign cancels; Subscription cancel flow builder for save rate.
 
 ## Score it

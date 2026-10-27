@@ -8,8 +8,12 @@ role: check
 job: ops
 level: advanced
 inputs:
-  - type: codebase
+  - type: question
     required: true
+  - type: codebase
+    required: false
+  - type: plan
+    required: false
 outputs:
   - type: audit_report
 uses: []

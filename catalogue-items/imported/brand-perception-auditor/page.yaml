@@ -30,13 +30,13 @@ you_get:
   - Changes to close the gap
   - Priorities for what to fix first
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text.
-  - Paste your brand description, who it is for, and the perception you want.
-  - Add samples of your copy, visuals and packaging. Add customer quotes or research if you have them.
+  - "Gather first: a short description of your brand, who it is for, the perception you want, samples of your copy (homepage, emails, ads), pictures of your visuals and packaging, and any customer quotes or research."
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. Then paste what you gathered.
   - Answer any question it asks about your intended position.
-  - It works in five steps: the impression people have now, the impression you want, the biggest clash, the smallest fix, then a check across every place customers see you.
+  - "It works in five steps, and you can check each one. 1. Write the three words a customer would use to describe you today. 2. Write the three words you want them to use. 3. Find the biggest clash between your look, your words and what you do. 4. Pick the smallest change that fixes it. 5. Check that the change holds on your website, packaging, emails and support."
   - Read the clashes and check any claim from psychology before you use it in public.
-  - Fix the top change first. Then test it with real customers, and use the Honest persuasion advisor to fix the words.
+  - Fix the top change first. Then test it with real customers. To clean up the words, use the Honest persuasion editor.
+next: [honest-persuasion-editor]
 output_sample:
   input:
     - Your brand description and the audience you serve

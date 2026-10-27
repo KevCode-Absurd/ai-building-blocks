@@ -1,6 +1,6 @@
 ---
 name: gtm-positioning-strategy
-description: Find and own a defensible market position. Use when messaging sounds like competitors, conversion is weak despite awareness, repositioning a product, or testing positioning claims. Includes Crawl-Walk-Run rollout methodology and the word change that improved enterprise deal progression.
+description: Find and own a defensible market position. Use when messaging sounds like competitors, conversion is weak despite awareness, repositioning a product, or testing positioning claims. Includes Crawl-Walk-Run rollout methodology and an illustrative word-change example (the author's story, not measured data).
 license: MIT
 metadata:
   author: Smit Patel (https://linkedin.com/in/smitkpatel)
@@ -10,6 +10,20 @@ metadata:
 # Positioning Strategy
 
 Find and own a defensible market position. Turn generic messaging into clear differentiation — or at least test whether your differentiation actually resonates before committing to it.
+
+## Before you start
+
+Gather: a description of the product; the homepage headlines of 5 to 7 rivals (or their links); the type of customer who is best for you; and, if you have them, your current headlines and notes on deals you won or lost. If something is missing, say so and mark that part "not enough input" instead of guessing.
+
+## Output format
+
+Hand back six sections, in this order:
+1. **Positioning clarity diagnosis**: does your message sound like your rivals' messages, and where are buyers confused.
+2. **Three-layer architecture**: market context, a one or two sentence position, and the narrative.
+3. **Headline and sub-headline tests**: options to test side by side, one change at a time.
+4. **Defensibility check**: how easily a rival could copy each claim.
+5. **Crawl-Walk-Run plan**: staged tests with the go or no-go rule for each stage.
+6. **Decision trees**: whether to reposition, which angle to test, and when to move on.
 
 ## When to Use
 
@@ -435,4 +449,4 @@ Did new positioning outperform incumbent by 20%+? (a suggested starting rule, no
 
 ---
 
-*Based on positioning work at AI agent and developer platforms, including navigating the framing spectrum from "autonomous" to "AI companion" and how category framing changes enterprise buyer perception. Also includes Crawl-Walk-Run rollout methodology from repositioning products without breaking existing customer recognition. Not theory — patterns from testing positioning before committing to rebrands.*
+*The author's own account (we have not checked it): based on positioning work at AI agent and developer platforms, including navigating the framing spectrum from "autonomous" to "AI companion" and how category framing changes enterprise buyer perception. Also includes Crawl-Walk-Run rollout methodology from repositioning products without breaking existing customer recognition. Not theory — patterns from testing positioning before committing to rebrands.*

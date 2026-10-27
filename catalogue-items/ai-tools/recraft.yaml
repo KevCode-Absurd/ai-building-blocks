@@ -20,11 +20,11 @@ best_for:
   - Designers who want vector files from a prompt.
   - Marketing teams that need a steady look across images.
 not_for:
-  - Photo-real people and product shots.
+  - "Photo-real people and product shots. Use a photographer or a stock photo library, or an image maker that handles photos."
   - Free commercial use, which the free plan does not allow.
 pricing:
   model: freemium
-  from: Check the maker's site
+  from: "Free plan; paid price not confirmed (third-party pages disagree)"
   note: Free plan images are public and not licensed for commercial use. Paid Basic, Pro and Teams plans add credits that reset monthly and do not roll over. Third-party pages disagree on the price.
 works_with:
   - figma-ai
@@ -40,7 +40,7 @@ first_result:
   - "Describe the subject and the style. Set a style so a group of images matches."
   - "Make a set. Keep the closest and edit it."
   - "Check the text, the edges and any logo."
-  - "You end with image or vector files. Open a vector file in a design tool to resize it."
+  - "You end with image or vector files. The exact file types (such as SVG or PNG) and the export sizes were not verified, so check what your plan downloads before you plan a job around it. Open a vector file in a design tool to resize it."
   - "Next: for ad images use the Marketing image maker. For exact words in an image use Ideogram."
 needs:
   - "A Recraft account."

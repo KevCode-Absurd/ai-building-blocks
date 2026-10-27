@@ -10,7 +10,6 @@ inputs:
   - {type: question, required: true}
 outputs:
   - {type: plan}
-  - {type: copy_draft}
 origin: rebuilt
 version: 1.0.0
 minds: [jerry-seinfeld, akira-kurosawa, stephen-king]

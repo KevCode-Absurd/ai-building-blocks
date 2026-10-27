@@ -33,7 +33,7 @@ how_to_use:
   - Open an AI tool that can run code and the Shopify command line, such as Claude Code, Cursor, Codex or Gemini CLI.
   - Sign in to your store with read-only access to products and inventory.
   - Paste the skill and give your store domain. Pick a breakdown by location, vendor or both if you want one.
-  - Check the count of items with no cost. Add those costs in Shopify and run it again for a firmer total.
+  - Before you read the total, check the count of items with no cost. They count as zero, so the total is too low until you add those costs in Shopify and run it again.
   - Compare the total with your accounting system, then send the CSV to your accountant or insurer.
 output_sample:
   input:

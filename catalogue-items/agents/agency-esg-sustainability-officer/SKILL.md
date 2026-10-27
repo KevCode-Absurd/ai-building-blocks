@@ -11,8 +11,9 @@ Plan and check a sustainability program so every claim can be backed. The full p
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Developer docs writer](https://useaiblocks.com/skills/developer-docs-writer).
-- The [Store tax setup planner](https://useaiblocks.com/skills/store-tax-setup-planner). It takes the plan.
+- The [Developer docs writer](https://useaiblocks.com/skills/developer-docs-writer). It takes the audit report.
+- The [SOP and runbook checker](https://useaiblocks.com/skills/sop-and-runbook-checker). It takes the plan.
+- The [Handover note writer](https://useaiblocks.com/prompts/handover-note-writer). It takes the plan and audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -36,6 +37,10 @@ How to start:
 <!-- /needs -->
 
 ## What to get from the user
+
+These are the inputs that count. If the generic "Before you start" list above asks for something else, such as a question or source text, ignore that part.
+
+Not for: a drafted report from data you already have (use the [ESG report preparer](https://useaiblocks.com/skills/esg-report-preparer)), whether EU sustainability rules apply to you (use the [EU sustainability report checker](https://useaiblocks.com/skills/eu-sustainability-report-checker)), or emissions worked out from shipping, energy and supplier data (use the [Supply chain carbon tracker](https://useaiblocks.com/skills/supply-chain-carbon-tracker)).
 
 1. **The company.** Size, sector, countries, who it sells to.
 2. **The purpose.** A customer or investor questionnaire, a first report, a target review, a claims check or a rules question. If unclear, ask which one to do first.
@@ -80,6 +85,9 @@ CALENDAR AND RULES TO CHECK
 CHECKS STILL NEEDED
   <item> | <who should confirm>
 ```
+CHECKS STILL NEEDED is also your CHECKS MISSED list: name every check that could not run, or write "none".
+
+Next: for a written report once the data exists, use the [ESG report preparer](https://useaiblocks.com/skills/esg-report-preparer).
 
 ## Rules
 

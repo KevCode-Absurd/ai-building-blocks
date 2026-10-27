@@ -1,18 +1,20 @@
 new_slug: implied-terminal-reinvestment
 name: Implied terminal reinvestment schedule
 headline: Implied terminal reinvestment schedule
-summary: Find the reinvestment and return on capital hidden in your terminal value. Give it value, NOPAT, growth and WACC. You get an implied reinvestment schedule.
+summary: Work backwards from a terminal value to the cash flow, reinvestment and return on new capital (ROC) it assumes. Give it value, NOPAT, growth and WACC.
 job: money-and-investing
 thinking: high
 thinking_why: "The terminal value is taken as given and worked backwards, so the method only holds if it covers operating assets at the terminal date."
-subhead: An implied FCFF, reinvestment-rate and ROC workpaper. Share terminal operating value, first stable-year NOPAT, stable growth and matching WACC.
+subhead: Share terminal operating value, first stable-year NOPAT (operating profit after tax), stable growth and the matching WACC (discount rate). You get the cash flow the value assumes (FCFF), the reinvestment it needs and the return on new capital (ROC) it implies.
 explain: |-
-  An implied FCFF, reinvestment-rate and ROC workpaper.
+  A terminal value hides two assumptions: how much profit the business must plough back to grow, and what that new money earns. This works both out from the value you already have. FCFF is the cash left for investors after reinvestment. ROC is the return earned on new reinvestment.
+
+  If you start from growth and return on capital instead and want the reinvestment a terminal value needs, use the Terminal growth reinvestment checker. This one starts from the value and works backwards.
 
   Public equity valuation. Illustrative figures. A terminal value of 1,000 at a 10% WACC and 3% growth implies FCFF of 70. With NOPAT of 100, reinvestment is 30, or 30% of NOPAT. Growth of 3% divided by a 30% reinvestment rate gives a ROC of 10%. A value of 800 implies FCFF of 56, reinvestment of 44 (44%) and a ROC of 6.818182%.
 when:
-  - You need an implied FCFF, reinvestment-rate and ROC workpaper.
-  - You work on public equity valuation and need traceable calculations.
+  - You have a terminal value and want to know what reinvestment and return on capital it assumes.
+  - A terminal value looks too high and you want to test whether the growth it needs is believable.
   - A reviewer needs to trace the result back to inputs and assumptions.
 not_for:
   - "You need a full company valuation or an investment call: use a person who does valuation work, such as an analyst or adviser."
@@ -53,12 +55,14 @@ output_sample:
     - name: CHECKS MISSED
       contains: Checks that failed or could not run, or the word none.
 how_it_works:
-  - title: 1. Verify the supplied value is at the terminal date and covers operating assets only; record its valuation convention
-    text: Verify the supplied value is at the terminal date and covers operating assets only; record its valuation convention.
-  - title: 2. Multiply value by WACC less growth to infer FCFF; subtract FCFF from NOPAT to infer reinvestment
-    text: Multiply value by WACC less growth to infer FCFF; subtract FCFF from NOPAT to infer reinvestment.
-  - title: 3. Divide reinvestment by NOPAT and growth by reinvestment rate; flag zero, negative or above-one reinvestment as a failed steady-state interpretation
-    text: Divide reinvestment by NOPAT and growth by reinvestment rate; flag zero, negative or above-one reinvestment as a failed steady-state interpretation.
+  - title: Check the value
+    text: Confirms the value is at the terminal date and covers operating assets only, and records how it was valued.
+  - title: Find the cash flow
+    text: FCFF is value times (WACC minus growth). Reinvestment is NOPAT minus FCFF.
+  - title: Find the rate and return
+    text: Reinvestment rate is reinvestment divided by NOPAT. ROC is growth divided by the reinvestment rate.
+  - title: Flag a broken result
+    text: Zero, negative or above-100% reinvestment means the steady-state view fails. It is flagged, not adjusted.
 output_shape: |-
   An implied FCFF, reinvestment-rate and ROC workpaper.
   Scope and dated sources

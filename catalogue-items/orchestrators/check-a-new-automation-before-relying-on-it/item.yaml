@@ -8,13 +8,15 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: automation_workflow
     required: true
   - type: question
     required: false
 outputs:
   - type: plan
   - type: document
+  - type: automation_workflow
+    required: true
 uses:
   - repeatable-ai-loop-designer
   - process-and-sop-writer

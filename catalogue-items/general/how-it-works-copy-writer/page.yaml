@@ -11,7 +11,7 @@ subhead: Give it your draft and your product facts. It finds the reasons your pr
 explain: |
   When buyers have heard a promise many times, they stop asking what it does. They ask how it could. An answer that is clear and true makes an old promise believable again. An answer that is made up, or full of words nobody understands, does the opposite.
 
-  This skill lists every cause your facts give for the result, and tags each as a fact, something standard in your field or a gap. It then picks how much to say: a short phrase when buyers already know how this kind of product works, a passage when they need reasons, or a lead position when your way of doing it is the new thing. It writes a chain of at least two links, checks each one and puts the passage where the promise needs backing. A link with no fact behind it is never written.
+  This skill lists every cause your facts give for the result, and tags each as a fact, a named standard in your field that you confirm, or a gap. It then picks how much to say: a short phrase when buyers already know how this kind of product works, a passage when they need reasons, or a lead position when your way of doing it is the new thing. It writes a chain of at least two links, checks each one and puts the passage where the promise needs backing. A link with no fact behind it is never written.
 
 when:
   - Readers like your promise but ask "how?" or say it sounds too good.
@@ -63,7 +63,7 @@ how_it_works:
   - title: States the doubt
     text: Writes the promise and the question a doubtful buyer would ask.
   - title: Gathers the causes
-    text: Lists every reason from your facts and tags each as a fact, a standard in the field or a gap.
+    text: Lists every reason from your facts and tags each as a fact, a named standard you confirm, or a gap. An unnamed standard counts as a gap.
   - title: Chooses the level
     text: A short phrase, a descriptive passage or the main selling point, based on what the buyer already understands.
   - title: Builds the chain

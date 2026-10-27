@@ -7,6 +7,8 @@ description: Use when a draft story, talk, case study or presentation has the ri
 
 The order in which a reader learns things is a choice, and it shapes what they feel. A story told in time order puts the reader outside the character. A story told in the order the character learns things puts the reader inside. This skill takes a draft and tests different orders against one question: where should the reader stand? It always keeps a plain time-order version, so the logic can be checked.
 
+**Not for:** a finished draft that only needs polish (use a line editor), checking one scene or a whole draft for a single effect (use the [Single-effect draft checker](https://useaiblocks.com/skills/single-effect-draft-checker)), or a draft that needs new scenes or a new plot (write them first, then come back).
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -46,9 +48,9 @@ The original order and the true order. The point of view. The new order, each sc
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Scene turn checker](https://useaiblocks.com/skills/scene-turn-checker). It takes the plan.
-- The [Scene suspense reviewer](https://useaiblocks.com/skills/page-pull-scene-checker). It takes the plan.
-- The [Story conflict escalation planner](https://useaiblocks.com/skills/rising-cost-ladder-builder). It takes the plan.
+- The [Scene turn checker](https://useaiblocks.com/skills/scene-turn-checker). It takes the story outline.
+- The [Scene detail picker](https://useaiblocks.com/skills/scene-detail-picker). It takes the story outline.
+- The [Unplotted first-draft writer](https://useaiblocks.com/skills/unplotted-first-draft-writer). It takes the story outline and plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -10,6 +10,10 @@ metadata:
 
 Translate business strategy and operational plans into accurate headcount demand forecasts — from gathering demand signals and modeling capacity requirements to prioritizing critical roles and aligning recruiting resources.
 
+## What you need
+
+Your growth goals and budget. If you have them, also bring a spreadsheet of current headcount by team and a headcount and turnover report, which the plan uses to allow for exits, transfers and backfills.
+
 ## Supported tasks
 
 - Translating business plans into headcount demand models

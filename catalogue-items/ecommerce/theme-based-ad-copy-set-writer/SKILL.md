@@ -9,11 +9,11 @@ description: Turn one product theme into three to five full ad copy sets. Check 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Buyer awareness ad planner](https://useaiblocks.com/skills/awareness-stage-ad-framework-chooser).
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy.
+- **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the ad copy.
 - **Check it before it goes live** with the [Five-part ad checker](https://useaiblocks.com/skills/five-part-ad-checker). It takes the ad copy.
-- **Check it before it goes live** with the [Headline promise checker](https://useaiblocks.com/skills/headline-promise-checker). It takes the ad copy.
-- **Check it before it goes live** with the [Headline relevance checker](https://useaiblocks.com/prompts/headline-reader-and-reward-checker). It takes the ad copy.
-- The [Five-angle ad headline writer](https://useaiblocks.com/skills/five-angle-ad-headline-writer).
+- The [Ad response copy editor](https://useaiblocks.com/skills/reply-getting-fix-writer). It takes the ad copy.
+- The [Fresh line rewriter](https://useaiblocks.com/skills/fresh-line-rewriter). It takes the ad copy.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -29,7 +29,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-2. **Audit report** with the [Claim evidence checker](https://useaiblocks.com/skills/claim-and-proof-matcher). Bring a draft, customer words (optional), audit report (optional), plan (optional). It uses your brand brain and your offer and ad copy and a buyer brief.
+2. **Audit report** with the [Claim evidence checker](https://useaiblocks.com/skills/claim-and-proof-matcher). Bring a draft, customer words (optional), audit report (optional), plan (optional). It uses your brand brain and offer and ad copy and a buyer brief.
 3. This one.
 
 How to start:

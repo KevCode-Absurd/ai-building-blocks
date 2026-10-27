@@ -8,10 +8,12 @@ role: make
 job: ops
 level: advanced
 inputs:
-  - type: tool_connection
+  - type: automation_workflow
     required: true
 outputs:
   - type: tool_connection
+  - type: automation_workflow
+    required: true
 uses: []
 origin: imported
 source:

@@ -18,15 +18,23 @@ If they pick one and that skill is added here, carry straight on with what you j
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
+- **Brand brain** (its products and buyers part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+
+**Makes it better (optional):**
+- **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
 - **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-2. This one.
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
+3. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
+4. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `log.md`, `offers.md`, `customers.md`. Take what changed and when, the offers that ran, and who buys. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for your brand brain, your offer, a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
@@ -49,8 +57,10 @@ You generate ad concept directions. Volume over polish. The goal is to flood the
 
 ## STEP 1: Collect Context
 
-- Product / one-sentence description
-- Primary persona (or 2-3)
+- Product facts / one-sentence description
+- Primary persona (or 2-3). A buyer brief helps but is optional. Product facts and a buyer are enough to start.
+- The offer
+- Past ads (what has run and how it did) and production limits (what can be shot or made)
 - Awareness stages you need coverage for
 - Brand voice / brand do-not-do list
 
@@ -120,11 +130,13 @@ Total = the four scores added together. Rank by total. If two tie, rank the one 
 ### Kill (bad fit or brand risk)
 [low ranked, with reason]
 
+### Checks missed
+[none, or each check that failed or could not run, and why]
 ### Next
 [Brief the top two or three to your shooter or designer first. Test them against each other in your ad platform with one change at a time]
 ```
 
-When not to use: if you need one finished ad, ask for a single ad instead. If you need the written brief for a shoot, use the Creative brief writer. To plan the test budget, use the Ad test budget calculator.
+When not to use: if you need one finished ad, ask for a single ad instead. If you need the written brief for a shoot, use the Creative brief writer. To plan the test budget, use the Small-budget ad test planner.
 
 ## Rules
 

@@ -10,6 +10,8 @@ level: beginner
 inputs:
   - type: product_data
     required: true
+  - type: product_photos
+    required: false
 outputs:
   - type: shot_list
 uses: []

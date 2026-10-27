@@ -35,9 +35,11 @@ This skill enables an AI agent to systematically clean and preprocess raw datase
 
 ## Usage
 
-Provide the agent with the file path to the raw dataset and optionally a schema definition specifying expected column types, valid ranges, and uniqueness constraints. The agent will produce a cleaned file and a transformation log.
+Provide the agent with the file path to the raw dataset and optionally a schema definition specifying expected column types, valid ranges, and uniqueness constraints. The agent will produce a cleaned file and a transformation log. Save the cleaned data in the same format as the raw file (CSV by default) and the log as a plain text or Markdown file next to it.
 
 ## Examples
+
+These examples are templates. The counts, shapes and results in the comments are placeholders, not real output. Your own data will give different numbers, so report only what your code prints.
 
 ### Example 1: Cleaning a messy CSV with pandas
 
@@ -47,16 +49,16 @@ import numpy as np
 
 # Load raw data
 df = pd.read_csv("messy_orders.csv")
-print(f"Raw shape: {df.shape}")  # (2340, 8)
+print(f"Raw shape: {df.shape}")  # (<ROWS>, <COLUMNS>)
 print(df.isnull().sum())
-# order_id         0
-# customer_name   12
-# email           45
-# order_date      18
-# amount          23
-# status           0
-# region          67
-# discount         0
+# order_id         <count of blanks>
+# customer_name   <count of blanks>
+# email           <count of blanks>
+# order_date      <count of blanks>
+# amount          <count of blanks>
+# status          <count of blanks>
+# region          <count of blanks>
+# discount        <count of blanks>
 
 # 1. Fix data types — order_date has mixed formats
 df["order_date"] = pd.to_datetime(df["order_date"], format="mixed", dayfirst=False)
@@ -68,12 +70,13 @@ df["customer_name"] = df["customer_name"].fillna("Unknown")
 df["email_missing"] = df["email"].isna()
 df["amount"] = df["amount"].fillna(df["amount"].median())
 df["region"] = df["region"].fillna(df["region"].mode()[0])
-df["order_date"] = df["order_date"].fillna(method="ffill")
+# Leave blank dates blank and flag them. Do not copy a date from another row.
+df["order_date_missing"] = df["order_date"].isna()
 
 # 3. Remove duplicates
 before = len(df)
 df = df.drop_duplicates(subset=["order_id"], keep="first")
-print(f"Removed {before - len(df)} duplicate orders")  # Removed 34 duplicate orders
+print(f"Removed {before - len(df)} duplicate orders")  # Removed <N> duplicate orders
 
 # 4. Standardize categorical values
 df["status"] = df["status"].str.strip().str.lower().replace({
@@ -90,11 +93,13 @@ IQR = Q3 - Q1
 lower, upper = Q1 - 1.5 * IQR, Q3 + 1.5 * IQR
 df["amount"] = df["amount"].clip(lower=lower, upper=upper)
 
-print(f"Clean shape: {df.shape}")  # (2306, 8)
+print(f"Clean shape: {df.shape}")  # (<ROWS>, <COLUMNS>)
 df.to_csv("clean_orders.csv", index=False)
 ```
 
 ### Example 2: Data validation pipeline with schema enforcement
+
+This is a sketch. The Great Expectations calls change between versions (the code below follows the 1.x style), so check the docs for the version you have installed. If the calls fail, run the same checks in plain pandas, such as isna, between, isin and duplicated.
 
 ```python
 import great_expectations as gx
@@ -110,7 +115,7 @@ suite.add_expectation(
 )
 suite.add_expectation(
     gx.expectations.ExpectColumnValuesToBeBetween(
-        column="amount", min_value=0.01, max_value=50000.00
+        column="amount", min_value=<MIN_ALLOWED>, max_value=<MAX_ALLOWED>
     )
 )
 suite.add_expectation(
@@ -132,14 +137,14 @@ results = context.run_validation(suite, batch=gx.read_csv("clean_orders.csv"))
 
 print(f"Success: {results.success}")
 print(f"Passed: {results.statistics['successful_expectations']}/{results.statistics['evaluated_expectations']}")
-# Success: True
-# Passed: 5/5
+# Success: <True or False>
+# Passed: <passed>/<checked>
 ```
 
 ## Best Practices
 
 - Always save a copy of the raw data before any transformations — cleaning should be reproducible, not destructive.
-- Log every transformation with counts (e.g., "Filled 23 nulls in amount with median 312.45") to create an auditable cleaning trail.
+- Log every transformation with counts (e.g., "Filled [N] nulls in amount with median [MEDIAN]") to create an auditable cleaning trail.
 - Prefer domain-informed imputation over mechanical defaults; consult the user when a column's missingness pattern is non-random (MNAR).
 - Validate early and often — run schema checks after each cleaning phase, not just at the end.
 - Treat cleaning as iterative: the first pass catches the obvious issues, but downstream analysis frequently surfaces new ones.

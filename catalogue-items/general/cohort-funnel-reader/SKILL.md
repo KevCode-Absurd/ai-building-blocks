@@ -63,8 +63,8 @@ The group table with sizes. The thin cells marked. One line per step on the move
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Product pivot decision reviewer](https://useaiblocks.com/skills/pivot-or-persevere-decider). It takes the audit report.
-- The [Self-service product growth planner](https://useaiblocks.com/skills/copilot-gtm-product-led-growth).
-- The [Marketing plan writer](https://useaiblocks.com/skills/marketing-plan-writer). It takes the audit report.
+- The [Brand and sales budget splitter](https://useaiblocks.com/skills/brand-and-sales-budget-splitter). It takes the audit report.
+- The [Competitive advantage development planner](https://useaiblocks.com/skills/power-stage-build-planner). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -33,6 +33,9 @@ how_to_use:
   - Download the skill folder. In Claude, open Customize → Skills, then choose + → Create skill → Upload a skill. In ChatGPT, add the files to a project's Sources. In Gemini, make a Gem and paste the instructions. Or paste the instructions into a chat.
   - Ask your AI to follow this skill. Include the files and details listed on this page.
   - It works best when your AI can run Python code and save files.
+  - Model files are run as Python on your computer. Run only files your AI wrote in this session. If a model came from the internet, a shared drive or a colleague, read it before you run it.
+  - Look at the preview image and the check results before you make anything. Give your AI the vendor drawing for any size it could not check.
+  - Next, send the STEP file and the report to a machinist or fabrication shop to review. Print or cut from the STL or DXF.
 output_sample:
   input:
     - What the part does and what it mates with

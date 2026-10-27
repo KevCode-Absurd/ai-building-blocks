@@ -102,8 +102,8 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Check it before it goes live** with the [Sound-off commercial checker](https://useaiblocks.com/skills/sound-off-commercial-checker). It takes the script.
 - **Check it before it goes live** with the [Video ad transition reviewer](https://useaiblocks.com/skills/video-ad-bridge-checker). It takes the script.
 - **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script.
-- The [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer).
-- The [Buyer group video script writer](https://useaiblocks.com/skills/persona-script-multiplier). It takes the script.
+- **Make video ads** with the [Creator filming brief writer](https://useaiblocks.com/skills/creator-filming-brief-writer). It takes the script.
+- **Make video ads** with the [Video ad edit planner](https://useaiblocks.com/skills/video-ad-edit-planner). It takes the script.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

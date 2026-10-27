@@ -91,7 +91,7 @@ output_sample:
     - "What must stay the same, and what to leave out (optional)"
     - "The shape you want, such as square or tall (optional)"
   prerequisites:
-    - "A Midjourney account, to make the pictures from the prompts"
+    - "A Midjourney account (a paid service), to make the pictures from the prompts"
   output:
     - name: "Interpretation"
       contains: "A short reading of your idea, with what you asked for kept apart from what it assumed."

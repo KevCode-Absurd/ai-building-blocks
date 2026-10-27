@@ -50,7 +50,7 @@ For each funding round, extract or estimate:
 | ARR multiple | `valuation / ARR` |
 | Lead investor | Direct |
 
-**Rule for every figure:** show its source, or mark it `estimate`. Never present an estimate as a reported number. The ranges below are rough starting guesses without a source. Use them only when nothing better is found, and label the result `estimate`.
+**Rule for every figure:** show its source, or mark it `estimate`. Never present an estimate as a reported number. The ranges below are rough starting guesses without a source. Do not show them as findings. Use them only when nothing better is found, and label the result `estimate`.
 
 **ARR estimation heuristics (when not public):**
 - Seed/Series A: ARR often $500K–$3M
@@ -72,10 +72,10 @@ The three changes multiply rather than add: `valuation multiplier = ARR multipli
 
 ### 4. Attribute Compression to Causes
 
-Use this checklist. For each cause, rate it: Primary / Contributing / Not applicable. `references/benchmarks.md` has dated private-market median multiples by period, public-software drawdowns, and known round-pair comparables for context.
+Use this checklist. For each cause, rate it: Primary / Contributing / Not applicable. These ratings are inferences from public information, not tested against the company's own data, so say so in the answer. Every benchmark range or dated market event you quote must name its source in `references/benchmarks.md` or a search result. If it has none, label it `unverified` in the output. `references/benchmarks.md` has dated private-market median multiples by period, public-software drawdowns, and known round-pair comparables for context.
 
 **Macro / Rate Environment**
-- Was the earlier round priced during the 2020–2021 ZIRP bubble? (typically a ~2–5x artificial premium)
+- Was the earlier round priced during the 2020–2021 ZIRP bubble? (a rough guess of a ~2–5x premium, unsourced; label it `unverified` unless `references/benchmarks.md` supports it)
 - Was the later round priced during the 2022–2023 rate hikes? (removes the bubble premium)
 - Was the later round priced during or just after a sector-wide public-software selloff, such as the April 2026 meltdown? Private marks typically lag public ones by 1–2 quarters.
 - How does each round's multiple compare with the private-market median for its date?

@@ -10,7 +10,9 @@ level: beginner
 inputs:
   - type: codebase
     required: true
-  - type: brief
+  - type: question
+    required: false
+  - type: data_model
     required: false
 outputs:
   - type: code_change

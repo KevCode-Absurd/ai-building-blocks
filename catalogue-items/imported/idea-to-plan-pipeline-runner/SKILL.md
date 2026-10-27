@@ -14,6 +14,9 @@ license: "MIT"
 license_source: "https://github.com/Slashworks-biz/idea-os/blob/main/LICENSE"
 ---
 
+
+> Licence note (added by AI Blocks): the written text of this copy is shared under CC BY-4.0 (see `LICENSE-CONTENT`). The `license: MIT` line in the header above is the original author's own declaration for their repo. Keep the credit to the author either way.
+
 # idea-os
 
 An operating system for turning a raw idea into a build-ready plan. Takes a rough problem statement and produces four files: clarifying questions, deep research, a PRD, and a phased execution plan with platform/stack picks, a user-journey diagram, and kill criteria.
@@ -29,7 +32,7 @@ Source: https://github.com/Slashworks-biz/idea-os — full skill, 11 reference f
 - Use when a user shares a raw product idea or problem statement and wants a structured pipeline from clarifying questions through deep research, PRD, and a phased execution plan.
 - Use when the user says "I have an idea for…", "help me build X", "validate and plan this concept", or "what should I build?" — and wants files they can take forward, not a one-shot answer.
 - Use when a non-technical founder, PM, or hobbyist needs structure to bridge the gap between "idea" and "Monday morning's build queue".
-- Do **not** use for quick sanity-check feedback on a half-formed idea (use `idea-refine` instead) or for editing an existing PRD (use `product-management` instead).
+- Do **not** use for quick sanity-check feedback on a half-formed idea (use the Idea sharpener, `idea-sharpener`, instead) or for editing an existing PRD (ask your AI to edit it directly).
 
 ## How It Works
 

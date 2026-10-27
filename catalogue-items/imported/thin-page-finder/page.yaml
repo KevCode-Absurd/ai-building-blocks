@@ -10,6 +10,8 @@ explain: |
   Pages with almost no words or no search titles can rank poorly, and customers leave them fast. This skill lists every page and blog post in your Shopify store and flags the weak ones so you know exactly what to fix.
 
   It reads your content through the Shopify Admin connection, using a read-only login, so nothing in your store is changed. It checks each page for an empty body, a body under a length you set (100 characters by default), a missing SEO title and a missing SEO description. You can include unpublished items too. The result is a plain list or JSON you can hand to a writer.
+
+  Licence: MIT, as the LICENSE file in this item says. Credit goes to 40rty AI.
 when:
   - Your store traffic dipped and you suspect weak pages.
   - You are about to rewrite your blog and need a priority list.
@@ -30,7 +32,7 @@ you_get:
   - Blog posts with the same problems
   - A list to give your writer
 how_to_use:
-  - Use an AI that can run commands and connect to Shopify, such as Claude Code. A plain chat window cannot read your store.
+  - Use an AI that can run commands and connect to Shopify, such as Claude Code, Cursor, Codex or Gemini CLI. These tools usually need an account and a paid plan or an API key, so check yours first. A plain chat window cannot read your store.
   - Sign in to your store with read access to content. The skill only reads, so nothing in your store changes.
   - Tell your AI to run the Thin page finder on your store address. Add a minimum body length or ask for unpublished items if you want.
   - Open the CSV file it makes. Sort it by the issue column. Start with your About, FAQ and Contact pages.

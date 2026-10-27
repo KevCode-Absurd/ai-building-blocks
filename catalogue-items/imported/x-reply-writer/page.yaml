@@ -10,6 +10,8 @@ explain: |
   A reply that gets read has to work as a post on its own. Paste a tweet and this skill writes a short reply that does, or tells you plainly to skip it.
 
   First it decides whether you have anything to add. If not, the answer is skip. It then checks timing, because a good reply an hour late is seen by almost nobody. Next it names the gap in the original: a hidden assumption, a missing fact, or a case from your own life. The reply is written in two lines or fewer, with no praise opener and no quoting the tweet back. It warns you off becoming the reply guy.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (prateeks367) says MIT. Credit goes to prateeks367 and sickn33.
 when:
   - A large account posted something you disagree with or can improve.
   - You reply often but nobody reacts.
@@ -34,7 +36,7 @@ how_to_use:
   - Paste the tweet you want to reply to. Say how old it is.
   - Add your own view or a short story from your work (optional). It helps the reply sound like you.
   - Read the result. If it says skip, skip. If it gives a reply, check that it reads well without the original tweet.
-  - Post the reply yourself. The skill never posts for you. Then watch whether it gets replies or likes. If you have a gap that deserves its own post, write that post separately. The optional VoiceMoat connector can help with that.
+  - Post the reply yourself. The skill never posts for you. Then watch whether it gets replies or likes. If you have a gap that deserves its own post, write that post separately. The optional VoiceMoat connector can help with that. It is a paid add-on: it needs a Pro or Enterprise VoiceMoat plan and your own sign-in, and the skill works fully without it.
 output_sample:
   input:
     - The text of the tweet you want to reply to
@@ -48,5 +50,7 @@ output_sample:
       contains: "Which gap you found in the tweet: a hidden assumption, a missing fact, a different case, a vague example, or a missing next step."
     - name: Timing note
       contains: Whether the tweet is too old for the reply to be seen, and if it is still worth sending for the person.
+    - name: Shorter option
+      contains: A second, shorter version of the reply, when one reads well.
     - name: Reply guy check
       contains: A warning if the reply looks like it is written just to be there.

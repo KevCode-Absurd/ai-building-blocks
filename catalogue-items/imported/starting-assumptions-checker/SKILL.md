@@ -60,7 +60,7 @@ quantity's meaning to a distribution, then check its observable implications.
   scales, R2D2 variance allocation, geometry and interpretation.
 - For optional pymc-extras prior factories, serialization, censoring and
   posterior-as-prior transfer, see the extras model tools file from the separate `pymc-modeling` skill.
-  That file is not included in this copy.
+  That file is not included in this copy, so those optional extras workflows are not available here. Use the two references above.
 
 Use the installed package's version-matched API documentation when adapting the
 examples. PreliZ widgets need an interactive notebook; pymc-extras is optional

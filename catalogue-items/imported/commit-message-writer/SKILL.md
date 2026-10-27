@@ -50,15 +50,15 @@ Generate a commit message from the actual staged changes (`git diff --cached`). 
 git status --short
 git diff --cached --stat
 
-# 2. Suppose the change: added CAPTCHA verification to the login endpoint
-# Generated commit (the details in the body are placeholders; use only facts from your own diff):
-git commit -m "feat: add CAPTCHA verification to login endpoint" -m "Blocks automated credential stuffing; <timeout and lockout values from your diff>."
+# 2. Illustration only. The change, subject and body below are made up to show the format.
+# Never copy them into a real commit. Use only facts that your own diff shows.
+git commit -m "feat: [VERB-FIRST SUMMARY OF YOUR CHANGE]" -m "[WHY YOU MADE IT, from your diff or your note. Add numbers only if the diff has them.]"
 ```
 
 Another example (bug fixes must state trigger conditions):
 
 ```bash
-git commit -m "fix: keep order-list filters across pagination" -m "Trigger: filter first, then turn the page. Cause: page turns dropped the query params."
+git commit -m "fix: [WHAT WAS BROKEN, in a few words]" -m "Trigger: [WHEN IT HAPPENED, from your diff or notes]. Cause: [THE CAUSE YOUR DIFF SHOWS]."
 ```
 
 ## Limitations

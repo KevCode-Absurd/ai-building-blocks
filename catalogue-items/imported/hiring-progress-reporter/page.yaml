@@ -32,12 +32,12 @@ you_get:
   - A simple chart page if you ask
   - Specific recommendations
 how_to_use:
-  - Open your AI chat. Paste in the skill text from this page.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. Gather first: your stage-by-stage export with dates, reply numbers and blockers.
   - "Say which report you want: weekly update, market report, talent map or look back after the role is filled."
   - Paste your pipeline counts, reply numbers, blockers and notes. Say who will read the report.
   - Read the executive summary first. Check that every number matches your data and fix anything that does not.
   - For a chart page, ask for an HTML dashboard. Open the file in any browser. Your AI needs to create files for this.
-  - PDF export and company branding are optional. They need code tools and your own brand guide, so skip them to start.
+  - PDF export and company branding are optional. PDF export needs Node, Puppeteer and Chrome, plus your own brand guide, so skip them to start. Every number in the report must come from your data. Ask the AI to label any estimate and name its source.
 output_sample:
   input:
     - Your pipeline counts by stage

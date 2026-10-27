@@ -32,9 +32,9 @@ you_get:
   - What-if results for the best options
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste the skill text from this page into a new chat.
-  - List your steps in order. For each one, add the time per unit, the number of machines and people, and the shifts.
+  - List your steps in order. For each one, add the time per unit, the number of machines and people, and the shifts. A simple table with the columns step, time per unit, machines, staff, shifts and known breakdowns is enough.
   - Add any known breakdowns, and your goal, such as more units per day (optional).
-  - Ask your AI to find the bottleneck and test fixes. If it can run Python, ask it to run the simulation too. It needs the packages simpy, pandas, numpy and matplotlib. Ask it to install them first.
+  - Ask your AI to find the bottleneck and test fixes. You do not need Python for this: ask for the capacity table alone, where the step with the lowest effective capacity is the bottleneck. If it can run Python, ask it to run the simulation too. It needs the packages simpy, pandas, numpy and matplotlib. Ask it to install them first.
   - Check the capacity table first. The step with the lowest capacity should be the one marked as the bottleneck.
   - Pick the top fix, then run the numbers again with your real times before you spend money.
   - Time each step on the shop floor for two weeks and run the capacity table again with those measured times. Your guesses may name the wrong step.

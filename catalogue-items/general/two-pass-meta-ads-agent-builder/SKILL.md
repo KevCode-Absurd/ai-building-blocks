@@ -15,7 +15,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Codebase** (yours): a project's code, in a folder or repo the AI can open.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Meta developer app setup planner** with the [Meta developer app setup planner](https://useaiblocks.com/skills/meta-developer-app-setup-planner). Bring codebase.
+1. **Meta developer app setup planner** with the [Meta developer app setup planner](https://useaiblocks.com/skills/meta-developer-app-setup-planner). Bring your question, codebase (optional).
 2. This one.
 
 How to start:

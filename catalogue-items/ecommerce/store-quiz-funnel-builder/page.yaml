@@ -117,8 +117,8 @@ improve:
   - Pair it with the quiz answers to ad angles reader to turn answers into ads.
 works_best_with:
   tools:
-    - {name: "Heyflow", why: "A quiz and funnel builder with per-question analytics. The source describes the tool as Heyflow-type."}
-    - {name: "Klaviyo", why: "Email platform for the follow-up sequence by answer."}
+    - {name: "Heyflow", why: "Paid. A quiz and funnel builder with per-question analytics. The source describes the tool as Heyflow-type. A free plan or a cheaper tool can work for a first test."}
+    - {name: "Klaviyo", why: "Paid email platform for the follow-up sequence by answer. It has a free tier for small lists."}
     - {name: "Shopify", why: "Where the products and the buy box live."}
   inputs:
     - Reviews and customer words to ground the questions

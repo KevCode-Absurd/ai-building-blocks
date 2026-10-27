@@ -59,7 +59,7 @@ Do **not** invoke it for one-off questions about screenpipe itself, for real-tim
 
 Either install the official release or build from source. Either way the daemon binds HTTP on `localhost:3030` by default.
 
-**From source** (recommended if you want the CLI daemon without the desktop GUI):
+**Recommended: install the official release from Screenpipe's own install docs.** The source build below is an unverified example for people who want the CLI daemon without the desktop GUI. Follow Screenpipe's current docs if anything differs:
 
 ```bash
 git clone --depth 1 https://github.com/screenpipe/screenpipe.git

@@ -13,9 +13,7 @@ It plans. It does not change the account.
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Meta creative test campaign planner](https://useaiblocks.com/skills/meta-setup-of-new-ad-campaigns-with-new-creatives-planner).
-- The [Daily Meta ad review planner](https://useaiblocks.com/skills/meta-manage-ads-on-a-daily-basis-planner).
-- The [Meta bid cap launch planner](https://useaiblocks.com/skills/meta-set-up-a-bid-cap-campaign-planner).
+- The [Marketing budget allocation planner](https://useaiblocks.com/skills/next-dollar-budget-allocator). It takes the plan.
 - **Read your ad results** with the [Meta delivery troubleshooter](https://useaiblocks.com/skills/meta-delivery-troubleshooter). It takes the plan.
 - **Read your ad results** with the [Google Ads report auditor](https://useaiblocks.com/skills/google-ads-report-auditor). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
@@ -71,7 +69,7 @@ Ask once for anything missing. Never invent it. Mark each gap `MISSING:`. No acc
 2. **Find where a weak result comes from.** Review the campaign's purpose and total, then ad sets, then ads: spend, purchases, revenue, cost per sale and order value. Name the source of a weak total before you propose pausing a whole ad set.
 3. **Mark each ad.** One mark per ad, using the owner's spend limit, the buying delay and the evidence so far:
    - `maintain`: at or better than break-even, with enough data.
-   - `gather more evidence`: too little spend or too few purchases to judge. Give a review date.
+   - `gather more evidence`: too little spend or too few purchases to judge. Give a review date. Starting default, which the owner may change: the ad has spent less than the owner's spend limit, has fewer than 3 purchases, or has run for fewer days than the buying delay.
    - `investigate`: results moved a lot or look wrong, such as a spend jump or purchases that stop. Say what to check.
    - `creative refresh`: clicks and cost are weakening while the offer and page look unchanged.
    - `proposed pause`: past the owner's spend limit with no purchase, or cost per sale well above break-even over enough data. Check sample size, buying delay and tracking first.
@@ -94,4 +92,4 @@ Use these headings, in this order:
 
 ## Final check
 
-Before you hand back, confirm: no pause rests on a missing break-even, every mark has proof, every change has a review date and a way to undo it, and nothing says the account was changed. Write `CHECKS MISSED:` with anything you could not check, or "none". Retain the prior approved settings so a change can be compared and rolled back.
+Before you hand back, confirm: no pause rests on a missing break-even, every mark has proof, every change has a review date and a way to undo it, and nothing says the account was changed. List anything you could not check in section 7, Missing and not run (the list the start block calls CHECKS MISSED), or write "none". Retain the prior approved settings so a change can be compared and rolled back.

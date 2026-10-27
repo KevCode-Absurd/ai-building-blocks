@@ -13,6 +13,8 @@ The user's input is: $ARGUMENTS
 
 ## Workflow
 
+If you are in a chat tool without Bash or Composio, ask the user to paste the ticket text and skip the lookup steps below.
+
 ### If ticket IDs are provided:
 1. Run `composio search "get ticket details from Gorgias"` in Bash
 2. Run `composio execute GORGIAS_GET_TICKET -d '{"ticket_id":"<ID>"}'` in Bash (in parallel) for each ticket. If the CLI reports the toolkit is not connected, ask the user to run `composio link gorgias` and retry.

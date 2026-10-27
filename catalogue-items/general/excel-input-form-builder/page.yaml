@@ -61,9 +61,9 @@ how_it_works:
   - title: Step 2
     text: 2. Create one record per row in a native Excel table. Store IDs as text, keep dates typed and reserve separate columns for inputs and calculated results.
   - title: Step 3
-    text: 3. Add bounded dropdowns or named-list validation and understandable error messages. Check required fields and duplicate keys with visible diagnostics; pasted data can bypass validation.
+    text: 3. Add dropdowns with Excel's Data Validation list (from a named list on a separate sheet) and plain error messages. Check required fields and duplicate keys with visible diagnostics; pasted data can bypass validation.
   - title: Step 4
-    text: 4. Use a restrained input fill, freeze the table header and preserve existing formulas. Lock calculation cells only if requested, explaining that worksheet protection is not encryption.
+    text: 4. Give the entry cells a light fill, freeze the top row of the table and keep any existing formulas. Add a duplicate flag column (for example a COUNTIF check on the key). Lock calculation cells only if asked, and say that worksheet protection is not encryption.
   - title: Step 5
     text: 5. Test valid, missing, duplicate and pasted-invalid records in a disposable copy. Reopen the saved workbook and deliver the empty form with its rules and unresolved limitations.
 output_shape: >-
@@ -89,9 +89,9 @@ tweaks:
   - what: Your source files
     how: Field names, data types, allowed values, required fields, record key and intended Excel version.
   - what: The result you need
-    how: Name the file format, audience and parts that must stay editable. State any page or slide limit.
+    how: Say who will fill in the form and which columns must stay open for them to edit.
   - what: The app used to check it
-    how: Say which Excel or PowerPoint version you will use. Your AI must name any check it cannot run.
+    how: Say which Excel version you will use. Your AI must name any check it cannot run.
 judge:
   - No invented production records.
   - Blank and zero obey the supplied rules.

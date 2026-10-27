@@ -33,6 +33,8 @@ Output is one `.html` file with sticky TOC, search filter, scrollspy, code-copy 
 
 ## Pipeline
 
+AI Blocks note: run these commands from the root of this folder, where the `scripts/` folder sits. The paths below say `markdown-html/skills/md-document/scripts/` because that is the author's full pack layout. Here, use `scripts/` instead. Needs Python 3 only (standard library). If the user has no design setup, add `--no-config` to the render step: it uses the built-in default colours and fonts, and you must tell the user the page has the default look. The page loads Google Fonts and Prism.js from the internet when opened.
+
 ```bash
 # 1. Parse markdown → JSON AST
 python3 markdown-html/skills/md-document/scripts/markdown_parser.py \
@@ -71,7 +73,7 @@ Out of scope: nested lists, HTML inlines, footnotes, definition lists, task list
 ## Hard rules
 
 1. **Refuses input < 100 lines.** Markdown wins below the threshold (Shihipar).
-2. **Refuses without onboarding.** `config_loader.setup_completed()` must return `True`. Otherwise surface `/cs:design-system`.
+2. **Needs a design setup, or the default look.** In the author's full pack, `config_loader.setup_completed()` must return `True`; otherwise surface `/cs:design-system`. That command and `config_loader.py` are not in this folder. Here, if the user has no design setup, render with `--no-config` and say the default look is used. Do not pretend their brand colours were applied.
 3. **Single-file output.** All CSS + JS inline. Only externals are `fonts.googleapis.com` and `cdn.jsdelivr.net` (Prism). Anything else is a regression.
 4. **Customization must change behavior.** `design_style=editorial` produces 720px-wide layout with 1.75 line-height; `playful` rounds the callouts and adds shadow; `technical` is dense with 0.875rem code. Smoke-tested.
 5. **WCAG-compliant tokens.** Inherits the design-system's WCAG AA palette — body text ≥ 4.5:1 contrast, links iteratively walked to 4.5:1.

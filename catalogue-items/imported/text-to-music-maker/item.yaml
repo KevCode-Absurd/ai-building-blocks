@@ -10,6 +10,8 @@ level: intermediate
 inputs:
   - type: question
     required: true
+  - type: audio
+    required: false
 outputs:
   - type: audio
 uses: []

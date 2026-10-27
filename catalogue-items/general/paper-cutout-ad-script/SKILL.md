@@ -75,8 +75,8 @@ The point, the paper kit, then a table of `Line | narration | key word | proof p
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Paper cutout explainer clip prompt writer](https://useaiblocks.com/skills/paper-cutout-video-prompts). It takes the script.
-- The [3D explainer ad script writer](https://useaiblocks.com/skills/3d-explainer-video-script).
-- The [Paper craft video ad script writer](https://useaiblocks.com/skills/paper-craft-ad-script).
+- The [Video ad script line checker](https://useaiblocks.com/skills/video-ad-script-line-checker). It takes the script.
+- The [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker). It takes the script.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

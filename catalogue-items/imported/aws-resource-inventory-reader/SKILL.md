@@ -12,7 +12,7 @@ Answer natural language questions about AWS resources by translating intent into
 **STRICTLY READ-ONLY.** This skill exclusively uses:
 - `aws <service> describe-*`
 - `aws <service> list-*`
-- `aws <service> get-*` only for the named calls used in this file, such as `get-caller-identity`, `get-resources`, `get-bucket-encryption`, `get-bucket-policy`, `get-function-configuration` and `get-cost-and-usage`. Do not run any other `get-*` call.
+- `aws <service> get-*` only for the named calls used in this file: `get-caller-identity`, `get-resources`, `get-bucket-encryption`, `get-bucket-policy`, `get-bucket-versioning`, `get-bucket-lifecycle-configuration`, `get-public-access-block`, `get-function-configuration`, `get-function-concurrency`, `get-queue-attributes`, `get-account-summary`, `get-account-password-policy`, `get-compliance-summary-by-config-rule`, `get-findings`, `get-rest-apis`, `get-apis` and `get-cost-and-usage`. Do not run any other `get-*` call.
 - `aws sts get-caller-identity`
 - `aws configure get`
 - `aws resourcegroupstaggingapi get-resources`

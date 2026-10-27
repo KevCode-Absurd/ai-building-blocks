@@ -65,11 +65,11 @@ The product and buyer, with the "You get..." line. The list of at least ten answ
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Ad angle writer](https://useaiblocks.com/skills/ad-angle-multiplier).
 - **Write the ad copy** with the [Ad headline variation writer](https://useaiblocks.com/skills/typed-headline-batch-writer). It takes the buying reasons.
-- The [Buyer-stage ad theme planner](https://useaiblocks.com/skills/persona-stage-theme-matrix-planner).
 - **Make an offer people want** with the [Offer checklist reviewer](https://useaiblocks.com/skills/offer-checklist-reviewer). It takes the buying reasons.
 - The [Ad response incentive planner](https://useaiblocks.com/skills/test-reply-offer-planner). It takes the plan.
+- The [Ad reach planner](https://useaiblocks.com/skills/reach-before-repeat-planner). It takes the plan.
+- **Understand your buyers** with the [Ideal customer profile writer](https://useaiblocks.com/skills/ideal-customer-profile-writer). It takes the buying reasons.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

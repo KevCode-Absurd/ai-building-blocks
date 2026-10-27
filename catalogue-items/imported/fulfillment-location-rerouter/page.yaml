@@ -21,8 +21,8 @@ not_for:
   - "You need to move just one or two orders: change the location by hand in Shopify Admin."
 you_give:
   - Your store address, like mystore.myshopify.com
-  - The ID of the location to move orders from
-  - The ID of the location to move orders to
+  - The ID of the location to move orders from (find it in Shopify Admin under Settings, then Locations; it is the number in the page address)
+  - The ID of the location to move orders to. Both must be active locations that can fulfil orders
   - Specific order numbers (optional)
 you_get:
   - A preview of the orders that would move
@@ -34,9 +34,9 @@ how_to_use:
   - Sign in to your store with the Shopify CLI. Allow read_orders and write_fulfillments access.
   - Paste the skill and give your store address, the source location ID and the destination location ID. Add order numbers if you want only some orders moved.
   - Run the preview first. Check the list of orders and the destination.
-  - Check that the destination has stock for every item. This skill does not check or move stock.
+  - Check that the destination has stock for every item. This step is required. This skill does not move stock, so transfer it first in Shopify Admin if it is short.
   - Tell your AI to go ahead by typing yes. The skill must not move any order until you do. Then open the CSV log and check for errors.
-  - Before any move, transfer stock to the destination in Shopify Admin. After the move, spot-check a few orders in Shopify Admin.
+  - After the move, spot-check a few orders in Shopify Admin.
 output_sample:
   input:
     - Your store address

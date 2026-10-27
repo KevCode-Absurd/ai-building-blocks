@@ -10,6 +10,8 @@ explain: |
   A shared task where older and younger pupils both learn something, not one group helping the other. Give the learning goal and the age range and you get a plan with roles, steps and tutor training.
 
   The design rule is that both groups must gain. The task needs input from each age group that the other cannot supply, so work is shared, not handed down. A gap of two to three years works best. The older pupils are taught how to tutor: ask before telling, wait, and check understanding. The interaction is structured, because loose instructions to work together often leave the older child doing everything. You get timing, materials and what to watch for.
+
+  Licence: this is a copy of Gareth Manning's skill, shared under CC BY-SA 4.0 (see the LICENSE file). If you change it and share it, share your version under the same licence. Credit goes to Gareth Manning.
 when:
   - You are pairing Year 2 with Year 4 for a fractions session.
   - You want a buddy-class activity that stretches the older children.
@@ -34,7 +36,10 @@ how_to_use:
   - Paste the skill text into the chat.
   - Add your learning goal and the age groups you will pair. Add session length, group sizes and materials if you have them.
   - Read the Role Structure first. Check that each age group brings something the other needs.
-  - Run the session. If you repeat it, check the Quality Indicators after week one and adjust the plan.
+  - Run the session. If you repeat it, check the Quality Indicators after week one and adjust the plan. To plan the group work itself, use the Group work task planner. To script how older pupils tutor, use the Tutor chat script writer.
+next:
+  - group-work-task-planner
+  - tutor-chat-script-writer
 output_sample:
   input:
     - The learning goal for both age groups

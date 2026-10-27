@@ -15,6 +15,7 @@ explain: >-
 
   A signed agreement is not distribution. Separate sourced accounts from accounts merely influenced by a partner.
 when:
+  - You think a partner shares your buyers and want a small test before any big deal.
   - You need a practical way to find customers for a software business.
   - You want to test a growth idea before committing more time or money.
 not_for:
@@ -64,11 +65,11 @@ output_sample:
     - name: MISSING
       contains: The facts still unknown that could change the plan.
 how_it_works:
-  - title: Check 1
+  - title: Compare partnership types
     text: Compare distribution, integration, co-marketing and licensing partnerships. Identify the shared buyer and each side's actual incentive.
-  - title: Check 2
+  - title: Map a realistic partner pipeline
     text: Map a realistic partner pipeline with evidence, decision owner, mutual value, dependencies and a modest next commitment.
-  - title: Check 3
+  - title: Draft a pilot with an exit
     text: Draft a pilot with responsibilities, referral ownership, implementation effort, data access, success criteria and an exit condition.
 output_shape: |
   Recommendation: <test now / later / weak fit, with reason>
@@ -80,7 +81,9 @@ output_shape: |
   Measurement: <events, cohort, denominators, attribution>
   Decision: <continue / revise / stop rule>
   Risks and next action: <...>
+  Produces: <a partner-fit matrix, mutual-value memo, proposal and pilot terms checklist>
   MISSING: <unknowns>
+  CHECKS MISSED: <one line each, or none>
 tweaks:
   - what: Your growth goal
     how: Give a target and deadline so the advice has something concrete to work towards.

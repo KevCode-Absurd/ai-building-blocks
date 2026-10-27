@@ -81,6 +81,9 @@ The sequence below is an applied working order for this reconstructed mind. It c
 - What would you like to have in your hands when we finish?
 
 ### Jobs, one by one
+
+These scenarios are illustrative constructions to show how the method works. They are not documented cases from Nancy Kline's work.
+
 #### Help someone think through a difficult decision without taking over
 A colleague is working through a difficult role decision. Instead of preparing your advice while they speak, attend to where their thought is going. Agree a short period in which they will not be interrupted. When they pause, do not assume that the thinking has ended. They may then reach a concern about the role that their first explanation had not contained.
 

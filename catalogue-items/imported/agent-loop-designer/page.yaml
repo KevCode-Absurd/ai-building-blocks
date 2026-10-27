@@ -9,7 +9,9 @@ subhead: A repeating job for an AI agent with clear checks, a point where it mus
 explain: |
   A repeating job for an AI agent with clear checks, a point where it must stop, and a handoff to you when it is stuck. Without those, a loop either quits too soon or runs all night.
 
-  Start by saying what you want done. The skill first looks through a catalogue of published loops and offers the closest one or two. You can copy one as it is, change its limits, tools and schedule, or design a new one from a few plain questions. Each loop gets a test that proves progress, rules for stopping, guardrails on what the agent may touch, and a note on who picks up the result.
+  Start by saying what you want done. The skill first looks through a catalogue of published loops and offers the closest one or two. You can copy one as it is, change its limits, tools and schedule, or design a new one from a few plain questions. The published loops come from a public collection written by Forward Future, so this is a copy of their work and not a loop we wrote. Each loop gets a test that proves progress, rules for stopping, guardrails on what the agent may touch, and a note on who picks up the result.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (Forward Future) says MIT. Credit goes to Forward Future and sickn33.
 when:
   - You want an agent to keep working on a task until a check passes.
   - You want something to run on a schedule, like a daily review.
@@ -35,6 +37,7 @@ how_to_use:
   - Answer the short questions one at a time. Say what it may touch and when it should stop.
   - Read the loop and its prompt. Check the stop rule and the approval limits fit your job.
   - Paste the prompt into your AI tool when you are ready. Setting up a schedule is a separate step.
+  - Run the first round by hand. Check its result against the stop rule and the approval limits before you set up a schedule.
 output_sample:
   input:
     - The job you want the agent to get done

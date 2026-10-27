@@ -20,6 +20,7 @@ A plan that does not fit the week is a list of regrets. Ask two questions before
    read it out loud.
 2. Never invent a number, a result or a source. If a figure would strengthen it and you do not have
    one, ask for it or write the line without it.
+3. If an earlier step gave an audit or a retention reading of the channel, use it to choose what to make next.
 
 ## The shape of a week
 

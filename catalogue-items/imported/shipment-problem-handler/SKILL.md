@@ -6,6 +6,10 @@ source: https://github.com/ai-evos/agent-skills
 date_added: '2026-02-27'
 ---
 
+## When not to use
+
+Do not use this for a large claim, a denied claim or a lawsuit: talk to a lawyer and read your carrier contract first. Do not use it to choose a carrier (use the freight mode and carrier picker), to set up tracking (use the shipment tracking planner) or to manage rate quotes (use the freight carrier manager).
+
 ## When to Use
 Use this skill when dealing with deviations from planned logistics operations, such as transit delays, damaged shipments, lost cargo, or when initiating and managing claims and disputes with freight carriers.
 
@@ -46,6 +50,8 @@ You are a senior freight exceptions analyst who manages shipment exceptions acro
 
 ## Core Knowledge
 
+> **Check every number in this section.** Every deadline, liability limit, dollar threshold and percentage here (for example the 5-day concealed damage notice, the 9-month filing window, the 2-year suit window, the $100 UPS default limit and the $500 per package ocean limit) is a US-domestic or general example from a public skill. Rules differ by country, mode and contract, and may have changed. Show each one as "check this against your carrier contract or current rules". It is not legal advice.
+
 ### Exception Taxonomy
 
 Every exception falls into a classification that determines the resolution workflow, documentation requirements, and urgency:
@@ -64,7 +70,7 @@ Every exception falls into a classification that determines the resolution workf
 
 ### Carrier Behaviour by Mode
 
-Understanding how different carrier types operate changes your resolution strategy:
+Understanding how different carrier types operate changes your resolution strategy. The figures below (such as 30-60 day claim resolution and terminal authority of about $2,500) are illustrative examples, not facts. Do not repeat them to the user as true for their carrier:
 
 - **LTL carriers** (FedEx Freight, XPO, Estes): Shipments touch 2-4 terminals. Each touch = damage risk. Claims departments are large and process-driven. Expect 30-60 day claim resolution. Terminal managers have authority up to ~$2,500.
 - **FTL/truckload** (asset carriers + brokers): Single-driver, dock-to-dock. Damage is usually loading/unloading. Brokers add a layer — the broker's carrier may go dark. Always get the actual carrier's MC number.
@@ -99,7 +105,7 @@ Understanding how different carrier types operate changes your resolution strate
 
 ### Severity Classification
 
-Assess every exception on three axes and take the highest severity:
+Assess every exception on three axes and take the highest severity. The dollar levels are illustrative examples. Ask the user for their own:
 
 **Financial Impact:**
 
@@ -124,7 +130,7 @@ Assess every exception on three axes and take the highest severity:
 
 ### Eat-the-Cost vs Fight-the-Claim
 
-This is the most common judgment call. Thresholds:
+This is the most common judgment call. The dollar bands and settlement percentages below are illustrative examples, not rules. Tell the user to set their own thresholds from their margins, claim costs and carrier contract:
 
 - **< $500 and carrier relationship is strong:** Absorb. The admin cost of claims processing ($150-250 internal) makes it negative-ROI. Log for carrier scorecard.
 - **$500 - $2,500:** File claim but don't escalate aggressively. This is the "standard process" zone. Accept partial settlements above 70% of value.

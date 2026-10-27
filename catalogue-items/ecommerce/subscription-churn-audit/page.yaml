@@ -135,8 +135,8 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Skio or Recharge", why: "Their exports give cancel dates, order numbers and reasons."}
-    - {name: "Klaviyo", why: "It gives sends and the cancels that follow each one when you connect your subscription app."}
+    - {name: "Skio or Recharge", why: "Paid subscription apps; use the one you already have. Their exports give cancel dates, order numbers and reasons."}
+    - {name: "Klaviyo", why: "Paid email service that needs an account. It gives sends and the cancels that follow each one when you connect your subscription app."}
     - {name: "Any good chat AI", why: "Any current chat AI that reads a spreadsheet can run the audit."}
   inputs:
     - "Failed-payment cancels, split from chosen cancels"

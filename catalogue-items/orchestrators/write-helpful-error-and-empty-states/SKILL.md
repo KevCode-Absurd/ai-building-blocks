@@ -18,6 +18,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Codebase** (yours): a project's code, in a folder or repo the AI can open.
 - **A draft** (yours): the ad, page, email or script you want checked or improved.
 - **Design file** (yours): a design in a design tool, such as a Figma file, with its parts and styles.
+- **Web app** (yours): a working web page or app, built and ready to open.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
@@ -81,8 +82,8 @@ End with a HAND-BACK SUMMARY: each saved file, each step run or skipped and why,
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Interface microcopy writer](https://useaiblocks.com/skills/interface-microcopy-writer).
-- The [Colour contrast checker](https://useaiblocks.com/skills/colour-contrast-checker). It takes the design direction and document.
+- The [Colour contrast checker](https://useaiblocks.com/skills/colour-contrast-checker). It takes the design direction.
+- The [Logo strength tester](https://useaiblocks.com/skills/logo-strength-tester). It takes the design direction.
 - The [Forms and instructions rewriter](https://useaiblocks.com/skills/plain-words-interface-rewriter). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

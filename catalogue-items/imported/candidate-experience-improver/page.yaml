@@ -25,12 +25,13 @@ you_give:
   - Drop-off numbers or candidate feedback (optional)
   - Your company tone (optional)
 you_get:
-  - A map of the candidate path
-  - The top friction points
-  - Message drafts for each stage
-  - A short survey to measure experience
+  - "A candidate path map: a table with one row per stage, showing wait time, how the candidate feels and what they hear from you"
+  - "The top three friction points, one short paragraph each with a fix"
+  - "A short message draft for each stage, from acknowledgment to rejection"
+  - "A short survey of about five questions for each stage"
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill. It runs in any AI chat. No paid tool or API key is needed.
+  - Before you start, write down how long each stage takes and how many candidates leave at each one, if you know. Your AI asks for these if they are missing, and says so when it has to guess.
   - Send your hiring steps from application to offer, the roles you hire for, and your drop-off numbers if you have them.
   - Ask for the candidate path map first. Check each stage's wait time and how the candidate feels.
   - Then ask for the stage messages and the survey. Edit the messages so they sound like your company.

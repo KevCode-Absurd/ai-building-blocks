@@ -20,6 +20,8 @@ inputs:
     required: false
   - type: traction_shortlist
     required: false
+  - type: plan
+    required: false
 outputs:
   - type: channel_experiment
 origin: rebuilt

@@ -7,7 +7,7 @@ role: orchestrate
 job: analysis
 level: intermediate
 inputs:
-  - {type: source_text, required: true}
+  - {type: page_speed_report, required: true}
   - {type: question, required: true}
   - {type: performance_sheet, required: true}
   - {type: store_capture, required: true}

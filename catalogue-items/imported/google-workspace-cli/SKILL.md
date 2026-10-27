@@ -16,7 +16,7 @@ This skill acts on real Gmail, Drive, Calendar and admin data. Follow these rule
 
 1. **Ask what the job is, once.** If the person has not said which service, which files, people or sheets, or what outcome, ask. Do not guess.
 2. **Read first, change later.** Start with a read-only command (a list or a search) and show the result. Only then move to a change.
-3. **Confirm before any change.** Before anything that sends an email, shares or unshares a file, moves, archives or deletes items, edits a Sheet or calendar, or changes an admin setting: show the exact command, say how many items it will touch, run it with `--dry-run` if the command supports it, and wait for a clear yes. A yes to one command is not a yes to the next.
+3. **Confirm before any change.** Before anything that sends an email, shares or unshares a file, moves, archives or deletes items, edits a Sheet or calendar, or changes an admin setting: show the exact command, say how many items it will touch, run it with `--dry-run` if the command supports it, and wait for a clear yes. To find out whether a command supports `--dry-run`, run `<command> --help`. If it does not, first run a read-only command that lists exactly the items the change would touch, show that list, and ask for the yes. A yes to one command is not a yes to the next.
 4. **Never run a command that still has `...` in it.** Where this skill shows `...`, run `<command> --help` first, then write the full command from what the help says. Commands marked *(verify)* get the same treatment: run `gws schema <service>.<resource>.<method>` or `--help` first.
 5. **Smallest permissions.** Sign in with only the services the job needs (for example `-s drive`), not everything.
 6. **Admin work needs admin rights.** If a command fails for lack of rights, say so and stop. Do not try to work around it.
@@ -102,6 +102,8 @@ gws auth login -s drive,gmail,sheets
 
 ### Headless/CI
 
+This is not the default. Use it only when the machine cannot open a browser to sign in. Ask the user before you write any credentials file.
+
 > **Caution:** `gws auth export --unmasked` writes your secrets to a plain file. Use it only for a headless machine that cannot sign in itself. Keep the file private, keep it out of any shared folder or git, and delete it when the job is done. On your own computer, sign in with `gws auth login` so no secrets sit in a file you made.
 
 ```bash
@@ -111,6 +113,9 @@ python3 scripts/auth_setup_guide.py --guide service-account
 # Export credentials from an interactive machine, then point the CLI at them
 gws auth export --unmasked > credentials.json
 export GOOGLE_WORKSPACE_CLI_CREDENTIALS_FILE=/path/to/credentials.json
+
+# When the job is done, delete the file
+rm credentials.json
 ```
 
 ### Environment Variables

@@ -30,7 +30,7 @@ how_to_use:
   - "Ask your question and name the account and region, for example: list running EC2 instances in eu-west-1."
   - Check the account and region at the top of the answer before you trust it.
   - Read the gaps and limits note, then ask for a narrower filter if the list is long.
-  - Pass the resource table to your cloud admin, or use it with a cost or security review.
+  - Pass the resource table to your cloud admin. Or use it as the starting list for the Cloud bill waste finder or the Cloud misconfiguration finder.
 output_sample:
   input:
     - Your question, such as which EC2 instances are running

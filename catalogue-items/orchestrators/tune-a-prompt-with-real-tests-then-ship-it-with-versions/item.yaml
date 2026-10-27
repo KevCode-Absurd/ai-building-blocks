@@ -8,8 +8,13 @@ job: ops
 level: intermediate
 inputs:
   - {type: question, required: true}
+  - {type: eval_set, required: false}
+  - {type: prompt, required: true}
 outputs:
   - {type: plan}
+  - {type: audit_report}
+  - {type: prompt, required: true}
+  - {type: eval_set, required: true}
 uses: [prompt-improver, prompt-tester-and-tuner, prompt-change-manager]
 steps:
   - {uses: prompt-improver, note: "Turns the rough prompt into a clear, structured one."}

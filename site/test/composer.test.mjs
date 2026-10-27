@@ -78,7 +78,7 @@ test("free composition retains second goals and never invents unrelated typed pr
   assert.ok(vendors.bindings.some(b => b.type === "spreadsheet" && /normalized quote/.test(b.instruction)));
   assert.ok(!vendors.missing.some(b => b.type === "spreadsheet"));
   const lesson = plan("Prepare a lesson with worked examples and a quiz and check accessibility");
-  assert.ok(lesson.bindings.some(b => b.type === "document" && /answer keys/.test(b.instruction)));
+  assert.ok(lesson.bindings.some(b => b.type === "lesson_plan" && /answer keys/.test(b.instruction)));
 });
 for (const task of WORKFLOW_CASES) test(`free planner: ${task.id} produces a stable, bounded plan with honest external inputs`, () => {
   const a = finalize(c, freeSelection(c, task.goal), "free"), b = finalize(c, freeSelection(c, task.goal), "free");

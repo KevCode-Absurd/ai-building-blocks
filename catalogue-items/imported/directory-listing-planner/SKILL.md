@@ -9,9 +9,16 @@ metadata:
 
 You are an expert in directory-driven distribution for software products. Your goal is to help the user build a compounding backlink + discovery foundation by submitting to the right directories, in the right order, with the right positioning — and to make sure that foundation actually produces leads instead of vanity backlinks.
 
+## Start here
+
+1. Readiness first: the landing page, pricing page, policies, logos, screenshots and demo video must exist (Phase 0, Step 1).
+2. Destination pages next (alternatives, use cases), then pick the tiers (Step 2).
+3. Week 1: the flagship and startup/SaaS directories. Weeks 2 and 3: AI, agent and other tiers that fit. Submit by hand, with the user's approval for each one.
+4. The core plan needs no paid service. Paid G2 plans and a Product Hunt hunter are optional and must follow each platform's rules.
+
 ## About the numbers
 
-The figures in this skill (conversion rates, citation rates, upvote lifts, traffic shares) are the original author's estimates and are not sourced. Treat them as unverified. Do not repeat them to the user as fact. Say "the author estimates" or leave them out, and tell the user to check them before they plan around them.
+Every percentage, multiplier, price, date, count and target in this skill (conversion rates, citation rates, upvote lifts, traffic shares, G2 prices and cut-off dates, KPI targets, subreddit sizes) is the original author's estimate, is not sourced, and may be out of date. Treat them all as unverified. Do not repeat them to the user as fact. Say "the author estimates" or leave them out, and tell the user to check them on the platform's own site before they plan around them.
 
 ## Before Starting
 
@@ -26,7 +33,7 @@ Directory submissions are the **foundation layer** of distribution — never the
 
 1. **Pass dofollow backlinks** from high domain-rating sites into your marketing pages. This raises your DR, which makes your entire site easier to rank for competitive keywords.
 2. **Create discovery surface area** — people browsing AI/SaaS directories are in-market buyers, not random traffic.
-3. **Get cited by AI engines** — ChatGPT, Claude, Perplexity, and Google AI Overviews all pull heavily from high-DR directories when answering "what's the best [category]?" queries. AI-referred traffic converts **6–27× higher** than traditional search traffic.
+3. **Get cited by AI engines** — ChatGPT, Claude, Perplexity, and Google AI Overviews all pull heavily from high-DR directories when answering "what's the best [category]?" queries. The author estimates that AI-referred traffic converts much better than traditional search traffic (unverified).
 
 But directories alone will not generate meaningful leads. They exist to pass link equity into the pages that DO generate leads — template galleries, comparison pages, alternative pages, blog posts. **Build the destination pages first, then submit to directories so the link equity has somewhere useful to land.**
 
@@ -38,20 +45,20 @@ The full directory catalog lives in `references/directory-list.md`. The position
 
 ### Rule 1: Foundation before submission
 Never submit to a directory until the landing page it will link to is live, indexed, and has:
-- A single `<h1>` and sequential heading hierarchy — pages with clean hierarchy have **2.8× higher AI citation rates**, and 87% of ChatGPT-cited pages use a single H1.
+- A single `<h1>` and sequential heading hierarchy — the author says clean hierarchy helps AI engines cite a page (unverified).
 - A real pricing page (even "free while in beta" counts — most Tier 1 directories require one).
 - Privacy policy + terms.
 - Logo assets in PNG + SVG + square 1024×1024 + favicon.
 - 5–8 real product screenshots at 1920×1080 (not marketing mockups).
-- A 60–90 second demo video — products with video on Product Hunt get **2.7× more upvotes**.
+- A 60–90 second demo video — the author says products with a video do better on Product Hunt (unverified).
 - FAQ schema markup (AI engines heavily weight `FAQPage` JSON-LD for answer extraction).
 - Structured data: `Organization`, `Product`, `SoftwareApplication`.
 
 ### Rule 2: Destination pages before directories
 Directories are the *source* of link equity. You need *destinations* that can convert the resulting traffic. Minimum destinations before submitting to anything:
-- 3–5 competitor alternative pages (`/alternatives/[competitor]`) targeting "[competitor] alternative" keywords. Comparison/alternative pages convert at **5–15%** vs 0.5–2% for generic content.
+- 3–5 competitor alternative pages (`/alternatives/[competitor]`) targeting "[competitor] alternative" keywords. The author estimates that comparison and alternative pages convert far better than generic content (unverified, no figures).
 - 3–5 use-case pages (`/for/[audience]` or `/use-cases/[use-case]`).
-- Template gallery with 20+ entries (if applicable — this was Typeform's largest SEO growth driver, generating 30K non-branded signups and $3M/year LTV).
+- Template gallery with 20+ entries (if applicable — the author calls this Typeform's largest SEO growth driver; unverified).
 - 1 "best of" blog post you wrote yourself about your own category, including honest coverage of competitors.
 
 ### Rule 3: Positioning varies by directory type
@@ -156,25 +163,25 @@ Fetch the listing's HTML with `curl -fsSL https://directory.com/your-listing`, o
 
 ## Product Hunt Deep Dive (The Anchor Event)
 
-Product Hunt is the single highest-leverage submission but also the most easily wasted. The 2026 PH algorithm weights **comment quality** more than upvote count — a post with 50 upvotes + 30 genuine comments ranks above one with 200 upvotes + 5 comments. **80% of failed launches** fail because they launched without a warm audience OR asked for upvotes instead of feedback.
+Product Hunt is the single highest-leverage submission but also the most easily wasted. The author says Product Hunt's ranking weights **comment quality** more than upvote count. The author also says most failed launches fail because they launched without a warm audience or asked for upvotes instead of feedback. Both are unverified. Check Product Hunt's own guidance.
 
 ### 3-week prep timeline
 
 - **Day -21 to -14:** Use a real account in your own name. Take part honestly: comment on launches you have actually looked at and follow makers you care about. Do not bulk upvote, use extra accounts or trade upvotes to look established, because that breaks Product Hunt's rules.
 - **Day -14:** Create "Upcoming" page on PH. Drive traffic to it to collect "notify on launch" subscribers.
-- **Day -10:** (Optional) book a hunter. Don't pay cash — trade a feature, shoutout, or intro. A known hunter adds ~15% to day-one momentum but isn't required.
+- **Day -10:** (Optional) find a hunter. A hunter is not required. Check Product Hunt's current rules before you arrange one. Do not pay cash or trade rewards in return for upvotes or votes, and do not promise anything that breaks the platform's promotion rules. The author thinks a known hunter helps day-one momentum; that is unverified.
 - **Day -7:** Draft launch-day assets: gallery images (1270×760), tagline, 260-char description, first comment from you, first comment from a customer.
 - **Day -3:** Email list warm-up. "We're launching Tuesday. Here's what to expect. Reply if you want a heads up."
 - **Day -1:** Final check — product works in incognito, video autoplays, CTA goes to signup, PH listing preview looks right.
 
 ### Launch day execution
 
-- **Launch at 12:01 AM Pacific Time.** Tuesday, Wednesday, or Thursday only — weekend launches get 60–70% less traffic. The 12:01 AM PT start maximizes your 24-hour window.
-- **First 2 hours are everything.** Need 50+ supporters in the first 2 hours to trigger algorithmic distribution.
+- **Launch at 12:01 AM Pacific Time.** Tuesday, Wednesday, or Thursday only — the author says weekend launches get less traffic (unverified). The 12:01 AM PT start maximizes your 24-hour window.
+- **First 2 hours are everything.** The author's rule of thumb is to have a warm group of real supporters ready for the first 2 hours (the exact number is unverified).
 - **Post the first comment yourself** with the story: why you built it, what's different, what to try first.
 - **Reply to every comment** in under 30 minutes. PH measures maker responsiveness.
 - **Share the link to:** Twitter/X thread, LinkedIn long-form post, personal Slack/Discord communities, your email list, Indie Hackers, every power user via DM.
-- **Never ask for upvotes.** Ask for **feedback**. "Would love your honest take on the positioning" converts 3× better than "support us!" and doesn't trigger the algorithm's anti-manipulation filters.
+- **Never ask for upvotes.** Ask for **feedback**. "Would love your honest take on the positioning" reads better than "support us!" and follows the platform's rules.
 - **Don't message strangers.** The community flags this and moderators will hide your post.
 
 ### Post-launch
@@ -187,27 +194,26 @@ Product Hunt is the single highest-leverage submission but also the most easily 
 
 ## Reviews Playbook (G2 / Capterra / TrustRadius)
 
-G2 and Capterra (now owned by G2 as of Feb 2026) listings are **worthless without reviews**. 10 reviews is the magic threshold for Grid appearance. Run the 10-in-30 protocol during launch month.
+G2 and Capterra listings are of little use without reviews. The author says Capterra is now owned by G2 and that about 10 reviews are needed to appear on the Grid; both are unverified, so check G2's current rules. Run the 10-in-30 protocol during launch month.
 
 ### The 10-in-30 protocol
 
 1. **Day 1 post-launch:** Identify 20 users who have completed a meaningful action with the product.
-2. **Send each a personal email** with a direct review URL (reduces friction by ~70%). No forms, no landing pages — direct link.
+2. **Send each a personal email** with a direct review URL (fewer clicks means more reviews). No forms, no landing pages — direct link.
 3. **Offer a modest thank-you only if the review site's current rules allow it.** Check the rules first, say plainly that a thank-you is offered, and ask for an honest review, never a positive one. Never pay for or script reviews.
 4. **Follow up once** after 5 days. Don't follow up twice — it becomes annoying and damages the relationship.
-5. **Target:** 50% conversion → 10 reviews from 20 asks.
+5. **Target:** about 10 honest reviews from 20 asks (the author's planning guess, not a promise).
 
 ### Critical deadlines
 
-- **G2 Summer reports:** cut off ~April 28. Plan review drives to land before this.
-- **G2 Fall reports:** cut off ~July 28.
+- **G2 report cut-offs:** the author gives approximate dates (late April for Summer, late July for Fall). They are unverified and may have changed, so check G2's current report calendar and plan review drives to land before the cut-off.
 - Missing a cutoff means waiting 3 months for the next grid update.
 
 ### Badges and paid plans
 
-- **"Users Love Us" badge** is still free: requires 20 reviews at 4.0+ average.
-- **Grid, Momentum, Index, and Award badges** require a paid G2 plan ($2,999+/year starting Summer 2025).
-- **Do not spend on paid G2 in year one.** The free listing + Users Love Us badge is sufficient.
+- **"Users Love Us" badge:** the author says it is free and needs a set number of reviews at a good average. Rules may have changed. Check G2.
+- **Grid, Momentum, Index, and Award badges:** the author says these need a paid G2 plan. Prices and rules change, so check G2's current pricing page and do not quote a price from memory.
+- **Do not spend on paid G2 in year one** unless the user has checked the cost and wants it. The free listing is the place to start.
 
 ### Cross-platform
 
@@ -222,7 +228,7 @@ Directories are useless if the backlinks land on a generic homepage. Build these
 
 ### 1. Alternative pages (highest ROI)
 
-Competitor alternative pages convert at **5–15%**, often hitting 15–30% for bottom-of-funnel queries. One page per top competitor:
+The author says competitor alternative pages convert well (unverified, no figures). One page per top competitor:
 
 - `/alternatives/[competitor-1]`
 - `/alternatives/[competitor-2]`
@@ -241,7 +247,7 @@ Every ICP gets a dedicated landing page:
 
 ### 3. Template / asset gallery (if applicable)
 
-Typeform's template library generated **30,000 non-branded organic signups and $3M/year LTV**. The pattern:
+The author says Typeform's template library drove a large share of its organic signups (unverified, no figures given here). The pattern:
 - One indexable page per template at `/templates/[slug]`.
 - H1 with the keyword, 150+ word description, screenshot, "when to use this," "use this template" CTA.
 - Related templates at the bottom of each page (internal linking = SEO compounding).
@@ -253,17 +259,17 @@ Write honest roundups of your own category: `/blog/best-[category]-tools-2026`. 
 
 ### 5. Integration pages (when integrations ship)
 
-Every integration = one landing page at `/integrations/[partner]`. Follows the Zapier playbook: Zapier gets **~2.6M monthly organic visits** from programmatic integration pages (~15% of their total organic traffic).
+Every integration = one landing page at `/integrations/[partner]`. Follows the Zapier playbook: the author says Zapier gets a large share of its organic visits from integration pages (unverified).
 
 ---
 
 ## GEO (Generative Engine Optimization)
 
-In 2026, 30–50% of "research a tool" queries happen inside ChatGPT, Claude, Perplexity, or Google AI Overviews without ever touching a traditional search page. Directories matter here too — AI engines pull heavily from high-DR directories when generating answers. But the *destination pages* also need to be GEO-optimized.
+The author says a large and growing share of "research a tool" queries now happen inside ChatGPT, Claude, Perplexity, or Google AI Overviews without ever touching a traditional search page (unverified). Directories matter here too — AI engines pull heavily from high-DR directories when generating answers. But the *destination pages* also need to be GEO-optimized.
 
 ### Tactics that get pages cited
 
-1. **One H1 per page, sequential heading hierarchy.** 2.8× higher citation rate. 87% of cited pages use a single H1.
+1. **One H1 per page, sequential heading hierarchy.** The author says this helps AI citation (unverified).
 2. **Dense, factual content with citable stats.** AI engines prefer specific numbers ("3× faster than X") over vague claims.
 3. **FAQ schema on every landing page.** AI engines heavily weight `FAQPage` JSON-LD for answer extraction.
 4. **Comparison tables.** Extractable, structured — exactly what an AI answer needs.
@@ -299,13 +305,13 @@ Directories are one-shot. Community is ongoing. Both feed the same funnel.
 
 ### LinkedIn (B2B primary channel)
 
-80% of B2B social leads come from LinkedIn. Cadence: **3–5 posts/week** — fewer loses momentum, more causes fatigue.
+The author says most B2B social leads come from LinkedIn (unverified). Suggested cadence: **3–5 posts/week** — fewer loses momentum, more causes fatigue (the author's view).
 
-Content types ranked by 2026 engagement:
-1. Personal stories with business lessons (1.5–2× avg engagement)
-2. Original data / research (1.3–1.5×)
-3. Contrarian industry takes (1.2–1.5×)
-4. Document carousels with 8–12 slides (1.3–1.8×)
+Content types the author ranks by engagement (unverified, no figures):
+1. Personal stories with business lessons
+2. Original data / research
+3. Contrarian industry takes
+4. Document carousels with 8–12 slides
 
 ### Twitter/X (indie hacker + dev channel)
 
@@ -325,7 +331,7 @@ Every substantial technical post = dofollow backlink + dev audience reach. Cross
 
 ## KPIs & Tracking
 
-Track weekly. If a number isn't moving, investigate — don't just submit more directories.
+Track weekly. If a number isn't moving, investigate — don't just submit more directories. The targets below are the author's planning guesses, not benchmarks. Set your own from your baseline.
 
 | Metric | Day 0 | Day 30 target | Day 90 target |
 |---|---|---|---|
@@ -366,7 +372,7 @@ One self-reported 2026 case for calibration: an MCP server plus a micro SaaS, su
 1. **What are you launching?** (Category changes tier mix — AI vs traditional SaaS vs no-code vs dev tool.)
 2. **When is launch day?** (Phase 0 assets need 7 days of prep.)
 3. **Do you have destination pages built?** (Alternatives, use cases, templates — if not, build first.)
-4. **Product Hunt hunter lined up?** (Optional but adds ~15% day-one lift. 3-week warm-up required regardless.)
+4. **Product Hunt hunter lined up?** (Optional. A 3-week warm-up is needed either way.)
 5. **How many beta users can you ask for reviews?** (Need 20 to hit 10.)
 6. **Do you have an MCP server, plugin, agent skill, public API, or `/llms.txt`?** (If yes, Tier 4 registries and listings are a real moat.)
 7. **Existing integrations?** (If yes, Tier 7 marketplaces are the highest-DR backlinks available.)
@@ -394,6 +400,8 @@ Keep the plan actionable. Every item should be something the user can do today.
 ---
 
 ## Related Skills
+
+These names come from the original collection and are not in this folder. If one is missing, do the step in plain text or tell the user it is a next step they can ask for. Never say you ran a skill you do not have.
 
 - **launch** — broader launch moment, ORB framework, five-phase approach
 - **programmatic-seo** — destination pages (alternatives, integrations, templates) that backlinks should flow into

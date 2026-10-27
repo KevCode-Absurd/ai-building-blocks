@@ -1,6 +1,6 @@
 # Set up AI to work for you: AI Blocks
 
-> 86 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 92 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Ad prompt comparison reviewer](https://useaiblocks.com/skills/old-vs-new-ad-prompt-scorer): Compare old and new ad prompts with a blind test. Paste both sets of ads. Get a keep-or-switch decision and a score out of 100.
 - [Agent action approval reviewer](https://useaiblocks.com/skills/copilot-verify-agent-action): Check an AI agent action before it runs. Get a review of its scope, approval, risks and missing evidence, with a clear result and reason.
@@ -36,6 +36,7 @@
 - [AI tool picker](https://useaiblocks.com/skills/ai-tool-picker): Describe the job you want done. Get the kind of AI tool that fits, tools to try first and a backup.
 - [AI workflow quality investigator](https://useaiblocks.com/skills/copilot-diagnose): Check an AI workflow for weak spots before it goes live. Get five scores, the worst problems ranked, and clear fixes for each.
 - [AI writing workflow planner](https://useaiblocks.com/skills/ai-writing-workflow-planner): Describe how your team writes. Get what AI should draft, what people own, and rules that keep your voice.
+- [Ask your AI what it knows about you](https://useaiblocks.com/prompts/me-md-from-ai-memory): Paste one prompt. Your AI asks first, then turns what it remembers about you into a me.md for you to check.
 - [Automation governance planner](https://useaiblocks.com/agents/agency-automation-governance-architect): Decide if a business process should be automated. Get a verdict, the risks, a safe design with fallback and the tests to pass before go-live.
 - [Automation reliability reviewer](https://useaiblocks.com/workflows/check-a-new-automation-before-relying-on-it): Review an automation's triggers, inputs and failure paths. Get a process map, test checklist and recovery guide.
 - [Backup and recovery planner](https://useaiblocks.com/skills/backup-and-recovery-planner): Describe systems and agreed loss and downtime limits. Get a backup plan, restore steps and drills, with results when actually run.
@@ -60,12 +61,16 @@
 - [Local AI model setup planner](https://useaiblocks.com/skills/local-ai-model-setup): Share your hardware. Get steps to run Ollama and Open WebUI with a local model.
 - [Long chat failure diagnoser](https://useaiblocks.com/skills/long-chat-failure-diagnoser): Describe how your AI gets worse in long chats. Get likely failure patterns, checks and fixes to try.
 - [Long chat summariser](https://useaiblocks.com/skills/long-chat-summariser): Turn a long AI chat into a sectioned summary of files, decisions, and next steps.
+- [Make your me.md and set it up in every AI you use](https://useaiblocks.com/workflows/make-your-me-md-and-set-it-up-in-every-ai): Answer a few questions or let your AI use what it remembers. Get your me.md and a short version set up in each AI.
 - [Marketing prompt tester](https://useaiblocks.com/skills/marketing-prompt-tester): Compare prompt versions on shared test cases. Get scores, flagged failures and a saved version history.
 - [MATLAB installer](https://useaiblocks.com/skills/matlab-installer): Get install scripts and checks for your system, release, and chosen products.
 - [MATLAB package inventory reporter](https://useaiblocks.com/skills/matlab-product-lister): Provide a MATLAB install folder or release. Get its recorded products and support packages in separate lists.
 - [MCP handler security reviewer](https://useaiblocks.com/skills/copilot-mcp-implementation-security-review): Review your MCP server code for security gaps. Get a report of risks in each tool handler, with file and line evidence and fixes.
 - [MCP protocol release tester](https://useaiblocks.com/skills/copilot-mcp-release-qa): Test your MCP server before release. Get a real session check of its tools, errors and docs, with exact commands and a clear pass or fail.
 - [MCP settings risk checker](https://useaiblocks.com/skills/copilot-mcp-security-audit): Share MCP server settings. Get static checks for exposed secrets, shell patterns and changing package versions, with proposed fixes.
+- [me.md builder](https://useaiblocks.com/skills/me-md-builder): Answer a few questions, or let your AI use what it remembers. Get one private file that tells any AI who you are.
+- [me.md refresher](https://useaiblocks.com/skills/me-md-refresher): Give it your me.md and recent chats or a chat export. Get dated edits to approve and a list of stale sections.
+- [me.md short-core writer](https://useaiblocks.com/skills/me-md-short-core-writer): Give it your me.md. Get a short version for your AI's settings box and where to put it in each AI you use.
 - [Meta Ads results reviewer](https://useaiblocks.com/agents/meta-results-review-agent): Review your Meta Ads results against your targets. Get ranked findings, tracking gaps, proposed fixes and a checkpoint for the next review.
 - [Multi-agent system architect](https://useaiblocks.com/agents/agency-engineering-multi-agent-systems-architect): Design a team of AI agents that holds up in real use, with each agent's job, limits, failure plan and the points where a person signs off.
 - [Multi-agent workflow planner](https://useaiblocks.com/skills/multi-agent-workflow-planner): Plan a multi-agent workflow for a big task. You get a task graph with one owner per step, clear handoffs, approval points and checks.
@@ -88,3 +93,4 @@
 - [Specialist findings coordinator](https://useaiblocks.com/agents/specialist-findings-brief-agent): Combine findings from several specialists into one decision brief. Settle clashes, rank next steps and get a checkpoint with owners.
 - [Story ad workflow test planner](https://useaiblocks.com/workflows/ad-ai-setup-test): Plan an old-versus-new story ad test, define what each AI step receives, then compare saved outputs and costs.
 - [Task automation builder](https://useaiblocks.com/skills/task-automation-builder): Turn a repetitive task into a script, schedule or file watcher. Name the task and its trigger, and get a tested task automation you can run.
+- [Workflow diagram and change planner](https://useaiblocks.com/skills/workflow-diagram-and-change-planner): Share a workflow or goal. Get it drawn as a diagram, each hand-off checked, and changes with reasons.

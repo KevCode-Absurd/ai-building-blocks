@@ -10,6 +10,8 @@ explain: |
   A literature review you can defend: a recorded search, papers screened with clear rules, a PRISMA flow diagram, and a written synthesis whose citations have been checked. Reviewers can repeat your steps and get the same papers.
 
   The skill turns your question into search strings for sources such as PubMed, arXiv, bioRxiv and Semantic Scholar. It helps you log every query and count, and it processes the records the searches return. Papers are screened against inclusion rules you set, and the reconciled counts feed the PRISMA diagram. Findings are grouped by theme, gaps are named, and a script checks that each citation's DOI is registered and fetches its details. You still open each source to confirm it supports the claim. It works with Python, and PDF export needs Pandoc and XeLaTeX.
+
+  Licence: MIT, as the LICENSE.md file in this item says. Credit goes to K-Dense. The skill file ends with the author's request to cite their paper. Add that reference only if you want to.
 when:
   - You need a systematic or scoping review for a thesis or paper.
   - You must show reviewers exactly how you searched.
@@ -34,6 +36,7 @@ how_to_use:
   - Start here. Have these ready: your research question, your inclusion and exclusion rules, the databases you will use, your date range and any papers you already have.
   - Open an AI that can run code and reach the internet. Install the skill folder, or paste in its instructions.
   - Paste your research question and your inclusion and exclusion rules. Add your databases and date range if you have them.
+  - Your AI runs the steps for you. In order, it runs search_databases.py on the records you bring back from each database, then verify_citations.py on your draft. You do not need to type these commands yourself.
   - Check the search strings it writes before it runs them. Save the search log it keeps.
   - Ask a second person to screen the full texts and settle any disagreements. Then check the PRISMA counts add up.
   - Read the citation check as a DOI and metadata check only. Open each source yourself to confirm it supports the claim.

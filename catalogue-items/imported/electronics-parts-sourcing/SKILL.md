@@ -163,10 +163,22 @@ class ComponentAllocationManager:
             total_requirement = production_plan['units'].sum() * qty_per_unit
 
             # Allocation status
-            allocation_status = comp_info.get('allocation_status', 'open')  # blank: report as 'status MISSING', do not read it as safe
-            lead_time_weeks = comp_info.get('lead_time_weeks')  # blank means MISSING: ask the user, never assume a default
-            available_inventory = comp_info.get('available_inventory', 0)
-            allocated_qty = comp_info.get('allocated_qty', 0)
+            allocation_status = comp_info.get('allocation_status')  # blank (None) means MISSING: never read it as 'open' or safe
+            lead_time_weeks = comp_info.get('lead_time_weeks')  # blank (None) means MISSING: ask the user, never assume a default
+            available_inventory = comp_info.get('available_inventory')  # blank (None) means MISSING
+            allocated_qty = comp_info.get('allocated_qty')  # blank (None) means MISSING
+
+            # Any blank key field: list the part as MISSING and do not score it
+            if None in (allocation_status, lead_time_weeks, available_inventory, allocated_qty) or pd.isna(
+                [allocation_status, lead_time_weeks, available_inventory, allocated_qty]
+            ).any():
+                risk_assessment.append({
+                    'part_number': part_number,
+                    'manufacturer': comp_info.get('manufacturer', ''),
+                    'risk_score': float('nan'),
+                    'risk_category': 'MISSING data: ask the user',
+                })
+                continue
 
             # Calculate risk score
             risk_score = self._calculate_risk_score(
@@ -190,7 +202,7 @@ class ComponentAllocationManager:
                 'risk_category': self._categorize_risk(risk_score)
             })
 
-        return pd.DataFrame(risk_assessment).sort_values('risk_score', ascending=False)
+        return pd.DataFrame(risk_assessment).sort_values('risk_score', ascending=False, na_position='last')
 
     def _calculate_risk_score(self, allocation_status, lead_time, requirement, supply):
         """Calculate component risk score (0-100)"""
@@ -259,7 +271,7 @@ class ComponentAllocationManager:
                 actions.append('request_emergency_allocation')
                 actions.append('explore_authorized_distributors')
 
-            if part['lead_time_weeks'] > 26:
+            if part['lead_time_weeks'] is not None and part['lead_time_weeks'] > 26:
                 actions.append('increase_forecast_horizon')
                 actions.append('commit_to_longer_term_contract')
 
@@ -284,7 +296,8 @@ class ComponentAllocationManager:
         return pd.DataFrame(recommendations)
 
 
-# Example usage
+# Example usage. These parts and numbers are made-up placeholders that show the method.
+# Replace them with the user's own parts list. Never report them as real findings.
 components_data = pd.DataFrame({
     'part_number': ['IC_001', 'IC_002', 'CAP_001', 'RES_001'],
     'description': ['MCU STM32', 'Power IC', 'MLCC 10uF', 'Resistor 10K'],

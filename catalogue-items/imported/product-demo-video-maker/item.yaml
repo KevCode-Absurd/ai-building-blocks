@@ -10,8 +10,11 @@ level: intermediate
 inputs:
   - type: brief
     required: true
+  - type: image
+    required: false
 outputs:
-  - type: document
+  - type: script
+  - type: footage
 uses: []
 origin: imported
 source:

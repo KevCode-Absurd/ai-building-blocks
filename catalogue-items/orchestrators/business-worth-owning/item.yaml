@@ -10,6 +10,7 @@ inputs:
   - {type: question, required: true}
   - {type: performance_sheet, required: true}
   - {type: competitor_set, required: false}
+  - {type: financial_statements, required: true}
 outputs:
   - {type: audit_report}
 uses: [business-power-tester, circle-of-competence-sorter, steady-track-record-checker, owner-minded-management-checker, roe-margin-check, owner-earnings-calculator, business-tenet-scorecard-writer]

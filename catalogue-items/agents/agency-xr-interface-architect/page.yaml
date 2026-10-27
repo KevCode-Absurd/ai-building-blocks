@@ -10,7 +10,7 @@ explain: |-
 
   It picks the main way to act: direct touch, gaze and pinch, a controller or hand gestures. Then it plans a backup for each, so people with different abilities can still use the app. It lays out panels, menus and heads-up displays with comfort in mind, and maps the flow from first look to done.
 
-  It follows the XR Interface Architect profile from Agency Agents. The profile gives no measured distances or comfort limits, and the agent will not invent any. It marks each placement as a starting point to test, and it gives you experiments to run on a real headset.
+  It follows the XR Interface Architect profile from Agency Agents, shared under the MIT licence. The profile gives no measured distances or comfort limits, and the agent will not invent any. It marks each placement as a starting point to test, and it gives you experiments to run on a real headset.
 when:
   - You are designing a menu, dashboard or heads-up display for a headset app and need a layout plan.
   - Your app must work with hands, controllers and gaze, and you need to decide which one leads.
@@ -39,7 +39,7 @@ how_to_use:
   - Say "Plan the interface. Mark any distance or angle as a starting point to test." Answer its one round of questions.
   - Read the input plan first. Check that every key task has a backup input.
   - Build rough panels in your tool, using the placement plan. Move them and see what feels tiring.
-  - Run the test experiments with real users on the headset. Paste the results back for a revised plan.
+  - Run the test experiments with real users on the headset. Let each tester stop at any time, since headsets can cause dizziness. Paste the results back for a revised plan.
 how_it_works:
   - title: Fix the brief
     text: It confirms the app idea, tasks, device, environment and users. Gaps are asked once, then marked MISSING.

@@ -9,7 +9,9 @@ subhead: Give it an article, book, PDF or web page, and pick how deep to go. It 
 explain: |
   A knowledge map of an article, book or PDF, with each idea linked to the evidence behind it, followed by a plain-language check that you understood. It turns long reading into a structure you can study from.
 
-  The map has typed nodes such as claim, data, example and assumption, joined by labelled links like supports or contradicts. Source locations stay attached so you can find the page again. Then the Feynman check has you explain the idea simply and shows where your explanation is thin. If you give it several documents, it compares them without blending their disagreements into one answer.
+  The map has typed nodes such as claim, data, example and assumption, joined by labelled links like supports or contradicts. Source locations stay attached so you can find the page again. Then the Feynman check has you explain the idea simply and shows where your explanation is thin. If you give it several documents, it compares them without blending their disagreements into one answer. It stops and asks for the text if it cannot read your source, and it never fills gaps from memory.
+
+  The licence that applies to this copy is the one in the LICENSE-CONTENT file in this item, CC BY 4.0. The skill file's header also names the author xiehuan123's own MIT licence. Both allow reuse with credit.
 when:
   - You want study notes that show how ideas connect.
   - You are comparing three reports that disagree.
@@ -31,8 +33,8 @@ you_get:
   - A comparison of several sources that keeps their disagreements
   - A plain-language check with recall questions
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the full text of this skill.
-  - Add your source. Upload the PDF or paste the text. A web page needs an AI that can browse.
+  - Open Claude, ChatGPT or Gemini and paste in the full text of this skill, or add it with the buttons on this page.
+  - Add your source. Claude, ChatGPT and Gemini can read a text PDF you upload. A web page needs an AI with browsing turned on. If your AI cannot open the file or page, paste the text in. That always works.
   - "Say which mode you want: quick, deep, map, feynman or book. Also say your reading question."
   - Check that each main claim has evidence or a note that none was given.
   - For the Feynman check, close the source and explain the idea in your own words before your AI corrects you.

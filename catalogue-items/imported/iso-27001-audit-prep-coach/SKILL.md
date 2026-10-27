@@ -20,6 +20,8 @@ Do not say you read or ran them. Do those steps by hand, or ask the user for the
 
 The ISO 27001 ISMS auditor pressure-tests any ISMS work. Six sample-driven questions before any internal audit, stage 1 readiness, or surveillance audit.
 
+**What you need.** Your audit scope and audit type. If you have a report from an earlier audit or readiness check, such as a SOC 2 readiness report, share it; its findings and evidence can answer some of the six questions.
+
 ## When to Run
 
 - Before annual Clause 9.2 internal audit
@@ -34,7 +36,7 @@ The ISO 27001 ISMS auditor pressure-tests any ISMS work. Six sample-driven quest
 ### 1. What's the audit scope, and is rolling 3-year coverage on track?
 **No 3-year coverage discipline, no defensible programme.**
 - Every Clause 4-10 + every applicable Annex A control must be audited at least once per 3-year cycle
-- Run `isms_audit_scheduler.py` in `ra-qm-team/skills/isms-audit-expert/`
+- Work out by hand, from what the user pastes, which clauses and controls were audited in the last 3 years and which are due
 - Confirm auditor independence — no self-audit on any sample
 
 ### 2. When was the risk register last refreshed, and are treatments linked to Annex A controls?
@@ -42,13 +44,13 @@ The ISO 27001 ISMS auditor pressure-tests any ISMS work. Six sample-driven quest
 - Quarterly refresh expected; annual minimum
 - Every high/critical risk must link to ≥ 1 Annex A control treating it
 - Residual risk acceptance documented + signed
-- Review against `iso27001_audit_playbook.md` for stage 1 expectations
+- Check the register by hand against what a stage 1 audit expects (the playbook file is not in this copy)
 
 ### 3. Show me the access review records — quarterly cadence, the last 4 quarters.
 **A common finding area (the original author's view; no source is given).**
 - Annex A.5.15 + A.8.2 + A.8.3 access controls
 - Sample real records pulled from Okta / IAM, not curated audit-prep packs
-- For each terminated employee in last 90 days: deprovisioning evidence within 24-hour SLA
+- For each terminated employee in last 90 days: deprovisioning evidence within the time your own policy sets (for example 24 hours; ISO 27001 does not set a number)
 - Privileged access reviewed at finer granularity
 
 ### 4. What's the supplier inventory + last review evidence?
@@ -61,7 +63,7 @@ The ISO 27001 ISMS auditor pressure-tests any ISMS work. Six sample-driven quest
 ### 5. Where's the incident response evidence + post-incident review?
 **A.5.24-27 + A.6.8 — high-stakes audit area.**
 - Severity definitions documented + consistently applied
-- Last 5 incidents have post-incident review (PIR) within 30-day SLA
+- Last 5 incidents have post-incident review (PIR) within the time your own policy sets (for example 30 days; ISO 27001 does not set a number)
 - GDPR Article 33 / 34 notification timing aligned with A.5.24 (cross-check with cs-dpo-gdpr)
 - Blameless retro culture; not punitive
 
@@ -76,16 +78,7 @@ The ISO 27001 ISMS auditor pressure-tests any ISMS work. Six sample-driven quest
 
 **The three scripts and the playbook named in this skill are not in this copy, so do not run them or say you did.** Do the three steps by hand in the chat: (1) plan the audit scope and dates from what the user tells you, (2) walk the six questions as a mock audit, (3) list which SOC 2 and ISO 42001 controls the same evidence could cover. Say these checks were done by reading what the user pasted.
 
-```bash
-# 1. Audit programme planning
-python ra-qm-team/skills/isms-audit-expert/scripts/isms_audit_scheduler.py audit_scope.json
-
-# 2. Mock audit for readiness check
-python ../../skills/compliance-os/scripts/audit_simulator.py iso27001_scope.json
-
-# 3. Cross-framework reuse (the overlap with SOC 2 and ISO 42001 is large but partial; the exact share depends on scope and is not given here)
-python ../../skills/compliance-os/scripts/cross_framework_mapper.py program.json
-```
+The original author ran three scripts for these steps. They are not in this copy. The overlap with SOC 2 and ISO 42001 is large but partial, and the exact share depends on scope.
 
 ## Output Format
 
@@ -131,6 +124,8 @@ python ../../skills/compliance-os/scripts/cross_framework_mapper.py program.json
 ```
 
 ## Routing
+
+These commands come from the original author's toolkit and are not in this copy. If you need one, use the AI Blocks item that does the same job, or ask your AI to do the check by hand.
 
 - `/cs:compliance-readiness` — for multi-framework view
 - `/cs:soc2-audit-prep` — for SOC 2 cross-walk pair (large overlap)

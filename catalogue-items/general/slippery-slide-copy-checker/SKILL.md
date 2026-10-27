@@ -60,9 +60,10 @@ The score and how it was worked out. The parts list with each job and pull mark.
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Brand voice editor](https://useaiblocks.com/skills/brand-voice-editor). It takes the draft.
+- The [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the draft and audit report.
 - The [Claim evidence checker](https://useaiblocks.com/skills/claim-and-proof-matcher). It takes the draft and audit report.
-- The [Sales copy readiness checker](https://useaiblocks.com/skills/sales-copy-readiness-checker). It takes the draft.
+- The [Brand voice editor](https://useaiblocks.com/skills/brand-voice-editor). It takes the draft.
+- **Write the ad copy** with the [Sales copy reviewer](https://useaiblocks.com/skills/sales-copy-reviewer). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

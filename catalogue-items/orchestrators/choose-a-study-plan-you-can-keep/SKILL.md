@@ -14,14 +14,15 @@ This workflow chains three skills from the library. Run them in order. Save each
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+- **Your lesson plan** (yours): the lesson or class task, the age group, the subject and the aims.
 
 **Makes it better (optional):**
 - **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a brief, source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, your lesson plan, source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -29,6 +30,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+
+This list replaces the general one above. You do not need a brief in a separate file.
 
 - **The goal** (required): what the learner wants to be able to do, such as pass a named exam.
 - **The date** (required): the exam day or deadline. If there is none, write `MISSING: date` and plan in blocks of weeks.
@@ -61,7 +64,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## If something is missing
 
-Write `MISSING: <what>` next to the affected result and keep going on work that does not depend on it. Stop a step when a required input is absent, and hand back the partial files with the exact input needed to resume. If a component skill file is not in the pack, stop at that step and ask for the file. Its public page, `https://useaiblocks.com/skills/<slug>`, is where the user can get it. Never write the skill's steps from memory.
+Write `MISSING: <what>` next to the affected result and keep going on work that does not depend on it. A missing date or level only gets a `MISSING:` line, and the plan carries on as set out in "What you need". A missing goal, weekly hours or material stops step 1: hand back what exists with the exact input needed to resume. If a component skill file is not in the pack, stop at that step and ask for the file. Its public page, `https://useaiblocks.com/skills/<slug>`, is where the user can get it. Never write the skill's steps from memory.
 
 ## What you hand back
 
@@ -89,12 +92,12 @@ When you've handed it back, suggest what they could do next in one short questio
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
-## After this
+## After this (for this job)
 
-Offer one next step and say they can type their own:
+The progress reviewer in the general list above is the same tool as the one named here, and this is its correct link. Offer one next step and say they can type their own:
 
 - Do the first week and bring your closing reflections back. Ask for the plan to be adjusted.
-- After a few weeks, review how it is going with the [Study plan progress review assistant](https://useaiblocks.com/agents/study-plan-progress-review-assistant).
+- After a few weeks, review how it is going with the [Study practice progress reviewer](https://useaiblocks.com/agents/study-plan-progress-review-assistant).
 - If the date is close, rank topics by marks with the [Exam study roadmap builder](https://useaiblocks.com/skills/exam-study-roadmap-builder).
 
 ## Check before you hand it back

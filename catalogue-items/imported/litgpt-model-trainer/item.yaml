@@ -8,10 +8,14 @@ role: make
 job: ops
 level: advanced
 inputs:
-  - type: spreadsheet
+  - type: question
     required: true
+  - type: training_data
+    required: false
 outputs:
   - type: code_change
+    required: true
+  - type: ai_model
     required: true
 uses: []
 origin: imported

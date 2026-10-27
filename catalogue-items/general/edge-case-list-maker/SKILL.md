@@ -7,6 +7,11 @@ description: "Paste this above a change you plan to make to software, a spreadsh
 
 Turns a change into an ordered list of cases to check, including edge cases and old behaviour that must stay. It writes no code.
 
+## When not to use
+- You need a full test plan with every check. Use the Test list writer.
+- You are fixing a one-line typo. Just make the fix and look at the result yourself.
+- You want to plan a whole new feature. Split it into single changes first, then run this once for each change.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -24,7 +29,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-- **The change** (required): what should behave differently after, in your own words.
+- **The change** (required): what should behave differently after, in your own words. One or two sentences are enough, such as: when a customer applies two discount codes, only the larger one counts instead of both.
 - **What it does today** (optional): current behaviour, notes or code.
 - **Known problems** (optional): past bugs, odd customers, rules.
 
@@ -44,7 +49,8 @@ CHANGE (one line), CASES (in order, each with its group and size), START WITH (t
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Process and behavior change planner](https://useaiblocks.com/skills/structure-behaviour-split). It takes the plan.
-- The [Oracle to Postgres migration test planner](https://useaiblocks.com/skills/copilot-planning-oracle-to-postgres-migration-integration-testing). It takes the plan.
+- The [AI coding task brief writer](https://useaiblocks.com/skills/coding-agent-handoff-writer). It takes the plan.
+- The [Data pipeline builder](https://useaiblocks.com/skills/data-pipeline-builder). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

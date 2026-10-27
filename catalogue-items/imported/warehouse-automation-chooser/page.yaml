@@ -39,6 +39,7 @@ how_to_use:
   - Add any vendor quotes you hold. They are better than the estimates in the skill.
   - Answer its questions. It marks missing numbers instead of guessing.
   - Check each payback. Does it come from a quote or your own figure? Ask it to say which.
+  - The cost, pick-rate and payback numbers in the skill and its Python code are placeholders. Any sizing result is only an illustration until you replace them with vendor quotes or your own data.
   - Before you show any payback, check that every sample cost or pick rate in the result has been replaced by a vendor quote or your own figure.
   - Take the top two options to vendors for quotes. Ask for a trial or a pilot first.
 how_it_works:
@@ -58,7 +59,7 @@ output_shape: |
   Automation Feasibility Study
   Summary: <recommendation>, <why>, <capital cost>, <payback>
   Current state: <orders per day>, <labour cost>, <pick rate>, <accuracy>
-  Options: <option>, <cost>, <yearly saving>, <payback>, <risk>, <site fit>
+  Options: <option>, <cost>, <yearly saving>, <payback>, <risk>, <site fit>, <source: vendor quote, your figure or estimate>
   Financials: <capital>, <saving>, <running cost>, <payback>, <source>
   Plan: <phase>, <months>, <first step>
   Numbers still needed: <input>, <who can supply it>

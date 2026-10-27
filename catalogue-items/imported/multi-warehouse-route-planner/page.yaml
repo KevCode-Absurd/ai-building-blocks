@@ -9,7 +9,7 @@ subhead: Give it your warehouses, trucks and customer stops. It decides which wa
 explain: |
   A decision on which warehouse serves each customer and the best truck routes out of every depot, to cut total distribution cost.
 
-  The skill treats it as a multi-depot routing problem, which has two linked choices: who is assigned to which depot, and how each truck loops. It first asks about your depots, their capacity and fixed costs, whether trucks return to their own depot, and how many customers you serve. Size decides the method: exact solving for small cases, smart heuristics for medium ones and metaheuristics for large. It can balance workload between depots or minimize the longest route.
+  The skill treats it as a multi-depot routing problem, which has two linked choices: who is assigned to which depot, and how each truck loops. It first asks about your depots, their capacity and fixed costs, whether trucks return to their own depot, and how many customers you serve. Size decides the method: exact solving can work for small cases, smart heuristics for medium ones and metaheuristics for large. The sample code uses only a search heuristic from OR-Tools. It gives a good answer, not a proven best one. Ask your AI for an exact model if you need that on a small case. It can balance workload between depots or minimize the longest route.
 when:
   - You have three warehouses and customers that any of them could serve.
   - Trucks from two depots overlap in the same areas.
@@ -39,8 +39,7 @@ how_to_use:
   - "Tell your AI your goal: least distance, balanced loads or shortest longest route. Say if trucks must return to their own depot."
   - Ask it to run the solver and report the result. It may need to install OR-Tools and scikit-learn first.
   - Check the depot loads. If one depot is overloaded, ask it to re-run with balanced workload as the goal.
-  - Use the routes to brief drivers. Re-run with a different depot count to compare options.
-  - Next, send the checked routes to your routing or dispatch tool, or rerun with a different number of depots to compare.
+  - Next, brief your drivers from the checked routes or send them to your routing or dispatch tool. To compare options, rerun with a different number of depots.
 output_sample:
   input:
     - Your depot locations, truck counts and capacities

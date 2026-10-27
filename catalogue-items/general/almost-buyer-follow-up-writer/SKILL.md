@@ -62,8 +62,6 @@ The groups with numbers. The offer in one line and the reason to act now. Each m
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Check it before it goes live** with the [Email consent and message reviewer](https://useaiblocks.com/skills/permission-email-audit). It takes the email flow.
-- **Sell it** with the [Sales closing question planner](https://useaiblocks.com/skills/ask-which-closing-planner).
-- **Sell it** with the [Sales deal follow-up tracker](https://useaiblocks.com/skills/stalled-deal-revival-desk).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

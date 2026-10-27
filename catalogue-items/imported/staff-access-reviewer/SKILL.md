@@ -42,7 +42,7 @@ Audits all staff member accounts on the store to surface security and access-hyg
 
 3. Flag any member with `active: false` (or `accountType: SUSPENDED`) as **inactive but provisioned**.
 
-4. Flag any member with `isShopOwner: true` or `accountType: COLLABORATOR` with full permissions as **high privilege** for review.
+4. Flag any member with `isShopOwner: true` or `accountType: COLLABORATOR` as **high privilege** for review. The query does not return permissions, so say plainly that the user must open each flagged account in Shopify admin to see what it can actually do.
 
 5. Cross-tabulate: produce per-account record with all flags joined (`stale`, `inactive`, `high_privilege`).
 
@@ -50,10 +50,10 @@ Audits all staff member accounts on the store to surface security and access-hyg
 
 ## GraphQL Operations
 
-The query asks only for the fields the audit needs. It leaves out phone, avatar and account settings links on purpose, because an access review does not need that personal data. `lastSeen` must exist on `StaffMember` in api_version 2025-01. Check this against Shopify's current docs before the first run. If the field is not available, say so: the stale-login check cannot run, and you must report only the inactive and high-privilege flags.
+The query asks only for the fields the audit needs. It leaves out phone, avatar and account settings links on purpose, because an access review does not need that personal data. Before the first run, confirm in Shopify's current Staff API docs that `lastSeen` exists on `StaffMember` and which `accountType` values exist. If `lastSeen` is missing, stop the stale-login check and say so: report only the inactive and high-privilege flags.
 
 ```graphql
-# staffMembers:query — validated against api_version 2025-01
+# staffMembers:query — check field names against Shopify's current docs before the first run
 query StaffAccountAudit($after: String) {
   staffMembers(first: 250, after: $after) {
     edges {

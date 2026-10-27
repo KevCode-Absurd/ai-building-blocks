@@ -51,6 +51,8 @@ Hand back, in this order: the line design (width and spacing), the impedance che
 3. **Check mesh/memory:** `memoryEstimate(obj, fc, 'RetainMesh', true)` — inspect auto-mesh before solving
 4. **After:** `matlab-analyze-em` — validate S-parameters → `matlab-optimize-pcb-design` — tune → `matlab-integrate-pcb-circuit` — cascade
 
+If you already have the substrate and conductor set up as code, build the trace on them.
+
 ## Quick Reference
 
 | Object | Topology | Key Properties |

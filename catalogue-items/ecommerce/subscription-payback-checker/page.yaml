@@ -137,8 +137,8 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Recharge", why: "Its reports show subscriber retention and revenue by cohort."}
-    - {name: "Shopify", why: "Order and customer reports give first-order value and repeat orders."}
+    - {name: "Recharge", why: "Paid subscription app; use the one you already have. Its reports show subscriber retention and revenue by cohort."}
+    - {name: "Shopify", why: "Paid plan needed. Order and customer reports give first-order value and repeat orders."}
     - {name: "Google Sheets", why: "A simple cohort table with months across the top works well."}
   inputs:
     - "A cohort table by first-order month, with revenue and gross profit by month"

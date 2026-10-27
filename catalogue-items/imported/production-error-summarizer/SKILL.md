@@ -15,10 +15,11 @@ description: "Use when the user asks to inspect Sentry issues or events, summari
 - Use `sentry schema <resource>` to discover API endpoints quickly.
 
 If the CLI is not installed, give the user these steps:
-1. Install the Sentry CLI: `curl https://cli.sentry.dev/install -fsS | bash`
+1. Install the Sentry CLI: `curl https://cli.sentry.dev/install -fsS | bash` (this downloads and runs a script, so the user should read it first or use Sentry's other install options)
 2. Authenticate: `sentry auth login`
 3. Confirm authentication: `sentry auth status`
 - Never ask the user to paste the full token in chat. Ask them to set it locally and confirm when ready.
+- The token only needs read access to issues and events (for example the `event:read` and `project:read` scopes). Do not ask for a token with write access.
 
 ## Core tasks (use Sentry CLI)
 
@@ -71,6 +72,8 @@ sentry event view {your-org}/{your-project}/{event_id} --json
 
 ### 6) AI-powered root cause analysis
 
+This and the fix plan below may need a paid Sentry plan or AI add-on, and may start an AI run in Sentry. Check the user's Sentry plan first, and say so if the command is refused.
+
 ```bash
 sentry issue explain {ABC-123}
 ```
@@ -97,7 +100,7 @@ sentry schema issues
 
 - `org_slug`, `project_slug`: auto-detected by the CLI from DSNs, env vars, and directory names. Override with positional `{your-org}/{your-project}` if auto-detection fails.
 - `time_range`: default `24h` (pass as `--period 24h`).
-- `environment`: default `prod` (pass as part of `--query`, e.g., `environment:production`).
+- `environment`: default `production` (pass as part of `--query`, e.g., `environment:production`). If the user's environment is named differently, such as `prod`, use their name.
 - `limit`: default 20 (pass as `--limit`).
 - `search_query`: optional `--query` parameter, uses Sentry search syntax (e.g., `is:unresolved`, `assigned:me`).
 - `issue_short_id`: use directly with `sentry issue view`.

@@ -9,7 +9,7 @@ subhead: Thousands of group messages turn into a ranked list of problems people 
 explain: |
   Thousands of group messages turn into a ranked list of problems people keep complaining about, with real quotes as proof. It reads a Telegram Desktop export and shows which needs are worth building something for.
 
-  It reads the file in small chunks, so a multi-gigabyte export will not crash your computer. It looks for phrases in English and Russian such as "I wish", "is there a bot" or "waste of time". Themes rank higher when they appear across several separate chats, because one angry person is a story and many people in many groups is a pattern. Every theme needs two to five exact quotes with date and chat name. Themes without quotes are marked unconfirmed.
+  It reads the file in small chunks, so a multi-gigabyte export will not crash your computer. It looks for phrases in English and Russian such as "I wish", "is there a bot" or "waste of time". Themes rank higher when they appear across several separate chats, because one angry person is a story and many people in many groups is a pattern. Every theme needs two to five exact quotes with date and chat name. Themes without quotes are marked unconfirmed. Licence: this copy is from sickn33's collection, whose written content is CC BY 4.0 (see LICENSE-CONTENT). The skill file's own header says MIT, set by the original author wwewtech. Both let you reuse it if you keep the credit.
 when:
   - You run or study a Telegram community and want to know what members struggle with.
   - You hunt for product ideas and want proof that people really ask for them.
@@ -31,10 +31,11 @@ you_get:
 how_to_use:
   - In Telegram Desktop, export each chat as JSON. This gives you a file called result.json.
   - Put all the export files in one folder on your computer. Only use chats you are allowed to analyze.
-  - Open an AI that can run code and read large files. Paste in this skill and add the folder.
+  - Use an AI that runs code on your own computer, such as Claude Code or Codex. Do not upload the raw export to a chat window on the web. The skill is built to read the files locally, and the exports hold other people's private messages. Only short snippets and quotes should reach your AI, and you should remove names, phone numbers and usernames from them first. If you are not allowed to send any of that text to your AI provider, do not use this skill.
+  - Paste in this skill and point your AI at the folder. It counts phrase hits with a scanner, then reads the export message by message, skips service messages, and takes the date, chat name and text for each quote. The scanner only counts and samples. It never supplies quotes.
   - Tell it your niche and any extra search phrases (optional), then ask it to find unmet needs.
   - Check each quote against the original export before you use it.
-  - Chat exports hold real people's words. Before you share a report, remove names, phone numbers and usernames from the quotes, and keep only quotes you are allowed to publish.
+  - Chat exports hold real people's words. Remove names, phone numbers and usernames before analysis as well as before you share a report, and keep only quotes you are allowed to publish.
   - Next, talk to a few customers about the top needs, or write a short feature spec, before you build anything.
 output_sample:
   input:

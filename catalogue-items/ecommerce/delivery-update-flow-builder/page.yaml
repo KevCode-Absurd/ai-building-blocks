@@ -20,7 +20,7 @@ when:
 not_for:
   - "You ship fewer than 300 orders a month and want a paid tracking page: start with the email flow and the date rule, then add a tracking page later."
   - "Your parcels are often late: fix delivery accuracy with your carrier first, because messages do not fix lateness."
-  - "You want to find orders that are already at risk: use a where-is-my-order risk finder, or check your carrier scan data by hand."
+  - "You want to find orders that are already at risk: pull the late scans from your carrier by hand. This skill sets up the messages, not that list."
 
 you_give:
   - Orders per month and the number of tickets that ask about order status
@@ -64,7 +64,7 @@ output_sample:
 
 how_it_works:
   - title: Measures first
-    text: WISMO rate is order-status contacts divided by orders. Under 3 percent is healthy, 3 to 8 percent is normal but costly, and over 8 percent is a structural problem.
+    text: WISMO rate is order-status contacts divided by orders. Under 3 percent is healthy, 3 to 8 percent is normal but costly, and over 8 percent is a structural problem. These bands are rules of thumb, not measured industry data.
   - title: Costs the tickets
     text: At 3 to 5 minutes a lookup, it turns your ticket count into agent hours.
   - title: Builds the date rule
@@ -108,7 +108,7 @@ tweaks:
   - what: Real carrier times by lane
     how: Give delivery times for your main regions. One national average hides the lanes that run late, and those lanes make the tickets.
   - what: Your order value
-    how: Higher-priced orders get more calls. One source puts calls at 12 to 18 percent of orders at a $250 average order and about 3 percent at $40. Give your average so the limits are read fairly.
+    how: Higher-priced orders get more calls. One unchecked vendor source puts calls at 12 to 18 percent of orders at a $250 average order and about 3 percent at $40. Treat that as direction only. Give your average so the limits are read fairly.
   - what: Peak season
     how: Say if your numbers are from a peak month. Sources put the ticket share higher then, so compare like with like.
   - what: Your channel
@@ -132,14 +132,14 @@ improve:
   - Add your brand voice rules, so the messages sound like you.
   - Add any limits your carrier contract or consumer law sets on how you state delivery dates.
   - Save your WISMO rate and accuracy to your brand file each month, so you can see the trend.
-  - Pair it with the where-is-my-order risk finder, which finds orders already at risk, and the shipment tracking planner.
+  - Pair it with the Post-purchase flow builder, and the Support capacity planner if tickets still pile up.
 
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Any current chat AI can do the sums and write the messages. Paste real numbers."}
-    - {name: "Klaviyo", why: "It sends the update flow by email and SMS from your order events."}
-    - {name: "AfterShip", why: "It hosts a tracking page and sends delivery updates. Check the current price against your order volume."}
-    - {name: "Gorgias", why: "A helpdesk that can tag order-status tickets, so your WISMO count is real and not a guess."}
+    - {name: "Klaviyo", why: "Paid service with an account. It sends the update flow by email and SMS from your order events."}
+    - {name: "AfterShip", why: "Paid service with an account. It hosts a tracking page and sends delivery updates. Check the current price against your order volume."}
+    - {name: "Gorgias", why: "Paid service with an account. A helpdesk that can tag order-status tickets, so your WISMO count is real and not a guess."}
   inputs:
     - "Your helpdesk tag counts for order-status tickets"
     - "Delivery scan data by lane for the last 90 days"

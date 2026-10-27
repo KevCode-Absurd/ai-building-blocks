@@ -54,7 +54,7 @@ The chosen case and why, with two other candidates. What everyone assumes and th
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Draft proofreader](https://useaiblocks.com/skills/draft-proofreader). It takes the brief.
 - The [Long-form writing planner](https://useaiblocks.com/skills/long-form-piece-structurer). It takes the brief.
-- The [Story theme and scene reviewer](https://useaiblocks.com/skills/hidden-theme-finder).
+- The [Brand origin story writer](https://useaiblocks.com/skills/brand-origin-story-writer). It takes the brief.
 - **Say it to the room** with the [Internal proposal pitch planner](https://useaiblocks.com/skills/idea-buy-in-pitch-planner). It takes the brief.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

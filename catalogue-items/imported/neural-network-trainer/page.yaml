@@ -9,7 +9,9 @@ subhead: A neural network trained in MATLAB, tested on held-out data and exporte
 explain: |
   A neural network trained in MATLAB, tested on held-out data and exported, using the current functions instead of the old ones. If your code uses outdated calls, it is moved over for you.
 
-  The skill first decides the right route. For table data, it uses fitcnet or fitrnet. For images, signals and sequences, it uses the newer trainnet approach with dlnetwork, and can start from a pretrained network for transfer learning. After training it scores the model with testnet and predicts with minibatchpredict. It can export the result to Simulink. It also migrates older patternnet, fitnet, narxnet and trainNetwork code, and can speed up slow deep learning code with dlaccelerate. You need MATLAB with the right toolboxes.
+  The skill first decides the right route. For table data, it uses fitcnet or fitrnet. For images, signals and sequences, it uses the newer trainnet approach with dlnetwork, and can start from a pretrained network for transfer learning. After training it scores the model with testnet and predicts with minibatchpredict. It can export the result to Simulink. It also migrates older patternnet, fitnet, narxnet and trainNetwork code, and can speed up slow deep learning code with dlaccelerate. You need MATLAB with the right toolboxes. These are paid MathWorks products, and the licence allows use only with MathWorks products such as MATLAB.
+
+  In plain words: fitcnet and fitrnet train a simple network on a table, one to sort things into groups and one to predict a number. trainnet with dlnetwork is the newer route for images, signals and sequences. testnet scores the result on data the network has not seen. minibatchpredict makes the predictions. dlaccelerate speeds up slow code.
 when:
   - You have a dataset in MATLAB and want a working classifier.
   - Your old patternnet code now shows warnings.
@@ -21,7 +23,7 @@ not_for:
   - "You need to load, clean or augment your images first: do that step in MATLAB before you start."
   - "You are not sure whether a CNN, LSTM or transformer fits: ask a data scientist or read up on network types, then come back to train."
 you_give:
-  - Your data (table, images or signals)
+  - "Your data. For a table, use one row per example, one column for each input and one column for what you want to predict. For images or signals, put each example in its own file or row, with its label."
   - What you want to predict
   - Existing MATLAB code to update (optional)
   - Whether you need a Simulink export (optional)

@@ -11,7 +11,7 @@ inputs:
   - type: source_text
     required: true
 outputs:
-  - type: plan
+  - type: copy_draft
 uses: []
 origin: imported
 source:

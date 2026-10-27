@@ -104,8 +104,10 @@ Run the checks in "Check before you hand it back" and fix any that fail. List ea
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Paper craft video clip prompt writer](https://useaiblocks.com/skills/paper-craft-video-prompts). It takes the script.
-- The [Knitted wool video ad script writer](https://useaiblocks.com/skills/knitted-wool-ad-script).
-- The [Paper cutout explainer video ad script writer](https://useaiblocks.com/skills/paper-cutout-ad-script).
+- The [Video ad script line checker](https://useaiblocks.com/skills/video-ad-script-line-checker). It takes the script.
+- The [Podcast-style video clip prompt writer](https://useaiblocks.com/skills/podcast-style-video-prompts). It takes the script.
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script.
+- **Check it before it goes live** with the [Video ad transition reviewer](https://useaiblocks.com/skills/video-ad-bridge-checker). It takes the script.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

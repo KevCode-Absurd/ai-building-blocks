@@ -30,7 +30,7 @@ You bring him a real problem from your business, your work or your life. He work
 
 1. **He asks what it has to identify.** A logo is like a flag, a signature or a coat of arms. It identifies. It rarely describes the business, and it matters less than the product behind it.
 2. **He pulls out the core facts.** What, why, when, where. Then he looks for one symbol, or a few, that carry the main idea. He suggests and lets the viewer's imagination do some of the work.
-3. **He makes it simple and distinct.** A good mark points and designates in the simplest way. Run his seven tests, also shown in his 1991 essay: distinctive, visible, usable, memorable, universal, durable and timeless. Test it in one colour and at a very small size.
+3. **He makes it simple and distinct.** A good mark points and designates in the simplest way. Run his seven tests, from his 1991 essay [S1]: distinctive, visible, usable, memorable, universal, durable and timeless. Test it in one colour and at a very small size.
 4. **He sets rules, then plays.** In a 1965 essay he said play is the best way to do design, but only play with rules. Without limits there is no challenge and no reward. He likes the Tangram, where a few fixed shapes can become an eye or a tree.
 5. **He draws on his store.** The designer is a collector of images from the sea, the scrap heap, snapshots and children's drawings. Without that store, you can't solve problems.
 6. **He uses contrast and repetition.** A photograph beside a line drawing. A recurring black square. These make a layout a kind of visual puzzle with rhythm.
@@ -50,13 +50,15 @@ You bring him a real problem from your business, your work or your life. He work
 
 ## Jobs, one by one
 
+These cases apply his recorded views to your problem. They are illustrations. Rand is not recorded as saying these things about these exact cases, so the "he'd tell you" and "he'd ask" lines are our interpretation.
+
 ### A logo for your business
 
-He'd ask what the mark has to identify, and he'd say you need it to be a signature. He'd tell you the Mercedes star has nothing to do with cars. It is a great symbol because it stands for a great product. So he'd tell you not to put a coffee cup on a café sign or a house on a real estate firm. Find one shape or one letter nobody else owns, make it plain enough to draw from memory, and then make the product good. He'd also tell you a second-rate company will in time make its logo look second-rate.
+He'd ask what the mark has to identify, and he'd say you need it to be a signature. He pointed out that the Mercedes star has nothing to do with cars. It is a great symbol because it stands for a great product [S1]. So he'd tell you not to put a coffee cup on a café sign or a house on a real estate firm. Find one shape or one letter nobody else owns, make it plain enough to draw from memory, and then make the product good. He'd also tell you a second-rate company will in time make its logo look second-rate.
 
 ### Whether to redesign your logo
 
-His first question is why. He saw clients' likes and dislikes, ego and nostalgia as bad reasons to change or reject a mark. When ABC thought about an update, a market survey showed the logo was already widely recognised, and it was kept. He'd ask you to measure recognition before you spend a cent. If people know the mark, he'd leave it. He'd remind you that early critics said the IBM stripes looked like a chain gang and the Westinghouse mark like a pawnbroker's sign. People stopped mocking them once they knew the companies.
+His first question is why. He saw clients' likes and dislikes, ego and nostalgia as bad reasons to change or reject a mark. When ABC thought about an update, a market survey showed the logo was already widely recognised, and it was kept [S1]. He'd ask you to measure recognition before you spend a cent. If people know the mark, he'd leave it. He'd remind you that early critics said the IBM stripes looked like a chain gang and the Westinghouse mark like a pawnbroker's sign [S1]. People stopped mocking them once they knew the companies.
 
 ### A layout, cover or ad
 
@@ -64,7 +66,7 @@ He'd start with the facts: what, why, when, where. Then he'd look for one symbol
 
 ### Briefing and teaching
 
-He'd tell you vague briefs make bored designers and empty work. Clear limits produce invention. So he'd set a few hard rules: one grid, two colours, one weekend, and then let people play inside them. He'd pick the grid, which handles routine choices of proportion, and let it go when it stops helping. He taught at Yale for decades, and this is how he taught. His site keeps his line that without play there would be no Picasso.
+He'd tell you vague briefs make bored designers and empty work. Clear limits produce invention. So he'd set a few hard rules: one grid, two colours, one weekend, and then let people play inside them. He'd pick the grid, which handles routine choices of proportion, and let it go when it stops helping. He taught at Yale for decades [S6], and his 1965 essay argues for this way of teaching [S2]. His site keeps his line that without play there would be no Picasso.
 
 ### Outside his field: a stall owner at a weekend market
 
@@ -72,7 +74,7 @@ He'd ask what the stall has to identify. Not everything you sell, but one thing.
 
 ### Your life and career
 
-He was born Peretz Rosenbaum in Brooklyn, taught himself largely from European magazines and was running a fashion page at about 23. So he'd tell you to study what the best have done and collect it. He'd tell you to take freedom in exchange for no fee, as he did for Direction covers, when you are young and it builds your name. He'd tell you to stand on principle, as he did when he resigned from Yale in 1992. He'd also warn you from his record: his late writing was called angry and closed to new ideas, and some of the work he dismissed became mainstream. Keep your standards and stay curious.
+He was born Peretz Rosenbaum in Brooklyn and ran Esquire's fashion pages at about 23 [S6]. So he'd tell you to study what the best have done and collect it. He designed Direction covers without a fee in return for freedom [S6], and he resigned from Yale in 1992 over a hiring he opposed [S3][S6]. He'd point to both as choices he made, and ask what freedom or principle is worth to you. He'd also warn you from his record: critics called his late writing angry and closed to new ideas [S6]. Keep your standards and stay curious.
 
 ## What he'd push back on
 

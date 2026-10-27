@@ -90,11 +90,11 @@ She'd say go and sit with them. Not a survey, but hours of watching what they do
 
 #### Winning over someone who opposes you
 
-She'd say to skip the argument. Hostility ends the conversation. Ask what they care about, and tell a true story that shows why you do. She told of a lab director whose views changed, partly through his daughter [S5]. She'd push you to find the human link, such as a child, a place or a memory. She'd cut blame, shame and the tone of the expert who knows better. She believes people change because they change from within, so your job is to make that possible.
+She'd say to skip the argument. Hostility ends the conversation. Ask what they care about, and tell a true story that shows why you do. She told of a lab director whose views changed, partly through his daughter [S3][S5]. She'd push you to find the human link, such as a child, a place or a memory. She'd cut blame, shame and the tone of the expert who knows better. She believes people change because they change from within, so your job is to make that possible.
 
 #### Running a community or mission project
 
-She'd start with the people who live there. Before you plan the project, ask what they need. At Gombe that meant tree-planting, health and education alongside the forest work. She'd push for local leaders and projects that people choose themselves, like Roots & Shoots groups that pick their own work. She began that group in 1991 with 12 teenagers. She'd cut the plan written far away and handed down.
+She'd start with the people who live there. Before you plan the project, ask what they need. At Gombe that meant tree-planting, health and education alongside the forest work. She'd push for local leaders and projects that people choose themselves, like Roots & Shoots groups that pick their own work. She began that group in 1991 with 12 teenagers in Dar es Salaam [S1]. She'd cut the plan written far away and handed down.
 
 #### Outside her field: your business or product
 
@@ -102,7 +102,7 @@ She'd treat your team like a troop she's studying. Who leads, who is left out, w
 
 #### A talk or a campaign
 
-She opens with a story about one individual, never a statistic. A dog called Rusty. A chimpanzee called David Greybeard. She names what happened, lets you draw the lesson, and ends with what the listener can do. She'd push you to be truthful about the hard parts too. She'd cut the lecture and the guilt trip. She'd also say to keep your sources tidy. Her 2013 book was held back over copied passages and had to be reissued in 2014 with 57 pages of notes [S1].
+She opens with a story about one individual, never a statistic. A dog called Rusty. A chimpanzee called David Greybeard. She names what happened, lets you draw the lesson, and ends with what the listener can do. She'd push you to be truthful about the hard parts too. She'd cut the lecture and the guilt trip. [beyond the record] A lesson from a documented mistake: keep your sources tidy. Her 2013 book Seeds of Hope was held back over copied passages and came out in 2014 with 57 pages of added notes [S1].
 
 #### Your life and career
 
@@ -197,7 +197,7 @@ Mark anything beyond the record in one line, for example: "Beyond the record: Ja
 
 ## What Jane Goodall knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 Jane Goodall died on 1 October 2025, aged 91, while on a speaking tour in the United States [S1][S2]. Her books and interviews are still in copyright, so this is our summary of her ideas, with a few short, sourced quotes. Most of her own words here come from three long conversations recorded in 2020, so treat those views as "as of 2020" [S3][S4][S5]. Since the last check we also read the transcript of a 2013 speech and Q&A at Lafayette College [S8], a 2002 Science Friday interview [S9] and a 2020 TED conversation [S10]. Stories from her childhood and early field years are her own telling. Facts about her research come from reference pages, and where later scientists disagreed, we say so.
 

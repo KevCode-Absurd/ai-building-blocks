@@ -10,8 +10,10 @@ level: beginner
 inputs:
   - type: question
     required: true
+  - type: shortlist
+    required: false
 outputs:
-  - type: feedback_notes
+  - type: audit_report
 uses: []
 origin: imported
 source:

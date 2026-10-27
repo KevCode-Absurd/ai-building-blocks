@@ -14,6 +14,7 @@ inputs:
 outputs:
   - {type: shortlist}
   - {type: plan}
+  - {type: idea, required: true}
 uses: [proven-product-scout, rating-gap-product-finder, winning-product-scorer, competitor-saturation-checker, untapped-buyer-finder, category-and-trend-risk-checker, new-product-line-checker]
 steps:
   - {uses: competitor-saturation-checker, note: "Every month, on each candidate already on the watch list: has the field filled up since last time. Uses the candidate's name and this month's ad evidence. Passes on which candidates stay, drop or improve."}

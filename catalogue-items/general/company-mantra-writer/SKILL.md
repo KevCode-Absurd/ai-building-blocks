@@ -50,9 +50,9 @@ The benefit sentence. The meaning. Three mantras with their grid ratings. The pi
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Product range reviewer](https://useaiblocks.com/skills/product-line-cutter). It takes the brief.
-- The [Board and investor update planner](https://useaiblocks.com/skills/copilot-gtm-board-and-investor-communication). It takes the brief.
-- The [Company meeting and review planner](https://useaiblocks.com/skills/copilot-gtm-operating-cadence). It takes the brief.
+- The [SaaS market position adviser](https://useaiblocks.com/skills/copilot-gtm-positioning-strategy). It takes the brief.
+- The [Event marketing planner](https://useaiblocks.com/skills/event-marketing-planner). It takes the brief.
+- The [Content topic planner](https://useaiblocks.com/skills/content-topic-planner). It takes the brief.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

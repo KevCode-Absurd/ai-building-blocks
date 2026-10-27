@@ -17,6 +17,7 @@ Walks every product flagged as a bundle (either via Shopify's native `requiresCo
 
 ## Prerequisites
 - Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_products,read_inventory`
+- For metafield bundles, the metafield value is a JSON list such as `[{"variantId": "gid://shopify/ProductVariant/[ID]", "quantity": [NUMBER]}]`. Add it in the Shopify admin under Settings, Custom data, Products, then fill it in on each bundle product.
 - API scopes: `read_products`, `read_inventory`
 
 ## Parameters
@@ -53,6 +54,8 @@ Walks every product flagged as a bundle (either via Shopify's native `requiresCo
 5. For each bundle, compute `max_buildable_units = floor(min over components of (component_on_hand - safety_stock) / required_qty)`. Flag bundles where `max_buildable_units == 0` (broken bundle). The quantity used is on-hand stock minus the safety stock.
 
 ## GraphQL Operations
+
+The field names below were written for API version 2025-01 and were not run again in this catalogue. Check names such as `inventoryQuantity` and `productVariantComponents` against Shopify's current docs before the first run. If a query fails, fix the field name and say so in the report.
 
 ```graphql
 # products:query — validated against api_version 2025-01
@@ -219,6 +222,6 @@ CSV file `bundle_availability_<YYYY-MM-DD>.csv` with columns:
 ## Best Practices
 - Run daily for stores with many bundles; surface broken bundles before customers can buy something you cannot ship.
 - Use `safety_stock` to keep a buffer for non-bundle sales of the same component — bundles share inventory with standalone variants.
-- Pair with `inventory-adjustment` or `low-inventory-restock` to action a broken bundle into a reorder.
+- Pair with `stock-count-updater` or `restock-list-builder` to action a broken bundle into a reorder.
 - For native bundles, `requiresComponents: true` is authoritative — prefer it over metafield conventions when both exist.
-- A bundle with `max_buildable_units = 0` should also be temporarily unpublished until the bottleneck component is restocked; consider chaining this skill with `product-lifecycle-manager`.
+- A bundle with `max_buildable_units = 0` should also be temporarily unpublished until the bottleneck component is restocked; consider chaining this skill with `product-launch-retire`.

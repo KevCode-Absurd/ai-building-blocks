@@ -3,9 +3,6 @@ name: patent
 description: "Patent prior-art and landscape intelligence skill — not generic patent help. Commits to one of five sub-use-cases via forcing intake (novelty search / freedom-to-operate / competitive landscape / acquisition diligence / litigation prior-art) before any search runs. Searches Google Patents, Espacenet, USPTO, and optionally Lens.org for citation-graph signals. Output is an editable Word document (.docx) with verdict, ranked closest art (claim-text extracted), CPC-class-aware landscape, family-resolved hits, geographic coverage, FTO flags where applicable, strategy recommendations, and full audit log. Use when the user asks for patent searching or analysis (e.g., 'prior art search for [invention]', 'freedom to operate analysis for [product]'). Produces search signal, not legal advice — always recommends consulting a patent attorney before filing or licensing decisions. Trademark, copyright, and trade-secret questions are out of scope."
 license: MIT
 metadata:
-  source_spec: "megaprompts/11-patent-megaprompt.md"
-  build_pattern: "Path B (direct conversion)"
-  research_pack_convention: "Agent Integrity Rules verbatim per PR #657 audit; sub-use-case routing variant"
   version: 1.0.0
 ---
 
@@ -112,6 +109,10 @@ python scripts/sub_use_case_router.py \
 ```
 
 Returns: query plan (5-8 queries) + ranking heuristic + DOCX emphasis flags.
+
+**Check site terms first.** Google Patents, Espacenet and the USPTO each have terms of use. Before any automated access, tell the user to check them. If a site forbids automated access, do not use it. Give the user the queries to run by hand on that site instead.
+
+**If you cannot run the scripts:** write the query plan yourself from the intake answers. For novelty, give 3 narrow queries on the invention's own terms, 2 broad queries with synonyms, and 1 query limited to the class code (CPC) of the best hit. For the other four goals, follow the per-goal patterns in Phase 3. Give the queries to the user to run by hand, ask them to paste the results back, and say the audit counts are by hand.
 
 ## Phase 3: Multi-Source Search (Sequential)
 
@@ -283,5 +284,4 @@ Surface the **legally-relevant date** per sub-use-case:
 ---
 
 **Version:** 1.0.0
-**Source spec:** `megaprompts/11-patent-megaprompt.md` (maintainer-local draft spec — gitignored, not present in the public repository)
-**Build pattern:** Path B (direct conversion). Research-pack sibling, sub-use-case routing variant.
+**Needs:** web search and web page reading, plus Node.js for the Word file.

@@ -7,8 +7,10 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: product_photos
     required: true
+  - type: brief
+    required: false
 outputs:
   - type: image_prompt
     required: true

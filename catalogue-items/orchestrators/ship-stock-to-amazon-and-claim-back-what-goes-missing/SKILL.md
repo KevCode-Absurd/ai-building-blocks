@@ -33,7 +33,7 @@ How to start:
 
 ## What you need
 
-This is an Amazon seller job. Ignore any brand brain mentioned above. The Seller Central reports below are what step 2 reads.
+This is an Amazon seller job. The general "Before you start" list above mentions a brand brain. This job does not use one. The Seller Central reports below are what step 2 reads.
 
 Gather the sales and product facts now. The reports and proof come after the shipments close.
 - **Your sales so far, lead times and case sizes** (required): units sold per week, how fast they are growing, your maker's lead time, shipping time and monthly capacity, and units per case. Put them in a sheet or paste them.
@@ -61,8 +61,8 @@ Pause here: Ship it, keep the proof, and wait until the shipments close. Then ex
 
 ## Next steps to offer
 
-Ignore the suggestions in "After this" that do not fit Amazon claims. Offer these instead:
-- Log each claim as filed, paid or rejected, with the date, so you can follow up before the claim window closes.
+Use these instead of the general "After this" list above:
+- When you file with Amazon, bring the shipment ID, the units sent and received, and the receipt or packing list for each claim. Log each claim as filed, paid or rejected, with the date, so you can follow up before the claim window closes.
 - Run the claim check again each month with fresh reports.
 
 ## What you hand back

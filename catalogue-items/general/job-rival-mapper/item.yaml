@@ -7,7 +7,7 @@ role: make
 job: research
 level: intermediate
 inputs:
-  - type: brief
+  - type: customer_needs
     required: true
   - type: competitor_set
     required: false

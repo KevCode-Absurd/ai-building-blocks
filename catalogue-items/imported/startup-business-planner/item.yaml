@@ -8,11 +8,13 @@ role: make
 job: ops
 level: advanced
 inputs:
-  - type: question
+  - type: idea
     required: true
 outputs:
   - type: plan
   - type: document
+  - type: business_plan
+    required: true
 uses: []
 origin: imported
 source:

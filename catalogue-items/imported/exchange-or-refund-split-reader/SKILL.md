@@ -6,7 +6,6 @@ toolkit: shopify-admin, shopify-admin-execution
 api_version: "2025-01"
 graphql_operations:
   - returns:query
-  - orders:query
 status: stable
 compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ---
@@ -16,7 +15,7 @@ Analyzes return resolutions to calculate the split between exchanges (revenue re
 
 ## Prerequisites
 - Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_orders,read_returns`
-- API scopes: `read_orders`, `read_returns`
+- API scopes: `read_orders`, `read_returns`. Reading returns needs the `read_returns` permission, and what your Shopify plan allows can differ, so check Shopify's docs if the query is refused.
 
 ## Parameters
 
@@ -42,13 +41,13 @@ Analyzes return resolutions to calculate the split between exchanges (revenue re
    - **Store credit**: a refund transaction whose `gateway` is a gift card or store credit (read it from the `transactions` field below). If the gateway does not say clearly, count the return as a refund and tell the user how many were unclear.
    - **Refund**: return has cash/card refund with no exchange
 
-3. **OPERATION:** `orders` — query (if `compare_days_back > 0`)
-   **Inputs:** Same logic for prior period to compute trend
+3. **OPERATION:** `returns` — query again (only if `compare_days_back > 0`)
+   **Inputs:** The same query for the prior window: `created_at:>='<NOW - (days_back + compare_days_back) days>' AND created_at:<'<NOW - days_back days>'`. Categorize each return the same way (step 2), then show the prior split and the change next to the current one in the completion block.
 
 ## GraphQL Operations
 
 ```graphql
-# returns:query — validated against api_version 2025-01
+# returns:query — written for api_version 2025-01 (not validated here; check the field names against your store's API version)
 query ReturnResolutions($query: String!, $after: String) {
   returns(first: 250, after: $after, query: $query) {
     edges {
@@ -110,30 +109,6 @@ query ReturnResolutions($query: String!, $after: String) {
 }
 ```
 
-```graphql
-# orders:query — validated against api_version 2025-01
-query OrdersInPeriod($query: String!, $after: String) {
-  orders(first: 250, after: $after, query: $query) {
-    edges {
-      node {
-        id
-        name
-        totalPriceSet {
-          shopMoney {
-            amount
-            currencyCode
-          }
-        }
-      }
-    }
-    pageInfo {
-      hasNextPage
-      endCursor
-    }
-  }
-}
-```
-
 ## Session Tracking
 
 **Claude MUST emit the following output at each stage. This is mandatory.**
@@ -166,6 +141,7 @@ EXCHANGE vs REFUND RATIO  (<days_back> days)
     Exchange (revenue kept):    <n>  (<pct>%)
     Store credit (deferred):    <n>  (<pct>%)
     Refund (revenue lost):      <n>  (<pct>%)
+    Unclear gateway (counted as refund): <n>
 
   Revenue recovery rate: <pct>%
   (exchanges + store credit as % of all returns; counts returns, not money)
@@ -184,6 +160,7 @@ For `format: json`, emit:
   "exchanges": { "count": 0, "pct": 0 },
   "store_credit": { "count": 0, "pct": 0 },
   "refunds": { "count": 0, "pct": 0 },
+  "unclear_gateway_counted_as_refund": 0,
   "revenue_recovery_rate_pct": 0,
   "output_file": "exchange_refund_ratio_<date>.csv"
 }

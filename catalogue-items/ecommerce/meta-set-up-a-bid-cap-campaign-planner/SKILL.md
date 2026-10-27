@@ -14,8 +14,8 @@ You write a plan. You do not create, edit, publish or pause anything in the ad a
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Meta bid cap adjustment planner](https://useaiblocks.com/skills/meta-adjusting-and-scaling-bid-caps-in-meta-ads-planner).
+- The [Marketing budget allocation planner](https://useaiblocks.com/skills/next-dollar-budget-allocator). It takes the plan.
 - The [Meta creative test campaign planner](https://useaiblocks.com/skills/meta-setup-of-new-ad-campaigns-with-new-creatives-planner).
-- The [Meta campaign scaling planner](https://useaiblocks.com/skills/five-gate-campaign-scaling-planner).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -32,6 +32,10 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+
+The "Your results" line above means the Meta results export described below. The linked-skill and coding-assistant wording above does not apply: paste or attach the data in chat.
+
+Not for: a bid cap that already runs (use the [Meta bid cap adjustment planner](https://useaiblocks.com/skills/meta-adjusting-and-scaling-bid-caps-in-meta-ads-planner)), or new creatives to test (use the [Meta creative test campaign planner](https://useaiblocks.com/skills/meta-setup-of-new-ad-campaigns-with-new-creatives-planner)).
 
 Ask once for anything on the required list that is missing. If it is still missing, mark it `MISSING:` and do not guess a number.
 
@@ -96,4 +100,4 @@ Only the settings table holds proposals. Never present a proposed value as somet
 
 ## Final check
 
-Before you hand it back, check that every row in the table has a reason and a review trigger, that the target and budget came from the person, and that nothing says "guaranteed". List any check you missed under `NOT RUN:`.
+Before you hand it back, check that every row in the table has a reason and a review trigger, that the target and budget came from the person, and that nothing says "guaranteed". List any check you missed under `NOT RUN:`. That is the list the start block calls CHECKS MISSED.

@@ -93,8 +93,9 @@ MISSING: <forecast | dimensions | ship-to countries | bids>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Inbound shipment tracker builder](https://useaiblocks.com/skills/inbound-shipment-tracker-builder).
-- The [Pre-shipment inspection brief writer](https://useaiblocks.com/skills/pre-shipment-inspection-brief-writer). It takes the document.
+- The [Landed cost calculator](https://useaiblocks.com/skills/landed-cost-calculator). It takes the document.
+- The [Supplier shortlist vetter](https://useaiblocks.com/skills/factory-shortlist-vetter). It takes the document.
+- The [Product sample approval reviewer](https://useaiblocks.com/skills/sample-approval-gatekeeper). It takes the document.
 - The [3PL bill auditor](https://useaiblocks.com/skills/3pl-bill-auditor). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

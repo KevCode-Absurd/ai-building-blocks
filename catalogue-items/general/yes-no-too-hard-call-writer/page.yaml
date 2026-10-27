@@ -32,6 +32,7 @@ how_to_use:
   - Paste the four filter results and the plan with the walk-away price.
   - List the best chances you saw in the last year, to compare.
   - Save the call and its review date.
+  - For a large money decision, or money you cannot afford to lose, ask a licensed financial adviser before you commit. This skill is decision support, not advice.
 output_sample:
   input:
     - "The results of your four filters: understand it, quality, people and price"

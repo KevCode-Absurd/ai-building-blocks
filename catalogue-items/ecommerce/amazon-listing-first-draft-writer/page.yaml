@@ -70,9 +70,10 @@ how_it_works:
 
 output_shape: |
   TITLE: <main phrase first> (<characters>)
-  BULLETS: 1 <phrase + true number: benefit, then feature> | 2 | 3 | 4 | 5 <money-back note, test this>
+  BULLETS: 1 <phrase + true number: benefit, then feature> | 2 | 3 | 4 | 5 <money-back note only, if terms were given>
   DESCRIPTION: <one short paragraph>
   BACKEND KEYWORDS: <leftover phrases>
+  NOTES TO YOU (not for the listing): <test the money-back note; title length to check>
   MISSING: <facts or phrases you did not give>
 
 tweaks:

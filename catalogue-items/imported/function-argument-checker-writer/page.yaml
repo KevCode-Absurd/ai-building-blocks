@@ -9,7 +9,7 @@ subhead: Paste a MATLAB function and say what each input should be. Your AI rewr
 explain: |
   A MATLAB function whose inputs are checked with a clean arguments block, replacing older checks like inputParser. Bad inputs are rejected with clear errors instead of silently reshaped.
 
-  It writes the block with the right size, class and validator for each input. It handles repeating arguments, name-value options, and copying properties into class constructors. It also warns about quiet conversions where MATLAB changes the size or class of what you pass in, and tightens rules so a scalar means a scalar. It leaves ordinary guard checks inside the function body alone. You need MATLAB, a paid MathWorks product, to run the result. The skill is under the BSD 2-Clause licence, which lets you use it only with MathWorks products (see LICENSE.md).
+  It writes the block with the right size, class and validator for each input. It handles repeating arguments, name-value options, and copying properties into class constructors. It also warns about quiet conversions where MATLAB changes the size or class of what you pass in, and tightens rules so a scalar means a scalar. It leaves ordinary guard checks inside the function body alone. You need MATLAB, a paid MathWorks product, to run the result. This is a copy of MathWorks' own skill, matlab-validate-function-arguments. Licence: BSD 2-Clause plus a MathWorks term, as the LICENSE.md file says. You may use it only with MathWorks products. The skill file also links MathWorks' own reuse licence page, and it says the same thing.
 when:
   - You want to replace inputParser or validateattributes with an arguments block.
   - Your function accepts wrong types and only fails far down the code.
@@ -18,7 +18,7 @@ when:
 not_for:
   - "You only want guard checks inside the function body: leave the if and error lines as they are."
   - "Your function lives in a .mlx Live Script or .mlapp file: export it to a plain .m file first, then use this."
-  - "You want unit tests for the function: use a testing tool such as matlab-write-tests, not this."
+  - "You want unit tests for the function: use the MATLAB unit test writer, not this."
 you_give:
   - Your MATLAB function or class
   - The expected size, type and range of each input
@@ -30,12 +30,12 @@ you_get:
   - A list of inputs that changed
   - Warnings about silent conversions
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. It is about 2,500 words. If your chat tool cuts it off, paste the main SKILL.md text first and add the reference files only when asked, or upload the skill folder if your AI takes files.
   - Paste your MATLAB function below it.
   - "List what each input should be: size, type and range. Add defaults if you have them."
   - Ask your AI to rewrite the function with an arguments block.
   - Read the warnings on silent conversions and fix any input rules that are too loose.
-  - Run the new function in MATLAB on good and bad inputs. Then write tests with matlab-write-tests.
+  - Run the new function in MATLAB on good and bad inputs. Then write tests with the MATLAB unit test writer.
 output_sample:
   input:
     - Your MATLAB function or class, pasted as text

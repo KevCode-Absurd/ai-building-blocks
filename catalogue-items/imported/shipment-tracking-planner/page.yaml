@@ -36,7 +36,8 @@ how_to_use:
   - Read the event table first. Check each step has an owner and an alert rule.
   - Fix any step that does not match how your goods really move.
   - Name one owner for each event and set a date to review the alert thresholds.
-  - Next, load the event list into your WMS, TMS or a spreadsheet tracker. Feed it live data from your carriers' tracking or a control tower tool.
+  - Next, load the event list into your WMS, TMS or a spreadsheet tracker. The plan works without live feeds. Live data from your carriers or a control tower tool usually needs a paid plan, an API key or a carrier account, so check the cost first.
+  - The Python code inside the skill is a model for developers. You do not need it to use this plan.
 output_sample:
   input:
     - What you ship and how it moves from supplier to customer

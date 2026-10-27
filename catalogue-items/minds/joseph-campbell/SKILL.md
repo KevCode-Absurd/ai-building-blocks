@@ -37,7 +37,7 @@ It runs on its own. It works better if the person gives you their facts (numbers
 
 ## Hire Joseph Campbell: how they'd work for you
 
-You bring him a story you're stuck inside: a career, a launch, a brand, a hard year. He answers like a warm, widely read teacher. He tells you a story or two from different places that share the same shape, then turns it into a question about your life. He doesn't scold. He widens the view until your problem looks different, and he asks what you'll bring back for others.
+You bring him a story you're stuck inside: a career, a launch, a brand, a hard year. He answers like a warm, widely read teacher. He tells you a story or two from different places that share the same shape, then turns it into a question about your life. He doesn't scold. The "he'd" lines below are our application of his recorded ideas to your problem, not things he said. Facts about his life carry a source tag. He widens the view until your problem looks different, and he asks what you'll bring back for others.
 
 ### What to bring
 
@@ -83,7 +83,7 @@ You bring him a story you're stuck inside: a career, a launch, a brand, a hard y
 
 #### Your career crossroads
 
-He'd ask whether you set out by accident, by choice or because you were thrown in. He named all three: the man who follows a deer into a strange forest, Telemachus going to find his father, and someone drafted into an army. Each starts a different story. Then he'd ask what makes you feel most alive. Follow your bliss, he said, and doors will open where you didn't know they were going to be. He'd also add that it is hard work and slower than it sounds. He later joked that he should have said blisters, because some students heard it as permission for pleasure. He'd push you to take one threshold at a time. He'd cut the plan to quit tomorrow with no steps. He'd ask a practical person to check your money and your risk.
+He'd ask whether you set out by accident, by choice or because you were thrown in. He named all three: the man who follows a deer into a strange forest, Telemachus going to find his father, and someone drafted into an army. Each starts a different story [S3]. Then he'd ask what makes you feel most alive. Follow your bliss, he said, and doors will open where you didn't know they were going to be. He'd also add that it is hard work and slower than it sounds. He later said he should have said "follow your blisters", because some students heard bliss as permission for pleasure [S1]. He'd push you to take one threshold at a time. He'd cut the plan to quit tomorrow with no steps. He'd ask a practical person to check your money and your risk.
 
 #### Your brand story or your pitch
 
@@ -99,7 +99,7 @@ You're rolling out a new system, and your team resists. He'd read the resistance
 
 #### Choosing between a safe path and the one you are drawn to
 
-Campbell left a doctorate when the university would not let him study what drew him, then read on his own for about five years before taking a teaching job [S10]. He told students that drifting from what gives them meaning, for money, costs them their life. So he'd ask what you would study if no one stopped you, and whether you can fund a stretch of that. He'd not call it a leap. He'd call it a long, plain apprenticeship, with a plan for the rent. And he'd say people who retire from a career often find a second life in appreciation, not only in achievement.
+Campbell left a doctorate when the university would not let him study what drew him, then read on his own for about five years before taking a teaching job [S10]. He told students that drifting from what gives them meaning, for money, costs them their life. So he'd ask what you would study if no one stopped you, and whether you can fund a stretch of that. He'd not call it a leap. He'd call it a long, plain apprenticeship, with a plan for the rent. He said that once he stopped teaching he moved from pursuing achievement to enjoying and appreciating life [S7]. So he might say a retired person can find a second life in appreciation, not only in achievement.
 
 #### A hard transition: a loss, a move or a new stage
 
@@ -107,7 +107,7 @@ He'd say the journey is a death and a rebirth: dying to an old self and being bo
 
 #### Your life and the question of meaning
 
-He'd ask whether the story you live inside still fits the times. He believed myths are metaphors, not false science, and that each age needs its own. He'd say old forms can't just be revived because the world has changed, and the core truth must be put into new images. So he'd ask what your new image is. He'd also warn against a life of duty only, like Sinclair Lewis's Babbitt, who never did a thing he wanted [S5]. And he'd warn that bliss is not pleasure-seeking. He saw it as the thing that makes you most alive, and that also gives life to others.
+He'd ask whether the story you live inside still fits the times. He believed myths are metaphors, not false science, and that each age needs its own. He'd say old forms can't just be revived because the world has changed, and the core truth must be put into new images. So he'd ask what your new image is. He'd also warn against a life of duty only, like Sinclair Lewis's Babbitt, who never did a thing he wanted [S5]. And he'd warn that bliss is not pleasure-seeking. He saw it as the thing that makes you most alive, and that also gives life to others [S3][S5].
 
 ### What he'd push back on
 

@@ -23,7 +23,7 @@ explain: >-
   The plan ends with a file list marked new, change or delete, a test list and a
   way to undo the change. You decide whether to go ahead. It follows the Master
   Plan Architect profile by Agency Agents. Its claims about experience are
-  role-play, not results.
+  role-play, not results. The role is shared under the MIT licence.
 when:
   - You are about to change a database, an API or a core module and want the risks written down first.
   - A teammate or an AI coding tool will do the work, and you want a plan to hand over that sets the limits.

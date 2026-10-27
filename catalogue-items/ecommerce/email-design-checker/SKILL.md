@@ -104,8 +104,9 @@ MISSING: <what was not given>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Email and SMS results reviewer](https://useaiblocks.com/skills/email-and-sms-performance-reader).
 - The [Email build brief writer](https://useaiblocks.com/skills/email-layout-brief-writer). It takes the audit report.
+- The [Campaign email writer](https://useaiblocks.com/skills/campaign-email-writer). It takes the audit report.
+- The [Win-back flow builder](https://useaiblocks.com/skills/win-back-flow-builder). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

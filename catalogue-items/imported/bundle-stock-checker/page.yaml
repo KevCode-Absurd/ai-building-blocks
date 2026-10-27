@@ -16,12 +16,12 @@ when:
   - One component is running low and you need to know which bundles it affects.
   - You want a safety buffer so parts do not hit zero.
 not_for:
-  - "You have single products with no bundle setup: use the low-inventory-restock skill, or check stock in your Shopify admin."
+  - "You have single products with no bundle setup: use the restock-list-builder skill, or check stock in your Shopify admin."
   - "You want to change stock counts or hide a bundle: this only reads data, so make those changes in Shopify yourself."
   - "Your store is not on Shopify: ask a person on your team to compare parts by hand, since this needs Shopify access."
 you_give:
   - Your store address
-  - Where your bundle parts are listed
+  - "Where your bundle parts are listed: Shopify's own bundle setup, or a bundle metafield (Settings, then Custom data, then Products) holding a list such as [{\"variantId\": \"[VARIANT ID]\", \"quantity\": [NUMBER]}]"
   - A safety stock number (optional)
   - Whether to check active products only (optional)
 you_get:
@@ -30,12 +30,13 @@ you_get:
   - How many bundles you can really sell
   - The part that is the bottleneck
 how_to_use:
-  - Install the Shopify CLI on your computer. Use an AI tool that can run code, such as Claude Code, Cursor, Codex or Gemini CLI.
+  - Install the Shopify CLI on your computer. It is free. Use an AI tool that can run code, such as Claude Code, Cursor, Codex or Gemini CLI. Some of these need a paid plan, so check the tool's pricing first.
   - Sign in with the store auth command. Give it your store address and the read_products and read_inventory scopes.
   - Paste this skill into your AI. Add your store address, and your bundle metafield namespace and key if you use them.
   - Add a safety stock number or active-only setting if you want one (optional).
   - Let your AI run the checks. It only reads data and changes nothing. It counts on-hand stock minus your safety stock. A part that Shopify does not track is listed for review, since it could make the count too high.
-  - Open the bundle_availability CSV. Fix the broken bundles first, starting with the bottleneck part.
+  - Open the bundle_availability CSV. Fix the broken bundles first, starting with the bottleneck part. To restock it, use restock-list-builder. To fix a wrong count, use stock-count-updater.
+  - This skill was not run on a live store for this catalogue. Before you trust the first result, spot-check two bundles by hand in your Shopify admin. This is an MIT-licensed copy of the upstream skill from 40rty AI.
 output_sample:
   input:
     - Your store address

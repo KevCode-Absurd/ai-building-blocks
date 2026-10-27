@@ -9,7 +9,9 @@ subhead: The same recording, spoken by a different voice, with your timing, emot
 explain: |
   The same recording, spoken by a different voice, with your timing, emotion, breaths and pauses kept. It is useful when the performance is right but the voice is not.
 
-  The skill uses the ElevenLabs voice changer, which converts speech to speech. You give an audio file and pick a target voice from your voice library. It handles the limits: five minutes and 50 MB per request, so longer files are cut into chunks and joined again. It also covers output format choices and noise handling. It does not make or clone new voices, only converts into one you already have. It needs an ElevenLabs account and API key. ElevenLabs bills per minute of audio processed, so check your plan before you convert long files.
+  The skill uses the ElevenLabs voice changer, which converts speech to speech. You give an audio file and pick a target voice from your voice library. It handles the limits: five minutes and 50 MB per request, so longer files are cut into chunks and joined again. It also covers output format choices and noise handling. It does not make or clone new voices, only converts into one you already have. It needs an ElevenLabs account and API key. ElevenLabs bills by the length of audio processed, counted against your plan, so check your current plan before you convert long files.
+
+  This is an MIT-licensed copy of the ElevenLabs voice changer skill. We changed only the plain name and this page text. The method is theirs, and credit goes to ElevenLabs.
 when:
   - You recorded a scratch performance and want a character voice on top.
   - You want to dub a voice-over in a different voice without re-recording.
@@ -31,7 +33,7 @@ you_get:
   - Notes on cleaning noisy input
 how_to_use:
   - Check you have permission to use the target voice. If it is a real person's voice, get their OK first.
-  - Get an ElevenLabs account and API key. Some setups run a sign-in command that stores a key for your project.
+  - Get an ElevenLabs account and API key. The setup step runs a command (npx @elevenlabs/cli onboard init) that downloads a tool from npm, signs you in and stores a key for your project. Your AI will tell you before it runs it. If you prefer, make a key in your ElevenLabs account and set it yourself.
   - Open an AI that can run code and has internet access. Paste the skill and add your audio file.
   - Tell your AI which voice from your library to use. Say if the recording is noisy or longer than 5 minutes.
   - Ask it to convert the file and save the result as a new audio file, such as converted.mp3.

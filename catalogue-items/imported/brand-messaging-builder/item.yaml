@@ -12,6 +12,8 @@ inputs:
     required: false
   - type: persona
     required: false
+  - type: audit_report
+    required: false
 outputs:
   - type: brand_brain
 uses: []

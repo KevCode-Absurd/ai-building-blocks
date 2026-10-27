@@ -8,10 +8,11 @@ role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
+  - type: business_profile
     required: true
 outputs:
   - type: plan
+  - type: document
 uses: []
 origin: imported
 source:

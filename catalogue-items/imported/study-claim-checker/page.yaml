@@ -32,9 +32,10 @@ you_get:
   - Questions to ask the authors
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
-  - Paste the full paper or abstract, and the exact claim. Add the outcome that matters to you and the question you want answered.
+  - "Gather first: the full paper text or abstract, the exact claim wording, and the outcome that matters to you. Paste them in, and add the question you want answered."
   - Say how much you know about statistics if you want simpler or more technical wording (optional).
   - Read the concerns first. Check that each one points to a real place in the paper.
+  - If the verdict is weak, check the flagged place in the paper before you share or act on the claim.
   - Next, take each concern back to the paper and check it. If you need a formal written review, use the Manuscript peer review drafter.
   - Skip the figure step unless you want a diagram. It needs code running and a paid OpenRouter key, and it sends your prompt to a third party.
 output_sample:

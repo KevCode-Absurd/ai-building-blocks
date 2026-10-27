@@ -8,7 +8,9 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: plan
+    required: true
+  - type: codebase
     required: true
 outputs:
   - type: code_change

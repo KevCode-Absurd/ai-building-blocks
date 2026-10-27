@@ -7,6 +7,8 @@ job: research-topics
 headline: AI claim fact-check lesson builder
 subhead: A class activity that teaches students to check an AI's claims and citations before they trust them. AI makes errors that old fact-check rules miss, because there is no author or funder to look up.
 explain: |
+  Two terms: lateral reading means leaving a source to see what other sources say about it. The Ennis standard is a test of whether a claim is accurate and well supported.
+
   A class activity that teaches students to check an AI's claims and citations before they trust them. AI makes errors that old fact-check rules miss, because there is no author or funder to look up.
 
   The lesson builds on the SIFT method: stop, investigate, find better coverage, trace claims. It adds moves for four AI errors: invented studies, made-up statistics, real papers credited to the wrong author, and false claims that experts agree. Each gets its own check. Students trace a claim back to its origin. The kit includes a Hallucination Hunt game, a list of error types for your topic, and a teacher script that sets a real citation beside a fake one.
@@ -35,8 +37,8 @@ how_to_use:
   - "Send your details: the AI text students will check, such as an AI summary with named studies, plus your subject, year level and the tools students can use to check. Add the AI tool they use if you know it."
   - Read the error types first. Remove any that do not fit your class.
   - Run the Hallucination Hunt with a real AI answer from your subject, then use the teacher script to show one check aloud.
-  - Check every real citation in the script yourself before class. The Twenge example in the skill file is a made-up illustration, not a real finding.
-  - Next, turn what the Hallucination Hunt finds into a class discussion.
+  - Check every real citation in the script yourself before class. The author name, study and figure in the skill file's example are invented, so do not show them to students as real.
+  - Next, turn what the Hallucination Hunt finds into a class discussion. For a follow-up lesson, use a general source-evaluation lesson. The original collection's source credibility protocol and AI output audit designer are not in this library yet.
 output_sample:
   input:
     - Your subject and year level

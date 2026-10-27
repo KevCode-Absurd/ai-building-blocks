@@ -10,6 +10,8 @@ explain: |
   A chart you can hover, zoom and pan, saved so you can drop it into a web page, report or dashboard. Give it your data and get Plotly code for it. It needs Python and the Plotly package.
 
   The skill helps you choose between the fast high-level interface and the finer-control one for the same chart. It covers more than forty chart types, from lines and bars to maps and 3D. It shows setup with a data table, how to add titles, labels and colours, and how to export the result as a standalone HTML file or an image. It suits notebooks, dashboards and presentations where people need to explore numbers.
+
+  Licence: the written text of this skill is shared under CC BY-4.0 (the LICENSE-CONTENT file). The "MIT" line in the SKILL.md header is the original author's own note. Keep the credit to the author.
 when:
   - You have a CSV and want a chart people can explore.
   - You need a graph to embed in a web page.
@@ -36,7 +38,7 @@ how_to_use:
   - Ask for the chart type you want, or let your AI pick one and say why.
   - Open chart.html in your browser. Hover, zoom and pan to check it. If the chart is blank, check that the CSV header names match the columns you asked to plot.
   - Ask for changes to titles, colours or labels, then save the final file.
-  - Next, embed chart.html in a web page. For live data, move to a dashboard tool such as Dash. For print figures, use a static chart tool such as the Chart maker instead.
+  - Next, embed chart.html in a web page. For live data, move to a dashboard tool such as Dash. For print figures, use a static chart tool such as the Chart maker (chart-maker) instead.
 output_sample:
   input:
     - Your data as a CSV file or a table pasted into the chat

@@ -50,7 +50,7 @@ Start tomorrow morning, not next week. Put a one-hour block on your calendar bef
 
 ### Your fear of asking
 
-He'd say asking is the core discipline: for the meeting, the next step, the deal. Objections are not rejection, but they feel like it, so people hesitate. He cites figures that most people quit after one to four rejections, while it takes about eight asks on average to get a yes, though our record doesn't show the original studies, so treat them as rough. He teaches obstacle immunity: face more rejection over time. He also says to protect sleep, food and exercise, because emotional control takes energy. He'd cut the pep talk and keep the routine.
+He'd say asking is the core discipline: for the meeting, the next step, the deal. Objections are not rejection, but they feel like it, so people hesitate. He quotes widely shared sales figures on how soon people quit and how many asks it takes to get a yes. Our record does not show the original studies, so this mind gives no numbers here. Count your own asks and your own yeses. He teaches obstacle immunity: face more rejection over time. He also says to protect sleep, food and exercise, because emotional control takes energy. He'd cut the pep talk and keep the routine.
 
 ### Your slow research habit
 
@@ -70,7 +70,7 @@ He compares prospecting to the gym: early soreness is the cost of a result that 
 
 ### Your life and career
 
-If you left a job to build your own business, he'd say call everyone you know, take smaller early clients for cash and references, ask for monthly retainers over hourly pay, bring in people who sell better than you, and keep the business bigger than your own name. His own start had no plan and a failed ad portal [S9]. 
+If you left a job to build your own business, he'd say call everyone you know, take smaller early clients for cash and references, ask for monthly retainers over hourly pay, bring in people who sell better than you, and keep the business bigger than your own name. By his own account, his start had no clear plan, and an early ad portal did not earn [S9]. [beyond the record] Details beyond that are not in our partial transcript. 
 He'd say discipline means giving up what you want now for what you want most. Name the goal first. If you're considering a move into sales or a new role, he'd say don't expect to love every part of it. He'd ask which part you avoid, and whether you're dodging it from fear. Then he'd give you one small step with a number, to do tomorrow.
 
 ## What he'd push back on

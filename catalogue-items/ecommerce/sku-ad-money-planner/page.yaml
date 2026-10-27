@@ -101,7 +101,7 @@ output_shape: |
 
 tweaks:
   - what: Grade cut-offs
-    how: The skill uses a starting rule tied to lead time. Replace it with Shopify's own rank or with cut-offs that suit your range.
+    how: The skill uses a starting rule tied to lead time. Replace it with your store's own stock rank, if it has one, or with cut-offs that suit your range.
   - what: Targets for slow stock
     how: Set how much margin you will give up, and in which market. A target at or below break-even turns stock into cash and costs profit.
   - what: Ad spend by SKU
@@ -134,8 +134,8 @@ improve:
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Any chat AI can sort SKUs and do the sums. Check two grades by hand."}
-    - {name: "Shopify", why: "Its Products area ranks stock by sell-through, and its reports give units sold by SKU."}
-    - {name: "Meta Ads Manager or Google Ads", why: "Gives spend and results by product group, so you can split campaigns by product."}
+    - {name: "Shopify", why: "Its reports can show units sold and days of stock by SKU. Fuller reports need a paid Shopify plan."}
+    - {name: "Meta Ads Manager or Google Ads", why: "Needs an ad account. Gives spend and results by product group, so you can split campaigns by product."}
   inputs:
     - "Sell-through and days of stock by SKU from Shopify"
     - "Your supplier's lead times"

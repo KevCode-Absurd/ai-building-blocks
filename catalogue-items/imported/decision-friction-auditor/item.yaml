@@ -10,7 +10,7 @@ level: intermediate
 inputs:
   - type: landing_page
     required: false
-  - type: brief
+  - type: question
     required: false
 outputs:
   - type: audit_report

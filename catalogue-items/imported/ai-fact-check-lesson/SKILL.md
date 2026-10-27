@@ -175,9 +175,9 @@ Return your output in this exact format:
 
 ## Example Output
 
-> **AI Blocks note:** the AI answer in this example is a hypothetical made up to show the method. The Twenge citation, the 47% figure and the search results in the walkthrough are illustrative. They make no claim about the researcher or about what any real paper says. Always check a real citation yourself before you use it.
+> **AI Blocks note:** the AI answer in this example is a hypothetical made up to show the method. The author name "Marlow", the citation, the 47% figure and the search results in the walkthrough are all invented. They make no claim about any real researcher or about what any real paper says. Always check a real citation yourself before you use it.
 
-**Scenario:** *AI output context: "Year 11 Psychology students used ChatGPT to get a summary of research on social media and teenage mental health. The AI produced a 200-word response that included 'According to a 2021 study by Twenge and colleagues published in JAMA Psychiatry, daily social media use of over 3 hours increases depression risk in teenagers by 47%.'" / Student level: "Year 11, basic internet literacy, no formal source evaluation training" / Subject area: "Psychology" / Verification resources: "Google, Google Scholar, school library database"*
+**Scenario:** *AI output context: "Year 11 Psychology students used ChatGPT to get a summary of research on social media and teenage mental health. The AI produced a 200-word response that included 'According to a 2021 study by Marlow and colleagues published in JAMA Psychiatry, daily social media use of over 3 hours increases depression risk in teenagers by 47%.'" / Student level: "Year 11, basic internet literacy, no formal source evaluation training" / Subject area: "Psychology" / Verification resources: "Google, Google Scholar, school library database"*
 
 ---
 
@@ -190,9 +190,9 @@ Return your output in this exact format:
 ### Hallucination Taxonomy
 
 **Citation fabrication: real author, wrong study**
-- **What it looks like:** "Twenge and colleagues (2021) in JAMA Psychiatry" — Jean Twenge is a real researcher who does study social media and mental health. JAMA Psychiatry is a real journal. But did this specific study exist in 2021? The AI has used real names and a real journal to construct a plausible-sounding citation that may never have existed.
-- **Why it's dangerous:** Students searching "Twenge social media mental health" will find real Twenge papers — and may conclude the citation has been verified when they've only verified the author exists, not the specific study.
-- **How to verify:** Search Google Scholar for "Twenge JAMA Psychiatry 2021" — check whether a paper matching this description appears. Then read the abstract to verify it says what the AI claims.
+- **What it looks like:** "Marlow and colleagues (2021) in JAMA Psychiatry" — In this example, imagine Marlow is a real researcher who studies social media and mental health. The name is invented. JAMA Psychiatry is a real journal. But did this specific study exist in 2021? The AI has used real names and a real journal to construct a plausible-sounding citation that may never have existed.
+- **Why it's dangerous:** Students searching "Marlow social media mental health" will find real Marlow papers — and may conclude the citation has been verified when they've only verified the author exists, not the specific study.
+- **How to verify:** Search Google Scholar for "Marlow JAMA Psychiatry 2021" — check whether a paper matching this description appears. Then read the abstract to verify it says what the AI claims.
 
 **Statistical invention**
 - **What it looks like:** "increases depression risk by 47%" — a specific, precise-sounding number. Real psychological research reports effect sizes, correlations, and confidence intervals, not clean percentages like "47%."
@@ -226,8 +226,8 @@ When the AI says "research shows" or "studies have found" without naming a speci
 
 ### Verification Moves
 
-**Verifying a named citation (e.g. "Twenge et al., 2021, JAMA Psychiatry"):**
-- **Step 1:** Go to Google Scholar. Search: Twenge 2021 JAMA Psychiatry social media. Look at the first five results.
+**Verifying a named citation (e.g. "Marlow et al., 2021, JAMA Psychiatry"):**
+- **Step 1:** Go to Google Scholar. Search: Marlow 2021 JAMA Psychiatry social media. Look at the first five results.
 - **Step 2:** If a matching paper appears: click through to the abstract. Does it report the specific claim the AI made (47% depression increase)?
 - **Red flags:** Paper doesn't appear in Scholar. Paper exists but studies a different population (adults, clinical sample). Paper exists but reports different statistics (an odds ratio, not a percentage).
 - **Example walkthrough:** Search → paper appears → abstract shows it studies US adolescents, 2013-2018 data, reports correlations not percentages → the specific "47% depression risk" figure does not appear → AI has either invented or misrepresented this statistic.
@@ -249,18 +249,18 @@ When the AI says "research shows" or "studies have found" without naming a speci
 
 **Discussion questions:**
 - "What would have happened if you'd included this citation in an essay without checking?"
-- "The AI included a real author (Twenge). Does that make the citation more or less trustworthy than if it had invented a fake name? Why?"
+- "The AI included a real author (Marlow). Does that make the citation more or less trustworthy than if it had invented a fake name? Why?"
 - "How long did it take to verify these three claims? Is that time worth spending?"
 
 ### Teacher Modelling Script
 
-"Watch what I do with this AI citation. It says: 'According to a 2021 study by Twenge and colleagues in JAMA Psychiatry, over 3 hours of daily social media use increases depression risk by 47%.' Sounds convincing, right? Real researcher, real journal, specific percentage. Let me show you what fact-checking actually looks like.
+"Watch what I do with this AI citation. It says: 'According to a 2021 study by Marlow and colleagues in JAMA Psychiatry, over 3 hours of daily social media use increases depression risk by 47%.' Sounds convincing, right? Real researcher, real journal, specific percentage. Let me show you what fact-checking actually looks like.
 
-I open Google Scholar. I search: Twenge 2021 JAMA Psychiatry. I get several results — I can see Twenge has published in related areas. But I need THIS specific paper: 2021, JAMA Psychiatry. I scan the results... I see a 2022 paper in JAMA Pediatrics, a 2018 paper in Emotion, but nothing that exactly matches 2021, JAMA Psychiatry. That's a red flag.
+I open Google Scholar. I search: Marlow 2021 JAMA Psychiatry. I get several results — I can see Marlow has published in related areas. But I need THIS specific paper: 2021, JAMA Psychiatry. I scan the results... I see a 2022 paper in JAMA Pediatrics, a 2018 paper in Emotion, but nothing that exactly matches 2021, JAMA Psychiatry. That's a red flag.
 
-Let me try a broader search: Twenge JAMA Psychiatry. Now I'm looking for any Twenge paper in that journal. I see one result, from 2020 — I open it. It's about screen time and wellbeing, using different methods. And critically: it reports a correlation of r=0.05, not '47% increased depression risk.' The statistical language is completely different.
+Let me try a broader search: Marlow JAMA Psychiatry. Now I'm looking for any Marlow paper in that journal. I see one result, from 2020 — I open it. It's about screen time and wellbeing, using different methods. And critically: it reports a correlation of r=0.05, not '47% increased depression risk.' The statistical language is completely different.
 
-My conclusion: this citation either doesn't exist or has been significantly misrepresented. I have NOT proven the claim is false — there may be a different Twenge 2021 paper I haven't found yet. But I cannot use this citation in an essay until I can verify it exists and says what I need it to say. The AI gave me something that looks like a citation but doesn't function as one."
+My conclusion: this citation either doesn't exist or has been significantly misrepresented. I have NOT proven the claim is false — there may be a different Marlow 2021 paper I haven't found yet. But I cannot use this citation in an essay until I can verify it exists and says what I need it to say. The AI gave me something that looks like a citation but doesn't function as one."
 
 ---
 

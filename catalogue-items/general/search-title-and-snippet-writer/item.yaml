@@ -9,6 +9,7 @@ level: beginner
 inputs:
   - {type: brief, required: true}
   - {type: plan, required: false}
+  - {type: keyword_list, required: false}
 outputs:
   - {type: copy_draft}
 uses: []

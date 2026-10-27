@@ -39,6 +39,7 @@ how_to_use:
   - Add this skill and tell your AI your niche, platforms and what a good fit looks like.
   - Pick a quick answer in chat, or a CSV or JSON file. Start with a small number of creators to keep the cost low.
   - Read the ranked table. Open the top creators' profiles yourself and look at recent posts before you reach out.
+  - This collects data about named real people. Take contact details only from a creator's own published profile, and delete the collected creator data when the campaign ends.
   - No code or no Apify account? Paste each creator's public numbers into the chat instead, and ask for the same ranking.
 how_it_works:
   - title: Pick the data source

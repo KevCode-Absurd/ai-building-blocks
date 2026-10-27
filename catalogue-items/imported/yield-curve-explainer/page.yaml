@@ -8,7 +8,9 @@ job: money-and-investing
 headline: Yield curve explainer
 subhead: Pick a market and date. Get sourced curve slopes and plain-language context from comparable government yields.
 explain: |
-  Choose the government market and date. The method uses comparable observations from an identified official source. It states tenor gaps and slope signs, and it avoids mixing par, zero and real-yield series. A nominal-minus-real difference is called a breakeven only for matched Treasury and TIPS tenors and dates; it is not a pure inflation forecast. Missing data stays missing, and the explanation remains descriptive rather than a trade recommendation.
+  Choose the government market and date. The method uses comparable observations from an identified official source. It states tenor gaps and slope signs, and it avoids mixing par, zero and real-yield series. The 2s10s slope is the 10-year yield minus the 2-year yield; a "3-year percentile" shows where today's value ranks among the last three years of daily values from the same series. A nominal-minus-real difference is called a breakeven only for matched Treasury and TIPS tenors and dates; it is not a pure inflation forecast. Missing data stays missing, and the explanation remains descriptive rather than a trade recommendation. It is not investment advice.
+
+  Licence: we share this copy under Apache-2.0, as the LICENSE file says. Credit goes to nighomni123.
 when:
   - You want to understand a named government curve with sourced points.
   - You are writing a market note and need clean slopes and real rates.
@@ -33,9 +35,9 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text.
   - Say which market and date you want, such as the US Treasury curve on one date.
   - Name the slopes you want, such as 2s10s, if you have a preference.
-  - Use an AI that can search the web. Without it, paste in the official yield table yourself.
+  - Use an AI that can search the web. If yours cannot, paste in the official CSV or table for your market and date, and keep its source name and retrieval date with it, so every table can show them.
   - Check that every table shows a source and date, and that gaps are left blank.
-  - Use the result in a market note, or run it again for a later date from the same series to compare.
+  - Use the result in a market note, or run it again for a later date from the same series to compare. For a wider rates and economy view, use rates-economy-dashboard.
 output_sample:
   input:
     - The government or market, such as US or euro area

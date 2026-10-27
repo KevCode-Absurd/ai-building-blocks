@@ -7,9 +7,9 @@ thinking: high
 thinking_why: "The reserve changes both the balance sheet and the income statement, and the direction of each effect can be checked on its own."
 subhead: Give it a company's LIFO inventory, its LIFO reserves, COGS, revenue and tax rate. It restates inventory, COGS and after-tax earnings as if the company used FIFO. You get a bridge from reported to FIFO figures, with checks and gaps listed.
 explain: |-
-  A FIFO analytical restatement with inventory, COGS and after-tax earnings differences.
+  Companies that use LIFO report lower inventory and often higher COGS than FIFO companies. The filing gives the LIFO reserve, the gap between the two. This skill uses it to restate inventory, COGS and after-tax earnings on a FIFO basis, so you can compare companies like for like.
 
-  Issuer accounting and earnings. Illustrative figures. The reserve rises from 40 to 60, an increase of 20. That lowers FIFO COGS from 350 to 330, so gross margin is 170 / 500 = 34%. FIFO inventory is 200 + 60 = 260. After tax at 25%, earnings rise by 20 x 75% = 15. A closing reserve of 30, below the opening 40, reverses these directions.
+  Illustrative figures, not a real company: the reserve rises from 40 to 60, an increase of 20. That lowers FIFO COGS from 350 to 330, so gross margin is 170 / 500 = 34%. FIFO inventory is 200 + 60 = 260. After tax at 25%, earnings rise by 20 x 75% = 15. A closing reserve of 30, below the opening 40, reverses these directions.
 when:
   - You compare a LIFO company with a FIFO company and need the numbers on the same basis.
   - You want to know how much a rising LIFO reserve lowered reported profit.
@@ -62,12 +62,12 @@ output_sample:
     - name: MISSING and CHECKS MISSED
       contains: Inputs that were not supplied and any checks that failed or could not run.
 how_it_works:
-  - title: 1. Confirm US-GAAP LIFO usage and read the reserve definition; exclude acquisitions, currency and method changes from the operating reserve movement when necessary
-    text: Confirm US-GAAP LIFO usage and read the reserve definition; exclude acquisitions, currency and method changes from the operating reserve movement when necessary.
-  - title: 2. Add closing reserve to reported LIFO inventory; subtract the operating reserve increase from LIFO COGS to estimate FIFO COGS
-    text: Add closing reserve to reported LIFO inventory; subtract the operating reserve increase from LIFO COGS to estimate FIFO COGS.
-  - title: 3. Reconcile the gross-margin difference and stated tax effect; separately flag reserve liquidation rather than presenting the benefit as operating growth
-    text: Reconcile the gross-margin difference and stated tax effect; separately flag reserve liquidation rather than presenting the benefit as operating growth.
+  - title: Checks the basis
+    text: Confirms US-GAAP LIFO use and how the filing defines the reserve. Takes out acquisition, currency and method-change effects.
+  - title: Restates inventory and COGS
+    text: FIFO inventory is LIFO inventory plus the closing reserve. FIFO COGS is LIFO COGS less the rise in the reserve.
+  - title: Restates margin and earnings
+    text: Shows the gross margin and after-tax earnings difference, and flags a reserve fall so it is not shown as growth.
 output_shape: |-
   A FIFO analytical restatement with inventory, COGS and after-tax earnings differences.
   Scope and dated sources

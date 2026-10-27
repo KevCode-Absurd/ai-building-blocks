@@ -1,6 +1,8 @@
+import { SUPPORTED_PROTOCOL_VERSIONS } from '@modelcontextprotocol/sdk/types.js';
 import { apiSecurity, type SecurityEnv } from './api-security.ts';
 import { PublicCatalogueService, PublicApiError } from './public-catalogue.ts';
-import { handlePublicMcp, PUBLIC_MCP_TOOLS } from './public-mcp.ts';
+import { handlePublicMcp, PUBLIC_MCP_TOOLS, PUBLIC_MCP_VERSION, SKILLS_EXTENSION } from './public-mcp.ts';
+import { sha256 } from '../lib/workflow-execution.ts';
 
 export type PublicApiEnv = SecurityEnv & {
   ASSETS: { fetch(request: Request): Promise<Response> };
@@ -61,12 +63,54 @@ function queryArguments(url: URL) {
     if (['limit', 'offset', 'resource_offset', 'resource_limit'].includes(key)) {
       if (!/^\d+$/.test(value)) throw new PublicApiError(400, 'invalid_arguments', 'Pagination must be a nonnegative integer.');
       args[key] = Number(value);
+    } else if (key === 'tested') {
+      if (value !== 'true' && value !== 'false') throw new PublicApiError(400, 'invalid_arguments', 'tested must be true or false.');
+      args[key] = value === 'true';
     } else args[key] = value;
   }
   return args;
 }
 
+const SERVER_CARD = '/mcp/server-card', AI_CATALOG = '/.well-known/ai-catalog.json';
+/** Every path this module answers; the Worker and the Vite bridge route them here before static assets. */
+export const isPublicApiRoute = (path: string) => path === '/mcp' || path === '/api/v1' || path.startsWith('/api/v1/') || path === SERVER_CARD || path === AI_CATALOG;
+
+/** MCP discovery (SEP-2127 server cards and the AI Catalog, docs/discovery.md in modelcontextprotocol/experimental-ext-server-card):
+ *  a card for the public server at <mcp url>/server-card and a domain catalogue pointing to it. Public metadata only,
+ *  so any origin may read it; it never lists tools (hosts list those after connecting). */
+function serverCard(origin: string) {
+  return {
+    $schema: 'https://static.modelcontextprotocol.io/schemas/v1/server-card.schema.json',
+    name: 'com.useaiblocks/library', version: PUBLIC_MCP_VERSION, title: 'AI Blocks',
+    description: 'Find and load skills, workflows, agents, prompts, minds and AI tools just in time.',
+    websiteUrl: `${origin}/api-and-mcp`,
+    icons: [{ src: `${origin}/icon-512.png`, mimeType: 'image/png', sizes: ['512x512'] }],
+    remotes: [{ type: 'streamable-http', url: `${origin}/mcp`, supportedProtocolVersions: [...SUPPORTED_PROTOCOL_VERSIONS] }],
+    _meta: { 'com.useaiblocks/library': { openapi: `${origin}/api/v1/openapi.json`, extensions: [SKILLS_EXTENSION], read_only: true, authentication: 'none' } },
+  };
+}
+const aiCatalog = (origin: string) => ({ specVersion: '1.0', entries: [{ identifier: `urn:air:${new URL(origin).hostname.replace(/^www\./, '')}:mcp:library`, type: 'application/mcp-server-card+json', url: `${origin}${SERVER_CARD}` }] });
+
+async function discovery(request: Request, env: PublicApiEnv, route: string): Promise<Response> {
+  const cors = { 'access-control-allow-origin': '*', 'access-control-allow-methods': 'GET', 'access-control-allow-headers': 'Content-Type, If-None-Match', 'access-control-expose-headers': 'ETag', 'x-content-type-options': 'nosniff' };
+  if (env.PUBLIC_API_ENABLED !== 'true') return publicJson(503, { error: { code: 'service_disabled', message: 'The API and MCP service is not enabled.' } }, cors);
+  if (request.method === 'OPTIONS') return new Response(null, { status: 204, headers: { ...cors, 'access-control-max-age': '600' } });
+  if (!['GET', 'HEAD'].includes(request.method)) return publicJson(405, { error: { code: 'method_not_allowed', message: 'Use GET.' } }, { ...cors, allow: 'GET, HEAD, OPTIONS' });
+  // Host checks and read rate limits as for the rest of the API, without the origin allow-list (cards are for anyone).
+  const headers = new Headers(request.headers); headers.delete('origin'); headers.delete('sec-fetch-site');
+  const denied = await apiSecurity(new Request(request.url, { method: request.method, headers }), env);
+  if (denied) { const out = new Headers(denied.headers); for (const [k, v] of Object.entries(cors)) out.set(k, v); return new Response(denied.body, { status: denied.status, headers: out }); }
+  const origin = new URL(request.url).origin;
+  const body = JSON.stringify(route === SERVER_CARD ? serverCard(origin) : aiCatalog(origin));
+  const etag = `"${(await sha256(new TextEncoder().encode(body))).slice(0, 32)}"`;
+  const common = { ...cors, etag, 'cache-control': 'public, max-age=3600', vary: 'Accept' };
+  if ((request.headers.get('if-none-match') ?? '').split(',').map(s => s.trim().replace(/^W\//, '')).includes(etag)) return new Response(null, { status: 304, headers: common });
+  return new Response(request.method === 'HEAD' ? null : body, { status: 200, headers: { ...common, 'content-type': route === SERVER_CARD ? 'application/mcp-server-card+json' : 'application/ai-catalog+json' } });
+}
+
 export async function handlePublicApi(request: Request, env: PublicApiEnv): Promise<Response> {
+  const discoveryRoute = new URL(request.url).pathname.replace(/\/+$/, '');
+  if (discoveryRoute === SERVER_CARD || discoveryRoute === AI_CATALOG) return discovery(request, env, discoveryRoute);
   const denied = await publicApiSecurity(request, env); if (denied) return denied;
   const origin = request.headers.get('origin');
   const finish = (response: Response) => {
@@ -96,7 +140,8 @@ export async function handlePublicApi(request: Request, env: PublicApiEnv): Prom
     if (['GET', 'HEAD'].includes(request.method) && route === '/api/v1/status') return finish(publicJson(200, {
       service: 'ai-blocks', api_version: 'v1', model_calls: false, hosted_execution: false,
       persistence: 'client', authentication: 'public-catalogue-only', historical_revisions: false,
-      tools: ['search_library', 'get_skill', 'get_workflow', 'get_resource', 'prepare_workflow'],
+      tools: PUBLIC_MCP_TOOLS.map(tool => tool.name),
+      mcp: { url: `${url.origin}/mcp`, server_card: `${url.origin}${SERVER_CARD}`, version: PUBLIC_MCP_VERSION, protocol_versions: [...SUPPORTED_PROTOCOL_VERSIONS], prompts: true, resources: true, extensions: [SKILLS_EXTENSION] },
     }));
     if (['GET', 'HEAD'].includes(request.method) && route === '/api/v1/openapi.json') return finish(publicJson(200, openApi(url.origin)));
     if (route === '/api/v1/workflow-preparations') {
@@ -108,14 +153,23 @@ export async function handlePublicApi(request: Request, env: PublicApiEnv): Prom
       if (!input || typeof input !== 'object' || Array.isArray(input)) throw new PublicApiError(400, 'invalid_arguments', 'Send a JSON object.');
       return finish(publicJson(200, await service.callTool('prepare_workflow', input as Record<string, unknown>)));
     }
-    const match = route.match(/^\/api\/v1\/(skills|workflows|resources)\/([a-z0-9][a-z0-9-]{0,119})$/);
-    const tool = route === '/api/v1/search' ? 'search_library' : match ? ({ skills: 'get_skill', workflows: 'get_workflow', resources: 'get_resource' } as Record<string, string>)[match[1]] : null;
+    const match = route.match(/^\/api\/v1\/(skills|workflows|resources|items)\/([a-z0-9][a-z0-9-]{0,119})$/);
+    // fetch's ids are type/id, so a document route takes one or two path segments (or an encoded slash).
+    const document = route.replace(/%2F/gi, '/').match(/^\/api\/v1\/documents\/((?:[a-z_-]{3,20}\/)?[a-z0-9][a-z0-9-]{0,119})$/);
+    const tool = route === '/api/v1/search' ? 'search_library' : route === '/api/v1/plan' ? 'plan_workflow' : route === '/api/v1/documents' ? 'search' : document ? 'fetch'
+      : match ? ({ skills: 'get_skill', workflows: 'get_workflow', resources: 'get_resource', items: 'get_item' } as Record<string, string>)[match[1]] : null;
     if (!tool) return finish(publicJson(404, { error: { code: 'not_found', message: 'API route not found.' } }));
     if (!['GET', 'HEAD'].includes(request.method)) return finish(publicJson(405, { error: { code: 'method_not_allowed', message: 'Use GET.' } }, { allow: 'GET, HEAD, OPTIONS' }));
     const args = queryArguments(url);
-    if (match) {
-      if (Object.hasOwn(args, 'slug')) throw new PublicApiError(400, 'invalid_arguments', 'Specify the skill in the route, not the query.');
-      args.slug = match[2];
+    // ?q= is the request on the plan route, as on search.
+    if (tool === 'plan_workflow' && Object.hasOwn(args, 'query')) {
+      if (Object.hasOwn(args, 'request')) throw new PublicApiError(400, 'invalid_arguments', 'Duplicate query parameters are not supported.');
+      args.request = args.query; delete args.query;
+    }
+    const pathKey = tool === 'get_item' || tool === 'fetch' ? 'id' : 'slug';
+    if (match || document) {
+      if (Object.hasOwn(args, pathKey)) throw new PublicApiError(400, 'invalid_arguments', 'Specify the item in the route, not the query.');
+      args[pathKey] = document ? document[1] : match![2];
     }
     return finish(publicJson(200, await service.callTool(tool, args)));
   } catch (error) {
@@ -127,10 +181,14 @@ export async function handlePublicApi(request: Request, env: PublicApiEnv): Prom
 function openApi(origin: string) {
   const response = { description: 'Structured result with explicit revision hashes and execution limitations.' };
   const schema = (name: string) => PUBLIC_MCP_TOOLS.find(tool => tool.name === name)!.inputSchema;
-  const parameters = (name: string, route = false) => Object.entries(schema(name).properties ?? {}).map(([key, value]) => ({ name: key, in: route && key === 'slug' ? 'path' : 'query', required: (schema(name).required ?? []).includes(key), schema: value }));
-  return { openapi: '3.1.0', info: { title: 'AI Blocks public API', version: '1.0.0', description: 'Stateless catalogue retrieval and workflow validation. All inference and execution happen in the client.' }, servers: [{ url: origin }], paths: {
+  const parameters = (name: string, route = '') => Object.entries(schema(name).properties ?? {}).map(([key, value]) => ({ name: key, in: key === route ? 'path' : 'query', required: key === route || (schema(name).required ?? []).includes(key), schema: value }));
+  return { openapi: '3.1.0', info: { title: 'AI Blocks public API', version: PUBLIC_MCP_VERSION, description: 'Stateless catalogue retrieval and workflow validation, the same tools as the MCP server at /mcp. All inference and execution happen in the client.' }, servers: [{ url: origin }], paths: {
     '/api/v1/search': { get: { operationId: 'search_library', parameters: parameters('search_library'), responses: { '200': response } } },
-    ...Object.fromEntries([['skills', 'get_skill'], ['workflows', 'get_workflow'], ['resources', 'get_resource']].map(([kind, operationId]) => [`/api/v1/${kind}/{slug}`, { get: { operationId, parameters: parameters(operationId, true), responses: { '200': response } } }])),
+    '/api/v1/plan': { get: { operationId: 'plan_workflow', parameters: parameters('plan_workflow'), responses: { '200': response } } },
+    ...Object.fromEntries([['skills', 'get_skill'], ['workflows', 'get_workflow'], ['resources', 'get_resource']].map(([kind, operationId]) => [`/api/v1/${kind}/{slug}`, { get: { operationId, parameters: parameters(operationId, 'slug'), responses: { '200': response } } }])),
+    '/api/v1/items/{id}': { get: { operationId: 'get_item', parameters: parameters('get_item', 'id'), responses: { '200': response } } },
+    '/api/v1/documents': { get: { operationId: 'search', parameters: parameters('search'), responses: { '200': response } } },
+    '/api/v1/documents/{id}': { get: { operationId: 'fetch', description: 'id is type/id from search, such as skill/ad-angle-planner.', parameters: parameters('fetch', 'id'), responses: { '200': response } } },
     '/api/v1/workflow-preparations': { post: { operationId: 'prepare_workflow', requestBody: { required: true, content: { 'application/json': { schema: schema('prepare_workflow') } } }, responses: { '200': response } } },
   } };
 }

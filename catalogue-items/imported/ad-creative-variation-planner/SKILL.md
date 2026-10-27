@@ -12,7 +12,7 @@ A senior creative strategist's playbook for producing ad creative that performs.
 
 Performance creative is a different discipline from brand creative. Brand work optimizes for memorability, emotional resonance, and distinctive identity. Performance creative optimizes for stopping the scroll, communicating value in three seconds, and producing a click. Both matter. Mixing them up costs money. Brand creative running as performance ads bleeds budget; performance creative running as brand ads erodes equity.
 
-This skill is the discipline that produces performance creative without diluting brand. It assumes you know your audience and offer (use your own media plan and audience notes). It assumes you have brand-voice guidance (your own voice notes, or the Brand voice editor in this library). The hard part is the systematic production of variations that test cleanly and ship without manual approval bottlenecks, and that is what is here.
+This skill is the discipline that produces performance creative without diluting brand. It assumes you know your audience and offer (use your own media plan and audience notes). It assumes you have brand-voice guidance (your own short voice notes). The hard part is the systematic production of variations that test cleanly and ship without manual approval bottlenecks, and that is what is here.
 
 When to use this skill: producing ad creative for paid campaigns, planning a creative testing cycle, diagnosing creative fatigue, or auditing why creative is not converting.
 
@@ -40,7 +40,7 @@ A worked example. A premium coffee brand running a 60-second YouTube awareness a
 
 ## Hook patterns: the first 3 seconds
 
-> **AI Blocks note:** every number, result and proof point in the hook examples below (such as "cut CAC 40% in 30 days" or "10,000+ teams") is a placeholder. Replace it with a verified result of your own before any ad runs, or leave it out. The fatigue limits and performance gaps later in this file are the author's rules of thumb, not sourced figures. Check them against your own account.
+> **AI Blocks note:** every number, result and proof point in the hook examples below is a bracketed placeholder. Fill each one with a verified result of your own before any ad runs, or leave the hook out. Never invent a figure, customer count or result. The fatigue limits and performance gaps later in this file are the author's rules of thumb, not sourced figures. Check them against your own account.
 
 The biggest lever in performance creative. If the hook fails, no amount of body copy or CTA can recover the impression. A user who scrolled past the first second has already decided. The hook is the whole game until the body justifies why the user kept watching.
 
@@ -49,15 +49,15 @@ Twelve hook patterns work consistently. Detail in [`references/hook-pattern-libr
 1. **Problem-agitate-solve.** Open with the problem the audience feels. Agitate by naming the consequence. Solve with the offer. Works when the audience recognizes the pain.
 2. **Direct callout to audience.** "If you are a B2B founder running paid ads..." Triggers self-identification. Works when the audience is narrow and self-aware.
 3. **Contrarian claim.** "Stop using lookalike audiences." Hooks attention by violating expectation. Works when the audience has heard the conventional wisdom too often.
-4. **Result-led.** "How we cut CAC 40% in 30 days." Specific number, specific timeframe. Works when the result is real and documented.
-5. **Curiosity gap.** "The mistake 80% of marketers make..." Promises a payoff after the gap. Works when the gap is real; clickbait without payoff trains the audience to scroll past.
-6. **Social proof at top.** "Used by 10,000+ teams." Validation before pitch. Works when the proof is impressive enough to do the heavy lifting.
+4. **Result-led.** "How we [YOUR VERIFIED RESULT] in [TIMEFRAME]." Specific number, specific timeframe. Works when the result is real and documented.
+5. **Curiosity gap.** "The mistake [VERIFIED SHARE] of [YOUR AUDIENCE] make..." Promises a payoff after the gap. Works when the gap is real; clickbait without payoff trains the audience to scroll past.
+6. **Social proof at top.** "Used by [VERIFIED CUSTOMER COUNT] [CUSTOMER TYPE]." Validation before pitch. Works when the proof is impressive enough to do the heavy lifting.
 7. **Visual pattern interrupt.** A surprising visual that does not match the platform's usual feed flow. Works on TikTok and Reels where the pattern is fast and the interrupt is louder.
-8. **Question that hits intent.** "Tired of paying $400 for project management software?" The question pre-qualifies the audience. Works when the question matches a real search query the audience has typed.
-9. **Number-led.** "3 changes that doubled our ROAS." Lists trigger the brain's pattern-completion instinct. Works for educational content; less so for product ads.
-10. **Personal story open.** "Last year I was burning $50K a month on Meta ads with no return..." First-person specificity is hard to skip. Works when the story is real and the conclusion is action-relevant.
+8. **Question that hits intent.** "Tired of paying [PRICE] for [THE THING YOUR BUYER PAYS FOR TODAY]?" The question pre-qualifies the audience. Works when the question matches a real search query the audience has typed.
+9. **Number-led.** "[NUMBER] changes that [YOUR VERIFIED RESULT]." Lists trigger the brain's pattern-completion instinct. Works for educational content; less so for product ads.
+10. **Personal story open.** "Last year I was spending [YOUR REAL AMOUNT] a month on [CHANNEL] with no return..." First-person specificity is hard to skip. Works when the story is real and the conclusion is action-relevant.
 11. **Comparison.** "X vs Y: which actually works." Pits two options against each other. Works when the audience is in evaluation mode.
-12. **Behind-the-scenes / process.** "How we onboard a new client in 7 days..." Demystifies the work. Works when the process is the differentiator.
+12. **Behind-the-scenes / process.** "How we [YOUR REAL PROCESS] in [YOUR REAL TIME]..." Demystifies the work. Works when the process is the differentiator.
 
 For each pattern, the anti-pattern is the same: a hook that does not actually hook. Generic openings ("In today's world...", brand-logo cards, slow zooms over title cards) train the audience to scroll past. The first second is for the hook. The brand can wait.
 
@@ -138,7 +138,7 @@ Fatigue is real. The same audience seeing the same creative six times a week tun
 4. **Negative comments increasing.** A direct user signal that the audience is irritated.
 5. **Quality ranking dropping.** Meta folds hide and report signals into Quality ranking (above average, average, below average) rather than exposing a negative-feedback-rate column. TikTok exposes "not interested" rate.
 
-Refresh cadence. Weekly for high-spend campaigns ($50K+/month). Biweekly for medium spend. Monthly for low spend. The economics: producing a fresh variant is cheaper than running tired creative for one extra week.
+Refresh cadence (the author's rule of thumb, not a sourced figure). Weekly for high-spend campaigns. Biweekly for medium spend. Monthly for low spend. The economics: producing a fresh variant is cheaper than running tired creative for one extra week.
 
 The decision tree. If a top performer's metrics are still strong but frequency is climbing, ship variants of the same concept (same hook structure, different copy and visuals). If the metrics are dropping, retire the concept and ship a new one. Detail in [`references/fatigue-detection-checklist.md`](references/fatigue-detection-checklist.md).
 
@@ -189,7 +189,7 @@ Eight patterns recur across creative production work. The short version.
 - "Creative passes brand approval but underperforms." Brand discipline at the cost of performance discipline. The hierarchy is wrong; voice in every frame, performance in the structure.
 - "TikTok ad uses Meta-style production." Platform norm violation. TikTok rejects polished ad creative; phone-shot native wins.
 - "Our hooks all start with the brand logo." Kills the first-3-second hook. Brand logo belongs at second 1 to 3 (after the hook lands), not at second 0.
-- "We never refresh creative because the old set still works ok." Incremental loss compounds. CTR decay is gradual; the team that does not refresh discovers a 40% performance gap when they finally check.
+- "We never refresh creative because the old set still works ok." Incremental loss compounds. CTR decay is gradual; the team that does not refresh finds a large performance gap when they finally check (the original author gives no source for the size).
 
 ---
 

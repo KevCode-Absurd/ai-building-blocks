@@ -62,6 +62,8 @@ Who answered and who did not. The themes, with counts on each list. The conteste
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Blame-free review agenda writer](https://useaiblocks.com/skills/blame-free-review-agenda-writer). It takes the audit report.
+- The [Early idea protection planner](https://useaiblocks.com/skills/new-idea-protection-planner). It takes the audit report.
+- The [Problem response planner](https://useaiblocks.com/skills/proportional-fix-planner). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -10,6 +10,8 @@ explain: |
   Faster code that still gives the same answers. You hand over code that works but is too slow on big inputs, and the skill cuts its time or memory cost one change at a time.
 
   Its firm rule is that tests must pass before and after every change. If you have no tests, it first writes one from a sample input and the current output. Then it makes a single transformation, such as replacing a nested scan with a lookup table or running independent awaits together, and runs the tests. A failed test means the change is reverted and the work stops. It also fixes N+1 queries in common ORMs. No change goes in without proof.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The skill file header (morsechimwai) says Apache-2.0. Credit goes to morsechimwai and sickn33.
 when:
   - A function times out when the list gets large.
   - Nested loops are slowing a report that used to be quick.
@@ -35,6 +37,7 @@ how_to_use:
   - Let it run the tests first. If you have none, it writes one from a sample input and the current result.
   - Check each change it proposes. If a test fails, it undoes that change and stops.
   - Apply the final diff only after your own tests pass.
+  - Next, commit the change with the before and after timings in the commit message, and run your full test suite in your build system.
   - For new code, plan the approach first. For math-level changes, such as a Bloom filter or an FFT, ask a developer.
 output_sample:
   input:

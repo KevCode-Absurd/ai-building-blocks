@@ -8,7 +8,10 @@ job: analysis
 level: advanced
 inputs:
   - {type: source_text, required: true}
+  - {type: spreadsheet, required: false}
+  - {type: financial_statements, required: true}
 outputs:
+  - {type: audit_report}
   - {type: plan}
 uses: [defensive-stock-quality-screener, earnings-padding-detector, defensive-price-ceiling-tester, defensive-stock-list-builder, sit-still-rule-writer]
 steps:

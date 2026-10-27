@@ -46,7 +46,7 @@ Just run `/release-skills` - auto-detects your project configuration.
 ### Step 1: Detect Project Configuration
 
 1. Check for `.releaserc.yml` (optional config override)
-   - If present, inspect whether it defines release hooks. Hook commands run on the user's computer, so show them to the user and get a yes before running any hook from a repo the user did not write
+   - If present, inspect whether it defines release hooks. Hook commands run on the user's computer. If any hook exists, stop and list every hook command to the user before doing anything else. Do not run a hook, even in a dry run, until the user says yes
 2. Auto-detect version file by scanning (priority order):
    - `package.json` (Node.js)
    - `pyproject.toml` (Python)
@@ -271,6 +271,8 @@ project:
 
 ### Step 6: Commit Each Skill/Module Separately
 
+Do not make any commit in this step until the user has answered the Step 8 questions. Show the planned commit list and the changelog preview first, then commit only after the user says yes.
+
 For each skill/module group (in order of changes):
 
 1. **Check README updates needed**:
@@ -336,7 +338,7 @@ git commit -m "docs(project): update architecture documentation"
 
 ### Step 8: User Confirmation
 
-Before creating the release commit, ask user to confirm:
+Before creating any commit (the per-module commits in Step 6 and the release commit in Step 9), ask user to confirm:
 
 **Use AskUserQuestion with three questions**:
 
@@ -392,7 +394,7 @@ After user confirmation:
    ```
    If `.releaserc.yml` sets `tag.sign: true`, use `git tag -s` with the same notes file.
 
-4. **Push if user confirmed** (Step 8). This assumes a remote named `origin` and the branch `main`. Check your real remote and branch name first and use them if they differ:
+4. **Push if user confirmed** (Step 8). Do not assume the remote or branch. Run `git remote -v` and `git branch --show-current`, tell the user the exact remote and branch you will push to, and wait for a yes. Examples below use `origin` and `main`; substitute the real names:
    ```bash
    git push origin main
    git push origin v{VERSION}

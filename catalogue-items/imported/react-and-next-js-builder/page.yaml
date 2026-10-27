@@ -10,6 +10,8 @@ explain: |
   React and Next.js components for the screen you describe, written in TypeScript with Tailwind styling, and checked for load speed and bundle size. You get code you can drop into a project.
 
   The skill starts with a project scaffold if you need one, then generates components in a set structure. It applies common React patterns and Next.js performance rules, such as splitting code and loading images well. A bundle analyser shows what is making the app heavy, so you cut the real cause. It also covers accessibility checks and testing set-up. Python scripts do the scaffolding and analysis, and you need Node installed to run the result.
+
+  The skill file names an agent, a slash command and other skills (cs-frontend-engineer, /cs:frontend-review, performance-profiler, a11y-audit). They belong to the author's full pack and are not in this item. The load-time targets and bundle budgets in its profiles, and the package sizes it quotes, are the author's starting points, not measured facts. Set your own from your users and pages, and check package sizes on bundlephobia or npm.
 when:
   - You need a new screen built in React with Tailwind.
   - Your Next.js page loads slowly and you want to know why.
@@ -31,10 +33,12 @@ you_get:
 how_to_use:
   - Use an AI that can run code and read files, such as Claude with code tools. Make sure Node and Python are installed.
   - Add the skill folder to your AI, or paste the skill text into the chat.
+  - The agent, slash command and extra skills named in the skill file are not included. Answer the four questions yourself when your AI asks, and carry on with the scripts.
   - Describe the screen you want. Say if you have a project folder or need a new one. Your AI will also ask four things first. They are the main device and network, the load-time target, whether the pages must rank in search or sit behind a sign-in, and your accessibility target.
   - Let your AI build the project and the component. Run it on your computer with npm run dev.
   - Ask for the bundle check. Fix the heavy packages it lists, then run the check again.
   - Open your site in the Chrome browser and run Lighthouse to measure real load speed. The bundle check alone does not show it.
+  - After each fix, run the bundle check again and compare the Lighthouse scores before and after. Keep the change only if the score improves.
 output_sample:
   input:
     - A plain description of the screen you want

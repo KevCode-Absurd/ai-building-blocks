@@ -95,6 +95,7 @@ output_shape: |
   START-UP CASH: <first order + about 1,000 ads> vs <cash you can lose>
 
   SCORE <n>/100: margin <n>/40, price vs landed cost <n>/20, thirds rule <n>/20, cash <n>/20
+  CHECKS MISSED: <none | parts of the score or checks that could not run>
   MISSING: <current fee figures | size and weight>
   CHECK IN SELLER CENTRAL: <referral rate, size tier, pick and pack, storage, brand bonus>
 

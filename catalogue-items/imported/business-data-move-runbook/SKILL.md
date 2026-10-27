@@ -26,6 +26,8 @@ The runbook isn't enterprise-scale complexity — it's **a pragmatic checklist t
 
 Not every data move needs a runbook. Moving a team's Notion docs from one workspace to another = skip. Moving AP history from QBO to NetSuite = definitely runbook.
 
+If you have an export or field list from the old tool, share it as a spreadsheet. Phase 1 uses it to map source fields to target fields.
+
 ## Structure
 
 The runbook has 7 phases: **Plan → Extract → Transform → Load → Validate → Cutover → Decommission**. At this scale, phases 1–4 might take 1–4 weeks; cutover is often a weekend; decommission is 30–90 days of keeping old system read-only.

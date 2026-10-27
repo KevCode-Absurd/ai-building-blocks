@@ -94,9 +94,9 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep your rate, revision limit and payment terms in one note, and paste it each time.
+  - Save the scope list from each job, so the next quote starts from a scope you already trust.
+  - Ask your lawyer or contract template to mark any term on the review list you must always change, and paste that list next time.
 works_best_with:
   tools:
     - name: Claude, ChatGPT or Gemini

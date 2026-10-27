@@ -84,6 +84,9 @@ output_shape: |-
 
   NEXT STEP
   <the smallest useful step>
+
+  CHECKS MISSED
+  <one line per check that failed or could not run, or none>
 output_sample:
   input:
     - Your code project, or its main folders, language and database
@@ -108,6 +111,8 @@ output_sample:
       contains: Cases for money conversion, scoring, empty data, a check that can't run and a wrong account.
     - name: Assumptions and open questions
       contains: Each starting limit, weight and grade band, and who confirms it.
+    - name: Checks missed
+      contains: One line for each check that failed or could not run, or none.
 works_best_with:
   tools:
     - name: Claude Code

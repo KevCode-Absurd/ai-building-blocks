@@ -10,6 +10,8 @@ explain: |
   A strategy or planning document written in your own words, because you answer and the AI only asks. You name the document, such as principles, priorities, a vision or a ranked list. It makes a skeleton file and asks one question at a time.
 
   After each answer it patches your words into the right section, never rewriting the whole file, then asks the next question or a follow-up if the answer was thin. It will not suggest content for you. That keeps the document honest, because the thinking is yours. It is a good fit for quarterly reviews or notes you will return to for years. It is not for day planning or task lists.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The skill file itself says MIT, and the original author is davidondrej. Credit goes to davidondrej and sickn33.
 when:
   - You need to write down your priorities but staring at a blank page stalls you.
   - You want a quarterly review that reflects your real thinking.
@@ -29,7 +31,7 @@ you_get:
   - Your answers placed in the right sections
   - A finished document in your words
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text. A tool that can save and edit files works best.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. A tool that can save and edit files works best. In a plain chat that cannot write files, ask the AI to show the full updated document after each answer, and copy it into your own file.
   - Tell it which document you want, such as principles, priorities, a vision or a ranked list.
   - Answer each question in your own words. It asks only one at a time.
   - After each answer, check that the file now holds what you said. Ask for a fix if it does not.
@@ -45,7 +47,7 @@ output_sample:
     - An AI that can create and edit files works best. In a plain chat, ask it to show the updated file after each answer.
   output:
     - name: Skeleton file
-      contains: A new document with a header, empty sections and placeholders marked to be filled in.
+      contains: A new document with a header, a purpose line, one empty section for each part of the document you named, and placeholders marked to be filled in.
     - name: One question at a time
       contains: A single, specific question after each answer, or a follow-up if your answer was thin.
     - name: Patched sections

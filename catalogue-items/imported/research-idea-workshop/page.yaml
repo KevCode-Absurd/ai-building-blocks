@@ -10,6 +10,8 @@ explain: |
   A structured brainstorm for your research area that builds ideas, challenges them and ranks them, ending with a log of why you chose what you chose. Ideas stay proposals until evidence says otherwise.
 
   It keeps four jobs apart: making ideas, checking evidence, testing hypotheses and getting ethics review. First each idea is written on its own, to avoid copying the loudest one. Then a structured discussion adds options, and an adversarial round attacks the weak points. Every idea lists its hidden assumptions. A transparent scoring step ranks them, and a decision log records the reasons. Small Python tools help organise the output.
+
+  Licence: this copy is under the MIT licence (see the LICENSE.md file in this item). It is K-Dense's skill with the name changed; the skill text is unchanged.
 when:
   - You lead a lab meeting and want a fair way to pick a direction.
   - You want your ideas attacked before you invest months.
@@ -32,11 +34,12 @@ you_get:
   - Decision log
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the full text of SKILL.md into a new chat. The small helper tools are optional and need an AI that can run Python.
+  - Do not paste unpublished, confidential, personal or controlled data into a public AI chat. Use a tool your institution approves, or describe the material in general terms.
   - Say your research area or question, the criteria that matter to you, and any evidence you already have.
   - Write your own ideas first, before you read any from the AI. Add the views of others if you work in a group.
   - Let it cluster the ideas, attack the weak points and list the hidden assumptions behind each.
   - Check the scoring. Change a weight if it does not match what matters to you, then ask it to rerun the ranking.
-  - Read the shortlist and the decision log. Keep the log with your project notes.
+  - Read the shortlist. It is a table with one row per idea: raw ratings, uncertainty range, how the rank changes when weights change, and a decision status. Then read the decision log. Keep the log with your project notes.
 output_sample:
   input:
     - Your research area or question

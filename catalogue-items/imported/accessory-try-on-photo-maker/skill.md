@@ -11,7 +11,13 @@ description: 鞋包配饰真人穿戴图。商品图 + 模特参考图 → 真�
 > 3. Write one image prompt that says where the item sits on the body, keeps the product's shape, colour, hardware and logo the same, and says to change nothing else.
 > 4. Run it in an image tool (this costs credits; do a dry run to see the cost), make 2 to 4 versions, and check placement, scale, reflections and the face.
 >
-> Only use a reference photo of a person who has agreed to it. Do not present the result as a real customer photo or an endorsement. Links to `../flat-lay` and the `docs/` example pictures point to files that are not in this library. Ignore them; the steps above work without them. The `references/` and `scripts/` folders are included.
+> What you give back: one image prompt (product, model photo, exact placement line, keep-unchanged rules), a few fix-up lines, and, once an image tool runs it, one portrait JPEG per run (2 to 4 versions if asked).
+>
+> Paid service: step 4 needs an account with the dLazy image service (or another image tool that can edit with several pictures), an API key and credits. Do the dry-run cost check before any real run.
+>
+> Consent and labelling: only use a reference photo of a person who has agreed to it. Do not present the result as a real customer photo or an endorsement. Label the image as illustrative wherever a buyer or marketplace could read it as a real customer photo.
+>
+> Next: check the image against the marketplace's image rules, then pair it with a listing copy skill. Links to `../flat-lay` and the `docs/` example pictures point to files that are not in this library. Ignore them; the steps above work without them. The `references/` and `scripts/` folders are included.
 
 把一张**鞋 / 包 / 手表 / 眼镜 / 帽子 / 围巾 / 项链 / 耳饰**的商品图，变成**真人正确佩戴**的商拍图。
 

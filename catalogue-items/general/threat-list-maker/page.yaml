@@ -26,6 +26,7 @@ you_give:
   - "What the system does"
   - "Its parts and who uses it"
   - "What matters most to protect"
+  - "Controls you already have, such as two-step login or backups (optional)"
 you_get:
   - "A list of parts and entry points"
   - "The top threats, ranked, with likelihood and damage"

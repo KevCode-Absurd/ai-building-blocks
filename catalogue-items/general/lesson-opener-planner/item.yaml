@@ -7,9 +7,10 @@ role: make
 job: creative
 level: beginner
 inputs:
-  - {type: question, required: true}
+  - {type: lesson_plan, required: true}
 outputs:
   - {type: plan}
+  - {type: lesson_plan, required: true}
 uses: []
 origin: own
 version: 1.0.0

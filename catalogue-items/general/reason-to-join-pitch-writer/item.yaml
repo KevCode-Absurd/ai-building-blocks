@@ -9,6 +9,8 @@ level: intermediate
 inputs:
   - type: question
     required: true
+  - type: job_description
+    required: false
 outputs:
   - {type: copy_draft, required: true}
 origin: rebuilt

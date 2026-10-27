@@ -99,11 +99,10 @@ MISSING: <what>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Store sales drop analyst](https://useaiblocks.com/prompts/sales-drop-cause-finder).
 - The [Metric drop investigator](https://useaiblocks.com/skills/metric-drop-investigator). It takes the audit report.
-- The [New and returning customer profit analyst](https://useaiblocks.com/skills/new-and-returning-pl-splitter).
+- The [Shopify campaign link planner](https://useaiblocks.com/skills/campaign-link-tracker). It takes the audit report.
+- The [Meta server tracking checker](https://useaiblocks.com/skills/meta-server-tracking-checker). It takes the audit report.
 - The [Monthly store profit reviewer](https://useaiblocks.com/skills/monthly-profit-close).
-- The [Product margin checker](https://useaiblocks.com/skills/product-margin-checker).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -8,9 +8,10 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: question
     required: true
 outputs:
+  - type: audit_report
   - type: plan
 uses: []
 origin: imported

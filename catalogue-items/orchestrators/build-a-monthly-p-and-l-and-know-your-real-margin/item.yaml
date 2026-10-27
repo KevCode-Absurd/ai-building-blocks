@@ -10,8 +10,10 @@ inputs:
   - {type: spreadsheet, required: true}
   - {type: performance_sheet, required: true}
   - {type: document, required: false}
+  - {type: financial_statements, required: true}
 outputs:
   - {type: spreadsheet}
+  - {type: financial_statements, required: true}
 uses: [landed-cost-allocator, cogs-line-sorter, store-pl-builder, new-and-returning-pl-splitter, daily-contribution-margin-tracker]
 steps:
   - {uses: landed-cost-allocator, note: "Starts from supplier, freight and duty invoices to get the real cost of each product."}

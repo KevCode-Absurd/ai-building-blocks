@@ -11,9 +11,7 @@ Calculate product profitability for Shopify and DTC stores — cost breakdowns, 
 
 ## Installation
 
-```bash
-npx skills add nexscope-ai/eCommerce-Skills --skill profit-margin-calculator-shopify -g
-```
+Not needed here. The original author's install command for their own skill collection is left out.
 
 ## Cost Components
 
@@ -38,19 +36,28 @@ npx skills add nexscope-ai/eCommerce-Skills --skill profit-margin-calculator-sho
 
 > Added by AI Blocks: the ranges in this file (ad spend 20-40%, gross margin 60%+, net margin 15%+, LTV/CAC above 3) are unsourced rules of thumb from the original skill, not facts for every store. Compare them with your own data. Do not state them as benchmarks.
 
-| Metric | Recommended |
-|--------|-------------|
-| Gross Margin | >60% |
-| Net Margin | >15% |
-| LTV/CAC | >3 |
-| Repeat Rate | Higher = better |
+These ranges are unsourced rules of thumb. Never show them as a "recommended" table or as targets. Compare the person's own numbers with their own history instead. A higher repeat rate is better.
+
+## Hand math (use this first)
+
+The bundled `scripts/calculator.py` was written for Amazon sellers. It adds an Amazon referral fee (8 to 20 percent by default), labels its report "Amazon", and does not work out a card fee, a max CAC or LTV/CAC. Do not run it as is for a Shopify store. Work these out by hand, in this order, from the figures the person gave you:
+
+1. Card fee = price × card rate + fixed fee per order. The person must give you their own rate.
+2. Ad cost = price × ad share.
+3. Return cost = return rate × what one return costs them.
+4. Other costs = product cost + inbound shipping + warehouse fulfillment + customer shipping if free shipping is offered.
+5. Net profit = price − (card fee + ad cost + return cost + other costs). Net margin = net profit ÷ price.
+6. Max affordable CAC = price − (card fee + return cost + other costs). This is the most they can pay for ads on one order before it makes no profit.
+7. LTV/CAC only if they gave a repeat rate and average spend. Otherwise say there is not enough data.
+
+Show each line as a dollar amount and a share of the price, and show the sum so it adds up. If you do run the script, set `referral_fee_rate` to the card rate, put the fixed fee in `other_fees`, and fix the labels yourself.
 
 ## Usage
 
 ```bash
 python3 scripts/calculator.py
 
-python3 scripts/calculator.py '{"selling_price": 49.99, "ad_spend_ratio": 0.20, "product_cost": 12}'
+python3 scripts/calculator.py '{"selling_price": [PRICE], "ad_spend_ratio": [AD SHARE], "product_cost": [PRODUCT COST]}'
 ```
 
 ## Output Example
@@ -58,20 +65,21 @@ python3 scripts/calculator.py '{"selling_price": 49.99, "ad_spend_ratio": 0.20, 
 ```
 💰 **Shopify/DTC Profit Analysis Report**
 
-Selling Price         $49.99   100.0%
+Selling Price         $[PRICE]   100.0%
 ────────────────────────────────────────
-Product Cost          -$12.00    24.0%
-3PL Fulfillment       -$4.50     9.0%
-Payment Processing    -$1.75     3.5%
-Advertising           -$10.00    20.0%  ⬅️ Main cost
-... (other cost rows are left out of this example, which is why the lines shown do not add up to the net profit)
+Product Cost          -$[AMOUNT]   [SHARE]%
+3PL Fulfillment       -$[AMOUNT]   [SHARE]%
+Payment Processing    -$[AMOUNT]   [SHARE]%
+Advertising           -$[AMOUNT]   [SHARE]%
+Returns and other     -$[AMOUNT]   [SHARE]%
 ────────────────────────────────────────
-Net Profit            $18.59    37.2%
+Net Profit            $[AMOUNT]   [SHARE]%
 
-💡 Max Affordable CAC: $10.00
+💡 Max Affordable CAC: $[AMOUNT]
+(All figures are placeholders. Fill them only from the person's own numbers, and make the rows add up to the net profit.)
 ```
 
-## DTC Golden Ratios
+## DTC rules of thumb (the original author's, unsourced)
 
 ```
 DTC Health Formula:
@@ -82,7 +90,7 @@ DTC Health Formula:
 └── LTV/CAC > 3
 ```
 
-## vs Amazon
+## vs Amazon (rough figures from the original author; check each platform's current fees)
 
 | Item | Amazon | Shopify/DTC |
 |------|--------|-------------|
@@ -94,5 +102,5 @@ DTC Health Formula:
 
 ---
 
-**Part of [Nexscope AI](https://www.nexscope.ai/?co-from=skill) — AI tools for e-commerce sellers.**
+_Vendor footer from the original author (Nexscope AI), an advert that is not part of the answer. Leave it out._
 

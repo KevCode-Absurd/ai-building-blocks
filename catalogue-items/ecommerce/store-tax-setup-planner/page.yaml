@@ -133,8 +133,8 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Shopify", why: "It calculates sales tax from your store location and the buyer's address, and has its own settings under taxes and duties."}
-    - {name: "WooCommerce", why: "Tax classes and rate rows are built in. An automated tax plugin can handle many states."}
+    - {name: "Shopify", why: "Paid plan needed. It calculates sales tax from your store location and the buyer's address, and has its own settings under taxes and duties."}
+    - {name: "WooCommerce", why: "Free to install, but you host it yourself. Tax classes and rate rows are built in. An automated tax plugin can handle many states, and most of those plugins are paid."}
     - {name: "Any good chat AI", why: "Any current chat AI can plan the settings and write the tests."}
   inputs:
     - "A tax registration list or a note from your accountant"

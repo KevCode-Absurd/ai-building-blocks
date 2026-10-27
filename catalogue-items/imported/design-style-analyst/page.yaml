@@ -9,7 +9,7 @@ subhead: A reusable profile of a look you like. Share screenshots or links to de
 explain: |
   A reusable profile of a look you like. Share screenshots or links to designs you admire and you get a structured file with the colours, type, spacing, overall feel and any special effects, which you can then use to guide new designs.
 
-  It has three parts. The design system covers measurable values: colour, type, spacing, shape and motion. The design style covers the feel: mood, composition, imagery and brand voice. Visual effects cover things like canvas or 3D scenes, particles, shaders and scroll animation. The three work in three phases: see the schema, extract a profile from references, or generate a design from a profile plus your content.
+  It has three parts. The design system covers measurable values: colour, type, spacing, shape and motion. The design style covers the feel: mood, composition, imagery and brand voice. Visual effects cover things like canvas or 3D scenes, particles, shaders and scroll animation. The three work in three phases: see the schema, extract a profile from references, or generate a design from a profile plus your content. The skill installs a few helper packages from the web (npm install) when it measures colors. This is zanwei's design-dna skill, shared under the MIT licence.
 when:
   - You love a competitor's site and want to capture its look, not copy its code.
   - You need to brief a designer using real examples.
@@ -30,11 +30,12 @@ you_get:
   - Structured style file
   - Design made from the profile (optional)
 how_to_use:
-  - Open your AI tool and paste the skill text from this page. For screenshot files the skill measures colors exactly by default. That needs Node.js and an AI that can run code. Without them, it can only estimate colors by eye, and they can be off.
+  - Add the whole skill folder (the SKILL.md file, the references folder and the scripts folder) to your AI tool, for example in Claude Code, or upload the zip. A pasted SKILL.md alone has no schema file and no color script. For screenshot files the skill then measures colors exactly. That needs Node.js and an AI that can run code. Without them, it can only estimate colors by eye, and they can be off.
+  - A link with no screenshot only gets colors estimated by eye. Give it screenshot files when exact colors matter.
   - Add your screenshots or links. Say you want a style profile.
   - Read the profile. Fix any value that looks wrong, then ask for changes.
   - To make a page, paste your content and the profile, and ask for a design.
-  - Only let it fetch images from a link you own or have the right to use. Check any images it fetched are licensed for your use before you reuse them.
+  - Only let it fetch logos, photos or text from a link you own or have the right to use. For another brand's look, it recreates the style from the profile and never copies their assets. Check that anything it fetched is licensed for your use before you reuse it.
   - Save the Design DNA file. Next time, paste it with your content to make a new page, or give it to your designer next to your brand guide.
 output_sample:
   input:

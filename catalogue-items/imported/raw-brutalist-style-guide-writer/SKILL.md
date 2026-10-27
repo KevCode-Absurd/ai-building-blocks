@@ -22,7 +22,7 @@ a bold, "anti-design" style inspired by 1950s raw concrete architecture, priorit
 
 - Visual style: bold
 - Typography scale: desktop-first expressive scale | Fonts: primary=Darker Grotesque, display=Darker Grotesque, mono=JetBrains Mono | weights=100, 200, 300, 400, 500, 600, 700, 800, 900
-- Color palette: primary, secondary, neutral, success, warning, danger | Tokens: primary=#DD614C, secondary=#DAA144, success=#16A34A, warning=#D97706, danger=#DC2626, surface=#FFFFFF, text=#111827
+- Color palette: primary, secondary, neutral, success, warning, danger | Tokens: primary=#DD614C, secondary=#DAA144, success=#16A34A, warning=#D97706, danger=#DC2626, surface=#FFFFFF, text=#111827, primary-text=#B8422F
 - Spacing scale: 4/8/12/16/24/32
 
 
@@ -30,7 +30,7 @@ a bold, "anti-design" style inspired by 1950s raw concrete architecture, priorit
 
 WCAG 2.2 AA, keyboard-first interactions, visible focus states
 
-Contrast note: the default primary #DD614C is only about 3.6 to 1 on white. That passes for large text (3 to 1) but fails AA for normal-size text (4.5 to 1). Check every text and background pair, and darken the colour if normal text sits on it.
+Contrast note: the default primary #DD614C is only about 3.6 to 1 on white. That passes for large text (3 to 1) but fails AA for normal-size text (4.5 to 1). Use the token primary-text=#B8422F (about 5.4 to 1 on white) for normal-size text and links on white. Use #DD614C only for large text and fills, with dark text (#111827, about 5.0 to 1) on top of it. The secondary #DAA144 is about 2.3 to 1 on white, so use it for fills only, never for text. Check every other text and background pair.
 
 ## Writing Tone
 

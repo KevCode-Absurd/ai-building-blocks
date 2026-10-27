@@ -8,9 +8,10 @@ job: copy
 level: intermediate
 inputs:
   - {type: product_data, required: true}
-  - {type: performance_sheet, required: false}
+  - {type: search_query_report, required: false}
   - {type: product_photos, required: false}
   - {type: audit_report, required: false}
+  - {type: copy_draft, required: false}
 outputs:
   - {type: copy_draft}
 uses: []

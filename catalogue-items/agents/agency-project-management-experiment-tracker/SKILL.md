@@ -14,6 +14,8 @@ Read [the original role profile](references/source-agent.md) before you start. I
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Shopify campaign link planner](https://useaiblocks.com/skills/campaign-link-tracker). It takes the plan and audit report.
+- The [Warehouse experiment planner](https://useaiblocks.com/skills/warehouse-a-b-test-runner). It takes the plan.
+- The [Meta server tracking checker](https://useaiblocks.com/skills/meta-server-tracking-checker). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

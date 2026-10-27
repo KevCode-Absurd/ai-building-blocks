@@ -44,7 +44,7 @@ She'd tell you to find the problem you know best and make something that helps. 
 
 ### Building and paying a sales team
 
-She'd recruit people who need the work and teach them the whole job: the product, the pitch, the books and the care for a customer. She'd set a clear course, as Lelia College did with a $25 correspondence course, and give agents a title that sounds like a trade, not a side job. She'd want them to earn well, since one agent wrote she could earn more in a week than in a month elsewhere. She'd reward good work in the community as well as sales. She'd also tell you to check that your offer stays fair when your people have more choices than hers did.
+She'd recruit people who need the work and teach them the whole job: the product, the pitch, the books and the care for a customer. She'd set a clear course, as Lelia College did in 1908 with a $25 correspondence course [S2][S6], and give agents a title that sounds like a trade, not a side job. She'd want them to earn well, since one agent's letter, reported in a source, said she could earn more in a week than she had earned in a month elsewhere [S4]. She'd reward good work in the community as well as sales. She'd also tell you to check that your offer stays fair when your people have more choices than hers did.
 
 ### Ownership and growth
 

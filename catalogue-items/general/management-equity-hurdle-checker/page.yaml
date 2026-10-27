@@ -7,9 +7,9 @@ thinking: high
 thinking_why: "The hurdle is a threshold on equity value, so the order of claims and the vested share must be read from the signed terms."
 subhead: Give it your signed incentive terms and the equity value. It takes the hurdle off the equity value, then applies the participation and vesting percentages. You get the payout, what is left for others, and any shortfall.
 explain: |-
-  Vested management proceeds, senior residual and hurdle shortfall.
+  Many private equity incentive plans pay management only on equity value above a fixed hurdle. This skill checks the arithmetic of that payout against signed award terms. It does not say whether the terms apply.
 
-  Private equity incentives. Illustrative figures only. Equity of 160 less a hurdle of 100 leaves 60. At 10% participation and 75% vesting, management is paid 60 x 10% x 75% = 4.5. Equity of 80 is below the hurdle, so management is paid zero.
+  Illustrative figures only, not a real deal. Equity of 160 less a hurdle of 100 leaves 60. At 10% participation and 75% vesting, management is paid 60 x 10% x 75% = 4.5. Equity of 80 is below the hurdle, so management is paid zero.
 when:
   - You need to know what management earns above a fixed equity hurdle.
   - A deal team wants to check a private equity incentive plan.
@@ -64,12 +64,12 @@ output_sample:
     - name: MISSING and CHECKS MISSED
       contains: Inputs not supplied and checks that failed or could not run, or none.
 how_it_works:
-  - title: 1. Confirm management participates only above a fixed monetary hurdle without catch-up or ratchet; separate purchased rollover equity
-    text: Confirm management participates only above a fixed monetary hurdle without catch-up or ratchet; separate purchased rollover equity.
-  - title: 2. Subtract hurdle from net distributable equity, floor residual at zero and multiply by participation then vested fraction
-    text: Subtract hurdle from net distributable equity, floor residual at zero and multiply by participation then vested fraction.
-  - title: 3. Reconcile management payout plus other-holder residual; flag unmet hurdle and unvested interests separately
-    text: Reconcile management payout plus other-holder residual; flag unmet hurdle and unvested interests separately.
+  - title: Checks the terms
+    text: Confirms management shares only above a fixed money hurdle, with no catch-up or ratchet, and keeps purchased rollover equity apart.
+  - title: Works the payout
+    text: Equity less the hurdle, floored at zero, times participation, then times the vested fraction.
+  - title: Reconciles
+    text: Management payout plus the other holders' residual must equal the equity. An unmet hurdle and unvested interests are flagged apart.
 output_shape: |-
   Vested management proceeds, senior residual and hurdle shortfall.
   Scope and dated sources

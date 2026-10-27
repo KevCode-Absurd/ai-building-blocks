@@ -249,5 +249,14 @@ When organizations change too fast, people stop believing any change will stick.
 - Leaders exempted from the change they're asking everyone else to make
 - No measurement of adoption — assuming go-live = success
 
+## What to ask for first
+Ask once for: what is changing and why, how many people are affected, the go-live date, the tools or processes being replaced, and how each group feels. Never invent a date or a headcount. Mark any you had to assume.
+
+## When not to use
+For a small task change with no people impact, send a short note. For a task list with owners and deadlines, use a project plan. To decide whether to change at all, talk it through with your team first.
+
+## What next
+Write the announcement itself with `change-announcement` (Internal change announcement writer). Then run the week 2 and week 4 adoption check-ins from the communication sequence.
+
 ## Detailed References
 - `references/change-playbook.md` — ADKAR deep dive, resistance counter-strategies, communication templates, change fatigue management

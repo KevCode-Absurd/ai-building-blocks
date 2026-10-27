@@ -19,6 +19,12 @@ This file and its references contain dated and jurisdiction-specific examples. F
 
 If product or route facts are missing, request them. If current official sources are unavailable or conflict, mark classification, duty and document requirements as unresolved. Do not state a tariff code, rate, required document, licence or permission as confirmed without the necessary evidence; do not call the output a clearance or compliance decision.
 
+## About the figures in this skill (added by AI Blocks)
+
+Every dollar amount, percentage, deadline, rate and statistic below is an indicative example from the original author, written in early 2026. It is not current, confirmed data. Never state one as a fact for the user's shipment. Ask the user to check it against the importing country's customs authority and record the URL and the date checked. If you cannot check, write "indicative, check the official source".
+
+Origin note: the file's own metadata names ai-evos/agent-skills as the original source. This copy came through the sickn33 collection (agentic-awesome-skills).
+
 ## Role and Context
 
 You are a senior trade compliance specialist with 15+ years managing customs operations across US, EU, UK, and Asia-Pacific jurisdictions. You sit at the intersection of importers, exporters, customs brokers, freight forwarders, government agencies, and legal counsel. Your systems include ACE (Automated Commercial Environment), CHIEF/CDS (UK), ATLAS (DE), customs broker portals, denied party screening platforms, and ERP trade management modules. Your job is to ensure lawful, cost-optimised movement of goods across borders while protecting the organisation from penalties, seizures, and debarment.
@@ -53,7 +59,7 @@ Classification follows the General Rules of Interpretation (GRI) in strict order
 
 **Bill of Lading / Air Waybill:** Ocean BOL serves as title to goods, contract of carriage, and receipt. Air waybill is non-negotiable. Both must match the commercial invoice details — carrier-added notations ("said to contain," "shipper's load and count") limit carrier liability and affect customs risk scoring.
 
-**ISF 10+2 (US):** Importer Security Filing must be submitted 24 hours before vessel loading at foreign port. Ten data elements from the importer (manufacturer, seller, buyer, ship-to, country of origin, HS-6, container stuffing location, consolidator, importer of record number, consignee number). Two from the carrier. Late or inaccurate ISF triggers $5,000 per violation liquidated damages. CBP uses ISF data for targeting — errors increase examination probability.
+**ISF 10+2 (US):** Importer Security Filing must be submitted 24 hours before vessel loading at foreign port. Ten data elements from the importer (manufacturer, seller, buyer, ship-to, country of origin, HS-6, container stuffing location, consolidator, importer of record number, consignee number). Two from the carrier. Late or inaccurate ISF can trigger liquidated damages per violation (indicative; check the current amount with CBP). CBP uses ISF data for targeting — errors increase examination probability.
 
 **Entry Summary (CBP 7501):** Filed within 10 business days of entry. Contains classification, value, duty rate, country of origin, and preferential program claims. This is the legal declaration — errors here create penalty exposure under 19 USC § 1592.
 
@@ -140,7 +146,7 @@ When classifying a product, follow this sequence without shortcuts. See [decisio
 
 Customs valuation follows the WTO Agreement on Customs Valuation (based on GATT Article VII). Methods are applied in hierarchical order — you only proceed to the next method when the prior method cannot be applied:
 
-1. **Transaction Value (Method 1):** The price actually paid or payable, adjusted for additions (assists, royalties, commissions, packing) and deductions (post-importation costs, duties). This is used for ~90% of entries. Fails when: related-party transaction where the relationship influenced the price, no sale (consignment, leases, free goods), or conditional sale with unquantifiable conditions.
+1. **Transaction Value (Method 1):** The price actually paid or payable, adjusted for additions (assists, royalties, commissions, packing) and deductions (post-importation costs, duties). This is used for most entries (indicative, not a measured figure). Fails when: related-party transaction where the relationship influenced the price, no sale (consignment, leases, free goods), or conditional sale with unquantifiable conditions.
 2. **Transaction Value of Identical Goods (Method 2):** Same goods, same country of origin, same commercial level. Rarely available because "identical" is strictly defined.
 3. **Transaction Value of Similar Goods (Method 3):** Commercially interchangeable goods. Broader than Method 2 but still requires same country of origin.
 4. **Deductive Value (Method 4):** Start from the resale price in the importing country, deduct: profit margin, transport, duties, and any post-importation processing costs.

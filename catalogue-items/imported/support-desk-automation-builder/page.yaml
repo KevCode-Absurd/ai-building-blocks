@@ -36,6 +36,7 @@ how_to_use:
   - Paste this skill into the chat and say you want to build a support automation.
   - Answer the questions about your help desk, billing tool, database and common ticket types. Check the summary it gives back.
   - Add your API keys when asked. Keep them in environment variables, never in the chat.
+  - "For the database, create a read-only database user limited to the tables the automation needs. Do not give it production admin credentials."
   - Run the setup check, then try the triage on a few real tickets. Read each drafted reply before you approve it. Check that every script that replies, closes a ticket or refunds a payment refuses to run without the --approved flag. Your AI should only add it after you say yes. After your first approved draft, refine the triage keywords and reply templates.
 output_sample:
   input:

@@ -54,11 +54,11 @@ The identity statement. The ranked versions. The gateway step. The cue sentence.
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Digital tool audit planner](https://useaiblocks.com/skills/digital-tool-audit-planner).
 - The [Not-to-do list builder](https://useaiblocks.com/skills/not-to-do-list-builder). It takes the plan.
-- The [Weekly time audit planner](https://useaiblocks.com/skills/weekly-time-audit-planner). It takes the plan.
-- **Tell it as a story** with the [Daily word quota planner](https://useaiblocks.com/skills/daily-word-quota-planner). It takes the plan.
+- The [Decision checklist runner](https://useaiblocks.com/skills/decision-checklist-runner). It takes the plan.
+- The [Plan objection writer](https://useaiblocks.com/skills/case-against-writer). It takes the plan.
 - The [Workday wrap-up planner](https://useaiblocks.com/skills/daily-shutdown-planner). It takes the plan.
+- **Tell it as a story** with the [Daily word quota planner](https://useaiblocks.com/skills/daily-word-quota-planner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

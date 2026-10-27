@@ -12,6 +12,10 @@ argument-hint: "<process or task name>"
 
 Create a step-by-step operational runbook for a recurring task or procedure.
 
+## Before you write
+
+Ask the user for: the commands or notes they use today, the systems involved, and the owner's contact. Anything they do not give you is written as `TBC`.
+
 ## Usage
 
 ```

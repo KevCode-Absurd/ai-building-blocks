@@ -7,7 +7,8 @@ role: check
 job: analysis
 level: beginner
 inputs:
-  - {type: question, required: true}
+  - {type: performance_sheet, required: true}
+  - {type: question, required: false}
 outputs:
   - {type: audit_report}
 uses: []

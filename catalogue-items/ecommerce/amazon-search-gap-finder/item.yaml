@@ -8,10 +8,11 @@ job: research
 level: intermediate
 inputs:
   - {type: question, required: true}
-  - {type: spreadsheet, required: false}
+  - {type: keyword_list, required: false}
   - {type: store_capture, required: false}
 outputs:
   - {type: shortlist}
+  - {type: idea, required: true}
 uses: []
 origin: rebuilt
 example_pending: true

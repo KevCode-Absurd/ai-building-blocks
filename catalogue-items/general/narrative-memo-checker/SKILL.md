@@ -55,9 +55,9 @@ The cold ask, the score out of 100 with the working per check, each weak spot wi
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Six-page narrative memo writer](https://useaiblocks.com/skills/six-page-narrative-memo-writer).
-- The [Board meeting question coach](https://useaiblocks.com/skills/hard-questions-board-prep-coach).
-- The [Meeting brief writer](https://useaiblocks.com/skills/before-you-meet-brief-writer).
+- The [Numbers explainer](https://useaiblocks.com/prompts/figures-to-plain-pictures-writer). It takes the audit report.
+- The [Pitch feedback and revision tracker](https://useaiblocks.com/skills/pitch-revision-log). It takes the audit report.
+- The [Annual letter writer](https://useaiblocks.com/skills/annual-letter-writer). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -9,6 +9,7 @@ level: intermediate
 inputs:
   - {type: performance_sheet, required: true}
   - {type: product_data, required: true}
+  - {type: customer_list, required: true}
 outputs:
   - {type: audit_report}
 uses: [order-threshold-planner, bundle-and-quantity-break-builder, after-sale-offer-planner, offer-profit-per-session-checker, store-test-verdict-maker]

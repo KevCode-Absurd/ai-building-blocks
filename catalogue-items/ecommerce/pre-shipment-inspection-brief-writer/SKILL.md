@@ -17,6 +17,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Product photos** (yours): clear photos of the real product, from more than one angle. Attach them.
+- **The deal terms** (yours): the price, payment terms, discounts, fees and dates of the deal.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
@@ -77,8 +78,9 @@ CHECKS MISSED: <none, or which>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Factory sample revision reviewer](https://useaiblocks.com/skills/product-sample-approval-loop).
-- The [Supplier shortlist vetter](https://useaiblocks.com/skills/factory-shortlist-vetter).
+- The [Factory sample revision reviewer](https://useaiblocks.com/skills/product-sample-approval-loop). It takes the document.
+- The [Supplier shortlist vetter](https://useaiblocks.com/skills/factory-shortlist-vetter). It takes the document.
+- The [Product sample approval reviewer](https://useaiblocks.com/skills/sample-approval-gatekeeper). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

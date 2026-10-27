@@ -7,7 +7,7 @@ role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - type: document
+  - type: contract
     required: true
   - type: meeting_notes
     required: false

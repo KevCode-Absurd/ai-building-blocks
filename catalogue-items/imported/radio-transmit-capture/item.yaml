@@ -9,10 +9,14 @@ role: make
 job: build-software
 level: advanced
 inputs:
-  - type: brief
+  - type: question
     required: true
+  - type: code_change
+    required: false
 outputs:
   - type: code_change
+  - type: signal_data
+    required: true
 uses: []
 origin: imported
 source:

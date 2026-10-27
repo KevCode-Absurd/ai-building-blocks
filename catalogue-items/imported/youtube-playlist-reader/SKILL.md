@@ -16,6 +16,8 @@ metadata: {"openclaw":{"emoji":"📋","requires":{"env":["TRANSCRIPT_API_KEY"]},
 
 Browse playlists and fetch transcripts via [TranscriptAPI.com](https://transcriptapi.com).
 
+This uses a paid third-party service and an API key (the free tier is 100 credits). Each page of 100 videos costs 1 credit and each transcript costs 1 credit. It reads YouTube data, so check YouTube's terms and the video owner's rights before you publish or share any transcript text. Quote briefly and link to the video. Do not invent video titles, IDs or transcript text: if a call fails, say so.
+
 ## Setup
 
 If `$TRANSCRIPT_API_KEY` is not set, read [references/auth-setup.md](references/auth-setup.md) and follow the instructions there to get and store the key. Ask the user to create their own TranscriptAPI account and paste the key. Only sign up for them if they clearly say yes first.

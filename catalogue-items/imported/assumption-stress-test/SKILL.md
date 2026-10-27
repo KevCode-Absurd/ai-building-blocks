@@ -9,6 +9,8 @@ description: "/em:stress-test — Business assumption stress testing. Use before
 
 Take any business assumption and break it before the market does. Revenue projections. Market size. Competitive moat. Hiring velocity. Customer retention.
 
+If you have a plan, take the assumptions to test from it. If you have notes from an idea stress-test panel, start with the weak points they named.
+
 ---
 
 ## Why Most Assumptions Are Wrong

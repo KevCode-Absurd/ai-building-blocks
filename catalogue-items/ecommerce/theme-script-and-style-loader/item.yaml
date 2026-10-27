@@ -8,7 +8,7 @@ job: ops
 level: advanced
 inputs:
   - {type: theme_files, required: true}
-  - {type: audit_report, required: false}
+  - {type: page_speed_report, required: false}
 outputs:
   - {type: code_change}
   - {type: plan}

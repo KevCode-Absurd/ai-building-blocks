@@ -54,8 +54,8 @@ The score out of 100 with how it was worked out. The spend split. The sources an
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Ad return evidence checker](https://useaiblocks.com/skills/platform-roas-reality-check). It takes the audit report.
+- The [Ad change decision checker](https://useaiblocks.com/skills/campaign-keep-or-change-checker). It takes the audit report.
 - The [Ad results report writer](https://useaiblocks.com/skills/ad-results-report-writer). It takes the audit report.
-- The [TikTok Ads account auditor](https://useaiblocks.com/skills/tiktok-ads-account-auditor). It takes the audit report.
 - **Plan what to test** with the [Experiment designer](https://useaiblocks.com/skills/experiment-designer). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

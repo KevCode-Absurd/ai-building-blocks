@@ -9,6 +9,8 @@ job: ops
 level: advanced
 inputs:
   - type: codebase
+    required: false
+  - type: api_spec
     required: true
 outputs:
   - type: audit_report

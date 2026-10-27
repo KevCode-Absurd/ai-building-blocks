@@ -8,13 +8,15 @@ job: ops
 level: intermediate
 inputs:
   - {type: transcript, required: true}
-  - {type: brief, required: false}
+  - {type: question, required: false}
   - {type: offer, required: true}
+  - {type: deal_terms, required: true}
 outputs:
   - {type: copy_draft}
   - {type: document}
   - {type: audit_report}
   - {type: plan}
+  - {type: deal_terms, required: true}
 uses: [call-follow-up-drafter, sales-proposal-writer, deal-desk-reviewer, mutual-action-plan-builder]
 steps:
   - {uses: call-follow-up-drafter, note: "The follow-up email in your voice, a summary for your team and the CRM updates, from the call. Hands the call summary to step 2."}

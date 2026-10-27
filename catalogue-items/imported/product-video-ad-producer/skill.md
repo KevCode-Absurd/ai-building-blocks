@@ -5,9 +5,11 @@ description: 商品短视频广告。卖点 → 分镜脚本 → 分段生成 �
 
 # product-video-ad — 商品短视频广告
 
+> **English summary (added by AI Blocks).** This file is written in Chinese. Steps: (1) Ask the user for the product, the main selling points, the audience and the platform. Do not write the shots before you have them. (2) Write a shot script with the length, the picture and the caption for each shot, and let the user approve it in chat before anything is made. (3) Run a dry run, which shows each shot's plan and costs nothing. (4) Generate one clip per shot with the video model. This needs a paid video model key (fal or Replicate) and Node, and each clip costs money. Redo only a failed shot. (5) Join the clips with ffmpeg and add captions made from the shot lengths. Voice and music are added later in a video editor. Every caption must be a real, approved claim or offer. Never make up a price, a discount or a result.
+
 从卖点到成片：写分镜 → 逐镜生成 → 拼接 → 上字幕。
 
-和 [main-image-video](../main-image-video/skill.md) 的分工：那个是主图位的 3 秒单镜，
+和 Product photo to clip maker（main-image-video）的分工：那个是主图位的 3 秒单镜，
 这个是**多镜串联的完整广告**，15–30 秒，用于投流。
 
 ---
@@ -26,7 +28,7 @@ description: 商品短视频广告。卖点 → 分镜脚本 → 分段生成 �
 | --- | --- |
 | 配音配乐 | 脚本给文案，配音配乐请用剪辑软件 |
 | 精确卡点 | 生成模型的时长是档位，卡音乐点请后期调 |
-| 真人口播 | 用 [ugc-testimonial](../ugc-testimonial/skill.md) |
+| 真人口播 | 用 Creator testimonial video 或 Talking product video ad（ugc-testimonial 技能不在本库中） |
 
 ---
 
@@ -47,23 +49,23 @@ description: 商品短视频广告。卖点 → 分镜脚本 → 分段生成 �
 
 ## 三、分镜文件
 
-> Note for English readers (added by AI Blocks): the caption "现在下单立减 50" ("order now, 50 off") in the sample below is placeholder text. Replace it with your real, approved offer. Do not run an ad with a discount you do not offer.
+> Note for English readers (added by AI Blocks): every value in brackets in the sample below is a placeholder. Fill each caption only with a real, approved claim or offer from the user. Do not run an ad with a discount or result you do not have.
 
 ```json
 {
   "shots": [
-    { "id": "s1", "seconds": 3, "image": "docs/flat-lay/example-output.jpg",
-      "prompt": "Slow push-in on the model wearing the olive cable-knit sweater, cold morning light, breath visible.",
-      "caption": "零下十度，只穿了这一件" },
-    { "id": "s2", "seconds": 3, "image": "docs/flat-lay/garment-flatlay.jpg",
-      "prompt": "Macro pan across the cable knit texture, fibers catch the light.",
-      "caption": "粗棒针织，三层锁温" },
-    { "id": "s3", "seconds": 4, "image": "docs/flat-lay/example-output.jpg",
-      "prompt": "The model walks through a city street, sweater moves naturally with the body.",
-      "caption": "通勤、约会、周末都能穿" },
-    { "id": "s4", "seconds": 3, "image": "docs/flat-lay/garment-flatlay.jpg",
-      "prompt": "Product laid flat on light wood, slow top-down pull-back, clean and calm.",
-      "caption": "现在下单立减 50" }
+    { "id": "s1", "seconds": 3, "image": "[product-photo.jpg]",
+      "prompt": "Slow push-in on [PRODUCT in use], [LIGHT AND SETTING].",
+      "caption": "[HOOK CAPTION, a real claim]" },
+    { "id": "s2", "seconds": 3, "image": "[product-photo.jpg]",
+      "prompt": "Macro pan across [KEY DETAIL], light catches the surface.",
+      "caption": "[SELLING POINT 1, a real claim]" },
+    { "id": "s3", "seconds": 4, "image": "[product-photo.jpg]",
+      "prompt": "[PRODUCT in a real use scene], moving naturally.",
+      "caption": "[USE-CASE CAPTION]" },
+    { "id": "s4", "seconds": 3, "image": "[product-photo.jpg]",
+      "prompt": "Product laid flat, slow top-down pull-back, clean and calm.",
+      "caption": "[YOUR APPROVED OFFER OR CALL TO ACTION]" }
   ]
 }
 ```
@@ -73,6 +75,8 @@ description: 商品短视频广告。卖点 → 分镜脚本 → 分段生成 �
 ---
 
 ## 四、工具调用
+
+Before you run: this step needs a paid video model key (fal or Replicate), Node and, to join clips, ffmpeg. Every clip you make costs money.
 
 ```bash
 export DLAZY_VIDEO_MODEL=<你账号里可用的视频模型 ID>

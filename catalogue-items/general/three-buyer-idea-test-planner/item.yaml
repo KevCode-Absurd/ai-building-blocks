@@ -7,7 +7,7 @@ role: make
 job: research
 level: beginner
 inputs:
-  - {type: question, required: true}
+  - {type: idea, required: true}
 outputs:
   - {type: plan}
 origin: rebuilt

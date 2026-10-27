@@ -16,7 +16,10 @@ Queries customers matching a filter (tag, email list, or spend threshold) and ap
 
 ## Prerequisites
 - Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_customers,write_customers`
+- If that command is not found, your Shopify CLI version may use a different sign-in command. Run `shopify --help` or check the Shopify CLI docs, and use the sign-in flow that gives these scopes.
 - API scopes: `read_customers`, `write_customers`
+- Customer names and emails are protected customer data. If the query is refused or the email comes back empty, the app or token may need protected customer data access in Shopify's app settings. Ask the store owner to approve it. Do not work around it.
+- Run your first live pass on a development or test store, or on a filter that matches a handful of customers.
 
 ## Parameters
 
@@ -28,6 +31,8 @@ Queries customers matching a filter (tag, email list, or spend threshold) and ap
 | append | bool | no | true | Append to existing note (true) or replace entirely (false) |
 | dry_run | bool | no | true | Preview matching customers without executing mutations |
 | format | string | no | human | Output format: `human` or `json` |
+
+If you just ran the customer tag bulk updater, give its report. The tag it set can be the filter, and its customer rows are the list that gets the note.
 
 ## Safety
 
@@ -41,7 +46,9 @@ Queries customers matching a filter (tag, email list, or spend threshold) and ap
 
 2. Construct new note: if `append: true`, put `[YYYY-MM-DD] <note>` at the top of the existing note, with the old note below it (newline-separated); if `append: false`, replace with `<note>`
 
-3. **OPERATION:** `customerUpdate` — mutation
+3. **Dry-run gate:** if `dry_run: true`, do not call `customerUpdate`. For each matching customer, log the planned new note with the `[DRY RUN]` prefix, show the list to the user, and stop. Only go on to the mutation when `dry_run: false` and the user has seen the list.
+
+   **OPERATION:** `customerUpdate` — mutation
    **Inputs:** `id: <customer_id>`, `note: <new_note>`
    **Expected output:** `customer { id, note }`, `userErrors`
 

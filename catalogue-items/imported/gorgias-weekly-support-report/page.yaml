@@ -43,7 +43,7 @@ how_to_use:
   - Ask for the weekly support digest by name.
   - If Gorgias is not connected, your AI will ask you to run composio link gorgias. Do that, then ask again.
   - Read the report. Check the numbers against Gorgias for anything that looks off. The averages come from a sample of up to 25 tickets, so read them as a rough guide.
-  - Say yes to post it. Your AI finds the Slack channel and sends it.
+  - Your AI removes customer names, emails and order details from the report before it asks you to approve. Check the cleaned version. Say yes to post it. Your AI finds the Slack channel and sends it. This skill is a copy of the Composio weekly-digest skill (MIT licence), and the Slack argument names are read from the live tool before use.
 output_sample:
   input:
     - Your Gorgias account, connected through Composio

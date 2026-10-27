@@ -11,9 +11,9 @@ Plan a move to a new design system. Three steps run in order: inventory what is 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Colour contrast checker](https://useaiblocks.com/skills/colour-contrast-checker). It takes the design direction and document.
+- The [Colour contrast checker](https://useaiblocks.com/skills/colour-contrast-checker). It takes the design direction.
 - The [Logo strength tester](https://useaiblocks.com/skills/logo-strength-tester). It takes the design direction.
-- The [Design token and handoff builder](https://useaiblocks.com/skills/design-token-builder). It takes the audit report.
+- The [Design token and handoff builder](https://useaiblocks.com/skills/design-token-builder). It takes the design direction and audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -21,24 +21,25 @@ If they pick one and that skill is added here, carry straight on with what you j
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
 - **Design file** (yours): a design in a design tool, such as a Figma file, with its parts and styles.
 - **Codebase** (yours): a project's code, in a folder or repo the AI can open.
+- **Design tokens** (yours): the colours, type sizes and spacing, as CSS or JSON.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a brief, design file, codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, design file, codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **A capable chat AI with file support:** Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
 <!-- /needs -->
 
-## Before you start
+## What to gather first
 
-Use what is attached or pasted first. If something is missing, say what you can finish and what must wait, and mark each gap `MISSING:`. Never invent a component, a usage count or an owner.
+These three items replace the generic list above. Use what is attached or pasted first. If something is missing, say what you can finish and what must wait, and mark each gap `MISSING:`. Never invent a component, a usage count or an owner.
 
 **What you need:**
 - **Current components** (yours) and where they are used: code, a Figma file or a list. Say which products and platforms are in scope.
@@ -71,9 +72,9 @@ Lead with the change inventory, the replacement rules and the breaking changes. 
 
 Write `MISSING: <what>` next to the affected result. Carry on with work that does not depend on it. If no current components are given, stop and ask once.
 
-## After this
+## What to do with the result
 
-Suggest one next step in a short question, and say they can type their own:
+Suggest one of these next steps in a short question, and say they can type their own. These fit this workflow better than the generic list above:
 - **Get the rules approved** by the design system owner, then run step 3 again on the confirmed rules.
 - **Watch for drift after each stage** with the [Monthly design system keeper](https://useaiblocks.com/agents/monthly-design-system-keeper).
 - **Brief developers on one component** with the [Give developers a complete component brief](https://useaiblocks.com/workflows/give-developers-a-complete-component-brief) workflow.

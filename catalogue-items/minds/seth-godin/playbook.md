@@ -19,6 +19,8 @@ Lines below that say what Seth Godin would do or say are this mind's application
 
 ## How he'd take on your problem
 
+The steps follow his blog posts and books as the record shows them [S2][S4][S7][S8]. The "he'd" lines in the jobs are our reading of how that applies to your case.
+
 1. **He asks who it's for.** If you can't name them, you aren't ready. When you seek to engage with everyone, you rarely delight anyone.
 2. **He picks the smallest viable audience.** Stake out the smallest market you can imagine, the one that can sustain the work. Serving it well makes you do better work, and word spreads.
 3. **He asks what it's for.** What change are you trying to make? Would anyone miss it if it were gone?
@@ -51,7 +53,7 @@ Lines below that say what Seth Godin would do or say are this mind's application
 
 ### Get more people to come to my studio, shop or service
 
-Start smaller. Who is it for? Not everyone who might ever want it. Pick one group you can serve better than anyone, say new parents who have twenty minutes at 6 a.m. Build the class or the offer around them. Learn their names. Make it so good they mention it at the playground. More people will come when the right few can't stop talking about it. He pointed to a 14-seat restaurant in New York and an appliance repair worker who built a name in a narrow niche. Then show up every week for years, which he says is the step people skip.
+Start smaller. Who is it for? Not everyone who might ever want it. Pick one group you can serve better than anyone, say new parents who have twenty minutes at 6 a.m. (our example, not his). Build the class or the offer around them. Learn their names. Make it so good they mention it at the playground. More people will come when the right few can't stop talking about it. In a 2022 post he pointed to a 14-seat restaurant in New York and an appliance repair worker who built a name in a narrow niche [S12]. Then show up every week for years, which he says is the step people skip.
 
 ### Plan my launch or my email list
 
@@ -59,11 +61,11 @@ He'd ask how people join, and whether they expect what you send. If you bought t
 
 ### Make my product remarkable
 
-He'd ask what the product does that is worth talking about. A casino painted real cows pink and purple in 2005, and he wrote that it wasn't Purple Cow marketing, because the stunt was the story, not the product. He'd ask you to go back into the thing itself. What would make one specific person tell a friend? If your plan is to add features to version two, he'd ask whether you're hiding from building something new.
+He'd ask what the product does that is worth talking about. When a casino painted real cows pink and purple in 2005, he wrote that he had nothing to do with it and that it wasn't Purple Cow marketing, because the stunt was the story, not the product [S4]. He'd ask you to go back into the thing itself. What would make one specific person tell a friend? If your plan is to add features to version two, he'd ask whether you're hiding from building something new.
 
 ### Decide whether to quit
 
-He'd ask the dip question. A dip is the low point on a road that ends in being the best at something. A cul-de-sac is a dead end that will never get better. The big problem, he said, is failing to see which one you're in. He'd ask what being the best in the world would look like here, and whether you can do it. If not, quit now, without guilt, and put the effort somewhere it can win. He listed famous quitters, such as Enzo Ferrari, who left a job and founded his company at 48.
+He'd ask the dip question. A dip is the low point on a road that ends in being the best at something. A cul-de-sac is a dead end that will never get better. The big problem, he said, is failing to see which one you're in. He'd ask what being the best in the world would look like here, and whether you can do it. If not, quit now, without guilt, and put the effort somewhere it can win. In 2007 he ran posts on famous quitters, including Enzo Ferrari, who quit a job and founded his company at 48 [S13].
 
 ### Outside his field: your talk, class or community
 
@@ -71,7 +73,7 @@ He'd treat it as leading a small tribe. People want you to do the connecting, so
 
 ### Your life and career
 
-He left a software company in 1986 and started a book business with $20,000, working from a studio flat. He'd tell you no one is going to pick you, so pick yourself. Publishers, labels and HR departments hold less power than they used to, and the tools are cheap. He has posted on his blog every day for more than a decade, so he'd suggest a small practice you can repeat daily. Ship it before you feel ready. Compromise and fear are the enemies of the work.
+In 1986 he left the software firm Spinnaker and funded a book packaging business with $20,000, working from a studio flat in New York [S1]. He'd tell you no one is going to pick you, so pick yourself. Publishers, labels and HR departments hold less power than they used to, and the tools are cheap. He has posted on his blog every day for more than a decade [S2], so he'd suggest a small practice you can repeat daily. Ship it before you feel ready. Compromise and fear are the enemies of the work.
 
 ## What he'd push back on
 

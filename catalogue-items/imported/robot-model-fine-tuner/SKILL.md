@@ -19,7 +19,7 @@ This catalog copy does not include these files:
 - `scripts/train_pytorch.py`
 - `examples/simple_client/main.py`
 
-Do not say you read or ran them from this folder. They live in the public openpi repo (https://github.com/Physical-Intelligence/openpi), which Workflow 0 clones. Fetch them from that clone before you run any command here, and run every `uv run` command from inside the clone.
+Do not say you read or ran them from this folder. They are not included here. They live in the public openpi repo (https://github.com/Physical-Intelligence/openpi), which Workflow 0 clones (use the repo path `scripts/` and `examples/` inside the clone, at the latest main unless the user pins a commit). Fetch them from that clone before you run any command here, and run every `uv run` command from inside the clone.
 
 # OpenPI Fine-Tuning and Serving
 
@@ -373,9 +373,14 @@ observation = {
 result = client.infer(observation)
 actions = result["actions"]  # shape: (action_chunk_size, action_dim)
 
+# SAFETY: do not run this on a real robot until you have tested the policy in
+# simulation first. For the first real runs, use an emergency stop within reach,
+# reduced speed and a supervised, clear workspace.
 # Execute first action on robot
 robot.step(actions[0])
 ```
+
+**Next steps after the server runs:** test it in the matching LIBERO or ALOHA simulation, then run staged robot trials at reduced speed, and evaluate before any unsupervised use.
 
 ---
 

@@ -57,7 +57,7 @@ git log --no-merges --pretty=format:"%h|%s" <last-tag>..HEAD
 git diff --stat <last-tag> HEAD
 ```
 
-If the user supplies a PR number, a branch name, or explicit `from..to` refs, use those instead.
+If the user supplies a PR number, a branch name, or explicit `from..to` refs, use those instead. If an earlier step handed you a code change (a commit or pull request), write the entry for that change.
 
 ### 2. Filter noise
 

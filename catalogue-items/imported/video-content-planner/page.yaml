@@ -9,6 +9,8 @@ subhead: "A video plan you can start this week: what to make, for whom, and how 
 explain: |
   A video plan you can start this week: what to make, for whom, and how to get several clips out of each long video. 
   The skill first asks about your goal, audience, team size and what you already have, such as blog posts, webinars or demos. It sets up a channel with a clear niche, content pillars and search keywords. It writes scripts with a strong opening and a clear structure. It plans a pipeline that cuts one long video into many short clips. It also gives ideas to improve YouTube titles, descriptions and thumbnails for search. If you have a brand voice file, it reads that first so the video sounds like you.
+
+  It runs in any chat AI with no paid tools. Its claims about views, reach and drop-off are rules of thumb, not proven facts. The licence is MIT, as the LICENSE file says. Credit goes to Alireza Rezvani.
 when:
   - You want to start a YouTube channel and have no idea what to post.
   - You have a podcast or webinar that could become a month of short clips.

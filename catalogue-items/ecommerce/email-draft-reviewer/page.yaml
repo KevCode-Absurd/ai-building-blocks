@@ -21,7 +21,7 @@ not_for:
   - "You need order, shipping or legal emails to stay formal: keep the 'we' lines as they are and ask a person to check the terms."
   - "You want a final check for typos: use a spell checker or a proofreader after your edits."
   - "You want the email written from scratch: ask your AI to write a first draft, then bring it here to review."
-  - "You want a quick first pass with fewer checks: use the Email send-readiness scorer."
+  - "You want a quick first pass with fewer checks: use the Email send-readiness scorer (a prompt in this library)."
 
 you_give:
   - The email draft, its subject line and preview text
@@ -142,7 +142,7 @@ improve:
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Any current chat AI can count words, mark cuts and map the pacing. Paste the email as text."}
-    - {name: "Klaviyo", why: "Shows opens and clicks per email, so you can test whether the rules of thumb hold for your list."}
+    - {name: "Klaviyo", why: "Paid service with an account. Shows opens and clicks per email, so you can test whether the rules of thumb hold for your list."}
   inputs:
     - "Open and click results from your last few sends"
     - "Your brand voice rules"

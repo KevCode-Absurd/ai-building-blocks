@@ -12,6 +12,8 @@ explain: |
   The skill picks a ready-made data collector on Apify, called an Actor. It reads what that Actor needs, asks how you want the results saved, runs it and then summarises what came back. The summary covers who the audience seems to be, what they engage with and whether the engagement looks real.
 
   These Actors return public profile fields and comments, not verified age or gender. Any demographic read is an inference, and the summary labels it that way. It reports patterns across the group, not facts about named people. You need an Apify account, which charges per run, plus Node.js and a command line tool. It suits people comfortable with a terminal.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. Credit goes to sickn33, who collected it.
 when:
   - You want to know who follows a competitor before you copy their content.
   - You are choosing an influencer and need to see if their audience looks real.
@@ -37,10 +39,10 @@ you_get:
 how_to_use:
   - Pick one public account and one platform. Decide what you want to learn, such as who engages or whether comments look real.
   - Create an Apify account and an API token. Save the token in a file called .env as APIFY_TOKEN=your token. Do not paste it into chat. Apify charges for runs, so check the Actor's price first.
-  - Use an AI that can run commands, such as Claude Code. Install Node.js 20.6 or newer, the jq tool and the mcpc tool with npm install -g @apify/mcpc.
+  - Use an AI that can run commands, such as Claude Code. Install Node.js 20.6 or newer and the jq tool. The mcpc tool (npm install -g @apify/mcpc) is optional. It reads an Actor's settings but puts your token on the command line, so use it only on a computer that only you use.
   - Paste the skill and give your account link, platform and a small cap, such as 100 results, to start.
   - Ask your AI to name the Actor it picked and what the run will cost before it runs. Try the quick answer first, which shows the top 5 results, to check you have the right data.
-  - Run the full export, then read the summary. Treat age, gender and location as guesses unless the data states them.
+  - Run the full export, then read the summary. Treat age, gender and location as guesses unless the data states them. The engagement read is a rough check on counts, not proof that activity is bought.
   - When you are done, delete or lock the exported file. It holds personal public data about followers.
 how_it_works:
   - title: Choose the Actor
@@ -56,11 +58,12 @@ how_it_works:
 output_shape: |
   RUN          <Actor used, platform, cap, records collected, file path>
   AUDIENCE     <who they seem to be, marked as inferred: places, interests, languages>
-  ENGAGEMENT   <likes and comments against followers, repeat commenters, signs of real or bought activity>
+  ENGAGEMENT   <likes and comments against followers, repeat commenters, generic comments, with the counts used; a rough read, not proof>
   PATTERNS     <what they talk about, what content gets a response>
   LIMITS       <what public data cannot show, sample size>
   NEXT         <deeper analysis or groups to split by>
   MISSING      <inputs not given, or none>
+next: [creator-audience-checker, review-insight-finder]
 output_sample:
   input:
     - The public account or page link and the platform
@@ -70,7 +73,7 @@ output_sample:
   prerequisites:
     - An Apify account, which charges per run
     - An AI that can run commands
-    - Node.js 20.6 or newer, jq and the mcpc tool
+    - Node.js 20.6 or newer and jq. The mcpc tool is optional
   output:
     - name: Data file
       contains: The public records collected, as CSV or JSON, saved with a dated file name.

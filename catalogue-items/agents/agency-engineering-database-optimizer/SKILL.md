@@ -13,9 +13,9 @@ Read [the original role profile](references/source-agent.md) before you start. I
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Database schema designer](https://useaiblocks.com/skills/database-schema-designer).
-- The [GaussDB query and schema reviewer](https://useaiblocks.com/skills/agency-engineering-gaussdb-expert).
-- The [Agent database setup planner](https://useaiblocks.com/skills/agent-database-setup-planner).
+- The [Database schema designer](https://useaiblocks.com/skills/database-schema-designer). It takes the plan.
+- The [Oracle to Postgres migration test planner](https://useaiblocks.com/skills/copilot-planning-oracle-to-postgres-migration-integration-testing). It takes the plan.
+- The [Process and behavior change planner](https://useaiblocks.com/skills/structure-behaviour-split). It takes the plan and audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -27,10 +27,12 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Codebase** (yours): a project's code, in a folder or repo the AI can open.
+- **Code change** (yours): a change to the code, with what it fixes and how it was checked.
+- **The data model** (yours): the database tables or collections, their fields and how they link.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, codebase, code change. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -40,6 +42,8 @@ How to start:
 
 ## What to collect first
 
+These are the inputs that count. If the generic "Before you start" list above asks for something else, such as a question or source text, ignore that part.
+
 Ask once for anything missing. Never invent it. Mark each gap `MISSING:`.
 
 1. The database engine and version. PostgreSQL is the main focus. Say so if the user runs MySQL or a hosted service, and note where advice differs.
@@ -48,6 +52,7 @@ Ask once for anything missing. Never invent it. Mark each gap `MISSING:`.
 4. Rough row counts for the largest tables.
 5. How the app calls the database, such as an ORM or raw SQL (optional).
 6. Which queries matter most to users (optional).
+7. A schema change from an earlier step (optional). Use it as the table definitions.
 
 Remind the user that `EXPLAIN ANALYZE` runs the query. For a query that writes or deletes data, tell them to run it inside a transaction and roll back, or use plain `EXPLAIN`.
 
@@ -73,6 +78,8 @@ Use these headings, in this order:
 5. Checks on a copy
 6. Connections and monitoring
 7. Open questions and checks still needed
+
+Heading 7 is also your CHECKS MISSED list: name every check that failed or could not run, or write "none".
 
 ## Rules
 

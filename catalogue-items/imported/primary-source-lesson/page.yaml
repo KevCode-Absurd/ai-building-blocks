@@ -10,6 +10,8 @@ explain: |
   A full history lesson where learners investigate a real question using original documents, then argue from the evidence. Give it a topic and sources and it builds the lesson.
 
   It follows the Reading Like a Historian method from Stanford researchers. The lesson has four parts: set up background, ask a central question, work through the documents with prompts on who wrote it, when and why, and finish with discussion that compares sources. It includes guiding questions and scaffolds for readers who need help. It suits middle school, high school and adult classes.
+
+  This is a copy of Gareth Manning's Document-Based Lesson Designer from his education-agent-skills collection, under the CC BY-SA 4.0 licence (share-alike: keep the same licence if you share changes). The skill file also names Sean Hu as the contributor of this skill, so both are credited. The skill text is unchanged. Only the name and this page are ours.
 when:
   - You teach a unit and want learners to work from sources, not a textbook summary.
   - You have two documents that disagree about one event.
@@ -38,7 +40,7 @@ how_to_use:
   - Add your central question, your documents and what each one says.
   - Add your learners' level and your class time. Add the optional items if you have them.
   - Ask your AI to design the lesson.
-  - Check that each prompt matches your documents. Fix any claim about a source that is wrong.
+  - Before you teach, check that each prompt matches your documents. Compare every date, author and claim about a source with your own copy of it. Fix any that are wrong.
   - Print or copy the plan into your lesson notes.
   - Next, trim long documents with the History source simplifier, or add a writing frame with the Argument writing scaffold maker.
 next: [history-source-set-picker, history-source-simplifier, class-discussion-format-picker, argument-writing-scaffold-maker]

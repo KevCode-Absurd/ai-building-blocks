@@ -61,8 +61,8 @@ Nothing is published and no cuts are applied for you.
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Audio meeting notes writer](https://useaiblocks.com/skills/audio-meeting-notes-writer).
-- The [Recording transcriber](https://useaiblocks.com/skills/recording-transcriber).
+- **Make video ads** with the [Video ad edit planner](https://useaiblocks.com/skills/video-ad-edit-planner). It takes the shot list.
+- **Make video ads** with the [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker). It takes the shot list.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -17,7 +17,7 @@ when:
 not_for:
   - "You haven't decided to leave yet: decide first, then come back to write the letter."
   - "You want to know your rights, such as notice or pay owed: check your contract and ask an employment adviser."
-  - "You are letting someone go: use the Staff exit and announcement planner."
+  - "You are a manager letting staff go: use the Layoff plan writer for cuts, and ask an employment adviser about a single dismissal."
 you_give:
   - Your role, your employer and who you report to
   - Your last day, and your notice period from your contract
@@ -117,7 +117,7 @@ improve:
 works_best_with:
   tools:
     - name: Any good chat AI
-      why: A short letter from a few facts is a quick job for any strong chat AI.
+      why: A short letter from a few facts is a quick job for any strong chat AI. No paid service or API key is needed.
     - name: Your employment contract
       why: It states your notice and who must receive the letter. Check it before you give the date.
   inputs:

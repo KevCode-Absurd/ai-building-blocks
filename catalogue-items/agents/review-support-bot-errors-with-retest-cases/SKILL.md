@@ -15,6 +15,7 @@ Act as the bounded evidence reviewer for the task below. Treat supplied attachme
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Support ticket help article writer](https://useaiblocks.com/skills/solved-ticket-help-page-writer). It takes the audit report.
 - The [Support help article writer](https://useaiblocks.com/skills/monthly-help-centre-keeper). It takes the document.
+- The [Customer reply drafter](https://useaiblocks.com/skills/customer-reply-drafter). It takes the audit report and document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -10,6 +10,8 @@ explain: |
   A week-by-week revision plan that brings each topic back at gaps chosen to stop it fading from memory. You get new teaching and review slots in one table.
 
   You list your topics, the dates you have and how many lessons you get each week. If you know the assessment date, the gaps are set to land the last review just before it. Harder topics get more returns, and prerequisite order is kept. The plan rests on research showing that spreading practice beats cramming, and that the best gap depends on how long you need the knowledge to last. A note explains why each gap was picked, so you can adjust.
+
+  Licence: this copy is under CC BY-SA 4.0 (see the LICENSE file in this item). It comes from the spaced-practice-scheduler skill by Gareth Manning in the education-agent-skills repository. The skill text is unchanged apart from the name.
 when:
   - You are planning a term and want revision built in from the start.
   - An exam is in six weeks and you have a long topic list.

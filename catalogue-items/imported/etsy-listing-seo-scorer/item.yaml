@@ -12,6 +12,8 @@ inputs:
     required: true
 outputs:
   - type: audit_report
+  - type: keyword_list
+    required: true
 uses: []
 origin: imported
 source:

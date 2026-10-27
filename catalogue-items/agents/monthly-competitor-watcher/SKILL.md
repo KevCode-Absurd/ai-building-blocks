@@ -78,11 +78,11 @@ You never do these yourself. You list them for approval:
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Market opportunity finder](https://useaiblocks.com/skills/competitor-white-space-mapper). It takes the competitors and audit report.
 - The [Competitor ad teardown writer](https://useaiblocks.com/skills/competitor-ad-teardown-writer). It takes the competitors.
-- The [Competitor keyword opportunity finder](https://useaiblocks.com/skills/rival-keyword-gap-finder). It takes the competitors.
-- The [Market opportunity finder](https://useaiblocks.com/skills/competitor-white-space-mapper). It takes the competitors.
+- The [Competitive sales message writer](https://useaiblocks.com/prompts/rival-gap-message-writer). It takes the competitors.
 - **Write the landing page** with the [Competitor comparison page writer](https://useaiblocks.com/skills/alternative-page-writer). It takes the competitors and audit report.
-- **Plan your strategy** with the [Competitive advantage tester](https://useaiblocks.com/skills/business-power-tester). It takes the competitors and audit report.
+- **Plan your strategy** with the [Positioning statement writer](https://useaiblocks.com/skills/positioning-statement-writer). It takes the competitors.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

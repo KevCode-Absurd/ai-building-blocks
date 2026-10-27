@@ -10,7 +10,7 @@ subhead: Give it your last approved review, the new receipt or exit records and 
 explain: |
   A private equity investor, called the sponsor, puts cash in and gets cash back later. Managers may earn a share of the equity above a set hurdle. The sponsor's return depends on dates and on what the managers are paid first. It is easy to compute the management payout from the wrong base, such as the full company value. It is also easy to quote an annual return from dates that are not a year apart.
 
-  This sponsor receipt and management payout review starts from your last approved review. When a distribution, a vesting record, an exit receipt or an ownership record changes, it lists what moved. It works out the vested management payout from net equity proceeds. It then works out the sponsor's IRR and cash multiple, using the Management award and investor cash return checker.
+  This sponsor receipt and management payout review starts from your last approved review. When a distribution, a vesting record, an exit receipt or an ownership record changes, it lists what moved. It works out the vested management payout from net equity proceeds. It then works out the sponsor's IRR and cash multiple, using the Check management payout and sponsor receipts workflow.
 
   It handles one sponsor and a simple fixed hurdle award. If another holder appears, it stops the payout step and asks for the full ownership split. If the dates are not exact years, it does not quote an annual IRR. It says you need a date-based IRR tool. It reviews arithmetic against your records and approves nothing.
 
@@ -23,7 +23,7 @@ when:
 not_for:
   - There is more than one investor, or preferred shares with their own terms. Use the Preferred share payout reviewer, or supply a full ownership split first.
   - You want to check a fund's carry or distribution waterfall. Use the No-catchup fund payout checker.
-  - You only need the management payout and have no sponsor cash dates. Use the Management equity payout checker.
+  - You only need the management payout and have no sponsor cash dates. Use the Management equity hurdle checker.
   - Your cash dates are not exact years apart and you need an annual IRR. This review will not quote one. Run a date-based IRR in a spreadsheet with its XIRR function.
   - You want investment advice or a price view. This checks records and arithmetic only.
 
@@ -56,7 +56,7 @@ how_it_works:
   - title: Compare with the last review
     text: Reads the saved record if it belongs to this deal, or sets a first baseline. Lists each new or changed record. If nothing changed, it says so and stops.
   - title: Check who holds the equity
-    text: If a new rollover holder appears, it checks same-class ownership with the Seller rollover ownership calculator. It then stops the sole-sponsor payout step until a complete holder split is supplied.
+    text: If a new rollover holder appears, it checks same-class ownership with the Rollover equity ownership checker. It then stops the sole-sponsor payout step until a complete holder split is supplied.
   - title: Work out the management payout
     text: Takes the fixed hurdle off net equity proceeds, floors the rest at zero, and applies the participation share and the vested share. The sponsor exit receipt is the other holder's share, not the full company value.
   - title: Work out the sponsor return
@@ -128,7 +128,7 @@ improve:
   - Keep each review's record in one folder named by date, so the next run starts from the true prior state.
   - Keep the signed award terms in one note, with the hurdle, the participation share and the vesting dates, and paste it in each time.
   - Write each cash date from the bank record, not from the deal timetable.
-  - Pair it with the Management equity payout checker when you only need the payout.
+  - Pair it with the Management equity hurdle checker when you only need the payout.
 
 works_best_with:
   tools:

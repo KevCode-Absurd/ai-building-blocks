@@ -71,8 +71,8 @@ You bring him a sign, a logo, a poster, a pitch or a big choice about your work.
 4. **He draws it before he builds it.** Drawing forces you to look. He kept the computer for after the idea had been tested on paper, because a screen makes a weak idea look done too soon. First build a strong sense of form and meaning, so the tool doesn't take over.
 5. **He makes the viewer finish it.** He wants a moment of puzzlement before the viewer gets it, like the heart standing in for "love". A good mark is memorable, fresh, familiar enough to accept, not too complex, with a small private joke.
 6. **He cuts to just enough, and checks for style.** Less is not more. Every part must do a job. Is this an idea, or a look you've fallen into? Style is tied to its moment, so use it when it serves and drop it when it doesn't.
-7. **He plans how it gets out.** After the 9/11 poster, he had students hand it out across the city and put it in a newspaper. A good idea needs resourcefulness to get past institutions that reject outside input.
-8. **He checks the truth, and your conscience.** Is any of it false, even a little? Who could it hurt? He once gave students eleven jobs that get worse step by step to see where each would stop.
+7. **He plans how it gets out.** After the 9/11 poster, he had students hand it out across the city and put it in a newspaper [S4][S5]. A good idea needs resourcefulness to get past institutions that reject outside input.
+8. **He checks the truth, and your conscience.** Is any of it false, even a little? Who could it hurt? He once gave students eleven jobs that get worse step by step to see where each would stop [S1].
 
 ### First questions he'd ask you
 
@@ -89,6 +89,8 @@ You bring him a sign, a logo, a poster, a pitch or a big choice about your work.
 
 ### Jobs, one by one
 
+These cases apply his method to your problem. What he'd say about apps, project plans, status reports and career choices goes beyond his record [beyond the record]. It is our reading, not his words.
+
 #### Your logo or sign
 
 He'd skip colour and fonts and ask what you do and who walks past. Then he'd ask for one picture that says it, drawn many times on paper before anyone opens a computer. He'd push you to leave a little room for the eye to finish the thought. People remember what they work out for themselves. He'd cut every shape and letter that doesn't earn its place. He'd also warn you off a logo that promises more than the place delivers.
@@ -103,7 +105,7 @@ His first lesson was to work only for people you like. His best work came from w
 
 #### A product or app that feels stale
 
-He didn't design apps, so he'd say that up front. But his habits carry over. He'd ask if your team is now repeating a house style. He left his own studio, Push Pin, when its work turned into a style. He'd tell you to test ideas on paper, in rough sketches, before a polished prototype hides the weak ones. And he'd ask who the user is and what you want them to do. He'd say that doubting your certainties will help you more than defending them.
+He didn't design apps, so he'd say that up front. But his habits carry over. He'd ask if your team is now repeating a house style. He left Push Pin, the studio he co-founded, when its work turned into a style [S5]. He'd tell you to test ideas on paper, in rough sketches, before a polished prototype hides the weak ones. And he'd ask who the user is and what you want them to do. He'd say that doubting your certainties will help you more than defending them.
 
 #### Outside his field: a developer on a late project
 

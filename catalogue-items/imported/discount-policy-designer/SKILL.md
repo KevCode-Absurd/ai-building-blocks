@@ -10,6 +10,10 @@ compatible_tools: [claude-code, codex-cli, cursor, antigravity, opencode, gemini
 
 # commercial-policy
 
+**About the sources.** The named studies, books and benchmark reports below (OpenView, Tomasz Tunguz, Bessemer, KeyBanc, MIT Sloan, McKinsey, Bain, Forrester and others) are the original author's reading list. This library has not checked them, and the files in `references/` are the only place they are described. Do not quote a figure from them as fact. Say "the author cites" or leave it out. Every number in the policy must come from the user's own deals and constraints.
+
+**Sibling skills.** `deal-desk`, `pricing-strategist`, `contract-and-proposal-writer`, `cro-advisor` and `cfo-advisor` are from the original collection and are not in this folder. In AI Blocks, use the Deal desk reviewer to apply the policy to one deal. Never say you ran a skill you do not have.
+
 ## Purpose
 
 Design the **rules of engagement** that govern discounting off list price — the artifact that Deal Desk and AEs operate under. Three deterministic tools:
@@ -24,7 +28,7 @@ The output is the **policy itself** (matrix + exception flow + lint report), not
 
 - A new Head of Commercial or Head of Deal Desk is writing the company's first formal commercial policy
 - The existing matrix is older than 6 months and discount drift is showing in margin reviews
-- Reps are citing "Maria approved 28% on Acme last quarter" as precedent and you need to break the precedent loop
+- Reps are citing "[Name] approved [X]% on [customer] last quarter" as precedent and you need to break the precedent loop
 - Q-over-Q exception count is rising and you suspect the matrix bands are mispriced
 - CFO has tightened the margin floor and the matrix needs to be rebuilt against the new constraint
 - A board / exec is asking "why do we discount this much?" and you need a data-backed defensible policy
@@ -75,10 +79,10 @@ All three: stdlib-only, `--help`, `--sample`, `--input <json>`, `--output {markd
 ## Anti-patterns
 
 - **Setting discount bands without data backing.** "VP Sales argued for it in a Slack thread" is not data backing. If you can't show win-rate and NRR for the band, the band is rhetoric. (Caught by `data_backing` per cell + lint L08.)
-- **Letting precedent set policy.** "Maria approved 28% on Acme last quarter" is not a band — it's an exception that didn't break the policy. `exception_router.py` flags 3+ similar exceptions as a signal that **the matrix is wrong**, not the deal. (Anti-pattern AP-1.)
+- **Letting precedent set policy.** "[Name] approved [X]% on [customer] last quarter" is not a band — it's an exception that didn't break the policy. `exception_router.py` flags 3+ similar exceptions as a signal that **the matrix is wrong**, not the deal. (Anti-pattern AP-1.)
 - **Approving exceptions without compensating commitments.** Discount-for-nothing is a leak (Winning by Design). Every exception severity band requires non-negotiable commitments. (`exception_router.COMPENSATING_LIBRARY`.)
-- **Cliff edges at round-number ARR thresholds.** A hard $100K threshold produces deal-size gaming within 2 quarters (MIT Sloan agency theory). Smooth the gradient. (Lint L05.)
-- **"Strategic value" as an undefined catch-all.** If "strategic" is undefined, within a quarter 60% of deals will be flagged strategic and the matrix is dead. Define with concrete tests. (Lint L06.)
+- **Cliff edges at round-number ARR thresholds.** A hard round-number threshold tends to produce deal-size gaming (the author cites MIT Sloan agency theory; unverified). Smooth the gradient. (Lint L05.)
+- **"Strategic value" as an undefined catch-all.** If "strategic" is undefined, within a quarter most deals get flagged strategic and the matrix is dead. Define with concrete tests. (Lint L06.)
 - **No quarterly review.** Markets shift; matrices unchanged for 12 months are mispriced. Re-run the builder and linter every quarter. (Anti-pattern AP-8.)
 - **Mixing CFO and CRO accountabilities.** CFO owns the margin floor; CRO owns the band cap. Same accountable owner = predictable drift toward whatever they're compensated on (Bain *Pricing Power*).
 - **Skipping the lint pass before publishing.** BLOCKER findings (approver inversion, margin-floor violation, inverted bands) make the policy unsignable. Lint is the gate, not the after-action review.
@@ -147,4 +151,4 @@ python3 scripts/exception_router.py --sample
 python3 scripts/exception_router.py --input request.json --output json
 ```
 
-The sample matrix lints to **FAIL** with 4 BLOCKERs + 6 MAJORs + 2 MINORs — by design, to exercise every rule path. A real policy intake should lint to PASS or PASS_WITH_WARNINGS. The sample exception (42% on a $320K logo deal) routes to AE → Sales Manager → Director → VP Sales with 3 required compensating commitments (multi-year 36mo, prepay, named expansion path).
+The sample matrix lints to **FAIL** with 4 BLOCKERs + 6 MAJORs + 2 MINORs — by design, to exercise every rule path. A real policy intake should lint to PASS or PASS_WITH_WARNINGS. The sample exception (a made-up 42% discount on a made-up large logo deal, not a real deal) routes to AE → Sales Manager → Director → VP Sales with 3 required compensating commitments (multi-year 36mo, prepay, named expansion path).

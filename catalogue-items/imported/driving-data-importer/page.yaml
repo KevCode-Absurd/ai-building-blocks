@@ -10,6 +10,8 @@ explain: |
   Recorded driving data loaded, lined up in time and cleaned, ready for building driving scenarios in MATLAB. It handles GPS, camera, lidar and tracked-object data from common sources.
 
   The skill maps raw files into the right scenario builder objects: GPS, camera, lidar, actor tracks, trajectories and lane data. It accepts datasets like KITTI, nuScenes and Waymo, ROS bags, MAT, CSV and video. It also attaches mounting position, angles and camera settings, syncs sensors with different sample rates, corrects time offsets, trims segments and sets a common time zero. It will not open the Driving Log Analyzer unless you ask or report a sync problem. It needs MATLAB with the matching toolboxes.
+
+  This is MathWorks' skill. The licence that applies is the LICENSE file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE file.
 when:
   - You have a KITTI or ROS bag recording and want to build a scenario from it.
   - Camera and lidar timestamps do not match.
@@ -36,8 +38,8 @@ how_to_use:
   - Point it to your recording folder and say which dataset type it is.
   - Add calibration files and sensor mounting details if you have them.
   - If your annotations or timestamps are laid out in a way the skill cannot read, it should ask you how, not guess. Tell it where the timestamps are kept.
-  - Check the data summary it prints before you go on. Fix any missing sensor or wrong frame.
-  - Ask it to sync, trim or fix time offsets, then save the result for scenario building.
+  - Check the data summary it prints before you go on: dataset and recording name, duration, each sensor with its sample count and rate, whether annotations exist, and which calibration is available. Fix any missing sensor or wrong frame.
+  - Ask it to sync, trim or fix time offsets, then save the result for scenario building. It saves the wrapped objects to a file such as sandbox/<dataset>_wrapped.mat. Open that file in MATLAB to check it loads.
 output_sample:
   input:
     - Your raw recording files, such as a KITTI folder, a ROS bag, MAT, CSV or video

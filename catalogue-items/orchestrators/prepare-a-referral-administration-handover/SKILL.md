@@ -12,29 +12,34 @@ Hand clinic referral paperwork to the next administrator. Two component skills r
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
-
-**Makes it better (optional):**
-- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+- **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a brief, source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for document, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **A chat AI that reads files:** It reads a status export and your rules together. Check your clinic's rules before you share records with any AI.
 <!-- /needs -->
 
-## Before you start
+## When not to use
+- If you cannot share the records with an AI under your clinic's rules, do not use this. Ask your clinic's data lead.
+- To check records over time with closure proof, use the Clinic referral handover reviewer (`referral-administration-evidence-review-assistant`).
+- To decide who is seen first, ask a clinician. This pack never does that.
 
-Use what is attached or pasted first. Ask once, in one short message, for only what you cannot work without.
+## What to gather first
+
+These replace the generic list above. Use what is attached or pasted first. Ask once, in one short message, for only what you cannot work without.
 
 **You need:**
 - The referral status records you are allowed to share, with a reference for each.
 - The proof of each step: sent, received, booked. A date and a source for each.
 - Your clinic's own rules for follow-up, such as how long to wait before chasing.
 - Who takes over, and from when.
+
+**Before you paste any record:** confirm that your clinic's rules allow it and that the AI tool is approved for health data under your clinic's data-protection terms. If you are not sure, ask your clinic's data lead first. Where the rules allow only a reference, paste the reference and the status, not names.
 
 **Makes it better (optional):** the names of the clinicians to escalate to, contacts at receiving services, a past handover you liked.
 
@@ -63,7 +68,7 @@ If a component skill is missing, tell the user which one and ask them to add it 
 2. **Handover note writer** (`handover-note-writer`). Give it the step 1 file, the clinic's follow-up rules and the contacts. Ask for pending confirmations first, then each referral's next step, authorised contacts, the deadline evidence and the clinician escalation points. For each unconfirmed referral, add a short follow-up draft marked `DRAFT, NOT SENT`. Save `outputs/step-02-handover-note-writer.md`.
    **Gate before step 3:** no line reorders clinical care, and every draft uses only facts from the records.
 
-3. **Check and hand back.** Build the result below.
+3. **Check and hand back.** Check that each state matches its proof, that no clinical content is left, that every follow-up is marked `DRAFT, NOT SENT` and that every referral appears once. Then build the result below.
 
 ## What you hand back
 
@@ -95,7 +100,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every follow-up is marked `DRAFT, NOT SENT`.
 - End with `CHECKS MISSED:` and the checks that failed or could not run, or `none`.
 
-## After this
+## What to do with the result
 
 Offer one next step in a short question, and say the user can type their own:
 - **Keep checking the records over time** with the Referral administration evidence review assistant.

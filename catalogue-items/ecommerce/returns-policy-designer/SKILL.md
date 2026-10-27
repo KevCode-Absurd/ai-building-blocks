@@ -12,7 +12,7 @@ You turn returns from a cost line into a reason to buy again. You measure first,
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 **Makes it better (optional):**
 - **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
@@ -25,7 +25,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for your results, your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for spreadsheet, your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -37,7 +37,7 @@ How to start:
 ## What you need
 This skill works with rough numbers. If something is missing, ask once in one short message, then carry on and mark each gap `MISSING:`.
 
-- **Return rate** by product and by reason (required).
+- **A returns export** (required): each return with its reason, item, date requested and date refunded, so return rate by product and by reason, and days to refund, can be worked out. This is returns data from the store, not an ad-platform export.
 - **Days from return request to refund** today (required).
 - **Cost per return**: shipping, handling and written-off stock (strongly advised; use the store's own number before any range below).
 - **Product list** with price, cost, weight and resale value after return (strongly advised).
@@ -89,12 +89,16 @@ MISSING: <what was needed>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Refund request reply writer](https://useaiblocks.com/prompts/refund-request-reply-writer). It takes the the policy.
 - The [Top-customer outreach planner](https://useaiblocks.com/skills/top-customer-touch-planner). It takes the plan.
+- The [Retail returns response writer](https://useaiblocks.com/skills/agency-retail-customer-returns). It takes the the policy.
+- The [Shopify store policy checker](https://useaiblocks.com/skills/store-policy-checker). It takes the the policy.
+- The [Subscription cancel flow builder](https://useaiblocks.com/skills/subscription-cancel-flow-builder). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
 ## What next
-Take the product rules to the guarantee designer if you want longer cover. Use the first use gap checker on your returns and tickets to find why buyers return products, then fix those causes.
+Next, run the 90-day matched comparison from step 11 on your own returns data. Bring the product rules and that result to the guarantee designer if you want longer cover. Use the first use gap checker on your returns and tickets to find why buyers return products, then fix those causes.
 
 ## Checks
 - All three starting numbers are there, or marked `MISSING:`.

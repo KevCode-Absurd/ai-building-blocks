@@ -11,7 +11,7 @@ subhead: Describe the creator or athlete, your stage and what you want from them
 explain: |
   Some stores give a creator or athlete a share in the business, not only a fee. Done well, it ties a trusted person to your brand for years. Done badly, it gives away something you cannot get back, or breaks a tax or securities rule you did not know about.
 
-  This skill outlines a deal shape from what founders have described in public interviews: a long term, a base fee, a clear list of what the creator does, and equity that only counts value above today's price. It also lays out how to start with small sponsorships before a big deal. Every output ends with questions for your lawyer and accountant, because an equity deal needs them before anyone signs. Check with a lawyer.
+  This skill outlines a deal shape from what founders have described in public interviews: a long term, a base fee, a clear list of what the creator does, and, for options and similar awards, equity that only counts value above today's price. Other equity forms work differently, so your lawyer must explain the one you choose. It also lays out how to start with small sponsorships before a big deal. Every output ends with questions for your lawyer and accountant, because an equity deal needs them before anyone signs. Check with a lawyer.
 
 when:
   - A creator or athlete already uses your product and you want to make a long deal.
@@ -144,7 +144,7 @@ terms:
   - term: Equity
     meaning: A share of ownership in the business.
   - term: Strike price
-    meaning: The company value at which equity is issued. The holder shares only in value above it.
+    meaning: For options and similar awards, the company value at which the award is issued. The holder shares only in value above it. Other equity forms work differently.
   - term: Whitelisting
     meaning: Running a creator's post as an ad from their account, with their permission.
   - term: Non-endemic sponsor

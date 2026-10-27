@@ -12,7 +12,7 @@ A set looks like one shoot when a few things never change and the rest always do
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **Brand brain** (its buyers part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Product photos** (yours): clear photos of the real product, from more than one angle. Attach them.
 
 **Makes it better (optional):**
@@ -90,9 +90,9 @@ The style sheet, the frame list, one prompt per frame, the photos named `<nn>_<j
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Product photo set reviewer](https://useaiblocks.com/skills/product-photo-set-maker). It takes the product photos.
-- The [Marketplace photo rule checker](https://useaiblocks.com/skills/marketplace-photo-rule-checker). It takes the product photos and photo set.
-- The [Reference-style product photo maker](https://useaiblocks.com/skills/reference-product-photos). It takes the product photos.
+- The [Marketplace photo rule checker](https://useaiblocks.com/skills/marketplace-photo-rule-checker). It takes the photo set.
+- The [Product photo set reviewer](https://useaiblocks.com/skills/product-photo-set-maker).
+- The [AI product photo inspector](https://useaiblocks.com/skills/ai-product-photo-inspector). It takes the photo set.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

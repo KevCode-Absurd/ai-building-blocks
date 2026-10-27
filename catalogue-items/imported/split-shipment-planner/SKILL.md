@@ -31,7 +31,7 @@ Splits a fulfillment order containing multiple line items into two or more separ
 
 ## Safety
 
-> ⚠️ `fulfillmentOrderSplit` is irreversible — a split fulfillment order cannot be merged back. The original fulfillment order is replaced by multiple new ones. Run with `dry_run: true` to confirm the intended groupings before committing. Ensure all `line_item_ids` in `split_groups` belong to the target fulfillment order.
+> ⚠️ `fulfillmentOrderSplit` changes a live order and is hard to reverse. Shopify has a way to merge fulfillment orders again, but only in some cases, so treat the split as final. The original fulfillment order is replaced by multiple new ones. Run with `dry_run: true` to confirm the intended groupings before committing. Ensure all `line_item_ids` in `split_groups` belong to the target fulfillment order.
 
 ## Workflow Steps
 
@@ -42,8 +42,10 @@ Splits a fulfillment order containing multiple line items into two or more separ
 2. Validate `split_groups` — confirm all line item IDs exist in the fulfillment order and quantities are ≤ remaining quantities
 
 3. **OPERATION:** `fulfillmentOrderSplit` — mutation
-   **Inputs:** `fulfillmentOrderId`, `fulfillmentOrderLineItems` (the items and quantities for one split group). The mutation below takes one group at a time, so run it once per split group, and show the dry-run preview as one line per call so it matches what the live run does. Check the argument shape against Shopify's current docs for `fulfillmentOrderSplit` before the first live run.
-   **Expected output:** Array of new `fulfillmentOrders { id, lineItems }`, `userErrors`
+   **Inputs:** one `fulfillmentOrderSplits` entry with `fulfillmentOrderId` and `fulfillmentOrderLineItems` (the items and quantities for one split group). Run it once per split group.
+   **Expected output:** `fulfillmentOrderSplits { fulfillmentOrder, remainingFulfillmentOrder, replacementFulfillmentOrder }` and `userErrors`. If Shopify returns a schema error, stop and show it to the user. Do not guess a fix.
+
+4. **Dry run first.** Before any mutation, print the planned groups (one line per group, with item names and quantities) and the target fulfillment order ID. Run the mutation only after the user says yes to that exact preview.
 
 ## GraphQL Operations
 
@@ -53,7 +55,7 @@ query FulfillmentOrderLines($orderId: ID!) {
   order(id: $orderId) {
     id
     name
-    fulfillmentOrders(first: 10) {
+    fulfillmentOrders(first: 10, query: "status:open") {
       edges {
         node {
           id
@@ -79,27 +81,36 @@ query FulfillmentOrderLines($orderId: ID!) {
 }
 ```
 
+Variables for one split group: `{"fulfillmentOrderSplits": [{"fulfillmentOrderId": "gid://shopify/FulfillmentOrder/<id>", "fulfillmentOrderLineItems": [{"id": "gid://shopify/FulfillmentOrderLineItem/<id>", "quantity": <n>}]}]}`
+
 ```graphql
-# fulfillmentOrderSplit:mutation — validated against api_version 2025-01
-mutation FulfillmentOrderSplit($fulfillmentOrderId: ID!, $fulfillmentOrderLineItems: [FulfillmentOrderLineItemInput!]!) {
-  fulfillmentOrderSplit(
-    fulfillmentOrderId: $fulfillmentOrderId
-    fulfillmentOrderLineItems: $fulfillmentOrderLineItems
-  ) {
-    fulfillmentOrders {
-      id
-      status
-      lineItems(first: 50) {
-        edges {
-          node {
-            id
-            remainingQuantity
-            variant {
-              sku
-              title
+# fulfillmentOrderSplit:mutation — uses the FulfillmentOrderSplitInput shape
+mutation FulfillmentOrderSplit($fulfillmentOrderSplits: [FulfillmentOrderSplitInput!]!) {
+  fulfillmentOrderSplit(fulfillmentOrderSplits: $fulfillmentOrderSplits) {
+    fulfillmentOrderSplits {
+      fulfillmentOrder {
+        id
+        status
+        lineItems(first: 50) {
+          edges {
+            node {
+              id
+              remainingQuantity
+              variant {
+                sku
+                title
+              }
             }
           }
         }
+      }
+      remainingFulfillmentOrder {
+        id
+        status
+      }
+      replacementFulfillmentOrder {
+        id
+        status
       }
     }
     userErrors {
@@ -173,6 +184,6 @@ Human-readable split summary. No CSV output — split results are viewable in Sh
 | Fulfillment order not OPEN | Already fulfilled or cancelled | Abort with status report |
 
 ## Best Practices
-- Use `dry_run: true` to preview the resulting shipment groups before splitting — a split cannot be reversed.
+- Use `dry_run: true` to preview the resulting shipment groups before splitting. A split is hard to reverse.
 - Ensure `split_groups` covers all line items in the fulfillment order; any unassigned items will remain in the original (residual) fulfillment order.
 - For orders with items shipping from different warehouses, move the split groups to the correct locations after splitting, either by hand in Shopify Admin or with the fulfillment-location-rerouter skill on this site.

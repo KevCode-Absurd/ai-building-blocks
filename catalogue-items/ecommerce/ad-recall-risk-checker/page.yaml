@@ -101,7 +101,7 @@ output_shape: |
   CONTROVERSY RISK: <none | element, owner sign-off needed>
   FIXES: <section>: <smallest change>
   CHEAP TEST: <ten-person poll next day | head to head>
-  NOT RUN: <check, and what is needed>
+  NOT RUN (CHECKS MISSED): <check, and what is needed, or none>
 
 tweaks:
   - what: Whether you gave the finished ad

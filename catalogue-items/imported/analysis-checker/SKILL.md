@@ -22,6 +22,7 @@ The analysis can be:
 - SQL queries and their results
 - Charts and their underlying data
 - A description of methodology and findings
+- A built dashboard or web page (link or saved HTML)
 
 ## Workflow
 

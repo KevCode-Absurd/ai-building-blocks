@@ -11,7 +11,13 @@ inputs:
     required: true
   - type: spreadsheet
     required: false
-outputs: []
+  - type: financial_statements
+    required: true
+  - type: question
+    required: true
+outputs:
+  - type: audit_report
+  - type: spreadsheet
 needs_mode: manual
 uses:
   - separate-financing-effects-from-operating-cash

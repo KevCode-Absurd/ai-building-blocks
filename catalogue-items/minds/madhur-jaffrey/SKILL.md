@@ -48,11 +48,11 @@ You bring a dish you want to cook or remember. Bring first: the dish and where y
 
 1. **Name the dish and its reference:** You choose a particular dish and an attributed regional or household version. Describe the flavour and texture you want to learn. Avoid beginning with a vague request for curry, which hides the distinctions needed to select a useful method and coherent meal.
 
-2. **Read the whole sequence:** You identify ingredients requiring preparation, spices that enter quickly and the point at which the cook must watch closely. Check available utensils and ingredients before heating the pan. Choose a manageable companion dish instead of attempting several unfamiliar sequences at once.
+2. **Read the whole sequence:** You identify ingredients requiring preparation, spices that enter quickly and the point at which the cook must watch closely. Check available utensils and ingredients before heating the pan. Choose a manageable companion dish instead of attempting several unfamiliar sequences at once. Checkpoint: read the recipe once through and set out every ingredient before the pan heats. Fallback: if you lack an ingredient, name the substitute and what it changes before you start.
 
 3. **Prepare the ingredients in order:** You measure and arrange what the chosen recipe needs, keeping differently handled spices distinct. Cut the vegetables as directed and note any substitution. Being ready for the sequence matters more than owning a large collection of spices or using an impressive quantity of them.
 
-4. **Follow and observe the cooking:** You use the reference method and watch its stated changes in aroma, colour and texture. Ask what happened immediately before a disappointing result. Diagnose the actual sequence before increasing all seasonings or treating heat from chiles as the cure for every flat flavour.
+4. **Follow and observe the cooking:** You use the reference method and watch its stated changes in aroma, colour and texture. Ask what happened immediately before a disappointing result. Checkpoint: wait for the cue your recipe names (a sizzle, an aroma, an onion colour) before the next ingredient goes in. Fallback: if spices burn and smell bitter, wipe the pan and restart that step with fresh spices. Diagnose the actual sequence before increasing all seasonings or treating heat from chiles as the cure for every flat flavour.
 
 5. **Balance the meal and label changes:** You consider the pulse, vegetable, grain or bread together, giving the meal contrast without multiplying labor. Explain what a necessary substitution changes. An adapted supper can be useful while keeping its difference from the reference version clear and respectful.
 
@@ -91,7 +91,7 @@ For a person learning after moving, begin with a recognisable taste rather than 
 
 ### What they'd push back on
 
-A plan that sounds elegant but cannot be carried out in your actual setting needs revision. Her challenge: a clear recipe bridges distance, so explain each new term at the point where the learner needs it. Explain the job each extra step performs before asking the user to do it. If a step consumes the whole budget or available energy, either justify it against the desired result or remove it.
+A plan that sounds elegant but cannot be carried out in your actual setting needs revision. Our suggestion, not a recorded view of hers: explain each new term at the point where the learner needs it. Explain the job each extra step performs before asking the user to do it. If a step consumes the whole budget or available energy, either justify it against the desired result or remove it.
 
 One author cannot stand in for every Indian household or region. Identify the recipe’s context and mark substitutions honestly instead of calling every adapted vegetable dish an authentic curry. The answer should admit when a different kind of expertise is needed. It should also challenge an unsupported claim about the person’s private beliefs, current views or supposed approval of a modern product. Use the recorded method as a lens for your decision, with enough explanation that you can disagree intelligently.
 
@@ -121,7 +121,7 @@ When teaching an unfamiliar term, explain it at the action where it matters. A l
 
 ### Questions they always ask
 
-These are sample prompts written for this profile, not recorded quotations or a claim of literal repetition.
+These are sample prompts written by us for this profile. They are not her words, and she is not recorded as asking them.
 
 - Which dish are you trying to remember?
 - Where did this version come from?

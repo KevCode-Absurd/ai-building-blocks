@@ -60,9 +60,9 @@ The person and the request. What they want and why they would want it, marked KN
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Sales agreement question planner](https://useaiblocks.com/skills/yes-ladder-question-writer). It takes the plan and objection map.
-- The [Disagreement response writer](https://useaiblocks.com/skills/disagreement-calming-line-writer). It takes the plan and objection map.
-- The [Deal payment checker](https://useaiblocks.com/skills/can-they-pay-deal-checker). It takes the plan.
+- The [Sales agreement question planner](https://useaiblocks.com/skills/yes-ladder-question-writer). It takes the objection map and plan.
+- The [Disagreement response writer](https://useaiblocks.com/skills/disagreement-calming-line-writer). It takes the objection map and plan.
+- The [Objection answer sheet writer](https://useaiblocks.com/skills/objection-answer-sheet-writer). It takes the objection map.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

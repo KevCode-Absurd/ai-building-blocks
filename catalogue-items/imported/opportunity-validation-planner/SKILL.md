@@ -5,7 +5,7 @@ description: Use when validating product opportunities, mapping assumptions, pla
 
 # Product Discovery
 
-Run structured discovery to identify high-value opportunities and de-risk product bets.
+Run structured discovery to identify high-value opportunities and de-risk product bets. If you already have a lean canvas, use its risks and assumptions as the starting list to map.
 
 ## When To Use
 

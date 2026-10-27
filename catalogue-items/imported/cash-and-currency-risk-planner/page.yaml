@@ -30,13 +30,13 @@ you_get:
   - A list of idle balances to move
   - A treasury report
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat.
-  - List your cash balances by account and entity. Add the account, entity, currency, balance, due date and amount for each large payment.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat. Pasting only the skill text does not give your AI the scripts and reference files. For the calculation script, upload the whole folder to an AI that can run code. In a plain chat the AI works the numbers itself, so check them.
+  - "List your cash balances in columns: account, entity, currency, balance. List each large payment in columns: entity, currency, due date, amount, what it is for."
   - Add your foreign currency amounts and any floating-rate debt. Add your investment policy limits if you have them.
   - Tell the AI the confidence level and time horizon you want for the currency risk estimate. If you do not know, ask it to suggest one and explain why.
   - Read the 13-week forecast first and check every balance against your bank statements.
   - Take the hedge and investment ideas to your bank or adviser before you act. Running the calculation script needs an AI that can run code.
-  - Next, build a full forecast with the Cash forecast builder, or find cash stuck in customers and stock with the Cash tied up finder.
+  - Next, build a full forecast with cash-forecast-builder, or find cash stuck in customers and stock with cash-tied-up-finder.
 output_sample:
   input:
     - Cash balances by account and entity

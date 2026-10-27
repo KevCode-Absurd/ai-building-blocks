@@ -32,11 +32,13 @@ you_get:
   - Project-level overrides
 how_to_use:
   - You need Python 3 and a terminal (or an AI that can run code). Nothing else is needed. Have your main colour, fonts, company name and logo link ready for the ten questions.
-  - Download the skill folder and the Markdown to HTML converters. The converters read your saved style.
+  - Download the skill folder and the Markdown to HTML converters. The converters are separate items on AI Blocks, and they are not in this folder: Markdown to web page maker (md-document), Code review page maker (md-review) and Markdown slide deck maker (md-slides). The wizard shows nothing by itself. The converters read your saved style.
   - Run onboard.py in a terminal, or ask an AI that can run code to run it. Answer the ten questions.
   - For a fast start with default choices, run onboard.py with the --defaults option.
   - To change one value, use --set, for example --set brand.primary=#FF6B35. Use --reset to start over.
   - If the contrast check fails, pick a darker main colour and run it again.
+  - Next, run one converter on a short sample Markdown file to confirm your saved style is applied. Then convert your real pages.
+next: [markdown-to-web-page-maker, markdown-slide-deck-maker, code-review-page-maker]
 output_sample:
   input:
     - Your main brand colour and an accent colour (optional)

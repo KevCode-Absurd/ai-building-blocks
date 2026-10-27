@@ -29,7 +29,7 @@ you_get:
   - The plan rebuilt from the end date, with a score out of 100
   - A list of ways it could fail and one change for each gap
 how_to_use:
-  - "Download the handoff pack. It's a zip with HANDOFF.md and four skill files, in the order they run: Strategy trade-off planner, Feature roadmap to outcomes rewriter, Work-backwards plan checker and Failure-first plan check."
+  - "Download the handoff pack. It's a zip with HANDOFF.md and four skill files, in the order they run: Strategy trade-off planner, Product outcome roadmap planner, Backwards planning checker and Plan failure reviewer."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project, which can need a paid plan) and say "Follow HANDOFF.md".
   - State your end date and the result you want in plain numbers at the start. Step 3 needs both.
   - Tell it about any commitment you cannot drop, so the not-do list stays honest.

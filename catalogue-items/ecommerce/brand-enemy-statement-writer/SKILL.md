@@ -21,6 +21,7 @@ Check that the statement names an idea or practice, respects customers who curre
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Positioning idea generator](https://useaiblocks.com/skills/positioning-idea-generator). It takes the brief.
 - The [Brand launch planner](https://useaiblocks.com/skills/brand-launch-planner). It takes the brief.
+- The [SaaS market position adviser](https://useaiblocks.com/skills/copilot-gtm-positioning-strategy). It takes the brief.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

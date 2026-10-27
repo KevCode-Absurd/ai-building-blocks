@@ -8,11 +8,13 @@ job: ops
 level: advanced
 inputs:
   - {type: question, required: true}
-  - {type: copy_draft, required: false}
+  - {type: prompt, required: false}
   - {type: skill_files, required: false}
+  - {type: document, required: false}
+  - {type: eval_set, required: false}
 outputs:
   - {type: audit_report}
-  - {type: copy_draft}
+  - {type: prompt}
   - {type: skill_files}
 uses: [prompt-tester-and-tuner, prompt-fixer, marketing-prompt-tester, skill-file-validator, skill-quality-tester, skill-trigger-auditor, skill-writer-and-reviewer, skill-safety-checker]
 steps:

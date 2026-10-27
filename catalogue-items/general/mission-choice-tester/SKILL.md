@@ -5,7 +5,7 @@ description: Use when you have written a mission statement and want to know if i
 
 # Mission choice tester
 
-A mission statement that cannot settle a real choice is decoration. This skill tests yours the way a constitution is tested: by bringing it a case. It takes up to five real choices, asks what the statement says about each, and scores how many it settles. Where it is vague or silent, it proposes a fix. It scores the statement, not the person. If there is no statement yet, use [Personal mission statement writer](https://useaiblocks.com/skills/personal-mission-statement) first.
+A mission statement that cannot settle a real choice is decoration. This skill tests yours the way a constitution is tested: by bringing it a case. It takes up to five real choices, asks what the statement says about each, and scores how many it settles. Where it is vague or silent, it proposes a fix. It scores the statement, not the person. If there is no statement yet, use [Personal mission statement writer](https://useaiblocks.com/skills/personal-mission-statement) first. Not for a company or brand mission (use "Business mission writer"), for choosing between options today (use "Pros and cons decision planner"), or for judging whether a past choice was wise.
 
 ## Required input
 

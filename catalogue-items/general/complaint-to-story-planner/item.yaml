@@ -8,6 +8,7 @@ role: plan
 job: ops
 level: beginner
 inputs:
+  - {type: voc_reviews, required: true}
   - {type: question, required: true}
 outputs:
   - {type: plan}

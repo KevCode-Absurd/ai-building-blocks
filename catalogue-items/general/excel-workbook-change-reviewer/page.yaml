@@ -63,7 +63,7 @@ output_sample:
       contains: Missing facts and checks that could not run, each with a next action.
 how_it_works:
   - title: Step 1
-    text: 1. Hash and preserve both files. Inventory sheets, hidden states, tables, defined names, formulas, links, validations, charts, pivots and macro presence without executing macros or refreshing connections.
+    text: 1. Keep both original files unchanged and work on copies. Note each file's name and date. List sheets, hidden sheets, tables, defined names, formulas, links, validations, charts, pivots and whether it contains macros, without running macros or refreshing connections.
   - title: Step 2
     text: 2. Match records by confirmed stable keys, not by row position alone. Align changed sheet names and separate added, removed and reordered records.
   - title: Step 3
@@ -71,7 +71,7 @@ how_it_works:
   - title: Step 4
     text: 4. Review changed names, validation ranges, hidden sheets, print settings, external links and data connections. State features the inspection tool cannot preserve or compare.
   - title: Step 5
-    text: 5. Recalculate supported copies and investigate material differences using the agreed tolerance. Report file, sheet and cell or object locations with before/after evidence; make no repairs unless requested.
+    text: 5. Recalculate the copies in Excel (or another tool that can, such as LibreOffice) and investigate material differences using the agreed tolerance. Report file, sheet and cell or object locations with before/after evidence; make no repairs unless requested.
 output_shape: |-
   FILES
   workbook-change-review.xlsx and change-register.md.
@@ -88,9 +88,9 @@ tweaks:
   - what: Your source files
     how: Baseline and revised workbook, intended changes, sheet/key mapping and materiality or tolerance rules.
   - what: The result you need
-    how: Name the file format, audience and parts that must stay editable. State any page or slide limit.
+    how: Say whether you want every change listed or only the ones above your rounding limit.
   - what: The app used to check it
-    how: Say which Excel or PowerPoint version you will use. Your AI must name any check it cannot run.
+    how: Say which Excel version you will use. Your AI must name any check it cannot run.
 judge:
   - Reordering is not reported as every record changing.
   - Formulas and cached values are distinguished.

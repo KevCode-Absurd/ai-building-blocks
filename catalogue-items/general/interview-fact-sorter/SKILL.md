@@ -54,9 +54,9 @@ TO DO
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Customer conversation notes sorter](https://useaiblocks.com/skills/customer-interview-notes).
-- The [Customer job interview planner](https://useaiblocks.com/skills/customer-job-interview-planner).
-- The [Customer interview synthesizer](https://useaiblocks.com/skills/customer-interview-synthesizer).
+- The [Customer switching barrier planner](https://useaiblocks.com/skills/switch-friction-remover). It takes the audit report.
+- The [Customer switching journey mapper](https://useaiblocks.com/skills/switch-story-mapper). It takes the audit report.
+- The [Customer needs profile builder](https://useaiblocks.com/skills/job-based-avatar-builder). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -7,15 +7,17 @@ description: "Re-check your case competition deck against the rubric and new evi
 
 Reviews a case competition recommendation against the judging rubric and the case exhibits, then revises the slides that the change touches. It runs once per request and compares with the last review when one is supplied. It does not submit, send or present anything.
 
+When not to use it: for a first pass with no earlier review, run the Stress test a case competition recommendation workflow. For practice judge questions only, use the Prepare case competition judge questions workflow. For a talk story rather than a deck review, use the Build a talk around one real case workflow.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Numbers explainer](https://useaiblocks.com/prompts/figures-to-plain-pictures-writer). It takes the audit report.
-- The [Board deck builder](https://useaiblocks.com/skills/board-deck-builder). It takes the document.
-- The [Visual numbers explainer](https://useaiblocks.com/skills/number-to-picture-translator). It takes the document.
+- The [Board meeting question coach](https://useaiblocks.com/skills/hard-questions-board-prep-coach). It takes the document.
 - The [PowerPoint deck change reviewer](https://useaiblocks.com/skills/powerpoint-deck-change-reviewer). It takes the slide deck.
+- The [Numbers explainer](https://useaiblocks.com/prompts/figures-to-plain-pictures-writer). It takes the audit report.
 - The [India finance slide reviewer](https://useaiblocks.com/skills/finance-deck-quality-checker). It takes the slide deck.
+- The [Visual numbers explainer](https://useaiblocks.com/skills/number-to-picture-translator). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -23,19 +25,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
 - **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
 - **A draft** (yours): the ad, page, email or script you want checked or improved.
 
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-2. This one.
-
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a buyer brief, source text, a draft. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, source text, a draft. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -44,6 +42,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+
+Note: this job does not need a buyer brief, a brand brain or an ad draft. Use the list below. If the Before you start list above asks for them, skip that.
 
 Ask once for anything below that is missing. If it is still missing, write `MISSING: <what>`, name the path it blocks, and finish the parts that do not need it. Never guess.
 

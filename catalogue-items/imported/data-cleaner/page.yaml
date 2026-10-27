@@ -9,7 +9,7 @@ subhead: A messy file becomes analysis ready, with a log of every change made. Y
 explain: |
   A messy file becomes analysis ready, with a log of every change made. You see exactly what was fixed and can undo or adjust it.
 
-  First it profiles the data: nulls per column, duplicate rows and mixed types. Then it fills gaps by column, using medians for light numeric gaps and the most common value or an Unknown label for categories. Blank emails and phone numbers stay blank and are flagged. It removes exact duplicates and checks near duplicates, such as rows that differ only by spacing or capital letters. It converts dates and numbers to proper types and standardises formats. Outliers are found with the 1.5 times IQR rule or z-scores, and you choose between capping, blanking or keeping them. A final validation reports anything still wrong. It uses Python.
+  First it profiles the data: nulls per column, duplicate rows and mixed types. Then it fills gaps by column, using medians for light numeric gaps and the most common value or an Unknown label for categories. Blank emails and phone numbers stay blank and are flagged. It removes exact duplicates and checks near duplicates, such as rows that differ only by spacing or capital letters. It converts dates and numbers to proper types and standardises formats. Outliers are found with the 1.5 times IQR rule or z-scores, and you choose between capping, blanking or keeping them. A final validation reports anything still wrong. It uses Python. Your cleaned file comes back in the same format as your raw file (CSV by default), and the log is a text or Markdown file. Your raw file is never changed. This is Burhan Sebin's data-cleaning skill, shared under the MIT licence.
 when:
   - A CSV from a supplier has blank cells, duplicates and dates in three formats.
   - You need clean data before building a report.
@@ -35,7 +35,7 @@ how_to_use:
   - Read the cleaning log first. Check that the changes make sense for your data.
   - Answer any question about columns with many blanks. The skill asks before it drops columns with many blanks. Columns that are entirely empty are dropped and logged.
   - Check the near-duplicate pairs and the match threshold before it merges any customer records.
-  - Load the cleaned file into your report or formula tool.
+  - Load the cleaned file into your report or formula tool. To get charts or a written analysis, ask your AI to analyse the cleaned file next.
 output_sample:
   input:
     - Your raw data file, such as a CSV or spreadsheet
@@ -49,9 +49,9 @@ output_sample:
     - name: Data profile
       contains: Blank cells per column, duplicate rows and columns with mixed types, found before any change is made.
     - name: Cleaned dataset file
-      contains: Your data with gaps handled, duplicates removed, types fixed, formats matched and outliers treated.
+      contains: A file in the same format as your raw file, CSV by default, with gaps handled, duplicates removed, types fixed, formats matched and outliers treated.
     - name: Cleaning log
-      contains: Every change made, with counts, so you can check it, undo it or adjust it.
+      contains: A text or Markdown file listing every change made, with counts, so you can check it, undo it or adjust it.
     - name: Validation report
       contains: Results of checks for blanks, ranges, unique values and allowed values, and any problems still left.
     - name: Columns flagged for you

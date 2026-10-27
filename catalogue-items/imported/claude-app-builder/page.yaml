@@ -9,7 +9,7 @@ subhead: Tell it what you want to build with Claude. It writes code that calls t
 explain: |
   Tell it what you want to build with Claude, and get working code that talks to the Claude API correctly. It uses the official software kit for your language, so function names and imports are real and not guessed.
 
-  It first looks at your project for signs of another AI provider and stops if you are using one. Then it picks the right way to build: a single call, a tool-using loop or a longer-running agent. It covers streaming, tool use, saved prompts to cut cost, token counts and moving to newer models. It warns where old habits from training are out of date, such as how thinking is switched on.
+  It first looks at your project for signs of another AI provider and stops if you are using one. Then it picks the right way to build: a single call, a tool-using loop or a longer-running agent. It covers streaming, tool use, saved prompts to cut cost, token counts and moving to newer models. It warns where old habits from training are out of date, such as how thinking is switched on. This is an Apache 2.0 copy of Anthropic's claude-api skill. The default model name and settings in it can go out of date, so check them against your account before you run the code.
 when:
   - You want to add a Claude feature to an app and need correct code.
   - Your old Claude code uses settings that have since changed.
@@ -19,6 +19,7 @@ not_for:
   - You use OpenAI, Gemini or another AI provider. The skill stops when it finds one, so use that provider's own docs.
   - You have one quick question about the Claude API. Read the plain API docs from Anthropic instead.
   - You want a no-code tool. Ask a developer, or use a chat app, since this skill writes code you must run.
+  - You cannot read, run and fix code in your language. This skill needs a developer, or someone ready to run and debug the code it writes.
 you_give:
   - What you want to build
   - Your programming language
@@ -38,6 +39,7 @@ how_to_use:
   - If your AI cannot reach the web, it works from the skill's own notes. Test the code and fix any errors.
   - If you already have Claude code, ask for migrate first to move it to a newer model, or prompt-audit to find prompts written for older models.
   - Check the model name and thinking settings it picks against what your account offers. They are defaults written into the skill and can go out of date.
+  - You get the changed or new files (with their paths), the command to run them, and what the first answer should look like. The full reference is long, so ask for just the part you need.
   - Next, run the code once on one small test input. When it works, ask for cost-optimize to cut the bill or build-eval to test the answers.
 output_sample:
   input:

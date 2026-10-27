@@ -16,7 +16,7 @@ when:
   - You keep answering the same question and want it to become a post.
 not_for:
   - "You get fewer than a few posts or comments a week: reply by hand, it will be faster."
-  - "You need to answer customer complaints: use your support desk or a person on your team."
+  - "You need to answer customer complaints: use the Customer inbox triage and reply drafter, your support desk or a person on your team."
   - "You want to post, like or follow for you: this agent only drafts, so you post the replies yourself."
 you_give:
   - The posts you might reply to, or the comments on your own posts, with the platform and how old each is
@@ -30,6 +30,7 @@ you_get:
   - Questions people keep asking, with counts, as topics for your next posts
   - A log that keeps your openings from repeating
 how_to_use:
+  - Add the writer skill for each platform you use: X reply writer, LinkedIn comment writer, YouTube comment reply writer. The agent needs them to write the replies.
   - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to go through today's items.
   - The first time, paste your voice samples. It saves a voice file.
   - Paste the posts or comments, with the platform and how long ago each was posted. It does not fetch them for you, so paste fresh items each time you run it.

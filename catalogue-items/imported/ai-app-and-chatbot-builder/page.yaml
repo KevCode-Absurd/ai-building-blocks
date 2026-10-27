@@ -33,9 +33,10 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text.
   - Describe the app you want in plain words. Say which AI provider you use.
-  - Add the documents or tools the app should use, if any.
+  - Add the documents or tools the app should use, if any. The example weather and search tools return fixed placeholder text. Swap them for a real search or data source before you use the app.
+  - Set your API key as an environment variable for your provider. Never paste it into the code or the chat.
   - Read the code your AI writes. Check that it asks for your API key and does not run unsafe code.
-  - Run it on your computer with Python 3.10 or newer. Your AI can run it for you only if it can run code.
+  - Run it once in a test folder, with a few test documents, before you use it on real ones. Use Python 3.10 or newer on your computer. Your AI can run it for you only if it can run code.
   - Ask one test question. If the answer is wrong, paste the error back to your AI and ask for a fix.
 output_sample:
   input:

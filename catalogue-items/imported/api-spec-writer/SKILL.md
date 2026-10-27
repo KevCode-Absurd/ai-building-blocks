@@ -34,7 +34,7 @@ Before writing any YAML/JSON, ask (or infer from context) the following:
 | Common data models or entities? | `components/schemas` / `definitions` |
 | Any existing partial spec to extend? | Merge rather than overwrite |
 
-If the user provides code (Express routes, FastAPI, Django URLs, Spring controllers, etc.), **extract endpoints automatically** — do not ask what the user already told you.
+If the user provides code (Express routes, FastAPI, Django URLs, Spring controllers, etc.), **extract endpoints automatically** — do not ask what the user already told you. If the user has an API design plan, take the endpoints, models and errors from it instead of asking again.
 
 ### Step 2 — Build the Spec
 
@@ -321,7 +321,7 @@ If the user says **yes**:
   - Use the specification output above as the input
 - If the skill **is NOT available**:
   - Inform the user: "It looks like the API Test Case Generator skill isn't installed.
-    You can install it and re-run."
+    You can install it and re-run." Then stop. (That skill is not part of this item. The API test suite builder item on AI Blocks writes tests too.)
 
 If the user says **no**:
 - End the task here

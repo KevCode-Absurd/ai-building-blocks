@@ -39,3 +39,6 @@ Do not say you read or ran them. Do those steps by hand, or ask the user for the
 - `assets/reconciliation_report_template.md` — completed report showing source A vs. source B, the gap, root cause, and resolution status. Its sections, in order: Values compared, Root cause, Evidence, Resolution, Preventive measure.
 - A corrected query or pipeline change (if a bug was found)
 - A documented tolerance agreement (if the gap is acceptable)
+
+# Next steps
+After the report, name who signs it off (the owner of the metric), where it is stored (for example next to the dashboard or in the data catalog), and which data-quality check to run on the source that was wrong, so the gap does not come back. If the two sources should share one definition, use the Metric definition writer to record it.

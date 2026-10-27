@@ -10,6 +10,8 @@ explain: |
   Describe a traffic event in words and get a RoadRunner scenario written as code. A car cuts in, a pedestrian crosses, a lead vehicle brakes hard. Each one becomes actors, routes and trigger logic you can run and change.
 
   The skill works through the roadrunnerAPI in MATLAB. It first confirms a RoadRunner session is open. Then it adds vehicles and pedestrians, sets their routes and waypoints, and places them on roads by anchor or map position. Next it writes the scenario logic as phases, conditions and actions. Last, it checks the structure before you simulate. Scenes, road shapes and simulation runs are handled by other skills.
+
+  This is MathWorks' skill. The licence that applies is the LICENSE file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE file.
 when:
   - You need a cut-in or lead-brake test for an automated driving system.
   - You want a pedestrian crossing set up without clicking through the editor.
@@ -17,8 +19,9 @@ when:
   - You want the scenario checked before you simulate.
 not_for:
   - "You need to open or connect RoadRunner: open RoadRunner from MATLAB yourself first, as this skill needs a session already running."
-  - "You want to import a map or scene: import the scene in RoadRunner first, since this skill does not do it."
-  - "You want to draw roads, lanes or junctions: draw them in RoadRunner. To run the scenario, use Driving scenario simulator."
+  - "You want to import a map or scene: use the Road scene importer first, since this skill does not do it."
+  - "You want to draw roads, lanes or junctions: use the Road map author or draw them in RoadRunner. To run the scenario, use Driving scenario simulator."
+  - "You do not use MathWorks products: the licence allows use only with them."
 you_give:
   - A plain description of the traffic event
   - The road or scene to use
@@ -30,12 +33,12 @@ you_get:
   - Phase logic with conditions and actions
   - A structure check before simulation
 how_to_use:
-  - This needs MATLAB, a licensed RoadRunner install and a live roadrunnerAPI session, so it suits engineers, not general ops staff. Open RoadRunner from MATLAB and load the scene you want.
+  - This needs MATLAB, a licensed RoadRunner install and a live roadrunnerAPI session, so it suits engineers, not general ops staff. The skill does not name the MATLAB or RoadRunner versions it was written for, so ask your AI to check its code against your release before you run it. Open RoadRunner from MATLAB and load the scene you want. The skill that connects to RoadRunner is not in this library, so open it yourself. To import a scene first, use the Road scene importer. To draw roads, use the Road map author.
   - Give your AI the skill text and describe the traffic event in plain words.
   - Add actor types, speeds and trigger conditions if you have them. Have the scene name, the actor types, their speeds and the intended outcome (collision, near-miss or safe pass) ready first.
   - Let your AI run the MATLAB code it writes, or copy it into MATLAB yourself.
   - Read the summary and the structure check before you change anything.
-  - Run the simulation yourself when you are ready. This skill does not start it.
+  - Run the simulation yourself when you are ready. This skill does not start it. Use the Driving scenario simulator to run it.
 output_sample:
   input:
     - A plain description of the traffic event

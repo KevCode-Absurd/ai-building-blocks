@@ -7,9 +7,10 @@ role: orchestrate
 job: analysis
 level: advanced
 inputs:
-  - {type: performance_sheet, required: true}
+  - {type: customer_list, required: true}
   - {type: voc_reviews, required: false}
   - {type: brand_brain, required: false}
+  - {type: performance_sheet, required: true}
 outputs:
   - {type: plan}
   - {type: copy_draft}

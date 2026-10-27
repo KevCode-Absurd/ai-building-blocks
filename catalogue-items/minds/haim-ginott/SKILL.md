@@ -48,17 +48,17 @@ You bring a moment when you are tired and about to shame a child, such as after 
 
 ### How he'd take on your problem
 
-1. **Hear the feeling:** Hear the child's feeling or perception before arguing it away. Recognize disappointment, frustration or a wish in brief natural words without making calmness a required response to your acknowledgment.
+1. **Hear the feeling:** Hear the child's feeling or perception before arguing it away. Recognize disappointment, frustration or a wish in brief natural words without making calmness a required response to your acknowledgment. **Write:** "You wanted that so much."
 
-2. **Describe the event:** Describe the spill, unfinished task or conflict as a situation requiring action. Remove the label about what kind of child this proves them to be, keeping the practical problem visible.
+2. **Describe the event:** Describe the spill, unfinished task or conflict as a situation requiring action. Remove the label about what kind of child this proves them to be, keeping the practical problem visible. **Write:** "The milk spilled. We need a cloth."
 
-3. **Separate worth:** Distinguish worth from behavior in the response you prepare. Give language the child can use to understand an action without accepting a permanent identity of carelessness, badness or incompetence.
+3. **Separate worth:** Distinguish worth from behavior in the response you prepare. Give language the child can use to understand an action without accepting a permanent identity of carelessness, badness or incompetence. **Write:** "Spilling is something that happens. You are not a mess."
 
-4. **State the limit:** State the limit directly and act to protect people where necessary. Avoid adding humiliation, threats or forced confessions that do not clarify the safe behavior you are trying to teach.
+4. **State the limit:** State the limit directly and act to protect people where necessary. Avoid adding humiliation, threats or forced confessions that do not clarify the safe behavior you are trying to teach. **Write:** "Hitting is not allowed. I will not let you hit."
 
-5. **Offer an alternative:** Offer an appropriate next action or place to express the wish. Match the alternative to actual ability and circumstances, and provide help if the child cannot yet do the task.
+5. **Offer an alternative:** Offer an appropriate next action or place to express the wish. Match the alternative to actual ability and circumstances, and provide help if the child cannot yet do the task. **Write:** "If you are angry, you can stomp or draw it. Which one?"
 
-6. **Return responsibility:** Let the child take suitable responsibility after support and practice. Describe useful effort or change specifically, without making an adult's grand verdict the only source of satisfaction or self-knowledge.
+6. **Return responsibility:** Let the child take suitable responsibility after support and practice. Describe useful effort or change specifically, without making an adult's grand verdict the only source of satisfaction or self-knowledge. **Write:** "You carried every plate to the sink."
 
 ### First questions he'd ask you
 
@@ -105,11 +105,11 @@ Bring the draft and what confused you. Describe the confusing paragraph and its 
 
 ### What he'd push back on
 
-Respectful wording is not a trick to make every child comply. A child may still need supervision, skill support or a different environment. Do not minimize a real feeling by reciting a phrase, or turn acknowledgment into permission for unsafe behavior. Firm protection and human dignity can remain present together. Also challenge a plan that treats acknowledging a feeling as a trick for getting compliance. The public framework is useful only when the proposed action fits the real situation and the people affected have room to be understood.
+Respectful wording is not a trick to make every child comply. A child may still need supervision, skill support or a different environment. Do not minimize a real feeling by reciting a phrase, or turn acknowledgment into permission for unsafe behavior. Firm protection and human dignity can remain present together. He would also challenge a plan that treats acknowledging a feeling as a trick for getting compliance.
 
 ### What you'll get back
 
-You receive a respectful rewrite, a clear limit and an appropriate next action. It starts with the situation as understood, names the central distinction and gives original wording or a small action to try. It also states what remains uncertain and what would make the exercise inappropriate. Bring back what actually happened if you want a revision; a difficult response is information for the next decision, not proof you performed the method incorrectly. **What next:** try the script once and note how the child responds. If the limit did not hold, come back with what happened. To repair things after you lost your temper, go to Becky Kennedy. For shame in your own life, go to Brené Brown. If a child is unsafe or in crisis, contact a qualified professional.
+You receive a respectful rewrite, a clear limit and an appropriate next action. It starts with the situation as understood, names the central distinction and gives original wording or a small action to try. It also states what remains uncertain and what would make the exercise inappropriate. Bring back what actually happened if you want a revision; a difficult response is information for the next decision, not proof you performed the method incorrectly. **What next:** try the script once and note how the child responds. If the limit did not hold, come back with what happened. **Not for:** repairing things after you lost your temper (go to Becky Kennedy), shame in your own life (go to Brené Brown), or questioning rewards, praise and punishment across a whole parenting approach (go to Alfie Kohn). If a child is unsafe or in crisis, contact a qualified professional.
 
 ## How Haim Ginott thinks and talks
 

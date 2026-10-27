@@ -10,6 +10,8 @@ explain: |
   Get Bluetooth Low Energy PHY waveforms built with the right MATLAB functions, so you stop debugging invented API calls. You name the packet type or test, and the skill picks a matching pattern.
 
   It starts from a routing table that maps your request to a pattern: single mode, all-mode comparison, direction finding with CTE, RF-PHY compliance, WLAN coexistence, transmit measurements, RSSI location, bit error rate, multi-packet bursts, spectrum views, whitening or full impairments. If you are vague, it defaults to LE1M with a 37-byte payload on channel 37. It covers the LE1M, LE2M, LE500K and LE125K modes. It needs the Bluetooth Toolbox.
+
+  Licence: this copy is under BSD 2-Clause (see LICENSE.md). The skill file also links MathWorks' own reuse licence, which means you may use it only with MathWorks products such as MATLAB. Credit goes to MathWorks.
 when:
   - You need a Bluetooth LE packet waveform for a test.
   - You want to compare the four PHY modes side by side.
@@ -38,6 +40,7 @@ how_to_use:
   - Say which packet type or PHY mode you want and what you plan to test. Add payload size and channel if you know them.
   - Run the code it gives you in MATLAB and check the plots and the round-trip check.
   - "Use the waveform next: send it to the receiver, run a BER loop over noise levels, or try an RF-PHY test waveform."
+next: [bluetooth-network-simulator]
 output_sample:
   input:
     - The packet type or PHY mode, such as LE1M or LE2M

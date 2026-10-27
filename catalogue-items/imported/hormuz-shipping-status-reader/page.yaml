@@ -10,6 +10,8 @@ explain: |
   A quick, readable status check on the Strait of Hormuz: open, restricted or closed, and what that means for shipping and oil. Ask in plain words. The skill pulls live figures from a public dashboard called the Hormuz Strait Monitor and reads them back to you.
 
   A general question gets a full briefing: the current status and how long it has lasted, tanker crossings against normal, ships stranded, Brent oil price movement, war-risk insurance rates, cargo volume and the diplomatic situation. A narrower question, like how many ships are stuck, gets just that section. It also adds a short risk read. It uses the web to fetch data and cannot change anything. If the dashboard is down, it tells you.
+
+  It fetches its data from a third-party website, hormuzstraitmonitor.com. It reads one public page and changes nothing. Neither we nor the author run that site, so check the numbers there if they matter.
 when:
   - You need to know today whether the Strait of Hormuz is open.
   - You are tracking shipping delays that could affect your supply chain.
@@ -22,7 +24,7 @@ not_for:
 you_give:
   - Your question about the strait
   - Which part you care about, such as ships, oil price or insurance (optional)
-  - Internet access to fetch the dashboard
+  - A chat that can run curl or browse the web to fetch the dashboard. If yours cannot, open hormuzstraitmonitor.com yourself and paste the figures in
 you_get:
   - Current open, restricted or closed status
   - Ship counts against normal
@@ -33,7 +35,7 @@ how_to_use:
   - Paste the skill text into the chat.
   - "Ask your question, such as: is Hormuz open today? Name a topic like ships or insurance if you only want that part."
   - Check the time stamp in the answer to see how fresh the data is.
-  - If the dashboard is down, the AI will say so. Visit hormuzstraitmonitor.com yourself.
+  - If the dashboard is down, the AI will say so. Visit hormuzstraitmonitor.com yourself. If your chat cannot fetch pages at all, paste the numbers from the dashboard and ask it to read them back.
   - Treat the result as a read of a third-party dashboard, not financial advice.
   - Then check the status of your own cargo with your shipper or freight agent. If the strait is restricted, run the Shipping rate gap finder or the Supply chain backup plan builder.
 output_sample:

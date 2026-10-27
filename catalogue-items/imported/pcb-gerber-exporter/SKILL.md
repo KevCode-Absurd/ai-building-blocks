@@ -201,7 +201,7 @@ C2 = PCBConnectors.SMA_Cinch;
 
 4. **gerberWrite requires pcbComponent or pcbStack**: `gerberWrite` does not work on catalog objects (e.g., `microstripLine`, `filterHairpin`). Convert to `pcbComponent` first if needed.
 
-5. **Connector requires IsShielded on catalog objects.** Setting `obj.Connector = RFConnector` on a catalog object (microstripLine, etc.) will error with "SolverType property must be set to 'FEM'" unless `obj.IsShielded = true` is set first. Catalog objects do not support FEM directly — use `IsShielded = true` for MoM shielded mode. `design(RFConnector, obj)` only works with `pcbComponent` objects that have `SolverType='FEM'`.
+5. **Connector requires IsShielded on catalog objects.** Setting `obj.Connector = RFConnector` on a catalog object (microstripLine, etc.) will error with "SolverType property must be set to 'FEM'" unless `obj.IsShielded = true` is set first. Catalog objects do not support FEM directly. Setting `IsShielded = true` switches the object to an internal FEM-like solver path (see pitfalls 6 and 8 for what that changes). `design(RFConnector, obj)` only works with `pcbComponent` objects that have `SolverType='FEM'`.
 
 6. **IsShielded + finite conductivity conflict.** Setting `IsShielded = true` activates an internal FEM-like solver path. If you also set `Conductor = metal("Copper")` (finite conductivity), you will get "FEM solver does not support finite conductivity. Set conductivity of conductor to Inf." Leave `Conductor` at the default (PEC) when using `IsShielded = true` or `Connector`.
 

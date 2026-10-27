@@ -7,6 +7,8 @@ description: "Use when a listed company's new filing changes its inventory note,
 
 Review a listed company's inventory accounting each time a new filing arrives. You get a change register, a LIFO to FIFO margin bridge, a margin view without write-downs and the cash invested in stock. It uses only the filings you supply. It values nothing and files nothing.
 
+The minimum to start is the new dated filing with the inventory note, the income statement and the cash flow statement. The LIFO items are needed only for a US GAAP company that uses LIFO. Everything else is optional.
+
 ## Before you start
 Use what is attached or pasted first. If something is missing, say what you can finish and what must wait, and mark each gap `MISSING:`. Never replace a missing figure with zero.
 
@@ -19,7 +21,7 @@ Use what is attached or pasted first. If something is missing, say what you can 
 
 **Makes it better (optional):** the last accepted model and review log, and the record this agent wrote last time.
 
-**The pieces it uses:** the [Explain inventory accounting margin effects](https://useaiblocks.com/workflows/explain-inventory-accounting-margin-effects) workflow (the governing method), which runs the [LIFO reserve earnings bridge](https://useaiblocks.com/skills/lifo-reserve-earnings-bridge), the [Inventory charge margin bridge](https://useaiblocks.com/skills/inventory-charge-margin-bridge) and the [Noncash working-capital bridge](https://useaiblocks.com/skills/noncash-working-capital-bridge), and the [Trailing-period financial bridge](https://useaiblocks.com/skills/trailing-period-financial-bridge) (only for a trailing comparison). If you cannot open them, use the method written in step 3 and say you did.
+**The pieces it uses:** the [Explain inventory accounting margin effects](https://useaiblocks.com/workflows/explain-inventory-accounting-margin-effects) workflow (the governing method), which runs the [LIFO reserve earnings bridge](https://useaiblocks.com/skills/lifo-reserve-earnings-bridge), the [Inventory charge margin bridge](https://useaiblocks.com/skills/inventory-charge-margin-bridge) and the [Noncash working-capital bridge](https://useaiblocks.com/skills/noncash-working-capital-bridge), and the [Trailing-period financial bridge](https://useaiblocks.com/skills/trailing-period-financial-bridge) (only for a trailing comparison). If you cannot open them, use the method written in steps 3 to 6 and say you did. Do not rebuild a missing piece from memory beyond what those steps say.
 
 **Tools that do this best:**
 - **A spreadsheet engine and file-capable AI:** builds and reopens the workbook and can save the record file. In plain chat, return the same tables as text and the record for the user to keep.

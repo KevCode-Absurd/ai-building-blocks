@@ -87,6 +87,7 @@ output_shape: |
   RECOVERY: <email and SMS at each step where buyers drop off>
   AOV MATH: front end <$> + bump <$> + offer 1 <$> = <$> (at the take rates shown)
   MEASURE after each change: step conversion, AOV, refund rate, profit per customer
+  STOP RULE: stop a step if refund or chargeback rate goes above <owner's maximum, or MISSING: owner's maximum>
   TEST ORDER: 1 order page, 2 offer 1, 3 downsell or offer 2
   LIMITS: <checkout tool limits, processor rules, price caveat>
   CHECKS MISSED: <none or list>

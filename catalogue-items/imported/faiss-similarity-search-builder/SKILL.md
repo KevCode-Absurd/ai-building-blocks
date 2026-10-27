@@ -159,6 +159,8 @@ index_gpu = faiss.index_cpu_to_all_gpus(index_cpu)
 
 ## LangChain integration
 
+Note: OpenAIEmbeddings needs an OpenAI account and API key, and may charge per use. Check the cost before you embed your data. WARNING: `allow_dangerous_deserialization=True` lets a saved index file run code when it loads. Only load index files you created yourself. Never set it to True for a file from anyone else.
+
 ```python
 from langchain_community.vectorstores import FAISS
 from langchain_openai import OpenAIEmbeddings
@@ -173,7 +175,7 @@ vectorstore.save_local("faiss_index")
 vectorstore = FAISS.load_local(
     "faiss_index",
     OpenAIEmbeddings(),
-    allow_dangerous_deserialization=True
+    allow_dangerous_deserialization=True  # only for index files you made yourself
 )
 
 # Search

@@ -32,7 +32,7 @@ you_get:
   - A 30, 60 and 90 day cash forecast with doubtful amounts marked
   - A list of sends and offers to approve
 how_to_use:
-  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run this week's chase.
+  - Start a chat with the agent. In Claude Code (a paid tool), add it as a skill or save it in .claude/agents, then ask it to run this week's chase. To run it every Monday, set a recurring task or a reminder yourself. Nothing starts by itself. In a free chat, paste last week's invoice and customer files in each time.
   - Export your open invoices from your invoicing tool. Put the file in one folder, or attach it in the chat.
   - Add your bills and fixed costs once. Update them when they change.
   - Read the reminder drafts. Send the ones you agree with from your own email, then tell the agent which went out.

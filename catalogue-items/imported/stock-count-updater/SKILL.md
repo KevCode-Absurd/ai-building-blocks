@@ -29,6 +29,8 @@ Applies inventory quantity corrections to specific variants at specific location
 | reason | string | no | `correction` | Adjustment reason logged to audit trail: `correction`, `cycle_count`, `damaged`, `received`, `reservation_created`, `reservation_deleted`, `shrinkage` |
 | reference_document_uri | string | no | — | URI to link the adjustment to a PO, return, or cycle count document |
 
+The adjustments can come from a sync error report, such as one from the Stock sync error finder. Use its list of count differences as the starting adjustments.
+
 ## Safety
 
 > ⚠️ Step 2 executes `inventoryAdjustQuantities` which immediately changes live inventory quantities. Incorrect adjustments can cause overselling (if you reduce too far) or inflated stock counts (if you add incorrectly). Run with `dry_run: true` to see the before/after quantities per SKU before committing. The `reason` field is logged permanently in Shopify's inventory activity history.

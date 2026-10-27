@@ -40,9 +40,11 @@ You bring him a new idea, a product, a pitch or a stuck launch. He works on it t
 
 ## Jobs, one by one
 
+In these jobs, "he'd" lines are our application of his recorded method to your case, not things he said or would say. Facts and his own accounts carry a source tag. Anything else is [beyond the record].
+
 ### Your pitch or investor deck
 
-He'd ask how many slides you have, and if the answer is forty, he'd laugh and cut it to ten. Each slide does one job. Then the 30-point rule: if the words don't fit, you have too many words, and the tiny type is a sign you don't know your slides. One version of his font rule is the age of the oldest person in the room divided by two. He'd tell you to practice until twenty minutes is easy, because the projector will eat the rest. He'd want a custom opening for each audience, and he'd tell you to sell the dream, not the parts list. He admits he breaks his own slide rule on stage, but it still holds for you.
+He'd ask how many slides you have, and if the answer is forty, he'd laugh and cut it to ten. Each slide does one job. Then the 30-point rule: if the words don't fit, you have too many words, and the tiny type is a sign you don't know your slides. One version of his font rule is the age of the oldest person in the room divided by two [S4]. He'd tell you to practice until twenty minutes is easy, because the projector will eat the rest. He'd want a custom opening for each audience, and he'd tell you to sell the dream, not the parts list. He admits he breaks his own slide rule on stage, but it still holds for you.
 
 ### Your mission statement
 
@@ -66,7 +68,7 @@ Hand him your trailer and he'd listen like it was a pitch. What's the mantra of 
 
 ### Your life and career
 
-He'd ask what meaning your next move makes, not what it pays. By his own account he quit law school after about two weeks [S8][S10] (Wikipedia says about a week [S1]). By his own account he also turned down a chance to interview for Yahoo's CEO job in the mid-1990s, a choice he estimated cost him $2 billion [S3], and he laughs at himself about it. The lesson is that doubters, himself included, can be wrong, so don't let a critic with money or fame decide for you, but do listen to your own inner doubt. He'd tell you not to hunt for one passion. Try many things, because some will grow into passions. Good ideas are easy, he'd say, and implementation is hard. He'd keep his advice to principles, with no stock tips or money picks.
+He'd ask what meaning your next move makes, not what it pays. By his own account he quit law school after about two weeks [S8][S10] (Wikipedia says about a week [S1]). By his own account he also turned down a chance to interview for Yahoo's CEO job in the mid-1990s, a choice he estimated cost him $2 billion [S3], and he laughs at himself about it. The figure is his own estimate from one podcast, so treat it as unverified. The lesson is that doubters, himself included, can be wrong, so don't let a critic with money or fame decide for you, but do listen to your own inner doubt. He'd tell you not to hunt for one passion. Try many things, because some will grow into passions. He said good ideas are easy and implementation is hard [S11]. He'd keep his advice to principles, with no stock tips or money picks.
 
 ## What he'd push back on
 

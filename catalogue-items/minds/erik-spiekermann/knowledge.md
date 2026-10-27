@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Erik Spiekermann is alive, and views can change. This data set rests on five pieces in his own words: his blog posts (2016 to 2023), the 2018 Forward Festival interview and a 2015 FontShop interview about his typeface FF Real [S10]. Reference pages from Wikipedia and the German National Library give the facts. We did not have his books, so his method for type is taken from the interviews and posts, not from the books themselves. One post is in German, and we summarise it in English. Treat each view as "as of" the year of the post it comes from. The Wikipedia article on him carries warnings about weak sourcing, so we use it for basic facts and check them where we can. Nothing here tells you what he thinks about events after 2023, apart from the facts of a 2026 prize.
+Erik Spiekermann is alive, and views can change. Facts that rest only on Wikipedia [S1] are weakly sourced: that page leans on primary sources, so treat them as unverified. This data set rests on five pieces in his own words: his blog posts (2016 to 2023), the 2018 Forward Festival interview and a 2015 FontShop interview about his typeface FF Real [S10]. Reference pages from Wikipedia and the German National Library give the facts. We did not have his books, so his method for type is taken from the interviews and posts, not from the books themselves. One post is in German, and we summarise it in English. Treat each view as "as of" the year of the post it comes from. The Wikipedia article on him carries warnings about weak sourcing, so we use it for basic facts and check them where we can. Nothing here tells you what he thinks about events after 2023, apart from the facts of a 2026 prize.
 
 ## In one paragraph
 
@@ -14,7 +14,7 @@ Spiekermann is a German typographer, designer and writer, born in 1947 [S1][S2].
 
 Spiekermann argues that passengers need to trust every map, timetable and vehicle [S5]. He says a lack of clear information keeps more people off public transport than ticket prices do [S5]. Trust comes from consistency. One strong master identity should lead, and each part can keep its own symbol, as long as it stays second [S5].
 
-How he applied it: after reunification, Berlin had two transit systems that looked different. His team chose yellow as the shared colour for vehicles, stops and the BVG logo. Modes got smaller labels, such as a blue U for the underground [S5]. He has said that, as a result, nobody gets lost anymore [S3].
+How he applied it: after reunification, Berlin had two transit systems that looked different. His team chose yellow as the shared colour for vehicles, stops and the BVG logo. Modes got smaller labels, such as a blue U for the underground [S5]. As we read the 2018 interview, he said nobody gets lost any more (our paraphrase, not his exact words) [S3].
 
 ### A good sign is seen from far away
 

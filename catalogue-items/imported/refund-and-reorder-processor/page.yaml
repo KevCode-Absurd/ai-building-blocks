@@ -16,6 +16,7 @@ when:
   - You want to check the refund amount before any money moves.
   - You handle many refunds a week and want the same steps each time.
 not_for:
+  - "You have not yet decided if the return fits your refund policy: decide that first, as this tool does not check the policy and refunds go back to the original payment method."
   - "The order is already fully refunded: check the order's refund history in your Shopify admin, as there is nothing left to refund."
   - "The customer only wants store credit or an exchange: do that by hand in your Shopify admin, as this tool sends money back."
   - "You only need to find an order or check its status: look it up in your Shopify admin first, then come back with the order ID."
@@ -34,7 +35,7 @@ how_to_use:
   - Check you have a logged-in Shopify command line session for your store and permission to read and write orders. This tool needs an AI that can run commands, so a plain chat window will not work.
   - Find the order in your Shopify admin and copy its ID in the long form that starts with gid://shopify/Order/. The short order number is not enough.
   - Ask your AI to run the skill with dry run on first. Give it the store domain, the order ID and the items to refund.
-  - Read the preview. Check the items, the quantities and the refund amount before you go on.
+  - Read the preview. It lists each item, its quantity, the price the customer paid and the exact refund total. Shipping and tax are left out unless you ask. Check them before you go on.
   - Ask your AI to run it again with dry run off. This moves real money and cannot be undone.
   - If you asked for a replacement, send the invoice link to your customer. The draft order is not paid or shipped until they pay.
 output_sample:

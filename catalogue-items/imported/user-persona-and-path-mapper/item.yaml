@@ -12,6 +12,7 @@ inputs:
     required: true
 outputs:
   - type: persona
+  - type: plan
 uses: []
 origin: imported
 source:

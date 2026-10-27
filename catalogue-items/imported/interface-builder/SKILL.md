@@ -9,7 +9,7 @@ metadata:
 
 # Frontend Design
 
-This skill enables the agent to design and implement frontend interfaces that are visually polished, responsive, accessible, and maintainable. The agent works with design systems — component libraries, spacing scales, color tokens, and typography scales — to produce consistent UI code. It outputs production-ready HTML, CSS (including Tailwind CSS), and framework components (React, Vue, Svelte) with WCAG-compliant accessibility and dark mode support built in.
+This skill enables the agent to design and implement frontend interfaces that are visually polished, responsive, accessible, and maintainable. The agent works with design systems — component libraries, spacing scales, color tokens, and typography scales — to produce consistent UI code. It outputs production-ready HTML, CSS (including Tailwind CSS), and framework components (React, Vue, Svelte) with accessibility aimed at WCAG 2.1 AA and dark mode support. The agent cannot run a browser or device test, so tell the user that WCAG and contrast compliance is not confirmed until they check it with an accessibility checker and a real device.
 
 ## Workflow
 
@@ -27,7 +27,7 @@ This skill enables the agent to design and implement frontend interfaces that ar
 
 ## Usage
 
-Provide the agent with a description of the interface you need, including the framework, styling approach, and any existing design tokens. The agent will produce component code with responsive behavior, accessibility attributes, and dark mode support included.
+Provide the agent with a description of the interface you need, including the framework, styling approach, and any existing design tokens. If you already have a plan with a component list, build from it. The agent will produce component code with responsive behavior, accessibility attributes, and dark mode support included.
 
 ## Examples
 

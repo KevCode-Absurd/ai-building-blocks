@@ -37,12 +37,12 @@ how_to_use:
   - Read MISSING and CHECKS MISSED before you rely on the result.
   - The bundled check script needs Node.js 20 or later. Without it, the AI does the sums in the chat.
 how_it_works:
-  - title: 1. Confirm the eligible denominator after actual excuse and default elections; do not use total fund commitments blindly
-    text: Confirm the eligible denominator after actual excuse and default elections; do not use total fund commitments blindly.
-  - title: 2. Allocate the approved call budget in proportion to the subject eligible commitment
-    text: Allocate the approved call budget in proportion to the subject eligible commitment.
-  - title: 3. Compare allocated amount with its actual remaining callable balance; show any shortfall for fund counsel rather than silently reallocating it
-    text: Compare allocated amount with its actual remaining callable balance; show any shortfall for fund counsel rather than silently reallocating it.
+  - title: Confirms who is eligible
+    text: Takes out investors who are excused or in default under the fund agreement. It does not divide by total fund commitments.
+  - title: Splits the call
+    text: Share = the investor's eligible commitment divided by all eligible commitments, times the approved call.
+  - title: Caps at what can be called
+    text: Collectible is the lower of the share and the investor's unfunded balance. Any shortfall is shown for fund counsel and never moved to other investors.
 output_shape: |-
   Subject LP obligation, collectible amount and allocation shortfall.
   Scope and dated sources
@@ -54,9 +54,7 @@ tweaks:
   - what: "Call date"
     how: "Take the call date from the approved call and the commitment ledger. Use one currency and scale on every line."
   - what: "The investor's remaining commitment"
-    how: "Change the the investor's remaining commitment and have your AI recalculate. Keep the actual figures you supplied."
-  - what: Acceptance
-    how: Eligible commitments share the same transaction and allocation rules.
+    how: "Change the investor's remaining commitment and have your AI recalculate. Keep the actual figures you supplied."
 judge:
   - Eligible commitments share the same transaction and allocation rules.
   - A capped collectible amount does not waive or reallocate the unfilled obligation.

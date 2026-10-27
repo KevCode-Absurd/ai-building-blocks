@@ -10,6 +10,8 @@ explain: |
   A plan for which proof to show and where, matched to the doubts your buyer has. You describe what holds buyers back, and the skill picks the right testimonial, number, logo or case study for each doubt.
 
   It first gathers context: who the buyer is, how much they already trust you, how aware they are of the problem and what you want them to do. Then it maps each worry to the proof that answers it. A price worry may need a result with a number. A fit worry may need a story from a similar customer. It places each piece near the doubt it solves. It uses only real proof and flags claims you cannot back up.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. Credit goes to MMEHDI0606 and sickn33.
 when:
   - Your page has testimonials but sales are still low.
   - Buyers hesitate at price and you need proof for that moment.
@@ -38,6 +40,8 @@ how_to_use:
   - "Paste the proof you have: quotes, numbers, logos and case studies. Only real proof. For reviews and quotes, paste the exact words with the date and where each one came from."
   - Read the plan. Check every flag on weak claims before you change your page.
   - Move or add proof on your page, placing each piece next to the doubt it answers.
+  - "Next: write the page text around the proof with Honest conversion copywriter or Page copywriter. For a store page, use Store social proof placer."
+  - "The author-year names in the skill text are background ideas, not proven research. Do not quote them on your page."
 output_sample:
   input:
     - Who your buyer is and how much they trust you now
@@ -55,3 +59,4 @@ output_sample:
       contains: Claims that are vague, cherry-picked or cannot be checked, with a note to fix or drop them.
     - name: Quality check
       contains: A short check that the proof is real, fits the buyer and does not feel forced.
+next: [store-social-proof-placer, honest-conversion-copywriter]

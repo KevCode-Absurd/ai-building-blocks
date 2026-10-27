@@ -42,7 +42,7 @@ answers the question, or when the user has prohibited external search.
 
 ### Step 1: Define the question, budget, and stop condition
 
-State the claim or decision being researched. Unless the user requests exhaustive work,
+State the claim or decision being researched. If you have an earlier fact-check report, take the claims it left unconfirmed as the claims to research. Unless the user requests exhaustive work,
 use at most six search calls and six page opens. Stop early when every material claim has
 enough independent sources for its declared confidence and another query is unlikely to
 add a new publisher, source type, or contradiction.

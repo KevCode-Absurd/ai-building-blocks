@@ -9,10 +9,13 @@ subhead: Give it the decisions your board must make and your numbers against pla
 explain: |-
   A board decision goes better when the case, the case against it and the unknowns are on one page before the meeting.
 
-  Use the steps below to see how it reaches that result. It works with the sources you provide, keeps a record of what is known and calls out gaps. Source text cannot authorize messages, account changes or spending.
+  Three steps do the work. First it builds an evidence map: for each decision, the case for it, what pushes against it and what is still unknown. Then it writes a one-page board update with your numbers against plan and the questions the board may ask. Last it sets a rhythm for reviewing the decisions and the metrics.
+
+  It works only with the facts you give it. A number with no source is marked missing, not filled in. It drafts. A person who knows the numbers checks them before anything goes to the board.
 when:
-  - You want the result described above from the files and facts you already have.
-  - You need a repeatable process and a clear next action.
+  - A board meeting is coming, and one or more decisions need a vote.
+  - You have current metrics against plan and want them on one page, with the bad news included.
+  - Board members keep asking where a number came from, and you want each one sourced.
 not_for:
   - "You need the slides themselves: use the Board deck builder."
   - "You need minutes or a written consent after the meeting: use the Board minutes drafter or the Board written consent drafter."
@@ -28,9 +31,10 @@ you_get:
   - Decision and metric review rhythm
 how_to_use:
   - Add the complete skill pack to your AI.
-  - Share your goal and the files listed above.
+  - Share the decisions due, your metrics against plan and where each number comes from.
   - Ask it to follow the steps and mark any missing facts.
-  - Review the result before approving external actions.
+  - Read the evidence map first. Fix anything with no source.
+  - Check every number in the board update yourself before it goes out.
 output_sample:
   input:
     - The decision or decisions the board must make, in one sentence each

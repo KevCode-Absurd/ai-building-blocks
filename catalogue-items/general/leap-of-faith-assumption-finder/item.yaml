@@ -7,7 +7,7 @@ role: make
 job: strategy
 level: intermediate
 inputs:
-  - type: brief
+  - type: document
     required: true
   - type: question
     required: false

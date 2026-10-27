@@ -37,7 +37,7 @@ Before you write anything, make sure you have these. If one is missing, ask once
 2. Cloud provider, and Terraform or OpenTofu (required).
 3. How many environments, such as dev, staging and prod (required for layout).
 4. Terraform or OpenTofu version. It decides the testing options below (optional; if unknown, assume nothing newer than 1.5 and say so).
-5. Existing .tf files (optional; if given, review them before proposing changes).
+5. Existing .tf files (optional; if given, review them before proposing changes). Terraform code written by an earlier step counts as existing files.
 
 ## Steps
 

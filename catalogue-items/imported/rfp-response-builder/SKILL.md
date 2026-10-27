@@ -1,6 +1,6 @@
 ---
 name: rfp-responder
-description: "Use when an RFP, RFI, RFQ, security questionnaire, vendor questionnaire, or proposal request arrives and the team needs a structured response — parsing multi-section buyer-dictated requirements (MANDATORY vs WEIGHTED vs NICE-TO-HAVE), building a Shipley-method proof-point matrix mapping each requirement to a verifiable proof point, articulating 3-5 win-themes that ladder up across requirements, and producing a Shipley-derived winrate estimate that informs a bid / no-bid / partner-bid recommendation. For Bid Managers, Proposal Leads, Directors of Sales, and Sales Engineers at the response-strategy moment. Surfaces GAP requirements explicitly — never invents claims. NOT free-form proposal narrative authoring, NOT contract redline, NOT marketing collateral."
+description: "Use when an RFP, RFI, RFQ, security questionnaire, vendor questionnaire, or proposal request arrives and the team needs a structured response — parsing multi-section buyer-dictated requirements (MANDATORY vs WEIGHTED vs NICE-TO-HAVE), building a Shipley-method proof-point matrix mapping each requirement to a verifiable proof point, articulating 3-5 win-themes that ladder up across requirements, and producing an illustrative winrate estimate (editable default weights) that informs a bid / no-bid / partner-bid recommendation. For Bid Managers, Proposal Leads, Directors of Sales, and Sales Engineers at the response-strategy moment. Surfaces GAP requirements explicitly — never invents claims. NOT free-form proposal narrative authoring, NOT contract redline, NOT marketing collateral."
 context: fork
 version: 2.8.0
 author: claude-code-skills
@@ -11,6 +11,8 @@ compatible_tools: [claude-code, codex-cli, cursor, antigravity, opencode, gemini
 
 # rfp-responder
 
+**Terms in plain words.** MANDATORY: a requirement the buyer says you must meet or be rejected. WEIGHTED: a requirement the buyer scores with points. NICE-TO-HAVE: optional. STRONG / PARTIAL / GAP: you can fully prove it / you can prove part of it / you cannot prove it. Win theme: one buyer-side reason to pick you, repeated across answers. Pgw: probability of win.
+
 ## Purpose
 
 Help Bid Managers, Proposal Leads, and Directors of Sales answer five questions at the response-strategy moment:
@@ -18,7 +20,7 @@ Help Bid Managers, Proposal Leads, and Directors of Sales answer five questions 
 1. **What is this RFP actually asking?** (parse sections, tag every requirement MANDATORY / WEIGHTED / NICE-TO-HAVE, extract scoring criteria, surface deadlines and format constraints)
 2. **What is our true fit?** (proof-point matrix per requirement: STRONG / PARTIAL / GAP, each backed by a verifiable source — case study, certification, customer quote, technical attestation, benchmark)
 3. **What is our win-theme strategy?** (Shipley method: 3-5 themes that ladder up across requirements, not generic value-prop bullets)
-4. **What is our realistic winrate?** (Shipley-derived factor model: fit, incumbent, relationship strength, decision-criteria alignment, late-entry, competitor count, deal size — produces estimate + confidence band)
+4. **What is our realistic winrate?** (illustrative factor model with editable default weights: fit, incumbent, relationship strength, decision-criteria alignment, late-entry, competitor count, deal size — produces estimate + confidence band)
 5. **Should we bid?** (deterministic verdict: BID / PARTNER-BID / NO-BID with named factors driving the call)
 
 The skill surfaces GAPs explicitly. Leadership decides whether to close them, partner around them, or no-bid. **It never invents claims.**
@@ -65,13 +67,13 @@ Shipley method: 3-5 themes that span requirements. Each theme answers "why us ov
 
 ### Step 4 — Estimate winrate
 
-Feed deal context (fit %, incumbent strength, relationship, decision-criteria alignment, late-entry, competitor count, deal size vs. average) into `scripts/winrate_predictor.py`. Output: Shipley-derived estimate 0-100% + confidence band + factor breakdown + BID / PARTNER-BID / NO-BID verdict.
+Feed deal context (fit %, incumbent strength, relationship, decision-criteria alignment, late-entry, competitor count, deal size vs. average) into `scripts/winrate_predictor.py`. Output: illustrative estimate 0-100% + confidence band + factor breakdown + BID / PARTNER-BID / NO-BID verdict.
 
 ```bash
 python scripts/winrate_predictor.py --input deal_context.json --profile enterprise-software --output markdown
 ```
 
-**No-bid threshold:** estimate < 20% triggers automatic no-bid recommendation.
+The percentage is a discussion aid, not a forecast. **No-bid threshold:** estimate < 20% triggers automatic no-bid recommendation. Leadership makes the final call.
 
 ### Step 5 — Decide
 
@@ -83,7 +85,7 @@ Take parsed RFP + proof-point matrix + GAP audit + winrate estimate into the go 
 
 - `scripts/rfp_parser.py` — section + requirement extractor (regex + cue-word heuristics, stdlib only)
 - `scripts/response_drafter.py` — proof-point matrix + win-theme injection + GAP audit
-- `scripts/winrate_predictor.py` — Shipley-derived factor model + bid/no-bid verdict, industry-profile-tuned
+- `scripts/winrate_predictor.py` — illustrative factor model + bid/no-bid verdict, industry-profile-tuned
 
 All scripts: stdlib only (argparse, json, sys, pathlib, re, collections, statistics). `--help` and `--sample` work on all three.
 
@@ -97,7 +99,7 @@ All scripts: stdlib only (argparse, json, sys, pathlib, re, collections, statist
 
 - **The RFP is the ground truth.** If the buyer asked it, answer it — in the order they asked, in the format they specified. Re-organizing for narrative flow is for proposals, not RFPs.
 - **Proof points must be verifiable.** A claim is only as strong as the case study, certification, customer reference, or technical attestation backing it. Unsourced claims become GAPs.
-- **Win-themes are buyer-side, not seller-side.** "We're the leader in X" is a marketing claim; "Your operations team reduces incident MTTR by 60% with the same headcount" is a win-theme. Shipley canon, not optional.
+- **Win-themes are buyer-side, not seller-side.** "We're the leader in X" is a marketing claim; "Your operations team reduces incident MTTR by [X%, from a verified source] with the same headcount" is a win-theme. Shipley canon, not optional.
 - **Winrate estimates are directional.** The model is a discipline tool to force honest pursuit-qualification — not an oracle. Confidence band always wider than the point estimate suggests.
 - **Industry profiles tune base rates** — government RFPs reward compliance discipline; enterprise SaaS rewards reference accounts; healthcare rewards regulatory + security depth.
 - **Late entry is a structural disadvantage.** Entering after the RFP issued, with no relationship history, lowers the base rate. The size of the drop is an editable default in the script, not a measured fact; replace it with your own deal history. The skill names this, doesn't hide it.
@@ -128,7 +130,7 @@ Walked one at a time before any script runs. Recommended answer per question. Ne
 
 1. **"What's your STRONG / PARTIAL / GAP split on the MANDATORY requirements?"**
    Recommended: STRONG ≥ 70% on MANDATORY before bidding. PARTIAL/GAP on any MANDATORY = either close the gap pre-submission or no-bid.
-   Canon: Shipley *Proposal Guide v6* — capture-management discipline, "Pgw (probability of win) is bounded by your weakest MANDATORY."
+   Canon: Shipley *Proposal Guide v6* — capture-management discipline (general idea only): your chance of winning is limited by your weakest MANDATORY requirement.
 
 2. **"Is there an incumbent, and how strong is their position?"**
    Recommended: a strong incumbent (3+ years, no displacement event) lowers your base winrate a lot. Don't bid without a named displacement trigger.

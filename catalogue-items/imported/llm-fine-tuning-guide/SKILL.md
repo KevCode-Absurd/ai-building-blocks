@@ -292,7 +292,7 @@ model, tokenizer = FastLanguageModel.from_pretrained(
 )
 model = FastLanguageModel.get_peft_model(model, r = 32, lora_alpha = 32)
 
-# Replace the placeholder with your own prompt dataset. GRPO needs a "prompt" column.
+# Replace the placeholder with your own prompt dataset, or load_dataset will fail. GRPO needs a "prompt" column.
 dataset = load_dataset(
     "<your-prompt-dataset>",
     revision = dataset_revision,

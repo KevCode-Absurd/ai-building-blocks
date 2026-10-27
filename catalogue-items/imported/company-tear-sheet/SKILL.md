@@ -29,13 +29,13 @@ description: "Generate a professional company tear sheet — a dense single-comp
 - **Fiscal year is April–March.** `FY2025` = year ending **31 Mar 2025**; `Q1 FY26` = Apr–Jun 2025. Label periods `Q3 FY26 (Oct–Dec 25)`, never a bare calendar year.
 - **Units are lakh (10⁵) and crore (10⁷).** Never use the Excel format `#,##0,," Cr"`: it shows lakh under a crore label (a 100× error). Divide by `10000000` in a live formula and label the column `Revenue (₹ Cr)`. The number-format rules later in this file say USD and US Letter. For an Indian company, use ₹ crore and keep the rest.
 
-The companion files this skill once pointed to (`india-market-conventions`, `india-market-data`, `NOT-ADAPTABLE.md`) are not in this folder.
+The companion files this skill once pointed to (`india-market-conventions`, `india-market-data`, `NOT-ADAPTABLE.md`) and the `officecli-docx` skill are not in this folder. Where this file says to load them, use the rules written here and `officecli --help` for the commands. If you cannot work out a command, say so and give the content as tables instead.
 
 Generate audience-specific company tear sheets from **free, no-terminal data** and render the result as a
 professional Word document with the **`officecli` CLI**.
 
 Data comes from the free stack described in the Data Sources section below (SEC EDGAR primary for US filers; yfinance and company filings for Indian companies; yfinance,
-FRED). Document mechanics come from the `officecli-docx` skill. This file is the finance layer on top:
+FRED). Document mechanics come from `officecli` itself (the `officecli-docx` skill is not included here). This file is the finance layer on top:
 the style config, the audience methodology, and the build library.
 
 ## Data Sources
@@ -217,7 +217,7 @@ Formatting Notes.
   page width.** Left column: company identifiers (ticker, HQ, founded, employees, sector). Right column:
   financial identifiers (market cap, EV, stock price, shares outstanding). Each cell holds one paragraph
   per field, and each field is a **bold label run followed by a regular-weight value run** on the same
-  line (e.g. `Market Cap  $124.7B`). Do not left-justify all fields in a single column — that wastes
+  line (e.g. `Market Cap  $[AMOUNT]`). Do not left-justify all fields in a single column — that wastes
   horizontal space and looks unprofessional. The two-column spread is the single most important visual
   signal that separates a professional tear sheet from a default document.
   - **officecli implementation:** `add --type table --prop rows=1 --prop cols=2 --prop width=100%
@@ -287,12 +287,12 @@ Formatting Notes.
 
 - Currency: USD. Use millions unless revenue > $50B (then billions, one decimal). Label units in the
   **column header** (`Revenue ($M)`), never in individual cells.
-- **Table cells: plain numbers with commas, no dollar signs.** A revenue cell shows `4,916`, not
-  `$4,916`.
+- **Table cells: plain numbers with commas, no dollar signs.** A revenue cell shows `[AMOUNT]`, not
+  `$[AMOUNT]`.
 - Fiscal years: actual years (`FY2024`), never relative labels (`FY-1`).
 - Negatives in parentheses: `(2.3%)`. Percentages to one decimal. Thousands comma-separated.
-- **In the shell, single-quote any value containing `$`** — `--prop text='$124.7B'`. Double quotes let
-  the shell eat `$1` and silently write `24.7B`.
+- **In the shell, single-quote any value containing `$`** — `--prop text='$[AMOUNT]'`. Double quotes let
+  the shell eat `$1` and silently drop part of the number.
 
 **Footer (real document footer, not inline body text):**
 
@@ -553,9 +553,9 @@ publishing wrong numbers. **Quiet math errors in a tear sheet destroy credibilit
 
 ```
 metric,value,formula,components
-gross_margin_fy2024,72.4%,gross_profit/revenue,"9524/13159"
-revenue_growth_fy2024,12.3%,(current-prior)/prior,"13159/11716"
-net_debt_fy2024,2150,total_debt-cash,"4200-2050"
+gross_margin_[FISCAL YEAR],[RESULT],gross_profit/revenue,"[GROSS PROFIT]/[REVENUE]"
+revenue_growth_[FISCAL YEAR],[RESULT],(current-prior)/prior,"[CURRENT]/[PRIOR]"
+net_debt_[FISCAL YEAR],[RESULT],total_debt-cash,"[TOTAL DEBT]-[CASH]"
 ```
 
 ### Step 3c: Verify Data Files
@@ -584,7 +584,7 @@ conversation context for financial data.
 
 ### Step 4: Build the .docx with officecli
 
-Load the **`officecli-docx`** skill for CLI mechanics, then apply the Style Configuration above plus the
+Use `officecli --help` for CLI mechanics (the `officecli-docx` skill is not included here), then apply the Style Configuration above plus the
 section-specific formatting in the reference file. The build loop is: `create` → page setup on `/` →
 `ts_banner` + `ts_kv` → per section `ts_section` + content → `ts_footer` → `save`.
 
@@ -641,10 +641,10 @@ on; a number without a source cannot be checked, and a checkable tear sheet is t
 free data instead of a paid terminal.
 
 1. **Intermediate files carry a `source` column** (see the schemas below) for every row, in the form:
-   `Source: SEC EDGAR companyfacts (CIK 0001045810), FY2024 10-K, retrieved 2026-09-28`
-   `Source: yfinance .info, retrieved 2026-09-28 (EOD, delayed)`
-   `Source: Alpha Vantage EARNINGS_ESTIMATES (IBES-sourced), retrieved 2026-09-28`
-   `Source: FRED series T10Y2Y, retrieved 2026-09-28`
+   `Source: SEC EDGAR companyfacts (CIK [CIK NUMBER]), [FISCAL YEAR] 10-K, retrieved [DATE]`
+   `Source: yfinance .info, retrieved [DATE] (EOD, delayed)`
+   `Source: Alpha Vantage EARNINGS_ESTIMATES (IBES-sourced), retrieved [DATE]`
+   `Source: FRED series [SERIES ID], retrieved [DATE]`
 2. **Footer line 1 names the source systems and the retrieval date** — the document-level provenance
    anchor, present on every page.
 3. **Market data gets an explicit "as of" date** in the header block or table caption. A price without a

@@ -385,7 +385,7 @@ ORB mechanics live in the **launch** skill (channel-type playbook) and content a
 
 **Failure modes to avoid:**
 - **Spray-and-pray** — posting everywhere with no flagship and no repurposing plan. Effort scatters, nothing compounds.
-- **Platform dependency** — building on rented land. Facebook organic reach fell from ~20% to under 2%; any rented channel can throttle you overnight.
+- **Platform dependency** — building on rented land. organic reach on rented channels such as Facebook has fallen sharply over the years (the author gives no figure, so quote none); any rented channel can throttle you overnight.
 - **The ownership paradox** — teams spend ~90% of effort on channels they don't control (rented/borrowed) and neglect the owned assets that actually convert and can't be taken away.
 
 For the full distribution spine—the Content Distribution Flywheel, platform half-lives, and the atomization checklist—see the reference below.

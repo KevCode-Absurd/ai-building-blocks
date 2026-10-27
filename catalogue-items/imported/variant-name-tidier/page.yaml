@@ -9,7 +9,7 @@ subhead: One standard for every size, color or other option in your store, so Sm
 explain: |
   One standard for every size, color or other option in your store, so Sm, Small, small and S all become S. Filters work, search groups items correctly and customers stop guessing.
 
-  You name the option to fix, such as Size, and give a map from messy values to the one you want. The skill scans your products, finds every variant with a value in the map, and shows exactly what would change. By default it runs as a preview and changes nothing. Once you approve, it updates the variants in bulk. Be careful: changing option values affects what shoppers see and can break saved cart links or wishlists. It needs a Shopify login with write access to products.
+  You name the option to fix, such as Size, and give a map from messy values to the one you want. The skill scans your products, finds every variant with a value in the map, and shows exactly what would change. By default it runs as a preview and changes nothing. Once you approve, it updates the variants in bulk. Be careful: changing option values affects what shoppers see and can break saved cart links or wishlists. It needs a Shopify login with write access to products, and an AI tool that can run commands. Those tools may need a paid plan or an account of their own, so check their pricing. The Shopify command line works with your store login and needs no extra key.
 when:
   - Your size filter lists Sm, Small and S as three separate choices.
   - You imported products from several suppliers with different naming.
@@ -30,12 +30,14 @@ you_get:
   - A count of changes made
   - A JSON report (optional)
 how_to_use:
-  - Open an AI tool that can run code and use the Shopify command line, such as Claude Code. Paste in this skill.
+  - Open an AI tool that can run code and use the Shopify command line, such as Claude Code, Cursor, Codex or Gemini CLI. Some need a paid plan, so check first. Paste in this skill.
   - Sign in to your store with a login that can read and write products.
   - Tell your AI the store domain, the option to fix (such as Size) and your map of messy values to the standard one.
   - Run the preview first. Check the list. Add any messy values you did not know about to your map.
+  - Before you approve, ask your AI to confirm that the update call (productVariantsBulkUpdate) takes optionValues with optionName and name in the API version it is using. This skill was written against version 2025-01.
   - Approve the update. Your AI must wait for your yes before it changes anything. Then save the CSV file, because it holds the old values.
   - Check that any collections built on option values still match the right products.
+  - Next, run variant-sales-ranker to see which of your now-clean sizes and colors sell best.
 output_sample:
   input:
     - Your store domain

@@ -5,6 +5,24 @@ description: 服装工艺细节放大图。服装图 → 面料纹理、走线�
 
 # clothing-detail — 服装图生成细节放大图
 
+## English summary (added by AI Blocks)
+
+The rest of this file is in Chinese. Read this summary first and answer the user in English.
+
+**What it does.** One garment photo becomes a close-up of one area (collar, cuff, hem, button, zip, pocket, embroidery, print, weave or fibre). It never changes colour, weave or structure, adds a craft detail the photo does not show, or invents fabric content.
+
+**You need.** A sharp photo at least 400 by 400 pixels (20 KB to 15 MB; jpg, jpeg, png or webp) with the area clearly visible. One area per image. A dlazy account with credits and the dlazy command line tool, which cost money: the author's example run used 60 credits for one 1024 by 1024 image. Run with `--dry-run` first to see the cost without being charged.
+
+**Prompt template.** "Macro detail shot for an e-commerce detail page. Zoom into [AREA] of this [GARMENT, COLOUR, FABRIC] and render a photorealistic close-up that fills the frame. Show [what the area shows]. Keep the colour and stitch pattern exactly as in the source. Shallow depth of field with the far edge softly out of focus, soft directional light raking across the surface to reveal depth, clean neutral background bokeh. No person, no text, no watermark."
+
+**Four fix lines to add when something is wrong.** Plastic-looking texture: "Resolve individual [yarn plies / weave threads / fibre ends]; the surface must read as real textile, not plastic or CG." Not close enough: "Extreme magnification: the [AREA] must occupy at least 70% of the frame." Invented detail: "Do not invent any construction detail that is not visible in the source image." Colour shifted: "Sample the colour directly from the source image; no grading, no saturation boost."
+
+**Settings.** Quality `high` every time. Size 1024x1024 for a square detail slot, 1024x1536 for a tall product page. Save as `output-<sku>-<area>.jpg`.
+
+**Before you publish.** Check every close-up against the physical garment. The image model can draw weave, stitching or trim the garment does not have. Label the images as illustrative or AI-made where your store or the law requires it. Do not present them as proof of quality or fabric content.
+
+---
+
 一张服装图 → **局部微距特写**。详情页里「证明这件衣服做得好」的那几张图。
 
 为什么需要：转化率高的详情页通常有 2~3 张细节图（领口、袖口、面料纹理），但拍微距要专门的镜头和布光。本技能从常规商品图推出这些特写。

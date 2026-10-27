@@ -5,14 +5,14 @@ summary: Check that moving an amount between OCI and profit leaves total compreh
 job: track-numbers
 thinking: high
 thinking_why: "A move between profit and OCI must net to zero, so the signs, the tax and the eligibility to recycle all need checking."
-subhead: An after-tax profit/OCI reclassification table with a comprehensive-income conservation check. Share profit before a specific reclassification, OCI before it, signed after-tax reclassification and source notes on recycling eligibility.
+subhead: Give it profit and other comprehensive income (OCI) before the move, the signed after-tax amount and the notes on whether it can be recycled. You get a before and after table and a check that total comprehensive income does not change.
 explain: |-
-  An after-tax profit/OCI reclassification table with a comprehensive-income conservation check.
+  OCI is income that goes straight to equity and not through profit. Under some standards, an amount can later be "recycled": it leaves OCI and is recorded in profit. The split changes, but total comprehensive income must not. This skill builds the after-tax table and proves the total stays the same.
 
-  Issuer accounting and earnings. Illustrative figures. Recycling 5 into profit moves the profit/OCI split from 80/20 to 85/15, and total comprehensive income stays at 100. A signed loss of 10 produces a 70/30 split, and the total is still 100. The calculation does not establish whether recycling is permitted.
+  Illustrative figures, not a real company. Recycling 5 into profit moves the profit/OCI split from 80/20 to 85/15, and total comprehensive income stays at 100. A signed loss of 10 produces a 70/30 split, and the total is still 100. The calculation does not establish whether recycling is permitted.
 when:
-  - You need an after-tax profit/OCI reclassification table with a comprehensive-income conservation check.
-  - You work on issuer accounting and earnings and need traceable calculations.
+  - You need to show how recycling an amount from OCI to profit changes the split but not the total.
+  - You are reconciling a profit and OCI table and the totals do not tie.
   - A reviewer needs to trace the result back to inputs and assumptions.
 not_for:
   - "You need to know if the standard lets you recycle an amount to profit: read the accounting standard first, or ask your auditor."
@@ -24,7 +24,7 @@ you_give:
   - "The period end, plus the currency and scale used for the OCI reclassification."
   - "Your spreadsheet tool, if you want the OCI reclassification as a workbook."
 you_get:
-  - An after-tax profit/OCI reclassification table with a comprehensive-income conservation check.
+  - An after-tax table of profit and OCI before and after the move, with a check that total comprehensive income is unchanged.
   - "An editable workbook of the OCI reclassification, with its inputs, formulas and test cases to rerun."
   - "A tie-out of total comprehensive income before and after, the inputs still missing and the checks that ran."
 how_to_use:
@@ -58,14 +58,14 @@ output_sample:
     - name: MISSING and CHECKS MISSED
       contains: Inputs that were not supplied and checks that failed or could not run.
 how_it_works:
-  - title: 1. Identify the reserve and whether the applicable standard permits recycling to profit; distinguish reclassification from a new fair-value or actuarial movement
-    text: Identify the reserve and whether the applicable standard permits recycling to profit; distinguish reclassification from a new fair-value or actuarial movement.
-  - title: 2. Apply the same after-tax signed amount positively to profit and negatively to OCI, or reverse both signs for a loss recycling
-    text: Apply the same after-tax signed amount positively to profit and negatively to OCI, or reverse both signs for a loss recycling.
-  - title: 3. Reconcile total comprehensive income before and after; keep tax and any owner transactions outside the reclassification proof
-    text: Reconcile total comprehensive income before and after; keep tax and any owner transactions outside the reclassification proof.
+  - title: Checks recycling is allowed
+    text: Names the reserve and confirms the standard permits recycling to profit. A reclassification is kept apart from a new fair-value or actuarial movement.
+  - title: Applies the amount
+    text: Adds the signed after-tax amount to profit and subtracts it from OCI. A loss reverses both signs.
+  - title: Reconciles the total
+    text: Total comprehensive income before and after must match. Tax and owner transactions stay outside the proof.
 output_shape: |-
-  An after-tax profit/OCI reclassification table with a comprehensive-income conservation check.
+  After-tax profit and OCI table, before and after, with total comprehensive income check
   Scope and dated sources
   Inputs and assumptions
   Model calculations and reconciliations
@@ -76,7 +76,7 @@ tweaks:
   - what: "Period end"
     how: "Take the period end from the profit and OCI figures and the notes on recycling. Use one currency and scale on every line."
   - what: "The after-tax reclassification amount"
-    how: "Change the the after-tax reclassification amount and have your AI recalculate. Keep the actual figures you supplied."
+    how: "Change the after-tax reclassification amount and have your AI recalculate. Keep the actual figures you supplied."
   - what: Acceptance
     how: After-tax signs are equal and opposite in profit and OCI.
 judge:

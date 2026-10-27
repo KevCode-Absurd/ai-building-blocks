@@ -230,15 +230,7 @@ Pretraining:
 
 **Step 1: Prepare pretraining dataset**
 
-LitGPT expects tokenized data. Use `prepare_dataset.py`:
-
-```bash
-python scripts/prepare_dataset.py \
-  --source_path data/my_corpus.txt \
-  --checkpoint_dir checkpoints/tokenizer \
-  --destination_path data/pretrain \
-  --split train,val
-```
+LitGPT expects tokenized data. The `prepare_dataset.py` script the original skill used is not in this copy, so skip it. Use LitGPT's own text-file data option when you launch pretraining (Step 3 and Step 4), and check the option names against the LitGPT docs for your version. Put your plain text files in a folder such as `data/my_corpus/`. In the commands below, point `--data.data_dir` at your own prepared data folder.
 
 **Step 2: Configure model architecture**
 

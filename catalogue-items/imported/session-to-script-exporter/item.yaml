@@ -8,7 +8,7 @@ role: compress
 job: ops
 level: beginner
 inputs:
-  - type: codebase
+  - type: code_change
     required: false
 outputs:
   - type: code_change

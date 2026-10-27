@@ -11,9 +11,9 @@ Play both sides of a strategy contest, round by round, then give a verdict and a
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Idea debate judge](https://useaiblocks.com/skills/idea-debate-judge). It takes the brief.
-- The [Software vendor chooser](https://useaiblocks.com/skills/software-vendor-chooser). It takes the brief.
-- The [Interview-based strategy document writer](https://useaiblocks.com/skills/strategy-doc-interviewer). It takes the brief.
+- The [Design decision interview planner](https://useaiblocks.com/skills/design-interviewer). It takes the document.
+- The [AI answer fact-checker](https://useaiblocks.com/skills/ai-answer-fact-checker). It takes the document.
+- The [Vendor comparison writer](https://useaiblocks.com/skills/vendor-comparison-writer). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -42,13 +42,15 @@ Ask once for anything below that is missing. If it is still missing, write MISSI
 - The situation and what is at stake
 - The user's role and goal
 - The other side: style, wants and limits, as far as the user knows
-- The number of rounds (default 3, at most 5 unless asked)
+- The number of rounds (default 3; up to 5 is fine; more only if the user asks)
 - Hard limits the user will not give up (optional)
 - Earlier moves by the other side (optional)
 
 ## Source
 
 Read [the original role profile](references/source-agent.md) before you start, and use its method. Its memory and success claims are role language. You cannot remember duels between chats. The original's example is a layout sample, not a result. Do not copy its content as the answer.
+
+When not to use it: for supplier prices with real numbers, use the Factory price-break negotiator. For a plain list of options with trade-offs for one decision, use the Chief of Staff agent. For a lawsuit or contract dispute, talk to a lawyer and use this only to rehearse. It cannot predict what a real person will do.
 
 ## Steps
 
@@ -72,7 +74,7 @@ Return these sections, in this order. Use plain headings. Simple divider lines a
 - **Rounds**: For each round, both moves with stratagem, idea, move, reasoning and points.
 - **Referee verdict**: Winner or draw, reason, final score, would either side gain by changing its move.
 - **Advice for the real talk**: Open with, watch for, avoid.
-- **Where the simulation guessed**: The list.
+- **Where the simulation guessed**: The list. Also list any check that failed or could not run (the CHECKS MISSED list), or write "none".
 
 ## Rules
 

@@ -7,9 +7,10 @@ role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - {type: question, required: true}
+  - {type: job_description, required: true}
   - {type: feedback_notes, required: true}
   - {type: transcript, required: false}
+  - {type: question, required: true}
 outputs:
   - {type: plan, required: true}
   - {type: document, required: true}

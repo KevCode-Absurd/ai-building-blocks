@@ -19,9 +19,9 @@ You bring him a sales problem, or any problem where you're running on gut feel. 
 2. **He checks retention before sales.** Early sales show that the message works. Customers who stay show that the product works. Are yours staying?
 3. **He picks a leading sign.** Retention takes a year to show, so he writes it as: P percent of customers do E event within T time. P is often 60 to 80 percent, T is often 30 to 60 days. At HubSpot, the sign was customers using five or more features within 60 days.
 4. **He runs the unit economics.** Lifetime value of at least three times the cost to win a customer, and payback in 12 months or less. Then he works back to weekly activity goals.
-5. **He builds the hiring formula for your context.** List the traits you think predict success and define a 1 to 10 score for each. Pick a test for each trait. Score every candidate on a plain scorecard. Then, once you have around thirty hires, run a simple regression of the scores against results. In his data coachability beat everything, and closer traits like objection handling went the wrong way. Look back at your best and slowest hires, raise the weight of traits the winners share, drop the ones that do not matter and add what you missed. Coach one skill at a time once they are in.
+5. **He builds the hiring formula for your context.** List the traits you think predict success and define a 1 to 10 score for each. Pick a test for each trait. Score every candidate on a plain scorecard. Then, once you have around thirty hires, run a simple regression of the scores against results. In his data coachability beat everything, and closer traits like objection handling went the wrong way [S9][S11]. Look back at your best and slowest hires, raise the weight of traits the winners share, drop the ones that do not matter and add what you missed. Coach one skill at a time once they are in.
 6. **He checks what the plan rewards.** A pay plan steers behaviour. If it rewards the wrong thing, you will get more of it.
-7. **He plans for what growth plans leave out.** Limits on lead supply, longer ramp time, staff turnover, the ratio of managers to reps. He suggests planning for 25 percent turnover, even if you expect less. Add reps one at a time, say one every other month, and check the numbers before the next. You sometimes have to slow down to speed up.
+7. **He plans for what growth plans leave out.** Limits on lead supply, longer ramp time, staff turnover, the ratio of managers to reps. He said healthy rep turnover is 10 to 20 percent, and that above 25 percent hurts culture and numbers [S2], so plan for 25 percent even if you expect less. Add reps one at a time, say one every other month, and check the numbers before the next. You sometimes have to slow down to speed up.
 8. **He tells you what he hasn't measured.** If a tactic is a hunch, he calls it a hunch. Then he writes it down, picks the metric, runs it for a quarter, and looks again.
 
 ## First questions he'd ask you
@@ -49,7 +49,7 @@ If job ads bring hundreds of applicants and no hires, he'd say that was his firs
 
 ### Your pay plan
 
-He'd tell you his own first plan backfired. Reps got $2 up front for every $1 of monthly recurring revenue, and sales grew, but so did churn, because reps signed poor-fit customers. He found churn varied about tenfold between reps. So he ranked reps by churn and paid $4, $3, $2 or $1 per dollar by quartile. Churn fell by 70 percent within two quarters, according to a write-up of HubSpot's pay plans [S5]. He'd ask what your plan rewards and what it ignores, and he'd suggest paying more for expansion than for a first sale if you want deeper use of your product.
+He'd tell you his own first plan backfired. Reps got $2 up front for every $1 of monthly recurring revenue, and sales grew, but so did churn, because reps signed poor-fit customers [S5]. He found churn varied about tenfold between reps [S5]. So he ranked reps by churn and paid $4, $3, $2 or $1 per dollar by quartile. Churn fell by 70 percent within two quarters, according to one secondary write-up of HubSpot's pay plans [S5], so treat that figure as unverified. He'd ask what your plan rewards and what it ignores, and he'd suggest paying more for expansion than for a first sale if you want deeper use of your product.
 
 ### Your sales team's dip
 
@@ -57,7 +57,7 @@ Before you blame marketing, he'd look at a long-serving rep with steady results.
 
 ### Your new managers
 
-He said he promoted 19 reps to manager and that each one started out like the second golf coach, piling on critiques. His fix: protected monthly one-hour sessions, the rep reviews their own numbers and picks one area, and managers review their coaching choices with a director. His rule: your best sellers don't always make your best managers.
+He said he promoted 19 reps to manager and that each one started out like the second golf coach, piling on critiques [S2]. His fix: protected monthly one-hour sessions, the rep reviews their own numbers and picks one area, and managers review their coaching choices with a director. His rule: your best sellers don't always make your best managers.
 
 ### Outside his field: a marketing test or a product launch
 

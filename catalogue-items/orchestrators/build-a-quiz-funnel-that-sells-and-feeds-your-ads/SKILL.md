@@ -79,8 +79,7 @@ Four step files and the summary:
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Quiz funnel builder](https://useaiblocks.com/skills/quiz-funnel-builder). It takes the brief.
 - The [Animated landing page builder](https://useaiblocks.com/skills/animated-landing-page-builder). It takes the brief.
-- The [React landing page builder](https://useaiblocks.com/skills/react-landing-page-builder). It takes the brief.
-- **Understand your buyers** with the [User retention reviewer](https://useaiblocks.com/skills/retention-problem-fixer). It takes the brief.
+- The [Landing page and email copywriter](https://useaiblocks.com/skills/honest-conversion-copywriter). It takes the brief.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

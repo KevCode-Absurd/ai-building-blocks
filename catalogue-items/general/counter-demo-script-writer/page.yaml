@@ -21,6 +21,7 @@ not_for:
   - "You sell online with no face-to-face contact: write a sales page instead."
   - "You need a long, formal sales presentation with slides: build a deck with a person on your team or a slide tool."
   - "You have no product facts yet: write down what it does and how it is used first."
+  - "The product goes on skin, is eaten or makes a health claim: check it against your product safety and claim rules first, because this skill adds no safety testing."
 
 you_give:
   - "Your product facts"

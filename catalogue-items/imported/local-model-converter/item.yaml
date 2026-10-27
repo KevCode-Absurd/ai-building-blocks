@@ -8,10 +8,12 @@ role: compress
 job: ops
 level: intermediate
 inputs:
-  - type: codebase
+  - type: ai_model
     required: true
 outputs:
   - type: code_change
+    required: true
+  - type: ai_model
     required: true
 uses: []
 origin: imported

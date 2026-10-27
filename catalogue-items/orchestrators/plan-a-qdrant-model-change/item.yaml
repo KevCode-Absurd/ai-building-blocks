@@ -11,7 +11,7 @@ job: ops
 level: intermediate
 execution: coordinator
 inputs:
-  - type: brief
+  - type: question
     required: true
   - type: codebase
     required: false
@@ -41,9 +41,8 @@ steps:
   - uses: copilot-qdrant-monitoring
     note: 3. Read skills/copilot-qdrant-monitoring/SKILL.md. Share your Qdrant
       setup. Get useful health metrics, alerts and checks for slow or unhealthy
-      search. It uses your own setup and version, not step 2's output, and
-      builds the alerts and rollback gates around step 1's plan and step 2's
-      tests. Save the result with source references. Carry the user's goal and
+      search. It uses your own setup and version. It also takes step 1's plan
+      and step 2's tests, and builds the alerts and rollback gates around them. Save the result with source references. Carry the user's goal and
       all earlier findings into this step. If required evidence or tool access
       is missing, mark this step blocked; do not fabricate a result.
 origin: rebuilt

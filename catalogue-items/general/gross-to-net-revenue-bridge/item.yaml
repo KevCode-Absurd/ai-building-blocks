@@ -9,7 +9,7 @@ level: advanced
 inputs:
   - type: question
     required: true
-  - type: source_text
+  - type: financial_statements
     required: true
   - type: spreadsheet
     required: false

@@ -13,7 +13,7 @@ not_for:
 how_to_use:
   - Before you start, check your company's rules with IT. The scan reads your repo files, and a cloud AI tool may send them off your machine.
   - Use an AI that can run code and edit files in your repo, such as Claude Code or GitHub Copilot. A plain chat window will not work.
-  - Check that Node 20 or newer is installed. Your AI can run node --version to confirm. The scan downloads AgentRC from GitHub with npx, so it needs web access.
+  - Check that Node 20 or newer is installed. Your AI can run node --version to confirm. The scan downloads AgentRC from GitHub with npx, so it needs web access. Pin a release tag or commit from github.com/microsoft/agentrc when your AI asks, so you know which version runs. Without a pin it runs the latest upstream code. The scan reads your repo files and passes them, and the scanner output, to your AI tool. Check that this is allowed before you run it on private code.
   - Install the skill using your AI tool's steps for adding skills. The ai-readiness-reporter agent is optional. If you do not have it, your AI builds the page from report-template.html itself.
   - Ask your AI to run the acreadiness-assess skill. Add your policy file if you have one.
   - Open reports/index.html in your browser and read the fix-first list.
@@ -27,7 +27,7 @@ output_sample:
     - An AI that can run code and read and write files in your repo
     - Node 20 or newer installed
     - Web access, so the scan can fetch the AgentRC tool
-    - The ai-readiness-reporter custom agent installed next to the skill
+    - The ai-readiness-reporter custom agent (optional: if it is missing, your AI builds the page from report-template.html)
   output:
     - name: reports/index.html
       contains: One static dashboard file that opens in a browser, with all styling built in.

@@ -7,7 +7,7 @@ job: build-websites
 headline: Store policy cleaner
 subhead: Shipping, returns and privacy policies that both people and AI shopping assistants can read and quote correctly. When a shopper's AI asks do you ship to me or what is the return window, it needs clear plain text to answer from.
 explain: |
-  Shipping, returns and privacy policies that both people and AI shopping assistants can read and quote correctly. When a shopper's AI asks do you ship to me or what is the return window, it needs clear plain text to answer from. If your policy is missing or messy, it may skip you.
+  Shipping, returns and privacy policies that both people and AI shopping assistants can read and quote correctly. When a shopper's AI asks do you ship to me or what is the return window, it needs clear plain text to answer from. If your policy is missing or messy, an assistant may give a wrong answer or none at all.
 
   The skill first audits your Shopify store and reports which policies exist and which are unreadable. It can then prepare clean versions for you to approve. Writing to your live policies is off by default, because they are legal text and the skill will not invent legal terms. You supply the approved wording and it applies it only after a preview. A lawyer should check the content.
 when:
@@ -20,7 +20,7 @@ not_for:
   - "You need legal wording written or checked: use a lawyer, because this skill never writes legal terms."
   - "Your store is not on Shopify: copy your policy text into a plain page by hand."
 you_give:
-  - Your Shopify store link and access
+  - Your Shopify store link and access, with a tool that can run Shopify commands (this may need a paid plan or API access)
   - Which policies to check
   - Approved policy text files (optional)
   - Audit only or apply changes
@@ -36,6 +36,7 @@ how_to_use:
   - Have a lawyer check your policy wording. Save the approved text as one HTML file per policy, named for its type, such as REFUND_POLICY.html. Put them all in one folder.
   - Run it again in apply mode with your folder of files. The preview (dry run) is on by default and writes nothing. Check it, then turn the dry run off to let it write.
   - Run the audit once more to confirm every policy now reads as plain text.
+  - Keep the approved policy files in a safe place. Run the audit again whenever your shipping, returns or privacy rules change, and at least once a year.
 output_sample:
   input:
     - Your Shopify store address
@@ -43,7 +44,7 @@ output_sample:
     - Folder of approved policy files, one per policy (optional)
     - Audit only, or apply changes
   prerequisites:
-    - An AI that can run Shopify commands and has your store login
+    - An AI that can run Shopify commands and has your store login (a tool like Claude Code, which may need a paid plan or API access)
     - Permission to read and write legal policies in your Shopify admin
   output:
     - name: Policy table

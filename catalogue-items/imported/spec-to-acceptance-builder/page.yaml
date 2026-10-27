@@ -10,6 +10,8 @@ explain: |
   A big software request turned into a locked spec, a controlled build and proof that it works. Before any code is written, the skill freezes three documents: the product requirements, the technical design and the acceptance criteria. It checks facts itself and only asks you about real decisions.
 
   Code starts only after you approve those documents. Helper agents then work with clear ownership of files. When they report back, the lead agent does not take their word for it. It checks diffs, test runs and evidence against each numbered criterion. Gaps are marked TBD, ASSUMPTION or BLOCKED.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The skill file itself says MIT, and the original author is Linji-x. Credit goes to Linji-x and sickn33.
 when:
   - You have a large feature and the requirements are still fuzzy.
   - You want to approve what gets built before any code is written.
@@ -33,10 +35,11 @@ you_get:
   - A final report with a table of results per criterion
 how_to_use:
   - Open an AI agent that can read your project files and run code, such as Codex. The build stage needs this.
-  - "Add the skill, then give your request in plain words. Example: Build a job dashboard with role-based access."
+  - "Put the skill folder where your agent loads skills (for Codex, its skills folder), or upload the folder to your project. Then give your request in plain words. Example: Build a job dashboard with role-based access."
   - Answer the few questions it asks. It looks up facts in your code itself and asks only about real choices.
   - Read the PRD, tech design and acceptance criteria. Say yes only when they match what you want. No code is written before that.
   - Let it build, then read the acceptance table and the evidence for each criterion.
+  - When all criteria pass, hand ACCEPTANCE.md and the acceptance matrix to a reviewer before you merge or ship.
   - Codex or a similar agent tool may need a paid plan or an API key. Check the cost before you start.
   - In a plain chat without file access, paste the skill and your project details. You will get the spec documents, but not a checked build.
   - If the result is CHANGES_REQUESTED or BLOCKED, add a new loop for the failed criteria and run it again. Keep the approved PRD, TECH_DESIGN and ACCEPTANCE files as your record of what was agreed.

@@ -60,7 +60,7 @@ The decision and stakes. Every item with its answer, the evidence and PASS, FAIL
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Checklist review planner](https://useaiblocks.com/skills/checklist-upkeep-planner). It takes the audit report.
 - The [Decision process reviewer](https://useaiblocks.com/skills/decision-checklist-keeper).
-- The [Decision checklist builder](https://useaiblocks.com/skills/decision-checklist-builder).
+- The [Knowledge gap decision planner](https://useaiblocks.com/skills/learn-borrow-or-pass-planner). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

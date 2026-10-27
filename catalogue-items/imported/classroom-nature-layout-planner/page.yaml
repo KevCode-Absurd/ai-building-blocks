@@ -35,9 +35,10 @@ how_to_use:
   - Say what you want to improve, such as focus or a calmer feel. Add your budget and any plant or landlord rules.
   - Open Claude, ChatGPT or Gemini and paste in the skill. Then paste your room details. A photo or sketch can help if your AI can read images.
   - Read the ranked changes first. Pick the free ones to try this week.
-  - Check the plan against your school rules before you buy anything. Ask your SENCO about students with sensory needs.
-  - Check any study or figure in the plan against its original source before you share it with staff or parents.
+  - Check the free changes against your school's sensory and allergy policy before you make the first change, and check the plan against your school rules before you buy anything. Ask your SENCO about students with sensory needs.
+  - Any study or figure in the plan comes from your AI's memory and is not checked. Look up the original source before you share it with staff or parents.
   - Take the ranked changes and cost levels to your head teacher or facilities manager for any later-phase change that needs approval.
+  - Next, for lessons outdoors use outdoor-lesson-sequence-planner. To build a sense of belonging in the room, use classroom-belonging-planner. This is a CC BY-SA 4.0 copy of Gareth Manning's biophilic-learning-environment-designer, so keep the credit and the same licence on anything you share.
 output_sample:
   input:
     - "A description of your room: size, layout, windows, lighting, surfaces and any plants"

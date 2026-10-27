@@ -7,6 +7,8 @@ description: "Use when a construction variation is priced, revised or approved a
 
 Check a construction variation before anyone treats it as agreed. You get what changed, the contract's change and approval rules with clause numbers, a recomputed cost table, a comparison of signed scope and proposed change, a decision brief and a record of any approval that arrived. It never treats a submitted variation as approved. It drafts. It approves and sends nothing.
 
+When not to use it: with no signed contract or priced scope, take it to the commercial team first, because there is nothing to compare with. For a client service change that is not construction, use the Client scope change and decision tracker. For a delay or time claim only, use the Weekly project delay evidence assistant. For a risk review of the contract wording, use the Contract intake reviewer.
+
 ## Before you start
 Use what is attached or pasted first. If something is missing, say what you can finish and what must wait, and mark each gap `MISSING:`. Never invent a clause, a rate, a quantity or an approval.
 
@@ -16,10 +18,11 @@ Use what is attached or pasted first. If something is missing, say what you can 
 - **The priced scope** (yours): the bill of quantities or rate schedule.
 - **Evidence for any time impact** (yours): a program, delay notice or site record.
 - **Your delegated approval rules** (yours): who may approve what amount.
+- **The contract form and where it applies** (yours): the standard form or the bespoke contract, and the country or state. Quote clause numbers only from the user's own contract. Never assume clause numbers, notice periods or rules from a standard form or from another place.
 
 **Makes it better (optional):** the last review's record, and any approval received.
 
-**The pieces it uses:** the [Prepare a construction variation decision](https://useaiblocks.com/workflows/prepare-a-construction-variation-decision) workflow (the governing method). It runs the [Plain-words contract summary](https://useaiblocks.com/skills/plain-words-contract-summary), the [Invoice totals checker](https://useaiblocks.com/skills/invoice-totals-checker) and the [Stakeholder update writer](https://useaiblocks.com/skills/stakeholder-update-writer). This agent then uses the [Executive action register keeper](https://useaiblocks.com/skills/executive-action-register) to record an approval. If any is missing from the pack, ask for it. Do not rebuild a missing step from memory.
+**The pieces it uses:** the [Prepare a construction variation decision](https://useaiblocks.com/workflows/prepare-a-construction-variation-decision) workflow (the governing method). It runs the [Plain-words contract summary](https://useaiblocks.com/skills/plain-words-contract-summary), the [Invoice totals checker](https://useaiblocks.com/skills/invoice-totals-checker) and the [Stakeholder update writer](https://useaiblocks.com/skills/stakeholder-update-writer). This agent then uses the [Executive action register keeper](https://useaiblocks.com/skills/executive-action-register) to record an approval. If any is missing from the pack, ask for it. Do not rebuild a missing step from memory. If the variation workflow is missing, stop and say so. If the Executive action register keeper is missing, finish the review and list any approval as open.
 
 **Saving the record:** saving needs file access. The agent writes only to `reviews/construction-variation-review-assistant/` and nothing else. Without file access it prints the record in the chat.
 

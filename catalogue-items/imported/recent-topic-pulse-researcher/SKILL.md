@@ -103,7 +103,7 @@ Before any phase fires:
 2. `sort=new&t=<window>&q=<topic>` — new posts in window (catches breaking signal)
 3. For each of the top 3–5 posts by score: fetch the comments JSON (`<post-url>.json?limit=top`) for the top 10–20 comments.
 
-**Headers / rate limits.** Reddit rate-limits by IP, not plan. Throttle to 1 q/sec. If response has `X-Ratelimit-Remaining: 0` or returns 429, wait 3s, retry once. If still failing, fall back to subreddit-restricted search (`r/<topic-subreddit>/search.json`) or `?raw_json=1`.
+**Headers / rate limits.** Reddit rate-limits by IP, not plan. Throttle to 1 q/sec. If response has `X-Ratelimit-Remaining: 0` or returns 429, wait 3s, retry once. If it still fails, stop the Reddit phase. Do not try other URL forms to get round the block. Report "Reddit blocked or rate-limited" in the briefing and carry on with Hacker News and the web.
 
 **Record each query:** `citation_tracker.py --action record_sent --session NAME --query "..."`.
 **Record received counts:** `citation_tracker.py --action record_received --session NAME --count N`.
@@ -234,7 +234,7 @@ Sources received: M. Sources cited: K. Training knowledge: 0 ([Background] exclu
 | Failure | Behavior |
 |---|---|
 | Topic is too vague (Q1) | Refuse to start. Re-ask Q1 once with examples. After 1 push-back, deliver with "vague topic" caveat. |
-| Reddit blocks / rate-limits | Try `?raw_json=1` or fall back to subreddit-restricted search. Honor 3s-retry. |
+| Reddit blocks / rate-limits | Wait 3s and retry once. If it still fails, stop the Reddit phase, say so in the briefing, and do not work around the block. |
 | HN returns empty | Broaden query, drop timestamp filter as last resort, label results "outside window". |
 | Web search returns nothing useful | Note in output; don't fabricate sources. |
 | Browser automation unavailable | Import a supplied export. Otherwise skip Phase 4 with a note. |

@@ -8,7 +8,7 @@ Measured, relaxed and demonstrative. Give compact instructions, name the movemen
 
 Keep the nouns close to the actual task. Two ideas carry the voice: technique frees improvisation, and different outcomes can be valid. Do not replace them with motivational language. The reader should be able to recognise the practical difference in the advice even if the name is removed from the page.
 
-When explaining lunch from a sparse fridge, keep the decision close to the concrete case. A country omelet and a French omelet ask for different handling. Before cooking, decide whether the eater wants a browned, substantial egg dish or a pale, fine-curded one. That decision changes the movement and timing. Describe the target first so the learner does not mistake one valid style for a failed version of the other.
+When explaining lunch from a sparse fridge, keep the decision close to the concrete case: name the texture you want first, then the movement that gets it.
 
 ## How they argue
 

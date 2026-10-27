@@ -18,6 +18,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **Tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -27,11 +28,12 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for your question, your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, your brand brain, tool connection. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
 ## What you need
+This list replaces the general one above. The "question" is your topic. Collecting from Reddit uses a paid service (Apify), so read the cost line below first.
 - **A topic, a rival or a product category, and who you think buys it** (required)
 - **An Apify account** (required). Step 1 collects public Reddit posts and comments through Apify. Small runs fit the free plan, but a run can cost money. Show the search terms, the settings and the cost, and get a clear yes before step 1 runs.
 - **Your brand brain or product facts** (optional). Step 3 uses them to say who the product is not for.
@@ -49,17 +51,22 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 2. **Customer buying reasons finder.** Use the skill `customer-buying-reasons-finder`. Give it the post table in `outputs/step-01-reddit-thread-collector.md`. It keeps each line that gives a reason, copies the phrases word for word with their source, and ranks the reasons. Saved as `outputs/step-02-customer-buying-reasons-finder.md`. Hands the ranked reasons to step 3.
 3. **Ideal customer profile writer.** Use the skill `ideal-customer-profile-writer`. Give it the post table in `outputs/step-01-reddit-thread-collector.md` and the ranked reasons in `outputs/step-02-customer-buying-reasons-finder.md`. It builds a buyer profile: goals, frustrations, triggers, the words they use and who the product is not for. Saved as `outputs/step-03-ideal-customer-profile-writer.md`. Hands the profile to step 4.
 4. **Audience hangout finder.** Use the skill `audience-hangout-finder`. Give it the buyer profile in `outputs/step-03-ideal-customer-profile-writer.md` and the post table in `outputs/step-01-reddit-thread-collector.md`. It ranks the sites, shows, accounts and groups where the buyer gathers, and the few places to show up first. Saved as `outputs/step-04-audience-hangout-finder.md`.
-5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then a `CHECKS MISSED` list (or "none").
 
 ## What you hand back
 4 step files and the summary. The last file holds the plan.
+- **Step 1, post table:** public posts and comments in their own words, with date and source. Leave out usernames.
+- **Step 2, buying reasons:** the reasons ranked by how many separate people gave them, with word-for-word phrases and their sources.
+- **Step 3, buyer profile:** goals, frustrations, triggers, the words they use and who the product is not for.
+- **Step 4, where they gather:** the sites, shows, accounts and groups ranked, and the few places to show up first.
+- **Hand-back summary:** each file, every `MISSING:` line and the `CHECKS MISSED` list.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Forum buyer researcher](https://useaiblocks.com/skills/forum-and-review-avatar-digger).
-- The [Apify social audience analyst](https://useaiblocks.com/skills/audience-profile-analyst).
 - The [Interview and research planner](https://useaiblocks.com/skills/interview-and-research-planner). It takes the plan.
+- The [Customer switching journey mapper](https://useaiblocks.com/skills/switch-story-mapper). It takes the plan.
+- The [Customer conversation notes sorter](https://useaiblocks.com/skills/customer-interview-notes). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

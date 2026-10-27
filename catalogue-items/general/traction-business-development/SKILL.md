@@ -5,13 +5,19 @@ description: "Plan a business development acquisition experiment from a product 
 
 # Partnership experiment planner
 
+Needs no account, API key or paid tool, and no scraping. If your AI can browse, it reads the public pages you point to. If not, paste your page text.
+
+Not for comparing all 19 growth channels: use the Find your SaaS growth channel workflow (or, for a shop or service, Find your business growth channel). Not for a partner with no shared buyers: talk to a few customers first to learn who else they rely on. Not for contracts or legal terms: ask a lawyer. Not for growth from your own users inviting others: use the Viral growth experiment planner. It covers distribution, integration, co-marketing and licensing partners.
+
+Gather first: your product link or pasted pricing text, your growth goal, the most you can spend, your hours a week, and any partners you already know.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Sales channel experiment planner](https://useaiblocks.com/skills/traction-sales).
-- The [Trade show experiment planner](https://useaiblocks.com/skills/traction-trade-shows).
-- **Say it to the room** with the [Offline event experiment planner](https://useaiblocks.com/skills/traction-offline-events).
+- **Plan your strategy** with the [Customer acquisition experiment reviewer](https://useaiblocks.com/skills/traction-experiment-reviewer). It takes the channel experiment.
+- **Plan your strategy** with the [Growth channel shortlist planner](https://useaiblocks.com/skills/traction-channel-ranker).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -68,11 +74,13 @@ Evidence: <source URL, access date, fact, implication>
 Buyer and useful action: <...>
 Channel mechanism: <how the buyer reaches value>
 Pilot: <hypothesis, audience, offer, deliverable, owner>
+Produces: <a partner-fit matrix, mutual-value memo, proposal and pilot terms checklist>
 Limits: <cash, hours, date, proposed or approved>
 Measurement: <events, cohort, denominators, attribution>
 Decision: <continue / revise / stop rule>
 Risks and next action: <...>
 MISSING: <unknowns>
+CHECKS MISSED: <one line each, or none>
 
 ## Check the answer
 

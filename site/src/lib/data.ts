@@ -152,12 +152,8 @@ export const LEVELS = ["beginner", "intermediate", "advanced", "expert"] as cons
 export const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
 /** "2026-10-19" as "Oct 2026". Pages never show a day, only the month. */
 export const monthOf = (iso: string) => new Date(`${iso}T12:00:00Z`).toLocaleDateString("en-GB", { month: "short", year: "numeric", timeZone: "UTC" });
-const PORT_NAMES: Record<string, string> = {
-  voc_reviews: "Customer reviews", pdp_copy: "Product page copy", ad_copy: "Ad copy", brand_brain: "Brand file",
-  competitor_set: "Competitor set", reference_set: "Reference ads", ad_breakdowns: "Ad breakdowns", image_prompt: "Image prompt",
-  static_ads: "Image ads", video_ads: "Video ads", performance_sheet: "Performance data", audit_report: "Audit report",
-};
-export const portLabel = (t: string) => PORT_NAMES[t] ?? cap(t.replace(/_/g, " ").replace(/\b(cta|ugc|vsl|cro|pdp|seo|ai)\b/g, (m) => m.toUpperCase()));
+// Friendly type names live in port-label.ts so the Worker (public MCP diagrams) uses the same ones.
+export { portLabel } from "./port-label.ts";
 
 let catalogue: Promise<Catalogue> | null = null;
 let resolvedCatalogue: Catalogue | null = null;

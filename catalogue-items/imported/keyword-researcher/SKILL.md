@@ -23,7 +23,7 @@ Required:
 Optional, and it makes the report better:
 - What the content is for: blog posts, landing pages, product pages or paid campaigns.
 - The site URL, and three to five rival sites, for the gap step.
-- A keyword export from a keyword tool, or a Google Search Console export, for real numbers.
+- A keyword export from a keyword tool, or a Google Search Console export, for real numbers. A keyword list from an earlier step, such as the keyword research planner, also works here; treat its figures as estimates unless it names a source.
 
 ### If something is missing
 - Ask once for the topic and the market. If you still do not have them, write `MISSING: <what>` and stop. Do not guess a market.
@@ -45,11 +45,11 @@ Optional, and it makes the report better:
 
 2. **Expand into long-tail and related keywords.** Use autocomplete patterns, "People Also Ask" queries, and semantic variations to build a broad keyword list. Generate question-based keywords (who, what, how, why), comparison keywords ("X vs Y"), and modifier keywords (best, top, free, cheap, review). Aim for 50–200 candidate keywords per seed term depending on niche competitiveness.
 
-3. **Gather search metrics for each keyword.** Estimate monthly search volume, keyword difficulty (0–100 scale), cost-per-click for paid reference, and trend direction (rising, stable, declining). Pull click-through rate estimates where available. Note seasonal patterns — for example, "tax software" peaks in January–April while "sunscreen" peaks in May–July.
+3. **Gather search metrics for each keyword.** Use volume, keyword difficulty (0–100 scale), cost-per-click and trend direction (rising, stable, declining) from the person's export if they gave one. Otherwise give a rough band (low, medium, high) and label every figure `estimate`. Never invent exact numbers. Note seasonal patterns — for example, "tax software" peaks in January–April while "sunscreen" peaks in May–July.
 
 4. **Classify search intent for every keyword.** Categorize each keyword as informational (learn), navigational (find a specific site), commercial investigation (compare options), or transactional (buy/sign up). This mapping determines the correct content format: blog posts for informational, comparison pages for commercial, and product/landing pages for transactional.
 
-5. **Perform competitor keyword gap analysis.** Identify 3–5 organic competitors and compare their ranking keywords against the user's current keyword portfolio. Highlight keywords where competitors rank but the user does not — these are content gap opportunities. Also flag keywords where the user ranks on page 2 (positions 11–20) that could move to page 1 with targeted optimization.
+5. **Perform competitor keyword gap analysis.** Identify 3–5 organic competitors. If the person gave ranking data, compare the rivals' ranking keywords against the user's keyword portfolio and highlight keywords where competitors rank but the user does not. If not, name the terms rivals appear to cover from their pages and mark the gap list `unverified`. Flag page 2 keywords (positions 11–20) only from the person's own data.
 
 6. **Deliver a structured keyword strategy report.** Organize keywords into thematic clusters mapped to content pillars. Prioritize clusters by a composite score of volume, difficulty, intent alignment, and business value. Include specific content recommendations for each cluster — suggested titles, target word counts, and internal linking opportunities.
 
@@ -57,59 +57,51 @@ Optional, and it makes the report better:
 
 Provide the agent with a seed keyword or topic, your website URL (optional, for gap analysis), and your target audience. The agent returns a full keyword research report with prioritized clusters and content recommendations.
 
-**Prompt:** `Perform keyword research for the topic "AI-powered customer support" targeting SaaS companies in the US market. My site is https://supportbot.io.`
+**Prompt:** `Perform keyword research for the topic "[YOUR TOPIC]" targeting [YOUR AUDIENCE] in the [YOUR MARKET] market. My site is [YOUR WEBSITE].`
 
 ## Examples
 
-All the figures, rankings and sites in the two examples below are invented to show the layout. They are not real data. Do not copy them into a report.
+Everything in the two examples below is a placeholder that shows the layout. There are no real figures, rankings or sites. Never copy a placeholder into a report.
 
-### Example 1: SaaS Product Keyword Research
+### Example 1: Keyword Research
 
-**Request:** Research keywords for a project management SaaS product targeting remote teams.
+**Request:** Research keywords for [YOUR PRODUCT] targeting [YOUR AUDIENCE].
 
 **Keyword Table:**
 
 | Keyword | Monthly Volume | Difficulty | CPC | Intent | Priority |
 |---------|---------------|------------|-----|--------|----------|
-| project management software | 40,500 | 78 | $12.40 | Commercial | Medium |
-| best project management tools for remote teams | 3,600 | 45 | $8.20 | Commercial | High |
-| how to manage remote team projects | 2,900 | 32 | $3.10 | Informational | High |
-| free project management app | 8,100 | 62 | $6.50 | Transactional | Medium |
-| asana vs monday vs trello | 5,400 | 55 | $9.80 | Commercial | Medium |
-| remote team collaboration tools | 4,200 | 48 | $7.30 | Commercial | High |
-| project management for startups | 1,800 | 28 | $5.60 | Commercial | High |
-| kanban board software | 6,700 | 58 | $7.90 | Transactional | Medium |
-| how to create a project timeline | 3,100 | 22 | $2.40 | Informational | High |
-| project management best practices 2025 | 1,200 | 18 | $1.80 | Informational | High |
+| [KEYWORD 1] | [VOLUME OR ESTIMATE BAND] | [DIFFICULTY] | [CPC] | [Commercial / Informational / Transactional / Navigational] | [High / Medium / Low] |
+| [KEYWORD 2] | [VOLUME OR ESTIMATE BAND] | [DIFFICULTY] | [CPC] | [INTENT] | [PRIORITY] |
+| [KEYWORD 3] | [VOLUME OR ESTIMATE BAND] | [DIFFICULTY] | [CPC] | [INTENT] | [PRIORITY] |
 
-**Cluster Recommendation:** Group "best project management tools for remote teams," "remote team collaboration tools," and "project management for startups" into a **Remote Work Tools** content pillar. Create a comprehensive comparison guide (2,500+ words) as the pillar page, with supporting blog posts for each long-tail variation.
+Source of the numbers: [YOUR EXPORT or ESTIMATE]
+
+**Cluster Recommendation:** Group [KEYWORD 1], [KEYWORD 2] and [KEYWORD 3] into a **[PILLAR NAME]** content pillar. Create a comparison or guide page of [LENGTH] as the pillar page, with supporting posts for each long-tail variation.
 
 ### Example 2: Content Gap Analysis
 
-**Request:** Compare keyword portfolio of `supportbot.io` against competitors `intercom.com` and `zendesk.com`.
+**Request:** Compare the keyword portfolio of [YOUR SITE] against [RIVAL SITE 1] and [RIVAL SITE 2].
 
-**Gap Analysis:**
+**Gap Analysis** (rival ranks only from the person's own data; otherwise mark `unverified`):
 
-| Keyword | supportbot.io Rank | intercom.com Rank | zendesk.com Rank | Opportunity |
-|---------|-------------------|-------------------|------------------|-------------|
-| ai chatbot for customer service | Not ranking | #4 | #7 | **Create new pillar page** |
-| automated ticket routing | Not ranking | #8 | #3 | **Create feature page + blog post** |
-| customer support metrics | #18 | #5 | #2 | **Optimize existing page — page 2 → page 1** |
-| help desk software comparison | Not ranking | #6 | #1 | **Create comparison landing page** |
-| reduce support ticket volume | #15 | #11 | #9 | **Update and expand existing content** |
-| chatbot vs live chat | Not ranking | #3 | #12 | **Create informational blog post** |
+| Keyword | Your Rank | Rival 1 Rank | Rival 2 Rank | Opportunity |
+|---------|-----------|--------------|--------------|-------------|
+| [KEYWORD A] | Not ranking | [RANK] | [RANK] | Create new pillar page |
+| [KEYWORD B] | [YOUR PAGE-TWO RANK] | [RANK] | [RANK] | Optimize existing page, page 2 to page 1 |
+| [KEYWORD C] | Not ranking | [RANK] | [RANK] | Create comparison or blog page |
 
 **Recommendations:**
-- Highest-impact opportunity: Create a pillar page targeting "ai chatbot for customer service" (3,600 vol, difficulty 42). Both competitors rank but neither holds position #1.
-- Quick win: The page ranking #18 for "customer support metrics" needs updated statistics, expanded sections on CSAT and NPS, and 3–5 internal links from related content.
+- Highest-impact opportunity: [WHICH KEYWORD AND WHY, based on the data above].
+- Quick win: [WHICH EXISTING PAGE TO UPDATE AND WHAT TO ADD].
 
 ## Best Practices
 
 - **Start with commercial and transactional intent keywords.** These drive revenue directly. Layer in informational keywords to build topical authority and capture top-of-funnel traffic over time.
-- **Target keywords with difficulty scores below your site's Domain Authority.** A site with DA 30 should focus on keywords with difficulty under 35 to achieve realistic first-page rankings within 3–6 months.
+- **Target keywords with difficulty scores below your site's Domain Authority.** As a rough rule of thumb from the original author, a newer site should aim for lower-difficulty terms first. Treat any exact cut-off or timeline as a guess.
 - **Group keywords into clusters, not individual targets.** A single page should target a primary keyword plus 5–10 semantically related terms. This matches how search engines understand topics.
-- **Validate volume estimates with multiple signals.** Search volume data from any single tool can be inaccurate by 30–50%. Cross-reference with Google Trends, Search Console impression data, and paid campaign data when available.
-- **Revisit keyword research quarterly.** Search behavior shifts with trends, product launches, and algorithm updates. Re-run gap analysis each quarter to catch emerging opportunities.
+- **Validate volume estimates with multiple signals.** Search volume data from any single tool can be inaccurate by a wide margin. Cross-reference with Google Trends, Search Console impression data, and paid campaign data when available.
+- **Revisit keyword research on a regular schedule (the original author suggests quarterly).** Search behavior shifts with trends, product launches, and algorithm updates. Re-run gap analysis each quarter to catch emerging opportunities.
 - **Map every keyword to a specific URL or planned content piece.** Keywords without assigned content are wasted research. Maintain a keyword-to-URL mapping sheet as a living document.
 
 ## Edge Cases

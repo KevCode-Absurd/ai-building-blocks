@@ -11,7 +11,9 @@ Plan the whole chain that decides whether video starts fast and plays smoothly: 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Codebase onboarding guide writer](https://useaiblocks.com/skills/codebase-onboarding-guide-writer). It takes the document.
+- The [API and tool design reviewer](https://useaiblocks.com/skills/design-principles-checker). It takes the document.
+- The [AI coding task brief writer](https://useaiblocks.com/skills/coding-agent-handoff-writer). It takes the document.
+- The [README and decision interviewer](https://useaiblocks.com/skills/readme-and-decision-interviewer). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -9,7 +9,7 @@ subhead: Give it your product list and a keyword export. It tests each keyword f
 explain: |
   A store that sells a range can win searches like "waterproof hiking boots women" without paying for ads. Collection pages are the pages to do it with. The trouble is choosing. Most keyword lists are long, many terms have no buying intent, and a page built on the wrong term never gets seen.
 
-  The steps narrow the list to pages worth building. First it tests each keyword, keeps the ones with buying intent and gives each a page type. It pauses and asks you to pick one main keyword per page and save it with the products that belong there. Then it plans the set of collections with handles, parent links and a build order, and skips thin ones. It pauses again for you to pick the first collection, its keyword, products and some review lines. Last it writes that page's title, heading, text, FAQ and links.
+  The steps narrow the list to pages worth building. First it tests each keyword, keeps the ones with buying intent and gives each a page type. It pauses and asks you to pick one main keyword per page and save it with the products that belong there. Then it plans the set of collections with handles, parent links and a build order, and flags thin ones to merge. It pauses again for you to pick the first collection, its keyword, products and some review lines. Last it writes that page's title, heading, text, FAQ and links.
 when:
   - You sell a range of products and want sales from search without paying for ads.
   - You have a long keyword export and do not know which terms deserve a page.
@@ -27,7 +27,7 @@ you_give:
 you_get:
   - A keyword table with intent, volume, difficulty, page type and a keep or reject verdict, plus a score out of 100 for the list
   - A collection map with a keyword, handle, products, parent and child links for each page
-  - A build order in batches, and a list of collections left out with the reason
+  - A build order in batches, and a list of collections flagged to merge, with the reason
   - Page copy for the first collection, with title tag, heading, search description, text above and below the grid, FAQ and links
 how_to_use:
   - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
@@ -51,7 +51,7 @@ output_sample:
     - name: Step 2 collection plan
       contains: A map of collections with keyword, handle, products and parent and child links, plus a brief for each.
     - name: Build order and left-out list
-      contains: Collections grouped in batches, and the thin ones skipped with the reason.
+      contains: Collections grouped in batches, and the thin ones flagged to merge, with the reason.
     - name: Step 3 page copy
       contains: Title tag, heading, URL handle, search listing, text above and below the grid, FAQ, featured reviews and links.
     - name: HAND-BACK SUMMARY
@@ -60,7 +60,7 @@ how_it_works:
   - title: Test the keywords
     text: Store keyword validator checks each term for buying intent, volume, difficulty and what already ranks. It names the page type and the owner page for each keeper and scores the list out of 100.
   - title: Plan the collections
-    text: Collection page planner takes the validated keyword report and your chosen keywords and turns them into a map of collections. Each has one keyword, a handle, products and parent and child links. It skips thin collections and sets a build order in batches.
+    text: Collection page planner takes the validated keyword report and your chosen keywords and turns them into a map of collections. Each has one keyword, a handle, products and parent and child links. It flags thin collections to merge into their parent and sets a build order in batches.
   - title: Write the first page
     text: Collection page SEO builder takes one collection from the plan, its products and its keyword. It writes the title tag, heading, search listing, text, FAQ and link plan, and notes for splitting the text in Shopify.
 output_shape: |-
@@ -68,7 +68,7 @@ output_shape: |-
     Each term with intent, volume, difficulty, what ranks, page type, owner page and verdict | per-page keywords | score out of 100
 
   STEP 2: COLLECTION PLAN
-    Collection map with keyword, handle, products and links | brief per collection | build order | not added
+    Collection map with keyword, handle, products and links | brief per collection | build order | collections to merge
 
   STEP 3: PAGE COPY
     Title tag | heading | URL handle | search listing | text above the grid | text below the grid | FAQ | featured reviews | links | theme notes

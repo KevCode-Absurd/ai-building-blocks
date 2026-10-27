@@ -39,6 +39,7 @@ how_to_use:
   - Check every local detail in the result, such as landmarks, streets and zip codes, before you publish. Anything you did not give your AI should be marked [VERIFY].
   - Next, publish the fixes to your Google Business Profile and the main directories first. Then come back with new reviews for reply drafts, and run the name, address and phone check again.
   - Running the listing check and page scripts needs an AI that can run code. Without it, the AI works from what you paste.
+  - Check every local fact on a draft page (landmarks, streets, years in business) before you publish. The skill marks anything it could not source as VERIFY. Add photo location tags only where the photo was really taken.
 output_sample:
   input:
     - Your business name, address and phone number

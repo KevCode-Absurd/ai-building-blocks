@@ -10,6 +10,8 @@ explain: |
   One short list of code issues that matter, produced by four reviewers working at the same time on your change. Noise is filtered out before you see it.
 
   It picks the review scope in order: files you name, then your current git changes, then a branch or commit you ask for. It reads your project notes, then sends four read-only reviewers to hunt for different problems such as behaviour regressions, security and privacy, missing tests and risky structure. The main agent then removes weak or duplicate findings, orders the rest and writes one summary. It only reviews. It never edits your files.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (Dimillian) says MIT. Credit goes to Dimillian and sickn33.
 when:
   - You want a second look at a change before merging.
   - A large diff is too long to read line by line.

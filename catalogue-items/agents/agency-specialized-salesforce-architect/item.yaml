@@ -16,6 +16,8 @@ inputs:
 outputs:
   - type: plan
   - type: document
+  - type: data_model
+    required: true
 uses: []
 steps: []
 origin: imported

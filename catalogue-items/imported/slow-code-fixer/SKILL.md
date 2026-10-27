@@ -342,20 +342,16 @@ Time to Interactive: < 3 seconds
 - Datadog
 - Sentry Performance
 
-## Quick Wins
+## Quick Wins by bottleneck
 
-Easy optimizations with big impact:
+Only try a quick win that matches the bottleneck you measured:
 
-1. **Add database indexes** on frequently queried columns
-2. **Enable gzip compression** on server
-3. **Add caching** for expensive operations
-4. **Lazy load** images and heavy components
-5. **Use CDN** for static assets
-6. **Minify and compress** JavaScript/CSS
-7. **Remove unused dependencies**
-8. **Use pagination** instead of loading all data
-9. **Optimize images** (WebP, proper sizing)
-10. **Enable HTTP/2** on server
+- **Slow database query:** add an index on the columns it filters or sorts on, or use pagination instead of loading all rows.
+- **Repeated expensive work:** add caching for that operation.
+- **Heavy page load:** lazy load images and heavy components, compress and resize images (WebP, proper sizing), minify JavaScript and CSS, remove unused dependencies.
+- **Slow transfer of static files:** enable gzip on the server, use a CDN, enable HTTP/2.
+
+If the measurement points somewhere else, do not apply these. Fix what the numbers show.
 
 ## Optimization Checklist
 
@@ -385,9 +381,7 @@ Easy optimizations with big impact:
 
 ## Related Skills
 
-- `@database-design` - Query optimization
-- `@codebase-audit-pre-push` - Code review
-- `@bug-hunter` - Debugging
+- If the problem is a bug and not speed, use the hidden bug hunter or the bug root cause finder in the AI Blocks library.
 
 ## Limitations
 - Use this skill only when the task clearly matches the scope described above.

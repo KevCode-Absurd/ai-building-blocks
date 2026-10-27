@@ -130,8 +130,8 @@ improve:
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Planning an order of research is text work any strong chat AI does with this skill."}
-    - {name: "Google Analytics", why: "Shows pages, steps and where people leave."}
-    - {name: "A session replay tool", why: "Lets you watch real visits to a page."}
+    - {name: "Google Analytics", why: "Free. Shows pages, steps and where people leave. Export visits per step before you start."}
+    - {name: "A session replay tool", why: "Optional and often paid, and it needs an account and a snippet on your site. Lets you watch real visits to a page."}
   inputs:
     - "Funnel numbers by step"
     - "Customer reviews, chats or survey answers"

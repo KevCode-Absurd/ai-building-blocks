@@ -24,7 +24,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Audit report** with the [Reported earnings adjustment reviewer](https://useaiblocks.com/skills/earnings-padding-detector). Bring audit report, source text (optional).
+1. **Audit report** with the [Reported earnings adjustment reviewer](https://useaiblocks.com/skills/earnings-padding-detector). Bring audit report, financial statements (optional).
 2. This one.
 
 How to start:

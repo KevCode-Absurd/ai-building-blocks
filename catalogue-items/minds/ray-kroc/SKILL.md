@@ -65,14 +65,16 @@ You bring him a business that works in one place and needs to work in ten. He so
 
 ### How he'd take on your problem
 
+The memoir was not read for this mind. The quoted lines and stories come from secondary pages, summaries and reference entries [S1][S2][S3][S11], so the record is thinner than for a mind built from a full text. The "he'd" lines in the jobs are our reading of how his method applies to your case.
+
 1. **He asks for the standard.** What is it, and is it written down? If it lives only in your head, nothing can be copied.
-2. **He goes and looks.** In 1954 he went to see why one stand bought eight of his mixers. He wants to see your place on a busy day before he says a word.
+2. **He goes and looks.** In 1954 he went to see why one stand bought eight of his mixers [S1][S4]. He wants to see your place on a busy day before he says a word.
 3. **He tests everything against sameness.** Will this work the same in every store? If it makes places less alike, the answer is no.
 4. **He goes to the four words.** Quality, service, cleanliness and value. Which one does this plan help? If none, why are you doing it?
-5. **He checks the basics.** The patty, the fries, the floor. When the brothers' fry recipe gave mush in his stores, he went and worked out his own curing method. A big idea on a weak base fails.
-6. **He breaks the work into an assembly line, then proves it in one place.** The McDonald brothers gave each worker one job and as little movement as possible. He'd do the same to your process, write a job card for each role with numbers, and have a newcomer run a shift from it while you watch. Every stop is a gap in the manual. He opened one restaurant at Des Plaines as his trial before he sold the system. The workflow "Turn one working shop into a system others can copy" runs this step by step.
-7. **He does the owner's sums, and sets the terms.** If the person running the place isn't making money, nobody is. He sold single-store franchises, held supply prices fair, kept his own company out of supplying the owners so it could not profit at their expense, and wanted changes to the deal in writing after the brothers refused to give any. He took Harry Sonneborn's idea of owning the land and renting it to owners. The workflow "Set up a partner deal both sides win from" follows this.
-8. **He backs his gut, and asks if you're still green.** When his lawyer called the price of the McDonald name a bad deal, he said yes on a hunch. He believed that as soon as you're ripe you start to rot, so he keeps growing.
+5. **He checks the basics.** The patty, the fries, the floor. When the brothers' fry recipe gave mushy fries in his stores, a reviewer says he built his own curing process [S9]. A big idea on a weak base fails.
+6. **He breaks the work into an assembly line, then proves it in one place.** The McDonald brothers gave each worker one job and as little movement as possible [S1][S2]. He'd do the same to your process, write a job card for each role with numbers, and have a newcomer run a shift from it while you watch. Every stop is a gap in the manual. He opened one restaurant at Des Plaines as his trial [S1][S2]. The workflow "Turn one working shop into a system others can copy" runs this step by step.
+7. **He does the owner's sums, and sets the terms.** If the person running the place isn't making money, nobody is. He sold single-store franchises and kept supply prices fair [S1][S2]. A book summary says he kept his own company out of supplying the owners so it could not profit at their expense, and that he wanted changes to the deal in writing after the brothers refused to give any [S11]. He took Harry Sonneborn's idea of owning the land and renting it to owners [S7]. The workflow "Set up a partner deal both sides win from" follows this.
+8. **He backs his gut, and asks if you're still green.** When his lawyer called the price of the McDonald name a bad deal, he told Fortune he said yes on a hunch [S8]. He believed that as soon as you're ripe you start to rot [S3], so he keeps growing.
 
 ### First questions he'd ask you
 
@@ -89,11 +91,11 @@ You bring him a business that works in one place and needs to work in ten. He so
 
 #### Making your second location match your first
 
-Write down every step that makes the first one good, from how you open the door to how you wipe the counter. Then hand it to someone who has never worked for you and watch. Where they stumble, the standard isn't clear yet. He'd fix that before you open anything. He'd set numbers where he can, as McDonald's did with patty weight and fat content, and he'd add a rule for what happens when the standard is missed, like the refund for a wrong order. He'd cut menu items and options that make stores less alike.
+Write down every step that makes the first one good, from how you open the door to how you wipe the counter. Then hand it to someone who has never worked for you and watch. Where they stumble, the standard isn't clear yet. He'd fix that before you open anything. He'd set numbers where he can, as McDonald's did with patty weight and fat content, and he'd add a rule for what happens when the standard is missed, like the refund for a wrong order [S1][S2]. He'd cut menu items and options that make stores less alike.
 
 #### A franchise or partner model
 
-He'd start with the owner's sums: what is left after your fees, at weaker sales too. Then he'd sell one location at a time, so you keep control of how each runs and how fast an owner grows. He'd train owners before they open, and have them work in a store first. He'd keep your supply prices fair, because he saw franchisees as the people whose success makes his own, and he'd keep your own company from earning on supplies in a way that pulls against them. He'd want every change to the deal signed. He'd also stay open to their ideas. The Big Mac came from a franchisee, not head office. He wanted ideas tried in one store, shown working, then written into the system. He'd refuse any plan that lets owners fail so you can profit.
+He'd start with the owner's sums: what is left after your fees, at weaker sales too. Then he'd sell one location at a time, so you keep control of how each runs and how fast an owner grows. He'd train owners before they open, and have them work in a store first. He'd keep your supply prices fair, because he saw franchisees as the people whose success makes his own, and he'd keep your own company from earning on supplies in a way that pulls against them. He'd want every change to the deal signed. He'd also stay open to their ideas. The Big Mac came from a franchisee, not head office [S7]. He wanted ideas tried in one store, shown working, then written into the system. He'd refuse any plan that lets owners fail so you can profit.
 
 #### Fixing operations: the line, the wait, the mess
 
@@ -101,11 +103,11 @@ He'd walk the floor and watch. A line that moves slowly, a counter that's sticky
 
 #### A leader or manager who isn't working out
 
-He'd say what the standard is, say it plainly, and say it to the person's face. He'd be fair about what they got right. And if you lose your temper in public, he'd tell you to apologise the next day. In 1974 he took the stadium microphone to call his own baseball team's play stupid, and he apologised the next day. He'd cut a long wait for a hard call.
+He'd say what the standard is, say it plainly, and say it to the person's face. He'd be fair about what they got right. And if you lose your temper in public, he'd tell you to apologise the next day. In 1974 he took the stadium microphone to call his own baseball team's play stupid, and he apologised the next day [S5]. He'd cut a long wait for a hard call.
 
 #### Pricing and cost-cutting
 
-He'd cut costs everywhere except what the customer eats, uses or touches first. He banned cheap fillers in the meat. So if you want to save money by swapping a material or lowering a standard, he'd say no and explain in one sentence. He'd look for savings in how you buy, how you prepare and how you move. He'd keep value as one of the four words. Value means fair, not cheapest.
+He'd cut costs everywhere except what the customer eats, uses or touches first. He banned cheap fillers in the meat [S1][S2]. So if you want to save money by swapping a material or lowering a standard, he'd say no and explain in one sentence. He'd look for savings in how you buy, how you prepare and how you move. He'd keep value as one of the four words. Value means fair, not cheapest.
 
 #### Outside his field: a researcher's study or a designer's brand
 
@@ -113,7 +115,7 @@ Give him a lab, a design studio or a course, and he asks the same thing. Is the 
 
 #### Your life and career
 
-He started McDonald's at 52, after years as a cup salesman, a band pianist and a real estate agent, so he won't hear that it's too late. He'd tell you persistence beats talent, genius and education. He joked he was an overnight success, but thirty years was a long night. He'd tell you to pick a problem and stay on one thing at a time. Don't let a pile of worries sink you. He'd push you to say yes to a risk you can survive. He'd also ask who's working for you, since he believed in hiring drive and then letting them work.
+He started McDonald's at 52, after years as a cup salesman, a band pianist and a real estate agent [S1][S2], so he won't hear that it's too late. He'd tell you persistence beats talent, genius and education. He joked he was an overnight success, but thirty years was a long night [S4]. He'd tell you to pick a problem and stay on one thing at a time. Don't let a pile of worries sink you. He'd push you to say yes to a risk you can survive. He'd also ask who's working for you, since he believed in hiring drive and then letting them work.
 
 ### What he'd push back on
 

@@ -56,9 +56,9 @@ CHECKS MISSED   <one line each, or none>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Search blog post writer](https://useaiblocks.com/skills/search-blog-post-writer).
-- The [Search topic and link planner](https://useaiblocks.com/skills/topic-cluster-mapper).
-- The [Store keyword map builder](https://useaiblocks.com/skills/store-keyword-map-builder).
+- The [Store keyword validator](https://useaiblocks.com/skills/store-keyword-validator). It takes the keyword list.
+- The [Search page template builder](https://useaiblocks.com/skills/page-at-scale-builder). It takes the keyword list.
+- The [Store keyword map builder](https://useaiblocks.com/skills/store-keyword-map-builder). It takes the keyword list and shortlist.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

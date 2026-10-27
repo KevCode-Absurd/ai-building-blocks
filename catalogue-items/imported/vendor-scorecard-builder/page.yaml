@@ -13,7 +13,7 @@ when:
   - You pay for 100 or more software tools and have never reviewed them together.
   - A key vendor keeps going down and you want to put a number on it.
   - A renewal is 60 to 90 days away and you need a firm position.
-  - You want to claim credits for missed uptime promises.
+  - You want to find missed uptime promises that may earn a service credit.
 not_for:
   - "You want to write or negotiate contract terms: ask your lawyer or a general counsel, because this skill only checks how vendors perform."
   - "You want to find duplicate software or sort your spend: use a spend review, since this skill scores vendors you already plan to keep."
@@ -33,10 +33,11 @@ you_get:
 how_to_use:
   - Use an AI that can run Python and read files, such as Claude with file tools. A plain chat can follow the steps but cannot run the scripts.
   - Put your vendors in a spreadsheet with one row each. Ask your AI to turn it into the JSON catalog the skill needs. Each vendor needs: name, category, annual_spend, contract_end_date, criticality (tier-1, tier-2 or tier-3), uptime_pct, support_response_hours_p90, incident_count_last_12m, security_certs and renewal_terms. Leave out any you do not have and your AI marks it missing.
-  - The scoring script (vendor_scorer.py) is not in the skill folder. If your AI cannot find it, it works out the scores by hand from the weights in the skill and shows its maths.
+  - The three scripts (vendor_scorer.py, sla_compliance_tracker.py, vendor_risk_classifier.py) are in the skill's scripts folder. The --sample option runs them on made-up demo vendors, so use your own file for real results. If your AI cannot run them, it works out the scores by hand from the weights in the skill and shows its maths.
   - Upload the skill folder and the catalog. Tell your AI your industry and ask it to follow the skill.
-  - Add your SLA records if you have them, so it can flag credits you can claim.
+  - Add your SLA records if you have them, so it can flag credits worth checking. A flag is a prompt to read the vendor's own SLA credit terms and claim window before you claim. The flag uses a generic rule, not your contract.
   - Check the scorecard, SLA report and risk matrix. Pick your top replace and review vendors before renewal.
+  - Take your top three review vendors into a quarterly business review with the vendor before you renew. For each replace vendor, start the search for alternatives 60 to 90 days before its contract end date, or earlier if the notice period is longer. Then use vendor-comparison-writer to compare the options.
   - Use the results to prepare for each vendor talk. Do not treat a score as the final call.
 output_sample:
   input:
@@ -52,9 +53,9 @@ output_sample:
     - name: scorecard.md
       contains: A ranked list of vendors with a 0 to 100 score, a breakdown by dimension and a keep, review or replace verdict.
     - name: sla_report.md
-      contains: Compliance against each target for the last month and quarter, a trend, and a flag where a service credit can be claimed.
+      contains: Compliance against each target for the last month and quarter, a trend, and a flag where a service credit may be claimable. The flag uses a generic rule, so check the vendor's own credit terms before you claim.
     - name: risk_matrix.md
       contains: A Critical, High, Medium or Low rating for each vendor across four risk types, with a fix for each.
     - name: Final digest
-      contains: Top 3 keep wins, top 3 review talks, top 3 replace picks, claimable credits and critical-risk vendors with no fix.
+      contains: Top 3 keep wins, top 3 review talks, top 3 replace picks, credits worth checking and critical-risk vendors with no fix.
 next: [vendor-comparison-writer]

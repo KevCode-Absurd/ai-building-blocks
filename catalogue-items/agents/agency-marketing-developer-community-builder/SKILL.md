@@ -10,7 +10,9 @@ Give it a product, a platform and the problem. It returns a developer community 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Developer community builder](https://useaiblocks.com/skills/developer-community-builder).
+- The [Brand social account checker](https://useaiblocks.com/skills/brand-social-account-checker). It takes the plan.
+- The [Developer outreach planner](https://useaiblocks.com/skills/agency-specialized-developer-advocate). It takes the plan.
+- The [Marketing content drafter](https://useaiblocks.com/skills/marketing-content-drafter). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

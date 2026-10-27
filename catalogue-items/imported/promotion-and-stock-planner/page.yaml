@@ -40,7 +40,7 @@ how_to_use:
   - Answer its questions. If you have no history, say so. It will not make up a lift.
   - Check the lift for each deal type against what you remember. Does the best deal match your gut?
   - Fitting the lift needs an AI that can run Python. A small table can be done in plain chat.
-  - Next, take the go, change or stop list into your stock build plan. After each promotion, update the lift with the actual units sold.
+  - Next, take the go, change or stop list into the Production plan builder, and use the Demand forecast planner for normal weeks. After each promotion, update the lift with the actual units sold.
 how_it_works:
   - title: Gather your history
     text: It lists past promotions, normal sales, trade spend, lead times and capacity, and marks what is missing.
@@ -98,3 +98,4 @@ terms:
     meaning: Money you pay retailers for a deal, such as discounts, feature fees and display fees.
   - term: Baseline
     meaning: Normal sales with no promotion running.
+next: [production-plan-builder, demand-forecast-planner, clearance-discount-planner]

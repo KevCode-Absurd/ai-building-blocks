@@ -10,8 +10,10 @@ level: intermediate
 inputs:
   - type: codebase
     required: false
-  - type: brief
+  - type: question
     required: true
+  - type: audit_report
+    required: false
 outputs:
   - type: plan
 uses: []

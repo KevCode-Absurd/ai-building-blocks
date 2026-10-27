@@ -35,8 +35,10 @@ how_to_use:
   - Pick your scene. Choose one that fits the product, such as a floor for shoes or a counter for beauty items.
   - Paste the skill into Claude, ChatGPT or Gemini. Add your photo, the scene and the product details.
   - Copy the image prompt it writes. Run it in an image model that accepts a photo, such as ChatGPT or Gemini. The skill's own commands use the paid dLazy tool and need an account and a way to run commands. You can skip that and run the prompt in ChatGPT or Gemini instead. Some paid tools or API keys cost money per image.
+  - The skill file also lists scripts, docs/ paths and dLazy commands. They are not included here, so follow the ChatGPT or Gemini route above.
   - Check the result for a shadow under the product, matching light, clean edges and an unchanged product.
   - If it looks fake, add one of the fix lines to the prompt and run it again.
+  - When you are happy, save the image under a clear name, such as shoes-desk-1.jpg, and reuse the same prompt for other products in the same category.
 output_sample:
   input:
     - Your product photo on a white or plain background

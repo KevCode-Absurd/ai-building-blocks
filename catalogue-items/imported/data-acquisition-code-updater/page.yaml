@@ -10,6 +10,8 @@ explain: |
   Old MATLAB scripts that talk to measurement hardware get ported to the current DataAcquisition interface, so they stop breaking on new releases. Error messages about missing wait or Data fields usually point to this exact problem.
 
   The skill swaps the old session calls for their modern equivalents: daq("ni") for createSession, addinput for channel adds, ScansAvailableFcn for the data listener, and preload plus write for queued output. It works in a fixed order and checks after each step, because failures here are often silent. It also covers new scripts that mix triggers, callbacks and continuous capture. It is built around National Instruments hardware. Simple one channel captures do not need it.
+
+  This is MathWorks' skill. The licence that applies is the LICENSE file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE file.
 when:
   - Your lab script worked years ago and now errors on a new MATLAB release.
   - You see an error that wait is undefined for a DataAcquisition object.
@@ -19,6 +21,7 @@ not_for:
   - Your script only reads one channel once. Rewrite the few lines by hand using the MATLAB documentation.
   - Your hardware is not from National Instruments. Check the maker's own MATLAB support pages first.
   - Your script does not use Data Acquisition Toolbox. Ask a MATLAB developer or your AI for general help instead.
+  - You do not use MATLAB. The licence allows use only with MathWorks products.
 you_give:
   - Your old MATLAB script
   - The MATLAB release you use (optional)
@@ -30,10 +33,11 @@ you_get:
   - Fixes for callback and output queue code
   - Checks to confirm it still works
 how_to_use:
-  - Open your AI tool and paste in the skill instructions from this page. To run the checks you need MATLAB with Data Acquisition Toolbox and an NI device. With only the old script, you still get the ported code and the change table.
+  - Add the skill to your AI with the buttons on this page, or paste the full skill file into a chat. To run the checks you need MATLAB with Data Acquisition Toolbox and an NI device. With only the old script, you still get the ported code and the change table.
   - Paste your old MATLAB script. Add your MATLAB release, hardware and error message if you have them.
   - Read the table of changed calls first. Check each one makes sense for your hardware.
   - If your AI can run MATLAB with Data Acquisition Toolbox, ask it to run the checks. If not, run them yourself.
+  - Before any live test, check what your script writes to. Analog and digital outputs can drive connected equipment. Check the wiring and voltage limits, and try it on a safe load or with the equipment disconnected.
   - Run a short live test on your hardware before you start a full-length run.
   - Compare its output with a run of the old script before you trust a full-length acquisition.
 next: [matlab-test-runner, matlab-code-reviewer]

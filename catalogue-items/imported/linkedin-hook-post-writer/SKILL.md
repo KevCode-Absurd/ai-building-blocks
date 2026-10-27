@@ -1,6 +1,6 @@
 ---
 name: linkedin-post-writer
-description: "Draft LinkedIn posts from 16 tested hook formulas mapped to engagement goals (comments, reposts, likes, saves), with 2026 algorithm formatting rules and an AI-tell scrub pass before publishing."
+description: "Draft LinkedIn posts from 16 hook formulas mapped to engagement goals (comments, reposts, likes, saves), with formatting rules from the author's own experience and an AI-tell scrub pass before publishing."
 category: marketing
 risk: none
 source: community
@@ -82,7 +82,7 @@ Read the chosen formula's skeleton from the bundled [references/hook-formulas.md
 - 0-2 hashtags, placed at the end
 - No external links in the body (put links in the first comment)
 - Prefer "How I" over "How to": first-person experience hooks tend to outperform generic instruction (the original author's own observation, about 2-3x on their corpus; not a verified result)
-- Put one specific number in the first sentence ($873.47 beats $900; 40,000 beats "a lot")
+- Put one specific, real number in the first sentence, one the user gave you (an exact figure beats a rounded one, and a number beats "a lot")
 
 ### Step 4: Scrub AI tells
 
@@ -99,13 +99,13 @@ Show the user: formula used, full draft, character count, and a suggested postin
 ```text
 User:  write a post about what my bootstrapped SaaS actually costs to run
 Agent: Goal check: this reads like a saves play (people screenshot cost
-       breakdowns). Best fit is F7 Odd-Precision Money Ledger (9.4x baseline).
-       Draft hook:
+       breakdowns). Best fit is F7 Odd-Precision Money Ledger (the author's own reference: 9.4x their baseline).
+       Draft hook (all numbers here are placeholders; use only the user's real figures):
 
-       "My SaaS costs $412.83 a month to run. Here is every line item."
+       "My SaaS costs [YOUR REAL MONTHLY COST] a month to run. Here is every line item."
 
-       Then the ledger: hosting $94.20, email $35.00, monitoring $18.63...
-       exact numbers only, totals that actually add up, one lesson at the end.
+       Then the ledger: hosting [YOUR COST], email [YOUR COST], monitoring [YOUR COST]...
+       the user's real numbers only, totals that actually add up, one lesson at the end.
 ```
 
 ### Example 2: Goal-first selection
@@ -115,7 +115,7 @@ User:  I want a post that gets real comments, topic: why I stopped doing demos
 Agent: Comment-earners are F4 Confession, F10 Contrarian, F12 Permission Slip.
        For "I stopped doing X" the strongest is F10 Contrarian + Receipts:
        open with the unpopular claim, back it with 2 historical parallels,
-       close with a question that forces side-picking. Reference: 3,083 eng.
+       close with a question that forces side-picking. Reference: 3,083 eng, the author's own corpus.
 ```
 
 ## Best Practices
@@ -128,6 +128,10 @@ Agent: Comment-earners are F4 Confession, F10 Contrarian, F12 Permission Slip.
 - ❌ Don't pair F7 Money Ledger with rounded or invented numbers; readers notice
 - ❌ Don't open with an all-caps line ("THIS CHANGED EVERYTHING")
 - ❌ Don't frame LinkedIn as inferior inside a LinkedIn post
+
+## After you post
+
+Log the post's comments and reach, then compare formulas on your own audience. The reference numbers here come from the author's own posts, so your results are the evidence that counts.
 
 ## Limitations
 

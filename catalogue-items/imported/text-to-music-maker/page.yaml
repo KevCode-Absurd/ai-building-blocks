@@ -10,12 +10,15 @@ explain: |
   Type what you want to hear, such as "calm piano with soft rain", and get an audio clip back. You can also supply a recorded melody file and have the new music follow it, or ask for a sound effect like footsteps on gravel.
 
   The skill uses Meta's AudioCraft library in Python. MusicGen makes music from text, with optional melody guidance and stereo output. AudioGen makes sound effects. It helps you choose a model size, set clip length and creativity settings, and write prompts that name genre, mood and instruments. You need Python and a computer with a graphics card for decent speed.
+
+  Licence: the skill text is MIT, as the LICENSE file in this item says. The AudioCraft code and the MusicGen and AudioGen model weights have their own licences, and the weights may be non-commercial only. Check them before you publish any clip.
 when:
   - You need background music for a video and have no budget for stock tracks.
   - You want a short sound effect for a game or demo.
   - You have a tune and want it played in a different style.
-  - You plan to use clips in paid or commercial work. The model weights may allow non-commercial use only, so check the licence first.
+  - You want clips for a personal project, a draft or a test of an idea.
 not_for:
+  - "You plan to use the clips in paid or commercial work: the MusicGen model weights may allow non-commercial use only. Check the weights' licence first, or use a stock music library or the Suno song and music bed prompt writer."
   - "You want a spoken voiceover or text read aloud: use a text-to-speech tool, not this one."
   - "You want a long, finished commercial track: use a stock music library or a music producer."
   - "You have no way to run Python code: use the Suno song and music bed prompt writer, or pick a stock music site."
@@ -36,7 +39,7 @@ how_to_use:
   - Paste the skill into a chat with an AI that can run Python code. You need a computer with a graphics card for decent speed.
   - Choose a clip length and a model size. Start with the small model.
   - Run the code, then listen to the WAV file. Change the prompt and rerun until it sounds right.
-  - Check the licence before you use a clip in paid or commercial work.
+  - Check the licence of the AudioCraft code and the MusicGen and AudioGen weights before you use a clip in paid or commercial work. If you are stuck, see the troubleshooting notes in the skill's references.
 output_sample:
   input:
     - A text description of the music or sound

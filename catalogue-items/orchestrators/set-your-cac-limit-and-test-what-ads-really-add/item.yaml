@@ -9,6 +9,7 @@ level: advanced
 inputs:
   - {type: performance_sheet, required: true}
   - {type: spreadsheet, required: true}
+  - {type: customer_list, required: true}
 outputs:
   - {type: plan}
   - {type: audit_report}

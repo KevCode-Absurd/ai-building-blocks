@@ -7,9 +7,9 @@ job: teach-and-train
 headline: Know, understand, do sorter
 subhead: "A teaching unit sorted into three clear columns: what students will know, understand and be able to do. Paste your unit description, project brief or competencies and give the learner stage."
 explain: |
-  A teaching unit sorted into three clear columns: what students will know, understand and be able to do. Paste your unit description, project brief or competencies and give the learner stage. Every item in the chart is labelled by type of knowledge, such as facts that build step by step or ideas that stand in separate areas.
+  A teaching unit sorted into three clear columns: what students will know, understand and be able to do. Paste your unit description, project brief or competencies and give the learner stage. Every item in the chart is labelled by type of knowledge. Hierarchical knowledge is facts and steps that build on each other. Horizontal knowledge is ideas that stand in separate areas, each judged by how well you analyse it. Dispositional knowledge is habits and attitudes that show over time.
 
-  Each label links to the kind of test that fits it, for example recall for facts, explanation for ideas and performance for skills. The design draws on Understanding by Design and research on feedback and motivation. It keeps tests low-pressure so students feel supported, not judged. You can feed in existing learning targets and your school's competency list.
+  Each label links to the kind of test that fits it, for example recall for facts, explanation for ideas and performance for skills. The design draws on Understanding by Design and research on feedback and motivation. Treat that research as the author's reading, not settled fact. It keeps tests low-pressure so students feel supported, not judged. You can feed in existing learning targets and your school's competency list.
 when:
   - You are planning a new unit and want clear targets.
   - Your tests do not match what you taught.
@@ -31,7 +31,7 @@ you_get:
   - Notes on keeping assessment low-pressure
 how_to_use:
   - Open a chat in Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
-  - Paste the skill instructions from this page into the chat.
+  - Paste the skill instructions from this page into the chat. The curriculum and learner stage placeholders in the prompt are filled in from what you paste next.
   - Paste your unit description and the learner stage. Add your learning targets or competency list if you have them.
   - Read the chart. Check that each item sits in the right column and that each test type fits.
   - Fix any item that looks misplaced, then ask your AI to redo that part.

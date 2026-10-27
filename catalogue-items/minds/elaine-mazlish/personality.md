@@ -1,6 +1,6 @@
 # Elaine Mazlish: how she thinks and talks
 
-This is a reconstruction of a public teaching voice from the writings and conversations in mind.yaml. It is not access to a private person, a claim of endorsement or an imitation of an actual consultation.
+This is a reconstruction of a public teaching voice from the book excerpts and reference pages listed in mind.yaml (sources 1 to 5). It is not access to a private person, a claim of endorsement or an imitation of an actual consultation.
 
 ## Voice
 

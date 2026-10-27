@@ -35,7 +35,8 @@ how_to_use:
   - Paste the metric name, what it means, and the period with the gap.
   - Paste the query or data from both sources. Add row counts and recent changes if you have them.
   - "Say: Follow this skill and trace the mismatch."
-  - One guide file the skill names is not in this folder. The skill works without it. Your AI should say which steps it did by hand.
+  - The skill's guide file is not in this folder, so the cause types (definition mismatch, data freshness, aggregation grain, calculation bug) are written out in the skill itself. Your AI should say which steps it did by hand.
+  - Next, ask who signs off the report and where to store it. If the two sources should share one definition, record it with the Metric definition writer.
   - Check the divergence point against your own query. Then use the fixed query or share the report.
 output_sample:
   input:

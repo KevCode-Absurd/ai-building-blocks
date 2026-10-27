@@ -21,7 +21,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Your notes** (yours): what to keep, change or drop.
-- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+- **A story outline** (yours): the premise, the characters and the scenes in order.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
@@ -34,6 +34,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+This list replaces the general one above. The "results" here are your writing log, not an ad or store export.
 - **What you write and the length you are aiming for** (required)
 - **The days and minutes you can write** on a normal day and on your worst day (required)
 - **A normal week**, so the reading plan can find gaps (required)
@@ -50,14 +51,14 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Plan the start and the restart.** Use the skill `habit-plan-builder`. A small first step, a fixed cue and a restart rule for the days it goes wrong.
-2. **Set the daily word quota.** Use the skill `daily-word-quota-planner`. Give it your length, your days and minutes, a start date, and the first step and restart rule from step 1. It sizes the daily count to your worst weekday and works out the finish date.
-3. **Build a reading plan.** Use the skill `writers-reading-plan-builder`. Give it your normal week and the writing slot from step 2. It makes a weekly reading schedule that sits beside the writing slot and uses only the gaps you named.
+1. **Plan the start and the restart.** Use the skill `habit-plan-builder`. A small first step, a fixed cue and a restart rule for the days it goes wrong. The file has three lines: the first step, the cue and the restart rule. Save it as `outputs/step-01-habit-plan-builder.md`.
+2. **Set the daily word quota.** Use the skill `daily-word-quota-planner`. Give it your length, your days and minutes, a start date, and the first step and restart rule from step 1. It sizes the daily count to your worst weekday and works out the finish date. The file has a table of days, daily word count and the finish date. Save it as `outputs/step-02-daily-word-quota-planner.md`.
+3. **Build a reading plan.** Use the skill `writers-reading-plan-builder`. Give it your normal week and the writing slot from step 2. It makes a weekly reading schedule that sits beside the writing slot and uses only the gaps you named. The file has the reading slots for each day of the week. Save it as `outputs/step-03-writers-reading-plan-builder.md`.
 
 Pause here: Write at the same time every day for two weeks and keep a log of the date, the start time and the words.
 
-4. **Review the log.** Use the skill `writing-log-reviewer`. Give it your log and the daily count and finish date from step 2. It counts days hit against the plan, shows the pace and gives one change for next week. If there is no log yet, stop here and write MISSING: log.
-5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+4. **Review the log.** Use the skill `writing-log-reviewer`. Give it your log and the daily count and finish date from step 2. It counts days hit against the plan, shows the pace and gives one change for next week. If there is no log yet, stop here and write MISSING: log. Save it as `outputs/step-04-writing-log-reviewer.md`.
+5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then a `CHECKS MISSED` list (or "none").
 
 ## What you hand back
 Four step files and the summary: the start and restart plan, the daily word quota with a finish date, the reading plan, and the log review with its score out of 100 and one change. The closed-door routine is one room, one shut door, one start time, no phone and a stop rule. The score is the days you hit the count divided by the planned writing days, times 100. It measures how often you wrote to the count, not the quality of the writing.

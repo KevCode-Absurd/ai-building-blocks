@@ -9,33 +9,6 @@ description: Share the visit goal and care notes. Prepare questions, capture
 
 Share the visit goal and care notes. Prepare questions, capture reported instructions and draft a small family handoff.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Aging parent care coordinator](https://useaiblocks.com/skills/agency-healthcare-aging-parent-care-companion).
-- The [Action item tracker](https://useaiblocks.com/skills/executive-action-register). It takes the meeting notes and plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
-
-## Before you start
-Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
-
-**What you need** (use your own material or the linked skill):
-- **Your question** (yours): the decision or problem, and what a good outcome looks like.
-
-**Makes it better (optional):**
-- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
-
-How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
-
-**Tools that do this best:**
-- **Claude, ChatGPT or Gemini:** Any of them can follow the four stages. Pick one whose data handling you have read, since you share health details.
-<!-- /needs -->
-
 ## Privacy and limits
 
 Care notes are health information. Before the first stage, tell the person to use first names or initials, share only what this task needs, and check their AI tool's data handling before pasting health details. Never ask for full names, dates of birth, addresses, insurance or account numbers.
@@ -43,6 +16,34 @@ Care notes are health information. Before the first stage, tell the person to us
 This task is organisation, not medical advice. Do not answer questions about medicines, doses, interactions or what a symptom means. Send them to the care team or a pharmacist. If the person describes urgent symptoms, stop and tell them to call the care team or emergency services now.
 
 If an input is missing, ask once for the fact the stage needs. If it is still missing, mark it `MISSING:` and keep that stage open. Never fill a gap from general knowledge.
+
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **Meeting notes** (yours): an agenda, notes or decisions from a meeting.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, meeting notes. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **Claude, ChatGPT or Gemini:** Any of them can follow the four stages. Pick one whose data handling you have read, since you share health details.
+<!-- /needs -->
+
+## What you need for this job
+
+This list replaces the general one above. You do not need an article or transcript.
+- **The visit purpose and date**, and what you want from it.
+- **A short care summary** using first names or initials, with who reported each fact.
+- **Changes you have seen**, and instructions the care team gave before.
+- **Who needs a handoff**, and how much each person may know.
+- **Your notes from the visit**, once it has happened (not needed until stage 3).
 
 ## Run the staged task
 
@@ -90,7 +91,19 @@ Gate: Nothing is represented as sent, scheduled or remembered across sessions un
 
 ## Checkpoint and resume
 
-Record stage ID, accepted inputs and their sources/revisions, actual output, check evidence and state: NOT_STARTED, RUNNING, AWAITING_INPUT, AWAITING_NOTES, BLOCKED, NEEDS_REPAIR or COMPLETE. A file or state label alone does not establish completion. When inputs or outputs change, invalidate dependent results and resume from the earliest affected stage. User amendments change the contract; never invent a missing user response or approval. Finish with the deliverables, stage/check status, unresolved items and the next permitted action.
+Record stage ID, accepted inputs and their sources/revisions, actual output, check evidence and state: NOT_STARTED, RUNNING, AWAITING_INPUT, AWAITING_NOTES, BLOCKED, NEEDS_REPAIR or COMPLETE. These labels are for the record. When you talk to the person, say it in plain words: "waiting for your visit notes" for AWAITING_NOTES, "waiting for a fact from you" for AWAITING_INPUT, "stopped, needs a fix" for BLOCKED or NEEDS_REPAIR, and "done" for COMPLETE. A file or state label alone does not establish completion. When inputs or outputs change, invalidate dependent results and resume from the earliest affected stage. User amendments change the contract; never invent a missing user response or approval. Finish with the deliverables, stage/check status, unresolved items and the next permitted action.
+
+## What you hand back
+
+After each stage, give the person that stage's result: the fact card (a short list, each fact with who reported it), the question list (grouped by priority), the visit notes (the care team's words apart from your summary), then one short handoff note per recipient with an owner for each open item. End with the list of unclear points to take back to the care team and one suggested next step. Nothing is sent.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Aging parent care coordinator](https://useaiblocks.com/skills/agency-healthcare-aging-parent-care-companion).
+- The [Action item tracker](https://useaiblocks.com/skills/executive-action-register). It takes the meeting notes and plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Task boundaries
 

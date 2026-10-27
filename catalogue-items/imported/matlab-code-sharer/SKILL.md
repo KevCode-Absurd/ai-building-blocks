@@ -38,7 +38,7 @@ Share MATLAB content by uploading to GitHub, MATLAB Drive, or File Exchange, the
 ### 1. Identify the starting point
 
 Ask what the user has:
-- **Local files only** → they need to upload first, then generate the URL
+- **Local files only** → they need to upload first, then generate the URL. This includes MATLAB files an earlier step has just written or changed.
 - **Already on GitHub** → skip to URL generation (GitHub path)
 - **Already on MATLAB Drive with a share link** → skip to URL generation (Drive path)
 - **Already on File Exchange** → skip to URL generation (File Exchange path)

@@ -159,6 +159,8 @@ Return your output in this exact format:
 
 ## Example Output
 
+**This is an invented illustration of the layout.** The student, the feedback and the quotations in it are not from a real essay. In a real run, use only the user's own feedback and quote only from the work the user pastes. Never invent details about a student's work.
+
 **Scenario:** *Feedback text: "Good effort, Priya! Some really nice points in here. You need to work on your analysis — try to go deeper next time. Your writing style is lovely. 6/10." / Task context: "Year 10 English Literature essay analysing how Shakespeare presents Lady Macbeth's ambition in Act 1. Learning objective: analyse language and structure to explore how a character is presented."*
 
 ---
@@ -194,7 +196,7 @@ Return your output in this exact format:
 
 3. **"You need to work on your analysis — try to go deeper" is vague feed-forward.** This is the most common feedback failure in secondary education. "Go deeper" means nothing to a Year 10 student who doesn't know what deep analysis looks like. It requires Priya to already have the skill the feedback is telling her to develop.
 
-4. **"Your writing style is lovely" is self-level feedback with a gender dimension.** It compliments Priya as a writer rather than identifying specific effective writing choices. Some people argue that style praise can fall unevenly across groups of students, so check your own pattern of comments (this is not tested here).
+4. **"Your writing style is lovely" is self-level feedback.** It compliments Priya as a writer rather than identifying specific effective writing choices.
 
 5. **"6/10" is a judgment, not feedback.** Butler (1988) found that when comments are accompanied by grades, students attend to the grade and ignore the comments entirely. The score undermines any formative value the comments might have had.
 

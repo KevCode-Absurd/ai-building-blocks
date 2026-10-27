@@ -8,6 +8,7 @@ job: analysis
 level: intermediate
 inputs:
   - {type: question, required: true}
+  - {type: code_change, required: false}
 outputs:
   - {type: audit_report}
 origin: rebuilt

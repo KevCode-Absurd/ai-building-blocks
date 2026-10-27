@@ -9,7 +9,9 @@ subhead: Describe a part and the forces or heat acting on it, and get a finite e
 explain: |
   Describe a part and the forces or heat acting on it, and get a finite element model built, solved and plotted. It covers heat, stress and electromagnetic problems.
 
-  The skill follows five steps in MATLAB's PDE Toolbox. Build geometry from shapes, a STEP or STL file, or a 2D drawing. Set up the model with materials, supports, loads and starting conditions. Mesh with defaults first and refine if needed. Solve for steady, time-varying, vibration or frequency cases. Then read out fields, interpolate values and plot. It needs a recent MATLAB with the PDE Toolbox.
+  The skill follows five steps in MATLAB's PDE Toolbox. Build geometry from shapes, a STEP or STL file, or a 2D drawing. Set up the model with materials, supports, loads and starting conditions. Mesh with defaults first and refine if needed. Solve for steady, time-varying, vibration or frequency cases. Then read out fields, interpolate values and plot. It needs a recent MATLAB with the PDE Toolbox (a paid add-on).
+
+  This is MathWorks' skill. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE.md file.
 when:
   - You need to know how hot a part gets under a heat load.
   - You want stress in a bracket from a CAD file.
@@ -37,6 +39,7 @@ how_to_use:
   - Ask your AI to build, mesh, solve and plot the model, then report the key values.
   - Check the mesh quality and compare the peak values with a hand calculation before you use them in a design decision.
   - Have an engineer review and sign off the result before you act on it. Then ask your AI to refine the mesh and rerun to see if the answer changes.
+  - After an engineer has signed off the numbers, send the table of derived values to the MATLAB report builder for a write-up. Use the MATLAB chart maker for clean figures.
 output_sample:
   input:
     - Your part shape, as a CAD file (STEP or STL) or simple shapes with sizes

@@ -16,6 +16,7 @@ when:
   - You use many tools and cannot see which tasks repeat.
   - You want drafts you can review before using.
 not_for:
+  - "You want to watch other people's screens, or your employer's: do not use this without their clear consent and a check of company policy."
   - "You have no Screenpipe history or will not install it: write the skill by hand, or describe the task to your AI and ask it to draft one."
   - "You want to hide private work from any AI: skip this, or set Screenpipe's ignored-window list first, since screen history can hold passwords."
   - "You only use a chat window with no code running: this needs Python on your computer, so ask a person on your team to set it up."
@@ -30,7 +31,7 @@ you_get:
   - Draft skills for new tasks
   - Notes on which are worth automating
 how_to_use:
-  - Install Screenpipe on your computer and let it run. Before it records much, set its ignored-window list so password managers and private apps are skipped.
+  - Install Screenpipe from its official install page, using the current release, and let it run. Before it records much, set its ignored-window list so password managers and private apps are skipped.
   - Set up Python and choose your language model. A local one in LM Studio keeps data on your machine. A cloud one gets summaries of your activity with secret patterns scrubbed, but the scrub can miss things. If sign-in is on, run screenpipe auth token and set the result as SCREENPIPE_TOKEN.
   - Run the doctor check first. It tells you if Screenpipe, Python and your model are ready. Then run with --dry-run and read plan.md. The cleanup of secrets is a pattern match and does not guarantee that private or unpublished details are removed. Window titles and app names still leave your machine if you pick a cloud model.
   - Run the skill with the time window you want, such as the last week. This needs a way to run code, so use an AI that can run commands on your computer.

@@ -5,14 +5,14 @@ description: "Review your Meta Ads results against your targets. Get ranked find
 
 # Meta results review agent
 
-Reviews one set of dated Meta Ads results against the business's own targets. One bounded run per request. It works from exports and screenshots the user supplies. It does not log in, change budgets, pause ads, publish ads or message anyone unless the user asks for that exact action.
+Reviews one set of dated Meta Ads results against the business's own targets. One bounded run per request. When not to use: for a score across 30 account checks, use the [Meta Ads 30-check account auditor](https://useaiblocks.com/skills/meta-ads-30-check-account-auditor). For the same checks every Monday, use the [Meta Ads weekly account keeper](https://useaiblocks.com/skills/meta-ads-weekly-account-keeper). For one odd symptom such as ads that will not spend, use the [Meta delivery troubleshooter](https://useaiblocks.com/skills/meta-delivery-troubleshooter). It works from exports and screenshots the user supplies. It does not log in, change budgets, pause ads, publish ads or message anyone unless the user asks for that exact action.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Shape the product** with the [Product metrics review writer](https://useaiblocks.com/skills/product-metrics-review-writer). It takes the document.
 - The [Slow code fixer](https://useaiblocks.com/skills/slow-code-fixer). It takes the audit report.
-- The [Infrastructure maintenance planner](https://useaiblocks.com/skills/agency-support-infrastructure-maintainer). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -20,7 +20,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
 - **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
@@ -28,7 +28,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a brief, spreadsheet, document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, spreadsheet, document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -61,7 +61,7 @@ If your AI has no file access, ask the user to paste the numbers as text and say
 1. **Fix the scope.** Confirm account, dates, time zone, currency, attribution setting, goal and target. Give each export an evidence ID (E1, E2 and so on) with its date range.
 2. **Load the checkpoint.** If one was supplied, compare its scope and dates with this request. List what is new and what is stale. The current request wins.
 3. **Check the numbers line up (setup-check.md).** Confirm every export covers the same dates, time zone, currency and attribution setting. Recompute cost per result, ROAS, CPM and click-through rate from the raw columns and compare with the exported figures. List every mismatch. Do not compare two periods that use different attribution settings.
-4. **Check tracking (tracking-check.md).** For each part (events fired, Pixel and Conversions API deduplication, match quality, reported conversions against store or CRM totals), write Confirmed, Not confirmed or Not supplied, with the evidence ID. If there is no tracking evidence, write "Not checked" and lower the confidence of every finding that depends on conversions.
+4. **Check tracking (tracking-check.md).** For each part (events fired, Pixel and Conversions API deduplication, match quality, reported conversions against store or CRM totals), write Confirmed, Not confirmed or Not supplied, with the evidence ID. If there is no tracking evidence, write "Not supplied" and lower the confidence of every finding that depends on conversions.
 5. **Read the results.** Review campaigns, ad sets and ads against the target and against the account's own earlier period when supplied. Never use an industry average as the baseline. Look at spend share, cost per result, ROAS, frequency, CPM, creative mix (formats and number of distinct ideas), delivery notes and changes made in the period.
 6. **Rate each candidate finding.** Confirmed means the data shows it directly. Likely means the data points to it. Unknown means too little data. If a result rests on only a handful of conversions, say how many and mark confidence low. Missing tracking and low volume are gaps, not faults.
 7. **Write findings.md.** Rank by money at stake (spend affected times the gap to target), then by confidence. Each row has the finding, evidence IDs, the sum with its numbers, confidence and a proposed action.
@@ -81,6 +81,8 @@ The optional file `references/editable-role-template.md` is a role file you can 
 - `evidence-gaps.md`: what is missing, which finding it limits, how to get it.
 - `proposed-actions.md`: each change with where, why, risk and approval status.
 - `checkpoint.md`: the record for the next review.
+
+Next step to offer: once the owner has made the changes they approved, run the review again in a month with this checkpoint, or hand the weekly checks to the [Meta Ads weekly account keeper](https://useaiblocks.com/skills/meta-ads-weekly-account-keeper).
 
 Finish with the evidence used, assumptions, open questions, and `CHECKS MISSED:` listing any check that could not run (or "none").
 

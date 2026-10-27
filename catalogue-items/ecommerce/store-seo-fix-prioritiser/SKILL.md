@@ -17,8 +17,8 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Audit report** with the [Search Console quick-win finder](https://useaiblocks.com/skills/search-console-quick-win-finder). Bring your results, spreadsheet (optional), store capture (optional).
-2. **Audit report** with the [Search Console traffic drop investigator](https://useaiblocks.com/skills/search-console-traffic-drop-diagnoser). Bring your results, store capture (optional).
+1. **Audit report** with the [Search Console quick-win finder](https://useaiblocks.com/skills/search-console-quick-win-finder). Bring a search query report, spreadsheet (optional), store capture (optional).
+2. **Audit report** with the [Search Console traffic drop investigator](https://useaiblocks.com/skills/search-console-traffic-drop-diagnoser). Bring a search query report, store capture (optional).
 3. This one.
 
 How to start:

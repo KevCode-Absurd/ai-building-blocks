@@ -227,7 +227,7 @@ response = ask(model, document_image, question)
 
 ## Training custom model
 
-These scripts live in the LLaVA repository you clone, not in this skill's folder. Training needs large datasets and several GPUs: only start it when plain use is not enough.
+Training is optional. These scripts (`pretrain.sh` and `finetune.sh`) are not included in this catalogue copy. They live in the original LLaVA repository you clone. Training needs large datasets and several GPUs: only start it when plain use is not enough, and run the scripts from the original repository.
 
 ```bash
 # Stage 1: Feature alignment (558K image-caption pairs)

@@ -73,8 +73,8 @@ CHECKS MISSED: <one line each, or none>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Bundle tier layout planner](https://useaiblocks.com/skills/bundle-tier-layout-planner). It takes the offer.
-- The [Product pack and quantity discount planner](https://useaiblocks.com/skills/bundle-and-quantity-break-builder). It takes the offer.
 - The [Promotion idea planner](https://useaiblocks.com/skills/promotion-idea-planner). It takes the offer.
+- The [Offer profit-per-session checker](https://useaiblocks.com/skills/offer-profit-per-session-checker). It takes the offer.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

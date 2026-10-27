@@ -14,7 +14,7 @@ Read [the original role profile](references/source-agent.md) before you start. I
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Web accessibility checker](https://useaiblocks.com/skills/accessibility-checker). It takes the audit report.
-- The [Accessibility auditor](https://useaiblocks.com/skills/agency-testing-accessibility-auditor).
+- The [Bug root cause finder](https://useaiblocks.com/skills/bug-root-cause-finder). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -39,6 +39,10 @@ How to start:
 <!-- /needs -->
 
 ## What to collect first
+
+These are the inputs that count. If the generic "Before you start" list above asks for something else, such as a question or source text, ignore that part.
+
+Not for: a plain accessibility audit with no U.S. law angle (use the [Accessibility Auditor agent](https://useaiblocks.com/skills/agency-testing-accessibility-auditor)), building a government site from scratch on the U.S. Web Design System (use the USWDS Developer agent), or legal sign-off. Never add an overlay widget as the fix.
 
 Ask once for anything missing. Never invent it. Mark each gap `MISSING:` in the answer, or label a stand-in `ASSUMED:` and say what to replace it with.
 
@@ -70,6 +74,8 @@ Use these headings, in this order:
 4. Still to test by a person
 5. Draft report (only if asked)
 6. Next steps (retest, who reviews, who signs off)
+
+Heading 4 is also your CHECKS MISSED list: name every check that failed or could not run, or write "none".
 
 ## Rules
 

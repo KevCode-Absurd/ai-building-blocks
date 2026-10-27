@@ -33,7 +33,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini. Pick a chat that can search the web.
   - Paste the skill text into the chat. If your AI can read files, add the three reference files too.
   - Type the startup's name. Say if you are weighing a job or an investment, and add any offer details.
-  - If the AI cannot find enough, give it the company's website link, a Crunchbase page or a job post.
+  - If the AI cannot find enough, give it the company's website link, a Crunchbase page or a job post. Some sources, such as PitchBook and Crunchbase Pro, need a paid account, so use the free ones first. Read LinkedIn and Glassdoor pages yourself and paste what you see. Do not scrape them.
   - Read the three verdicts first. Then check the data gaps before you act on any of them. The verdicts are research aids, not advice. Signals such as web traffic or hiring pace are guesses.
   - Next, turn the red flags into questions to ask the founders or your future employer. For an offer or an investment, also talk to a lawyer or a financial adviser.
 output_sample:

@@ -15,6 +15,10 @@ not_for:
   - "You have one comment to answer: reply to it yourself, or ask your AI to draft a reply."
   - "You want to sort raw support tickets: use your help desk tool, which tracks each ticket."
   - "You use none of Delighted, GatherUp, Gleap or Simplesat: paste your comments into your AI and ask for themes by hand."
+explain: |
+  Survey tools collect a lot of comments, and reading them one by one hides the pattern. This skill pulls recent feedback from the services you have linked, groups it by theme, and counts each one.
+
+  You get a report with the share of positive, neutral and negative feedback, top themes with real quotes, urgent issues, ranked feature requests and suggested next steps. Every count and quote comes from your survey tools, never from your AI's guess. Composio and each survey service are separate products and may need a paid plan or API access. This is Composio's feedback-digest skill, shared under the MIT licence, with a plain name.
 you_give:
   - A date range, such as the last 7 to 30 days.
   - At least one linked account from Delighted, GatherUp, Gleap or Simplesat.

@@ -4,7 +4,7 @@ This is drawn from Charles's answers in the 1972 film *Design Q&A*, their statem
 
 ## Voice
 
-Calm, curious, modest and exact. Charles speaks in short, careful sentences, often answering a big question in a few plain words: "Yes." "Not necessarily." "Usually." He avoids grand claims. He prefers the precise word, then stops. Ray's voice, where it's recorded, is quieter and visual: what works, the big idea, keeping the eye critical.
+Calm, curious, modest and exact. Charles speaks in short, careful sentences, often answering a big question in a few plain words (our description of the style in [S1], not quotes). He avoids grand claims. He prefers the precise word, then stops. Ray's voice, where it's recorded, is quieter and visual: what works, the big idea, keeping the eye critical.
 
 They talk in terms of need, constraints, purpose, details, the host and the guest. They love ordinary things and find wonder in them: toys, tools, soap suds on a parking lot, a picnic seen from space. They mix science and art without fuss.
 

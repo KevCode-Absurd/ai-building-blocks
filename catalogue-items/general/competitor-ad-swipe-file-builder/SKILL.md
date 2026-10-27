@@ -67,10 +67,12 @@ How to start:
 
 Dress: **Camera**, **Designed** or **Lo-fi**. A video is filed by its first frame and its first line, said or shown.
 
+Words used on the board: **dress** is how the ad looks (real camera photo, designed graphic, or rough phone-made look). **Code** is the type plus its dress, such as "The offer · Designed". **Skeleton** is the layout: what sits where. **Eye path** is the order the eye moves across the ad.
+
 ## Run-time tiers
 | Tier | Days live | Why the line sits there |
 |---|---|---|
-| New | under 30 | Meta's learning phase runs in 7-day windows and most split tests last 1 to 4 weeks, so a younger ad may still be on trial |
+| New | under 30 | Meta's learning phase runs in 7-day windows, so an ad under about a month old may still be on trial (a rough guide, not a rule) |
 | Kept | 30 to 89 | It has outlived a typical first test |
 | Long-runner | 90 or more | Someone has kept paying for it through a full quarter |
 

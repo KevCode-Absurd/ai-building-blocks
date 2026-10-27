@@ -19,7 +19,10 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Competitors** (yours): the brands buyers compare you with.
+- **A search query report** (yours): an export from Google Search Console or the Google Ads search terms report, for set dates.
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **A keyword list** (yours): the search keywords, with what each searcher wants and, if known, volume and difficulty.
+- **Tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.

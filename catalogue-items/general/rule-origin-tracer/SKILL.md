@@ -52,8 +52,7 @@ The rule in quotes. Who needed it and when, with unknowns marked. What it grew f
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Decision consequence planner](https://useaiblocks.com/skills/second-order-effects-tracer). It takes the plan and audit report.
 - The [Task removal impact reviewer](https://useaiblocks.com/skills/hidden-value-check). It takes the plan.
-- The [Campaign lessons reviewer](https://useaiblocks.com/skills/copy-or-skip-lesson-writer). It takes the audit report and plan.
-- The [Company handbook change reviewer](https://useaiblocks.com/skills/handbook-change-desk).
+- The [Investment decision brief writer](https://useaiblocks.com/skills/yes-no-too-hard-call-writer). It takes the audit report and plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

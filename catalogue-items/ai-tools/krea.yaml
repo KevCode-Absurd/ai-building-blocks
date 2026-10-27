@@ -8,7 +8,7 @@ categories: [image, video]
 what_it_does:
   - "Gives you many image, video and 3D models in one account. The site says 64 or more models (checked 26 Oct 2026)."
   - "Renders as you draw or change the prompt, with real-time models (checked 26 Oct 2026)."
-  - "Makes images bigger and sharper, up to 22K for images and 8K for video (checked 26 Oct 2026)."
+  - "Makes images bigger and sharper, up to 22K for images and 8K for video. Which plan allows which size is not confirmed (checked 26 Oct 2026)."
   - "Trains a style, face or product on your own images. Free and Basic allow 50 images (checked 26 Oct 2026)."
   - "Chains models into a repeatable flow with Krea Nodes (checked 26 Oct 2026)."
 benefits:
@@ -41,6 +41,7 @@ first_result:
   - "Type a short prompt with the subject, the setting and the look, then generate."
   - "Run the same prompt in a second model and compare the two."
   - "Upscale the one you like, then download it. Check the plan terms before you use it in an ad."
+  - "Next: check the licence on the plan you use before the image goes into client or ad work. If the free units run out, wait for the daily refill, move to a paid plan, or compare Higgsfield or Freepik."
   - "What you get: images from the model you picked. The page does not say how many come back per run or which file types you can download, so check in the app."
 needs:
   - "A free account. No card is needed to start."

@@ -5,11 +5,11 @@ summary: Check which conversion price applies, the cap or the discount, and see 
 job: money-and-investing
 thinking: high
 thinking_why: "The cap price and the discount price come from different definitions, so each must be built from the signed terms before the lower one is chosen."
-subhead: Selected price, conversion shares and extra shares versus round pricing. Share signed instrument explicitly granting lower-of pricing, approved cap conversion price, round price, discount and converting balance.
+subhead: Give it the signed note, the cap price, the round price, the discount and the balance that converts. It picks the lower of the cap price and the discounted price, counts the shares and shows how many extra shares that gives versus the round price.
 explain: |-
-  Selected price, conversion shares and extra shares versus round pricing.
+  Some convertible notes let the investor convert at the lower of two prices: a cap price, or the round price less a discount. This skill builds both prices from the signed terms, picks the lower and counts the shares the balance becomes.
 
-  Venture financing. Illustrative figures only, in USD thousands. A note converts a balance of 120 in a round priced at 4 per share, with a 25% discount. The discounted price is 3. If the cap price is 2, the cap is lower, so it applies: 120 / 2 = 60 shares, against 30 shares at the round price, which is 30 extra. If the cap price is 3.5 instead, the discounted price of 3 is lower, so the discount applies: 120 / 3 = 40 shares, which is 10 extra.
+  It is arithmetic on a signed note, not legal advice. Illustrative figures only, in USD thousands. A note converts a balance of 120 in a round priced at 4 per share, with a 25% discount. The discounted price is 3. If the cap price is 2, the cap is lower, so it applies: 120 / 2 = 60 shares, against 30 shares at the round price, which is 30 extra. If the cap price is 3.5 instead, the discounted price of 3 is lower, so the discount applies: 120 / 3 = 40 shares, which is 10 extra.
 when:
   - You need selected price, conversion shares and extra shares versus round pricing.
   - You work on venture financing and need traceable calculations.

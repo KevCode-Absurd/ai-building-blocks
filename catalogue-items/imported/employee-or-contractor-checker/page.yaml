@@ -32,9 +32,9 @@ you_get:
   - A short summary of the risk areas
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
-  - If you are not using Claude Code, tell your AI to skip the config-file loading and the attorney-only gate in the skill. Use only the intake questions and the output sections. Give your country or state, and say the work is not started yet.
+  - If you are not using Claude Code, tell your AI to skip loading the config file, which only exists there. Keep the first question ("Has this work already started?") and stop if the answer is yes. Give your country or state, and say the work is not started yet.
   - Start with three facts: the role and daily work, the hours and tools, and the pay and place. Then paste your answers about the rest.
-  - The legal research step works best with a paid tool like Westlaw or CourtListener. Without one, your AI uses web search or memory, so check every cited law before you rely on it.
+  - The legal research step works best with a paid tool like Westlaw or CourtListener. Without one, ask your AI to tag every cited law as unverified, then check each one on the official government site before you rely on it.
   - Read the bottom line and the flagged items first.
   - Take the red flags to an employment lawyer before you sign anything. For a close call, a single consultation with an employment lawyer is the cheaper next step.
 output_sample:
@@ -60,3 +60,14 @@ output_sample:
       contains: Which flagged items to take to an employment lawyer before you sign.
     - name: Next steps
       contains: What to settle or change before the work starts.
+how_it_works:
+  - title: Check the work has not started
+    text: Asks first whether the person already works for you. If yes, it stops and points you to an employment lawyer.
+  - title: Gather the facts
+    text: Asks about day-to-day work, hours, tools, pay and other clients, and only about what you have not said.
+  - title: Find the tests for your place
+    text: Looks up the employee or contractor tests for your country or state and tags each source.
+  - title: Apply the tests
+    text: Scores your facts against each test and marks where real working life clashes with the contractor label.
+  - title: Flag and hand back
+    text: Gives a bottom line, the flagged items to take to a lawyer, and what to settle before work starts.

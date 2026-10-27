@@ -29,7 +29,7 @@ export function Before({ plan }: { plan: Plan }) {
             {chain.map((s, n) => (
               <li key={s.slug}>
                 <span className="n">{n + 1}</span>
-                <span><b>{s.label}</b> with the <Link to={local(s.url)}>{s.name}</Link>.{s.bring.length > 0 && <> Bring {s.bring.join(", ")}.</>}{s.uses.length > 0 && <> It uses your {s.uses.map((u) => u.charAt(0).toLowerCase() + u.slice(1)).join(" and ")}.</>}</span>
+                <span><b>{s.label}</b> with the <Link to={local(s.url)}>{s.name}</Link>.{s.bring.length > 0 && <> Bring {s.bring.join(", ")}.</>}{s.uses.length > 0 && <> It uses your {s.uses.map((u) => (u.charAt(0).toLowerCase() + u.slice(1)).replace(/^your /, "")).join(" and ")}.</>}</span>
               </li>
             ))}
             <li className="here"><span className="n">{chain.length + 1}</span><span><b>This one.</b> Make each step once, then reuse what it makes.</span></li>

@@ -292,7 +292,7 @@ dangerous_tools:
 
 ### 5.2 Per-User Tool Access Enforcement
 
-> Note (added by AI Blocks): the code below checks only `allowed_tools` and `denied_tools`. Nothing in this sample enforces `requires_approval`, `max_executions_per_session` or `allowed_operations`. Treat those as policy notes until you add the checks to your own handler. Sections 6 to 11 and the quick checklist are in `references/details.md`.
+> Note (added by AI Blocks): the code below checks `allowed_tools` and `denied_tools`, and then the `dangerous_tools` rules (`requires_approval`, `max_executions_per_session` and `allowed_operations`). It is a sketch to adapt, not tested code. `context.approved` and the `operation` argument are placeholders for your own approval step and your own tool arguments. Test it on a copy of your server before it goes live. Sections 6 to 11 and the quick checklist are in `references/details.md` (in this item's references folder: paste or upload it with this file).
 
 ```typescript
 // src/toolAuth.ts
@@ -323,6 +323,39 @@ export function isToolAllowed(userRole: string, toolName: string): boolean {
   return false;
 }
 
+// Checks for the dangerous_tools list in tool-policy.yaml
+interface DangerousTool {
+  name: string;
+  risk: string;
+  requires_approval?: boolean;
+  max_executions_per_session?: number;
+  allowed_operations?: string[];
+}
+const dangerous: DangerousTool[] = config.dangerous_tools ?? [];
+const runCounts = new Map<string, number>(); // key: session id + tool name
+
+// Returns a reason to refuse, or null if the call may go ahead.
+export function checkDangerousTool(
+  sessionId: string,
+  toolName: string,
+  approved: boolean,
+  operation?: string
+): string | null {
+  const rule = dangerous.find((d) => d.name === toolName);
+  if (!rule) return null;
+  if (rule.requires_approval && !approved) return "needs human approval first";
+  if (rule.max_executions_per_session !== undefined) {
+    const key = sessionId + ":" + toolName;
+    const count = (runCounts.get(key) ?? 0) + 1;
+    if (count > rule.max_executions_per_session) return "session limit reached";
+    runCounts.set(key, count);
+  }
+  if (rule.allowed_operations && !rule.allowed_operations.includes((operation ?? "").toUpperCase())) {
+    return "operation not allowed";
+  }
+  return null;
+}
+
 // MCP server integration: wrap the tool handler
 export function authorizedToolHandler(server: any) {
   const originalCallTool = server.callTool.bind(server);
@@ -334,6 +367,18 @@ export function authorizedToolHandler(server: any) {
     if (!isToolAllowed(userRole, toolName)) {
       return {
         content: [{ type: "text", text: `Access denied: tool "${toolName}" is not permitted for role "${userRole}".` }],
+        isError: true,
+      };
+    }
+    const problem = checkDangerousTool(
+      context.session?.id ?? "unknown",
+      toolName,
+      context.approved === true,
+      request.params.arguments?.operation
+    );
+    if (problem) {
+      return {
+        content: [{ type: "text", text: `Blocked: tool "${toolName}" ${problem}.` }],
         isError: true,
       };
     }

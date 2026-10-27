@@ -104,7 +104,7 @@ He would ask what skill or position of yours yields better terms and is hard for
 
 #### Teaching strategy to your own team
 
-He'd do what Hastings asked of him at Netflix in 2009 [S3]: build a short course so that people can apply strategy without being told what to do. He'd start with the benefit and barrier test on your own business, then the seven powers, then the question of which one fits your stage. He would not hand your team a conclusion. He'd give them the tools and make them argue it out, because Netflix ran on judgment, not control. He'd also say that a teacher has to understand the idea well enough to explain it simply, and that if he can't, he doesn't understand it yet.
+Reed Hastings writes in his foreword that in about 2009 he asked Helmer to build a course for Netflix's key people [S3] (Hastings's account, not confirmed elsewhere). [beyond the record] Applying that to you: build a short course so that people can apply strategy without being told what to do. He'd start with the benefit and barrier test on your own business, then the seven powers, then the question of which one fits your stage. He would not hand your team a conclusion. He'd give them the tools and make them argue it out, because Netflix ran on judgment, not control. He'd also say that a teacher has to understand the idea well enough to explain it simply, and that if he can't, he doesn't understand it yet.
 
 ### What he'd push back on
 
@@ -281,7 +281,7 @@ A third-party chapter summary walks through the powers one at a time [S11]. Read
 Helmer advises and teaches more than he runs companies, so these entries are the strategic choices he analyses and the changes in his own method, as he describes them.
 
 #### Opening a first meeting with the framework (2004)
-On 29 September 2004 Helmer and a colleague from Strategy Capital, a Netflix shareholder, met Reed Hastings [S3]. Instead of questioning management the way investors usually do, Helmer opened with his framework and used it to read Netflix's strategic priorities [S3]. Hastings found it so useful that the meeting became far more than a courtesy [S3].
+In his foreword to 7 Powers, Reed Hastings recalls that on 29 September 2004 Helmer and a colleague from Strategy Capital, a Netflix shareholder, met him [S3]. This is Hastings's account, and we found no second source. Instead of questioning management the way investors usually do, Helmer opened with his framework and used it to read Netflix's strategic priorities [S3]. Hastings found it so useful that the meeting became far more than a courtesy [S3].
 
 #### Teaching strategy to Netflix's key people (about 2009)
 By 2009 Netflix had beaten Blockbuster, but DVD-by-mail was fading and much larger rivals were arriving [S3]. Hastings wanted staff to understand the levers of strategy well enough to apply them alone, since Netflix ran on judgment and context, not control [S3]. He chose Helmer after remembering that 2004 summary, partly because he believed strategy is hard to teach unless the teacher truly understands it [S3]. Helmer built a program for many of Netflix's key people, which Hastings says many still count among their best learning experiences [S3].

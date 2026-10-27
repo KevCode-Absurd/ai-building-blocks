@@ -111,8 +111,9 @@ Run the checks in "Check before you hand it back" and fix any that fail. Check b
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Knitted wool video clip prompt writer](https://useaiblocks.com/skills/knitted-wool-video-prompts). It takes the script.
-- The [Paper craft video ad script writer](https://useaiblocks.com/skills/paper-craft-ad-script).
-- The [Talking object video ad script writer](https://useaiblocks.com/skills/talking-object-ad-script).
+- The [Video ad script line checker](https://useaiblocks.com/skills/video-ad-script-line-checker). It takes the script.
+- The [Ad script video format picker](https://useaiblocks.com/skills/video-ad-format-picker). It takes the script.
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

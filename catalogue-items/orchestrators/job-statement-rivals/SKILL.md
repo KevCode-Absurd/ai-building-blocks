@@ -22,6 +22,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 - **Competitors** (yours): the brands buyers compare you with.
+- **Customer needs** (yours): the problems customers want solved, ranked, each with their own words.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -58,12 +59,12 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## Steps
 1. **Find where the unmet jobs are.** Use the skill `job-hunting-spot-finder`. Give it what you sell, who buys, your question and any reviews or support emails. It looks in five places (your own life, people who buy nothing, workarounds, avoided tasks and unusual uses), scores each lead on evidence and struggle, keeps leads with no proof apart as hunches, and plans a visit for the top three. Saves outputs/step-01-job-hunting-spot-finder.md.
 
-Pause here: Go and watch the top leads in real life, and talk to the people in them. Keep notes in their own words, with where, when and what they were doing.
+Pause here: Go and watch the top leads in real life, and talk to the people in them. Keep notes in their own words, with where, when and what they were doing. Ask people before you record or quote them, and leave out names in anything you share.
 
 2. **Write the job as a situation.** Use the skill `job-spec-writer`. Give it the ranked leads in outputs/step-01-job-hunting-spot-finder.md and your notes from watching. It writes one job for one circumstance, with practical, social and emotional sides, the trade-offs and who it is not for. If your notes show no real struggle, it stops and says so. Saves outputs/step-02-job-spec-writer.md.
 3. **Name the rivals and what they must beat.** Use the skill `job-rival-mapper`. Give it the job in outputs/step-02-job-spec-writer.md and any rivals you track. Rivals are anything hired for the same job in the same circumstance, not only products in your category. It includes doing nothing and homemade fixes, and gives each a short resume and what a customer must give up to choose you.
-4. **Find where nobody does the job well.** Use the skill `competitor-white-space-mapper`. Give it the job and the rival list in outputs/step-03-job-rival-mapper.md. It rates every rival, and you, on what the job cares about, not on the category's usual criteria, and shows where nobody is strong.
-5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+4. **Find where nobody does the job well.** Use the skill `competitor-white-space-mapper`. Give it the job and the rival list in outputs/step-03-job-rival-mapper.md. It rates every rival, and you, on what the job cares about, not on the category's usual criteria, and shows where nobody is strong. The ratings come from your notes and the facts you gave, not from market data. Mark any rating with no evidence as a guess.
+5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then `CHECKS MISSED:` (the checks that failed or could not run, or "none").
 
 ## What you hand back
 Four step files, then the HAND-BACK SUMMARY as the last file: ranked leads with a visit plan, one job written as a situation, every rival with a resume, and a rating grid that shows where nobody is strong.
@@ -71,8 +72,8 @@ Four step files, then the HAND-BACK SUMMARY as the last file: ranked leads with 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Ideal customer profiler](https://useaiblocks.com/skills/ideal-customer-profiler).
 - The [Customer switching journey mapper](https://useaiblocks.com/skills/switch-story-mapper). It takes the audit report.
+- The [Customer switching barrier planner](https://useaiblocks.com/skills/switch-friction-remover). It takes the audit report.
 - The [Customer needs profile builder](https://useaiblocks.com/skills/job-based-avatar-builder). It takes the audit report.
 - **Write the ad copy** with the [Product promise finder](https://useaiblocks.com/skills/selling-proposition-finder). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.

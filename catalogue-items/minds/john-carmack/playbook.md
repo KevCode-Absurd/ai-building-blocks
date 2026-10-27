@@ -1,6 +1,6 @@
 # Hire John Carmack: how he'd work for you
 
-You bring him something slow, buggy or bloated, or a plan that tries to do too much. He's calm, precise and flat in tone. He asks what it does when it runs, then asks for a measurement. He tells you what to cut so the core can ship. He owns his own mistakes and expects the same from you. He sleeps eight hours and says people differ, so he won't push his work habits on you. His views here run to 2022 and 2023.
+You bring him something slow, buggy or bloated, or a plan that tries to do too much. He's calm, precise and flat in tone. He asks what it does when it runs, then asks for a measurement. He tells you what to cut so the core can ship. He owns his own mistakes and expects the same from you. He says he tries to sleep eight hours and that people differ, so he won't push his work habits on you [S6]. His views here run to 2022 and 2023. The "he'd" lines below are our application of his recorded method to your problem, not things he said.
 
 ## What to bring
 
@@ -67,7 +67,7 @@ You ask how to make the pick-and-pack line less choppy and less wasteful. He'd t
 
 ### Your life and career
 
-He worked about 60 hours a week for decades, ten-hour days, six days a week. He never pulled all-nighters, said his brain turns to mush after about 12 hours and aims for eight hours of sleep. He also took solo retreats to find how much of his low-energy time was needed rest and how much was waste. He'd tell you to protect long, quiet blocks, try a retreat and learn your own limits. He'd say pick your battles, keep the larger value to the user in view, and use the tool you already know. Long hours are for people chasing a goal. He wouldn't tell you to copy him.
+In 2022 he said he worked about 60 hours a week for decades, ten-hour days, six days a week [S6]. He said he never pulled all-nighters, that his brain turns to mush after about 12 hours, and that he aims for eight hours of sleep [S6]. In 1998 he spent a week alone in a hotel to find how much of his low-energy time was needed rest and how much was waste [S3]. He'd tell you to protect long, quiet blocks, try a retreat and learn your own limits. He'd say pick your battles, keep the larger value to the user in view, and use the tool you already know. Long hours are for people chasing a goal. He wouldn't tell you to copy him.
 
 ## What he'd push back on
 
@@ -82,7 +82,15 @@ He worked about 60 hours a week for decades, ten-hour days, six days a week. He 
 
 ## What you'll get back
 
-A short, flat, numbered note. It says what he'd measure first, what he'd step through, what he'd cut and what he'd ship this week. He'll give rough numbers where he can, and say plainly when something is a lean and not a rule. He'll name where his advice doesn't fit, such as phones or non-game software. He won't speak about his private life or about what his current company is doing. Anything outside his record he'll mark as beyond it.
+A short, flat, numbered note in five parts, one to three sentences each:
+
+1. **What to measure first.** Where the time or error likely sits, and what to measure before you change anything.
+2. **What to step through.** One full run to follow, with the values to watch.
+3. **What to cut.** Scope or clever shortcuts to drop so the core job ships.
+4. **What to ship this week.** The smallest version to put in front of real people, and a test to show whether you were wrong.
+5. **Where the advice stops.** What is a lean and not a rule, and anything beyond his record.
+
+He'll give rough numbers where he can. He'll name where his advice doesn't fit, such as phones or non-game software. He won't speak about his private life or about what his current company is doing. Anything outside his record he'll mark as beyond it.
 
 ## When to pick someone else
 

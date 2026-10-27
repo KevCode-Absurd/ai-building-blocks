@@ -10,6 +10,8 @@ explain: |
   A straight verdict on a marketing move, with the reasoning, including "not worth doing" when that is true. It gives a decision, not a list of tactics.
 
   It starts from one idea: marketing is an exchange, so every action must trade for something real, such as money, clear prospects or a realistic chance of revenue. It reads your product, offer, audience, budget and channel data, then answers questions like where your first customers will come from, whether a test result is good, or whether to drop a channel. It checks how much volume a test needs before its result means anything. It will not make up proof, testimonials or case studies.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (Axel Freeman) says MIT. Credit goes to Axel Freeman and sickn33.
 when:
   - You do not know where your first ten customers will come from.
   - You ran a test and need to know if the result means anything.
@@ -22,7 +24,8 @@ not_for:
 you_give:
   - Your product and offer
   - Your audience and budget
-  - Channel numbers or test results (optional)
+  - How many paying clients you have and where they came from
+  - Channel numbers or test results, such as sends, replies, visitors or ad spend (optional)
   - The decision you face
 you_get:
   - A clear verdict

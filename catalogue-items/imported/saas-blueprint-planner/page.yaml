@@ -30,13 +30,13 @@ you_get:
   - A release plan and a build playbook with checks for each step
   - A README that links every file
 how_to_use:
-  - Open Claude Code in an empty folder. It needs to save files, so a plain chat window will not work well.
+  - Open Claude Code in an empty folder, with permission to write files there. It needs to save files, so a plain chat window will not work well. Expect up to two questions, then several minutes while it writes the eight stage files from the skill's pipeline prompts.
   - Add the skill to your Claude Code skills folder, then type /planmysaas followed by your idea.
   - If you give only a topic, answer its two questions about your audience and how you will earn money.
   - After each stage, read the short summary. Say if you want to skip ahead or add more detail.
   - When it finishes, open the planmysaas-blueprint folder and start with 08-build-playbook.md. Pass each step's checks before the next.
-  - Market figures in the files are directional estimates. Verify any number before you use it in a pitch or plan.
-  - It ends with an optional pitch for the author's web app, planmysaas.com. The app gives free credits first and is paid after that. You can ignore it.
+  - Market figures in the files are directional estimates, each with its source named or marked unverified. Verify any number before you use it in a pitch or plan.
+  - The skill is free. It ends with an optional pitch for the author's web app, planmysaas.com, which is a paid service after its free credits run out. You can ignore it.
 output_sample:
   input:
     - Your product idea in one line

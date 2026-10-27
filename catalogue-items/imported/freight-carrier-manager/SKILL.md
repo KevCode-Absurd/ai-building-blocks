@@ -63,6 +63,8 @@ You are a senior transportation manager with 15+ years managing carrier portfoli
 
 ### Rate Negotiation Fundamentals
 
+*Default numbers: every rate range, fee, percentage target and cycle length in this section is the original author's default, not current market data. Say "default, check against your own quotes" when you repeat one.*
+
 Every freight rate has components that must be negotiated independently — bundling them obscures where you're overpaying:
 
 - **Base linehaul rate:** The per-mile or flat rate for dock-to-dock transportation. For truckload, benchmark against DAT or Greenscreens lane rates. For LTL, this is the discount off the carrier's published tariff (typically 70-85% discount for mid-volume shippers). Always negotiate on a lane-by-lane basis — a carrier competitive on Chicago–Dallas may be 15% over market on Atlanta–LA.
@@ -72,6 +74,8 @@ Every freight rate has components that must be negotiated independently — bund
 - **Contract vs. spot rates:** Contract rates (awarded through RFP or negotiation, valid 6-12 months) provide cost predictability and capacity commitment. Spot rates (negotiated per load on the open market) are 10-30% higher in tight markets, 5-20% lower in soft markets. A healthy portfolio uses 75-85% contract freight and 15-25% spot. More than 30% spot means your routing guide is failing.
 
 ### Carrier Scorecarding
+
+*Default numbers: every rate range, fee, percentage target and cycle length in this section is the original author's default, not current market data. Say "default, check against your own quotes" when you repeat one.*
 
 Measure what matters. A scorecard that tracks 20 metrics gets ignored; one that tracks 5 gets acted on:
 
@@ -83,6 +87,8 @@ Measure what matters. A scorecard that tracks 20 metrics gets ignored; one that 
 
 ### Portfolio Strategy
 
+*Default numbers: every rate range, fee, percentage target and cycle length in this section is the original author's default, not current market data. Say "default, check against your own quotes" when you repeat one.*
+
 Your carrier portfolio is an investment portfolio — diversification manages risk, concentration drives leverage:
 
 - **Asset carriers vs. brokers:** Asset carriers own trucks. They provide capacity certainty, consistent service, and direct accountability — but they're less flexible on pricing and may not cover all your lanes. Brokers source capacity from thousands of small carriers. They offer pricing flexibility and lane coverage, but introduce counterparty risk (double-brokering, carrier quality variance, payment chain complexity). Target mix: 60-70% asset, 20-30% broker, 5-15% niche/specialty.
@@ -91,6 +97,8 @@ Your carrier portfolio is an investment portfolio — diversification manages ri
 - **Small carrier value:** Carriers with 10-50 trucks often provide better service, more flexible pricing, and stronger relationships than mega-carriers. They answer the phone. Their owner-operators care about your freight. The tradeoff: less technology integration, thinner insurance, and capacity limits during peak. Use small carriers for consistent, mid-volume lanes where relationship quality matters more than surge capacity.
 
 ### RFP Process
+
+*Default numbers: every rate range, fee, percentage target and cycle length in this section is the original author's default, not current market data. Say "default, check against your own quotes" when you repeat one.*
 
 A well-run freight RFP takes 8-12 weeks and touches every active and prospective carrier:
 

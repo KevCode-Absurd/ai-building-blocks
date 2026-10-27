@@ -4,7 +4,10 @@ summary: Shuffle flat JSON records into a random order. Your AI checks the shape
 job: work-with-files
 headline: Shuffle flat JSON records
 subhead: Share a flat JSON array and any rule changes. Check its shape before the shuffle. Get the reordered records and checks.
-explain: Share a flat JSON array and any rule changes. Check its shape before the shuffle. Get the reordered records and checks.
+explain: |
+  A flat JSON array is a list of records that all have the same keys and no records inside records. Shuffling it by hand risks lost records, broken commas and mixed-up values.
+
+  Your AI first checks that the JSON is valid and every record has the same keys. If a check fails, it stops and tells you why, and your data stays unchanged. If the checks pass, it returns the records in a new order and compares the count and contents with your original.
 when:
   - You need a random order for quiz questions, fun facts or test data stored as JSON.
   - You want to remove ordering bias from a list of records before you use it.
@@ -25,8 +28,8 @@ how_to_use:
   - Paste your JSON array, or attach the file. No code running is needed for small files.
   - Add rules if you need them, such as fields to ignore, fields that are required, or whether nesting is allowed.
   - Read the validation notes first. If a check fails, fix the data and run it again.
-  - Before you use the result, compare the record count and keys against your original.
-  - Save the shuffled array as a new file and keep the original. An AI that rewrites a long array can drop or change records, so for more than a few hundred records, check the count with a script or spreadsheet before you import it anywhere.
+  - Before you use the result, compare the record count and keys against your original. A chat AI can say it checked the count without doing it, and its order is not guaranteed to be truly random or complete. For an exact random shuffle or a reliable check, run a short script or use a spreadsheet. Do the count yourself.
+  - Save the shuffled array as a new file and keep the original. Then use it where you needed it, such as a quiz tool or a test fixture. If the file needs edits, use a JSON editor or the JSON query helper. An AI that rewrites a long array can drop or change records, so for more than a few hundred records, check the count with a script or spreadsheet before you import it anywhere.
 output_sample:
   input:
     - Your JSON file or pasted array of flat records
@@ -51,3 +54,4 @@ how_it_works:
     text: Shuffle record order while preserving complete records and valid JSON, then compare counts and record contents.
 thinking: medium
 thinking_why: It weighs your evidence and follows a specific method.
+next: [json-query-helper]

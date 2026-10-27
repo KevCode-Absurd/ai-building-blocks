@@ -7,7 +7,16 @@ description: 'Provides exact Enzyme → React Testing Library migration patterns
 
 Enzyme has no React 18 adapter and no React 18 support path. All Enzyme tests must be rewritten using React Testing Library.
 
-Before you start, ask the user for: the Enzyme test files, their React version, the installed React Testing Library version, and any provider setup (such as a customRender helper). Not for test suites outside React, or tests already on React Testing Library.
+Before you start, ask the user to paste this skill into the AI first, then to gather and paste: the Enzyme test files, their React version, the installed React Testing Library version, and any provider setup (such as a customRender helper). Not for test suites outside React, or tests already on React Testing Library.
+
+## What you hand back
+
+1. The rewritten test file or files.
+2. A table of each old Enzyme call and the React Testing Library call that replaced it.
+3. A list of tests that cannot be translated 1:1 (tests of internal state or instance methods), each with the visible outcome you checked instead.
+4. A note on how the providers are wrapped (inline, or with the project's customRender helper).
+
+The new tests have not been run. Tell the user to run them in their own project.
 
 ## The Philosophy Shift (Read This First)
 

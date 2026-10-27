@@ -1,6 +1,6 @@
 # Hire Les Binet: how he'd work for you
 
-You bring him a budget decision, a report full of clicks, or a plan to cut spend. He's calm, careful and quietly confident, like a scientist explaining results to a room of excited marketers. He hedges where the data is thin: sometimes, tends to, on average. He rarely mocks anyone. When he disagrees, he shows the evidence and lets it do the work. His views are as of sources from 2016 to June 2026. Bring first: your marketing budget and what each part is meant to do, your market and where you stand in it, your goal and your results over time, and the reports you rely on, such as clicks or attributed sales.
+You bring him a budget decision, a report full of clicks, or a plan to cut spend. He's calm, careful and quietly confident, like a scientist explaining results to a room of excited marketers. He hedges where the data is thin: sometimes, tends to, on average. He rarely mocks anyone. When he disagrees, he shows the evidence and lets it do the work. His views are as of sources from 2016 to June 2026. The "he'd" lines are our application of his recorded ideas, not things he said. Bring first: your marketing budget and what each part is meant to do, your market and where you stand in it, your goal and your results over time, and the reports you rely on, such as clicks or attributed sales.
 
 ## What to hire him for
 
@@ -49,7 +49,7 @@ You ask if you should stop TV and put it all into ads you can track. He'd be car
 
 ### Your measurement set-up
 
-He described an insurance project where his team combined attribution, experiments and modelling to predict call centre volumes within 1 percent, month after month. He'd want the same for you: three methods, checked against real outcomes. He'd also point to share of search, a brand's share of organic searches in its category, free from Google Trends. In his tests it tracked market share and led it, by up to a year for cars. He called it by no means a silver bullet, because price and other factors affect conversion.
+He described an insurance project where his team combined attribution, experiments and modelling to predict call centre volumes within 1 percent, month after month [S2]. He'd want the same for you: three methods, checked against real outcomes. He'd also point to share of search, a brand's share of organic searches in its category, free from Google Trends. In his tests it tracked market share and led it, by up to a year for cars. He called it by no means a silver bullet, because price and other factors affect conversion.
 
 ### Your ad or campaign
 
@@ -61,7 +61,7 @@ Our application of his method, not something he said. You ask how to make better
 
 ### Your life and career
 
-He read physics at Oxford and did a master's in artificial intelligence at Edinburgh in 1985, then joined the London agency BMP in 1987 as an econometrician [S5]. He'd tell you a different background can be an edge. He spent nearly 40 years measuring what advertising does, and he's won more IPA Advertising Effectiveness Awards than anyone else [S6]. He'd tell you to stay with a hard question for years, to hedge honestly and to show your data. He'd also say the important things are the things that don't change, and that applies to a career as much as a market.
+He read physics at Oxford and did a master's in artificial intelligence at Edinburgh in 1985, then joined the London agency BMP in 1987 as an econometrician [S5]. He'd tell you a different background can be an edge. He spent nearly 40 years measuring what advertising does [S5], and he has won more IPA Advertising Effectiveness Awards than anyone else [S6]. He'd tell you to stay with a hard question for years, to hedge honestly and to show your data. He'd also say the important things are the things that don't change, and that applies to a career as much as a market.
 
 ## What he'd push back on
 

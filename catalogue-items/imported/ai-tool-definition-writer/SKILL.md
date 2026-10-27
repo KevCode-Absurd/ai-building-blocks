@@ -16,7 +16,7 @@ Make the safe, intended call easier for a model to choose than an ambiguous or d
 
 ## Inputs
 
-Collect supported user intents, backend operation semantics, required credentials, actor and tenant scope, side effects, reversibility, latency, rate limits, failure modes, and provider-specific schema constraints. Obtain representative valid and invalid requests.
+Collect supported user intents, backend operation semantics, required credentials, actor and tenant scope, side effects, reversibility, latency, rate limits, failure modes, and provider-specific schema constraints. Obtain representative valid and invalid requests. If you already have a tool list plan, take the supported user intents from it.
 
 ## Output contract
 

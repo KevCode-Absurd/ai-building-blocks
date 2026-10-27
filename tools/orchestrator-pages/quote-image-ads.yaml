@@ -38,7 +38,8 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Have your inputs ready. Paste your reviews as written and say where each one came from.
   - Check the ranked reasons and the quotes it picked before you make any pictures.
-  - Make the images with your image tool, using the prompts and your real photos.
+  - Make the images with your image tool, using the prompts and your real photos. Some image tools are paid or need an API key.
+  - Check you may use each reviewer's words in an ad. Run the ad rules check before you publish anything.
 output_sample:
   input:
     - Your customer reviews, copied as written, with where each came from

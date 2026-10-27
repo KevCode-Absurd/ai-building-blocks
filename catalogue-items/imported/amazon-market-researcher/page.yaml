@@ -10,6 +10,8 @@ explain: |
   A research report on an Amazon product or category built from live data: search results, rankings, Best Sellers, New Releases, seller catalogues and reviews. Each point comes with the source link so you can check it.
 
   You set a narrow question, a marketplace and a scope. The skill turns it into read-only data requests through the Pangolinfo service, then compares a small set of named products or pulls out review themes with evidence. It never invents tool names. It cannot place orders, contact sellers or crawl broadly. The service needs your own API key, kept in your tool's secret settings, and it may use plan credits.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header says MIT. Credit goes to Pangolinfo and sickn33.
 when:
   - You are sizing up a product niche before you buy stock.
   - You want to compare a few named competitors on price, rank and reviews.
@@ -36,7 +38,8 @@ how_to_use:
   - Open a chat and paste this skill. Ask your AI to list the bridge's tools first, and compare them with the tools named in the skill. If they do not match, stop and check the setup guide. Say your product or keyword, marketplace and goal.
   - Start small, with no more than three products or one page of results on the first run, so credit use stays low and predictable. Widen only after you check the first result.
   - Check that each row matches the product and marketplace you meant. Treat empty fields as gaps.
-  - Use the table to plan your next step, such as a pricing check or keyword research.
+  - Use the table to plan your next step. Check your margin with the Amazon unit profit checker, or pick search terms with the Amazon keyword picker.
+next: [amazon-unit-profit-checker, amazon-keyword-picker]
 output_sample:
   input:
     - A product, a keyword, a category or a short list of named products

@@ -11,6 +11,8 @@ level: expert
 inputs:
   - type: codebase
     required: true
+  - type: eval_set
+    required: true
 outputs:
   - type: code_change
 uses: []

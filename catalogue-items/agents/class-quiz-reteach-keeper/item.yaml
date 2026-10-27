@@ -10,9 +10,11 @@ inputs:
   - {type: spreadsheet, required: true}
   - {type: document, required: false}
   - {type: plan, required: false}
+  - {type: lesson_plan, required: true}
 outputs:
   - {type: plan}
   - {type: audit_report}
+  - {type: lesson_plan, required: true}
 uses: [quiz-and-dashboard-data-reader, student-mistake-analyser, direct-teaching-lesson-builder, worked-example-practice, concept-contrast-task, flawed-example-writer, step-by-step-hint-writer, retrieval-quiz-writer, lesson-understanding-check, skill-progression-map-builder]
 steps:
   - {uses: quiz-and-dashboard-data-reader, note: "Every quiz: reads your results table and says what it shows, which questions most of the class missed and what to do next in class. Hands the ranked list of most-missed questions to the mistake analyser."}

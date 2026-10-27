@@ -7,13 +7,15 @@ role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - {type: document, required: true}
+  - {type: lesson_plan, required: true}
   - {type: feedback_notes, required: false}
   - {type: codebase, required: false}
+  - {type: document, required: true}
 outputs:
   - {type: audit_report}
   - {type: document}
   - {type: plan}
+  - {type: lesson_plan, required: true}
 uses: [documentation-checker, accessible-lesson-auditor, small-working-example-explainer, lesson-opener-planner, recall-quiz-writer]
 steps:
   - {uses: documentation-checker, note: "Every month, for lessons that teach a tool, product or process: claims that are now false, drift from how the thing works today, and weak spots. Uses the lesson and the current docs or code. Passes on the false claims, to fix first."}

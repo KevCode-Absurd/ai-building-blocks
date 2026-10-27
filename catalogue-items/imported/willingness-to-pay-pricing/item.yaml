@@ -11,7 +11,7 @@ level: advanced
 inputs:
   - type: product_data
     required: true
-  - type: brief
+  - type: question
     required: false
 outputs:
   - type: plan

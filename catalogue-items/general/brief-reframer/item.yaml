@@ -8,12 +8,12 @@ job: strategy
 level: intermediate
 inputs:
   - {type: question, required: true}
-  - {type: brief, required: false}
   - {type: brand_brain, required: false}
 outputs:
   - {type: brief}
   - {type: plan}
   - {type: design_direction}
+  - {type: question, required: true}
 origin: rebuilt
 version: 1.0.0
 minds: [rory-sutherland, luke-sullivan, alan-fletcher]

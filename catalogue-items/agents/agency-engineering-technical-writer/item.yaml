@@ -12,6 +12,8 @@ inputs:
     required: true
   - type: codebase
     required: false
+  - type: api_spec
+    required: false
 outputs:
   - type: document
 uses: []

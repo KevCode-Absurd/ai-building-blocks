@@ -45,7 +45,7 @@ If the user provides all of these upfront, proceed directly to Step 2.
 
 ### Step 2 — Surface Contributions
 
-Use WorkIQ to gather evidence of real contributions for the review period. WorkIQ needs a Microsoft 365 account and may need a paid licence. It reads emails, chats and meetings, so first check the user is allowed to use it this way. For a peer or upward review, make sure the person whose messages are pulled would expect it, and leave out anything that is not about work:
+Use WorkIQ to gather evidence of real contributions for the review period. WorkIQ needs a Microsoft 365 account and may need a paid licence. It reads emails, chats and meetings, so first check the user is allowed to use it this way. For a peer or upward review, ask the user to confirm that the person whose messages would be read knows their work messages may be used this way. If they cannot confirm that, do not pull that person's messages: use the user's own bullet points instead. Leave out anything that is not about work:
 
 **For self-assessments:**
 - Pull emails and messages where the user delivered results, led initiatives, or solved problems
@@ -181,7 +181,7 @@ A single, clear, actionable ask.
 | Do | Don't |
 |---|---|
 | Name specific projects, dates, outcomes | Write vague generalisations ("always delivers quality work") |
-| Use numbers when available ("reduced review time by 30%") | Exaggerate or invent results |
+| Use numbers when available ("reduced review time by [X]%" (only with a real figure)) | Exaggerate or invent results |
 | Acknowledge real challenges and what you learned | Omit struggles entirely — reviewers notice the gaps |
 | Write in first person for self-assessments | Write passively ("it was achieved") |
 | Be concise — most fields need 2–4 sentences | Over-write — longer ≠ better |

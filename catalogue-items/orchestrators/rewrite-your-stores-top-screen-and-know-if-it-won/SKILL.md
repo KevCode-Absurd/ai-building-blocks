@@ -75,11 +75,11 @@ Pause here: Put the new top screen live for the test, run it for at least two fu
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Website first-screen copy writer](https://useaiblocks.com/prompts/top-of-page-headline-writer).
 - **Check it before it goes live** with the [Ad and page policy checker](https://useaiblocks.com/skills/ad-and-page-policy-checker). It takes the draft.
-- The [Landing page and email copywriter](https://useaiblocks.com/skills/honest-conversion-copywriter).
-- The [Reasons-to-switch page writer](https://useaiblocks.com/skills/reasons-to-switch-page-writer).
 - **Check it before it goes live** with the [Sales copy readiness checker](https://useaiblocks.com/skills/sales-copy-readiness-checker). It takes the draft.
+- The [Marketing copy editor](https://useaiblocks.com/skills/marketing-copy-sweeper). It takes the draft.
+- **Check it before it goes live** with the [AI-style wording editor](https://useaiblocks.com/skills/anti-ai-slop-copy-editor). It takes the draft.
+- The [Article-style ad draft editor](https://useaiblocks.com/skills/advertorial-draft-editor). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

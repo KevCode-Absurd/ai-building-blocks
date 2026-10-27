@@ -11,6 +11,7 @@ inputs:
   - {type: store_capture, required: false}
 outputs:
   - {type: document}
+  - {type: policy, required: true}
 uses: [store-security-checkup, store-sign-in-security-checker, staff-phishing-rules-briefer]
 steps:
   - {uses: store-security-checkup, note: "Starts the flow. Finds the gaps and ranks the fixes. Hands the findings, with who has admin access and how they sign in, to step 2."}

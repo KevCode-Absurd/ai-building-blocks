@@ -7,7 +7,7 @@ role: make
 job: copy
 level: intermediate
 inputs:
-  - type: brief
+  - type: customer_needs
     required: true
   - type: plan
     required: false

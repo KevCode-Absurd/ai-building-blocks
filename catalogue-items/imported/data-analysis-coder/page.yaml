@@ -10,6 +10,8 @@ explain: |
   Ask a question about a table, time series or sensor data and get clean MATLAB code that answers it. The code handles the messy parts first so the answer is trustworthy.
 
   The skill works with tables and timetables. It covers filtering, sorting, grouping, resampling, smoothing, missing values, outliers and type fixes. Before writing code it reads its own reference notes for each topic involved, which cover correct syntax and common traps that cause silent errors. It then writes code in the style MATLAB experts use and explains what each block does. For plots, file reading, large data or model training, it points you to a better matching skill. You need MATLAB to run the result.
+
+  This is MathWorks' skill. The licence that applies is the LICENSE file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE file.
 when:
   - You have a sensor log and want the top ten readings by hour.
   - A table has gaps and odd values and you need it cleaned before analysis.
@@ -19,6 +21,7 @@ not_for:
   - "You want charts or plots: use the MATLAB chart maker instead."
   - "You need to read or save CSV, Excel or MAT files: use the Data file reader and writer, which handles file reading and writing."
   - "You want to train a model on your table: use the Data classifier comparer, or ask a data scientist to help."
+  - "You do not use MATLAB: the licence allows use only with MathWorks products."
 you_give:
   - Your table or data description
   - The question you want answered
@@ -27,7 +30,7 @@ you_get:
   - In order: the reference notes it read, the MATLAB code, the cleaning steps and notes, then the answer to your question
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste the skill text into the chat. If your AI supports skill files, add the skill folder instead.
-  - Load your data into MATLAB as a table or timetable. Paste a few rows here, or list its columns and what each one holds. A few pasted rows are not enough to run the code.
+  - Load your data into MATLAB as a table or timetable. Tell your AI the column names, what type each holds, which column has the timestamp and the sample rate if it is sensor data. A few pasted rows are not enough to run the code.
   - Write the question you want answered, in plain words. Add your MATLAB release if you know it.
   - Ask your AI to list the reference files it read, then give you the code, the cleaning steps and the answer.
   - Run the code in MATLAB. Check the answer against a few rows of your data. This skill needs MATLAB to run the code.

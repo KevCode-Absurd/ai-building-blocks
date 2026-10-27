@@ -36,6 +36,8 @@ how_to_use:
   - Ask your AI to follow this skill. Include the files and details listed on this page.
   - It works best when your AI can run Python code on a computer with a strong GPU.
   - When the server runs, connect your robot code to it over a WebSocket and test with the simple client before you use a real robot.
+  - Test the policy in simulation first. On a real robot, keep an emergency stop within reach, use reduced speed and keep the workspace clear and supervised.
+  - Next, run staged robot trials or an evaluation on the matching LIBERO or ALOHA setup.
 output_sample:
   input:
     - Your robot dataset, in LeRobot format

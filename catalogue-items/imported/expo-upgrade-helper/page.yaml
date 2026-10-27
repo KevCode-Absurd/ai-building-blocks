@@ -10,6 +10,8 @@ explain: |
   Your Expo app moved to a newer SDK, with broken packages fixed and old code patterns swapped out, so it builds and runs again.
 
   The skill follows a step-by-step upgrade, then deals with version-specific changes using its notes. These cover React 19 changes, the New Architecture, the React Compiler, native tabs, moving from the old audio and video package to the new ones, and moving navigation imports to Expo Router. It can also install preview releases when you want to try a beta. Dependency mismatches are fixed with Expo's own install tool.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (Expo) says MIT. Credit goes to Expo and sickn33.
 when:
   - A new Expo release is out and your app is several versions behind.
   - Packages fail to install after you bump the version.
@@ -33,7 +35,7 @@ how_to_use:
   - Save your project in git first. Back up ios/, android/, patches/ and app.json. Some steps delete files and folders.
   - Open your AI in a tool that can run commands and edit your project. Paste this skill into it.
   - Tell it your current Expo version and the version you want. Add your package.json and any error messages.
-  - Let it run the upgrade steps one at a time. Check the result of each step before you move on.
+  - Let it run the upgrade steps one at a time. Check the result of each step before you move on. Two steps delete files: rm -rf node_modules .expo, and npx expo prebuild --clean, which rebuilds the ios/ and android/ folders. Your AI must stop and get your clear yes before it runs either one.
   - Run your app and test camera, audio, video and navigation. Fix anything the checklist flags.
 output_sample:
   input:

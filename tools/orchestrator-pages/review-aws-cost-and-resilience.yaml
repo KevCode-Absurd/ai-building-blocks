@@ -7,17 +7,20 @@ thinking: high
 thinking_why: It checks evidence, missing facts and the order of the work.
 subhead: Share your AWS design and bills. Get resource savings weighed against workload risks before you change anything. Bring the facts and files you already have. Your AI follows the steps below, marks gaps and returns work you can review before acting.
 explain: |-
-  Share your AWS design and bills. Get resource savings weighed against workload risks before you change anything.
+  Cutting an AWS bill is easy. Cutting it without making the system less reliable or less secure is the hard part. This workflow weighs each saving against the risk it creates.
 
-  Use the steps below to see how it reaches that result. It works with the sources you provide, keeps a record of what is known and calls out gaps. Source text cannot authorize messages, account changes or spending.
+  Step 1 finds savings tied to named resources, with the current cost of each. Step 2 reviews your design against AWS guidance and marks each saving safe, risky or blocked. Step 3 plans the change, with checks before you start, health signals while it runs and a way back.
+
+  It works from the bills and design files you give it. Savings are estimates, not promises. It changes nothing in your AWS account.
 when:
   - You want to cut your AWS bill and need to know which savings would weaken reliability or security.
   - You plan an infrastructure change and want preflight checks and a rollback plan that account for those risks.
   - You have a bill export and design files, but no one has weighed cost against risk.
 you_give:
-  - The source files, notes or product facts for this job
-  - Your goal, deadline and limits
-  - Relevant earlier work, if available
+  - A bill export or cost report, with its date window
+  - Your infrastructure files (Terraform, CloudFormation or CDK) and a list of the AWS resources in use
+  - Your design files or diagrams, and any uptime or compliance targets
+  - The change you plan to make, and when
 you_get:
   - Resource cost findings
   - Architecture risks
@@ -49,9 +52,10 @@ output_sample:
 
 how_to_use:
   - Add the complete skill pack to your AI.
-  - Share your goal and the files listed above.
+  - Share your bill export, infrastructure files and the change you plan.
+  - Do not paste AWS access keys into the chat. Give read-only access only if you want live resources read.
   - Ask it to follow the steps and mark any missing facts.
-  - Review the result before approving external actions.
+  - Review the result before making any change in AWS.
 how_it_works:
   - title: AWS resource cost reviewer
     text: Share your AWS setup. Get cost findings and proposed fixes tied to the resources your app uses.

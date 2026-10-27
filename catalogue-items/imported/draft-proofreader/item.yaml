@@ -12,6 +12,8 @@ inputs:
     required: true
   - type: brief
     required: false
+  - type: question
+    required: false
 outputs:
   - type: copy_draft
   - type: feedback_notes

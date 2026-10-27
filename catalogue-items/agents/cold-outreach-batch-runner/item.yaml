@@ -9,7 +9,7 @@ level: intermediate
 inputs:
   - {type: persona, required: true}
   - {type: offer, required: true}
-  - {type: spreadsheet, required: false}
+  - {type: lead_list, required: false}
   - {type: performance_sheet, required: false}
   - {type: source_text, required: false}
 outputs:

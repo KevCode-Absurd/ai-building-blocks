@@ -12,6 +12,8 @@ explain: |
   It compares Discord, Slack, GitHub Discussions, Discourse and Circle, and picks one for your audience. It keeps the channel list short, writes the first message a new member sees, and sets rules sized to the time your team has for moderation.
 
   Then it plans 90 days of weekly prompts and monthly events, and picks a few health numbers to watch. The thresholds it suggests are starting points from the original author, not industry standards.
+
+  The licence that applies to this copy is the one in the LICENSE-CONTENT file in this item, CC BY 4.0. The skill file's header also names the author jonathimer's own MIT licence. Both allow reuse with credit.
 when:
   - You are launching a Discord server or forum for the people who use your product.
   - Your community has members but almost nobody posts.
@@ -35,12 +37,13 @@ you_get:
   - A 90-day calendar of prompts and events
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Add this skill, or paste its instructions into the chat.
-  - Describe your developers, including their job, their experience, where they already talk and how they write. A few lines is enough.
+  - Describe your developers, including their job, their experience, where they already talk and how they write. A few lines is enough. This is the audience description the skill needs before it starts. If you have no such description, write it now.
   - Add your product, the hours your team has for moderation, and whether the community is new or already exists.
   - Read the platform pick first. Discord and GitHub Discussions are free. Slack, Discourse hosting and Circle cost money, and tools like Commsor and Octolens are paid extras you do not need. If you already use another platform and want to stay, say so and ask for the plan on that one.
   - Check the channel map. Cut any channel you cannot fill with posts in the first month.
   - Copy the welcome message into your platform, then follow the 90-day calendar one week at a time.
   - Once a month, check the health numbers and change the next month's prompts.
+  - Next, if your product is an open source project, use the Open source promoter to bring in the first members.
 how_it_works:
   - title: Understand your developers
     text: It uses the audience details you give it, such as who they are, where they talk and how they write.

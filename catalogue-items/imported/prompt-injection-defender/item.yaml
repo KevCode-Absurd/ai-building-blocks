@@ -10,13 +10,15 @@ level: advanced
 inputs:
   - type: codebase
     required: true
-  - type: brief
+  - type: question
     required: false
   - type: security_report
     required: false
   - type: test_report
     required: false
   - type: code_change
+    required: false
+  - type: prompt
     required: false
 outputs:
   - type: security_report

@@ -72,6 +72,7 @@ output_shape: |-
   CUSTOMER EXPLANATION    <rewritten text>
   CHANGES                 <original> -> <edit> | <clause>
   UNCLEAR POINTS          <clause> | <how it could be read two ways>
+  LEGAL NOTE              This is a plain-words explanation, not legal advice. Have your lawyer confirm the unclear points before you publish it.
 
   MISSING        <each gap>
   CHECKS MISSED  <one line each, or none>

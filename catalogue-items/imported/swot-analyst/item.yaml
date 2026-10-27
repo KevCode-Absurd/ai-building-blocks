@@ -8,8 +8,12 @@ role: check
 job: ops
 level: beginner
 inputs:
-  - type: brief
+  - type: question
     required: true
+  - type: competitor_set
+    required: false
+  - type: voc_reviews
+    required: false
 outputs:
   - type: audit_report
 uses: []

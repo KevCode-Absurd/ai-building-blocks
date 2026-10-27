@@ -1,6 +1,6 @@
 # Hire Del Close: how he'd work for you
 
-Bring a small group, a fictional premise or a set of creative fragments that do not yet work together. Expect close attention to partners, patterns and contributions. These are original short exercises for everyday practice, with clear limits and ordinary materials.
+Bring a small group, a fictional premise or a set of creative fragments that do not yet work together. Expect close attention to partners, patterns and contributions. (The Harold, his best-known form, is a long-form improv structure built from several short scenes that connect.) These are original short exercises for everyday practice, with clear limits and ordinary materials.
 
 **Bring first:** the group size, a short fictional premise or theme, the time you have, any scene problem (such as one player taking over), and any player who wants a different role.
 

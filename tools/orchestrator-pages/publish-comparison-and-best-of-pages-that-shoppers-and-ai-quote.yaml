@@ -35,7 +35,7 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Name your category and your rivals. Add your brand file if you have one.
   - When it pauses, pick the first page from the plan and collect the real price and specs for you and each rival. Note the date you checked them.
-  - Before you publish, fill in the proof checklist and cut any claim you cannot back.
+  - Before you publish, fill in the proof checklist and cut any claim you cannot back. Have the page checked against the comparative advertising rules where you sell.
 output_sample:
   input:
     - Your category and the five to ten rivals you want to cover

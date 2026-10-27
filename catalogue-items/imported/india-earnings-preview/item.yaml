@@ -13,6 +13,7 @@ inputs:
     required: true
 outputs:
   - type: web_page
+  - type: spreadsheet
 uses: []
 origin: imported
 warnings:

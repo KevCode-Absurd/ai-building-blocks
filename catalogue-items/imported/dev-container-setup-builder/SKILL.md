@@ -7,7 +7,7 @@ date_added: 2026-03-06
 ---
 ## Bundled upstream support
 
-Supporting files are included at skill-relative paths. See [UPSTREAM-NOTICE.md](UPSTREAM-NOTICE.md) for their pinned sources, licenses, hashes, and import changes.
+Only the two files in `references/` are included, at skill-relative paths. The base template files in `resources/` are NOT included. See [UPSTREAM-NOTICE.md](UPSTREAM-NOTICE.md) for the pinned sources, licenses, hashes, and import changes of the included files.
 
 # Devcontainer Setup Skill
 
@@ -83,7 +83,7 @@ Extensions and settings from all detected languages should be merged into the co
 
 ## Phase 2: Generate Configuration
 
-Start with base templates from `resources/` directory. This catalogue copy does not include that folder. If it is missing, say so and ask the user for the base files before you write anything. Do not invent them. Substitute:
+Start with base templates from `resources/` directory. This catalogue copy does not include that folder. If it is missing, stop and tell the user: "The base template files (Dockerfile, devcontainer.json, post_install.py, .zshrc, install.sh) are not in this skill. They come from the same skill folder in the trailofbits/skills repository on GitHub. Please add them, or paste them here." Do not write any file until you have them, and never invent them. Substitute:
 
 - `{{PROJECT_NAME}}` → Human-readable name (e.g., "My Project")
 - `{{PROJECT_SLUG}}` → Slug for volumes (e.g., "my-project")
@@ -139,8 +139,12 @@ Add to `customizations.vscode.settings`:
 ```
 
 **postCreateCommand:**
-Warning: `rm -rf .venv` deletes an existing Python virtual environment. Tell the user and get a clear yes before you include it. If they say no, leave it out.
-If `pyproject.toml` exists, chain commands:
+Warning: `rm -rf .venv` deletes an existing Python virtual environment. It is OFF by default. Only add it if the user explicitly says yes after you tell them what it deletes.
+If `pyproject.toml` exists, chain commands without the delete:
+```
+uv sync && uv run /opt/post_install.py
+```
+Only with the user's clear yes, put the delete in front:
 ```
 rm -rf .venv && uv sync && uv run /opt/post_install.py
 ```

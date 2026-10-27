@@ -10,6 +10,8 @@ level: advanced
 inputs:
   - type: question
     required: true
+  - type: design_file
+    required: false
 outputs:
   - type: design_file
 uses: []

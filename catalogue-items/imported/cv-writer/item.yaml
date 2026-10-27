@@ -8,10 +8,14 @@ role: make
 job: ops
 level: beginner
 inputs:
+  - type: resume
+    required: false
   - type: source_text
-    required: true
+    required: false
+  - type: job_description
+    required: false
 outputs:
-  - type: document
+  - type: resume
 uses: []
 origin: imported
 source:

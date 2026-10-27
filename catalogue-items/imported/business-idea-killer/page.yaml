@@ -9,14 +9,14 @@ subhead: Before you spend money or weeks, find the one fact that kills your idea
 explain: |
   Before you spend money or weeks, find the one fact that kills your idea. If it survives, you get the cheapest test it still has to pass.
 
-  The skill acts like a pathologist, not a cheerleader. If you keep a list of past rejected ideas, it checks that first: the same niche means dead, and a matching failure pattern becomes a strong warning to test. Otherwise it runs named kill checks and ends in a hard verdict. DEAD comes with the pattern that killed it. SURVIVED comes with one cheap test that could still end it. It can start your kill list file if you allow it.
+  The skill acts like a pathologist, not a cheerleader. If you keep a list of past rejected ideas, it checks that first: the same niche means dead, and a matching failure pattern becomes a strong warning to test. Otherwise it runs named kill checks and ends in a hard verdict. DEAD comes with the pattern that killed it. SURVIVED comes with one cheap test that could still end it. It can start your kill list file if you allow it. It is a thinking aid, not a forecast, and it does not give legal, tax or money advice. This copy is from sickn33's collection, whose written content is CC BY 4.0 (see LICENSE-CONTENT). The skill file's own header says MIT, set by the original author hafiz-actyte. Both let you reuse it if you keep the credit.
 when:
   - You have a new business idea and want honest feedback.
   - You want to know if you should build something before you spend time.
   - You have many ideas and need a fast way to rule out the weak ones.
   - You want a cheap test to run before committing.
 not_for:
-  - Your idea already has paying customers. Use market research to size the market instead.
+  - Your idea already has paying customers. Use market-size-estimator to size the market instead.
   - You need legal, tax or money advice. Talk to a lawyer or an accountant.
   - You want help planning the build. Run this first, then plan only if the idea survives.
 you_give:
@@ -30,10 +30,10 @@ you_get:
   - A row for your kill list
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text.
-  - Describe your idea in a few lines. Add who you will sell to and your price.
+  - "Gather three things first: the price you plan to charge, who will buy, and what the customer gets. Then describe your idea in a few lines with those details."
   - Paste your kill list if you have one. If not, say yes or no to starting one.
   - Answer the questions. Your AI asks you to look in the Meta Ad Library yourself and report back what you see.
-  - Read the verdict. If the idea survived, run the one test it names before you spend anything.
+  - Read the verdict. It is the last block of the answer, and it names the one sentence that decided it. If the idea survived, run the one test it names before you spend anything. A survived verdict is not a green light to build.
 output_sample:
   input:
     - Your business idea in a few lines

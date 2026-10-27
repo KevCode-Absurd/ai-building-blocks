@@ -8,10 +8,12 @@ role: orchestrate
 job: ops
 level: intermediate
 inputs:
+  - type: tool_connection
+    required: true
   - type: question
     required: false
 outputs:
-  - type: plan
+  - type: document
 uses: []
 origin: imported
 source:

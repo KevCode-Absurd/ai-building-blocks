@@ -84,11 +84,11 @@ def risk_adjusted_budget(base_budget, portfolio_risk_score, risk_tolerance_facto
     return base_budget * (1 + risk_premium)
 ```
 
-**Risk Response Strategies (by score threshold):**
-- **Avoid** (>18): Eliminate through scope/approach changes
-- **Mitigate** (12-18): Reduce probability or impact through active intervention
-- **Transfer** (8-12): Insurance, contracts, partnerships
-- **Accept** (<8): Monitor with contingency planning
+**Risk Response Strategies (by score threshold; example values, replace with your own; every score maps to one response):**
+- **Avoid** (above 18): Eliminate through scope/approach changes
+- **Mitigate** (12 up to and including 18): Reduce probability or impact through active intervention
+- **Transfer** (8 up to but not including 12): Insurance, contracts, partnerships
+- **Accept** (below 8): Monitor with contingency planning
 
 **Tier 3: Resource Capacity Optimization**
 Employs `resource_capacity_planner.py` for portfolio resource analysis:
@@ -173,10 +173,10 @@ def portfolio_risk(individual_risks, correlations):
     return math.sqrt(sum_sq + sum_corr)
 ```
 
-**Risk Appetite Framework:**
-- **Conservative**: Risk scores 0-8, 25-30% contingency reserves
-- **Moderate**: Risk scores 8-15, 15-20% contingency reserves
-- **Aggressive**: Risk scores 15+, 10-15% contingency reserves
+**Risk Appetite Framework (example values, replace with your own; every score falls in one band):**
+- **Conservative**: Risk scores from 0 up to but not including 8, 25-30% contingency reserves
+- **Moderate**: Risk scores from 8 up to but not including 15, 15-20% contingency reserves
+- **Aggressive**: Risk scores of 15 and above, 10-15% contingency reserves
 
 ## Assets & Templates
 
@@ -239,13 +239,13 @@ Reference: `assets/expected_output.json`
    ```bash
    python3 scripts/project_health_dashboard.py current_portfolio.json
    ```
-   ⚠️ If any project composite score <60 or a critical data field is missing, STOP and resolve data integrity issues before proceeding.
+   ⚠️ If any project composite score <60 or a critical data field is missing, STOP. Tell the project owner which project or field failed, ask them to correct or supply that field, and run this step again before you go on.
 
 2. **Risk Assessment Update**
    ```bash
    python3 scripts/risk_matrix_analyzer.py current_portfolio.json
    ```
-   ⚠️ If any risk score >18 (Avoid threshold), STOP and initiate escalation to project sponsor before proceeding.
+   ⚠️ If any risk score >18 (Avoid threshold), STOP. Tell the project sponsor in writing which risk scored above 18, what it could cost, and the proposed response, and ask for a decision before you go on.
 
 3. **Capacity Analysis**
    ```bash
@@ -364,7 +364,7 @@ Reference: `assets/expected_output.json`
 
 Reference: `references/portfolio-kpis.md` for full definitions and measurement guidance.
 
-### Portfolio Performance
+### Portfolio Performance (example targets, replace with your own)
 
 The targets in this section are example starting values, not standards. Replace them with the user's own numbers. The health-score weights can be changed too.
 
@@ -374,14 +374,14 @@ The targets in this section are example starting values, not standards. Replace 
 - Risk Mitigation Coverage: >90% risks with active plans
 - Resource Utilization: 75-85% average
 
-### Strategic Value
+### Strategic Value (example targets, replace with your own)
 - ROI Achievement: >90% projects meeting projections within 12 months
 - Strategic Alignment: >95% investment aligned with business priorities
 - Innovation Balance: 70% operational / 20% growth / 10% transformational
 - Stakeholder Satisfaction: >8.5/10 executive average
 - Time-to-Value: <6 months average post-completion
 
-### Risk Management
+### Risk Management (example targets, replace with your own)
 - Risk Exposure: Maintain within approved appetite ranges
 - Resolution Time: <30 days (medium), <7 days (high)
 - Mitigation Cost Efficiency: <20% of total portfolio risk EMV

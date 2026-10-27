@@ -5,9 +5,9 @@ name: Staff access reviewer
 summary: Check your Shopify staff accounts for old logins, inactive status and too much access. Get a staff access review that changes nothing.
 job: secure-code
 headline: Staff access reviewer
-subhead: A report on which Shopify staff accounts are a risk to your store. It lists accounts with no login for a set number of days (90 by default), accounts marked inactive but still set up, and accounts with full or owner-level access.
+subhead: A report on which Shopify staff accounts are a risk to your store. It lists accounts with no login for a set number of days (90 by default), accounts marked inactive but still set up, and owner and collaborator accounts to review.
 explain: |
-  A report on which Shopify staff accounts are a risk to your store. It lists accounts with no login for a set number of days (90 by default), accounts marked inactive but still set up, and accounts with full or owner-level access.
+  A report on which Shopify staff accounts are a risk to your store. It lists accounts with no login for a set number of days (90 by default), accounts marked inactive but still set up, and the owner and collaborator accounts, which you should review by hand. It does not read permissions, so open each flagged account in Shopify admin to see what it can do.
 
   The skill only reads data. It changes nothing, so it is safe to run at any time. You can include or leave out inactive accounts and the owner, and get the output as a readable list or as JSON. It is a good first step before you remove access. You need the Shopify command line, a signed-in session and permission to view staff.
 when:
@@ -26,7 +26,7 @@ you_give:
 you_get:
   - Staff with stale logins
   - Inactive but still active accounts
-  - Accounts with full access
+  - Owner and collaborator accounts to review
   - A readable or JSON report
 how_to_use:
   - Open an AI that can run the Shopify command line, such as Claude Code. A plain chat window cannot read your store.
@@ -34,6 +34,7 @@ how_to_use:
   - Paste the skill and give your store domain. Add your stale days number if you want one other than 90.
   - Read the summary first. Then open the CSV and sort by days since last login, longest first.
   - Check each flagged account with the person's manager. Remove access yourself in your Shopify admin.
+  - The CSV holds staff names and emails. Keep it private, and delete it when the review is finished.
 output_sample:
   input:
     - Your store domain

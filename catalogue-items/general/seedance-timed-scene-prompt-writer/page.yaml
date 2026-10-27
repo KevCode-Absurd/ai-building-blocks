@@ -32,7 +32,7 @@ how_to_use:
   - Give the scene idea and the length. List the file names of any references you will upload.
   - Say which Seedance version you use. If you do not, you get a layout that fits both the older and newer styles.
   - Check that the beats run with no gaps from 0 to the last second.
-  - Paste the prompt into your Seedance tool and upload the references it lists. Claude does not make the video.
+  - Paste the prompt into your Seedance tool and upload the references it lists. Claude does not make the video. Seedance is a paid service, so making a clip needs an account and uses credits.
   - Check the tool's own length and file limits before you run it.
 how_it_works:
   - title: Read the brief

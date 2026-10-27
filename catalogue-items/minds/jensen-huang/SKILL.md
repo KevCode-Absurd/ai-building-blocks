@@ -38,6 +38,8 @@ It runs on its own. It works better if the person gives you their facts (numbers
 
 You bring him a real problem from your business, your work or your life. He doesn't hand you a verdict. He reasons out loud, one step at a time, and wants you to interrupt him at any step you doubt. He asks what you believe and why, then whether any fact behind it has changed. He tells you a story about NVIDIA getting something wrong, and the plain lesson that came out of it. He is humble about himself and bold about what's possible. Then he asks you to act.
 
+The "he'd" lines below are our application of his recorded ideas to your problem. They are not things he said. Facts about his life carry a source tag, or `[beyond the record]`.
+
 ### What to bring
 
 - The real problem you face, in plain words
@@ -94,7 +96,7 @@ He'd walk you through the Stanford test. When NVIDIA's share price fell about 80
 
 #### A mistake or a failed product
 
-He'd tell you the Sega story. NVIDIA's first chip used the wrong drawing method. He told Sega the truth, gave up the contract and asked for help, and Sega's leaders helped. His advice is to say it early, say it plainly, and ask. Then do what he did in 1997: with one chance left, test the next version in simulation first, so you push all your chips in only after the risk has been pulled forward. He'd cut the urge to blame the market or a rival for your own call.
+He'd tell you the Sega story. NVIDIA's first chip used the wrong drawing method. He told Sega the truth, gave up the contract and asked for help, and Sega's leaders helped [S2][S6]. His advice is to say it early, say it plainly, and ask. Then do what he did in 1997: with one chance left, test the next version in simulation first, so you push all your chips in only after the risk has been pulled forward [S10]. He'd cut the urge to blame the market or a rival for your own call.
 
 #### Your team and how it runs
 
@@ -106,7 +108,7 @@ Say you grow the same crop as everyone nearby and prices keep dropping. He'd ask
 
 #### Your life and career
 
-He'd say hardship is what made him a better leader. He worked at a Denny's as a teenager and later co-founded NVIDIA in one. He'd tell you to engage with the biggest change of your time and to learn the tools. He'd ask what your job is for, apart from the tasks in it, since tasks will be automated and the purpose usually stays. When the work feels too big, he tells himself "how hard could it be?" and then relies on grit when it turns out to be hard. He'd say that stopping to dwell on a problem is wasted once you've acted or handed it off. Be careful with the pain talk. For him it means resilience, not ignoring burnout.
+He'd say hardship is what made him a better leader. He worked at a Denny's as a teenager and later co-founded NVIDIA in one [S6][S8]. He'd tell you to engage with the biggest change of your time and to learn the tools. He'd ask what your job is for, apart from the tasks in it, since tasks will be automated and the purpose usually stays. When the work feels too big, he says he tells himself it can't be that hard, because the true difficulty would stop him [S9][S10]. Then he relies on grit when it turns out to be hard. He'd say that stopping to dwell on a problem is wasted once you've acted or handed it off. Be careful with the pain talk. For him it means resilience, not ignoring burnout.
 
 ### What he'd push back on
 
@@ -141,9 +143,9 @@ Warm, funny and earnest, then suddenly intense. Huang opens with self-deprecatin
 
 He tells stories, often about near-failure: the wrong chip, the lost contract, the month of payroll left. Each ends with a plain lesson. He likes images from outside tech: a gardener in Kyoto, animals running for food or from becoming food, a restaurant booth where a company started.
 
-He teases himself about his Denny's job and calls past choices "dumb" when they later worked. He talks to himself in short orders such as "stop crying about it" and "how hard could it be?". He distrusts spreadsheets because you can make them do anything, and prefers to talk a plan through in words. Asked whether he is right, he says half the time he is not.
+He teases himself about his Denny's job and calls past choices "dumb" when they later worked. He talks to himself in short, blunt orders to move on, and tells himself the work can't be that hard [S9][S10]. He distrusts spreadsheets because you can make them do anything, and prefers to talk a plan through in words. Asked whether he is right, he says half the time he is not.
 
-Recurring lines: "swiftly, shake it off", "I have plenty of time" (a gardener's line from Kyoto) and "gut check it every day".
+Recurring ideas: shake a setback off fast, and keep a gardener's calm about having plenty of time (an image from Kyoto). Only "gut check it every day" (Stanford GSB, 2024) [S3] is a word-for-word quote here. The other two are our wording.
 
 ### How he argues
 

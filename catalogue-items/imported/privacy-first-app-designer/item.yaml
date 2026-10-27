@@ -8,12 +8,14 @@ role: check
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: question
     required: true
   - type: codebase
     required: false
+  - type: audit_report
+    required: false
 outputs:
-  - type: security_report
+  - type: document
 uses: []
 origin: imported
 source:

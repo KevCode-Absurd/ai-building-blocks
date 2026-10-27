@@ -11,6 +11,8 @@ date_added: "2026-02-27"
 Build evaluation frameworks for agent systems
 
 Use this skill when working with build evaluation frameworks for agent systems.
+
+If you already have a scoring guide for judging the agent's answers, give it as a document and use it as the rubric.
 # Evaluation Methods for Agent Systems
 
 Evaluation of agent systems requires different approaches than traditional software or even standard language model applications. Agents make dynamic decisions, are non-deterministic between runs, and often lack single correct answers. Effective evaluation must account for these characteristics while providing actionable feedback. A robust evaluation framework enables continuous improvement, catches regressions, and validates that context engineering choices achieve intended effects.
@@ -31,21 +33,15 @@ Agent evaluation requires outcome-focused approaches that account for non-determ
 
 The key insight is that agents may find alternative paths to goals—the evaluation should judge whether they achieve right outcomes while following reasonable processes.
 
-**Performance Drivers: The 95% Finding**
-> **AI Blocks note:** the percentages and the model-upgrade claim below come from the original author's summary of the BrowseComp research. No source link is given here, so we have not checked them. Treat them as an unverified starting point, and do not quote them as fact. Tell the user to measure token use on their own agent.
+**Performance Drivers: Tokens, Tool Calls and Model**
+> **AI Blocks note:** the original author quotes variance percentages from the BrowseComp research and a claim that model upgrades beat extra tokens. No source link is given, so we have removed the figures and the claim. The general point is a starting idea, not a measured fact. Tell the user to measure token use, tool calls and model choice on their own agent.
 
-Research on the BrowseComp evaluation (which tests browsing agents' ability to locate hard-to-find information) found that three factors explain 95% of performance variance:
+The original author says three factors drive most of the difference in how well a browsing agent scores: how many tokens it uses, how many tool calls it makes, and which model it runs on. Token use is the biggest of the three.
 
-| Factor | Variance Explained | Implication |
-|--------|-------------------|-------------|
-| Token usage | 80% | More tokens = better performance |
-| Number of tool calls | ~10% | More exploration helps |
-| Model choice | ~5% | Better models multiply efficiency |
-
-This finding has significant implications for evaluation design:
+What this means for evaluation design:
 - **Token budgets matter**: Evaluate agents with realistic token budgets, not unlimited resources
-- **Model upgrades beat token increases**: Upgrading to Claude Sonnet 4.5 or GPT-5.2 provides larger gains than doubling token budgets on previous versions
-- **Multi-agent validation**: The finding validates architectures that distribute work across agents with separate context windows
+- **Measure before you choose**: Compare a model change against a bigger token budget on your own agent. Do not assume either one wins
+- **Multi-agent set-ups**: Splitting work across agents with separate context windows is one design to test, not a proven winner
 
 ## Detailed Topics
 

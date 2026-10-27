@@ -14,6 +14,8 @@ Read [the original role profile](references/source-agent.md) before you start. U
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Daily executive brief writer](https://useaiblocks.com/skills/executive-daily-digest). It takes the plan.
+- The [Action item tracker](https://useaiblocks.com/skills/executive-action-register). It takes the plan.
+- The [Stakeholder update writer](https://useaiblocks.com/skills/stakeholder-update-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

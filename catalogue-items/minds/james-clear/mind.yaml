@@ -44,7 +44,7 @@ seats:
   - {seat: "Habits and small gains", asks: "What is the smallest version of this we could do every day, starting tomorrow?"}
   - {seat: "Systems over goals", asks: "Forget the target for a moment. What does the daily process look like, and is it built to win?"}
   - {seat: "Identity check", asks: "Who do we want to become, and does this action count as a vote for it?"}
-pairs_with: [cal-newport, tim-ferriss, daniel-kahneman, john-wooden, marcus-aurelius]
+pairs_with: [cal-newport, bj-fogg, tim-ferriss, daniel-kahneman, john-wooden, marcus-aurelius]
 last_checked: 2026-10-20
 sources:
   - {n: 1, title: "James Clear", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/James_Clear", kind: reference}

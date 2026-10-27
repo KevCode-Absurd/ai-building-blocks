@@ -90,10 +90,10 @@ You never do these. You list them:
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Article-style ad story checker](https://useaiblocks.com/skills/advertorial-story-and-belief-checker). It takes the page.
+- The [Decision friction auditor](https://useaiblocks.com/skills/decision-friction-auditor). It takes the page.
 - The [Customer objection coverage checker](https://useaiblocks.com/prompts/buyer-doubt-gap-finder). It takes the page.
-- The [Sales funnel drop-off finder](https://useaiblocks.com/skills/sales-funnel-drop-off-finder). It takes the page.
 - **Write the landing page** with the [Shopify landing page builder](https://useaiblocks.com/skills/shopify-landing-page-builder). It takes the page.
-- **Check it before it goes live** with the [Ad draft repair reviewer](https://useaiblocks.com/skills/pre-launch-ad-check-and-fix-loop). It takes the page.
+- **Write the landing page** with the [Landing page design planner](https://useaiblocks.com/skills/landing-page-design-planner). It takes the page.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

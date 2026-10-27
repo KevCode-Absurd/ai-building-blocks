@@ -99,8 +99,8 @@ Then the scripts, if a writing skill is paired.
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). It takes the plan.
-- The [Video ad message planner](https://useaiblocks.com/prompts/video-ad-script-angle-chooser).
-- The [Ad script video format picker](https://useaiblocks.com/skills/video-ad-format-picker).
+- The [Video ad script and prompt writer](https://useaiblocks.com/skills/weekly-video-ad-batch-maker).
+- The [Silent video story reviewer](https://useaiblocks.com/skills/voice-over-stripping-test). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

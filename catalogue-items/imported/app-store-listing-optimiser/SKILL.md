@@ -217,6 +217,8 @@ The report must include:
 
 ### Apple App Store — Key Facts
 
+The conversion figures in this section and the next (lifts, percentages, thresholds) come from `references/benchmarks.md` and the store specs. They are approximate and may be out of date. Quote them as rough guides with their source, never as promises or verified results.
+
 - Title (30 chars) + Subtitle (30 chars) + Keyword field (100 **bytes**, hidden) = indexed text
 - Keywords field is bytes not chars — Arabic/CJK use 2-3 bytes per char
 - Long description is NOT indexed for search — optimize for conversion only

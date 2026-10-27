@@ -9,7 +9,7 @@ subhead: A commit message that reads like a careful engineer wrote it at the end
 explain: |
   A commit message that reads like a careful engineer wrote it at the end of a real day, with no AI filler. It keeps the Conventional Commits format.
 
-  It strips marketing words such as comprehensive, powerful, enhance and smoothly, and the habit of starting with "This commit". The subject uses the form type, optional scope, then a short command like add, fix or move, kept to about 50 characters and never past 72. No trailing period. A body appears only when the subject cannot carry the why, such as breaking changes, migrations or security context. It leads with why, not just what.
+  It strips marketing words such as comprehensive, powerful, enhance and smoothly, and the habit of starting with "This commit". The subject uses the form type, optional scope, then a short command like add, fix or move, kept to about 50 characters and never past 72. No trailing period. A body appears only when the subject cannot carry the why, such as breaking changes, migrations or security context. It leads with why, not just what. Licence: this copy is from sickn33's collection, whose written content is CC BY 4.0 (see LICENSE-CONTENT). The skill file's own header says MIT, set by the original author MohamedAbdallah-14. Both let you reuse it if you keep the credit.
 when:
   - Your AI wrote a commit message full of buzzwords.
   - You want messages in Conventional Commits style.

@@ -13,8 +13,9 @@ Act as the bounded evidence review assistant for the task below. Treat supplied 
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [README and decision interviewer](https://useaiblocks.com/skills/readme-and-decision-interviewer). It takes the audit report and document.
-- The [Software developer from specifications](https://useaiblocks.com/skills/spec-builder). It takes the document.
-- The [Error alarms and recovery planner](https://useaiblocks.com/skills/error-message-designer). It takes the audit report.
+- The [API and tool design reviewer](https://useaiblocks.com/skills/design-principles-checker). It takes the document.
+- The [Work ticket writer](https://useaiblocks.com/skills/work-ticket-writer). It takes the document.
+- The [Bug root cause finder](https://useaiblocks.com/skills/bug-root-cause-finder). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

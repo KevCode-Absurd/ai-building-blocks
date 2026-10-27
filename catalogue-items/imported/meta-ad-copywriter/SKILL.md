@@ -9,7 +9,7 @@ description: "Write high-converting Meta (Facebook + Instagram) ad copy — prim
 
 # Meta Ad Copy Skill
 
-**Real facts only (added by AI Blocks).** Every number, name, result, study, quote and review in your copy must come from the user's own real data. The sample lines in this file, such as "47,312 women" or "lost 23 lbs", show the style only. Write them as [X customers], [name], [result] and [source], and never invent proof. Meta restricts health, weight-loss and before-and-after claims. Ask the user to check Meta's current ad policy before launch.
+**Real facts only (added by AI Blocks).** Health, weight-loss, body image and before-and-after ads face strict Meta ad rules, and lines like "your doctor won't tell you" or an implied personal health problem can be rejected. Check every line against Meta's current ad policy before launch. Every number, name, result, study, quote and review in your copy must come from the user's own real data. The sample lines in this file, such as "47,312 women" or the weight and health lines, show the style only and are not claims to run. Write them as [X customers], [name], [result] and [source], and never invent proof. Meta restricts health, weight-loss and before-and-after claims. Ask the user to check Meta's current ad policy before launch.
 
 This skill writes high-converting ad copy for Meta platforms (Facebook + Instagram) — primary text, headlines, descriptions, and UGC/video ad scripts. It draws on proven direct response frameworks from Schwartz, Halbert, Makepeace, Georgi, Sultanic, and others.
 
@@ -95,7 +95,7 @@ The "See more" click is a micro-conversion. Make expanding irresistible.
 **Headline (below the creative)** — Benefit-driven, specific. NOT a label — a second hook.
 
 Weak: "Learn More" | "Check This Out" | "Click Here"
-Strong: "The 7-Second Morning Fix" | "Why Diets Fail After 40" | "23 Lbs in 8 Weeks"
+Strong: "The 7-Second [Routine Name]" | "Why [Common Approach] Fails After [Age or Stage]" | "[Real Result] in [Real Time]"
 
 **Description (below the headline)** — Secondary benefit or risk reversal. Often hidden on mobile, so don't put critical info here. Use for friction reduction: "Free shipping" | "No credit card needed" | "2-minute read"
 
@@ -129,10 +129,10 @@ The hook is the single biggest lever in ad performance. Test more hooks than any
 
 | Type | Example | When to Use |
 |------|---------|-------------|
-| **Curiosity** | "There's a reason your doctor won't tell you about this..." | Cold traffic, unaware |
+| **Curiosity** | "There's a reason [the usual advice] never works for [problem]..." | Cold traffic, unaware |
 | **Contrarian** | "Everything you've been told about _____ is wrong." | Problem-aware, skeptical |
 | **Social proof** | "Over [X] [customers] have tried this 30-second trick..." | Solution-aware+ |
-| **Story** | "Last March I was 40lbs overweight and my doctor said..." | Cold, emotional markets |
+| **Story** | "Last [month] I was stuck with [problem] and [someone I trusted] said..." | Cold, emotional markets |
 | **Demographic callout** | "Attention men over 50 who..." | Cold, specific targeting |
 | **Result** | "I [real result] in [real time] without giving up [real thing]." | Warm/retargeting |
 | **Pattern interrupt** | "Stop scrolling. This actually matters." | Cold, saturated markets |
@@ -144,7 +144,7 @@ The hook is the single biggest lever in ad performance. Test more hooks than any
 - Use fragmented, open-ended curiosity — NOT complete fascinations that close the loop
 - Be specific: use the exact count from the user's own records ("[X] women") not "thousands of women"
 - Deploy tangible curiosity: hint at what they'll discover without revealing it
-- Tell them what it's NOT to intensify what it IS: "It's not a diet... not a pill... not exercise..."
+- Tell them what it's NOT to intensify what it IS: "It's not [common option A]... not [common option B]... not [common option C]..."
 - A single winning hook can run for months. Test constantly.
 
 ### The Curiosity Toolbox
@@ -156,7 +156,7 @@ The hook is the single biggest lever in ad performance. Test more hooks than any
 
 **Tangible Curiosity** — Make curiosity concrete and specific, not vague.
 
-Weak: "Discover the secret to weight loss"
+Weak: "Discover the secret to [the result]"
 Strong: "Discover the 7-second morning trick that targets the fat cells your body forgot about"
 
 **Bucket Brigades** — Transition phrases that maintain momentum and pull forward:
@@ -177,8 +177,8 @@ Use 2-3 per ad. Every paragraph ending with a bridge gets tiresome.
 These techniques make any ad more compelling:
 
 **Tell them what it's NOT:**
-> "It's not a diet... not a supplement... not exercise... not willpower..."
-> "It's not what your doctor told you. It's not what the internet says."
+> "It's not [common option A]... not [common option B]... not [common option C]..."
+> "It's not what [the usual source] told you. It's not what the internet says."
 
 **Tell them where it's NOT:**
 > "You can't find it in any store, any pharmacy, any website..."
@@ -319,19 +319,21 @@ In-feed VSLs designed for cold traffic. They never stop hooking.
 
 Personal narrative arc. Most effective for emotional markets.
 
+**Real people only.** Every name, quote, timeframe and result in a story or UGC script must come from a real customer who agreed to be quoted. If there is none, write [quote from a real customer] and stop. Never write a testimonial for a person who does not exist, and never present a made-up story as a real one. The lines below show the shape only.
+
 **Structure:**
 ```
 [HOOK — 0-5s] Start in the middle of the struggle
-  "Six months ago, I couldn't even look at myself in the mirror."
+  "[Time ago], I was [the struggle, in the customer's words]."
 
 [STRUGGLE — 5-20s] Failed attempts, relatable frustration
-  "I tried everything — diets, trainers, supplements. Nothing worked."
+  "I tried [what the customer really tried]. Nothing worked."
 
 [DISCOVERY — 20-40s] The turning point, how they found the solution
   "Then my sister sent me this weird article about..."
 
 [TRANSFORMATION — 40-60s] Specific results with numbers and timelines
-  "In [real time], I [real result]. My husband noticed in the first 2 weeks."
+  "In [real time], I [real result]. [Real detail from the customer.]"
 
 [CTA — 60-90s] Natural recommendation, not a pitch
   "I just wanted to share what actually worked for me. Link's below."

@@ -10,6 +10,10 @@ level: intermediate
 inputs:
   - type: brief
     required: true
+  - type: persona
+    required: false
+  - type: brand_guide
+    required: false
 outputs:
   - type: design_direction
 uses: []

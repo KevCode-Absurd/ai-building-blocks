@@ -13,6 +13,8 @@ inputs:
     required: false
   - type: spreadsheet
     required: false
+  - type: contract
+    required: true
 outputs:
   - type: audit_report
   - type: document

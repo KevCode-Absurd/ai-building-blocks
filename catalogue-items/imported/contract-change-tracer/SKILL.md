@@ -6,12 +6,12 @@ description: >
   clause. Use when the user says "what changed in this contract over time", "show
   me the amendment history", "where's the latest [clause]", "how has [provision]
   evolved", or uploads multiple versions of an agreement.
-argument-hint: "[file(s) | [CLM ID (coming soon)] | [repository link (coming soon)]] [--provision <clause name>]"
+argument-hint: "[file(s)] [--provision <clause name>]"
 ---
 
-# /amendment-history
+# Amendment history
 
-**Running this in a plain chat (no plugin).** This file was written for a Claude plugin. Where it mentions slash commands, matter workspaces, CLAUDE.md or `~/.claude/plugins` paths, "coming soon" CLM or repository sources, or routing to other skills, ignore them. Work from the files the user uploads or pastes. Where it asks for the work-product header, start the output with "Confidential. First-pass reading, not legal advice." Where it asks for the next-steps decision tree, end with three to five plain options, such as trace another clause, send the watch items to a lawyer, or review the current contract as amended.
+This works in a plain chat from files the user uploads or pastes. It uses no slash commands, no folders and no other skills. Start the output with "Confidential. First-pass reading, not legal advice." Ask the user to confirm that every amendment, addendum and side letter is included, because a missing document makes the net current state wrong.
 
 Loads a base agreement and all amendments, then either summarizes what
 changed over time or traces a specific provision to its current
@@ -19,8 +19,7 @@ controlling language.
 
 ## Instructions
 
-1. **Get the documents:** From file upload, [CLM ID (coming soon)], or [repository link (coming soon)]. Accept multiple files in one invocation. If none
-   provided, ask.
+1. **Get the documents:** From files the user uploads or text they paste. Accept several documents in one go. If none are given, ask.
 
 2. **Detect the mode** by parsing the request per the mode
    detection rules below. If a provision name is clearly stated, go straight
@@ -31,31 +30,14 @@ controlling language.
 
 4. **Offer follow-ups after output:**
    - "Want me to trace another provision?"
-   - "Want a full playbook review of the current agreement as amended?"
-     (routes to vendor-agreement-review)
-   - "Want a stakeholder summary of the key changes?"
-     (routes to stakeholder-summary)
+   - "Want to check the current agreement as amended against your own rules?" (use Contract risk reviewer)
+   - "Want a short summary of the key changes for someone else?"
 
 ## Examples
 
-```
-/commercial-legal:amendment-history acme-msa.pdf amendment-1.pdf amendment-2.pdf
-```
-
-```
-/commercial-legal:amendment-history --provision indemnity
-```
-
-```
-/commercial-legal:amendment-history
-[paste agreement and amendment text]
-```
-
----
-
-## Matter context
-
-**Matter context.** Check `## Matter workspaces` in the practice-level CLAUDE.md. If `Enabled` is `✗` (the default for in-house users), skip the rest of this paragraph — skills use practice-level context and the matter machinery is invisible. If enabled and there is no active matter, ask: "Which matter is this for? Run `/commercial-legal:matter-workspace switch <slug>` or say `practice-level`." Load the active matter's `matter.md` for matter-specific context and overrides. Write outputs to the matter folder at `~/.claude/plugins/config/claude-for-legal/commercial-legal/matters/<matter-slug>/`. Never read another matter's files unless `Cross-matter context` is `on`.
+- "Here is the base agreement and two amendments. What changed?"
+- "Trace the indemnity clause through these documents."
+- "Where is the latest wording on termination?"
 
 ---
 
@@ -104,19 +86,8 @@ If the overall request is ambiguous between modes, ask one question:
 
 Accept documents from any of these sources:
 
-**[CLM integration coming soon] (if connected):**
-Search by counterparty name or agreement title. Pull the base agreement
-and all amendments. Record metadata typically includes execution dates —
-use these to establish chronological order.
-
-**[Document repository integration coming soon] (if connected):**
-Search by counterparty name or filename. Look for files matching patterns
-like "Amendment", "Addendum", "Amendment No. 1", "First Amendment", or
-numbered suffixes. Pull all matches and sort by file date or filename
-numbering.
-
-**Direct upload:**
-User provides files directly. In most cases the ordering is
+**Uploads and pasted text:**
+The user provides files or text. In most cases the ordering is
 self-explanatory from document titles (e.g., "Amendment No. 1",
 "Second Amendment", "Addendum A") or dates visible in the filename
 or document header — proceed without asking.
@@ -143,9 +114,9 @@ top of the output only where uncertain:
 
 ---
 
-## Privilege inheritance
+## Confidentiality
 
-This skill reads the base agreement and amendments — often privileged or confidential in their own right, and typically used for privileged analysis. The output inherits the source's privilege and confidentiality status. Prepend the work-product header from `~/.claude/plugins/config/claude-for-legal/commercial-legal/CLAUDE.md` `## Outputs` to every output below, distribute only within the privilege circle, and store it where privileged materials live. Strip the header before any external delivery.
+The base agreement and amendments may be confidential or privileged. Remind the user to share the output only with people who are allowed to see the contract.
 
 ## Step 2: Read and index
 
@@ -284,17 +255,16 @@ If the provision was never amended after the base agreement:
 
 ---
 
-## Close with the next-steps decision tree
+## Close with next steps
 
-End with the next-steps decision tree per CLAUDE.md `## Outputs`. Customize the options to what this skill just produced — the five default branches (draft the X, escalate, get more facts, watch and wait, something else) are a starting point, not a lock-in. The tree is the output; the lawyer picks.
+End with three to five plain options, such as: trace another clause, send the watch items to a lawyer, check the current contract as amended against your own rules with Contract risk reviewer, or stop here.
 
 ## What this skill does not do
 
 - It does not determine which document controls in the event of a
   conflict between the base agreement and an amendment — that is a
-  legal interpretation question. It flags conflicts and routes to Legal.
+  legal interpretation question. It flags conflicts and sends them to a lawyer.
 - It does not draft new amendments.
-- It does not compare against the playbook in `~/.claude/plugins/config/claude-for-legal/commercial-legal/CLAUDE.md` — that is the
-  vendor-agreement-review skill's job. This skill is purely historical.
+- It does not compare the contract against your own rules. Use Contract risk reviewer for that. This skill is purely historical.
 - It does not infer what an amendment means if the language is
-  ambiguous — it quotes exactly and flags ambiguity for Legal.
+  ambiguous — it quotes exactly and flags ambiguity for a lawyer.

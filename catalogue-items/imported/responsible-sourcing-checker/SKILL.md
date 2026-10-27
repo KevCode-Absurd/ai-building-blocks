@@ -5,6 +5,8 @@ description: When the user wants to implement sustainable procurement practices,
 
 # Sustainable Sourcing
 
+**Quick steps (no code needed):** (1) Ask why they are checking and which goals and supplier groups come first. (2) Take their pasted supplier list. (3) Score only the metrics they gave; mark every other metric "unknown", leave it out of the score and list it as a gap. (4) Write the report below, the questionnaire and a ranked plan. (5) Tell them to repeat the review every 6 to 12 months and to send the biggest-gap suppliers the questionnaire first.
+
 **Read this first.** The Python code and the examples below are optional. A chat AI can do the same scoring from a pasted spreadsheet. The suppliers (SUP001, SUP002), spend figures and scores in the examples are made up to show the shape. Where the code scores a missing metric or an unassessed supplier as 50, do not do that in practice. Mark the metric "unknown", leave it out of the score, and list it as a gap to close before any rating is given.
 
 You are an expert in sustainable and responsible sourcing practices. Your goal is to help organizations integrate environmental, social, and governance (ESG) criteria into procurement decisions, evaluate supplier sustainability performance, and build responsible supply chains.
@@ -182,9 +184,15 @@ class SustainableSourcingManager:
         # Assess each dimension
         for dimension, dimension_config in self.assessment_criteria.items():
             dimension_score = 0
+            known_weight = 0
 
             for criterion, criterion_config in dimension_config['subcriteria'].items():
-                metric_value = esg_data.get(dimension, {}).get(criterion, 50)  # Default to 50/100
+                metric_value = esg_data.get(dimension, {}).get(criterion)  # None means unknown
+
+                # Missing metric: record it as a gap, leave it out of the score
+                if metric_value is None:
+                    assessment.setdefault('unknown_metrics', []).append(f"{dimension}: {criterion}")
+                    continue
 
                 # Score the metric (0-100 scale)
                 criterion_score = self._score_metric(metric_value, criterion)
@@ -192,6 +200,7 @@ class SustainableSourcingManager:
                 # Weight the criterion
                 weighted_criterion = criterion_score * criterion_config['weight']
                 dimension_score += weighted_criterion
+                known_weight += criterion_config['weight']
 
                 # Identify strengths (>80) and weaknesses (<40)
                 if criterion_score >= 80:
@@ -203,6 +212,10 @@ class SustainableSourcingManager:
                 if criterion_score < 20:
                     assessment['red_flags'].append(f"Critical: {dimension} - {criterion} (score: {criterion_score})")
 
+            if known_weight == 0:
+                assessment['dimension_scores'][dimension] = None  # unknown, not scored
+                continue
+            dimension_score = dimension_score / known_weight  # re-scale to the metrics we have
             assessment['dimension_scores'][dimension] = round(dimension_score, 1)
             total_weighted_score += dimension_score * dimension_config['weight']
 
@@ -285,7 +298,7 @@ class SustainableSourcingManager:
             if assessment:
                 supplier_score = assessment['overall_score']
             else:
-                supplier_score = 50  # Default for not assessed
+                continue  # not assessed: leave out of the score and list it as a gap
 
             weighted_score += supplier_score * spend_weight
 
@@ -309,12 +322,17 @@ class SustainableSourcingManager:
             supplier_id = item['supplier_id']
             spend = item['annual_spend']
             category = item.get('category', 'Unknown')
-            environmental_impact = item.get('environmental_impact_score', 50)  # 0-100
-            social_risk = item.get('social_risk_score', 50)  # 0-100
+            environmental_impact = item.get('environmental_impact_score')  # 0-100, None = unknown, do not guess
+            social_risk = item.get('social_risk_score')  # 0-100, None = unknown, do not guess
 
             # Find current assessment
             assessment = next((a for a in self.assessments if a['supplier_id'] == supplier_id), None)
-            current_score = assessment['overall_score'] if assessment else 50
+            current_score = assessment['overall_score'] if assessment else None  # None = not assessed
+
+            # Unknown inputs: list the supplier as a gap and do not score it
+            if environmental_impact is None or social_risk is None or current_score is None:
+                priorities.append({'supplier_id': supplier_id, 'category': category, 'annual_spend': spend, 'priority_score': None, 'priority_level': 'Unknown: data gap'})
+                continue
 
             # Calculate priority score
             # High spend + High impact + Low current performance = High priority
@@ -336,7 +354,7 @@ class SustainableSourcingManager:
             })
 
         df = pd.DataFrame(priorities)
-        df = df.sort_values('priority_score', ascending=False)
+        df = df.sort_values('priority_score', ascending=False, na_position='last')
 
         return df
 
@@ -796,36 +814,29 @@ print(f"Total TCO: ${tco_results.iloc[0]['total_tco']:,.2f}")
 
 | Supplier | Spend | ESG Score | E | S | G | Rating | Change | Red Flags |
 |----------|-------|-----------|---|---|---|--------|--------|-----------|
-| GreenTech | $5.0M | 78 | 82 | 76 | 75 | B+ | ↗ +5 | None |
-| MidRange | $3.5M | 62 | 65 | 58 | 64 | C+ | → 0 | None |
-| LowCost | $2.8M | 42 | 38 | 45 | 44 | D | ↘ -3 | 2 |
+| [SUPPLIER] | [SPEND] | [SCORE or unknown] | [E] | [S] | [G] | [RATING] | [CHANGE] | [FLAGS] |
 
 **Category Performance:**
 
 | Category | Spend | Avg ESG Score | Suppliers Assessed | Target | Status |
 |----------|-------|---------------|-------------------|--------|--------|
-| Electronics | $15M | 68 | 12/15 | 70 | ⚠ Below |
-| Plastics | $8M | 58 | 8/10 | 65 | ⚠ Below |
-| Metals | $12M | 72 | 10/10 | 70 | ✓ On Track |
+| [CATEGORY] | [SPEND] | [AVG SCORE] | [ASSESSED / TOTAL] | [YOUR TARGET] | [STATUS] |
 
 **Sustainable Sourcing KPIs:**
 
 | Metric | Current | Target | Status |
 |--------|---------|--------|--------|
-| Sustainable Sourcing Score | 64/100 | 70/100 | 86% to goal |
-| % Spend with A/B Rated Suppliers | 58% | 75% | Behind |
-| Supplier ESG Assessment Coverage | 75% | 90% | On Track |
-| Suppliers with Improvement Plans | 18 | 25 | Behind |
-| Carbon Intensity Reduction | -12% | -20% | On Track |
+| Sustainable Sourcing Score | [CURRENT]/100 | [YOUR TARGET] | [STATUS] |
+| % Spend with A/B Rated Suppliers | [CURRENT] | [YOUR TARGET] | [STATUS] |
+| Supplier ESG Assessment Coverage | [CURRENT] | [YOUR TARGET] | [STATUS] |
+| Suppliers with Improvement Plans | [CURRENT] | [YOUR TARGET] | [STATUS] |
+| Carbon Intensity Reduction | [CURRENT] | [YOUR TARGET] | [STATUS] |
 
 **Improvement Initiatives:**
 
 | Initiative | Suppliers | Investment | Expected Impact | Timeline | Status |
 |-----------|-----------|------------|-----------------|----------|--------|
-| Renewable Energy Program | 8 | $500K | -5,000 tCO2e | 2026 | In Progress |
-| Waste Reduction Partnership | 5 | $200K | 30% waste reduction | 2026 | Planning |
-| Fair Wage Assessment | 12 | $150K | Wage gaps identified | Q1 2026 | Starting |
-| Supplier Training Program | 20 | $300K | Knowledge building | Ongoing | Active |
+| [INITIATIVE] | [SUPPLIERS] | [COST, only if the user gave it] | [EXPECTED IMPACT] | [TIMELINE] | [STATUS] |
 
 ---
 

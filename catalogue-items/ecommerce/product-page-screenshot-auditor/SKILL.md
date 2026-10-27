@@ -20,7 +20,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **Theme files** with the [Shopify landing page builder](https://useaiblocks.com/skills/shopify-landing-page-builder). Bring your page. It uses your brand brain and a design direction.
+2. **Theme files** with the [Shopify landing page builder](https://useaiblocks.com/skills/shopify-landing-page-builder). Bring your page, page layout spec (optional). It uses your brand brain and a design direction.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `proof-and-claims.md`, `offers.md`, `voice-and-look.md`. Take the claims list with each claim's status, the offer terms word for word, and the voice rules. Source notes and rejected ideas never go into the result.
@@ -98,10 +98,10 @@ NEXT 3 STEPS
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Shopify duplicate page fixer](https://useaiblocks.com/skills/shopify-duplicate-page-fixer). It takes the audit report.
 - The [Store test evidence reviewer](https://useaiblocks.com/skills/store-test-verdict-maker). It takes the audit report.
-- The [Heatmap and session recording analyst](https://useaiblocks.com/skills/heatmap-and-recording-reader). It takes the audit report.
+- The [Shopify duplicate page fixer](https://useaiblocks.com/skills/shopify-duplicate-page-fixer). It takes the audit report.
 - The [Store SEO fix prioritiser](https://useaiblocks.com/skills/store-seo-fix-prioritiser). It takes the audit report.
+- The [Heatmap and session recording analyst](https://useaiblocks.com/skills/heatmap-and-recording-reader). It takes the audit report.
 - The [Page keep-or-cut auditor](https://useaiblocks.com/skills/page-keep-or-cut-auditor). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

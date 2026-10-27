@@ -7,9 +7,11 @@ thinking: high
 thinking_why: "Issued shares and reported expense measure different things, so each line needs its own source before the two are compared."
 subhead: Give it the shares your company issued to employees, a repurchase price to test, and what employees paid. It works out the cash needed to offset those shares. It then compares that cost with reported share compensation expense.
 explain: |-
-  A share-issuance cash-offset scenario and comparison with reported compensation expense.
+  When a company pays staff in shares, the new shares dilute the owners. Offsetting that means buying shares back, and that costs cash. The cash cost is not the same number as the share compensation expense in the accounts.
 
-  Illustrative figures, in millions. Three million issued shares x $20 = 60 to offset. Employee proceeds of 10 reduce net cash to 50, which is 10 above reported expense of 40. At a price of $15, gross is 45, net is 35, and the comparison is -5 (35 - 40).
+  Give it the net shares issued to staff, a repurchase price to test, the cash staff paid to exercise their awards, and the reported expense. It multiplies the shares by the price to get the gross offset, subtracts the exercise cash once to get the net offset, and compares that with the reported expense. It explains the gap in one line. This is a scenario, not a forecast. It does not value awards, work out diluted earnings per share, or advise on a buyback.
+
+  Illustrative figures, in millions: three million issued shares x $20 = 60. Employee proceeds of 10 leave 50, which is 10 above reported expense of 40. At $15, gross is 45, net is 35, and the gap is -5.
 when:
   - You want to know what it would cost in cash to buy back the shares you issued to staff.
   - You need to explain why that cash cost differs from reported share compensation expense.
@@ -69,19 +71,21 @@ how_it_works:
   - title: 3. Compare cash offset cost with reported compensation expense while retaining both; explain timing and valuation differences rather than replacing accounting expense automatically
     text: Compare cash offset cost with reported compensation expense while retaining both; explain timing and valuation differences rather than replacing accounting expense automatically.
 output_shape: |-
-  A share-issuance cash-offset scenario and comparison with reported compensation expense.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  SCOPE AND DATED SOURCES
+  INPUTS AND ASSUMPTIONS
+  SHARE LEDGER TIE-OUT
+  GROSS AND NET CASH OFFSET at each price tested
+  COMPARISON with reported expense, and the reason for the gap
+  FILE CHECKS: what ran
+  MISSING:
+  CHECKS MISSED:
 tweaks:
-  - what: "Issue period"
-    how: "Take the issue period from the share ledger, the repurchase price and the exercise payments. Use one currency and scale on every line."
-  - what: "Repurchase price"
-    how: "Change the repurchase price and have your AI recalculate. Keep the actual figures you supplied."
-  - what: Acceptance
-    how: Employee proceeds and net settlement are not deducted twice.
+  - what: Issue period
+    how: Take the issue period from the share ledger. Use one currency and scale on every line.
+  - what: Repurchase price
+    how: Change the repurchase price and have your AI recalculate. Keep the actual figures you supplied.
+  - what: Several prices
+    how: Give two or three prices to see the offset side by side.
 judge:
   - Employee proceeds and net settlement are not deducted twice.
   - The schedule does not add the same dilution cost again to an FCFF already adjusted for share compensation.
@@ -95,7 +99,7 @@ improve:
   - "Save one share offset cost you have already checked as an approved example, so your AI copies its layout."
   - "Write how your documents define net share issuance into SKILL.md, so every run uses your wording."
 before: []
-next: [reconcile-share-compensation-dilution-and-cash, treasury-stock-option-dilution]
+next: [ reconcile-share-compensation-dilution-and-cash, treasury-stock-option-dilution ]
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI

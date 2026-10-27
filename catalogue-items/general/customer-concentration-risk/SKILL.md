@@ -18,12 +18,12 @@ A business can look healthy and still sit one decision away from trouble. The ri
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your customer list** (yours): a customer or order export with dates, amounts and what they bought.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your results, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your customer list, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -54,12 +54,14 @@ These are the inputs for this skill. If the section above asks for an ads export
 
 The dependence map with shares and ratings. The client terms check. The limits table with owners and dates. Suppliers and credit, with second sources and the pay-first order. The exit plan for the biggest client. A note that every share was worked out from the sales you pasted, with the totals to check against your own books. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
+**What next:** to prepare the talk with your biggest client, use the Negotiation prep planner for the weaker side. To set better terms with a key supplier, use the Supplier partner terms planner. To bring in more clients, use the Prospecting block planner.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [90-day action plan builder](https://useaiblocks.com/skills/90-day-plan-builder). It takes the plan.
-- The [Customer experience journey mapper](https://useaiblocks.com/skills/job-experience-mapper). It takes the audit report.
-- The [Objectives and key results writer](https://useaiblocks.com/skills/okr-goal-writer). It takes the plan.
+- **Sell it** with the [Negotiation prep planner for the weaker side](https://useaiblocks.com/skills/weak-position-negotiation). It takes the plan.
+- **Sell it** with the [Supplier partner terms planner](https://useaiblocks.com/skills/supplier-partner-terms-planner).
+- **Sell it** with the [Sales prospecting schedule planner](https://useaiblocks.com/skills/prospecting-block-planner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -32,9 +32,9 @@ you_get:
   - A contingency plan
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste in the skill instructions from this page.
-  - Paste your supplier list with spend and how critical each supplier is. Add delivery, finance and location details if you have them.
+  - "Paste your supplier list with spend and how critical each supplier is. You need at least spend, criticality and one risk area (finance, delivery, quality, location or compliance) per supplier, or the score will be too thin to use. Add more details if you have them."
   - Tell your AI your own risk rules, such as the weights and alert levels. Otherwise it uses example values, and you should treat the scores as a practice run only. The Acme sample in the skill is made-up data. Do not share any score until you have entered your own supplier data and rules.
-  - If a supplier has no data for a risk area, the scorecard shows "no data" for it. It does not fill the gap with a guess.
+  - If a supplier has no data for a risk area, the scorecard shows "no data" for it and says how many checks the score rests on. The code does not fill gaps with example values.
   - If you want the scoring run as code, use an AI that can run Python. Install pandas and numpy first.
   - Read the dashboard and the top risk factors for each supplier. Check them against what you know.
   - Start with the actions marked high, and set a date for the next review. Give each contingency plan an owner and a review date.

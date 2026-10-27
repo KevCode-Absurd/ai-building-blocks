@@ -19,7 +19,7 @@ when:
   - You rebranded or changed your message and want to know if buyers noticed.
 not_for:
   - "You have no way to reach at least 50 buyers: talk to five or ten customers one by one instead, or build your list first."
-  - "You want to learn why buyers chose you, not how you rank: use short customer interviews, as the Customer discovery interview planner is not yet a sibling here, so ask a few buyers by phone."
+  - "You want to learn why buyers chose you, not how you rank: ask five to ten buyers by phone instead."
   - "You need sales proof before a big spend: check real orders in your store reports, because ratings show opinion, not buying."
 
 you_give:
@@ -140,7 +140,7 @@ improve:
 works_best_with:
   tools:
     - {name: "Google Forms", why: "A free way to build and send the survey and collect answers in a sheet."}
-    - {name: "Shopify post-purchase survey apps", why: "Ask the survey right after an order so you reach real buyers."}
+    - {name: "Shopify post-purchase survey apps", why: "Ask the survey right after an order so you reach real buyers. These apps are usually paid. Google Forms with an emailed link is a free way to do the same."}
     - {name: "Any good chat AI", why: "Writes the survey and works out the ranks on the answers you paste in."}
   inputs:
     - "Your email list or post-purchase flow, to reach 50 to 200 buyers"

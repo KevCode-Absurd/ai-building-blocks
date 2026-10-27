@@ -102,6 +102,16 @@ large the parent account is, and what happens under it afterwards.
 
 It will not write a reply engineered to provoke the author into responding.
 
+## Output format
+
+Return these parts, in this order:
+
+1. **Reply or skip:** one or two lines, or the single word SKIP with one line saying why.
+2. **The gap:** which gap you found in the tweet.
+3. **Timing note:** whether the tweet is too old for the reply to be seen, and whether it is still worth sending for the person.
+4. **Reply guy check:** one line on whether the reply looks written just to be there.
+5. **Shorter option:** a second, shorter version, if one reads well. Leave it out if not.
+
 ## Example
 
 ```text

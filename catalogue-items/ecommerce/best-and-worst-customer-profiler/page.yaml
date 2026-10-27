@@ -99,6 +99,7 @@ output_shape: |
     scale: <angle + offer>   stop: <angle + offer>   fix: <page promise>
 
   SCORE  <n>/100 = 100 x <new customers in angle-and-offer pairs at or above your average 90-day profit> / <all new customers>
+  CHECKS MISSED: <checks that failed or could not run, or none>
   MISSING: <what was needed>
 
 tweaks:
@@ -133,8 +134,8 @@ improve:
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Any current chat AI that reads spreadsheets can run the ranking. Attach the export and check one group by hand."}
-    - {name: "Shopify", why: "Its order and customer exports carry discount codes, refunds and first-order source, which this skill needs."}
-    - {name: "Klaviyo", why: "It can send a post-purchase survey, which gives the customer's own words for each group."}
+    - {name: "Shopify", why: "A paid service that needs an account. Its order and customer exports carry discount codes, refunds and first-order source. A plain order export from any store also works."}
+    - {name: "Klaviyo", why: "A paid service that needs an account. It can send a post-purchase survey, which gives the customer's own words for each group. The skill works without it."}
   inputs:
     - "A post-purchase survey that asks what problem they are solving"
     - "Ad account angle names matched to the orders they brought in"

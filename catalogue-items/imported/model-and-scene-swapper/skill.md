@@ -3,7 +3,7 @@ name: one-shot
 description: 已有模特图换模特、换背景。一张模特图 → 多人群多场景版本，商品本身不变。当用户说「换模特」「换背景」「换人种」「一图多版」「同一件衣服换个人」时使用。
 ---
 
-**Working in a chat (added by AI Blocks).** This file is in Chinese. Read it and reply in English. If you use a photo of a real person as the model reference (such as model-face.jpg), the user must have that person's written consent. Check local ad rules for AI-made models too. The link to the material-enhancement skill points to a skill that is not in this folder. If fabric texture looks flat, rerun with `--quality high`.
+**Working in a chat (added by AI Blocks).** This file is in Chinese. Read it and reply in English. Before you run anything, tell the user: image runs go through dLazy, a paid service that needs an account or API key, and each image costs money. Run `--dry-run` first to show the cost. If you use a photo of a real person as the model reference (such as model-face.jpg), the user must have that person's written consent. Check local ad rules for AI-made models too. Before any result is used in an ad, check it against the real garment: colour, cut, logo, folds, hands and light. The links to the flat-lay and material-enhancement skills point to skills that are not in this folder. For a flat photo with no model, use the Virtual try-on photo maker. If fabric texture looks flat, rerun with `--quality high`.
 
 # one-shot — 同一商品替换模特和背景
 

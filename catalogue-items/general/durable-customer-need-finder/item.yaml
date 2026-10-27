@@ -7,10 +7,10 @@ role: make
 job: research
 level: intermediate
 inputs:
-  - type: question
+  - type: idea
     required: true
 outputs:
-  - type: brief
+  - type: customer_needs
 origin: rebuilt
 version: 1.0.0
 minds:

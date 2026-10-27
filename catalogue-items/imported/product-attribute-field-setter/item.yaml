@@ -10,8 +10,10 @@ level: advanced
 inputs:
   - type: tool_connection
     required: true
+  - type: audit_report
+    required: false
 outputs:
-  - type: code_change
+  - type: spreadsheet
 uses: []
 origin: imported
 source:

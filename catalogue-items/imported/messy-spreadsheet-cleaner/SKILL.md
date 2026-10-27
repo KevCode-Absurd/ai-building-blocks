@@ -28,6 +28,7 @@ Clean messy data in the active sheet or a specified range.
 
 - The spreadsheet file (.xlsx). A CSV also works: save the cleaned result as .xlsx.
 - Optional: a range to clean and the columns that matter most. If none is given, use the whole used range of the active sheet and say so.
+- Optional: a data quality report from an earlier step. If it names problem columns, clean those first.
 - Never overwrite the original. Save the cleaned copy under a new name.
 
 ## If something is missing

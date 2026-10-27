@@ -10,11 +10,12 @@ level: beginner
 inputs:
   - type: source_text
     required: true
-  - type: brief
+  - type: job_description
     required: false
 outputs:
   - type: document
-  - type: plan
+  - type: resume
+    required: true
 uses: []
 origin: imported
 source:

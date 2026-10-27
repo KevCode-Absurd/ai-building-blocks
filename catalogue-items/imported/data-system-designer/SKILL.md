@@ -11,6 +11,10 @@ metadata:
 
 A principled approach to building reliable, scalable, and maintainable data systems. Apply these principles when choosing databases, designing schemas, architecting distributed systems, or reasoning about consistency and fault tolerance.
 
+## What you need
+
+A description of what the app stores and how it is read and written. If an earlier step gave you a system design plan, review its data layer against the Quick Diagnostic rows instead of asking again.
+
 ## Core Principle
 
 **Data outlives code.** Applications are rewritten and frameworks come and go, but data persists for decades -- prioritize the long-term correctness, durability, and evolvability of the data layer. Most applications are data-intensive, not compute-intensive: the hard problems are data volume, complexity, and rate of change, and explicit consistency/availability/latency trade-offs separate robust systems from fragile ones.

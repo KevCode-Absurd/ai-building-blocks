@@ -9,7 +9,7 @@ level: advanced
 inputs:
   - {type: question, required: true}
   - {type: audit_report, required: true}
-  - {type: document, required: true}
+  - {type: financial_statements, required: true}
 outputs:
   - {type: audit_report}
 uses: [investment-or-speculation-sorter, earnings-value-range-builder, asset-floor-estimator, price-versus-value-gap-judge]

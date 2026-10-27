@@ -9,7 +9,7 @@ You are an expert in pallet loading and optimization. Your goal is to help effic
 
 ## Accuracy warning
 
-The weight, height and compression results in this skill are rough estimates. The code samples use simplified rules (for example a placeholder height limit and a rough layer-weight estimate), and the mixed-SKU model is a sketch. Always tell the user to check the final pattern against the box maker's stacking strength, the pallet's load rating and the carrier's rules before shipping. Never present these figures as a safety guarantee. If a figure is not supplied, mark it `MISSING:` and do not guess it.
+The weight, height and compression results in this skill are rough estimates. The code samples use simplified rules (for example a placeholder height limit and a rough layer-weight estimate), and the mixed-SKU model is a sketch. Always tell the user to check the final pattern against the box maker's stacking strength, the pallet's load rating and the carrier's rules before shipping. Never present these figures as a safety guarantee. If a figure is not supplied, mark it `MISSING:` and do not guess it. The centre-of-gravity score is a rough screen with arbitrary cut-offs. It is not a safety pass, and the box compression strength and pallet load rating must come from the user.
 
 ## Initial Assessment
 
@@ -324,12 +324,9 @@ def optimize_mixed_sku_pallet(items, pallet_dims, max_weight):
     for item in items:
         prob += x[item['id']] <= item['quantity'], f"Quantity_{item['id']}"
 
-    # Height constraint (simplified - assumes stacking)
-    # This is a simplification; full solution needs layer-by-layer check
-    prob += lpSum([
-        x[item['id']] * item['dims'][2]
-        for item in items
-    ]) <= pallet_h * 10, "Height_Limit"  # PLACEHOLDER: rough approximation, replace with a layer-by-layer height check
+    # Height is NOT modelled in this sketch. After solving, check height layer by
+    # layer against the real maximum height. Until that check is done, report
+    # "MISSING: height check" in the result. Do not invent a height limit.
 
     # Solve
     prob.solve(PULP_CBC_CMD(msg=0))
@@ -399,8 +396,9 @@ def check_center_of_gravity(loaded_items, pallet_dims):
     offset_x = abs(cog_x - pallet_center_x)
     offset_y = abs(cog_y - pallet_center_y)
 
+    # ROUGH SCREEN ONLY. The 10% offset rule and the cut-off of 70 are
+    # arbitrary choices from the original author. They are not a safety limit.
     # Stability score (lower offset = higher stability)
-    # Good: offset < 10% of pallet dimension
     max_offset_x = pallet_dims[0] * 0.1
     max_offset_y = pallet_dims[1] * 0.1
 
@@ -413,7 +411,7 @@ def check_center_of_gravity(loaded_items, pallet_dims):
         'pallet_center': (pallet_center_x, pallet_center_y),
         'offset': (offset_x, offset_y),
         'stability_score': stability_score,
-        'is_stable': stability_score > 70
+        'is_stable': stability_score > 70  # rough screen only, not a safety pass
     }
 
 # Example
@@ -539,9 +537,10 @@ class PalletOptimizer:
         if item_id is None:
             item_id = f"SKU_{len(self.items)}"
 
-        # Default compression strength (stack limit)
+        # Compression strength (stack limit) must come from the box maker.
+        # Do not guess it. If it is missing, report "MISSING: compression strength".
         if compression_strength is None:
-            compression_strength = weight * 10  # Conservative estimate
+            raise ValueError("MISSING: compression_strength. Ask the box maker for it.")
 
         self.items.append({
             'id': item_id,
@@ -574,9 +573,13 @@ class PalletOptimizer:
         # Calculate max layers by height
         max_layers_height = int(self.pallet_dims[2] // box_dims[2])
 
-        # Calculate max layers by weight
+        # Calculate max layers by weight (weight_capacity must be the pallet's
+        # real load rating, minus the pallet's own weight if the rating includes it)
+        base_for_weight = generate_block_pattern(
+            box_dims, self.pallet_dims, allow_overhang
+        )
         max_layers_weight = int(self.weight_capacity //
-                               (box_weight * 100))  # PLACEHOLDER: rough estimate, check against the pallet's real load rating
+                               (box_weight * base_for_weight['boxes_per_layer']))
 
         # Calculate max layers by compression
         max_layers_compression = int(item['compression_strength'] / box_weight) + 1
@@ -893,7 +896,7 @@ class PalletOptimizer:
             print(f"  Center of Gravity: ({stab['cog'][0]:.1f}, {stab['cog'][1]:.1f}, {stab['cog'][2]:.1f})")
             print(f"  Offset from center: ({stab['offset'][0]:.1f}, {stab['offset'][1]:.1f}) in")
             print(f"  Stability Score: {stab['stability_score']:.1f}/100")
-            print(f"  Status: {'STABLE' if stab['is_stable'] else 'UNSTABLE - REVIEW REQUIRED'}")
+            print(f"  Rough centre check: {'looks centred' if stab['is_stable'] else 'OFF CENTRE - REVIEW REQUIRED'} (not a safety pass)")
 
 
 # Example usage
@@ -907,7 +910,7 @@ if __name__ == "__main__":
     # Add boxes (12x10x8 inches, 25 lbs each, 100 available)
     pallet.add_item(length=12, width=10, height=8, weight=25,
                    quantity=100, item_id='BOX_A',
-                   compression_strength=250)
+                   compression_strength=250)  # example value only: use the box maker's figure
 
     # Optimize
     solution = pallet.optimize_single_sku(interlock=True)
@@ -1030,13 +1033,15 @@ if __name__ == "__main__":
 
 ### Pallet Loading Report
 
+_Layout example only. Every number below is made up to show the layout. Never reuse them. Use the user's own figures, and mark any missing figure `MISSING:`._
+
 **Summary:**
 - Pallet Type: GMA (48" x 40")
 - Boxes Loaded: 84 cases
 - Total Weight: 2,100 lbs
 - Total Height: 64 inches
 - Utilization: 89.5%
-- Stability: PASS (COG offset: 1.2")
+- Rough centre-of-gravity screen: looks centred (offset [OFFSET]"). This is not a safety pass.
 
 **Loading Pattern:**
 
@@ -1073,7 +1078,7 @@ Layer 5 (Top):
 **Stability Analysis:**
 - Center of Gravity: (24.0", 20.0", 20.5")
 - Offset from center: 1.2" horizontal
-- Status: STABLE ✓
+- Rough screen: looks centred (not a safety pass)
 - Recommended: Stretch wrap with 3-4 passes
 
 **Shipping Instructions:**

@@ -34,7 +34,7 @@ vercel deploy [path] -y
 
 If CLI fails with auth error, use the deploy script.
 
-**Warn the user first and wait for a yes.** The script uploads the whole project folder to Vercel's no-login deploy service (`codex-deploy-skills.vercel.sh`), and the preview link is public until the user claims it. Remove `.env` files, keys and other secrets from the folder before you run it.
+**Warn the user first and wait for a yes.** Before you run it, list the files and folders you are about to upload and name any that look like secrets (`.env`, key files, tokens). Ask the user to remove them or confirm they are safe to publish. The script uploads the whole project folder to Vercel's no-login deploy service (`codex-deploy-skills.vercel.sh`), and the preview link is public until the user claims it. Remove `.env` files, keys and other secrets from the folder before you run it.
 
 ```bash
 skill_dir="<path-to-skill>"
@@ -70,7 +70,7 @@ Show the user the deployment URL. For fallback deployments, also show the claim 
 
 ### Escalated Network Access
 
-If deployment fails due to network issues (timeouts, DNS errors, connection resets), rerun the actual deploy command with escalated permissions (use `sandbox_permissions=require_escalated`). Do not escalate the `command -v vercel` installation check. The deploy requires escalated network access when sandbox networking blocks outbound requests.
+If deployment fails due to network issues (timeouts, DNS errors, connection resets), stop and ask the user first. Show the exact deploy command you want to rerun and say why it needs wider network access. Rerun it with escalated permissions (use `sandbox_permissions=require_escalated`) only after the user says yes, and escalate only that one command. Do not escalate the `command -v vercel` installation check. The deploy requires escalated network access when sandbox networking blocks outbound requests.
 
 Example guidance to the user:
 

@@ -7,13 +7,23 @@ role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - type: brief
-    required: true
-  - type: question
-    required: false
-outputs:
   - type: document
+    required: true
+  - type: spreadsheet
+    required: false
+  - type: audit_report
+    required: false
+  - type: question
+    required: true
+  - type: policy
+    required: true
+outputs:
+  - type: audit_report
+    required: true
   - type: plan
+    required: true
+  - type: document
+    required: false
 uses:
   - build-a-volunteer-induction-checklist
   - handover-note-writer

@@ -8,10 +8,14 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: question
     required: true
+  - type: plan
+    required: false
 outputs:
   - type: code_change
+    required: true
+  - type: data_model
     required: true
 uses: []
 origin: imported

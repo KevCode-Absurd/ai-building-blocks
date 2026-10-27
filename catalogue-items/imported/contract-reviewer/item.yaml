@@ -8,7 +8,7 @@ role: check
 job: ops
 level: advanced
 inputs:
-  - type: document
+  - type: contract
     required: true
 outputs:
   - type: audit_report

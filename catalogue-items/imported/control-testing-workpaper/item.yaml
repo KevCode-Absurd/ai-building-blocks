@@ -11,6 +11,8 @@ level: expert
 inputs:
   - type: question
     required: true
+  - type: spreadsheet
+    required: false
 outputs:
   - type: document
   - type: spreadsheet

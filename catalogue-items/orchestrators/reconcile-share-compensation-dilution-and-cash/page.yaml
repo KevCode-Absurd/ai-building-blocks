@@ -11,7 +11,9 @@ explain: |-
 
   This workflow keeps them apart. Step 1 builds weighted average shares from the real issuance dates and separates issued shares from future potential ones. Step 2 uses the terms of each award class and that weighted base to work out accounting dilution. Step 3 takes the net shares actually issued and the cash employees paid in, and prices an offset scenario: what it would cost in cash to buy the shares back.
 
-  It compares cash cost with reported compensation expense and keeps both. It does not claim they are equal. The offset is a scenario, not a trade, and nothing is bought.
+  It compares cash cost with reported compensation expense and keeps both. It does not claim they are equal. The offset is a scenario, not a trade, and nothing is bought. This is not accounting or investment advice.
+
+  Licence: MIT. The licence text is in the download.
 when:
   - Diluted shares rose and you need to know what is real issuance and what is accounting.
   - A board asks what it would cost in cash to offset the shares given to staff.
@@ -86,7 +88,7 @@ tweaks:
 judge:
   - Actual issued, basic weighted and potential diluted shares remain separate; exercise proceeds appear once; reported compensation and cash offset are reconciled without claiming equivalence.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
-  - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
+  - If a workbook is built, keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
 test:
   - Try a small sourced case and inspect every component handoff.
   - Remove one required source and confirm the affected step stops.

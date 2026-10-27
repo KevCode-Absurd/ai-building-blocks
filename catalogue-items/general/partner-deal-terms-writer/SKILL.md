@@ -1,6 +1,6 @@
 ---
 name: partner-deal-terms-writer
-description: Use when you are about to offer a franchise, reseller, licence or distribution deal, when a handshake deal has gone wrong, or when you want a partner to run your business in a new place under your name. Writes a one-page term sheet: what each side gives, fixed and local standards, every fee in one table matched to the partner's profit sum, a signed-change rule, exits and a first review date. Ends with points for a lawyer, what is missing and any of its checks it missed. Not legal advice.
+description: "Use when you are about to offer a franchise, reseller, licence or distribution deal, when a handshake deal has gone wrong, or when you want a partner to run your business in a new place under your name. Writes a one-page term sheet: what each side gives, fixed and local standards, every fee in one table matched to the partner's profit sum, a signed-change rule, exits and a first review date. Ends with points for a lawyer, what is missing and any of its checks it missed. Not legal advice."
 ---
 
 # Franchise and reseller terms writer
@@ -61,7 +61,8 @@ The deal in two lines. Who gives what. The standards, fixed and local. The fee t
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Partner profit tester](https://useaiblocks.com/skills/partner-profit-tester). It takes the plan.
-- The [Supplier partner terms planner](https://useaiblocks.com/skills/supplier-partner-terms-planner).
+- The [Deal desk reviewer](https://useaiblocks.com/skills/deal-desk-reviewer). It takes the the deal terms.
+- The [Deal payment checker](https://useaiblocks.com/skills/can-they-pay-deal-checker). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

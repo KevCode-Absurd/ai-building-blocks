@@ -10,6 +10,8 @@ explain: |
   Tell it the part, such as a spiral inductor, interdigital capacitor, ring resonator or balun, and get a design you can measure instead of guess at. It pulls out the numbers that matter: inductance, capacitance and self-resonant frequency.
 
   The skill creates the part from a catalogue object, tunes it for your target frequency, and then reads its values at that frequency. It can use fast behavioural S-parameters for quick estimates. Before a full solve it checks the mesh and memory need, so you do not start a run that will not finish. After design you move on to full-wave checks, tuning and circuit work. It runs in MATLAB with the RF PCB Toolbox, and needs a substrate set first.
+
+  This is MathWorks' skill. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE.md file.
 when:
   - You need a spiral inductor for a given inductance on your board.
   - You want to check where a capacitor stops acting like a capacitor.
@@ -32,10 +34,11 @@ you_get:
 how_to_use:
   - Check you have MATLAB with the RF PCB Toolbox. Both are paid products and need a license.
   - Set up your substrate and metal first with the PCB material setup helper.
-  - "Expect one report: a table of part dimensions, the L or C value at your target frequency, the self-resonant frequency, then a pass or fail on the mesh and memory check."
+  - "Expect one report: a table of part dimensions, the L or C value at your target frequency, the self-resonant frequency, then the mesh and memory estimate. There is no automatic pass or fail. You read the estimate and decide."
   - Give your AI the skill text, the part type and your target frequency.
+  - Work in this order. First, set the substrate and metal. Second, pick the part. Third, set its dimensions, or tune them for your frequency. Fourth, run the quick behavioural check. Fifth, run the memory estimate (memoryEstimate) and read it.
   - Let your AI run the MATLAB code. It builds the part and reads L or C at your frequency.
-  - Check the mesh and memory estimate before you approve a full-wave solve.
+  - If the memory estimate is more than your computer has, ask your AI to coarsen the mesh before you approve a full-wave solve.
   - Compare the quick estimate with the full result, since they differ near resonance.
 output_sample:
   input:
@@ -57,7 +60,7 @@ output_sample:
     - name: Behavioral S-parameters
       contains: A fast estimate of how the part behaves across your frequency range.
     - name: Memory and mesh estimate
-      contains: A check of mesh density and memory need before you start a full-wave solve.
+      contains: An estimate of mesh density and memory need before you start a full-wave solve. You read it and decide. There is no automatic pass or fail.
     - name: Next steps
       contains: Pointers to full-wave checks, tuning of dimensions and adding the part to a circuit.
 next: [pcb-circuit-combiner]

@@ -7,10 +7,14 @@ role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - type: document
+  - type: resume
     required: true
   - type: feedback_notes
     required: false
+  - type: job_description
+    required: false
+  - type: question
+    required: true
 outputs:
   - type: shortlist
   - type: plan
@@ -24,7 +28,7 @@ steps:
   - {uses: job-ad-campaign-planner, note: "Only when too few strong fits turn up and many applicants miss the same must-have: a plan to reach the right people."}
   - {uses: fair-candidate-comparer, note: "Only after interviews, when you add your notes: compares finalists against the scoring guide. You make the call."}
   - {uses: hiring-progress-reporter, note: "Every Friday: counts by stage, what is stuck and what to do next week."}
-schedule: "Each time a new batch of applications arrives, and a short update every Friday"
+schedule: "Run by hand each time a new batch of applications arrives, and again every Friday for the update. Nothing starts on a timer unless you connect a scheduler."
 asks_before: [sending any message to a candidate, rejecting or moving a candidate out of the process, booking interviews, posting or changing a job ad, making or sending an offer]
 origin: own
 version: 1.0.0

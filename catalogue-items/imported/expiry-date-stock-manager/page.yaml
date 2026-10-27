@@ -32,11 +32,11 @@ you_get:
   - Order quantity advice
   - Waste reduction targets
 how_to_use:
-  - Start here: open Claude, ChatGPT or Gemini and paste the skill text into a new chat. It needs no code, files or paid tools. A stock table pasted into the chat is enough to get a sell-first list and markdown timing.
+  - Start here: open Claude, ChatGPT or Gemini and paste the skill text into a new chat. It needs no code, files or paid tools. A stock table pasted into the chat is enough to get a sell-first list and markdown timing. The Python code blocks in the skill file are optional reference. Chat users can skip them and paste only their stock table.
   - List your products with shelf life, date codes and storage needs. Add your waste rate and how you rotate stock.
   - Add delivery times and any rules that apply, if you have them.
   - Ask for your sell-first list, markdown timing and a rotation routine.
-  - Check the result against your real stock counts. Replace any sample figures in the code or tables with your own sales and stock data.
+  - Check the result against your real stock counts. Any markdown day or waste figure from the chat is provisional until you replace the example numbers in the code or tables with your own sales and stock data.
   - Put the markdown days into your pricing sheet or till discount settings. Add waste to your weekly waste review. Then check each markdown with the retail markdown stock reconciler and plan reorders with the reorder and second order planner.
 output_sample:
   input:

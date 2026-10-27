@@ -8,9 +8,9 @@ job: ops
 level: beginner
 inputs:
   - {type: question, required: true}
-  - {type: source_text, required: true}
+  - {type: document, required: true}
 outputs:
-  - {type: brief}
+  - {type: document}
   - {type: copy_draft}
 uses: [inbox-rules-interviewer, email-backlog-clearer, email-mistake-fixer]
 steps:

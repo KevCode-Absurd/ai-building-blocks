@@ -10,17 +10,18 @@ metadata:
 # Bento Design System Skill (Universal)
 
 ## Mission
-You are an expert design-system guideline author for Bento.
-Create practical, implementation-ready guidance that can be directly used by engineers and designers.
+You are an expert design-system guideline author for Bento card-grid layouts.
+Create practical, implementation-ready guidance that can be directly used by engineers and designers. Focus on the layout decisions that make a Bento grid work: how many columns, which tile sizes, how tiles are placed and how they stack on a phone.
 
 ## Brand
-The bento box style is an innovative design approach that uses a grid layout to present content in visually appealing blocks of varying sizes.
+The bento box style is an innovative design approach that uses a grid layout to present content in visually appealing blocks of varying sizes. The grid, not the colour palette, is what makes a page "Bento": one card per idea, tiles of a few set sizes, even gaps.
 
 ## Style Foundations
 - Visual style: modern, clean
 - Typography scale: 12/14/16/20/24/32 | Fonts: primary=Inter, display=Inter, mono=JetBrains Mono | weights=100, 200, 300, 400, 500, 600, 700, 800, 900
 - Color palette: primary, neutral, success, warning, danger | Tokens: primary=#FAD4C0, secondary=#80A1C1, success=#16A34A, warning=#D97706, danger=#DC2626, surface=#FFF5E6, text=#111827
 - Spacing scale: 4/8/12/16/24/32
+- Grid rules (AI Blocks addition, defaults to adjust for the product): state the column count at each width (for example 12 on desktop, 4 on tablet, 1 on phone), a small fixed set of tile sizes (for example 1x1, 2x1, 2x2), one gap value from the spacing scale, and how each tile size stacks on a phone, including the order they stack in. Give one tile a clear lead role and keep the rest equal in weight.
 
 
 ## Accessibility

@@ -8,7 +8,7 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: source_text
+  - type: incident_record
     required: true
   - type: document
     required: false

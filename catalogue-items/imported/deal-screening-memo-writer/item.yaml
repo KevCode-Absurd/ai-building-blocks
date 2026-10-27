@@ -10,8 +10,8 @@ level: intermediate
 inputs:
   - type: document
     required: true
-  - type: brief
-    required: true
+  - type: question
+    required: false
 outputs:
   - type: audit_report
 uses: []

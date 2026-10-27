@@ -41,6 +41,8 @@ Give the user, in order:
 
 If the compute budget, GPU count or goal is missing, ask once, then mark it MISSING. Never invent budgets, model sizes or speed-up figures. Say that code here is a starting sketch: the user must run it on their own GPUs and check flags against the version of DeepSpeed or Megatron-DeepSpeed they install.
 
+If you have a server plan from an earlier step, take the GPU count and budget from it. If you share your existing training code, build on it.
+
 ## Installation
 
 ```bash
@@ -123,7 +125,7 @@ class MoELayer(nn.Module):
 
 ### DeepSpeed MoE Training
 
-Flag names below follow the Megatron-DeepSpeed examples. They change between versions, so check them against the repo you install.
+Flag names below follow the Megatron-DeepSpeed examples. They change between versions, so check them against the repo you install. The entry-point name (`pretrain_gpt_moe.py` here, `pretrain_moe.py` in a later example) also differs between versions: use the one that exists in your checkout, and treat both commands as outlines until `--help` confirms every flag.
 
 ```bash
 # Training script with MoE
@@ -472,7 +474,8 @@ moe_lr_decay_iters = 500000
 moe_loss_coeff = 0.01    # Auxiliary loss (load balancing)
 router_z_loss_coeff = 0.001  # Router entropy (stability)
 
-# These thresholds are rules of thumb to test, not proven values.
+# The 2.0 usage ratio, the 10.0 grad-norm limit and the new coefficients below are untested guesses.
+# They are not proven values. Watch your own training curves and pick your own limits.
 # If load imbalance persists, increase aux loss
 if max_expert_usage / min_expert_usage > 2.0:
     moe_loss_coeff = 0.1  # Stronger load balancing
@@ -520,7 +523,8 @@ num_experts = 8  # Better for small datasets
 def moe_inference(x, model, top_k=2):
     """Sparse MoE inference sketch: only load k experts.
     model.load_expert is NOT a real API. You must write it yourself
-    (for example, load expert weights from disk or CPU memory on demand)."""
+    (for example, load expert weights from disk or CPU memory on demand).
+    This is an outline, not code that runs as written."""
     # Router
     gate_logits = model.gate(x)
     topk_scores, topk_indices = torch.topk(

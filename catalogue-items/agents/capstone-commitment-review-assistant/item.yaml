@@ -13,6 +13,8 @@ inputs:
     required: false
   - type: question
     required: false
+  - type: lesson_plan
+    required: true
 outputs:
   - type: document
   - type: plan

@@ -18,6 +18,7 @@ when:
 not_for:
   - "You need to pull data from one or two texts by hand: use a plain prompt in your chat AI and copy the result."
   - "You don't work in Python: use a no-code tool that reads documents into a spreadsheet."
+  - "The code needs a fixed list of fields. For free-form replies, use a plain prompt instead."
   - "You want a full pipeline that reads files in bulk: use the data extraction pipeline builder."
   - "You want free-form text such as a summary or an email: ask your AI directly, no data shape needed."
 you_give:
@@ -32,7 +33,7 @@ you_get:
   - Example runs on your text
   - Optional streaming code
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste this skill into the chat.
+  - "Use your chat AI only to draft the code. Open Claude, ChatGPT or Gemini and paste this skill into the chat. You run the code yourself later, on your own computer, with Python and your own API key."
   - List the fields you want, with a type for each, such as text, number or date.
   - Paste a sample of the text you want to read. Say which AI provider you use.
   - Add rules for valid values if you have any, such as an age range or a fixed list of choices.

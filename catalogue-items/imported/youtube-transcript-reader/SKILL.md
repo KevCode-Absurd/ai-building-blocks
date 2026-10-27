@@ -12,6 +12,10 @@ Covers transcript extraction, video search, channel browsing, in-channel search,
 
 > **BYOK / free-tier note:** TranscriptAPI is a commercial service (BYOK — you bring your own key; 100 free credits included, no card required). For local/self-hosted extraction without an API key, use `youtube-transcript-api` (Python) or `yt-dlp` as OSS fallbacks. See [Anti-Patterns](#anti-patterns) for guidance.
 
+## What you need
+
+A video link or a search. If an earlier step gave a shortlist of videos, take the transcripts of the ones the person picks from it.
+
 ## API Setup
 
 Every request to `transcriptapi.com` requires two headers:

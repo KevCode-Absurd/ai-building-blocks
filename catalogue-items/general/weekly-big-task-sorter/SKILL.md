@@ -58,8 +58,8 @@ The full list. Big and small labels with reasons. The main task and what it unlo
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Week priority picker](https://useaiblocks.com/prompts/week-priority-picker). It takes the plan.
-- The [Decision priority planner](https://useaiblocks.com/skills/big-decisions-first-sorter).
 - The [Urgent versus important sorter](https://useaiblocks.com/skills/urgent-versus-important-sorter). It takes the plan.
+- The [Plan failure reviewer](https://useaiblocks.com/skills/failure-first-plan-check). It takes the plan.
 - **Lead the team** with the [Team review theme sorter](https://useaiblocks.com/skills/review-lists-sorter). It takes the plan.
 - The [Life goals and time planner](https://useaiblocks.com/skills/monthly-roles-and-goals-reviewer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.

@@ -354,6 +354,14 @@ If authorized Web Archive data exists for their landing pages:
 ### Counter-Play 2: ...
 ````
 
+## What next
+
+Turn the top gaps in the Creative Gap Analysis into a test plan. Before any counter-play ad runs, check it against the ad platform's rules. Do not use a rival's name or claims in an ad without checking the platform's policy and the law where you advertise.
+
+## When not to use
+
+If the rivals run no public ads, or you need their real spend or sales, this cannot help. Use customer interviews or your own sales data instead.
+
 ## Limitations
 
 - Public ad libraries can be incomplete, delayed, region-specific, dynamic, or blocked by authentication and anti-automation controls.

@@ -8,6 +8,7 @@ job: analysis
 level: beginner
 inputs:
   - {type: script, required: true}
+  - {type: shot_list, required: false}
 outputs:
   - {type: audit_report}
 origin: rebuilt

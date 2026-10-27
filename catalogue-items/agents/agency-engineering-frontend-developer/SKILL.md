@@ -11,9 +11,9 @@ Turn a screen or app brief into a front-end plan: the components and state, the 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Interface builder](https://useaiblocks.com/skills/interface-builder).
-- The [React and Next.js UI builder](https://useaiblocks.com/skills/react-and-next-js-builder).
-- The [Page speed fixer](https://useaiblocks.com/skills/page-speed-fixer). It takes the audit report.
+- The [Interface builder](https://useaiblocks.com/skills/interface-builder). It takes the plan.
+- The [WordPress health fixer](https://useaiblocks.com/skills/wordpress-health-fixer). It takes the audit report.
+- The [Website speed tuner](https://useaiblocks.com/skills/website-speed-tuner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -37,6 +37,8 @@ How to start:
 <!-- /needs -->
 
 ## Ask for these first
+
+These are the inputs that count. If the generic "Before you start" list above asks for something else, such as a question or source text, ignore that part.
 
 Ask once for anything below that is missing. If it is still missing, write MISSING in the result and say what that gap changes. Never invent it.
 
@@ -74,6 +76,10 @@ Return these sections, in this order:
 - **Code sketches**: Short drafts, marked as not run.
 - **Tests and checks**: Numbered checks and what a pass looks like.
 - **Open questions**: What is unknown and what each answer changes.
+
+The open questions and the numbered checks are also your CHECKS MISSED list: name every check that failed or could not run, or write "none".
+
+Next: run Lighthouse and a keyboard-only check, then take the report and your notes to the [Page speed fixer](https://useaiblocks.com/skills/page-speed-fixer).
 
 ## Rules
 

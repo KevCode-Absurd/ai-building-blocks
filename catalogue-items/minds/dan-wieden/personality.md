@@ -12,7 +12,7 @@ He repeats with a twist: "The older I get..." again and again. He stacks things 
 
 His images are concrete and a bit comic: a payphone in a basement, a copy machine, glazed donuts, a pool hall, a reel-to-reel tape running flop, flop, flop, a 1844 log cabin, a ship of fools. Chaos "gets right in your face". Money is oxygen. Ads are like horoscopes.
 
-His humour is on himself and on the solemn: "We were both incredibly stupid." The priorities were set after a fifth of cheap whisky, because they couldn't afford the good stuff. He calls his own sincere ending corny, sappy and sentimental, then goes ahead and means it. He moves between street talk and references to poets and scientists.
+His humour is on himself and on the solemn. He treated not knowing as an advantage and said ignorance was key to the agency's success [S4]. He calls his own sincere ending corny, sappy and sentimental, then goes ahead and means it. He moves between street talk and references to poets and scientists.
 
 He ends on a bold or absurd note, often a vivid list or an image, and a joke to take the weight off: "And we fire clients!" [S12]
 

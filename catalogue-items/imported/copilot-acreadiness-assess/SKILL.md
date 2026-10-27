@@ -24,6 +24,7 @@ This skill is the *Measure* step in AgentRC's **Measure → Generate → Maintai
    ```bash
    npx -y github:microsoft/agentrc readiness --json [--policy <source>] [--per-area]
    ```
+   `github:microsoft/agentrc` with no version runs whatever the upstream repo serves today. Before running it, ask the user to pick a release tag or commit from github.com/microsoft/agentrc and pin it, as `github:microsoft/agentrc#<TAG OR COMMIT>`. If the user cannot, say that the scan runs the latest upstream code, and get a yes first. The scan reads the repo's files, so confirm the user is happy for that code to be processed by the AI tool in use.
    The `CommandResult<T>` JSON envelope is your input for the next step.
 
 4. **Hand off to the `ai-readiness-reporter` custom agent** to interpret the JSON and produce `reports/index.html`. If that agent is not installed, do this step yourself: read `report-template.html`, fill it in from the JSON, and write `reports/index.html`. The agent renders via the bundled template `report-template.html` (shipped alongside this skill) so every report has an identical look & feel. The agent:

@@ -9,7 +9,7 @@ subhead: Give it a crash or odd behaviour. Get several parallel read-only invest
 explain: |
   Four read-only investigators look into your bug at the same time, and you get one ranked list of likely causes and the fastest way to prove each. No code is changed.
 
-  The skill starts by building a bug packet: the symptom, what you expected, what happened, steps to repeat, who is hit, and any logs or recent changes. It writes a short brief that says what is unproven and where to look. Then four helpers each inspect the code from a different angle. The main agent compares their findings and ranks the causes by likelihood, with a next step for each. It suits regressions, crashes and flaky behaviour.
+  The skill starts by building a bug packet: the symptom, what you expected, what happened, steps to repeat, who is hit, and any logs or recent changes. It writes a short brief that says what is unproven and where to look. Then four helpers each inspect the code from a different angle. The main agent compares their findings and ranks the causes by likelihood, with a next step for each. It suits regressions, crashes and flaky behaviour. Licence: this copy is from sickn33's collection, whose written content is CC BY 4.0 (see LICENSE-CONTENT). The skill file's own header says MIT, set by the original author Dimillian. Both let you reuse it if you keep the credit.
 when:
   - A feature broke after a release and you do not know which change did it.
   - A crash happens now and then and you cannot repeat it.
@@ -31,7 +31,7 @@ you_get:
   - The fastest test to confirm each cause
 how_to_use:
   - Open your AI tool with access to your project files, such as Claude Code or Codex. It needs to read your code.
-  - Paste the skill into the chat, or add the skill folder as your tool asks.
+  - Paste the skill into the chat, or add the skill folder as your tool asks. Claude Code and Codex can run helpers side by side. If your tool cannot, it checks the four angles one after another.
   - Describe what you see and what you expected. Add steps, logs and recent changes if you have them.
   - Ask your AI to investigate and rank the likely causes, and tell it not to edit files.
   - Read the ranked list. Run the fastest proof step for the top cause before you change any code.

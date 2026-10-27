@@ -16,12 +16,13 @@ This workflow chains 4 skills. You run them in order and save each result. Step 
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **A search query report** (yours): an export from Google Search Console or the Google Ads search terms report, for set dates.
 - **Theme files** (yours): shopify theme files (Liquid sections, settings) ready to upload.
 
 **Makes it better (optional):**
 - **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
+- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -31,11 +32,12 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for your results, theme files, your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a search query report, theme files, your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
 ## What you need
+This list replaces the general one above. The "results" are your Search Console export, not an ad export. Theme files are needed only for step 3, so the run can start without them.
 - **A Search Console export covering the drop and an equal earlier period** (required): pages and searches, with clicks, impressions, click rate and position. Dates of site changes help.
 - **Crawl or indexing reports, or page screenshots** (optional): they sharpen steps 1 and 2.
 - **Your Shopify theme files** (needed for step 3 only): the product grid snippet, the page head file, the breadcrumb section and the robots template. Without them, step 3 gives the plan and settings, not the code.
@@ -52,14 +54,14 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Search Console traffic drop diagnoser.** Use the skill `search-console-traffic-drop-diagnoser`. Give it your Search Console export for the drop and the earlier period. It finds the pages and queries that lost clicks and the likely causes, and hands that diagnosis to step 2.
-2. **Store SEO fix prioritiser.** Use the skill `store-seo-fix-prioritiser`. Give it the diagnosis from step 1, plus a crawl export and the Search Console indexing report if you have them. Without a crawl export it marks the checks it could not run. It ranks the faults behind the drop so you fix crawl and index problems before content, and hands the ranked list to step 3.
-3. **Shopify duplicate page fixer.** Use the skill `shopify-duplicate-page-fixer`. Give it the ranked list from step 2 and your theme files. Make the changes on a copy of your theme first. It fixes the duplicate and thin pages the ranked list put first. Your fixes go live before step 4.
+1. **Search Console traffic drop diagnoser.** Use the skill `search-console-traffic-drop-diagnoser`. Give it your Search Console export for the drop and the earlier period. It finds the pages and queries that lost clicks and the likely causes, and hands that diagnosis to step 2. The file lists the pages and queries that lost clicks, the size of each loss and the likely cause. Save it as `outputs/step-01-search-console-traffic-drop-diagnoser.md`.
+2. **Store SEO fix prioritiser.** Use the skill `store-seo-fix-prioritiser`. Give it the diagnosis from step 1, plus a crawl export and the Search Console indexing report if you have them. Without a crawl export it marks the checks it could not run. It ranks the faults behind the drop so you fix crawl and index problems before content, and hands the ranked list to step 3. The file is a numbered fix list, each fix with the page it affects and why it ranks there. Save it as `outputs/step-02-store-seo-fix-prioritiser.md`.
+3. **Shopify duplicate page fixer.** Use the skill `shopify-duplicate-page-fixer`. Give it the ranked list from step 2 and your theme files. Make the changes on a copy of your theme first. It fixes the duplicate and thin pages the ranked list put first. Your fixes go live before step 4. The file lists each change, the page it touches and the code or setting to use. Save it as `outputs/step-03-shopify-duplicate-page-fixer.md`.
 
 Pause here: Make the fixes live, then wait four weeks and export a fresh Search Console report for the same pages.
 
-4. **Organic search report builder.** Use the skill `organic-search-report-builder`. Give it your own fresh Search Console export for the same pages, taken four weeks after the fixes, not step 3's output. Add your brand search terms. It reports non-branded clicks, branded trend and organic sales for the new window, so you can see whether the drop is recovering.
-5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+4. **Organic search report builder.** Use the skill `organic-search-report-builder`. Give it your own fresh Search Console export for the same pages, taken four weeks after the fixes, not step 3's output. Add your brand search terms. It reports non-branded clicks, branded trend and organic sales for the new window, so you can see whether the drop is recovering. Four weeks is a guide, and recovery may take longer or not come: report what the numbers show and do not promise a return. Save it as `outputs/step-04-organic-search-report-builder.md`.
+5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then a `CHECKS MISSED` list (or "none").
 
 ## What you hand back
 4 step files and the summary. Step 1's file is the diagnosis, step 2's the ranked fix list, and step 3's the duplicate page fixes. Step 4's file is the recovery report.
@@ -67,9 +69,9 @@ Pause here: Make the fixes live, then wait four weeks and export a fresh Search 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Search Console traffic drop investigator](https://useaiblocks.com/skills/search-console-traffic-drop-diagnoser).
 - The [Store SEO results reviewer](https://useaiblocks.com/skills/monthly-store-seo-keeper).
-- The [Traffic drop investigator](https://useaiblocks.com/skills/traffic-drop-investigator).
+- The [Search Console traffic drop investigator](https://useaiblocks.com/skills/search-console-traffic-drop-diagnoser).
+- The [AI search recommendation gap finder](https://useaiblocks.com/skills/ai-recommendation-gap-finder). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

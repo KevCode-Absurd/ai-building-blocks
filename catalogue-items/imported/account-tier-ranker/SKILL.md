@@ -85,8 +85,8 @@ Plot on a 2x2 (Fit x Engagement). High is 6 or more on the 0-10 axis (after reno
 Tiered tables (Tier A with fit/engagement scores, open opp, last touch,
 next action; B and C the same; deprioritized as collapsed names), plus
 Coverage Gaps: Tier A/B accounts with no activity 30+ days, and accounts
-that could not be scored for missing fields (flagged here; fixes hand
-off to update-opportunity). Every account links its record; scoring inputs are quoted
+that could not be scored for missing fields (flagged here; tell the user
+to fix those fields in their CRM or spreadsheet, then run the ranking again). Every account links its record; scoring inputs are quoted
 as read.
 
 ## How it adapts (guidance for Claude; never show these labels to the user)
@@ -96,6 +96,5 @@ tiers:
   files-only:   full tiering from the uploaded book; engagement rows
                 that need live signals are dropped and noted
   read-only:    live crm account set + email inbound signal
-  gated-writes: none (field fixes hand off to update-opportunity /
-                the crm hygiene flow)
+  gated-writes: none (the user fixes fields in their own CRM)
 ```

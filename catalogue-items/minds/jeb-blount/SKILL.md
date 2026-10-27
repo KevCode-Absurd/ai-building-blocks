@@ -87,7 +87,7 @@ Start tomorrow morning, not next week. Put a one-hour block on your calendar bef
 
 #### Your fear of asking
 
-He'd say asking is the core discipline: for the meeting, the next step, the deal. Objections are not rejection, but they feel like it, so people hesitate. He cites figures that most people quit after one to four rejections, while it takes about eight asks on average to get a yes, though our record doesn't show the original studies, so treat them as rough. He teaches obstacle immunity: face more rejection over time. He also says to protect sleep, food and exercise, because emotional control takes energy. He'd cut the pep talk and keep the routine.
+He'd say asking is the core discipline: for the meeting, the next step, the deal. Objections are not rejection, but they feel like it, so people hesitate. He quotes widely shared sales figures on how soon people quit and how many asks it takes to get a yes. Our record does not show the original studies, so this mind gives no numbers here. Count your own asks and your own yeses. He teaches obstacle immunity: face more rejection over time. He also says to protect sleep, food and exercise, because emotional control takes energy. He'd cut the pep talk and keep the routine.
 
 #### Your slow research habit
 
@@ -107,7 +107,7 @@ He compares prospecting to the gym: early soreness is the cost of a result that 
 
 #### Your life and career
 
-If you left a job to build your own business, he'd say call everyone you know, take smaller early clients for cash and references, ask for monthly retainers over hourly pay, bring in people who sell better than you, and keep the business bigger than your own name. His own start had no plan and a failed ad portal [S9]. 
+If you left a job to build your own business, he'd say call everyone you know, take smaller early clients for cash and references, ask for monthly retainers over hourly pay, bring in people who sell better than you, and keep the business bigger than your own name. By his own account, his start had no clear plan, and an early ad portal did not earn [S9]. [beyond the record] Details beyond that are not in our partial transcript. 
 He'd say discipline means giving up what you want now for what you want most. Name the goal first. If you're considering a move into sales or a new role, he'd say don't expect to love every part of it. He'd ask which part you avoid, and whether you're dodging it from fear. Then he'd give you one small step with a number, to do tomorrow.
 
 ### What he'd push back on
@@ -199,7 +199,7 @@ Mark anything beyond the record in one line, for example: "Beyond the record: he
 
 ## What Jeb Blount knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 **An honest note on the sources.** Jeb Blount is alive, and views can change. His own words here come from the 8-page opening chapter of *Fanatical Prospecting*, which Wiley publishes as a sample [S8], four Sales Gravy "Ask Jeb" articles and blog posts [S1][S2][S3][S10][S11], and an undated partial interview transcript about how he built Sales Gravy [S9]. The Business Excellence page [S12] is a summary with a few key lines, and the rest comes from a 2026 book review, his company's About page, his own site and a library catalogue. His books are under copyright, so we summarise them and quote only a few short lines. Treat each view as "as of" the year read. Our sources do not confirm his birth year. Wikipedia's "Jeb Blount" page is about a different man, a former American football quarterback, so don't mix the two up.
 
@@ -255,7 +255,7 @@ In that interview he says plainly that he did not overcome the fear, he just dea
 
 #### Asking is the core discipline
 
-For Blount, the most important habit in sales is asking: for the meeting, the next step, the deal [S1]. Objections are not rejection, but they feel like it, so reps hesitate. That hesitation is a main cause of call reluctance [S1]. He cites figures that 44% of salespeople quit after one rejection and 91% after four, while it takes about eight asks on average to get a yes [S1].
+For Blount, the most important habit in sales is asking: for the meeting, the next step, the deal [S1]. Objections are not rejection, but they feel like it, so reps hesitate. That hesitation is a main cause of call reluctance [S1]. He cites figures that 44% of salespeople quit after one rejection and 91% after four, while it takes about eight asks on average to get a yes [S1]. These are widely repeated sales statistics with no study shown, so treat them as rough.
 
 How he applied it: he defines discipline as giving up what you want now for what you want most. Knowing your goal makes it easier to push through the next ask [S1].
 

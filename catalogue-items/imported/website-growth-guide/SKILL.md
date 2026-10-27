@@ -83,8 +83,7 @@ Queue bold experiments — not button colors — scored by ICE.
 
 **Purpose:** Keep the visitors who will not buy today with an interactive assessment instead of losing them at exit.
 
-**Brief (fallback):** About 3% of a market is ready now; capture the rest. A scorecard or quiz
-converts 30-50% versus 3-10% for a PDF. Four steps: a landing page built on the 3 Cs (Clarity,
+**Brief (fallback):** The author's rule of thumb (untested, test it on your own site): only a small share of a market is ready to buy now, so capture the rest. The author says a scorecard or quiz converts far better than a PDF download. Do not quote any percentage to the user. Four steps: a landing page built on the 3 Cs (Clarity,
 Credibility, Connection); a questionnaire that captures the email before the questions, then 8-15
 scored questions in 2-7 categories; a results page with dynamic content per tier that creates
 tension between where the visitor is and could be; a follow-up engine segmented by score.
@@ -178,7 +177,7 @@ refunds; raising price can raise conversion.
 Practical Value, Stories. A personalized scorecard result is high Social Currency — a remarkable stat
 about themselves. Practical Value (a calculator, a genuinely useful resource) gets forwarded; frame
 promotions with the Rule of 100. Public ("Powered by [you]", behavioral residue) markets after use.
-Stories must pass the Trojan Horse test. Only ~7% of word-of-mouth is online — design things worth
+Stories must pass the Trojan Horse test. The author's rule of thumb (untested) is that most word-of-mouth happens offline, so design things worth
 talking about, not just share buttons.
 
 **Invoke:** Use the `contagious` skill with the scorecard results page from Phase 2 and the site's highest-value asset. Ask for a STEPPS audit scored out of 10, a shareable redesign of the results page with a share card that passes the Trojan Horse test, and Public / behavioral-residue features.
@@ -195,8 +194,7 @@ talking about, not just share buttons.
 
 **Brief (fallback):** Marketing is a process, not an event. The 3x3 grid: BEFORE (Target Market,
 Message, Media), DURING (Capture Leads, Nurture, Convert), AFTER (Experience, Lifetime Value,
-Referrals). The AFTER column is usually where the money hides — retention costs 5-25x less than
-acquisition, and a 5% retention gain lifts profit 25-95%. The number-one reason customers do not
+Referrals). The AFTER column is usually where the money hides — the author's rule of thumb (untested, test it on your own numbers) is that keeping a customer costs far less than winning a new one. The number-one reason customers do not
 refer is that nobody asked.
 
 **Invoke:** Use the `one-page-marketing` skill as an audit tying Phases 1-7 together — the scorecard fills Capture, the offer fills Convert, Contagious powers Referrals. Ask for the 9-square plan scored 0-10 per square, flagging empty AFTER squares, and a lead-nurture sequence at a 3-to-1 value-to-ask ratio.

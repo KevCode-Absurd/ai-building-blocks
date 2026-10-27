@@ -40,6 +40,8 @@ Adaptable templates for incident response runbooks covering detection, triage, m
 | **SEV3** | Minor impact | 2 hours | Non-critical bug |
 | **SEV4** | Minimal impact | Next business day | Cosmetic issue |
 
+**Before you start:** name who has authority to approve changes during an incident (the service owner or incident commander). Write that name into the runbook. No change command below should run without that person's approval.
+
 ### 2. Runbook Structure
 
 ```
@@ -59,6 +61,8 @@ Adaptable templates for incident response runbooks covering detection, triage, m
 Bind service, namespace, cluster context, database, owners, approved incident authority, evidence sources and rollback revision before adapting these templates. Thresholds, financial amounts, impact percentages and resolution messages are illustrative, never observed incident facts. The endpoints, environment variables and script paths in these templates (the feature-flag API, `STRIPE_CIRCUIT_BREAKER_ENABLED`, `RATE_LIMIT_ENABLED`, `scripts/smoke-test-payments.sh`, `scripts/db-rollback.sh`) are placeholders. They do not exist in your stack by default and the scripts are not included. Replace each with your own tested equivalent, or remove the step. Read-only triage comes first; mutations require an approved service-specific response. Verify actual smoke/rollback scripts in the target project before using them. No script is bundled or implied by this template.
 
 ## Runbook Templates
+
+**Every command in these templates is a placeholder** for a payments service on Kubernetes. Do not run any of them as written. Replace each with your own tested equivalent, and get the service owner's approval before any command that changes anything. Read-only checks come first.
 
 ### Template 1: Service Outage Runbook
 
@@ -215,7 +219,7 @@ curl -s "http://prometheus:9090/api/v1/query?query=sum(rate(http_requests_total{
 curl -s "http://prometheus:9090/api/v1/query?query=histogram_quantile(0.99,sum(rate(http_request_duration_seconds_bucket[5m]))by(le))" | jq
 
 # Smoke test critical flows
-./scripts/smoke-test-payments.sh
+[YOUR TESTED SMOKE TEST: no script is included in this skill, supply and test your own]
 ```
 
 ## Rollback Procedures
@@ -224,7 +228,7 @@ curl -s "http://prometheus:9090/api/v1/query?query=histogram_quantile(0.99,sum(r
 kubectl rollout undo deployment/payment-service -n payments
 
 # Rollback database migration (if applicable)
-./scripts/db-rollback.sh $MIGRATION_VERSION
+[YOUR TESTED DB ROLLBACK STEP: no script is included in this skill, supply and test your own, with $MIGRATION_VERSION]
 
 # Rollback feature flag
 curl -X POST https://api.company.com/internal/feature-flags \

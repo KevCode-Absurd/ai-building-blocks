@@ -62,7 +62,7 @@ The score out of 100 with how it was worked out. The channel table and trends. T
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Ad channel budget reviewer](https://useaiblocks.com/skills/monthly-channel-budget-reviewer).
 - The [Marketing budget allocation planner](https://useaiblocks.com/skills/next-dollar-budget-allocator). It takes the plan.
-- The [Marketing scorecard builder](https://useaiblocks.com/skills/marketing-scorecard-builder).
+- The [Lead magnet reviewer](https://useaiblocks.com/skills/lead-offer-tuner). It takes the audit report.
 - The [Cost per customer calculator](https://useaiblocks.com/skills/cost-per-customer-calculator). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

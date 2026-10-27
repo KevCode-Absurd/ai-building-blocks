@@ -9,7 +9,7 @@ subhead: Two guides that take a new engineer from day one to deep knowledge of y
 explain: |
   Two guides that take a new engineer from day one to deep knowledge of your codebase. One is for senior people who need the reasons behind choices; the other is for those who need to get started now.
 
-  It detects your main language from build files, then writes both guides with examples in that language. The senior guide covers design principles, an architecture map with a diagram, key abstractions, a log of big decisions and trade-offs, and dependencies. The starter guide covers setup, where things live and first tasks. Together they let a newcomer work out who owns what and why it was built that way.
+  It detects your main language from build files, then writes both guides with examples in that language. The senior guide covers design principles, an architecture map with a diagram, key abstractions, a log of big decisions and trade-offs, and dependencies. The starter guide covers setup, where things live and first tasks. Together they let a newcomer work out who owns what and why it was built that way. Licence: this copy is from sickn33's collection, whose written content is CC BY 4.0 (see LICENSE-CONTENT).
 when:
   - A new hire starts Monday and your docs are thin.
   - Only one person understands how the system fits together.
@@ -29,8 +29,9 @@ you_get:
   - An architecture diagram
   - A log of key decisions
 how_to_use:
+  - Before you start, gather the path to your repository or folder, the level of reader you write for, and any notes on past decisions. Check that your AI tool can read the whole repository, since guides built from only part of it will have gaps.
   - Open your AI tool and give it access to your repository files. It works best when it can read them.
-  - Paste the skill instructions into the chat, or upload the skill file.
+  - Paste the skill instructions into the chat, or upload the skill file. A plain request for the two guides is all it needs. The /deep-wiki:onboard command from the original is not part of this copy.
   - Ask it to write both onboarding guides. Add your audience level and notes on past decisions if you have them (optional).
   - Check the results. Any part marked unverified has no proof in the code, so confirm it yourself.
   - Ask a senior engineer to review both guides, then commit them into the repo.

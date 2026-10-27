@@ -8,10 +8,10 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: source_text
+  - type: meeting_notes
     required: true
 outputs:
-  - type: brief
+  - type: document
 uses: []
 steps: []
 origin: imported

@@ -10,6 +10,8 @@ explain: |
   A camera connected and capturing in MATLAB, whether it is a laptop webcam, a USB camera or an industrial GigE model. You get code that finds the device, sets it up and grabs a still image or video.
 
   The skill follows a fixed order: list the devices with the hardware info call, connect through the video input object, set properties like exposure and frame rate, then grab frames. It picks the right driver name per system, such as winvideo on Windows, macvideo on Mac and linuxvideo on Linux, and uses gentl for GigE and CoaXPress cameras. It tells you which support packages to install, and it asks which frame grabber you have when it needs to.
+
+  This is MathWorks' skill. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE.md file.
 when:
   - You plugged in a USB camera and MATLAB does not see it.
   - You need to grab a series of frames at a set rate for analysis.
@@ -36,8 +38,8 @@ how_to_use:
   - Install the support packages it lists. GigE, USB3 Vision and CoaXPress cameras also need the vendor's .cti file.
   - Run the listing code in MATLAB first. Check your camera appears, then run the connect and capture code.
   - Your AI can only test the code if it can run MATLAB and reach your camera. Otherwise, run it yourself and report any errors back.
-  - "Expect four parts back: device listing code, connect code, capture code and clean-up code. Run them in that order."
-  - Next, save the frames to disk or pass them to your image processing code. To write up the results, use the MATLAB report builder.
+  - "Expect five parts back: device listing code, connect code, capture code, clean-up code and the list of support packages to install. Install the packages first, then run the code in that order."
+  - Next, save the frames to disk or pass them to your image processing code. To write up the results, use the MATLAB report builder. If a run fails with a code error, the MATLAB bug tracer can help. It will not fix camera detection problems. For a GigE camera that is not found, check first that the camera maker's GenTL producer (.cti file) is installed.
 next:
   - matlab-report-builder
   - matlab-bug-tracer

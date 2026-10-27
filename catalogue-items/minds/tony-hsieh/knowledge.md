@@ -1,6 +1,6 @@
 # Tony Hsieh: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 Tony Hsieh died in November 2020, so his record is closed [S6]. Source note, 21 October 2026: his own words come from a 2010 Goodreads interview [S1], a PBS NewsHour interview recorded around 2019 [S2], a 2010 Marketplace interview transcript [S8], a 2010 essay on what poker taught him [S9] and the opening of a 2010 Harvard Business Review piece, the rest of which is paywalled [S10]. A 2010 Stanford talk is known only through a report that paraphrases him [S3]. Around those sit a report on the 2015 change in how Zappos was run [S4], a textbook case study [S5] and two reference pages [S6][S7]. Several of his books and Zappos pages were not reachable, and his 2010 book, Delivering Happiness, was not used. Treat each view as "as of" the year of its source.
 
@@ -145,6 +145,6 @@ In 2013 Zappos began moving to a system with no job titles and no traditional ma
 
 - "We wanted to come up with committable core values." (Goodreads, 2010) [S1]
 - "we basically ran out of friends" (PBS NewsHour interview, c. 2019) [S2]
-- "We're not trying to maximize efficiency. We're trying to maximize the customer experience" (Stanford, 2010) [S3]
+- "We're not trying to maximize efficiency. We're trying to maximize the customer experience" (Stanford's report of his 2010 talk, which paraphrases him, so the exact wording may not be his) [S3]
 - "Table selection is the most important decision you can make." (2010) [S9]
 - "Self-management and self-organization is not for everyone." (staff memo, 2015) [S4]

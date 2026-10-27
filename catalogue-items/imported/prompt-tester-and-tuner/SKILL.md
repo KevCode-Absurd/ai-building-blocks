@@ -94,7 +94,9 @@ Without the two price flags, `--estimate-cost` reports token estimates only. The
    sys.exit(0 if ok else 1)"
    echo "gate exit=$?"   # 0 = ship; 1 = regression, iterate again
    ```
-   Pair this structural gate with your task-level eval: the revision must not lose any previously-passing eval case (no-regression rule).
+   This script checks only clarity and token count. It never reads `eval_results.json`. Pair it with your task-level eval, done by hand or by the AI: the revision must not lose any previously-passing eval case (no-regression rule). `eval_results.json` is a list with one entry per test case, for example `[{"case": "case-1", "result": "pass", "note": "why"}]`. Keep the baseline's file and compare case by case.
+
+   Running the prompt on the test cases needs access to the model you are testing, and API calls may cost money. Estimate it first: number of test cases times tokens per call times your provider's price per million tokens. Take that price from your provider's current price page.
 
 ### Few-Shot Example Design
 

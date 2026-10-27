@@ -14,7 +14,9 @@ You need:
 2. **Focus areas** the user wants stressed, such as growth or segments (optional).
 3. **A slide template** or brand guide (optional). Without one, use the clean default style below.
 
-Ask once for anything missing.
+Ask once, in one message, for anything missing. Workflow step 1 then needs no second round of questions about the same things.
+
+**Approval stops to expect.** There are two kinds: one for the outline and style choices (step 2), then one for each slide (step 3). A one-slide profile has two stops in total.
 
 **Where the numbers come from.** The best sources are the company's own filings and investor presentations. For a US company that is the annual report (10-K) on SEC EDGAR. For an Indian company it is the annual report and the results filings on the BSE and NSE websites. Market data such as market cap, enterprise value and consensus is usually from paid terminals (Bloomberg, FactSet, CapIQ) and BamSEC. If the user has none of these, use free sources: exchange filings, the company's investor page and a delayed price from a free quote page. Say which route you used.
 
@@ -34,9 +36,8 @@ Ask once for anything missing.
 ## Workflow
 
 ### 1. Clarify Requirements
-- **Ask the user**: Single-slide or multi-slide (3-4 slides)?
-- **Ask the user**: Any specific focus areas or topics to emphasize?
-- **Only after user confirms**, proceed to research
+- Confirm single-slide or multi-slide (3-4 slides), and any focus areas, unless Before you start already got them.
+- Only after the user confirms, proceed to research
 
 ### 2. Research & Planning
 **Data Sources:**
@@ -110,9 +111,9 @@ Ask once for anything missing.
 
 **Information packing techniques:**
 - Combine related facts: "HQ: <city>; Founded: <year>; <n> employees"
-- Always include numbers: "$50B revenue" not "large revenue"
+- Always include numbers: "<amount> revenue" not "large revenue"
 - Add context only when you have a sourced comparison: "EBITDA margin: <x>% (vs. <y>% industry average, <source>)"
-- Include YoY changes: "Revenue: $125M (+28% YoY)"
+- Include YoY changes: "Revenue: <amount> (<change>% YoY)"
 - Use percentages: "Enterprise: 62% of revenue"
 
 **If a quadrant looks sparse, add more from sources you have (never from guesses):**
@@ -187,7 +188,7 @@ def add_section(slide, x, y, w, header_text, bullets, header_size=10, bullet_siz
 - **Follow brand guidelines if provided**
 
 ### Visual Reference
-The example file `examples/Nike_Strip_Profile_Example.pptx` is not included in this folder. Use the layout described below and adapt colors to each company's brand.
+There is no example file in this folder. The layout described below is the only reference. Adapt colors to each company's brand.
 
 ---
 
@@ -308,14 +309,14 @@ slide.addText('Company Overview', {
 **Horizontal Bar (fits in bottom-right quadrant for 4:3 slide):**
 ```javascript
 slide.addChart(pptx.charts.BAR, [{
-  name: 'FY2024 Revenue by Region',
-  labels: ['North America', 'EMEA', 'China', 'APLA'],
-  values: [21.4, 13.6, 7.6, 6.7]
+  name: '<fiscal year> Revenue by Region',
+  labels: ['<region 1>', '<region 2>', '<region 3>', '<region 4>'],
+  values: [<value 1>, <value 2>, <value 3>, <value 4>]  // sourced figures only
 }], {
   x: 5.0, y: 4.1, w: 4.5, h: 3.0,  // Fits in bottom-right quadrant (4:3)
   barDir: 'bar', chartColors: ['FF6B35'], showValue: true,
   dataLabelFontSize: 10, catAxisLabelFontSize: 10, valAxisLabelFontSize: 10,
-  dataLabelFormatCode: '$#,##0.0B',
+  dataLabelFormatCode: '<currency and scale format>',
   title: 'Revenue by Geography', titleFontSize: 12, titleBold: true
 });
 ```
@@ -324,28 +325,28 @@ slide.addChart(pptx.charts.BAR, [{
 ```javascript
 slide.addChart(pptx.charts.PIE, [{
   name: 'Product Mix',
-  labels: ['Footwear', 'Apparel', 'Equipment'],
-  values: [68, 29, 3]
+  labels: ['<product line 1>', '<product line 2>', '<product line 3>'],
+  values: [<share 1>, <share 2>, <share 3>]  // sourced percentages only
 }], {
   x: 5.0, y: 4.1, w: 4.5, h: 3.0,  // Fits in bottom-right quadrant (4:3)
   showPercent: true, showLegend: true, legendPos: 'r',
   dataLabelFontSize: 10, legendFontSize: 10,
   chartColors: ['FF6B35', '2C2C2C', '4A4A4A'],
-  title: 'Revenue Mix FY24', titleFontSize: 12, titleBold: true
+  title: 'Revenue Mix <fiscal year>', titleFontSize: 12, titleBold: true
 });
 ```
 
 **Line Chart (full width for subsequent slides):**
 ```javascript
 slide.addChart(pptx.charts.LINE, [{
-  name: 'Revenue ($B)',
-  labels: ['FY21', 'FY22', 'FY23', 'FY24', 'FY25E'],
-  values: [44.5, 46.7, 48.5, 51.4, 54.2]
+  name: 'Revenue (<currency and scale>)',
+  labels: ['<year 1>', '<year 2>', '<year 3>', '<year 4>'],
+  values: [<value 1>, <value 2>, <value 3>, <value 4>]  // reported figures only; add a forecast point only if you have a sourced consensus
 }], {
   x: 0.3, y: 1.2, w: 9.4, h: 5.5,  // Full width for 4:3 slide
   chartColors: ['FF6B35'], showValue: true, lineSmooth: true,
   dataLabelFontSize: 11, catAxisLabelFontSize: 11, valAxisLabelFontSize: 11,
-  title: 'Revenue Trend & Forecast', titleFontSize: 14, titleBold: true
+  title: 'Revenue Trend', titleFontSize: 14, titleBold: true
 });
 ```
 
@@ -368,15 +369,15 @@ slide.addText('Key Financials & Valuation', {
 // Financial data table
 slide.addTable([
   [{ text: 'Metric', options: { bold: true, fill: '003366', color: 'FFFFFF' } },
-   { text: 'FY24', options: { bold: true, fill: '003366', color: 'FFFFFF' } },
-   { text: 'FY25E', options: { bold: true, fill: '003366', color: 'FFFFFF' } }],
-  ['Revenue', '$51.4B', '$54.2B'],
-  ['YoY Growth', '+6.0%', '+5.5%'],
-  ['EBITDA', '$8.9B', '$9.5B'],
-  ['EBITDA Margin', '17.3%', '17.5%'],
-  ['EPS', '$3.42', '$3.75'],
-  ['Market Cap', '$185B', '—'],
-  ['EV/EBITDA', '12.5x', '11.7x']
+   { text: '<year 1>', options: { bold: true, fill: '003366', color: 'FFFFFF' } },
+   { text: '<year 2>', options: { bold: true, fill: '003366', color: 'FFFFFF' } }],
+  ['Revenue', '<value>', '<value>'],
+  ['YoY Growth', '<value>', '<value>'],
+  ['EBITDA', '<value>', '<value>'],
+  ['EBITDA Margin', '<value>', '<value>'],
+  ['EPS', '<value>', '<value>'],
+  ['Market Cap', '<value or n/a>', 'n/a'],
+  ['EV/EBITDA', '<value or n/a>', '<value or n/a>']
 ], {
   x: 0.45, y: 4.1, w: 4.3, h: 3.0,  // Below header in bottom-left quadrant
   fontFace: 'Arial', fontSize: 10,
@@ -386,10 +387,10 @@ slide.addTable([
 });
 ```
 
-❌ **Incorrect:** Plain text like `Note: FY2024 revenue growth +1.0%, Net Income $5.1B...`
+❌ **Incorrect:** Plain text like `Note: revenue growth <x>%, net income <amount>...`
 ❌ **Incorrect:** HTML tables that don't convert properly to PowerPoint
 
-For projections, use Bear/Base/Bull case scenarios in structured tables.
+Only show projections that come from a sourced consensus or the company's own guidance, and label the source. Do not build bear, base or bull cases from your own assumptions.
 
 ---
 

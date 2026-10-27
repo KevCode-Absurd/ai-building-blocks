@@ -16,6 +16,8 @@ inputs:
 outputs:
   - {type: ad_style_dna}
   - {type: hooks}
+  - {type: plan}
+  - {type: audit_report}
 uses: [fatigued-ad-reviver, video-hook-scorer, creative-hit-rate-planner, winning-hook-rubric-builder]
 steps:
   - {uses: fatigued-ad-reviver, note: "Starts with the slowing ad: its weekly spend and return, and its transcript. Gives back a revival plan and new hooks. Hands step 2 the new hooks, plus a revival plan."}

@@ -12,8 +12,12 @@ inputs:
     required: true
   - type: tool_connection
     required: false
+  - type: automation_workflow
+    required: true
 outputs:
   - type: tool_connection
+  - type: automation_workflow
+    required: true
 uses: []
 origin: imported
 source:

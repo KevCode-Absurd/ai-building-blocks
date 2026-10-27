@@ -20,6 +20,8 @@ outputs:
   - type: audit_report
   - type: theme_files
   - type: document
+  - type: design_tokens
+    required: true
 uses:
   - design-system-auditor
   - screen-states-designer

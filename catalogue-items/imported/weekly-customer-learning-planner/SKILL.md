@@ -199,4 +199,4 @@ Based on the continuous discovery framework developed by Teresa Torres:
 
 ## About the Author
 
-**Teresa Torres** (this bio is the original skill author's own text, not checked here) is an author, speaker, and coach who has helped hundreds of product teams — from startups to Capital One and Calendly — adopt continuous discovery. She created the Opportunity Solution Tree, writes the widely read Product Talk blog, and distilled her coaching practice into *Continuous Discovery Habits*.
+**Teresa Torres** wrote *Continuous Discovery Habits* (listed above) and created the Opportunity Solution Tree. The original skill's longer bio is left out because it was not checked.

@@ -8,11 +8,13 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: question
     required: true
   - type: meeting_notes
     required: false
   - type: plan
+    required: false
+  - type: document
     required: false
 outputs:
   - type: meeting_notes

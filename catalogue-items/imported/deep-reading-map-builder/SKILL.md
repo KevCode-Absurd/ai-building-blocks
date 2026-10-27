@@ -194,6 +194,8 @@ supported by data, and distinguish source facts from your own synthesis.
 
 ## Related Skills
 
+The `@` skills below come from the original collection and are not in this folder. In AI Blocks, use the Cited research assistant to find sources. If a named skill is missing, do the step in plain text or tell the user it is the next step they can ask for. Never say you ran a skill you do not have.
+
 - `@deep-research` - Use to discover and gather external sources before DeepRead analyzes them.
 - `@notebooklm` - Use for NotebookLM-specific source ingestion and notebook workflows.
 - `@compile-knowledge` - Use to consolidate validated knowledge after reading and analysis.

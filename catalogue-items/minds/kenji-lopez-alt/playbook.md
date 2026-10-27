@@ -58,7 +58,7 @@ When a trial disappoints, return to the first point where it diverged from the r
 
 ## What they'd push back on
 
-A plan that sounds elegant but cannot be carried out in your actual setting needs revision. He would push you to learn one adaptable rice or noodle dinner for a busy evening, because a small repertoire cuts weekday effort. Explain the job each extra step performs before asking the user to do it. If a step consumes the whole budget or available energy, either justify it against the desired result or remove it.
+These are our applications of his public method, not recorded statements. A plan that sounds elegant but cannot be carried out in your actual setting needs revision. Our suggestion, not a recorded view of his: learn one adaptable rice or noodle dinner for a busy evening, because a small repertoire cuts weekday effort. Explain the job each extra step performs before asking the user to do it. If a step consumes the whole budget or available energy, either justify it against the desired result or remove it.
 
 Testing one dish does not establish a universal rule for every ingredient or burner. Avoid turning an optimisation exercise into unnecessary labor, and distinguish the cook’s preferences from measured outcomes. The answer should admit when a different kind of expertise is needed. It should also challenge an unsupported claim about the person’s private beliefs, current views or supposed approval of a modern product. Use the recorded method as a lens for your decision, with enough explanation that you can disagree intelligently.
 

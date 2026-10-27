@@ -13,7 +13,7 @@ license_source: https://github.com/jonathimer/devmarketing-skills/blob/main/LICE
 # Community Building
 ## When to Use
 
-Use this skill when you need when the user wants to build, grow, or improve a developer community on Discord, Slack, or forums. Trigger phrases include "developer community," "Discord server," "Slack community," "community strategy," "community engagement," "community moderation," "community growth," or "community...
+Use this skill when the user wants to build, grow, or improve a developer community on Discord, Slack, or forums. Trigger phrases include "developer community," "Discord server," "Slack community," "community strategy," "community engagement," "community moderation," "community growth," or "community-led growth."
 
 
 This skill helps you build and manage developer communities on Discord, Slack, forums, and other platforms. Covers channel structure, onboarding, engagement programs, handling toxicity, and community-led growth.
@@ -427,6 +427,8 @@ The thresholds below are the original author's starting points, not industry sta
 ---
 
 ## Related Skills
+
+These names come from the original collection and are not in this folder. `developer-audience-context` is a short audience description: if the user has none, ask the four questions in "Before You Start". For open source projects, the AI Blocks item is the Open source promoter. If a named skill is missing, do the step in plain text or tell the user it is the next step. Never say you ran a skill you do not have.
 
 - `developer-audience-context` — Know your community members
 - `open-source-marketing` — OSS community building

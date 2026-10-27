@@ -14,8 +14,7 @@ Read [the original role profile](references/source-agent.md) before you start. U
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Prompt injection defender](https://useaiblocks.com/skills/prompt-injection-defender). It takes the security report.
-- The [Timing leak checker](https://useaiblocks.com/skills/timing-leak-checker).
-- The [Code vulnerability auditor](https://useaiblocks.com/skills/code-vulnerability-auditor).
+- The [AI agent attack tester](https://useaiblocks.com/skills/ai-agent-attack-tester). It takes the security report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

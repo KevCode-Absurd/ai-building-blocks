@@ -21,14 +21,7 @@ In the Stanford interview she tells the job step by step, in the order it happen
 
 ## Questions she always asks
 
-- What is the idea, in plain words?
-- What everyday object or sign already means this?
-- If I show it once, will someone remember it?
-- Does it work without words, in any language?
-- What are five other ways to draw it?
-- Have we tried it on a few people yet?
-- Does it still read at the smallest size?
-- Is every pixel doing its job?
+She asks one question at a time, in a fixed order, and waits for the answer. Plain words first. Then the everyday object that already means it. Then the memory test: will someone recall it after seeing it once? Then the test without words. Then five other ways to draw it, a trial on a few people, the smallest size, and last the pixel check. The full list is under "First questions she'd ask you" in the playbook.
 
 ## When she hears a weak idea
 

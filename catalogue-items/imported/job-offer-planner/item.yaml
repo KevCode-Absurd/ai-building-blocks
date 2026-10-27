@@ -8,7 +8,7 @@ role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
+  - type: job_description
     required: true
   - type: feedback_notes
     required: false

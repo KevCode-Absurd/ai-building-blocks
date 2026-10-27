@@ -145,7 +145,7 @@ The signal to act on. Declining cohort LTV over two consecutive months is the al
 
 > **AI Blocks note:** the percentage ranges in this section and the next are the original author's rules of thumb, not measured benchmarks, and no source is named. Say so when you use them, and tell the user to check their own holdout or test results.
 
-Most "the campaign improved 15% week over week" stories are noise. Real performance changes are 30% or more in metrics that vary 10 to 20% naturally. Below that threshold, you are looking at variance and calling it signal.
+Most "the campaign improved 15% week over week" stories are noise. By the author's rule of thumb (not a sourced figure), real performance changes are 30% or more in metrics that vary 10 to 20% naturally. Check this against your own history. Below that threshold, you are looking at variance and calling it signal.
 
 Sources of noise in paid media metrics.
 
@@ -164,7 +164,7 @@ This is where `experimentation-analytics` bridges in. The statistical patterns a
 
 The honest test. If we had not run this ad, would we still have gotten the conversion? The number above zero is the incremental contribution.
 
-Most paid media is 30 to 70% incremental, not 100%. Some is zero. Branded search bidding is often 5 to 20% incremental (most converters would have found you organically). Retargeting is often 20 to 40% incremental (many of those users were going to convert anyway). Prospecting is often 50 to 90% incremental.
+By the author's rough guide (not a sourced figure; test your own account), most paid media is 30 to 70% incremental, not 100%. Some is zero. Branded search bidding is often 5 to 20% incremental (most converters would have found you organically). Retargeting is often 20 to 40% incremental (many of those users were going to convert anyway). Prospecting is often 50 to 90% incremental.
 
 Four methods.
 

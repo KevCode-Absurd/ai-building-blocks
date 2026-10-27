@@ -7,7 +7,7 @@ job: write-emails
 headline: Own-voice outreach writer
 subhead: Emails and follow-ups that read like you wrote them, each tied to something real about the person getting them. You read and approve every draft before it goes out.
 explain: |
-  Emails and follow-ups that read like you wrote them, each tied to something real about the person getting them. You read and approve every draft before it goes out.
+  Emails and follow-ups that read like you wrote them, each tied to something real about the person getting them. You read and approve every draft before it goes out. Nothing is sent until you approve each batch.
 
   The skill first learns your voice. It reads 15 to 30 of your sent emails from Gmail or Microsoft 365, or three examples you pasted, and notes sentence length, greetings, sign-offs, contractions, exclamation marks, how direct your ask is and things you never say. It saves the profile for next time. Then it finds a true detail for each prospect, from a recent post, role change or company news. It writes the message around that detail and drafts follow-ups in the same voice. With no samples, it asks for three first.
 when:
@@ -19,6 +19,7 @@ not_for:
   - "You want bulk marketing to bought or unsubscribed lists: use an email marketing tool that handles consent and opt-outs."
   - "You want to write to one person who already knows you: write it yourself, it will be faster."
   - "You have no sent emails and no writing samples: write three emails you like first, then come back."
+  - "You have no list of prospects yet: build one first with the Prospect list builder, or keep a simple list in a spreadsheet or your CRM."
 you_give:
   - Your prospects and context
   - Sent emails or three samples of your writing
@@ -35,7 +36,7 @@ how_to_use:
   - Read the voice profile it makes. Fix anything that does not sound like you.
   - Read message one closely, then skim the follow-ups. Ask for changes until it sounds right.
   - Approve each batch before anything is sent. If no mail account is connected, copy the drafts and send them yourself. The drafts are AI-written, so check every claim, and do not say you wrote one by hand if someone asks.
-  - "Hooks come from public posts, role changes and company news. Use public sources or details the person shared with you, and check a site's terms before you collect from it."
+  - "Hooks come from the prospect's own website, press releases, posts they made in public, and details they shared with you. Do not scrape profile pages or collect private contact details, and check a site's terms before you copy from it."
   - Check your local opt-out rules before sending cold email, such as CAN-SPAM or PECR.
 output_sample:
   input:

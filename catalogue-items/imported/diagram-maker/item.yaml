@@ -8,8 +8,10 @@ role: make
 job: ops
 level: beginner
 inputs:
-  - type: brief
+  - type: question
     required: true
+  - type: source_text
+    required: false
 outputs:
   - type: image
 uses: []

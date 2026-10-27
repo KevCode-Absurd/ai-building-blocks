@@ -14,11 +14,11 @@ This agent uses two skills in this order: `prompt-injection-defender` (map the b
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [SOC 2 readiness planner](https://useaiblocks.com/skills/soc-2-readiness-planner).
-- The [AI-written code security reviewer](https://useaiblocks.com/skills/agency-security-ai-generated-code-auditor).
 - The [Human approval review planner](https://useaiblocks.com/skills/human-review-gate). It takes the test report and security report.
+- The [Test results analyst](https://useaiblocks.com/skills/agency-testing-test-results-analyzer). It takes the test report.
 - The [Code change test coverage reviewer](https://useaiblocks.com/skills/test-gap-finder). It takes the test report.
-- The [Software test gap finder](https://useaiblocks.com/skills/copilot-test-gap-audit). It takes the test report.
+- **Build it** with the [A-Evolve agent improvement loop builder](https://useaiblocks.com/skills/agent-improvement-loop). It takes the test set.
+- The [Service rollout and rollback planner](https://useaiblocks.com/skills/copilot-devops-rollout-plan). It takes the test report and plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -33,6 +33,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 - **Security report** (yours): the risks found in the code, ranked, each with a fix.
 - **Test report** (yours): what was tested, what passed, what failed and why.
+- **Your prompt** (yours): the full prompt or instructions you give the AI.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.

@@ -5,11 +5,13 @@ name: LLM fine-tuning guide
 summary: Plan a fine-tuning run for your GPU. Give your model and goal. You get Unsloth code sized to your memory, with a fixed chat template and export.
 job: build-software
 headline: LLM fine-tuning guide
-subhead: Say your model and GPU. Get a fine-tuning plan and code with Unsloth, sized to your memory, ready to export. Bring base model. Use the result to plan your next step.
+subhead: Say your model and GPU. You get a fine-tuning plan and Unsloth code sized to your memory, ready to export.
 explain: |
   A fine-tuning plan and working code for your model and your graphics card, sized to the memory you have so it does not run out halfway through. Tell it the model, the GPU and the goal.
 
   It works through six steps with Unsloth. First, it estimates memory before any code. Then it loads the model and fixes the chat template, a common cause of models that ignore stop tokens. It attaches LoRA adapters, runs the training, and exports to the format your runtime needs, such as GGUF. It covers QLoRA on a 16 GB GPU and reward-based methods like GRPO and DPO. You need Python and a GPU.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header says Apache-2.0. Unsloth's core package is Apache-2.0, and optional parts such as its Studio app are AGPL-3.0.
 when:
   - You want a model that follows your format and have one consumer GPU.
   - Training crashes with out of memory part way through.
@@ -37,6 +39,7 @@ how_to_use:
   - Add your training data, or say what format it is in.
   - Check the memory estimate first. Resize the plan if it is too tight.
   - Before you train, check that the chat template step shows the right part of one batch masked.
+  - For the GRPO example, replace the <your-prompt-dataset> placeholder with your own prompt dataset first. The code fails if you leave it.
   - Run the training, then ask for the export format your runtime needs.
   - The result comes in the order of the six steps. A memory table comes first, then one code block for each step, then the export commands.
 output_sample:

@@ -8,10 +8,10 @@ role: make
 job: ops
 level: beginner
 inputs:
-  - type: question
+  - type: prompt
     required: true
 outputs:
-  - type: brief
+  - type: prompt
 uses: []
 origin: imported
 source:

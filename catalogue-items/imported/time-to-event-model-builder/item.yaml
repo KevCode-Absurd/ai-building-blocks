@@ -12,7 +12,7 @@ inputs:
     required: true
 outputs:
   - type: audit_report
-  - type: image
+  - type: code_change
 uses: []
 origin: imported
 source:

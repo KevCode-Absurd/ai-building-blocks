@@ -23,7 +23,7 @@ not_for:
   - "You want the full version with every check: use the Marketing image maker."
 
 you_give:
-  - "What the image is for"
+  - "What the image is for, including where it will run (blog header, social post or banner)"
   - "What it should show, in a sentence"
   - "Your colours or style (optional)"
   - "Exact words on the image (optional)"

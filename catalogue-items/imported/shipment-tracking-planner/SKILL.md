@@ -5,6 +5,8 @@ description: When the user wants to implement shipment tracking, product traceab
 
 # Track and Trace
 
+> **Note:** The Python code in this skill is an illustrative model for developers. You do not need to run it to make a tracking plan. A chat AI can write the plan from the questions and the framework alone. All names, dates and figures in code and tables below are made-up examples. Fill real ones only from the user's own data, or write MISSING.
+
 You are an expert in track-and-trace systems and supply chain visibility. Your goal is to help organizations implement end-to-end traceability, real-time tracking, and comprehensive visibility across their supply chains for operational efficiency, compliance, and customer service.
 
 ## Initial Assessment
@@ -850,6 +852,8 @@ print(f"  Total Quantity: {recall['total_quantity']} units")
 
 ### Track-and-Trace Dashboard
 
+All names, IDs, dates and figures in this layout are placeholders. Fill them only from the user's own data, or write MISSING. Never invent a count, a rate or a lot number.
+
 **Executive Summary:**
 - Total shipments/products tracked
 - Tracking performance
@@ -860,36 +864,29 @@ print(f"  Total Quantity: {recall['total_quantity']} units")
 
 | Shipment ID | Origin | Destination | Status | Current Location | ETA | Delay | Exceptions |
 |-------------|--------|-------------|--------|------------------|-----|-------|------------|
-| SHP-10234 | NYC | LAX | In Transit | Memphis Hub | Jan 15 | On Time | None |
-| SHP-10235 | CHI | MIA | Delayed | Atlanta | Jan 16 | +2 days | Weather |
-| SHP-10236 | SEA | BOS | Exception | Portland | TBD | +5 days | Customs Hold |
+| [SHIPMENT ID] | [ORIGIN] | [DESTINATION] | [STATUS] | [LOCATION] | [DATE] | [DELAY] | [EXCEPTION OR NONE] |
 
 **Traceability:**
 
 | Lot/Batch ID | Product | Quantity | Manufacturing Date | Expiry | Current Location | Status |
 |--------------|---------|----------|-------------------|--------|------------------|--------|
-| LOT-A12345 | Product X | 1,000 | 2025-11-15 | 2027-11-15 | DC East | Active |
-| LOT-A12346 | Product X | 800 | 2025-11-20 | 2027-11-20 | Customer ABC | Sold |
-| LOT-A12347 | Product X | 500 | 2025-11-25 | 2027-11-25 | Recall | Quarantine |
+| [LOT ID] | [PRODUCT] | [QUANTITY] | [DATE] | [DATE] | [LOCATION] | [STATUS] |
 
 **Performance Metrics:**
 
 | Metric | Value | Target | Status |
 |--------|-------|--------|--------|
-| Shipments Tracked | 15,234 | N/A | ✓ |
-| Real-Time Visibility | 98.2% | 95.0% | ✓ Above |
-| On-Time Delivery | 91.5% | 92.0% | ⚠ Slightly Below |
-| Exception Rate | 4.3% | <5.0% | ✓ On Track |
-| Traceability Coverage | 99.8% | 100% | ✓ Near Target |
+| Shipments Tracked | [COUNT] | N/A | [STATUS] |
+| Real-Time Visibility | [PERCENT] | [YOUR TARGET] | [STATUS] |
+| On-Time Delivery | [PERCENT] | [YOUR TARGET] | [STATUS] |
+| Exception Rate | [PERCENT] | [YOUR TARGET] | [STATUS] |
+| Traceability Coverage | [PERCENT] | [YOUR TARGET] | [STATUS] |
 
 **Exceptions Summary:**
 
 | Exception Type | Count | Avg Resolution Time | Oldest Open |
 |----------------|-------|---------------------|-------------|
-| Delay | 127 | 18 hours | 3 days |
-| Customs Hold | 23 | 4.2 days | 8 days |
-| Damaged | 8 | 2 days | 1 day |
-| Lost | 2 | Pending | 12 days |
+| [TYPE] | [COUNT] | [TIME] | [AGE] |
 
 ---
 

@@ -31,7 +31,7 @@ you_get:
   - Safer rewrites
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill instructions into a new chat.
-  - The skill mentions a plugin config file, saved standards and a legal research tool. You do not need them in a chat. Paste your own claims standards instead. A legal research tool such as Westlaw is a paid service and is optional.
+  - The skill mentions a plugin config file, saved standards and a legal research tool. You do not need them in a chat. Paste your own claims standards instead. Westlaw and web search are both optional. A legal research tool such as Westlaw is a paid service. Without one, check every rule your AI names at the issuing authority before you use it.
   - Paste your ad or page copy. Say where it will run.
   - Add any proof you hold and your company claims standards, if you have them (optional).
   - Turn on web search if your AI has it, so it can check current ad rules. This is optional.

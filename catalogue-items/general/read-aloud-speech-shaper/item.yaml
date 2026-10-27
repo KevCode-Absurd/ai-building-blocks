@@ -12,7 +12,7 @@ inputs:
   - type: question
     required: true
 outputs:
-  - {type: script}
+  - {type: copy_draft}
 origin: rebuilt
 version: 1.0.0
 minds: [maya-angelou]

@@ -8,6 +8,7 @@ job: image
 level: beginner
 inputs:
   - {type: product_data, required: true}
+  - {type: brand_brain, required: false}
 outputs:
   - {type: shot_list}
 uses: []

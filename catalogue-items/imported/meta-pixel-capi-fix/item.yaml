@@ -11,7 +11,9 @@ level: advanced
 inputs:
   - type: web_page
     required: false
-  - type: brief
+  - type: question
+    required: false
+  - type: tool_connection
     required: false
 outputs:
   - type: audit_report

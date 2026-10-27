@@ -5,9 +5,9 @@ job: work-with-audio
 headline: ElevenLabs voice description writer
 subhead: Describe an original voice. Get a short voice design prompt with tone, texture, pace and character. Bring the brief and any files you want it to use.
 explain: |-
-  Use this when you need a compact original voice design description. Identify use case, personality and intensity before describing vocal traits. Use an original voice; do not imply copying an identifiable person without permission.
+  A voice description tells ElevenLabs how a voice should sound. Say what the voice is for, who listens, three tone words and how strong the character should be.
 
-  Define an approximate adult age range and vocal presentation only when useful, then specify pitch/register, texture, rhythm and pacing.
+  The skill then writes one short paragraph on age range, pitch, texture, pace and personality. It always describes an original voice. It never asks you to copy a real person without their permission.
 when:
   - You need a compact original voice design description.
   - You want a clear draft and checks from the material you already have.

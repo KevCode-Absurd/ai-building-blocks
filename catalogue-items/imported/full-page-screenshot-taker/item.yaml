@@ -8,7 +8,7 @@ role: make
 job: ops
 level: beginner
 inputs:
-  - type: question
+  - type: web_page
     required: true
 outputs:
   - type: image

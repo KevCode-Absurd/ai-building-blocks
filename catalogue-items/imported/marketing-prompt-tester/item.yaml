@@ -8,12 +8,16 @@ role: check
 job: ops
 level: advanced
 inputs:
-  - type: copy_draft
+  - type: prompt
     required: true
   - type: audit_report
     required: false
+  - type: eval_set
+    required: false
 outputs:
   - type: test_report
+  - type: prompt
+    required: true
 uses: []
 origin: imported
 source:

@@ -34,7 +34,7 @@ you_get:
   - A two-week posting and reply routine
   - The numbers to check after two weeks
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Add this skill, or paste its instructions into the chat. A web search tool helps with the niche study. Without one, you paste the posts yourself. The Python scripts in the skill are optional.
+  - Open Claude, ChatGPT or Gemini. Add this skill, or paste its instructions into the chat. A web search tool helps with the niche study. Some search tools need a paid plan or an API key, so check before you rely on one. Without one, you paste the posts yourself. This skill is an imported copy of an MIT-licensed public skill, and its estimates are untested. The Python scripts in the skill are optional.
   - Paste your niche, your handle and 10 past posts, and say your goal. Add the accounts you admire, or paste 5 to 10 of their posts if your AI cannot search the web.
   - Read the profile audit first. Fix your bio and pinned post before you post anything new.
   - Edit the drafts so they sound like you. Put links in a reply, not in the main post.

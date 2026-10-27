@@ -33,8 +33,8 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text. No code running or paid tool is needed.
   - Say what kind of site you are building, for example a small restaurant, a store or a parts maker.
-  - Add your competitor audit if you have one, plus the size of your catalogue or menu. No audit? Name your type of site and say you have no audit. It then works from its notes for each type of site. Other skills named in the skill file, such as the competitor audit and design standards skills, are not in this library.
-  - Read the notes it writes. Check the checklist for conventions marked absent, and add them to your plan.
+  - Add your competitor audit if you have one, plus the size of your catalogue or menu. No audit? Name your type of site and say you have no audit. It then works from its notes for each type of site. The skills named in the skill file as companions (competitor-experience-audit, design-standards, information-architecture) are not in this library. If you do not have them, use the matching references/shape-*.md file, such as shape-ecommerce-catalog.md, as your audit substitute.
+  - It writes a notes file named composition-[site-shape]-[brand-slug].md, or gives the notes in the chat. Check its five sections: the site shape, the build decisions, the conventions checklist, the wedge and the hand-off list. Add every convention marked absent to your plan.
   - Pass the hand-off list to your designer, or to the design and component skills, to build the pages.
 output_sample:
   input:

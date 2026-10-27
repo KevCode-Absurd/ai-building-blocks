@@ -9,7 +9,7 @@ subhead: Current, cited answers about building with OpenAI, pulled from the offi
 explain: |
   Current, cited answers about building with OpenAI, pulled from the official developer docs at the moment you ask. Models and APIs change fast, so answers from memory go stale.
 
-  The skill searches the docs through the OpenAI developer docs server, then reads the full page before it answers. For API questions it checks the official API spec for fields and parameters. For model choices, it reads the latest model guide first and keeps any model you name. It covers products such as the Responses API, the Chat Completions API, the Apps SDK and Codex, and helps plan upgrades from one model to another, including prompt changes. It needs the docs server connected.
+  The skill searches the docs through the OpenAI developer docs server, then reads the full page before it answers. For API questions it checks the official API spec for fields and parameters. For model choices, it reads the latest model guide first and keeps any model you name. It covers products such as the Responses API, the Chat Completions API, the Apps SDK and Codex, and helps plan upgrades from one model to another, including prompt changes. It needs the docs server connected. Licence: Apache-2.0 (see the LICENSE file). Credit goes to OpenAI.
 when:
   - You need to know which OpenAI model suits your task today.
   - An API call fails and you want to check required fields.
@@ -29,9 +29,10 @@ you_get:
   - A model recommendation
   - Migration and prompt upgrade steps
 how_to_use:
-  - Use an AI agent that can run tools and reach the OpenAI developer docs server, such as Codex. A plain chat window cannot run the lookup tools.
+  - Use an AI agent that can run tools and reach the OpenAI developer docs server (a connection to OpenAI's official docs), such as Codex. A plain chat window cannot run the lookup tools. Agents like Codex may need their own account or paid plan.
+  - The skill can run small scripts that come with it. They save a temporary copy of the Codex manual in your computer's temp folder. The agent needs permission to run commands for that. If it has none, it uses the docs server instead.
   - Connect the OpenAI docs server in your agent's settings. Check your tool's own guide for the exact steps.
-  - Add this skill to your agent, or paste its text into the chat. The skill file is written for your AI. You only need to read the answer and its links. Your agent will ask before it installs the docs server.
+  - Add this skill to your agent, or paste its text into the chat. The skill file is written for your AI. You only need to read the answer and its links. Your agent asks you before it installs the docs server, and installing it is your choice.
   - Ask your question. Say what you are building and which model you use now, if any.
   - Check the links in the answer. Open the main page to confirm it matches what you asked.
   - If you cannot connect the docs server, ask your AI to search only official OpenAI sites. Treat the answer with more care.

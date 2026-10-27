@@ -7,10 +7,10 @@ role: orchestrate
 job: ops
 level: beginner
 inputs:
-  - {type: brief, required: true}
-  - {type: source_text, required: true}
+  - {type: lesson_plan, required: true}
+  - {type: question, required: true}
 outputs:
-  - {type: feedback_notes}
+  - {type: audit_report}
   - {type: plan}
 uses: [stuck-point-diagnosis-coach, step-by-step-hint-writer, confidence-building-task-ladder, study-session-planner-and-review]
 steps:

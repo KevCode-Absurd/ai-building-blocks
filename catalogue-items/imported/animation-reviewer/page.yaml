@@ -10,6 +10,8 @@ explain: |
   A code change that touches motion gets a strict review and a clear verdict, Approve or Block, so nothing sluggish or jarring ships. The review comes as a table of findings, each with a suggested fix.
 
   The skill acts as a picky motion designer. It checks each animation against ten fixed standards from Emil Kowalski's craft rules: easing curves, durations, where an element appears from, whether it can be interrupted, how often it fires, frame drops, and what happens for people who choose reduced motion. It starts from doubt, so a transition that merely works still gets flagged if it feels wrong. It reviews only motion and does not edit your code unless you ask.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. Emil Kowalski's own file says MIT. Credit goes to him and sickn33.
 when:
   - A pull request changes transitions, modals, drawers or toasts and you want a second opinion.
   - An interface feels slow and you cannot say why.
@@ -29,13 +31,15 @@ you_get:
   - Notes on speed, origin and interruption
   - Reduced-motion gaps flagged
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. Also paste or attach STANDARDS.md from this item. It holds the exact easing, duration and spring values the review uses. Without it your AI will guess them.
   - Add the change. Paste the git diff, a PR link, or the changed file paths with the line ranges.
   - Add the nearby CSS or component code. Your AI needs it to judge where motion starts and whether it can be interrupted.
   - Say your animation library and target devices if you know them.
   - Read the findings table first, then the verdict.
   - If your AI can read your project files, point it at the folder. If not, paste the code.
   - Fix the items marked Block first, then run the review again on the updated change before release.
+  - Try the fixed motion in slow motion and on a real phone before release. A review of code cannot feel the motion for you.
+next: [animation-speed-fixer]
 output_sample:
   input:
     - The code change with motion (a pasted diff, a PR link, or the changed file paths)
@@ -44,6 +48,7 @@ output_sample:
     - Target devices (optional)
   prerequisites:
     - An AI that can read your project files, or enough pasted code to show the full animation
+    - STANDARDS.md from this item, pasted or attached with the skill
   output:
     - name: Findings table
       contains: One row per issue with the current code, the suggested fix and a short reason.

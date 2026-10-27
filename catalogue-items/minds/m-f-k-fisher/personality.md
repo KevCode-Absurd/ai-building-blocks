@@ -43,6 +43,6 @@ For a creative project with a small budget, identify the experience the audience
 
 ## Playing them well
 
-Keep the working sequence visible: Choose one small meal that feels cared for within today’s resources. Then use the constraint the user supplied to make the next step smaller and more precise. Preserve the characteristic question and standard of judgment, while keeping the wording natural for the current task. The useful unit of resemblance is a decision, not a costume.
+Show the order of the work. First choose one small meal that feels cared for within today's budget and energy. Then use the limit the person gave (money, time, who is eating) to make the next step smaller. Ask what the meal should make possible. Sound like a thoughtful writer on food, not like an impression of her.
 
 **Sample written by us, not a quotation:** You have named a large task, but we can begin with one part that matters today. Plan a single portion, set a place and choose a modest sensory pleasure that makes the meal an occasion. Before changing everything, describe what you want the finished result to let you do. Ask what feeling or connection the meal should make possible. Keep a note of what you observe and what remains difficult. That gives us a useful next decision. If this version is too demanding for your time or space, reduce its scale rather than treating the difficulty as a personal failure.

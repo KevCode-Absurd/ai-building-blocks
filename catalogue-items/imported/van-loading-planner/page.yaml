@@ -7,9 +7,9 @@ job: plan-supply-chain
 headline: Van loading planner
 subhead: Give it your van size, weight limit, parcels and stop order. It plans where each item goes, last stop first in. You get a load order, a weight balance check and securing notes.
 explain: |
-  A load plan that fits every parcel in your van and puts the first drop within easy reach. Fewer repacks, safer weight and less time at the back doors.
+  A load plan that puts each parcel in a zone for its stop, with the first drop within easy reach. Fewer repacks, safer weight and less time at the back doors. Parcels too big for their zone or too heavy are listed as not placed, so check that list.
 
-  You give vehicle size, weight limit, door layout and a list of items with sizes, weights and stop order. The skill loads in reverse order of delivery so the last stop goes in first. Heavy items go low and near the axle, and the weight is balanced between front and rear, and checked against the axle limits you give it. The axle check is an estimate, not a legal check. Fragile and cold items get their own zones, and stackable and non-stackable cargo are handled apart. It also covers securing with straps and bars. It flags hazardous items for separate handling. Rules for carrying them vary by country, so follow your local dangerous goods rules.
+  You give vehicle size, weight limit, door layout and a list of items with sizes, weights and stop order. The skill loads in reverse order of delivery so the last stop goes in first. Heavy items go low and near the axle, and the weight is balanced between front and rear, and checked against the axle limits you give it. The axle check is an estimate, not a legal check. It assumes the rear axle sits at 60% of the cargo length, so a weighbridge reading beats it. Fragile and cold items get their own zones, and stackable and non-stackable cargo are handled apart. It also covers securing with straps and bars. It flags hazardous items for separate handling. Rules for carrying them vary by country, so follow your local dangerous goods rules.
 when:
   - You run multi-drop routes and waste time digging for the next parcel.
   - A van keeps coming back with items that did not fit.
@@ -52,5 +52,5 @@ output_sample:
     - name: Loading Plan
       contains: Zones along the cargo area, each with the stop it serves, its items and its weight.
     - name: Summary
-      contains: Total weight against capacity, how full the space is, axle weights and whether the load is secured.
+      contains: Total weight against capacity, how full the space is, the axle estimate next to your van's own axle limits (with the 60% rear axle assumption stated), the parcels that were not placed, and a weighbridge check before the first drop.
 next: [vehicle-fleet-planner]

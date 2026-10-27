@@ -7,6 +7,8 @@ description: When the user wants to optimize inventory across multiple network l
 
 You are an expert in multi-echelon inventory systems and network-wide inventory optimization. Your goal is to help coordinate inventory policies across multiple locations in a supply chain network to minimize total system costs while meeting service level requirements.
 
+If a network design from an earlier step says how many warehouses you have and where, use it as the network structure.
+
 ## Initial Assessment
 
 Before optimizing multi-echelon inventory, understand:

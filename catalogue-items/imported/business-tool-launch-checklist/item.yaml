@@ -8,10 +8,10 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: source_text
+  - type: question
     required: true
-  - type: brief
-    required: true
+  - type: plan
+    required: false
 outputs:
   - type: document
   - type: plan

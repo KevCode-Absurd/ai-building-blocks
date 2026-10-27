@@ -7,7 +7,6 @@ description: Share segment accounts, ownership records and dated holding values.
 
 A linked ledger that ties segment profit to the group, matches outside ownership to the earnings used, and values separate holdings once.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -16,6 +15,13 @@ When you've handed it back, suggest what they could do next in one short questio
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
+## When not to use
+- To tie segment profit to the group total only, use the Business unit profit reconciliation checker (`segment-profit-elimination-bridge`).
+- For value per share of a holding company's listed stakes only, use the Holding company value calculator (`listed-holding-lookthrough-nav`).
+- For a price target or a buy or sell view, this gives none. It checks scope only and is not investment advice.
+- To explain property NAV against book value, use the Property net asset value and book-value checker (`reconcile-property-nav-and-book-value`).
+
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -35,6 +41,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+
+These items replace the generic source text and spreadsheet inputs above. Give each with its unit, scale and date: the segment note, the consolidation list, the ownership records, parent-only balances and dated stake values.
 
 - Segment results and the bridge to consolidated operating profit.
 - The consolidation scope: each company, its ownership share and its treatment.
@@ -58,26 +66,29 @@ If an item is missing, ask once. If it cannot be supplied, write MISSING: with w
 
 ## Steps
 
-Read each step's own SKILL.md if it is attached. If it is not, follow the step as written here and say so in the hand-back. Build a short input map first: each source, its date, units, period and what is missing.
+Read each step's own SKILL.md if it is attached. If it is not, follow the step as written here, starting with the first action listed under it, and say so in the hand-back. Build a short input map first: each source, its date, units, period and what is missing.
 
 1. **Business unit profit reconciliation checker** (`segment-profit-elimination-bridge`). Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Tie segment measures to consolidated operating profit and preserve all corporate costs and profit eliminations before passing earnings into valuation.
+   - First action: list each segment measure from the note, then tie it to the consolidated operating profit line. Segment profit, less corporate costs, plus or minus eliminations, equals group operating profit.
    - Check before moving on: Segment profit plus corporate costs and eliminations equals group operating profit. No practice figure is used as an input.
    - Hands to step 2: group earnings that tie, with the list of subsidiaries counted at 100%.
    - Save `outputs/step-1-segment-profit-elimination-bridge.md` and any real file. With no file access, give it as a labelled section. If a needed input is missing, stop this step and write MISSING:.
 
 2. **Minority interest valuation checker** (`minority-interest-multiple-reconciliation`). Map subsidiaries included at 100% in the earnings denominator and include their outside ownership consistently in consolidated enterprise value. Keep book and estimated market minority values distinct.
+   - First action: list every subsidiary counted at 100% in earnings with the outside owners' share. Add that share to enterprise value on the same basis.
    - Check before moving on: Every subsidiary counted at 100% in earnings has its outside owners in value. Book and market minority values are labelled.
    - Hands to step 3: the list of businesses whose earnings are already in the group.
    - Save `outputs/step-2-minority-interest-multiple-reconciliation.md` and any real file. With no file access, give it as a labelled section. If a needed input is missing, stop this step and write MISSING:.
 
 3. **Holding company value calculator** (`listed-holding-lookthrough-nav`). Value separately held equity stakes only where their operating earnings were excluded from the consolidated model. Reconcile parent-only liabilities and label all additions/exclusions to prevent double counting.
+   - First action: list each holding whose earnings are outside the group model and value it at its dated value times your stake. Count parent-only cash and debt once.
    - Check before moving on: No stake is valued if its earnings are already in. Parent-only debt and cash count once.
    - Goes into the result: the final scope ledger and any unresolved differences.
    - Save `outputs/step-3-listed-holding-lookthrough-nav.md` and any real file. With no file access, give it as a labelled section. If a needed input is missing, stop this step and write MISSING:.
 
-## Workbook
+## Workbook (only if asked)
 
-If they ask for a workbook and you can make files, build one linked workbook: inputs, calculations, checks and a summary on separate sheets. Mark inputs in blue, same-sheet formulas in black and cross-sheet links in green. Show units and put negatives in parentheses. Recalculate, look for errors, change one input to test the links, put the case back, and reopen the saved file. If you cannot make files, give each schedule as a table and say no workbook was built. Report any check that could not run.
+Only if they ask for a workbook and you can make files, build one linked workbook: inputs, calculations, checks and a summary on separate sheets. Mark inputs in blue, same-sheet formulas in black and cross-sheet links in green. Show units and put negatives in parentheses. Recalculate, look for errors, change one input to test the links, put the case back, and reopen the saved file. If you cannot make files, give each schedule as a table and say no workbook was built. Report any check that could not run.
 
 ## Acceptance
 

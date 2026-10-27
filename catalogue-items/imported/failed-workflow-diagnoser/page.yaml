@@ -34,7 +34,8 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text.
   - Paste your cleaned log, then the workflow file from the same commit as the failed run. Add what changed since the last green run if you know it.
   - Read the root cause and the diff. Check that the fix does not weaken your tests or checks.
-  - Apply the diff, push it, and run the workflow again. The skill cannot run it for you. Use its checklist to confirm the result.
+  - Before you rerun, check whether the workflow has deploy or publish steps. Rerunning them can repeat their side effects, such as a second release. Rerun only the failing job, or use a dry run first.
+  - Apply the diff, push it, and run the workflow again. The skill cannot run it for you. Use its checklist to confirm the failing step now passes on a rerun, then move on to the flaky test fixer if a test still fails at random.
 output_sample:
   input:
     - Your failed GitHub Actions log, with secrets, tokens and private URLs removed

@@ -9,7 +9,7 @@ subhead: A clear answer to why your trained model says what it says. You see whi
 explain: |
   A clear answer to why your trained model says what it says. You see which inputs matter most, why it gave one case a certain score, and where it keeps getting things wrong.
 
-  The skill works in MATLAB on models trained on rows and columns of data. It matches your question to a method: ranking the inputs, showing how one input moves the result, explaining a single prediction, studying the errors, or comparing groups of people. It works with built-in models and with custom ones you wrap in a prediction function. It is not for images or text models, and it does not train or tune anything.
+  The skill works in MATLAB on models trained on rows and columns of data. It matches your question to a method: ranking the inputs, showing how one input moves the result, explaining a single prediction, studying the errors, or comparing groups of people. It works with built-in models and with custom ones you wrap in a prediction function. It is not for images or text models, and it does not train or tune anything. You need MATLAB and its Statistics and Machine Learning Toolbox. Both are paid MathWorks products, so check you hold a licence first.
 when:
   - Your manager asks which factors drive the model.
   - One customer got a bad score and you must explain why.
@@ -19,6 +19,7 @@ not_for:
   - "You need to train, tune or pick features for a model: do that in MATLAB first, then come back to explain the result."
   - "Your model reads images, text or signals: this skill only works on rows and columns of data, so use a method built for that type of data."
   - "Your model predicts more than one result at once: split it into one model per result, or ask a data scientist for help."
+  - "Your model was cross-validated (a partitioned model): pick one trained model to explain instead."
   - "You want to use the code outside MATLAB or other MathWorks products: the licence does not allow it."
 you_give:
   - A trained model on table data
@@ -38,7 +39,8 @@ how_to_use:
   - Ask one clear question, such as which inputs matter or why one case got its score.
   - Add the groups you want to compare, if you have any (optional).
   - Check the plan your AI shows you, then let it run the analysis in MATLAB.
-  - Read the result and the caveats. If the model is weak, collect more data or retrain it outside this skill.
+  - Read the result and the caveats. Share the findings with whoever owns the model. If the model is weak, collect more data or retrain it outside this skill.
+next: [no-code-model-trainer, neural-network-trainer]
 output_sample:
   input:
     - Your trained model (built in MATLAB, or any model wrapped in a prediction function)

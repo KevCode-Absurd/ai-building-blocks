@@ -9,6 +9,7 @@ level: beginner
 inputs:
   - {type: meeting_notes, required: true}
   - {type: transcript, required: false}
+  - {type: question, required: true}
 outputs:
   - {type: meeting_notes}
   - {type: plan}

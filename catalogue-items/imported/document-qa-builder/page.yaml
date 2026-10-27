@@ -9,7 +9,7 @@ subhead: Working code that lets you ask questions about your own documents and g
 explain: |
   Working code that lets you ask questions about your own documents and get answers that show which pages they came from. This is the common retrieval-augmented generation setup.
 
-  It uses LlamaIndex, a framework for connecting language models to private data. The code loads your files, with more than 300 connectors for sources like PDFs, Notion and databases, then splits and indexes them. When you ask a question, it finds the best passages, passes them to the model and returns the answer with the source passages attached. It suits knowledge bases, internal chatbots and data extraction. It needs Python, the LlamaIndex package and an API key for a model provider.
+  It uses LlamaIndex, a framework for connecting language models to private data. The code loads your files, with more than 300 connectors for sources like PDFs, Notion and databases, then splits and indexes them. When you ask a question, it finds the best passages, passes them to the model and returns the answer with the source passages attached. It suits knowledge bases, internal chatbots and data extraction. It needs Python, the LlamaIndex package and an API key for a model provider. This is Orchestra Research's LlamaIndex skill, shared under the MIT licence.
 when:
   - You want a chatbot that answers from your company handbook.
   - You have hundreds of PDFs and need to ask questions across all of them.
@@ -36,6 +36,8 @@ how_to_use:
   - Run the short starter example from the skill. Ask one question about your files.
   - Print the source passages for the answer. Check they match what the answer says. If you scrape web pages, get the site owner's permission first.
   - If an answer is not backed by its passage, try smaller chunks or retrieve more passages, then check again before you share the tool with others.
+  - The text of your files is sent to your model provider with each question. Do not use private or sensitive files until you have checked the provider's terms.
+  - Next, add the optional chat engine so it remembers earlier questions, or ask your AI to add a test that checks each answer against its source passage.
 output_sample:
   input:
     - Your documents, such as PDFs, Word files, text files or web pages

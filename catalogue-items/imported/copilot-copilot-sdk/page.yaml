@@ -38,7 +38,9 @@ how_to_use:
   - Download the skill folder. In Claude, open Customize → Skills, then choose + → Create skill → Upload a skill. In ChatGPT, add the files to a project's Sources. In Gemini, make a Gem and paste the instructions. Or paste the instructions into a chat.
   - Ask your AI to follow this skill. Include the files and details listed on this page.
   - It works best when your AI can read the files you provide and use the named tools when the job requires them.
-  - Next, run the quick start, then test the custom tool and the MCP link one at a time.
+  - Before you run anything, check that your GitHub Copilot subscription is active and that you are signed in on this computer.
+  - A good first run prints one reply from the agent to your terminal. If you see that, the setup works.
+  - Next, run the quick start, then test the custom tool and the MCP link one at a time. In Go, fill in the MCP server fields from the SDK's own documentation, because the skill leaves them empty.
 output_sample:
   input:
     - What your agent app should do

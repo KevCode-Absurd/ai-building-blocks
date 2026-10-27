@@ -30,6 +30,8 @@ TransformerLens is the de facto standard library for mechanistic interpretabilit
 - You need remote execution on massive models → Use **nnsight** with NDIF
 - You want higher-level causal intervention abstractions → Use **pyvene**
 
+If you have a report from the model feature finder, use its named features as the behaviour to trace through the layers.
+
 ## Installation
 
 ```bash

@@ -1,6 +1,6 @@
 # Check contracts and rules: AI Blocks
 
-> 98 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 99 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Accessibility standards checker](https://useaiblocks.com/skills/accessibility-standards-checker): Check your site against WCAG accessibility rules. Give it your page code or screenshots. You get gaps by level, fixes ranked first, and statement notes.
 - [Ad claim sorter](https://useaiblocks.com/prompts/ad-claim-sorter): Paste your ad or page copy. Get each claim sorted as fine, needs proof or cut, with safer wording.
@@ -38,6 +38,7 @@
 - [Dispute demand letter draft writer](https://useaiblocks.com/workflows/turn-a-dispute-into-a-checked-demand-letter-draft): Share the dispute, agreement and supporting messages. Get a fact sheet, a dated timeline and a demand-letter draft for a lawyer to review.
 - [Dispute timeline builder](https://useaiblocks.com/skills/dispute-timeline-builder): Build a dated dispute timeline from documents. Get source links, key events, gaps and first-pass flags for legal review.
 - [Employee data privacy reviewer](https://useaiblocks.com/workflows/review-employee-data-access-before-a-change): Share proposed HR changes, data types, roles and policy. Get access risks, privacy questions and restricted review actions before changes are made.
+- [EU AI Act readiness checker](https://useaiblocks.com/skills/eu-ai-act-readiness-checker): Check AI system details and records for possible gaps under the EU AI Act.
 - [EU financial IT resilience checker](https://useaiblocks.com/skills/financial-it-resilience-checker): Share your EU finance firm and IT supplier details. Check DORA duties, incident reports, contract terms and facts to confirm.
 - [EU network security rules checker](https://useaiblocks.com/skills/eu-network-security-check): Check firm size, services, countries, and records for gaps under NIS2, the EU network security law.
 - [Facilities contract cost comparison reviewer](https://useaiblocks.com/workflows/compare-facilities-service-contract-options): Compare facilities service coverage and full costs. Summarise contract duties and questions for review, using the same basis for each offer.

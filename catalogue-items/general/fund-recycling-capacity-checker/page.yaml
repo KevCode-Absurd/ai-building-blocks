@@ -66,12 +66,14 @@ output_sample:
     - name: MISSING and CHECKS MISSED
       contains: Inputs not supplied and checks that failed or could not run.
 how_it_works:
-  - title: 1. Check the exact cap basis, investment-period cutoff, eligible distribution categories and any LP approvals
-    text: Check the exact cap basis, investment-period cutoff, eligible distribution categories and any LP approvals.
-  - title: 2. Compute aggregate cap and subtract actual previously recycled amounts, keeping any historic overuse visible
-    text: Compute aggregate cap and subtract actual previously recycled amounts, keeping any historic overuse visible.
-  - title: 3. Admit only eligible new distributions within remaining capacity; reconcile distributions left ineligible under the cap
-    text: Admit only eligible new distributions within remaining capacity; reconcile distributions left ineligible under the cap.
+  - title: Read the cap terms
+    text: Starts with the cap base and recycling fraction, then the cutoff date, eligible distribution types and approvals. If the window is closed or unproven, nothing is reusable.
+  - title: Work out what is left
+    text: Cap base times fraction, minus what was already recycled. If that is below zero, the overuse is shown on its own line and the remaining cap is zero.
+  - title: Fit the new distributions
+    text: The reusable amount is the smaller of the eligible distributions and the remaining cap. The rest is the excluded excess.
+  - title: Tie it out
+    text: Reusable plus excluded must equal the eligible distributions. Missing inputs are listed, never set to zero.
 output_shape: |-
   Remaining cap, reusable amount, excluded excess and prior cap overuse.
   Scope and dated sources

@@ -99,7 +99,7 @@ function ScopedIntakePage({ c, toast, draftKey }: Props & { draftKey: string }) 
         <p className="small" id="intake-words" data-testid="intake-words">
           {words ? `${words.toLocaleString()} words.` : "Nothing pasted yet."}
           {words > 0 && words < SHORT && " That's short. If it's a summary, your AI will mark the steps it can't find."}
-          {biz ? " Your saved context goes in the pack too." : ""}
+          {biz ? " Your me.md goes in the pack too." : ""}
         </p>
         {error && <p className="small intake-error" role="alert">We could not prepare the files. Your text is still here. {error}</p>}
         <div className="bp-actions intake-actions">

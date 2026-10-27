@@ -30,10 +30,11 @@ you_get:
   - Breakdown by balance band
   - A list of stale cards and cards that expire within 30 days
 how_to_use:
-  - Use an AI that can run Shopify admin commands. A plain chat with no store access cannot read your cards.
-  - Sign in to your store with permission to read gift cards.
+  - Use an AI that can run Shopify admin commands, such as Claude Code with the Shopify CLI installed. A plain chat with no store access cannot read your cards.
+  - Gather these first. Your store domain, which cards to include (on, off or all), your balance band edges and the number of days before a card counts as stale (the defaults are 10, 50, 100, 250 and 500, and 365 days).
+  - Sign in to your store with the Shopify CLI. Your login needs the read_gift_cards permission.
   - Paste the skill into your AI and give your store domain. Add band edges or stale days if you want your own.
-  - Check the totals, the month and band tables, and the stale list.
+  - Check the totals, the month and band tables, and the stale list. If your store sells in more than one currency, you get a separate total for each. If no cards come back, check the card status you chose and your login permission.
   - Send the figure to your accountant before you book anything. Stale cards are judged by last update date, and cards that expire within 30 days are flagged too. Both are only hints, not proof the money is earned.
   - The saved file lists customer email addresses. Keep it private and share only the totals unless your accountant needs the rows.
 output_sample:

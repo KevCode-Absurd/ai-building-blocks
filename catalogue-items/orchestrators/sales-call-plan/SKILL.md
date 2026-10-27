@@ -76,9 +76,9 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Win and loss pattern finder](https://useaiblocks.com/skills/win-and-loss-pattern-finder).
-- The [Sales discovery call coach](https://useaiblocks.com/skills/agency-sales-discovery-coach).
 - The [Lost deal pitch reviewer](https://useaiblocks.com/skills/monthly-lost-deal-reviewer). It takes the draft.
+- The [Cold call script writer](https://useaiblocks.com/skills/cold-call-script-writer). It takes the draft.
+- The [Mutual action plan builder](https://useaiblocks.com/skills/mutual-action-plan-builder). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

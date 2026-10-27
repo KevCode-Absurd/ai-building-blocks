@@ -32,10 +32,11 @@ you_get:
   - Early warning signals
   - Short list of what to do now
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the full text of SKILL.md, or add the skill to your AI. The page does not hold the skill text.
   - Describe your worry in one or two lines, such as a late shipment or a demand spike.
   - Add the decision it affects, how far ahead you plan, and any weak points like a single supplier.
   - Paste your cost and lead time figures if you have them. If not, your AI will ask or mark them as missing.
+  - Ask for more than three cases only if you need them, such as a "perfect storm" that combines two problems. The optional Python code in the skill builds five example cases to show the method, and it is untested.
   - Check the numbers in the result. The skill's example demand, cost and penalty figures are invented placeholders, so swap in your own before you share the report.
   - Share the report with your team or finance, and set a date to review the early warning signs.
 output_sample:
@@ -51,7 +52,7 @@ output_sample:
     - name: Executive summary
       contains: The purpose, the scenarios tested, the main findings and what they mean for your decision.
     - name: Scenario definitions
-      contains: A table of each scenario with a name, a description, key assumptions and a probability.
+      contains: A table of three scenarios (base, best and worst) with a name, a description, key assumptions and a probability. The probability is your own judgement, and it is left as missing if you give none.
     - name: Scenario results
       contains: A table comparing total cost, service level, inventory and key notes for each scenario.
     - name: Risk assessment

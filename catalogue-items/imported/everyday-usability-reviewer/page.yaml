@@ -17,8 +17,8 @@ when:
   - A physical product or device gets blamed for user mistakes.
 not_for:
   - "You want a review of visual style or brand look: ask a designer, since this checks how easy it is to use."
-  - "You want a full usability score with set heuristics: use the ux-heuristics item, if your library has it."
-  - "You need proof of what real users do: run a short usability test with five real users instead."
+  - "You want proof from real people: use the Usability test runner, or run a short test with five users."
+  - "You need proof of what real users do: use the Usability test runner, or run a short test with five real users instead. The score here is your AI's judgement, not a measured result."
 you_give:
   - Description or screenshot of the product or screen
   - The task users try to do
@@ -33,7 +33,7 @@ how_to_use:
   - Describe your screen or product in a few lines, or attach a screenshot.
   - Say the task users are trying to do. Add complaints or support questions if you have them.
   - Ask your AI to list the task, walk each step through the seven stages of action, and mark each of the five checks pass or fail.
-  - Read the score and the failing checks first. Then pick the fixes that match your top complaints. This is an MIT-licensed skill imported from Wondel.ai, adapted from wondelai/skills.
+  - Read the score and the failing checks first. Then pick the fixes that match your top complaints. Turn each failing check into one fix, make the change, and run the review again to see if the score rises. This is an MIT-licensed skill imported from Wondel.ai, adapted from wondelai/skills.
 output_sample:
   input:
     - A description or screenshot of your product or screen
@@ -41,12 +41,13 @@ output_sample:
     - Complaints or support questions (optional)
   output:
     - name: Score
-      contains: A score out of 10, with 2 points for each of the five checks your design passes.
+      contains: Comes first. A score out of 10, with 2 points for each of the five checks your design passes. It is your AI's judgement, so check it against real users.
     - name: Failing checks
       contains: "The checks that lost points: finding what to do, seeing results, fixing errors, matching controls, and limits."
     - name: Confusing points
-      contains: Each spot where users get lost, with the reason it confuses them.
+      contains: Up to five spots where users get lost, with the reason each one confuses them.
     - name: Fixes
       contains: Changes grouped under cues, limits and feedback, so users know what to do and what happened.
     - name: Error recovery
       contains: Ways to stop common mistakes and help users undo them.
+next: [usability-test-runner]

@@ -31,7 +31,7 @@ you_get:
   - One ordered timeline with gaps and durations
   - A blame-free incident review with follow-up actions
 how_to_use:
-  - Open your AI and paste the skill text. If your AI can run code, upload the skill folder with its Python scripts. If it cannot, paste the same fields and ask it to give the same sections by hand.
+  - Open your AI and paste the skill text. If your AI can run code, upload the skill folder with its Python scripts. If it cannot, paste the incident description, the impact numbers and the timestamped events in the chat, and ask it to work out the severity, the timeline and the review by hand. You get the same sections, but nothing is checked by a script.
   - During the outage, paste your incident description and impact numbers. Ask for the severity, the response team and the update messages.
   - Check the severity. Send the updates, and change the times and details in the templates first.
   - After the fix, paste your timestamped logs and chat messages. Ask for one ordered timeline and a list of gaps.

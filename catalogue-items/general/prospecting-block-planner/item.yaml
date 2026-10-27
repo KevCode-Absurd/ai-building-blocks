@@ -9,7 +9,7 @@ level: intermediate
 inputs:
   - {type: question, required: true}
   - {type: plan, required: false}
-  - {type: spreadsheet, required: false}
+  - {type: lead_list, required: false}
 outputs:
   - {type: plan}
 origin: rebuilt

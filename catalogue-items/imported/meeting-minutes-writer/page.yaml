@@ -10,6 +10,8 @@ explain: |
   Short minutes that let someone who missed the call catch up in three minutes, and let attendees see what they owe. Paste your rough notes and get the point of the meeting first, then the detail.
 
   The notes are sorted into three groups. Decisions are written as "Decided to do X", never "Discussed X". Action items need an owner and a date, and when the notes lack one, the gap is marked [unassigned] or [TBD] rather than guessed. Open questions say what blocks them and who moves next. A final check confirms every item is complete, and the minutes stay under a third of the length of the notes.
+
+  This is a copy of a community skill written by alapha888, not an original AI Blocks skill. Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (alapha888) says MIT. Credit goes to alapha888 and sickn33.
 when:
   - You have a page of messy notes from a team call and need to send a summary.
   - Your action items keep going out without owners or dates.

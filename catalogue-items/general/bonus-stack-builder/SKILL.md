@@ -93,8 +93,8 @@ CHECKS MISSED
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Guarantee and refund plan writer](https://useaiblocks.com/skills/guarantee-designer). It takes the offer.
-- The [Offer bonus planner](https://useaiblocks.com/prompts/bonus-idea-matcher). It takes the offer.
 - The [Offer name writer](https://useaiblocks.com/skills/offer-name-writer). It takes the offer.
+- The [Offer value reviewer](https://useaiblocks.com/skills/value-equation-scorer). It takes the offer.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

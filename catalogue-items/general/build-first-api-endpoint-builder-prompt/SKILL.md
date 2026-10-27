@@ -9,13 +9,15 @@ This prompt is for a person who is not a developer and wants to see what a serve
 
 It is a practice exercise. It does not build a feature for your business. Part 3 is the bridge to your own first endpoint.
 
+Not for: testing endpoints you already have (use the API test suite builder), a mobile app that needs a server (use the Expo API route builder), a Slack bot (use the First Slack Bot coding prompt), or a project that is not Next.js with an app folder. The "Before you start" list mentions MISSING lines and CHECKS MISSED. This prompt has neither section: if something is missing, say exactly what and stop.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Supabase connection prompt writer](https://useaiblocks.com/prompts/connect-code-to-supabase-builder-prompt).
-- The [Expo API route builder](https://useaiblocks.com/skills/expo-api-route-builder).
-- The [Google Ads agent development planner](https://useaiblocks.com/prompts/google-ads-operator-agent-builder-prompt).
+- The [Pull request writer](https://useaiblocks.com/skills/pull-request-writer). It takes the code change.
+- The [Simple code coach](https://useaiblocks.com/skills/simple-code-coach). It takes the code change.
+- The [Oracle migration risk reviewer](https://useaiblocks.com/skills/copilot-reviewing-oracle-to-postgres-migration). It takes the code change.
 - The [Code change reviewer](https://useaiblocks.com/skills/code-change-reviewer). It takes the code change.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
@@ -99,6 +101,8 @@ Wait for my OK before you write any code. Don't add packages or connect any outs
 Read the brief and fix anything wrong before you say OK.
 
 ## What good output looks like
+
+The AI should hand back, in this order: Check (App Router found or not, and what it saw), Files created, Other files changed (or none), the Plain-English explanation, How to test, and the optional brief for your own endpoint.
 
 - Two new files, `app/api/ping/route.ts` and `app/api/echo/route.ts`, and a list of every file the AI touched.
 - A plain-English explanation that answers all five questions in Part 1.

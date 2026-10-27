@@ -16,11 +16,12 @@ The two steps use a two-step order inspired by Alex Hormozi's lost chapter on yo
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your customer list** (yours): a customer or order export with dates, amounts and what they bought.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 
 **Makes it better (optional):**
 - **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -30,11 +31,13 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for your results, customer words, your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your customer list, customer words, your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
 ## What you need
+
+These inputs replace the general list above.
 
 - **Your customer list** (required): one row per customer, with what each one paid and how long they stayed or kept buying. This is not an ad platform export.
 - **How good each customer is to work with** (optional): a simple scale or a note.
@@ -55,6 +58,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 1. **Find your best customers.** Use the skill `best-customer-finder`. Give it the customer list, the customer words and your brand brain if you have it. It ranks customers by what they paid, how long they stayed and how well they fit, and keeps the top fifth (the exact count is stated). It then reads their answers, finds the three to five traits nearly all of them share (each with a count against the rest), writes a plain profile, names who does not fit, counts the channels they first came through, and says what the list cannot show. Save it as `outputs/step-01-best-customer-finder.md`.
 2. **Rebuild how they buy.** Use the skill `buying-path-rebuilder`. Give it the profile and channels from `outputs/step-01-best-customer-finder.md`, plus what each top customer did before buying and their words. It lists each top customer's path, counts how many did each step (as x of n), finds the pattern most of them share, and checks it against weaker customers' paths (marked unchecked if you gave none). It then writes the steps to add to every lead's path, picks the pieces that most top customers used for sales to hand out, and sets a test: leads who get the steps against leads who do not, with a number that counts as a win. Save it as `outputs/step-02-buying-path-rebuilder.md`.
+
+   If you have no record of what top customers did before buying, ask at least five of them first. If you cannot, stop after step 1, write `MISSING: what top customers did before buying`, and hand back the step 1 file with that gap named. Step 2 never guesses a path.
 3. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back
@@ -67,9 +72,9 @@ Two step files and the summary, in this shape:
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Ideal customer profiler](https://useaiblocks.com/skills/ideal-customer-profiler).
 - The [Customer switching journey mapper](https://useaiblocks.com/skills/switch-story-mapper). It takes the plan.
 - The [Customer task definition writer](https://useaiblocks.com/skills/job-spec-writer). It takes the shortlist.
+- The [Customer conversation notes sorter](https://useaiblocks.com/skills/customer-interview-notes). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

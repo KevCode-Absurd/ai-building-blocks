@@ -58,8 +58,8 @@ how_it_works:
     text: Use operating invested capital excluding nonoperating assets and a WACC matching NOPAT.
   - title: 2. Deduct the annual capital charge from each NOPAT forecast and discount each economic profit at correct annual timing
     text: Deduct the annual capital charge from each NOPAT forecast and discount each economic profit at correct annual timing.
-  - title: 3. Add discounted economic profits to opening capital only under constant-capital and zero-terminal-excess-return assumptions; reconcile maintenance investment with depreciation
-    text: Add discounted economic profits to opening capital only under constant-capital and zero-terminal-excess-return assumptions; reconcile maintenance investment with depreciation.
+  - title: "3. Add discounted economic profits to opening capital only under constant-capital and zero-terminal-excess-return assumptions; reconcile maintenance investment with depreciation"
+    text: "Add discounted economic profits to opening capital only under constant-capital and zero-terminal-excess-return assumptions; check that yearly spending to keep the assets running (maintenance investment) equals depreciation, so capital really stays flat. If it does not, stop and say the flat-capital assumption fails."
 output_shape: |-
   A two-period economic-profit schedule and PV contribution over invested capital.
   Scope and dated sources

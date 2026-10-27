@@ -30,10 +30,10 @@ you_get:
   - An improvement road map
   - A security score
 how_to_use:
-  - Check that your skill folder sits in the claude-skills repo, for example at engineering/skills/your-skill. The commands expect this layout.
+  - Check that your skill folder sits in the claude-skills repo, for example at engineering/skills/your-skill. The commands expect that folder layout, so the path must match. This copy has only four tools: the validator, the script tester, the quality scorer and the security scorer. The skill's audit_skills.py tool, which checks many skills at once, is not included, so run the three commands on each folder in turn.
   - Open a terminal in the repo root, or use an AI that can run code and read files. Python 3 is all you need.
   - Run the structure check on your skill folder with the skill_validator.py script. Add the JSON flag if you want results a program can read.
-  - Read the skill's Python scripts first. script_tester.py runs them, so only use it on code you trust. Then run the script_tester.py script on the same folder, then the quality_scorer.py script. Add a minimum score if you want it to fail below a bar.
+  - Read the skill's Python scripts first. script_tester.py runs them, so only use it on code you trust, and run it on a throwaway copy of the folder or inside a container. Then run the script_tester.py script on that copy, then the quality_scorer.py script. Add a minimum score if you want it to fail below a bar.
   - Work through the improvement roadmap from the top. Fix one item, then run all three checks again.
   - Stop when the structure check passes, every script passes and the score meets your target.
 output_sample:
@@ -55,6 +55,6 @@ output_sample:
     - name: Tier recommendation
       contains: Whether the skill reads as BASIC, STANDARD or POWERFUL, based on its size and features.
     - name: Improvement roadmap
-      contains: A ranked list of fixes to work through from the top, then re-run until you reach your target score.
+      contains: A ranked list of fixes to work through from the top, then re-run until you reach your target score. The scorer's JSON has the fields overall_score, letter_grade, tier_recommendation, dimensions and improvement_roadmap. The validator's JSON has overall_score, compliance_level and checks.
     - name: Security score
       contains: A risk rating for the skill, which can also be added into the quality score.

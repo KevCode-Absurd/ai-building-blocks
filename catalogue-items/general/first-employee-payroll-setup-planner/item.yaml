@@ -13,8 +13,6 @@ inputs:
 outputs:
   - type: plan
     required: true
-  - type: question
-    required: false
 origin: own
 version: 1.0.0
 next:

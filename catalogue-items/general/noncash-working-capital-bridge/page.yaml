@@ -5,14 +5,14 @@ summary: Find how much cash a business really put into working capital, after re
 job: track-numbers
 thinking: high
 thinking_why: "Only part of a balance change is cash, so each noncash movement must be found in the notes before the cash figure is read."
-subhead: An operating working-capital investment bridge with a signed cash-flow counterpart. Share opening and closing operating working capital plus signed acquisition, FX and other noncash movements on the same perimeter.
+subhead: Give it the opening and closing operating working capital and the acquisition, currency and write-off figures from the notes. It takes those out of the balance change and shows the cash the business really put in.
 explain: |-
-  An operating working-capital investment bridge with a signed cash-flow counterpart.
+  Working capital on the balance sheet can rise for reasons that never touched cash, such as buying a company, a currency move or a write-off. If you read the whole rise as cash spent, you get the wrong picture. This skill removes the noncash parts and shows the cash effect that is left.
 
-  Issuer accounting and earnings. Illustrative figures. The balance rises from 100 to 150, an increase of 50. Noncash movements of 20 + 5 - 5 = 20 leave 30 of operating investment, and a cash effect of -30. If the acquisition adds 30 to the balance instead, only 20 is operating investment.
+  Illustrative figures, not a real company. The balance rises from 100 to 150, an increase of 50. Noncash movements of 20 + 5 - 5 = 20 leave 30 of operating investment, and a cash effect of -30. If the acquisition adds 30 to the balance instead, only 20 is operating investment.
 when:
-  - You need an operating working-capital investment bridge with a signed cash-flow counterpart.
-  - You work on issuer accounting and earnings and need traceable calculations.
+  - You need to know how much cash went into working capital, not just how the balance moved.
+  - You compare cash flow and balance sheet and the numbers do not tie.
   - A reviewer needs to trace the result back to inputs and assumptions.
 not_for:
   - You have factoring, supplier finance or discontinued operations. These need their own schedules, so split them out first or ask your accountant.
@@ -20,11 +20,11 @@ not_for:
   - You want a full cash-flow statement or a company valuation. Use a full model built with your finance team.
   - "Part of your operating cash came early from selling invoices to a factor: use the Factoring cash-flow timing bridge instead."
 you_give:
-  - Opening and closing operating working capital plus signed acquisition, FX and other noncash movements on the same perimeter.
+  - Opening and closing operating working capital, plus the signed acquisition, currency and other noncash movements for the same set of businesses.
   - "The period end, plus the currency and scale used for the working capital investment."
   - "Your spreadsheet tool, if you want the working capital investment as a workbook."
 you_get:
-  - An operating working-capital investment bridge with a signed cash-flow counterpart.
+  - The operating investment in working capital for the period, and the matching cash-flow effect with its sign.
   - "An editable workbook of the working capital investment, with its inputs, formulas and test cases to rerun."
   - "A tie-out of the balance change and the noncash movements, the inputs still missing and the checks that ran."
 how_to_use:
@@ -54,14 +54,14 @@ output_sample:
     - name: "MISSING: and CHECKS MISSED"
       contains: Inputs that could not be found and checks that failed or could not run, or none.
 how_it_works:
-  - title: 1. Define operating working capital consistently, excluding cash, financing and tax balances unless explicitly part of the chosen measure
-    text: Define operating working capital consistently, excluding cash, financing and tax balances unless explicitly part of the chosen measure.
-  - title: 2. Reconcile closing minus opening balances to acquisition additions, currency translation, write-offs and other noncash movements from the notes
-    text: Reconcile closing minus opening balances to acquisition additions, currency translation, write-offs and other noncash movements from the notes.
-  - title: 3. Subtract signed noncash movements to isolate operating balance investment; reverse its sign for the indirect cash-flow contribution and investigate residual classification differences
-    text: Subtract signed noncash movements to isolate operating balance investment; reverse its sign for the indirect cash-flow contribution and investigate residual classification differences.
+  - title: Defines the measure
+    text: Sets operating working capital the same way at both dates, leaving out cash, financing and tax balances.
+  - title: Takes out noncash movements
+    text: Lists acquisitions, currency translation and write-offs from the notes with signs, and subtracts them from the balance change.
+  - title: Gives the cash effect
+    text: Reverses the sign of what is left to show the cash-flow effect, then reconciles opening to closing with no plug.
 output_shape: |-
-  An operating working-capital investment bridge with a signed cash-flow counterpart.
+  Operating investment in working capital and its signed cash-flow effect
   Scope and dated sources
   Inputs and assumptions
   Model calculations and reconciliations

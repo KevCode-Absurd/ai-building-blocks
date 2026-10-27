@@ -17,6 +17,8 @@ Display volumes with `volshow` for performant, high quality volume display. Disp
 - User wants ROIs, annotations, or other lines and shapes plotted on top of the volume or surface mesh
 - User wants to display labeled data or other overlay volumes on top of a volume
 
+If you already have a viewer or app, give it as the codebase and the 3D view is added to it.
+
 ## When NOT to Use
 
 - User does not have the Image Processing Toolbox — fall back to `isosurface` + `patch`, but recommend `volshow` for better performance.

@@ -12,9 +12,11 @@ inputs:
     required: true
   - type: source_text
     required: false
+  - type: spreadsheet
+    required: false
 outputs:
-  - type: brief
   - type: audit_report
+  - type: document
 uses: []
 steps: []
 origin: imported

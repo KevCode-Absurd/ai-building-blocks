@@ -9,7 +9,7 @@ headline: "Store test verdict maker"
 subhead: Give it your finished test's numbers, dates and what else happened on the store. It checks the result can be trusted, shows the lift as a range in money, and tells you to ship, not ship, re-test or call it inconclusive, with a trust score out of 100.
 
 explain: |
-  A test that finished with a green "winner" banner is not yet a result. Many winners come from stopping early, an uneven traffic split, an email send that spiked sales, or a tracking bug. If you check a test every day and stop at the first good look, a 5 percent chance of a false alarm can grow to about 26 percent.
+  A test that finished with a green "winner" banner is not yet a result. Many winners come from stopping early, an uneven traffic split, an email send that spiked sales, or a tracking bug. If you check a test every day and stop at the first good look, a 5 percent chance of a false alarm can grow a lot.
 
   This skill checks the test before it reads the result. It tests the split, the run length, early stopping, tracking and anything else that changed. Then it gives the lift as a range, turns both ends into gross profit per month, and checks that order value, margin and returns did not get worse. It ends with one call and a log entry, so the lesson is saved. It is the store version of the general A/B test verdict maker.
 
@@ -102,6 +102,7 @@ output_shape: |
   WHY      <two sentences>
   LOG      hypothesis | evidence | metrics | planned sample and dates | result with range
            split check | call | lesson
+  CHECKS MISSED: <none, or the checks you could not run>
   MISSING: <what was not given>
 
 tweaks:

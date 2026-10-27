@@ -5,7 +5,7 @@ name: 3D image viewer builder
 summary: Build a 3D image viewer in MATLAB. Give it a scan or mesh and get code to scroll slices, overlay masks and draw marked regions.
 job: build-software
 headline: 3D image viewer builder
-subhead: Give it a 3D scan, volume file or surface mesh, plus any mask to lay on top. It picks the right MATLAB display call for your data and writes the viewer code. You get slice scrolling, overlay display, drawn regions with notes and a starter app layout if you want one.
+subhead: Give it a 3D scan, volume file or surface mesh, plus any mask to lay on top. It picks the right MATLAB display call for your data and writes the viewer code. You get slice scrolling, overlay display, drawn regions with notes and a starter app layout if you want one. It needs MATLAB with the Image Processing Toolbox, and the licence lets you use it only with MathWorks products.
 explain: |
   You get MATLAB code that opens a 3D scan or surface mesh in an interactive viewer. You can scroll through slices, lay a colour mask on top, and draw marked regions and notes right on the volume.
 
@@ -36,8 +36,10 @@ how_to_use:
   - Paste in the file type of your scan (DICOM, NIfTI or mesh) and say what you want to see, such as slices, a mask overlay or drawn regions.
   - Say if you want a small app around the viewer.
   - Run the code it gives you in MATLAB. You need the Image Processing Toolbox. DICOM and NIfTI files also need the Medical Imaging Toolbox.
-  - Check the scan opens with the right size and units. Ask your AI to fix anything that looks off.
-  - Want a full app next? Pair the viewer with the MATLAB app builder. Ask someone who knows MATLAB to run the code and confirm the scan size and units. This is a viewing aid, not a tool for diagnosis.
+  - Check the scan opens with the right size and units, and that a slice looks like the scan you expect.
+  - If it fails, tell your AI the exact MATLAB error. The usual causes are a missing toolbox and wrong spacing or units.
+  - Want a full app next? Ask for the app layout, or pair the viewer with the MATLAB app builder.
+  - This is a viewing aid, not a tool for diagnosis. Ask someone who knows MATLAB, and a qualified clinician for anything medical, before you rely on what you see.
 output_sample:
   input:
     - Your 3D volume, scan file (DICOM, NIfTI or NRRD) or surface mesh

@@ -23,9 +23,11 @@ you_get:
   - "A plain-language prompt and a matching JSON prompt, with a role for each reference image"
   - Missing inputs and steps that still need to run
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Add the skill to your AI, or download the pack and give its instructions to your AI.
+  - Write your brief in one sentence and say where the image will be used. Attach any image to edit and any reference images.
+  - For each reference, say what it is for (product shape, face, style or layout) and which one wins if they clash.
+  - Read the plain-language prompt and the JSON side by side. Check they say the same thing.
+  - Paste the plain-language prompt into Nano Banana in Gemini, or your image tool, and attach the same images. Check the result against the preserve list.
 output_sample:
   input:
     - "Your brief: the image you want, or the edit you want made"

@@ -9,7 +9,8 @@ level: intermediate
 inputs:
   - {type: question, required: true}
 outputs:
-  - {type: plan}
+  - {type: audit_report}
+  - {type: plan, required: false}
 origin: rebuilt
 version: 1.0.0
 minds: [richard-branson, ratan-tata, jeff-bezos]

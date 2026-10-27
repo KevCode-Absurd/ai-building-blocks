@@ -37,6 +37,8 @@ how_to_use:
   - Ask for drafts for each platform. Edit them so they sound like you before you post.
   - "For listening, the Reddit, Hacker News and Bluesky recipes fetch live pages. That may break each site's rules, so use the official API or skip it. Some tools also need a paid plan or a key, so check before you start."
   - "You end with a 4-week calendar (posts per platform per week), then a draft for each post."
+  - "The skill text is long. If your AI cuts it off, paste the sections on pillars, hooks and the content calendar first, then the rest."
+  - "Next: plan the bigger picture with Content strategy planner. Before you schedule, read each draft once and cut any line that sounds like a stock AI phrase."
 output_sample:
   input:
     - Your platforms, such as LinkedIn, X, Instagram, TikTok or Facebook
@@ -62,3 +64,4 @@ output_sample:
       contains: When to schedule ahead, when to post live, and how to keep a queue.
     - name: Engagement routine
       contains: A short daily routine for replying to comments and sorting what needs an answer.
+next: [content-strategy-planner]

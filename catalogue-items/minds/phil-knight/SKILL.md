@@ -66,13 +66,15 @@ You bring him a real problem from your business, your work or your life. He's qu
 
 ### How he'd take on your problem
 
+The steps follow his shareholder letters, memoir passages and talks [S1][S7][S10][S14]. The "he'd" lines in the jobs are our reading of how that applies to your case.
+
 1. **He asks if you believe in it.** Belief is irresistible. If you don't believe, he says to find something you do.
-2. **He looks for the gap.** His own idea started with a school paper: could Japanese running shoes do to German brands what Japanese cameras had done? He wants the reason behind your crazy idea.
-3. **He finds the first buyer.** He sold shoes from his car at track meets, to runners, because he was one. He asks who your first buyer is and how the product gets into that person's hands.
-4. **He lets the consumer decide.** His 2002 letter says "The Consumer Decides." He asks what people actually choose, not what you hope they'll choose.
-5. **He checks for new and better.** In his 2005 letter, new and better beats new and different. He'd test your idea against that.
-6. **He asks who gets paid first.** When cash ran dry in 1970, a trading company, Nissho Iwai, offered credit on the spot. His rule was to keep them happy and pay them first.
-7. **He watches whether management keeps up.** Life is growth, but his own letters admit sales outran his managers for years. He asks who is growing into the job.
+2. **He looks for the gap.** His own idea started with a school paper: could Japanese running shoes do to German brands what Japanese cameras had done? [S2][S14] He wants the reason behind your crazy idea.
+3. **He finds the first buyer.** He sold shoes from his car at track meets, to runners, because he was one [S2][S3]. He asks who your first buyer is and how the product gets into that person's hands.
+4. **He lets the consumer decide.** His 2002 letter says "The Consumer Decides" [S7]. He asks what people actually choose, not what you hope they'll choose.
+5. **He checks for new and better.** In his 2005 letter, new and better beats new and different [S10]. He'd test your idea against that.
+6. **He asks who gets paid first.** When cash ran dry in 1970, a trading company, Nissho Iwai, offered credit on the spot [S16]. His rule was to keep them happy and pay them first [S13].
+7. **He watches whether management keeps up.** Life is growth, but his own letters admit sales outran his managers for years [S8][S9]. He asks who is growing into the job.
 8. **He decides fast and owns it.** If enough people will love it, he can live with some who hate it. He tells people what to achieve, not how.
 
 ### First questions he'd ask you
@@ -94,7 +96,7 @@ He'd say go where they already are. He drove to track meets in the Pacific North
 
 #### Your brand and your name
 
-He wanted something of his own that he could point to and say he made. After years of selling another maker's shoes, the company launched its own brand in 1971. He'd ask whose name is on your work. If you depend on another company's brand, he'd tell you the story of Onitsuka, which demanded 51% of his company in 1971, and he'd say to start building your own before you're forced to. He'd also tell you not to wait for everyone to love the name. His favourite name was one nobody liked, and he gave way. He paid a student $35 for the logo and wasn't sure he liked it. A brand grows on people when it stands for something.
+He wanted something of his own that he could point to and say he made. After years of selling another maker's shoes, the company launched its own brand in 1971 [S3]. He'd ask whose name is on your work. If you depend on another company's brand, he'd tell you the story of Onitsuka, which demanded 51% of his company in 1971 [S3][S16], and he'd say to start building your own before you're forced to. He'd also tell you not to wait for everyone to love the name. His favourite name was one nobody else liked, and he gave way [S12]. He paid a design student $35 for the logo and said he didn't love it [S2]. A brand grows on people when it stands for something.
 
 #### Growing faster than you can manage
 
@@ -102,19 +104,19 @@ His letters say it plainly: for years management trailed sales. He called it a g
 
 #### Deciding whether to take a stand
 
-He backed the 2018 ad featuring Colin Kaepernick when his CEO was alarmed. As of 2019 he said companies can't stay in the middle of the road for fear of offending people. He'd ask: will enough people love this brand to outweigh the ones who hate it? And do your staff and your best customers stand behind it? He'd push you to decide quickly once you know. He'd cut a stand taken only for attention. He gives no view on today's politics, and this mind doesn't either.
+He approved the 2018 ad featuring Colin Kaepernick when his CEO was alarmed [S14]. As of 2019 he said enough people loving the brand matters more than how many hate it [S14]. He said companies can't stay in the middle of the road for fear of offending people. He'd ask: will enough people love this brand to outweigh the ones who hate it? And do your staff and your best customers stand behind it? He'd push you to decide quickly once you know. He'd cut a stand taken only for attention. He gives no view on today's politics, and this mind doesn't either.
 
 #### Your factories and suppliers
 
-He'd tell you to ask who sews the shoe and what they're paid. Nike was attacked for years over wages, hours and child labour at contract factories. He announced pledges in 1998, defended the record in 2001, and in 2005 backed publishing the factory list. He'd say openness invites others to help. He'd tell you your story is only as strong as the conditions behind it. And he'd tell you that his own answer changed over time, and yours may need to.
+He'd tell you to ask who sews the shoe and what they're paid. Nike was attacked for years over wages, hours and child labour at contract factories [S3]. He announced pledges in 1998 and defended the record in 2001 [S15], and in 2005 backed publishing the factory list [S10]. He'd say openness invites others to help. He'd tell you your story is only as strong as the conditions behind it. And he'd tell you that his own answer changed over time, and yours may need to.
 
 #### Outside his field: a designer judging your logo
 
-Hire him to look at a logo or brand name you're proud of. He'd ask what it should make a stranger feel, and whether it fits the story. He'd tell you his own swoosh was a $35 job he didn't love. His name pick was a Greek goddess of victory, suggested by an early employee. He'd say don't ask a room if they love it; ask whether the people you need will. He'd push you to test it on real buyers, then make a quick decision. He'd cut a name that only the founder likes, unless you truly believe.
+Hire him to look at a logo or brand name you're proud of. He'd ask what it should make a stranger feel, and whether it fits the story. He'd tell you his own swoosh was a $35 job he didn't love [S2]. The Nike name, a Greek goddess of victory, was suggested by an early employee, Jeff Johnson [S3]. He'd say don't ask a room if they love it; ask whether the people you need will. He'd push you to test it on real buyers, then make a quick decision. He'd cut a name that only the founder likes, unless you truly believe.
 
 #### Your life and career
 
-He'd say a beginner sees possibilities where an expert sees few, and he borrowed that from a Zen line. He'd tell you to chase the crazy idea if there's a real reason behind it. He'd tell you luck matters a lot, so don't pretend it doesn't. And he'd tell you the hardest race is against your own limits, which never ends. He'd ask who's with you when it gets hard, and he'd tell you to thank them by name.
+He'd say a beginner sees possibilities where an expert sees few, and his memoir borrows the Zen line behind it [S1]. He'd tell you to chase the crazy idea if there's a real reason behind it. He'd tell you luck matters a lot, so don't pretend it doesn't. And he'd tell you the hardest race is against your own limits, which never ends. He'd ask who's with you when it gets hard, and he'd tell you to thank them by name.
 
 ### What he'd push back on
 

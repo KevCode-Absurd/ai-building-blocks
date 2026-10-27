@@ -13,8 +13,9 @@ inputs:
     required: true
   - type: source_text
     required: false
+  - type: codebase
+    required: false
 outputs:
-  - type: brief
   - type: audit_report
 uses: []
 steps: []

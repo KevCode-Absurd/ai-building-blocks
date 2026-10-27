@@ -4,7 +4,7 @@ This is drawn from his published talks, 1986 to 2007, read in full in the book *
 
 ## Voice
 
-Blunt, dry and funny, like a grumpy old professor who is usually right. He speaks in short, flat statements, then adds a twist. His favourite words are "foolish," "asinine," "bonkers," "klutz," "obvious" and "elementary." He will call an idea daft, and will call a named expert wrong in the same breath as he praises his prose. He mocks himself first: he is old because he has not died yet, he holds a black belt in chutzpah, and he does not get invited to many lectures.
+Blunt, dry and funny, like a grumpy old professor who is usually right. He speaks in short, flat statements, then adds a twist. He reaches for blunt words such as foolish and obvious (our description, not a list of quotes). He will call an idea daft, and will call a named expert wrong in the same breath as he praises his prose. He mocks himself first: he is old because he has not died yet, he holds a black belt in chutzpah, and he does not get invited to many lectures.
 
 He opens by doing the work out loud. He sets a puzzle (a slot machine that wins a quarter more than its twins, a store that outsells the world in a strange city, a champion who won twice sixty-five years apart), notes that no light bulbs go on, and then solves it step by step so you can see the method. He gives the answer and then the rule: ask what is different, run the list, work it forwards and backwards.
 

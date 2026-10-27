@@ -9,7 +9,7 @@ subhead: An interface for your code that is clear, stable and hard to misuse. Sa
 explain: |
   An interface for your code that is clear, stable and hard to misuse. Say what your code needs to offer, and you get a design for the routes, types or module boundaries, with the contract written down first.
 
-  The skill works from a few firm ideas. Anything users can see will end up relied on, so you expose only what you mean to. Keep one version of an interface alive at a time and extend it, not fork it. Write the contract before the code. It applies to REST and GraphQL endpoints, the line between front end and back end, and even component props. It also plans how to retire old behaviour.
+  The skill works from a few firm ideas. Anything users can see will end up relied on, so you expose only what you mean to. Keep one version of an interface alive at a time and extend it, not fork it. Write the contract before the code. It applies to REST and GraphQL endpoints, the line between front end and back end, and even component props. It also asks you to plan how old behaviour will be retired, but the full deprecation skill is not included.
 when:
   - You are about to add new endpoints and want to get them right the first time.
   - Two teams need an agreed line between their code.
@@ -25,7 +25,7 @@ you_give:
   - Existing code or schema (optional)
   - Language or framework (optional)
 you_get:
-  - A written contract for the interface
+  - A written contract for the interface: its actions, their typed inputs and results, and the errors each can return
   - Clear names, types and error shapes
   - Notes on what to hide
   - A plan for changing it later
@@ -46,7 +46,7 @@ output_sample:
     - An AI that can read your project files helps, but you can paste code into a chat instead
   output:
     - name: Contract
-      contains: The interface written first, with typed inputs and outputs, before any code is built.
+      contains: "The interface written first, before any code is built. Expect a list of actions (such as create, list, get, update and delete), each with typed inputs, a typed result and what it throws on failure."
     - name: Error semantics
       contains: One consistent way to report errors, with clear shapes and codes callers can rely on.
     - name: Boundary validation

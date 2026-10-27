@@ -8,7 +8,9 @@ role: make
 job: ops
 level: beginner
 inputs:
-  - type: brief
+  - type: tool_connection
+    required: true
+  - type: question
     required: true
 outputs:
   - type: spreadsheet

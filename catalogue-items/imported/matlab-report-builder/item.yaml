@@ -8,10 +8,15 @@ role: render
 job: ops
 level: intermediate
 inputs:
-  - type: source_text
+  - type: question
     required: true
+  - type: spreadsheet
+    required: false
+  - type: codebase
+    required: false
 outputs:
   - type: document
+  - type: code_change
 uses: []
 origin: imported
 source:

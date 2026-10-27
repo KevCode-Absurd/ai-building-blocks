@@ -8,10 +8,11 @@ role: make
 job: ops
 level: advanced
 inputs:
-  - type: spreadsheet
+  - type: dataset
     required: true
 outputs:
   - type: code_change
+  - type: document
 uses: []
 origin: imported
 source:

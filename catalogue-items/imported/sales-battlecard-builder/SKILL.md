@@ -28,7 +28,7 @@ Build structured sales battlecards that arm reps with everything they need to wi
 Provide the competitor name, your product's key differentiators, the target buyer persona, and any known competitive dynamics. The skill outputs a complete battlecard.
 
 **Example prompt:**
-> Create a battlecard for competing against DataVault Analytics. We sell CloudMetrics, a real-time analytics platform. Our advantages are real-time processing, simpler pricing, and better onboarding. Their advantages are brand recognition and deeper enterprise compliance features. Target buyer is VP of Data at mid-market SaaS companies.
+> Create a battlecard for competing against [COMPETITOR]. We sell [PRODUCT], [WHAT IT IS]. Our advantages are [A, B, C]. Their advantages are [X, Y]. Target buyer is [ROLE] at [TYPE OF COMPANY].
 
 ## When not to use
 
@@ -36,97 +36,75 @@ Skip the battlecard for a rival the team has never met in a deal. Keep a simple 
 
 ## Examples
 
-**These examples are fictional.** The companies, customers, quotes, results and prices in them are invented to show the layout only. Never copy a name, quote, number or result into a real deal. In a real battlecard, use only sourced facts, and write unknowns as placeholders such as [customer, result, source, date].
+**These examples show the layout only.** Every name, number, quote, result and price is a placeholder in square brackets. In a real battlecard, fill each one from a sourced, dated fact. Where you have no source, leave the placeholder and mark it unverified. Never write an invented customer, quote or result into a card.
 
 ### Example 1: Full Competitive Battlecard
 
-**Competitor:** DataVault Analytics
-**Our Product:** CloudMetrics
-**Target Buyer:** VP of Data at mid-market SaaS (200–1000 employees)
+**Competitor:** [COMPETITOR NAME]
+**Our Product:** [YOUR PRODUCT]
+**Target Buyer:** [BUYER ROLE AND COMPANY SIZE]
 
 ---
 
-**Competitor Snapshot**
+**Competitor Snapshot** (each line with source and date)
 
-- Founded 2012, ~2,000 employees, estimated $180M ARR
-- Strong enterprise presence (Fortune 500), weaker in mid-market
-- Recent: Raised Series E ($120M), launched AI module in Q3, acquired a data governance startup
-- Key reviews theme: Powerful but complex; long implementation cycles; expensive at scale
+- [Founded, size and funding, only from a public source: URL, date]
+- [Where they are strong and where they are weaker: URL, date]
+- [Recent launches or news: URL, date]
+- [What reviewers often say, from a named review site: URL, date]
 
 ---
 
 **Feature Comparison**
 
-| Capability | CloudMetrics | DataVault | Advantage |
-|---|---|---|---|
-| Real-time data processing | Sub-second streaming ingestion | Batch-first with near-real-time add-on | ✅ Strong — Us |
-| Time to value | 2-week avg. onboarding | 8–12 week implementation | ✅ Strong — Us |
-| Pricing model | Per-query pricing, no seat fees | Per-seat + data volume tiers | ✅ Slight — Us |
-| Enterprise compliance (SOX, FedRAMP) | SOC 2 Type II, HIPAA | SOC 2, HIPAA, SOX, FedRAMP | ❌ Slight — Them |
-| Pre-built dashboards | 50+ templates | 200+ templates | ❌ Slight — Them |
-| Custom SQL exploration | Full SQL with live autocomplete | SQL with limited auto-suggest | ✅ Slight — Us |
-| Embedded analytics | Native SDK, white-label ready | Requires partner module ($$$) | ✅ Strong — Us |
-| Brand recognition | Growing mid-market presence | Established enterprise brand | ❌ Them |
-| Customer support | Dedicated CSM on all plans | CSM only on Enterprise tier | ✅ Slight — Us |
+| Capability | Our product | Competitor | Advantage | Source and date |
+|---|---|---|---|---|
+| [Capability 1] | [What we do] | [What they do] | Strong lead / Slight lead / Even / Behind | [URL, date or "unverified"] |
+| [Capability 2] | [What we do] | [What they do] | [Rating] | [URL, date or "unverified"] |
 
 ---
 
 **Objection Handlers**
 
-**"DataVault is the industry standard — why would we take a risk on CloudMetrics?"**
+**"[Objection a rep hears]"**
 
-Acknowledge: DataVault has built a strong enterprise brand over the past decade — that's real.
-Reframe: The question is whether a product built for Fortune 500 complexity is the right fit for a mid-market team that needs speed and simplicity.
-Counter: Our mid-market customers go live in 2 weeks vs. DataVault's 8–12 week average. StreamOps, a 300-person SaaS company, evaluated both and chose us specifically because they couldn't justify a 3-month implementation for a 40-person data team.
-Bridge: What's your timeline for getting live dashboards in front of stakeholders?
+Acknowledge: [A true thing the competitor does well.]
+Reframe: [Why the buyer's own situation changes the question.]
+Counter: [Proof: [customer, result, source, date]. Use only a result the customer has agreed you may share.]
+Bridge: [A question that moves the buyer back to your differentiator.]
 
-**"DataVault has more compliance certifications."**
-
-Acknowledge: They do hold FedRAMP and SOX certifications that we don't yet carry.
-Reframe: For mid-market SaaS companies, SOC 2 Type II and HIPAA cover 95%+ of audit requirements. FedRAMP matters primarily for federal contracts.
-Counter: We're on track for SOX certification by Q3. In the meantime, every mid-market customer we've onboarded has passed their compliance audits with our current certifications.
-Bridge: Which specific compliance standards does your security team require? Let's map those directly.
-
-**"DataVault's AI module looks impressive."**
-
-Acknowledge: They made a big bet on AI with their Q3 launch — the vision is compelling.
-Reframe: First-generation AI features from a batch-oriented platform operate on stale data. Our AI-assisted insights run on real-time streams.
-Counter: Two customers who tested DataVault's AI module told us the insights lagged by 4–6 hours because the underlying data pipeline is batch-based. Our anomaly detection fires within seconds of a data shift.
-Bridge: How important is real-time alerting to your use case vs. retrospective pattern analysis?
+(Repeat for 5 to 8 objections.)
 
 ---
 
 **Win Themes**
 
-1. **Speed to value** — "Go live in weeks, not months. Your team starts getting answers on day 14, not day 90."
-2. **Real-time by design** — "We were built streaming-first. DataVault bolted on real-time as an afterthought — and the architecture shows."
-3. **Mid-market fit** — "You shouldn't need a 5-person implementation team to set up an analytics platform for a 300-person company."
+1. **[Theme, such as time to value]** — "[Talk track that links your strength to the buyer's priority, backed by a sourced fact.]"
+2. **[Theme]** — "[Talk track.]"
+3. **[Theme]** — "[Talk track.]"
 
 **Landmine Questions:**
-- "When you evaluated DataVault, did they quote you an implementation timeline? Ask them what their median mid-market onboarding duration is."
-- "Ask DataVault how their AI module handles real-time anomaly detection vs. batch-processed insights."
-- "Request DataVault's per-query pricing — they charge per seat, which gets expensive as you democratize data access."
+- "[A question a rep can ask early that makes the buyer check something where you are stronger.]"
 
 ---
 
 ### Example 2: Quick-Reference Deal Scenario Card
 
-**Scenario:** Prospect is in final evaluation between CloudMetrics and DataVault. Prospect's main concern is total cost of ownership over 3 years.
+**Scenario:** [Where the deal stands, and the buyer's main concern, such as total cost over a set number of years.]
 
 **Key plays:**
-- Request DataVault's 3-year TCO including implementation services, per-seat growth at 20% annual headcount increase, and add-on module costs (AI, embedded, governance).
-- Present our 3-year TCO: per-query pricing scales with usage, not headcount. At 300 employees growing to 500, our cost grows ~15% while their per-seat model grows ~67%.
-- Reference customer: PayFlow (fintech, 400 employees) — chose us over DataVault, projected $340K savings over 3 years, went live in 11 days.
+- [Ask the buyer for the competitor's full quote, including implementation, extra seats and add-ons.]
+- [Show our cost model, using the buyer's own numbers: [headcount], [growth], [price], [term].]
+- [Reference customer: [customer, result, source, date], only with the customer's permission.]
 
-**TCO Comparison (estimated, 300-person company growing to 500):**
+**Cost comparison (use the buyer's real quotes, not guesses):**
 
-| Cost Component | CloudMetrics (3-Year) | DataVault (3-Year) |
+| Cost Component | Our product | Competitor |
 |---|---|---|
-| Platform license | $216,000 | $378,000 |
-| Implementation | $0 (self-serve) | $85,000 |
-| Add-on modules | Included | $54,000 |
-| Dedicated CSM | Included | $36,000 (Enterprise tier) |
-| **Total** | **$216,000** | **$553,000** |
+| Platform licence | [amount, source] | [amount, source] |
+| Implementation | [amount, source] | [amount, source] |
+| Add-ons | [amount, source] | [amount, source] |
+| **Total** | [sum] | [sum] |
 
 ## Best Practices
 

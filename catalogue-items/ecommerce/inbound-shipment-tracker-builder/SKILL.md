@@ -89,8 +89,8 @@ MISSING: <POs | forwarder quotes | warehouse requirements | owner>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Landed cost calculator](https://useaiblocks.com/skills/landed-cost-calculator). It takes the document and spreadsheet.
-- The [Warehouse stock level planner](https://useaiblocks.com/skills/warehouse-stock-level-planner). It takes the spreadsheet.
 - The [Pre-shipment inspection brief writer](https://useaiblocks.com/skills/pre-shipment-inspection-brief-writer). It takes the document and spreadsheet.
+- The [Warehouse stock level planner](https://useaiblocks.com/skills/warehouse-stock-level-planner). It takes the spreadsheet.
 - The [3PL bill auditor](https://useaiblocks.com/skills/3pl-bill-auditor). It takes the spreadsheet and document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

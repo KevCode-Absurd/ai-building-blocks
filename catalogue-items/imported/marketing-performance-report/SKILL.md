@@ -10,6 +10,10 @@ argument-hint: "<time period or campaign>"
 
 Generate a marketing performance report with key metrics, trend analysis, insights, and optimization recommendations.
 
+## How to use this file
+
+AI Blocks note: the core of the skill is "Inputs", "Report Structure" and "Output Formatting". Everything from "Metric Definitions and Benchmarks" onward (trends, forecasting, attribution, optimization) is optional reference. Use it only when the user asks. Analytics connectors are optional too: the skill works on numbers the user pastes, and never pulls or invents numbers it was not given.
+
 ## Trigger
 
 User runs `/performance-report` or asks for a marketing report, performance analysis, campaign results, or metrics summary.
@@ -152,6 +156,8 @@ Prioritize recommendations in a 2x2 matrix format:
 - Targets for key metrics
 
 ## Metric Definitions and Benchmarks
+
+AI Blocks note: the benchmark ranges below are general rules of thumb. They have no source or date, and real figures differ by industry, list size, audience and season. Judge the user's numbers against their own past periods and their own targets first. If you mention a range, label it "rough guide, not a standard". Never present a benchmark as a fact about the user's market.
 
 ### Email Marketing
 

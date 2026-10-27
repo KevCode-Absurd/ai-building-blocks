@@ -8,11 +8,13 @@ role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: idea
     required: true
 outputs:
   - type: plan
   - type: document
+  - type: product_spec
+    required: true
 uses: []
 origin: imported
 source:

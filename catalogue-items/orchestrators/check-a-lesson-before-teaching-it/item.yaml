@@ -8,14 +8,16 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: lesson_plan
     required: true
-  - type: document
-    required: false
+  - type: question
+    required: true
 outputs:
   - type: audit_report
   - type: plan
   - type: document
+  - type: lesson_plan
+    required: true
 uses:
   - overloaded-lesson-checker
   - lesson-barrier-spotter

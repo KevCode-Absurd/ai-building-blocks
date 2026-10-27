@@ -8,10 +8,14 @@ role: make
 job: ops
 level: beginner
 inputs:
-  - type: question
+  - type: idea
     required: true
+  - type: shortlist
+    required: false
 outputs:
   - type: document
+  - type: idea
+    required: true
 uses: []
 origin: imported
 source:

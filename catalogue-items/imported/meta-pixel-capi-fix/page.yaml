@@ -31,7 +31,7 @@ you_get:
   - A test plan to confirm they work
 how_to_use:
   - Use an AI that can run shell scripts, such as Claude with code running. You also need a Meta access token with ads permissions.
-  - Give your AI the skill folder. Tell it your platform, your pixel ID or ad account ID, and your token.
+  - Give your AI the skill folder. Tell it your platform and your pixel ID or ad account ID. Set your token on your own computer as an environment variable named META_TOKEN. Do not paste the token into the chat.
   - Ask it to audit your pixel first. Read the scorecard and the fix list.
   - Ask for the setup steps for your platform, and make the fixes.
   - Copy the test event code from the Test Events tab in Events Manager and pass it to the test script. The script sends fake customer data tagged as a test. Only that code makes the events show up in the tab. Then check the tab.
@@ -52,7 +52,7 @@ output_sample:
     - name: Platform setup guide
       contains: Pixel base code, standard events, matching settings, server events setup and shared event IDs for your platform, with known traps.
     - name: CAPI test result
-      contains: A test page view and test purchase sent to Meta, which you then confirm in the Test Events tab.
+      contains: A test page view and test purchase sent to your real pixel with made-up customer details and your test code, so they show in the Test Events tab and stay out of your reports. Confirm them there.
     - name: Match quality check
       contains: Each matching field scored, with the target for purchases and leads and fixes sorted by impact.
     - name: Custom server event

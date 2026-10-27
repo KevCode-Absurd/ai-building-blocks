@@ -8,7 +8,10 @@ job: research
 level: beginner
 inputs:
   - {type: question, required: true}
+  - {type: source_text, required: false}
+  - {type: meeting_notes, required: false}
 outputs:
+  - {type: plan}
   - {type: copy_draft}
 uses: [before-you-meet-brief-writer, get-them-talking-plan, contact-memory-card-writer, honest-appreciation-note-writer]
 steps:

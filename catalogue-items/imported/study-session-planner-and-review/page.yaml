@@ -17,6 +17,7 @@ when:
   - You coach learners and want them to plan and reflect on their own.
 not_for:
   - "You need last-minute exam cramming: use a teacher-led revision plan or a past-paper timetable instead."
+  - "You want to be taught the subject or told which study method to use: this is a session wrapper only. Use the study strategy picker for methods."
   - "You have no topic or goal for the session: pick a topic first, or ask a teacher or tutor what to focus on."
   - "You want a long-term plan across weeks: build a simple weekly timetable by hand, then use this for each single session."
 you_give:
@@ -37,7 +38,7 @@ how_to_use:
   - About 15 minutes in, or at a natural break, come back and ask for the mid-session check. It takes about a minute, and you can skip it if you are in deep focus. Say how it is going and switch method if the coach suggests it.
   - At the end, ask for the closing step. Write down what changed and what you will do next time.
   - Keep the goal and next step. Paste them in at the start of your next session.
-  - The closing note is a short list: your goal, how confident you felt, how well you met the goal, and the next goal.
+  - "The closing note has four fields: your goal, how confident you felt, how well you met the goal (rated 1 to 4), and the next goal."
   - To pick a better study method, use the study strategy picker. To plan revision before an exam, use the study revision coach.
 next: [study-strategy-picker, study-revision-coach]
 output_sample:

@@ -19,6 +19,7 @@ not_for:
   - "You have fewer than about 100 conversions or only one day of data: check one metric by hand in your analytics tool instead."
   - "You want a live dashboard that updates by itself: use the dashboard in your analytics or ad tool instead."
   - "You have no exports or numbers yet: pull the reports from your tools first, or ask whoever runs your ads."
+  - "Your exports cover different date ranges in each tool: re-export them for the same dates first, or the comparisons will not hold."
 you_give:
   - Data exports from analytics and ad tools
   - The reporting period
@@ -35,7 +36,8 @@ how_to_use:
   - Decide the reporting period. Write dates in one format, such as 1 Jan 2025 to 31 Jan 2025. Add last period and last year if you have them.
   - Write your goal in one line, such as leads or sales, plus the target number if you have one.
   - Open Claude, ChatGPT or Gemini. Paste the skill, then paste or upload your exports, period and goal. No code is needed.
-  - Check the report first. Any metric you did not supply should read 'not provided', not a guess. Then pick the top recommendation to act on.
+  - Check the report first. Any metric you did not supply should read 'not provided', not a guess. If you did not give last period or last year, those comparisons and change figures should also read 'not provided'. Then pick the top recommendation to act on.
+  - Use exports from the same date range in every tool. If two tools give different counts for the same thing, tell your AI which one to trust (usually your sales or CRM records) and ask it to note the gap.
 next:
   - marketing-performance-report
   - marketing-plan-writer

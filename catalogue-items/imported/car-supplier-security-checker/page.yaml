@@ -9,7 +9,7 @@ subhead: If you sell to car makers, you learn which TISAX level you need, which 
 explain: |
   If you sell to car makers, you learn which TISAX level you need, which labels to ask for, and which gaps to close before the assessment. Describe the work you do for them, and you get a plan based on the data and prototypes you handle.
 
-  TISAX is an assessment with labels you can share with many customers, not a certificate. The skill states which catalogue version applies to your timing, the current one or the new one that takes over for assessments ordered from January 2027. It matches your work to assessment levels and modules such as prototypes, and lists the control areas where firms usually fall short. It is guidance, not an audit.
+  TISAX is an assessment with labels you can share with many customers, not a certificate. The skill states which catalogue version applies to your timing, the current one or the new one that takes over for assessments ordered from January 2027. It matches your work to assessment levels and modules such as prototypes, and lists the control areas where firms usually fall short. It is guidance, not an audit. The skill's dates, fees and version facts were last checked by its author on 3 October 2026. Confirm them on enx.com and vda.de before you act. This is an MIT-licensed copy of Hemant Naik's public tisax skill.
 when:
   - A car maker customer asked for TISAX and you do not know where to start.
   - You handle prototype parts or test vehicles and need to know which module applies.
@@ -32,11 +32,11 @@ you_get:
   - A preparation plan
 how_to_use:
   - "Gather four things: what you do for car makers, the data and prototypes you handle, your sites and security setup, and your planned assessment date (optional)."
-  - Open Claude, ChatGPT or Gemini and paste the SKILL.md instructions into the chat. No code or paid tool is needed.
+  - "Open Claude, ChatGPT or Gemini and paste the SKILL.md instructions into the chat. Checking your gaps with your AI needs no code and no paid tool. The real assessment is not free: you pay ENX to register and you pay an accredited audit provider. The skill quotes fee amounts from its author, so check them at enx.com."
   - "Paste your details and say which result you want: label choice, gap table, roadmap or audit prep."
   - Answer any questions your AI asks about your work, sites and data.
   - Check the version status and the labels first, then work through the gap table.
-  - Confirm fees, dates and rules on the ENX and VDA sites before you act, and book an accredited audit provider for the real assessment.
+  - Confirm fees, dates and rules on enx.com and vda.de before you act. Treat any control count or overlap percentage in the answer as a rough estimate. Book an accredited audit provider for the real assessment.
 output_sample:
   input:
     - What you do for car makers

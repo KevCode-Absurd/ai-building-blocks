@@ -7,17 +7,17 @@ subhead: Share the three texts, term list and house rules. Compare matching line
 explain: |
   Share the three texts, term list and house rules. Compare matching lines. Get a report of drift with cited text; the files stay unchanged.
 
-  It checks quote and dash style, term use, fixed quotations, names and exact numbers across Russian, English and Brazilian Portuguese. It never translates and never edits. When a ruling is not in your term list, it flags the gap and leaves the call to you.
+  It checks quote and dash style, term use, fixed quotations, names and exact numbers across Russian, English and Brazilian Portuguese. It never translates and never edits. When a ruling is not in your term list, it flags the gap and leaves the call to you. It suits book and publishing projects with one text in three languages. It does not fit business copy, marketing pages or product text. This is an MIT-licensed copy of the translation-sync skill by Mikefluff.
 when:
   - You want to check translation parity across three languages.
   - You changed the Russian text and need to see whether the English and Portuguese caught up.
   - You are about to commit translated chapters and want a drift check first.
 not_for:
-  - "You edit text in one language only: use a plain proofreader instead."
+  - "You edit text in one language only: use draft-proofreader instead."
   - "You want a machine translation or a new translation: use a human translator, since this only checks existing text."
   - "You have no matching RU, EN and PT-BR passages yet: finish the translations first, then run this check."
 you_give:
-  - Matching RU, EN and PT-BR passages plus the author’s term registry, fixed quotations and house typography rules.
+  - Matching RU, EN and PT-BR passages plus the author’s term registry (terminology.md), fixed quotations (anchor-quotes.md), names and place notes (names-and-realia.md) and house typography rules (typography.md). The folder holds sample versions of these files. Without your own, the check runs against the sample rules and its findings will not fit your book.
 you_get:
   - A read-only parity report with passage evidence, rule references, severity and unresolved canon questions.
 how_to_use:

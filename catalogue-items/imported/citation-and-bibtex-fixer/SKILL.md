@@ -34,6 +34,10 @@ The examples below call those scripts. Without them, do each job by hand:
 
 # Citation Management
 
+**Risk: critical (the original author's label).** Wrong references can end up in a paper, and bulk searches of Google Scholar can break its terms. So: look up each entry on its real source page, mark anything you could not check as unverified, never fill a missing field from memory, and never run bulk Google Scholar searches.
+
+The example workflows below show the original scripts. They only run if you have the original scripts folder. Without it, use "Without the scripts" above.
+
 ## Detailed Guide
 
 Read [the detailed guide](references/detailed-guide.md) before executing this skill. It retains the complete procedure and reference material. Treat its safety, prerequisites, and validation requirements as mandatory. For focused work, load the relevant sections; for end-to-end work, read the guide completely.
@@ -58,10 +62,8 @@ Use this skill when:
 
 ```bash
 # Step 1: Find key papers on your topic
-python scripts/search_google_scholar.py "transformer neural networks" \
-  --year-start 2017 \
-  --limit 50 \
-  --output transformers_gs.json
+# Google Scholar bulk search removed: its terms may forbid automated searches.
+# Search by hand, or use PubMed, arXiv or the publisher site instead.
 
 python scripts/search_pubmed.py "deep learning medical imaging" \
   --date-start 2020 \
@@ -69,10 +71,6 @@ python scripts/search_pubmed.py "deep learning medical imaging" \
   --output medical_dl_pm.json
 
 # Step 2: Extract metadata from search results
-python scripts/extract_metadata.py \
-  --input transformers_gs.json \
-  --output transformers.bib
-
 python scripts/extract_metadata.py \
   --input medical_dl_pm.json \
   --output medical.bib
@@ -82,7 +80,7 @@ python scripts/doi_to_bibtex.py 10.1038/s41586-021-03819-2 >> specific.bib
 python scripts/doi_to_bibtex.py 10.1126/science.aam9317 >> specific.bib
 
 # Step 4: Combine all BibTeX files
-cat transformers.bib medical.bib specific.bib > combined.bib
+cat medical.bib specific.bib > combined.bib
 
 # Step 5: Format and deduplicate
 python scripts/format_bibtex.py combined.bib \
@@ -158,23 +156,12 @@ cat final_validation.json
 ### Example 4: Finding and Citing Seminal Papers
 
 ```bash
-# Find highly cited papers on a topic
-python scripts/search_google_scholar.py "AlphaFold protein structure" \
-  --year-start 2020 \
-  --year-end 2024 \
-  --sort-by citations \
-  --limit 20 \
-  --output alphafold_seminal.json
+# Find highly cited papers on a topic. Do this by hand on PubMed, the publisher site
+# or a review article. Do not run bulk Google Scholar searches.
+# Then convert the DOIs you pick to BibTeX:
+python scripts/doi_to_bibtex.py --input chosen_dois.txt --output seminal_refs.bib
 
-# Extract the top 10 by citation count
-# (script will have included citation counts in JSON)
-
-# Convert to BibTeX
-python scripts/extract_metadata.py \
-  --input alphafold_seminal.json \
-  --output alphafold_refs.bib
-
-# The BibTeX file now contains the most influential papers
+# Check each entry against its publisher page before you cite it.
 ```
 
 ## Limitations

@@ -51,7 +51,7 @@ first_result:
   - "Open the agent chat and describe one small change. Ask it to show its plan first."
   - "Read the plan, then let it edit. Read each changed file before you accept it."
   - "Run your tests. If something breaks, ask the agent to fix it, or undo the change in git."
-  - "You end with edited files in your project. Save your project rules in a file so the agent follows them next time."
+  - "You end with: a plan you read before any edit, a list of changed files you can review, and a test run that passes or fails. Save your project rules in a file so the agent follows them next time."
   - "Next: write that rules file with the AI coding agent rules writer, and set up context with the Agent context setter."
 needs:
   - "A computer where you can install an editor."

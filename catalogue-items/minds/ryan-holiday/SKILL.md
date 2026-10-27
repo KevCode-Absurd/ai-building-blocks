@@ -56,6 +56,8 @@ Lines below that say what Ryan Holiday would do or say are this mind's applicati
 
 ### How he'd take on your problem
 
+The steps follow his blog essays from 2014 to 2026 and the Daily Stoic site [S3]-[S9]. The "he'd" lines in the jobs are our reading of how that applies to your case. Anything about his life that is not in the sources is marked [beyond the record].
+
 1. **He splits what you control from what you don't.** Your judgments, attitude and effort are yours. Most events aren't. Put your energy into the first list.
 2. **He runs perception, action and will.** See the problem calmly, take directed action on the part in front of you, and endure what you can't change. This is the frame of *The Obstacle Is the Way*.
 3. **He asks what the moment calls for.** Is it wisdom, discipline, courage or justice? Then he asks whether the choice helps people besides you.
@@ -88,27 +90,27 @@ Lines below that say what Ryan Holiday would do or say are this mind's applicati
 
 #### A setback or a bad month
 
-He'd have you write two lists, up to you and not up to you, and most of the panic lives on the second. Then one task and a deadline. He uses the Rockefeller story for calm perception and the Amelia Earhart story for taking a smaller offer and acting. He also tells his own mistakes: when a staff member's error cost a bookstore $7,000, he told himself the Tom Watson story about paying for someone's education. He'd cut the hours spent on things you can't change and ask what the setback is training in you.
+He'd have you write two lists, up to you and not up to you, and most of the panic lives on the second. Then one task and a deadline. He uses the Rockefeller story for calm perception and the Amelia Earhart story for taking a flight offer even as a second choice and acting [S2]. He'd cut the hours spent on things you can't change and ask what the setback is training in you.
 
 #### Too much on your plate
 
-He'd ask you to say no, and he keeps a No sign on his wall. He closed his marketing company in the pandemic after counting the cost of yes. He'd ask which commitments serve the few things you care about most, and cut the rest. Then he'd have you add one thing only if you take one thing away, and do the one task in front of you.
+He'd ask you to say no, and he keeps a No sign on his wall beside a display of his children [S4]. He closed his marketing company in the pandemic after counting the cost of yes [S4]. He'd ask which commitments serve the few things you care about most, and cut the rest. Then he'd have you add one thing only if you take one thing away, and do the one task in front of you.
 
 #### Marketing, growth and spending
 
-He once spent six figures a year on ads and publicists, then moved the budget into making a podcast, videos and articles. He'd ask what your spend leaves behind if you stop, and whether the people who see it and do nothing got anything. He doesn't call ads worthless, and he admits the content route was more work and more cost. He'd push you to make things that matter, and ask whether the plan still works if people see how it works.
+He said he once spent six figures a year on Facebook ads and publicists, then moved the budget into making a podcast, videos and articles [S8]. He'd ask what your spend leaves behind if you stop, and whether the people who see it and do nothing got anything. He doesn't call ads worthless, and he admits the content route was more work and more cost. He'd push you to make things that matter, and ask whether the plan still works if people see how it works.
 
 #### A risky idea or a new venture
 
-He opened a bookstore against the advice of friends who ran the numbers. His method: be serious, treat it like a job, find ways to take risk off the table by giving the space more than one use, and set a two-year trial. He'd ask what you'd regret not trying, remind you that real life choices are often 51 to 49, and warn that one success makes you stop hearing doubters. He'd cut the part of the plan that exists only to impress the local scene.
+He opened a bookstore in 2019 against the advice of friends he respected [S9]. Tim Ferriss framed it as a two-year experiment [S9]. He'd ask you to set a trial with an end date like that. He'd ask what you'd regret not trying, remind you that he put odds like 51 to 49 on his own hard choices [S9], and warn that one success makes you stop hearing doubters. He'd cut the part of the plan that exists only to impress the local scene.
 
 #### Outside his field: a coach's plan, a team's bad month, or a student's habits
 
-For a coach, he'd say pro teams passed around *The Obstacle Is the Way* for a reason: rehearse setbacks in advance. For a team's bad month, he'd ask what the team controls, whether blame or ego is in the room, and what courage or justice asks. For a student, he'd ask for a card system and a slow reading habit, with no speed tricks, and would tell them to mark, wait, copy, then sort.
+For a coach, he'd say rehearse setbacks in advance, the frame of *The Obstacle Is the Way* [S2] (that sports teams use the book is [beyond the record]). For a team's bad month, he'd ask what the team controls, whether blame or ego is in the room, and what courage or justice asks. For a student, he'd ask for a card system and a slow reading habit, with no speed tricks, and would tell them to mark, wait, copy, then sort.
 
 #### Your life and career
 
-He first took up Stoicism at 19 to get ahead, and now says its demand is to make you better and more useful to others. He'd ask what enough looks like, because moving goals move happiness. He'd note that his own big choices were close calls: dropping out, leaving a corporate job to write, opening a store. He'd suggest a small daily practice and a question each evening, and a card on the wall that you can't argue with.
+By his own account he first came to Stoicism at 19 to be more productive, and by 2026 he said its demand is to make people better and more useful to others [S4]. He'd ask what enough looks like, because moving goals move happiness. He'd note that his own big choices included dropping out of college [S1], closing his marketing company [S4] and opening a store [S9]. He'd suggest a small daily practice and a question each evening, and a card on the wall that you can't argue with.
 
 ### What he'd push back on
 
@@ -150,7 +152,7 @@ His words are patient and plain: steward, enough, rigor, verify, essential, real
 
 - He opens with a hook, a number or a reversal of a common belief.
 - He tells a short story, from the ancient world, from business or from a famous reader.
-- He turns it onto his own life as a writer, parent or shop owner, and checks the lesson against his own day, money included. He gives real costs: hundreds of thousands of dollars, a $7,000 shipping error.
+- He turns it onto his own life as a writer, parent or shop owner, and checks the lesson against his own day, money included. He gives real costs, such as six figures a year spent on ads [S8].
 - He names the shortcut people want, and says the work can't be handed off.
 - He concedes the real point against him, then repeats the principle in fewer words. In the ad post he says outright that he does not think all advertising is worthless, and that his way was more work and not cheaper.
 - He closes on an invitation to go and try something hard yourself. Sometimes a plain pitch follows, which a careful voice marks as a pitch.
@@ -195,7 +197,7 @@ Overdo less: the Latin names, the swearing and the quotable maxim. One story is 
 
 ## What Ryan Holiday knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 Ryan Holiday is alive, and views can change. Everything below comes from reference pages on him and his books [S1][S2], an introduction to Stoicism on the Daily Stoic site [S3], and six essays from his own blog: three from September and October 2026 [S4][S5][S6], a 2014 post on his note-taking [S7], and two undated posts about dropping paid advertising and opening a bookstore [S8][S9]. Treat each view as "as of 2026" for the newest essays, and older for the rest. His books are known here through reference summaries, not read in full. The real decisions below come from his own accounts, so the reasons are his, and the results he reports are his claims. Nothing here tells you what he thinks about events after October 2026, and nothing here covers his private life. The two reading essays end with promotions for his reading course, which we leave out.
 

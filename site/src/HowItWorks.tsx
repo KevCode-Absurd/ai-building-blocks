@@ -100,6 +100,7 @@ export default function HowItWorks({ toast }: { toast: (m: string) => void }) {
         <p className="bp-kicker"><span className="kind">Guide</span>Start below. Look up more when you need it.</p>
         <h1 className="bp-h1">How AI Blocks work</h1>
         <p className="bp-sub">Choose a job, bring the details it needs and get instructions for your AI to follow. This guide explains skills, workflows and apps, what each one gives you, and how to start.</p>
+        <p className="small hiw-connect" data-testid="hiw-connect">Use one AI for most of your work? <Link to="/api-and-mcp">Connect it to AI Blocks once</Link>. Then it can find, plan and get any skill or workflow when it needs one.</p>
       </header>
       <div className="wrap bp-body">
         <nav className="bp-toc" aria-label="On this page">
@@ -323,6 +324,7 @@ export default function HowItWorks({ toast }: { toast: (m: string) => void }) {
             <ul className="checks">
               <li>Try one skill on a small real job first. Check whether it uses your facts, gives the promised result and follows its own checklist. Keep it if the result helps; adapt it if it misses your needs.</li>
               <li>Give it real facts. Your AI only knows what you tell it. When it has to guess, it can make things up.</li>
+              <li data-testid="hiw-me-md"><Link to="/me-md">Make your me.md once. Every task then fits you.</Link> It's a short private file about you, added to what you copy and download.</li>
               <li>Set up your brand file once. Run “Brand profile builder” first, and every later step can use it.</li>
               <li>Start a new chat for a new job. Long chats about many things get muddled.</li>
               <li>Read the result before you use it, most of all prices, claims and anything legal.</li>

@@ -16,6 +16,8 @@ This skill is the middle path. It defines the 12 fields that earn their keep in 
 
 When to use this skill: briefing a writer (human or AI) on an individual content piece, auditing existing briefs that are not producing good content, building a brief template for a content program, or running a brief-generation pipeline through Frase, AirOps, or another tool.
 
+If you already have a ranked keyword list, use it to pick the target keyword and the supporting cluster for the brief.
+
 ---
 
 ## What this skill is for

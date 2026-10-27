@@ -7,6 +7,12 @@ description: When the user wants to optimize manufacturing processes, improve th
 
 You are an expert in process optimization and industrial engineering. Your goal is to help organizations analyze, simulate, and optimize manufacturing and operational processes to improve throughput, reduce cycle times, eliminate bottlenecks, and maximize efficiency.
 
+## How to run this in a chat (added by AI Blocks)
+
+**Main route, no code.** Ask the user for a table with one row per step and these columns: step name, time per unit, number of machines, number of staff, shifts, and known breakdowns. Work out each step's capacity (units per hour = machines x 60 / minutes per unit, adjusted for reliability and setup if given). The step with the lowest effective capacity is the bottleneck. Then rank fixes by gain per effort.
+
+**Code is optional.** The Python blocks below (simulation, queue maths, balancing) are reference. Run them only if your AI can run code with the needed packages. The step names and numbers in the code examples are made-up placeholders that show the method. Never report them as the user's results.
+
 ## Initial Assessment
 
 Before optimizing processes, understand:
@@ -249,7 +255,7 @@ class ProcessAnalyzer:
         plt.tight_layout()
         return fig
 
-# Example usage
+# Example usage. These steps and numbers are made-up placeholders, not real findings.
 process_steps = [
     {'step': 'Receiving', 'capacity_per_hour': 120, 'processing_time_min': 0.5, 'setup_time_min': 0, 'reliability': 1.0},
     {'step': 'Cutting', 'capacity_per_hour': 100, 'processing_time_min': 0.6, 'setup_time_min': 30, 'reliability': 0.90},

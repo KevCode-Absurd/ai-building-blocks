@@ -79,8 +79,9 @@ Four step files and the summary:
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Buyer awareness ad planner](https://useaiblocks.com/skills/awareness-stage-ad-framework-chooser).
-- The [Five-angle ad headline writer](https://useaiblocks.com/skills/five-angle-ad-headline-writer).
+- The [Product weakness line writer](https://useaiblocks.com/skills/candid-line-writer). It takes the shortlist.
+- The [Call-to-action writer](https://useaiblocks.com/skills/call-to-action-writer). It takes the plan.
+- The [Story image ad writer](https://useaiblocks.com/skills/story-image-ad-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

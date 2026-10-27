@@ -48,7 +48,7 @@ How to start:
 4. **Pass 3: obvious actions and stage direction.** Cut moves the reader will assume: a person sits in a chair, reaches for the handle, walks across the room. Keep an action that carries a feeling or a plot fact. Cut lines that explain what a reader can work out, such as saying what a look meant.
 5. **Pass 4: back story.** Keep only the back story the present scene needs. Where a past fact matters, cut the paragraph and keep one telling gesture instead, such as a man still setting out two mugs. Cut research or background facts that show off what the writer knows.
 6. **Pass 5: what pulls away.** If the theme plan was given, cut or shorten scenes and lines that go against it. If it was not, cut the passages where the story wanders. Say which.
-7. **Protect the planted.** Before every cut, check that it is not something set up for a later scene: an object, a rule, a skill, a promise. Keep those. If a late scene needs something that appears only late, move a mention of it earlier and log the move.
+7. **Protect the planted.** Before every cut, check that it is not something set up for a later scene: an object, a rule, a skill, a promise. Keep those. If a late scene needs something that is set up nowhere earlier, do not move or add text. Note it in the log as a gap for the writer to fix.
 8. **Count again.** Count the words in the new draft. If it is above the target, run the passes again, harder, starting with Pass 3. If the target still cannot be met, name what is blocking it and ask the writer to choose, and do not break the story to hit the number.
 9. **Log and check.** Write the log with a word count for each pass and show that the passes add to the total cut. Then check the new draft: the opening still draws the reader in, the ending still lands, the voice is the writer's, and every planted detail still pays off.
 10. **Check it.** Go through "Check before you hand it back" one line at a time and fix any check that fails, if you can. Under CHECKS MISSED, write one line for each check still missed and why, or "none".
@@ -70,7 +70,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The new word count is at or below 90% of the old, or the blocker is named.
 - The log counts add up to the total cut.
 - No planted detail was lost.
-- Nothing was added except a joining word, and each is logged.
+- Nothing was added or moved. At most a joining word where a cut leaves a gap, and each one is logged.
 - The voice reads as the writer's.
 
 ## If something is missing

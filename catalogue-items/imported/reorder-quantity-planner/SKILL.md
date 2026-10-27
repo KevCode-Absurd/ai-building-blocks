@@ -17,7 +17,7 @@ compatibility: Claude Code, Cursor, Codex, Gemini CLI
 Forecasts future demand for each SKU based on historical sales velocity, trend analysis, and optional seasonality adjustments. Calculates reorder points (when to order) and suggested reorder quantities (how much to order) factoring in vendor lead times and safety stock. Read-only — no mutations.
 
 ## Prerequisites
-- Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_orders,read_products,read_inventory` (check this against the current Shopify CLI docs, since the command can change; if the store login fails, ask the user to sign in to the store with the Shopify CLI themselves and try again)
+- Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_orders,read_products,read_inventory` (this command may have changed. Before running it, tell the user which command you will run and ask them to confirm it against the current Shopify CLI docs. If the login fails or asks for other scopes, stop and ask the user to sign in to the store themselves, then try again. Never guess other scopes.)
 - API scopes: `read_orders`, `read_products`, `read_inventory`
 
 ## Parameters
@@ -40,7 +40,7 @@ Forecasts future demand for each SKU based on historical sales velocity, trend a
 ## Workflow Steps
 
 1. **OPERATION:** `orders` — query
-   **Inputs:** `query: "created_at:>='<NOW - days_back days>'"`, `first: 250`, select `createdAt`, `lineItems { variant { id }, quantity }`, pagination cursor
+   **Inputs:** `query: "created_at:>='<NOW - days_back days>'"`, `first: 250`, select `createdAt`, `cancelledAt`, `lineItems { variant { id }, quantity }`, pagination cursor. Keep fetching pages with `pageInfo.endCursor` until `hasNextPage` is false, so orders beyond the first 250 are included. Skip orders that have a `cancelledAt` date. Refunds are not subtracted, so say in the report that returns count as sold.
    **Expected output:** All orders with line items for sales velocity calculation
 
 2. Calculate per-variant sales velocity:
@@ -61,7 +61,7 @@ Forecasts future demand for each SKU based on historical sales velocity, trend a
    - **Days of Stock** = current_inventory / daily_sales_rate
    - **Safety stock (units)** = safety_stock_days × daily_sales_rate
    - **Reorder Point** = (lead_time_days + safety_stock_days) × daily_sales_rate
-   - **Reorder Quantity** = forecast_days × daily_sales_rate + safety_stock - current_inventory
+   - **Reorder Quantity** = forecasted demand from Step 2 (which includes trend_multiplier) + safety stock - current_inventory. The Reorder Point does not use the trend; it is a plain sales-rate figure. Current inventory is the total across all locations.
    - **Stockout Date** = today + (current_inventory / daily_sales_rate) days
    - **Order-By Date** = stockout_date - lead_time_days
 
@@ -76,6 +76,7 @@ query SalesHistory($query: String!, $after: String) {
     edges {
       node {
         createdAt
+        cancelledAt
         lineItems(first: 50) {
           edges {
             node {

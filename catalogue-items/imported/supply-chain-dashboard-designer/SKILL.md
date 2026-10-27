@@ -309,7 +309,7 @@ class ControlTowerPlatform:
         # Shipment KPIs
         total_shipments = len(self.shipments)
         delivered_shipments = [s for s in self.shipments if s.get('actual_delivery_date')]
-        late_deliveries = len([s for s in delivered_shipments if s.get('delivery_performance_days', 0) < 0])
+        late_deliveries = len([s for s in delivered_shipments if s.get('delivery_performance_days', 0) > 0])
         otd_pct = ((len(delivered_shipments) - late_deliveries) / len(delivered_shipments) * 100) if delivered_shipments else 100
 
         # Exception KPIs

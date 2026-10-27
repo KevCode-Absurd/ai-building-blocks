@@ -7,6 +7,8 @@ description: Use when you have a campaign plan, ad or script and want to know if
 
 Work that people notice does four things. It gives some pleasure, it reaches many people, it keeps a few recognisable assets, and it gives the public something to do with it. This skill checks a plan against those four and scores it. It cannot promise fame, because fame depends on how people respond.
 
+Not for: checking an ad against ad-platform rules (use the platform's policy page), a pure price promotion with no paid reach (test the offer on your own sales numbers instead), or counting how many people a plan will reach (use your ad platform's reach report). The scores here are a judgement of the plan, not a measurement.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -21,7 +23,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
 2. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and a buyer brief.
-3. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and your offer and buying reasons.
+3. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and offer and buying reasons.
 4. This one.
 
 How to start:
@@ -55,6 +57,8 @@ How to start:
 ## What you hand back
 
 The score out of 100 with how it was worked out. Each facet with its rating and reason. The distinctive assets list. The weakest facet and one change to test. What is unknown. MISSING lines. Last, CHECKS MISSED: one line per check missed, or "none".
+
+Next: take the weakest facet's change into your plan. Then bring the items on the WHAT IS UNKNOWN list, with your reach and spend numbers, to your ad platform's reach report to measure what this check can only judge.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

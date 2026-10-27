@@ -34,8 +34,8 @@ how_to_use:
   - "Paste your embedding details: vector size, item count, and your speed and memory limits. Add test queries if you have them (optional)."
   - Ask your AI to pick an index and write the build, search and save code.
   - Run the code in Python with faiss installed. Your AI needs a code tool to run it for you, or you can run it yourself.
-  - Check the speed and recall table. The figures, and any "10 to 100 times faster" GPU claim, are typical values from the library's guide, not measured on your data. Run the check on your own vectors before you rely on them.
-  - Only load saved index files you made yourself. Loading files from others can run harmful code.
+  - Check the speed and recall table. The figures are typical values from the library's guide, not measured on your data. GPU search is often much faster, but how much depends on your data. Run the check on your own vectors before you rely on any figure.
+  - Only load saved index files you made yourself. In the LangChain example, allow_dangerous_deserialization=True lets a file run code when it loads. Never set it for a file from anyone else.
   - To power a find-similar feature, load the saved index in your app, turn the visitor's query into a vector with the same embedding model, and search the index.
 output_sample:
   input:
@@ -46,7 +46,7 @@ output_sample:
   prerequisites:
     - An AI that can run Python code, or a computer with Python
     - The faiss-cpu library, or faiss-gpu if you have a GPU
-    - Embeddings you already made
+    - Embeddings you already made. An embedding service such as OpenAI needs an account and an API key, and may charge per use, so check the cost before you embed your data.
   output:
     - name: Index choice
       contains: The index type picked for your size and limits, with the reason, from Flat, IVF, HNSW or product quantization.

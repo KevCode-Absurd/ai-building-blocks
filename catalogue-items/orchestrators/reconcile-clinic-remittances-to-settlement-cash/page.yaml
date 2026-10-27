@@ -11,7 +11,9 @@ explain: |-
 
   This workflow first rolls claims forward: the opening balance, new bills, approved adjustments and cash applied. It then ties remittance cash, less provider offsets, to what reached the bank. Only bank-confirmed cash, at the time it was available, moves on to the second step. That step lines up your payments in order against the cash on hand.
 
-  Remittances still pending stay out of the ladder until they land. It works from totals and deidentified records only, and it plans administrative cash. It does not approve a payment and it does not set clinical priorities.
+  Remittances still pending stay out of the ladder until they land. It works from totals and deidentified records only, and it plans administrative cash. It does not approve a payment and it does not set clinical priorities. It is not billing, legal or financial advice.
+
+  Licence: MIT. The licence text is in the download.
 when:
   - A payer says a claim was paid but the bank shows less.
   - Your billing system and your bank statement disagree at month end.
@@ -63,7 +65,7 @@ tweaks:
 judge:
   - Claim-applied cash is reconciled to bank cash after provider offsets; receipts enter the liquidity ladder only at their actual bank availability time.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
-  - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
+  - If a workbook is built, keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
 test:
   - Try a small sourced case and inspect every component handoff.
   - Remove one required source and confirm the affected step stops.

@@ -30,7 +30,9 @@ If any MCP call fails because Linear MCP is not connected, pause and set it up:
 3. Log in with OAuth:
    - `codex mcp login linear`
 
-After successful login, the user will have to restart codex. You should finish your answer and tell them so when they try again they can continue with Step 1.
+**In another AI tool (not Codex):** add the Linear MCP server at `https://mcp.linear.app/mcp` through that tool's own connector or MCP settings, then log in with OAuth when asked. Restart the tool if it asks you to, then continue with Step 1.
+
+After successful login in Codex, the user will have to restart codex. You should finish your answer and tell them so when they try again they can continue with Step 1.
 
 **Windows/WSL note:** If you see connection errors on Windows, try configuring the Linear MCP to run via WSL:
 ```json
@@ -50,9 +52,11 @@ Execute Linear MCP tool calls in logical batches:
 - For bulk operations, explain the grouping logic and wait for the user's clear yes before you create or change anything.
 
 ### Step 4
-Summarize results as a table of created or updated issues (ID, title, team, priority, status), then a list of blockers. Call out remaining gaps and propose next actions (additional issues, label changes, assignments, or follow-up comments).
+Summarize results as a table with these columns: ID, title, team, priority, status. Then give a list of blockers, one line each: the issue ID, what blocks it, and who can unblock it. If a bulk change was only partly applied, add a short list of which issues changed, which did not, and why. Call out remaining gaps and propose next actions (additional issues, label changes, assignments, or follow-up comments).
 
 ## Available Tools
+
+This list was written for one version of the Linear MCP server. Check it against the tools your connection actually offers, and use only tools you can see. If a tool is missing, say so and give the step to do by hand in Linear.
 
 Issue Management: `list_issues`, `get_issue`, `create_issue`, `update_issue`, `list_my_issues`, `list_issue_statuses`, `list_issue_labels`, `create_issue_label`
 

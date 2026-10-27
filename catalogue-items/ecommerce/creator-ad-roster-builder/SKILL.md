@@ -96,7 +96,7 @@ MISSING: <what would sharpen this>
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Five-part creator ad script writer](https://useaiblocks.com/skills/five-part-creator-ad-script-writer). It takes the brief.
 - The [AI video shot planner](https://useaiblocks.com/skills/ai-video-shot-planner). It takes the brief.
-- The [Video ad edit planner](https://useaiblocks.com/skills/video-ad-edit-planner). It takes the brief.
+- The [Video ad production plan builder](https://useaiblocks.com/skills/video-ad-production-plan-builder). It takes the brief.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

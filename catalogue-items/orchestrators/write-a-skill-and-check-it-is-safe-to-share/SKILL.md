@@ -32,7 +32,7 @@ How to start:
 
 ## What you need
 
-You do not need a buyer brief or a brand file to write a skill. The only useful inputs are the job description, a sample of the job done well and the skills you already have installed. Ignore any buyer brief mentioned above.
+You do not need a buyer brief or a brand file to write a skill. The only useful inputs are the job description, a sample of the job done well and the skills you already have installed. The general "Before you start" list above mentions a buyer brief. This job does not use one.
 
 - **The job you repeat** (required). Describe it in a few lines, what a good result looks like, and when the skill should start.
 - **A sample of the job done well** (optional). Paste it so the skill matches your standard.
@@ -65,7 +65,7 @@ Pause here: Apply the fixes from the score and the trigger grade to the skill fi
 
 ## Next steps to offer
 
-Ignore the suggestions in "After this" that are about ads. Offer these instead:
+Use these instead of the general "After this" list above:
 - Run the skill's test prompts on a real task and see whether it fires when it should.
 - Run the Skill safety checker again on the final files before you share them.
 
@@ -81,9 +81,9 @@ Ignore the suggestions in "After this" that are about ads. Offer these instead:
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Reusable AI skill writer](https://useaiblocks.com/prompts/repeat-job-skill-drafter).
 - The [Skill file validator](https://useaiblocks.com/skills/skill-file-validator). It takes the skill files.
 - The [AI skill file checker](https://useaiblocks.com/prompts/skill-file-problem-spotter). It takes the skill files.
+- The [AI skill library reviewer](https://useaiblocks.com/skills/monthly-skill-library-keeper). It takes the skill files.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -9,7 +9,7 @@ subhead: Turn a rough request like "help me code Python" into a clear, structure
 explain: |
   Turn a rough request like "help me code Python" into a clear, structured prompt you can paste straight into any AI. No prompting jargon needed.
 
-  The skill reads your intent, sorts the task by type and complexity, and picks a fitting framework from a set of eleven that includes RTF, RISEN, Chain of Thought, RODES, RACE and STAR. It asks questions only when something critical is missing. Then it rebuilds your request with the right role, context, steps and output format and hands back the finished prompt without explaining the technique. It suits coding, writing, analysis, planning, learning and creative tasks.
+  The skill reads your intent, sorts the task by type and complexity, and picks a fitting way to structure the prompt from a set of eleven well-known prompt frameworks, such as step-by-step reasoning or role, task and format. It asks questions only when something critical is missing. Then it rebuilds your request with the right role, context, steps and output format and hands back the finished prompt without explaining the technique. It suits coding, writing, analysis, planning, learning and creative tasks.
 when:
   - You know what you want from the AI but cannot phrase it well.
   - Your prompts give generic answers.
@@ -34,7 +34,7 @@ how_to_use:
   - Say what you will use the answer for, and add any limits.
   - Answer any questions it asks. It asks at most 3.
   - Copy the prompt from the code block and paste it into a new chat to use it.
-  - If the answer misses your goal, come back with what was wrong and ask for a better prompt. Repeat until the answer fits.
+  - Test the prompt on a real task. If the answer misses your goal, come back with what was wrong and ask for a better prompt. Repeat until the answer fits. Fill any [fill in] gap with your own detail first.
 output_sample:
   input:
     - Your rough prompt or idea

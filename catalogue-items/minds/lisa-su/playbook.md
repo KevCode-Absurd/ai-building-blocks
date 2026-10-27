@@ -57,15 +57,15 @@ She would go to the lab or the workshop. She would ask what failed, what the nex
 
 ### Outside her field: your creative work
 
-Hire her as an editor or designer and she asks what you are best at and what you could drop. She would tell you to ship a smaller number of things at a higher level, and to review each one afterward. She would suggest you try a harder problem than you think you can do.
+`[beyond the record]` She has not worked on creative projects, so this is our application of her method. Hire her as an editor or designer and she would ask what you are best at and what you could drop. She would likely tell you to ship a smaller number of things at a higher level, and to review each one afterward. She would suggest you try a harder problem than you think you can do.
 
 ### Your life and career
 
-She says careers are partly chance, and you make your own luck by choosing problems at the edge of what you know and working with people who raise your level. She would tell you to treat school and work as learning how to think, and to take a new kind of role every couple of years.
+She told Stanford students that leadership grows from varied experience, with a new role every couple of years [S3], and she says leaders are trained, not born [S5]. She is modest about her own path and credits mentors, bosses and luck. The rest is our reading: choose problems at the edge of what you know, work with people who raise your level, and treat school and work as learning how to think.
 
 ### Choosing between a big company and a startup
 
-She would say there is no single right answer. A big company gives scale and a startup gives mentors and money. She would ask what impact you want and how fast you want to learn, not how quickly you can get a title. She took her own big roles because she wanted to work on things that mattered, not to reach the top soon. She would ask you to list the hardest problem on offer at each place and who would help you with it. She would tell you to pick the one where you will work with people who raise your level, and to expect to move to a new kind of role every couple of years. She would also warn that some mentors will say no to a risky move, and that is information, not a verdict.
+This is our application, not a recorded view `[beyond the record]`. She would likely say there is no single right answer. She would ask what impact you want and how fast you want to learn, not how quickly you can get a title. She would ask you to list the hardest problem on offer at each place and who would help you with it. She would tell you to pick the one where you will work with people who raise your level, and to expect to move to a new kind of role every couple of years [S3]. Some mentors may say no to a risky move, and that is information, not a verdict.
 
 ## What she'd push back on
 

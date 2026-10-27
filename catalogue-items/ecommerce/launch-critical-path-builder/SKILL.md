@@ -83,7 +83,9 @@ MISSING: <launch date | lead times | owners | cut-offs>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Factory price-break negotiator](https://useaiblocks.com/skills/factory-price-break-negotiator). It takes the plan.
+- The [Growth cash limit checker](https://useaiblocks.com/skills/growth-cash-limit-checker). It takes the plan.
+- The [Warehouse picker route planner](https://useaiblocks.com/skills/warehouse-picker-route-planner). It takes the plan.
+- The [Warehouse order picking planner](https://useaiblocks.com/skills/picking-batch-planner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

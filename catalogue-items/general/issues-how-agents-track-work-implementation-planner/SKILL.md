@@ -11,8 +11,9 @@ When several AI agents work from one list of tasks, two of them can pick up the 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Agent approval workflow builder](https://useaiblocks.com/skills/the-proposal-engine-agents-ask-permission-implementation-planner).
-- The [Oracle migration risk reviewer](https://useaiblocks.com/skills/copilot-reviewing-oracle-to-postgres-migration). It takes the code change.
+- The [Oracle migration risk reviewer](https://useaiblocks.com/skills/copilot-reviewing-oracle-to-postgres-migration). It takes the code change and plan.
+- The [Stripe payments builder](https://useaiblocks.com/skills/stripe-payments-builder). It takes the plan.
+- The [Simple code coach](https://useaiblocks.com/skills/simple-code-coach). It takes the code change.
 - The [Animation reviewer](https://useaiblocks.com/skills/animation-reviewer). It takes the code change.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
@@ -21,11 +22,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
 - **Codebase** (yours): a project's code, in a folder or repo the AI can open.
+- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, codebase, plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -43,6 +48,7 @@ Ask once for anything on this list that is missing. If it is still missing, writ
 4. **How long a task can run** (required): the longest normal run, so the claim time limit and renewal can be set. Mark any value you assume.
 5. **Rules for sub-tasks and blocking** (optional): should a parent wait for its children, and does a cancelled blocker still block?
 6. **Where recovery of stale claims runs** (optional): a cron job, or at the start of each agent run.
+7. **A run-loop plan** (optional): from the Single-task agent heartbeat builder. Take how long a run lasts and where claims are renewed from it.
 
 If items 1 and 3 are both missing, stop after asking for them. Do not write a generic plan.
 

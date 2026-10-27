@@ -10,6 +10,7 @@ inputs:
   - {type: question, required: true}
 outputs:
   - {type: copy_draft}
+  - {type: audit_report}
 uses: [teaching-story-writer, single-effect-draft-checker, lesson-talk-writer]
 steps:
   - {uses: teaching-story-writer, note: "Takes one of your lessons and who is listening, and writes a one-minute funny story that carries that lesson. Hands step 2 the story."}

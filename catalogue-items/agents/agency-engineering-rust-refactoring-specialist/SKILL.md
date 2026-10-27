@@ -15,7 +15,8 @@ Read [the original role profile](references/source-agent.md) before you start. I
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Pull request risk reviewer](https://useaiblocks.com/skills/pull-request-risk-reviewer). It takes the code change.
 - The [Code change reviewer](https://useaiblocks.com/skills/code-change-reviewer). It takes the code change.
-- The [Code refactor planner](https://useaiblocks.com/skills/code-refactor-planner).
+- The [Code change test coverage reviewer](https://useaiblocks.com/skills/test-gap-finder). It takes the code change.
+- **Build it** with the [Pull request writer](https://useaiblocks.com/skills/pull-request-writer). It takes the code change.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

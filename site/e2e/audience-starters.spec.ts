@@ -25,7 +25,7 @@ test('only the four audience starters are offered, shareable and can return to t
 
 test('student context reaches a complete imported download with its license', async ({ page }, info) => {
   await page.goto('/?audience=students#library');
-  await page.getByTestId('audience-guide').getByRole('button', { name: 'Save your context' }).click();
+  await page.getByTestId('audience-guide').getByRole('button', { name: 'Add your me.md' }).click();
   await page.getByTestId('biz-sells').fill('I am studying computer science with an exam on 23 October.');
   await page.getByTestId('biz-more').fill('Use my course notes. Ask practice questions before revealing answers.');
   await page.getByTestId('biz-save').click();

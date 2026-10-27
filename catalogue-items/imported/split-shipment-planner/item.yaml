@@ -1,6 +1,6 @@
 slug: split-shipment-planner
 name: Split shipment planner
-summary: Say which items ship from where. Get one order split into separate shipments. Changes a live order and cannot be undone.
+summary: Say which items ship from where. Get one order split into separate shipments. Changes a live order and is hard to undo.
 category: general
 boards: []
 type: skill

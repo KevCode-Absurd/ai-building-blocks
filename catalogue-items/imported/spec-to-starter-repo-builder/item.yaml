@@ -8,7 +8,7 @@ role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
+  - type: product_spec
     required: true
 outputs:
   - type: codebase

@@ -34,7 +34,7 @@ how_to_use:
   - Tell it what your readers already know, and where to save the article.
   - Read the starting beat options. Pick one, and the AI writes only that beat.
   - Pick the next beat from the new options. Repeat until the article ends.
-  - Edit any beat you like. The AI re-reads the file each time and keeps your edits.
+  - Edit any beat you like. The AI re-reads the file each time and keeps your edits. If your AI cannot read files, paste the current article back in before each new beat, and copy each new beat into your file.
   - When the article ends, run an editing pass on the whole draft, then format it for where it will be published.
 output_sample:
   input:

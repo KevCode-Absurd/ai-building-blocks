@@ -47,8 +47,10 @@ Match your output to the task type:
 
 ## Directive Coverage by Sector
 
+**The revision letters and dates in the tables below are the author's, as last checked by the author. AI Blocks did not re-check them, and the overview file says one bundled revision has expired. Verify every revision against TSA's official Security Directives page before you use it, and record the date you checked.**
+
 ### Pipelines (Highest Risk)
-| Directive | Current Revision | Focus |
+| Directive | Revision named by the author (verify) | Focus |
 |-----------|-----------------|-------|
 | **SD Pipeline-2021-01** | G (January 2026) | Immediate measures: incident reporting, cybersecurity coordinator, baseline practices review |
 | **SD Pipeline-2021-02** | F (latest) | Comprehensive CRMP: network segmentation, access controls, monitoring, patching, CIP, IRP, ADR, CAP |
@@ -56,14 +58,14 @@ Match your output to the task type:
 **Covered entities**: Owners/operators of hazardous liquid and natural gas pipeline and LNG facilities designated as critical by TSA.
 
 ### Freight Rail
-| Directive | Current Revision | Focus |
+| Directive | Revision named by the author (verify) | Focus |
 |-----------|-----------------|-------|
 | **SD 1580-21-01** | E (January 2026) | Rail cybersecurity: incident reporting, coordinator, CRMP, network segmentation, ICS/SCADA protection |
 
 **Covered entities**: Freight railroad carriers and rail transit systems designated at higher risk by TSA.
 
 ### Public Transportation and Passenger Rail
-| Directive | Current Revision | Focus |
+| Directive | Revision named by the author (verify) | Focus |
 |-----------|-----------------|-------|
 | **SD 1582-21-01** | E (January 2026) | Transit cybersecurity: incident reporting, coordinator, CRMP, OT/IT segmentation |
 
@@ -356,9 +358,9 @@ In November 2024, TSA published a **Notice of Proposed Rulemaking (NPRM)** that 
 
 ---
 
-## Status Note — October 2026
+## Status Note — October 2026 (the author's note, not checked here: verify on TSA's site)
 
-Directives **SD Pipeline-2021-01G** and the 1580/1582 rail series remain operative; the November 2024 surface cyber risk management **NPRM is still unfinalized**. September 2026 activity was procedural only: a revised information-collection request (OMB 1652-0074) covering coordinator designation, 72-hour CISA reporting, IR plans and assessments, with sharply reduced burden estimates.
+The author states that directives **SD Pipeline-2021-01G** and the 1580/1582 rail series remain operative; the November 2024 surface cyber risk management **NPRM is still unfinalized**. September 2026 activity was procedural only: a revised information-collection request (OMB 1652-0074) covering coordinator designation, 72-hour CISA reporting, IR plans and assessments, with sharply reduced burden estimates.
 
 ## Reference Files
 

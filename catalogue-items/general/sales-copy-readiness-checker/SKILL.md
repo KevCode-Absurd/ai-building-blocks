@@ -19,7 +19,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-2. **A draft** with the [Ad response copy editor](https://useaiblocks.com/skills/reply-getting-fix-writer). Bring audit report. It uses your ad copy and your lessons and your offer.
+2. **A draft** with the [Ad response copy editor](https://useaiblocks.com/skills/reply-getting-fix-writer). Bring audit report. It uses your ad copy and lessons and offer.
 3. This one.
 
 How to start:

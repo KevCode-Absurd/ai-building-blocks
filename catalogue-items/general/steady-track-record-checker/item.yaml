@@ -7,8 +7,9 @@ role: check
 job: analysis
 level: intermediate
 inputs:
-  - {type: audit_report, required: true}
-  - {type: question, required: false}
+  - {type: question, required: true}
+  - {type: performance_sheet, required: false}
+  - {type: audit_report, required: false}
 outputs:
   - {type: audit_report}
 origin: rebuilt

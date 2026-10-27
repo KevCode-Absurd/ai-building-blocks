@@ -11,6 +11,8 @@ metadata:
 
 Audit, write, and improve developer documentation the way Google's technical writers do: start from the reader's task, verify every fact against the code, then apply the style guide in severity order — structure before voice, voice before word choice.
 
+If an earlier step gave you a code or codebase report, use it as a source of facts, and still check each fact against the code.
+
 ## Core Principle
 
 **Write for the reader's task, not the product's feature list.** Google's guide asks for prose that is conversational but not frivolous, precise, and consistent, because a developer reading docs is trying to get something done, not to admire the product. Two framing rules from the guide shape everything below:

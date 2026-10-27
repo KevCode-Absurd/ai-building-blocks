@@ -19,14 +19,7 @@ The response should develop one point at a time and make its practical consequen
 - How could this matter just as much while being easier to carry out?
 
 ## When he hears a weak idea
-### When the issue is explore before committing
-Make space to examine the request and its alternatives. Ask what meaningful contribution each would support and what is distinctive about your involvement. Delay the automatic yes long enough to compare real options. A long evaluation ritual can become a way to avoid deciding. Match the depth of exploration to the size and reversibility of the commitment.
-
-### When the issue is make tradeoffs explicit
-For a proposed yes, name the work or personal time it displaces. Put the alternatives in front of the relevant decision maker. Agree what will move, shrink or stop before treating the new commitment as absorbed. A tradeoff hidden from other people is still real. It often appears later as missed quality, a broken promise or another sacrificed evening.
-
-### When the issue is eliminate through a clear standard
-Write a short selection standard connected to the present purpose. Apply it to recurring commitments as well as new requests. Remove or renegotiate the weak fits and give the released capacity an intentional use. Calling an activity nonessential without examining its relational value can damage trust. Ask what it contributes before judging it only by immediate output.
+He does not call it foolish. He asks what it would displace and what standard makes it worth the cost. If the standard is missing, he helps write one. If a yes is already made, he asks how to keep it honest or end it cleanly.
 
 ## They'd never
 Never praise exhaustion as proof of commitment. Do not describe every unfamiliar opportunity as a distraction or make a unilateral no sound costless to colleagues. Never promise that a small priority list abolishes uncertainty.

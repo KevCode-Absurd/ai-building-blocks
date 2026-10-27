@@ -1,10 +1,14 @@
 // What comes after a block, and what comes before it. Shared by the block page plan (tools/lib/needs.mjs,
-// at build time) and the builder's "add next" suggestions (lib/suggest.ts). Plain code: same catalogue, same answer.
+// at build time) and the builder's "add next" and "add before" suggestions (lib/suggest.ts and the before side, through
+// previousSteps). One ranking for both directions (handoffLink). Plain code: same catalogue, same answer.
 //
 // Evidence, strongest first:
 //   1. a reviewed workflow runs the other block straight after this one, or the other block is built on this one (uses);
-//   2. the other block takes a specific thing this one makes (ad copy, a script, a skill file);
+//   2. the other block needs a specific thing this one makes (ad copy, a script, a skill file), most when it can't
+//      start without it;
 //   3. both do the same job, and their names and descriptions are about the same subject.
+// What a block hands back must match what the next one takes: a sibling with nothing to take (another translator) is
+// scored down and only shown when fewer than two real hand-offs exist, and "takes" names only real port matches.
 // Moving from one job to another (ad copy to its check, a cash forecast to the books) needs backing from the reviewed
 // workflows: how often that job's blocks run straight after this job's (jobFlow). Without it, a link to another job
 // needs a specific hand-off and the same subject.
@@ -91,10 +95,22 @@ function context(all) {
   const broad = new Set([...readers].filter(([, m]) => m.size > BROAD_JOBS).map(([t]) => t));
   const n = Math.max(1, words.size), idf = (t) => Math.log(1 + n / (1 + (df.get(t) ?? 0)));
   const norm = new Map([...words].map(([slug, w]) => [slug, Math.sqrt(w.reduce((s, t) => s + idf(t) ** 2, 0)) || 1]));
-  c = { words, idf, norm, follows, later, bySlug, jobs, jobOut, usedBy, broad };
+  // Who could be linked at all, by what links them: readers and makers of each port type, the blocks of each job.
+  const list = (map, key, x) => { let l = map.get(key); if (!l) map.set(key, (l = [])); if (l[l.length - 1] !== x) l.push(x); };
+  const readersOf = new Map(), makersOf = new Map(), byTask = new Map();
+  for (const x of all) {
+    if (x.type === "mind") continue;
+    for (const p of x.inputs ?? []) list(readersOf, typeOf(p), x);
+    for (const t of handsOver(x)) list(makersOf, t, x);
+    list(byTask, x.task, x);
+  }
+  c = { words, idf, norm, follows, later, bySlug, jobs, jobOut, usedBy, broad, readersOf, makersOf, byTask };
   CONTEXT.set(all, c);
   return c;
 }
+
+/** A port type too loose to link two blocks alone: a generic one, or one read in many different jobs. */
+export const isLoosePort = (type, all) => GENERIC_PORTS.has(type) || context(all).broad.has(type);
 
 /** How much two blocks are about the same subject, 0 to 1 (rarity-weighted overlap of name, alias and summary words). */
 export function subjectSimilarity(a, b, all) {
@@ -128,62 +144,171 @@ const MOVES = 0.05;
 const FLOOR = 0.5;
 /** With no strong link, at most this many weaker ones (same family and subject). */
 const FALLBACK = 2;
+/** Score for each specific thing the other block needs to start and this one makes; LOOSE for a generic or stand-in one. */
+const SPECIFIC = 6, LOOSE = 2.5;
+/** Taken off a link with nothing to hand over (no input of the other block is made here). */
+const NO_HANDOFF = 5;
+/** With this many real hand-offs (or workflow links) on the list, siblings with nothing to hand over are left off. */
+const SIBLINGS_UNTIL = 2;
+/** The result types a block hands over: its outputs and `extra` types they contain. */
+const madeOf = (b, extra = []) => new Set([...(b.outputs ?? []).map(typeOf), ...extra]);
+/** Types a result holds as parts: a brand brain holds the products and buyers. */
+export const PARTS = { brand_brain: ["product_data", "persona"] };
+/** What a block hands over, with the parts of what it makes (a brand brain builder hands over product data too). */
+export function handsOver(b) {
+  const made = madeOf(b);
+  for (const t of [...made]) for (const part of PARTS[t] ?? []) made.add(part);
+  return made;
+}
+/** Whether `to` only makes again the specific things `from` already makes (loose results like a plan do not count). */
+const remakes = (from, to, made) => {
+  const outs = (to.outputs ?? []).map(typeOf).filter((t) => !GENERIC_PORTS.has(t));
+  return outs.length > 0 && outs.every((t) => made.has(t));
+};
+const usedCount = (x) => Math.min((Array.isArray(x.usedIn) ? x.usedIn.length : Number(x.usedIn)) || 0, 5);
+/** A candidate's own merits, whichever side it is suggested on: tested, used in workflows, not an agent. */
+export const candidateMerit = (x) => (isTested(x) ? 1.5 : 0) + usedCount(x) * 0.3 + (x.type === "agent" ? -1 : 0);
+
 /**
- * The blocks to suggest after `b`, best first: [{ x, score, follows, takes, why }].
- * `outs` may add result types the block's own outputs stand for (the brand brain's parts).
- * @param {any} b
+ * How well `from` leads into `to`: the one ranking behind "what comes next" (nextSteps) and "what comes before"
+ * (previousSteps, the builder's before-steps). Evidence, strongest first: `from` runs straight before `to` in a reviewed
+ * workflow, `to` is built on `from`, `to` needs a specific thing `from` makes, then generic or stand-in hand-offs and
+ * the same job and subject. `made`: the types `from` hands over (default: its outputs); `alike`: types they can stand
+ * in for. Returns null when nothing links them, else { score, linked, takes, hands, follows, why }: `linked` false is a
+ * weaker fallback link (same family and subject); `takes`, the inputs of `to` that `from` really makes, strongest first;
+ * `hands`, whether anything is handed over (a port, a build-on or a workflow step). The candidate's own merits
+ * (candidateMerit) are not included.
+ * @param {any} from
+ * @param {any} to
  * @param {any[]} all
- * @param {{ max?: number, perTask?: number, floor?: number, exclude?: (x: any) => boolean, outs?: string[], startHere?: string[] }} [options]
- * @returns {{ x: any, score: number, follows: number, takes: string[], why: string }[]}
+ * @param {{ made?: Set<string>, alike?: Set<string>, creative?: boolean }} [options]
+ * @returns {{ score: number, linked: boolean, takes: string[], hands: boolean, follows: number, why: string } | null}
  */
-export function nextSteps(b, all, { max = 5, perTask = 3, floor = FLOOR, exclude = () => false, outs: extraOuts = [], startHere = [] } = {}) {
+export function handoffLink(from, to, all, { made = madeOf(from), alike = new Set(), creative } = {}) {
   const ctx = context(all);
-  const outs = new Set([...(b.outputs ?? []).map(typeOf), ...extraOuts]);
-  const creative = [...outs].some((t) => CREATIVE.has(t)) || (b.outputs ?? []).some((p) => typeOf(p) === "copy_draft" && sameFamily(b.task, "write-ad-copy"));
-  const direct = ctx.follows.get(b.slug), later = ctx.later.get(b.slug), builtOnThis = ctx.usedBy.get(b.slug), before = new Set(b.uses ?? []);
+  const follows = ctx.follows.get(from.slug)?.get(to.slug) ?? 0, after = ctx.later.get(from.slug)?.get(to.slug) ?? 0;
+  // A block built on this one ("uses" it) comes after it; one this block is built on comes before it.
+  const builtOn = ctx.usedBy.get(from.slug)?.has(to.slug) ? 1 : 0;
+  if (!follows && (from.uses ?? []).includes(to.slug)) return null;
+  const inputs = to.inputs ?? [];
+  const takes = inputs.filter((p) => made.has(typeOf(p)));
+  const stands = inputs.filter((p) => alike.has(typeOf(p)) && !made.has(typeOf(p)));
+  if (!follows && !builtOn && !after && !takes.length && !stands.length && to.task !== from.task) return null;
   const loose = (p) => GENERIC_PORTS.has(typeOf(p)) || ctx.broad.has(typeOf(p));
-  const strong = [], weak = [];
-  for (const x of all) {
-    if (x.slug === b.slug || x.type === "mind" || isFlow(x) || x.twin === b.slug || exclude(x)) continue;
-    const follows = direct?.get(x.slug) ?? 0, after = later?.get(x.slug) ?? 0;
-    // A block built on this one ("uses" it) comes after it; one this block is built on comes before it.
-    const builtOn = builtOnThis?.has(x.slug) ? 1 : 0;
-    if (!follows && before.has(x.slug)) continue;
-    const inputs = x.inputs ?? [];
-    const takes = inputs.filter((p) => outs.has(typeOf(p)));
-    if (!follows && !builtOn && !after && !takes.length && x.task !== b.task) continue;
-    const specific = takes.filter((p) => !loose(p)).reduce((s, p) => s + (required(p) ? 3 : 1), 0);
-    const generic = takes.filter(loose).reduce((s, p) => s + (GENERIC_PORTS.has(typeOf(p)) ? 1 : 1.5), 0);
-    // "Set up AI" holds unrelated set-ups (a study plan, a server plan), so sharing it is no evidence on its own.
-    const catchAll = b.task === CATCH_ALL && x.task === CATCH_ALL;
-    const sameTask = x.task === b.task && !catchAll, family = !catchAll && sameFamily(b.task, x.task), flow = jobFlow(b.task, x.task, all);
-    const sim = subjectSimilarity(b, x, all);
-    const linked = follows > 0 || builtOn > 0 || (after > 0 && family)
-      || (specific > 0 && (sameTask || (flow >= MOVES && sim >= 0.02) || sim >= 0.12))
-      || (generic > 0 && ((sameTask && sim >= 0.05) || (family && flow >= MOVES && sim >= 0.1)))
-      || (sameTask && sim >= 0.2);
-    const fallback = !linked && ((specific > 0 && family && sim >= 0.04) || (generic > 0 && family && sim >= 0.1) || (sameTask && sim >= 0.1));
-    if (!linked && !fallback) continue;
-    // A check of an ad or a page only follows something people will see.
-    if (!creative && !follows && !builtOn && (x.task === "check-ads" || x.task === "audit-landing-page")) continue;
-    const missing = inputs.filter((p) => required(p) && !outs.has(typeOf(p))).length;
-    const score = Math.min(follows, 3) * 6 + builtOn * 8 + Math.min(after, 2) * 2 + specific + generic + sim * 25 + (sameTask ? 3 : family ? 1 : 0) + flow * 10
-      + (isTested(x) ? 1.5 : 0) + Math.min((Array.isArray(x.usedIn) ? x.usedIn.length : Number(x.usedIn)) || 0, 5) * 0.3 - missing * 0.5 + (x.type === "agent" ? -1 : 0)
-      + (startHere.includes(x.slug) ? 1 : 0) + (creative && x.task === "check-ads" ? 4 : 0)
-      // A check that reads what a maker made is the usual next step after it.
-      + (b.role !== "check" && x.role === "check" && takes.length ? 2 : 0);
-    (linked ? strong : weak).push({ x, score, follows, takes: takes.map(typeOf), why: follows ? "follows" : specific || generic ? "takes" : "same job" });
-  }
+  // After a reviewed workflow, the hand-off is the strongest evidence: a specific thing the other block needs to start
+  // counts most; a generic or stand-in one (a plan, a brief, opening lines read as ad copy) far less.
+  // A block whose inputs are all optional needs one of them (an ad, a script or a page to check): any it takes counts as needed.
+  const needs = (p) => required(p) || !inputs.some(required);
+  const specific = takes.filter((p) => !loose(p)).reduce((s, p) => s + (needs(p) ? SPECIFIC : 2), 0);
+  const generic = [...takes.filter(loose), ...stands].reduce((s, p) => s + (needs(p) ? LOOSE : 1), 0);
+  // "Set up AI" holds unrelated set-ups (a study plan, a server plan), so sharing it is no evidence on its own.
+  const catchAll = from.task === CATCH_ALL && to.task === CATCH_ALL;
+  const sameTask = to.task === from.task && !catchAll, family = !catchAll && sameFamily(from.task, to.task), flow = jobFlow(from.task, to.task, all);
+  const sim = subjectSimilarity(from, to, all);
+  // Within one job, any real hand-off links them (the score orders them); across jobs a generic hand-off needs
+  // backing from the workflows and a close subject.
+  const linked = follows > 0 || builtOn > 0 || (after > 0 && family)
+    || (specific > 0 && (sameTask || (flow >= MOVES && sim >= 0.02) || sim >= 0.12))
+    || (generic > 0 && (sameTask || (family && flow >= MOVES && sim >= 0.1)))
+    || (sameTask && sim >= 0.2);
+  const fallback = !linked && ((specific > 0 && family && sim >= 0.04) || (generic > 0 && family && sim >= 0.1) || (sameTask && sim >= 0.1));
+  if (!linked && !fallback) return null;
+  // A check of an ad or a page only follows something people will see.
+  creative ??= [...made, ...alike].some((t) => CREATIVE.has(t)) || (from.outputs ?? []).some((p) => typeOf(p) === "copy_draft" && sameFamily(from.task, "write-ad-copy"));
+  if (!creative && !follows && !builtOn && (to.task === "check-ads" || to.task === "audit-landing-page")) return null;
+  const missing = inputs.filter((p) => required(p) && !made.has(typeOf(p)) && !alike.has(typeOf(p))).length;
+  const score = Math.min(follows, 3) * 6 + builtOn * 8 + Math.min(after, 2) * 2 + specific + generic + sim * 25 + (sameTask ? 3 : family ? 1 : 0) + flow * 10
+    - missing * 0.5 + (creative && to.task === "check-ads" ? 4 : 0)
+    // Another way to make the same thing (a second job post writer after a job post writer) is an alternative, not a next step.
+    - (!follows && from.role !== "check" && to.role !== "check" && remakes(from, to, made) ? 4 : 0)
+    // A check that reads what a maker made is the usual next step after it.
+    + (from.role !== "check" && to.role === "check" && takes.length + stands.length ? 2 : 0)
+    // Nothing to hand over: a sibling on the same subject, which a real hand-off should beat.
+    - (!takes.length && !stands.length && !builtOn ? NO_HANDOFF : 0);
+  const strength = (p) => (loose(p) ? 0 : 2) + (needs(p) ? 1 : 0);
+  const named = [...new Set([...takes].sort((p, q) => strength(q) - strength(p)).map(typeOf))];
+  return { score, linked, takes: named, hands: takes.length + stands.length + builtOn + follows > 0, follows, why: follows ? "follows" : specific || generic ? "takes" : "same job" };
+}
+
+/** The list from scored candidates: strong links (or, with none, the best FALLBACK weak ones), near the best, a few per job. */
+function pick(strong, weak, { max, perTask, floor, siblings }) {
   const order = (p, q) => q.score - p.score || p.x.slug.localeCompare(q.x.slug);
   // With no strong link, the best weaker ones (same family and subject) still give the page somewhere to go.
   const pool = strong.length ? strong.sort(order) : weak.sort(order).slice(0, FALLBACK);
+  // A sibling with nothing to hand over (another translator, the same tool for another language) is only shown when
+  // fewer than SIBLINGS_UNTIL real hand-offs make the list.
+  const handoffs = siblings === "never" ? Infinity : siblings ? pool.filter((s) => s.hands && s.score >= floor * (pool[0]?.score ?? 0)).length : Infinity;
   const perJob = new Map(), picked = [];
   for (const s of pool) {
-    if (picked.length >= max || (picked.length && s.score < floor * picked[0].score)) break;
+    if (picked.length >= max) break;
+    if (picked.length && s.score < floor * picked[0].score && !s.keep) continue;
+    if (!s.hands && handoffs >= SIBLINGS_UNTIL) continue;
     const n = perJob.get(s.x.task) ?? 0;
     if (n >= perTask) continue;
     perJob.set(s.x.task, n + 1);
     picked.push(s);
   }
   return picked;
+}
+const offList = (b, x) => x.slug === b.slug || x.type === "mind" || isFlow(x) || x.twin === b.slug;
+
+/**
+ * The blocks to suggest after `b`, best first: [{ x, score, follows, takes, hands, why }] (handoffLink, plus the
+ * candidate's merits). `outs` may add result types the block's outputs contain (the brand brain's parts); `alike`, types
+ * they can stand in for (opening lines read as ad copy). Only `takes`, the other block's inputs this one really makes,
+ * names the hand-off, strongest first (specific and required before generic or optional); a stand-in counts as loose evidence.
+ * `siblings`: false never lists a block that takes nothing from this one (the builder and the step map, where an after
+ * step must use what this one made); true (block pages) fills a short list with same-subject siblings.
+ * @param {any} b
+ * @param {any[]} all
+ * @param {{ max?: number, perTask?: number, floor?: number, exclude?: (x: any) => boolean, outs?: string[], alike?: string[], startHere?: string[], siblings?: boolean }} [options]
+ * @returns {{ x: any, score: number, follows: number, takes: string[], hands: boolean, why: string }[]}
+ */
+export function nextSteps(b, all, { max = 5, perTask = 3, floor = FLOOR, exclude = () => false, outs: extraOuts = [], alike: alikeOuts = [], startHere = [], siblings = true } = {}) {
+  const made = madeOf(b, extraOuts);
+  const alike = new Set(alikeOuts.filter((t) => !made.has(t)));
+  const creative = [...made, ...alike].some((t) => CREATIVE.has(t)) || (b.outputs ?? []).some((p) => typeOf(p) === "copy_draft" && sameFamily(b.task, "write-ad-copy"));
+  const strong = [], weak = [], ctx = context(all), slug = (s) => ctx.bySlug.get(s);
+  // Only these can link (handoffLink): blocks that read something it makes, the same job, workflow neighbours, build-ons.
+  const near = new Set([...[...made, ...alike].flatMap((t) => ctx.readersOf.get(t) ?? []), ...(ctx.byTask.get(b.task) ?? []),
+    ...[...(ctx.follows.get(b.slug)?.keys() ?? []), ...(ctx.later.get(b.slug)?.keys() ?? []), ...(ctx.usedBy.get(b.slug) ?? [])].map(slug)]);
+  for (const x of near) {
+    if (!x || offList(b, x) || exclude(x)) continue;
+    const link = handoffLink(b, x, all, { made, alike, creative });
+    if (!link) continue;
+    (link.linked ? strong : weak).push({ x, ...link, score: link.score + candidateMerit(x) + (startHere.includes(x.slug) ? 1 : 0) });
+  }
+  return pick(strong, weak, { max, perTask, floor, siblings: siblings ? "few" : "never" });
+}
+
+/**
+ * The blocks to suggest before `b`, best first: makers of what it reads, by the same ranking as nextSteps the other
+ * way round (handoffLink from each candidate to `b`). Only real hand-offs: the candidate makes an input of `b` (with a
+ * brand brain's parts), `b` is built on it, or it runs straight before `b` in a reviewed workflow; never a sibling.
+ * `takes`: the inputs of `b` it makes, strongest first. Each: { x, score, follows, takes, hands, keep, why }.
+ * `makers`: named makers of a shared input (the brand brain builder for product facts, read in every line of work):
+ * one that makes an input of `b` is always on the list (within `max`), whatever the subject and score.
+ * @param {any} b
+ * @param {any[]} all
+ * @param {{ max?: number, perTask?: number, floor?: number, exclude?: (x: any) => boolean, startHere?: string[], makers?: string[] }} [options]
+ * @returns {{ x: any, score: number, follows: number, takes: string[], hands: boolean, why: string }[]}
+ */
+export function previousSteps(b, all, { max = 5, perTask = 2, floor = FLOOR, exclude = () => false, startHere = [], makers = [] } = {}) {
+  const ctx = context(all), reads = new Set((b.inputs ?? []).map(typeOf)), builtOn = new Set(b.uses ?? []);
+  const strong = [], weak = [];
+  // Only makers of what it reads, what it is built on and its workflow predecessors can go before it.
+  const near = new Set([...reads].flatMap((t) => ctx.makersOf.get(t) ?? []));
+  for (const s of builtOn) if (ctx.bySlug.get(s)) near.add(ctx.bySlug.get(s));
+  for (const { x } of workflowPredecessors(b, all)) near.add(x);
+  for (const x of near) {
+    if (offList(b, x) || exclude(x)) continue;
+    const made = handsOver(x);
+    if (![...made].some((t) => reads.has(t)) && !builtOn.has(x.slug) && !ctx.follows.get(x.slug)?.has(b.slug)) continue;
+    const named = makers.includes(x.slug) && [...made].some((t) => reads.has(t));
+    const link = handoffLink(x, b, all, { made }) ?? (named ? { score: 0, linked: true, takes: (b.inputs ?? []).filter((p) => made.has(typeOf(p))).map(typeOf), hands: true, follows: 0, why: "takes" } : null);
+    if (!link?.hands) continue;
+    if (named) link.linked = true;
+    (link.linked ? strong : weak).push({ x, ...link, keep: named, score: link.score + candidateMerit(x) + (startHere.includes(x.slug) ? 1 : 0) });
+  }
+  return pick(strong, weak, { max, perTask, floor, siblings: false });
 }

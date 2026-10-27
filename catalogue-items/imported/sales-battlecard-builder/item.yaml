@@ -10,7 +10,7 @@ level: intermediate
 inputs:
   - type: competitor_set
     required: true
-  - type: brief
+  - type: question
     required: false
 outputs:
   - type: document

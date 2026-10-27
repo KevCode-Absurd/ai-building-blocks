@@ -22,7 +22,7 @@ you_give:
 you_get:
   - A connection file, a queue file, a worker file and a test script
   - A plain explanation of priority, retries and concurrency
-  - A test run that shows three jobs completed
+  - A test run that shows three jobs completed. The agent names and account ID in the test are placeholders to swap for real ones.
 how_to_use:
   - Open your code project in an AI that can edit files, such as Claude Code.
   - Make sure Redis is running and REDIS_URL is in your .env.local file.

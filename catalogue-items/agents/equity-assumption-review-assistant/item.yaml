@@ -11,7 +11,9 @@ inputs:
     required: true
   - type: spreadsheet
     required: false
-outputs: []
+outputs:
+  - type: document
+  - type: audit_report
 needs_mode: manual
 uses:
   - source-note-summariser

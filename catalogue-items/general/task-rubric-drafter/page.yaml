@@ -25,6 +25,7 @@ not_for:
 you_give:
   - "The task"
   - "The goal it shows"
+  - "Who it is for, such as their age or stage (optional)"
   - "Number of levels (optional)"
 
 you_get:
@@ -36,6 +37,7 @@ how_to_use:
   - "Copy the prompt (the card on this page) and paste it into any AI chat, or open it if you added it to your AI."
   - "Paste your details under it, in the slots under What you need."
   - "Send it and read the answer against the checks on this page."
+  - "Try the rubric: have two markers grade the same two pieces of work and compare. Rewrite any cell where they differ."
   - "Reply with what to change, and keep the version that works."
 output_sample:
   input:

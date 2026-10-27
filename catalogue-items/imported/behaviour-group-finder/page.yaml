@@ -9,7 +9,7 @@ subhead: Natural customer groups found in your data and described in a way you c
 explain: |
   Natural customer groups found in your data and described in a way you can act on. Say what decision the groups should inform, such as a campaign, a roadmap or a retention plan, and the AI picks three to seven behaviours to compare.
 
-  Your AI runs k-means clustering (a way to sort users into groups) in code. A helper script then profiles each group by how far above or below average it sits on each trait. It checks the groups are truly different using a silhouette score above 0.3, and that they make business sense. Each group gets a strategy: retain and expand, monetise, activate, win back or sunset. You need user-level data and a way to run Python.
+  Your AI runs k-means clustering (a way to sort users into groups) in its own code. That same code checks the groups are truly different with a silhouette score (how clearly the groups separate) above 0.3, and that they make business sense. A helper script does not cluster. It only profiles the groups that already have labels, by how far above or below average each one sits on each trait. Each group gets a strategy: retain and expand, monetise, activate, win back or sunset. You need user-level data and a way to run Python.
 when:
   - Marketing wants different messages for different customers and has no groups.
   - You suspect your best customers share a pattern.
@@ -34,8 +34,10 @@ how_to_use:
   - Paste this skill, then upload your user data file.
   - Say what the groups will be used for, such as a campaign, a roadmap or a retention plan.
   - Add the traits you think matter (optional). Your AI picks three to seven if you do not.
+  - Ask your AI to save each user's group label as a new column in your data file, for example one called segment. The helper script needs that column. It runs with --segment-col for that column and --metric-col for the number you want compared, such as revenue.
   - Check the group profiles. Ask whether you would treat each group differently, and rerun with other traits if not.
   - Next, test one group with a small campaign or a retention email. Compare its results with the group profile.
+next: [email-segment-builder, churn-risk-finder]
 output_sample:
   input:
     - Your user-level data, with details like plan type and behaviour such as sessions, spend and last visit

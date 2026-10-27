@@ -101,10 +101,11 @@ When a user requests file organization help:
    When requested, search for duplicates. The commands below work on Linux and macOS, but not everywhere: `md5` is macOS only (on Linux use `md5sum`), and `find -printf` is GNU/Linux only. On Windows, use PowerShell, for example `Get-ChildItem -Recurse -File | Get-FileHash | Group-Object Hash | Where-Object Count -gt 1`:
 
    ```bash
-   # Find exact duplicates by hash
-   find [directory] -type f -exec md5 {} \; | sort | uniq -d
+   # Find exact duplicates by hash: print every file whose hash appears more than once
+   # Linux: md5sum. macOS: md5 -r. Both print the hash first, then the path. Each line of output is one set of identical files, with the copies separated by |.
+   find [directory] -type f -exec md5sum {} + | sort | awk '{c[$1]++; l[$1]=l[$1] " | " $0} END{for(h in c) if(c[h]>1) print l[h]}'
 
-   # Find files with similar names
+   # Find file names that appear in more than one folder (same name, maybe not the same content)
    find [directory] -type f -printf '%f\n' | sort | uniq -d
 
    # Find similar-sized files
@@ -183,6 +184,7 @@ When a user requests file organization help:
 
    - Always confirm before deleting anything
    - Write every move to a log file named `tidy-moves.log` in the target folder, one line per move as `old path -> new path`. This is the only way back. Moves are not reversed automatically
+   - To undo, read the log from the bottom up and move each file from its new path back to its old path. Offer to write those move commands for the user, and show them before running anything
    - Preserve original modification dates
    - Handle filename conflicts gracefully
    - Stop and ask if you encounter unexpected situations

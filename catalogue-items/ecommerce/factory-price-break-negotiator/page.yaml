@@ -9,7 +9,7 @@ headline: "Factory price-break negotiator"
 subhead: "Give it your bill of materials, landed cost, this year's units and next year's plan. It writes the opening call, asks line by line for price breaks, what you give back, and a fallback factory plan. You get a script and a margin range to aim inside."
 
 explain: |
-  Asking a factory for "a better price" gets a small answer. Asking about cotton, labor and zippers one at a time, with a volume plan behind each, gets a real one. Factories get credits from their own suppliers when you buy more, and those pass to you only if you ask for them by line.
+  Asking a factory for "a better price" gets a small answer. Asking about cotton, labor and zippers one at a time, with a volume plan behind each, gets a real one. Factories may pay less to their own suppliers when you buy more. Ask line by line whether any of that can reach you.
 
   This skill uses your cost sheet to plan the first call. It opens with a partnership, not a cut: your growth in units, and what you will do with the savings. It lists asks by line, what you can offer back, and the factory's usual margin so you aim inside it. It tells you what to do if the factory will not move, and warns against squeezing too hard, since a pressured factory makes up the difference with cheaper materials or skipped checks.
 
@@ -67,7 +67,7 @@ how_it_works:
   - title: Opens as a partner
     text: Shows your growth plan in units and says the savings go into marketing that grows both sides.
   - title: Asks line by line
-    text: For each part and for labor, asks when it gets cheaper. The factory's own suppliers give volume credits that reach you only when you ask.
+    text: For each part and for labor, asks when it gets cheaper. The factory's own suppliers may charge less at volume. It asks whether any of that can reach you.
   - title: Looks at the factory's line
     text: Asks how much of a dedicated assembly line your orders use, and how you can raise that.
   - title: Finds the margin range

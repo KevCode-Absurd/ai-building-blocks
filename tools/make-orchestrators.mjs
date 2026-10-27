@@ -15,6 +15,7 @@ const NAMES = {
   image_prompt: "image prompts", ad_copy: "ad copy", hooks: "opening lines", shot_list: "shot list", design_direction: "design plan",
   landing_page: "landing page", plan: "setup sheet", shortlist: "shortlist of ads to study", ad_breakdowns: "ad breakdowns",
   competitor_set: "list of competitors", truth_sheet: "product truth sheet", gallery_plan: "gallery plan", pdp_images: "product page images",
+  api_spec: "API spec", ai_model: "AI model", eval_set: "test set", dataset: "data files", me_file: "me.md",
 };
 const label = (t) => NAMES[t] ?? t.replace(/_/g, " ");
 // One plain line on what to give, shown next to each input in the workflow's SKILL.md.

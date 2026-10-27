@@ -24,7 +24,7 @@ not_for:
   - People who want a fixed monthly cost, since heavy use drains credits quickly.
 pricing:
   model: freemium
-  from: "US$15 per month"
+  from: "US$12 per month on yearly billing (the price on monthly billing was not confirmed)"
   note: Free plan gives a one-time grant of 125 credits. Standard is US$12 per month billed yearly and includes 625 credits a month, which reset each month.
 works_with:
   - elevenlabs
@@ -42,9 +42,9 @@ first_result:
   - "Go to runway.com and sign up. The free plan gives a one-time grant of 125 credits."
   - "Pick one job: a clip from text, a still image into motion, or an edit of footage."
   - "Make a short clip first. One pool of credits pays for every kind of output, so keep early tests short."
-  - "Watch the clip for warped details."
+  - "Check the clip frame by frame for faces, hands, on-screen text and object edges. If any look warped, run it again with a shorter or simpler prompt."
   - "To try an edit, use a short clip you own."
-  - "You end with a short clip or an edited version of your footage."
+  - "You end with a short clip or an edited version of your footage. Typical clip length, resolution and file type were not verified, so check them in the app."
   - "Next: write the prompt with the Watercolor video clip prompt writer or the Paper craft video clip prompt writer, or plan the whole ad with the Marketing video producer."
 needs:
   - "A Runway account and credits."

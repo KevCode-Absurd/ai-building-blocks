@@ -66,7 +66,7 @@ output_sample:
 
 how_it_works:
   - title: Sets the team
-    text: Scouts who look like your buyer, relationship managers, and one lead who can come from the scouts. A solo owner gets a one-scout version.
+    text: Scouts who know your buyer's niche and feeds, relationship managers, and one lead who can come from the scouts. A solo owner gets a one-scout version.
   - title: Breaks the feed
     text: Scouts search the app by hashtag, keyword and location, and go through the follow lists of creators your buyer follows, from their own accounts. No VPNs, extra accounts or other tricks.
   - title: Starts with the buyer's follows
@@ -84,7 +84,7 @@ how_it_works:
 
 output_shape: |
   TEAM
-  Scout (<n>): <who, why they match the buyer> | weekly: <routine>
+  Scout (<n>): <role, what niche and platform they know> | weekly: <routine>
   Relationship manager (<n>): <tasks> | weekly: <routine>
   Lead: <name or role>
 
@@ -95,6 +95,7 @@ output_shape: |
 
   BRIEF AND RELATIONSHIP RULES
   <free product + basic guidelines>  Disclosure: #ad or paid-partnership label
+  Check-in rule: <one contact per creator every 2 weeks, logged by the relationship manager>
   Tracking: <codes or links | halo read>
 
   SHOP FIT   <GO | NO-GO>

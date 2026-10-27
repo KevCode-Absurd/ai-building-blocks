@@ -55,12 +55,14 @@ fake = Faker()
 Faker.seed(42)  # Deterministic output for reproducibility
 random.seed(42)
 
+# Read the connection details from environment variables. Never write a
+# password in this file or commit one to your repo.
 DB_CONFIG = {
-    "host": "localhost",
-    "port": 5432,
-    "dbname": "dev_db",
-    "user": "dev_user",
-    "password": "dev_password",
+    "host": os.environ.get("DB_HOST", "localhost"),
+    "port": int(os.environ.get("DB_PORT", "5432")),
+    "dbname": os.environ["DB_NAME"],
+    "user": os.environ["DB_USER"],
+    "password": os.environ["DB_PASSWORD"],
 }
 
 NUM_USERS = 50
@@ -69,9 +71,10 @@ NUM_ORDERS = 100
 
 
 def seed():
-    # Guard: never seed production. Set APP_ENV=production there and this stops.
-    if os.environ.get("APP_ENV", "development") == "production":
-        raise SystemExit("Refusing to seed production.")
+    # Guard: fail closed. APP_ENV must be set, and only a test value is allowed.
+    # If it is missing or says production (or anything else), the script stops.
+    if os.environ.get("APP_ENV") not in ("development", "test", "staging"):
+        raise SystemExit("Refusing to seed: set APP_ENV to development, test or staging.")
     conn = psycopg2.connect(**DB_CONFIG)
     cur = conn.cursor()
 
@@ -171,7 +174,7 @@ if __name__ == "__main__":
 
 ```sql
 -- seed.sql — Idempotent seed data for local development
--- Run with: psql -U dev_user -d dev_db -f seed.sql
+-- Run with: psql -U [YOUR_TEST_USER] -d [YOUR_TEST_DB] -f seed.sql
 
 BEGIN;
 
@@ -226,7 +229,7 @@ COMMIT;
 - **Always respect foreign key ordering** — insert parent rows before child rows. Map out the dependency graph before writing the script to avoid constraint violations.
 - **Use ON CONFLICT DO NOTHING or UPSERT** patterns to make seed scripts idempotent. Running the seed twice should produce the same result, not duplicate data or throw errors.
 - **Separate seed profiles by environment** — a small, fast seed for local development, a larger seed for CI integration tests, and an even larger one for load testing. Control via environment variables.
-- **Never seed production databases** with test data. Use environment checks (e.g., `assert os.environ["ENV"] != "production"`) at the top of seed scripts as a safety guard.
+- **Never seed production databases** with test data. Put an environment check at the top of every seed script that fails closed: it should refuse to run unless the environment is explicitly set to a test value (such as `development`, `test` or `staging`), so a missing or unknown setting stops the script instead of letting it run.
 - **Reset auto-increment sequences** after seeding with explicit IDs to prevent primary key collisions when the application inserts new rows.
 
 ## Edge Cases

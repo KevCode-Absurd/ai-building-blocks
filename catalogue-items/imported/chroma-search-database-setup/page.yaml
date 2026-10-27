@@ -9,7 +9,7 @@ subhead: A small searchable store for your documents that finds passages by mean
 explain: |
   A small searchable store for your documents that finds passages by meaning instead of exact words. Ask a question and it brings back the closest text, ready to feed into a question-answering app.
 
-  The setup uses Chroma, a free database that runs on your own computer. You split your text into pieces, turn them into number lists called embeddings, and save them with labels like source and date. A short set of functions then lets you add, search, filter and delete. You can narrow a search by label, mix word search with meaning search, and keep the store on disk or run it as a server. Python is needed, and it works well in a notebook for early prototypes.
+  The setup uses Chroma, a free database that runs on your own computer. You split your text into pieces, turn them into number lists called embeddings, and save them with labels like source and date. A short set of functions then lets you add, search, filter and delete. You can narrow a search by label, mix word search with meaning search, and keep the store on disk or run it as a server. Python is needed, and it works well in a notebook for early prototypes. Licence: this copy of the skill file is MIT (see LICENSE). Chroma itself is Apache 2.0, a separate licence. The star and version counts in the skill file are the author's, from when it was written.
 when:
   - You want a chatbot that answers from your own documents.
   - Keyword search misses pages that use different wording.
@@ -35,7 +35,7 @@ how_to_use:
   - Ask your AI to write one Python script that sets up Chroma, adds your text and runs a test query.
   - Run the script. The default model runs on your computer and needs no account. The OpenAI and HuggingFace options need an API key and may cost money.
   - Check that the test query returns passages that match your question, with the right labels.
-  - Fix your text pieces or labels if the matches look wrong, then run the script again.
+  - If the matches look off-topic, split your text into shorter pieces (about 1,000 characters each), check that each piece has the right label, or try a different embedding model. Then run the script again.
   - Next, wire the store into a question-answering app. The LangChain and LlamaIndex notes in the skill's references/integration.md show how.
 output_sample:
   input:

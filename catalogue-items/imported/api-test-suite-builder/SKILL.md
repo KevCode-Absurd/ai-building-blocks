@@ -52,7 +52,7 @@ The commands below are starting points and were not checked against every framew
 find ./app/api -name "route.ts" -o -name "route.js" | sort
 
 # Extract HTTP methods from each route file
-grep -rn "export async function\|export function" app/api/**/route.ts | \
+grep -rn "export async function\|export function" app/api --include="route.ts" | \
   grep -oE "(GET|POST|PUT|PATCH|DELETE|HEAD|OPTIONS)" | sort -u
 
 # Full route map
@@ -74,6 +74,7 @@ grep -rn "router\.\(get\|post\|put\|delete\|patch\)\|app\.\(get\|post\|put\|dele
   src/ --include="*.ts" | grep -oE "(get|post|put|delete|patch)\(['\"][^'\"]*['\"]"
 
 # Generate route map
+# The sed line below uses \U, which only works with GNU sed (not the default on macOS). Check its output against your code.
 grep -rn "router\.\|app\." src/ --include="*.ts" | \
   grep -oE "\.(get|post|put|delete|patch)\(['\"][^'\"]+['\"]" | \
   sed "s/\.\(.*\)('\(.*\)'/\U\1 \2/"

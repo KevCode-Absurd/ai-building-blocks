@@ -176,9 +176,13 @@ d_v = 1 - e_v
 wacc = e_v*ke + d_v*kd*(1 - tax_rate)
 
 # 4e. Terminal value — compute both, use midpoint
+# Run Step 5 first to get med_ev_eb (the peer median EV/EBITDA). Do not type in a multiple.
 tv_gordon = fcff[-1] * (1 + g_terminal) / (wacc - g_terminal)
-tv_exit   = (rev_t[-1] * ebit_margin + rev_t[-1] * da_pct) * 15  # 15 is a placeholder; replace it with the peer median EV/EBITDA from Step 5
-tv_base   = 0.5 * (tv_gordon + tv_exit)
+if med_ev_eb is not None and not np.isnan(med_ev_eb):
+    tv_exit = (rev_t[-1] * ebit_margin + rev_t[-1] * da_pct) * med_ev_eb
+    tv_base = 0.5 * (tv_gordon + tv_exit)
+else:
+    tv_base = tv_gordon  # no peer median: use Gordon only and say so in the output
 
 # 4f. Bridge to equity
 pv_fcff = sum(f / (1+wacc)**(i+1) for i, f in enumerate(fcff))
@@ -194,7 +198,7 @@ implied_price_dcf = equity / shares_out
 
 ## Step 5: Relative Valuation
 
-Select 4-6 peers. Peer map and adjustment rules in `references/relative_valuation.md`.
+Select 4-6 peers. Peer map and adjustment rules in `references/relative_valuation.md`. Run this step before the terminal value in Step 4e, because 4e needs the peer median EV/EBITDA.
 
 ```python
 PEERS = ["MSFT", "ORCL", "CRM", "NOW", "SAP", "WDAY"]  # pick by industry
@@ -211,6 +215,8 @@ med_pe     = np.nanmedian([v["pe_fwd"] for v in multiples.values()])
 med_ev_rev = np.nanmedian([v["ev_rev"] for v in multiples.values()])
 med_ev_eb  = np.nanmedian([v["ev_ebitda"] for v in multiples.values()])
 
+# Before running this block, print income_q.index and cashflow_q.index and check each row label below exists.
+# If a label differs (for example "EBIT" or "Diluted EPS"), use the label the real data shows. If none fits, stop and tell the user which row is missing.
 eps_ttm    = float(income_q.loc["Diluted EPS"].iloc[:4].sum())
 rev_ttm    = float(income_q.loc["Total Revenue"].iloc[:4].sum())
 ebitda_ttm = float(income_q.loc["EBIT"].iloc[:4].sum()) + float(cashflow_q.loc["Depreciation And Amortization"].iloc[:4].sum())

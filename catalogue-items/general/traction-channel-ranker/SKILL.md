@@ -5,13 +5,13 @@ description: "Share your product facts. Get all 19 channels compared and a short
 
 # Traction channel test picker
 
+Needs no account, API key or paid tool, and no scraping. Start with a business profile (from the [Growth channel profile builder](https://useaiblocks.com/skills/traction-business-profiler)), or with a product link plus your growth goal, the most you can spend and your hours a week. If your AI cannot browse, paste your page text. It ranks and plans only: it sends nothing, spends nothing and publishes nothing.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Growth channel test shortlist planner](https://useaiblocks.com/skills/traction-research-agent).
-- The [Growth channel profile builder](https://useaiblocks.com/skills/traction-business-profiler).
-- The [Customer acquisition experiment reviewer](https://useaiblocks.com/skills/traction-experiment-reviewer).
 - The [Viral growth experiment planner](https://useaiblocks.com/skills/traction-viral-marketing). It takes the traction shortlist.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
@@ -63,6 +63,10 @@ Choose a dated growth goal and identify the bottleneck on its critical path. Bra
 Build channel-matrix.csv with channel, idea, buyer_fit, evidence, confidence, cost_assumptions, time_to_signal, reachable_buyers, prerequisites, risk, rank and rationale. Use qualitative high / medium / low fit and confidence unless the user provides a numerical rubric; a neat score is not evidence. Cost and reachable audience estimates must be sourced or labelled unknown.
 
 Group ideas into promising now, possible later and longer shots. Choose up to three affordable pilots to run first. Three is the usual target; fewer are correct if the combined cash or time limits cannot support three. Do not run three expensive channels merely to fill a quota. State what excluded a close contender.
+
+Shape of the two files, with placeholders:
+- channel-matrix.csv row: `<channel>,<idea>,<high|medium|low>,<evidence or unknown>,<confidence>,<cost assumption or unknown>,<time to signal>,<reachable buyers or unknown>,<prerequisites>,<risk>,<rank>,<rationale>`
+- shortlist.md: `Pilot 1: <channel slug> | outcome <one measure> | review <date> | cash <cap> | hours <cap>`, then excluded close contenders and the main uncertainty.
 
 Save shortlist.md with selected skill slugs, shared resource allocation, one primary outcome per test, review timing and the most important uncertainty. Use small tests to replace assumptions, then focus effort only when results justify it. Do not confuse simultaneous cheap exploration with scaling every channel. If none fits the current constraints, explain the limitation and choose a smaller research step.
 

@@ -58,9 +58,9 @@ The goal. What would guarantee failure. Survival risks, then other failure modes
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Go or no-go launch checker](https://useaiblocks.com/skills/go-or-no-go-launch-checker). It takes the plan.
 - The [Goal cascade checker](https://useaiblocks.com/skills/goal-cascade-checker). It takes the plan.
-- The [Brand name fit checker](https://useaiblocks.com/skills/brand-name-stretch-checker). It takes the plan.
-- **Lead the team** with the [Team decision and dissent note writer](https://useaiblocks.com/skills/disagree-and-commit-note-writer). It takes the plan.
+- The [Competitive strategy planner](https://useaiblocks.com/skills/one-bold-move-picker). It takes the plan.
 - **Decide what to do** with the [Investment decision brief writer](https://useaiblocks.com/skills/yes-no-too-hard-call-writer). It takes the plan.
+- **Lead the team** with the [Team decision and dissent note writer](https://useaiblocks.com/skills/disagree-and-commit-note-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

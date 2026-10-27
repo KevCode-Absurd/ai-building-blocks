@@ -21,7 +21,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-2. **Your image ads** with the [Buyer research image ad maker](https://useaiblocks.com/workflows/scroll-stopping-image-ads). Bring customer words, product photos (optional). It uses your brand brain.
+2. **Your image ads** with the [Buyer research image ad maker](https://useaiblocks.com/workflows/scroll-stopping-image-ads). Bring customer words, product photos, your results (optional). It uses your brand brain.
 3. This one.
 
 How to start:
@@ -148,8 +148,8 @@ CHECKS MISSED  <each check missed, and why, or none>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Single image ad planner](https://useaiblocks.com/skills/single-image-ad-planner). It takes the brief.
-- The [Image ad batch brief writer](https://useaiblocks.com/skills/weekly-image-ad-batch-maker).
 - The [Product image ad prompt writer](https://useaiblocks.com/prompts/accurate-product-image-ad-maker). It takes the brief.
+- The [Image ad batch brief writer](https://useaiblocks.com/skills/weekly-image-ad-batch-maker).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

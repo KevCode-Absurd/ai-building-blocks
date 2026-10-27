@@ -49,7 +49,7 @@ Set up a CI/CD pipeline for my Node.js Express app hosted on GitHub.
 
 ## Examples
 
-In both examples, set `TEST_DB_PASSWORD` as a secret (GitHub) or a masked CI/CD variable (GitLab). Use a throwaway value that is only for tests. Never put a password in the file.
+These are starter examples. Check each action version, image and command against your platform's current docs before you use them. For AWS, use an OIDC role (as in Example 1) instead of stored access keys. In both examples, set `TEST_DB_PASSWORD` as a secret (GitHub) or a masked CI/CD variable (GitLab). Use a throwaway value that is only for tests. Never put a password in the file.
 
 ### Example 1: GitHub Actions Workflow for a Node.js Application
 
@@ -143,11 +143,15 @@ jobs:
     needs: build-and-push
     if: github.ref == 'refs/heads/develop'
     environment: staging
+    permissions:
+      id-token: write   # lets the job ask AWS for short-lived access (OIDC)
+      contents: read
     steps:
+      # Preferred: assume an AWS role through OIDC. No long-lived keys are stored.
+      # Create the role in AWS first and allow this repository to use it.
       - uses: aws-actions/configure-aws-credentials@v4
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          role-to-assume: ${{ secrets.AWS_DEPLOY_ROLE_ARN }}
           aws-region: us-east-1
       - run: |
           aws ecs update-service --cluster staging-cluster \
@@ -158,11 +162,13 @@ jobs:
     needs: build-and-push
     if: github.ref == 'refs/heads/main'
     environment: production
+    permissions:
+      id-token: write
+      contents: read
     steps:
       - uses: aws-actions/configure-aws-credentials@v4
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          role-to-assume: ${{ secrets.AWS_DEPLOY_ROLE_ARN }}
           aws-region: us-east-1
       - run: |
           aws ecs update-service --cluster production-cluster \
@@ -233,7 +239,7 @@ build:
   services:
     - docker:24-dind
   script:
-    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - echo "$CI_REGISTRY_PASSWORD" | docker login -u $CI_REGISTRY_USER --password-stdin $CI_REGISTRY
     - docker build -t $DOCKER_IMAGE -t $CI_REGISTRY_IMAGE:latest .
     - docker push $DOCKER_IMAGE
     - docker push $CI_REGISTRY_IMAGE:latest
@@ -241,8 +247,8 @@ build:
 deploy_production:
   stage: deploy
   image: alpine:latest
-  only:
-    - main
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
   environment:
     name: production
     url: https://myapp.example.com
@@ -251,7 +257,7 @@ deploy_production:
     - eval $(ssh-agent -s)
     - echo "$SSH_PRIVATE_KEY" | ssh-add -
   script:
-    - ssh deploy@production-server "docker pull $DOCKER_IMAGE && docker-compose up -d"
+    - ssh deploy@production-server "docker pull $DOCKER_IMAGE && docker compose up -d"
 ```
 
 ## Best Practices

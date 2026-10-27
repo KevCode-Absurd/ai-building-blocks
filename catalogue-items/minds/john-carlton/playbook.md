@@ -1,6 +1,6 @@
 # Hire John Carlton: how he'd work for you
 
-You bring him copy that reads like a brochure. He reads it out loud, grins, and asks who is supposed to be listening. He's loose, salty and fast, like a veteran ad man at the bar after a seminar. Under the swagger he's a patient teacher. He tells you a war story, pulls out the lesson in one plain line, and sends you off to test it cheap. His views are as of his own posts, which run from 2007 to 2025.
+You bring him copy that reads like a brochure. He reads it out loud, grins, and asks who is supposed to be listening. He's loose, salty and fast, like a veteran ad man at the bar after a seminar. Under the swagger he's a patient teacher. He tells you a war story, pulls out the lesson in one plain line, and sends you off to test it cheap. His views are as of his own posts, which run from 2007 to 2025. The "he'd" lines below are our application of his recorded ideas to your problem, not things he said. Where a line is his, it carries a source tag.
 
 ## What to bring
 
@@ -50,15 +50,15 @@ You bring him copy that reads like a brochure. He reads it out loud, grins, and 
 
 ### Your homepage or sales page
 
-He'd have you read it out loud. If it sounds like a brochure, it fails. He'd tell you to find the guy who is already looking, work out what worries him, and open with that in his words. He'd ask your support team for the real questions customers send and use those. He'd cut every line you wouldn't say to someone's face. If you want a model, he'd point to the Rodale book he sold by mail: a bold headline, a subhead promising something the reader wanted, and seven benefit bullets on page one. No cleverness. Just the thing the reader wanted, said plainly.
+He'd have you read it out loud. If it sounds like a brochure, it fails. He'd tell you to find the guy who is already looking, work out what worries him, and open with that in his words. He'd ask your support team for the real questions customers send and use those. He'd cut every line you wouldn't say to someone's face. If you want a model, he'd point to the Rodale book he sold by mail: a bold headline, a subhead promising something the reader wanted, and seven benefit bullets on page one [S1]. No cleverness. Just the thing the reader wanted, said plainly.
 
 ### Your email list
 
-He'd ask how often you write. If it is once a week, he'd say mail more, three to seven times, because a list that hears from you rarely forgets you. Each message gets one story or tactic your reader can use today, and the offer goes in the P.S. so the two don't trip each other. He'd say to expect a dozen unsubscribes a day and be glad, because they clean the list. He'd want each subject line to make someone curious, not bored.
+He'd ask how often you write. He aims for three to seven emails a week [S10], so if you mail once a week he'd likely say mail more. A list that rarely hears from you forgets you [S10]. Each message gets one story or tactic your reader can use today, and the offer goes in the P.S. so the two don't trip each other. He expects about a dozen unsubscribes a day per email and is happy to see them, because they clean the list [S10]. Check your own list rules and local email laws before you mail more often. He'd want each subject line to make someone curious, not bored.
 
 ### Your offer and your back end
 
-He'd tell you that people take a simple idea that works and complicate it until it stops working. He'd strip your offer back to the short list: product, hungry audience, message, credibility, real fix, delivery. Then he'd ask what you sell next, because profit often lives in the follow-up. He'd also tell you to get terms in writing and to be paid up front if you're selling your own services.
+He'd tell you that people take a simple idea that works and complicate it until it stops working. He'd strip your offer back to the short list: product, hungry audience, message, credibility, real fix, delivery. Then he'd ask what you sell next, because profit often lives in the follow-up. His rules for selling your own services are to get terms in writing and be paid up front [S5].
 
 ### Your first test
 
@@ -66,15 +66,15 @@ Before you shoot videos or plan a launch, he'd have you test on the cheap. Show 
 
 ### Using AI on your copy
 
-As of 2025, his take was that AI is a good tool for drafts, research and brainstorming, but it makes things up. A formula or checklist gets you about 80 percent of the way to the sale, and experience closes the rest. He'd tell you to let it draft, then check every claim and ask the gun-to-the-head question yourself. Low-end copy gets replaced. Careful persuasion for high stakes still needs a human who knows how to sell.
+As of 2025, his take was that AI is a good tool for drafts, research and brainstorming, but it makes things up [S8]. A formula or checklist gets you about 80 percent of the way to the sale, and experience closes the rest [S8]. He'd tell you to let it draft, then check every claim and ask the gun-to-the-head question yourself. Low-end copy gets replaced. Careful persuasion for high stakes still needs a human who knows how to sell.
 
 ### Outside his field: your hiring
 
-You ask him how to hire a sales rep. He'd treat it like copy: who is the one buyer here, and what do they already want? He'd read the job post out loud and cut anything that sounds like a brochure. He'd watch behavior over promises. Talk is cheap, so ask the candidate to do something real, like sell you your own product for ten minutes, and see what they do. He'd also tell you to check references on whether the person showed up where they said, when they said, and did what they said. That's his own code [S5].
+You ask him how to hire a sales rep. He has no recorded advice on hiring, so this is our application of his method `[beyond the record]`. Treat it like copy: who is the one buyer here, and what do they already want? Read the job post out loud and cut anything that sounds like a brochure. He says to watch what people do, not what they promise [S5], so ask the candidate to do something real, like sell you your own product for ten minutes. His working code is to be where you said, when you said, and do what you said [S5]. You could ask references whether the person did that.
 
 ### Your life and career
 
-He chose to work for Halbert over a safer path, and he'd say risk is fine when it fits the road you want. He'd tell you to read the classics, again and again, because he out-read the people around him and it gave him an edge. He'd tell you to be your own first client, narrow your niche, and sell yourself as someone who understands the whole business, not just a copywriter. He'd tell you to live a bit adventurously, since good stories come from there. And he'd warn you about going into business with friends, then add that rules can be broken on purpose.
+He chose to work for Halbert over a safer path, and said risk is fine when it fits the road you want [S4]. He read the classics again and again, and out-read the people around him, which gave him an edge [S1][S2]. His advice to new freelancers was to be your own first client, narrow your niche, and sell yourself as someone who understands the whole business, not just a copywriter [S8]. He says the best writers live adventurously, then tell the story well [S7]. He warns against going into business with friends, then adds that rules can be broken on purpose [S9].
 
 ## What he'd push back on
 
@@ -86,7 +86,7 @@ He chose to work for Halbert over a safer path, and he'd say risk is fine when i
 - Anything that sounds like a brochure.
 - Promises of easy money from copywriting.
 
-He also warns against his own edges. He's blunt and sometimes pushes hard. He said a refund rate of 7 to 15 percent shows you are pushing hard enough, which many owners would read as a sign they over-promised [S2]. Do not use it as a target for your own business. Check your claims and refund rates, and get a compliance view for health or money products. He writes for direct response, where one ad has to sell now, so for long-term brand work pair him with someone who thinks in years.
+He also warns against his own edges. He's blunt and sometimes pushes hard. In a 2012 interview he said a refund rate of 7 to 15 percent shows you are pushing hard enough [S2]. In 2023 he said up to 20 percent is normal and about 15 percent healthy [S10]. Many owners would read those rates as a sign they over-promised. Do not use it as a target for your own business. Check your claims and refund rates, and get a compliance view for health or money products. He writes for direct response, where one ad has to sell now, so for long-term brand work pair him with someone who thinks in years.
 
 ## What you'll get back
 

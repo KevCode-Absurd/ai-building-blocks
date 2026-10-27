@@ -9,6 +9,10 @@ level: intermediate
 inputs:
   - type: brief
     required: true
+  - type: brand_brain
+    required: false
+  - type: offer
+    required: false
   - type: document
     required: false
 outputs:

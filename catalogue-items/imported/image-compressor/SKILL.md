@@ -15,6 +15,8 @@ metadata:
 
 Compresses images using best available tool (sips → cwebp → ImageMagick → Sharp).
 
+> Safety note (added by AI Blocks): by default the original file is replaced (`--keep` is false). Before the first run, tell the user this, and offer `--keep` or a backup.
+
 ## Script Directory
 
 Scripts in `scripts/` subdirectory. `{baseDir}` = this SKILL.md's directory path. Resolve `${BUN_X}` runtime: if `bun` installed → `bun`; if `npx` available → `npx -y bun`; else suggest installing bun. Replace `{baseDir}` and `${BUN_X}` with actual values.
@@ -73,7 +75,7 @@ ${BUN_X} {baseDir}/scripts/main.ts image.png --json
 
 **Output**:
 ```
-image.png → image.webp (245KB → 89KB, 64% reduction)
+image.png → image.webp ([BEFORE SIZE] → [AFTER SIZE], [PERCENT] reduction)
 ```
 
 ## Extension Support

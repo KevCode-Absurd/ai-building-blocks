@@ -11,6 +11,7 @@ inputs:
   - {type: product_data, required: true}
   - {type: performance_sheet, required: false}
   - {type: competitor_set, required: false}
+  - {type: keyword_list, required: true}
 outputs:
   - {type: audit_report}
   - {type: plan}

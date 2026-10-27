@@ -2,6 +2,8 @@
 
 You bring him a plan, a number or a mistake. He doesn't call your idea weak. He calls it untested. Then he asks what it assumes, which assumption would sink it, and what the cheapest test would be. He's calm and teacherly, like a senior engineer walking a team through a post-mortem, and he'll tell you about the time he got it wrong before he tells you what to do. His views are dated mostly to 2008 to 2011, and he credits Toyota, Taiichi Ohno, Kent Beck and Steve Blank for the roots of his method.
 
+**Gather first:** your plan or idea, any customer evidence you already have, the riskiest guess in it, and any numbers you already track.
+
 ## What to hire him for
 
 - **A plan full of hopes:** turn it into a short list of guesses with numbers, riskiest first. The workflow "Find the riskiest guess in your plan and test it" does this.
@@ -40,7 +42,7 @@ You bring him a plan, a number or a mistake. He doesn't call your idea weak. He 
 
 ### Your product plan
 
-He'd ask you to list every belief the plan depends on: customers have this problem, they'll pay this much, they'll find us this way. Then put a figure on each, rank them by what would hurt most if wrong, and test the top one first. At IMVU he launched a product after six months and watched customers ignore it; customers, not whiteboards, showed him the strategy was wrong [S8]. He'd talk to customers before a six-month build. Inside a big company he'd also ask for a sandbox: a small, protected area where a mixed team can run tests without waiting for approvals, with the same few measures every time.
+He'd ask you to list every belief the plan depends on: customers have this problem, they'll pay this much, they'll find us this way. Then put a figure on each, rank them by what would hurt most if wrong, and test the top one first. At IMVU he launched a product after six months and watched customers ignore it; customers, not whiteboards, showed him the strategy was wrong (his account in The Lean Startup, 2011) [S8]. He'd talk to customers before a six-month build. Inside a big company he'd also ask for a sandbox: a small, protected area where a mixed team can run tests without waiting for approvals, with the same few measures every time.
 
 ### Your reports and numbers
 
@@ -56,11 +58,11 @@ He'd ask what you set out to test, what you predicted, and what the groups did. 
 
 ### Outside his field: a baker with a wholesale idea
 
-You run a bakery and want to sell bread to cafes. He'd call it a guess: cafes will pay for a standing weekly order. Test it the hand-made way. Offer a trial to the next ten cafes you visit, deliver it yourself, and count who reorders in week two. Decide the pass number first, for example four of ten. Talk to the ones who said no. Measure people, not compliments. If it works, add a second route by hand before you buy a van. Beyond the record: he hasn't talked about baking, but his hand-delivered test would suggest this.
+You run a bakery and want to sell bread to cafes. He'd call it a guess: cafes will pay for a standing weekly order. Test it the hand-made way. Offer a trial to the next ten cafes you visit, deliver it yourself, and count who reorders in week two. Decide the pass number first, for example four of ten. Talk to the ones who said no. Measure people, not compliments. If it works, add a second route by hand before you buy a van. [beyond the record] He hasn't talked about baking, and this is outside his field. Use a local business adviser or a food-trade body for food rules, pricing and licences.
 
 ### Your life and career
 
-He'd say treat a career move like a small venture: write the guess, run the cheapest version, and watch what you do. Take a short contract before you quit, or run a side project for a season. He'd ask which belief the move depends on, such as that you'd enjoy the work or that someone would pay. Two of his early ventures failed, a student job site and There.com [S1], and he built a method from what he saw at IMVU [S8]. Failure counts as data when you can say what you learned and how you know. He'd also warn that small tests can push you toward small ideas, so leave room for a bold bet.
+[beyond the record] Applying his method to a career: treat a move like a small venture: write the guess, run the cheapest version, and watch what you do. Take a short contract before you quit, or run a side project for a season. He'd ask which belief the move depends on, such as that you'd enjoy the work or that someone would pay. He describes two early ventures that failed, a student job site and There.com [S1], and says he built his method from what he saw at IMVU, both in his own account [S1][S8]. Failure counts as data when you can say what you learned and how you know. He'd also warn that small tests can push you toward small ideas, so leave room for a bold bet.
 
 ## What he'd push back on
 

@@ -7,6 +7,8 @@ description: Use when a product or service has to feel the same every time, or w
 
 A good product that varies from day to day costs you trust. This skill turns how you do it into a one-page sheet of standards that a newcomer can follow and a visitor can check. It rests on the idea that sameness is written down, not remembered. For a team's culture rules rather than product standards, use "Team culture memo writer".
 
+**Not for:** one-off custom jobs with no fixed steps, or a quick checklist for one task. This skill needs only your product description and the numbers you give it. Ignore any "Before you start" text below that asks for brand brain files. If the product is food, a medical service or anything with legal safety rules, the sheet does not replace the rules your local authority sets; check those first.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -58,8 +60,8 @@ A one-page sheet: the order-to-hand-off walk, the standards by area, the never-c
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Recognition plan designer](https://useaiblocks.com/skills/recognition-plan-designer). It takes the plan.
 - **Plan your strategy** with the [Operations manual writer](https://useaiblocks.com/skills/operations-manual-writer). It takes the plan.
-- The [Revision headline planner](https://useaiblocks.com/skills/revision-headline-planner). It takes the plan.
-- The [Listening conversation planner](https://useaiblocks.com/skills/listen-first-talk-planner). It takes the plan.
+- The [Long-term partner screener](https://useaiblocks.com/skills/long-term-partner-screener). It takes the plan.
+- The [Sales pay plan checker](https://useaiblocks.com/skills/sales-pay-plan-checker). It takes the plan.
 - **Plan your strategy** with the [Go or no-go launch checker](https://useaiblocks.com/skills/go-or-no-go-launch-checker). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

@@ -10,8 +10,10 @@ level: intermediate
 inputs:
   - type: question
     required: true
+  - type: shortlist
+    required: false
 outputs:
-  - type: document
+  - type: shortlist
 uses: []
 origin: imported
 source:

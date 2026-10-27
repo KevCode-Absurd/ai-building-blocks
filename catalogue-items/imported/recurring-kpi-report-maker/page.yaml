@@ -18,7 +18,7 @@ when:
 not_for:
   - "You have a one-off question about your numbers: ask your AI directly, or pull the figure from your accounting tool."
   - "You want a live dashboard that updates by itself: use a dashboard tool such as Looker Studio or Power BI."
-  - "You want the wider picture of how your business is doing: use business-pulse instead."
+  - "You want the wider picture of how your business is doing: use business-snapshot-writer instead."
 you_give:
   - Plain-words description of the report
   - Data from a connected tool or an uploaded file
@@ -29,6 +29,7 @@ you_get:
   - Saved report definition
   - Rerun on demand or schedule
 how_to_use:
+  - Have ready a one-line description of the report, and either a connected tool or a CSV or Excel export of your numbers.
   - Open your AI tool and add this skill. Paste the instructions into a chat if you cannot add files.
   - "Describe your report in one sentence. For example: sales by location vs last year plus AR aging, every Monday."
   - Answer the one batch of questions it asks, such as which period each run covers. Then confirm the spec once.

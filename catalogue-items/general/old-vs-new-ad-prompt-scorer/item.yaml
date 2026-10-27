@@ -10,6 +10,7 @@ level: expert
 inputs:
   - {type: static_ads, required: true}
   - {type: brief, required: true}
+  - {type: prompt, required: true}
 outputs:
   - {type: audit_report}
 uses: [ai-workflow-handoff-planner]

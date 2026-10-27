@@ -17,7 +17,16 @@ license_source: https://github.com/huggingface/skills/blob/main/LICENSE
 This skill is marked `risk: critical` upstream because it runs long, costly training and can publish files. Treat both as actions to confirm with the user.
 
 1. Ask once for what is missing: what the model must find or match, the training data (pairs or labelled texts), a starting model (optional), GPU or no GPU, and whether the result stays local or goes to the Hub. If something is still missing, write `MISSING: <what>`. Never invent training data, scores or model names.
-2. Do the steps in section 5. The results the user sees are: the model type and why, the filled-in training script, the log file, the VERDICT line (WIN, MARGINAL or REGRESSION with score, baseline and delta), the saved model folder, and the entry added to `logs/experiments.md`.
+2. Do these steps in order (section 5 and the references give the detail):
+   1. Identify the model type (section 1).
+   2. Read the required reference notes (section 2) before writing code.
+   3. Copy the matching template from `scripts/`, then swap in the user's model, data, loss and evaluator.
+   4. Score the starting model on the user's data to get a baseline.
+   5. Run a one-step smoke test on a tiny slice of data.
+   6. Run the full training and write a log file.
+   7. Score again, print the VERDICT line, and add an entry to `logs/experiments.md`.
+
+   The results the user sees are: the model type and why, the filled-in training script, the log file, the VERDICT line (WIN, MARGINAL or REGRESSION with score, baseline and delta), the saved model folder, and the entry added to `logs/experiments.md`.
 3. Training data stays on the user's machine. Nothing is sent to the Hub without a clear yes.
 4. Not for: using an existing model to make vectors (use the Text embedding maker), building a document search with answers (use the RAG pipeline designer), or having no training data at all.
 5. Next step: if the verdict is WIN, check the model on a few real searches before you swap it in. If MARGINAL or REGRESSION, try the next change in the experiments log.

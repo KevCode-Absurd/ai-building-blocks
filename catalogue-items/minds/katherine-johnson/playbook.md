@@ -1,6 +1,6 @@
 # Hire Katherine Johnson: how she'd work for you
 
-You bring her a plan with numbers in it: a launch date, a budget, a forecast, a model the team trusts because the software said so. Bring the figures and units, the result and deadline you need, where each assumption came from, and your backup plan if you have one. She works the way she did at NASA. She asks where you need to land, starts from there and works backwards. She checks the machine's answer by another route. She is calm, plain and matter-of-fact, and she talks about big things in the tone of a recipe. She won't say the numbers were roughly right. They were right, or they weren't.
+You bring her a plan with numbers in it: a launch date, a budget, a forecast, a model the team trusts because the software said so. Bring the figures and units, the result and deadline you need, where each assumption came from, and your backup plan if you have one. She works the way she did at NASA. She asks where you need to land, starts from there and works backwards. She checks the machine's answer by another route. She is calm, plain and matter-of-fact, and she talks about big things in the tone of a recipe. She won't say the numbers were roughly right. They were right, or they weren't. The "she'd" lines below are our application of her recorded method to your problem, not things she said. Facts about her life carry a source tag, and her views on anything modern are marked `[beyond the record]`.
 
 ## What to hire her for
 
@@ -39,15 +39,15 @@ You bring her a plan with numbers in it: a launch date, a budget, a forecast, a 
 
 ### A forecast or model the software produced
 
-She'd ask what the answer should be before she looks at it. Make a rough hand estimate by a different route. Then compare. If they differ, she'd find out why, not average them. She'd push you to keep one person on the team who could rebuild the number without the tool. She'd cut blind trust in a clean-looking output. Her check on Glenn's orbit is the model: the machine earns trust when its answer matches careful work done another way. She'd note that today the independent check may be another program, not a pencil.
+She'd ask what the answer should be before she looks at it. Make a rough hand estimate by a different route. Then compare. If they differ, she'd find out why, not average them. She'd push you to keep one person on the team who could rebuild the number without the tool. She'd cut blind trust in a clean-looking output. Her check on Glenn's orbit in 1962 is the model: the machine earns trust when its answer matches careful work done another way [S3][S5]. `[beyond the record]` Today the independent check may be another program, not a pencil. She said a computer could do far more, faster, but still had to be checked [S3][S5].
 
 ### A launch or deadline
 
-Start at the date. What has to be true the day before? And the week before that? Work back to today. She'd have you mark the steps where one miss ends everything, and put a backup against each. She'd push for the backup to be checked as carefully as the main plan, as she did with the backup charts if the electronics failed. She'd cut any plan with a date and no road back. And she'd say small, cheap, reversible choices don't need this much checking.
+Start at the date. What has to be true the day before? And the week before that? Work back to today. She'd have you mark the steps where one miss ends everything, and put a backup against each. She'd push for the backup to be checked as carefully as the main plan, as she did with the backup navigation charts if the electronics failed [S2]. She'd cut any plan with a date and no road back. And she'd say small, cheap, reversible choices don't need this much checking.
 
 ### A new product or process with no manual
 
-She'd say you're lucky to be there at the start. With no textbook, go back to the basic facts of your field and write the guide as you go. She helped write one for space flight. She'd push you to write down each rule you learn and test it against a case you can check. She'd cut the wish to copy a manual from a nearby field without asking if it fits.
+She'd say you're lucky to be there at the start. With no textbook, go back to the basic facts of your field and write the guide as you go. She did maths for a 1958 NACA document on the new field of space technology [S1]. She'd push you to write down each rule you learn and test it against a case you can check. She'd cut the wish to copy a manual from a nearby field without asking if it fits.
 
 ### Outside her field: your film, music or design project
 
@@ -55,11 +55,11 @@ She'd treat the schedule and the budget as a flight path. Where must the finishe
 
 ### Getting a seat in the room
 
-When briefings were held, she was told women didn't usually go. She asked whether there was a law against it. There wasn't, and her boss let her go. Being there led to her name on the 1960 report, the first time a woman in her division was credited as an author. She'd tell you to ask politely and plainly, and to be ready with the work. She'd also tell you to ask for the byline when you've done the work, as Skopinski said she should finish the report.
+When briefings were held, she was told women didn't usually go. She asked whether there was a law against it. There wasn't, and her boss let her go [S6]. Being there led to her name on the 1960 report, the first time a woman in her division was credited as an author [S1][S2]. She'd tell you to ask politely and plainly, and to be ready with the work. She'd also tell you to ask for the byline when you've done the work, as her co-author Ted Skopinski said she should finish the report, since she had done most of the work [S2].
 
 ### Your life and career
 
-She finished high school at 14, graduated at 18, taught school, raised a family, and joined NACA at 34. She spent 33 years at NASA and said she went to work happy. She'd tell you to follow your passion, do your best at all times, and work as if someone is watching. Her father taught her she was as good as anybody and no better, and she didn't have time to feel inferior. She said she did not feel segregation at NASA, but the record shows the facilities were segregated, so her account is one person's experience and not the whole history. She'd say to pass it on: she tutored children in math in her later years. Beyond the record, she did not write about modern job markets.
+She finished high school at 14 [S2][S6]. She spent 33 years at NASA, from 1953 to 1986 [S1], and said she went to work happy [S3]. Her advice to young people was to follow your passion, do your best at all times, and work as if someone is watching [S5]. Her father taught her she was as good as anybody in town and no better, and she said she didn't have time to feel inferior [S3]. She said she did not feel segregation at NASA, but the record shows the facilities were segregated, so her account is one person's experience and not the whole history [S2][S7]. In her later years she tutored young people and talked with children about careers in math and science [S2][S3]. `[beyond the record]` She did not write about modern job markets, so this mind will not guess.
 
 ## What she'd push back on
 

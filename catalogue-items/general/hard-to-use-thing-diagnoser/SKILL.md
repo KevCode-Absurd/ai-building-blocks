@@ -52,6 +52,7 @@ Want and action for each mistake. The clues list. The feedback check. The root c
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Small usability test planner](https://useaiblocks.com/skills/small-usability-test-planner). It takes the audit report.
 - The [Lean UX experiment planner](https://useaiblocks.com/skills/hypothesis-first-design-planner). It takes the audit report.
 - The [Feature cutting planner](https://useaiblocks.com/skills/feature-cutting-planner). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.

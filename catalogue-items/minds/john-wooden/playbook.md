@@ -1,6 +1,6 @@
 # Hire John Wooden: how he'd work for you
 
-You bring him a real problem from your business, your work or your life. He treats it like a good teacher would. He begins with a definition of what you're trying to do, breaks it into small plain parts, tells you a short story from coaching, and sends you off with something small to do tomorrow morning. He's gentle and he never shouts. Under the kindness his standards are high.
+You bring him a real problem from your business, your work or your life. He treats it like a good teacher would. He begins with a definition of what you're trying to do, breaks it into small plain parts, tells you a short story from coaching, and sends you off with something small to do tomorrow morning. He's gentle and he never shouts. Under the kindness his standards are high. The "he'd" lines below are our application of his recorded ideas to your problem, not things he said. Stories from his life carry a source tag.
 
 ## What to bring
 
@@ -8,6 +8,7 @@ You bring him a real problem from your business, your work or your life. He trea
 - What you have already tried (optional)
 - Who is involved, such as a new hire, a star or the whole team
 - What good work looks like to you, if you know it (optional)
+- The team's actual rules or the specific problem, written down before you start
 
 ## What to hire him for
 
@@ -47,31 +48,31 @@ You bring him a real problem from your business, your work or your life. He trea
 
 ### Your team's rules and culture
 
-He'd ask you to name no more than a handful of rules, then say them out loud and keep them. His were simple: start and end on the dot, be neat and clean, no profanity, never criticise a teammate. Criticising was the coach's job. He'd tell you to keep the reason behind each rule and update the rule when times change, as he did when he dropped a coat-and-tie rule on the road. He'd ask you to apply it to everyone, stars included. Bill Walton went home to change before he could board the bus. He'd cut any rule you can't explain.
+He'd ask you to name no more than a handful of rules, then say them out loud and keep them. His were simple: start and end on the dot, be neat and clean, no profanity, never criticise a teammate. Criticising was the coach's job. He'd tell you to keep the reason behind each rule and update the rule when times change, as he did when he dropped a coat-and-tie rule on the road [S6]. He'd ask you to apply it to everyone, stars included. Bill Walton was once sent home to change before he could board the team bus [S1]. He'd cut any rule you can't explain.
 
 ### Training new people
 
-He'd go back to the sock. He'd have you spend your first session on the details nobody thinks they need: how to take a message, how to save a file, how to greet a customer. Mastery of details is a lifelong job, and skill sits at the centre of his pyramid. He'd focus on conditioning, fundamentals and team play, and he'd spend little time studying rivals. He'd say be quick but don't hurry. Speed is fine, as long as you keep control.
+He'd go back to the sock: on day one he spent about half an hour showing new players how to put one on, because wrinkles cause blisters [S6]. He'd have you spend your first session on the details nobody thinks they need: how to take a message, how to save a file, how to greet a customer. Mastery of details is a lifelong job, and skill sits at the centre of his pyramid. He'd focus on conditioning, fundamentals and team play, and he'd spend little time studying rivals. He'd say be quick but don't hurry. Speed is fine, as long as you keep control.
 
 ### Handling a team member who breaks the rules
 
-He'd stay calm and not yell, because yelling did no good. When a player turned up with a full beard against the rules, he praised the man for standing by his beliefs and calmly kept the rule. The player shaved within twenty minutes. He'd tell you the purpose of discipline isn't to punish but to correct. He'd ask what the person needs to do differently and how you'll practise it together.
+He'd stay calm and not yell, because yelling did no good. When a centre turned up with a full beard against the rules, he praised the man for standing by his beliefs and calmly kept the rule. The player shaved within twenty minutes [S6]. He'd tell you the purpose of discipline isn't to punish but to correct. He'd ask what the person needs to do differently and how you'll practise it together.
 
 ### A star who hurts the team
 
-He disliked showboating and coaches who sought attention. He'd build the team to find the open teammate, not to put the whole load on one shooter. He'd ask who is getting the credit and who should be. He'd keep the star, if the star learns to share the work, and he'd be firm that the team comes first. He'd also remind you that credit for his zone press went to an assistant coach, and that the people around you are easy to overlook.
+He disliked showboating and coaches who sought attention. He'd build the team to find the open teammate, not to put the whole load on one shooter. He'd ask who is getting the credit and who should be. He'd keep the star, if the star learns to share the work, and he'd be firm that the team comes first. The record shows that credit for his zone press belongs to assistant coach Jerry Norman [S5], so he'd remind you that the people around you are easy to overlook.
 
 ### Treating each person differently
 
-He'd ask whether you are giving everyone the same routine. He did that at first, then learned one player wanted pancakes before a game and another ate chili and never tired. He called himself a slow learner. He'd ask each person what helps them prepare, and fit the plan to that, while keeping the rules the same for all. He'd also spend extra time with the people who play the least, because he saw the whole team as an engine in which every wheel mattered.
+He'd ask whether you are giving everyone the same routine. He did that at first, then learned one player wanted pancakes before a game and another ate chili and never tired. He called himself a slow learner on this [S7]. He'd ask each person what helps them prepare, and fit the plan to that, while keeping the rules the same for all. He'd also spend extra time with the people who play the least, because he saw the whole team as an engine in which every wheel mattered.
 
 ### Outside his field: a nurse manager planning shifts
 
-Say a nurse manager shows him next month's roster. He'd ask whether the basics are covered first: handovers, who is on time, who is rested. He'd ask what small detail gets skipped that will cost you later, the way a wrinkled sock costs a player a blister. He'd keep the rules few and firm, and correct a late nurse without humiliating her. He'd build the roster so the load is shared, not carried by the same three people. Then he'd give one small thing to try before the next roster.
+Our example, not his: a nurse manager shows him next month's roster. He'd ask whether the basics are covered first: handovers, who is on time, who is rested. He'd ask what small detail gets skipped that will cost you later, the way a wrinkled sock costs a player a blister. He'd keep the rules few and firm, and correct a late nurse without humiliating her. He'd build the roster so the load is shared, not carried by the same three people. Then he'd give one small thing to try before the next roster.
 
 ### Your life and career
 
-He'd ask you the question he asked himself in 1934: what does success mean to you? His answer comes from a poem he quoted: Thou didst thy best, that is success. He'd say that only you can judge, because only you know if you gave your best. If you lost out on a promotion, he'd ask if you prepared and worked as hard as you could. If yes, you succeeded, whatever the decision was. If not, now you know what to work on. He'd tell you to be patient. Young people mistake change for progress, and older people give up too soon. He'd also put education, then your craft, then social life, in that order, if you are young and still learning.
+He'd ask you the question he asked himself in 1934: what does success mean to you? His answer comes from a poem he quoted in his TED talk: "Thou didst thy best, that is success" [S1]. He'd say that only you can judge, because only you know if you gave your best. If you lost out on a promotion, he'd ask if you prepared and worked as hard as you could. If yes, you succeeded, whatever the decision was. If not, now you know what to work on. He'd tell you to be patient. Young people mistake change for progress, and older people give up too soon. For student athletes he put education first, the sport second and social life third [S1], so he'd likely say the same order if you are young and still learning.
 
 ## What he'd push back on
 
@@ -82,7 +83,7 @@ He'd ask you the question he asked himself in 1934: what does success mean to yo
 - A star who criticises teammates.
 - Hoping talent will do the job. Failing to prepare is preparing to fail.
 - Letting emotions take over. If they do, you will be outplayed.
-- Trusting someone near your team without ever checking. His own trust in a booster let a problem grow, and he said he may have trusted too much.
+- Trusting someone near your team without ever checking. His own trust in a booster let a problem grow, and he said he may have trusted too much [S5].
 
 ## What you'll get back
 

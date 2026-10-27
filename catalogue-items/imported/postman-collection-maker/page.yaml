@@ -10,6 +10,8 @@ explain: |
   A Postman collection file that imports in one click, built from a plain description of your API or from cURL commands you paste in.
 
   The skill pulls out each endpoint's name, method, URL, headers, authentication, body and query parameters. It puts the host in a base_url variable so you can switch between environments. It then writes a valid Collection v2.1 JSON file with folders for related requests. When something is unclear, it follows common REST habits and lists its guesses at the end so you can correct them. You can mix described endpoints and cURL in one request.
+
+  Licence: this copy comes from the sickn33 collection under CC BY 4.0 (LICENSE-CONTENT). The skill file's own header names LambdaTest and the MIT licence. Both are open licences, and both authors are credited.
 when:
   - You have a dozen cURL commands and want them organised.
   - A new teammate needs a way to try your API.
@@ -36,6 +38,8 @@ how_to_use:
   - Copy the collection.json and environment.json blocks into two files.
   - In Postman, choose File, then Import, and add both files.
   - Read the assumptions list and fix anything the AI guessed wrong.
+  - Do not paste real passwords, tokens or API keys into the chat. Fill them in inside Postman after you import.
+  - Next, ask for an OpenAPI file of the same API, or add tests in Postman.
 output_sample:
   input:
     - A plain description of your API, or one or more cURL commands
@@ -51,3 +55,4 @@ output_sample:
       contains: A list of guesses made, such as inferred methods or placeholder values, so you can correct them.
     - name: Import instructions
       contains: A short note on how to bring the files into Postman with File, then Import.
+next: [api-spec-writer, api-test-suite-builder]

@@ -13,7 +13,9 @@ explain: |
 
   It writes the pricing page and works three example months, a small, a typical and a heavy customer, line by line. Prices are drafts. You check them against your own costs and real usage before you launch.
 
-  On this site the skill comes with plain how-to steps, a list of what it needs, and a sample of the result.
+  On this site the skill comes with plain how-to steps, a list of what it needs, and a sample of the result. We gave it a plain name and wrote the page text. The method is the author's.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (jonathimer) says MIT. Credit goes to jonathimer and sickn33.
 when:
   - You are launching an API or a tool and must decide what to charge per unit.
   - Customers say their bill was higher than they expected.

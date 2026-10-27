@@ -9,7 +9,7 @@ subhead: Say what looks wrong in your camera image, such as dark, blurry or wash
 explain: |
   A dark, blurry or washed-out camera picture gets better, starting with the camera and ending with software. Tell it what looks wrong and it checks the image, works out the likely cause, and gives you camera settings and processing steps to fix it.
 
-  It follows a hardware-first rule: change exposure, gain, focus or light at the source before touching pixels, because that keeps more detail. A diagnostic step measures brightness, contrast, sharpness and noise, and detects backlit subjects. If settings are not enough, it applies a set of image processing steps in a sensible order. It is built around MATLAB tools, so you need MATLAB and the image toolbox to run the code.
+  It follows a hardware-first rule: change exposure, gain, focus or light at the source before touching pixels, because that keeps more detail. A diagnostic step measures brightness, contrast, sharpness and noise, and detects backlit subjects. If settings are not enough, it applies a set of image processing steps in a sensible order. It is built around MATLAB tools, so you need MATLAB and the image toolbox to run the code. Licence: the LICENSE.md in this folder applies. It is BSD 2-Clause with an added MathWorks term: use it only with MathWorks products such as MATLAB. The skill file header links MathWorks' own licence page, which is the upstream source of that term.
 when:
   - Your webcam image is too dark and you do not know which setting to change.
   - A subject standing in front of a window turns into a silhouette.
@@ -29,12 +29,12 @@ you_get:
   - Image processing steps in the right order
   - A before and after check
 how_to_use:
-  - Check you have MATLAB with the Image Acquisition Toolbox and Image Processing Toolbox. MATLAB is a paid product.
+  - Check you have MATLAB with the Image Acquisition Toolbox and Image Processing Toolbox. MATLAB is a paid product, and this skill cannot run without it. If you do not have MATLAB, change the light, exposure and focus on your camera app by hand, or ask a general AI for free photo-editing steps.
   - Connect your camera to the computer.
   - Open an AI that can run MATLAB code and paste in this skill. It needs MATLAB tool access to run its checks (detect_matlab_toolboxes and check_matlab_code). Without that, type ver in MATLAB to list your toolboxes, and ask your AI to read the code before you run it.
   - Say what looks wrong, and name your camera if you know it.
   - Read the diagnosis, then try the camera settings it suggests before any processing.
-  - Keep the .m function it writes for later captures. If the before and after numbers do not improve, change one camera setting at a time and measure again.
+  - Keep the .m function it writes for later captures. If the before and after numbers do not improve, change one camera setting at a time and measure again. Run the before and after check again after any camera, firmware or resolution change.
 output_sample:
   input:
     - What looks wrong, such as too dark, blurry, noisy or washed out

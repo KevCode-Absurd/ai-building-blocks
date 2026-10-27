@@ -23,7 +23,7 @@ If an answer is still missing, write MISSING next to it and use the defaults. Ne
 
 ## Style Foundations
 - Visual style: high-contrast, retro
-- Typography scale: desktop-first expressive scale | Fonts: primary=Macondo, display=Macondo, mono=JetBrains Mono | weights=100, 200, 300, 400, 500, 600, 700, 800, 900
+- Typography scale: desktop-first expressive scale | Fonts: display=Macondo (headings and short labels only), primary=a plainer legible font for long reading text, mono=JetBrains Mono | weights=only those each font ships in (Macondo has one regular weight)
 - Color palette: primary, neutral, success, warning, danger | Tokens: primary=#3B82F6, secondary=#8B5CF6, success=#16A34A, warning=#D97706, danger=#DC2626, surface=#FFFFFF, text=#111827
 - Spacing scale: 4/8/12/16/24/32
 

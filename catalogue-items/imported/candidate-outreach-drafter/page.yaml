@@ -9,7 +9,7 @@ subhead: Describe the role, what makes it appealing, the person you want and the
 explain: |
   Personal first messages that get replies, plus follow-ups to send after. Describe the role and the person you want, and you get a short opening note, a four-touch sequence and a polite last message.
 
-  Each draft leads with what matters to the candidate, names something specific from their background and asks for one small step, like a 15-minute chat. It sets length by channel: under about 400 characters for LinkedIn messages and around 100 to 150 words for email. It keeps the tone human, not stiff, and fits it to the platform. It stops after four touches. It also has notes on handling replies and on sending from the hiring manager.
+  Each draft leads with what matters to the candidate, names something specific from their background and asks for one small step, like a 15-minute chat. It sets length by channel: under about 400 characters for LinkedIn messages and around 100 to 150 words for email. It keeps the tone human, not stiff, and fits it to the platform. It stops after four touches. It also has notes on handling replies and on sending from the hiring manager. The percentages in the skill file are the author's own and are not checked. Do not repeat them to a candidate.
 when:
   - You found a strong person on LinkedIn or GitHub and need a first message.
   - Your cold messages get no replies.
@@ -32,11 +32,11 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in this skill. No code, files or paid tools are needed.
   - Paste the role and what makes it appealing. Add the person's profile or your notes on their work.
-  - Say which channel you will use, such as LinkedIn or email. Add the hiring manager's name if they will send it (optional).
+  - Say which channel you will use, such as LinkedIn or email. Add the hiring manager's name if they will send it (optional). If you do, the hiring manager must read and approve the message first, and they answer the replies. Never send in someone's name without their yes.
   - Tell your AI the tone you want, such as professional, casual or technical. If you say nothing, it uses a friendly, professional tone.
   - Read the first message. Check that the personal detail about the person is true, then send it.
   - Send the follow-ups on the days listed in the sequence. Stop after the fourth touch.
-  - When someone replies with interest, send the role brief and book a call within 48 hours. The response playbook in the result has a reply for each other answer. The skill also reads its five reference files, so paste them in too or attach the folder.
+  - When someone replies with interest, send the role brief and book a call within 48 hours. The response playbook in the result has a reply for each other answer. The full reply templates and message patterns are in five reference files. Attach the whole folder or paste those files in too. If you paste only the skill text, you still get the messages and the sequence, but the reply templates are shorter.
 output_sample:
   input:
     - The role and what makes it appealing

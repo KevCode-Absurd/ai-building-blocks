@@ -9,15 +9,15 @@ subhead: Reviews, complaints and quiet customers all tell you something. Give it
 explain: |
   Reviews, complaints and quiet customers all tell you something. Give it your reviews and complaints and you get themes backed by exact quotes, a reply for every review in your voice, and a list of customers who may be leaving.
 
-  It collects from Google, Yelp, Facebook, disputes, tickets and email, defaulting to the last 90 days. Missing sources are named, so a gap does not look like good news. Replies are drafted for you to approve. It spots customers who have stopped ordering and drafts win-back offers for those worth keeping. With Shopify, order and shipping patterns add to the picture. It works from pasted or exported reviews, and can fetch public pages.
+  It collects from Google, Yelp, Facebook, disputes, tickets and email, defaulting to the last 90 days. Missing sources are named, so a gap does not look like good news. Replies are drafted for you to approve. It spots customers who have stopped ordering and drafts win-back offers for those worth keeping. With Shopify, order and shipping patterns add to the picture. It works best from pasted or exported reviews. It fetches a public page only if that site's terms allow it. Nothing is posted or sent without your approval. Win-back offers use only what you have agreed to give. This is Anthropic's review-reputation skill, shared under the Apache 2.0 licence, with a plain name.
 when:
   - A one-star review arrived and you need a good reply.
   - Your rating dropped and you want to know why.
   - You want to find customers who have gone quiet.
   - You want every review answered without writing each from scratch.
 not_for:
-  - "You need one reply to an upset customer and have no review text: use ticket-deflector."
-  - "You want to win back quiet customers only, with no review work: use the reactivate step named /reactivate."
+  - "You need one reply to an upset customer and have no review text: use the Angry customer reply writer."
+  - "You want to win back quiet customers only, with no review work: use the Win-back flow builder."
   - "You want a rating or review count with no reviews to give it: collect the reviews first, because it will not guess numbers."
 you_give:
   - Reviews, pasted or exported, or links to review pages

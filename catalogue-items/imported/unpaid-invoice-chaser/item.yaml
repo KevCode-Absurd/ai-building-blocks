@@ -8,8 +8,10 @@ role: make
 job: ops
 level: beginner
 inputs:
+  - type: tool_connection
+    required: false
   - type: spreadsheet
-    required: true
+    required: false
 outputs:
   - type: copy_draft
 uses: []

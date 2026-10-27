@@ -46,7 +46,7 @@ How to start:
 
 ## What you need
 
-The problems and promises are the one required input. If the section above asks for an objection map, a problems-and-promises table from the Buyer problem list builder, or a list you wrote, does the same job.
+The problems and promises are the one required input. The "objection map" named above is the same thing here: each buyer doubt or problem paired with the promise that answers it. If the section above asks for an objection map, a problems-and-promises table from the Buyer problem list builder, or a list you wrote, does the same job.
 
 - **Problems and promises** (required): the table from the Buyer problem list builder, or a list you wrote. Each promise says what result the buyer gets.
 - **Your limits** (optional): hours, tools, things you will not do.
@@ -91,8 +91,8 @@ Then tell the person the shortlist goes next to the [Offer trim and stack builde
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Offer package planner](https://useaiblocks.com/skills/offer-trim-and-stack-builder). It takes the shortlist.
-- The [Offer value reviewer](https://useaiblocks.com/skills/value-equation-scorer).
-- The [Pricing decision planner](https://useaiblocks.com/skills/pricing-decision-planner).
+- The [Promotion explanation writer](https://useaiblocks.com/skills/reason-why-deal-writer). It takes the shortlist.
+- The [Niche offer pricing planner](https://useaiblocks.com/skills/niche-price-ladder-builder). It takes the shortlist.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

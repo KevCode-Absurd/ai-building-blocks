@@ -9,7 +9,7 @@ subhead: Give it the deck file and the new figures or a source spreadsheet. It f
 explain: |
   Every figure in your deck updated, with the formatting untouched. Give it the deck and the new numbers and it changes values on slides, tables and charts, then lists exactly what it changed.
 
-  It works in four phases. First it gets the new data. Then it finds every place each number appears, including headline text, tables, chart data and footnotes. Third, it shows you a plan and waits for your approval before editing anything. Last, it makes the smallest change possible and checks that totals still match. It follows Indian conventions: April to March fiscal years and lakh and crore units, labelled the right way.
+  It works in four phases. First it gets the new data. Then it finds every place each number appears, including headline text, tables, chart data and footnotes. Third, it shows you a plan and waits for your approval before editing anything. Last, it makes the smallest change possible and checks that totals still match. It follows two Indian rules: April to March fiscal years and lakh and crore units, labelled the right way. This is nighomni123's India deck-refresh skill, shared under the Apache 2.0 licence.
 when:
   - Quarterly results arrived and the board deck still shows last quarter.
   - A client changed one assumption and ten slides depend on it.
@@ -30,11 +30,12 @@ you_get:
   - Change log by slide
   - Flags for numbers that do not tie
 how_to_use:
-  - Open your AI in a tool that can edit files, such as the PowerPoint add-in or a chat that accepts uploads. The skill uses a prompt tool called ask_user_question; if your AI has none, it asks you in chat instead. The India helper files it mentions are not included, and its two Indian rules (April to March years, lakh and crore units) are written in the skill.
+  - Open your AI in a tool that can edit files, such as the PowerPoint add-in or a chat that accepts uploads. The skill uses a prompt tool called ask_user_question; if your AI has none, it asks you in chat instead. The India helper files it mentions are not included. The only Indian rules it applies are the two written in the skill: April to March years, and lakh and crore units.
   - Paste the skill, then upload your deck.
   - Paste your old-to-new numbers, or upload the spreadsheet. Say if growth rates and shares should be recalculated.
   - Read the update plan and the flagged list. Approve it, skip the flagged items, or fix the mapping first.
   - Open the updated deck and the change report. Check each flagged number and any slide where the story no longer fits.
+  - Have the deck owner sign off the change report before the deck goes out. When you confirm a flagged number, ask your AI to change it and add it to the report.
 output_sample:
   input:
     - Your deck file
@@ -42,7 +43,6 @@ output_sample:
     - Whether to recalculate growth rates and shares (optional)
   prerequisites:
     - An AI that can open and edit a PowerPoint file, or the PowerPoint add-in
-    - The india-market-conventions and india-market-data files, only if you want the Indian rules applied
   output:
     - name: Update plan
       contains: Every old value, each place it appears, the exact text, and what it will become, for you to approve.

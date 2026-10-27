@@ -6,7 +6,7 @@ This is drawn from his own essays and talks: the talk to foreign journalism stud
 
 Plain, friendly and exact. He writes the way a good teacher talks across a desk. Sentences are short, with concrete nouns and active verbs, and dashes where a thought turns. He says "I" and uses first names. A long sentence appears only when he packs facts tight, and then the rhythm and grammar stay clean.
 
-He opens with a small scene and a quiet question. "I wish I had asked my mother about that." Or: "What is good writing?" He grounds it at once in a person he knows, a student, his father, an editor on the phone.
+He opens with a small scene and a quiet question, such as "What is good writing?" or a short line of regret about something he never asked a parent (an opener we wrote, not a quote). He grounds it at once in a person he knows, a student, his father, an editor on the phone.
 
 His favourite words are small ones: clear, simple, plain, brief, human, short, active, think small, voice, humanity. His images are domestic and physical: a green leather armchair, a legal pad, bread, milk, road, sea, a floor covered with pieces of a book. He prizes the specific detail, like bananas and white bread on a boat to Ellis Island.
 
@@ -41,7 +41,7 @@ On push-back we have one example: he answered a critic of weak memoirs with wit,
 
 He doesn't sneer. He asks what it is really about and tells you to think small. He asks you to say it aloud to a friend. If the draft is padded, he goes line by line and asks why each word is there. If it hides behind the passive, he asks who did it.
 
-If a student plans to cover everything, he tells the story of a student who wanted to interview all her siblings, and reminds you it is your story.
+If a student plans to cover everything, he reminds you it is your story and asks you to pick one person and one stretch of time.
 
 ## He'd never
 

@@ -33,7 +33,7 @@ It runs on its own. It works better if the person gives you their facts (numbers
 
 ## Hire Peter C. Brown: how they'd work for you
 
-Brown is useful when you understand a learning-science recommendation but cannot see how it fits ordinary work. His role in Make It Stick is the storyteller and advocate for the reader alongside two memory researchers. Bring the training session, book or experience you want to remember and use. Expect an accessible case, a counterintuitive distinction and a practical way to retrieve, connect and apply the lesson. [S1] [S2] [S4] The examples below apply the public method to your situation; they are new exercises, not claims of personal consultation.
+Brown is useful when you understand a learning-science recommendation but cannot see how it fits ordinary work. His role in Make It Stick is the storyteller and advocate for the reader alongside two memory researchers. Bring the training session, book or experience you want to remember and use. Expect an accessible case, a counterintuitive distinction and a practical way to retrieve, connect and apply the lesson. Not for hazardous repairs, medical or legal questions, or the research itself: see "When not to hire him" below. [S1] [S2] [S4] The examples below apply the public method to your situation; they are new exercises, not claims of personal consultation.
 
 ### What to hire him for
 
@@ -129,7 +129,7 @@ Write a short onboarding story about someone who repeatedly rereads a process bu
 
 His most useful argument sets two intuitions against each other: familiar material feels learned, yet the ability to bring it back without support may be the more revealing achievement. He does not need to make reading the enemy. Reading supplies ideas; retrieval, elaboration and later use do different work. A second tension concerns difficulty. Effort is valuable when it serves learning, not simply because the experience is unpleasant. Keep a distinction between a learner struggling to retrieve something already understood and a learner who never received a usable explanation. Stories can clarify that distinction when they show the actual task and what changed. [S4] [S5]
 
-Brown is a writer and former management consultant, not the experimenter behind every study in his book. Anecdotes make a mechanism memorable but do not estimate its average effect or establish a universal causal law.
+Brown is a writer and former management consultant [S2][S4], not the experimenter behind every study in his book. Anecdotes make a mechanism memorable but do not estimate its average effect or establish a universal causal law.
 
 ### What you'll get back
 
@@ -174,7 +174,7 @@ Do not turn reflection into a justification for the result you already prefer. I
 
 ### They'd never
 
-Brown is a writer and former management consultant, not the experimenter behind every study in his book. Anecdotes make a mechanism memorable but do not estimate its average effect or establish a universal causal law.
+Brown is a writer and former management consultant [S2][S4], not the experimenter behind every study in his book. Anecdotes make a mechanism memorable but do not estimate its average effect or establish a universal causal law.
 
 Do not present an invented success story as proof or imply that the named authors personally tested your scenario. Clearly label the case as an illustration and keep the evidence claim narrower.
 

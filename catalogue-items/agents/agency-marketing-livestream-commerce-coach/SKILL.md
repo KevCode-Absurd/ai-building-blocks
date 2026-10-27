@@ -13,9 +13,9 @@ Read [the original role profile](references/source-agent.md) before you start. I
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Sales discovery question writer](https://useaiblocks.com/prompts/problem-cost-question-writer). It takes the brief.
-- The [Sales opening line writer](https://useaiblocks.com/prompts/sales-opener-trio-writer). It takes the brief.
-- The [Sales competitor guide writer](https://useaiblocks.com/skills/sales-battlecard-builder). It takes the brief.
+- The [Mutual action plan builder](https://useaiblocks.com/skills/mutual-action-plan-builder). It takes the draft and plan.
+- The [Partner profit tester](https://useaiblocks.com/skills/partner-profit-tester). It takes the plan.
+- The [Deal payment checker](https://useaiblocks.com/skills/can-they-pay-deal-checker). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -26,11 +26,18 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+- **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for your question, your brand brain, your results. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -39,6 +46,8 @@ How to start:
 <!-- /needs -->
 
 ## What to collect first
+
+These are the inputs that count. If the generic "Before you start" list above asks for a question or source text, ignore that part: this agent takes the product list with price, margin and stock, the platform, stream length, host experience, the audience, and optionally past-stream numbers and the ad budget.
 
 Ask once for anything missing. Never invent it. Mark each gap `MISSING:` in the answer, or label a stand-in `ASSUMED:` and say what to replace it with.
 
@@ -57,7 +66,7 @@ Ask once for anything missing. Never invent it. Mark each gap `MISSING:` in the 
 3. Build the run order as a timed table. Put the hero where viewers tend to arrive, keep a flash deal ready for a drop, and keep any single session within the length the user gave. The profile suggests no session over 6 hours. Mark that as the author's rule.
 4. Write the scripts. For each hero product use five steps: a hook that keeps viewers, the product, trust, a push to buy, and a follow-up. Add one chat prompt per product and a line for each price reveal. Use only facts the user gave about the product. Do not invent reviews, sales numbers or before-and-after results. Use placeholders such as `<proof to show>` where the host must supply real proof.
 5. Check the wording. Flag claims such as "lowest price anywhere", health or cure claims for food and supplements, result promises for cosmetics, fake comparisons, and talk that pushes viewers off the platform. Give a safer line for each. Say the rules are the profile author's summary and the user must check the platform's current rules.
-6. Plan traffic by stage. The profile suggests more paid viewers at cold start, then a shift toward free viewers as chat activity and watch time grow. Treat its split (70/30, 50/50, 30/70) and its metric targets (such as watch time over 60 seconds, chat rate over 5%, 3% payment conversion, 800 yuan per thousand views) as the author's starting points, not benchmarks. The cost per order you can afford is the average order value divided by the target return. The profile's own example (100 yuan order, return 3, bid 33 yuan) uses division, although its line is written the other way round. Give a stop rule for ads that spend with no orders, and say which numbers the user must set from their own margin.
+6. Plan traffic by stage. The profile suggests more paid viewers at cold start, then a shift toward free viewers as chat activity and watch time grow. Treat its split (70/30, 50/50, 30/70) and its metric targets (such as watch time over 60 seconds, chat rate over 5%, 3% payment conversion, 800 yuan per thousand views) as the author's starting points, not benchmarks. Use one formula every time: the cost per order you can afford = [AVERAGE ORDER VALUE] divided by [TARGET RETURN]. Show the sum with the user's own numbers and ignore any line in the profile that writes it the other way round. Give a stop rule for ads that spend with no orders, and say which numbers the user must set from their own margin.
 7. Plan host practice: read from the script, then partly memorize, then go off script. Add drills, a dead-air rule (if talk goes quiet for about 30 seconds, use a chat prompt or switch to a flash deal) and a way to score each practice run on script follow-through, chat prompts and pacing.
 8. Give a review sheet: what to check during the stream (viewers, watch time, chat rate, at set times) and after it (funnel, top products, return rate, what to change). Finish with what is still unchecked.
 
@@ -73,6 +82,10 @@ Use these headings, in this order:
 6. Host practice
 7. Review sheet
 8. Still to check
+
+Heading 8 is also your CHECKS MISSED list: name every check you could not run, or write "none".
+
+Next: for a content plan for Douyin videos as well as live, use the [Douyin Strategist agent](https://useaiblocks.com/skills/agency-marketing-douyin-strategist).
 
 ## Rules
 

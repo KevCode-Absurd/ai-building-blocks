@@ -12,8 +12,8 @@ Turn complaints into questions you can test. Three steps run in order: group the
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Product ease of use checker](https://useaiblocks.com/skills/hard-to-use-thing-diagnoser). It takes the question.
-- The [Screen usability reviewer](https://useaiblocks.com/skills/new-screen-design-reviewer). It takes the question.
 - The [Small usability test planner](https://useaiblocks.com/skills/small-usability-test-planner). It takes the audit report and question and plan.
+- The [Screen usability reviewer](https://useaiblocks.com/skills/new-screen-design-reviewer). It takes the question.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -21,7 +21,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 
 **Makes it better (optional):**
@@ -29,16 +29,16 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a brief, customer words, your notes. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, customer words, your notes. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **A capable chat AI with file support:** Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
 <!-- /needs -->
 
-## Before you start
+## What you need
 
-Use what is attached or pasted first. If something is missing, say what you can finish and what must wait, and mark each gap `MISSING:`. Never invent a complaint, a count or a quote.
+This list replaces the general "Before you start" list above. There, "A brief" means your complaints and the screens they are about, and "Customer words" means the complaints themselves. Use what is attached or pasted first. If something is missing, say what you can finish and what must wait, and mark each gap `MISSING:`. Never invent a complaint, a count or a quote.
 
 **What you need:**
 - **Complaints** (yours): support excerpts, reviews or survey comments the user has the right to use. Ask for dates and product versions. If they are missing, mark them `MISSING: date` or `MISSING: version` on each theme they affect.
@@ -46,9 +46,9 @@ Use what is attached or pasted first. If something is missing, say what you can 
 
 **Makes it better (optional):** who the users are, what has been tried, and earlier research.
 
-**Tools:** none beyond a chat AI. Ask the user to remove names, emails and account numbers first. If personal details are in the paste, leave them out of every output and say so.
+**Tools:** a chat AI. It needs file support only if you attach files; otherwise paste the text. Ask the user to remove names, emails and account numbers first. If personal details are in the paste, leave them out of every output and say so.
 
-The pack includes this file and the three component skills named in the steps. Read each component's instructions before you use it. If one is missing, get its page at https://useaiblocks.com/skills/<slug> or ask for the pack file. Never replace a missing skill with instructions you made up.
+The three component skills named in the steps are separate skill pages on the site; add them to your AI or paste them in. Read each component's instructions before you use it. If one is missing, get its page at https://useaiblocks.com/skills/<slug> or ask for the pack file. Never replace a missing skill with instructions you made up.
 
 ## Rules for all steps
 
@@ -70,9 +70,9 @@ Lead with the sample note, then the theme map, the ranked questions and the rese
 
 Write `MISSING: <what>` next to the affected result. Carry on with work that does not depend on it. If no complaints are given, stop and ask once.
 
-## After this
+## Next steps to offer
 
-Suggest one next step in a short question, and say they can type their own:
+Use these instead of the general "After this" list above. Suggest one next step in a short question, and say they can type their own:
 - **Run the top research task** and bring back the answers.
 - **Turn a known problem into changes** with the [Turn a design review into fixes](https://useaiblocks.com/workflows/turn-a-design-review-into-fixes) workflow.
 - **Dig into one repeated mistake** with the [Hard-to-use thing diagnoser](https://useaiblocks.com/skills/hard-to-use-thing-diagnoser).

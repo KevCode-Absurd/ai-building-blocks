@@ -32,9 +32,9 @@ How to start:
 
 Use what is attached or pasted first. Ask once, in one short message, for only what you cannot work without.
 
-**You need:**
+**You need for this job.** This list replaces the general one above. You do not need a talk transcript or a slide deck.
 - The abstract draft, as it stands.
-- The study's methods and results: the paper, report or tables, with table numbers or page numbers.
+- The study's methods and results: the paper, report or tables, with table numbers or page numbers. Use the final tables and figures, not an earlier draft of them.
 - The conference word limit and who will read the abstract.
 
 **Makes it better (optional):** the conference's required headings, the deadline, and anything the author does not want changed.
@@ -77,9 +77,9 @@ State plainly that nothing was submitted and that the author must check every fi
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Study headline claim checker](https://useaiblocks.com/prompts/study-headline-claim-checker).
-- The [Study and claim evidence reviewer](https://useaiblocks.com/skills/study-claim-checker).
-- The [Machine learning research paper writer](https://useaiblocks.com/skills/ai-research-paper-writer).
+- The [Manuscript peer review drafter](https://useaiblocks.com/skills/manuscript-peer-review-drafter). It takes the audit report.
+- The [Scholarly work reviewer](https://useaiblocks.com/skills/scholarly-work-reviewer). It takes the audit report.
+- The [Language model feature explorer](https://useaiblocks.com/skills/model-feature-finder). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -97,9 +97,9 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 Write `MISSING: <what>` next to the affected claim. Carry on with the claims that do not depend on it. Without the word limit, revise for clarity and say the length is unchecked. Without the results, stop at step 1 and list what to supply. Never turn an unknown figure into an assumption to finish.
 
-## After this
+## After this (for this job)
 
-Suggest one next step as a short question, and say the user can type their own:
+Use these instead of the general suggestions above. Suggest one next step as a short question, and say the user can type their own:
 - **Talk or poster.** Turn the checked results into slides with the [Prepare a source-checked research talk](https://useaiblocks.com/workflows/prepare-a-source-checked-research-talk) workflow, or into a poster with the [Prepare research poster source notes](https://useaiblocks.com/workflows/prepare-research-poster-source-notes) workflow.
 - **A co-author read.** Give the overclaim list to a co-author who did not write the abstract, then submit it yourself.
 Nothing is submitted for them. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

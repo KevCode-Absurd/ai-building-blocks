@@ -33,8 +33,7 @@ you_get:
 how_to_use:
   - "Gather these first: one folder of markdown files, with an owner line in each file header. For one runbook, a file with a heading like Step 1 for each step (or a JSON list of steps). To get new SOPs written, a short JSON file with the SOP name, owner and trigger. The scripts run on your own computer with Python 3 and need no extra packages."
   - Export your wiki as markdown files. If you only have PDF or HTML, convert them to markdown first.
-  - Open an AI that can run Python code, such as Claude with code tools.
-  - Paste the skill text and upload your markdown files in one folder.
+  - "Run it one of two ways. Either run the scripts yourself on your own computer with Python 3, or use an AI that can run Python code, such as Claude with code tools. In the second case, upload the skill folder and your markdown files together and say: Follow SKILL.md."
   - Name the processes that matter most, if you have them.
   - "Read the cleanup list first. It lists the top 20 pages, ranked by how stale they are and how many pages link to them. Each runbook step gets a traffic light, and the runbook gets a score out of 100: 80 or more is safe to use, 60 to 79 is use with caution, under 60 is not safe. Fix the top items."
   - Review the draft SOPs with the person who owns each process before you publish them.

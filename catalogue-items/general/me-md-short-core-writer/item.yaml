@@ -1,0 +1,45 @@
+slug: me-md-short-core-writer
+name: me.md short-core writer
+summary: Give it your me.md. Get a short version for your AI's settings box and where to put it in each AI you use.
+category: general
+type: skill
+role: compress
+job: ops
+level: beginner
+inputs:
+  - type: me_file
+    required: true
+outputs:
+  - type: me_file
+    required: true
+uses: []
+origin: rebuilt
+version: 1.0.0
+added: 2026-10-27
+example_pending: true
+needs_mode: manual
+credits:
+  - title: Custom instructions for ChatGPT
+    by: OpenAI Help Center
+    url: https://help.openai.com/en/articles/8096356-custom-instructions-for-chatgpt
+    used: Where the short core goes in ChatGPT, and why it must be short
+  - title: Projects in ChatGPT
+    by: OpenAI Help Center
+    url: https://help.openai.com/en/articles/10169521-projects-in-chatgpt
+    used: Keeping the full file as a project file in ChatGPT
+  - title: What are projects?
+    by: Anthropic, Claude Help Center
+    url: https://support.claude.com/en/articles/9517075-what-are-projects
+    used: Keeping the full file in a Claude project's knowledge
+  - title: How Claude remembers your project
+    by: Anthropic, Claude Code docs
+    url: https://code.claude.com/docs/en/memory
+    used: The user-level CLAUDE.md that loads in every project, and importing another file into it
+  - title: Upload Google Docs and other file types to Gem instructions
+    by: Google Workspace Updates
+    url: https://workspaceupdates.googleblog.com/2024/11/upload-google-docs-and-other-file-types-to-gems.html
+    used: Adding the full file to a Gem
+  - title: Rules
+    by: Cursor docs
+    url: https://docs.cursor.com/context/rules
+    used: User rules that apply in every Cursor project

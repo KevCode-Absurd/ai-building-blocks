@@ -92,6 +92,9 @@ output_shape: |-
   FILES AND MISSING
     <each step's file> | MISSING: <every line>
 
+  CHECKS MISSED
+    <each check that failed or could not run, or none>
+
   Check with a qualified lawyer before you apply this.
 tweaks:
   - what: The rule text

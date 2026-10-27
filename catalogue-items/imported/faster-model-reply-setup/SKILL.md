@@ -1,6 +1,6 @@
 ---
 name: speculative-decoding
-description: Accelerate LLM inference using speculative decoding, Medusa multiple heads, and lookahead decoding techniques. Use when optimizing inference speed (1.5-3.6× speedup), reducing latency for real-time applications, or deploying models with limited compute. Covers draft models, tree-based attention, Jacobi iteration, parallel token generation, and production deployment strategies.
+description: Accelerate LLM inference using speculative decoding, Medusa multiple heads, and lookahead decoding techniques. Use when optimizing inference speed (papers report 1.5-3.6× in their own setups), reducing latency for real-time applications, or deploying models with limited compute. Covers draft models, tree-based attention, Jacobi iteration, parallel token generation, and production deployment strategies.
 version: 1.0.0
 author: Orchestra Research
 license: MIT
@@ -24,7 +24,7 @@ dependencies: [transformers, torch]
 ## When to Use This Skill
 
 Use Speculative Decoding when you need to:
-- **Speed up inference** by 1.5-3.6× without quality loss
+- **Speed up inference** (the papers report 1.5-3.6× in their own setups; never promise this, measure it)
 - **Reduce latency** for real-time applications (chatbots, code generation)
 - **Optimize throughput** for high-volume serving
 - **Deploy efficiently** on limited hardware
@@ -57,6 +57,8 @@ pip install vllm
 ## Quick Start
 
 ### Basic Speculative Decoding (Draft Model)
+
+Cost warning: this example pairs a 70B target model with a 7B draft model. That needs a very large multi-GPU setup (well over 100 GB of GPU memory in 16-bit) and gated Hugging Face access to the Llama models. Swap in a model that fits the user's GPU, and ask for their GPU size first.
 
 ```python
 from transformers import AutoModelForCausalLM, AutoTokenizer
@@ -96,6 +98,8 @@ print(response)
 
 ### Medusa (Multiple Decoding Heads)
 
+Unverified illustration. Check this snippet against the current README of the FasterDecoding/Medusa repository before running it, and say whether you did.
+
 ```python
 from medusa.model.medusa_model import MedusaModel
 
@@ -108,7 +112,7 @@ model = MedusaModel.from_pretrained(
 
 tokenizer = AutoTokenizer.from_pretrained("FasterDecoding/medusa-vicuna-7b-v1.3")
 
-# Generate with Medusa (2-3× speedup)
+# Generate with Medusa (the repo reports a speedup; measure your own)
 prompt = "Write a Python function to calculate fibonacci numbers:"
 inputs = tokenizer(prompt, return_tensors="pt").to("cuda")
 
@@ -124,6 +128,8 @@ response = tokenizer.decode(outputs[0], skip_special_tokens=True)
 ```
 
 ### Lookahead Decoding (Jacobi Iteration)
+
+Unverified illustration. Check this snippet against the current README of the hao-ai-lab/LookaheadDecoding repository before running it, and say whether you did.
 
 ```python
 from lookahead.lookahead_decoding import LookaheadDecoding

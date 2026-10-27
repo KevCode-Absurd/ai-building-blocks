@@ -324,3 +324,7 @@ Test: <how to make it fail on purpose, and what you should see>
 ```
 
 Never say the workflow is fixed unless you read it back (`n8n_get_workflow`) and saw both `onError` and the wired error output on every risky step. If you could not read it back, say "not checked".
+
+## Licence note
+
+The upstream author (Romuald Czlonkowski, czlonkowski/n8n-skills) lists this skill as MIT. The collection it was copied from lists its written content as CC BY 4.0 unless an upstream notice says otherwise (see `LICENSE-CONTENT`). We share this copy under CC BY 4.0. Keep the credit to Romuald Czlonkowski and sickn33 either way.

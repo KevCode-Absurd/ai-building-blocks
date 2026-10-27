@@ -5,6 +5,10 @@ description: Refines raw ideas into sharp, actionable concepts through structure
 
 # Idea Refine
 
+## Files not included in this copy
+
+`frameworks.md`, `refinement-criteria.md` and `examples.md` are not included here. Do not say you read them. Use the steps in this file, and judge each option by the questions in the evaluation step.
+
 ## Overview
 
 Refines raw ideas into sharp, actionable concepts worth building through structured divergent and convergent thinking.
@@ -15,7 +19,7 @@ Refines raw ideas into sharp, actionable concepts worth building through structu
 - Use when you need to stress-test assumptions before committing to a direction
 - Use when you want to expand options before converging on one
 - Trigger phrases: "Help me refine this idea", "Ideate on [concept]", "Stress-test my plan"
-- Not for: a user who is unsure what they want at all (use `interview-me`), or a direction already chosen that needs a spec (use `spec-driven-development`)
+- Not for: a user who is unsure what they want at all (talk it through with a friend or coach first, or use the Requirements question asker, `requirements-question-asker`), or a direction already chosen that needs a spec (use the Product requirements writer, `product-requirements-writer`)
 
 ## How It Works
 
@@ -24,6 +28,8 @@ Refines raw ideas into sharp, actionable concepts worth building through structu
 3.  **Sharpen & Ship:** Produce a concrete markdown one-pager moving work forward.
 
 ## Usage
+If you have a shortlist of ideas from an earlier step, pick the one to sharpen and start from it.
+
 
 This skill is primarily an interactive dialogue. Invoke it with an idea, and the agent will guide you through the process.
 

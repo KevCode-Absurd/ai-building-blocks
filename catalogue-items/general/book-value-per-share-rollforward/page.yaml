@@ -5,15 +5,18 @@ summary: Roll opening common equity to closing equity and get book value per sha
 job: money-and-investing
 thinking: high
 thinking_why: "Profit, dividends, buybacks and other income must roll opening equity to closing equity, and the share count must match the same owners."
-subhead: A common-equity movement table and book-value-per-share bridge. Share opening common equity, ordinary profit, common dividends, issuance cash, repurchase cash, OCI and opening/closing share counts.
+subhead: Give it a company's opening equity, its profit and payouts for the year, and its share counts. It rolls opening equity to closing equity, divides by closing shares and shows what moved book value per share.
 explain: |-
-  A common-equity movement table and book-value-per-share bridge.
+  Book value per share is the part of a company's accounts that belongs to its ordinary shareholders, divided by the number of shares. It moves when the company earns profit, pays dividends, issues shares or buys them back.
 
-  Public equity and share counts. Illustrative figures. 500+80-10+40-30-60 = $520 million closing equity. Dividing by 52 million closing shares gives $10. Raising dividends by $52 million lowers book value per share to $9.
+  This skill starts with opening equity and adds each movement, so you can see why the number changed and check the result against the balance sheet. Any gap is listed, never hidden. The practice figures are made up: 500 + 80 - 10 + 40 - 30 - 60 gives 520 million of closing equity. Divided by 52 million closing shares, that is 10 a share. Paying 52 million more in dividends would lower it to 9.
+
+  Book value is an accounting figure. It is not the share's market price or what the business would sell for, so do not use it as a buy or sell signal.
 when:
   - You want to know how a company's book value per share moved from one period to the next, and why.
   - You work from public filings and need each movement traced to a source.
   - A reviewer needs to trace the result back to inputs and assumptions.
+  - You want equity and per-share book value rolled forward. To test whether profit covers a payout to shareholders, use the Shareholder distribution coverage checker instead.
 not_for:
   - "You need earnings per share: use weighted average shares and a simple EPS calculation, because this item uses closing shares only."
   - "You have a private company or a tax or legal-basis question: ask an accountant for a full accounts or tax review."

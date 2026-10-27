@@ -62,6 +62,8 @@ Pause here: Put the offer live and let it run until you have a few weeks of sign
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Offer profit-per-session checker](https://useaiblocks.com/skills/offer-profit-per-session-checker). It takes the audit report.
+- The [Offer test planner](https://useaiblocks.com/skills/offer-test-planner). It takes the audit report.
+- The [Pricing decision planner](https://useaiblocks.com/skills/pricing-decision-planner). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

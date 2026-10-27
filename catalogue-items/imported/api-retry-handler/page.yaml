@@ -10,6 +10,8 @@ explain: |
   Code that handles an API saying slow down, without crashing your app or sending the same action twice. Name the API and you get a retry layer that is safe, bounded and easy to read.
 
   The skill first sorts each reply. Bad requests and permission errors are final and never retried. Rate limits, timeouts and server faults are retried. Next it reads the delay hints the service sends, such as the Retry-After header or a reset time, before it makes up its own wait. If there is no hint, it uses growing waits with a little random jitter and a hard cap on attempts. It also checks that repeating the action is safe.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (Prajeeth-12) says MIT. Credit goes to Prajeeth-12 and sickn33.
 when:
   - Your script gets 429 errors from a payment, AI or code hosting service.
   - Retries sometimes create duplicate orders or messages.
@@ -36,7 +38,9 @@ how_to_use:
   - Add the rate limits from the API docs if you have them (optional).
   - Read the result. Check that actions which change data are not retried without a repeat-safe key.
   - Run and test the code in your own project. Your AI can only run it if it has code tools.
-  - Wire the retry function into one real API call, log each retry, and add a circuit breaker (a switch that stops calls for a while) for long outages.
+  - Wire the retry function into one real API call and log each retry. For long outages, add a circuit breaker (a switch that stops calls for a while). No circuit breaker skill is included here, so ask your AI to write one.
+  - Next, build the full connector around it with the API connector builder, or test it with the API test suite builder.
+next: [api-rate-limit-adder, api-test-suite-builder]
 output_sample:
   input:
     - The API you call

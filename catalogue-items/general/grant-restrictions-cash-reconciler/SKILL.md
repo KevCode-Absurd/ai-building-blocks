@@ -7,7 +7,9 @@ description: "Use when part of your bank balance belongs to a grant and you need
 
 This skill rolls two balances forward side by side: restricted cash, and total bank cash. The gap between them is free cash. It shows how a grant's cash moved in one period. It does arithmetic on the numbers you supply. It does not check that they are true, and it does not decide whether a payment was allowed under an award.
 
-Not for: revenue recognition, a legal release of funds, tax or a filing; judging if a cost was eligible; or a spendable-cash snapshot across several accounts against a minimum balance (use "Restricted cash availability checker").
+Not for: revenue recognition, a legal release of funds, tax or a filing; judging if a cost was eligible; or a spendable-cash snapshot across several accounts against a minimum balance (use the [Restricted cash availability checker](https://useaiblocks.com/skills/restricted-cash-availability-checker), which the list below calls "Spendable cash balance checker"; it is the same skill and it returns how much cash you can spend after restrictions).
+
+Your inputs are your own bank statement and fund ledger. The "Water utility billing and cash checker" step in the start list below does not make them, so skip it.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

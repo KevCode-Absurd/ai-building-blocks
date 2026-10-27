@@ -7,7 +7,7 @@ role: orchestrate
 job: research
 level: intermediate
 inputs:
-  - {type: performance_sheet, required: true}
+  - {type: customer_list, required: true}
   - {type: voc_reviews, required: true}
   - {type: brand_brain, required: false}
 outputs:

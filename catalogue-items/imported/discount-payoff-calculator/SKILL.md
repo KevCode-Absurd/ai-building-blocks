@@ -1,7 +1,7 @@
 ---
 name: shopify-admin-discount-roi-calculator
 role: conversion-optimization
-description: "Read-only: calculates the true ROI of each discount code and automatic discount by comparing incremental revenue against discount cost."
+description: "Read-only: compares the revenue from orders that used each discount code and automatic discount against what the discount cost. It does not include product cost or work out which sales would have happened anyway."
 toolkit: shopify-admin, shopify-admin-execution
 api_version: "2025-01"
 graphql_operations:
@@ -12,10 +12,10 @@ compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ---
 
 ## Purpose
-Evaluates the true return on investment for each discount code and automatic discount by measuring revenue generated, number of orders, average order value with vs. without discount, customer acquisition attributed to discounts, and whether discounted orders cannibalized full-price sales. Goes beyond `discount-hygiene-cleanup` (which finds broken/unused codes) to answer "was this discount worth it?" Read-only — no mutations.
+Compares, for each discount code and automatic discount, the revenue from orders that used it against what the discount cost. It also measures number of orders, average order value with vs. without discount, the share of new customers, and a simple flag for possible cannibalization (customers who would have bought anyway). The revenue counted is the total of all orders that used the code, not only the extra sales the discount caused, so it overstates the gain. Product cost is not included. Goes beyond the Old discount code cleaner (which finds broken/unused codes) to answer "did this discount earn more than it cost?" Read-only — no mutations.
 
 ## Prerequisites
-- Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_orders,read_discounts,read_customers`
+- Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_orders,read_discounts,read_customers`. If that command is not found, check the Shopify CLI docs for the current sign-in. Shopify may return only the last 60 days of orders unless the app also has `read_all_orders`, so tell the user if the window is longer than that.
 - API scopes: `read_orders`, `read_discounts`, `read_customers` (needed to read `customer.numberOfOrders` for the new-customer share)
 
 ## Parameters
@@ -185,8 +185,8 @@ CSV file `discount_roi_<YYYY-MM-DD>.csv` with columns:
 | Stacked discounts | Multiple codes per order | Attribute proportionally or flag as "multi-discount" |
 
 ## Best Practices
-- Discounts with ROI < 100% cost more than they generate in revenue. Check your product costs before you retire one, because this figure ignores them.
+- The figure is (revenue − discount cost) ÷ discount cost × 100. Below 0% means the revenue was less than the discount cost. Between 0% and 100% means revenue was less than twice the discount cost. Neither is a loss on its own, because product cost is not included. Check your product costs before you retire a code.
 - High new-customer % with positive ROI = great acquisition tool — keep running.
 - Low new-customer % with negative AOV lift = cannibalization — customers would have bought anyway.
 - To compare two codes side by side, use Discount code comparer.
-- To find broken or unused codes, use a discount cleanup check.
+- To find broken or unused codes, use the Old discount code cleaner.

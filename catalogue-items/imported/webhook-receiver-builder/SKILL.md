@@ -133,7 +133,7 @@ async function checkIdempotency(eventId) {
 
 async function markEventReceived(eventId) {
   await db.query(
-    "INSERT INTO processed_webhook_events (event_id, received_at) VALUES ($1, NOW()) ON CONFLICT (event_id) DO NOTHING" // processed_at stays empty until the worker finishes,
+    "INSERT INTO processed_webhook_events (event_id, received_at) VALUES ($1, NOW()) ON CONFLICT (event_id) DO NOTHING", // processed_at stays empty until the worker finishes
     [eventId]
   );
 }
@@ -205,8 +205,10 @@ logger = logging.getLogger(__name__)
 
 GITHUB_WEBHOOK_SECRET = os.environ["GITHUB_WEBHOOK_SECRET"]
 
-# In-memory idempotency store (use Redis or PostgreSQL in production)
+# In-memory stores. For testing only: they are lost on restart. Use Redis or PostgreSQL in production.
+# A delivery goes into processed_deliveries only after its handler succeeds.
 processed_deliveries: set[str] = set()
+in_flight: set[str] = set()  # deliveries being handled right now
 
 
 def verify_github_signature(payload_body: bytes, signature_header: str | None) -> None:
@@ -233,7 +235,7 @@ async def github_webhook(request: Request, background_tasks: BackgroundTasks):
 
     # Step 2: Idempotency check using delivery ID
     delivery_id = request.headers.get("X-GitHub-Delivery")
-    if delivery_id in processed_deliveries:
+    if delivery_id in processed_deliveries or delivery_id in in_flight:
         logger.info(f"Duplicate delivery {delivery_id}, skipping")
         return {"status": "duplicate", "delivery_id": delivery_id}
 
@@ -243,8 +245,9 @@ async def github_webhook(request: Request, background_tasks: BackgroundTasks):
 
     logger.info(f"Received GitHub event: {event_type} (delivery: {delivery_id})")
 
-    # Acknowledge immediately, process in background
-    processed_deliveries.add(delivery_id)
+    # Acknowledge immediately, process in background.
+    # Do not mark the delivery as processed here: only after the handler succeeds.
+    in_flight.add(delivery_id)
     background_tasks.add_task(process_github_event, event_type, payload, delivery_id)
 
     return {"status": "accepted", "event": event_type, "delivery_id": delivery_id}
@@ -262,15 +265,21 @@ async def process_github_event(event_type: str, payload: dict, delivery_id: str)
     handler = handlers.get(event_type)
     if not handler:
         logger.warning(f"Unhandled GitHub event type: {event_type}")
+        processed_deliveries.add(delivery_id)
+        in_flight.discard(delivery_id)
         return
 
     try:
         await handler(payload)
+        processed_deliveries.add(delivery_id)  # mark only after success
         logger.info(f"Successfully processed {event_type} (delivery: {delivery_id})")
     except Exception as e:
+        # Not marked as processed, so a redelivery of this ID is handled again.
         logger.error(f"Failed to process {event_type} (delivery: {delivery_id}): {e}")
         # In production, move to dead letter queue for retry
         raise
+    finally:
+        in_flight.discard(delivery_id)
 
 
 async def handle_push(payload: dict):

@@ -8,14 +8,16 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: lesson_plan
     required: true
-  - type: document
+  - type: question
     required: false
 outputs:
   - type: audit_report
   - type: plan
   - type: document
+  - type: lesson_plan
+    required: true
 uses:
   - accessible-lesson-auditor
   - learning-options-designer

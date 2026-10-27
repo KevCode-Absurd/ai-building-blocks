@@ -22,6 +22,7 @@ not_for:
   - "You want to value the business or pick a multiple. This skill stops at the bridge. The Minority-interest multiple reconciliation is the next step for valuation."
   - "You want to compare profit with cash: use the Cash versus earnings checker."
   - "You only have group figures and no segment note. There is nothing to bridge."
+  - "The reported group figure is adjusted but the segment measure is statutory, or the other way round: settle which measure each uses first, because the bridge cannot tie across two measures."
 you_give:
   - "Each segment's profit and the name of the measure it uses, from the segment note"
   - "The eliminations between segments, with their signs"
@@ -97,8 +98,8 @@ tweaks:
     how: Say which group measure to tie to. Segment measures often match an adjusted figure, not the statutory one.
   - what: Several periods
     how: Run each period on its own, with its own reported figure, so one period's gap does not hide another's.
-  - what: Acceptance
-    how: Profit eliminations and revenue eliminations are not confused, and the target measure, period and segment note use the same scope.
+  - what: Signs
+    how: In the chat bridge a deduction is negative. The optional script takes eliminations and costs as positive numbers and subtracts them, so -10 in the bridge is 10 in its inputs file.
 judge:
   - Profit eliminations and revenue eliminations are not confused.
   - Target measure, period and segment note use the same perimeter.

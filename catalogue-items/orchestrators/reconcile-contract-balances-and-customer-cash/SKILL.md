@@ -7,7 +7,6 @@ description: Share contract balances, invoices, receipts and loss records. Get a
 
 Three linked roll-forwards that follow customer advances and unbilled work into invoices, receivables and cash, with gaps left open.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -16,18 +15,26 @@ When you've handed it back, suggest what they could do next in one short questio
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
+## When not to use
+- To explain why reported revenue changed through price, scope or extra weeks, use the Comparable revenue growth checker (`reconcile-revenue-presentation-and-perimeter`).
+- For balance-sheet-to-cash gaps across the whole business, use the Working capital and cash tax checker (`reconcile-working-capital-and-tax-cash`).
+- For the credit loss reserve only, use the Customer credit loss allowance checker (`receivables-allowance-movement-bridge`).
+- For a cash forecast, this does not predict. It explains past periods only.
+
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+- **Financial statements** (yours): the income statement, balance sheet and cash flow statement, for the periods you have.
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
 - **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for source text, spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for financial statements, your question, spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -35,6 +42,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+
+These items replace the generic article, transcript and book-notes inputs above. They are the contract liability and contract asset notes, billing and receivables records, cash collected and the allowance movement. Give each with its period, currency and scale.
 
 - Contract liability and contract asset notes with opening and closing balances.
 - Billings and invoices for the period.
@@ -58,26 +67,29 @@ If an item is missing, ask once. If it cannot be supplied, write MISSING: with w
 
 ## Steps
 
-Read each step's own SKILL.md if it is attached. If it is not, follow the step as written here and say so in the hand-back. Build a short input map first: each source, its date, units, period and what is missing.
+Read each step's own SKILL.md if it is attached. If it is not, follow the step as written here, starting with the first action listed under it, and say so in the hand-back. Build a short input map first: each source, its date, units, period and what is missing.
 
 1. **Customer advance revenue tracker** (`contract-liability-release-bridge`). Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Reconcile aggregate customer advance liability additions and releases; distinguish new deferred billings from actual cash and isolate releases from opening balances.
+   - First action: list opening balance, new billings added, amounts released to revenue and the closing balance from the note.
    - Check before moving on: Opening plus additions minus releases equals the closing balance in the note.
    - Hands to step 2: the amounts released to revenue, so they are not counted again.
    - Save `outputs/step-1-contract-liability-release-bridge.md` and any real file. With no file access, give it as a labelled section. If a needed input is missing, stop this step and write MISSING:.
 
 2. **Unbilled work to cash tracker** (`contract-asset-billing-cash-bridge`). Use the same revenue/perimeter to reconcile unbilled revenue transfers, direct invoices and receivable collections. Prevent revenue releases from being counted twice across contract categories.
+   - First action: list the opening unbilled balance, the amount transferred to invoices and the closing balance. Tie the transfers to the invoice list. Collections = opening receivable + invoices - write-offs - other noncash - closing receivable.
    - Check before moving on: Transfers from unbilled work tie to invoices. No release is counted in two categories.
    - Hands to step 3: the gross receivable movement and the implied collections.
    - Save `outputs/step-2-contract-asset-billing-cash-bridge.md` and any real file. With no file access, give it as a labelled section. If a needed input is missing, stop this step and write MISSING:.
 
 3. **Customer credit loss allowance checker** (`receivables-allowance-movement-bridge`). Reconcile write-offs and credited recoveries separately and carry the actual gross-receivable adjustments into the collection bridge; validate all other noncash movements before accepting implied cash.
+   - First action: roll the allowance forward (opening + charge - write-offs + recoveries = closing). Carry the write-offs into the receivables line so they are not read as cash.
    - Check before moving on: Write-offs, recoveries and currency changes are kept out of collections. Residuals stay visible.
    - Goes into the result: the final cash bridge with unexplained residuals.
    - Save `outputs/step-3-receivables-allowance-movement-bridge.md` and any real file. With no file access, give it as a labelled section. If a needed input is missing, stop this step and write MISSING:.
 
-## Workbook
+## Workbook (only if asked)
 
-If they ask for a workbook and you can make files, build one linked workbook: inputs, calculations, checks and a summary on separate sheets. Mark inputs in blue, same-sheet formulas in black and cross-sheet links in green. Show units and put negatives in parentheses. Recalculate, look for errors, change one input to test the links, put the case back, and reopen the saved file. If you cannot make files, give each schedule as a table and say no workbook was built. Report any check that could not run.
+Only if they ask for a workbook and you can make files, build one linked workbook: inputs, calculations, checks and a summary on separate sheets. Mark inputs in blue, same-sheet formulas in black and cross-sheet links in green. Show units and put negatives in parentheses. Recalculate, look for errors, change one input to test the links, put the case back, and reopen the saved file. If you cannot make files, give each schedule as a table and say no workbook was built. Report any check that could not run.
 
 ## Acceptance
 

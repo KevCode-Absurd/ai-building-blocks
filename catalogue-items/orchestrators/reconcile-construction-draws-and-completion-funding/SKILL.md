@@ -7,7 +7,6 @@ description: Share approved project costs, loan terms and draw dates. Get cost d
 
 A cost-only draw schedule, an interest schedule and a check of what is left to fund before the project is done.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -16,18 +15,25 @@ When you've handed it back, suggest what they could do next in one short questio
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
+## When not to use
+- For interest on the loan only, use the Construction loan interest calculator (`construction-interest-schedule-builder`).
+- For a draw plan with uncovered costs only, use the Construction funding schedule planner (`construction-funding-draw-planner`).
+- To check only whether the remaining cost is funded, use the Project completion funding checker (`completion-funding-gap-checker`).
+- To know whether a lender will approve a draw or more money, ask your lender. This does the arithmetic only.
+
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+- **The contract** (yours): the full agreement or terms, with dates and any changes.
 
 **Makes it better (optional):**
 - **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for source text, spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for the contract, spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -35,6 +41,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+
+These items replace the generic article, transcript and book-notes inputs above. They are the certified cost schedule, the funding agreements and funding order, the loan's interest terms, costs already spent and the cost-to-finish estimate with contingency and date.
 
 - Certified costs by period and the approved draw timing.
 - Equity and debt commitments you can use, and the funding order the agreements set.
@@ -57,26 +65,29 @@ If an item is missing, ask once. If it cannot be supplied, write MISSING: with w
 
 ## Steps
 
-Read each step's own SKILL.md if it is attached. If it is not, follow the step as written here and say so in the hand-back. Build a short input map first: each source, its date, units, period and what is missing.
+Read each step's own SKILL.md if it is attached. If it is not, follow the step as written here, starting with the first action listed under it, and say so in the hand-back. Build a short input map first: each source, its date, units, period and what is missing.
 
 1. **Construction funding schedule planner** (`construction-funding-draw-planner`). Build the cost-only equity/debt draw schedule using the actual contractual funding order. Pass actual debt draws and undrawn commitment by period to the interest and completion bridges.
+   - First action: list each period's certified cost, then fill equity and debt draws in the funding order the agreements set, up to each commitment.
    - Check before moving on: No interest sits in the cost lines. Each draw stays within its commitment.
    - Hands to step 2: debt draws and undrawn commitment for each period.
    - Save `outputs/step-1-construction-funding-draw-planner.md` and any real file. With no file access, give it as a labelled section. If a needed input is missing, stop this step and write MISSING:.
 
 2. **Construction loan interest calculator** (`construction-interest-schedule-builder`). Accrue interest using actual opening debt and sourced draw timing, adding interest only at period end if the contract permits. Identify interest outside the cost-only draw schedule and reconcile final debt, including interest, against the facility cap.
+   - First action: for each period, interest = opening debt x rate x the fraction of the period outstanding, with draws counted from their date. Add interest to the debt only at the date the contract says.
    - Check before moving on: Interest accrues on actual debt and dates. Closing debt with interest is tested against the limit.
    - Hands to step 3: interest by period and closing debt.
    - Save `outputs/step-2-construction-interest-schedule-builder.md` and any real file. With no file access, give it as a labelled section. If a needed input is missing, stop this step and write MISSING:.
 
 3. **Project completion funding checker** (`completion-funding-gap-checker`). Include future unpaid cost and interest requirements exactly once in cost to complete, then compare with genuinely usable cash and remaining commitments. Distinguish cost overrun from funding gap and retain any interest-funding shortfall explicitly.
+   - First action: cost to finish = unpaid cost plus future interest, each once. Compare it with usable cash plus remaining commitments. Gap = cost to finish minus usable funds.
    - Check before moving on: Each unpaid cost and each interest amount is counted once. No uncovered amount is treated as financed.
    - Goes into the result: the funding gap, the cost overrun and any interest shortfall.
    - Save `outputs/step-3-completion-funding-gap-checker.md` and any real file. With no file access, give it as a labelled section. If a needed input is missing, stop this step and write MISSING:.
 
-## Workbook
+## Workbook (only if asked)
 
-If they ask for a workbook and you can make files, build one linked workbook: inputs, calculations, checks and a summary on separate sheets. Mark inputs in blue, same-sheet formulas in black and cross-sheet links in green. Show units and put negatives in parentheses. Recalculate, look for errors, change one input to test the links, put the case back, and reopen the saved file. If you cannot make files, give each schedule as a table and say no workbook was built. Report any check that could not run.
+Only if they ask for a workbook and you can make files, build one linked workbook: inputs, calculations, checks and a summary on separate sheets. Mark inputs in blue, same-sheet formulas in black and cross-sheet links in green. Show units and put negatives in parentheses. Recalculate, look for errors, change one input to test the links, put the case back, and reopen the saved file. If you cannot make files, give each schedule as a table and say no workbook was built. Report any check that could not run.
 
 ## Acceptance
 

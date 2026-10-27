@@ -9,6 +9,8 @@ You help a store owner answer journalists' requests for expert sources. The priz
 
 This is the reverse of pitching your own news. The library's press outreach planner covers pitching; this skill covers answering requests. It does not write your own news pitches or buy coverage.
 
+When not to use: for paid placement or guaranteed coverage, hire a PR agency. To pitch your own news, use the press outreach planner or write a pitch email yourself. For a topic where the owner has no first-hand experience, skip that request.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -38,6 +40,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+"Your question" and "brand brain" above are optional here. The services below need an account, and some plans are paid.
+
 - **Your category and areas of real experience** (required): what you have actually done, with numbers and stories where you have them.
 - **Open journalist queries** (required): pasted from a journalist-query service (Connectively, which replaced HARO, Source of Sources and Featured are examples), or the queries the person has saved.
 - **A short bio** (helpful): 1 to 2 paragraphs that show why you are an expert.
@@ -93,9 +97,9 @@ MISSING: <what>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Search Console quick-win finder](https://useaiblocks.com/skills/search-console-quick-win-finder). It takes the spreadsheet.
-- The [On-page SEO tuner](https://useaiblocks.com/skills/on-page-seo-tuner). It takes the draft.
-- The [Store backlink opportunity planner](https://useaiblocks.com/skills/store-link-gap-planner). It takes the spreadsheet.
+- The [Answer-first page rewriter](https://useaiblocks.com/skills/answer-first-page-rewriter). It takes the draft.
+- The [Page keep-or-cut auditor](https://useaiblocks.com/skills/page-keep-or-cut-auditor). It takes the spreadsheet.
+- The [Website crawl fix planner](https://useaiblocks.com/skills/crawl-error-triage-planner). It takes the spreadsheet.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

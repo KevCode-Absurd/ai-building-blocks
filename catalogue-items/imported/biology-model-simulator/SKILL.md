@@ -12,6 +12,10 @@ metadata:
 Run simulations of SimBiology models: deterministic ODE, stochastic SSA,
 scenario exploration, and sensitivity analysis.
 
+## What you need
+
+The SimBiology model, and the cases you want to run. If the model came from the model builder, give its code as the model.
+
 ## When to Use
 
 - "simulate", "run", "predict" model behavior

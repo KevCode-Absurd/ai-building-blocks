@@ -12,6 +12,8 @@ inputs:
     required: true
   - type: document
     required: false
+  - type: spreadsheet
+    required: false
 outputs:
   - type: plan
     required: true

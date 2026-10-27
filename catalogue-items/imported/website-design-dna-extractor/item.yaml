@@ -16,6 +16,8 @@ inputs:
 outputs:
   - type: design_direction
   - type: document
+  - type: design_tokens
+    required: true
 uses: []
 origin: imported
 package_files: all

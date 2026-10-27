@@ -51,7 +51,7 @@ how_to_use:
   - Paste your procedure. Add what starts it, who is involved and the rules with their numbers.
   - If you have the OrgScript spec or grammar file, paste it too. Without it, the agent uses only what the profile lists.
   - Answer the questions it asks. Don't let it guess a rule you haven't given.
-  - Run the format, validate and check commands on the file yourself, unless your AI can run them.
+  - Run the format, validate and check commands on the file yourself, unless your AI can run them. They need the OrgScript command line tool, which this pack does not include. Without it, the check status reads "not run".
   - Read the plain summary back against your real procedure before you share the file.
 how_it_works:
   - title: Read the procedure

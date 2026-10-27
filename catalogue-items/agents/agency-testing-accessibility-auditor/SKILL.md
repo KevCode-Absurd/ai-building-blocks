@@ -14,8 +14,8 @@ Read [the original role profile](references/source-agent.md) before you start. I
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Web accessibility checker](https://useaiblocks.com/skills/accessibility-checker). It takes the audit report.
-- The [Section 508 accessibility reviewer](https://useaiblocks.com/skills/agency-engineering-section-508-specialist).
-- The [Live screen debugger](https://useaiblocks.com/skills/live-screen-debugger).
+- The [Test results analyst](https://useaiblocks.com/skills/agency-testing-test-results-analyzer). It takes the test report.
+- The [Bug root cause finder](https://useaiblocks.com/skills/bug-root-cause-finder). It takes the test report and audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -9,7 +9,7 @@ subhead: Name a company or contact and say why you are reaching out. It looks th
 explain: |
   One target, three ready messages: an email, a call script and a LinkedIn note. Each is based on what that company or person has actually been doing. You review and send them yourself.
 
-  The skill looks up the company or contact in your Common Room data. It pulls product activity, community posts, hiring or funding signals and your past contact. If the data is thin, it searches the web for a recent hook, such as news from the last two weeks that the person will know you could see. The result is personal to that target, not a template. It needs a Common Room account connected.
+  The skill looks up the company or contact in your Common Room data. It pulls product activity, community posts, hiring or funding signals and your past contact. If the data is thin, it searches the web for a recent hook, such as news from the last two weeks that the person will know you could see. The result is personal to that target, not a template. It is an imported skill from Common Room, so it needs your own Common Room account connected. A plain email template does not use your account data.
 when:
   - You want to reach a named account with a message that sounds informed.
   - You need an email, a call opener and a LinkedIn note in one go.
@@ -22,7 +22,8 @@ not_for:
 you_give:
   - A company name or a contact
   - Your offer or reason for reaching out
-  - A connected Common Room account
+  - A connected Common Room account (a separate third-party service with its own plan and terms)
+  - Your product, offer and positioning, pasted into the chat
   - Tone preferences (optional)
 you_get:
   - A personalised email
@@ -35,6 +36,7 @@ how_to_use:
   - Ask your AI to follow this skill. Include the files and details listed on this page.
   - It works best when your AI can connect to your Common Room account.
   - Pick one draft, adapt it, send it yourself and log the outreach in your CRM or Common Room.
+  - If there is no reply, set a follow-up date and ask your AI for a short second message built on a new signal.
 output_sample:
   input:
     - A company name or a contact name

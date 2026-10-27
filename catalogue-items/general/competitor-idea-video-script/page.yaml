@@ -21,9 +21,9 @@ when:
   - You want to test whether a move from another category works for your buyer.
 not_for:
   - 'You only have notes about a brand, like "science-first", and no ad you have seen: collect one real ad from the Meta Ad Library first, or give your own words about an ad you saw.'
-  - "You want to keep the ad's order and pace: use the competitor-video-ad-script skill instead."
-  - "You have no customer reviews or product facts: gather a few real quotes and facts first, or the proof lines will be marked missing."
   - "You want to keep the ad's rows, order and pace: use the Competitor ad video script writer."
+  - "You have no customer reviews or product facts: gather a few real quotes and facts first, or the proof lines will be marked missing."
+  - "Your script would make vitamin, health or money claims you have not checked: run each claim past the label and your local rules first, because this skill checks copying, not claim rules."
 
 you_give:
   - A real ad, as a screenshot, a video, its words with where you saw them, or a breakdown card (attach the screenshot; your AI can see pictures)
@@ -76,8 +76,8 @@ how_it_works:
     text: The idea shapes one or two parts. The order, lines and proof come from your own research.
   - title: Checks the distance
     text: Five yes or no lines on order, wording, claims, people and shots, and your do-not-borrow list.
-  - title: Runs eight checks
-    text: Checks the reference, the idea, the sources and the five distance lines, and names any check still missed.
+  - title: Runs nine checks
+    text: Checks the reference, the idea, the part it shapes, the sources and the five distance lines, and names any check still missed.
 
 output_shape: |
   REFERENCE
@@ -122,7 +122,8 @@ example:
     Research: buyer doubt from the brand file, "A gummy can't hold
     enough to replace my powder." Review: "[Sprout] has been the one
     thing I've been able to stick to."
-    Facts: one pack is about 100% of daily value for vitamins, about
+    Facts (the daily-value figures are printed on the label and are on
+    the allowed-claims list): one pack is about 100% of daily value for vitamins, about
     25% for minerals. 6g fiber. Survey of 3,000+ customers: 80% of
     surveyed users take it daily. Offer: $29.99 first order with text
     sign-up, then $49.99 every 4 weeks; 30-day money-back, first order

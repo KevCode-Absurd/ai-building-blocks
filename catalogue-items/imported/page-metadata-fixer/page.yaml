@@ -12,6 +12,8 @@ explain: |
   This page metadata fixer checks in priority order. First come duplicates and indexing mistakes, because they do the most harm. Then titles and descriptions, canonical links, share cards for social sites, icons, and structured page data. It makes sure the title, description, canonical link and share address all agree.
 
   It keeps changes small. It follows the pattern your project already uses, and it does not invent ratings, reviews or prices for structured data. It tells you what it could not check, such as how a card looks on a live address.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (ibelick) says MIT. Credit goes to ibelick and sickn33.
 when:
   - A link looks bare or wrong when you paste it into chat or social media.
   - Search results show a missing or odd title for one of your pages.

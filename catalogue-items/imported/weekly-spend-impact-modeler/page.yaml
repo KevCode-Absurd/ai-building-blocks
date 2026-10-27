@@ -33,7 +33,7 @@ you_get:
   - Plain statement of what is not proven
 how_to_use:
   - Open a chat with an AI that can run Python and read files. Claude or ChatGPT with code running turned on both work.
-  - Upload the skill folder, or paste in SKILL.md.
+  - Upload the whole skill folder, with its references and scripts folders, and requirements.txt. Pasting SKILL.md alone is not enough, because it calls the scripts and contract files in the folder.
   - Add your weekly spend and sales by channel as a spreadsheet or CSV. Use one row per week per channel, with the week start date, channel, spend, and the outcome count or revenue. Also give your time zone, currency and week range.
   - Add your CRM numbers and any spend scenarios you want to test (optional).
   - Ask your AI to follow the skill. Check the status lines before you read any channel result.
@@ -64,6 +64,7 @@ output_sample:
     - name: Assumptions and limits
       contains: Scope, dates, units, status flags and a plain note on what is not proven.
 output_shape: |
+  What the words mean: STATUS ok = the model ran on enough data. limited = it ran with named gaps. no usable result = read no channel number. Modeled share = the share of sales the model credits to a channel. CRM share = the share your CRM credits to it. The ratio is modeled divided by CRM.
   STATUS <ok / limited / no usable result> | Scope: <weeks, time zone, currency>
   CHANNEL <name> | modeled contribution: <number or unknown> | modeled share vs CRM share: <ratio>
   SCENARIOS <spend change by channel> | assumed response: <low to high>

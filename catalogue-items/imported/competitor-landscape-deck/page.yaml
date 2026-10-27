@@ -36,7 +36,7 @@ how_to_use:
   - Answer the scope questions, then read the outline. Ask for changes until you approve it.
   - Check that every number has a dated source and that all companies use the same period.
   - Say yes to build the deck. This needs an AI that can make a PowerPoint file, or the PowerPoint add-in.
-  - Open the deck and check titles, charts and tables before you share it.
+  - Open the deck and check titles, charts and tables before you share it. Any figure or scenario odds in the skill's templates are placeholders. Each number in your deck needs its own dated source, and you set any scenario odds.
   - Before it goes out, refresh the numbers and the dates of the sources. A short written memo that goes with the deck helps people who read it without you.
 output_sample:
   input:
@@ -47,7 +47,7 @@ output_sample:
     - Your PowerPoint template or competitor data file (optional)
   prerequisites:
     - An AI that can make a PowerPoint file, or a PowerPoint add-in
-    - Web access or your own sources for company numbers
+    - Web access or your own sources for company numbers (the deck needs them)
   output:
     - name: Scope answers
       contains: Your choices on scope, competitor set, audience and depth, and whether you need investment scenarios.

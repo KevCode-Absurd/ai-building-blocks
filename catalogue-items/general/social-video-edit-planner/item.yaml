@@ -10,6 +10,8 @@ level: advanced
 inputs:
   - {type: footage, required: true}
   - {type: brand_brain, required: false}
+  - {type: transcript, required: false}
+  - {type: brief, required: false}
 outputs:
   - {type: edit_plan}
 uses: []

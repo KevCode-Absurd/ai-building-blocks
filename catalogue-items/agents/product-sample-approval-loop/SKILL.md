@@ -18,6 +18,8 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 - **Product data** (yours): one product's facts: price, variants, ingredients or materials, how it is used, photos by job.
+- **The deal terms** (yours): the price, payment terms, discounts, fees and dates of the deal.
+- **The contract** (yours): the full agreement or terms, with dates and any changes.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
@@ -77,8 +79,9 @@ If the owner approves a step in clear words, do only that step and write what yo
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Factory bottleneck finder](https://useaiblocks.com/skills/factory-bottleneck-finder).
 - The [Factory price-break negotiator](https://useaiblocks.com/skills/factory-price-break-negotiator). It takes the document.
+- The [Waste reduction planner](https://useaiblocks.com/skills/waste-reduction-planner). It takes the document.
+- The [AI purchasing process planner](https://useaiblocks.com/skills/procurement-agent-architecture-plan). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

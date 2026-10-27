@@ -42,7 +42,7 @@ how_to_use:
   - Say 'Plan this front end. Do not guess my framework version.' Your AI asks once for what is missing.
   - Read the component list and the state plan first. Change them if they do not match your design.
   - Build the sketches in your project. The AI cannot run your code, so run the tests and checks yourself.
-  - Run Lighthouse and a keyboard-only check, then paste the results back and ask for fixes.
+  - Run Lighthouse and a keyboard-only check, then paste the results back and ask for fixes. For deeper speed work, take the Lighthouse report to the Page speed fixer.
 how_it_works:
   - title: Collect the brief
     text: It confirms the screen, framework and version, design and data. It asks once for anything missing, then marks it MISSING.

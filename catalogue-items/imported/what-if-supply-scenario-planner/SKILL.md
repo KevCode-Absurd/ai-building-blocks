@@ -388,6 +388,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from scipy import stats
+from typing import Dict
 
 class MonteCarloScenarioAnalysis:
     """Monte Carlo simulation for supply chain scenarios"""
@@ -1283,23 +1284,23 @@ print(f"\nTotal Plan Cost: ${supplier_disruption_plan.estimate_total_cost():,}")
 
 **Scenario Definitions:**
 
+Use three scenarios by default: a base case, a best case and a worst case. Add more (for example a "perfect storm" that combines a demand spike with a supply shortage) only if the user asks. The code later in this file builds five example scenarios; that is a demonstration, not the default. A probability is the user's own judgement. If the user gives none, write MISSING. Never make one up.
+
 | Scenario Name | Description | Key Assumptions | Probability |
 |--------------|-------------|-----------------|-------------|
-| Base Case | Most likely future | Current trends continue | 50% |
-| High Growth | Demand surge | Economic boom, new markets | 20% |
-| Supply Disruption | Major supplier failure | Single-source risk realizes | 15% |
-| Perfect Storm | Multiple issues | Demand spike + supply shortage | 10% |
-| Cost Inflation | Rising costs | Fuel, labor, materials up 30% | 25% |
+| Base Case | [MOST LIKELY FUTURE] | [USER'S ASSUMPTIONS] | [USER'S JUDGEMENT OR MISSING] |
+| Best Case | [BETTER THAN EXPECTED] | [USER'S ASSUMPTIONS] | [USER'S JUDGEMENT OR MISSING] |
+| Worst Case | [WHAT GOES WRONG] | [USER'S ASSUMPTIONS] | [USER'S JUDGEMENT OR MISSING] |
 
 **Scenario Results:**
 
+All figures come from the user's own numbers, or are marked as estimates. If a number is missing, write MISSING.
+
 | Scenario | Total Cost | Service Level | Inventory | Key Metrics |
 |----------|-----------|---------------|-----------|-------------|
-| Base Case | $25M | 95% | 8,000 units | Baseline |
-| High Growth | $32M | 87% | 12,000 units | Capacity constrained |
-| Supply Disruption | $38M | 78% | 5,000 units | High stockout costs |
-| Perfect Storm | $45M | 65% | 7,000 units | Crisis mode |
-| Cost Inflation | $31M | 93% | 8,000 units | Margin pressure |
+| Base Case | [COST] | [SERVICE LEVEL] | [UNITS] | [NOTE] |
+| Best Case | [COST] | [SERVICE LEVEL] | [UNITS] | [NOTE] |
+| Worst Case | [COST] | [SERVICE LEVEL] | [UNITS] | [NOTE] |
 
 **Risk Assessment:**
 - High-priority risks identified
@@ -1310,7 +1311,7 @@ print(f"\nTotal Plan Cost: ${supplier_disruption_plan.estimate_total_cost():,}")
 **Recommendations:**
 
 1. **Immediate Actions** (0-3 months)
-   - Qualify backup suppliers for top 10 components
+   - Qualify backup suppliers for the components with a single source
    - Increase safety stock for critical items
    - Implement demand sensing for early warning
 

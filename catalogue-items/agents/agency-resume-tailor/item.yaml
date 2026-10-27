@@ -8,11 +8,17 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: source_text
+  - type: resume
     required: true
+  - type: job_description
+    required: true
+  - type: audit_report
+    required: false
 outputs:
   - type: document
   - type: audit_report
+  - type: resume
+    required: true
 uses: []
 steps: []
 origin: imported

@@ -11,8 +11,9 @@ Review an app's text, formats and layout for translation, and return a ranked fi
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [MATLAB app builder](https://useaiblocks.com/skills/matlab-app-builder).
-- The [Claude API app builder](https://useaiblocks.com/skills/claude-app-builder).
+- The [README and decision interviewer](https://useaiblocks.com/skills/readme-and-decision-interviewer). It takes the audit report.
+- The [Bug report writer](https://useaiblocks.com/skills/bug-report-writer). It takes the audit report.
+- The [Error alarms and recovery planner](https://useaiblocks.com/skills/error-message-designer). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

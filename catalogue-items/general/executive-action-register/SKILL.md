@@ -10,8 +10,8 @@ description: "Share meeting notes or email threads. Get one action list with own
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Daily executive brief writer](https://useaiblocks.com/skills/executive-daily-digest). It takes the plan.
-- The [Work commitment and follow-up writer](https://useaiblocks.com/skills/executive-work-keeper).
 - The [Task follow-up writer](https://useaiblocks.com/skills/executive-due-task-drafts). It takes the plan.
+- The [Work commitment and follow-up writer](https://useaiblocks.com/skills/executive-work-keeper).
 - The [Meeting minutes writer](https://useaiblocks.com/skills/meeting-minutes-writer). It takes the plan.
 - The [Handover note writer](https://useaiblocks.com/prompts/handover-note-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
@@ -20,17 +20,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**What you need** (use your own material or the linked skill):
-- **Meeting notes** (yours): an agenda, notes or decisions from a meeting.
-
 **Makes it better (optional):**
+- **Meeting notes** (yours): an agenda, notes or decisions from a meeting.
 - **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 - **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 - **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 - **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Plan** with the [Meeting agenda and cost planner](https://useaiblocks.com/skills/meeting-agenda-and-cost-planner). Bring a brief, meeting notes (optional).
+1. **Plan** with the [Meeting agenda and cost planner](https://useaiblocks.com/skills/meeting-agenda-and-cost-planner). Bring your question, meeting notes (optional), a brief (optional).
 2. **Meeting notes** with the [Executive meeting brief writer](https://useaiblocks.com/skills/executive-meeting-brief). Bring meeting notes.
 3. This one.
 

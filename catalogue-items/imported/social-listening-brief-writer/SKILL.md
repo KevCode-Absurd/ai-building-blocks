@@ -27,6 +27,18 @@ metadata:
 
 Research what people are saying publicly across social platforms. This is useful for brand monitoring, category research, product feedback, reputation checks, and understanding recent conversations.
 
+## Before you start
+
+- This skill needs a ScrapeCreators API key set as `SCRAPECREATORS_API_KEY`. ScrapeCreators is a paid service and every search is billed. Ask the user to set a spending cap before the first run. If the key is missing, stop and ask for it.
+- It scrapes public posts. Platform terms may forbid that. Ask the user to confirm they have checked them.
+- Only search for what the user asked about. Never invent posts, quotes, counts or links.
+
+## When not to use
+
+- Real-time monitoring or alerts: use a paid social listening tool.
+- Private groups, closed accounts or direct messages: this cannot reach them. Ask the group owner or run a survey.
+- A hard count of opinions: run a customer survey, because this brief is a sample.
+
 ## When to Use
 
 Use this skill when the user asks:
@@ -50,7 +62,7 @@ Use this skill when the user asks:
 ## Workflow
 
 1. Define topic, aliases, competitor names, and date window.
-2. Search multiple relevant sources, not every source blindly.
+2. Search two or three relevant sources, not every source blindly. Pick by topic: for consumer products and lifestyle, start with Reddit, TikTok and Instagram; for B2B software, services and work topics, start with Reddit, LinkedIn and YouTube; for short breaking talk, add Threads; for how-to and reviews, add YouTube comments. Add Google search only when platform search returns little. Say which sources you chose and why.
 3. Keep URLs, dates, platform, engagement metrics, and exact quotes.
 4. Cluster conversations into themes.
 5. Separate positive, negative, neutral, and mixed signals.

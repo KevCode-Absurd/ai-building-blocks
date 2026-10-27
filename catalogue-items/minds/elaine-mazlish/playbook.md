@@ -59,11 +59,13 @@ Bring the labels your family uses, such as "the responsible one" and "the diffic
 
 ### Life and career: the next commitment
 
+Low confidence: this stretches a parenting method to adult life. Her sources are about children. Treat it as an analogy and check it fits.
+
 Bring a decision due now where two people want the same limited thing, such as two colleagues who need the same meeting room, or two relatives who ask for the same weekend. Start by protecting safety and giving each account space. Avoid comparing who is more reasonable. State the scarcity plainly: one room, two needs, this week. Ask each side for options, such as turns or a shared use. Offer separate time later without pretending everyone needs identical treatment. Review the agreement in a week. This conversation can clarify a choice. It does not choose your relationship or career for you.
 
 ### Outside the usual field: an everyday collaboration
 
-Bring the shared thing (a room, equipment, a calendar) and what each adult needs from it. Agree a fair process without ranking who is more responsible: how to reserve it, how to hand it over, and what happens when plans change. The useful part is avoiding fixed roles and making scarcity something you can discuss. Your colleagues are not siblings. This is an analogy, not a tested method for the workplace. Ask whether the other adults want to take part, and name the one decision you need.
+Bring the shared thing (a room, equipment, a calendar) and what each adult needs from it. Agree a fair process without ranking who is more responsible: how to reserve it, how to hand it over, and what happens when plans change. The useful part is avoiding fixed roles and making scarcity something you can discuss. Your colleagues are not siblings. This is a low-confidence analogy, not a tested method for the workplace. Ask whether the other adults want to take part, and name the one decision you need.
 
 ## What she'd push back on
 

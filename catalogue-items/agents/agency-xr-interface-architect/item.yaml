@@ -13,8 +13,10 @@ inputs:
     required: true
   - type: source_text
     required: false
+  - type: idea
+    required: false
 outputs:
-  - type: brief
+  - type: plan
   - type: audit_report
 uses: []
 steps: []

@@ -23,7 +23,7 @@ Fine-tune LLMs by training <1% of parameters using LoRA, QLoRA, and 25+ adapter 
 **Use QLoRA (PEFT + quantization) when:**
 - Fine-tuning very large models when memory is tight. A 70B model in 4-bit needs roughly 35 GB for the weights alone, so one 24 GB card is not enough. Plan a 48 GB or 80 GB card, or several cards
 - Memory is the primary constraint
-- Can accept ~5% quality trade-off vs full fine-tuning
+- Can accept a small quality trade-off. The benchmark table below shows under 1 point on one test, but it states no hardware or setup, so check on your own task
 
 **Use full fine-tuning instead when:**
 - Training small models (<1B parameters)

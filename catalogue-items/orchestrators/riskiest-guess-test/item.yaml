@@ -9,6 +9,7 @@ level: intermediate
 inputs:
   - {type: document, required: true}
   - {type: question, required: false}
+  - {type: idea, required: true}
 outputs:
   - {type: plan}
 uses: [leap-of-faith-assumption-finder, smallest-test-picker, mvp-experiment-planner]

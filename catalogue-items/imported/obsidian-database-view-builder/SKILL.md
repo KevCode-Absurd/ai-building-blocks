@@ -12,6 +12,11 @@ date_added: "2026-03-21"
 
 Read [the detailed guide](references/detailed-guide.md) before executing this skill. It retains the complete procedure and reference material. Treat its safety, prerequisites, and validation requirements as mandatory. For focused work, load the relevant sections; for end-to-end work, read the guide completely.
 
+## What you need
+
+How you want your notes filtered and shown. If you have note templates or a property list from an earlier step, filter and group on those properties.
+
+
 ## When to Use
 - Use when creating or editing `.base` files in Obsidian.
 - Use for database-like note views with filters, formulas, summaries, or cards/tables.

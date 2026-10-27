@@ -19,18 +19,20 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+- **Your idea** (yours): the product, app, business or project idea, in a line or a short paragraph.
 
 **Makes it better (optional):**
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
+- **Your business plan** (yours): the idea, customers, market, how it makes money and the key numbers.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for document, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for document, your idea, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
 ## What you need
-- **Your plan** (required): a paragraph or a pasted plan. It should say what you make, for whom, how you expect people to find it and what you expect in return (money, time, a changed habit). Paste it as it stands, comparisons and all.
+- **Your plan** (required): a paragraph or a pasted plan. It should say what you make, for whom, how you expect people to find it and what you expect in return (money, time, a changed habit). Paste it as it stands, comparisons and all. Bring the numbers you have (price, reach, sign-up rate). Where the plan gives none, step 1 writes a placeholder marked `GUESS`. Treat each `GUESS` as a question to check, not a fact.
 - **Your biggest worry** (optional): the decision you face, or the part you doubt most.
 - **What you can spend and who you can reach this week** (optional): days, money and a real group. They decide which test form comes out on top.
 
@@ -52,16 +54,16 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## What you hand back
 3 step files and the summary. The last file holds the plan. Each file holds:
 - Step 1: plain facts, value guess, growth guess, ranked guesses with a number, damage, evidence and score, and the riskiest named.
-- Step 2: what yes means, the test form and runner-up with cost and blind spot, who to try it on, the keep and leave-out lists, the ask and the fail line.
+- Step 2: what yes means, the test form and runner-up with cost and blind spot, who to try it on (one group you can reach this week, such as a community or customer list), the keep and leave-out lists, the ask (what you want them to do, such as sign up, pay a deposit or book a call) and the fail line.
 - Step 3: pass, fail and middle numbers with sample and time, the run plan by group, how results are read, and the pass, fail and middle rule with a stop after a set number of tests.
 - Summary: each step's file and every `MISSING:` line in one list.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Business assumption test planner](https://useaiblocks.com/prompts/plan-guess-ranker).
+- The [Business assumption test planner](https://useaiblocks.com/prompts/plan-guess-ranker). It takes the plan.
 - The [Business assumption stress tester](https://useaiblocks.com/skills/assumption-stress-test). It takes the plan.
-- The [Business model assumption tester](https://useaiblocks.com/skills/business-model-guess-tester).
+- The [Paid idea test planner](https://useaiblocks.com/prompts/two-day-paid-ask-planner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

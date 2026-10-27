@@ -22,6 +22,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 - **Competitors** (yours): the brands buyers compare you with.
+- **A search query report** (yours): an export from Google Search Console or the Google Ads search terms report, for set dates.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -69,9 +70,9 @@ Four step files and the summary: the category plan, the AI panel log with share 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [AI search recommendation gap finder](https://useaiblocks.com/skills/ai-recommendation-gap-finder).
-- The [Link and PR outreach planner](https://useaiblocks.com/skills/link-and-pr-outreach-planner).
-- The [AI store facts checker](https://useaiblocks.com/skills/brand-facts-accuracy-fixer).
+- The [Answer-first page rewriter](https://useaiblocks.com/skills/answer-first-page-rewriter). It takes the plan.
+- The [Internal link mapper](https://useaiblocks.com/skills/internal-link-mapper). It takes the plan.
+- The [Product page editor for AI search](https://useaiblocks.com/skills/ai-ready-product-page-editor). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

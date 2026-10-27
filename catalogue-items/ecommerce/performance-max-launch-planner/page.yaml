@@ -9,9 +9,9 @@ headline: "Performance Max launch planner"
 subhead: Give it your feed status, monthly conversions, daily budget, product categories and break-even ROAS. It tells you if Performance Max fits now, and if so hands back the campaign and asset group map, assets, settings to switch off, bidding path and budget plan.
 
 explain: |
-  Performance Max spreads your budget across Google Search, Shopping, YouTube, Display and more, and decides where the sales come from. It works when it has clean product data, tracked purchases and enough budget to learn. On a small budget you cannot see what works, and in-platform ROAS can overstate it, since one source says 50 percent or more of its conversions can come from warm or repeat buyers.
+  Performance Max spreads your budget across Google Search, Shopping, YouTube, Display and more, and decides where the sales come from. It works when it has clean product data, tracked purchases and enough budget to learn. On a small budget you cannot see what works, and in-platform ROAS can overstate it, since one course says 50 percent or more of its conversions can come from warm or repeat buyers.
 
-  This skill starts with a fit test, using the stricter of two budget rules. If you fit, it builds the plan: how much of your budget it should get, how to split asset groups by product type, what assets to add, which automatic settings to switch off, how to exclude brand, and how to bid. If you do not fit, it tells you what to build first.
+  This skill starts with a fit test, using the stricter of two budget rules. Both rules are rules of thumb from Google Ads courses, not Google rules, so test them on your own account. If you fit, it builds the plan: how much of your budget it should get, how to split asset groups by product type, what assets to add, which automatic settings to switch off, how to exclude brand, and how to bid. If you do not fit, it tells you what to build first.
 
 when:
   - You run Search and Shopping and wonder whether to add Performance Max.
@@ -84,7 +84,7 @@ how_it_works:
   - title: Excludes brand
     text: A brand list and negative keywords, since without them it is mostly a retargeting campaign.
   - title: Sets bidding
-    text: Max conversion value first, then a target by conversion count, with the two views shown.
+    text: Max conversion value first, then a target just below your actual return at about 50 conversions a month.
 
 output_shape: |
   FIT  <go / wait>
@@ -123,7 +123,7 @@ judge:
   - The fit test shows both budget rules and uses the stricter number.
   - Asset groups each have 15 or more products and the total is between 3 and 20.
   - Brand is excluded with both a list and negative keywords.
-  - Bidding advice depends on conversion count and shows both views.
+  - Bidding advice depends on conversion count and gives one default path.
   - It says in-platform ROAS may overstate results.
 
 test:

@@ -15,14 +15,14 @@ You bring him a problem with a cost or a deadline on it. He asks what physics sa
 
 ## How he'd take on your problem
 
-1. **He starts from physics and raw cost.** In 2002 he listed what a rocket is made of and found the materials cost about 2% of the usual price. So he built rockets himself.
+1. **He starts from physics and raw cost.** In 2002 he listed what a rocket is made of and found the materials cost about 2% of the usual price [S6]. So he built rockets himself.
 2. **He questions every requirement.** And he attaches a named person to it, because rules from smart people are the ones nobody questions.
-3. **He deletes.** Remove any part or step you can. If you don't add back about 10% of what you cut, you didn't cut enough.
+3. **He deletes.** Remove any part or step you can. If you don't add back about 10% of what you cut, you didn't cut enough [S7].
 4. **He simplifies what survived.** Only then, and only what is left.
 5. **He speeds it up.** Why does this take a week? A long schedule is wrong and a tight one is right.
 6. **He automates last.** By his own account he automated too early in Tesla's factories. On the 2018 call he described a robot that placed fibreglass fluff on the car floor: tests showed the fluff did nothing, so he deleted the part and the robot.
 7. **He writes the sequence down.** Step one funds step two. Tesla's plan: a costly car in small numbers, then a mid-price car, then an affordable one.
-8. **He lists how it fails, then tests it.** A rocket has a thousand ways to fail and one to work, so he tests many failure modes, builds so one part can fail and the system still works, and treats simulation as approximate. He funds the risky first step with money he can lose: he put the odds of his first two companies at about 10%.
+8. **He lists how it fails, then tests it.** A rocket has a thousand ways to fail and one to work, so he tests many failure modes, builds so one part can fail and the system still works, and treats simulation as approximate. He funds the risky first step with money he can lose: he said he put the odds of each of his first two companies at about 10% [S9].
 
 ## First questions he'd ask you
 
@@ -50,7 +50,7 @@ When Model 3 output missed target, his fix was not more machines. He found the s
 
 ### Planning a product launch in stages
 
-He'd lay out a sequence. Start with a small, high-priced version for early buyers, because a small run is simpler to build and the price pays for the next step. Use the cash to build a cheaper version in larger numbers. Say the plan in writing so people can see how the moves fit. Then ask what the factory should look like, because the process that makes the product matters as much as the product. Beyond the record: he never wrote this about a small bakery or a studio, but the staging logic carries over.
+He'd lay out a sequence. Start with a small, high-priced version for early buyers, because a small run is simpler to build and the price pays for the next step. Use the cash to build a cheaper version in larger numbers. Say the plan in writing so people can see how the moves fit. Then ask what the factory should look like, because the process that makes the product matters as much as the product. [beyond the record] he never wrote this about a small bakery or a studio, but the staging logic carries over.
 
 ### Shipping something new
 
@@ -62,7 +62,7 @@ He isn't a designer or a teacher. But he would take your video edit, hiring plan
 
 ### Making an offer or a final ask
 
-He wrote his April 2022 offer to Twitter in two short letters: one price in cash, the premium it gave, a reason, and a binary choice. If not accepted, he would reconsider his stake. Then a second letter repeated it, said he would respect a shareholder vote and attached the merger agreement. He'd tell you to make the number, the reason and the deadline plain, and to say what you do if the answer is no. He'd also warn, from his own record, that a public claim you cannot back costs money, as the 2018 tweet did. Beyond the record: he never wrote about a small purchase or a job offer.
+He wrote his April 2022 offer to Twitter in two short letters: one price in cash, the premium it gave, a reason, and a binary choice. If not accepted, he would reconsider his stake. Then a second letter repeated it, said he would respect a shareholder vote and attached the merger agreement. He'd tell you to make the number, the reason and the deadline plain, and to say what you do if the answer is no. He'd also warn, from his own record, that a public claim you cannot back costs money, as the 2018 tweet did. [beyond the record] he never wrote about a small purchase or a job offer.
 
 ### Your life and career
 

@@ -31,7 +31,7 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
   - "Type your rough notes, for example: worked on the auth migration, reviewed 3 PRs, blocked on API rate limits."
-  - Or connect your code host and ticket tool first, if your AI supports it, and ask for your standup.
+  - "Or connect your code host and ticket tool first, if your AI supports it, and ask for your standup. Not every AI supports these connections, and some need a paid plan or an access key. Typing notes always works."
   - Ask for one part only, such as blockers, if that is all you need.
   - Check the update for anything missing, add detail on blockers, then paste it into Slack, email or your standup tool where your team reads it.
 output_sample:

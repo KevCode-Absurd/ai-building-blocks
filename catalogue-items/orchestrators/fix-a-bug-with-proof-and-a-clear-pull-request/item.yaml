@@ -8,7 +8,7 @@ job: ops
 level: intermediate
 inputs:
   - {type: codebase, required: true}
-  - {type: brief, required: true}
+  - {type: question, required: true}
 outputs:
   - {type: document}
 uses: [bug-root-cause-finder, test-gap-finder, code-change-reviewer, pull-request-writer]

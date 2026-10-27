@@ -81,6 +81,7 @@ extensions/
 ### Configuration (shopify.extension.toml)
 
 ```toml
+# Use the current API version from Shopify's developer docs. 2025-01 is the version this example was written for.
 api_version = "2025-01"
 
 [[extensions]]
@@ -146,7 +147,7 @@ fn run(input: input::ResponseData) -> Result<output::FunctionRunResult> {
     // Parse configuration from metafield
     let config: Config = input.discount_node.metafield
         .as_ref()
-        .map(|m| serde_json::from_str(&m.value).unwrap())
+        .and_then(|m| serde_json::from_str(&m.value).ok())
         .unwrap_or_default();
 
     for line in input.cart.lines {
@@ -169,6 +170,7 @@ fn run(input: input::ResponseData) -> Result<output::FunctionRunResult> {
                         },
                     )],
                     value: output::Value::Percentage(output::Percentage {
+                        // unwrap() is shown for brevity. Replace it with real error handling before you deploy.
                         value: Decimal::from_str(&config.discount_percentage).unwrap(),
                     }),
                     message: Some(format!("{}% volume discount", config.discount_percentage)),
@@ -291,7 +293,7 @@ export function run(input) {
   // Calculate cart total
   const total = cart.cost.totalAmount.amount;
 
-  // Hide COD for orders over $500
+  // Hide COD for orders over [YOUR LIMIT]. Use your own limit in your shop's currency.
   if (parseFloat(total) > 500) {
     const codMethod = input.paymentMethods.find((method) =>
       method.name.includes("Cash on Delivery"),
@@ -329,7 +331,8 @@ fn run(input: input::ResponseData) -> Result<output::FunctionRunResult> {
     let mut errors = vec![];
 
     // Check minimum order value
-    let total: f64 = input.cart.cost.total_amount.amount.parse().unwrap();
+    // If the amount cannot be read, do not block the cart.
+    let total: f64 = input.cart.cost.total_amount.amount.parse().unwrap_or(f64::INFINITY);
     if total < 25.0 {
         errors.push(output::FunctionError {
             localized_message: "Minimum order value is $25.00".to_string(),
@@ -340,6 +343,7 @@ fn run(input: input::ResponseData) -> Result<output::FunctionRunResult> {
     // Check product availability by region
     for line in &input.cart.lines {
         if let input::InputCartLinesMerchandise::ProductVariant(variant) = &line.merchandise {
+            // is_restricted_product is a helper you write: check the variant and buyer country against your own restricted list
             if is_restricted_product(&variant, &input.cart.buyer_identity) {
                 errors.push(output::FunctionError {
                     localized_message: format!(

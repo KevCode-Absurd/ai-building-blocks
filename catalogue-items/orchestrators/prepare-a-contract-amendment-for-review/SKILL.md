@@ -12,14 +12,14 @@ Prepare a contract amendment for your legal reviewer. Two steps run in order: a 
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+- **The contract** (yours): the full agreement or terms, with dates and any changes.
 
 **Makes it better (optional):**
-- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for document, a brief. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for the contract, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -28,9 +28,9 @@ How to start:
 
 ## What you need
 
-- The signed agreement. If only a summary or a later draft exists, say so and mark MISSING: signed text.
+- The signed agreement, as readable text, Word or a PDF with selectable text. If only a summary or a later draft exists, say so and mark MISSING: signed text. Scanned pages must be supplied as text first.
 - The proposed amendment, or each draft with its date. If there are several drafts, work from the newest and list the others as earlier versions.
-- Which party the user is, and the country or state the contract names. Ask once if absent. Do not guess the jurisdiction.
+- Which party the user is, and the country or state the contract names. Ask once if absent. Do not guess the jurisdiction. Without it, mark every comment on legal effect MISSING: jurisdiction.
 - Optional: the user's goal for the change, earlier amendments and the email thread. A goal is intent, not an agreed term.
 
 Ask once, in one short message, for only what you cannot work without. Use what is attached or pasted first.
@@ -62,9 +62,9 @@ Lead with the issue list, high risks first. Then give the change trace, the plai
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Contract change tracer](https://useaiblocks.com/skills/contract-change-tracer). It takes the document.
-- The [Contract summary writer](https://useaiblocks.com/skills/contract-plain-summary). It takes the document and audit report.
-- The [AI vendor terms checker](https://useaiblocks.com/skills/ai-vendor-terms-checker). It takes the document.
+- The [Contract summary writer](https://useaiblocks.com/skills/contract-plain-summary). It takes the audit report.
+- The [Policy change impact reviewer](https://useaiblocks.com/skills/rule-change-policy-comparer). It takes the document.
+- The [Subpoena first-look reviewer](https://useaiblocks.com/skills/subpoena-first-look-reviewer). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -87,13 +87,10 @@ Write MISSING: <what> next to the affected result. Keep going with the work that
 - No jurisdiction: continue the trace, mark every legal-effect comment MISSING: jurisdiction.
 - Scanned pages that cannot be read: list the pages as MISSING and do not guess their text.
 
-## After this
-
-Ask one short question about what to do next, and say they can type their own. Offer:
+## What to do with the result
 
 - Send the change trace, issue list and MISSING list to the legal reviewer before anyone signs.
-- Use the Contract change tracer if the contract has several earlier amendments and you want one dated history.
-- Use the Negotiation prep coach if the issue list shows points to push back on.
+- If the contract has several earlier amendments, use the Contract change tracer for one dated history. If the issue list shows points to push back on, use the Negotiation prep coach.
 
 Nothing here sends, signs or changes anything outside the working files. If they pick a next step that is not in this pack, give them its link on useaiblocks.com and say what to bring to it.
 

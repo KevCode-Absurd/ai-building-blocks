@@ -21,7 +21,7 @@ not_for:
   - "You need a formal email to someone outside your team: write a normal email instead of a Slack post."
 you_give:
   - The point you want to make
-  - Who it is for and which channel
+  - Who it is for and which channel, and whether the tone is formal or casual
   - Whether it is an announcement or a reply, and any deadline or action date (optional)
   - Links or people to mention (optional)
   - Slack connected (optional)
@@ -32,10 +32,11 @@ you_get:
   - A draft ready to send after you approve it
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill text into the chat.
-  - Type your point in a line or two. Add the channel and who it is for.
+  - State your point in a line or two. Say who the channel's audience is and whether the tone is formal or casual.
+  - Say which kind of post you want: a message, a thread reply or a canvas. If you are not sure, your AI picks by length.
   - Add any links or people to mention. Slack needs the user ID for a mention, so write the name and fix it before you send.
   - Saving a draft or making a canvas only works if your AI has a Slack connector. Without one, just ask for text you can paste into Slack.
-  - Check the first line. It should carry the news. Check that bold, links and mentions look right in Slack, then send it. Check the thread later for replies. If the update needs more detail, ask for a canvas or a short follow-up post.
+  - Get the draft. Check the first line. It should carry the news. Check that bold, links and mentions look right in Slack, then send it yourself. Check the thread later for replies. If the update needs more detail, ask for a canvas or a short follow-up thread reply after the first post. For a longer written update, the internal update writer pairs well with this.
 output_sample:
   input:
     - The point you want to make, in a line or two
@@ -54,3 +55,4 @@ output_sample:
       contains: Single-asterisk bold, links in angle brackets and mentions, with no headers or double asterisks.
     - name: Draft for approval
       contains: The message saved as a draft in Slack, or ready to paste, for you to check before sending.
+next: [internal-update-writer, change-announcement]

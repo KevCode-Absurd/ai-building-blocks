@@ -35,6 +35,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+This list replaces the general one above. The five skills are in the library at `https://useaiblocks.com/skills/<slug>`. Get any that is not in your folder from there.
 - **Your offer** (required): what it contains, its price and its terms.
 - **Your lead numbers** (optional): spend, leads, how many qualify and how many buy.
 - **Handling time per lead** (needed for step 2): minutes per lead and cost per hour.
@@ -52,10 +53,10 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## Steps
 1. **Choose premium, free or discount.** Use the skill `front-end-offer-picker` on your offer, lead numbers, cash and rules. It scores the three routes and saves the pick, with the reason and what must be true.
 2. **Set the cost and the friction.** Use the skill `lead-cost-and-friction-planner`. Give it the pick from step 1, your spend, lead count, qualified count and handling minutes per lead. It saves cost per qualified lead, the friction to add one step at a time and a stop rule.
-3. **Plan the small paid first step.** Use the skill `paid-first-step-planner`. Give it your main offer and the plan from steps 1 and 2. It saves the cheap first piece, the booked second meeting, a no-show fee and the upsell. Run this step only if step 1 picked discount. Before you run it, check your local consumer rules on taking a card and charging no-show fees.
+3. **Plan the small paid first step.** Use the skill `paid-first-step-planner`. Give it your main offer and the plan from steps 1 and 2. It saves the cheap first piece, the booked second meeting, a no-show fee and the upsell. Run this step only if step 1 picked discount. Before you run it, the person checks their local consumer rules. That check covers: taking a card before the service, how a no-show fee must be shown and agreed, cancellation and refund rights, and how a "free" or discount offer may be advertised. This workflow does not give legal advice, so a local adviser confirms. Mark the step `MISSING: local rules check` until the person says it is done.
 4. **Plan what buyers buy next.** Use the skill `value-ladder-planner`. Give it your offers with prices and what each gives the buyer, plus the first step from steps 1 to 3. It saves the ladder from first step to top offer.
 5. **Test it small.** Use the skill `small-test-and-rollout-planner`. Give it the offer and the ladder, your cost to make and deliver each order, and the money you can afford to lose. It saves a small test with a budget, a time and a win rule written first.
-6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then a `CHECKS MISSED` list (or "none").
 
 ## What you hand back
 5 step files and the summary. The last file is the small test plan, with its win rule written first.
@@ -63,9 +64,9 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Free sample offer planner](https://useaiblocks.com/skills/free-sample-offer-planner).
 - The [Guarantee and refund plan writer](https://useaiblocks.com/skills/guarantee-designer). It takes the plan.
 - The [Offer test planner](https://useaiblocks.com/skills/offer-test-planner). It takes the plan.
+- The [Pricing decision planner](https://useaiblocks.com/skills/pricing-decision-planner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

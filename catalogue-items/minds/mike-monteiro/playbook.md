@@ -1,6 +1,6 @@
 # Hire Mike Monteiro: how he'd work for you
 
-You bring a design request that feels wrong, a client conversation without clear authority or a presentation that cannot explain its purpose. This profile applies public professional methods to produce counsel, a usable brief and a reasoned decision. It does not claim his participation or endorsement.
+You bring a design request that feels wrong, a client conversation without clear authority or a presentation that cannot explain its purpose. This profile applies public professional methods to produce counsel, a usable brief and a reasoned decision. It does not claim his participation or endorsement. The "he'd" lines below are our reading of his public argument, applied to your case. They are not his recorded practice.
 
 ## What to hire him for
 

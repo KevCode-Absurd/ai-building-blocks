@@ -23,11 +23,11 @@ Use a file location available to the user in the current environment. The legacy
 
 For each entity, show the confirmed source and as-of date, the filing and date (or “unknown”), the entity facts used, and any missing facts. Call the result a tracking aid, not a legal determination.
 
-# /entity-compliance
+# How to run it
 
 In a plain chat there are no slash commands and no `~/.claude` folder. Treat each flag below as a plain request ("build my tracker", "show what is due in 90 days", "update", "audit", "export"). Take the entity list from what the user pastes, and keep the tracker as a file in the user's own folder.
 
-1. Load `~/.claude/plugins/config/claude-for-legal/corporate-legal/CLAUDE.md` → `## Entity Management` (entity table, jurisdictions, registered agent).
+1. Take the entity table (name, type, where formed or registered, registered agent) from what the user pastes.
 2. Route to the correct mode below based on flag:
    - No flag or `--init`: Mode 1 — initialize tracker from entity table
    - `--report`: Mode 2 — surface upcoming deadlines and overdue items
@@ -35,7 +35,7 @@ In a plain chat there are no slash commands and no `~/.claude` folder. Treat eac
    - `--sweep`: Mode 3c — walk through unknown/overdue items one by one
    - `--audit`: Mode 4 — full health audit
    - `--export`: Mode 5 — produce CSV or table export
-3. Read/write `~/.claude/plugins/config/claude-for-legal/corporate-legal/entities/compliance-tracker.yaml`.
+3. Read and write the tracker file the user keeps, for example compliance-tracker.yaml in their own folder.
 4. After any update: show summary of changes and next action.
 
 ---
@@ -53,9 +53,9 @@ to share it.
 
 ## Important: deadline reference caveat
 
-> The filing deadlines in this skill's reference table reflect publicly available
-> requirements as of the skill's build date. State filing requirements and due
-> dates can change. **Always confirm deadlines with your registered agent or
+> This skill holds no filing dates of its own. Every date must come from an
+> official source that was checked, or from your registered agent. State filing
+> requirements and due dates can change. **Always confirm deadlines with your registered agent or
 > directly with the relevant Secretary of State before relying on them for
 > compliance purposes.** If you use CT Corp, National Registered Agents, or
 > another registered agent service, their compliance calendar is authoritative
@@ -64,21 +64,15 @@ to share it.
 
 ## Jurisdiction assumption
 
-> This tracker computes deadlines against the state or country of formation / qualification recorded per entity. Filing rules, due-date mechanics, and fee structures vary materially by jurisdiction. If an entity's actual footprint differs from what's in `~/.claude/plugins/config/claude-for-legal/corporate-legal/CLAUDE.md` (undisclosed foreign qualification, dissolved entities, jurisdictional re-domestication, international filings managed by a local agent), the output may not apply as written — confirm with the registered agent or local counsel for that jurisdiction.
+> This tracker computes deadlines against the state or country of formation / qualification recorded per entity. Filing rules, due-date mechanics, and fee structures vary materially by jurisdiction. If an entity's actual footprint differs from what the user pasted (undisclosed foreign qualification, dissolved entities, jurisdictional re-domestication, international filings managed by a local agent), the output may not apply as written — confirm with the registered agent or local counsel for that jurisdiction.
 
-## Entity-type disambiguation (especially Delaware)
+## Entity-type disambiguation
 
-> The filing calendar depends on **entity type**, not just jurisdiction. Treating a "Delaware entity" as a single bucket is a common and consequential error — DE corporations, DE LLCs, and DE LPs have different filings, different deadlines, and different consequences for a miss. Confirm the entity type from the entity table before computing or reporting a deadline, and never copy a deadline from one entity-type to another in the same state.
+> The filing calendar depends on **entity type**, not just jurisdiction. Treating every entity in one state as a single bucket is a common and consequential error: a corporation, an LLC and a limited partnership in the same state can have different filings, different deadlines and different consequences for a miss. Confirm the entity type from the entity table before computing or reporting a deadline, and never copy a deadline from one entity type to another in the same state.
 >
-> **Delaware — the split that matters:**
+> If the entity table records an entity without a type, flag it as `type_unknown` and ask the user to confirm before computing any deadline. Take every date, amount and filing name from the current official filing page for that entity type and year, and record the URL and the date you checked. This guide gives no dates of its own.
 >
-> - **DE Corporation (Inc., Corp.):** Annual report AND franchise tax, both due **March 1**. Franchise tax is calculated by the authorized-shares method or the assumed-par-value capital method (whichever is lower); the annual report captures director / officer information. Statutory basis: 8 Del. C. §§ 501–502 [verify current].
-> - **DE LLC:** No annual report is listed by the Delaware Division of Corporations; an annual tax is due **June 1**. Verify the current amount and date with the current official filing page for the relevant year.
-> - **DE LP:** No annual report is listed by the Delaware Division of Corporations; an annual tax is due **June 1**. Verify current amount and date with the current official filing page for the relevant year.
->
-> A DE LLC is NOT required to file a March 1 annual report — writing that deadline for an LLC carries real risk (spurious "overdue" flags that mask actual June 1 exposure, or worse, the inverse: a user who treats the March 1 corporation rule as universal and misses the June 1 LLC deadline). If the entity table records a Delaware entity without a type, flag it as `type_unknown` and ask the user to confirm before computing either deadline.
->
-> The same entity-type discipline applies in every other jurisdiction with divergent filing regimes by entity type (e.g., CA corp Statement of Information vs. CA LLC SOI cadence; TX franchise tax applies to corporations, LLCs, and LPs but with different no-tax-due thresholds). When the reference table for a jurisdiction is populated, make sure it is indexed by entity type, not just by state.
+> The same discipline applies in every jurisdiction with different filing rules by entity type. Index what you record by entity type, not just by state.
 
 ---
 
@@ -86,7 +80,7 @@ to share it.
 
 ## Tracker file
 
-Lives at `~/.claude/plugins/config/claude-for-legal/corporate-legal/entities/compliance-tracker.yaml`. Structure:
+Lives in a file the user keeps, for example compliance-tracker.yaml in their own folder. Structure:
 
 ```yaml
 # Entity Compliance Tracker
@@ -100,7 +94,7 @@ metadata:
   last_updated: "[date]"
   last_audit: "[date or null]"
 
-custom_jurisdictions:   # manually added — US states or countries not in built-in reference table
+custom_jurisdictions:   # manually added — US states or countries the user describes
   []                    # populated when a new jurisdiction is encountered
 
 entities:
@@ -141,13 +135,11 @@ Status values:
 
 ## Mode 1: Initialise
 
-Run when no tracker exists, or with `--rebuild` to regenerate from scratch.
+Run when no tracker exists, or when the user asks to rebuild it from scratch.
 
 ### Step 1: Load entity table
 
-Read `~/.claude/plugins/config/claude-for-legal/corporate-legal/CLAUDE.md` → `## Entity Management` → Entity table. If the entity table
-is populated (from org chart upload at cold-start), use it directly. If not,
-ask the user to either run the cold-start module or provide the entity list.
+Use the entity table the user pasted. If there is none, ask the user to paste their entity list.
 
 ### Step 2: For each entity × jurisdiction, confirm the filing requirements
 
@@ -159,9 +151,9 @@ For each jurisdiction where the entity is registered (domestic or foreign):
 2. If not, ask the user what they know (filing type, due-date basis, last filed date, typical fee). Record what they provide.
 3. For anything the user does not know, flag the entity × jurisdiction entry as `unknown` — do not populate dates from a cached reference. The user's next step is to confirm with the registered agent or Secretary of State.
 
-**Capture details in the tracker rather than a reference table:**
+**Capture details in the tracker, with the source and date checked:**
 
-> I don't have filing requirements for [Jurisdiction] in the reference table.
+> I have no confirmed filing requirements for [Jurisdiction] yet.
 > Let me capture them so we can track this going forward.
 >
 > For [Entity] in [Jurisdiction]:
@@ -212,12 +204,12 @@ If formation_date is null: set status to `unknown` and flag for confirmation.
 
 ### Step 3: Write the tracker
 
-Generate `~/.claude/plugins/config/claude-for-legal/corporate-legal/entities/compliance-tracker.yaml` with all entities and their
+Write the tracker file with all entities and their
 calculated filing requirements. Set initial status:
 - `current` if last_filed is within the current filing period
 - `due_soon` if due within 90 days and no last_filed for current period
 - `overdue` if due date has passed and no last_filed for current period
-- `unknown` if formation_date is missing or state is not in reference table
+- `unknown` if formation_date is missing or no checked official source exists yet
 
 Show a summary after generating:
 
@@ -234,7 +226,7 @@ Status summary:
   🔴 Overdue:   [N]
   ❓ Unknown:   [N] (confirm with registered agent)
 
-Run /corporate-legal:entity-compliance --report to see what's due.
+Ask "Show what is due in the next 90 days" to see what is due.
 ```
 
 ---
@@ -245,9 +237,7 @@ Run /corporate-legal:entity-compliance --report to see what's due.
 
 Surfaces upcoming deadlines and flags overdue items. Default: next 90 days.
 
-```
-/corporate-legal:entity-compliance --report [--days 30|60|90|180]
-```
+Ask: "Show what is due in the next 30, 60, 90 or 180 days."
 
 Output format:
 
@@ -270,7 +260,7 @@ ENTITY COMPLIANCE REPORT — [date]
 
 🌐 AGENT-MANAGED ([N]):
   [Entity] / [Country] / [Filing type] — managed by [local agent]; confirm status directly
-  [Entity] / [Country] — no local agent recorded; add one with --update
+  [Entity] / [Country] — no local agent recorded; add one with an update
 
 GOOD STANDING:
   Last confirmed: [date]
@@ -278,7 +268,7 @@ GOOD STANDING:
   Entities not confirmed in last 12 months: [list]
 ```
 
-If the tracker covers more than ~10 entities, or any time the user asks: offer the dashboard (see CLAUDE.md `## Outputs → Dashboard offer for data-heavy outputs`). Shape the offer for this output — counts by filing status (overdue / due soon / filed / unknown), counts by good-standing state, and a sortable entity table with jurisdiction, filing type, and next due date.
+If the tracker covers more than ~10 entities, or any time the user asks: offer a summary page. Shape it for this output — counts by filing status (overdue / due soon / filed / unknown), counts by good-standing state, and a sortable entity table with jurisdiction, filing type, and next due date.
 
 ---
 
@@ -290,7 +280,7 @@ Updates one or more entities in the tracker. Three sub-modes:
 
 ### Consequential-action gate (file SOI / annual report)
 
-**Before directing or confirming a filing:** Read `## Who's using this` in `~/.claude/plugins/config/claude-for-legal/corporate-legal/CLAUDE.md`. If the Role is **Non-lawyer**:
+**Before directing or confirming a filing:** Ask the user whether they are a lawyer. If they are **not a lawyer**:
 
 > Filing a Statement of Information, annual report, or franchise tax return with a Secretary of State has legal consequences — it's a formal representation from the entity, it carries fees, and missed or incorrect filings can cause loss of good standing or franchise-tax defaults. Have you reviewed this with an attorney (or a qualified registered agent) before filing? If yes, proceed to record the filing. If no, here's a brief to bring to them:
 >
@@ -306,26 +296,18 @@ Do not record a new `last_filed` date past this gate without an explicit yes. Tr
 
 ### 3a: Manual update
 
-```
-/corporate-legal:entity-compliance --update
-```
-
-Attorney tells Claude what was filed:
-> "We filed the Delaware annual report for [Entity] on March 1. Fee was $450."
+The user says what was filed, for example:
+> "We filed the [FILING TYPE] for [Entity] in [JURISDICTION] on [DATE]. The fee was [FEE]."
 
 Claude updates:
-- `last_filed` → March 1 date
-- `last_fee` → $450
+- `last_filed` → the date given
+- `last_fee` → the fee given
 - `status` → `current`
 - `last_updated` in metadata
 
 ### 3b: Registered agent report upload
 
-```
-/corporate-legal:entity-compliance --update --from-report
-```
-
-User uploads a CT Corp, National Registered Agents, or similar compliance
+The user says "Update from my agent's report" and uploads a CT Corp, National Registered Agents, or similar compliance
 report (PDF, CSV, or Excel). Claude reads it and updates matching entities:
 
 From the report, extract for each entity:
@@ -349,11 +331,7 @@ Not in report (in tracker, no update): [list — status unchanged]
 
 ### 3c: Bulk status sweep
 
-```
-/corporate-legal:entity-compliance --sweep
-```
-
-Walks through each entity with `unknown` or `overdue` status and asks for
+The user says "Walk me through the unknown items". Walks through each entity with `unknown` or `overdue` status and asks for
 current information one at a time:
 
 > [Entity] / [State] / [Filing type] — currently showing as [status].
@@ -367,11 +345,7 @@ Updates tracker after each confirmation. Produces a completion summary.
 
 ## Mode 4: Health audit
 
-```
-/corporate-legal:entity-compliance --audit
-```
-
-Broader review beyond just filing status. Surfaces:
+The user says "Audit my list". This is a broader review beyond just filing status. Surfaces:
 
 **Filing compliance:**
 - Overdue items (from report mode)
@@ -392,13 +366,13 @@ Broader review beyond just filing status. Surfaces:
   refreshing, especially if M&A or financing is anticipated.
 
 **Foreign qualification gaps:**
-- Based on `~/.claude/plugins/config/claude-for-legal/corporate-legal/CLAUDE.md` entity table: are there states in the company's
+- Based on the pasted entity table: are there states in the company's
   operational footprint (offices, employees) where entities are not foreign
   qualified? This requires the attorney to confirm operational presence —
   Claude can flag the question but cannot determine presence independently.
 
 **Intercompany agreement gaps:**
-- From `~/.claude/plugins/config/claude-for-legal/corporate-legal/CLAUDE.md`: if intercompany agreements are marked as partial or no,
+- From the pasted entity notes: if intercompany agreements are marked as partial or no,
   flag which entity relationships likely need agreements (parent-subsidiary
   services, IP licenses, loans).
 
@@ -410,7 +384,7 @@ ENTITY HEALTH AUDIT — [date]
 FILING COMPLIANCE
   Overdue: [N]
   Unknown status: [N]
-  Action: run --sweep to confirm unknown items
+  Action: walk through the unknown items to confirm them
 
 DORMANT ENTITIES ([N])
   [List of dormant entities with age and annual carrying cost if known]
@@ -423,8 +397,8 @@ GOOD STANDING
 
 POTENTIAL GAPS
   Foreign qualification: [flag question — confirm operational presence in:]
-    [list of states from `~/.claude/plugins/config/claude-for-legal/corporate-legal/CLAUDE.md` footprint not in tracker as qualified]
-  Intercompany agreements: [status from `~/.claude/plugins/config/claude-for-legal/corporate-legal/CLAUDE.md`]
+    [list of states from the user's footprint not in tracker as qualified]
+  Intercompany agreements: [status from the user's notes]
 
 RECOMMENDED ACTIONS
   1. [Highest priority action]
@@ -437,11 +411,7 @@ RECOMMENDED ACTIONS
 
 ## Mode 5: Export
 
-```
-/corporate-legal:entity-compliance --export [--format csv|table]
-```
-
-Produces a flat export suitable for sharing with finance, legal ops, or
+The user says "Export as CSV" or "Export as a table". This produces a flat export suitable for sharing with finance, legal ops, or
 outside registered agent. Default: CSV.
 
 CSV columns:
@@ -474,8 +444,8 @@ a report or Slack message, showing only the next 90 days of filings.
   This skill is best suited for smaller organizations without agent support,
   or as a lightweight layer on top of agent data for organizations that do
   have support.
-- The filing deadline reference table is not legal advice and may not reflect
-  current requirements. Confirm all deadlines before relying on them.
+- The tracker is not legal advice and may not reflect current requirements.
+  Confirm all deadlines before relying on them.
 
 
 ## Formula injection defense

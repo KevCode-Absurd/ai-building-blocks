@@ -13,12 +13,12 @@ license: "MIT"
 
 ## Description
 
-Adversarial code review skill that forces genuine perspective shifts through three hostile reviewer personas (Saboteur, New Hire, Security Auditor). Each persona looks hard for an issue — no "LGTM" escapes — and says so plainly if it finds no real one. Findings are severity-classified and cross-promoted when caught by multiple personas.
+Adversarial code review skill that forces genuine perspective shifts through three hostile reviewer personas (Saboteur, New Hire, Security Auditor). Each persona looks hard for an issue — no easy "LGTM" — and says so plainly if it finds no real one. There is no minimum number of findings. Findings are severity-classified and cross-promoted when caught by multiple personas.
 
 ## Features
 
 - **Three adversarial personas** — Saboteur (production breaks), New Hire (maintainability), Security Auditor (OWASP-informed)
-- **Mandatory findings** — Each persona must surface at least one issue, eliminating rubber-stamp reviews
+- **No rubber stamps** — Each persona must look hard. It reports real issues only, or "No real issue found" with what it checked. There is no quota.
 - **Severity promotion** — Issues caught by 2+ personas are promoted one severity level
 - **Self-review trap breaker** — Concrete techniques to overcome shared mental model blind spots
 - **Structured verdicts** — BLOCK / CONCERNS / CLEAN with clear merge guidance
@@ -86,7 +86,7 @@ For every file in the diff:
 
 ### Step 3: Run All Three Personas
 
-Execute each persona sequentially. Each persona must look hard and report at least one finding. If a persona finds nothing wrong after a real second look, it writes "No real issue found" and names what it checked. Never invent a problem to fill the gap.
+Execute each persona sequentially. Each persona must look hard. There is no minimum number of findings. If a persona finds nothing wrong after a real second look, it writes "No real issue found" and names what it checked. Never invent a problem to fill the gap.
 
 **IMPORTANT:** Do not soften findings. Do not hedge. Do not say "this might be fine but..." — either it's a problem or it isn't. Be direct.
 
@@ -118,7 +118,7 @@ After all three personas have reported:
 3. For each state mutation, ask: "What if this runs twice? Concurrently? Never?"
 4. For each conditional, ask: "What if neither branch is correct?"
 
-**Look for at least one issue. If the code is genuinely bulletproof, write "No real issue found", name what you checked, and note the most fragile assumption it relies on.**
+**Look hard for real issues. There is no quota. If the code is genuinely bulletproof, write "No real issue found", name what you checked, and note the most fragile assumption it relies on.**
 
 ---
 
@@ -142,7 +142,7 @@ After all three personas have reported:
 3. Check: would a new contributor know where to add a similar feature?
 4. Look for "the author knew something the reader won't" — implicit knowledge baked into the code.
 
-**Look for at least one issue. If the code is crystal clear, write "No real issue found", name what you checked, and note the most likely point of confusion for a newcomer.**
+**Look hard for real issues. There is no quota. If the code is crystal clear, write "No real issue found", name what you checked, and note the most likely point of confusion for a newcomer.**
 
 ---
 
@@ -168,7 +168,7 @@ After all three personas have reported:
 3. Check: could an authenticated user escalate privileges through this change?
 4. Check: does this change expose any new attack surface?
 
-**Look for at least one issue. If the code has no security surface, write "No real issue found", name what you checked, and note the closest thing to a security-relevant assumption.**
+**Look hard for real issues. There is no quota. If the code has no security surface, write "No real issue found", name what you checked, and note the closest thing to a security-relevant assumption.**
 
 ## Severity Classification
 

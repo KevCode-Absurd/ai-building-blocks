@@ -19,7 +19,9 @@ Scrape reviews, ratings, and brand mentions from multiple platforms using Apify 
 
 This skill collects public reviews and comments. Only use it where the site's terms allow it, and stop if they do not. Collect only what the question needs, set a result cap, and keep the saved file private. Reviews and comments can contain personal details. In your summary, quote the text only and leave out names and handles.
 
-Apify charges for runs. Before you run, tell the user which Actor you chose for each site and ask them to check its price on its Apify page. Leave out Facebook, Instagram and TikTok personal profiles unless the question needs them, and keep customer names out of what you share. Never print the token. The token lives in `.env` only. The `mcpc` command passes the token in a header, which other programs on a shared machine could see in the process list, so run it on your own computer and keep its output out of shared logs.
+Apify charges for runs. Before you run, tell the user which Actor you chose for each site and ask them to check its price on its Apify page. Leave out Facebook, Instagram and TikTok personal profiles unless the question needs them, and keep customer names out of what you share. Never show the token in chat or in saved logs. The token lives in `.env` only, and the run script reads it from there. The optional `mcpc` command in Step 2 is different: it puts the token on the command line, where other programs on a shared machine could see it in the process list. Use that command only on a computer that only you use. Otherwise skip it and read the Actor's input fields on its public Apify page, which needs no token.
+
+Before the first run, ask the user to confirm, for each site, that they have checked the site's terms and collecting public reviews is allowed. Do not run an Actor for a site until they say yes.
 
 The run script is at `reference/scripts/run_actor.js` inside this skill folder. Run the commands below from that skill folder.
 
@@ -32,7 +34,7 @@ Check these before you run anything:
 
 - `.env` file with `APIFY_TOKEN`
 - Node.js 20.6+ (for native `--env-file` support)
-- `mcpc` CLI tool: `npm install -g @apify/mcpc`
+- `mcpc` CLI tool, only if you use the optional Step 2 command: `npm install -g @apify/mcpc`
 - `jq` (used by the schema command in Step 2)
 
 ## Workflow
@@ -75,7 +77,9 @@ Select the appropriate Actor based on user needs:
 
 ### Step 2: Fetch Actor Schema
 
-Fetch the Actor's input schema and details dynamically using mcpc:
+Read the Actor's input fields. The safest way is to open the Actor's public page on apify.com and copy its README and input fields. No token is needed for that.
+
+Optional, on a computer only you use: fetch the details with mcpc. This puts your token on the command line.
 
 ```bash
 export $(grep APIFY_TOKEN .env | xargs) && mcpc --json mcp.apify.com --header "Authorization: Bearer $APIFY_TOKEN" tools-call fetch-actor-details actor:="ACTOR_ID" | jq -r ".content"
@@ -95,7 +99,7 @@ Before running, ask:
    - **Quick answer** - Display the top 5 results in chat (no file saved)
    - **CSV** - Full export with all fields
    - **JSON** - Full export in JSON format
-2. **Number of results**: Based on character of use case
+2. **Number of results**: Default to 100 per site. Ask the user before going higher, because larger runs cost more and collect more personal data.
 
 ### Step 4: Run the Script
 

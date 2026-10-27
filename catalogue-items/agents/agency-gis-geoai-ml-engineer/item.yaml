@@ -11,11 +11,12 @@ level: intermediate
 inputs:
   - type: question
     required: true
-  - type: source_text
+  - type: map_data
+    required: false
+  - type: training_data
     required: false
 outputs:
-  - type: brief
-  - type: audit_report
+  - type: plan
 uses: []
 steps: []
 origin: imported

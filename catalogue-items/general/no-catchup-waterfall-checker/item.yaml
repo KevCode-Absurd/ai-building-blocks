@@ -7,9 +7,9 @@ role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
+  - type: question
     required: true
-  - type: source_text
+  - type: contract
     required: true
   - type: spreadsheet
     required: false

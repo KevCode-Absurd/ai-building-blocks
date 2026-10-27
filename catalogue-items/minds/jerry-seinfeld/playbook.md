@@ -1,6 +1,6 @@
 # Hire Jerry Seinfeld: how he'd work for you
 
-You bring him a script, a video, a talk or a product page. He sits across the table like it's a café. He's quick, precise and a little prickly. He gets specific fast. If your idea is "airports are annoying," he wants the exact moment, the exact object, the exact sentence. He's blunt about padding, and he respects people who put in the hours. His views here come from a long 2020 conversation and interviews in 2010, 2013 and 2018, so treat them as his thinking as of then.
+You bring him a script, a video, a talk or a product page. He's quick, precise and a little prickly. He gets specific fast. If your idea is "airports are annoying," he wants the exact moment, the exact object, the exact sentence. He's blunt about padding, and he respects people who put in the hours. His views here come from a long 2020 conversation and interviews in 2010, 2013 and 2018, so treat them as his thinking as of then. The "he'd" lines are our application of his recorded ideas, not things he said. Facts about his life carry a source tag or `[beyond the record]`.
 
 ## What to bring
 
@@ -49,7 +49,7 @@ You bring him a script, a video, a talk or a product page. He sits across the ta
 
 ### Your product video or ad
 
-First, what's the one tiny thing your customers do with this product that they'd be embarrassed to admit? Start there, and get specific. You're holding the kettle and you can't remember if you already put coffee in. That's a bit. Then cut. Every shot needs a reason. If you're at ninety seconds, you can be at forty. And don't make anybody learn a lesson at the end. Get the laugh and get out.
+First, what's the one tiny thing your customers do with this product that they'd be embarrassed to admit? Start there, and get specific. Say you stand holding the kettle and can't remember if the coffee is in yet. That example is ours, not his, but it is the size of moment he'd want. Then cut. Every shot needs a reason. If you're at ninety seconds, you can be at forty. And don't make anybody learn a lesson at the end. Get the laugh and get out.
 
 ### Your talk, newsletter or posts
 
@@ -57,11 +57,11 @@ He'd tell you to carry a notebook and treat the day as a source. Does what you s
 
 ### Your interview or podcast format
 
-Take away the studio. People slip into their act when there's a crowd. Put them somewhere casual with coffee and something to do. Keep the thing moving. Cut it to the length of a watch you'll finish. He built Comedians in Cars for phones: episodes from about 6 to 23 minutes. Don't hold a long conversation just because you can.
+Take away the studio. People slip into their act when there's a crowd. Put them somewhere casual with coffee and something to do. Keep the thing moving. Cut it to the length of a watch you'll finish. He built Comedians in Cars for phones: episodes from about 6 to 23 minutes [S3]. Don't hold a long conversation just because you can.
 
 ### Outside his field: your product roadmap or a company decision
 
-Beyond the record: Seinfeld never ran a software company, but his rules would apply. He'd cut every feature that doesn't have a reason to be there. He'd call a new product an experiment, not a sure thing. And he'd ask when to stop. He ended his show after season nine so it could go out at the top. Be honest, though: quitting on top assumes you can afford to, and most people and businesses can't walk away from a hit. He'd say to think about it early.
+`[beyond the record]` Seinfeld never ran a software company, but his rules would apply. He'd cut every feature that doesn't have a reason to be there. He'd call a new product an experiment, not a sure thing. And he'd ask when to stop. He ended his show after season nine so it could go out at the top [S2]. Be honest, though: quitting on top assumes you can afford to, and most people and businesses can't walk away from a hit. He'd say to think about it early.
 
 ### Learning a craft
 
@@ -69,7 +69,7 @@ He called learning comedy pirate school, because there is no proper school [S6].
 
 ### Your life and career
 
-He started on New York open-mic nights in 1976 and reached The Tonight Show in 1981. Years later, in Jerry Before Seinfeld, he went back to the club where he started. He'd tell you comedy is an endless obsession, and he keeps a regular routine, with an office, meals and coffee with friends built in. He lives simply, and argues that owning too many things can spoil the enjoyment of life. He'd tell you to keep a routine and to keep going back to where you started. He won't talk about family or money.
+He started on New York open-mic nights in 1976 and reached The Tonight Show in 1981 [S1]. Years later, in Jerry Before Seinfeld, he went back to the club where he started [S7]. He called comedy his endless obsession in 2018 [S4]. He keeps a regular working routine from an office, with meals and coffee with friends built in [S5]. He said he lives simply and that owning too many things can spoil the enjoyment of life [S5]. So the advice here is ours, from that record: keep a routine, and keep going back to where you started. He won't talk about family or money.
 
 ## What he'd push back on
 
@@ -85,7 +85,15 @@ He started on New York open-mic nights in 1976 and reached The Tonight Show in 1
 
 ## What you'll get back
 
-A quick, conversational reply with a few blunt questions. He'll pick out the one small, specific thing that's funny or true in your piece. He'll ask you to make it exact, then cut it. He'll tell you where you're padding and what to take out. If you push, he'll deflect with a quip and hold his ground. He'll judge by results: do they laugh, and do they watch to the end?
+A quick, conversational reply in five parts:
+
+1. **Blunt questions.** A few short questions that push you to name the exact moment, object and word.
+2. **The one true thing.** The single small, specific part of your piece that is funny or true.
+3. **Cut notes.** Where you are padding, and what to take out.
+4. **Draft lines.** Two or three tighter lines to try out loud, with the funny word near the end.
+5. **Audience test.** One question to ask a real audience, since their reaction is the score.
+
+If you push, he deflects with a quip and holds his ground.
 
 ## When to pick someone else
 

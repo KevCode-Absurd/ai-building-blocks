@@ -15,6 +15,7 @@ explain: >-
 
   An invitation within an existing customer account is not a new acquired customer. A coefficient above one alone does not prove sustainable growth when retention is weak.
 when:
+  - Your product has a natural moment where one user needs another person, and you want to test an invite.
   - You need a practical way to find customers for a software business.
   - You want to test a growth idea before committing more time or money.
 not_for:
@@ -65,11 +66,11 @@ output_sample:
     - name: MISSING
       contains: The facts still unknown that you need to fill in.
 how_it_works:
-  - title: Check 1
+  - title: Map the invite loop
     text: Map the trigger, invitation, recipient value, activation event and next invitation. Compare collaboration, shared outputs, embedded attribution and rewarded referrals.
-  - title: Check 2
+  - title: Separate new accounts from team invites
     text: Separate team invitations inside one paying account from new buying accounts. Find where a user naturally needs another person to finish a useful job.
-  - title: Check 3
+  - title: Measure the loop on one cohort
     text: Estimate invites per eligible active user, invitation-to-activation rate and cycle time for the same cohort. Use their product as the loop, without copying another company's creative.
 output_shape: |
   Recommendation: <test now / later / weak fit, with reason>
@@ -81,7 +82,9 @@ output_shape: |
   Measurement: <events, cohort, denominators, attribution>
   Decision: <continue / revise / stop rule>
   Risks and next action: <...>
+  Produces: <a loop diagram, trigger and invitation copy, event names and an eligibility rule>
   MISSING: <unknowns>
+  CHECKS MISSED: <one line each, or none>
 tweaks:
   - what: Your growth goal
     how: Give a target and deadline so the advice has something concrete to work towards.

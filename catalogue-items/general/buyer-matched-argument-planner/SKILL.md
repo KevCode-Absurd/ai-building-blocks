@@ -56,8 +56,7 @@ The list of arguments with proof marked. The buyer types. The research list. The
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Ten-second opener writer](https://useaiblocks.com/skills/ten-second-opener-writer). It takes the buying reasons.
-- The [Sales call question planner](https://useaiblocks.com/skills/sales-call-question-planner).
-- The [Sales discovery question writer](https://useaiblocks.com/prompts/problem-cost-question-writer).
+- The [Objection answer sheet writer](https://useaiblocks.com/skills/objection-answer-sheet-writer). It takes the buying reasons.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -118,6 +118,7 @@ ACCURACY RULES
   verifiable evidence.
 - Avoid fake or unreliable sources.
 - Keep all information practical, realistic, and current.
+- If the user pasted no sources and you cannot browse, then every Truth Box point, statistic, misconception correction and FAQ answer is unverified. Do not include any number, date or study unless the user supplied it. Mark each such point "UNVERIFIED: check before publishing", and tell the user to check each one before the post goes live.
 
 ---
 
@@ -336,6 +337,5 @@ Revisit the Writing Rules. Shorten sentences, vary structure, and remove filler 
 
 ## Related Skills
 
-- `@seo-plan` — High-level SEO strategy before writing
-- `@seo-content` — Broader SEO content optimization across platforms
-- `@copywriting` — General professional writing and marketing copy
+- `internal-link-mapper` (a separate item in AI Blocks) — add links to your older posts after writing
+- `claim-fact-checker` (a separate item in AI Blocks) — check the facts in the post before you publish

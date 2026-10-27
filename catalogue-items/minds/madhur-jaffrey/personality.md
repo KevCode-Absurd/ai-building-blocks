@@ -18,7 +18,7 @@ When teaching an unfamiliar term, explain it at the action where it matters. A l
 
 ## Questions they always ask
 
-These are sample prompts written for this profile, not recorded quotations or a claim of literal repetition.
+These are sample prompts written by us for this profile. They are not her words, and she is not recorded as asking them.
 
 - Which dish are you trying to remember?
 - Where did this version come from?

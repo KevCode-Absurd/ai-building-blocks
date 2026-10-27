@@ -10,21 +10,15 @@ description: >
 
 # Stakeholder Summary
 
-**Running this in a plain chat (no plugin).** This file was written for a Claude plugin. Where it mentions slash commands, matter workspaces, CLAUDE.md or `~/.claude/plugins` paths, `renewal-tracker` or `escalation-flagger`, ignore those and work from what the user pastes: the review and the contract text. In a chat:
-- Start the summary with "Confidential. First-pass summary, not legal advice."
+This works in a plain chat from what the user pastes: the finished review and the contract text. It uses no slash commands, folders, trackers or other skills.
+- Start the summary with one line: "Confidential. First-pass summary, not legal advice." Add no other legal caveats.
 - If no house style is given, write for a busy manager: two short paragraphs, no legal terms.
 - Never say a renewal is "tracked" or "added to the tracker". Write "Add the renewal date to your calendar. Not done yet."
-- If the review names people to escalate to, list each one under "Escalation status" as "not routed", because nothing here sends it. If the review names none, leave the block out.
-
-## Matter context
-
-**Matter context.** Check `## Matter workspaces` in the practice-level CLAUDE.md. If `Enabled` is `✗` (the default for in-house users), skip the rest of this paragraph — skills use practice-level context and the matter machinery is invisible. If enabled and there is no active matter, ask: "Which matter is this for? Run `/commercial-legal:matter-workspace switch <slug>` or say `practice-level`." Load the active matter's `matter.md` for matter-specific context and overrides. Write outputs to the matter folder at `~/.claude/plugins/config/claude-for-legal/commercial-legal/matters/<matter-slug>/`. Never read another matter's files unless `Cross-matter context` is `on`.
-
----
+- If the review names people the contract should go to, list each one under "Escalation status" as "not routed", because nothing here sends it. If the review names none, or the user has no approvers, leave the block out. It is optional.
 
 ## Destination check
 
-Before producing output, check where it's going. If the user has named a destination (a channel, a distribution list, a counterparty, "everyone"), ask whether it's inside the privilege circle. Public channels, company-wide lists, counterparty/opposing counsel, vendors, and clients (for work product) waive the protection. When the destination looks outside the circle, flag it and offer (a) the privileged version for legal only, (b) a sanitized version for the broader channel, or (c) both — don't silently apply a privileged header and then help paste it somewhere the header won't protect it. See the canonical `## Shared guardrails → Destination check` in this plugin's CLAUDE.md.
+Before producing output, check where it's going. If the user has named a destination (a channel, a distribution list, a counterparty, "everyone"), ask whether it's inside the privilege circle. Public channels, company-wide lists, counterparty/opposing counsel, vendors, and clients (for work product) waive the protection. When the destination looks outside the circle, flag it and offer (a) the privileged version for legal only, (b) a sanitized version for the broader channel, or (c) both — don't silently apply a privileged header and then help paste it somewhere the header won't protect it.
 
 ## Purpose
 
@@ -36,7 +30,7 @@ The underlying review memo was run against either the sales-side or the purchasi
 
 ## Audience calibration
 
-Read `~/.claude/plugins/config/claude-for-legal/commercial-legal/CLAUDE.md` → `## House style` → who reads stakeholder summaries, how long should they be. If not specified, default to: procurement or a department head, two paragraphs max, no legal terms of art.
+Use the house style the user gives you for who reads the summary and how long it should be. If none is given, default to: procurement or a department head, two paragraphs max, no legal terms of art.
 
 Different audiences need different summaries:
 
@@ -72,11 +66,10 @@ If a full conditional quote doesn't fit the summary's length cap, paraphrase rat
 
 ### Format
 
-Prepend the work-product header from `~/.claude/plugins/config/claude-for-legal/commercial-legal/CLAUDE.md` `## Outputs` (it differs by user role — see `## Who's using this`).
+Start with the one-line header "Confidential. First-pass summary, not legal advice."
 
 ```markdown
-[WORK-PRODUCT HEADER — per plugin config ## Outputs]
-<!-- Remove the header above if forwarding outside the legal-privileged circle (e.g., to a business stakeholder, counterparty, or vendor). Confirm the correct marking for your jurisdiction and matter before forwarding. -->
+Confidential. First-pass summary, not legal advice.
 
 **[Counterparty] [Agreement type]** — [READY TO SIGN | NEEDS CHANGES | BLOCKED]
 
@@ -86,20 +79,11 @@ for the dashboard tool the marketing team wants."]
 
 [One paragraph: what the stakeholder needs to know. The catch, if there is one.
 The thing that will surprise them later if nobody tells them now. E.g., "Heads
-up: this auto-renews every year and we have to cancel 60 days out. I've added
-it to the tracker but you should know." Or: "Clean agreement, no surprises,
+up: this auto-renews every year and we have to cancel 60 days out. Add the
+renewal date to your calendar. Not done yet." Or: "Clean agreement, no surprises,
 cleared to sign."]
 
-<!-- Do not claim "I've added it to the tracker" unless `renewal-tracker` has
-actually been run for this contract — see Verify tracker entries before
-asserting them below. -->
-
-**Verify tracker entries before asserting them.** Before the summary says "I've added it to the tracker" (or any equivalent — "it's in the tracker," "tracked," "set a reminder"), verify that `renewal-tracker` has been run for this contract. Check the outputs folder or the matter folder for a `renewal-tracker` output that names this counterparty / agreement. If there isn't one:
-
-- Either run `renewal-tracker` for this contract first, then write the summary.
-- Or write the summary without asserting the tracker entry, and include an action item: "Add to renewal tracker — not yet done."
-
-Claiming a tracker entry exists when it does not is worse than omitting the reassurance. The stakeholder then trusts the reminder that will never fire. If the truthful statement is "tracked," the skill runs the tracker. If it's "you should add this to your calendar — I haven't logged it," say that.
+**Never claim a renewal is tracked.** Nothing here logs a renewal date. Do not write "I've added it to the tracker", "it's tracked" or "I set a reminder". Write "Add the renewal date to your calendar. Not done yet." as an action item.
 
 **What you need to do:**
 - [ ] [Action item, if any — "confirm the team is okay with data living in EU"
@@ -127,15 +111,14 @@ Claiming a tracker entry exists when it does not is worse than omitting the reas
 - The word "indemnification" (say "they cover us if" / "we cover them if")
 - The word "notwithstanding"
 - Risk matrices with colored dots (unless this stakeholder has specifically asked for them before)
-- Caveats about how this isn't legal advice — the stakeholder knows who sent it
+- Long legal caveats. The one-line header at the top is enough
 
 ## When the review found problems
 
 If the review has 🔴 or 🟠 issues, the summary still needs to be two paragraphs — but the second paragraph is "here's what we're pushing back on and why."
 
 ```markdown
-[WORK-PRODUCT HEADER — per plugin config ## Outputs]
-<!-- Remove the header above if forwarding outside the legal-privileged circle. -->
+Confidential. First-pass summary, not legal advice.
 
 **[Counterparty] [Agreement type]** — NEEDS CHANGES
 
@@ -156,40 +139,25 @@ probably agree" / "This might be a sticking point — will keep you posted."]
 
 ## Handoffs
 
-**From vendor-agreement-review / saas-msa-review:** Those skills produce the full memo. This skill reads the memo and compresses it. Don't re-review the contract — read the review.
+**From the review:** The review the user pastes is the full memo. This skill reads it and compresses it. Don't re-review the contract — read the review. If there is no review yet, use Contract risk reviewer first.
 
-**To the stakeholder:** Via whatever channel `~/.claude/plugins/config/claude-for-legal/commercial-legal/CLAUDE.md` says. If Slack, keep it under 150 words. If email, the format above is fine as-is.
+**To the stakeholder:** By email or chat. If chat, keep it under 150 words. If email, the format above is fine as-is.
 
-## Escalation-fan-out reconciliation
+## Escalation status (optional)
 
-The upstream review is a one-to-many producer: it can name five escalation targets (Deputy GC, CISO, Privacy Officer, CFO, business owner) across different findings. `escalation-flagger` routes one finding at a time. Without a reconciliation step, the Deputy GC sees the memo and the other four approvers never do.
+A review can name several people who should see the contract (for example a privacy officer, a security lead or a finance head). Tally them:
 
-Before producing the summary, read the upstream review memo and tally escalations:
+1. Count the people the review named, from its routing block or its "escalate to" tags. Count each person once.
+2. Nothing in this skill sends anything, so list every one as not routed.
 
-1. **Count the escalation targets the review named.** Look for the routing / escalation block at the end of the review, or for per-finding "escalate to [X]" tags. De-dupe by approver name — a reviewer named for two findings counts once.
-2. **Count the escalations actually routed.** Read the review folder (or matter folder) for `escalation-*.md` drafts produced by `escalation-flagger` since the review was written. Each draft names one approver.
-3. **Reconcile.** If N approvers were named and M drafts exist, (N − M) escalations have not been routed.
-
-Include a short reconciliation block in the summary — above the checklist, below the catch paragraph:
+Put a short block above the checklist:
 
 ```markdown
-**Escalation status:** [M] of [N] escalation targets routed. The following have not been routed and require action:
+**Escalation status:** [N] named in the review, none routed yet:
 - [Approver name] — [one line on the finding that named them]
-- [Approver name] — [one line]
 ```
 
-If all N have been routed:
-```markdown
-**Escalation status:** [N] of [N] escalation targets routed.
-```
-
-If the upstream review surfaced no escalations, omit the block.
-
-**Do not omit a named approver from the reconciliation because the stakeholder wouldn't recognize the name.** Business stakeholders often do not know who the Privacy Officer or CISO is. The reconciliation is internal-facing — it tells the lawyer sending the summary whether all the routing is done, not the stakeholder. If the stakeholder-facing summary needs to stay narrow, the reconciliation can live in a "routing status" footer or attached note — but it has to exist. A summary that implies routing is complete when it is not is worse than no summary.
-
-**Word-count carve-out.** The escalation reconciliation block is exempt from the 200-word cap. Length-cap discipline on the summary body stays; the reconciliation is housekeeping, not narrative.
-
-**When no escalation-flagger drafts exist.** If the upstream review named approvers and no drafts are in the folder, treat the count as M = 0. The reconciliation block lists all N as unrouted. That is the finding.
+If the review named nobody, or the user has no approvers, leave the block out. Do not drop a named person because the stakeholder would not know them. The block tells the sender what is left to do. The block is exempt from the 200-word cap.
 
 ## A note on tone
 

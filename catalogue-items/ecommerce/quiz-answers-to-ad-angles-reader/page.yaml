@@ -8,7 +8,7 @@ headline: "Quiz answers to ad angles reader"
 subhead: "Paste the answers people gave in your quiz. It counts who they are, their main pains and what they tried, reads how much they already know, and ranks the ad angles and frames to test. It also lists changes to your quiz or offer and scores how solid the data is."
 explain: |
   A quiz collects what buyers say about themselves, in numbers. Most stores never read it as a whole. They look at sales and ignore what 100 people told them about their pain, their goals and what they tried before.
-  This skill reads that data. It waits for about 100 submissions, counts the share of each age group, pain, goal and past solution, and reads how aware the buyers already are from what they have tried. If 70% choose one specific pain over a general one, your ads should be about that pain. It picks the angle and the frame to test from your buyers' stated doubts. It uses your own data, not competitor ads. The source's view is that copying a competitor's concept is about 20% of the work and the frame and message are about 80%. It works only for people who clicked your ads, so it reads one group, not all buyers.
+  This skill reads that data. It waits for about 100 submissions, counts the share of each age group, pain, goal and past solution, and reads how aware the buyers already are from what they have tried. If 70% choose one specific pain over a general one, your ads should be about that pain. It picks the angle and the frame to test from your buyers' stated doubts. It uses your own data, not competitor ads. One speaker's rule of thumb is that copying a competitor's concept is about 20% of the work and the frame and message are about 80%. It is not a measured fact. It works only for people who clicked your ads, so it reads one group, not all buyers.
 when:
   - Your quiz has reached about 100 submissions and you have not read the answers as a whole.
   - Your ads are not landing and you do not know which pain or goal to lead with.
@@ -117,7 +117,7 @@ improve:
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Reads a spreadsheet export and writes the report. The source feeds the export to a chat AI."}
-    - {name: "Heyflow", why: "A quiz tool that exports answers per question. The source describes the quiz tool as Heyflow-type."}
+    - {name: "Heyflow", why: "A paid quiz tool that exports answers per question. Any quiz tool with a per-question export works, so check the plan and price first."}
     - {name: "Google Sheets", why: "Lets you check the counts yourself with a pivot table."}
   inputs:
     - Ad set names or IDs for each submission

@@ -5,18 +5,18 @@ description: Use when you are reading a company's results, or the books of a bus
 
 # One-off items separator
 
-The profit line you see is not always what the business earned from its ordinary work. A sale of a building, a tax refund, a gain on shares held or a big write-off can sit inside it. If you value a company by what it earns, you must know what it earns when nothing unusual happens. This skill takes the one-offs out, year by year, and shows what is left. It is a method of analysis, not personal financial advice, and it never tells you to buy or sell a named security.
+The profit line you see is not always what the business earned from its ordinary work. A sale of a building, a tax refund, a gain on shares held or a big write-off can sit inside it. If you value a company by what it earns, you must know what it earns when nothing unusual happens. This skill takes the one-offs out, year by year, and shows what is left. It is a method of analysis, not personal financial advice, and it never tells you to buy or sell a named security. It separates and pairs the one-offs; to judge whether a company padded its profit, use "Earnings padding detector" afterwards.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+- **Financial statements** (yours): the income statement, balance sheet and cash flow statement, for the periods you have.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for financial statements. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -52,7 +52,7 @@ How to start:
 8. **Flag what you cannot settle.** Items you cannot place or size go in a list for "Earnings padding detector", with the question to ask.
 9. **Check it.** Go through "Check before you hand it back" and fix what fails. Under CHECKS MISSED write one line per check missed, or "none".
 
-**Worked sum (made-up numbers).** A hardware chain reports profit of 2.4m. It includes a gain of 0.8m after tax on selling an old warehouse. Separately, a 0.5m cost of closing a store was charged straight to equity and never reached the profit line. Ordinary earnings are 2.4 minus 0.8, which is 1.6m. The two one-offs net to a 0.3m gain, so the all-in result is 1.9m. The 1.6m is the figure to build on, and the 0.5m closure cost goes in the long-run record.
+**Shape of the sum (placeholders, not data).** Reported profit is [REPORTED]. It includes an after-tax gain of [GAIN] on selling an asset. Separately, a closure cost of [COST] was charged straight to equity and never reached the profit line. Ordinary earnings are [REPORTED] minus [GAIN]. The two one-offs net to [GAIN] minus [COST], so the all-in result is [REPORTED] minus [COST]. Build on the ordinary figure, and put the closure cost in the long-run record.
 
 ## What you hand back
 

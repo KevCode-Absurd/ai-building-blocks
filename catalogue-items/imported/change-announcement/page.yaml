@@ -9,7 +9,7 @@ subhead: "The full message package for a re-org, tool change or layoff: the anno
 explain: |
   The full message package for a re-org, tool change or layoff: the announcement, an FAQ, talking points for managers and a calendar of follow-ups. It is written for staff, not customers, and settles when to speak, in what order and what to leave unsaid.
 
-  The skill sets the size of the change first so the tone matches, since cheerful wording on a job cut backfires. Managers hear first and get answers, because staff trust their own manager most. The FAQ answers what people really ask, like pay, reporting lines and whether more cuts are coming. It sets five to seven touchpoints rather than one post. It works through a fixed change model. The research it cites comes from the skill's author and is not checked here, so confirm any figure before you repeat it.
+  The skill sets the size of the change first so the tone matches, since cheerful wording on a job cut backfires. Managers hear first and get answers, because staff trust their own manager most. The FAQ answers what people really ask, like pay, reporting lines and whether more cuts are coming. It sets five to seven touchpoints rather than one post (the calendar script builds seven). It works through a fixed change model. The research and company examples it cites (such as Prosci, Edelman, MIT Sloan and past layoff cases) come from the skill's author and are not checked here. Do not quote a number or name a company in your message until you have read the original source.
 when:
   - You are about to announce a re-org and want the words and order ready.
   - Managers will get questions on day one and need answers.
@@ -32,7 +32,7 @@ you_get:
 how_to_use:
   - Open your AI chat and paste in the skill text from this page.
   - "Fill in a short brief: change type, size, effective date, who is affected, your channels and what you cannot share yet."
-  - Tell your AI to run the skill one question at a time. If it cannot run code, ask it to write four parts in order from your brief. Those are the announcement, the FAQ, manager talking points and a dated calendar of five to seven follow-ups.
+  - Tell your AI to run the skill one question at a time. The three scripts are optional. The one that fills the full package is missing from this copy, so the AI writes that step by hand anyway. If it cannot run code, ask it to write four parts in order from your brief. Those are the announcement, the FAQ, manager talking points and a dated calendar of five to seven follow-ups.
   - Check the announcement against the eight mistakes in the skill. Fix any it finds.
   - Name the leader who will sign the message. Confirm they will be at the town hall.
   - Send any layoff or policy message to legal and HR for review before you share it.

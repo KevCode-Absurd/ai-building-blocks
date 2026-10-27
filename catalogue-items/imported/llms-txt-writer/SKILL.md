@@ -341,8 +341,10 @@ Construct the llms.txt following this template:
 
 - Founded in [year] by [name(s)]
 - Headquartered in [City, Country]
-- [Specific metric: e.g., "Serves 10,000+ businesses in 40 countries"]
-- [Key differentiator: e.g., "Only platform offering real-time X and Y integration"]
+- [Specific metric, only if your site states it: YOUR REAL FIGURE]
+- [Key differentiator, only if your site states it: YOUR REAL CLAIM]
+
+Every Key Facts line must be checked against the live site before you publish. If the site does not state a fact, leave the line out.
 - Industry: [Classification]
 
 ## Contact
@@ -357,7 +359,7 @@ Construct the llms.txt following this template:
 Before outputting:
 1. Verify all URLs are reachable (200 status).
 2. Confirm total entry count is between 10-30.
-3. Check that no description exceeds 50 words.
+3. Check that every description is 10-30 words, and that none runs past 30.
 4. Verify the overall file length is 50-150 lines.
 5. Ensure Markdown formatting is clean and consistent.
 

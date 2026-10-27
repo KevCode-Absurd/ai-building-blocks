@@ -299,3 +299,7 @@ Before shipping an agent:
 - Node types, parameters, model availability, and defaults vary by n8n version; verify them against the target instance.
 - This guidance cannot set provider secret values or prove a live multi-turn agent works without an authorized execution.
 - Validation does not prove tool selection quality, correct wiring, idempotency, or safe side effects; inspect and test those separately.
+
+## Licence note
+
+The upstream author (Romuald Czlonkowski, czlonkowski/n8n-skills) lists this skill as MIT. The collection it was copied from lists its written content as CC BY 4.0 unless an upstream notice says otherwise (see `LICENSE-CONTENT`). We share this copy under CC BY 4.0. Keep the credit to Romuald Czlonkowski and sickn33 either way.

@@ -9,7 +9,9 @@ subhead: Describe the role you need, your industry and where you can hire. It so
 explain: |
   A map of where the people you want to hire work today, how many of them exist, and how hard they are to reach. Recruiters stop guessing and start with a ranked list of companies and a view of the rivals competing for the same people.
 
-  The skill sorts target companies into three circles. Circle one holds direct competitors. Circle two holds firms using the same skills in another setting. Circle three holds places where skills transfer with some ramp up. For each pool it estimates size, how reachable people are, likelihood of fit, competition and willingness to move. It also notes where the talent sits by city. It reads public web pages only.
+  The skill sorts target companies into three circles. Circle one holds direct competitors. Circle two holds firms using the same skills in another setting. Circle three holds places where skills transfer with some ramp up. For each pool it estimates size, how reachable people are, likelihood of fit, competition and willingness to move. It also notes where the talent sits by city. It reads public web pages only. It names people only if they have a public work profile. Check the privacy rules where you hire before you keep any personal details.
+
+  Licence: MIT, as the LICENSE file in this item says. Credit goes to the original author.
 when:
   - You must hire a rare role and do not know where those people work.
   - You need to size a talent pool before you promise a hiring date.
@@ -31,6 +33,7 @@ you_get:
   - Competition and move likelihood per pool
   - Suggested ways in
 how_to_use:
+  - Have ready: the role you need, your industry and company size, the places you can hire and any competitors you know.
   - Open Claude, ChatGPT or Gemini. Turn on web search if your AI offers it.
   - Paste the skill text from this page into the chat.
   - Describe the role, your industry, your company size and the places you can hire. Add your known competitors if you have them.

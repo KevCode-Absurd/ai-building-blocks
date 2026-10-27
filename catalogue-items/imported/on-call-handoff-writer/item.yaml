@@ -8,7 +8,7 @@ role: compress
 job: ops
 level: intermediate
 inputs:
-  - type: source_text
+  - type: incident_record
     required: true
 outputs:
   - type: document

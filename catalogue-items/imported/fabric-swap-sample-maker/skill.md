@@ -5,6 +5,18 @@ description: 一键替换服装面料。版式图 + 面料图 → 换上新面�
 
 # fabric-on-body — 一键替换服装面料
 
+## English summary (added by AI Blocks)
+
+The rest of this file is in Chinese. The English prompt templates and commands in it are the parts to copy. Answer the user in English.
+
+**What it does.** Image 1 is a garment style sheet (sets the cut and camera angle). Image 2 is a fabric swatch (sets material, texture, shine and drape). The prompt keeps the cut fixed and replaces only the cloth.
+
+**You need.** Two jpg, png or webp images, each 20 KB to 15 MB and larger than 400 by 400 pixels. A dlazy account with credits and the dlazy command line tool. Images cost credits, so run `--dry-run` first to see the cost without being charged.
+
+**Settings.** Use `--quality high` every time, because the material is the whole point.
+
+**This is a preview only.** The image shows a likely look. It does not show real feel, weight or how the fabric behaves when sewn. Do not show it to buyers as a real product photo. Order a physical sample before you decide.
+
 **版型不动，面料换掉**。给一张服装版式图 + 一张面料小样，输出这个版型用新面料做出来的样衣效果图。
 
 价值在打样前：一个版型试 8 种面料，传统做法是打 8 件样衣（每件几天、几百块）；这里是 8 次生成。
@@ -24,7 +36,7 @@ description: 一键替换服装面料。版式图 + 面料图 → 换上新面�
 dlazy gpt-image-2 \
   --prompt 'Fabric replacement for a garment style sheet. Image 1 is the garment pattern/style reference: an oversized drop-shoulder crewneck sweater with ribbed collar, cuffs and hem. Image 2 is the target fabric: ivory silk satin with a soft lustrous sheen and fine weave. Re-render the exact same garment silhouette from image 1 in the fabric from image 2. Keep the pattern identical: same oversized drop-shoulder cut, same body length, same sleeve length, same collar/cuff/hem construction, same flat-lay layout and camera angle. Replace only the material — the sweater must now read as ivory silk satin with specular highlights on the folds and soft drape instead of chunky knit. Clean white background, even studio light, no text.' \
   --images docs/fabric-on-body/style-sheet.jpg docs/fabric-on-body/fabric-swatch.jpg \
-  --size 1024x1024 --quality medium --imageFormat jpeg \
+  --size 1024x1024 --quality high --imageFormat jpeg \
   --save docs/fabric-on-body/example-output.jpg
 ```
 

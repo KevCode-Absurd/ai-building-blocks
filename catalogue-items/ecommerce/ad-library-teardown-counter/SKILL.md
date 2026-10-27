@@ -28,6 +28,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+This list is the real set of inputs. The "Reference ads" line in "Before you start" means this Ad Library export.
+
 - **The ads** (required): an export or hand-collected list from the public Meta Ad Library, with ad copy, format, start date and destination link. Collect by hand from the public library. Do not use paid scraping tools.
 - **The rival** (required): the brand and its pages. Check every page the brand runs ads from.
 - **Landing pages** (optional): a list of pages the ads point to, with their types.
@@ -42,7 +44,7 @@ Does not fit:
 - The numbers from the sources (median age of 5 days, oldest 24 days, a weekly launch cycle) are from one fashion brand's account at one time. They are not a norm.
 
 ## Steps
-1. **Pick the right rivals.** Choose brands a step or two above you. As a rough rule, look at brands about 10 times your yearly revenue. If you sell about $1 million a year, look at brands near $10 million, not giants such as Nike and not tiny stores that drive no sales. Adjust the size for your category.
+1. **Pick the right rivals.** Choose brands a step or two above you. As a rough rule of thumb from the source, not a benchmark, look at brands about 10 times your yearly revenue. If you sell about $1 million a year, look at brands near $10 million, not giants such as Nike and not tiny stores that drive no sales. If you are smaller or in a niche category, pick the next size up that you can name and say what size you chose.
 2. **Collect the ads.** In the Ad Library, search all ads and include inactive ones. Check each of the brand's pages. Prefer ads that have run the longest, using the start date and how long each has been live. The public library does not show impressions for most ads, so do not rank by them. One example carousel had run 469 days.
 3. **Count the assets.** Unique creative assets. Distinct copy lines (the same asset can carry different copy). Formats: video, static, GIF, carousel. The share that are catalog ads.
 4. **Work out ad age.** Median age of a live ad, and the oldest live ad, from start dates. State the launch rhythm if you see one. In the fashion example, the median was 5 days, the oldest 24 days and launches came weekly.
@@ -81,9 +83,9 @@ MISSING: <what would sharpen this>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Competitor ad opportunity finder](https://useaiblocks.com/skills/competitor-ad-gap-finder). It takes the competitors and shortlist.
 - The [Competitor messaging analyst](https://useaiblocks.com/skills/competitor-messaging-comparer). It takes the competitors.
-- The [Competitor ad change reviewer](https://useaiblocks.com/skills/monthly-competitor-watcher). It takes the competitors.
+- The [Competitor ad teardown writer](https://useaiblocks.com/skills/competitor-ad-teardown-writer). It takes the competitors.
+- The [Competitor ad opportunity finder](https://useaiblocks.com/skills/competitor-ad-gap-finder). It takes the competitors and shortlist.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

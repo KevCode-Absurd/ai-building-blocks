@@ -36,23 +36,25 @@ Have ready: a product photo or spec sheet, the sales channels (product page, ads
 
 Every effect size below (for example +79%, +22%, +30%) is a result from one study, and the studies are listed in reference.md. Figures marked † have no study behind them. Treat all of them as a guide, not a promise.
 
-1. **Format.** Hedonic → video, GIF, or slideshow is required (willingness to pay 79% higher). Utilitarian → stills are enough. Premium hedonic → add a slow-motion action shot (+22% sales) †. Video should feel personal and human, not corporate. †
-2. **Gaze.** Hedonic → model looks away from the camera (sun hat: +30% sales). Informational or negative-emotion messages → model looks at the camera.
-3. **Touch.** A first-person hand touching, holding, or using the product (+16% purchase likelihood).
-4. **Side.** Graspable product toward the right of the frame, angled for a right hand. If it can't be held, add a graspable object beside it (handedness doesn't change with reading direction — don't flip this). Future-oriented products right, vintage left; flip *that* for right-to-left readers.
-5. **Shine.** Light or polish for a visible reflection; a digital reflection is fine only if it stays representative of the real finish (a matte product shown glossy misleads buyers). Never brief "no reflections" (+23% attractiveness, +32% purchase likelihood).
-6. **Spacing.** Clear empty space between products in multi-product shots and grids (liking +11.4%, sales nearly doubled). In ads, wide margins with related products clustered in the center. †
+1. **Format.** Hedonic → video, GIF, or slideshow is recommended (willingness to pay 79% higher in the study, Roggeveen et al., 2015). Utilitarian → stills are enough. Premium hedonic → add a slow-motion action shot (+22% sales) †. Video should feel personal and human, not corporate. †
+2. **Gaze.** Hedonic → model looks away from the camera (sun hat: +30% sales in one A/B test, To & Patrick, 2021). Informational or negative-emotion messages → model looks at the camera.
+3. **Touch.** A first-person hand touching, holding, or using the product (+16% purchase likelihood across 15 experiments, Luangrath et al., 2022).
+4. **Side.** Graspable product toward the right of the frame, angled for a right hand (Maille et al., 2019). If it can't be held, add a graspable object beside it (handedness doesn't change with reading direction — don't flip this). Future-oriented products right, vintage left; flip *that* for right-to-left readers.
+5. **Shine.** Light or polish for a visible reflection; a digital reflection is fine only if it stays representative of the real finish (a matte product shown glossy misleads buyers). Never brief "no reflections" (+23% attractiveness, +32% purchase likelihood, Sharma & Kumar, 2022).
+6. **Spacing.** Clear empty space between products in multi-product shots and grids (liking +11.4%, sales nearly doubled, Sevilla & Townsend, 2016). In ads, wide margins with related products clustered in the center. †
 7. **Multiples.** Product bought for one specific function (an energy drink for energy, a stain remover) → several copies together (+10.7% perceived effectiveness) †. Not a rule for treats or decor.
-8. **Props.** Complementary items around the focal product, varied in shape and color; the props' own sales are unaffected.
+8. **Props.** Complementary items around the focal product, varied in shape and color; the props' own sales are unaffected (Radon et al., 2021).
 9. **Context.** Womenswear → a fitting setting, not white background. Menswear → irrelevant.
-10. **Saturation.** High to look bigger, low to look smaller. Pretest candidates with a poll where cheap. †
+10. **Saturation.** High to look bigger, low to look smaller (Hagtvedt & Brasel, 2017). Pretest candidates with a poll where cheap. †
 
 ## Output
 
 | # | Shot | Direction | Rule | Effect |
 |---|---|---|---|---|
-| 1 | Hero video, 8–12 s | Truffle broken in slow motion | Hedonic → video; premium → slow-mo | WTP +79% |
-| 2 | Hand shot | First-person hand lifting a truffle, box on the right | Touch; graspable right | +16% |
+| 1 | Hero video, [LENGTH] s | [SHOT DIRECTION FOR THE USER'S PRODUCT] | Hedonic → video; premium → slow-mo † | Willingness to pay +79% in the study (example row, shape only) |
+| 2 | Hand shot | First-person hand holding [PRODUCT], [PRODUCT] on the right | Touch; graspable right | +16% in the study (example row, shape only) |
+
+In the Effect column, give the study name for each figure. A rule marked † has no study on file, so write "practitioner tip" instead of a number.
 
 Then list what *not* to do for this product (e.g. no direct gaze, no matte finish).
 

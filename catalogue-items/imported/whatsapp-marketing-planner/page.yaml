@@ -22,6 +22,7 @@ not_for:
 you_give:
   - Your business and products
   - Number of customers
+  - Whether your contacts have already opted in to WhatsApp messages. The welcome, abandoned cart and win-back flows depend on it.
   - Brand voice notes (optional)
   - Country or markets
   - Budget for tools (optional)
@@ -35,6 +36,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
   - Have ready your customer count, your main goal, and the app or API you use now. Send these to your AI first, along with your business, products and country.
   - Add your brand voice notes and budget if you have them (optional).
+  - Work through sections 01 to 07 in order. Start with setup and opt-in, and send no broadcast until opt-in is in place.
   - Read the setup pick first. Check it fits your list size.
   - Treat all benchmarks and tool prices as rough estimates. Check them with the tool maker before you buy. Confirm each template category (marketing or utility) with your WhatsApp provider before you send, and check opt-in wording against WhatsApp's policy and your local law.
   - Copy the welcome flow and opt-in wording into your WhatsApp tool. No code or files are needed.

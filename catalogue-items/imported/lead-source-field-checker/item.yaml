@@ -10,6 +10,8 @@ level: expert
 inputs:
   - type: spreadsheet
     required: true
+  - type: lead_list
+    required: true
 outputs:
   - type: audit_report
     required: true

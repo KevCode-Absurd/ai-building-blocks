@@ -20,7 +20,7 @@ competitive intelligence, competitor analysis, battlecard, win/loss analysis, co
 
 ## First run
 
-1. Gather the facts: your product, your ideal customer, your rival names, recent deal wins and losses, and any pricing pages or reviews you already hold.
+1. Gather the facts: your product, your ideal customer, your rival names, recent deal wins and losses, and any pricing pages or reviews you already hold. If you already have competitor profiles, use them as the facts for each rival.
 2. Choose the deliverable: landscape map, battlecard, win/loss review or rival update.
 3. Sort the rivals with the threat matrix (Layer 1).
 4. Set the tracking plan (Layer 2).

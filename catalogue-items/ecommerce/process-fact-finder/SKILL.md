@@ -36,7 +36,7 @@ If the notes are missing, ask once in one short message. Then carry on with what
 **When not to use:** with no maker notes, spec sheets or test results, ask the maker or supplier for them first. For finished ad copy, use the fact-based ad copy writer once you have proof. To learn what buyers feel or say, use the post-purchase survey builder.
 
 ## Steps
-1. **Read the notes in full** (or ask to see how the product is made). Ask what happens at each step and why.
+1. **Read the notes in full.** List each process step the notes describe and what each check is for. If a step or its purpose is not in the notes, put it under the "ask your maker" questions instead of guessing.
 2. **List every step, check and standard**, even the ones that feel ordinary. Facts that are common to every maker, but that nobody has told buyers, can still be the first to claim. Hopkins' brewing example: other brewers made the same plain steps, but only one told buyers about them.
 3. **Screen each fact** with three questions. Does the buyer know this? Would they be surprised? Does it show care?
 4. **Turn the keepers into specific claims** with a number or something visible: how many tests, how deep, how many steps, how fast. Use only numbers that appear in the notes.
@@ -73,8 +73,7 @@ MISSING: <maker notes | proof for a claim | rival lines>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Ad headline variation writer](https://useaiblocks.com/skills/typed-headline-batch-writer). It takes the buying reasons.
-- The [Product promise finder](https://useaiblocks.com/skills/selling-proposition-finder).
-- The [Ad evidence planner](https://useaiblocks.com/skills/four-kind-proof-finder).
+- The [Ad angle planner](https://useaiblocks.com/skills/ad-angle-planner). It takes the buying reasons.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

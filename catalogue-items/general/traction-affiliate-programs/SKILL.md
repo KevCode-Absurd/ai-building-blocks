@@ -5,6 +5,10 @@ description: "Plan an affiliate programs acquisition experiment from a product U
 
 # Affiliate experiment planner
 
+Needs no account, API key or paid tool, and no scraping. If your AI can browse, it reads the public pages you point to. If not, paste your page text.
+
+Affiliate disclosure and consumer-protection rules apply where you live. Have a lawyer check the terms before you sign anyone.
+
 Not for comparing all 19 growth channels: use the Find your SaaS growth channel workflow (or, for a shop or service, Find your business growth channel). Not for a product with no buyer overlap with any partner audience: talk to a few customers first to learn where they look for help. Not for contracts or legal terms: ask a lawyer to review the draft terms.
 
 Gather first: your product link or pasted pricing text, your growth goal, the most you can spend, your hours a week, and any partner audiences you already know.
@@ -16,8 +20,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Customer acquisition experiment reviewer](https://useaiblocks.com/skills/traction-experiment-reviewer). It takes the channel experiment.
 - The [Growth channel shortlist planner](https://useaiblocks.com/skills/traction-channel-ranker).
 - The [Platform growth experiment planner](https://useaiblocks.com/skills/traction-existing-platforms).
-- The [Offline ads experiment planner](https://useaiblocks.com/skills/traction-offline-ads).
-- **Say it to the room** with the [Offline event experiment planner](https://useaiblocks.com/skills/traction-offline-events).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -79,11 +81,13 @@ Evidence: <source URL, access date, fact, implication>
 Buyer and useful action: <...>
 Channel mechanism: <how the buyer reaches value>
 Pilot: <hypothesis, audience, offer, deliverable, owner>
+Produces: <a partner profile, commission model, attribution rules and recruitment draft>
 Limits: <cash, hours, date, proposed or approved>
 Measurement: <events, cohort, denominators, attribution>
 Decision: <continue / revise / stop rule>
 Risks and next action: <...>
 MISSING: <unknowns>
+CHECKS MISSED: <one line each, or none>
 
 ## Check the answer
 

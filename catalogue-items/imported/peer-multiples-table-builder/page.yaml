@@ -11,7 +11,9 @@ explain: |
 
   It is set up for Indian markets. The year runs April to March, periods read like Q3 FY26, and money is in crore. Crore comes from a live formula that divides the raw figure, not from a number format that is off by 10 times. Every multiple is a formula, so the table updates when an input changes.
 
-  It prefers institutional data sources, which are paid. If you do not have them, it uses the company's own results filings on NSE or BSE and marks anything from a free site as unverified. It will not fill a hole with a guess, and it asks you to confirm the peers. The table is a starting point for a valuation, not the valuation.
+  It prefers institutional data sources, which are paid. If you do not have them, it uses the company's own results filings on NSE or BSE and marks anything from a free site as unverified. It will not fill a hole with a guess, and it asks you to confirm the peers. The table is a starting point for a valuation, not the valuation. It is not investment advice.
+
+  This is nighomni123's comps-analysis skill, renamed. Licence: Apache 2.0 (see the LICENSE file).
 when:
   - You are valuing an Indian listed company and need its peers' multiples.
   - You are preparing a pitch and need a quick comps page for a sector.
@@ -37,10 +39,12 @@ you_get:
 how_to_use:
   - Choose 5 to 8 listed peers with the same business and a similar size, or let your AI suggest them. Confirm the list.
   - Gather the latest quarterly results filing for each company from NSE or BSE, plus net debt for each, or export them from your data tool. Paid sources are better, but not needed. Free sites such as Screener.in and yfinance reuse data under their own terms, so every figure from them is marked unverified.
-  - Open the skill, give your AI the target ticker, 5 to 8 peer tickers and the files. Some helper files the skill names are not in this folder, so it uses the layout and rules written in the skill. Use an AI that can write Excel files if you can.
+  - Open the skill, give your AI the target ticker, 5 to 8 peer tickers and the files. The helper files the skill names (india-market-conventions, india-market-data, xlsx-author, officecli-xlsx and NOT-ADAPTABLE.md) are not in this folder. Your AI follows the two India rules in the skill instead: the April to March fiscal year, and crore from a live division formula. It also uses the layout in the skill.
+  - To write the Excel file, your AI needs a command-line tool called officecli and permission to run commands. If it has neither, you get the table as text with each formula written out, to paste into Excel.
   - Check the layout, then the inputs, then the margins, then the multiples. Your AI stops after each part for you to confirm.
   - Look at outliers outside the 25th and 75th percentiles, and every figure marked unverified. Check them against the filings.
   - Write up your valuation view yourself. The table does not give a price.
+  - For a full valuation with forecasts, use the DCF model builder for India next. For a private company or a start-up, use the Early-stage valuation estimator.
 output_sample:
   input:
     - The target company name or ticker

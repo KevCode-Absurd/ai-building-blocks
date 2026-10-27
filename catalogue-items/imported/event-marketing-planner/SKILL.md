@@ -39,7 +39,7 @@ Before roles and tactics: events are the most expensive, riskiest, hardest-to-me
 - **Is in-person even necessary?** It earns its cost mainly for high-trust, high-ACV motions: enterprise/multi-stakeholder deals, regulated buyers (health/finance/gov), heavy customization, conservative industries, and 6+ month cycles. If your ICP isn't there, spend on digital first.
 - **The 80/20 of selection.** A handful of events generate most event pipeline. Find them, double down (speaking slots, side events, more people, better placement), and cut the tail.
 - **Bigger isn't better.** Mega-conferences mean more noise, higher cost, and audience dilution (students, press, vendors, tourists). Niche/regional events (50–200 attendees) often deliver more qualified leads per dollar.
-- **Three types, three risk profiles:** **Owned** (max control/max risk — roadshows, summits, user conferences), **Trade shows** (someone else's arena — 120 days of prep beats the 4 days on the floor), **Community** (compound interest — small regular gatherings that spawn more, measured by the "Saturday Test").
+- **Three types, three risk profiles:** **Owned** (max control/max risk — roadshows, summits, user conferences), **Trade shows** (someone else's arena — 120 days of prep beats the 4 days on the floor), **Community** (compound interest — small regular gatherings that spawn more, measured by the "Saturday Test": would people come to this gathering on a Saturday, unpaid, because they want to?).
 
 ## The Universal Arc: 20% Event, 80% Before-and-After
 
@@ -91,7 +91,7 @@ The zero-budget motion, and often the best ROI in the building:
 Events produce your highest-proof content — capture it deliberately:
 
 - **Record everything you're allowed to record.** Talks, webinars, panels. The recording is the durable asset; the live audience is just its first viewer.
-- **Transcripts compound in AI answers.** Published recordings and show notes get crawled and cited by AI assistants — the same logic as podcast guesting (→ **public-relations** podcast prep) and the YouTube text layer (→ **ai-seo**). Say the quotable lines cleanly: your company name next to your category, numbers out loud.
+- **Transcripts compound in AI answers.** In the author's view, published recordings and show notes can be found and quoted by AI assistants (this is the author's judgement, not a tested fact) — the same logic as podcast guesting (→ **public-relations** podcast prep) and the YouTube text layer (→ **ai-seo**). Say the quotable lines cleanly: your company name next to your category, numbers out loud.
 - Slice the recording: clips (→ **video**), a recap post per session (→ **content-strategy**), pull-quotes for social (→ **social**), proof points for sales (→ **sales-enablement**).
 - Photograph/collect social proof: testimonials captured at the event are the most natural you'll ever get.
 

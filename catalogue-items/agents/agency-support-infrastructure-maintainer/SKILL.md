@@ -14,8 +14,8 @@ Read [the original role profile](references/source-agent.md) before you start. U
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Service rollout and rollback planner](https://useaiblocks.com/skills/copilot-devops-rollout-plan). It takes the plan.
-- The [Cloud infrastructure code writer](https://useaiblocks.com/skills/cloud-setup-coder).
 - The [AWS architecture reviewer](https://useaiblocks.com/skills/copilot-aws-well-architected-review). It takes the plan.
+- The [Azure architecture reviewer](https://useaiblocks.com/skills/copilot-azure-well-architected-review). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -27,10 +27,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+- **Code change** (yours): a change to the code, with what it fixes and how it was checked.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, document, code change. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -45,6 +46,7 @@ Ask once for anything missing. If it is still missing, write `MISSING: <what>`, 
 - How backups work now: what, how often, where the copy lives, and the date of the last restore test.
 - How software is updated, and how people get access.
 - Optional: the last bill or a cost export, current alerts, a list of admin users, a compliance need (SOC 2, ISO 27001, a customer questionnaire).
+- Optional: a change from an earlier step that set up cloud, servers or backups. Check it in the health check and the backup section.
 
 If the user pastes a password, key or token, tell them to remove it and rotate it, and do not repeat it back.
 

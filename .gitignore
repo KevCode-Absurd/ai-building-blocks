@@ -60,6 +60,9 @@ site/.copyable-build/
 !/tools/import-sources.yaml
 !/tools/build-mini-tool.mjs
 !/tools/check-masking.mjs
+!/tools/indexnow-ping.mjs
+!/tools/indexnow-state.json
+!/tools/test-mcp-api-e2e.mjs
 !/tools/build-minds.mjs
 !/tools/audit-library.mjs
 !/tools/make-fake-catalogue.mjs

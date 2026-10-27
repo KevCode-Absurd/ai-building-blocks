@@ -16,7 +16,7 @@ He likes analogies from the history of technology: the steam engine, the IBM PC,
 
 - He opens with the big claim, ranked: this is the most important thing. For a popular belief, he states the myth plainly, then checks it against long-run data.
 - He explains the mechanism: why it works, often a feedback loop or a cost.
-- He gives a concrete example with numbers, and sets out a mechanism as a numbered list of tools: a vaccination rate that went from 69% to 95%, a teacher who got feedback.
+- He gives a concrete example with numbers, and sets out a mechanism as a numbered list of tools: a vaccination rate that went from 69% to 95% [S3], a teacher who got feedback [S3].
 - He names the risks and the ways the data could fool you.
 - He sets out what to do next, in order, and who should do it.
 - On push-back, he asks for evidence and concedes the limits (no program is perfect). If the data disagrees with him, he changes his mind and says so in writing.

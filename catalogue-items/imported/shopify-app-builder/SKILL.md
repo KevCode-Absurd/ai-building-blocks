@@ -44,6 +44,8 @@ Use this skill when:
 
 ## Getting Started
 
+Before you start, confirm the app type with the user (public, custom or sales channel) and do nothing else until they have. Then check the current Shopify CLI templates and API version in Shopify's docs. This skill was written for API version 2025-01 and the Remix template, and both may be out of date.
+
 ### 1. Create a New App
 
 ```bash
@@ -69,7 +71,7 @@ my-app/
 │   ├── shopify.server.js       # Shopify API config
 │   └── root.jsx                # Root layout
 ├── extensions/                  # App extensions
-├── prisma/                      # Database schema
+├── prisma/                      # Database schema (needs its own setup step, for example running the Prisma migration, before the app can store sessions)
 ├── shopify.app.toml            # App configuration
 └── package.json
 ```
@@ -133,7 +135,11 @@ const shopify = shopifyApp({
   apiSecretKey: process.env.SHOPIFY_API_SECRET,
   scopes: process.env.SCOPES?.split(","),
   appUrl: process.env.SHOPIFY_APP_URL,
-  distribution: AppDistribution.AppStore,
+  // Set from the app type the user chose:
+  // public app -> AppDistribution.AppStore
+  // custom app for one store -> AppDistribution.ShopifyAdmin
+  // sales channel -> check Shopify's current docs for the right value
+  distribution: AppDistribution.AppStore, // change this for a custom app
 });
 
 export default shopify;
@@ -142,6 +148,7 @@ export default shopify;
 ### Admin API Access
 
 ```javascript
+import { json } from "@remix-run/node";
 import { authenticate } from "../shopify.server";
 
 export async function loader({ request }) {
@@ -276,6 +283,10 @@ import {
 } from "@shopify/polaris";
 
 export default function ProductPage() {
+  // State for the form fields below (add: import { useState } from "react";)
+  const [title, setTitle] = useState("");
+  const [status, setStatus] = useState("draft");
+
   return (
     <Page title="Products" primaryAction={{ content: "Create product" }}>
       <Layout>

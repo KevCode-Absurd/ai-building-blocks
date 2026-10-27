@@ -15,6 +15,8 @@ compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ## Purpose
 Queries products (or variants, or customers) matching a filter and bulk-sets or bulk-deletes metafield values. Used for structured data updates like material composition, care instructions, product specifications, or custom attributes that power storefront features.
 
+If you have an audit report from an earlier step, such as a list of unused or missing fields, use it to choose the filter, namespace and key.
+
 ## Prerequisites
 - Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_products,write_products`
 - API scopes: `read_products`, `write_products`

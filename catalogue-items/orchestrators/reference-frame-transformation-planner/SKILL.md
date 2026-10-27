@@ -5,7 +5,7 @@ description: Use when the user wants a controlled before/after image-to-video tr
 
 # Reference-frame transformation planner
 
-Share before and after ideas. Get image and video prompts for a drawing-to-3D or mechanical-toy change with scene locks.
+Share before and after ideas. Get image and video prompts for a drawing-to-3D or mechanical-toy change with scene locks. A scene lock is anything that must stay the same in both frames, such as the camera crop, lighting, scale or text.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -34,7 +34,7 @@ This method produces plan, image prompt, video prompt from the supplied brief. R
 
 Two terms used below. A scene lock is something that must stay the same in both frames, such as the camera crop, lighting, scale or text. An approved frame is an image you have looked at and accepted as the start or end of the clip.
 
-Gather first: the before image (or a description of it), the after idea in a few lines, and which change applies, illustration-to-3D or mechanical-object-to-toy.
+Gather first: the before image (or a description of it), the after idea in a few lines, and which change applies, illustration-to-3D or mechanical-object-to-toy. These three replace the buyer brief in the generic list above. A buyer brief is not needed for this job.
 
 ## Method
 
@@ -44,7 +44,7 @@ Gather first: the before image (or a description of it), the after idea in a few
 
 3. For illustration-to-3D replace only the selected drawing region with a plausible volumetric version, same pose/scale/placement. Preserve page texture, print, surrounding illustration and shadows outside the edit.
 
-4. For mechanical-toy transformation plan panel seams, hinge/pivot order, friction, weight and ground contact. Use original design elements, not franchise replication. Do not ask the object to melt or morph while claiming a mechanical assembly.
+4. For a mechanical-toy change, list each moving part and say how it moves. Name where the panels meet, which hinge or pivot moves first, what stops each part (friction), how heavy each part is and where the toy touches the ground. Use original design elements, not a copy of a known franchise. Do not let the object melt or morph and still call it a mechanical assembly.
 
 5. Approve the second image before animation; a mismatched end frame cannot be repaired by adding more motion words. Name real attached references and do not invent files.
 
@@ -69,16 +69,18 @@ NOT RUN
 
 ## Next steps
 
-Generate the after frame with an image tool, using the after-frame edit prompt. Approve it against the lock table. Then run the transition prompt in a video tool. If the endpoints do not match, go back and fix the after frame before animating.
+Generate the after frame with an image tool, using the after-frame edit prompt. Approve it against the lock table. Then run the transition prompt in a video tool. If the endpoints do not match, go back and fix the after frame before animating. Image and video tools may be paid or need credits. When you have the clip, watch it against the lock table. Keep the clip if the scene stayed locked, or rerun with a shorter, simpler change if it drifted. Nothing is generated here.
+
+The ad-policy links below apply only if you will run the clip as a paid ad. For a personal or product demo, skip them.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker).
-- The [Seedance timed scene prompt writer](https://useaiblocks.com/skills/seedance-timed-scene-prompt-writer).
-- The [Wordless video ad opening writer](https://useaiblocks.com/skills/wordless-video-ad-opening-writer).
 - **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image prompt.
 - **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the image prompt.
+- The [AI video shot planner](https://useaiblocks.com/skills/ai-video-shot-planner). It takes the video prompt.
+- The [Silent video story reviewer](https://useaiblocks.com/skills/voice-over-stripping-test). It takes the plan.
+- The [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

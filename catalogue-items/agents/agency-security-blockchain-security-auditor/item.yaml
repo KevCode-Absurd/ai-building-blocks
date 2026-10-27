@@ -9,13 +9,12 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: question
+  - type: codebase
     required: true
-  - type: source_text
+  - type: question
     required: false
 outputs:
-  - type: brief
-  - type: audit_report
+  - type: security_report
 uses: []
 steps: []
 origin: imported

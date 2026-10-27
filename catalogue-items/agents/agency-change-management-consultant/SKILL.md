@@ -14,8 +14,8 @@ Read [the original role profile](references/source-agent.md) before you start. I
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Change rollout planner](https://useaiblocks.com/skills/change-rollout-planner). It takes the plan.
-- The [Process and meeting cleanup planner](https://useaiblocks.com/skills/process-and-meeting-cull-planner). It takes the plan.
 - The [Nonprofit change rollout planner](https://useaiblocks.com/skills/nonprofit-change-rollout-planner). It takes the plan.
+- The [Sales pay plan checker](https://useaiblocks.com/skills/sales-pay-plan-checker). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -39,6 +39,8 @@ How to start:
 <!-- /needs -->
 
 ## What to collect first
+
+These are the inputs that count. If the generic "Before you start" list above asks for something else, such as source text, ignore that part.
 
 Ask once for anything missing. Never invent it. Mark each gap `MISSING:` in the answer, or label a stand-in `ASSUMED:` and say what to replace it with.
 
@@ -73,6 +75,8 @@ Use these headings, in this order:
 6. Resistance risks
 7. Adoption checks
 8. Open questions
+
+End with `CHECKS MISSED:` and list any check below that failed or could not run, or write "none". Put unanswered questions under heading 8, not here.
 
 ## Checks
 

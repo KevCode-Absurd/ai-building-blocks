@@ -7,6 +7,8 @@ description: Use when a scene or dialogue only explains things and nobody is try
 
 A scene pulls the reader when each person is trying to get something and words are their tool. This skill rebuilds a scene that only explains. It works for stories, plays, sales and training role plays, and scripts for video or audio.
 
+**Not for:** plain factual copy such as a help page, or a scene that already works and only needs line edits. Paste the whole scene in full with speaker labels, so each line can be matched to a want. Ignore any "Before you start" text below about ads, brand files or the Draft shortening editor: the only required input is the scene.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.

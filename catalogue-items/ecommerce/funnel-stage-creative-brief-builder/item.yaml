@@ -7,8 +7,16 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: persona
     required: true
+  - type: brand_brain
+    required: false
+  - type: product_data
+    required: false
+  - type: competitor_set
+    required: false
+  - type: performance_sheet
+    required: false
 outputs:
   - type: brief
     required: true

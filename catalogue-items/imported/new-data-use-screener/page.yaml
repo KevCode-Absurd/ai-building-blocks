@@ -18,6 +18,7 @@ when:
 not_for:
   - "You need a final legal sign-off: take the result to your privacy counsel or data protection officer, who must decide on any assessment."
   - "You have not set up your privacy practice notes yet: finish that setup first, because the skill stops without them."
+  - "Your activity falls outside GDPR and US state privacy law: the classification may not apply as written, so ask your privacy counsel."
   - "You want to review a contract or vendor terms: ask your lawyer, or read the contract clause by clause yourself."
 you_give:
   - A description of the new data use
@@ -32,9 +33,9 @@ you_get:
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - "Describe the new data use: what data, whose data, why, and whether a vendor is involved."
-  - Add your privacy practice setup. In a chat that cannot read files, paste it in. Without it the skill stops, or runs on US defaults if you say "provisional".
+  - Add your privacy practice setup. In a chat that cannot read files, paste it in. Without it the skill stops, or runs on US defaults if you say "provisional". Do not use provisional mode if you have customers in the EU or UK, because the call may be wrong.
   - Where the skill points to /privacy-legal:cold-start-interview, use the setup-interview folder inside it. We copied it in so the skill works on its own.
-  - Other commands it names (pia-generation, ai-governance-legal, product-legal) are not included. Skip those handoffs, or start the full assessment in a separate chat.
+  - Other commands it names (pia-generation, ai-governance-legal, product-legal) are not included. Skip those handoffs, or start the full assessment in a separate chat. If the screen says an assessment is needed and you cannot run one, ask your AI for a short checklist from the conditions table and take it to your privacy counsel.
   - It cites laws from the AI's knowledge or search. Have your privacy counsel check every citation before you rely on it.
 output_sample:
   input:

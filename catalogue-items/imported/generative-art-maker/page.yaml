@@ -35,7 +35,7 @@ how_to_use:
   - Your AI first writes a short art philosophy, then the viewer and the sketch code.
   - Open the HTML file in your browser. If your AI shows previews, you can view it there. Use the sliders and try new seeds.
   - Note the seed you like. The same seed gives the same piece again.
-  - Save the image from the viewer to use in a site header or a print.
+  - Save the image from the viewer to use in a site header or a print. Save the seed with it. You can pair it with the Article cover maker for a post image, or the Web animation builder to make it move on a site.
   - The art is code, so check the file size and the colours before you print it. Ask your AI for a larger size if needed.
 output_sample:
   input:

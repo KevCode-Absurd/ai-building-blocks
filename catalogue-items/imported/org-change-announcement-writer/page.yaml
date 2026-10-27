@@ -36,10 +36,10 @@ how_to_use:
   - "Write a short brief with: what is changing and why, who is affected and how many people, the date it was decided, who will send it, what is not changing, company size, tone and timeline."
   - Add any rumours or worries you already know about (optional).
   - Open Claude, ChatGPT or Gemini. Paste the skill, then paste your brief.
-  - Ask for the pieces you need, such as the leader announcement, manager talking points or town hall script.
+  - Ask for the communication plan first, using the planning prompts. Then ask for the leader announcement (announcement prompts), manager talking points (manager toolkit prompts) and town hall script (town hall prompts).
   - Read each piece for tone. Check that it answers what this means for each person.
   - Have HR or legal review it before you send anything.
-  - Send the texts in the order in your communication plan. A week later, use the rumour and follow-up check to see what people understood.
+  - Send the texts in the order in your communication plan. A week later, use the rumour and follow-up check to see what people understood. For a change that runs for months, use the Change rollout planner next.
 output_sample:
   input:
     - What is changing and why

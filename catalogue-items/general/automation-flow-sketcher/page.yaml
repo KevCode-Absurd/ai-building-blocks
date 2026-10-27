@@ -27,6 +27,7 @@ you_give:
   - "The apps involved"
   - "How often and how many"
   - "What must never happen (optional)"
+  - "Your Zapier or Make plan, since features depend on it (advised)"
 you_get:
   - "The trigger and each step with its data"
   - "Filters that stop bad runs"

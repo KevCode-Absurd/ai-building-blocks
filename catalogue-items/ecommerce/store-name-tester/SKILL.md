@@ -37,7 +37,7 @@ How to start:
 ## What you need
 This skill runs on its own. If something marked required is missing, ask once, in one short message, for only what you can't work without, then carry on and mark each gap `MISSING:`.
 
-- **Two to five names** (required). Paste your own, or make a list first with the Store name generator.
+- **Two to five names** (required). Paste your own shortlist, or make one first with the [Store name generator](https://useaiblocks.com/skills/store-name-generator). (Ignore the shortlist link in the box above. Only the Store name generator makes name shortlists.)
 - **What is sold, who buys it, and the main benefit** (required).
 - **Your top three rivals' names** (recommended).
 - **The feeling the name must carry** (recommended): for example fast, trusted, soft, strong.
@@ -56,11 +56,11 @@ This skill runs on its own. If something marked required is missing, ask once, i
 6. **Add up and call it.** Score each test 0, 10 or 20 (fail, partial, pass) and add. Below 60 drop. 60 to 79 fix. 80 and above keep. Borderline rule: if a name sits at or near a cut-off (for example 80 or 60) and any single test scored 0, move it down one band (keep becomes fix, fix becomes drop) and say why. This 20-points-each scoring is this skill's own design, built from the agency's test list, so tell the owner it is a decision aid, not a standard. Show the sum.
 7. **Check the name starts the positioning job (not scored).** A name should hint at the main benefit, as Head and Shoulders or DieHard do, instead of being a say-nothing made-up word. Made-up names such as Kodak or Xerox work only when you are first in the mind with a truly new product.
 8. **Aim for almost, but not quite, generic (not scored).** A descriptive name can block me-too rivals. Stop before it becomes the everyday word for the whole category, because then you can lose trademark rights (the book's example was the "Lite" beer name).
-9. **Reject initials unless the full name is famous (not scored).** In the book's survey, "initial" companies had 49 percent awareness against 68 percent for matched "name" companies. That is a 1980s survey of business magazine readers, so use it as direction only. Initials stick only when they are shorter to say than the words.
+9. **Reject initials unless the full name is famous (not scored).** The book reports a survey in which companies with initials had lower awareness than matched companies with names. We could not check that survey, and it is from the 1980s, so treat it as unverified direction only and quote no figure. Initials stick only when they are shorter to say than the words.
 10. **Run the seven qualities (not scored).** Meaningful; distinctive (easy to say, spell and share); future-oriented, with room to grow into new products; modular, so it works with extensions such as "Name Kids"; protectable (trademark and domain free); positive in the markets served; and visual, so it looks good in a logo and an email. Mark each yes, no or unknown.
 11. **Label the name type and its cost (not scored).** Founder names are tied to a person. Descriptive names box you in as you add products. Made-up names need ad money to explain what the business is. Initials are hard to remember and hard to protect. Odd spellings need extra explaining when the name is said aloud. Metaphor names (a thing, place or animal that hints at a quality) and mixes of types carry no single cost listed here, so judge them on the other tests.
 12. **Show each name in five places.** Write the same five items: a business-news headline about the brand, a product page title, the pack front text, a search result and a creator caption. Then apply one rule, is it believable. In under a second, does it seem like a real brand in this category? If the owner can, ask three people who have not seen the list. Write a believability line per name.
-13. **Check markets.** Check meaning in every market and language the owner sells in, and do it before launch. Test sound and meaning in each main dialect. Check colour use as well; one global firm uses white instead of black in China because of its associations. You cannot judge connotation reliably, so list what a native speaker must confirm. Where the source is a 2012 handbook, tell the owner to check current local rules.
+13. **Check markets.** Check meaning in every market and language the owner sells in, and do it before launch. Test sound and meaning in each main dialect. Check colour use as well, because colours carry different meanings in different markets. Ask a native speaker or local designer. You cannot judge connotation reliably, so list what a native speaker must confirm. Where the source is a 2012 handbook, tell the owner to check current local rules.
 14. **Write the hand-off.** One-line reason a stranger would remember each name, a short note for the decision makers, and the list of checks the owner must do: a trademark search in each market, domain and handle availability, and a lawyer for trademarks. Before launch, hand survivors to a trademark first-check before buying anything.
 
 ## Limits to state
@@ -118,7 +118,7 @@ Before you hand it back, check each of these and fix any that fail.
 - No name is called cleared, safe, free to use or registered.
 - The sound result is used only as a tie-breaker.
 - Every name has five mock-ups and a believability line.
-- The 49 versus 68 percent figure is presented as direction from a 1980s survey, not as a benchmark.
+- No survey figure is quoted as a benchmark. Initials advice is presented as unverified direction.
 - Every unrun test is listed under NOT RUN.
 
 ## If something is missing

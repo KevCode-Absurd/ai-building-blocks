@@ -62,7 +62,7 @@ TEST: <the two prices to compare on your own shop>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Discount wording and price display planner](https://useaiblocks.com/skills/discount-wording-planner). It takes the audit report.
-- The [Price display planner](https://useaiblocks.com/skills/price-display-planner).
+- The [Price test planner](https://useaiblocks.com/skills/price-test-planner). It takes the audit report.
 - The [Online store pricing planner](https://useaiblocks.com/skills/price-position-planner). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

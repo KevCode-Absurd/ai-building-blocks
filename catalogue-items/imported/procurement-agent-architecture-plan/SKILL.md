@@ -24,8 +24,9 @@ recommendation.
 This is a **pattern**, not a full implementation plan. It gives you the agent
 team structure, roles, orchestration, and integration points. For a complete
 blueprint with business case, financial projections, phased implementation
-plan, and deployment guides, generate one via the Agent Blueprint MCP server
-(`agentblueprint` npm package) or at [agentblueprint.ai](https://agentblueprint.ai).
+plan, and deployment guides, ask a developer or consultant. The author also sells
+a full blueprint through its own paid service ([agentblueprint.ai](https://agentblueprint.ai)).
+That is optional and not needed for this pattern.
 
 ---
 
@@ -247,6 +248,8 @@ validating results before the Communication Agent sends anything external.
 
 ---
 
+**Paid tools and access:** the systems above (vendor database, scoring engine, policy engine, notification and approval tools) are not available in a plain chat. A developer must build or buy them, and some need paid platforms or API access. The plan only says what each agent needs from them. When you hand the plan back, name the person who approves at each checkpoint (for example, the budget owner for the award).
+
 ## Key Metrics
 
 | Metric | What it measures |
@@ -289,8 +292,9 @@ This pattern gives you the architecture. A full Agent Blueprint adds:
   coding agent can follow step-by-step
 - **Platform-specific expert skills** for your procurement platform
 
-Generate a full blueprint: install the `agentblueprint` MCP server
-(`npx agentblueprint`) or visit [agentblueprint.ai](https://agentblueprint.ai).
+The author sells a full blueprint through its own paid service
+([agentblueprint.ai](https://agentblueprint.ai)). It is optional, and we have not reviewed it.
+Do not install any tool or package until your own developer has checked it.
 
 ---
 

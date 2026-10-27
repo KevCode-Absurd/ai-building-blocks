@@ -20,7 +20,7 @@ when:
   - You want to train for a pitch or a sales call by facing a tough, simulated opponent.
 not_for:
   - "You are negotiating supplier prices and want a ready plan with numbers: use the Factory price-break negotiator."
-  - "You want a plain list of options with trade-offs for one decision: use the Personal Growth Mentor agent, which has a decision table."
+  - "You want a plain list of options with trade-offs for one decision: use the Chief of Staff agent, which sets out options, the cost of waiting and a recommendation."
   - "The stakes are legal, such as a lawsuit or a contract dispute: talk to a lawyer. Use this only to rehearse."
   - "You want to predict what a real person will do. It cannot. It only tests your plan against a character built from your notes."
   - "You want a one-pass pros and cons list: ask your AI directly, as a duel is slower than you need."
@@ -28,7 +28,7 @@ you_give:
   - The situation in a few lines, and what is at stake.
   - Your role and your goal, such as "buyer who wants 10 percent off".
   - The other side's style, wants and limits, as far as you know them.
-  - The number of rounds. Three is the default. Five gives more depth.
+  - The number of rounds. Three is the default. Up to five gives more depth.
   - Your hard limits, meaning what you will not give up (optional).
   - Moves the other side has made before (optional).
 you_get:

@@ -9,9 +9,9 @@ description: Get a coding brief for a Slack bot that receives scoped events, che
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Meta Ads reporting app planner](https://useaiblocks.com/prompts/meta-ads-report-code-builder-prompt).
-- The [API endpoint development brief writer](https://useaiblocks.com/prompts/build-first-api-endpoint-builder-prompt).
-- The [Slack bot builder](https://useaiblocks.com/skills/slack-bot-builder).
+- The [Slack agent message router builder](https://useaiblocks.com/skills/how-messages-reach-your-agent-implementation-planner). It takes the code change.
+- The [Simple code coach](https://useaiblocks.com/skills/simple-code-coach). It takes the code change.
+- The [Pull request writer](https://useaiblocks.com/skills/pull-request-writer). It takes the code change.
 - The [Code change reviewer](https://useaiblocks.com/skills/code-change-reviewer). It takes the code change.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

@@ -24,11 +24,11 @@ Initiates a formal Shopify Return on a delivered order — specifying which line
 |-----------|------|----------|---------|-------------|
 | store | string | yes | — | Store domain (e.g., mystore.myshopify.com) |
 | format | string | no | human | Output format: `human` or `json` |
-| dry_run | bool | no | false | Preview operations without executing mutations |
+| dry_run | bool | no | true | Preview operations without executing mutations. Set to false only after the user has confirmed the preview |
 | order_id | string | yes | — | GID of the order (e.g., `gid://shopify/Order/12345`) |
 | return_line_items | array | no | all fulfilled | Array of `{fulfillment_line_item_id, quantity, reason, reason_note}` to return |
 | return_reason | string | no | `OTHER` | Default return reason for all items if not specified per-item: `SIZE_TOO_SMALL`, `SIZE_TOO_LARGE`, `WRONG_ITEM`, `NOT_AS_DESCRIBED`, `DEFECTIVE`, `STYLE`, `COLOR`, `UNWANTED`, `OTHER` |
-| notify_customer | bool | no | true | Send return initiation notification email to customer |
+| notify_customer | bool | no | true | Send return initiation notification email to customer. Tell the user this before the live run and ask whether to keep it on |
 
 ## Safety
 

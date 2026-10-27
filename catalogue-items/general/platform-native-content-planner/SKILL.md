@@ -59,8 +59,8 @@ The platform and why. How people post there. The audience topics. The month of p
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Social content calendar maker](https://useaiblocks.com/skills/standing-social-calendar-maker). It takes the plan.
-- The [Social post calendar and draft writer](https://useaiblocks.com/skills/social-post-planner).
-- The [Weekly social post writer](https://useaiblocks.com/skills/weekly-social-content-planner).
+- The [Shareable content checker](https://useaiblocks.com/skills/shareable-content-checker). It takes the hooks.
+- The [Social post format reviewer](https://useaiblocks.com/skills/organic-format-tester). It takes the hooks.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -17,7 +17,6 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Product data** (yours): one product's facts: price, variants, ingredients or materials, how it is used, photos by job.
 - **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
-- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 How to start:

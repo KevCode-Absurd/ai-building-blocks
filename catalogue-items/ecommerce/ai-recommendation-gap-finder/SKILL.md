@@ -33,6 +33,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+This list is the real set of inputs. The "Audit report" in "Before you start" means the panel results below.
+
 - **Panel results** (required): who was named, who was cited, per question and assistant. These come from the AI recommendation panel runner.
 - **Brand entities** (strongly advised): store name, own-brand products, any named method or phrase, the founder.
 - **Competitor list and desired positioning** (advised).
@@ -60,11 +62,11 @@ Platform notes below come from studies and talks from 2025 to 2026, and none is 
 4. **Filter the panel for three cases.** AI names the store but does not link (missed citation). A rival is named and the store is not (competitor gap). Topics are linked to rivals (topic gap).
 5. **Tag each opportunity.** Fix (improve what exists), build (a new page or video) or influence (get mentioned elsewhere). Rate each high, medium or low on the demand it could drive, its credibility, and the chance of being cited.
 6. **Quick wins first.** An old page that ranked and went stale (refresh it), then missing best-of placements.
-7. **Weigh the platforms.** One data set (not named here) found the three assistants cite mostly different domains. One source said ChatGPT leans to publishers, Reddit and big retailers, Google to video and established sites, and Perplexity tracks Google rankings more. Another growth lead said Reddit works for ChatGPT only, and that the playbooks for ChatGPT, Claude, Perplexity and Gemini differ. That last point is one person's view. Act first on the assistant where the panel shows the weakest result.
+7. **Weigh the platforms.** Some talks and studies from 2025 to 2026 suggest the assistants cite mostly different domains. Claims such as "ChatGPT leans to publishers, Reddit and big retailers", "Google leans to video and established sites" and "Perplexity tracks Google rankings more" are untested ideas. Their sources are not named here, so treat them as hypotheses and check them on the store's own panel before you rely on them. The claim that Reddit works for ChatGPT only, and that each assistant needs its own playbook, is one person's view. Act first on the assistant where the panel shows the weakest result.
 8. **Repeat on a rival.** Run the same check on a competitor's results to find topics and formats they cover that the store does not.
 
 ## Score
-The score measures topic coverage in the panel. Score = topics where the store is named in at least half of the valid runs ÷ all topics in the panel × 100, rounded. Show the sum and list the topics. If a topic has fewer than 3 runs, mark it too thin and leave it out. A small panel means the score is a rough guide.
+The score measures topic coverage in the panel. Score = topics where the store is named in at least half of the valid runs, divided by all topics in the panel, times 100, rounded. Show the sum and list the topics. If a topic has fewer than 3 runs, mark it too thin and leave it out. A small panel means the score is a rough guide.
 
 ## What you hand back
 ```
@@ -86,7 +88,7 @@ PLATFORM NOTE  <which assistant to work on first, and why> | dated <month year>
 
 SCORE  <n>/100 (<topics where named in half the runs or more> of <topics> x 100 = <n>)
 
-NOT RUN  <what, and why>
+NOT RUN (CHECKS MISSED)  <what, and why, or none>
 MISSING: <what was not given>
 ```
 
@@ -95,7 +97,7 @@ MISSING: <what was not given>
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Product page editor for AI search](https://useaiblocks.com/skills/ai-ready-product-page-editor). It takes the audit report.
 - The [AI recommendation mention tracker](https://useaiblocks.com/skills/ai-answer-visibility-tracker).
-- The [AI store facts checker](https://useaiblocks.com/skills/brand-facts-accuracy-fixer).
+- The [Ahrefs content gap and decay reviewer](https://useaiblocks.com/skills/content-gap-and-decay-finder). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

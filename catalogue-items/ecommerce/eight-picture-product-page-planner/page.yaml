@@ -24,7 +24,7 @@ not_for:
 
 you_give:
   - "Product facts"
-  - "A list of the photos you have, by job"
+  - "A list of the photos you have, by job (attaching the files is optional)"
   - "Proof you hold (optional)"
   - "The biggest doubt (optional)"
 you_get:

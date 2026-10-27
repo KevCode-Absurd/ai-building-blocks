@@ -31,7 +31,7 @@ How to start:
 
 ## When not to use
 
-This is a method of analysis, not personal financial advice. It is not a substitute for a licensed adviser on tax, loans or a single buy or sell decision, and it names no security to buy or sell.
+This is a method of analysis, not personal financial advice. It is not a substitute for a licensed adviser on tax, loans or a single buy or sell decision, and it names no security to buy or sell. Do not use it for one stock you are about to buy, money you need within a few years, or a loan secured on your holdings (take those to an adviser first).
 
 ## What you need
 - **Your holdings** (required): for each, the name, roughly how much of your total it is, when you bought it, and one line on why you bought it. Say which are broad funds.
@@ -49,7 +49,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Judge each holding by its business results.** Use the skill `holdings-results-review` on your holdings and any yearly figures. It saves `outputs/step-01-holdings-results-review.md`: every holding sorted keeper, watch, weak or not understood by earnings, returns and debt, with the price kept out of it.
+1. **Judge each holding by its business results.** Use the skill `holdings-results-review` on your holdings and any yearly figures. It saves `outputs/step-01-holdings-results-review.md`: every holding sorted by earnings, returns and debt, with the price kept out of it. Keeper: the reason you bought it still holds, returns are steady or rising and debt is modest. Watch: it mostly holds but one fact is slipping. Weak: earnings or returns have fallen, or debt has risen. Not understood: you cannot say in plain words how it makes money, or you have no figures. A holding with no figures goes straight to not understood, never to a guess.
 2. **Rank them and cut the list.** Use the skill `lifetime-punch-card-bet-ranker`. Give it `outputs/step-01-holdings-results-review.md` and how much money you can commit. It saves a short ranked list with sizes, using your best holding as the bar, and a written no for the rest.
 3. **Write the rules for sitting still.** Use the skill `sit-still-rule-writer`. Give it the ranked list from step 2 (`outputs/step-02-lifetime-punch-card-bet-ranker.md`), the results review from step 1 and your costs. It saves a one-page rule set: the facts that must stay true, review dates, the cost of acting and the only reasons to change a holding.
 4. **Write your rules for price drops.** Use the skill `price-drop-rules-writer`. Give it the holdings plan from steps 2 and 3, the results review from step 1, when you need the money and any loan against your holdings. It saves a rule card for drops and jumps, written before the next one, so you do not decide in the middle of one.

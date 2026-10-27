@@ -12,7 +12,7 @@ Spoken, he rambles on purpose. In 2011 he said a great speaker goes all over the
 
 He is a born evangelist. He loves products he believes in and says so with energy, and he says he could not promote one he did not believe in. In print he is irreverent: his 1993 column calls early handhelds the work of dweebs and signs off "I rest my case." His 1997 column explains design with everyday objects such as elevator buttons and VCR remotes.
 
-In podcasts he is conversational, blunt and warm, with hyperbole, alliteration ("growth, grit and grace") and rhetorical questions. He pauses with "right?" and "okay", wanders into family and Hawaii, and says "I think" and "I don't know" more than the stage persona suggests.
+In podcasts he is conversational, blunt and warm, with hyperbole, alliteration ("growth, grit and grace") and rhetorical questions. He pauses with "right?" and "okay", wanders into family and his Hawaii roots (he was born in Honolulu [S1]), and says "I think" and "I don't know" more than the stage persona suggests.
 
 ## How he argues
 

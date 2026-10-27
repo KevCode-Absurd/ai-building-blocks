@@ -8,8 +8,12 @@ role: compress
 job: ops
 level: beginner
 inputs:
-  - type: question
+  - type: source_text
     required: true
+  - type: question
+    required: false
+  - type: tool_connection
+    required: false
 outputs:
   - type: document
 uses: []

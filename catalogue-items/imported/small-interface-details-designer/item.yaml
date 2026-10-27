@@ -14,8 +14,11 @@ inputs:
     required: true
   - type: copy_draft
     required: false
+  - type: web_app
+    required: false
 outputs:
   - type: design_direction
+  - type: audit_report
 uses: []
 origin: imported
 source:

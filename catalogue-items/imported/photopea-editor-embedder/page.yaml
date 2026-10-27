@@ -10,6 +10,8 @@ explain: |
   A working image editor inside your web page, controlled by your own code. Photopea runs in a frame, and your page can open files, run edits and export results without the user leaving your app.
 
   The skill uses the photopea.js wrapper instead of hand-written message passing. It gives scripts for common jobs such as renaming text layers from their contents, exporting each layer as its own PNG, and editing text, selections, filters, colours and paths. A detailed guide holds the full steps, safety notes and checks, and the skill says to read it first. It needs web development skills.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (yikuansun) says MIT. Credit goes to yikuansun and sickn33.
 when:
   - You are adding image editing to your product.
   - You need to export every layer of a design as a separate file.
@@ -30,12 +32,13 @@ you_get:
   - Open, edit and export flow
   - Checks that the editor responds
 how_to_use:
+  - Before you start, you need a web page you can edit and a browser to test in. Photopea may ask for an account or a paid plan to remove its ads or to use some features. Check its terms.
   - Open a chat with your AI and paste this skill. If your AI can read files, upload the skill folder instead.
   - Tell it what edits your app needs, such as swapping text or exporting layers.
   - Share the page or app where the editor will sit, and a sample file to open.
   - Ask your AI for the embed code and one script per edit.
   - Add the code to your page and test it in a browser. This step needs a browser, and code running if you want your AI to test it.
-  - Check Photopea's terms before you ship your app. Then test the exported files, and pass them to your storage or print step. The skill text is MIT licensed and the collection is CC BY 4.0, so keep the credit with any copy you share.
+  - Check Photopea's terms before you ship your app. Then test the exported files, and pass the PNG files or layer data (JSON) to your storage or print step. If your code passes user text, links or layer names into a script, run them through JSON.stringify first, as the skill's limits require. The skill text is MIT licensed and the collection is CC BY 4.0, so keep the credit with any copy you share.
 output_sample:
   input:
     - What image edits your app needs

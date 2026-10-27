@@ -7,6 +7,8 @@ description: Use when your copy makes a big claim that readers doubt or throw ou
 
 A reader does not weigh a claim on its own. They weigh it against what they already believe and against what they have just read. The same sentence is thrown out at the top of a page and accepted ten lines down, after the reader has agreed with several smaller things. This skill rebuilds the order of a draft so each claim is prepared by the ones before it.
 
+Not for: a claim with no evidence behind it (get the proof first, or use the Claim evidence checker), a draft that only needs a typo or tone edit, or a claim about health, money or medicine. Regulated claims need a qualified person to review them before they run.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -38,7 +40,7 @@ How to start:
 ## Steps
 1. **List the claims** in the draft in the order they appear. Mark the biggest one: the claim that, if rejected, makes the rest worthless. Call it the goal claim.
 2. **Map the beliefs it runs against.** Write what the reader believes about this kind of product, about themselves ("I could never do this"), and about sellers like you ("they all say that"). Use the brief or customer words. Never argue with a held belief head on. Work from it, using the reader's own logic.
-3. **Score each claim from 1 to 5** for how readily a doubtful reader would accept it with nothing before it: 5 is accepted at once, 1 is thrown out. The goal claim often scores 1 or 2.
+3. **Score each claim from 1 to 5** for how readily a doubtful reader would accept it with nothing before it: 5 is accepted at once, 1 is thrown out. The goal claim often scores 1 or 2. These scores are your judgement from the draft and the brief, not measured results. Say so, and tell the person to check the ladder against real reader reactions (a test group, replies, or a split test) before trusting it.
 4. **Build the ladder.** The ladder has these rules:
    - The first rung scores 5. It must be true and widely accepted.
    - Each rung asks for at most one point more belief than the rung before. A jump of two points or more fails and needs a rung between.
@@ -62,9 +64,9 @@ The goal claim and the beliefs it runs against. A ladder table: each rung, its t
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Check it before it goes live** with the [Claim evidence checker](https://useaiblocks.com/skills/claim-and-proof-matcher). It takes the draft.
-- **Check it before it goes live** with the [Brand voice editor](https://useaiblocks.com/skills/brand-voice-editor). It takes the draft.
 - The [How-it-works copy writer](https://useaiblocks.com/skills/how-it-works-copy-writer). It takes the draft.
 - **Check it before it goes live** with the [Ad claims checker](https://useaiblocks.com/prompts/ad-claim-proof-gap-finder). It takes the draft.
+- **Check it before it goes live** with the [Brand voice editor](https://useaiblocks.com/skills/brand-voice-editor). It takes the draft.
 - The [Sales copy editor](https://useaiblocks.com/skills/sales-copy-editor). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

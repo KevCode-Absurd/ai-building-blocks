@@ -10,6 +10,8 @@ level: intermediate
 inputs:
   - type: source_text
     required: true
+  - type: image
+    required: false
 outputs:
   - type: image
 uses: []

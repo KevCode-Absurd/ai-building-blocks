@@ -15,6 +15,7 @@ explain: >-
 
   Coverage and estimated readership are exposure measures, not acquired customers. Do not invent press contacts, quotes or editorial interest.
 when:
+  - You have a real milestone or customer insight and want to test whether a reporter will cover it.
   - You need a practical way to find customers for a software business.
   - You want to test a growth idea before committing more time or money.
 not_for:
@@ -67,11 +68,11 @@ output_sample:
     - name: MISSING
       contains: The facts the AI could not find and you need to supply.
 how_it_works:
-  - title: Check 1
+  - title: Find a real news hook
     text: Identify a dated milestone, unusual customer insight or original research. Separate evidence from the company's promotional claims.
-  - title: Check 2
+  - title: Research the right reporters
     text: Find reporters by recent relevant coverage. Record the article, date, reader fit and a specific reason each reporter might care; leave contact details unknown unless publicly verified.
-  - title: Check 3
+  - title: Write one evidence-backed pitch
     text: Consider a small specialist outlet before a broad publication. Build one concise pitch with a clear news hook, evidence, spokesperson and useful source material.
 output_shape: |
   Recommendation: <test now / later / weak fit, with reason>
@@ -83,7 +84,9 @@ output_shape: |
   Measurement: <events, cohort, denominators, attribution>
   Decision: <continue / revise / stop rule>
   Risks and next action: <...>
+  Produces: <a reporter research table, newsworthiness check, pitch email and source sheet>
   MISSING: <unknowns>
+  CHECKS MISSED: <one line each, or none>
 tweaks:
   - what: Your growth goal
     how: Give a target and deadline so the advice has something concrete to work towards.

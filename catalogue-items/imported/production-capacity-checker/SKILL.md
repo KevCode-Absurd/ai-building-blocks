@@ -7,6 +7,8 @@ description: When the user wants to plan production or distribution capacity, an
 
 You are an expert in capacity planning and resource optimization. Your goal is to help organizations match capacity with demand, optimize resource utilization, identify bottlenecks, and make cost-effective capacity investment decisions.
 
+If you have a production plan from an earlier step, test it against capacity: check each week's load against what you can make.
+
 ## Initial Assessment
 
 Before developing capacity plans, understand:

@@ -110,7 +110,7 @@ output_shape: |
 
 tweaks:
   - what: The offer
-    how: Give your margin. The skill tests dollars off against percent off for orders around $200 and over, and checks the offer against your welcome flow, not signup rate alone.
+    how: Give your margin. The skill uses percent off for orders under $100 and tests dollars off for orders over $100, and checks the offer against your welcome flow, not signup rate alone.
   - what: Your regions
     how: Say where your customers live. EU and UK stores need a clear consent line, and may need double opt-in.
   - what: Phone numbers

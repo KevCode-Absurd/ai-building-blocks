@@ -5,11 +5,13 @@ name: Test data seeder
 summary: Get a test data seeder script that fills your database with realistic, repeatable rows. Give it your schema. Safe to run twice.
 job: test-and-fix-code
 headline: Test data seeder
-subhead: Describe your tables. Get realistic, repeatable test data loaded for development and staging. Bring your schema or migration files. Use the result to plan your next step.
+subhead: Describe your tables. Get realistic, repeatable test data loaded for development and staging. Bring your schema or migration files. You get a script you commit next to your migrations and run on a test database.
 explain: |
   Realistic test data loaded into your database, the same every time you run it, so development and staging stop depending on empty tables or a copy of real customers. Everything fits your schema and keeps its links intact.
 
   The skill reads your tables, columns, constraints and foreign keys. It plans the data by purpose: fixed seeds for repeatable tests, or random fake data for demos. It writes a seed script in your language, using tools like Faker or your framework's seeders, and loads parent tables before children. The script is safe to run twice, using upserts or clean-and-reload. It offers small, medium and large profiles, then checks row counts and that all references point to real rows.
+
+  Licence: MIT, as the LICENSE file in this item says. Credit goes to Burhan Sebin.
 when:
   - Your development database is empty and the app looks broken.
   - You need the same test data in every environment.
@@ -34,7 +36,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
   - Paste your schema or migration files. Say which database and language you use.
   - "Say which environment this is for and how much data you want: small, medium or large."
-  - Read the seed script. Check it refuses to run against production.
+  - Read the seed script. Check it refuses to run unless the environment is set to a test value, and that it reads the database login from environment variables. Never commit a password to your repo.
   - Run it on a test database. Your AI can do this only if it can run code. Otherwise run it yourself.
   - Check the row counts and the link check. Then commit the script next to your migrations.
 output_sample:

@@ -17,6 +17,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Brand brain** (its buyers part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
+- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -38,6 +39,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+The sketch covers one buyer group only. "Your question" above means the product and problem below. Everything marked optional can be skipped. The research is done by hand: no scraping and no paid tool is needed.
+
 - **Product and the problem it solves** (required). One or two sentences.
 - **A starting group** (strongly advised): the age range and gender of your biggest competitor's buyers, or the buyer profile an earlier step picked for you. If they don't have it, tell them how to get a rough one: a website traffic tool, the competitor's ads in the Meta Ad Library, or asking a chat AI. Mark any number you could not check as `[guess]`.
 - **The posts and reviews** (required for the second half): the person reads them and pastes them in. If your AI can open pages, it may help find threads, but the person still reads them.
@@ -58,7 +61,7 @@ Privacy rule for all public reading: collect words, not people. Never keep usern
    - In the Meta Ad Library, open each rival's page transparency list. Ads that repeat, and those low in the list, have probably run longest and may be profitable. That is not certain, so check before you assume.
 2. **Pick a starting group.** Use the biggest competitor's top buyer group (for example women 45 to 65). It is where to start looking, not the buyer.
 3. **Run the 30-second test.** Ask: can you say, in 30 seconds, who the buyer is, their hopes, their situation, their problem, and the one thing they would wish for if they could snap their fingers? If not, that is why you are doing the research.
-4. **Set a timer for 60 minutes.** The source plan is 30 minutes on public forums (Reddit first) and 30 on Amazon reviews. The same speaker also says forums should get most of the effort, about 80 percent, because they hold the most detail. Both are one person's rule. Start with 30 and 30. If the reviews are thin, spend the spare time on forums.
+4. **Set a timer for 60 minutes.** Use 30 minutes on public forums (Reddit first) and 30 on Amazon reviews. This is one source's plan, so treat it as a starting point. If the reviews are thin, spend the spare time on forums, which tend to hold more detail.
 5. **Write the search phrases as the buyer would type them.** Produce 10, in the buyer's voice, each ending with the word Reddit or the name of the niche forum. Cover the problem, the feeling and the fixes already tried. The sources' examples: "my cat won't drink water Reddit" and "hair loss making me less attractive Reddit". Tell the person to act as the buyer while typing.
 6. **Read and paste, by hand.** Read each post and its comments word for word. Paste whole posts or lines into one document, with spacing and no structure yet. This is meant to be slow. Do not run a script or an AI over the reviews to summarise them first: it strips the feeling and the vocabulary. Remove usernames as you paste.
 7. **Mark up the quotes** (you may do this once they paste them, but only on text they pasted). Bold three things:

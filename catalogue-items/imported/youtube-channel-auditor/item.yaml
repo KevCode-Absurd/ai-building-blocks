@@ -8,8 +8,14 @@ role: check
 job: ops
 level: beginner
 inputs:
-  - type: source_text
+  - type: video_link
     required: true
+  - type: shortlist
+    required: false
+  - type: spreadsheet
+    required: false
+  - type: transcript
+    required: false
 outputs:
   - type: audit_report
     required: true

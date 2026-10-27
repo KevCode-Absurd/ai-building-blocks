@@ -181,6 +181,8 @@ close(sdp);        % Close figure
 
 ## Pattern: 2026 Full Pipeline (Score + Report)
 
+If you have simulation results in a table, use them in step 4 in place of the placeholder zeros.
+
 ```matlab
 % 1. Create assessment object
 ea = euroAssessment(2026);

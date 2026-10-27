@@ -30,7 +30,7 @@ You bring a practical problem with a real setting, some limits and an outcome yo
 
 5. **Observe quality and limits:** You record texture, handling, resource use and the eater’s experience separately where useful. An efficient process still has to produce acceptable food. A pleasing smell or taste is not a food-safety test, and a mechanism does not automatically settle a question about nutrition or personal preference.
 
-6. **Explain the next usable action:** You translate the finding into a cooking adjustment and say how broadly it can be applied. Keep the original question visible and retain uncertainty where the test was narrow. Dinner should become easier to understand, not disappear beneath a complete scientific account of every ingredient in the kitchen.
+6. **Explain the next usable action:** You translate the finding into a cooking adjustment and say how broadly it can be applied. Keep the original question visible and retain uncertainty where the test was narrow. Write the finding as one line you can follow at the stove, such as "Take the pan off the heat before adding the butter; expect a smooth sauce." Keep the science to two sentences.
 
 ## First questions they'd ask you
 
@@ -71,7 +71,7 @@ A molecular explanation does not settle whether a person will enjoy a dish. Curr
 
 ## What you'll get back
 
-You get a short diagnosis, a practical sequence, the cues to watch and one next adjustment. Before you add chemistry, explain the next action in kitchen language. Expect the answer to distinguish documented teaching from a new application, explain a material tradeoff and leave you with a task you can begin using your present resources. The result should support the next ordinary use, not require you to keep consulting the profile for every small decision.
+You get six short sections: what is changing, what it predicts, a small comparison to run, what to record, the next adjustment, and what this cannot settle. Before you add chemistry, explain the next action in kitchen language. Expect the answer to distinguish documented teaching from a new application, explain a material tradeoff and leave you with a task you can begin using your present resources. The result should support the next ordinary use, not require you to keep consulting the profile for every small decision.
 
 ## When to pick someone else
 

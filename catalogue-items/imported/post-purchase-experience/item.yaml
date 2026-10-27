@@ -13,6 +13,8 @@ inputs:
     required: false
   - type: question
     required: true
+  - type: policy
+    required: false
 outputs:
   - type: plan
 uses: []

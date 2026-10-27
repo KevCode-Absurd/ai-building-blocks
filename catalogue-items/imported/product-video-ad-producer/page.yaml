@@ -32,12 +32,13 @@ you_get:
   - A list of any failed shots to redo
 how_to_use:
   - "Before you start: you need a paid video model key (fal or Replicate). Each shot you make costs money."
-  - The detailed guide in the skill file (SKILL.md) is written in Chinese. The steps above are the same in English. The scripts need the skill folder, Node and ffmpeg on your computer.
+  - The detailed guide in the skill file (SKILL.md) is written in Chinese. It starts with an English summary of the steps. The scripts need the skill folder, Node and ffmpeg on your computer.
   - Open an AI that can run code and use files. Paste the skill and your selling points, audience and platform.
   - Read the shot script your AI writes. Fix it in chat before anything is made.
   - Ask for a dry run first. It shows the plan for each shot and costs nothing.
   - Run it. Redo any failed shot on its own, then join the clips again.
   - Check every price, discount and claim in the captions against your real offer before you run the ad.
+  - Next, add voice and music in a video editor. Then upload the ad to your paid social account, where it goes through the platform's ad review. For a real person talking to camera, use the Talking product video ad workflow instead.
 output_sample:
   input:
     - Your product and its main selling points
@@ -61,3 +62,4 @@ output_sample:
       contains: The clips joined into one ad.
     - name: final-sub.mp4
       contains: The same ad with captions added.
+next: [talking-product-video-ad, product-photo-to-clip-maker]

@@ -13,9 +13,11 @@ Read [the original role profile](references/source-agent.md) before you start. I
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Database designer](https://useaiblocks.com/skills/database-design-guide).
-- The [Agent database setup planner](https://useaiblocks.com/skills/agent-database-setup-planner).
-- The [Backend builder](https://useaiblocks.com/skills/backend-builder).
+- The [Agent database migration planner](https://useaiblocks.com/skills/agent-database-migration-planner). It takes the the data model.
+- The [OpenAPI app builder](https://useaiblocks.com/skills/build-an-app-from-an-openapi-spec). It takes the API spec.
+- The [Postgres query tuner](https://useaiblocks.com/skills/postgres-query-tuner). It takes the the data model.
+- The [API design reviewer](https://useaiblocks.com/skills/api-design-reviewer). It takes the API spec.
+- The [API test planner](https://useaiblocks.com/skills/agency-testing-api-tester). It takes the API spec.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -38,6 +40,8 @@ How to start:
 <!-- /needs -->
 
 ## What to collect first
+
+These are the inputs that count. If the generic "Before you start" list above asks for something else, such as a question or source text, ignore that part.
 
 Ask once for anything missing. Never invent it. Mark each gap `MISSING:`, or label a stand-in `ASSUMED:` and say what to replace it with.
 
@@ -75,6 +79,8 @@ Use these headings, in this order:
 7. Security, monitoring and growth
 8. Migration plan
 9. Open questions and checks still needed
+
+Heading 9 is also your CHECKS MISSED list: name every check that failed or could not run, or write "none".
 
 ## Rules
 

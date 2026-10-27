@@ -8,10 +8,13 @@ role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: document
+    required: true
+  - type: tool_connection
     required: true
 outputs:
-  - type: plan
+  - type: audit_report
+  - type: copy_draft
 uses: []
 origin: imported
 source:

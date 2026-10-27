@@ -26,7 +26,7 @@ Trigger this skill when:
 
 1. **Identify Targets**: Select the DOM elements or SVGs to be animated.
 2. **Define Properties & Easing**: Specify values to animate. **Crucially**, utilize advanced easing functions (e.g., custom `cubicBezier`, `spring`, or `elastic`) instead of basic `linear` or `ease-in-out` to make the motion feel expensive and natural.
-3. **Orchestrate Timelines**: Inspect the installed major version first, before you write any code. The snippets below are valid only for v3; for v4, write the v4 equivalent (`createTimeline()`) instead. This example targets Anime.js v3; use `anime.timeline()` to sequence complex choreography. Master the use of timeline offsets (relative `'-=200'` vs absolute) to create seamless overlapping motion.
+3. **Orchestrate Timelines**: Check the installed major version first, before you write any code (look at `package.json` or the script tag, or ask the user). If it is v3, use `anime.timeline()` and the v3 snippet below. If it is v4, use `createTimeline()` and the v4 snippet below. If the user does not know or has nothing installed, ask which they want to install, and do not mix the two. Master the use of timeline offsets (relative `'-=200'` vs absolute) to create seamless overlapping motion.
 4. **Implement**:
    For a bundler with Anime.js v3 installed, `import anime from "animejs";` supplies the `anime` binding. The selectors must exist in the rendered DOM.
 
@@ -46,6 +46,16 @@ Trigger this skill when:
    );
    ```
 
+   For Anime.js v4 (imports are named, targets move into `add()`, and `translateY` becomes `y`), the same idea looks like this. Check the names against the official docs for the installed version before you ship it:
+
+   ```javascript
+   import { createTimeline, stagger } from "animejs";
+
+   const tl = createTimeline({ defaults: { duration: 1000, ease: "out(3)" } });
+   tl.add(".hero-text", { y: [50, 0], opacity: [0, 1], delay: stagger(100) })
+     .add(".hero-image", { scale: [0.9, 1], opacity: [0, 1] }, "-=800");
+   ```
+
 ## Motion and Compatibility
 
 - **Scope**: Use motion when it serves the product brief and user task. Respect the existing design system; simple transitions and static states are valid choices.
@@ -56,7 +66,14 @@ Trigger this skill when:
 
 **User request:**
 
-> Create complex, multi-stage landing page orchestrations.
+> My landing page has a headline, a subline and a hero image. Make the headline and subline slide up one after the other, then fade in the image. I use Anime.js v3.
+
+**What a finished result looks like:**
+
+- The version used (v3) and the selectors the HTML must have (`.hero-text`, `.hero-image`).
+- One timeline with the order, easing, stagger and offsets.
+- A reduced-motion fallback that shows the final state with no movement.
+- Short notes on where to put the code and how to test it in a browser.
 
 ## Limitations
 - The code above uses the v3 API. Anime.js v4 uses imported `createTimeline()` and a different target/parameter signature; do not mix major-version examples. Consult [official timeline documentation](https://animejs.com/documentation/timeline/) for the installed version.

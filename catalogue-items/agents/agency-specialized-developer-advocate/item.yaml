@@ -10,9 +10,13 @@ level: intermediate
 inputs:
   - type: question
     required: true
+  - type: voc_reviews
+    required: true
   - type: source_text
     required: false
-  - type: performance_sheet
+  - type: spreadsheet
+    required: false
+  - type: plan
     required: false
 outputs:
   - type: plan

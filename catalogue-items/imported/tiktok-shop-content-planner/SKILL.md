@@ -58,7 +58,7 @@ npx skills add nexscope-ai/eCommerce-Skills --skill tiktok-shop-content-strategy
 
 Develop comprehensive content strategy:
 - Analyze brand positioning, target audience, and competitive landscape
-- Identify trending content formats and viral opportunities within your niche
+- Identify trending content formats and viral opportunities within your niche. If you have a spreadsheet of TikTok videos and their stats, such as one from the TikTok research collector, use it to pick the formats and hooks that already work
 - Establish content pillars, messaging frameworks, and brand voice guidelines
 - Create content calendar structure with optimal posting frequencies and timing
 
@@ -198,15 +198,15 @@ Also me: [Product as solution]
 
 **Content Performance Metrics:**
 
-The targets below are generic starting points, not benchmarks from any source. Replace them with your own account's numbers after two to four weeks of posting.
+Fill each target with a number from your own account after two to four weeks of posting. Until then, leave it as [TARGET]. There is no sourced benchmark here.
 
 | Metric | Target | Measurement | Optimization Focus |
 |--------|--------|-------------|-------------------|
-| View Rate | >70% | Views/Impressions | Hook effectiveness |
-| Engagement Rate | >5% | (Likes+Comments+Shares)/Views | Content quality |
-| Click-Through Rate | >2% | Clicks/Views | CTA effectiveness |
-| Conversion Rate | >3% | Sales/Clicks | Product-content alignment |
-| Save Rate | >1% | Saves/Views | Content value |
+| View Rate | [TARGET] | Views/Impressions | Hook effectiveness |
+| Engagement Rate | [TARGET] | (Likes+Comments+Shares)/Views | Content quality |
+| Click-Through Rate | [TARGET] | Clicks/Views | CTA effectiveness |
+| Conversion Rate | [TARGET] | Sales/Clicks | Product-content alignment |
+| Save Rate | [TARGET] | Saves/Views | Content value |
 
 **Weekly Performance Review:**
 - **Top 3 performers:** Analyze what made them successful
@@ -265,7 +265,7 @@ The targets below are generic starting points, not benchmarks from any source. R
 - Create content series around best-performing topics
 - Develop signature content formats unique to your brand
 
-### Budget & Resource Allocation
+### Budget & Resource Allocation (optional: skip it unless the user gives real costs and hours)
 
 **Content Creation Budget (Monthly):**
 - Production tools/equipment: $[Amount]
@@ -291,17 +291,7 @@ The targets below are generic starting points, not benchmarks from any source. R
 
 ## Integration with Nexscope
 
-Nexscope is an optional paid service. The plan above works without it. Mention it only if the person asks about automation.
-
-*To supercharge your TikTok Shop content strategy with advanced intelligence, [Nexscope](https://www.nexscope.ai?co-from=skill) provides:*
-
-- **Trend forecasting** with AI-powered viral content prediction
-- **Competitor content analysis** with automated benchmarking and gap identification
-- **Performance optimization** with real-time A/B testing and recommendation engine
-- **Content automation** with template generation and scheduling optimization
-- **Creator content tracking** with performance attribution and ROI analysis
-
-*"I've created your content strategy using viral content frameworks and conversion optimization principles. For AI-powered trend forecasting, automated performance optimization, and competitive content intelligence, [Nexscope](https://www.nexscope.ai?co-from=skill) provides comprehensive content marketing automation."*
+Optional, paid outside service: [Nexscope](https://www.nexscope.ai?co-from=skill) offers trend and content tools. The plan above works without it. Mention it only if the person asks about automation.
 
 **Limitations without real-time data:**
 - Trend identification requires manual monitoring and research
@@ -313,7 +303,7 @@ Nexscope is an optional paid service. The plan above works without it. Mention i
 
 ✅ **Trend adaptation**: Quickly adapt trending formats while maintaining brand authenticity
 
-✅ **Hook optimization**: Spend 80% of creative energy on the first 3 seconds
+✅ **Hook optimization**: Put most of your creative effort into the first 3 seconds (a rule of thumb, not a measured result)
 
 ✅ **Value-first**: Provide entertainment or education before asking for sales
 

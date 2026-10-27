@@ -26,9 +26,22 @@ API security setup and private staging requirements are in [APP-SECURITY.md](../
 
 Integration is pending. A GitHub push does not prove that a live deployment or domain is configured. Follow [the launch handoff](../docs/CLOUDFLARE-LAUNCH-2026-10-22.md) for project settings, D1 migrations, secrets, preview verification and rollback.
 
-`wrangler.example.jsonc` targets Workers Static Assets on Workers Paid: 100,000 files per version, with a 95,000-file build guard. Copy it to ignored `wrangler.jsonc` and replace production/staging database IDs before using account commands. Staging uses a separate database. Never commit salts, team tokens, local state or a populated configuration. Only `/api` and `/api/*` run the application Worker before assets; `_redirects` and `_headers` retain existing URL and cache behavior. Legacy `_routes.json` is excluded by `.assetsignore`.
+`wrangler.example.jsonc` targets Workers Static Assets on Workers Paid: 100,000 files per version, with a 95,000-file build guard. Copy it to ignored `wrangler.jsonc` and replace production/staging database IDs before using account commands. Staging uses a separate database. Never commit salts, team tokens, local state or a populated configuration. Only `/api`, `/mcp`, OAuth and discovery run the application Worker before assets; `_redirects` and `_headers` retain existing URL and cache behavior. Other paths reach the Worker only when no asset matches: that is how the item twins (`/skills/<slug>.md` and `.json`) are served, so keep `assets.not_found_handling` unset. Item pages never run the Worker. Legacy `_routes.json` is excluded by `.assetsignore`.
 
 Use `npm run worker:dry-run` for offline packaging. `npm run worker:local-config` generates the ignored test configuration; migrate it with `wrangler d1 migrations apply COMMENTS --local --config wrangler.local.jsonc`, then `npm run worker:dev`. Run `node tools/check-cloudflare-local.mjs` from the repo root against that local server. `npm run worker:staging` and `npm run worker:deploy` deploy the populated staging/production configuration after account setup and verification. See the handoff for the short persistence path needed on this Windows checkout.
+
+## Crawl files and IndexNow
+
+Every build writes honest dates: an item's `lastmod` (and its page's "Updated" and `dateModified`) is the git commit date of its own files, so a fresh checkout or a rebuild never moves it. Build for release from a full clone, not a shallow one. The sitemap index carries each child's newest `lastmod`. `/feed.json` (JSON Feed) and `/feed.xml` (RSS) list the newest 100 new or changed items. Every item page has a Markdown twin (`/skills/<slug>.md`) and a JSON twin (`/skills/<slug>.json`), served by `src/server/twins.ts` from the deployed page data. The sitemap is submitted to Search Console once; never resubmit it.
+
+After each production deploy, tell Bing and Yandex (IndexNow) which pages are new or changed. From the repo root, after `site/dist` has been deployed:
+
+```
+node tools/indexnow-ping.mjs --dry-run   # check the list first
+node tools/indexnow-ping.mjs             # ping, then save this build as tools/indexnow-state.json
+```
+
+It compares the deployed build's sitemaps with `tools/indexnow-state.json` (the last build pinged) and sends only new URLs and URLs whose `lastmod` changed, in batches of up to 10,000. Commit the updated state file. The first time there is no state file: before deploying, save the live site's sitemaps with `node tools/indexnow-ping.mjs --baseline --new https://useaiblocks.com`, then deploy and run the two commands above. (`--all` sends every URL once instead.) It never runs during a build. The key is the public file `site/public/<key>.txt`.
 
 Key code: `scripts/build-index.mjs` (catalogue), `scripts/prerender.mjs` (HTML and tour), `src/lib/handoff.ts` (exports), `src/Builder.tsx` (canvas), `src/server/` (API rules), `functions/api/` (Cloudflare adapters), and `e2e/` (browser tests).
 

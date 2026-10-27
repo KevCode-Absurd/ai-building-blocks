@@ -100,9 +100,9 @@ Then give the smallest next step. For example, send the first brief to the desig
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Sales funnel ad brief writer](https://useaiblocks.com/skills/funnel-stage-creative-brief-builder). It takes the brief.
 - The [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the brief.
-- The [Ad creative mix planner](https://useaiblocks.com/skills/creative-portfolio-mix-planner).
+- The [Ad creative variation planner](https://useaiblocks.com/skills/ad-creative-variation-planner). It takes the brief.
+- The [Meta test campaign planner](https://useaiblocks.com/skills/meta-test-campaign-planner). It takes the brief.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

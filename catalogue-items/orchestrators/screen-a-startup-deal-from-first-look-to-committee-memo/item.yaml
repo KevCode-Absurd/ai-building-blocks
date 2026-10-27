@@ -7,10 +7,12 @@ role: orchestrate
 job: analysis
 level: advanced
 inputs:
-  - {type: source_text, required: true}
+  - {type: business_plan, required: true}
   - {type: meeting_notes, required: true}
   - {type: question, required: true}
   - {type: document, required: false}
+  - {type: source_text, required: true}
+  - {type: deal_terms, required: true}
 outputs:
   - {type: document}
   - {type: audit_report}

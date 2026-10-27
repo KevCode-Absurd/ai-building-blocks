@@ -33,7 +33,7 @@ you_get:
   - Failed frames redone, or dropped with a note to take a real photo
   - A list of faults to add to your prompts next time
 how_to_use:
-  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask for a photo set.
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask for a photo set. Without file access, paste the truth sheet and the mistakes list back in at the start of each round.
   - Attach clear photos of your real product and say where the set goes.
   - Read the plan. For a product page, say yes before it writes the prompts.
   - Make the pictures in a tool you pick, such as ChatGPT, Gemini or Higgsfield. The agent cannot draw, and asks before anything uses credits.

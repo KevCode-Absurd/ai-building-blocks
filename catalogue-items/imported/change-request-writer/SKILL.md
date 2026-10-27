@@ -8,7 +8,7 @@ argument-hint: "<change description>"
 
 > If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
 
-Create a structured change request with impact analysis, risk assessment, and rollback plan.
+Create a structured change request with impact analysis, risk assessment, and rollback plan. If an earlier step gave you a plan for the change, use it to fill in the implementation plan, timeline and owners.
 
 ## Usage
 

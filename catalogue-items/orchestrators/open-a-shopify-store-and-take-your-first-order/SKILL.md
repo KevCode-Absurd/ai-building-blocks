@@ -72,9 +72,9 @@ Pause here: Open the admin and do the base settings from the plan: business deta
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Payments and checkout settings checker](https://useaiblocks.com/skills/payments-and-checkout-settings-checker). It takes the audit report.
 - The [WooCommerce store setup planner](https://useaiblocks.com/skills/woocommerce-store-setup-planner).
 - The [Shopify Markets setup planner](https://useaiblocks.com/skills/shopify-markets-setup-planner).
-- The [Payments and checkout settings checker](https://useaiblocks.com/skills/payments-and-checkout-settings-checker). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

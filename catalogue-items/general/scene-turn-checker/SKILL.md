@@ -7,19 +7,25 @@ description: Use when someone has a scene list or outline. Marks what changes in
 
 A scene list can look full and still go nowhere, because the situation at the end of each scene is the same as at the start. This skill marks what changes in each scene and the choice that causes it, and checks that choices cost something and set-ups pay off. Scenes where nothing turns are flagged with a fix, and the list gets a score.
 
+**Not for:** testing the idea before you outline (use `story-premise-tester`), checking that the pictures carry a finished script (use `voice-over-stripping-test`), or line edits on a finished draft. The input is a scene list or outline, not a whole manuscript. The score is a rough guide to where scenes stall, not a verdict on the story.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A story outline** (yours): the premise, the characters and the scenes in order.
 
 **Makes it better (optional):**
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A story outline** with the [Story premise tester](https://useaiblocks.com/skills/story-premise-tester). Bring your question.
+2. This one.
+
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for plan, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a story outline, your question. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -51,10 +57,9 @@ A scene table with the change, the choice and the cost. The flagged scenes with 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Page-turner scene drafter](https://useaiblocks.com/skills/page-turner-scene-drafter). It takes the plan and audit report.
-- The [Scene suspense reviewer](https://useaiblocks.com/skills/page-pull-scene-checker). It takes the plan.
-- The [Story theme and scene reviewer](https://useaiblocks.com/skills/hidden-theme-finder). It takes the audit report.
-- **Make video ads** with the [Silent video story reviewer](https://useaiblocks.com/skills/voice-over-stripping-test). It takes the plan.
+- The [Scene detail picker](https://useaiblocks.com/skills/scene-detail-picker). It takes the story outline.
+- The [Unplotted first-draft writer](https://useaiblocks.com/skills/unplotted-first-draft-writer). It takes the story outline.
+- The [World detail consistency checker](https://useaiblocks.com/skills/world-detail-consistency-checker). It takes the story outline.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

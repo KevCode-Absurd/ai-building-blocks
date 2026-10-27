@@ -44,6 +44,8 @@ output_sample:
     - Where your leads come from, and how many
     - Your revenue goal (optional)
   output:
+    - name: Layout of the plan
+      contains: The score table first, then one section per role, then a 30-day email schedule and the pipeline math.
     - name: Process score
       contains: A score from 0 to 10, two points for each of five checks, and the checks that block a 10.
     - name: Lead type mix

@@ -104,6 +104,7 @@ MISSING: <what>
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [AI search visibility tester](https://useaiblocks.com/skills/ai-recommendation-panel-runner). It takes the plan.
 - The [Collection page SEO builder](https://useaiblocks.com/skills/collection-page-seo-builder). It takes the plan.
+- The [Internal link mapper](https://useaiblocks.com/skills/internal-link-mapper). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

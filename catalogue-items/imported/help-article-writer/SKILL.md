@@ -13,9 +13,9 @@ Produce polished help center articles and FAQ entries that deflect support ticke
 
 ## Workflow
 
-1. **Identify topic from support data** — Mine support ticket trends, search analytics (what customers search for but don't find), and CSM feedback to find the highest-impact topics. Prioritize by ticket volume (articles addressing the top 10 question clusters deflect the most tickets), topic complexity (complex topics benefit most from written guides), and recency (new features or recent changes need documentation immediately).
+1. **Identify topic from support data** — Mine support ticket trends, search analytics (what customers search for but don't find), and CSM feedback to find the highest-impact topics. Prioritize by ticket volume (the most common question clusters deflect the most tickets), topic complexity (complex topics benefit most from written guides), and recency (new features or recent changes need documentation immediately).
 
-2. **Research the solution** — Gather the authoritative answer from engineering docs, internal wikis, product specs, and subject matter experts. Test the workflow yourself end-to-end in the product to verify accuracy. Document the exact UI text, button labels, and navigation paths as they appear in the current product version. Note any prerequisites, required permissions, or plan-tier restrictions.
+2. **Research the solution** — In a plain chat, the user supplies the answer. First run: (a) the user pastes the ticket list, (b) pick one question, (c) the user confirms the exact menu and button names, (d) write the article in the template below. Where the user has no source, ask them to get the answer from engineering docs, internal wikis, product specs, or a subject matter expert. Ask the user to test the workflow end-to-end in the product to verify accuracy. Document the exact UI text, button labels, and navigation paths as they appear in the current product version. Note any prerequisites, required permissions, or plan-tier restrictions.
 
 3. **Structure the article** — Follow a consistent template: **Title** (action-oriented, matches how customers search), **Summary** (1-2 sentence answer for scanning), **Prerequisites** (what the reader needs before starting), **Steps** (numbered, one action per step, with expected outcome), **Troubleshooting** (common errors and their fixes), and **Related Articles** (links to adjacent topics). Keep the hierarchy flat — use H2 for major sections and H3 sparingly.
 
@@ -52,21 +52,21 @@ Every product name, menu path, price, plan, discount, timing and policy in these
 Enable SAML-based SSO so your team can sign in using your company's identity provider. Supported providers: Okta, Azure AD, and OneLogin.
 
 **Prerequisites**
-- Admin role in your account (Settings → Team → Roles shows "Admin" next to your name)
+- Admin role in your account ([MENU PATH] shows "Admin" next to your name)
 - Access to your identity provider's admin console
-- Your account must be on the Enterprise plan
+- Your account must be on the [PLAN NAME] plan
 
 **Steps**
 
-1. Go to **Settings → Security → Single Sign-On** and click **Configure SSO**.
+1. Go to **[MENU PATH TO SSO]** and click **[BUTTON NAME]**.
 
    *[Screenshot: Settings page with Security tab highlighted and SSO section visible]*
 
 2. Select your identity provider from the dropdown: **Okta**, **Azure AD**, or **OneLogin**.
 
 3. Copy the values shown on screen — you will need these in your identity provider:
-   - **ACS URL:** `https://app.example.com/auth/saml/callback`
-   - **Entity ID:** `https://app.example.com/saml/metadata`
+   - **ACS URL:** `[ACS URL FROM YOUR PRODUCT]`
+   - **Entity ID:** `[ENTITY ID FROM YOUR PRODUCT]`
    - **RelayState:** leave blank unless using a custom landing page
 
 4. In your identity provider's admin console, create a new SAML application using the values from step 3.
@@ -89,7 +89,7 @@ Enable SAML-based SSO so your team can sign in using your company's identity pro
 
 7. Click **Test Connection**. A new browser tab opens. Sign in with your identity provider credentials. If successful, you'll see "SSO connection verified."
 
-8. Toggle **Enforce SSO** to require all team members to sign in via your identity provider. Non-SSO login will be disabled after a 24-hour grace period.
+8. Toggle **Enforce SSO** to require all team members to sign in via your identity provider. Non-SSO login will be disabled after [GRACE PERIOD].
 
 **Troubleshooting**
 
@@ -97,7 +97,7 @@ Enable SAML-based SSO so your team can sign in using your company's identity pro
 |-------|-------|-----|
 | "SAML response signature invalid" | Metadata XML is outdated or from the wrong app | Re-download the metadata XML from your IdP and re-upload it |
 | "User not found" | Email in SAML assertion doesn't match any account email | Verify the email attribute mapping in your IdP sends the user's primary email |
-| "Clock skew detected" | Server time difference between IdP and our service exceeds 5 minutes | Ensure your IdP server's NTP is synced. We allow a 5-minute skew tolerance |
+| "Clock skew detected" | Server time difference between IdP and our service exceeds [ALLOWED SKEW] | Ensure your IdP server's NTP is synced. We allow a [ALLOWED SKEW] skew tolerance |
 | "Audience mismatch" | Entity ID in your IdP doesn't match the value from step 3 | Copy the exact Entity ID from Settings → SSO — trailing slashes matter |
 | Test passes but users can't log in | Enforce SSO is off, or users are hitting the wrong login URL | Share the SSO login URL from Settings → SSO with your team, and enable Enforce SSO |
 
@@ -122,27 +122,27 @@ Answers to the most common questions about plans, invoices, payments, and refund
 
 **How do I upgrade or downgrade my plan?**
 
-Go to **Settings → Billing → Plan** and click **Change Plan**. Select your new plan and confirm. Upgrades take effect immediately and you'll be charged a prorated amount for the remainder of your billing cycle. Downgrades take effect at the start of your next billing cycle — you keep access to your current plan's features until then.
+Go to **[MENU PATH TO PLAN]** and click **[BUTTON NAME]**. Select your new plan and confirm. [UPGRADE RULE FROM YOUR POLICY]. [DOWNGRADE RULE FROM YOUR POLICY].
 
 **Where can I find my invoices?**
 
-All invoices are available at **Settings → Billing → Invoice History**. Click any invoice to view or download a PDF. Invoices are also emailed to the billing contact on file within 24 hours of each charge.
+All invoices are available at **[MENU PATH TO INVOICES]**. [HOW TO VIEW OR DOWNLOAD]. [WHEN INVOICES ARE EMAILED, IF AT ALL].
 
 **How do I update my payment method?**
 
-Go to **Settings → Billing → Payment Method** and click **Update**. We accept Visa, Mastercard, American Express, and ACH bank transfer (annual plans only). Your new payment method will be used for all future charges.
+Go to **[MENU PATH TO PAYMENT METHOD]** and click **[BUTTON NAME]**. We accept [PAYMENT METHODS YOU ACCEPT]. Your new payment method will be used for all future charges.
 
 **Can I get a refund?**
 
-We offer a full refund within 14 days of any charge if you're not satisfied. After 14 days, we issue prorated credit toward future billing. To request a refund, email billing@example.com with your account email and the invoice number. Refunds are processed within 5-7 business days.
+[REFUND POLICY FROM YOUR POLICY OWNER, INCLUDING THE REFUND WINDOW]. To request a refund, [HOW TO REQUEST ONE]. Refunds are processed within [PROCESSING TIME].
 
 **What happens if my payment fails?**
 
-We retry failed payments on days 1, 3, and 7. You'll receive an email notification after each failed attempt. If payment isn't resolved within 14 days, your account is downgraded to the free tier. Your data is preserved for 90 days — upgrade anytime to restore full access.
+[RETRY SCHEDULE FROM YOUR BILLING SYSTEM]. [WHAT HAPPENS IF PAYMENT IS NOT RESOLVED, AND HOW LONG DATA IS KEPT].
 
 **Do you offer annual billing discounts?**
 
-Yes. Annual billing saves 20% compared to monthly billing on all paid plans. Switch to annual billing anytime from **Settings → Billing → Plan** — select "Annual" and your savings are applied immediately with a prorated credit for any remaining monthly balance.
+[YES OR NO, AND THE DISCOUNT, FROM YOUR PRICING PAGE]. To switch, go to **[MENU PATH TO PLAN]** and [STEPS].
 
 **Related Articles**
 - Understanding Your Invoice Line Items

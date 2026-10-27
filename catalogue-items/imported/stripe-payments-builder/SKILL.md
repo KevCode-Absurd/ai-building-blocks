@@ -26,6 +26,8 @@ Ask once for anything missing. Never guess a price, a plan name or a Stripe ID.
 1. **How do you charge?** One-off, subscription, seat-based or usage-based.
 2. **Plans and prices.** Names, amounts, monthly or yearly, trial length. Use placeholder env vars such as `STRIPE_PRO_MONTHLY_PRICE_ID` until the user creates the prices in Stripe.
 3. **Stack.** Language, framework, and the database that stores users.
+
+If you have a billing plan from an earlier step, use it to answer questions 1 to 3 and ask only for what it leaves out.
 4. **Stripe account in test mode.** Work in test mode only. Never ask the user to paste a secret key into chat. Keys go in a `.env` file the AI does not read.
 
 Stop and say so if the user has no web backend. For a single payment with no app, suggest Stripe Payment Links instead.
@@ -124,7 +126,7 @@ export const PLANS = {
 ```typescript
 // app/api/billing/checkout/route.ts
 import { NextResponse } from "next/server"
-import { stripe } from "@/lib/stripe"
+import { stripe, PLANS } from "@/lib/stripe"
 import { getAuthUser } from "@/lib/auth"
 import { db } from "@/lib/db"
 
@@ -133,6 +135,12 @@ export async function POST(req: Request) {
   if (!user) return NextResponse.json({ error: "Unauthorized" }, { status: 401 })
 
   const { priceId, interval = "monthly" } = await req.json()
+
+  // Only accept price IDs that are in PLANS. Never trust a price from the browser.
+  const allowedPriceIds: string[] = Object.values(PLANS).flatMap((p) => [p.monthly, p.yearly])
+  if (!allowedPriceIds.includes(priceId)) {
+    return NextResponse.json({ error: "Unknown price" }, { status: 400 })
+  }
 
   // Get or create Stripe customer
   let stripeCustomerId = user.stripeCustomerId
@@ -165,7 +173,7 @@ export async function POST(req: Request) {
 }
 ```
 
-Check that `priceId` is one of the IDs in `PLANS` before you use it. Never take a price from the browser unchecked. The 14-day trial is an example; use the trial length the user gave you, or none.
+The route above rejects any `priceId` that is not in `PLANS`. Keep that check. Never take a price from the browser unchecked. The 14-day trial is an example; use the trial length the user gave you, or none.
 
 ---
 
@@ -390,10 +398,23 @@ async function handleInvoicePaymentSucceeded(invoice: Stripe.Invoice) {
 
 ## Usage-Based Billing
 
-> Outdated call: `createUsageRecord` is the older way to report usage. Newer Stripe API versions use Billing Meters instead (`stripe.billing.meterEvents.create`). Check the Stripe docs for your API version before you ship this code.
+> Current way: report usage with Billing Meters. Create a meter in your Stripe dashboard first, and use its event name below. The older `createUsageRecord` call is kept below as legacy for accounts still on an old API version.
 
 ```typescript
-// Report usage for metered subscriptions (older API: see the note above)
+// Report usage with a Billing Meter
+// [METER EVENT NAME] is the event name you set when you created the meter in Stripe.
+export async function reportMeterUsage(stripeCustomerId: string, value: number) {
+  await stripe.billing.meterEvents.create({
+    event_name: "[METER EVENT NAME]",
+    payload: { stripe_customer_id: stripeCustomerId, value: String(value) },
+  })
+}
+```
+
+### Legacy: usage records (older API versions only)
+
+```typescript
+// Report usage for metered subscriptions (older API, kept for old accounts)
 export async function reportUsage(subscriptionItemId: string, quantity: number) {
   await stripe.subscriptionItems.createUsageRecord(subscriptionItemId, {
     quantity,

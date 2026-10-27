@@ -8,16 +8,16 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
-    required: true
   - type: question
-    required: false
+    required: true
   - type: copy_draft
     required: false
 outputs:
   - type: plan
   - type: feedback_notes
   - type: document
+  - type: lesson_plan
+    required: true
 uses:
   - peer-feedback-session-planner
   - honest-draft-feedback-giver

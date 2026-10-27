@@ -9,12 +9,12 @@ subhead: One matching product photo for every row in your product spreadsheet, s
 explain: |
   One matching product photo for every row in your product spreadsheet, so a whole catalog looks like a single shoot. The hard part is keeping a big set consistent, so the style rules never change and only the product details do.
 
-  Claude splits each prompt into a fixed style block and a variable block for each item. It sets up a loop with parallel runs, retries and resume after a stop, and a price check before the run. The script does not stop on its own when spending reaches a cap, so you set a total you accept and watch it yourself. A contact sheet helps you pick the best images. Claude cannot draw. An image model API key and its cost are needed.
+  Claude splits each prompt into a fixed style block and a variable block for each item. It sets up a loop with parallel runs, retries and a way to rerun the failed products, and a price check before the run. The script does not stop on its own when spending reaches a cap, so you set a total you accept and watch it yourself. It does not build a contact sheet, so you look through the images yourself. Claude cannot draw. An image model API key and its cost are needed.
 when:
   - You have hundreds of products and need images in one style.
   - A run failed halfway and you want to resume it.
   - You want to see the image spend before starting.
-  - You need a contact sheet to choose from.
+  - You want a report of which products worked and which failed.
 not_for:
   - "You want mixed visual styles in one batch: run each style as its own batch, or make single photos one at a time."
   - "You have only one or two products: ask your image tool for a single photo instead of building a batch script."
@@ -29,15 +29,15 @@ you_get:
   - One image per product
   - Retry and resume handling
   - A price check before you run
-  - A contact sheet to pick from
+  - A report.csv marking each product ok or fail
 how_to_use:
   - Open your AI tool and paste in this skill. Use one that can run commands and read your files.
   - "Before you start: you need a dLazy account with credits. The seedream-5.0 model is the cheap default. The gpt-image-2 model costs about 6 times more and suits products where fine detail matters."
   - Give it your product CSV, your source photos and the style you want for the whole set.
   - Run one product first. Then run five more that cover dark, light and shiny items. Fix the style now, because changing it later means rerunning the whole batch.
-  - Do a dry run to see the price, then run the full batch. Check report.csv and rerun the failed products.
-  - Check a sample of the images before you publish them. The prompt templates in the skill are in Chinese.
-  - Next, use report.csv to rerun the failed products, and the contact sheet to pick the best image for each product. The skill's last step points to a separate check skill (detect-task) that is not in this folder, so look at a 10% sample by eye instead.
+  - Do a dry run to see the price. Write down the most you accept to spend, because the loop has no spending stop. Run the batch in chunks, such as 20 products at a time, and check your credit balance between chunks. Then check report.csv, which has one row per product marked ok or fail, and rerun the failed products.
+  - Check a sample of about 10% of the images by eye before you publish them. The prompt templates in the skill are in Chinese, so use this one: "Product photo for a catalogue. Image 1 is the product: [category, colour, material, key details]. Keep its colour, material and details exactly as in image 1. [Your fixed style block, the same for every product]. Realistic commercial product photography, no text, no watermark."
+  - Next, use report.csv to rerun the failed products, and look through the images to pick the best one for each product. The skill's last step pointed to a separate check skill (detect-task) that is not in this folder, so we replaced it with your own 10% check.
 output_sample:
   input:
     - Your product list as a CSV with a code, a photo path and a short description for each product

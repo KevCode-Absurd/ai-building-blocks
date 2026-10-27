@@ -35,7 +35,7 @@ not_for:
   - You want one live deal scored for risk. Use the Deal Strategist agent.
   - You want to plan your own next discovery call. Use the Discovery Coach agent.
   - You want a weekly list of which deals to act on today. Use the Weekly sales pipeline reviewer.
-  - You want a forecast and pipeline numbers checked. Use the Pipeline Analyst agent.
+  - You want a forecast and pipeline numbers checked. Use the Sales pipeline health and forecast agent.
   - You want to decide pay, promotion or firing. This is a coaching aid, so keep those choices with you and HR.
 you_give:
   - The rep's role and how long they have been selling

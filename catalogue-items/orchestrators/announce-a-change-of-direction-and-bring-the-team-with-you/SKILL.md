@@ -67,8 +67,8 @@ Four step files and the summary, in this shape:
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Nonprofit change rollout planner](https://useaiblocks.com/skills/nonprofit-change-rollout-planner). It takes the plan.
-- The [Internal change announcement writer](https://useaiblocks.com/skills/change-announcement). It takes the document.
-- The [Team culture memo writer](https://useaiblocks.com/skills/team-culture-memo-writer). It takes the draft.
+- The [Long-term partner screener](https://useaiblocks.com/skills/long-term-partner-screener). It takes the plan.
+- The [Sales pay plan checker](https://useaiblocks.com/skills/sales-pay-plan-checker). It takes the plan.
 - The [Staff announcement writer](https://useaiblocks.com/skills/staff-announcement-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

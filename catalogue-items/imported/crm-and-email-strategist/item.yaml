@@ -8,12 +8,15 @@ role: check
 job: ops
 level: advanced
 inputs:
-  - type: brief
+  - type: question
+    required: true
+  - type: email_flow
     required: false
 outputs:
   - type: audit_report
-    required: true
   - type: plan
+    required: false
+  - type: email_flow
     required: false
 uses: []
 origin: imported

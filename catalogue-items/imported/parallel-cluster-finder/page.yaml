@@ -9,7 +9,8 @@ subhead: A list of the computing clusters your MATLAB can use, with each profile
 explain: |
   A list of the computing clusters your MATLAB can use, with each profile checked and one set as the default. It answers the question of where you can run big jobs.
 
-  It lists saved cluster profiles, finds clusters on your network and cloud, and imports a profile file from an admin. Then it validates the profile to prove it connects, sets the default and removes profiles you no longer need. It covers local, job-scheduler and cloud cluster types. It does not submit jobs or open pools. You need MATLAB with Parallel Computing Toolbox. The files are shared under MathWorks' own licence (see LICENSE.md in the folder), which limits use to MathWorks products.
+  It lists saved cluster profiles, finds clusters on your network and cloud, and imports a profile file from an admin. Then it validates the profile to prove it connects, sets the default and removes profiles you no longer need. It covers local, job-scheduler and cloud cluster types. It does not submit jobs or open pools. You need MATLAB with Parallel Computing Toolbox. 
+  This is MathWorks' skill. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE.md file.
 when:
   - You do not know what parallel resources you have.
   - An admin sent you a profile file and you need to load it.
@@ -29,7 +30,8 @@ you_get:
   - Imported profile
   - Default cluster set
 how_to_use:
-  - Open MATLAB and make sure Parallel Computing Toolbox is installed. Use an AI that can run MATLAB code, or paste the code it gives you into MATLAB.
+  - Before any step, you need a MATLAB licence with Parallel Computing Toolbox (a paid add-on). Open MATLAB and check that it is installed. Use an AI that can run MATLAB code, or paste the code it gives you into MATLAB.
+  - Check your MATLAB release. Listing, importing and setting a default work from R2022b. Checking a profile in code needs R2025a, and deleting one in code needs R2026a. On older releases, use the Cluster Profile Manager in MATLAB for those two steps.
   - Paste the skill into your AI chat, or upload the skill folder if your AI accepts files.
   - Ask a plain question, such as "What parallel clusters can I use?" Add your admin's profile file if you have one.
   - Read the profile table. Unreachable profiles are marked, so you can tell them apart from missing ones.

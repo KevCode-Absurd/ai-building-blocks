@@ -11,6 +11,8 @@ This skill provides guidance for creating effective skills.
 
 Note: this copy was written for Codex. In Claude, ChatGPT or Gemini, read "Codex" as your AI. The `agents/openai.yaml` file and the helper scripts are only for tools that run code and use skill folders. In a plain chat, ask for the text of SKILL.md and any reference files instead.
 
+File names used as examples in this guide (such as `rotate_pdf.py`, `finance.md`, `mnda.md`, `logo.png` and `slides.pptx`) are illustrations only. They are not files you must supply or that exist in this copy.
+
 ## About Skills
 
 Skills are modular, self-contained folders that extend Codex's capabilities by providing

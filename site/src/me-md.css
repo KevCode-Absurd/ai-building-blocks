@@ -1,0 +1,61 @@
+/* /me-md guide: the same look as the API & MCP guide, inside the shared site shell and its theme. */
+.me-md-docs { padding-bottom: 40px; }
+.me-md-docs a { text-decoration: underline; text-underline-offset: 4px; }
+.me-md-docs a:hover { opacity: .8; }
+.me-md-docs .hero { display: block; min-height: 0; overflow: visible; text-align: left; padding: 72px 0 88px; max-width: 850px; }
+/* The hero keeps its text above the dithered band at its foot (.hero::after, 64px). */
+.me-md-docs .eyebrow { font: 12px/1.5 var(--mono); letter-spacing: .04em; color: var(--muted); margin: 0 0 20px; }
+.me-md-docs h1 { font: 650 clamp(36px, 6.1vw, 64px)/1.05 var(--display); letter-spacing: -.055em; max-width: 820px; margin: 0 0 23px; }
+.me-md-docs .lede { font: 400 19px/1.65 var(--sans); max-width: 720px; color: var(--muted); margin: 0; }
+.me-md-docs .hero-actions { display: flex; justify-content: flex-start; gap: 12px; flex-wrap: wrap; margin-top: 27px; }
+.me-md-docs .button { display: inline-flex; align-items: center; justify-content: center; text-decoration: none; padding: 10px 17px; border: 1px solid var(--text); border-radius: 5px; background: var(--text); color: var(--bg); font-size: 14px; font-weight: 600; cursor: pointer; }
+.me-md-docs .button.secondary { color: var(--text); background: transparent; }
+.me-md-docs .note { font-size: 13px; color: var(--muted); }
+.me-md-docs .hero .note { margin: 20px 0 0; }
+.me-md-docs .section { padding: 48px 0; border-top: 1px solid var(--line); scroll-margin-top: 80px; }
+.me-md-docs .section-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 12px; }
+.me-md-docs .section-head .num { font: 12px var(--mono); color: var(--muted); flex: 0 0 24px; }
+.me-md-docs h2 { font: 600 clamp(25px, 3vw, 34px)/1.15 var(--display); letter-spacing: -.035em; margin: 0; }
+.me-md-docs h3 { font-size: 18px; line-height: 1.3; letter-spacing: -.02em; margin: 0 0 12px; }
+.me-md-docs p { margin: 0 0 17px; }
+.me-md-docs .intro { color: var(--muted); max-width: 760px; margin-bottom: 25px; }
+.me-md-docs .subtle { color: var(--muted); font-size: 14px; }
+.me-md-docs .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.me-md-docs .cards-two { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 15px; }
+.me-md-docs .card { border: 1px solid var(--line); background: var(--panel); border-radius: 8px; padding: 23px; display: flex; flex-direction: column; min-width: 0; }
+.me-md-docs .card .tag { font: 11px/1.5 var(--mono); color: var(--muted); margin: 0 0 12px; }
+.me-md-docs .card p { font-size: 14px; color: var(--muted); margin: 0 0 16px; }
+.me-md-docs .card a { margin-top: auto; font-size: 14px; }
+.me-md-docs code { font: .85em var(--mono); overflow-wrap: anywhere; }
+.me-md-docs .prompt { border: 1px solid var(--line); background: var(--panel); border-radius: 6px; padding: 23px; min-width: 0; }
+.me-md-docs .prompt-title { font: 12px var(--mono); color: var(--muted); margin-bottom: 8px; }
+.me-md-docs .prompt pre { max-height: 300px; overflow: auto; background: var(--bg-2); border: 1px solid var(--line); border-radius: 5px; padding: 15px; font: 12px/1.7 var(--mono); white-space: pre-wrap; overflow-wrap: anywhere; margin: 12px 0 0; }
+.me-md-docs .copy { font-size: 13px; border: 1px solid var(--text); border-radius: 4px; padding: 8px 13px; background: var(--text); color: var(--bg); cursor: pointer; margin-top: 12px; font-weight: 600; }
+.me-md-docs .copy:disabled { opacity: .7; cursor: default; }
+.me-md-docs .small-link { margin: 12px 0 0; }
+.me-md-docs .subnote { padding: 17px 20px; border-left: 2px solid var(--text); background: var(--bg-2); font-size: 14px; margin-top: 20px; }
+.me-md-docs .subnote p:last-child { margin-bottom: 0; }
+.me-md-docs .text-button { border: 0; padding: 0; background: none; color: inherit; font: inherit; font-weight: 600; text-decoration: underline; text-underline-offset: 4px; cursor: pointer; }
+.me-md-docs .files { padding-left: 20px; margin: 0 0 20px; }
+.me-md-docs .files li { margin-bottom: 8px; }
+.me-md-docs .table-wrap { overflow-x: auto; }
+.me-md-docs table { border-collapse: collapse; width: 100%; font-size: 14px; text-align: left; }
+.me-md-docs th, .me-md-docs td { border-bottom: 1px solid var(--line); padding: 12px 12px 12px 0; vertical-align: top; overflow-wrap: anywhere; }
+.me-md-docs th { font-weight: 600; color: var(--muted); }
+.me-md-docs td:first-child { font-weight: 600; width: 20%; }
+.me-md-docs .status { min-height: 24px; font-size: 13px; color: var(--muted); margin-top: 13px; }
+@media (max-width: 760px) {
+  .me-md-docs .cards, .me-md-docs .cards-two { grid-template-columns: 1fr; }
+  .me-md-docs .card, .me-md-docs .prompt { padding: 19px; }
+  .me-md-docs .hero { padding: 49px 0 80px; }
+  .me-md-docs .section { padding: 35px 0; }
+  .me-md-docs .lede { font-size: 17px; }
+  .me-md-docs table, .me-md-docs tbody, .me-md-docs tr, .me-md-docs td { display: block; width: auto; }
+  .me-md-docs thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .me-md-docs tr { padding: 12px 0; border-bottom: 1px solid var(--line); }
+  .me-md-docs td { border: 0; padding: 2px 0; }
+  .me-md-docs td:first-child { width: auto; }
+}
+@media (max-width: 760px) {
+  .me-md-docs td[data-label]:not(:first-child)::before { content: attr(data-label) ": "; font-weight: 600; color: var(--muted); }
+}

@@ -10,7 +10,9 @@ level: expert
 inputs:
   - type: question
     required: true
-  - type: source_text
+  - type: financial_statements
+    required: false
+  - type: document
     required: false
 outputs:
   - type: spreadsheet

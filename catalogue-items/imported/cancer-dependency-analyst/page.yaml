@@ -9,7 +9,7 @@ subhead: Name a gene or cell line and, if you like, a cancer type to compare. It
 explain: |
   Name a gene or cell line and see which cancers need it to survive and which drugs hit them. The skill works from DepMap, the public map of gene knockout screens in cancer cells, and gives you ranked lists you can take to the lab as ideas to test.
 
-  It finds the latest data release first and checks which files are really available, since some links are blank. Then it ranks dependencies, compares groups defined before you look, checks genes that rise and fall together, and links them to drug response data. It is careful to say that results suggest targets and do not prove a drug works. You need data downloads and a way to run code.
+  It finds the latest data release first and checks which files are really available, since some links are blank. Then it ranks dependencies, compares groups defined before you look, checks genes that rise and fall together, and links them to drug response data. It is careful to say that results suggest targets and do not prove a drug works. You need data downloads and a way to run code. Licence: this copy is MIT, as in the LICENSE.md in this folder. The skill file header says CC BY 4.0, so keep the credit either way. DepMap data has its own terms, set by DepMap for each release. Read them before you reuse or share any results.
 when:
   - You study a gene and want to know which cancer types rely on it.
   - You need to pick cell lines for an experiment and want the ones most sensitive to a knockout.
@@ -32,7 +32,10 @@ you_get:
 how_to_use:
   - Open an AI that can run Python 3.10 or newer with numpy, pandas and scipy, and reach the internet. Paste in this skill. The files it will fetch are the DepMap release's CRISPRGeneEffect.csv, Model.csv and, for drug links, the PRISM files.
   - Tell it your gene or cell line. Add a cancer type to compare, if you have one.
-  - Let it find the latest DepMap release and list the files it needs.
+  - Let it find the latest DepMap release and list the files it needs. It saves a release record (file names, checksums, date).
+  - Ask for the gene dependency profile of your target. It gives a table of scores for each cancer model.
+  - Ask for the group comparison or biomarker scan if you gave a cancer type. Each table has group size, effect size, p-value and q-value columns.
+  - Ask for co-essential genes and drug links. Each table lists sample counts, r, p-value and q-value.
   - DepMap may show a browser check when you download files. Complete it yourself, and read DepMap's terms before you automate any download.
   - Read the group sizes and q-values before the ranked lists. Treat every result as an idea to test in the lab.
   - Next, pick cell lines for a knockout experiment from the ranked list, or take the top co-essential genes into a lab validation plan.

@@ -20,8 +20,8 @@ best_for:
   - Upscaling and cleaning up product images.
   - Teams who want image and video models under one plan.
 not_for:
-  - A fixed cost per image, since each model uses credits at a different rate.
-  - Long videos with one continuous take.
+  - "A fixed cost per image, since each model uses credits at a different rate. Compare Canva or Adobe Firefly, and check their plan limits."
+  - "Long videos with one continuous take. Compare Higgsfield."
 pricing:
   model: subscription
   from: Check the maker's site
@@ -36,12 +36,13 @@ blocks:
 alternatives: [krea, higgsfield, canva, adobe-firefly]
 last_checked: 2026-10-21
 first_result:
+  - "Note: the sign-in steps below are not verified, because the pricing page redirects to Magnific. If the steps differ, follow the current login page."
   - "Go to freepik.com and sign in. Freepik now runs as Magnific, so you may see that name. No free plan was shown."
   - "Check your plan and credits first. Credits last one year, and each model uses them at a different rate."
   - "Pick one job: find a stock image, make an image from a description, or enlarge a picture you already have."
   - "For an AI image, write the subject, the setting and the style. Try two models on the same description."
   - "Check hands, text and logos. Check what the licence allows before you use a stock or AI image in an ad."
-  - "You end with images or video clips to download."
+  - "You end with image files or short video clips to download. File types, video length and resolution limits were not verified, so check them on your plan before you plan a project around them."
   - "Next: check an enlarged picture with the Image upscale checker."
 needs:
   - "A Freepik account and a plan with credits."

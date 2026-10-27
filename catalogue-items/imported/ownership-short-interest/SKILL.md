@@ -55,6 +55,8 @@ The skill resolves `FINTEL_API_KEY` in this order:
 !`if [ -n "$FINTEL_API_KEY" ]; then echo "KEY_FROM_ENV_VAR"; elif [ -f .env ] && grep -qE "^FINTEL_API_KEY=" .env; then echo "KEY_FROM_LOCAL_DOTENV:$(pwd)/.env"; else GIT_COMMON=$(git rev-parse --path-format=absolute --git-common-dir 2>/dev/null); if [ -n "$GIT_COMMON" ]; then ROOT=$(dirname "$GIT_COMMON"); if [ -f "$ROOT/.env" ] && grep -qE "^FINTEL_API_KEY=" "$ROOT/.env"; then echo "KEY_FROM_ROOT_DOTENV:$ROOT/.env"; else echo "KEY_NOT_SET"; fi; else echo "KEY_NOT_SET"; fi; fi`
 ```
 
+This probe needs a bash or zsh shell. On Windows, run it in Git Bash or WSL, or set `FINTEL_API_KEY` as a Windows environment variable first and tell the user so; if the probe cannot run, ask the user whether the key is set.
+
 Then act on the result:
 
 - `KEY_FROM_ENV_VAR` — use `$FINTEL_API_KEY` directly in curl calls.

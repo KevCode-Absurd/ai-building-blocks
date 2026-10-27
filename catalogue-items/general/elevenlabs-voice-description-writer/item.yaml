@@ -9,8 +9,10 @@ level: intermediate
 inputs:
   - type: brief
     required: true
+  - type: audio
+    required: false
 outputs:
-  - type: document
+  - type: prompt
     required: true
 uses: []
 package_files: all

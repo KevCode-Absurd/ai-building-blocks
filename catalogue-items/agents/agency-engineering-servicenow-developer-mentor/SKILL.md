@@ -13,9 +13,9 @@ Read [the original role profile](references/source-agent.md) before you start. I
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Bug root cause finder](https://useaiblocks.com/skills/bug-root-cause-finder). It takes the code change and audit report.
 - The [GitHub check failure fixer](https://useaiblocks.com/skills/ci-failure-fixer). It takes the code change.
-- The [Bug root cause finder](https://useaiblocks.com/skills/bug-root-cause-finder). It takes the code change.
-- The [Persistent bug debugger](https://useaiblocks.com/skills/fix-loop-breaker). It takes the code change.
+- The [Code change test coverage reviewer](https://useaiblocks.com/skills/test-gap-finder). It takes the code change.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

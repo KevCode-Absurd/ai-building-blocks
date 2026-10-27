@@ -55,10 +55,9 @@ The period and aim. Three to five objectives, each with key results that carry a
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Quarterly business plan reviewer](https://useaiblocks.com/skills/quarterly-strategy-reviewer). It takes the plan.
-- The [Values-based weekly planner](https://useaiblocks.com/skills/values-to-week-planner). It takes the plan.
 - The [Backwards planning checker](https://useaiblocks.com/skills/work-backwards-plan-checker). It takes the plan.
+- The [Values-based weekly planner](https://useaiblocks.com/skills/values-to-week-planner). It takes the plan.
 - **Lead the team** with the [Employee performance review writer](https://useaiblocks.com/skills/quarterly-performance-review-keeper). It takes the plan.
-- **Lead the team** with the [Recognition plan designer](https://useaiblocks.com/skills/recognition-plan-designer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -44,7 +44,7 @@ output_sample:
     - Your current battle cards and feature grid (optional)
     - Call notes or lost-deal emails that mention a rival (optional)
   prerequisites:
-    - Your brand brain from the Brand profile builder, or your own product facts
+    - Your own product facts. A brand brain from the Brand profile builder is optional and can hold them
     - A CRM export of closed deals, or a spreadsheet with the same columns
     - An AI that can read files and browse the web, so it can check rival facts
   output:

@@ -11,7 +11,8 @@ inputs:
   - type: codebase
     required: true
 outputs:
-  - type: code_change
+  - type: audit_report
+  - type: plan
 uses: []
 origin: imported
 source:

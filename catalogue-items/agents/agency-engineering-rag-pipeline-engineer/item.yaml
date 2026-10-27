@@ -13,6 +13,8 @@ inputs:
     required: true
   - type: source_text
     required: false
+  - type: plan
+    required: false
 outputs:
   - type: plan
 uses: []

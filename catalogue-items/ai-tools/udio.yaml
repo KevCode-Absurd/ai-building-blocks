@@ -8,7 +8,7 @@ categories: [voice]
 what_it_does:
   - "Makes a song with vocals from a text description."
   - "Writes lyrics, or uses the lyrics you paste in."
-  - "Makes several versions so you can pick the best."
+  - "Makes several versions so you can pick the best. We could not confirm how many versions you get per run, or how long each clip is."
   - "Lets you extend a track to make it longer."
 benefits:
   - Get a draft song for an idea without hiring a composer.
@@ -33,13 +33,14 @@ alternatives: [suno, elevenlabs]
 last_checked: 2026-10-26
 checked: 26 Oct 2026
 first_result:
-  - "Open udio.com and sign in. We could not read the sign-in steps on 26 Oct 2026, so follow what the site shows you."
+  - "Open udio.com and sign in. We could not check the sign-in flow on 26 Oct 2026, so follow the prompts on screen. Look for what the site says you get after sign-in, such as free credits."
   - "Before you make anything, find Udio's terms of service and read what they say about commercial use and downloads."
   - "Write a style description in a sentence or two, such as the genre, mood and tempo. Leave the lyrics blank to have Udio write them, or paste your own."
   - "Generate, then listen to every version. Pick the one closest to your idea."
   - "Extend that version if you want a longer track. Treat the result as a draft, not a finished song."
   - "You end with several song versions to pick from. Next: compare Suno, or plan a jingle with the Jingle video ad script writer."
 needs:
+  - "A read of Udio's terms for commercial use and downloads, before you pay or publish a song."
   - "A free Udio account. We could not confirm sign-in options."
   - "A one or two line description of the style and mood."
   - "Your own lyrics, if you do not want Udio to write them (optional)."

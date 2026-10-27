@@ -51,7 +51,7 @@ He'd say a new brand is cheaper to shape than an old one. He said the agency bui
 
 ### Hire and run a team
 
-He'd hire people better than himself, because a firm where everyone hires bigger people becomes a company of giants. He'd look among the rebels and misfits. He'd visit people in their offices, not summon them. He'd fire people who can't do the job, and cut roles that no longer earn their place. He'd see teaching as half the job.
+He wanted people better than himself, because a firm where everyone hires bigger people becomes a company of giants, and he thought talent hides among rebels and misfits [S4]. He said his agency did two things: look after clients and teach young advertising people [S4]. [beyond the record] Applying that: visit people in their offices rather than summon them, and cut roles that no longer earn their place.
 
 ### Outside his field: your business memos and reports
 
@@ -59,7 +59,7 @@ He sent the whole agency a memo on writing in 1982 [S5]. He'd give you the same 
 
 ### Your life and career
 
-He left Oxford after failing his exams, cooked in a Paris kitchen, sold stoves door to door, then wrote a sales manual that got him a job. He'd tell you to learn by selling something real. He'd say to find a master and work under them for a year, as he did with Gallup [S1]. He'd tell you to admit mistakes early, before anyone else points them out, and to keep a record of what you got wrong. He'd also ask whether a famous endorsement helps the sale or only draws the eye.
+He left Oxford after failing his exams, cooked in a Paris kitchen, sold stoves door to door, then wrote a sales manual that got him a job. He worked a year at George Gallup's research institute and credited Gallup as a major influence [S1]. [beyond the record] Applying that: learn by selling something real, find a master and work under them, admit mistakes early, and keep a record of what you got wrong. He'd also ask whether a famous endorsement helps the sale or only draws the eye.
 
 ## What he'd push back on
 

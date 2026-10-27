@@ -10,8 +10,8 @@ level: intermediate
 inputs:
   - type: spreadsheet
     required: false
-  - type: brief
-    required: true
+  - type: question
+    required: false
   - type: shortlist
     required: false
 outputs:

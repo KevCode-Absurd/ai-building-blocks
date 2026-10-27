@@ -33,8 +33,9 @@ you_get:
   - Adjusting journal entries
 how_to_use:
   - Save your purchases and counts as a CSV or spreadsheet with named columns (item, date, quantity, unit cost, freight, duty, count quantity and selling price).
-  - Open Claude, ChatGPT or Gemini. Pick one that can run code, so the maths is checked by script.
-  - Paste the skill text into the chat, then add your purchase records, opening stock and counts. Ask the AI to run calculate.py on them.
+  - Open Claude, ChatGPT or Gemini. Pick one that can run code, so the maths is checked by script. Running code may need a paid plan, so check yours first.
+  - Upload the whole skill folder, including scripts/calculate.py. If you can only paste text, paste the skill text and the script too, or ask the AI to do the sums step by step and show its working.
+  - Add your purchase records, opening stock and counts. Ask the AI to run calculate.py on them.
   - Say which cost method you use, FIFO or weighted average. If you are unsure, ask your AI to compare both.
   - Add selling prices and costs to sell if you have them, so it can test for write-downs.
   - Check the valuation totals and the write-down flags against your own records.
@@ -46,7 +47,8 @@ output_sample:
     - Your cost method, FIFO or weighted average (optional)
     - Selling prices and costs to sell (optional)
   prerequisites:
-    - An AI that can run code, so the maths is checked by script
+    - An AI that can run code, so the maths is checked by script. This can need a paid plan on Claude, ChatGPT or Gemini.
+    - The skill folder with scripts/calculate.py, uploaded or pasted
   output:
     - name: Method & Inputs
       contains: The cost method, how overhead is added to stock, and the normal capacity used.

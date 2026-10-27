@@ -11,7 +11,9 @@ Plan a mobile app that fits its team, its users and its phones. Built on the Mob
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Expo React Native data fetching coder](https://useaiblocks.com/skills/mobile-data-fetching-coder).
+- The [Expo React Native data fetching coder](https://useaiblocks.com/skills/mobile-data-fetching-coder). It takes the plan.
+- The [LangSmith AI app monitor](https://useaiblocks.com/skills/langsmith-ai-app-monitor). It takes the plan.
+- The [AI coding task brief writer](https://useaiblocks.com/skills/coding-agent-handoff-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -23,10 +25,13 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+- **Codebase** (yours): a project's code, in a folder or repo the AI can open.
+- **Design file** (yours): a design in a design tool, such as a Figma file, with its parts and styles.
+- **Code change** (yours): a change to the code, with what it fixes and how it was checked.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, source text, codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -35,11 +40,14 @@ How to start:
 
 ## What you need
 
+These are the inputs that count. If the generic "Before you start" list above asks for something else, such as a question or source text, ignore that part.
+
 - What the app does and who uses it
 - The features needed, such as login, camera, location, payments, push alerts or offline use
 - The team's skills and budget
 - The oldest iOS and Android versions to support (optional)
 - The backend or API, and design files (optional)
+- The app's code, or a code change from an earlier step (optional). Use it to see how the app works today.
 - For a slow or crashing app: where it happens, which phones, and any crash or profiler output (optional)
 
 Ask once for anything missing, in your first reply. If it is still missing, write `MISSING: <what>` and go on with labelled assumptions. Never invent users, devices, measurements or store results.
@@ -68,7 +76,9 @@ Use these headings, in this order:
 5. Performance targets (measure, target to verify, how to measure)
 6. Platform integrations (login, camera and media, location, push, analytics, crash reports)
 7. Device test plan
-8. Open risks and missing facts (`MISSING:` items and checks not run)
+8. Open risks and missing facts (`MISSING:` items and checks not run). This is also your CHECKS MISSED list: write "none" if every check ran.
+
+Next: once the app is built, take it to the [Mobile Release Engineer agent](https://useaiblocks.com/skills/agency-engineering-mobile-release-engineer) for store launch.
 
 ## Rules
 

@@ -48,9 +48,9 @@ What you told it, tagged by source. Each item marked trainable or specific. The 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Root cause finder](https://useaiblocks.com/skills/root-cause-finder). It takes the plan.
-- The [Personal mission statement writer](https://useaiblocks.com/skills/personal-mission-statement). It takes the plan.
-- The [Job exit plan writer](https://useaiblocks.com/skills/job-exit-plan-writer). It takes the plan.
+- The [Ruin risk stress tester](https://useaiblocks.com/skills/ruin-risk-stress-tester). It takes the plan.
+- The [Plan objection writer](https://useaiblocks.com/skills/case-against-writer). It takes the plan.
+- The [Decision checklist runner](https://useaiblocks.com/skills/decision-checklist-runner). It takes the plan.
 - **Plan your strategy** with the [Hourly work to product planner](https://useaiblocks.com/skills/hours-to-assets-planner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

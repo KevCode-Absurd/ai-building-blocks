@@ -1,7 +1,7 @@
 ---
 name: shopify-admin-discount-hygiene-cleanup
 role: store-management
-description: "Finds expired, zero-usage, or duplicate discount codes and optionally deactivates or deletes them."
+description: "Finds expired and zero-usage discount codes and optionally deletes them after you approve the list."
 toolkit: shopify-admin, shopify-admin-execution
 api_version: "2025-01"
 graphql_operations:
@@ -12,7 +12,7 @@ compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ---
 
 ## Purpose
-Audits the discount catalog for expired codes, codes with zero redemptions, and duplicate code prefixes. Discount sprawl accumulates over months of campaigns and makes the admin difficult to navigate. Optionally deletes flagged codes. Replaces manual discount cleanup and builds on the `discount-ab-analysis` skill with a write step.
+Audits the discount catalog for expired codes and codes with zero redemptions. It does not flag duplicate codes or code prefixes. Discount sprawl accumulates over months of campaigns and makes the admin difficult to navigate. Optionally deletes flagged codes. Replaces manual discount cleanup and builds on the `discount-ab-analysis` skill with a write step.
 
 ## Prerequisites
 - Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_discounts,write_discounts`
@@ -39,9 +39,9 @@ Audits the discount catalog for expired codes, codes with zero redemptions, and 
    **Inputs:** `first: 250`, select `discount { ... on DiscountCodeBasic { codes, usageLimit, asyncUsageCount, endsAt, status } }`, pagination cursor
    **Expected output:** All discount codes with usage and expiry data; paginate until `hasNextPage: false`
 
-2. Flag discounts matching: `flag_expired` (status = EXPIRED) and/or `flag_zero_usage` (asyncUsageCount == 0 AND created > `zero_usage_min_age_days` ago)
+2. Flag discounts matching: `flag_expired` (status = EXPIRED, using `status` and `endsAt`) and/or `flag_zero_usage` (`asyncUsageCount` == 0 AND `createdAt` is more than `zero_usage_min_age_days` days ago). Write one CSV row per flagged code. Fill `flag_reason` with `expired` (and the `endsAt` date) or `zero usage for N days` (with the `createdAt` date). A code that matches both gets both reasons. Fill `action` with `flagged only`, `deleted` or `skipped`.
 
-2b. **STOP AND CONFIRM.** Show the flagged list (title, status, usage count, end date) and the CSV. Do not call `discountCodeDelete` until the person says yes to this exact list in this chat. If `dry_run` is true, stop here. Delete only the codes the person approved. Never delete a code that is not on the approved list.
+2b. **STOP AND CONFIRM.** Show the flagged list (title, status, usage count, end date) and the CSV. Ask the person to confirm, in this chat, that none of the flagged codes is used in an email, SMS or ad campaign that has not gone out yet. This confirmation is required before any delete. Do not call `discountCodeDelete` until the person says yes to this exact list and to the campaign check in this chat. If `dry_run` is true, stop here. Delete only the codes the person approved. Never delete a code that is not on the approved list.
 
 3. **OPERATION:** `discountCodeDelete` — mutation
    **Inputs:** `id: <discount_node_id>` — the `id` of the discount node returned by `discountNodes` (the `gid://shopify/DiscountCodeNode/...` value in the `discount_id` column of the CSV). Do not pass a code string. Check that each id matches a row the person approved.

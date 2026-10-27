@@ -5,11 +5,13 @@ name: LinkedIn comment writer
 summary: Paste a LinkedIn post and get a short comment that adds something new, in your voice. Use it to write LinkedIn comments that get read.
 job: grow-social
 headline: LinkedIn comment writer
-subhead: Paste a post. Get a comment that adds something new instead of agreeing, in your voice. Bring the post text. Use the result to plan your next step.
+subhead: Paste a post. You get a comment that adds something new instead of agreeing, in your voice, or a plain "skip this one" if you have nothing to add.
 explain: |
   A short LinkedIn comment that adds something the post did not have, written in your voice. It replaces the "Great post!" that nobody reads.
 
   First it helps you decide whether to comment at all. Then it finds the gap in the post: what is missing, assumed or too general. Next it picks one of five shapes: a counterexample, an extension, a specific case, an honest disagreement about the idea, or a real question. It keeps the comment short and standalone, and removes any pitch. The same method works when you reply on someone else's thread. It never posts for you.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (prateeks367) says MIT. Credit goes to prateeks367 and sickn33.
 when:
   - You want to get noticed by people you admire without sounding fake.
   - Your comments get no replies.
@@ -36,7 +38,7 @@ how_to_use:
   - Read the gap it found. If it says skip, skip the post.
   - Check the comment is short, stands alone and has no pitch. Then post it yourself, as the skill never posts for you.
   - After you post, check for replies the next day and answer them. If the gap you found is a point you can make well, keep it as an idea for your own post.
-  - The skill also mentions an optional VoiceMoat connector. It needs a paid Pro or Enterprise plan and a sign-in. The skill works fully without it.
+  - The skill also mentions an optional VoiceMoat connector. It needs a paid Pro or Enterprise plan and a sign-in, and it sends post text to voicemoat.com. The skill works fully without it, needs no account and makes no network calls on its own.
 output_sample:
   input:
     - The text of the LinkedIn post

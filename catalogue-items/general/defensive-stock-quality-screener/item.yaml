@@ -7,7 +7,8 @@ role: check
 job: analysis
 level: advanced
 inputs:
-  - {type: source_text, required: true}
+  - {type: financial_statements, required: true}
+  - {type: spreadsheet, required: false}
 outputs:
   - {type: audit_report}
 origin: rebuilt

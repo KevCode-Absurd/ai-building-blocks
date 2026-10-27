@@ -44,14 +44,14 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 Where the run stops: step 1 needs only the company. After step 1 it always pauses until the release and the transcript are pasted. Step 2 cannot run without the transcript, and step 3 cannot run without the release. If either is missing when the person comes back, stop at that step and say so. Do not carry on with `MISSING:` and write a tone read or a recap from memory.
 
 ## Steps
-1. **Write the preview.** Use the skill `earnings-preview-writer`. It reads the company and what the person thinks matters. It returns the report date, what analysts expect, the company's record of beats and misses, and what to watch in the print, with the numbers to watch and what would count as a surprise. It can pull price and estimate data from Yahoo Finance, a free public site, but only when your AI can run code and reach the web. That data may be incomplete or out of date, so name the date it was read. If your AI cannot do that, it uses only what the person pasted and marks the rest `MISSING:`. Any figure it could not check is marked `MISSING:`. Save it as `outputs/step-01-earnings-preview-writer.md`.
+1. **Write the preview.** Use the skill `earnings-preview-writer`. It reads the company and what the person thinks matters. It returns the report date, what analysts expect, the company's record of beats and misses, and what to watch in the print, with the numbers to watch and what would count as a surprise. The default is that the person pastes the expected figures and the report date from a source they trust. As an optional extra it can read price and estimate data from Yahoo Finance, a free public site, but only when your AI can run code and reach the web. This is automated web retrieval: the site may block it or change without notice, and its terms may limit automated use, so use it only if the person agrees. That data may be incomplete or out of date, so name the date it was read. If it fails or the person declines, use only what they pasted and mark the rest `MISSING:`. Any figure it could not check is marked `MISSING:`. Save it as `outputs/step-01-earnings-preview-writer.md`.
 
 Pause here: Wait for the release and the call. Paste the release and the transcript.
 
 2. **Read the call's tone.** Use the skill `earnings-call-tone-reader`. It reads the transcript, and last quarter's transcript if there is one. It returns where management was confident, where they hedged, which questions they dodged and how the tone moved from last quarter, with a quote for each claim. Without last quarter's transcript it reports this call's tone as a level only. Save it as `outputs/step-02-earnings-call-tone-reader.md`.
 3. **Write the recap.** Use the skill `earnings-recap-writer`. It reads the release, `outputs/step-02-earnings-call-tone-reader.md` and `outputs/step-01-earnings-preview-writer.md`. It returns the quarter against the preview: what beat, what missed and what surprised, in EPS, revenue and margins. Every number names its source, the release first. Save it as `outputs/step-03-earnings-recap-writer.md`.
 4. **Write the update.** Use the skill `earnings-update-report-writer`. It reads `outputs/step-03-earnings-recap-writer.md` and the person's past notes. It returns the written update: what changed in the picture, what did not and what to watch next quarter. This skill is written for Indian markets by default, so name the market and fiscal calendar to use if the company is listed elsewhere. It gives no advice to buy or sell. Save it as `outputs/step-04-earnings-update-report-writer.md`.
-5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then a `CHECKS MISSED` list (or "none"). State that the update is not investment advice.
 
 ## What you hand back
 Four step files and the summary. The second file holds the tone read, and the last holds the written update.
@@ -71,6 +71,11 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Test the idea with real people** with the [Seven-question startup scorer](https://useaiblocks.com/skills/seven-question-startup-scorer). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
+
+## After this (for this job)
+Use these first. Suggest one next step as a short question:
+- Save the numbers to watch from step 1 and the surprises from step 3 in your notes on this company. Bring them back for next quarter's preview.
+- Run the same steps for the next company you follow.
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.

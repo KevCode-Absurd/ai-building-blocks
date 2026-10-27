@@ -17,7 +17,7 @@ when:
   - You need a severity-sorted list to hand to a developer.
 not_for:
   - "You need SOC 2, PCI-DSS, HIPAA or GDPR sign-off: hire a qualified auditor, because this scan is not a certification."
-  - "You want to test a live running app from the outside: use a penetration tester, because this does not run dynamic (DAST) tests."
+  - "You want to test a live running app from the outside: use the live app security tester, because this does not run dynamic (DAST) tests."
   - "You have no project files to share, or your AI cannot run Python: ask a developer to run the three scans for you."
 you_give:
   - Your project folder
@@ -32,12 +32,15 @@ you_get:
   - JSON output for builds
   - "A pattern-based result: scans can miss flaws or flag things that are fine, so a developer must review each finding"
 how_to_use:
-  - Use an AI that can run code and read files, such as Claude with code tools. Check that Python is installed.
+  - Use an AI that can run code and read files, such as Claude with code tools. Check that Python is installed. All three scans run on your computer and need no internet, no paid service and no API key.
+  - The package scan checks your packages against a small built-in list of known flaws. It does not look up a live vulnerability database. A clean result does not mean your packages are safe, so also run your package manager's audit command.
   - Add the skill to your AI, or paste its text into the chat.
   - Give your AI your project folder. Say which framework to check against and the lowest severity to show (both optional).
   - Ask it to run the code scan, the package scan and the compliance check in that order.
   - Read the results from the top. Fix critical findings first, then rerun the scans.
   - Save the JSON files if you want to use them in your build pipeline.
+  - The skill file also has background notes on secret scanning tools, supply-chain checks and an OWASP quick check. They are optional. The three scans are the core of this skill.
+  - The secret scanner gitleaks, which the skill suggests for CI, can need a paid licence key (GITLEAKS_LICENSE) when used in GitHub Actions for an organisation. Check the terms of each tool before you pick one.
 output_sample:
   input:
     - Your project folder
@@ -59,3 +62,4 @@ output_sample:
       contains: The package scan results in JSON, ready for a build pipeline.
     - name: compliance.json
       contains: The compliance check results in JSON, ready for a build pipeline.
+next: [live-app-security-tester, dependency-risk-auditor]

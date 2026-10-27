@@ -24,6 +24,8 @@ Owners describe pulling numbers from three dashboards and trying to find the sto
 
 Dispatch all connector calls in a single batch. See `reference/data_sources.md` for the metric-to-tool mapping. Serial pulls turn this into a wait nobody sits through twice.
 
+*Cost and sign-in:* connecting a tool means signing in to that account through its connector. Some connectors need a paid plan on that tool, or a paid connector service, so tell the user before they connect. Exports from the same tools need no sign-in.
+
 - **HubSpot** — deals by stage, new contacts, lead source, win rate, cycle time, stalled deals
 - **PayPal, Stripe, Square** — revenue trend, transaction counts, refunds
 - **Shopify** — orders, SKU-level revenue, repeat purchase rate
@@ -83,7 +85,7 @@ Use the exact structure in `reference/output_template.md`. Include only sections
 
 Writing rules:
 
-- Numbers lead, words follow. Not "paid social performed well" — "paid social drove 41 leads at USD 18 each, down from USD 31 last month."
+- Numbers lead, words follow. Not "paid social performed well" — "paid social drove [N] leads at [AMOUNT] each, down from [AMOUNT] last month" (use the user's real figures, never these placeholders).
 - Every number carries its comparison. A figure with no baseline is a missed insight.
 - Name the specific campaign, product, channel, or customer. "Some campaigns underperformed" is unusable.
 - No marketing vocabulary the owner doesn't use. Not "top of funnel velocity" — "how many new leads came in and how fast."

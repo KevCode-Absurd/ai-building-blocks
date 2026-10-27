@@ -18,9 +18,10 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **What you need** (use your own material or the linked skill):
 - **Brand brain** (its buyers part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
+- **Product photos** (yours): clear photos of the real product, from more than one angle. Attach them.
 
 **Makes it better (optional):**
-- **Product photos** (yours): clear photos of the real product, from more than one angle. Attach them.
+- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -71,7 +72,7 @@ If an image tool is connected, offer to make the picture with it, and ask before
 | Why now? | The offer | Price, bundle, gift, trial or guarantee as the main thing | A live offer with its terms and dates |
 | Why now? | The occasion | A dated reason: a launch, season, limited run or restock | A real date |
 
-Dress: **Camera**, **Designed** or **Lo-fi** (phone-made, always your own design, never a real app's screen). Every ad here is aimed at **New**. Code each ad `type · dress · New`.
+In this skill a "code" is the short label of an ad (type, dress, audience), a "dress" is its look, and a "hunch" is an insight with too little support to use in copy. Dress: **Camera**, **Designed** or **Lo-fi** (phone-made, always your own design, never a real app's screen). Every ad here is aimed at **New**. Code each ad `type · dress · New`.
 
 ## Steps
 1. **Build a buyer sheet** for each buyer with a different core problem. Fields: what they want, what they tried and why it let them down, the moment that makes them look today, their phrases word for word, their doubts. An insight is **used** when 3 or more separate buyers say it, or 1 buyer says it and an ad on that argument beat the account's cost per purchase. Anything less goes on a hunch list and stays out of copy. One buyer is an anecdote and two can be a coincidence. Three is the smallest repeat worth building on.
@@ -96,6 +97,7 @@ Dress: **Camera**, **Designed** or **Lo-fi** (phone-made, always your own design
 - Every view of it comes from a real photo of that view. Drawn versions keep the real shape, colours and big lettering. Leave fine print off rather than make it up.
 - Leave the product out only for a problem shot or a shot of the thing it replaces, and then the words must name it and give one fact that's only true of it.
 - Picture the problem, what causes it, or the product doing its job. Never a result the facts don't state: no changed body or face, no week-by-week change, no drawn number without a source. Fear is never bigger than the real stake.
+- Health, body, digestion, weight, sleep or money claims (for example on a supplement) may only use wording already approved in the brand file, with its conditions. If none is approved, write `MISSING: approved claim` and leave the line out. The brand owner signs off any such line before the ad runs, and the platform's ad policy applies.
 - Quotes are word for word, with the source and no generated face beside them. The usual way in a comparison is unbranded.
 
 ## What you hand back
@@ -104,11 +106,11 @@ In this order: SOURCES, BUYER SHEET, REASONS TO BUY with the cuts, STOP 1 with t
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image ads and image prompt.
 - The [Image ad batch brief writer](https://useaiblocks.com/skills/weekly-image-ad-batch-maker).
-- The [Product image ad prompt writer](https://useaiblocks.com/prompts/accurate-product-image-ad-maker).
 - The [Image ad visual brief writer](https://useaiblocks.com/prompts/image-ad-settings-picker). It takes the image ads.
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image ads.
 - **Check it before it goes live** with the [Ad layout readability checker](https://useaiblocks.com/skills/ad-reading-flow-checker). It takes the image ads.
+- **Check it before it goes live** with the [Ad awareness stage reviewer](https://useaiblocks.com/skills/ad-awareness-stage-checker). It takes the image ads.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

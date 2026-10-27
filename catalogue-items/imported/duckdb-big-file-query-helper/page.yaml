@@ -10,6 +10,8 @@ explain: |
   Large CSV, Parquet and JSON files queried in place from MATLAB, with no giant loading step. You get SQL answers fast, and only the reduced result lands in memory.
 
   The skill uses DuckDB through the Database Toolbox. On load it audits your code for the slow habit of reading a file into MATLAB, writing it to a database, then querying it. It sends you straight to reading the file with SQL instead. It covers in-memory and file databases, filtering, grouping, deduplicating, cleaning and sampling at the source, and saving to a .duckdb file for repeat use. It also says when not to use it: small files, or number-heavy work better done in MATLAB afterwards.
+
+  Licence: BSD 2-Clause plus a MathWorks reuse term, as the LICENSE file says. You may use this copy only together with MathWorks products such as MATLAB. MATLAB and Database Toolbox are paid MathWorks products, so you need your own licence for both.
 when:
   - Your file is too big to load with MATLAB's readtable, which reads a whole file into memory.
   - Your code loads a CSV only to write it into a database.
@@ -19,6 +21,7 @@ not_for:
   - "Your file fits in memory: use MATLAB's own readtable or readmatrix."
   - "You have many files in a folder: start with MATLAB's datastore or tall arrays, and use DuckDB only as a fallback."
   - "You need number-heavy maths on the data: reduce it here first, then do the maths in MATLAB."
+  - "You do not use MATLAB: the licence allows use only with MathWorks products. Ask a general AI for DuckDB SQL in Python instead."
 you_give:
   - The path to your CSV, Parquet or JSON file
   - The file size and how much memory (RAM) your computer has
@@ -30,7 +33,7 @@ you_get:
   - A review of slow loading habits in your code
   - A saved .duckdb file for repeat use (optional)
 how_to_use:
-  - Check that you have MATLAB R2026a or later with Database Toolbox. This skill needs MATLAB code to run.
+  - Check that you have MATLAB R2026a or later with Database Toolbox. Both are paid MathWorks products, so check your licence and cost before you start. This skill needs MATLAB code to run.
   - Compare your file size to your computer's memory. If the file fits easily, use readtable instead. The first check in the skill depends on this ratio.
   - Paste the skill into your AI. Add the file path and the question you want answered.
   - Ask for the profile query first. Run it to see the columns and row count.

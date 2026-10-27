@@ -10,6 +10,8 @@ explain: |
   A ready pipeline file that runs your API tests every time someone pushes code, so a broken endpoint is caught within minutes. You hand over your Postman collection and name your build tool.
 
   The skill uses Newman, the command line runner for Postman. It asks a short list of questions: which CI platform you use, where the collection and environment files live, which reports you want such as JUnit or HTML, which Node version, and when it should run. It then writes the config for GitHub Actions, GitLab, Jenkins, Azure DevOps, CircleCI or Bitbucket. Secrets come from your CI store, reports are saved as artifacts, and the build fails when a test fails.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (LambdaTest) says MIT. Credit goes to LambdaTest and sickn33.
 when:
   - You have Postman tests but run them only by hand.
   - Your team wants API checks on every pull request.
@@ -20,7 +22,7 @@ not_for:
   - "You want to see how your API holds up under heavy traffic: use a load testing tool such as k6."
   - "You have no Postman collection yet: write your API tests in Postman first, then come back."
 you_give:
-  - Your Postman collection
+  - Your Postman collection, as a file in your repo. A Postman link also works, but then you need a Postman API key stored in your CI secrets
   - Your CI platform
   - Environment file or secrets plan
   - Report types and trigger
@@ -33,10 +35,13 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat.
   - Tell your AI which CI tool you use, where your collection and environment files live, and when the tests should run.
   - "Say which reports you want: JUnit, HTML or both. Add your Node.js version if you have a preference."
-  - Run the same newman command on your own computer first, against your collection and environment files, to confirm the tests pass.
+  - Run the same newman command on your own computer first, against your collection and environment files, to confirm the tests pass. Node.js must be installed there, or this first run will fail.
   - Copy the pipeline file into your project, in the place your CI tool expects.
   - Add the secrets your AI lists in your CI tool's settings, then push a change to see the first run.
   - This skill only writes text, so it needs no code running. It helps if your AI can read your project files.
+  - Never paste real keys or passwords into the chat. Use the names of the secrets only.
+  - At the end the skill offers Postman test cases. That needs a separate postman-testcase-generator skill, which is not in this item. Say no, or use the Postman collection maker.
+next: [api-test-suite-builder]
 output_sample:
   input:
     - Your Postman collection file, or its Postman link
@@ -47,6 +52,8 @@ output_sample:
   prerequisites:
     - A Postman collection with tests in it
     - A project in a CI tool that you can edit
+    - Node.js on your own computer, to run Newman once before you push
+    - If your collection is a Postman link, a Postman API key kept in your CI secrets
     - For the Jenkins version, the JUnit and HTML Publisher plugins, and a NodeJS tool named NodeJS-18 set up in Jenkins. Without them the pipeline fails at setup
   output:
     - name: Pipeline file
@@ -58,4 +65,4 @@ output_sample:
     - name: Folder layout and .gitignore tip
       contains: Where to keep your collection and environment files, and a reminder to ignore the results folder.
     - name: Follow-up offer
-      contains: A question asking if you want Postman test cases made from the pipeline commands.
+      contains: A question asking if you want Postman test cases made from the pipeline commands. This needs a separate skill that is not included.

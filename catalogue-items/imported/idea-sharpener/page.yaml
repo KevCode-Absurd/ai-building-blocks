@@ -32,6 +32,7 @@ you_get:
 how_to_use:
   - "Before you start, have three things ready: who the idea is for, how you will know it worked, and any limit on time or money."
   - Open Claude, ChatGPT or Gemini. Paste the skill text into a new chat. No code or paid tool is needed. In a plain chat, the skill's file reads and question pop-ups do not run, so ask your AI to ask the questions in plain text and write the one-pager in the chat.
+  - This copy does not include the skill's three extra files (frameworks, refinement criteria and examples). The shorter version in the skill text is intended.
   - Type your rough idea. Answer the 3 to 5 questions it asks. It will not go on until it knows who the idea is for and what success looks like.
   - Read the 5 to 8 variations. Say which ones you like and which you do not.
   - Read the directions it compares and the assumptions it names. Push back if something feels wrong.

@@ -18,6 +18,7 @@ Scans all active products, collections, and pages and flags records with missing
 ## Prerequisites
 - Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_products,read_content`
 - API scopes: `read_products`, `read_content`
+- API versions: the products and collections queries use 2025-01. The pages query uses 2025-04. Run each query with its own version.
 
 ## Parameters
 
@@ -180,7 +181,7 @@ CSV file `seo_audit_<YYYY-MM-DD>.csv` with columns:
 | Empty store | No products/collections/pages | Exit with summary: 0 records |
 
 ## Best Practices
-- Prioritize fixing missing meta descriptions on top-selling products first — descriptions appear in search result snippets and directly impact click-through rate.
+- Fix missing meta descriptions on your best-selling products first. This skill does not read sales data, so sort the CSV by sales yourself. Descriptions appear in search result snippets and affect click-through rate.
 - A good SEO title length is 50–60 characters; meta descriptions should be 120–160 characters. Adjust `min_title_length` and `min_description_length` to match these targets.
 - Run monthly as part of a catalog hygiene routine, especially after bulk product imports which often omit SEO fields.
 - After fixing gaps, pair with `product-data-completeness-score` for a comprehensive catalog quality view.

@@ -36,7 +36,7 @@ how_to_use:
   - Add your photo and the area. Add a reference image if you want to copy an angle (optional).
   - Check each result against the real garment. Look for plastic-looking texture, wrong color or stitching that is not on the garment.
   - Keep two or three close-ups for the product page. Save the prompt with the product code so you can repeat the shot.
-  - AI close-ups can show weave, stitching or trim that the real garment does not have. Label them as illustrative or check each against the physical item before you publish, so buyers are not misled about quality. Where your store or the law requires it, say the images are AI-made.
+  - Before you publish, check every close-up against the physical garment. AI close-ups can show weave, stitching or trim that the real garment does not have. Label them as illustrative, so buyers are not misled about quality. Where your store, your sales platform or the law requires it, say the images are AI-made. Never use them as proof of quality or fabric content.
   - Next, save the close-ups you keep beside the main product photos for that listing, and add them to the product page in that order.
 output_sample:
   input:
@@ -51,6 +51,8 @@ output_sample:
       contains: A photo-style macro shot of the one area you chose, filling the frame with soft side light.
     - name: Prompt used
       contains: The full text sent to the image model, so you can run the same shot again.
+    - name: File name and size
+      contains: Saved as output-SKU-area.jpg. Size is 1024 by 1024 for a square detail slot or 1024 by 1536 for a tall product page.
     - name: Extra area options
       contains: Other parts of the garment worth zooming into, so you can make two or three shots per item.
     - name: Fix lines

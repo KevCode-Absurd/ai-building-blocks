@@ -143,8 +143,8 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "TikTok Ads Manager", why: "Where the campaign is built, and where the keyword planner and audience manager live."}
-    - {name: "Shopify", why: "The official TikTok app sends purchase events the campaign optimises for."}
+    - {name: "TikTok Ads Manager", why: "Needs a TikTok ads account with a payment method; you pay for ad spend. Where the campaign is built, and where the keyword planner and audience manager live."}
+    - {name: "Shopify", why: "Paid plan needed. The official TikTok app sends purchase events the campaign optimises for."}
   inputs:
     - "Your break-even cost per sale from the break-even ROAS and CPA calculator"
     - "A list of your three best hooks from other channels"

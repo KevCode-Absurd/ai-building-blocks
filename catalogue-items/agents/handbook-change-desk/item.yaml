@@ -7,12 +7,13 @@ role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - {type: document, required: true}
-  - {type: brief, required: true}
+  - {type: policy, required: true}
+  - {type: question, required: true}
 outputs:
   - {type: audit_report}
   - {type: document}
   - {type: plan}
+  - {type: policy, required: true}
 uses: [rule-origin-tracer, handbook-change-checker, policy-removal-test-planner, policy-handbook-writer, company-policy-explainer, change-announcement]
 steps:
   - {uses: rule-origin-tracer, note: "Every change that touches an existing rule: where the rule came from, who it served and whether it earns its place. Hands the origin to the removal test, or the writer when the rule stays."}

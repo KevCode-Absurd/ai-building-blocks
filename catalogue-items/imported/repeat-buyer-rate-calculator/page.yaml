@@ -10,6 +10,8 @@ explain: |
   The share of your customers who come back and order again within the number of days you pick, with the rate split by first product bought. It shows which products bring people back.
 
   You choose a period for first-time buyers and a repeat window, such as 90 days. The skill reads customers acquired in that period from Shopify, then checks their later orders. The repeat rate is the share who placed a second order inside the window. With product segmenting on, it ranks first purchases by how often those buyers return. It reads data only. It needs a logged-in Shopify command line session with customer and order access.
+
+  Licence: this copy is under the MIT licence (see the LICENSE file in this item). Credit goes to 40rty AI.
 when:
   - You want to know if customers come back after the first order.
   - You are choosing which product to promote to new shoppers.
@@ -35,6 +37,7 @@ how_to_use:
   - Open an AI that can run code and use the Shopify command line, such as Claude Code. A plain chat window cannot reach your store.
   - Log in to your store with read access to customers and orders. The skill only reads data and changes nothing.
   - Paste the skill and give your store domain. Add your two windows and say if you want the split by product.
+  - The repeat window runs from each customer's first order. Buyers whose window has not ended yet are flagged, so a recent period can look low.
   - Check the customer count first. If it looks too low, widen the days back.
   - Read the rate by first product. Guest checkouts have no customer record, so they are left out.
   - Open the CSV to spot-check a few customers before you act on the numbers.

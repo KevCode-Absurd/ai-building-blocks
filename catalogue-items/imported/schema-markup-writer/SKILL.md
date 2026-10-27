@@ -90,6 +90,8 @@ Trigger phrases include: "generate schema", "create JSON-LD",
 }
 ````
 
+Use `reviews` and `aggregate_rating` only when those reviews and that rating are shown on the page. If they are not, leave them out. Never write an invented review, rating or count.
+
 ---
 
 ## Schema Type Menu
@@ -100,7 +102,7 @@ Multiple types can be requested for a single page:
 | Schema Type          | Best For                                    | Rich Result Unlocked                    |
 |----------------------|---------------------------------------------|-----------------------------------------|
 | `Article`            | Blog posts, pillar pages, news              | Article rich result, Top Stories        |
-| `FAQPage`            | FAQ sections on any page                    | FAQ accordion in SERP — AEO critical    |
+| `FAQPage`            | FAQ sections on any page                    | FAQ rich result. Google now limits it to certain sites, so it may not show |
 | `HowTo`              | Step-by-step guides                         | Step-by-step rich result                |
 | `Product`            | Product or pricing pages                    | Price, availability, rating in SERP     |
 | `Review`             | Individual product or service reviews       | Star rating in SERP                     |
@@ -110,10 +112,7 @@ Multiple types can be requested for a single page:
 | `WebPage`            | Any page needing basic structured identity  | Enhances page understanding by crawlers |
 | `WebSite`            | Homepage only                               | Sitelinks Searchbox in SERP             |
 
-**AEO Priority:** `FAQPage` and `HowTo` are the two schema 
-types most directly responsible for AI engine extraction. 
-Always include `FAQPage` on landing pages and blog posts 
-that contain a FAQ section.
+**AEO note:** `FAQPage` and `HowTo` mark up question and step content in a form AI engines can read. Whether AI engines use it is unverified, and Google limits FAQ and HowTo rich results to certain sites. Add `FAQPage` only where the page shows real questions and answers, and say these limits to the user.
 
 ---
 

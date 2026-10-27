@@ -7,10 +7,12 @@ role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - {type: question, required: true}
+  - {type: design_tokens, required: true}
   - {type: brand_guide, required: false}
+  - {type: design_file, required: true}
 outputs:
   - {type: document}
+  - {type: design_tokens, required: true}
 uses: [visual-system-rules-writer, colour-contrast-checker, design-token-builder, developer-handoff-spec-writer]
 steps:
   - {uses: visual-system-rules-writer, note: "Sets the feeling, colours, type and grid as short rules. Gives each colour a hex code and hands the colour list to step two."}

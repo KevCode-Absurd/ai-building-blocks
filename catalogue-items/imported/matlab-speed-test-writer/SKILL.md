@@ -120,7 +120,9 @@ end
 The whole `Test` method body is timed. Use only when the entire method IS the workload:
 
 ```matlab
-function testSlowFunction(testCase, DataSize) %#ok<INUSD>
+function testSlowFunction(testCase)
+    % DataSize is a MethodSetupParameter, so it reaches setup, not the test method.
+    % The test reads the data that setup stored in testCase.inputData.
     data = testCase.inputData;
     result = slowFunction(data);
     testCase.verifyNotEmpty(result);
@@ -304,7 +306,7 @@ When asked to write performance tests, consider which level is appropriate:
 |-------|-------|---------------|-----------------|
 | **Unit** | Single operation (e.g., `svd`, `mldivide`) | Yes — sweep sizes | >10ms per testpoint |
 | **System** | One function end-to-end | Yes — sweep sizes | >10ms per testpoint |
-| **Workflow (ALB)** | Complete multi-step customer workflow | No — one representative size | 0.5–5s total |
+| **Workflow (ALB, application-level benchmark)** | Complete multi-step customer workflow | No — one representative size | 0.5–5s total |
 
 **When to use each:**
 - **Unit**: Function has multiple expensive operations and you need to isolate which one regressed

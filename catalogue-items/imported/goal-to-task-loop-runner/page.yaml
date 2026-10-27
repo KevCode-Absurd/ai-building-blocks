@@ -29,10 +29,10 @@ you_get:
   - "A clear stop: finished or stuck"
 how_to_use:
   - Use an AI that can run Python and read and write files, such as Claude Code. A plain chat window cannot run the loop.
-  - Download the skill folder and open your AI inside it, so it can find the scripts and the 18 ready-made setups.
+  - Download the skill folder and open your AI inside it, so it can find the scripts and the 18 ready-made setups. The first file to use is scripts/goal_compiler.py, which turns your goal into plan.json. The setups are the .json files in assets/harnesses (for example engineering.json).
   - Tell your AI your goal and name the finished result so it can be checked. A vague goal is refused with questions.
   - Pick the setup that fits your work, or point it at your own folder of skills.
-  - Let it compile the plan. Read each task and its check before it starts.
+  - Let it compile the plan. Read each task and its check command before it starts. The checks run on your computer, so run this only in a folder you trust. The plan.json file lists each task with its skill, its checks and what done means. The state.json file records each task's status, number of attempts and evidence.
   - It runs one task at a time and checks each one before the next. Stop when it says finished or stuck.
   - Only use plan and state files you made yourself. They run commands on your computer, so never run ones from someone else.
 not_for:

@@ -1,6 +1,6 @@
 ---
 name: writing-beats
-description: Writing; commit to a path through your raw notes and assemble them into a journey of beats, grounding each term before a beat leans on it.
+description: Turn a pile of raw notes into an article, one beat at a time. Commit to a path through your notes and build a journey of beats, grounding each term before a beat leans on it.
 disable-model-invocation: true
 ---
 
@@ -60,7 +60,7 @@ The article ends when the journey is complete, not when the pile is empty. Most 
 ## Writing rhythm
 
 - Append one beat at a time. Never write ahead.
-- Re-read the article file from disk before every write. Preserve user edits absolutely.
+- Re-read the article file from disk before every write. Preserve user edits absolutely. If you cannot read files, ask the user to paste the current article text before each new beat, and read that instead. Give them each new beat to copy back into their file.
 - If the user edits a previous beat substantially, let it change what comes next.
 - If the user says "rewrite that beat" or "go back and try a different beat 3", do it: edit in place, leave the rest alone.
 

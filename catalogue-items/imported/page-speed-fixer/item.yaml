@@ -8,7 +8,7 @@ role: check
 job: ops
 level: intermediate
 inputs:
-  - type: audit_report
+  - type: page_speed_report
     required: false
   - type: codebase
     required: true

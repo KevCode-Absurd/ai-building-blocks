@@ -72,11 +72,12 @@ Identify the exact asset version, intended placement, destination and review sco
 - Cut the last three seconds of a video: if the message still lands, the end is padding.
 
 **5. The five links, read as the buyer**
+(The five links are who, gain, proof, risk and step, listed below. Observed coverage means the checks you could actually do on what you were given, out of all the checks that apply to this ad.)
 Mark each strong, thin or missing, and name what carries it (headline, picture, setting, caption, the page):
 - **Who:** can they tell in a second it's about their moment?
 - **Gain:** do they see what changes for them, in their words?
 - **Proof:** is there a reason to believe, on the ad or one tap away?
-- **Risk:** is their main doubt answered, or a safe yes offered?
+- **Risk:** is their main doubt answered, or a safe yes offered? Suggest a guarantee or trial only if the approved offer terms include one; otherwise write `MISSING: offer terms`.
 - **Step:** one clear action, going to the right page?
 
 Fix the weakest link first. A buyer who already knows the brand needs less on who and more on risk and step.
@@ -96,7 +97,7 @@ Each version should differ in one nameable thing: the reason to buy, the buyer, 
 
 **Policy is a separate check.** For Facebook and Instagram, also run the "Meta ads compliance checker".
 
-**Score it with coverage.** Keep the existing penalty score as an internal editing aid:100 minus25 per observed stop-ship item and5 per observed worth-a-look item, floored at0. Report observed checks/eligible checks and list NOT CHECKED items beside it. A high score cannot clear a missing critical fact, destination, media or tracking check. With no inspectable asset, report NOT SCORED. A revised score is provisional until the revised asset was actually reviewed; it is not proof that suggested fixes were made. The score predicts no business result.
+**Score it with coverage.** Keep the existing penalty score as an internal editing aid: 100 minus 25 per observed stop-ship item and minus 5 per observed worth-a-look item, floored at 0. Report observed checks/eligible checks and list NOT CHECKED items beside it. A high score cannot clear a missing critical fact, destination, media or tracking check. With no inspectable asset, report NOT SCORED. A revised score is provisional until the revised asset was actually reviewed; it is not proof that suggested fixes were made. The score predicts no business result.
 
 ## What you hand back
 - **Ad:** name, shape, where it runs, who it's for, and its message in one sentence (for video, the "cut the last three seconds" result).

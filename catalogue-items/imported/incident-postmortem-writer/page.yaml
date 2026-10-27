@@ -35,7 +35,7 @@ how_to_use:
   - Paste the skill text, then paste your chat logs, alert times and impact notes.
   - Ask for the timeline first. Check every time and event against your own records.
   - Ask for the causes and the action items. Make sure each action has one owner and a due date.
-  - Replace any example name, number or ticket ID with your own. The templates use invented figures for illustration.
+  - Replace any example name, number or ticket ID with your own. The templates use bracketed placeholders. Any number, time or ticket ID missing from your records should be written as TBD and left for the team to confirm before the review.
   - Share the draft before the review meeting. Use the meeting plan to run it.
   - After the review, track each action item in your ticket system and check it is closed by its due date.
 output_sample:

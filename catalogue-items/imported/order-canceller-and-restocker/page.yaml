@@ -5,7 +5,7 @@ name: Order canceller and restocker
 summary: Cancel a Shopify order, put the stock back and tell the customer, as you choose. Preview first, since a cancelled order can't be reopened.
 job: run-your-store
 headline: Order canceller and restocker
-subhead: Name the order. Get it cancelled, stock put back and the customer told, as you choose. Cancels a live order. Bring store domain. Use the result to plan your next step.
+subhead: Name the order. Get it cancelled, stock put back and the customer told, as you choose. Cancels a live order and cannot be undone. Bring your store domain and the order ID. Afterwards, check the order in your Shopify admin.
 explain: |
   Cancel a Shopify order, put the items back in stock, refund the money and email the customer, all in one step and in the way you choose. It saves the trip through several admin screens.
 
@@ -37,7 +37,9 @@ how_to_use:
   - Ask for a dry run first. Check the order name and what would change.
   - If it looks right, tell your AI to run it for real. It stops and asks you to confirm that exact order first. Cancelling can't be undone, and the refund and customer email default to on.
   - Read the summary at the end and check the order in your Shopify admin.
-  - If the order had already shipped in full, the cancel fails. Refund the customer in your Shopify admin instead. The refund-and-reorder skill named in the file is not in this library.
+  - If the order had already shipped in full, the cancel fails. Use the Refund and reorder processor, or refund the customer in your Shopify admin.
+  - If you do not have the order ID, use the Order lookup assistant to find it.
+  - After the cancel, tell your warehouse and support person, and reorder stock if you need it.
 output_sample:
   input:
     - Your store domain

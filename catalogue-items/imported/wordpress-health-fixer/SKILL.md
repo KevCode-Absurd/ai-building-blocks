@@ -21,8 +21,8 @@ tools: [claude, cursor, codex, gemini]
 - The user asks to clean up, harden, or speed up a WP install based on that screen
 
 Turns a WordPress Site Health report (Critical issues / Recommended improvements / Passed tests) into a
-prioritized, risk-tiered fix plan — then executes the safe fixes and hands off the rest with exact
-commands or code.
+prioritized, risk-tiered fix plan — then drafts the safe fixes for the user to run, and hands off the rest with exact
+commands or code. The skill cannot reach the site, so the user (or their host) runs every command.
 
 ## ⚠️ Safety — read before touching any file
 
@@ -256,7 +256,7 @@ and matched rows look correct.
 
 Give the user:
 1. **Triage table**: item | category | tier | one-line fix summary
-2. **Tier 1 fixes**: execute directly (with confirmation + backup for deletions), show before/after
+2. **Tier 1 fixes**: draft the exact change for the user to run (with confirmation + backup for deletions), show before/after
 3. **Tier 2 fixes**: exact snippet + exactly where it goes + backup command + lint/verify command + rollback
    command + note that a host restart or support ticket may be required; don't mark these "done" until the
    user confirms the site still loads

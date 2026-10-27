@@ -8,8 +8,10 @@ role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
+  - type: question
     required: true
+  - type: document
+    required: false
   - type: source_text
     required: false
   - type: tool_connection

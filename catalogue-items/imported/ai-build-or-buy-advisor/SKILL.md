@@ -160,9 +160,9 @@ See `references/ai_team_org_evolution.md`.
 # 1. Define use_case.json (volume, latency, accuracy, team size, budget)
 python scripts/model_buildvsbuy_calculator.py use_case.json
 # 2. Review 3-year TCO + breakeven
-# 3. Cross-check with cs-cfo-advisor on budget commitment
-# 4. Cross-check with cs-cto-advisor on engineering capacity (esp. for fine-tune)
-# 5. Log via /cs:decide; consider /cs:freeze 60 on multi-year vendor commitment
+# 3. Ask your finance lead to check the budget commitment
+# 4. Ask your technical lead to check engineering capacity (esp. for fine-tune)
+# 5. Write down the decision with its date and reason; hold off about 60 days on any multi-year vendor commitment
 ```
 
 ### Workflow 2: AI Risk Classification (2-4 hours)
@@ -173,9 +173,9 @@ python scripts/model_buildvsbuy_calculator.py use_case.json
 python scripts/ai_risk_classifier.py use_case.json
 # 2. For HIGH-RISK: budget conformity assessment + registration
 # 3. For LIMITED-RISK: implement transparency requirements
-# 4. Cross-check with cs-general-counsel-advisor on contractual implications
-# 5. Cross-check with cs-ciso-advisor on technical safeguards
-# 6. Log via /cs:decide
+# 4. Ask your lawyer to check the contract implications
+# 5. Ask your security lead to check the technical safeguards
+# 6. Write down the decision with its date and reason
 ```
 
 ### Workflow 3: API-to-Self-Hosted Breakeven (1 day)
@@ -186,9 +186,9 @@ python scripts/ai_risk_classifier.py use_case.json
 python scripts/ai_cost_economics.py workload.json
 # 2. Run sensitivity scenarios (low/mid/high GPU rates)
 # 3. Estimate migration cost (engineering time + risk)
-# 4. Cross-check with cs-cfo-advisor on capex commitment
-# 5. Cross-check with cs-cto-advisor on platform readiness
-# 6. Log via /cs:decide; pair with /cs:freeze if signing GPU commitment
+# 4. Ask your finance lead to check the spending commitment
+# 5. Ask your technical lead to check platform readiness
+# 6. Write down the decision with its date and reason; hold off before signing any GPU commitment
 ```
 
 ### Workflow 4: AI Team Roadmap (1 week)
@@ -197,7 +197,7 @@ python scripts/ai_cost_economics.py workload.json
 1. List top 5 AI capabilities the product needs in 12 months
 2. Map each capability to the role that ships it (see `ai_team_org_evolution.md`)
 3. Sequence hires (one role at a time, ramp before next)
-4. Cross-check with cs-chro-advisor on comp + leveling
+4. Ask your HR lead to check pay and levels
 5. Identify the centralize-vs-embed trigger
 
 ## Output Standards

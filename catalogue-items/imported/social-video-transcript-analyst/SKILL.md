@@ -56,6 +56,7 @@ If a detail endpoint already includes transcript text, use it. If transcript is 
 
 1. **Collect URLs or discover videos**
    - If URLs are provided, fetch each transcript directly.
+   - If you have a social listening brief from an earlier step, take the video links from its notable posts.
    - If a creator/channel is provided, first fetch recent posts/videos, then choose relevant videos.
 
 2. **Extract transcript text**

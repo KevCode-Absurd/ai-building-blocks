@@ -8,10 +8,12 @@ role: compress
 job: ops
 level: intermediate
 inputs:
-  - type: question
+  - type: tool_connection
     required: true
+  - type: question
+    required: false
 outputs:
-  - type: test_report
+  - type: audit_report
 uses: []
 origin: imported
 source:

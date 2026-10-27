@@ -7,6 +7,8 @@ description: Use when a store is deciding whether to rename or rebrand. It looks
 
 You decide whether a store should keep, tweak or change its name, and you plan the work. You score the case for renaming out of 100, where a higher score means a stronger case. You show how the score is worked out. The weights are this skill's own starting point, built from one naming agency's view and one design team's process, so say so. You need real data. Do not run this on guesses.
 
+Not for renaming one product (pick the name yourself), a logo-only refresh, or a store with no sales, search or customer data yet. To sharpen how your brand stands against rivals, use the [Positioning grid builder](https://useaiblocks.com/skills/positioning-grid-builder). For a keep, update or replace table on a brand that is not a store, use the imported [Rebrand planner](https://useaiblocks.com/skills/rebrand-planner).
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -54,7 +56,7 @@ This skill runs on its own. If something marked required is missing, ask once, i
 2. **Friction list.** Check five kinds of friction: spelling, search, pronunciation, wrong meaning in a key market, and clash with a bigger brand. Each costs 15 points in this skill's own scoring (up to 75). Note which are real from evidence the owner gave (customer emails, search results, support tickets), not from your own opinion.
 3. **Equity list.** Count branded search, repeat customers and reviews under the name. Subtract 10 points for each one that is strong for this store (up to 30). The agency's claim is that owners fear losing equity, but it has never seen the loss show up when the launch has energy and a clear story. That is one agency's claim. Tell the owner to check their own data first, by renaming one product line as a pilot and watching the branded search trend.
 4. **Size and age rule.** Young brands can switch in a 6 to 9 month window with extra resources (the guest's examples were venture-backed early-stage companies). Add 10 points if the brand is in its first year, because a right name compounds in value the longer it runs, so the best time to decide is early. A giant brand needs a much stronger reason.
-5. **Add up.** Friction minus equity plus the age bonus, kept between 0 and 100. Show the sum. Call it: below 40 keep and fix the friction; 40 to 69 tweak and run a pilot; 70 and above rename. These lines are this skill's own starting point, so adjust them. A hard trigger overrides them.
+5. **Add up.** Friction minus equity plus the age bonus, kept between 0 and 100. Show the sum. Call it: below 40 keep and fix the friction; 40 to 69 tweak and run a pilot; 70 and above rename. These lines and all the point weights are this skill's own starting point. They are untested, so adjust them. A hard trigger overrides them. Never present a TWEAK or RENAME call as settled: tell the owner to confirm it with their own pilot data (rename one product line and watch branded search) and an accountant or adviser before spending on a rebrand.
 6. **If renaming.** Write the message to customers: we were X, now Y, and here is what you get. Keep the old name findable in search. Redirect the old domain. Plan 6 to 9 months of extra spend (the agency's window for young brands). For marketplace sellers, plan how reviews carry over before anything changes, because reviews on a listing can be lost.
 7. **If keeping.** Fix the friction: add a tagline that explains the name, and add spelling help in ads.
 8. **Discover.** Align the team on three or four company goals. Gather traffic, sales and survey data. Run video interviews on why people buy or pass. Segment customers into personas with names and stories, and map each persona's path from discovery to purchase with what pushes them and what blocks them. Run brand exercises on values and beliefs, features and benefits, voice and tone, and look and feel, and cluster the words into themes. Map your position against rivals using the Positioning grid builder and note crowded spots.
@@ -97,8 +99,9 @@ CHECKS MISSED: <none, or list>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Tagline checker and rewriter](https://useaiblocks.com/prompts/tagline-score-card).
-- The [Product name brainstormer](https://useaiblocks.com/skills/product-name-brainstormer).
+- The [Store brand architecture planner](https://useaiblocks.com/skills/store-brand-architecture-planner). It takes the plan.
+- The [Brand messaging builder](https://useaiblocks.com/skills/brand-messaging-builder). It takes the audit report.
+- The [Brand health auditor](https://useaiblocks.com/skills/brand-health-auditor). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

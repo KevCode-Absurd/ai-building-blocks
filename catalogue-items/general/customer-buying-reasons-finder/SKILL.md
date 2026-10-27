@@ -21,7 +21,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **Customer words** with the [Reddit thread collector](https://useaiblocks.com/skills/reddit-thread-collector). Bring your question.
+2. **Customer words** with the [Reddit thread collector](https://useaiblocks.com/skills/reddit-thread-collector). Bring your question, document (optional), tool connection (optional).
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `customers.md`, `offers.md`, `proof-and-claims.md`, `market.md`. Take the buyers, the main promise and approved claims only. Source notes and rejected ideas never go into the result.
@@ -109,9 +109,9 @@ Missed: <one line per check still missed, or none>
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Make image ads** with the [Image ad maker from customer quotes](https://useaiblocks.com/skills/customer-quote-image-ad). It takes the buying reasons.
 - The [Ideal customer profile writer](https://useaiblocks.com/skills/ideal-customer-profile-writer). It takes the buying reasons.
-- The [Customer quote finder](https://useaiblocks.com/skills/customer-quote-finder).
-- The [Customer fit reviewer](https://useaiblocks.com/skills/wrong-buyer-review-checker).
-- **Make image ads** with the [Single image ad planner](https://useaiblocks.com/skills/single-image-ad-planner). It takes the buying reasons.
+- The [Buyer emotion and copy theme finder](https://useaiblocks.com/skills/dominant-emotion-finder). It takes the buying reasons.
+- The [Customer feedback and brand reviewer](https://useaiblocks.com/skills/monthly-customer-voice-keeper).
+- **Make an offer people want** with the [Offer checklist reviewer](https://useaiblocks.com/skills/offer-checklist-reviewer). It takes the buying reasons.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

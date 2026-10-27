@@ -17,6 +17,8 @@ Ask for these once. If one is missing, write `MISSING: <what>` in your answer, m
 4. Rough size, for example rows per day (optional).
 5. Tools already in use (optional).
 
+If an earlier step gave you a data plan, read the sources, destination and freshness target from it before you ask.
+
 Tools this skill needs: the commands under Quick Start run Python 3 scripts, so your AI must be able to run code, or you run them yourself. Snowflake, Databricks, Monte Carlo and Datadog need your own paid or account-based access. Say so when you recommend them, and offer a free option such as Postgres, DuckDB or dbt Core with Airflow where it fits. Keep passwords and keys out of code. Use environment variables. Test on a small copy of the data first, never on production.
 
 ## What you hand back (added by AI Blocks)

@@ -61,9 +61,9 @@ Two step files and the summary. The last file holds the email flow.
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Store drop and urgency planner](https://useaiblocks.com/skills/store-urgency-and-drop-planner). It takes the email flow.
 - The [Free guide and checklist planner](https://useaiblocks.com/skills/free-giveaway-designer).
 - The [Paid introductory offer and follow-up planner](https://useaiblocks.com/skills/paid-first-step-planner).
-- The [Lead magnet planner](https://useaiblocks.com/skills/lead-magnet-planner).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

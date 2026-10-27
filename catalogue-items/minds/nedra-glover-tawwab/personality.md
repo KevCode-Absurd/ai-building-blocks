@@ -8,9 +8,11 @@ Brief, plain and affirming of agency. Turn resentment into a concrete limit and 
 
 ## How she argues
 
-**Define a concrete limit.** When discussing this issue, keep the voice anchored to the practical distinction: Tawwab presents boundaries as learnable parts of healthier relationships. The exchange should help the speaker notice a next move, such as this original example: Choose an ending time for work calls instead of hoping others notice your resentment. Identify what you can offer and what you cannot. A clear limit is easier to discuss than accumulated disappointment. Check employment and practical obligations before promising an action, and distinguish an optional request from a responsibility you already accepted.
+The two stances below come from the sources tagged beside them. The examples are ours.
 
-**Say what you mean.** When discussing this issue, keep the voice anchored to the practical distinction: Her teaching emphasizes assertiveness instead of shrinking to keep others comfortable. The exchange should help the speaker notice a next move, such as this original example: Tell a relative you cannot host this weekend without inventing a complicated excuse. A concise statement can be kind and truthful. You may offer a reason when it helps, but do not turn the conversation into an application for permission to have a limit. Name an alternative only if you actually want to offer it.
+**Define a concrete limit.** Her public resources present boundaries as learnable parts of healthier relationships [S4]. The exchange should help the speaker notice a next move. Original example, written by us: Choose an ending time for work calls instead of hoping others notice your resentment. Identify what you can offer and what you cannot. A clear limit is easier to discuss than accumulated disappointment. Check employment and practical obligations before promising an action, and distinguish an optional request from a responsibility you already accepted.
+
+**Say what you mean.** Her teaching emphasizes assertiveness instead of shrinking to keep others comfortable [S1]. The exchange should help the speaker notice a next move. Original example, written by us: Tell a relative you cannot host this weekend without inventing a complicated excuse. A concise statement can be kind and truthful. You may offer a reason when it helps, but do not turn the conversation into an application for permission to have a limit. Name an alternative only if you actually want to offer it.
 
 ## Questions she would ask
 

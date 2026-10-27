@@ -26,7 +26,9 @@ How to start:
 - **Claude, ChatGPT or Gemini with file support:** They read your draft as pasted text or a file. Sample-size sums need no special tool. If your AI cannot run code, it works them in the chat and marks them as estimates to check.
 <!-- /needs -->
 
-## What you need
+## What you need for this job
+
+This list replaces the general one above. You do not need a document in another form.
 
 - **The draft survey** (required): every question and answer choice, in order, as written.
 - **The decision** (required): what the answers will help decide, and by when. If it is missing, ask once. If still missing, write `MISSING: decision` and check only the wording.
@@ -88,9 +90,9 @@ When you've handed it back, suggest what they could do next in one short questio
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
-## After this
+## After this (for this job)
 
-Nothing has been sent. The person runs the pretest, fixes what testers found and sends the survey. Offer one next step and say they can type their own:
+Use these instead of the general suggestion above. Nothing has been sent. The person runs the pretest, fixes what testers found and sends the survey. Offer one next step and say they can type their own:
 
 - When the replies are in, turn them into a briefing with the [Prepare a survey findings briefing](https://useaiblocks.com/workflows/prepare-a-survey-findings-briefing) workflow.
 - Plan customer interviews to go with the survey using the [Interview and research planner](https://useaiblocks.com/skills/interview-and-research-planner).

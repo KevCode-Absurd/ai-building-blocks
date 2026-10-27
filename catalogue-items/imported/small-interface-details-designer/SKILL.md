@@ -11,6 +11,11 @@ metadata:
 
 Design the tiny, contained product moments users touch every day -- toggles, password fields, loading indicators, pull-to-refresh, like buttons. Based on Dan Saffer's four-part structure (Trigger, Rules, Feedback, Loops & Modes), this framework turns invisible details into the polish that separates forgettable products from beloved ones.
 
+## What you need
+
+- The screen or feature, and what the user is trying to do.
+- Optional: a screenshot or design file, the current screen text, and a built page or app from an earlier step. If you have one, work from the real screen and name the small moments you find on it.
+
 ## Core Principle
 
 **The difference between a product you tolerate and a product you love is almost always in the microinteractions.** A microinteraction is a contained moment built around a single use case -- changing a setting, syncing data, picking a password -- so small that users rarely think about it consciously, but they feel it. Every microinteraction follows the same four-part structure: a Trigger initiates it, Rules determine what happens, Feedback shows what is happening, and Loops & Modes define its long-term behavior.

@@ -10,6 +10,8 @@ explain: |
   An arm that moves from pose A to pose B along a path that avoids obstacles, with timing that respects speed and acceleration limits. That is what you finish with, as MATLAB code you can run.
 
   It starts by requiring a proper robot model, because planning on a bad model gives false safe paths. You describe the obstacles as a collision world. It then helps you choose a planner: RRT for fast random search, CHOMP for smoother optimised paths. The raw path is shortened, then turned into a timed trajectory, such as time-optimal, constant speed for welding, or trapezoidal. A last check confirms the full trajectory is free of collisions. You need MATLAB with the robotics toolbox.
+
+  Licence: this copy is under BSD 2-Clause (see the LICENSE.md file in this item). The skill file also links MathWorks' own reuse licence, which means you may use it only with MathWorks products such as MATLAB. Follow the LICENSE.md file. Credit goes to MathWorks. This is MathWorks' skill copied word for word.
 when:
   - You have two arm poses and need a safe path between them.
   - A tool must move at constant speed along a seam, like welding or cutting.
@@ -30,14 +32,14 @@ you_get:
   - Planner choice with reasons
   - A collision check of the final motion
 how_to_use:
-  - Get your robot model ready in MATLAB first. If you do not have one, use the robot kinematics skill to build it.
+  - Get your robot model ready in MATLAB first. If you do not have one, use the Robot arm modeler (called matlab-model-robot-kinematics inside the skill file) to build it.
   - Open an AI that can run MATLAB code. You need MATLAB with Robotics System Toolbox, which is a paid product. The skill's licence lets you use it only with MathWorks products.
   - Gather first: the name of your robot model variable, your start and goal poses (as joint values or as position and rotation), the obstacle shapes or map, and your speed and acceleration limits.
-  - Paste the skill into your AI. Then add them.
+  - Paste the skill into your AI, then paste the inputs you gathered after it.
   - Check the planner your AI picks and the reason it gives. Ask for a different one if it does not fit.
   - Read the collision check on the final timed motion before you trust the path.
   - Test the trajectory in simulation before you run it on a real arm. Review it with a person who is trained on that arm, and have an emergency stop within reach for the first run.
-  - Next, build the model with the Robot arm modeler if you have not, and run a collision review before any real arm run.
+  - Next, build the model with the Robot arm modeler if you have not (the skill file calls it matlab-model-robot-kinematics), and run a collision review before any real arm run.
 next: [robot-arm-modeler]
 output_sample:
   input:

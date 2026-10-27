@@ -7,7 +7,7 @@ role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - {type: source_text, required: true}
+  - {type: page_speed_report, required: true}
   - {type: store_capture, required: true}
   - {type: performance_sheet, required: true}
   - {type: theme_files, required: false}

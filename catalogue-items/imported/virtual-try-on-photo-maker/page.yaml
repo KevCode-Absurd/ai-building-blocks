@@ -35,8 +35,9 @@ how_to_use:
   - Only use a model face photo and reference photos of people who agreed to it, or that you have the rights to. Do not present the result as a real model or as someone's endorsement.
   - Check your photos. Each must be 20KB to 15MB, over 400 by 400 pixels, and jpg, png or webp.
   - Pick a clear reference photo. Use a front pose and a plain wall if the garment must look exact.
-  - Paste the skill into your AI. The skill file is written in Chinese, and your AI reads it and answers in English. Add both photos and describe the garment's colour, fabric and fit.
-  - Run the command with your image model key. This needs code running and a paid account. Use the dry run first to see the cost.
+  - Paste the skill into your AI. The skill file is written in Chinese, with an English summary at the top. Your AI reads it and answers in English. Add both photos and describe the garment's colour, fabric and fit.
+  - Get a key. The skill uses a paid image service called dLazy. Sign in at dlazy.com and make an API key on its API key page, or run dlazy login in a terminal. Your photos are uploaded to dLazy to make the picture. You can set a different image service's key instead, such as OpenAI or Gemini.
+  - Run the command with your image model key. This needs code running and a paid account. Use the dry run first to see the cost, because each shot spends credits.
   - Make two to four shots and pick the best one.
   - Check colour, fabric, print position, hands and collar. If one is off, ask your AI to add the matching fix line and run again.
 output_sample:
@@ -58,7 +59,7 @@ output_sample:
     - name: Cost estimate
       contains: A dry run that shows the credit cost before you make the real picture.
     - name: On-model photo
-      contains: One to four shots of the model wearing your garment, saved as files for you to pick from.
+      contains: One to four shots of the model wearing your garment, saved as files for you to pick from. A paid image model makes these, and each shot spends credits.
     - name: Quality check
       contains: A list to check colour, texture, print position, hands and collar, with a fix line to add if one fails.
 next: [product-photo-retoucher, ai-product-photo-inspector, product-photo-set-maker]

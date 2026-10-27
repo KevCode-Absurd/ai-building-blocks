@@ -8,8 +8,12 @@ role: check
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: question
     required: true
+  - type: image
+    required: false
+  - type: codebase
+    required: false
 outputs:
   - type: audit_report
 uses: []

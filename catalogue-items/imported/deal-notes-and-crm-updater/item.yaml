@@ -10,10 +10,16 @@ level: intermediate
 inputs:
   - type: meeting_notes
     required: false
-  - type: spreadsheet
+  - type: lead_list
+    required: false
+  - type: transcript
+    required: false
+  - type: tool_connection
     required: false
 outputs:
   - type: spreadsheet
+  - type: lead_list
+    required: true
 uses: []
 origin: imported
 source:

@@ -7,12 +7,13 @@ role: check
 job: analysis
 level: intermediate
 inputs:
-  - {type: performance_sheet, required: true}
+  - {type: search_query_report, required: true}
   - {type: brand_brain, required: false}
   - {type: audit_report, required: false}
 outputs:
   - {type: audit_report}
   - {type: plan}
+  - {type: keyword_list, required: true}
 uses: []
 origin: rebuilt
 example_pending: true

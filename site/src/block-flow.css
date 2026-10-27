@@ -18,6 +18,11 @@
 .run-ai { margin-top: 1.5rem; max-width: 70ch; }
 .run-ai-h { font-size: 1.05rem; margin: 0 0 .75rem; }
 .run-ai .install-tabs { margin-bottom: .5rem; }
+.pull-ai { margin-top: 1.5rem; max-width: 70ch; }
+.run-ai .pull-ai { margin-top: 1.25rem; }
+.pull-ai > .small { margin: .25rem 0; }
+.pull-ai .cmd { margin: .5rem 0 .75rem; }
+.pull-ai .cmd code { overflow-wrap: anywhere; }
 .bp-next { padding-top: 44px; max-width: 860px; }
 .bp-next > .bp-h2 { font-size: clamp(20px, 2vw, 24px); }
 .bp-details { margin-top: 56px; border-top: 1px solid var(--line); }

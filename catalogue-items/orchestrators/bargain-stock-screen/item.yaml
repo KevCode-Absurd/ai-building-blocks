@@ -8,7 +8,7 @@ job: analysis
 level: advanced
 inputs:
   - {type: spreadsheet, required: true}
-  - {type: source_text, required: false}
+  - {type: financial_statements, required: false}
 outputs:
   - {type: plan}
 uses: [enterprising-bargain-screener, asset-floor-estimator, price-versus-value-gap-judge, bargain-group-rules-writer]

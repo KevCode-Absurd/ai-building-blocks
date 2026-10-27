@@ -8,7 +8,7 @@ job: strategy
 level: intermediate
 inputs:
   - {type: audit_report, required: true}
-  - {type: question, required: false}
+  - {type: idea, required: false}
 outputs:
   - {type: plan}
 origin: rebuilt

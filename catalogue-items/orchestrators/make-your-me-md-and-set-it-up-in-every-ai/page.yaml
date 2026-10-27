@@ -1,0 +1,98 @@
+new_slug: make-your-me-md-and-set-it-up-in-every-ai
+name: Make your me.md and set it up in every AI you use
+headline: Make your me.md and set it up in every AI you use
+summary: Answer a few questions or let your AI use what it remembers. Get your me.md and a short version set up in each AI.
+job: set-up-ai
+thinking: medium
+thinking_why: It runs two skills in order and waits for your approval between them.
+subhead: Your AI writes your me.md with you, from what it remembers, your documents and a few questions. Then it makes a short version for the settings box in each AI and tells you where both go.
+explain: |-
+  Every AI you use starts out knowing nothing about you. Some keep a memory, but each one keeps its own, and you can't see most of it.
+
+  This workflow fixes that in two steps. Step one writes your me.md with you. It asks before it uses what your AI remembers, reads any CV or bio you attach, and asks a few short questions. It removes private details and shows you the file to approve. Step two turns the approved file into a short core that fits your AI's settings box, and tells you where the core and the full file go in ChatGPT, Claude, Claude Code, Gemini and Cursor.
+when:
+  - You're new to me.md and want it done and set up in one go.
+  - You use two or more AI apps and want them all to know the same things about you.
+  - You're setting up a new AI tool and want it to know you from day one.
+not_for:
+  - "You already have a me.md and want it updated: use the me.md refresher."
+  - "You want a file about a business, not a person: use the Brand profile builder."
+you_give:
+  - A yes or no to using what your AI remembers
+  - A CV, LinkedIn export, bio or old me.md (optional)
+  - Short answers to its questions
+  - The AI apps you use (optional)
+you_get:
+  - Your me.md, checked and dated, ready to save in AI Blocks
+  - A short core of about 1,200 characters for your AI's settings box
+  - Where to put both in each AI you use
+how_to_use:
+  - Download the workflow pack and add it to Claude, ChatGPT or Gemini.
+  - "Say: follow the workflow file, and wait for my approval after step 1."
+  - Answer the memory question and the short questions. Skip any you like.
+  - Approve your me.md, then check the short core.
+  - Paste your me.md into Your me.md in AI Blocks, and follow the guide for each AI.
+output_sample:
+  input:
+    - A yes or no to using what your AI remembers
+    - A CV, LinkedIn export, bio or old me.md (optional)
+    - Your answers to up to 12 short questions
+    - The AI apps you use (optional)
+  output:
+    - name: step-01-me-md-builder.md
+      contains: Your approved me.md, with every section dated and private details removed.
+    - name: step-02-me-md-short-core-writer.md
+      contains: The short core with its character count, and where it goes in each AI.
+    - name: Hand-back summary
+      contains: Both files, anything missing, and the two things to do now.
+how_it_works:
+  - title: me.md builder
+    text: Asks before using memory, reads your documents and asks for the gaps. Removes private details, dates every section and waits for your approval.
+  - title: me.md short-core writer
+    text: Turns the approved file into a short core for settings boxes, and says where it goes in ChatGPT, Claude, Claude Code, Gemini and Cursor.
+output_shape: |-
+  STEP 1  me.md
+  ## Core, ## Work, ## Projects (expires <date>), ## Voice,
+  ## Preferences, ## Background, ## Never, ## Where to look,
+  ## Sources and dates
+
+  STEP 2  SHORT CORE (<n> characters)
+  <the short core>
+  WHERE TO PUT IT
+  <app>: short core -> <where>. Full me.md -> <where>.
+
+  HAND-BACK SUMMARY
+  MISSING        <each gap>
+  CHECKS MISSED  <one line each, or none>
+  DO NOW         Save it in AI Blocks. Set it up in each AI.
+tweaks:
+  - what: Memory
+    how: Say yes to let your AI draft from what it remembers. It's the fastest way, but check every marked fact.
+  - what: Documents
+    how: A current CV or bio cuts the interview short.
+  - what: Which apps
+    how: Name the AI apps you use, so step 2 covers only those.
+judge:
+  - Every fact in your me.md is something you said, something in your documents, or a memory fact you confirmed.
+  - No private detail you wouldn't want an AI to read.
+  - The short core fits in about 1,200 characters and holds no projects.
+  - Each step ran its own checks, or the run stopped and says which one failed.
+test:
+  - Run it with memory off and no documents. It should still work, from your answers alone.
+  - Paste the short core into one AI's settings and ask it what it knows about you.
+  - Run the me.md refresher a month later. It should find the projects that expired.
+improve:
+  - Keep the me.md in AI Blocks, so every prompt you copy and pack you download carries the parts it needs.
+  - Run the me.md refresher once a month.
+works_best_with:
+  tools:
+    - name: Any good chat AI that reads files, such as Claude, ChatGPT or Gemini
+      why: Step 1 may read a CV or export, and step 2 needs the whole me.md.
+  inputs:
+    - A link to where you keep your current projects
+    - The text already in your AI's settings box
+terms:
+  - term: me.md
+    meaning: One short private file that tells any AI who you are, your work, projects, style and what to avoid.
+  - term: Short core
+    meaning: The few lines from your me.md that go in your AI's settings box. About 1,200 characters.

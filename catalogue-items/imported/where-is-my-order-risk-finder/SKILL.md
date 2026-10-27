@@ -23,9 +23,9 @@ Generates a bulk report of orders most likely to generate "Where Is My Order?" (
 |-----------|------|----------|---------|-------------|
 | store | string | yes | — | Store domain (e.g., mystore.myshopify.com) |
 | format | string | no | human | Output format: `human` or `json` |
-| dry_run | bool | no | false | Preview operations without executing mutations |
+| dry_run | bool | no | false | Kept for consistency with other skills. This skill only reads, so it has no effect |
 | unfulfilled_sla_days | integer | no | 3 | Flag unfulfilled orders older than this many days |
-| stale_tracking_days | integer | no | 5 | Flag shipped orders where the last fulfillment was created more than this many days ago (proxy for stale tracking) |
+| stale_tracking_days | integer | no | 5 | Flag shipped orders whose order record (`updated_at`) has not changed for more than this many days. This is a stand-in for stale tracking, because carrier scans are not read |
 | limit | integer | no | 250 | Max orders per page |
 
 ## Workflow Steps
@@ -145,6 +145,8 @@ For `format: json`, emit:
 
 ## Output Format
 CSV file `wismo-report-<YYYY-MM-DD>.csv` with columns: `risk_type`, `order_name`, `customer_email`, `order_date`, `days_waiting`, `fulfillment_status`, `tracking_number`, `tracking_company`, `shipping_city`, `shipping_country`.
+
+`days_waiting` is the days since `createdAt` for `UNFULFILLED_OVERDUE` orders, and the days since `updatedAt` for `SHIPPED_STALE_TRACKING` orders.
 
 Two sections in the CSV (separated by `risk_type` column value): `UNFULFILLED_OVERDUE` and `SHIPPED_STALE_TRACKING`. For human format, also shows a summary table before the CSV path.
 

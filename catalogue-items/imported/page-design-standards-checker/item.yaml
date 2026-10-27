@@ -10,6 +10,8 @@ level: intermediate
 inputs:
   - type: web_page
     required: true
+  - type: design_tokens
+    required: false
 outputs:
   - type: audit_report
 uses: []

@@ -32,6 +32,8 @@ Run the architecture designer to get pattern recommendations:
 python scripts/architecture_designer.py --input requirements.json
 ```
 
+`requirements.json` is a file you create from the Step 1 list. See "JSON Format" under Input Requirements below for its shape.
+
 **Example output (made-up sample values, not a result from a real app):**
 
 ```json
@@ -138,7 +140,7 @@ const db = new rds.ServerlessCluster(this, 'AppDb', {
 Analyze estimated costs and optimization opportunities:
 
 ```bash
-python scripts/cost_optimizer.py --resources current_setup.json --monthly-spend 2000
+python scripts/cost_optimizer.py --resources inventory.json --monthly-spend [YOUR MONTHLY SPEND]
 ```
 
 **Example output (made-up sample values, not a result from a real account):**
@@ -188,7 +190,7 @@ Verify deployment and set up monitoring:
 aws cloudformation describe-stacks --stack-name my-app-stack
 
 # Set up CloudWatch alarms
-aws cloudwatch put-metric-alarm --alarm-name high-errors ...
+aws cloudwatch put-metric-alarm   --alarm-name high-errors   --namespace AWS/Lambda   --metric-name Errors   --dimensions Name=FunctionName,Value=[YOUR FUNCTION NAME]   --statistic Sum --period 300 --evaluation-periods 1   --threshold [ERROR COUNT THAT SHOULD ALERT YOU]   --comparison-operator GreaterThanOrEqualToThreshold   --alarm-actions [YOUR SNS TOPIC ARN]
 ```
 
 **If stack creation fails:**
@@ -250,7 +252,7 @@ python scripts/serverless_stack.py --app-name my-app --region us-east-1
 Analyzes costs and recommends optimizations.
 
 ```bash
-python scripts/cost_optimizer.py --resources inventory.json --monthly-spend 5000
+python scripts/cost_optimizer.py --resources inventory.json --monthly-spend [YOUR MONTHLY SPEND]
 ```
 
 **Output:** Recommendations for:
@@ -264,6 +266,8 @@ python scripts/cost_optimizer.py --resources inventory.json --monthly-spend 5000
 
 ## Quick Start
 
+Every cost range and savings target below is a made-up illustration, not a quote or a promise. Check real prices in the AWS pricing calculator.
+
 ### MVP Architecture (< $100/month)
 
 ```
@@ -274,7 +278,7 @@ Result:
 - DynamoDB pay-per-request for data
 - Cognito for authentication
 - S3 + CloudFront for static assets
-- Estimated: $20-50/month
+- Estimated: [MONTHLY COST RANGE]
 ```
 
 ### Scaling Architecture ($500-2000/month)
@@ -303,7 +307,7 @@ Result:
 - Right-sizing recommendations
 - Savings Plans analysis
 - Storage lifecycle policies
-- Target savings: $900/month
+- Target savings: [SAVINGS TARGET]
 ```
 
 ### IaC Generation

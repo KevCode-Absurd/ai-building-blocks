@@ -7,11 +7,14 @@ role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: document
+  - type: contract
     required: true
   - type: spreadsheet
     required: false
-outputs: []
+outputs:
+  - type: audit_report
+  - type: spreadsheet
+    required: false
 needs_mode: manual
 uses:
   - reconcile-private-fund-fee-charges

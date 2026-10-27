@@ -21,9 +21,11 @@ This skill collects public data about people who follow or comment on an account
 
 Report patterns across the group, such as common places, interests and how much of the engagement looks genuine. Never list named people or build a profile of one person in your summary. These Actors return public profile fields and comments, not verified age or gender. Label any demographic claim as inferred, and say how many records it rests on.
 
-Apify charges for runs. Before you run, tell the user which Actor you chose and ask them to check its price on its Apify page. Never print the token. The token lives in `.env` only. The `mcpc` command passes the token in a header, which other programs on a shared machine could see in the process list, so run it on your own computer and keep its output out of shared logs.
+Apify charges for runs. Before you run, tell the user which Actor you chose and ask them to check its price on its Apify page. Never show the token in chat or in saved logs. The token lives in `.env` only, and the run script reads it from there. The optional `mcpc` command in Step 2 is different: it puts the token on the command line, where other programs on a shared machine could see it in the process list. Use that command only on a computer that only you use. Otherwise skip it and read the Actor's input fields on its public Apify page, which needs no token.
 
 The run script is at `reference/scripts/run_actor.js` inside this skill folder. Run the commands below from that skill folder.
+
+The exported file holds personal public data about followers. Keep it in a private folder, never share it, and tell the user to delete it once the analysis is done.
 
 If an input is missing (account link, platform, cap), ask once, then mark `MISSING: <what>` and stop. Never invent audience data. If you cannot run commands, say so, and offer a rough read of a sample of public comments the user pastes, marked as low confidence.
 
@@ -34,7 +36,7 @@ Check these before you run anything:
 
 - `.env` file with `APIFY_TOKEN`
 - Node.js 20.6+ (for native `--env-file` support)
-- `mcpc` CLI tool: `npm install -g @apify/mcpc`
+- `mcpc` CLI tool, only if you use the optional Step 2 command: `npm install -g @apify/mcpc`
 - `jq` (used by the schema command in Step 2)
 
 ## Workflow
@@ -56,12 +58,12 @@ Select the appropriate Actor based on analysis needs:
 
 | User Need | Actor ID | Best For |
 |-----------|----------|----------|
-| Facebook follower demographics | `apify/facebook-followers-following-scraper` | FB followers/following lists |
+| Facebook followers (lists only, no demographics) | `apify/facebook-followers-following-scraper` | FB followers/following lists and profile fields |
 | Facebook engagement behavior | `apify/facebook-likes-scraper` | FB post likes analysis |
 | Facebook video audience | `apify/facebook-reels-scraper` | FB Reels viewers |
 | Facebook comment analysis | `apify/facebook-comments-scraper` | FB post/video comments |
 | Facebook content engagement | `apify/facebook-posts-scraper` | FB post engagement metrics |
-| Instagram audience sizing | `apify/instagram-profile-scraper` | IG profile demographics |
+| Instagram audience sizing | `apify/instagram-profile-scraper` | IG public profile fields |
 | Instagram location-based | `apify/instagram-search-scraper` | IG geo-tagged audience |
 | Instagram tagged network | `apify/instagram-tagged-scraper` | IG tag network analysis |
 | Instagram comprehensive | `apify/instagram-scraper` | Full IG audience data |
@@ -71,13 +73,15 @@ Select the appropriate Actor based on analysis needs:
 | Instagram comment analysis | `apify/instagram-comment-scraper` | IG comment sentiment |
 | YouTube viewer feedback | `streamers/youtube-comments-scraper` | YT comment analysis |
 | YouTube channel audience | `streamers/youtube-channel-scraper` | YT channel subscribers |
-| TikTok follower demographics | `clockworks/tiktok-followers-scraper` | TT follower lists |
-| TikTok profile analysis | `clockworks/tiktok-profile-scraper` | TT profile demographics |
+| TikTok followers (lists only, no demographics) | `clockworks/tiktok-followers-scraper` | TT follower lists and profile fields |
+| TikTok profile analysis | `clockworks/tiktok-profile-scraper` | TT public profile fields |
 | TikTok comment analysis | `clockworks/tiktok-comments-scraper` | TT comment engagement |
 
 ### Step 2: Fetch Actor Schema
 
-Fetch the Actor's input schema and details dynamically using mcpc:
+Read the Actor's input fields. The safest way is to open the Actor's public page on apify.com and copy its README and input fields. No token is needed for that.
+
+Optional, on a computer only you use: fetch the details with mcpc. This puts your token on the command line.
 
 ```bash
 export $(grep APIFY_TOKEN .env | xargs) && mcpc --json mcp.apify.com --header "Authorization: Bearer $APIFY_TOKEN" tools-call fetch-actor-details actor:="ACTOR_ID" | jq -r ".content"
@@ -97,7 +101,7 @@ Before running, ask:
    - **Quick answer** - Display the top 5 results in chat (no file saved)
    - **CSV** - Full export with all fields
    - **JSON** - Full export in JSON format
-2. **Number of results**: Based on character of use case
+2. **Number of results**: Default to 100 per run. Ask the user before going higher, because larger runs cost more and collect more personal data.
 
 ### Step 4: Run the Script
 
@@ -132,6 +136,7 @@ After completion, report:
 - Number of audience members/profiles analyzed
 - File location and name
 - Key demographic insights (label each one as inferred and say how many records it rests on)
+- Engagement read. Use this rough method and call it a heuristic, never proof of bought activity: compare likes and comments with follower count in the same sample, count how many commenters appear more than once, and note how many comments are only emojis or one generic word. Give the counts you used. Say "looks typical", "looks thin" or "looks odd", and never state a threshold as a rule.
 - Suggested next steps (deeper analysis, segmentation)
 
 ## Error Handling

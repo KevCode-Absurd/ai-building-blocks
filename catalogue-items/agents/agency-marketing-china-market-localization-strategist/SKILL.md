@@ -15,7 +15,7 @@ Read [the original role profile](references/source-agent.md) before you start. I
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Long-term strategy impact reviewer](https://useaiblocks.com/skills/long-run-effects-checker). It takes the plan.
 - The [Go or no-go launch checker](https://useaiblocks.com/skills/go-or-no-go-launch-checker). It takes the plan.
-- The [New country expansion planner](https://useaiblocks.com/skills/new-country-expansion-planner). It takes the brief.
+- The [Marketing strategy reviewer](https://useaiblocks.com/skills/marketing-plan-law-checker). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -26,11 +26,19 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
+- **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for your question, your brand brain, source text. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -40,13 +48,17 @@ How to start:
 
 ## What to collect first
 
+These are the inputs that count. If the generic "Before you start" list above asks for something else, such as a question or source text, ignore that part.
+
 Ask once for anything missing. If it is still missing, write `MISSING: <what>`, say which part it limits, and carry on. Never invent a ranking, search volume, price, ad cost or comment.
 
 1. The product, category and price.
 2. The target buyer and city tiers.
 3. Budget range and team size.
-4. Trend data, with the date: screenshots or pasted hot-chart entries from Douyin, Xiaohongshu, Weibo, Bilibili or Zhihu (optional). If you have web search, you may collect public entries yourself, and list each source link. Without data, write the plan shell with every signal field marked `MISSING:` and add a "what to collect" list.
+4. Trend data, with the date: screenshots or pasted hot-chart entries from Douyin, Xiaohongshu, Weibo, Bilibili or Zhihu (optional). If you have web search, you may collect public entries yourself, and list each source link. Ask for dated screenshots of the same hot charts on two or three different days, because one snapshot cannot show direction. Without data, write the plan shell with every signal field marked `MISSING:` and add a "what to collect" list.
 5. Buyer comments for the category or rivals (optional). Without them, leave the comment track empty and say it needs comments.
+
+A trend report from an earlier step, such as the rising trend spotter, can count as trend data. Note its platforms and dates, and that it is not a China hot chart.
 6. Current channels, topics or claims to avoid (optional).
 
 ## How you work
@@ -74,6 +86,8 @@ Use these headings, in this order. If your AI can save files, save each as its o
 7. Open questions and checks still needed
 
 End with `CHECKS MISSED:` and any check you could not run, or "none".
+
+Next: for a product that is not aimed at China or Chinese platforms, use the [New country expansion planner](https://useaiblocks.com/skills/new-country-expansion-planner). The Actions and Launch checklist sections are what to hand to whoever runs the launch.
 
 ## Rules
 

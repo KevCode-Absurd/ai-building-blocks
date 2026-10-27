@@ -102,6 +102,7 @@ output_shape: |
   REFERENCE STORES (examples, not targets)
   <store, size, split, what does not carry over to you>
 
+  CHECKS MISSED: <checks that failed or could not run, or none>
   MISSING: <spend by channel | revenue | margin | months of data>
 
 tweaks:
@@ -137,7 +138,7 @@ improve:
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "It does the maths and the comparison. Paste your spend table as text or a file."}
-    - {name: "Northbeam", why: "An attribution tool that shows spend and revenue across channels and creative in one place."}
+    - {name: "Northbeam", why: "A paid attribution tool that shows spend and revenue across channels and creative in one place. It is not required. A spreadsheet with a blended result and holdout tests is a free option."}
     - {name: "Meta Ads Manager", why: "Its export gives you spend by campaign and its Experiments tool can run a holdout."}
   inputs:
     - "A column of new customers per channel, so the next best dollar compares real customers, not clicks"

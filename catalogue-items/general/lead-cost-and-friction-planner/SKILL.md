@@ -18,7 +18,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Plan** with the [First purchase offer planner](https://useaiblocks.com/skills/front-end-offer-picker). Bring your results (optional), your question (optional). It uses your your offer.
+1. **Plan** with the [First purchase offer planner](https://useaiblocks.com/skills/front-end-offer-picker). Bring your results (optional), your question (optional). It uses your offer.
 2. This one.
 
 How to start:
@@ -55,7 +55,6 @@ The campaign sums, which wins, the diagnosis if response is low, the friction pl
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Paid introductory offer and follow-up planner](https://useaiblocks.com/skills/paid-first-step-planner). It takes the plan.
-- The [Value ladder planner](https://useaiblocks.com/skills/value-ladder-planner).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

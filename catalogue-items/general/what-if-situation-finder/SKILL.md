@@ -55,9 +55,9 @@ Then say what to do next: run the Scene detail picker if the place needs facts, 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Daily word quota planner](https://useaiblocks.com/skills/daily-word-quota-planner). It takes the brief.
-- The [Unplotted first-draft writer](https://useaiblocks.com/skills/unplotted-first-draft-writer). It takes the brief.
-- The [Scene detail picker](https://useaiblocks.com/skills/scene-detail-picker). It takes the brief.
+- The [Unplotted first-draft writer](https://useaiblocks.com/skills/unplotted-first-draft-writer). It takes the story outline.
+- The [Daily word quota planner](https://useaiblocks.com/skills/daily-word-quota-planner). It takes the story outline.
+- The [Scene detail picker](https://useaiblocks.com/skills/scene-detail-picker). It takes the story outline.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

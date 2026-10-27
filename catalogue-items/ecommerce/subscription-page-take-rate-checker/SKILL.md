@@ -29,8 +29,8 @@ How to start:
 
 **Tools that do this best:**
 - **Any good chat AI:** Any current chat AI that reads images can score the screens. Attach phone and desktop views.
-- **Shopify:** Your theme editor or a split-testing app shows which version of the page each buyer saw.
-- **Skio or Recharge:** Your subscription app sets the default selection, the plans shown and the cart upgrade, so the fixes land there.
+- **Shopify:** Paid plan needed. Your theme editor or a split-testing app shows which version of the page each buyer saw.
+- **Skio or Recharge:** Paid subscription apps; the fixes land in the one you already use. Your subscription app sets the default selection, the plans shown and the cart upgrade, so the fixes land there.
 <!-- /needs -->
 
 ## What you need
@@ -46,7 +46,7 @@ Score each rule as full points, half points or zero, as set out below. The weigh
 
 1. **R1 Default selection (20 points).** Is subscription pre-selected on load, on phone and on desktop? People lean toward what they see first. Full only if subscription is selected on both phone and desktop, it is clearly labelled as a repeat order, and the buyer can switch to one-time in one click with no extra steps. Half: selected on one, or only after a click, or the repeat-order label or the easy switch is missing. Zero: one-time pre-selected. One-time pre-selected is the first red flag. A default that pushes buyers into recurring orders without a clear label is not full marks.
 2. **R2 Offer gating (20).** Is the best discount available on subscription only, with one-time at full price and shown small? Full: yes. Half: one-time is discounted, but clearly less. Zero: both are discounted about the same. The subscription advantage is gone when both get a similar discount.
-3. **R3 Option count (15).** Three choices where two are subscription (for example a 90-day plan, a 30-day plan and one-time). When one-time is half the choices, subscribing is not the obvious path. Full: two of three are subscription. Zero: one-time is half or more of the choices. Half: anything between.
+3. **R3 Option count (15).** Three choices where two are subscription (for example a 90-day plan, a 30-day plan and one-time). When one-time is half the choices, subscribing is not the obvious path. Full: one-time is a third or less of the choices (for example one of three). Half: one-time is more than a third but under half (for example two of five). Zero: one-time is half or more of the choices.
 4. **R4 Pop-up alignment (15).** The pop-up, welcome email and ads must push the same subscription offer as the page. Example: a "10% off" pop-up that only works on one-time purchases pulls buyers away from a 20% subscription offer. The fix is that the pop-up offers the subscription deal, with no extra discount on one-time. Full: all agree. Half: one place clashes. Zero: the pop-up discounts one-time.
 5. **R5 Visible value (15).** Beside the options, not behind a tooltip: the money saved, every free gift with its dollar value, the guarantee and the per-unit price. Give 3 points for each of the four items shown, and 3 more if the free gifts show a dollar value. Cap at 15.
 6. **R6 Cadence sanity (8).** Quantity and delivery gaps fit how fast the product is used. A daily product on a 30-day plan with a sensible quantity is fine. A product used now and then on a 30-day plan gets cancelled for "too much product". Full: fits. Half: one plan is off. Zero: the default plan is off.
@@ -89,7 +89,7 @@ FIXES, BIGGEST LIFT FIRST
 TEST PLAN (top two fixes)
 Test 1: <change> | measure: <first-order take rate> | run: <weeks>
 
-NOT SEEN
+NOT SEEN (checks missed): <rules you could not confirm, or none>
 MISSING: <what you need to check>
 ```
 Say what the score measures: how well the page sells subscription to first-time buyers, from seven rules with our own weights.
@@ -98,8 +98,8 @@ Say what the score measures: how well the page sells subscription to first-time 
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Subscriber cancellation and retention reviewer](https://useaiblocks.com/skills/subscription-churn-watcher).
-- The [Subscription churn auditor](https://useaiblocks.com/skills/subscription-churn-audit).
 - The [Subscription cancel flow builder](https://useaiblocks.com/skills/subscription-cancel-flow-builder). It takes the audit report.
+- The [Billing reminder and confirmation writer](https://useaiblocks.com/skills/billing-reminder-and-confirmation-writer). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -116,4 +116,4 @@ Write `MISSING: <phone screenshot | pop-up | cart | landing pages>`. Score only 
 - Calling a page good because it looks polished.
 - Changing the pop-up, page and cart in one test.
 - Hiding the cancel path or the renewal terms to lift take rate.
-- Using one store's numbers as a promise. The month-6 value gap ($195 against $130) is one store's figure. The person should compare their own.
+- Using one store's numbers as a promise. Any month-6 value gap quoted in the sources is one store's figure. The person should compare their own.

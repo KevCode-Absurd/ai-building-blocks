@@ -62,9 +62,10 @@ The story line, the three light keys, the casting card, then a table of `Line | 
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Animated film video clip prompt writer](https://useaiblocks.com/skills/animated-video-ad-prompts). It takes the script.
-- The [Short film video ad script writer](https://useaiblocks.com/skills/short-film-ad-script).
-- The [Video ad style remake planner](https://useaiblocks.com/skills/video-ad-style-remake-planner). It takes the script.
+- The [Podcast-style video clip prompt writer](https://useaiblocks.com/skills/podcast-style-video-prompts). It takes the script.
+- The [Short film video clip prompt writer](https://useaiblocks.com/skills/short-film-video-prompts). It takes the script.
 - **Check it before it goes live** with the [Video ad transition reviewer](https://useaiblocks.com/skills/video-ad-bridge-checker). It takes the script.
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

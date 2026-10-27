@@ -7,7 +7,11 @@ description: Use when you face a real choice, the team is split and you need a c
 
 Give it a hard decision. Get a council's call and dissent, a stress-tested plan and a note that commits the team.
 
-This workflow chains skills from the library. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+Use it when: you face a real choice with a cost to getting it wrong, the team is split, or the same argument keeps coming back.
+
+Not for: a choice with one right answer (check the facts instead), a choice you can undo in a day (just try it, or run the advisory council once on its own), or planning the work after the choice is made (use a task list with an owner and a date for each step).
+
+This workflow chains skills from the library. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next. The council's voices are role-plays based on each person's public work. They are not what those people think. The decision stays with you.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -38,14 +42,18 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## Steps
 1. **Run the council.** Use the skill `advisory-council`. Gives the decision, the strongest dissent, what would change the call and the first steps. Hands the council brief to steps 2 and 3.
 
-Pause here: Turn the brief's decision and first three steps into a dated plan with an owner for each step.
+Pause here: Turn the brief's decision and first three steps into a dated plan with an owner for each step. Save it as `outputs/pause-dated-plan.md` before step 2, with one row per step: `Step | What | Owner | Date | Decision rule (what result means go on, change or stop)`. Add the decision and the due date for the whole plan at the top. If an owner or date is missing, write `MISSING: owner` or `MISSING: date` in that row.
 
-2. **Try to break the plan.** Use the skill `failure-first-plan-check`. Give it the council brief from the steps before. Tests the plan you wrote from the council's brief, starting with the council's strongest dissent, and fixes the gaps. Hands the checked plan to step 3.
+2. **Try to break the plan.** Use the skill `failure-first-plan-check`. Give it the council brief from `outputs/step-01-advisory-council.md` and the plan in `outputs/pause-dated-plan.md`. Tests the plan you wrote from the council's brief, starting with the council's strongest dissent, and fixes the gaps. Hands the checked plan to step 3.
 3. **Write the commit note.** Use the skill `disagree-and-commit-note-writer`. Give it the plan and the council brief from the steps before. Takes the checked plan from step 2 and the council's dissent from step 1 and writes the note that closes the debate.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back
-3 step files and the summary. The last file holds the copy draft.
+3 step files, the plan you wrote at the pause, and the summary. The last file holds the commit note.
+- Step 1: the council's call, the strongest dissent, what would change the call and the first three steps.
+- Step 2: ways the plan could fail, survival risks first, and a change to the plan for each.
+- Step 3: each doubt on record, who decides any clash, the owner, the signal to watch, the review date and the note for the team.
+- Summary: each step's file and every `MISSING:` line in one list.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

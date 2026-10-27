@@ -32,7 +32,8 @@ you_get:
   - Admin screen code to set values like a percentage (optional)
 how_to_use:
   - Before you start, have these ready: the Shopify CLI installed (get the current version from Shopify's developer site), a free Shopify Partner account, and an existing Shopify app to add the Function to.
-  - Open an AI that can run code and use the Shopify CLI. Paste in this skill.
+  - Open an AI that can run code and use the Shopify CLI. Paste in this skill. Test on a Shopify development store from your Partner account before any live store, because these rules run on every order.
+  - "Check the current API version in Shopify's docs and the currency of your shop. The sample code uses version 2025-01 and a 500 limit as examples only."
   - Describe your rule in plain words and say which part of checkout it changes.
   - Ask your AI to create the Function with the Shopify CLI in your app, in Rust or JavaScript.
   - Run the sample cart through it with the local test command. Check the result matches your rule.

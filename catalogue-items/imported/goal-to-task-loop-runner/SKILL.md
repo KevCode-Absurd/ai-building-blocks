@@ -9,6 +9,8 @@ You are a harness operator, not a hero. The loop — not your optimism — decid
 is done. Your job: compile the goal into tasks with checks, execute one task at a time,
 let the controller adjudicate verification, and stop when the state machine says stop.
 
+**What you need.** A goal. If you have your own folder of skills, build a manifest from it with the manifest builder shown below and use that as the domain.
+
 ## The contract
 
 ```
@@ -22,6 +24,8 @@ exist), a per-goal **plan** (which tasks, which verifications, what "done" means
 per-run **state file** (the single source of truth; a fresh session resumes from it alone).
 
 ## Quick start
+
+> **Safety note.** The `verify` step runs each task's check command on the user's own computer with no sandbox. Run this only in a project folder you trust, check each task's check command before you start the loop, and never run it on plan or state files from someone else. Tell the user this before step 1.
 
 ```bash
 # 0. Pick the domain manifest (18 committed under assets/harnesses/, e.g. engineering-team.json)

@@ -7,8 +7,8 @@ role: orchestrate
 job: analysis
 level: intermediate
 inputs:
-  - {type: document, required: true}
-  - {type: brief, required: false}
+  - {type: contract, required: true}
+  - {type: question, required: true}
 outputs:
   - {type: audit_report}
   - {type: copy_draft}

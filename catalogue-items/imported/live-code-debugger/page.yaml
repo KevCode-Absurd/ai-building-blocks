@@ -35,6 +35,7 @@ how_to_use:
   - If the dap tool is missing, your AI asks before it installs it. Say yes only if you are happy with that.
   - Watch each stop. Check the values and the call stack against what you expected.
   - Ask your AI to test its fix on the paused program, then restart and run the same case again.
+  - Once the fix is confirmed, apply it to your code, add a test for the same case, and remove any temporary debug code.
   - On a Mac with Go, do not turn off system protection to attach to a running program. Start the program under the debugger or attach remotely instead, and get approval first.
 output_sample:
   input:

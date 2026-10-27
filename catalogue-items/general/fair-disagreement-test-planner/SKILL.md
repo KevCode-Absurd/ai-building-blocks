@@ -51,8 +51,8 @@ The dispute in one line. Each claim in each side's terms. The common ground and 
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Decision checklist reviewer](https://useaiblocks.com/skills/mental-model-checklist-runner). It takes the plan.
-- The [Third option finder](https://useaiblocks.com/skills/third-option-finder). It takes the plan.
-- The [Loyalty claim checker](https://useaiblocks.com/skills/loyalty-claim-checker). It takes the plan.
+- The [Plan objection writer](https://useaiblocks.com/skills/case-against-writer). It takes the plan.
+- The [Second-opinion reviewer](https://useaiblocks.com/skills/second-opinion-reviewer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -25,9 +25,9 @@ Never estimate or invent a measurement. If you cannot open the page, or cannot m
 
 4. **Implement structured data markup.** Generate JSON-LD schema markup appropriate to the page type — Article, Product, FAQ, BreadcrumbList, Organization, or LocalBusiness. Validate the markup against Google's Rich Results requirements. Ensure the schema references match the visible page content to avoid structured data penalties.
 
-5. **Audit internal linking and content depth.** Map the internal link graph to identify orphan pages and shallow content clusters. Recommend anchor text improvements and suggest new internal links that strengthen topical authority. Evaluate content length and keyword density relative to top-ranking competitors.
+5. **Audit internal linking and content depth.** Map the internal link graph to identify orphan pages and shallow content clusters. Recommend anchor text improvements and suggest new internal links that strengthen topical authority. Evaluate content length and keyword use. Compare with top-ranking competitors only if the user supplies competitor pages or data; otherwise mark those figures `MISSING:` and do not guess.
 
-6. **Generate a prioritized SEO report.** Produce a structured report with findings organized by impact (critical, high, medium, low). Include before/after code snippets for recommended changes, estimated effort for each fix, and expected ranking impact. Provide a checklist format so engineers and content teams can track completion.
+6. **Generate a prioritized SEO report.** Produce a structured report with findings organized by impact (critical, high, medium, low). Include before/after code snippets for recommended changes, a plain effort label for each fix (low, medium or high) and its priority. Do not predict ranking gains or traffic. No one can promise them. Provide a checklist format so engineers and content teams can track completion.
 
 ## Usage
 
@@ -82,15 +82,15 @@ The names, numbers, dates and counts in these two examples are made-up placehold
 | Priority | Issue | Details | Fix |
 |----------|-------|---------|-----|
 | Critical | Missing XML sitemap | No sitemap found at `/sitemap.xml`; [share of pages not indexed, from Search Console] | Generate and submit sitemap to Search Console |
-| Critical | LCP = 4.8s on mobile | Hero image is 2.4 MB uncompressed PNG | Convert to WebP, add `width`/`height`, use `loading="lazy"` |
-| High | Duplicate title tags | 12 pages share the title "Acme Co — Home" | Write unique, keyword-rich titles for each page |
-| High | Missing canonical tags | 8 pages lack `<link rel="canonical">`, causing index bloat | Add self-referencing canonicals to every page |
+| Critical | LCP = [measured value] on mobile | Hero image is [file size] uncompressed PNG | Convert to WebP, add `width`/`height`, use `loading="lazy"` |
+| High | Duplicate title tags | [count] pages share the title "Acme Co — Home" | Write unique, keyword-rich titles for each page |
+| High | Missing canonical tags | [count] pages lack `<link rel="canonical">`, which can cause duplicate-page problems | Add self-referencing canonicals to every page |
 | Medium | No `robots.txt` | Entire site crawlable including `/admin` and `/staging` | Create `robots.txt` disallowing private paths |
 | Low | Images missing alt text | [count] of [total] images have empty `alt` attributes | Add descriptive alt text with relevant keywords |
 
 ## Best Practices
 
-- **Write for humans first, search engines second.** Keyword stuffing degrades user experience and triggers ranking penalties. Aim for natural keyword integration at 1–2% density.
+- **Write for humans first, search engines second.** Keyword stuffing degrades user experience and triggers ranking penalties. Aim for natural keyword use. A density of 1–2% is the author's rough guide, not a rule.
 - **Prioritize Core Web Vitals.** Google uses LCP, INP, and CLS as direct ranking signals. Compress images, defer non-critical JS, and set explicit dimensions on media elements.
 - **Use self-referencing canonical tags on every page.** This prevents duplicate content issues caused by URL parameters, trailing slashes, or session IDs.
 - **Build topical authority through internal linking.** Link related content in clusters around pillar pages. Use descriptive anchor text instead of generic "click here" links.

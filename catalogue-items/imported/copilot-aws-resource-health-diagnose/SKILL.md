@@ -14,6 +14,9 @@ This workflow analyzes a specific AWS resource to assess its health status, diag
 
 ## Workflow Steps
 
+### Step 0: Confirm the account and region
+Before any command, run `aws sts get-caller-identity` and read the account ID back to the user, with the region you will use. Continue only after the user says it is the right account.
+
 ### Step 1: Get AWS Diagnostic Best Practices
 Fetch `https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/` for monitoring and troubleshooting guidance to inform the diagnostic approach.
 
@@ -136,6 +139,8 @@ aws lambda put-reserved-concurrency \
 aws rds reboot-db-instance --db-instance-identifier <name>
 ```
 
+Before either command: a database reboot needs a maintenance window the user agrees to, and a Lambda concurrency change needs the account and function limits checked first (`aws lambda get-account-settings`). Read-only rollback for each: for Lambda, read the current value first (`aws lambda get-function-concurrency --function-name <name>`), write it down, and put it back if the change makes things worse; for RDS, a reboot cannot be undone, so confirm the instance status afterwards with `aws rds describe-db-instances` and have a snapshot or recent backup in place first.
+
 **Short-term Fixes** (High/Medium): Configuration adjustments, right-sizing, CloudWatch alarm improvements, IAM corrections.
 
 **Long-term Improvements**: Architectural changes for resilience, preventive monitoring, enable AWS Health Dashboard notifications via EventBridge.
@@ -170,7 +175,7 @@ Next steps: set the suggested CloudWatch alarms, then run this check again after
 ## Error Handling
 - **Resource Not Found**: Ask user to clarify name/region
 - **Authentication Issues**: Guide through `aws configure`
-- **Insufficient Permissions**: List required IAM actions (`logs:*`, `cloudwatch:*`, `pi:*`)
+- **Insufficient Permissions**: List only the read-only actions needed, such as `logs:DescribeLogGroups`, `logs:StartQuery`, `logs:GetQueryResults`, `cloudwatch:GetMetricStatistics`, `pi:GetResourceMetrics`, and the `Describe` or `Get` action for the resource type. Do not ask for wildcard permissions or any write permission for the diagnosis.
 - **No Logs Available**: Suggest enabling CloudWatch logging for the resource type
 - **Query Timeouts**: Use shorter time windows
 

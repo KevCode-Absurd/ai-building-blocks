@@ -59,8 +59,9 @@ What you own. Each idea sorted, with its carry-over or the reason it was dropped
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [First market picker](https://useaiblocks.com/skills/first-market-picker).
-- The [Software marketing idea picker](https://useaiblocks.com/skills/marketing-idea-picker).
+- The [First market picker](https://useaiblocks.com/skills/first-market-picker). It takes the shortlist.
+- The [Market expansion roadmap planner](https://useaiblocks.com/skills/market-expansion-sequencer). It takes the shortlist.
+- The [Go or no-go launch checker](https://useaiblocks.com/skills/go-or-no-go-launch-checker). It takes the shortlist.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

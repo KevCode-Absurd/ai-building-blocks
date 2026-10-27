@@ -24,7 +24,7 @@ Each perspective surfaces insights the others miss. A company can be a great inv
 
 ## Step 1: Gather Information
 
-Before analyzing, collect as much public information as possible about the startup. Use web search, the company's website, Crunchbase data, press coverage, and any other available sources.
+Before analyzing, collect as much public information as possible about the startup. Use web search, the company's website, Crunchbase data, press coverage, and any other available sources. Crunchbase Pro and PitchBook need a paid account, so start with free sources: the company's own site, its press and blog pages, and public job posts. Read LinkedIn and Glassdoor pages by hand as they are shown publicly. Do not scrape them or pull them with automated tools, as that can break their terms.
 
 **Key data to gather:**
 

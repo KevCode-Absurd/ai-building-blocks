@@ -10,8 +10,16 @@ level: beginner
 inputs:
   - type: document
     required: true
+  - type: slide_deck
+    required: false
+  - type: web_page
+    required: false
 outputs:
   - type: document
+  - type: slide_deck
+    required: false
+  - type: web_page
+    required: false
 uses: []
 origin: imported
 source:

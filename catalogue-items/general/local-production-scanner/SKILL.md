@@ -7,6 +7,8 @@ description: Use when you are deciding what to make locally in a market that buy
 
 In many markets, a large share of what people buy is brought in from elsewhere. This skill finds where making it locally could win, what you would have to build yourself to do it, and how much cushion you need. It gives a plan and an audit of the evidence, not a forecast. It does not predict demand or prices, and it does not test whether people will buy (run a small paid trial for that).
 
+Not for a market with no import or trade data at all (collect customs or trade body figures first), or a service business where making locally is not the question.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -36,7 +38,7 @@ How to start:
 ## Steps
 
 1. **List what the market imports or ships out raw.** Write each item with the volume or value and the source of that figure. If a figure has no source, mark `MISSING: source` and keep it out of the ranking.
-2. **Pick the item with the most local value.** For each item, estimate how much work and money stays in the market if you make it locally: jobs, local inputs, margin kept. Rank the items and give a one-line reason for the top three. Use only numbers given or sourced.
+2. **Pick the item with the most local value.** For each item, estimate how much work and money stays in the market if you make it locally: jobs, local inputs, margin kept. Score each item 1 to 5 on jobs kept, local inputs used and margin kept, add the three scores, and rank by the total. Break ties by the item with the best-sourced figures. Give a one-line reason for the top three. Use only numbers given or sourced; a score with no source figure behind it is marked MISSING.
 3. **List what you will have to build yourself.** For the top item, write the power, water, road, port and storage the plant needs and whether each exists. For each that does not, write a cost range with its source or `MISSING: cost`.
 4. **Size the first plant to change the market.** Write the volume that would shift prices or supply, not the smallest volume that proves a point. Give the logic: share of imports replaced, and the price at which local product wins.
 5. **Plan the funding and the fallback.** Write how the first phase is paid for, ideally from profits of an existing business. Name a fallback business or product that earns while the plant is built or delayed.
@@ -51,8 +53,9 @@ The import table with sources. The top three items and the pick. The infrastruct
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Market definition and share checker](https://useaiblocks.com/skills/market-boundary-checker). It takes the plan.
+- The [Minimum experiment planner](https://useaiblocks.com/skills/smallest-test-picker). It takes the plan.
 - The [Business assumption stress tester](https://useaiblocks.com/skills/assumption-stress-test). It takes the plan.
+- The [MVP experiment planner](https://useaiblocks.com/skills/mvp-experiment-planner). It takes the plan and audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

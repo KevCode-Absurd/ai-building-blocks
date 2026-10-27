@@ -10,6 +10,8 @@ date_added: "2026-09-04"
 
 ## 1. Purpose
 
+(Where this file says "Claude", read "your AI". The steps work in any AI that can read the code.)
+
 This skill governs **how Claude thinks** during the context-building phase of an audit.
 
 When active, Claude will:
@@ -156,7 +158,7 @@ All invariants, assumptions, and data dependencies must propagate across calls.
 
 ### 5.3 Complete Analysis Example
 
-FUNCTION_MICRO_ANALYSIS_EXAMPLE.md is not included in this copy. Use the points below as the pattern for a complete walkthrough:
+The original worked example file is not included in this copy, and nothing below depends on it. Use the points below as the pattern for a complete walkthrough:
 - Full micro-analysis of a DEX swap function
 - Application of First Principles, 5 Whys, and 5 Hows
 - Block-by-block analysis with invariants and assumptions
@@ -169,7 +171,7 @@ This example demonstrates the level of depth and structure required for all anal
 
 ### 5.4 Output Requirements
 
-When performing ultra-granular analysis, Claude MUST structure output following the format below (OUTPUT_REQUIREMENTS.md is not included in this copy).
+When performing ultra-granular analysis, Claude MUST structure output following the format below (the original output-requirements file is not included; this list is the whole format).
 
 Key requirements:
 - **Purpose** (2-3 sentences minimum)
@@ -183,13 +185,14 @@ Quality thresholds:
 - Minimum 5 assumptions documented
 - Minimum 3 risk considerations for external interactions
 - At least 1 First Principles application
+- These are targets, not quotas. If a function really has fewer invariants or assumptions, say so. Never invent one to reach a number.
 - At least 3 combined 5 Whys/5 Hows applications
 
 ---
 
 ### 5.5 Completeness Checklist
 
-Before concluding micro-analysis of a function, verify against this checklist (COMPLETENESS_CHECKLIST.md is not included in this copy):
+Before concluding micro-analysis of a function, verify against this checklist (the original checklist file is not included; this list is the whole checklist):
 
 - **Structural Completeness**: All required sections present (Purpose, Inputs, Outputs, Block-by-Block, Dependencies)
 - **Content Depth**: Minimum thresholds met (invariants, assumptions, risk analysis, First Principles)

@@ -5,11 +5,11 @@ job: grow-social
 thinking: medium
 thinking_why: It judges who to approach first and what to do by hand, but the steps are clear.
 headline: First customers by hand planner
-subhead: Give it your product and the first customers you want. It picks a narrow group you can reach, plans how to win them one at a time, marks each hand step to keep or automate later and sets what to learn. You get a plan with named people and places.
+subhead: Give it your product and the first customers you want. It picks a narrow group you can reach, plans how to win them one at a time, marks each hand step to keep or automate later and sets what to learn. You get a plan with the people and places you name, and a way to find more.
 explain: |
   Most new products start with a launch and a wait. Few people come, and the founder is left with no idea why. A better start is a small group you can reach yourself, won one at a time, with more service than any big company would give.
 
-  This skill picks a narrow group, lists where they gather and who to contact by name, and plans how to recruit and set each one up yourself. It marks every manual step as one to automate later or one to keep. It works backwards from the income you need to a number of customers, and it names a community you already belong to. The plan has a way to record what each user says, and it does not depend on a big launch.
+  This skill picks a narrow group, lists where they gather and who to contact (using the names you give it, and marking any other as unverified), and plans how to recruit and set each one up yourself. It marks every manual step as one to automate later or one to keep. It works backwards from the income you need to a number of customers, and it names a community you already belong to. The plan has a way to record what each user says, and it does not depend on a big launch.
 when:
   - You have a product and no customers yet.
   - You are about to launch and have no way to find the first ten buyers.
@@ -61,7 +61,7 @@ how_it_works:
   - title: Picks a narrow group
     text: Chooses a group you can reach in person or by message.
   - title: Names where they gather
-    text: Lists places and people to contact by name.
+    text: Lists the places and people you name, marks anything else unverified, and shows you how to find more.
   - title: Recruits one at a time
     text: Plans how to win each person and set them up yourself.
   - title: Overserves them
@@ -80,7 +80,7 @@ output_shape: |
 
   WHERE THEY GATHER
   <place or person> | <how to contact> | <why they would care>
-  (real names only; MISSING if none known)
+  (only names you gave; anything else marked UNVERIFIED or MISSING)
 
   HOW TO WIN EACH ONE
   <recruit by hand> | <set them up yourself> | <extra service>

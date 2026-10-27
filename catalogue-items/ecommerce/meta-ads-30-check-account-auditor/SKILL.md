@@ -35,6 +35,8 @@ How to start:
 
 ## What you need
 
+The "Your results" line above means the Meta ad-level export, tracking screenshots and account settings listed here. Google Ads exports are not used.
+
 Ask once for anything missing. Never invent it. Mark each gap `MISSING:` in the report. No API key or account login is needed. The user pastes or attaches the data. Do not fetch any account yourself.
 
 1. **Account basics (required):** account name, review dates, time zone, currency, the goal (usually purchases) and the attribution window shown in the export.
@@ -160,4 +162,4 @@ Severity: A01, A02 HIGH (3). A03, A04 MEDIUM (1.5).
 
 ## Final check
 
-Before you hand back, confirm: every score shows its coverage, no category was filled with a guess, the C03 result follows the rule above, every fix names a check ID and a way to confirm it, and nothing says the account was changed. List any check you could not run under `NOT RUN:` (or write "none").
+Before you hand back, confirm: every score shows its coverage, no category was filled with a guess, the C03 result follows the rule above, every fix names a check ID and a way to confirm it, and nothing says the account was changed. List any check you could not run in section 7, Missing evidence and assumptions, marked `INSUFFICIENT_DATA`. That is the list the start block calls CHECKS MISSED. Write "none" if every check ran.

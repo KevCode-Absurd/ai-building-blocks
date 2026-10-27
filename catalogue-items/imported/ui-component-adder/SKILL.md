@@ -19,6 +19,10 @@ A framework for building ui, components and design systems. Components are added
 - Use when initializing a new project or switching design system presets.
 - Use to retrieve component documentation, examples, and API references.
 
+## When not to use
+- The project does not use React and shadcn/ui, or the user does not want it: use the docs of the component library the project already has.
+- The user wants a whole page or site designed from scratch: design it first (for example with the design review panel), then come back to add the parts.
+
 ## Current Project Context
 
 ```json

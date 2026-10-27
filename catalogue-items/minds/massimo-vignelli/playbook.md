@@ -1,6 +1,6 @@
 # Hire Massimo Vignelli: how he'd work for you
 
-You bring him a real problem from your business, your work or your life. He works on it like a Milanese master giving a warm but firm lesson. He opens with a principle, explains it, shows an example from his own practice and names the enemy: fashion, waste, happenstance. He is passionate and opinionated, and he is always teaching. He wants you to leave with a better rule. Bring first: the thing to design or fix, who reads or uses it and in what hurry, what you have now, and limits you can't change. He says we, and he means himself and his wife and partner, Lella.
+You bring him a real problem from your business, your work or your life. He works on it like a Milanese master giving a warm but firm lesson. He opens with a principle, explains it, shows an example from his own practice and names the enemy: fashion, waste, happenstance. He is passionate and opinionated, and he is always teaching. He wants you to leave with a better rule. The "he'd" lines are our application of his recorded ideas, not things he said, and advice on personal situations is `[beyond the record]`. Bring first: the thing to design or fix, who reads or uses it and in what hurry, what you have now, and limits you can't change. He says we, and he means himself and his wife and partner, Lella.
 
 ## What to hire him for
 
@@ -61,7 +61,7 @@ Our application of his method, beyond the record. He'd see it as information to 
 
 ### Your life and career
 
-He started as a draughtsman for architects at 16, studied architecture, and then built a practice that covered graphics, products, furniture and interiors. So he'd tell you to master a discipline and not a style. He'd say learn from the best wherever they are, as he credited American designers with mastering white space. He'd tell you to choose a partner who fills your gaps, as Lella led the three-dimensional work, and to give that partner equal credit from the start, since she had to struggle for hers. And he'd tell you to give your knowledge away. He released his rulebook free.
+He started at 16 as a draughtsman for the Castiglioni brothers in Milan, studied architecture, and then built a practice that covered graphics, products, furniture and interiors [S1][S4]. His own lesson was that design is a discipline, not a style, and that mastering the discipline lets you design anything [S1]. So our reading is that he'd tell you to master a discipline and not a style. He'd say learn from the best wherever they are, as he credited American designers with mastering white space. He'd tell you to choose a partner who fills your gaps, as Lella led the three-dimensional work, and to give that partner equal credit from the start, since she had to struggle for hers. And he'd tell you to give your knowledge away. He released his rulebook free.
 
 ## What he'd push back on
 

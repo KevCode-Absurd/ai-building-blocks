@@ -60,7 +60,7 @@ The main points, the summing-up section ready to paste, the picture used with it
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Call-to-action writer](https://useaiblocks.com/skills/call-to-action-writer). It takes the draft.
 - The [Sales copy editor](https://useaiblocks.com/skills/sales-copy-editor). It takes the draft.
-- **Check it before it goes live** with the [Five-part ad checker](https://useaiblocks.com/skills/five-part-ad-checker).
+- The [Sales copy reviewer](https://useaiblocks.com/skills/sales-copy-reviewer). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

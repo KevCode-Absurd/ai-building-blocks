@@ -16,9 +16,10 @@ Read [the original role profile](references/source-agent.md) for its full method
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Threat intelligence analyst agent](https://useaiblocks.com/skills/agency-security-threat-intelligence-analyst).
-- The [Threat modeler](https://useaiblocks.com/skills/threat-modeler). It takes the brief.
-- The [Security audit evidence reviewer](https://useaiblocks.com/skills/copilot-audit-integrity). It takes the audit report.
+- The [Code intent mismatch auditor](https://useaiblocks.com/skills/code-intent-gap-auditor). It takes the document.
+- The [Agent injection evidence review assistant](https://useaiblocks.com/skills/track-agent-injection-controls-and-retest-evidence). It takes the document.
+- The [ISO 27001 audit prep coach](https://useaiblocks.com/skills/iso-27001-audit-prep-coach). It takes the document.
+- The [Documentation accuracy reviewer](https://useaiblocks.com/skills/documentation-checker). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -9,6 +9,8 @@ Give it your site. Get a ranked audit, on-page fixes, new titles and tags, and s
 
 This workflow chains 5 skills into one job. You run them one after another, and each skill's result is saved and passed to the next.
 
+**When not to use it:** Not for one page's title and description: use the [Title and meta tag writer](https://useaiblocks.com/skills/title-and-meta-tag-writer). Not for a drop in paid-ad sales: use the [Ad sales drop analyst](https://useaiblocks.com/skills/ad-sales-drop-analyst). It cannot promise rankings, and you approve before any change goes live.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -19,6 +21,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Pdp copy** (yours): product page copy: title, benefits, details, FAQ, proof blocks.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
@@ -33,6 +36,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+The generic "Before you start" block above is short on detail. For this audit you need:
+
 - **Your site address, as a URL or saved HTML** (required). Step 1 audits the whole site from it.
 - **Your key pages and the searches you want each to rank for** (required). Steps 3 and 4 work page by page from these.
 - **A search console export for a closed date window, with what each column counts** (optional). Steps 1 to 3 use it to see what ranks today.
@@ -55,14 +60,20 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back
-5 step files and the summary. The first two files hold the audits; the fourth the titles and descriptions; the last the markup.
+5 step files and the summary:
+- **Step 1, site audit:** problems ranked by how much they block ranking.
+- **Step 2, technical audit:** speed, crawl, mobile, redirect, sitemap and robots fixes, in the order that pays.
+- **Step 3, page fixes:** for each key page, its target search and the heading, content, image and link fixes.
+- **Step 4, titles and descriptions:** one title and one meta description per key page, within length limits.
+- **Step 5, markup:** schema code ready to paste, using only facts that appear on the page.
+- **HAND-BACK SUMMARY:** each file, any step not run and why, every `MISSING:` line in one list.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [SEO auditor](https://useaiblocks.com/skills/seo-auditor).
-- The [Tool page SEO planner](https://useaiblocks.com/skills/tool-pages-seo-fixer).
 - The [Store SEO fix prioritiser](https://useaiblocks.com/skills/store-seo-fix-prioritiser). It takes the audit report.
+- The [AI search recommendation gap finder](https://useaiblocks.com/skills/ai-recommendation-gap-finder). It takes the audit report.
+- The [Shopify duplicate page fixer](https://useaiblocks.com/skills/shopify-duplicate-page-fixer). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

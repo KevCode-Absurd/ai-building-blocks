@@ -51,7 +51,7 @@ The user provides a JSON catalog (see `assets/vendor_catalog_template.md` for th
 
 ### Step 2 — Score each vendor 0-100
 
-Run `scripts/vendor_scorer.py --input catalog.json --profile <industry> --output scorecard.md`. **That script is not in this folder.** If you cannot find it, score each vendor by hand with the weights in the table below, show the arithmetic for each dimension, and say that the scores were worked out by hand.
+Run `scripts/vendor_scorer.py --input catalog.json --profile <industry> --output scorecard.md`. The script is in this skill's `scripts/` folder. If your AI can only read pasted text and cannot run it, score each vendor by hand with the weights in the table below, show the arithmetic for each dimension, and say that the scores were worked out by hand.
 
 The scorer weights 5 dimensions per industry profile:
 
@@ -71,17 +71,17 @@ Output: ranked markdown scorecard with per-dimension breakdown and a verdict per
 
 ### Step 3 — Measure SLA compliance
 
-Run `scripts/sla_compliance_tracker.py --input sla_records.json --output sla_report.md`.
+Run `scripts/sla_compliance_tracker.py --input sla_records.json --output sla_report.md`. If your AI cannot run it, work out the same numbers by hand and say so.
 
 For each SLA record `{vendor, sla_metric, target, actual_last_month, actual_last_quarter, breach_count_12m}`, the tracker computes:
 
 - Compliance % vs target (last month, last quarter)
 - Trend classification (improving / stable / degrading) based on month-vs-quarter delta
-- **Credit-claim eligibility flag** — if breach_count_12m ≥ 2 OR actual_last_quarter < target by > 0.5pp, flag the SLA credit as claimable
+- **Credit-claim eligibility flag** — if breach_count_12m ≥ 2 OR actual_last_quarter < target by > 0.5pp, flag the SLA credit as worth checking. This is a generic rule, not the vendor's contract. A flag means: read the vendor's own SLA credit terms (the claim window, how to file, what counts as downtime) before you claim. It is not a confirmed claim
 
 ### Step 4 — Classify third-party risk
 
-Run `scripts/vendor_risk_classifier.py --input catalog.json --profile <industry> --output risk_matrix.md`.
+Run `scripts/vendor_risk_classifier.py --input catalog.json --profile <industry> --output risk_matrix.md`. If your AI cannot run it, classify by hand from the four vectors below and say so.
 
 Classifies each vendor as **Critical / High / Medium / Low** across 4 risk vectors (Shared Assessments SIG-Lite-ish):
 
@@ -99,7 +99,7 @@ Combine the 3 artifacts into a final BizOps / VMO digest:
 - Top 3 KEEP wins (vendors over-performing — consider deepening)
 - Top 3 REVIEW conversations (schedule QBR with vendor)
 - Top 3 REPLACE candidates (start alternatives search now)
-- All SLA credits eligible to claim (with dollar estimate where possible)
+- All SLA credits worth checking against the vendor's own credit terms (with a dollar estimate only if the contract terms are in hand)
 - All Critical-risk vendors with no current mitigation
 
 ## Scripts
@@ -115,8 +115,9 @@ All three accept `--input` (JSON), `--output` (markdown path), `--sample` (run w
 ## Quick example
 
 ```bash
-# Emits a weighted vendor scorecard (industry-tuned dimensions + per-vendor verdict) for the built-in sample catalog
-cd business-operations/skills/vendor-management && python3 scripts/vendor_scorer.py --sample
+# Emits a weighted vendor scorecard for the script's built-in sample catalog.
+# The sample vendors are made-up demo data, not your vendors. Run it from the skill folder.
+python3 scripts/vendor_scorer.py --sample
 ```
 
 ## References

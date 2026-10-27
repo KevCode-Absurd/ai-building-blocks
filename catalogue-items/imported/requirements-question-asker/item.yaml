@@ -11,7 +11,7 @@ inputs:
   - type: question
     required: true
 outputs:
-  - type: feedback_notes
+  - type: brief
 uses: []
 origin: imported
 source:

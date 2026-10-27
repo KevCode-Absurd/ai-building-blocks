@@ -36,7 +36,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill. Use an AI that can run code, such as in Claude Code or a similar tool.
   - Give it your staging address, proof you may test it, and what is out of scope. Add a test login or token if the app needs one.
   - Ask for a passive scan first. Approve the active scan only after you check the scope.
-  - Read the findings and check the evidence for each one. The examples in the skill are illustrations, not real results.
+  - Read the findings and check the evidence for each one. The examples in the skill are illustrations, not real results. Mark each confirmed false positive and keep it out of the next scan's baseline, so the repeat-scan comparison stays accurate.
   - Next, sort the findings by severity and fix the worst first. Run the scan again and compare it with the last one. Pair it with a code-level review, such as the Code security reviewer.
 output_sample:
   input:

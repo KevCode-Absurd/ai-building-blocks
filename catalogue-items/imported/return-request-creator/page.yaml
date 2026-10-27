@@ -11,7 +11,7 @@ explain: |
 
   You name the order, the line items and quantities, and a reason such as wrong size, defective or not as described. If you give nothing, all fulfilled items are returned with the reason set to other. The skill checks the order has shipped, since only fulfilled orders can have a return. It can run as a dry run to preview, and you choose whether the customer gets an email. Orders not yet shipped need a cancel instead.
 when:
-  - A customer writes in asking to send back an item that arrived.
+  - A customer writes in asking to send back an item that arrived. This is for live returns on fulfilled orders only.
   - Your support team needs a tracked return, not just a refund.
   - You want the same reason on every return.
   - You want to check a return before it goes live.
@@ -33,8 +33,9 @@ you_get:
 how_to_use:
   - Use an AI that can run code and reach your Shopify admin. A plain chat window cannot do this.
   - Log in to your store and allow it to read orders and write returns.
+  - Find the order ID in your Shopify admin. Open the order, then copy the long ID that starts with gid://shopify/Order/ (your AI can read it for you from the order number if it can reach your store).
   - Paste the skill and give your AI the order ID, the items and the reason.
-  - Ask for a dry run first. Check the items and quantities in the preview.
+  - The preview (dry run) is on by default, so nothing is created until you say so. Check the items and quantities in the preview.
   - Check with the customer that a return is expected. The customer gets an email unless you turn it off.
   - Tell your AI to run it for real, then check the report for errors.
   - Once the item arrives, check it over. Then open the order in Shopify admin and use Refund to pay the customer back.

@@ -10,8 +10,12 @@ level: intermediate
 inputs:
   - type: voc_reviews
     required: true
+  - type: spreadsheet
+    required: false
 outputs:
   - type: persona
+  - type: customer_needs
+    required: true
 uses: []
 origin: imported
 source:

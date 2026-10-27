@@ -9,7 +9,7 @@ headline: "Fraud rules setter"
 subhead: Give it your monthly orders, average order value, chargeback count and payment setup. It writes an order-handling rule set, a daily review routine for held orders and a chargeback watch line, matched to how many hours you can spend.
 
 explain: |
-  Fraud costs a store the sale, the product and a dispute fee. Too many chargebacks is worse: processors flag accounts above 0.9 percent and can stop taking cards above 1 percent (check the exact figures with your processor). But rules that are too tight hold up real buyers, so you lose sales too.
+  Fraud costs a store the sale, the product and a dispute fee. Too many chargebacks is worse: processors flag accounts above 0.9 percent and can stop taking cards above 1 percent. A platform blog reports these figures, so confirm them with your processor. But rules that are too tight hold up real buyers, so you lose sales too.
 
   This skill uses the order risk rating your platform already gives each order, and sets what happens at each level: take payment on low risk, send a notice on medium, hold high for review. It also covers extra card checks, protection cover you may qualify for, a checklist for held orders and a monthly loop to loosen or tighten. It fits your volume and your review time, so you never hold orders nobody will look at.
 
@@ -56,7 +56,7 @@ output_sample:
     - name: RULES
       contains: What happens to low, medium and high risk orders, and the one pattern that justifies a cancel.
     - name: EXTRA CHECKS
-      contains: Settings for 3D Secure and the address check, plus notes on any protection cover you may have.
+      contains: Settings for 3D Secure and the address check, plus notes on any protection cover you may have, with its exclusions to check.
     - name: REVIEW ROUTINE
       contains: Who reviews held orders, when, a short checklist, and how to release or cancel within 24 hours.
     - name: MONTHLY LOOP
@@ -66,7 +66,7 @@ output_sample:
 
 how_it_works:
   - title: Sets the watch line
-    text: Uses the processor's 0.9 percent flag and 1 percent stop levels, and adds a warning at 0.5 percent so you have a buffer.
+    text: Uses the 0.9 percent flag and 1 percent stop levels that a platform blog reports (confirm them with your processor), and adds a warning at 0.5 percent so you have a buffer. The 0.5 percent is this skill's own suggestion.
   - title: Uses the risk rating
     text: Builds on the platform's low, medium and high order rating instead of a home-made scoring system.
   - title: Writes the flow rules
@@ -74,7 +74,7 @@ how_it_works:
   - title: Sets extra card checks
     text: Keeps dynamic 3D Secure on for higher-risk payments and reads reports for 30 days before changing the address check.
   - title: Checks cover
-    text: Notes whether Shopify Protect applies and tells you to read its exclusions.
+    text: Notes whether Shopify Protect may apply. It may cover the dispute fee, subject to eligibility and exclusions, so read its current terms.
   - title: Writes the review routine
     text: Gives a checklist for held orders and a 24-hour release or cancel rule.
   - title: Sets the monthly loop
@@ -85,7 +85,7 @@ output_shape: |
   <orders a month, AOV, chargebacks, payment setup, review hours>
 
   WATCH LINE
-  Chargeback rate now: <n>%  | warning at 0.5% | processor flag 0.9% | stop risk 1%
+  Chargeback rate now: <n>%  | warning at 0.5% (this skill's suggestion, not a processor rule) | processor flag 0.9% | stop risk 1% (both figures reported by a platform blog: confirm with your processor)
 
   RULES (in order)
   1. Low risk: <action>
@@ -96,7 +96,7 @@ output_shape: |
   EXTRA CHECKS
   3D Secure: <setting and why>
   Address check: <setting and when to review>
-  Cover: <Shopify Protect or other, with limits>
+  Cover: <Shopify Protect or other: may cover the dispute fee, subject to eligibility and exclusions to check>
 
   REVIEW ROUTINE
   Who: <name or role>  When: <time>

@@ -11,6 +11,10 @@ inputs:
     required: true
   - type: spreadsheet
     required: false
+  - type: financial_statements
+    required: true
+  - type: question
+    required: true
 outputs:
   - type: spreadsheet
 needs_mode: manual

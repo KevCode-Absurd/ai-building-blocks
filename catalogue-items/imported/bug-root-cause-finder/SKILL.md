@@ -22,6 +22,8 @@ Use this skill when:
 - the failure is intermittent, a regression, performance-related, or otherwise hard to isolate
 - you want an explicit user confirmation checkpoint before any fix is applied
 
+If you already have a ranked list of likely causes (an audit report), start Phase 2 from it. It does not replace reproducing the failure in Phase 1.
+
 ## The Protocol
 
 ### Phase 1: REPRODUCE

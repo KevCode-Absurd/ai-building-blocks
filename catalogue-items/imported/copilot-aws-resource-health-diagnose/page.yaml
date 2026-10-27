@@ -12,7 +12,8 @@ not_for:
   - "You have no AWS CLI access or logging turned off: ask a teammate with access to run the checks, or turn on CloudWatch logging first."
 how_to_use:
   - Use an AI that can run AWS CLI commands, such as Claude Code or another coding agent. In a plain chat, run each command yourself and paste the results back.
-  - Check that the AWS CLI is signed in and CloudWatch logging is on for your resource.
+  - Check that the AWS CLI is signed in to the right account and region, and that CloudWatch logging is on for your resource. Your AI should read the account ID back to you before it runs anything. Say yes only if it is the account you mean.
+  - Give the AI read-only access if you can. The checks need only read permissions for logs, metrics and the resource.
   - Paste the skill, then give the resource name, type, region and symptoms.
   - Let it run the read-only checks and read the summary report.
   - Read every fix before you approve it. Rebooting a database or changing Lambda concurrency can cause downtime or throttling.

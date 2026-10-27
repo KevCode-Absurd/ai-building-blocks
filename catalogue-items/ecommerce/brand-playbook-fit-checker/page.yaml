@@ -70,9 +70,9 @@ how_it_works:
   - title: Splits account from surroundings
     text: Asks what carries the brand outside the ad account, such as celebrity seeding, shops, press, brand search and loyalty.
   - title: Runs the cold start test
-    text: Asks if these same ads would work with no brand awareness. The source says the same ads would likely return about 0.4 for a new brand.
+    text: Asks if these same ads would work with no brand awareness. One speaker's view is that the same ads would likely do far worse for a new brand. That is an opinion, not a measurement.
   - title: Checks the awareness mix
-    text: If over 90 percent of ads aim at people who already know the brand, the account is a way to reach known buyers, not to find new ones.
+    text: If almost all ads aim at people who already know the brand (one speaker counted over 90 percent for one brand, which is unverified), the account is a way to reach known buyers, not to find new ones.
   - title: Lists what you cannot see
     text: Spend per ad, offer margin and funding are hidden. Ad library "winners" are guesses.
   - title: Checks observed against modelled
@@ -108,6 +108,7 @@ output_shape: |
   SMALL TEST
   <the one test, cost, how long, what result means go>
   CLAIM RISK: <note and a line to check with a qualified person>
+  CHECKS MISSED: <checks that failed or could not run, or none>
   MISSING: <what was not supplied>
 
 tweaks:

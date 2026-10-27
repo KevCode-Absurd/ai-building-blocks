@@ -10,6 +10,8 @@ explain: |
   Your AI has a memory tool connected, yet it still asks the same questions and forgets what you decided last week. This skill gives it standing rules for when to look things up and when to write them down.
 
   The rules are plain. Recall before you start work that has history, pick a tool, or follow a convention. Save after a decision, a correction, a failure, or a lasting preference. Each note holds one fact, the reason, the date and the source, in your own words. It skips secrets and anything that can be reread from a file. It works with a notes folder, a local memory server or a hosted one.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (mnemoverse) says CC0-1.0. Credit goes to mnemoverse and sickn33.
 when:
   - You connected a memory tool but your AI never seems to use it.
   - Your AI keeps undoing a habit you already corrected.
@@ -32,11 +34,12 @@ you_get:
 how_to_use:
   - Connect a memory tool to your AI first. A notes folder works. So does a memory server. This skill adds no memory tool of its own.
   - Open a chat in Claude, ChatGPT or Gemini, or your AI tool's rules or instructions area. Paste the skill text.
-  - Tell your AI the project name and where its memory lives, such as the folder path or server name.
+  - Tell your AI the project name and where its memory lives, such as the folder path or server name. Pasting the rules into a chat only lasts for that session. For lasting rules, put them in your AI tool's instructions or rules area.
+  - Check that the rules loaded. Ask your AI to restate them in its own words.
   - Add any standing decisions you want kept (optional). Ask your AI to save each one as a note.
   - Work as usual. Check that your AI names the notes it used, with dates, before it starts.
   - Correct it when it forgets. It should save the correction as a new note.
-  - Once a month, review the notes and close any that are out of date. For the files your AI reads at the start, pair this with the Agent context setter.
+  - Once a month, review the notes and close any that are out of date. For the files your AI reads at the start, pair this with the Agent context setter (the Related item for rules files).
 output_sample:
   input:
     - The memory tool or notes folder your AI can use

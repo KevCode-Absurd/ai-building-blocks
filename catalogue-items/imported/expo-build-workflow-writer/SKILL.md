@@ -29,6 +29,8 @@ Ask once for anything not given:
 
 Needs Node, internet access and an Expo account. EAS builds can be limited or cost money on the person's Expo plan, so say so before they run it. If you cannot run code or reach the internet, still write the file, mark it `NOT VALIDATED`, and tell the person to run the validator themselves.
 
+**Ask before anything costs money or goes live.** Writing the file changes nothing. The workflow can later start paid EAS builds or send a build to the App Store or Google Play. Before you write a job that submits to a store, or tell the user to run a paid build, show them the job list and wait for a clear yes. Never run a store submission against production store accounts yourself.
+
 ## What you hand back
 
 1. The workflow file, with its path under `.eas/workflows/`.
@@ -109,7 +111,8 @@ When generating or editing workflows:
 After generating or editing a workflow file, validate it against the schema:
 
 ```sh
-# Install dependencies if missing
+# Install dependencies if missing. The versions in scripts/package.json are ranges, not pinned,
+# so tell the user, and ask them to read scripts/fetch.js and scripts/validate.js first
 [ -d "<skill-dir>/scripts/node_modules" ] || npm install --prefix <skill-dir>/scripts
 
 node <skill-dir>/scripts/validate.js <workflow.yml> [workflow2.yml ...]

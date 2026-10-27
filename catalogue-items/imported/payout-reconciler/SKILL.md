@@ -12,7 +12,7 @@ compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ---
 
 ## Purpose
-Reconciles Shopify Payments payouts to the order transactions that contributed to them. For each payout, sums gross sales, refunds, adjustments, and fees, and compares the computed net to the payout's reported `net` amount. Discrepancies are flagged with a delta and the suspected cause. Read-only — no mutations.
+Checks each Shopify Payments payout against its charges, refunds, adjustments and fees, and pulls candidate orders for flagged payouts. It does not match every payout to its orders one by one. For each payout, sums gross sales, refunds, adjustments, and fees, and compares the computed net to the payout's reported `net` amount. Discrepancies are flagged with a delta and the suspected cause. Read-only — no mutations.
 
 ## Prerequisites
 - Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_shopify_payments_payouts,read_orders`
@@ -40,14 +40,15 @@ Reconciles Shopify Payments payouts to the order transactions that contributed t
 
 2. For each payout, compute reconciliation expectation:
    ```
+   Treat every summary value as a positive number (take its absolute value), then:
    expected_net = chargesGross - chargesFee
-                - refundsFeeGross + refundsFee   (refundsFeeGross is the refunded amount; refundsFee is normally negative / reversed)
+                - refundsFeeGross + refundsFee   (the refunded amount goes out; the fee Shopify gives back on a refund comes in)
                 + adjustmentsGross - adjustmentsFee
                 + retriedPayoutsGross - retriedPayoutsFee
    ```
    `delta = reported_net - expected_net`
 
-   **Sign check.** The query returns `refundsFeeGross` (the refunded amount) and `refundsFee`. The formula assumes refunds reduce the payout, so use the refunded amount as a positive number with a minus sign. Check the signs on the first payout against the Shopify admin payout detail. If almost every payout shows a large delta, suspect a sign error and say so. Do not report every payout as a discrepancy.
+   **Sign check, before the full run.** Work out the formula for ONE sample payout first. Compare it with the reported net and with the payout detail in the Shopify admin. If the delta is large, a sign is wrong. Fix the one term that explains it, tell the user which term you flipped, then run the full window. If almost every payout still shows a large delta, stop and say so. Do not report every payout as a discrepancy.
 
 3. **OPERATION:** `orders` — query (only for flagged payouts to drill down)
    **Inputs:** `query: "transactions:'gateway:shopify_payments processed_at:>=<payout.issuedAt - 7d> processed_at:<=<payout.issuedAt + 1d>'"`, `first: 250`

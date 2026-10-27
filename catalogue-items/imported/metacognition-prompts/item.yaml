@@ -9,10 +9,10 @@ role: make
 job: ops
 level: beginner
 inputs:
-  - type: brief
+  - type: lesson_plan
     required: true
 outputs:
-  - type: question
+  - type: document
 uses: []
 origin: imported
 source:

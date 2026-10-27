@@ -39,6 +39,7 @@ you_get:
 how_to_use:
   - Open an AI that can run Python on a computer with a GPU, such as Claude Code, and paste in this skill. Add the whole folder so it can read the notes on each method.
   - Tell it your model, your target length and your GPU. Say whether you can fine-tune. If you can, say what long text you have.
+  - Some models, such as Llama, are gated. Accept the model's licence on its Hugging Face page and log in with your own Hugging Face token before the download. Never paste the token into the chat.
   - Read the method it picks. Ask it to check the config key names against the Transformers version you have installed.
   - Run the config and code on a small test. Check that the model still answers short prompts well.
   - Fine-tune if the plan says so. Then test on a long document that has the answer near the start, in the middle and near the end.

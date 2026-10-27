@@ -8,8 +8,12 @@ role: check
 job: ops
 level: intermediate
 inputs:
-  - type: brief
-    required: true
+  - type: web_page
+    required: false
+  - type: codebase
+    required: false
+  - type: question
+    required: false
 outputs:
   - type: audit_report
   - type: plan

@@ -29,12 +29,12 @@ you_get:
   - A rewrite with a clear core message
   - Before and after examples
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat. No code, files or paid tools are needed.
+  - Open Claude, ChatGPT or Gemini and paste the skill text (SKILL.md) into a new chat. No code, files or paid tools are needed. The files in the references folder are optional extras.
   - Paste the message, copy or slide you want to improve.
   - Say who it is for and what they should remember or do.
   - Add real proof points you have, such as numbers, quotes or logos (optional). Your AI must not invent any.
   - Read the score table and the two weakest traits first.
-  - Use the rewrite, and fill each placeholder with a real fact before you publish.
+  - Use the rewrite, and fill each placeholder with a real fact before you publish. Example phrases in the skill, such as a customer count, are illustrations of a technique. Replace them with your own facts or leave them out.
   - Next, show the rewrite to two people outside your team. Ask them what they remember a day later. Then score it again with the Quick Diagnostic.
 output_sample:
   input:

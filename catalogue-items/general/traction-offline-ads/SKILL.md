@@ -18,9 +18,7 @@ Plain terms: a holdout is a similar place or group that does not see the ad, so 
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Growth channel shortlist planner](https://useaiblocks.com/skills/traction-channel-ranker).
-- The [Affiliate experiment planner](https://useaiblocks.com/skills/traction-affiliate-programs).
 - The [Customer acquisition experiment reviewer](https://useaiblocks.com/skills/traction-experiment-reviewer). It takes the channel experiment.
-- **Say it to the room** with the [Offline event experiment planner](https://useaiblocks.com/skills/traction-offline-events).
 - The [Search content experiment planner](https://useaiblocks.com/skills/traction-search-engine-optimization).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

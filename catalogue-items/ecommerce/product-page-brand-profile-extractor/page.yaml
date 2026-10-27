@@ -52,18 +52,18 @@ output_sample:
 how_it_works:
   - title: Check the inputs
     text: Confirm product page or pasted page text, brand assets and approved facts. Mark facts that are missing.
-  - title: How This Works
-    text: Follow the how this works section in the full method and keep its required fields and decision rules.
-  - title: Collect Input
-    text: Follow the collect input section in the full method and keep its required fields and decision rules.
-  - title: Product Data Extraction
-    text: Follow the product data extraction section in the full method and keep its required fields and decision rules.
-  - title: Color Palette Extraction
-    text: Follow the color palette extraction section in the full method and keep its required fields and decision rules.
-  - title: Visual Vocabulary
-    text: Follow the visual vocabulary section in the full method and keep its required fields and decision rules.
-  - title: Deliver Brand DNA Profile
-    text: Follow the deliver brand dna profile section in the full method and keep its required fields and decision rules.
+  - title: Read the page
+    text: Paste the product link. If your AI cannot open it, or the store blocks it, paste the page text instead.
+  - title: List the facts
+    text: Pull out the name, price, description and features. Anything the page does not show is marked missing.
+  - title: Separate claims from proof
+    text: List what the page claims, which testimonials it shows and any press or certifications. Claims are kept as claims, not proof.
+  - title: Estimate six colors
+    text: Pick primary, secondary, accent, background, text and product colors from the image. Each hex code is labelled an estimate.
+  - title: Set the visual style
+    text: Write backgrounds, lighting, props, mood and photo style that fit your category.
+  - title: Suggest three themes
+    text: Give three ad themes, each with a short reason based on the brand and audience.
   - title: Review the result
     text: Return a source-linked product and brand profile with six color roles. Check facts, math and the decisions before any action.
 thinking: medium

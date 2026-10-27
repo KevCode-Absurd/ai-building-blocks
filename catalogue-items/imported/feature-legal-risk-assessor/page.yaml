@@ -10,13 +10,17 @@ explain: |
   A short, structured look at what could go wrong with a risky feature, written so a lawyer or leader can act on it. It is a first check, not legal advice.
 
   Use it for the few launches that need more than a table row, such as an AI feature, a product for children, or biometric or health data. The skill states what is being assessed, then lists two to five specific risks. Each one has a concrete scenario, who gets hurt, how likely and how bad it is with a reason for each, and a fix that lowers it. It ends with a recommendation and open questions for counsel. It avoids long paperwork for low-risk launches.
+
+  Any case, law or fine it names comes from an AI and may be wrong, so it tags each one to check. Nothing here is legal advice.
+
+  Licence: Apache 2.0, as the LICENSE file says. Credit goes to Anthropic.
 when:
   - Your team plans an AI feature that uses customer data.
   - Leadership asks what the risk is and wants more than one line.
   - A launch touches children, health or biometric data.
   - A review turned up a problem nobody has seen before.
 not_for:
-  - "You need a quick check of a normal launch: a short launch review is enough, so skip this deeper step."
+  - "You need a quick check of a normal launch: use the Launch legal reviewer instead, and come back here only if it finds something new or serious."
   - "You want numbers and risk scores: use your company's own risk framework, because this skill is plain-words only."
   - "You need advice you can rely on in court or with a regulator: ask a qualified lawyer, since this is only a first check."
 you_give:

@@ -10,7 +10,7 @@ level: advanced
 inputs:
   - type: performance_sheet
     required: true
-  - type: brief
+  - type: question
     required: false
 outputs:
   - type: audit_report

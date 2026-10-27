@@ -30,6 +30,7 @@ you_get:
   - Options when responding
   - Short triage memo
 how_to_use:
+  - The setup-interview is optional. If you skip it, your AI asks you in chat for the approver, the facts of the work and your fair-use read.
   - Have these facts ready: the work, who owns it, any registration, the exact web addresses of the copies, and who must approve a notice. If your AI has no saved setup, it will ask you for them. This is for US law only. For the EU, UK or elsewhere, you need a different notice.
   - Open your AI tool. Use one that can read and write files, such as Claude, and load the skill folder.
   - Say whether you want to send a notice, respond to one you received, or write a counter-notice.
@@ -43,7 +44,7 @@ output_sample:
     - Proof that you own the work
     - The notice you received (optional)
   prerequisites:
-    - The ip-legal practice profile, set up with the setup-interview first
+    - Optional: a saved practice profile from the setup-interview. Without it, give the approver, the facts of the work and your fair-use read in the chat
     - An AI that can read and write files in a folder
   output:
     - name: notice-v1.md

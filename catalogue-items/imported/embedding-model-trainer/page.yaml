@@ -13,7 +13,11 @@ explain: |
 
   What sets it apart is the check. It scores the model before training, trains, scores again and prints one line: WIN, MARGINAL or REGRESSION. You see at once whether training helped.
 
-  You need Python, a GPU for most jobs and training pairs. Nothing is published unless you say so.
+  You need Python, a GPU for most jobs and training pairs. Nothing is published unless you say so. A rented GPU or a Hugging Face account can cost money.
+
+  What AI Blocks changed from the source skill: we added the one-line WIN, MARGINAL or REGRESSION verdict, the local-only default, a cost warning and a plain run order.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (Hugging Face skills) says Apache-2.0. Credit goes to Hugging Face and sickn33.
 when:
   - Ready-made search misses results in your field, such as legal, medical or product terms.
   - You need a reranker to sort the top 100 search results.

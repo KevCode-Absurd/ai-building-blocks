@@ -214,14 +214,14 @@ Rounded-rect states with double-border for composite states. Filled circle for i
 3. Include `xmlns="http://www.w3.org/2000/svg"` on the root `<svg>` element
 4. Put all `<style>`, `<defs>`, markers, and patterns at the top of the SVG
 5. Use `text-anchor="middle"` for centered labels; ensure text doesn't overflow boxes
-6. **Chinese text support:** When labels contain Chinese characters, use `font-family: 'JetBrains Mono', 'Noto Sans SC', 'PingFang SC', sans-serif'` and increase box widths — CJK characters are wider
+6. **Chinese text support:** When labels contain Chinese characters, use `font-family: 'JetBrains Mono', 'Noto Sans SC', 'PingFang SC', sans-serif;` and increase box widths — CJK characters are wider
 7. **Save location:** If the input is a file, save to `{inputFileDir}/diagram/`. Otherwise save to `{projectDir}/diagram/{topic-slug}/`. Create the directory if it doesn't exist
 
 ## Script
 
 Determine this SKILL.md file's directory path as `{baseDir}`. Script path: `{baseDir}/scripts/main.ts`.
 
-Resolve `${BUN_X}` runtime: if `bun` installed → `bun`; if `npx` available → `npx -y bun`; else suggest installing bun.
+Resolve `${BUN_X}` runtime: if `bun` installed → `bun`; if `npx` available → `npx -y bun` (this downloads the bun package from the web, so tell the user first); else skip the PNG, say so, and give the SVG on its own.
 
 ### SVG → @2x PNG
 

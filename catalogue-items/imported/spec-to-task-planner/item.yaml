@@ -8,7 +8,9 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: document
+  - type: product_spec
+    required: true
+  - type: tool_connection
     required: true
 outputs:
   - type: plan

@@ -20,7 +20,7 @@ description: Translate SQL queries into plain language business logic. Use when 
 1. **Receive the query and context** — obtain the SQL and the business question it answers. Also collect any schema notes (what the key tables and columns represent in business terms).
 2. **Translate the FROM/JOIN structure** — describe in plain language which data sources are combined and what type of join is used (inner keeps only matches; left keeps all rows from the left side). Note if the join type seems inconsistent with the stated purpose.
 3. **Translate WHERE filters** — list each filter condition as a business rule in plain language (e.g., `status = 'completed'` → "only includes orders that have been paid and fulfilled").
-4. **Explain GROUP BY and aggregations** — describe what each aggregation computes and at what grain. Use `scripts/sql_explainer.py` to automate a first-pass structural parse.
+4. **Explain GROUP BY and aggregations** — describe what each aggregation computes and at what grain. Optional: if you can run code, use `scripts/sql_explainer.py` to automate a first-pass structural parse. In a chat, skip it and read the query yourself.
 5. **Summarise output columns** — for each output column, state its business meaning and any edge cases (nulls, rounding, currency units).
 6. **Flag issues and write validation questions** — identify potential problems (implicit null propagation, unexpected fan-out, hardcoded dates). Generate 3–5 questions the query author should confirm. Use `assets/query_documentation_template.md` to record the full translation.
 

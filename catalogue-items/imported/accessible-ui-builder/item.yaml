@@ -8,9 +8,11 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: question
     required: true
   - type: codebase
+    required: false
+  - type: design_tokens
     required: false
 outputs:
   - type: web_app

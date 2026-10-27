@@ -35,7 +35,7 @@ Gather first: the length of each file, whether each is approved, the usage right
 
 1. Inventory the script, dialogue/voice takes, footage, music and SFX with durations and approvals. Separate created assets from assets only planned.
 
-2. Set the output use and duration before choosing a loudness/export target. Do not silently hard-code a platform target or assume all supplied media has reuse rights.
+2. Set the output use and duration before choosing a loudness/export target. Ask one question: where will this play? Web or social (phone speakers and headphones), broadcast TV, cinema, or a room with a sound system. Each has its own delivery spec. Use the one the platform, broadcaster or venue publishes, and write `MISSING: delivery spec` if the person has none. Do not silently hard-code a platform target or assume all supplied media has reuse rights.
 
 3. Lock the approved spoken words and select the best understandable take. Mark breaths and dead air for intentional trimming; do not remove every pause or alter meaning.
 
@@ -60,9 +60,9 @@ NOT RUN
 [editing/listening/loudness/export if absent]
 ```
 
-## Next steps
+## Next steps to offer
 
-Hand the timecoded mix plan to the editor. If the voice takes are noisy, run them through the Noisy audio cleaner before the mix.
+Use these instead of the general "After this" list above. Hand the timecoded mix plan to the editor. If the voice takes are noisy, run them through the Noisy audio cleaner before the mix.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

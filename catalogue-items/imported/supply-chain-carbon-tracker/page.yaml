@@ -23,7 +23,7 @@ you_give:
   - Shipping and freight data
   - Energy use
   - Supplier or purchase data
-  - Emission factors you trust (optional)
+  - Emission factors you trust, each with a source, a year and a unit
 you_get:
   - Emissions by scope and source
   - A supplier emissions report
@@ -32,7 +32,7 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Pick a mode that can run code, or the sums may be rough.
   - Paste the skill text from this page into the chat.
-  - Add your shipping, energy and supplier data. Add your own emission factors, with source and year, if you have them.
+  - "First, list your emission factors with source and year. Then add your shipping, energy and supplier data. The sums are not reliable without factors you can cite."
   - Tell your AI your goal, such as a customer request, a target or a baseline.
   - Check which numbers are real and which are estimates, and check each factor's source and unit.
   - Use the ranked ideas to pick your first cuts. Do not use the result for audited filings.

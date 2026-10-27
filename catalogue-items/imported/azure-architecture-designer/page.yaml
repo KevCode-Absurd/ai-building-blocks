@@ -30,7 +30,7 @@ you_get:
   - An Azure DevOps pipeline
   - Cost review and security review
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Paste in the skill text. It works best in an AI that can run code.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text. It works best in an AI that can run code. The three Python helper scripts (architecture_designer.py, bicep_generator.py and cost_optimizer.py) are in this item's scripts folder, so upload the folder with them. If your AI cannot run code, it can still follow the steps and write the design, the Bicep and the cost review by hand, but the results will be less exact.
   - Describe your app, your users, your monthly budget, your compliance needs and your region.
   - Read the recommended pattern first. Check it fits your team's skills before you ask for templates.
   - Ask for the Bicep templates and the pipeline. You need an Azure account to deploy them.
@@ -48,6 +48,8 @@ output_sample:
     - An AI that can run code, to use the helper scripts
     - An Azure account, only if you deploy the templates
   output:
+    - name: Order of the result
+      contains: "Six parts, in this order: the architecture recommendation, the Bicep templates, the pipeline, the cost review, the security review and the deployment fixes."
     - name: Architecture recommendation
       contains: The pattern that fits your size, the list of Azure services, a rough monthly cost and the trade-offs.
     - name: Bicep templates

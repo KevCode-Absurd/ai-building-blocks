@@ -59,8 +59,8 @@ The mission paragraph. Who is helped and what they can do afterwards. The stages
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Combined business risk modeler](https://useaiblocks.com/skills/compound-scenario-modeler). It takes the plan.
-- The [Job name picker](https://useaiblocks.com/skills/job-name-picker). It takes the plan.
-- The [Quarterly business plan reviewer](https://useaiblocks.com/skills/quarterly-strategy-reviewer). It takes the plan.
+- The [Second location readiness checker](https://useaiblocks.com/skills/second-location-check). It takes the plan.
+- The [Plan failure reviewer](https://useaiblocks.com/skills/failure-first-plan-check). It takes the plan.
 - **Lead the team** with the [Sales role splitter](https://useaiblocks.com/skills/sales-role-splitter). It takes the plan and draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

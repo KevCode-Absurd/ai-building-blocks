@@ -11,6 +11,7 @@ inputs:
   - {type: plan, required: false}
 outputs:
   - {type: plan}
+  - {type: deal_terms, required: true}
 uses: [partner-profit-tester, partner-deal-terms-writer, incentive-checker, supplier-partner-terms-planner]
 steps:
   - {uses: partner-profit-tester, note: "What the partner keeps after your fees, at your forecast and at a weaker one."}

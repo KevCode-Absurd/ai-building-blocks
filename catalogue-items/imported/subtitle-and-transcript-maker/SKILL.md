@@ -10,7 +10,7 @@ metadata: {"openclaw": {"requires": {"env": ["ELEVENLABS_API_KEY"]}, "primaryEnv
 
 Transcribe audio to text with Scribe v2 - supports 90+ languages, speaker diarization, and word-level timestamps.
 
-> **Setup, before writing any code:** if `ELEVENLABS_API_KEY` isn't set for this project, run `npx -y @elevenlabs/cli@latest onboard init` from the app's folder first and follow what it prints: it signs the user in and stores a key for the project, so nobody copies one by hand. Otherwise see the [Installation Guide](references/installation.md). For JavaScript, use `@elevenlabs/*` packages only.
+> **Setup, before writing any code:** if `ELEVENLABS_API_KEY` isn't set for this project, offer to run `npx -y @elevenlabs/cli@latest onboard init` from the app's folder. Show the user the exact command, say that it signs them in and stores a key for the project, and wait for a clear yes before you run it. Never run it on your own. Otherwise see the [Installation Guide](references/installation.md). For JavaScript, use `@elevenlabs/*` packages only.
 
 ## Quick Start
 

@@ -57,7 +57,7 @@ Description: $ARGUMENTS
 - Above the fold: the most important metric or action
 - Use the 4 section types: Full Card (A), Grid (B), Carousel (C), Hero (D)
 
-4. Output format:
+4. Output format (one flow only, not a whole product):
    - **Flow diagram** in ASCII showing screen connections
    - **Screen inventory** listing each screen's purpose and key components
    - **Edge cases** (empty states, errors, loading) for each screen

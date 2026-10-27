@@ -78,6 +78,8 @@ pip install -e .
 
 ## Quick Start
 
+> **Cost and memory warning.** The example loads a 70B teacher and a 7B student. In float16 the 70B model alone needs far more memory than one consumer GPU has, and renting enough GPUs costs real money. Before the user runs anything, estimate the memory and cost for their model pair and get a yes. For a first test, use a much smaller pair.
+
 ### Basic Knowledge Distillation
 
 ```python
@@ -104,7 +106,9 @@ tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-70b-hf")
 from torch.utils.data import DataLoader
 from torch.optim import AdamW
 
-# dataset: your tokenised prompts, each with input_ids, attention_mask and labels
+# dataset: YOU MUST DEFINE THIS. A list or torch Dataset of your tokenised prompts,
+# each item holding input_ids, attention_mask and labels (see the datasets package).
+# The code below will not run until you define it.
 dataloader = DataLoader(dataset, batch_size=1, shuffle=True)
 optimizer = AdamW(student.parameters(), lr=1e-5)
 # Move each batch to the same device as the models before the forward pass.
@@ -134,7 +138,9 @@ for batch in dataloader:
     # Teacher forward (no grad)
     with torch.no_grad():
         teacher_outputs = teacher(**batch)
-        teacher_logits = teacher_outputs.logits
+        # The teacher (device_map="auto") and the student (cuda:0) can sit on different
+        # devices. Move the teacher logits to the student's device before the loss.
+        teacher_logits = teacher_outputs.logits.to(student.device)
 
     # Student forward
     student_outputs = student(**batch)
@@ -465,13 +471,17 @@ alpha = 0.9  # Strong distillation
 ### 3. Data Quality
 
 ```python
-# Best: Use teacher-generated data + real data
+# Mix teacher-generated data with real data.
+# An often-quoted split is about 70% teacher-generated and 30% real.
+# That split is an untested rule of thumb with no source here.
+# Treat it as a starting point and check it on your held-out test prompts.
 train_data = {
-    "teacher_generated": 70%,  # Diverse, high-quality
-    "real_data": 30%            # Ground truth
+    "teacher_generated": "[SHARE, tune on held-out test]",
+    "real_data": "[SHARE, tune on held-out test]"
 }
 
-# Avoid: Only real data (doesn't utilize teacher fully)
+# Real data only does not use the teacher fully. Teacher data only can copy the
+# teacher's mistakes. Test both against your held-out prompts.
 ```
 
 ## Evaluation

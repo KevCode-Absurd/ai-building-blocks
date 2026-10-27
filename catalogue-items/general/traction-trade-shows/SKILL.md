@@ -5,6 +5,10 @@ description: "Plan a trade shows acquisition experiment from a product URL or bu
 
 # Trade show experiment planner
 
+Needs no account, API key or paid tool, and no scraping. If your AI can browse, it reads the public pages you point to. If not, paste your page text.
+
+Gather first: the name, dates and location of the show you are weighing (required), your product link or pricing text, your growth goal, the most you can spend, and your hours a week.
+
 Not for comparing all 19 growth channels: use the Find your SaaS growth channel workflow (or, for a shop or service, Find your business growth channel). Not for buyers who do not go to trade shows or industry events: pick another channel. Not for booking a big booth today: this plan tests a small step first.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
@@ -12,10 +16,8 @@ Not for comparing all 19 growth channels: use the Find your SaaS growth channel 
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Say it to the room** with the [Offline event experiment planner](https://useaiblocks.com/skills/traction-offline-events).
-- The [Partnership experiment planner](https://useaiblocks.com/skills/traction-business-development).
-- The [Product demonstration script writer](https://useaiblocks.com/skills/counter-demo-script-writer).
 - **Plan your strategy** with the [Customer acquisition experiment reviewer](https://useaiblocks.com/skills/traction-experiment-reviewer). It takes the channel experiment.
-- **Say it to the room** with the [Speaking event outreach planner](https://useaiblocks.com/skills/traction-speaking-engagements).
+- **Plan your strategy** with the [Growth channel shortlist planner](https://useaiblocks.com/skills/traction-channel-ranker).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -51,7 +53,7 @@ Use the funnel qualified visitor or account -> useful product action -> paying c
 
 Decision to resolve: Will a specific industry show concentrate enough qualified buyers or partners for a measurable pilot?
 
-1. Research the show: check its exhibitor list, dated attendee figures and the job titles of buyers who attend. If you find no dated evidence, stop and say so rather than guess. Choose one outcome: qualified customers, partners or press.
+1. Research the show: check its exhibitor list, dated attendee figures and the job titles of buyers who attend. Look on the show’s own website, press kit or exhibitor prospectus, and ask the organiser if nothing is published. If you find no dated evidence, stop and say so rather than guess. Choose one outcome: qualified customers, partners or press.
 2. Compare attending, a small sponsorship and exhibiting. Cost it with these lines: travel, booth, staff hours, materials and follow-up. Mark every default figure as a proposed assumption until the person supplies real quotes.
 3. Draft pre-booked meeting outreach, a short demonstration, lead qualification questions and a dated follow-up plan.
 
@@ -72,11 +74,13 @@ Evidence: <source URL, access date, fact, implication>
 Buyer and useful action: <...>
 Channel mechanism: <how the buyer reaches value>
 Pilot: <hypothesis, audience, offer, deliverable, owner>
+Produces: <a show comparison, total-cost budget, meeting plan, demo script and follow-up sequence>
 Limits: <cash, hours, date, proposed or approved>
 Measurement: <events, cohort, denominators, attribution>
-Decision: <continue / revise / stop rule>
+Decision: <continue / revise / stop rule, naming the cost cap and who approves spending>
 Risks and next action: <...>
 MISSING: <unknowns>
+CHECKS MISSED: <one line each, or none>
 
 ## Check the answer
 

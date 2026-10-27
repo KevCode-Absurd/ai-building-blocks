@@ -7,6 +7,8 @@ description: Use when you have tested a loan, bond, note or preferred share for 
 
 Picking safe debt is mostly the art of saying no. Turning down a good loan costs a delay. Accepting a bad one costs your money. So the rules here exclude, and none of them gives way because the rate is high, the date is near or something is pledged. This skill takes your test results and writes the call. It is a method of analysis, not personal financial advice. It never tells you to buy or sell a named security.
 
+Not for judging a share (this tests debt only), for debt you have not yet tested with "Average earnings coverage tester" and "Equity cushion ratio tester", or for a large or personal decision on its own: see a licensed financial adviser.
+
 A result with a MISSING test is provisional. For a large or personal loan, or money you cannot afford to lose, take the call to a licensed financial adviser before any money moves.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
@@ -45,7 +47,7 @@ How to start:
 4. **Do not relax for a near due date.** Repayment needs either cash on hand or the power to borrow again. Borrowers often choose a short loan because their credit is too poor for a long one. The only exception is a borrower with so much cash and near-cash that repayment is certain, like a bank loan. 
 5. **Do not accept a high rate as pay for thin cover.** Safe debt pays little because that is the trade. If the rate is far above safe rates, ask what the market knows. A high rate on an issue priced well below its face is a bet on recovery.
 6. **Do not accept a pledge as the main comfort.** Security is a mitigation of a mistake, not a reason to make one. Unsecured debt of a strong borrower can be as good as secured debt of a weak one.
-7. **Check what a rise in rates does.** Long debt at a low fixed rate falls in price when rates rise, and a short debt must be refinanced at the higher rate. If you expect rates to rise, avoid long low-rate debt. If you are unsure, keep to about ten years or less and ask for extra cover. Ten years is an example limit, so use your own.
+7. **Check what a rise in rates does.** Long debt at a low fixed rate falls in price when rates rise, and a short debt must be refinanced at the higher rate. If you expect rates to rise, avoid long low-rate debt. If you are unsure, keep to a time limit you set ([YEARS] years or less) and ask for extra cover. Use your own limit; this skill gives none.
 8. **Check the price against the repayment price.** If you would pay more than the amount you get back, or more than the call price, the premium is a bet that the debt will not be repaid early. Say how much of your price is that bet.
 9. **Write the call.** Choose one:
    - **MEETS THE BAR:** both tests pass, no exclusion applies, and the terms and price carry no extra bet.
@@ -55,7 +57,7 @@ How to start:
 11. **Set a date to test again.** Re-run the tests each year, and when new debt ranks ahead of you.
 12. **Check it.** Go through "Check before you hand it back" and fix what fails. Under CHECKS MISSED write one line per check missed, or "none".
 
-**Worked case (made-up numbers).** A 14-month note from a mid-size baker pays 9% when safe notes pay 5%. Earnings cover is 2.4 times against a bar of 3, and the cushion is 0.8 against a bar of 1.0. The baker says it will refinance. The bars of 3 and 1.0 here are examples; use the bars your own tests set. Call: REJECT as an investment. Both tests fall short, and the high rate and the near date are not safety. It could be a small speculation if the amount can be lost; call it that.
+**Shape of a call (placeholders, not data).** A [TERM]-month note from a [SIZE] borrower pays [RATE] when safe notes pay [SAFE RATE]. Earnings cover is [COVER] against a bar of [BAR 1], and the cushion is [CUSHION] against a bar of [BAR 2]. The borrower says it will refinance. Use the bars your own tests set, never numbers from this skill. If both tests fall short, the call is REJECT as an investment: the high rate and the near date are not safety. It could be a small speculation if the amount can be lost; call it that.
 
 ## What you hand back
 
@@ -65,8 +67,8 @@ The results in three lines. The exclusion checks with a yes or no each. The matu
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Investment margin of safety reviewer](https://useaiblocks.com/skills/price-versus-value-gap-judge). It takes the audit report.
-- The [Business track record checker](https://useaiblocks.com/skills/steady-track-record-checker). It takes the audit report.
-- The [Business value capture reviewer](https://useaiblocks.com/skills/who-keeps-the-gain-tester). It takes the audit report.
+- The [Long-run business return calculator](https://useaiblocks.com/skills/long-hold-return-calculator). It takes the audit report.
+- The [Reported earnings adjustment reviewer](https://useaiblocks.com/skills/earnings-padding-detector). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

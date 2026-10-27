@@ -16,9 +16,10 @@ inputs:
     required: false
   - type: document
     required: false
+  - type: audit_report
+    required: false
 outputs:
   - type: spreadsheet
-    required: true
 uses: []
 origin: imported
 source:

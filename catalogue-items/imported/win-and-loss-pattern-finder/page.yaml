@@ -9,7 +9,7 @@ subhead: "The patterns behind your closed deals: where you lose, what buyers obj
 explain: |
   The patterns behind your closed deals: where you lose, what buyers object to and what wins have in common. A leader can act on this instead of trusting hunches from the last painful loss.
 
-  The skill reads closed opportunities and their stage history from your CRM, or from an uploaded export. It defaults to the last quarter and a team scope, and you can narrow to one rep or to wins or losses only. It counts losses by stage, groups stated reasons and objections, and adds call transcripts and late-stage emails for the biggest deals when connected. Every number cites its record and says plainly when data was missing.
+  The skill reads closed opportunities and their stage history from your CRM, or from an uploaded export. It defaults to the last 90 days and a team scope, and you can narrow to one rep or to wins or losses only. It counts losses by stage, groups stated reasons and objections, and adds call transcripts and late-stage emails for the biggest deals when connected. Every number cites its record and says plainly when data was missing.
 when:
   - Your close rate dropped and nobody knows why.
   - You need evidence for a pricing or product change.

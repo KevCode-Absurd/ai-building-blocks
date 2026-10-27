@@ -10,10 +10,11 @@ level: advanced
 inputs:
   - type: codebase
     required: true
-  - type: brief
+  - type: question
     required: false
 outputs:
   - type: test_report
+  - type: audit_report
 uses: []
 origin: imported
 source:

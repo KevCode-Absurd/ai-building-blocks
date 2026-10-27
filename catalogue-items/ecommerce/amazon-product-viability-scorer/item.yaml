@@ -11,6 +11,8 @@ inputs:
   - {type: store_capture, required: false}
   - {type: spreadsheet, required: false}
   - {type: shortlist, required: false}
+  - {type: audit_report, required: false}
+  - {type: idea, required: false}
 outputs:
   - {type: audit_report}
 uses: []

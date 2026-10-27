@@ -7,6 +7,7 @@ role: orchestrate
 job: strategy
 level: advanced
 inputs:
+  - {type: idea, required: true}
   - {type: question, required: true}
 outputs:
   - {type: audit_report}

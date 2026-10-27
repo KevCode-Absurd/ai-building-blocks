@@ -17,7 +17,7 @@ when:
   - You want to know which problems you must fix yourself and which an editor can fix for you.
   - Your readers sent notes and you want a ranked list of what to fix first.
 not_for:
-  - "You want to edit an ad, sales page or email: use a copy editor or ask your AI to rewrite it for the sale."
+  - "You want to edit an ad, sales page or email: use the Sales copy editor instead."
   - "Your draft is under about 1,000 words: one quick edit pass in your AI is enough, so skip the rounds."
   - "You want the agent to fix a plot hole or a wrong fact: that is your call, so decide it yourself or ask a trusted reader."
 you_give:
@@ -33,7 +33,7 @@ you_get:
   - A list of the problems left for you, with the page and the question to answer
   - A question sheet to send to first readers
 how_to_use:
-  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then give it the draft file.
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then give it the draft file. If your AI cannot save files, paste the latest round and your kept-on-purpose list back in at the start of each round.
   - Tell it the kind of piece and how long the draft has rested.
   - Read the hand-back. Fix the problems on your list yourself.
   - Send the draft to first readers with the question sheet. When their notes come in, run the agent again. It starts with their notes.

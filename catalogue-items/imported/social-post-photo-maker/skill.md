@@ -15,6 +15,7 @@ The rest of this file is in Chinese. In short: it turns one outfit photo into so
 - **Steps.** List each item the person wears. Write the prompt: lock every garment, then set the new model, place, pose, light and camera. Run it for three or four images per scene. Check for swapped items, odd hands and a busy background, then add a fix line and run again.
 - **Output.** Tall images (1024 by 1536, jpeg), one set per scene such as street, cafe, home, travel and commute.
 - **Not for.** Never present generated people as real customers, or as endorsing or using your product. Never copy a real person's face without consent. Use honest photos or real reviews instead.
+- **Say it is AI-made.** These pictures show an invented person. When you post them, label them as AI-generated where the platform asks, and check the platform's rules on AI images and on paid promotion first. Do not let them suggest a real customer wore or endorsed the product.
 - **Missing files.** The example commands point to `docs/` images that are not included here. Use your own photos.
 
 ---

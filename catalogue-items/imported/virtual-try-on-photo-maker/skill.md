@@ -5,6 +5,8 @@ description: 服装平铺图一键上身试穿。服装平铺图 + 姿势参考�
 
 # flat-lay — 服装图一键上身试穿
 
+> **English summary (added by AI Blocks).** Your AI should read this file and answer in English. Steps: (1) check each photo is 20KB to 15MB, over 400 by 400 pixels, and jpg, png or webp; (2) use one garment photo for one item, or a top photo and a bottom photo for a full outfit, and never a set with shoes or bags in one image; (3) pick a clear reference photo for pose, angle, light and background; (4) fill the English prompt template in section 5, writing the garment's colour, fabric, fit and small details as exactly as you can; (5) run it with `--dry-run` first to see the credit cost, then run it for real with `--batch 2` to `4`; (6) check colour, texture, print position, hands and collar, and add the matching fix sentence from the table in section 5 if one is off. The image is made by a paid dLazy image model, which needs a dLazy account and API key. Your photos are uploaded to dLazy's servers. Only use photos of people who agreed, and never present the result as a real model or an endorsement.
+
 把一张**服装平铺图**变成**模特上身商拍图**，不用约模特、不用租场地、不用摄影棚。
 
 本技能用 dLazy 的 `gpt-image-2` 实现：以「服装图 + 参考图」双图参考做图像编辑合成，服装保真、姿势场景照抄参考图。

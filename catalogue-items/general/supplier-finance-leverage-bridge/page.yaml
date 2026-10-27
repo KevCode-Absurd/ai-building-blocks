@@ -37,12 +37,12 @@ how_to_use:
   - Read MISSING and CHECKS MISSED before you use the adjusted figures.
   - The bundled check script needs Node.js 20 or later. Without it, the AI does the sums in the chat.
 how_it_works:
-  - title: 1. Read payment terms, provider payments and balance disclosures; distinguish arrangement identification from a conclusion that every balance must be classified as borrowing
-    text: Read payment terms, provider payments and balance disclosures; distinguish arrangement identification from a conclusion that every balance must be classified as borrowing.
-  - title: 2. For a clearly labeled debt-like scenario, add only the identified balance to financing debt and remove it from operating trade payables
-    text: For a clearly labeled debt-like scenario, add only the identified balance to financing debt and remove it from operating trade payables.
-  - title: 3. Deduct the same eligible cash once for net debt; reconcile the balance-sheet perimeter and preserve reported classifications beside the analytical scenario
-    text: Deduct the same eligible cash once for net debt; reconcile the balance-sheet perimeter and preserve reported classifications beside the analytical scenario.
+  - title: Find the proven balance
+    text: Read the payment terms, the provider payments and the balance in the note. Finding an arrangement does not make every balance borrowing, so use only the balance you can show.
+  - title: Move it from payables to debt
+    text: Add only that balance to financing debt and take it out of trade payables. Total liabilities stay the same, and the view is labelled a what-if.
+  - title: Take off cash once
+    text: Subtract the eligible cash once to reach net debt. Show the reported and adjusted figures side by side.
 output_shape: |-
   A reported-to-analytical leverage bridge with supplier balances shown separately.
   Scope and dated sources
@@ -54,7 +54,7 @@ tweaks:
   - what: "Balance sheet date"
     how: "Take the balance sheet date from the debt note, the payables note and the supplier finance disclosure. Use one currency and scale on every line."
   - what: "The supplier finance balance"
-    how: "Change the the supplier finance balance and have your AI recalculate. Keep the actual figures you supplied."
+    how: "Change the supplier finance balance and have your AI recalculate. Keep the actual figures you supplied."
   - what: Acceptance
     how: Supplier balances are not already included in financing debt.
 judge:

@@ -8,12 +8,12 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: question
+  - type: api_spec
     required: true
   - type: source_text
     required: false
 outputs:
-  - type: test_report
+  - type: plan
   - type: code_change
 uses: []
 steps: []

@@ -10,6 +10,9 @@ license: MIT
 license_source: https://github.com/bitjaru/styleseed/blob/main/LICENSE
 ---
 
+
+> Licence note (added by AI Blocks): the written text of this copy is shared under CC BY-4.0 (see `LICENSE-CONTENT`). The `license: MIT` line in the header above is the original author's own declaration for their repo. Keep the credit to the author either way.
+
 # UX Microcopy Generator
 ## When to Use
 
@@ -19,7 +22,7 @@ Use this skill when you need generate UX microcopy (button labels, error message
 ## When NOT to use
 
 - For long-form content (blog posts, docs, marketing pages) — out of scope
-- For full feedback state design (not just text) → use `/ss-feedback`
+- For full feedback state design (not just text) → not included in this copy; work with a designer on loading, success and error states
 - For brand voice/tone definition itself — this skill consumes a voice spec, doesn't create it
 - For translations to non-English languages — single-language only
 
@@ -30,12 +33,12 @@ Description: what the screen does, in the user's words (ask for it if missing)
 >
 > The rule set the skill applies: buttons
 > name the action (not "Submit"), errors help instead of blame, empty states invite,
-> money copy stays calm, one term per concept. Korean/CJK projects: see §W8 for the
-> clear-calm-human "Toss feel" (존댓말 일관성, 사용자 관점 "내 계좌", 군더더기 빼기).
+> money copy stays calm, one term per concept. Korean/CJK projects: the original §W8 guide
+> is not included in this copy. Paste your own Korean style notes if you have them.
 
 ## Instructions
 
-1. Read the user's voice notes or design language if they pasted them. If not, use the Tone Rules below.
+1. Read the user's voice notes or design language if they pasted them. If not, use the Tone Rules below. If a code change just added loading, empty or error states to the screen, read the changed code and write the text for each state it added.
 
 2. Apply the voice principles:
 

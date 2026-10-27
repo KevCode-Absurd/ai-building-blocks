@@ -37,6 +37,8 @@ how_to_use:
   - Treat any benchmark it quotes, such as conversion rates or response-time figures, as a rough rule of thumb. Compare against your own past numbers.
   - Read each document it gives you. Check that every stage and handoff has an owner and a time limit.
   - Fix anything that does not match how your team works. Then build it in your CRM.
+  - The skill names enrichment tools such as Clay, Apollo and ZoomInfo. These are paid services that need their own accounts. You can skip them.
+  - Next, use the Cold email writer for the outreach your reps send, and the Pricing strategist if pricing is part of the deal desk.
 output_sample:
   input:
     - "How you sell: self-serve, sales-led or a mix"

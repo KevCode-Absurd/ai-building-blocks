@@ -313,7 +313,15 @@ function useToggleTask() {
 
 ## See Also
 
-For detailed accessibility requirements and testing tools, see `../../references/accessibility-checklist.md`. That file is not in this copy, so do the checks by hand, or run the Accessibility checker skill on the finished screen.
+The full checklist file from the original is not in this copy. Use this short list instead:
+
+- Every control works with the keyboard alone, and focus is always visible.
+- Every form field and button has a label.
+- Text contrast is at least 4.5:1 (3:1 for large text).
+- The layout holds at 320, 768, 1024 and 1440 pixels wide.
+- Headings follow a clear order, and images have alt text.
+
+After you review the code, run its tests and merge it into your component library. For a deeper check, run the Accessibility standards checker on the finished screen.
 
 ## Common Rationalizations
 

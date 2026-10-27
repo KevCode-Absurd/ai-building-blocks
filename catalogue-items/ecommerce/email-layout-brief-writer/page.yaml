@@ -72,7 +72,7 @@ how_it_works:
   - title: Places the buttons
     text: A button at the end of every section, one under each product, a general one after the products and a footer with shop-by-category links.
   - title: Picks the product grid
-    text: One row with copy or a 2 by 2 grid, never 3 by 2, so text stays readable on a phone.
+    text: Three or four products, in one row with copy or a 2 by 2 grid, never 3 by 2, so text stays readable on a phone.
   - title: Writes the layout as a table
     text: One row per block, in order, so the designer cannot reshuffle it. It starts from a real layout you like.
   - title: Plans the build
@@ -84,7 +84,7 @@ output_shape: |
   | # | Block | What it holds | Headline / copy | Button | Image |
   | 1 | Top (above the fold) | logo, headline, 1-2 sentences | <...> | <large, centred> | <...> |
   | 2 | Bridge | <infographic type>, max 3 points | <...> | <button> | <...> |
-  | 3 | Products | <1 row with copy | 2x2> | <...> | shop now under each | <...> |
+  | 3 | Products | <3 to 4 products: 1 row with copy, or 2x2> | <...> | shop now under each | <...> |
   | 4 | Final call | <...> | <...> | <button> | |
   | 5 | Footer | category buttons, trust icons, unsubscribe | | | |
   DESIGN FLOW: <gradient, accent colour, button style>
@@ -123,9 +123,9 @@ improve:
 works_best_with:
   tools:
     - name: Figma
-      why: Design the email in one frame, group it by section and use its slice tool to export each part.
+      why: Design tool with a free and paid plans. Design the email in one frame, group it by section and use its slice tool to export each part.
     - name: Klaviyo
-      why: Upload slices, add links and alt text, and build live product blocks and the footer.
+      why: Paid service with an account. Upload slices, add links and alt text, and build live product blocks and the footer.
     - name: Any good chat AI
       why: It can transcribe a competitor email, turn it into a template and draft headline and button text.
   inputs:

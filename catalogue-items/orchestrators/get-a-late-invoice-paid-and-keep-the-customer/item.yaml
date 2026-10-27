@@ -8,7 +8,6 @@ job: ops
 level: beginner
 inputs:
   - {type: question, required: true}
-  - {type: brief, required: true}
   - {type: persona, required: false}
 outputs:
   - {type: copy_draft}

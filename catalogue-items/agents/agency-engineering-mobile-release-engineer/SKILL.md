@@ -13,9 +13,9 @@ Read [the original role profile](references/source-agent.md) before you start. U
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Launch checklist runner](https://useaiblocks.com/skills/launch-checklist-runner).
-- The [Expo app deployment engineer](https://useaiblocks.com/skills/mobile-app-release-shipper).
 - The [Service rollout and rollback planner](https://useaiblocks.com/skills/copilot-devops-rollout-plan). It takes the plan.
+- The [Release safety planner](https://useaiblocks.com/skills/safe-release-planner). It takes the audit report.
+- The [Bicep deployment preflight checker](https://useaiblocks.com/skills/copilot-azure-deployment-preflight). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

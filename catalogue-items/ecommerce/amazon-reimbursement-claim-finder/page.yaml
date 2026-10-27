@@ -97,7 +97,7 @@ output_shape: |
   MONTHLY ROUTINE
   <steps and a log: filed, paid, rejected, reason>
 
-  NOT RUN: <check and the report it needs>
+  NOT RUN (CHECKS MISSED): <check and the report it needs, or none>
   MISSING: <report or proof>
   CHECK: <current claim windows in Seller Central>
 

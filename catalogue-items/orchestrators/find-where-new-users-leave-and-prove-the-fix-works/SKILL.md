@@ -9,6 +9,8 @@ Give it visits, sign-ups and 30-day users. Get the biggest leak, a one-morning t
 
 This workflow chains skills from the library. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
+**When not to use it:** your question is why ad sales dropped (use the [Ad sales drop analyst](https://useaiblocks.com/skills/ad-sales-drop-analyst)). You want to compare two page versions and need to know if traffic is enough (use the [A/B test traffic checker](https://useaiblocks.com/skills/ab-test-traffic-checker)). Your product has no users with 30 days of history yet (run a usability test first, as in step 2).
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -34,8 +36,10 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-- **Ad or store performance export for a closed date window, with definitions** (required)
-- **The problem, decision or piece of work you want help with, and what a good outcome looks like** (required)
+This list replaces the general one above. You do not need an ad export or a brand brain.
+- **Funnel numbers for one named period** (required): visits, sign-ups and users still active after 30 days, with how each is counted.
+- **The new-user goal** (required): what a new user should do, and what a good outcome looks like.
+- **The post-fix export** (needed for step 3): the same numbers for a later period, once every user in it has had 30 days.
 - **A buyer grounded in real review language: problem, trigger, wants, doubts, words they use** (optional)
 - **A built or live web page, as a URL or saved HTML** (optional)
 
@@ -54,7 +58,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 Pause here: Run the test with three people and one outsider. Implement the first-visit fix only with the owner’s approval. Export results only after the post-change cohort has completed the full observation window for the measure being reviewed. For 30-day retention, every included user must have had 30 days to return. Use the same cohort rules and complete window for the before and after groups. Earlier first-use results may be reviewed separately, labelled with their shorter window; they do not establish a 30-day retention result.
 
 3. **Product metrics review writer.** Use the skill `product-metrics-review-writer`. Give it the fresh export from after the wait and the test plan from the steps before, so the review uses the pass number and targets set there. Before comparing, check cohort dates, measure definitions and complete observation windows. Stop the affected comparison if either group is too young or the windows differ. Read the supported before-and-after change as an observation, not proof that the fix caused it.
-4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then a `CHECKS MISSED` list (or "none").
 
 ## What you hand back
 3 step files and the summary. The last file holds the audit report.
@@ -62,8 +66,8 @@ Pause here: Run the test with three people and one outsider. Implement the first
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [User flow mapper](https://useaiblocks.com/skills/user-flow-mapper).
 - The [First-use onboarding designer](https://useaiblocks.com/skills/first-use-onboarding-designer). It takes the audit report.
+- The [User flow mapper](https://useaiblocks.com/skills/user-flow-mapper).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

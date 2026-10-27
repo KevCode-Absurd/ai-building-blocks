@@ -9,7 +9,7 @@ subhead: "Give it your Shopify store and a time window. It compares the revenue 
 explain: |
   The return on every discount you run, before product cost: the revenue it brought in set against what the discount cost you. Some codes pay for themselves, and others only give margin away.
 
-  The skill reads all your discount codes and automatic discounts in your Shopify store, then keeps those used at least a minimum number of times in your chosen window (90 days by default). For each one, it pulls the orders and works out revenue, order count, average order size and money given away. It only reads data, so it is safe to run anytime. It needs a signed-in Shopify CLI with read access to orders, discounts and customers. Output comes as a table or JSON.
+  The skill reads all your discount codes and automatic discounts in your Shopify store, then keeps those used at least a minimum number of times in your chosen window (90 days by default). For each one, it pulls the orders and works out revenue, order count, average order size and money given away. It only reads data, so it is safe to run anytime. It needs a signed-in Shopify CLI with read access to orders, discounts and customers. Output comes as a table or JSON. The revenue counted is all revenue from orders that used the code, so it overstates what the discount truly added. This is 40rty AI's discount-roi skill, shared under the MIT licence.
 when:
   - You run many codes and do not know which ones are worth it.
   - Your margins feel thin and you suspect discounts are the cause.
@@ -17,13 +17,12 @@ when:
   - You need numbers for a talk with your team about promotions.
 not_for:
   - "You need profit after product cost: add your product costs and work it out in a spreadsheet first, since this only compares revenue to discount cost."
-  - "You want to find broken or unused codes: use a discount cleanup check, not this one."
+  - "You want to find broken or unused codes: use the Old discount code cleaner, not this one."
   - "You do not use Shopify: this reads Shopify order and discount data only, so use your own store's sales report."
 you_give:
   - Your Shopify store domain
   - How many days back to look (optional, 90 by default)
   - The fewest uses a discount needs to be counted (optional, 3 by default)
-  - Product cost per item (optional, to judge profit yourself)
 you_get:
   - Revenue and order count for each discount
   - Average order value for each discount, next to orders with no discount
@@ -54,6 +53,6 @@ output_sample:
     - name: Top performers
       contains: The codes with the best return, with their revenue, cost and share of new customers.
     - name: Underperformers
-      contains: Codes that cost more than they earn, with a warning when buyers would likely have bought anyway.
+      contains: Codes with the weakest revenue against their discount cost, with a warning when buyers would likely have bought anyway.
     - name: Baseline comparison
       contains: Average order value without a discount next to the average order value with discounts, and the gap.

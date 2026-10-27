@@ -41,6 +41,8 @@ output_sample:
       contains: The spoken words, with each speaker labeled and delivery cues only where they are needed.
     - name: DELIVERY NOTES
       contains: Pacing, emotional turns and an estimated length based on word count, not measured audio.
+    - name: TAG-FREE VERSION
+      contains: The same script with every bracketed cue removed, for voices that do not support tags.
     - name: NOT RUN
       contains: The audio and listening checks that still need you, such as generating one take and listening to it.
 how_it_works:

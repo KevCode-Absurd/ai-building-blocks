@@ -6,7 +6,7 @@ argument-hint: "[inquiry-type]"
 
 # /legal-response -- Generate Response from Templates
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> The CONNECTORS.md file this skill points to is not in this copy. No reply templates ship with this skill either, so use the person's own templates if they have them, or the default structure below. Subpoenas, regulator letters and requests that involve a minor always go to a lawyer before any reply is sent.
 
 Generate a response to a common legal inquiry using configured templates. Customizes the response with specific details and includes escalation triggers for situations that should not use a templated response.
 

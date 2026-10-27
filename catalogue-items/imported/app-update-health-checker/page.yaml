@@ -10,6 +10,8 @@ explain: |
   A clear read on whether your latest Expo app update is healthy: crash rate, launches, unique users and bundle size, for each published update. You can answer is the new release crashing more than the last one in minutes.
 
   The skill uses the Expo command line tool, so it needs to be installed and signed in. It lists recent update groups, then pulls per-platform launches, failed launches, crash rate and daily numbers for the one you pick. For a channel and runtime, it shows how many users run the embedded build and how many run over-the-air updates, and which updates are most popular. It reports totals only. It cannot show a single user's crash or device detail.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (Expo) says MIT. Credit goes to Expo and sickn33.
 when:
   - You just pushed an update and want to know if it is crashing.
   - You need to compare the new release with the last one.
@@ -33,10 +35,13 @@ you_get:
 how_to_use:
   - Use an AI that can run commands on your computer. A plain chat window cannot do this.
   - Install the EAS command line tool and the jq tool (the checks use it to read the results), and sign in to Expo. Open your app folder.
-  - Ask your AI to check the health of your latest update, and name the channel or branch. The command it runs is eas update:list --branch <name> --json --non-interactive.
+  - Ask your AI to check the health of your latest update, and name the channel or branch. It runs eas update:list --branch <name> --json --non-interactive and uses jq to pick the group ID of the newest update.
+  - It then runs eas update:insights <group ID> to get launches, failed launches and crash rate for each platform. For the channel view it runs eas channel:insights with your channel and runtime version.
+  - Ask it to run update:insights again on the group ID of the previous update, so you can compare the two crash rates.
   - Read the crash rate for each platform. Look for a spike on one platform only.
-  - "Next step: compare the crash rate with the previous update. If it rose sharply, tell the app owner first. Pausing a channel or rolling back affects live users. Then check your crash logs."
+  - "Next step: if the crash rate rose sharply against the previous update, tell the app owner first. Pausing a channel or rolling back affects live users. Then check your crash logs."
   - Note that new updates may show zeros for a short time, and numbers lag by up to a day.
+next: [release-day-rollback-planner, incident-postmortem-writer]
 output_sample:
   input:
     - Your Expo app folder
@@ -47,12 +52,13 @@ output_sample:
     - An AI that can run commands on your computer
     - The EAS command line tool installed and signed in to Expo
     - The jq tool, which reads the JSON results
+    - "These commands only read numbers. They change nothing in your app or your channels"
   output:
     - name: Update list
       contains: Recent update groups with their group IDs, branch names, runtime versions and platforms.
     - name: Update insights
-      contains: Launches, failed launches, crash rate, unique users and average payload size for each platform, plus a daily breakdown.
+      contains: "Launches, failed launches, crash rate, unique users and average payload size for each platform, plus a daily breakdown. Crash rate is failed launches divided by (launches plus failed launches), times 100."
     - name: Channel insights
       contains: How many users run the embedded build and how many run over-the-air updates, plus the most popular updates.
     - name: Health read
-      contains: A short note on whether crash rate looks high, and whether iOS and Android differ.
+      contains: A short note on whether crash rate looks high, how it compares with the previous update, and whether iOS and Android differ. Counts lag by up to a day, and a fresh update may show zeros.

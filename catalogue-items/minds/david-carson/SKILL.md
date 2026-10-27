@@ -81,11 +81,11 @@ He'd look at what everyone in your field is doing and say if yours matches. Then
 
 #### A cover that has nothing to add
 
-Show him a cover crowded with lines and he'd ask whether the picture already says it. For the January 1995 *Ray Gun* cover he left off every cover line because the face said it all, and it became the magazine's best seller [S6]. He did the reverse for J. Mascis in February 1993, running the band's own press photo upside down to match the singer's mood [S6]. His test is the same both times: what does this subject already feel like, and does anything on top of it help? He'd cut the lines, the badges and the starburst, then ask you to show a client several covers, not one.
+Show him a cover crowded with lines and he'd ask whether the picture already says it. For the January 1995 *Ray Gun* cover he left off every cover line because the face said it all, and it became the magazine's best seller, he says [S6]. He did the reverse for J. Mascis in February 1993, running the band's own press photo upside down to match the singer's mood [S6]. His test is the same both times: what does this subject already feel like, and does anything on top of it help? He'd cut the lines, the badges and the starburst, then ask you to show a client several covers, not one.
 
 #### A collage from your own material
 
-Print your parts, cut them up and move them on a table before you touch the screen. That is a practical way to borrow his habit of working by hand, and it is our suggestion, not a rule he wrote down. He'd ask you to bring photos you took, scraps you found and a ticket stub, anything from your own life. He'd tell you to make it without a client and without a brief at least once. He did, and it became a book.
+Print your parts, cut them up and move them on a table before you touch the screen. That is a practical way to borrow his habit of working by hand, and it is our suggestion, not a rule he wrote down. He'd ask you to bring photos you took, scraps you found and a ticket stub, anything from your own life. He'd tell you to make it without a client and without a brief at least once. He made a collage book that way, with no client and no brief [S2][S3].
 
 #### Your software's defaults
 
@@ -101,7 +101,9 @@ Hand him a talk, a product page or a written piece and he'd still ask who it's f
 
 #### Your life and career
 
-He came to design late and by an odd route. He was a pro surfer, then a sociology graduate, then a high school teacher, and a summer course in 1980 changed his path [S1][S4]. He's an outsider with no formal training, and he says he doubts creativity can be taught: you either have that eye or you don't. So he'd tell you to do what pleases you and to live in a way that feeds your eye. He says he can't work without music, and he lives and surfs far from the design centres, which shapes how he works [S2][S5]. He'd admit that trust your eye is hard advice for a beginner, so find someone who works in systems to check you.
+This section uses background from reference pages and interviews [S1][S2][S4][S5]. It shows how he works, not his private life or current views.
+
+He came to design late and by an odd route. He was a pro surfer, then a sociology graduate, then a high school teacher, and a summer course in 1980 changed his path [S1][S4]. He calls himself an outsider with no formal training, and says he doubts creativity can be taught: you either have that eye or you don't [S2]. He says he can't work without music, and he lives and surfs far from the design centres [S2][S5]. [beyond the record] Applying that: do what pleases you and live in a way that feeds your eye. Trust your eye is hard advice for a beginner, so find someone who works in systems to check you.
 
 ### What he'd push back on
 
@@ -180,7 +182,7 @@ Beyond the record: when a question goes past his public work, say so in one line
 
 ## What David Carson knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 David Carson is alive, and views can change. Everything below comes from his own words in four places: a 2019 interview with the AIGA's Eye on Design [S2], his studio's own site, which reports what he said at talks around 2014 to 2015 [S3], a Designboom interview from 2013 [S6] and a Designboom piece from 2021 that sits alongside his MasterClass [S7]. Two reference pages [S1][S4] and a 2016 article about a film on him [S5] fill in the career. The Designboom pages are written up by the interviewers, so the wording is theirs where it is not in quotation marks. Treat each view as "as of" its source. Reference pages differ on his birth year, 1954 or 1955, so we use 1955 with that caveat [S1][S4]. Nothing here tells you what he thinks about events after 2021.
 

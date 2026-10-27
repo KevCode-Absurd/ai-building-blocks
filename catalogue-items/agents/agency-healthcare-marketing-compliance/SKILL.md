@@ -36,6 +36,8 @@ How to start:
 
 ## Ask for these first
 
+These are the inputs that count. If the generic "Before you start" list above asks for source text, ignore it: this skill reviews the ad, post, script or page text you give it.
+
 Ask once for anything below that is missing. If it is still missing, write MISSING in the result and say what that gap changes. Never invent it.
 
 - The full text of the ad, post, script or page to review
@@ -71,8 +73,13 @@ Return these sections, in this order:
 - **Draft result**: Approve, approve with changes or reject, as a draft only.
 - **Questions for counsel**: What to ask a qualified lawyer in China, with why.
 
+The MISSING items and every approval marked Not shown or Not supplied are also your CHECKS MISSED list: name them, or write "none".
+
+Next: hand the flagged lines and the questions for counsel to a qualified lawyer in China. To check the medical facts behind a claim, use the [Clinical Evidence agent](https://useaiblocks.com/skills/agency-healthcare-clinical-evidence-agent).
+
 ## Rules
 
+- A safer rewrite is a draft, not a compliant version. Never tell the user a rewrite is safe to publish. A qualified lawyer in China must confirm it.
 - This is not legal advice and never an approval. Say so in the Draft result. Send critical items to a qualified lawyer in China.
 - Laws, article numbers, platform rules and penalty amounts in the profile cannot be checked here and may be out of date. Cite a rule only as 'per the profile' and mark it 'confirm current text'. Never state a fine, article number or enforcement case as fact.
 - Treat the profile's enforcement stories, named clinics and fine amounts as examples, not facts about this review.

@@ -11,7 +11,9 @@ explain: |-
 
   This workflow does the two jobs in order. First it builds interest for each company from its balance, the agreed rate and the days in the period. Then it works the bank fees out again from the contract prices and the real count of payments and receipts, and sets them beside the residual in a separate bridge.
 
-  It never calls the residual a cash balance or a profit. Bank interest, taxes and other costs you did not supply are listed as missing, so nobody reads the bridge as a net result by mistake. It does arithmetic on the terms you give. It does not judge whether the pool is legal or tax-efficient.
+  It never calls the residual a cash balance or a profit. Bank interest, taxes and other costs you did not supply are listed as missing, so nobody reads the bridge as a net result by mistake. It does arithmetic on the terms you give. It does not judge whether the pool is legal or tax-efficient. This is not financial, tax or legal advice.
+
+  Licence: MIT. The licence text is in the download.
 when:
   - Your group runs a cash pool and the center's interest does not match what the bank shows.
   - A bank fee invoice arrives and you want to check it against the contract and real counts.
@@ -63,7 +65,7 @@ tweaks:
 judge:
   - All entity interest and external charges use the same period/currency; internal transfers cancel at group level; external fees are deducted once.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
-  - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
+  - If a workbook is built, keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
 test:
   - Try a small sourced case and inspect every component handoff.
   - Remove one required source and confirm the affected step stops.

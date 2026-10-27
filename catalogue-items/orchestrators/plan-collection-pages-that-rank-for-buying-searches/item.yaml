@@ -8,7 +8,7 @@ job: page
 level: intermediate
 inputs:
   - {type: product_data, required: true}
-  - {type: spreadsheet, required: true}
+  - {type: keyword_list, required: true}
   - {type: competitor_set, required: false}
   - {type: performance_sheet, required: false}
   - {type: voc_reviews, required: false}

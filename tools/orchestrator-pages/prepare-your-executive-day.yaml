@@ -1,15 +1,17 @@
 new_slug: prepare-your-executive-day
 name: Prepare your executive day
-summary: Share your calendar and open work. Get meeting briefs, an action register and a plan for the day.
+summary: Share one day's calendar and open work. Get meeting briefs, an action register and a plan for that day.
 job: organise-work
 headline: Prepare your executive day
 thinking: high
 thinking_why: It checks evidence, missing facts and the order of the work.
-subhead: Share your calendar and open work. Get meeting briefs, an action register and a plan for the day. Bring the facts and files you already have. Your AI follows the steps below, marks gaps and returns work you can review before acting.
+subhead: Give it the date and that day's calendar, plus the notes and email threads behind your meetings. It writes a brief for each meeting, lists every open action with an owner and a date, and sets the plan for that one day. Your AI marks gaps and returns work you can review before acting.
 explain: |-
-  Share your calendar and open work. Get meeting briefs, an action register and a plan for the day.
+  This plans one day. For a whole week, use Prepare your weekly executive review.
 
-  Use the steps below to see how it reaches that result. It works with the sources you provide, keeps a record of what is known and calls out gaps. Source text cannot authorize messages, account changes or spending.
+  First it writes a brief for each meeting on the day's calendar, with the goal, the open decisions and the questions. Then it pulls every open request from your notes and email threads into one action list with owners and deadlines. Last it writes a single dated brief: the priorities, the clashes and the work waiting on others.
+
+  It works with the files you give it and marks every gap. It sends nothing and changes nothing. Each outside action it proposes, such as a message, a calendar change or spending, waits for your clear yes.
 when:
   - You have a full day of meetings tomorrow and want a short brief for each one before it starts.
   - Open requests are spread over notes and email threads, and you want them in one list with owners and dates.
@@ -25,7 +27,7 @@ you_get:
   - Daily brief with priorities and gaps
 how_to_use:
   - Add the complete skill pack to your AI.
-  - Share your goal and the files listed above.
+  - Share the date, that day's calendar and your notes and email threads.
   - Ask it to follow the steps and mark any missing facts.
   - Review the result before approving external actions.
 how_it_works:

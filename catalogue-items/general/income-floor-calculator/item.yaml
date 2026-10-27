@@ -9,6 +9,7 @@ job: analysis
 level: intermediate
 inputs:
   - {type: question, required: true}
+  - {type: spreadsheet, required: false}
 outputs:
   - {type: audit_report}
   - {type: question}

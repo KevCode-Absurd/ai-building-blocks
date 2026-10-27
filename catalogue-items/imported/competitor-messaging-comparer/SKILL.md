@@ -12,7 +12,11 @@ Research competitors and generate a structured competitive analysis comparing po
 
 ## Trigger
 
-User runs `/competitive-brief` or asks for a competitive analysis, competitor research, or market comparison.
+User asks for a competitive analysis, competitor research, or market comparison. In Claude Code this can also be started with `/competitive-brief`; in ChatGPT, Gemini or a plain chat, just ask in words.
+
+## When not to use
+
+For one quick fact about a rival, such as a price, search their site directly. For private data such as rival traffic or revenue, use a paid research tool: this reads public pages only. For a one-page sales sheet, run this brief first and then ask for a battlecard.
 
 ## Inputs
 
@@ -35,7 +39,7 @@ Gather the following from the user:
 
 ## Research Process
 
-For each competitor, research using web search:
+For each competitor, research using web search. Read public pages only, and read them one at a time. Check each site's terms and robots rules before you collect anything. Do not log in, do not bypass a paywall, do not bulk-collect pages or reviews, and do not create accounts or start free trials for a rival. Quote a rival's words only from pages you opened, with the link.
 
 1. **Company website** — homepage messaging, product pages, about page, pricing page
 2. **Recent news** — press releases, funding announcements, product launches, partnerships (last 6 months)

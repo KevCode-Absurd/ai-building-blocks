@@ -9,7 +9,7 @@ subhead: "Which sales channel really makes money? You get a clear verdict for ea
 explain: |
   Which sales channel really makes money? You get a clear verdict for each one: double down, maintain, defund or exit. Plus a suggested mix of direct and partner sales that holds up when costs shift.
 
-  You fill in a short data template for each channel: deals, revenue, margin, acquisition cost, partner discounts, support load and the often forgotten extras like partner training. Scripts then work out the full cost to serve per deal and per dollar of revenue. They score return three ways: first-year cash, lifetime value and the next dollar spent. A last step tests mixes against your limits, such as a minimum direct share, and shows what happens if costs rise 20%. Python is needed.
+  You fill in a short data template for each channel: deals, revenue, margin, acquisition cost, partner discounts, support load and the often forgotten extras like partner training. Scripts then work out the full cost to serve per deal and per dollar of revenue. They score return three ways: first-year cash, lifetime value and the next dollar spent. A last step tests mixes against your limits, such as a minimum direct share, and shows what happens if costs rise 20%. Python is needed. The skill file also holds rules of thumb with percentages and names of research sources. They come from the skill's author and are not checked. Use them as rough guides, never as facts about your business.
 when:
   - Your pipeline is split between direct and partner sales and you do not know which half is profitable.
   - You are thinking of hiring a channel manager and want to know if the channel can pay for one.
@@ -33,9 +33,10 @@ you_get:
 how_to_use:
   - Open a chat with an AI that can run Python code and read files, then add the skill folder.
   - Fill in the channel data template for each channel. Use real numbers from the last 12 months. The scripts read three JSON files made from the template (channel.json, roi.json and mix.json) and print a markdown report each.
+  - Ask your AI to turn the filled template into the three JSON files. The cost file needs the channel name, deal volume, gross revenue, each cost line and the overhead percent. The ROI file needs what you invested and what came back, per channel. The mix file needs deals, yearly revenue, deal size, margin, acquisition cost, sales cycle days, retention, expansion and partner discount, per channel. Each script prints a sample with --sample, so you can see the exact layout.
   - Ask your AI to follow the skill and run the cost to serve script for each channel first.
   - Run the ROI script, then the mix script. Add your mix limits if you have them.
-  - Check the verdicts and the cost-shift table, then take them to your channel review.
+  - Check the verdicts and the cost-shift table, then take them to your channel review. Bring the one decision you want from it, such as moving budget from one channel to another. Run the scripts again after your costs change.
 output_sample:
   input:
     - Your channel data template, filled in for each channel (deals, revenue, margin, acquisition cost, sales cycle)

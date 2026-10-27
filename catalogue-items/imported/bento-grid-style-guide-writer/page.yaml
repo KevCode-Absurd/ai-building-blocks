@@ -34,9 +34,10 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the full skill text into a new chat.
   - Have ready a short description of your product, your brand colours and fonts, and the components that need rules (cards, buttons, forms). Describe your product, your brand and who uses the page.
   - Add the colours and fonts you already use, if you have them. Say which components you need rules for, and the accessibility level. The skill starts from WCAG 2.2 AA.
-  - Ask for the grid rules too: how many columns, which tile sizes, and how tiles stack on a phone. The skill's text does not set these unless you ask.
+  - Check the grid rules in the result: how many columns, which tile sizes, and how tiles stack on a phone. The skill sets starting values for these. Change them to fit your content.
   - Read the tokens first. Change any default, such as the Inter font or the peach and blue colours, to match your brand.
   - Hand the finished guide to your designers and developers. Turn the tokens into a design-token file, and run the QA checklist on one existing page first.
+next: [design-token-builder, design-system-auditor]
 output_sample:
   input:
     - A short description of your product and brand

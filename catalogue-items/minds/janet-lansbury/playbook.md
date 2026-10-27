@@ -48,27 +48,27 @@ You bring a child demanding adult participation in every moment of play. This mi
 
 ### Observe play before directing it
 
-A pause can reveal an intention you would otherwise miss. Supervision and a safe setting remain the adult's job. Observation is active attention, not indifference, and a child can still ask for help that you provide without taking over the entire task. The working output is a safe play setup, a brief limit and a sustainable caregiver routine.
+A pause can reveal an intention you would otherwise miss. Supervision and a safe setting remain the adult's job. Observation is active attention, not indifference, and a child can still ask for help that you provide without taking over the entire task. You get a safe play setup and a note on what stays uncertain.
 
 ### Support child-led play while staying responsive
 
-Follow interest without demanding uninterrupted absorption. Children vary in how much proximity and response they need. The useful habit is respecting a developing activity, not meeting a target number of minutes of supposedly perfect independent play. The working output is a short before-and-after message you can read aloud.
+Follow interest without demanding uninterrupted absorption. Children vary in how much proximity and response they need. The useful habit is respecting a developing activity, not meeting a target number of minutes of supposedly perfect independent play. You get a sustainable caregiver routine and a note on what stays uncertain.
 
 ### End a demand for constant adult entertainment
 
-Be honest about the limit rather than pretending you cannot draw. Acknowledge disappointment and allow the child to decide what to do next within a safe setup. The adult's rest matters alongside the child's opportunity to create. The working output is one clear action and the condition under which you will take it.
+Be honest about the limit rather than pretending you cannot draw. Acknowledge disappointment and allow the child to decide what to do next within a safe setup. The adult's rest matters alongside the child's opportunity to create. You get a brief limit you can say aloud and the one action you will take if it is ignored.
 
 ### Create a safe play setup with suitable supervision
 
-The intended distinction is who directs the play, not whether attachment needs disappear. Remain available and attend to practical needs. If a child struggles with separation, respond to that situation rather than treating a play principle as a command to ignore distress. The working output is two feasible options and a question that helps you choose.
+The intended distinction is who directs the play, not whether attachment needs disappear. Remain available and attend to practical needs. If a child struggles with separation, respond to that situation rather than treating a play principle as a command to ignore distress. You get a safe play setup with two feasible options and a question that helps you choose.
 
-### Life and career: the next commitment
+### Life and career: holding a limit when you are tired
 
-In this original play example, a child demands that the parent draw one more picture again and again. The parent is tired and needs to make dinner. State that drawing is finished for now, acknowledge the child's wish and leave safe materials available. Stay responsive without adding fresh entertainment to prevent every protest. Observe whether the child finds an activity or needs a practical form of support. The experiment is respecting agency and adult capacity, not achieving a set duration of solitary play or withholding connection. When using this for a life or career choice, name the decision due now and the support you can reasonably ask for. Keep your own values and responsibilities visible. A conversation can clarify a choice without allowing this mind to choose your relationship or career for you.
+Take one real example: a child asks the parent to draw one more picture again and again, and the parent is tired and needs to make dinner. State that drawing is finished for now, acknowledge the child's wish and leave safe materials available. Stay responsive without adding fresh entertainment to prevent every protest. The aim is respecting the child's agency and the adult's capacity, not reaching a set time of solo play or withholding connection. For an adult life or career choice, name the decision due now and the support you can ask for. This is an analogy from the method, and it cannot choose your relationship or career for you.
 
-### Outside the usual field: an everyday collaboration
+### Outside the usual field: planning a caregiver's day
 
-For a caregiver planning a day, identify care routines that can receive full attention and realistic times for self-directed activity with appropriate supervision. Keep the setup safe and flexible. The lesson can also inform adult creative work: leave some space to explore before imposing a solution, while recognizing that child care is Lansbury's actual public field. The output is a short written plan with a review date. This is an analogy from the method, not proof that it works in this new setting.
+For a caregiver planning a day, identify care routines that can receive full attention and realistic times for self-directed activity with appropriate supervision. Keep the setup safe and flexible. The lesson can also inform adult creative work: leave some space to explore before imposing a solution, while recognizing that child care is Lansbury's actual public field. You get a short written plan with a review date. Using this for adult creative work is an analogy from the method, not proof that it works there.
 
 ## What she'd push back on
 
@@ -76,7 +76,7 @@ Independent play varies with child, environment and available support. Do not co
 
 ## What you'll get back
 
-You receive a safe play setup, a brief limit and a sustainable caregiver routine. It starts with the situation as understood, names the central distinction and gives original wording or a small action to try. It also states what remains uncertain and what would make the exercise inappropriate. Bring back what actually happened if you want a revision; a difficult response is information for the next decision, not proof you performed the method incorrectly.
+You receive five parts: the situation as understood, a safe play setup, a brief limit with wording to try, a sustainable caregiver routine, and what stays uncertain, including what would make the exercise inappropriate. Bring back what actually happened if you want a revision; a difficult response is information for the next decision, not proof you performed the method incorrectly.
 
 ## When to pick someone else
 

@@ -37,7 +37,7 @@ you_get:
 how_to_use:
   - Use an AI that can run commands on your computer, such as Claude Code or Codex. Install Node 18 or newer first.
   - Say what you want done and in which Google service. Name the people, files or sheets you mean.
-  - Let the AI install gws and run the doctor check. Then sign in with only the permissions your job needs.
+  - Let the AI install gws and run the doctor check. Then sign in with only the permissions your job needs, using gws auth login on your own computer. Do not export your credentials to a file unless the machine cannot sign in itself.
   - Start with a read-only job, such as a list. Check the table it shows before you ask for any change.
   - For anything that sends, shares, moves or deletes, ask for a dry run first and read it. Say yes only when it matches what you meant.
   - If the job will repeat, ask for a saved script and run it on a small test first.

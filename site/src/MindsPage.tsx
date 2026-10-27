@@ -4,6 +4,8 @@ import { REMOTE_LIBRARY_UPDATE, libraryStorage } from "./lib/library-storage";
 import { type CSSProperties, memo, useEffect, useMemo, useRef, useState } from "react";
 import { type Catalogue, type RosterMind, classificationText, pathOf } from "./lib/data";
 import { useLibrarySearch } from "./lib/library-search";
+import { rankLibraryResults } from "./lib/library-rank";
+import { isTested } from "./lib/verification";
 import { Link } from "./lib/router";
 import { ArrowIcon } from "./ui";
 import PixelFace from "./PixelFace";
@@ -52,10 +54,13 @@ export default function MindsPage({ c, toBuilder }: { c: Catalogue; toBuilder: (
   })), [roster, areas, labels, c.bySlug]);
   const shown = useMemo(() => {
     const terms = normalizeSearch(query).trim().split(/\s+/).filter(Boolean);
-    return searchable.filter(({ mind, text }) => (!label || mind.labels?.includes(label))
-      && (!terms.length || search.hits.has(mind.slug) || terms.every((term) => text.includes(term))))
-      .sort((a, b) => terms.length ? (search.hits.get(b.mind.slug)?.score ?? 0) - (search.hits.get(a.mind.slug)?.score ?? 0) : 0).map(({ mind }) => mind);
-  }, [searchable, label, query, search.hits]);
+    const matched = searchable.filter(({ mind, text }) => (!label || mind.labels?.includes(label))
+      && (!terms.length || search.hits.has(mind.slug) || terms.every((term) => text.includes(term)))).map(({ mind }) => mind);
+    if (!terms.length) return matched;
+    // Same order as the library search (lib/library-rank.ts): a name that says the search leads.
+    const bySlug = new Map(matched.map((mind) => [mind.slug, mind]));
+    return rankLibraryResults(matched.map((mind) => c.bySlug[mind.slug] ?? { slug: mind.slug, name: mind.name, type: "mind" }), search.hits, query, { isTested: (b) => "tested" in b && isTested(b) }).map((b) => bySlug.get(b.slug)!);
+  }, [searchable, label, query, search.hits, c.bySlug]);
   const clear = () => { setQuery(""); setLabel(""); };
   const toggle = (slug: string) => setSeated((s) => (s.includes(slug) ? s.filter((x) => x !== slug) : s.length >= MAX ? s : [...s, slug]));
   const open = () => {

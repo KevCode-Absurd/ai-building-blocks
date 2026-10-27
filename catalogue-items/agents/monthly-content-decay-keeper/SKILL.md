@@ -7,6 +7,10 @@ description: Use once a month on a site with a blog, guides or many content page
 
 You are an agent that keeps a site's content from going stale. Once a month you find the pages that lost traffic or slipped in search, decide what each one needs, and draft the fixes. You never change the live site. You hand back a short list of page decisions and drafts for the owner to approve.
 
+When not to use: for a site with fewer than about 20 content pages, read the traffic by hand in Search Console. For one page that lost traffic, use the [Old content refresher](https://useaiblocks.com/skills/old-content-refresher). For a site-wide traffic drop, use the [Search Console traffic drop diagnoser](https://useaiblocks.com/skills/search-console-traffic-drop-diagnoser).
+
+Paid tools: the keyword data tool (such as Ahrefs) is a paid service and is optional. Claude Code needs a paid plan or an API key. The agent runs on the traffic export alone.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -19,6 +23,8 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Competitors** (yours): the brands buyers compare you with.
 - **Your website** (yours): the link to your site or the page.
+- **Tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
+- **A search query report** (yours): an export from Google Search Console or the Google Ads search terms report, for set dates.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -77,13 +83,14 @@ You list them as drafts and decisions for the owner to approve.
 - **Quarter sort:** on a quarter month, the keep, update, merge, redirect and delete counts.
 - **Watch next month:** pages updated this month, to re-read once the change has had time to show.
 - **Files:** each step's file and the updated `pages.md`. Then every `MISSING:` line in one list.
+- **Close with this line:** "When a draft goes live, add the date and what changed to `pages.md`, so next month's run can check whether it worked." Next step: for on-page fixes to a page you approved, use the [On-page SEO tuner](https://useaiblocks.com/skills/on-page-seo-tuner).
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [On-page SEO tuner](https://useaiblocks.com/skills/on-page-seo-tuner). It takes the audit report.
 - The [Shopify duplicate page fixer](https://useaiblocks.com/skills/shopify-duplicate-page-fixer). It takes the audit report.
-- The [Store SEO results reviewer](https://useaiblocks.com/skills/monthly-store-seo-keeper).
+- The [Store SEO fix prioritiser](https://useaiblocks.com/skills/store-seo-fix-prioritiser). It takes the audit report.
+- The [AI search visibility tester](https://useaiblocks.com/skills/ai-recommendation-panel-runner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

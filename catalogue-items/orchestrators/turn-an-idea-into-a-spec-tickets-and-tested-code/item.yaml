@@ -7,11 +7,14 @@ role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - {type: question, required: true}
+  - {type: idea, required: true}
   - {type: codebase, required: true}
+  - {type: question, required: true}
+  - {type: document, required: true}
 outputs:
   - {type: code_change}
   - {type: document}
+  - {type: product_spec, required: true}
 uses: [spec-writer, ticket-planner, spec-builder, test-gap-finder, pull-request-writer]
 steps:
   - {uses: spec-writer, note: "Turns your idea into a spec with user stories and testing decisions, and hands the spec to step 2."}

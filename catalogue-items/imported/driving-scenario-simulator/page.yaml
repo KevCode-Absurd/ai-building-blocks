@@ -10,6 +10,8 @@ explain: |
   Run a RoadRunner scenario from MATLAB or Simulink and read back exactly what happened. You can play it in one go, step through it frame by frame, and pull the logs when it ends.
 
   The skill lists the calls that belong to RoadRunner Scenario. It warns you not to mix them up with the older drivingScenario tool, which is a different product. It covers making a simulation and driving one vehicle from outside. You can add read-only observers and sensors that report lane edges and other cars. You can read or set scenario variables. Simulink blocks and shared actor behaviours are covered too. Setup and scene building are left to other skills.
+
+  This is MathWorks' skill. The licence that applies is the LICENSE file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE file.
 when:
   - You have a RoadRunner scenario and want to run it from code.
   - You want to step through a simulation and check each frame.
@@ -19,6 +21,7 @@ not_for:
   - "You need to launch RoadRunner or connect to it: set that up first with the MATLAB commands from MathWorks, as this skill starts after RoadRunner is running."
   - "You want to build scenes or add actors and paths in the editor: do that by hand in RoadRunner, then come back to run it."
   - "You use drivingScenario from Automated Driving Toolbox: that is a different product, so use its own MathWorks guides."
+  - "You do not use MathWorks products: the licence allows use only with them."
 you_give:
   - A RoadRunner scenario
   - What to control, watch or measure
@@ -34,6 +37,7 @@ how_to_use:
   - Open or save your RoadRunner scenario, and note your MATLAB release.
   - Open a chat with an AI that can run MATLAB code. Paste the SKILL.md text from the skill folder into the chat. Also paste or attach the two files in its references folder, simulation-api-reference.md and simulink-cosim-details.md. The skill points to them for call signatures and block setup.
   - Tell your AI what to run, control or measure. Add any sensors or scenario variables you want.
+  - The skill is written for MATLAB with RoadRunner. Ask your AI to check the code it writes against your MATLAB release before you run it, since calls differ between releases.
   - Run the code it writes in MATLAB. Check the simLog and sensor readings.
   - Next, plot the poses in simLog in MATLAB to check the run. To export vehicle paths to CSV, use exportActorTrajectoryToCSV in MATLAB.
   - The skill's licence allows use only with MathWorks products (see its LICENSE.md). Check your own MathWorks licence before you reuse it.

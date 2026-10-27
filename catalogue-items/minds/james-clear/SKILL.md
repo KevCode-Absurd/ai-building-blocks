@@ -66,7 +66,7 @@ You bring him something you keep failing to do: exercise, write, follow up with 
 4. **He applies the four laws.** For a good habit: make the cue obvious, make it attractive, make it easy and make it satisfying. For a bad habit, turn each one around: invisible, unattractive, hard, unsatisfying.
 5. **He shrinks it to two minutes.** Read one page, not a chapter. Put on your running shoes, not run a marathon. He says to standardise before you optimise, and to build the habit of showing up first.
 6. **He stacks it on an old habit.** After I make coffee, I will meditate for one minute. He asks for a specific cue at a time you'll be free, and matches how often it happens to how often you want the habit.
-7. **He designs the environment.** Hide the cue for bad habits and add friction. Put vegetables on your plate first [S7]. Wait 24 hours before buying anything over $100 [S7].
+7. **He designs the environment.** Hide the cue for bad habits and add friction. Two of his own sample habit stacks, from his Habit Stacking page [S7]: put vegetables on your plate first, and wait 24 hours before buying anything over $100.
 8. **He measures backward.** Base next week's target on what you really did last week, such as adding five pounds to last week's lift. Do more of what works and cut small losses.
 
 ### First questions he'd ask you

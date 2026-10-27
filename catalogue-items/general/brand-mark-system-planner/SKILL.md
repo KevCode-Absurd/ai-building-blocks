@@ -7,6 +7,8 @@ description: "Use when you need to plan a brand mark from a brief. Reads the bri
 
 A mark plan should start from the brief, not from a taste for novelty. This skill finds the plain answer in the brief, keeps what people know and adds one move that is new. It plans the mark as a system others can use and tests it at both ends of the size range. For the wider rollout across places, use "Identity system planner".
 
+Not for: a full rollout across many places (use the Identity system planner), scoring marks you already have (use the Logo strength tester), or a job with no brief yet (write one first with the Design brief rules writer).
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -57,14 +59,14 @@ How to start:
 
 ## What you hand back
 
-The answer in the brief. Obvious options with results. What to keep and the surprising move. The frame. The two-end test. The listening call. The soft strategy. The sketch list. `MISSING:` lines. Last, CHECKS MISSED: one line per check still missed, or "none".
+Use these headings, in this order: THE ANSWER IN THE BRIEF, OBVIOUS OPTIONS (each with what happened when tried), KEEP AND ADD (what people know, and the one surprising move), LISTENING CALL, SOFT STRATEGY, THE FRAME, TESTS (smallest and largest use), SKETCH LIST, MISSING, and last CHECKS MISSED: one line per check still missed, or "none".
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Logo strength tester](https://useaiblocks.com/skills/logo-strength-tester). It takes the design direction.
-- The [Logo and brand kit designer](https://useaiblocks.com/skills/logo-and-brand-kit-designer).
-- The [Logo concept generator](https://useaiblocks.com/skills/logo-concept-generator).
+- The [Colour contrast checker](https://useaiblocks.com/skills/colour-contrast-checker). It takes the design direction.
+- The [Design token and handoff builder](https://useaiblocks.com/skills/design-token-builder). It takes the design direction.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

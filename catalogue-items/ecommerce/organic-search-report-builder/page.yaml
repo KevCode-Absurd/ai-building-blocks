@@ -22,9 +22,9 @@ when:
   - You pay an agency or freelancer for SEO and want a report you can check yourself.
 
 not_for:
-  - "Your clicks fell and you want to know which pages lost them. Use the Search Console traffic drop investigator."
+  - "Your clicks fell and you want to know which pages lost them. Use the Search Console traffic drop diagnoser."
   - "You want pages to push this month from queries that rank on page two. Use the Search Console quick-win finder."
-  - "You want to know if SEO is worth doing for your store at all. Use the SEO investment readiness reviewer."
+  - "You want to know if SEO is worth doing for your store at all. Use the SEO worth-it checker."
   - "Your site is under three months old, or you have no Search Console set up. There is too little data for a trend."
 
 you_give:
@@ -130,7 +130,7 @@ improve:
   - Change the five weights in the skill file if your store lives on a different part, for example give purchases more.
   - Add your brand terms to the skill file so you never retype them.
   - Add a line for Bing and AI assistants, which Search Console doesn't cover.
-  - Pair it with the Search Console traffic drop investigator when clicks fall, and the Search Console quick-win finder for pages to push.
+  - Pair it with the Search Console traffic drop diagnoser when clicks fall, and the Search Console quick-win finder for pages to push.
 
 works_best_with:
   tools:

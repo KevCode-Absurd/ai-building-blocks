@@ -27,7 +27,7 @@ not_for:
   - "Heavy daily use on a free plan. Third-party sites report caps, which xAI's pages we could open do not confirm."
 pricing:
   model: freemium
-  from: "Check the maker's site (plan prices not confirmed)"
+  from: "grok.com plan prices could not be confirmed. API use is priced per token and per call (see note)"
   note: "Checked 26 Oct 2026 on docs.x.ai. API prices per 1 million tokens for the grok-4.3 model are US$1.25 for input and US$2.50 for output, and grok-4.7 is US$2.00 and US$6.00, for prompts under 200K tokens. Images cost US$0.02 to US$0.05 each. Web Search is US$5 per 1,000 calls. X Search is US$5 per 1,000 posts or US$10 per 1,000 profiles, billed per item returned. Token charges apply on top. The grok.com app plans are not confirmed. Third-party sites list a free plan with caps, SuperGrok at US$30 a month and SuperGrok Heavy at US$300 a month, and they disagree on details."
 works_with:
   - X
@@ -43,7 +43,7 @@ first_result:
     - "Pick a mode from the chat box. The page showed one called Fast, and we could not see the others."
     - "Ask about a recent topic you already know well, such as an event you followed this week."
     - "Check the answer against two sources you trust before you use it. Posts on X can be one-sided."
-    - "You end with a written answer. Ask it for its sources and open them. Next: for a topic scan use the Recent topic pulse researcher, or compare Perplexity for answers with numbered sources."
+    - "You end with a short written answer. Ask it for a dated list of sources with links, and for a note of what it could not verify. Then open the sources yourself. Next: for a topic scan use the Recent topic pulse researcher, or compare Perplexity for answers with numbered sources."
   api:
     - "Open docs.x.ai and follow its steps to get an API key. We did not check the sign-up steps."
     - "Send one short test prompt through the Responses API with the model you chose. Add the web_search tool if you want current results."

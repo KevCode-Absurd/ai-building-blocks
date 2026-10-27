@@ -8,7 +8,7 @@ role: plan
 job: ops
 level: beginner
 inputs:
-  - {type: brief, required: true}
+  - {type: question, required: true}
 outputs:
   - {type: plan}
 uses: []

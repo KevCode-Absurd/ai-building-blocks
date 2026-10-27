@@ -10,8 +10,8 @@ description: "Share a target account and product. Get buyer roles, deal risks an
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Deal health reviewer](https://useaiblocks.com/skills/deal-health-reviewer). It takes the document.
-- The [Deal desk reviewer](https://useaiblocks.com/skills/deal-desk-reviewer). It takes the document.
 - The [Mutual action plan builder](https://useaiblocks.com/skills/mutual-action-plan-builder). It takes the document.
+- The [Pre-sales proof of concept planner](https://useaiblocks.com/skills/proof-of-concept-plan). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

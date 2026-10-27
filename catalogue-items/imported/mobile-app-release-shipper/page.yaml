@@ -10,6 +10,8 @@ explain: |
   Your Expo app built for iOS and Android and sent to the app stores, with the settings written down so the next release is one command.
 
   The skill sets up Expo's build service, creates the build profiles in a config file, and runs the production build for each platform. It can send the iOS build to TestFlight for testers, then to App Store review, and send the Android build to Google Play. It also covers version and build numbers, store listing text, and automated releases that run when you merge code. You need an Expo project, an Apple developer account and a Google Play account.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (Expo) says MIT. Credit goes to Expo and sickn33.
 when:
   - Your Expo app works and you are ready to put it on the App Store.
   - You want testers on TestFlight before the public release.
@@ -47,7 +49,7 @@ output_sample:
   prerequisites:
     - An AI that can run commands on your computer
     - An Expo account to sign in to EAS, the Expo build service
-    - A paid Apple developer account and a Google Play developer account
+    - A paid Apple developer account and a Google Play developer account. Both stores charge for these, and your Expo plan limits how many builds you get
   output:
     - name: eas.json
       contains: Build profiles for testing and production, plus submit settings for the iOS and Android stores.
@@ -57,6 +59,8 @@ output_sample:
       contains: Steps to send the build to TestFlight for testers, then to App Store review.
     - name: Android submission
       contains: Steps to send the build to Google Play, moving through internal, closed, open and production tracks.
+    - name: Final summary
+      contains: "A short list at the end: the build ID for each platform and the submission status for each store (for example, iOS: sent to TestFlight; Android: not submitted yet)."
     - name: Version rule
       contains: How version and build numbers are set and raised on each release so they do not clash.
     - name: Automated release setup

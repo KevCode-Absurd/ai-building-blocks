@@ -10,6 +10,10 @@ explain: |
   A finished report in PDF, Word or HTML, built from MATLAB code, with a title page, chapters, tables and charts. Give it your results and get a document that updates whenever you rerun it.
 
   The skill builds on the MATLAB Report API for chapters, figures and tables, and uses the lower-level DOM tools only for things the Report API lacks, such as custom paragraphs. It lists your layout needs first, then checks whether the standard title page and sections cover them. When they do not, it makes a custom reporter instead of squeezing fields into the wrong slots.
+
+  You need MATLAB and the MATLAB Report Generator, which is a paid add-on, and an AI that can run MATLAB code (or you run the code yourself).
+
+  This is MathWorks' skill. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE.md file.
 when:
   - You run the same analysis each month and need a fresh report every time.
   - A client wants a PDF with your branding on the title page.
@@ -36,9 +40,9 @@ how_to_use:
   - Gather your results file, your format, your section list and any title page or branding details.
   - Paste the skill into your AI chat, or add it to your AI tool. Then paste your details and ask it to build the report.
   - Run the code it gives you in MATLAB. Your AI needs to run MATLAB itself, or you run the code and share any errors.
-  - Open the saved file. Check that the titles, chapter names and captions are right.
+  - Open the saved file. Check that it opens, and that the titles, chapter names and captions are right.
   - If the standard layout does not fit, ask your AI to make a custom reporter for your title page or page design.
-  - Next, open the finished file and check the titles and captions. Run the code again after your data changes to refresh the report.
+  - Next, send the report to your client or team. When your data changes, run the code again to refresh the report. To add charts to it, make them first with the MATLAB chart maker.
 next:
   - matlab-chart-maker
 output_sample:

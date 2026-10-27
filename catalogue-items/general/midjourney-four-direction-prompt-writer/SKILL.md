@@ -5,7 +5,7 @@ description: Use when the user wants four distinct Midjourney visual directions 
 
 # Midjourney image prompt writer
 
-Turn one image idea or reference into four Midjourney prompts that each look different, plus four directions to try next. This skill writes prompts. It does not make the pictures, so the person pastes each prompt into Midjourney.
+Turn one image idea or reference into four Midjourney prompts that each look different, plus four directions to try next. This skill writes prompts. It does not make the pictures, so the person pastes each prompt into Midjourney. Midjourney is a paid service with its own account; this skill does not need it to write the prompts.
 
 ## When not to use this
 
@@ -61,7 +61,7 @@ If the idea is thin but usable, say what you assumed and write the prompts anywa
 
 ## What you hand back
 
-Use this layout. Put each prompt in its own code block so it copies cleanly.
+Use this layout, in one code block so it copies cleanly.
 
 ```text
 INTERPRETATION
@@ -90,7 +90,6 @@ End with one line: these are prompts, not pictures. Paste each into Midjourney t
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Multi-provider image maker](https://useaiblocks.com/skills/multi-provider-image-maker). It takes the image prompt.
 - The [Image and video prompt director](https://useaiblocks.com/skills/visual-prompt-director).
-- The [Image prompt engineer agent](https://useaiblocks.com/skills/agency-design-image-prompt-engineer).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

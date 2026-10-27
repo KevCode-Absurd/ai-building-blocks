@@ -22,7 +22,7 @@ Scans all active products and their variants for missing or insufficient images.
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
 | store | string | yes | — | Store domain (e.g., mystore.myshopify.com) |
-| min_images | integer | no | 1 | Flag products with fewer than this many images |
+| min_images | integer | no | 1 | Flag products with fewer than this many images. Use 10 or less: only the first 10 images per product are counted, so a higher number would flag products wrongly |
 | check_variants | bool | no | true | Also flag variants with no assigned image |
 | status_filter | string | no | active | Product status to scan: `active`, `draft`, or `all` |
 | format | string | no | human | Output format: `human` or `json` |
@@ -151,4 +151,4 @@ CSV file `image_audit_<YYYY-MM-DD>.csv` with columns:
 - Some sales channels, such as Google Shopping, may reject products with no images. Check each channel's rules, and fix the zero-image products first.
 - For apparel or products with color/size variants, set `min_images: 3` to ensure at least one front, back, and lifestyle shot per product.
 - Run after bulk product imports to catch images that failed to upload in the import batch.
-- Pair with `product-data-completeness-score` for a single comprehensive catalog quality report.
+- This skill does not give a full catalogue quality report. The `product-data-completeness-score` skill it used to point to is not in this library. To fill other gaps in your product data, use the Product data gap filler.

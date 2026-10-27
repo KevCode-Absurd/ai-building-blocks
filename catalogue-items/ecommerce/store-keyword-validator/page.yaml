@@ -134,7 +134,7 @@ improve:
 works_best_with:
   tools:
     - {name: "Google Keyword Planner", why: "Free inside a Google Ads account. Gives volume ranges, bid ranges and ideas from a rival's web address."}
-    - {name: "Semrush", why: "Gives difficulty scores, intent labels and a gap view that shows missing and weak keywords."}
+    - {name: "Semrush", why: "Paid tool. Gives difficulty scores, intent labels and a gap view that shows missing and weak keywords."}
     - {name: "Google Trends", why: "Free. Its related searches help find terms buyers use."}
     - {name: "Any good chat AI", why: "Runs the tests on a pasted list and explains each verdict."}
   inputs:

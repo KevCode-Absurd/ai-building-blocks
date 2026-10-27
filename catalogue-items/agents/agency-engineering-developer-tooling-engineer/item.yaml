@@ -13,6 +13,10 @@ inputs:
     required: true
   - type: source_text
     required: false
+  - type: plan
+    required: false
+  - type: code_change
+    required: false
 outputs:
   - type: plan
 uses: []

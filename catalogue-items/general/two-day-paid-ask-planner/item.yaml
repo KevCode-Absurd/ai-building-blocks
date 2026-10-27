@@ -7,7 +7,7 @@ role: make
 job: strategy
 level: beginner
 inputs:
-  - type: question
+  - type: idea
     required: true
   - type: plan
     required: false

@@ -26,6 +26,8 @@ Collect application specifications:
 
 ### Step 2: Design Architecture
 
+> **Cost warning.** The deploy steps later in this skill create billable Google Cloud resources (Cloud Run, Firestore, Cloud Build and more). Tell the user this before they run any deploy command. Suggest they set a budget alert in the Google Cloud console and check Billing reports for the project after deploying. Treat every cost figure in this skill as a sample.
+
 Run the architecture designer to get pattern recommendations:
 
 ```bash
@@ -119,6 +121,17 @@ variable "region" {
   description = "GCP region"
   type        = string
   default     = "us-central1"
+}
+
+variable "environment" {
+  description = "Environment name, such as dev or prod"
+  type        = string
+  default     = "dev"
+}
+
+variable "app_name" {
+  description = "Short lowercase name for the app"
+  type        = string
 }
 
 resource "google_cloud_run_v2_service" "api" {
@@ -268,7 +281,7 @@ Recommends GCP services based on workload requirements.
 python scripts/architecture_designer.py --input requirements.json --output design.json
 ```
 
-**Input:** JSON with app type, scale, budget, compliance needs
+**Input:** `requirements.json`, a JSON file with app type, scale, budget and compliance needs. You can also pass `--app-type`, `--users` and `--budget` instead of a file. Run the script with `--help` to see the exact options.
 **Output:** Recommended pattern, service stack, cost estimate, pros/cons
 
 ### cost_optimizer.py
@@ -276,7 +289,7 @@ python scripts/architecture_designer.py --input requirements.json --output desig
 Analyzes GCP resources for cost savings.
 
 ```bash
-python scripts/cost_optimizer.py --resources inventory.json --monthly-spend 5000
+python scripts/cost_optimizer.py --resources current_setup.json --monthly-spend 5000
 ```
 
 **Output:** Recommendations for:

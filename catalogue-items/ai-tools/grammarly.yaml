@@ -25,7 +25,7 @@ not_for:
   - Checking languages other than English in depth.
 pricing:
   model: freemium
-  from: Check the maker's site
+  from: "Free plan available; paid prices in US dollars are not confirmed (see grammarly.com/plans)"
   note: The free plan includes spelling and grammar checks and 100 AI prompts a month. A paid individual plan adds full rewrites and more prompts. Enterprise is priced on request. The page showed local currency, so no US dollar price was confirmed.
 works_with:
   - Google Docs
@@ -36,12 +36,12 @@ blocks: []
 alternatives: [jasper, copy-ai, chatgpt, claude]
 last_checked: 2026-10-21
 first_result:
-  - "Go to grammarly.com and sign up for the free plan."
+  - "Go to grammarly.com and sign up for the free plan. The sign-up and install steps here were not checked, so follow the current page if it differs."
   - "Add the browser extension or the desktop app, so it checks where you already write. We did not check the install steps."
   - "Paste a draft, such as a customer email, into the editor. Accept or reject each suggestion one by one."
   - "Pick a tone for the message, such as friendly or confident, and read the rewrite."
   - "Read the final text aloud once. Grammarly checks spelling and style. It does not check whether your facts are true."
-  - "You end with a corrected draft that you have approved line by line."
+  - "You end with a corrected draft in the tone you picked, plus the suggestions you accepted and rejected one by one."
   - "Next: for a first draft from nothing, write it in ChatGPT or Claude, then polish it here."
 needs:
   - "A draft to check. English works best."

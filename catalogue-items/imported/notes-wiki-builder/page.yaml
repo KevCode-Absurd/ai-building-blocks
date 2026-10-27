@@ -10,6 +10,8 @@ explain: |
   Your AI remembers what it learned. Instead of one giant notes file that rots, you get small linked files and an index, so the next session finds the fact without redoing the work.
 
   The rule is one fact per file. Each has a one-line description that recall matches against, [[links]] to related files, and a single index line. The hard part is discipline: only keep what is lasting, such as a tool that fails silently or a limit nobody wrote down. Update an existing file instead of making a near-copy. Skip routine work, since filler makes recall worse. You pick a store, either the agent's memory folder or a shared wiki folder, and compile before you close a task.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (5dive-ai) says MIT. Credit goes to 5dive-ai and sickn33.
 when:
   - You just finished research and want it available next week.
   - Your AI keeps re-learning the same hard-won fact.
@@ -29,11 +31,12 @@ you_get:
   - An updated index
   - Fewer duplicates
 how_to_use:
-  - "Gather the finding you want to keep. Pick where notes live: your AI's memory folder, or a shared wiki folder for your team. If the folder or index does not exist yet, ask your AI to create it first."
+  - "Gather the finding you want to keep. Pick where notes live: your AI's memory folder, or a shared wiki folder for your team. Confirm the folder and index file name first: usually memory/ with MEMORY.md for your AI's own notes, or wiki/ with wiki/index.md for a team. If the folder or index does not exist yet, ask your AI to create it first."
   - Paste this skill into your AI chat, or add it to your AI tool as a skill. The skill also names the skill writer and the research skills, but you do not need them.
   - Paste what you learned, or say "save this" at the end of a task. Share your existing notes if you have them.
   - Check that your AI searched for a similar note first, and updated it instead of making a copy.
   - Read the new file and the index line. Make sure the one-line description uses words you would search for.
+  - Before your next session, check that the index line still links to a file that exists.
   - This works best when your AI can read and save files. In a plain chat, copy the files it writes into your folder yourself.
 output_sample:
   input:

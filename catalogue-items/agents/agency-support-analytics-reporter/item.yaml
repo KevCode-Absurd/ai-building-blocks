@@ -8,13 +8,15 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: question
+  - type: spreadsheet
     required: true
-  - type: source_text
+  - type: question
+    required: false
+  - type: customer_list
     required: false
 outputs:
-  - type: brief
-  - type: audit_report
+  - type: document
+  - type: plan
 uses: []
 steps: []
 origin: imported

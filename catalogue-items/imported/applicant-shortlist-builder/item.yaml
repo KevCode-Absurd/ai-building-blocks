@@ -8,7 +8,9 @@ role: check
 job: ops
 level: advanced
 inputs:
-  - type: document
+  - type: resume
+    required: true
+  - type: job_description
     required: true
 outputs:
   - type: shortlist

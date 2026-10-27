@@ -10,6 +10,8 @@ explain: |
   Server routes for your mobile app, built inside Expo Router and ready to host with EAS Hosting. They keep your secret keys on the server, away from the phone.
 
   The skill first helps you decide whether you need a route at all. Good reasons are hidden API keys, database writes, proxying Stripe or OpenAI calls, checking data on the server, webhooks and heavy work. Poor reasons are public data, plain CRUD that a managed backend handles, file uploads and sign-in alone, and it points you to better options there. When a route is the right answer, it writes the route files and sets up the deploy.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (Expo) says MIT. Credit goes to Expo and sickn33.
 when:
   - Your app calls a paid API and the key must not ship inside the app.
   - You need an endpoint that receives Stripe or GitHub webhooks.
@@ -34,7 +36,8 @@ how_to_use:
   - Open your AI tool and paste the skill, or load the skill folder if your tool takes files.
   - Say what your app needs from a server and which services you call.
   - Share your Expo project files. This works best when your AI can read files and run commands.
-  - Check the routes it writes. Make sure each one checks who is calling and limits use before it calls a paid service. The skill's sign-in example is a stub that accepts any token, so replace it with a real check. The skill gives no rate-limit code, so ask your AI to add one, such as a per-user counter in your database or your host's rate-limit feature.
+  - Check the routes it writes. Make sure each one checks who is calling and limits use before it calls a paid service. The skill's sign-in example is a stub that refuses every request until you add a real token check, so replace it before you ship. Do not ship any route until that check is in place. The skill gives no rate-limit code, so ask your AI to add one, such as a per-user counter in your database or your host's rate-limit feature.
+  - Verify before use: the weather and OpenAI examples in the skill use a placeholder endpoint and a model name to replace. Check the provider's current docs.
   - Test locally with npx expo serve and curl.
   - To go live, log in to EAS, set your secrets (leave out --value so EAS asks for the key and it stays out of your shell history), then run eas deploy. Stripe, OpenAI and hosting use can cost money.
 output_sample:

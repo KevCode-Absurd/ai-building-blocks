@@ -10,6 +10,8 @@ level: advanced
 inputs:
   - type: codebase
     required: true
+  - type: deploy_url
+    required: false
 outputs:
   - type: audit_report
 uses: []

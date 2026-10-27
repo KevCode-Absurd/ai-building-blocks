@@ -8,14 +8,16 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: question
     required: true
   - type: codebase
     required: false
   - type: test_report
     required: false
+  - type: plan
+    required: false
 outputs:
-  - type: document
+  - type: api_spec
 uses: []
 origin: imported
 source:

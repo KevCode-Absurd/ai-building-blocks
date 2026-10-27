@@ -301,7 +301,7 @@ Must report `count: 0`.
 
 **This skill produces investment banking-quality LBO models by filling templates with correct formulas, proper formatting, and validated calculations. The skill adapts to any template structure while ensuring financial accuracy and professional presentation standards.**
 
-- **Runbook:** [`references/runbook-lbo.md`](references/runbook-lbo.md) — the end-to-end walkthrough (which skills to load in what order, and the output contract).
+- **Runbook:** [`references/runbook-lbo.md`](references/runbook-lbo.md) — a two-line note: load this skill, then ask the user for the target company and deal terms if none were given. No other skill is needed. Use only the deal facts the user gives you; do not look up or guess a company's accounts.
 
 ## Hand back
 

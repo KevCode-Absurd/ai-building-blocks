@@ -10,6 +10,8 @@ explain: |
   A messy PyTorch training script becomes a clean one with checkpoints, logging and multi-GPU support already in place. You stop rewriting the same boilerplate for every project.
 
   The skill moves your code into PyTorch Lightning. You put the model in a LightningModule with training and validation steps, and the Trainer handles the loop. From there you switch on distributed training with DDP, FSDP or DeepSpeed by changing a setting, not rewriting code. Callbacks cover saving the best model, early stopping and learning rate logging. The same script runs on a laptop or a GPU cluster. It needs Python with the lightning and torch packages.
+
+  Licence: MIT, as the LICENSE file in this item says. Credit goes to Orchestra Research.
 when:
   - Your training script is full of manual loops, device moves and save code.
   - You want to move from one GPU to several without a rewrite.
@@ -17,6 +19,7 @@ when:
   - You are handing code to a teammate who must read it.
 not_for:
   - "Your code is not PyTorch, or the script is a tiny one-off: keep it as it is, or use the framework you already have."
+  - "A teammate who does not know Lightning must keep the script in plain PyTorch: leave it as it is, or use Accelerate, which keeps your own loop."
   - "You want the smallest possible change to your existing loop: use Accelerate, a separate library that adds multi-GPU support with few edits."
   - "You need to run many nodes and tune settings at scale: use Ray Train, a separate tool for that job."
 you_give:
@@ -37,7 +40,7 @@ how_to_use:
   - Run the new script and your old one for a few epochs. Check the loss curves look the same.
   - Fix any gaps, then switch on multi-GPU by changing one Trainer setting.
   - Your AI needs to run Python to test the result. If it cannot, run the script yourself.
-  - Keep your old script as a reference until the new one matches it. Then merge, and add a small test that runs one epoch.
+  - Keep your old script as a reference until the new one matches it. Then merge, and add a small test that runs one epoch. To check the whole setup on a small model first, run the tiny GPT trainer as a smoke test. If you only need multi-GPU with few changes to your loop, pick Accelerate instead.
 output_sample:
   input:
     - Your current PyTorch training script

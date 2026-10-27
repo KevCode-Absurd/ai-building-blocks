@@ -7,13 +7,13 @@ role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: question
     required: true
   - type: codebase
     required: false
   - type: meeting_notes
     required: false
-  - type: source_text
+  - type: incident_record
     required: false
 outputs:
   - type: plan

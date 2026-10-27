@@ -10,9 +10,12 @@ level: intermediate
 inputs:
   - type: codebase
     required: true
+  - type: plan
+    required: false
 outputs:
   - type: code_change
     required: true
+  - type: plan
 uses: []
 origin: imported
 source:

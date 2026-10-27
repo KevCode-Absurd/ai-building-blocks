@@ -12,11 +12,11 @@ Time spent on prospects who are not ready is time taken from those who are. This
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Shortlist** (yours): a ranked short list chosen from a larger set, with reasons.
+- **Your lead list** (yours): your leads or open deals, exported from your CRM or a sheet.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for shortlist. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your lead list. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -48,9 +48,9 @@ The list, dated, with the re-grade day. The A's, each with timing and next step.
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Lost deal pitch reviewer](https://useaiblocks.com/skills/monthly-lost-deal-reviewer).
-- The [Objection answer sheet writer](https://useaiblocks.com/skills/objection-answer-sheet-writer).
-- **Decide what to do** with the [Root cause finder](https://useaiblocks.com/skills/root-cause-finder). It takes the shortlist.
+- The [Lost deal pitch reviewer](https://useaiblocks.com/skills/monthly-lost-deal-reviewer). It takes the lead list.
+- The [Sales lead priority ranker](https://useaiblocks.com/skills/who-to-call-first-ranker). It takes the lead list.
+- The [Deal notes and CRM updater](https://useaiblocks.com/skills/deal-notes-and-crm-updater). It takes the lead list.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

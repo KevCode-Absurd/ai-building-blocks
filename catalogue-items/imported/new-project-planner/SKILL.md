@@ -68,6 +68,8 @@ instructions are always the final authority and can override the docs at any tim
 
 ### Phase 1 — PRD.md first
 
+If you already have a plan or blueprint for the idea (for example from an earlier planning step), use it as the starting point for the PRD instead of asking for the same facts again.
+
 This is the foundation. Everything else depends on it.
 
 - Take whatever the user gave you (even just "restaurant app") and ask a small

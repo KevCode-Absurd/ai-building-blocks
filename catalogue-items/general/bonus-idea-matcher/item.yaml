@@ -9,6 +9,10 @@ level: beginner
 inputs:
   - type: offer
     required: true
+  - type: voc_reviews
+    required: false
+  - type: objection_map
+    required: false
 outputs:
   - type: offer
 uses: []

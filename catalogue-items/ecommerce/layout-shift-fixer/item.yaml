@@ -7,7 +7,7 @@ role: make
 job: page
 level: intermediate
 inputs:
-  - {type: audit_report, required: true}
+  - {type: page_speed_report, required: true}
   - {type: theme_files, required: true}
   - {type: store_capture, required: false}
 outputs:

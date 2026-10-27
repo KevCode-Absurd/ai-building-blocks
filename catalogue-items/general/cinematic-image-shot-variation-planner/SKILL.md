@@ -32,7 +32,9 @@ A short brief with:
 - anything that must stay the same in all four, such as a product or a character;
 - reference images or style notes, if you have them (optional).
 
-This skill writes the prompts. It cannot draw. Paste a prompt into an image tool such as ChatGPT, Gemini or Higgsfield to get the picture.
+This skill writes the prompts. It cannot draw. Paste a prompt into an image tool such as ChatGPT, Gemini or Higgsfield to get the picture. ChatGPT and Gemini have free tiers with limits. Higgsfield is optional and runs on paid credits, so check its current plans before you rely on it. Nothing in this skill spends money for you.
+
+If the "Before you start" list mentions reference ads, here that means reference images or style notes for the look you want.
 
 ## Scope and intake
 
@@ -42,7 +44,7 @@ This method produces image prompt from the supplied brief. Read what the user al
 
 1. Identify subject, moment, intended style and fixed continuity. Return four variations unless the user asks for another number.
 
-2. Before writing, plan distance, lens feel, physical witness position, orientation, foreground, crop, focus, height and tilt for each variation.
+2. Before writing, plan distance, lens feel, where the camera stands (a real place a person could stand, such as "from the back-door step, at seated height"), orientation, foreground, crop, focus, height and tilt for each variation.
 
 3. At least three setups differ substantially in physical camera position or lens/distance relationship. Do not use only height or renamed angle labels for variety.
 
@@ -60,7 +62,7 @@ This method produces image prompt from the supplied brief. Read what the user al
 
 ```text
 SETUP 1
-Camera label: [distance · lens feel · physical witness position]
+Camera label: [distance · lens feel · where the camera stands]
 Copy-ready prompt: [4–5 sentences]
 
 SETUP 2, SETUP 3, SETUP 4
@@ -80,9 +82,7 @@ Paste the prompt you like best into an image tool. If the picture is close, ask 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Uncanny anime image prompt writer](https://useaiblocks.com/skills/uncanny-anime-image-prompt-writer).
 - The [Multi-provider image maker](https://useaiblocks.com/skills/multi-provider-image-maker). It takes the image prompt.
-- The [Image prompt engineer agent](https://useaiblocks.com/skills/agency-design-image-prompt-engineer).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

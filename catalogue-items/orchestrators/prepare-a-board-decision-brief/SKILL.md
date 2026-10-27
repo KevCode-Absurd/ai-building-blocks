@@ -10,8 +10,8 @@ description: "Share company facts and decisions due. Get an evidence map, a boar
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Nonprofit board meeting and role planner](https://useaiblocks.com/skills/nonprofit-board-meeting-and-role-planner). It takes the document.
-- The [Nonprofit executive board report writer](https://useaiblocks.com/skills/nonprofit-executive-board-report-writer).
 - The [Employee feedback action reviewer](https://useaiblocks.com/skills/employee-feedback-action-review-assistant). It takes the document.
+- The [Internal change announcement writer](https://useaiblocks.com/skills/change-announcement). It takes the document.
 - The [HR AI tool vendor checker](https://useaiblocks.com/skills/hr-ai-tool-vendor-checker). It takes the document.
 - The [Succession plan builder](https://useaiblocks.com/skills/succession-plan-builder). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
@@ -32,6 +32,22 @@ How to start:
 2. **Check what's missing.** Look for your question, spreadsheet, business profile. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
+
+## When to use, and when not to
+Use this before a board meeting when you have one or more decisions to put to a vote and current numbers to show against plan.
+- For slides, use the Board deck builder (`board-deck-builder`).
+- For minutes after the meeting, use the Board minutes drafter (`board-minutes-drafter`).
+- For a decision made without a meeting, use the Board written consent drafter (`board-written-consent-drafter`).
+
+## What to gather first
+- The metrics against plan: each number with its target and the period it covers.
+- The decisions due: one line each, with the choice on the table and who has to decide.
+- The source of each number, such as a report, a ledger or a person. A number with no source is marked `MISSING: source` and is not shown as fact.
+- Optional: a sourced business profile.
+
+This replaces the generic input list above. The board gets drafts only. A person who knows the numbers checks them before the pack goes out.
+
+The generic next-step list above comes from the file types. For a company board, the Board deck builder or the Board minutes drafter is the usual next step.
 
 ## Goal
 

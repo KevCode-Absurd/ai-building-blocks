@@ -92,9 +92,9 @@ If an image tool is connected, offer to make the picture with it, and ask before
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Marketplace photo rule checker](https://useaiblocks.com/skills/marketplace-photo-rule-checker). It takes the product photos and photo set.
-- The [AI product photo inspector](https://useaiblocks.com/skills/ai-product-photo-inspector). It takes the product photos and photo set.
-- The [Product photo retoucher](https://useaiblocks.com/skills/product-photo-retoucher). It takes the product photos.
+- The [Marketplace photo rule checker](https://useaiblocks.com/skills/marketplace-photo-rule-checker). It takes the photo set.
+- The [AI product photo inspector](https://useaiblocks.com/skills/ai-product-photo-inspector). It takes the photo set.
+- The [Product page gallery planner](https://useaiblocks.com/skills/product-page-gallery-planner).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

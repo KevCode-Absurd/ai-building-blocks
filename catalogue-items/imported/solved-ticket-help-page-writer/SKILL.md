@@ -6,7 +6,7 @@ argument-hint: "<resolved issue or ticket>"
 
 # /kb-article
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Words that start with ~~ (such as ~~support platform) name a tool the user may have linked. If none is linked, ask the user to paste the ticket text instead.
 
 Draft a publish-ready knowledge base article from a resolved support issue, common question, or documented workaround. Structures the content for searchability and self-service.
 

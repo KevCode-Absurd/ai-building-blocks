@@ -10,6 +10,8 @@ inputs:
   - {type: performance_sheet, required: true}
   - {type: spreadsheet, required: true}
   - {type: question, required: true}
+  - {type: contract, required: true}
+  - {type: customer_list, required: true}
 outputs:
   - {type: audit_report}
 uses: [store-revenue-forecast-builder, support-capacity-planner, 3pl-bid-and-agreement-builder, inbound-shipment-tracker-builder, 3pl-bill-auditor]

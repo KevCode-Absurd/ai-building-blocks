@@ -134,6 +134,7 @@ response = rails.generate(messages=[{
 
 Validate both input and output. `toxicity_detector`, `extract_facts` and `verify_facts` below are PLACEHOLDERS. They are not part of NeMo Guardrails. The person must supply real code or a real service for each, and a fact check needs a source the person trusts.
 ```python
+# NOT RUN, NOT RUNNABLE: pseudocode. Do not copy into a live app.
 from nemoguardrails.actions import action
 
 @action()
@@ -166,12 +167,13 @@ define flow self check output
     stop
 """, actions=[check_input_toxicity, check_output_hallucination])
 ```
-If no real fact check exists, say so in **Limits**. Do not claim the app blocks made-up facts.
+If no real fact check exists, say so in **Limits**. Do not claim the app blocks made-up facts. Do not put this sketch in a live chatbot: the toxicity and fact checks are placeholders, so it would look like a guardrail while blocking nothing.
 
 ### Workflow 3: Fact-checking with retrieval
 
 A sketch of the idea only. The names `extract facts`, `check facts` and `fact_check_action` are PLACEHOLDERS. The method for registering an action depends on your version: see references/integrations.md.
 ```python
+# NOT RUN, NOT RUNNABLE: pseudocode. Do not copy into a live app.
 config = RailsConfig.from_content("""
 define flow fact check
   bot inform something

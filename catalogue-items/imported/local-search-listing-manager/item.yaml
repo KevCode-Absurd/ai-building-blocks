@@ -8,10 +8,13 @@ role: check
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: question
     required: true
+  - type: web_page
+    required: false
 outputs:
   - type: audit_report
+  - type: copy_draft
 uses: []
 origin: imported
 source:

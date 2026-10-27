@@ -10,7 +10,7 @@ level: intermediate
 inputs:
   - type: design_file
     required: false
-  - type: brief
+  - type: question
     required: true
   - type: audit_report
     required: false

@@ -7,7 +7,7 @@ description: "Generate personalized outreach messages using Common Room signals.
 
 This catalog copy does not include these files:
 
-- `references/my-company-context.md`
+- `references/my-company-context.md` (the user pastes this into the chat instead)
 
 Do not say you read or ran them. Do those steps by hand, or ask the user for the original file.
 
@@ -63,7 +63,7 @@ Use the strongest hooks to write all three formats. Each format has different co
 
 Always produce all three, clearly labeled.
 
-When the user's company context is available (the `references/my-company-context.md` file is not in this copy), ground the value bridge and pitch in the user's specific product and positioning. If it is not supplied, ask the user for their offer and positioning before you write the pitch.
+Ground the value bridge and pitch in the user's own product, offer and positioning. Ask the user to paste them into the chat before you write the pitch. Do not invent them.
 
 ### Step 6: Annotate Your Choices
 

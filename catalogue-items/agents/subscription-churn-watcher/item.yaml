@@ -8,7 +8,7 @@ job: email
 level: intermediate
 inputs:
   - { type: spreadsheet, required: true }
-  - { type: performance_sheet, required: true }
+  - { type: performance_sheet, required: false }
   - { type: voc_reviews, required: false }
   - { type: store_capture, required: false }
   - { type: product_data, required: false }

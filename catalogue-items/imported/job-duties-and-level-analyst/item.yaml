@@ -8,10 +8,16 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: job_description
     required: true
+  - type: source_text
+    required: false
+  - type: copy_draft
+    required: false
 outputs:
   - type: document
+  - type: job_description
+    required: true
 uses: []
 origin: imported
 source:

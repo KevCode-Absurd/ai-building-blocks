@@ -29,6 +29,13 @@ The agent builds out the Channels, Relationships, Key Activities, Resources, and
 ### Step 3: Financial & Consistency Check
 Final validation to ensure every activity is accounted for in the Cost Structure and revenue streams align with customer segments.
 
+## When Not to Use This Skill
+- You need proof that people will pay: talk to customers first, or use `business-idea-killer`.
+- You need a profit and loss forecast or a legal structure: ask an accountant or a lawyer.
+
+## What next
+Test the riskiest block with real customers. Use `market-size-estimator` to size the market, and move any cost numbers into a spreadsheet.
+
 ## Examples
 
 ### Example 1: Subscription-based SaaS (Runnable)

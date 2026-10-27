@@ -7,7 +7,7 @@ role: make
 job: analysis
 level: advanced
 inputs:
-  - { type: spreadsheet, required: true }
+  - { type: financial_statements, required: true }
   - { type: audit_report, required: false }
 outputs:
   - { type: audit_report }

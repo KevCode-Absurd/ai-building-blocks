@@ -9,7 +9,7 @@ description: >
   ActorSimulation getAttribute/setAttribute, addObserver, SensorSimulation,
   Simulink co-sim blocks, and publishActorBehavior.
   NOT for project setup, scene building, scenario authoring, or trajectory export.
-license: https://www.mathworks.com/content/dam/mathworks/license/pmrl/license.md
+license: BSD-2-Clause plus MathWorks products-only clause (see LICENSE.md in this folder)
 metadata:
   author: MathWorks
   version: "1.0"
@@ -336,8 +336,12 @@ Observers can also be Simulink models (`.slx`) since R2024b.
 
 Attach driving sensors to actors and read ground-truth data during simulation.
 
+Use the same stepping pattern as Workflow B: create the simulation first, then start in stepping mode, then step with a pause after every Step.
+
 ```matlab
 rrSim = createSimulation(rrApp);
+stepSize = 0.01;
+set(rrSim, StepSize=stepSize);
 sensorSim = get(rrSim, "SensorSimulation");
 
 % Create and attach sensors to ego vehicle (actor ID 1)
@@ -347,10 +351,14 @@ radarSensor = drivingRadarDataGenerator(SensorIndex=2, ...
     MountingLocation=[1.8 0 0.2]);
 addSensors(sensorSim, {visionSensor, radarSensor}, 1);
 
+% Start in stepping mode (NOT SimulationCommand="Start", which runs freely)
+simulateScenario(rrApp, IsSteppingStart=true, IsBlocking=false, EnableLogging=true);
+pause(0.5);  % Allow sim to initialize before stepping
+
 % During step loop
-set(rrSim, SimulationCommand="Start");
 for i = 1:numSteps
     set(rrSim, SimulationCommand="Step");
+    pause(stepSize);  % REQUIRED — Step is async
     targets = targetPoses(sensorSim, 1);       % struct array in ego frame
     lanes = laneBoundaries(sensorSim, 1);      % lane boundary data
 end

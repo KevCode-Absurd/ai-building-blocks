@@ -31,9 +31,9 @@ you_get:
   - Vendor email drafts
   - Slow movers to clear
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in this skill's instructions.
-  - Upload your sales history and stock count, or paste them in. Say the date you counted the stock.
-  - Add unit cost, price, vendor and lead time for each item. Lead time is optional, but it makes the dates more exact.
+  - Open an AI that can read files, such as Claude with files on, or a coding AI, and attach the whole skill folder. The skill reads its reference and shared files, so pasting only SKILL.md is not enough.
+  - Upload your sales history and stock count, or paste them in. Say the date you counted the stock. Connecting Shopify, Square or NetSuite is optional and may need a paid plan or API access.
+  - Add unit cost, price, vendor and lead time for each item. If you leave lead time out, the skill asks once per vendor and remembers your answer. It does not guess one. Without it the dates and order sizes are not reliable.
   - Read the buy list. Check the sales rate and days of cover on the lines that matter most.
   - Reply yes to the purchase orders and vendor emails you want. Nothing is ordered or sent until you do.
   - Send the approved orders to your suppliers yourself. Connecting Shopify, Square or NetSuite is optional and may need a paid plan.

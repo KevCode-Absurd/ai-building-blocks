@@ -7,11 +7,21 @@ role: orchestrate
 job: ops
 level: intermediate
 inputs:
+  - type: job_description
+    required: true
+  - type: copy_draft
+    required: true
   - type: document
+    required: false
+  - type: resume
+    required: false
+  - type: source_text
     required: true
 outputs:
-  - type: document
+  - type: copy_draft
   - type: audit_report
+  - type: resume
+    required: true
 uses:
   - tailor-a-job-application-to-real-evidence
   - proofreader

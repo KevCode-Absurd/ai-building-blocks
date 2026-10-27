@@ -5,7 +5,7 @@ description: Use when an invoice is late and you want to be paid without losing 
 
 # Payment reminder letter writer
 
-A late payer is rarely refusing. They are busy, unsure of the invoice or waiting on someone else. A reminder that starts where they are gets paid sooner and keeps the customer. This skill writes one, with a follow-up for if it is ignored.
+A late payer is rarely refusing. They are busy, unsure of the invoice or waiting on someone else. A reminder that starts where they are gets paid sooner and keeps the customer. This skill writes one, with a follow-up for if it is ignored. Not for an invoice the customer disputes (sort out the issue first), or for a legal final demand (ask a lawyer or a collections service).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -21,7 +21,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **Plan** with the [Deal payment checker](https://useaiblocks.com/skills/can-they-pay-deal-checker). Bring your question, your offer (optional), plan (optional). It uses your brand brain and a buyer brief.
+2. **Plan** with the [Deal payment checker](https://useaiblocks.com/skills/can-they-pay-deal-checker). Bring your question, your offer (optional), plan (optional). It uses your brand brain.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
@@ -59,10 +59,15 @@ How to start:
 
 The feeling you set. The likely thoughts. The letter with a subject line. The follow-up and when to send it. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
+Then tell the person what to do next: send the letter, write the send date and the reply date in their invoice record, and send the follow-up on its set date if there is no payment.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Deal payment checker](https://useaiblocks.com/skills/can-they-pay-deal-checker).
+- The [Mutual action plan builder](https://useaiblocks.com/skills/mutual-action-plan-builder). It takes the draft.
+- The [CRM activity logger](https://useaiblocks.com/skills/crm-activity-logger). It takes the draft.
+- The [Late invoice and cash forecast reviewer](https://useaiblocks.com/skills/weekly-invoice-and-cash-chaser).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

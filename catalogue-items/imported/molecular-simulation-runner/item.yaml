@@ -10,6 +10,8 @@ level: expert
 inputs:
   - type: question
     required: true
+  - type: dataset
+    required: false
 outputs:
   - type: document
   - type: spreadsheet

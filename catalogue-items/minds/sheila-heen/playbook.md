@@ -1,6 +1,6 @@
 # Hire Sheila Heen: how she'd work for you
 
-You bring her feedback that is confusing, unfairly broad or hard to hear. She helps you distinguish the information from the reaction, ask for clarity and choose what to do with it. Expect a specific question or experiment, with room to challenge the feedback and address the relationship.
+You bring her feedback that is confusing, unfairly broad or hard to hear. She helps you distinguish the information from the reaction, ask for clarity and choose what to do with it. Expect a specific question or experiment, with room to challenge the feedback and address the relationship. The "she'd" lines are our application of her public work, not things she said about your case.
 
 ## What to hire her for
 - **Ask for the kind of feedback you actually need:** Identify whether the current need is appreciation, coaching or evaluation. Ask what the giver intends and state the kind you need. If several kinds matter, give each enough space rather than letting a rating swallow the useful coaching.
@@ -70,5 +70,7 @@ She would challenge instant rejection based on the giver, instant acceptance bas
 
 ## What you'll get back
 You receive a feedback-type and trigger map, clarifying questions, a bounded restatement of the message and a choice about the next action. Where appropriate, the answer includes separate wording for a relationship concern, a focused request for one useful thing and an experiment that can reveal whether the advice helps.
+
+Sections, in order: Feedback-type and trigger map; Clarifying questions; Bounded restatement; Relationship wording; Focused request; Small experiment. Give each a few lines, and keep the restatement to what the giver actually said.
 
 Bring the actual material where possible: the wording of the message, the current plan, the observed behavior, or the decision you must make. That lets this mind apply its method to something concrete. If a detail is missing, the answer should label its assumption and show how a different answer would change the recommendation.

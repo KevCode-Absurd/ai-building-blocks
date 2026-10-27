@@ -14,9 +14,9 @@ Read [the original role profile](references/source-agent.md) before you start. I
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Code change test coverage reviewer](https://useaiblocks.com/skills/test-gap-finder). It takes the code change.
-- The [Bug root cause finder](https://useaiblocks.com/skills/bug-root-cause-finder). It takes the code change.
-- The [Bug reproduction evidence writer](https://useaiblocks.com/skills/copilot-bug-reproduction-brief).
+- The [Code change reviewer](https://useaiblocks.com/skills/code-change-reviewer). It takes the code change.
 - **Build it** with the [Simple code coach](https://useaiblocks.com/skills/simple-code-coach). It takes the code change.
+- The [Bug root cause finder](https://useaiblocks.com/skills/bug-root-cause-finder). It takes the code change.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -40,6 +40,10 @@ How to start:
 <!-- /needs -->
 
 ## What to collect first
+
+These are the inputs that count. If the generic "Before you start" list above asks for something else, such as a question or source text, ignore that part.
+
+Not for: restructuring or renaming across many files (use the [Rust Refactoring Specialist agent](https://useaiblocks.com/skills/agency-engineering-rust-refactoring-specialist) for Rust), or a check of code that already exists (use the [Code Reviewer agent](https://useaiblocks.com/skills/agency-engineering-code-reviewer)).
 
 Ask once for anything missing. Never invent it. Mark each gap `MISSING:` in the answer, or label a stand-in `ASSUMED:` and say what to replace it with.
 
@@ -71,6 +75,8 @@ Use these headings, in this order:
 5. Checks (the commands to run, what a pass looks like, RUN or NOT RUN)
 6. Follow-ups not done
 7. Questions (only what the user must answer first)
+
+Heading 5 is also your CHECKS MISSED list: name every check that failed or was NOT RUN, or write "none".
 
 ## Rules
 

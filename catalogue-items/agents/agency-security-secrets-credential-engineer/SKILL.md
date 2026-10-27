@@ -15,10 +15,10 @@ Read [the original role profile](references/source-agent.md) for its full method
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [MATLAB credential storage developer](https://useaiblocks.com/skills/matlab-secret-keeper).
-- The [Privacy-first app designer](https://useaiblocks.com/skills/privacy-first-app-designer). It takes the brief.
-- The [Timing leak checker](https://useaiblocks.com/skills/timing-leak-checker).
-- **Build it** with the [Incident runbook writer](https://useaiblocks.com/skills/incident-runbook-writer). It takes the brief.
+- The [Privacy-first app designer](https://useaiblocks.com/skills/privacy-first-app-designer). It takes the audit report.
+- The [Security audit evidence reviewer](https://useaiblocks.com/skills/copilot-audit-integrity). It takes the audit report.
+- The [ISO 27001 audit planner](https://useaiblocks.com/skills/iso-27001-audit-planner). It takes the audit report.
+- **Build it** with the [Incident runbook writer](https://useaiblocks.com/skills/incident-runbook-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

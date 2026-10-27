@@ -8,11 +8,12 @@ role: source
 job: ops
 level: beginner
 inputs:
-  - type: brief
+  - type: question
     required: true
 outputs:
-  - type: brief
+  - type: question
     required: true
+  - type: document
 uses: []
 origin: imported
 source:

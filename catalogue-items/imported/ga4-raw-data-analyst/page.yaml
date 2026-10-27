@@ -38,7 +38,7 @@ how_to_use:
   - Approve the run. Then check the results and the note on late events, since daily tables can change for up to three days.
   - Open the reconciliation result first. Compare its daily row counts with the same days on the GA4 screen, and note any day that is off.
   - Check the late-event note for those days. If the gap sits in the last three days, run the query again later before you report it.
-  - Send the gap list to whoever owns your tracking, or keep it with the report so each month is counted the same way.
+  - Send the gap list to whoever owns your tracking, or keep it with the report so each month is counted the same way. The report is a JSON file in your Downloads folder with one result per SQL file. Customer data in it stays private.
 output_sample:
   input:
     - Your BigQuery project and GA4 export dataset name

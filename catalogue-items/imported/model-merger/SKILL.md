@@ -17,8 +17,10 @@ Use Model Merging when you need to:
 - **Create specialized models** by blending domain-specific expertise (math + coding + chat)
 - **Improve performance** beyond single models on some benchmarks (test your own merge; gains vary)
 - **Reduce training costs** - no GPUs needed, merges run on CPU
-- **Experiment rapidly** - create new model variants in minutes, not days
+- **Experiment rapidly** - try new model variants much faster than training from scratch (time depends on model size and your hardware)
 - **Preserve multiple skills** - merge without catastrophic forgetting
+
+**Check licences first**: before you merge, confirm each parent model's licence allows merging and your intended use (some forbid commercial use or derivatives). Keep the parents' licence files with the merged model and name the parents in its model card.
 
 **Success Stories**: many models on HuggingFace are made by merging. Check the model cards for their results.
 

@@ -26,6 +26,8 @@ Turn engineering work into evidence-backed impact statements for performance rev
 USE FOR: "brag", "log work", "what did I do", "backfill", "performance review", "self-review", "promo packet", "weekly update", "status report", "write impact statement", "what did I ship", "I forgot to log my work", "review prep", "accomplishments"
 DO NOT USE FOR: project management, sprint planning, time tracking, ticket creation
 
+Not needed for the basic workflow: the Microsoft "Connect" preset and the optional copilot-brag-sheet extension. Skip both unless you work at Microsoft or already use that extension.
+
 ## Quick Start
 
 | User wants... | Mode | Output |

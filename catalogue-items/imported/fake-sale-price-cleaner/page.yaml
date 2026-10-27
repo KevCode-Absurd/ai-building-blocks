@@ -9,7 +9,7 @@ subhead: A Shopify store where strikethrough prices only show when there is a re
 explain: |
   A Shopify store where strikethrough prices only show when there is a real discount. It removes old compare-at prices that no longer mean anything, which keeps your pricing honest.
 
-  The skill reads your variants through the Shopify CLI. It finds two kinds of problem: compare-at prices that are at or below the selling price, and compare-at prices that have sat unchanged past an age limit, 90 days by default. You can limit the run to one collection or tag. It starts as a dry run and writes a CSV of every change first, so you can undo them. A live run clears the old values and does not keep them in Shopify. You need store access.
+  The skill reads your variants through the Shopify CLI. It finds two kinds of problem: compare-at prices that are at or below the selling price, and compare-at prices that have sat unchanged past an age limit, 90 days by default. The age rule is off unless you turn it on, because any edit to a product resets the date it uses. You can limit the run to one collection or tag. It starts as a dry run and writes a CSV of every change first, so you can undo them. A live run clears the old values and does not keep them in Shopify. You need store access.
 when:
   - Your store shows crossed-out prices that have been there for a year.
   - A product page shows a sale price higher than the old price.
@@ -34,9 +34,10 @@ how_to_use:
   - Paste this skill and give your store domain. Add a collection or tag to limit the run (optional).
   - Start with a dry run. This is the default, and nothing changes in your store.
   - Open the CSV and check every row. Old values are not kept in Shopify, so this file is your only way back. Do not run live until you have read it.
-  - If you are in a sale, turn off the age rule. The age rule uses the date the variant was last updated, not the date the old price was set. Any edit to the product resets that date, so a live sale price can be cleared by mistake.
+  - Leave the age rule off unless you mean to use it. It is off by default. It uses the date the variant was last updated, not the date the old price was set. Any edit to the product resets that date, so a live sale price can be cleared by mistake. Never turn it on during a sale.
   - Run it live only when the CSV looks right. Then check 5 to 10 products on your store.
-  - Keep the CSV. To bring a price back, enter the old value from the CSV by hand in Shopify.
+  - Keep the CSV. It is the only way to restore a price. To bring one back, open the product in Shopify admin, open the variant, and type the old value from the CSV into the Compare-at price box. Check the box name against your admin, as Shopify changes its menus.
+  - Fair price rules differ by country. This tool removes strikethrough prices that show no real discount, but it does not check that your remaining sale claims are lawful. Ask an adviser if you are unsure.
 output_sample:
   input:
     - Your store domain

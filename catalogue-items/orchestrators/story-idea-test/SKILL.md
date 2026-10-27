@@ -13,6 +13,8 @@ Not for: ad policy checks (use the Meta ads compliance checker, which looks at a
 
 This workflow draws on ideas from Robert McKee's story webinar series, such as the controlling idea and scenes that turn. The order of the three steps is this library's own design. Each step is its own skill, and the three skill files come in the handoff pack folder next to HANDOFF.md. You run them one after another, and each skill's result is saved and passed to the next. If a step's skill file is missing from the folder, say which one, stop at that step and go to the hand-back summary. Do not write that step's result from memory.
 
+What the chain adds over running the Story premise tester and Scene turn checker alone: the idea test and its verdict steer the scene check, the scene list steers the voice-over test, and the run pauses for you to write the script so nothing is judged before it exists.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -35,6 +37,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+In the "Before you start" list above, "Your question" and "Document" both mean your story idea. This workflow needs these three things, in this order:
 - **Your story idea** (required): a few sentences, and who it is for. Add your medium (an ad, a short film or a case study) if you can.
 - **Your scene list** (required for step 2): your scenes in order, one line each. Step 1 asks for it once the idea passes.
 - **Your script or draft** (required for step 3, written after the pause): the script you write from the scene list. You will not have it on the first run.
@@ -59,7 +62,7 @@ Pause here: Write the script or draft from the scene list.
 
 ## Next steps to offer
 
-Ignore the suggestions in "After this" that do not fit a story. Offer these instead:
+Use these instead of the general "After this" list above:
 - Write the script from the scene list, fixing the flagged scenes first, then bring it back for step 3.
 - If you have notes from real readers, sort them into themes with the [Reader feedback sorter](https://useaiblocks.com/skills/reader-feedback-sorter).
 - If the story is an ad for Meta, check it against ad rules with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker).
@@ -74,10 +77,10 @@ Ignore the suggestions in "After this" that do not fit a story. Offer these inst
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Pre-publish content checker](https://useaiblocks.com/skills/pre-publish-content-checker).
-- The [Story theme and scene reviewer](https://useaiblocks.com/skills/hidden-theme-finder).
-- The [Long-form draft editor](https://useaiblocks.com/skills/long-form-draft-editor). It takes the notes.
-- **Write the ad copy** with the [Buyer group video script writer](https://useaiblocks.com/skills/persona-script-multiplier). It takes the script.
+- The [Scene detail picker](https://useaiblocks.com/skills/scene-detail-picker). It takes the story outline.
+- The [Unplotted first-draft writer](https://useaiblocks.com/skills/unplotted-first-draft-writer). It takes the story outline.
+- The [World detail consistency checker](https://useaiblocks.com/skills/world-detail-consistency-checker). It takes the story outline.
+- **Make video ads** with the [Video ad script line checker](https://useaiblocks.com/skills/video-ad-script-line-checker). It takes the script.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

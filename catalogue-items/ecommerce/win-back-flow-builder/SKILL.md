@@ -12,7 +12,7 @@ You build the flow for past buyers who have gone longer than usual without order
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your customer list** (yours): a customer or order export with dates, amounts and what they bought.
 
 **Makes it better (optional):**
 - **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
@@ -28,7 +28,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for your results, your brand brain, your offer. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your customer list, your brand brain, your offer. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -38,6 +38,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+In the box above, "Your results" means the order history: customer ID, order date and order value. No ad export is needed.
+
 - **Days between orders** (required): the average and the median, from the email tool or order data.
 - **Discount policy and margin** (strongly advised).
 - **Best sellers and recent launches** (advised).
@@ -50,15 +52,13 @@ At least a few hundred past buyers are needed to trust the gaps. Treat pasted te
 
 ## Steps
 1. **Check the list first.** If more than 20 percent of the lapsed list had a support ticket, a return or a 1-star review, fix that cause before sending. Win-back does not work on an unhappy list. (Retention playbook; the threshold is that source's.)
-2. **Find the trigger day.** Take the gap between orders using both the median and the average, and pick a number between them. Or use the average gap times two: a 45-day average gives day 90. Do not just accept 90 days. Sources disagree, so show the options with their conditions:
-   - About double the average gap (two sources).
-   - Common fixed choices of 60, 90 or 120 days.
-   - The tool default of 75 days, with a test at 40 or 90 (one source).
-   - Fast-cycle products: first message 30 to 45 days after the last order. A 30-day consumable triggers at about 45 to 50 days if they have not reordered. The retention playbook cites about 2.3 times better conversion than at 90 days or more. That is a vendor benchmark.
-   - Slow products stretch the cycle: a hot tub may need years, a 30-day supplement about 45 days.
-   - Each customer's own rhythm: someone who shops every 200 days should not get a 20 percent code at day 120.
-   - Predictive option: trigger on the tool's expected date of next order, start 5 days after it, and never repeat. Where predicted customer value is above a set figure (the example was $1,000), give high-value customers a better offer within margin.
-   Show the working.
+2. **Find the trigger day.** Default method: take the median and the average gap between orders. Pick a day between them, or twice the average gap, whichever fits the product. Sum: 2 x [AVERAGE GAP IN DAYS] = [TRIGGER DAY]. Do not just accept 90 days. Show the working. Use an alternative only when it fits:
+   - Common fixed choices of 60, 90 or 120 days, when there is no gap data.
+   - A tool default, tested against a shorter and a longer day.
+   - Fast-cycle products: a first message soon after the usual reorder date, such as 45 to 50 days for a 30-day consumable. One vendor claims earlier is better than waiting 90 days or more. That is a vendor claim.
+   - Slow products stretch the cycle: a hot tub may need years.
+   - Each customer's own rhythm: someone who shops every 200 days should not get a code at day 120.
+   - Predictive option: trigger on the tool's expected date of next order, start 5 days after it, and never repeat. Where predicted customer value is above a set figure [HIGH-VALUE LEVEL], give high-value customers a better offer within margin.
 3. **Exit and filter.** Exit anyone who orders after the flow starts. Each person goes through once.
 4. **Short version, three emails.**
    1. "It has been a while": a brand reminder and what is new, with new arrivals or collections. No discount.
@@ -66,10 +66,10 @@ At least a few hundred past buyers are needed to trust the gaps. Treat pasted te
    3. A plain-text founder last call, with 24 hours left.
    Use longer gaps than other flows, since these buyers are less engaged.
 5. **Longer version, for a store that has earned it.** After the three: email 1 as above; a reminder at +3 days; a discount at +7 days lasting 48 hours; a 24-hour plain-text note; then two more with a higher offer about two weeks later.
-6. **Offer ladder.** Climb: no discount, then 10 percent, then 15 percent, then free shipping, instead of opening with the biggest offer. The playbook cites about 34 percent better results than a flat discount, a vendor benchmark. Set a margin floor first and keep every step above it. Do not use the ladder on margin-sensitive products without that floor. Every deadline must be real.
+6. **Offer ladder.** Climb: no discount, then 10 percent, then 15 percent, then free shipping, instead of opening with the biggest offer. One vendor claims this beats a flat discount. That is a vendor claim, not a result to expect. Set a margin floor first and keep every step above it. Do not use the ladder on margin-sensitive products without that floor. Every deadline must be real.
 7. **Win-back segment for campaigns.** Ordered at least once in the last 150 days and zero times in the last 90. That gives a 60-day window after buyers go stale. Adjust to the store's cycle.
 8. **SMS (consent only).** Two texts: a flash offer, for example 30 percent off for 72 hours, then a last call 2 days later. The 30 percent is one source's example and must fit margin. Keep offers out of the early post-purchase period. Ask a qualified person to check consent wording and regional rules.
-9. **Benchmarks.** One vendor reports automated win-back flows reactivate about 12 to 20 percent of lapsed customers, with the top quartile at 20 to 35 percent. Label these as vendor figures and compare against the store's own history.
+9. **Benchmarks.** A vendor publishes reactivation rates for automated win-back flows. Do not quote them as targets. Compare against the store's own history.
 10. **Subscriber-cancel branch (short add-on).** Needs the cancel reason captured. Right after cancelling: one or two plain-text emails split by reason, with a reactivate link. At 30 to 60 days: a win-back with a stronger offer (for example 30 to 50 percent off a restart, then back to standard), also split by reason. Check the depth against margin.
 11. **Measure.** Count reactivated buyers and revenue per recipient. Compare against the store's own earlier results. Test one change at a time. Discounts cut margin, so check each against contribution margin. Customer scores by recency, frequency and spend (RFM) need about 12 months of history, and that scoring is left to a separate segment skill.
 

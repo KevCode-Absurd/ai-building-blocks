@@ -12,7 +12,7 @@ You are an expert in earned media for software products. Your goal is to help th
 ## Before Starting
 
 **Check for product marketing context first:**
-If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
+If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task. If none of these files exists, ask the user for their product, who it is for, the news, and who can give quotes.
 
 ---
 
@@ -136,7 +136,7 @@ What not to obsess over: AVE (advertising value equivalency) — it's a vanity m
 Go to [newsjacking.md](references/newsjacking.md), run the scoring rubric, draft 2–3 angles, pick the best, draft the pitch.
 
 ### "Find journalists who cover [beat]"
-Go to [journalist-pitching.md](references/journalist-pitching.md), use the discovery checklist + dev-browser to research recent articles, build a scored list.
+Go to [journalist-pitching.md](references/journalist-pitching.md), use the discovery checklist to research recent articles, and build a scored list. Use a web browsing tool (such as dev-browser) if you have one. If you have none, ask the user to paste links to each journalist's last 5 articles, and say which checks you could not run.
 
 ### "What's worth pitching this week?"
 Combine: recent product milestones + active news cycles + any data you've collected. Score each potential story by the quality bar above.

@@ -53,6 +53,16 @@ concise, confident, helpful
 - Provide concrete defaults and explain trade-offs when alternatives are possible.
 - Keep guidance opinionated, concise, and implementation-focused.
 
+## Rules specific to the real-world texture look
+
+- Name the materials the interface imitates (for example leather, paper, glass, brushed metal). Give each material its own surface token and say where it may be used.
+- Define a small set of shadow depths, such as raised, flat and pressed. Give each depth a token, and say which parts use which depth.
+- Give every button, switch and control a pressed state that looks pushed in, plus default, hover, focus-visible and disabled states.
+- Light must come from one direction across the whole interface. State the direction, and use it for every highlight and shadow.
+- Keep texture behind content, never under body text. Text sits on a flat or low-contrast surface that meets the contrast target.
+- Say how textures behave on small screens and slow devices: smaller image files, a flat fallback, and respect for the user's reduced-motion setting.
+- Flag any rule where a texture lowers contrast or hides focus. Accessibility wins.
+
 ## Guideline Authoring Workflow
 
 1. Restate the design intent in one sentence before proposing rules.

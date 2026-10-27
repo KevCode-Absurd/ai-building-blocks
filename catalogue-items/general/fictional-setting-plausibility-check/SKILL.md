@@ -8,6 +8,10 @@ description: Share your setting and its rules. Find weak links between land,
 
 Share your setting and its rules. Find weak links between land, resources, trade and daily life.
 
+Not for: checking new scenes against an older canon document (use the [World-detail consistency checker](https://useaiblocks.com/skills/world-detail-consistency-checker)), fact-checking real history or culture (ask a historian or read your own sources), or a score or yes-or-no on realism (this gives questions and small fixes).
+
+What you need: your setting sheet or map notes (a plan from the Invented society planner works as the setting sheet), your genre and the rules you chose to break, and references if your setting borrows a real time or place. If the "What you need" list further down names a different input, use this one.
+
 Review the fictional setting I supply below for cause-and-effect plausibility. Preserve its genre, canon and intentional departures from real-world rules. If I have not supplied the setting or its rules, ask for them before reviewing it.
 
 Use three complementary lenses: (1) land, water, climate, resources, transport and settlement; (2) food, exchange, kinship, institutions and daily practices; (3) technology, social change and any specific historical inspiration. Treat these as questions and conditional relationships, not laws that geography determines behavior or that every culture has one function. Preserve real-world exceptions and the world's intentional fantasy rules.
@@ -24,7 +28,9 @@ References and specific time/place, if relevant: (supply sources or leave unveri
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Invented society planner](https://useaiblocks.com/skills/invented-society-planner).
+- The [Plain English editor](https://useaiblocks.com/skills/plain-english-editor). It takes the audit report.
+- The [Text proofreader](https://useaiblocks.com/skills/proofreader). It takes the audit report.
+- The [Story theme and scene reviewer](https://useaiblocks.com/skills/hidden-theme-finder). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -36,10 +42,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
+- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for source text, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for source text, your question, plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 

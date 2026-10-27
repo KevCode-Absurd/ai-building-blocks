@@ -12,6 +12,10 @@ inputs:
     required: false
   - type: document
     required: false
+  - type: transcript
+    required: false
+  - type: spreadsheet
+    required: false
 outputs:
   - type: audit_report
 uses: []

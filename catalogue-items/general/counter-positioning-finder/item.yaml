@@ -9,6 +9,7 @@ level: advanced
 inputs:
   - {type: question, required: true}
   - {type: audit_report, required: false}
+  - {type: idea, required: true}
 outputs:
   - {type: audit_report, required: true}
 origin: rebuilt

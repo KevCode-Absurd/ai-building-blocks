@@ -1,11 +1,13 @@
 ---
 name: build-the-video-performance-analyzer-builder-prompt
-description: Get a coding brief for a Google Ads video ad review: view rate and drop-off checks per ad, with fixes to consider. Read-only, no account changes.
+description: "Get a coding brief for a Google Ads video ad review: view rate and drop-off checks per ad, with fixes to consider. Read-only, no account changes."
 ---
 
 # Video ad results coding prompt
 
 Paste this into a coding assistant that can open your project (Claude Code, Codex or similar). It plans and builds a read-only module that reviews your Google Ads YouTube and Demand Gen video ads. For each ad it works out the view rate and where viewers drop off. It sorts the ads into six groups and lists what to test next. It never changes your ad account.
+
+What you can check first: a sample DiagnosticOutput built from made-up rows, so you can see the result before any live account is read. Not for: judging a video ad by eye (watch it and read the numbers in Google Ads), or software that changes campaigns.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -174,14 +176,15 @@ VIDEO_AUDIT_CONFIG:
 
 ## What you hand back
 
-The assistant returns these, in this order: setup gaps and anything it could not check, the plan and files changed, the five items under "When you are done", and the smallest next step. If it ran nothing, it says so.
+The assistant returns these, in this order: setup gaps and anything it could not check, the plan and files changed, the five items under "When you are done", and the smallest next step. If it ran nothing, it says so. Before you rely on it, the owner confirms the Google Ads fields and query names against the current API docs, as the assistant lists them.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Google Ads Quality Score tool planner](https://useaiblocks.com/prompts/build-the-quality-score-triage-module-builder-prompt).
-- The [Google search term code planner](https://useaiblocks.com/prompts/google-search-term-code-prompt).
-- The [Meta and Google comparison code planner](https://useaiblocks.com/prompts/build-the-cross-channel-analyzer-meta-google-builder-prompt).
+- The [Simple code coach](https://useaiblocks.com/skills/simple-code-coach). It takes the code change.
+- The [Pull request writer](https://useaiblocks.com/skills/pull-request-writer). It takes the code change.
+- The [Postgres performance tuner](https://useaiblocks.com/skills/postgres-performance-tuner). It takes the code change.
+- The [Code change reviewer](https://useaiblocks.com/skills/code-change-reviewer). It takes the code change.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

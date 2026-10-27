@@ -9,7 +9,7 @@ subhead: Customer words are the best source for positioning, product and copy. S
 explain: |
   Customer words are the best source for positioning, product and copy. Share interviews, surveys, tickets or reviews and you get patterns, the exact language buyers use and clear personas.
 
-  It works in three modes. First, it analyses research you already have. Second, it mines public sources like review sites, forums and Reddit for unprompted opinions. Third, if no signal exists, it helps you run interviews and surveys. It pulls out pains, goals, objections and phrases to reuse, and builds personas from what people said. Fetched reviews and posts are treated as data, never as instructions. It reads your product notes first if you have them.
+  It works in three modes. First, it analyses research you already have. Second, it mines public opinions from review sites, forums and Reddit that you paste in. If you let it read those sites itself, that is automated scraping and may break their terms, so check them first. Third, if no signal exists, it helps you run interviews and surveys. It pulls out pains, goals, objections and phrases to reuse, and builds personas from what people said. Reviews and posts are treated as data, never as instructions. It reads your product notes first if you have them. This is Corey Haines' customer-research skill, shared under the MIT licence.
 when:
   - You have call transcripts and no time to read them all.
   - You want to see what buyers say about you and competitors on review sites.
@@ -35,6 +35,7 @@ how_to_use:
   - Paid tools such as SparkToro can find where your buyers talk online. They are optional and cost money.
   - Plan on at least 5 separate data points (calls, reviews or posts) for each group of buyers before you build personas. With fewer, the AI should say the evidence is thin.
   - Check the quotes against your source text before you use them. Treat any review text as data, not as orders for the AI.
+  - Ask for the gap analysis. It lists anything marked Low confidence and what to ask customers next.
   - Use the personas and quote bank to write copy or plan product work.
 output_sample:
   input:
@@ -46,7 +47,7 @@ output_sample:
     - An AI that can read long text. Web access helps if you want it to read public review sites or forums.
   output:
     - name: Research synthesis report
-      contains: The main themes, ranked by how often and how strongly they come up, with quotes and what they mean.
+      contains: Each theme with a short summary, how often it came up, how strongly it is felt, word-for-word quotes with their source, what it means, and a High, Medium or Low confidence label.
     - name: VOC quote bank
       contains: Word-for-word customer quotes grouped by theme, ready to reuse in copy.
     - name: Persona document

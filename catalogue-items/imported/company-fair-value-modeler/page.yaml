@@ -35,6 +35,8 @@ how_to_use:
   - Read the headline verdict and the sensitivity grid first. Then check the peer list and key assumptions against the company's annual report.
   - The data comes from an unofficial Yahoo Finance reader, which may be wrong or against that site's terms. Check the figures against the company's filings.
   - Treat the result as research, not advice, and do not use it alone for a buy or sell decision. It does not work for unlisted companies.
+  - Next, save the sensitivity grid and the list of assumptions. Check the growth and margin inputs against the company's latest annual report before you act on any number.
+  - The exit multiple comes from the peer median the skill calculates. If it cannot find one, it uses the cash flow method alone and tells you.
 output_sample:
   input:
     - A stock ticker

@@ -10,7 +10,7 @@ level: expert
 inputs:
   - {type: audit_report, required: false}
   - {type: voc_reviews, required: false}
-  - {type: performance_sheet, required: false}
+  - {type: customer_list, required: false}
   - {type: question, required: true}
 outputs:
   - {type: plan}

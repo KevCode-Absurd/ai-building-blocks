@@ -81,6 +81,8 @@ Move beyond "pay for a post."
 
 **Starting ranges for a single post** (rough negotiation anchors from the skill's contributors, with no source or date, *not* fixed prices — check them against current quotes before you use them):
 
+(Undated contributor estimates. No source and no date. Ask creators for current quotes.)
+
 | Tier | Single post (rough range) | Notes |
 |---|---|---|
 | **Nano** (1k–10k) | Free product – $100 | Often product-only |

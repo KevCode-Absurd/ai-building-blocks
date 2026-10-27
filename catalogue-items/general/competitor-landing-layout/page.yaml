@@ -31,7 +31,7 @@ you_get:
   - Any of its own checks the plan still misses, each named
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Attach the screenshot. Use a page you own or one you're allowed to study.
+  - Attach the screenshot. Use a page you own or one you're allowed to study. Take it yourself, and check the site's terms first. Delete it once you have your layout map.
   - Paste your brand facts, real reviews with sources, your rating if you have one, and the list of photos you have.
   - Paste the ad that will send people to the page, so the first screen carries on from it.
   - Read the "removed" rows in the slot map. Those are the things you'd need real proof for before adding them back.
@@ -195,7 +195,7 @@ works_best_with:
     - name: Any good chat AI that reads images
       why: It reads the reference screenshot section by section, which the layout map depends on.
     - name: Figma Make
-      why: Turns the layout map and your copy into a working page prototype you can adjust before anyone builds it.
+      why: Optional. Turns the layout map and your copy into a working page prototype. It needs a Figma account, and heavier use may need a paid plan.
   inputs:
     - A full-length phone screenshot of the reference, since many pages reorder or drop sections on phones
     - Your colours as hex codes with the job each does, and your font names, so the result can't pass for the reference brand

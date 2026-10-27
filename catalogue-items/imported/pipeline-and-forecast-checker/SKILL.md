@@ -49,7 +49,7 @@ python scripts/pipeline_analyzer.py --input pipeline.json --format text
 - **Concentration Risk** -- Warns when >40% of pipeline is in a single deal
 - **Coverage Gap Analysis** -- Identifies quarters with insufficient pipeline
 
-**Input Schema:**
+**Input Schema:** (all names and numbers in the three input examples are placeholders that show the shape. Use only the user's own data.)
 
 ```json
 {

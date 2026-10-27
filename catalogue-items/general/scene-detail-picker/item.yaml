@@ -7,7 +7,7 @@ role: make
 job: creative
 level: beginner
 inputs:
-  - {type: brief, required: true}
+  - {type: story_outline, required: true}
 outputs:
   - {type: plan}
 origin: rebuilt

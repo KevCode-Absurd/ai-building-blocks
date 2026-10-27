@@ -116,7 +116,7 @@ The teacher must provide:
 - **Competency name:** The dispositional competency. *e.g. "Agency" / "Collaboration" / "Self-Regulation" / "Ecological Literacy" / "Creative Confidence" / "Regenerative Mindset"*
 - **Competency definition:** One sentence beginning "The ability to..." *e.g. "The ability to initiate, plan, and complete meaningful work with increasing independence and purpose" / "The ability to work with others to produce outcomes that no individual could achieve alone"*
 - **Band:** Which developmental band — A, B, C, D, E, or F. *e.g. "Band D (ages 12–14)" / "Band E (ages 13–15)" / "Band F (ages 15–17)"*
-- **Band descriptors:** The existing band-level descriptors for this competency. *e.g. "I can identify opportunities for action and take responsibility for planning and executing my own projects, seeking support when needed and adapting my approach based on feedback and changing conditions"*
+- **Band descriptors:** The band-level observation indicators for this competency: what the teacher notices, not an "I can..." statement. *e.g. "Identifies opportunities for action, takes responsibility for planning and carrying out own projects, seeks support when needed, and adapts the approach after feedback"*
 - **Assessment context:** When and how. *e.g. "End of term, feeding into developmental review session with student, teacher, and parents" / "Ongoing, documented through project portfolio" / "Mid-year review, part of student-led conference"*
 
 Optional (injected by context engine if available):

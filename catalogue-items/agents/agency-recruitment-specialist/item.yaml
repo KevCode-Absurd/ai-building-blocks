@@ -10,10 +10,12 @@ level: intermediate
 inputs:
   - type: question
     required: true
-  - type: source_text
+  - type: document
     required: false
 outputs:
   - type: plan
+  - type: job_description
+    required: true
 uses: []
 steps: []
 origin: imported

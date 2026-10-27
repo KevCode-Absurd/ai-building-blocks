@@ -10,6 +10,12 @@ explain: |
   A clear answer on why one X or LinkedIn post did badly, and what to change next time. It separates the three ways a post fails, because each needs a different fix.
 
   You paste the post with its impressions, likes, comments and reposts. If a post was barely shown, rewriting the hook will not help, so it checks timing, gaps since your last post, links and falling reach. If it was seen but not clicked, it reviews the first line. If people read it but did not react, it looks at the point and the ask. Without impressions it tells you it cannot diagnose and offers only a read-through of the writing.
+
+  Compared with the Post flop reason finder, this one does more checks (timing, gaps between posts, links, a note on chance) and gives a failure type with the evidence behind it.
+
+  The skill file also describes an optional VoiceMoat connector. It needs a paid VoiceMoat plan (Pro or Enterprise), and it sends your post text and account data to voicemoat.com. You do not need it. The steps below work without it.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (prateeks367) says MIT. Credit goes to prateeks367.
 when:
   - A post you were proud of got almost no reaction.
   - You do not know if people never saw it or just ignored it.

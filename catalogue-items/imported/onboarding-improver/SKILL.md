@@ -40,6 +40,8 @@ Show advancement. Celebrate completions. Make the path visible. (See onboarding 
 
 ## Onboarding Psychology
 
+(Optional. Skip this section and the toolkit that follows for a quick run.)
+
 The principles that make progress mechanics, checklists, and prompts actually work:
 
 - **Endowed Progress Effect** — people finish faster when progress is already started for them. A checklist that opens at "20% done" (a step pre-completed on their behalf) is reported in third-party research to raise completion by roughly **40%** vs. starting at 0%. Treat that as a rough example, not a promise, and check it against your own funnel data. Give users a head start, don't make them start from nothing.
@@ -54,7 +56,7 @@ The components you assemble an onboarding experience from. Use the fewest that r
 
 | Component | Purpose |
 |-----------|---------|
-| Welcome forms | Capture role/goal to personalize the path (keep short — Hick's Law) |
+| Welcome forms | Capture role/goal to personalize the path (keep short — Hick's Law: the more choices people see, the slower they decide) |
 | Initial screens | First-run screens that orient and point to one clear action |
 | Drip emails | Multi-touch nurture — **one concept per email**, don't overload |
 | Skippable tutorials | Optional guidance users can bypass — never trap them |

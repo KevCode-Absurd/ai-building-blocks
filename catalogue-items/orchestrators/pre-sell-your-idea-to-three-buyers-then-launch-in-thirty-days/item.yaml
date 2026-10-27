@@ -7,15 +7,15 @@ role: orchestrate
 job: research
 level: beginner
 inputs:
+  - {type: idea, required: true}
   - {type: question, required: true}
-  - {type: brief, required: false}
 outputs:
   - {type: plan}
   - {type: lessons_register}
 uses: [three-buyer-idea-test-planner, two-day-paid-ask-planner, thirty-day-launch-planner, trial-log-planner]
 steps:
   - {uses: three-buyer-idea-test-planner, note: "Who to ask first, in what order, what to say in one line, what counts as a real yes (money, not words), in Noah Kagan's manner. Hands step 2 the buyer list and the rule for a real yes."}
-  - {uses: two-day-paid-ask-planner, note: "The two-day ask: the message, the price, how to take the money today, what you promise and when, and what to say to a no. Uses the buyer list from step 1. Hands you the script to run; you bring back who paid."}
+  - {uses: two-day-paid-ask-planner, note: "The two-day ask: the message, the price, how to take the money today, what you promise and when, a plain refund line, and what to say to a no. Uses the buyer list from step 1. Hands you the script to run; you bring back who paid."}
   - {uses: thirty-day-launch-planner, note: "Uses the ask plan and the results you bring back. If three paid: the smallest version that works, built and shipped on a date thirty days out, in the manner of Pieter Levels and Sara Blakely. If not: what the log says to change, and whether to try once more."}
   - {uses: trial-log-planner, note: "Uses the test plan, the ask results and the launch plan as the first rows. A log for every attempt: what you expected, what happened, what it taught, in the manner of Edison and Galileo, so each no narrows the next try."}
 origin: own

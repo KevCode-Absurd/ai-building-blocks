@@ -9,7 +9,9 @@ subhead: A list of real performance problems in your Django code, each proved by
 explain: |
   A list of real performance problems in your Django code, each proved by reading it, with the change that fixes it. It will not invent issues to look thorough, and zero findings is a fine result.
 
-  The skill ranks problems by impact. N+1 queries and unbounded querysets come first, because they break at scale. Next come missing indexes and write loops. Minor patterns are skipped. Before reporting anything, it traces the data flow, checks for existing fixes and thinks about data volume. A finding marked critical must really be critical, or it is downgraded or dropped. It reads your code and does not need a running site.
+  The skill ranks problems by impact. N+1 queries and unbounded querysets come first, because they break at scale. Next come missing indexes and write loops. Minor patterns are skipped. Before reporting anything, it traces the data flow, checks for existing fixes and thinks about data volume. A finding marked critical must really be critical, or it is downgraded or dropped. It reads your code and does not need a running site. It does not measure runtime, so confirm any gain with a profiler. The code it reads may be private, so only paste what you are allowed to share.
+
+  This is a copy of the django-perf-review skill from sickn33's collection. The licence that applies to this copy is the one in the LICENSE-CONTENT file in this item, CC BY 4.0. The skill file's header also names Apache 2.0 for the original skill. Both allow reuse with credit.
 when:
   - A page gets slower as your data grows.
   - You suspect an N+1 query behind a slow list view.

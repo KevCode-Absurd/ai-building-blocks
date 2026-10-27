@@ -19,7 +19,7 @@ If there is no Git remote, stop and ask the user to either:
 
 ## Prerequisites
 
-- When sandboxing blocks the deployment network calls, rerun with `sandbox_permissions=require_escalated`.
+- When sandboxing blocks the deployment network calls (the AI tool's safety limits stop it reaching the internet), rerun with `sandbox_permissions=require_escalated`, but only after telling the user and getting a yes.
 - The deployment might take a few minutes. Use appropriate timeout values.
 
 ## When to Use This Skill
@@ -112,7 +112,7 @@ If not installed, offer to install:
 
 **4. MCP Setup (if MCP isn't configured)**
 
-If `list_services()` fails because MCP isn't configured, ask whether they want to set up MCP (preferred) or continue with the CLI fallback. If they choose MCP, ask which AI tool they're using, then provide the matching instructions below. Always use their API key.
+If `list_services()` fails because MCP isn't configured, ask whether they want to set up MCP (preferred) or continue with the CLI fallback. If they choose MCP, ask which AI tool they're using, then provide the matching instructions below. Always use their API key. The user must put the key into their own config file or shell. Never ask them to paste the key into the chat, and never print it back.
 
 ### Cursor
 
@@ -441,7 +441,7 @@ If MCP returns an error about missing Git credentials or repo access, stop and g
 ### Step 3: Configure Environment Variables
 Add required env vars via MCP after creation. See [references/direct-creation.md](references/direct-creation.md).
 
-Remind the user that secrets can be set in the Dashboard if they prefer not to pass them via MCP.
+Tell the user to set secret values in the Render Dashboard. Do not ask them to paste secret values into the chat.
 
 ### Step 4: Verify Deployment
 Check deploy status, logs, and metrics. See [references/direct-creation.md](references/direct-creation.md).

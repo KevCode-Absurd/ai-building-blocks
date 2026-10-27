@@ -10,7 +10,12 @@ level: intermediate
 inputs:
   - type: brief
     required: true
+  - type: plan
+    required: false
+  - type: brand_brain
+    required: false
 outputs:
+  - type: script
   - type: shot_list
   - type: video_prompt
 uses: []

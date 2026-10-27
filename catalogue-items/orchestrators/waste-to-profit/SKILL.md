@@ -60,8 +60,9 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Process waste finder](https://useaiblocks.com/skills/process-waste-finder). It takes the plan.
-- The [Competitive advantage tester](https://useaiblocks.com/skills/business-power-tester). It takes the audit report.
+- The [Plan failure reviewer](https://useaiblocks.com/skills/failure-first-plan-check). It takes the plan and audit report.
 - The [Market category opportunity finder](https://useaiblocks.com/skills/first-in-category-finder). It takes the audit report.
+- **Lead the team** with the [Revision headline planner](https://useaiblocks.com/skills/revision-headline-planner). It takes the audit report and plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

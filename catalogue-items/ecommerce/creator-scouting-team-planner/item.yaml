@@ -8,7 +8,8 @@ job: organic
 level: advanced
 inputs:
   - {type: question, required: true}
-  - {type: persona, required: false}
+  - {type: persona, required: true}
+  - {type: product_data, required: false}
   - {type: performance_sheet, required: false}
 outputs:
   - {type: plan}

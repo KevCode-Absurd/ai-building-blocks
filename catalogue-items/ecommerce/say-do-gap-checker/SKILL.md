@@ -39,7 +39,7 @@ Does not fit: decisions you can test directly in a day. Just test them. A store 
 ## Steps
 1. **Sort every answer into say or do.** Say is a stated opinion. Do is an action that cost the person money, time or a click. Give do answers about three times the weight of say answers when you judge the set. The three is a starting weight to adjust, not a measured figure.
 2. **Flag answers where the person wants to look good.** Look for answers that make the person seem healthy, kind, green, smart or thrifty ("I only buy eco products", "I always hunt for a bargain"), and answers that please the asker. These are likely to be higher than what they do.
-3. **Flag taste or preference answers given with the brand visible.** In the cola study in the book Buyology, more than half of the people preferred the challenger when they tasted without seeing the brand. When the brands were named, 75 percent said the leader. So run a blind version and a branded version as two separate tests, and do not mix the answers.
+3. **Flag taste or preference answers given with the brand visible.** Tests where the brand is shown and tests where it is hidden can give different results, as the book Buyology describes for a cola test. Do not quote its percentages. So run a blind version and a branded version as two separate tests, and do not mix the answers.
 4. **Flag one-sip or one-glance tests of things used over time.** A sweet sip can beat a full can; a trial size can mislead. A quick poll of a first reaction does not tell you how people feel after a month.
 5. **Keep the author's warning in mind.** He argues that much of what people choose happens without thinking. Treat the reasons customers give as stories, not causes. He also argues that most new product launches fail. Both are his claims from the 2000s and we could not verify them, so give no percentages and do not use them as a benchmark for your store. They are a reason to test behaviour before you spend.
 6. **Never kill an idea on stated dislike alone** if early clicks or time on the page say otherwise. In the book's TV pilot study, viewers rated an unaired show as the one they were least likely to watch, yet their brain response ranked it above a known flop. A store cannot scan brains, so the useful version is: look at what people did in the first days.
@@ -51,6 +51,7 @@ Does not fit: decisions you can test directly in a day. Just test them. A store 
 8. **Keep the test honest.** A pre-order must say it is a pre-order, show a real ship date and a refund route, and only take money for something you can deliver. If you are not ready to take money, use a "join the waiting list" button and say so. Do not show an ad for a product that does not exist as if it were in stock. Check ad platform rules.
 9. **Score the set** with the rules below.
 10. **State the decision to make now** and the result that would change it.
+11. **Say what next.** For a product people can sample, suggest the Taster event planner. To write better survey questions, suggest the Buyer research plan with survey.
 
 ## Score it
 The score measures how far these answers can be trusted for this decision. It does not say whether the idea is good.
@@ -100,7 +101,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Customer switching barrier planner](https://useaiblocks.com/skills/switch-friction-remover). It takes the audit report.
 - The [Customer needs profile builder](https://useaiblocks.com/skills/job-based-avatar-builder). It takes the audit report.
 - The [Customer switching journey mapper](https://useaiblocks.com/skills/switch-story-mapper). It takes the audit report.
-- The [Subscription signup page reviewer](https://useaiblocks.com/skills/subscription-page-take-rate-checker). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

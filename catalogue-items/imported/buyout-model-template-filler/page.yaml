@@ -11,7 +11,7 @@ explain: |
 
   It works one section at a time: sources and uses, operating forecast, debt schedule, returns, then sensitivity tables. After each section it shows you what it built and waits for your yes before the next one. This keeps a wrong cell in the funding table from flowing into the returns.
 
-  Every calculation is a live formula, never a typed number. Inputs, formulas and links are colour coded so a reviewer can follow them. If you have no template, it builds a standard four-section layout and tells you so. It runs checks before it hands the file back.
+  Every calculation is a live formula, never a typed number. Inputs, formulas and links are colour coded so a reviewer can follow them. If you have no template, it builds a standard four-section layout and tells you so. It runs checks before it hands the file back. This is an Apache 2.0 copy of the upstream lbo-model skill (see its LICENSE file). It includes two short rules for Indian deals: April to March years, and lakh and crore units. The upstream companion skills for those are not in this copy.
 when:
   - Your firm has its own buyout template and you need a deal dropped into it.
   - You have deal terms from a call and need a first model before the meeting.
@@ -40,6 +40,8 @@ how_to_use:
   - Check each section when it pauses, starting with sources and uses. Debt plus equity must equal the total price.
   - Reply "continue" for the next section. Fix anything wrong before you do.
   - At the end, read the checks list. Open the file and confirm the base case in the sensitivity table matches the headline IRR.
+  - Have a finance professional review the finished file before it goes to your team, an investment committee or a lender. The returns only show what your assumptions produce. They are not a forecast.
+  - Next, change one assumption, such as the exit multiple or the amount of debt, and check that the returns move the way you expect. To build a model from a company's accounts instead, use buyout-returns-modeler.
 output_sample:
   input:
     - Your blank LBO model template (Excel)

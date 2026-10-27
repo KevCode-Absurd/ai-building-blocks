@@ -7,6 +7,8 @@ description: "Use when you have decided to leave a job and need the letter. Take
 
 A resignation letter says clearly that you are leaving and when. It is not the place for complaints. This skill writes a short, polite one from a few facts, plus what to say to the manager first and a handover list. It does not state a notice period or legal right. Those come from the person's contract.
 
+**Not for:** a manager letting staff go (use `layoff-plan-writer` for cuts; ask an employment adviser about a single dismissal), or someone who has not decided to leave yet. Before the last day is set, check the contract for the notice period and who must receive the letter. It works in any chat AI and needs no paid service or key.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -20,7 +22,7 @@ How to start:
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
-- **Any good chat AI:** A short letter from a few facts is a quick job for any strong chat AI.
+- **Any good chat AI:** A short letter from a few facts is a quick job for any strong chat AI. No paid service or API key is needed.
 - **Your employment contract:** It states your notice and who must receive the letter. Check it before you give the date.
 <!-- /needs -->
 

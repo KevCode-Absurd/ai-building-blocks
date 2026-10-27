@@ -5,17 +5,20 @@ name: X thread writer
 summary: Turn a long idea, article or draft into an X thread where every post stands alone. You get a beat plan and the full thread text.
 job: grow-social
 headline: X thread writer
-subhead: Give it a long idea, transcript or draft. Get an X thread where every post stands on its own. Bring the idea, article, transcript or draft. Use the result to plan your next step.
+subhead: Give it a long idea, transcript or draft. Get an X thread where every post stands on its own. Bring the idea, article, transcript or draft. Then copy the thread into X and test it with your own audience.
 explain: |
   Turn a long idea, transcript or rough draft into an X thread where every post still makes sense if someone lands on it alone.
 
   It first asks if the idea needs a thread at all. A single point with one proof is a post, and it says so. If a thread is right, it writes a skeleton first: one line per beat. If the beats could be shuffled with no loss, it labels the thread as a list. The first post makes a specific promise, each following post holds one idea and never leans on the last, and the final post closes the loop. Posts are split by three dashes so a tool can chain them.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (prateeks367) says MIT. Credit goes to prateeks367 and sickn33.
 when:
   - You have a blog post or talk and want it as a thread.
   - You wrote a rambling draft and need to find the spine.
   - You are unsure whether your idea is a thread or just one tweet.
   - You want a thread where quoting any single post will not embarrass you.
 not_for:
+  - "You want it to post for you: the plain copy-and-paste route needs no connector and posts nothing. The optional VoiceMoat connector can post to your real X or LinkedIn account, but only after a preview and your clear yes, and it needs a paid Pro or Enterprise plan."
   - "You want a LinkedIn post: write a single post by hand, since LinkedIn has no threads and this skill is for X only."
   - "Your idea is one point with one proof: write a single post instead. The skill will tell you when that is the case."
   - "You want reach or likes promised: no tool can do that, so test posts with your own audience."

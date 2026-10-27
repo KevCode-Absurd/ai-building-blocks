@@ -13,10 +13,10 @@ Read [the original role profile](references/source-agent.md) before you start. U
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Team capacity planner](https://useaiblocks.com/skills/team-capacity-planner).
-- The [Team sprint planner and reporter](https://useaiblocks.com/skills/delivery-team-sprint-runner).
-- The [Project risk portfolio planner](https://useaiblocks.com/skills/project-risk-portfolio). It takes the plan.
 - The [Daily executive brief writer](https://useaiblocks.com/skills/executive-daily-digest). It takes the plan.
+- The [Project risk portfolio planner](https://useaiblocks.com/skills/project-risk-portfolio). It takes the plan.
+- The [Project delay test reviewer](https://useaiblocks.com/skills/weekly-project-delay-evidence-assistant). It takes the plan.
+- The [Workday wrap-up planner](https://useaiblocks.com/skills/daily-shutdown-planner). It takes the plan.
 - The [Weekly work review planner](https://useaiblocks.com/skills/weekly-review-guide). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

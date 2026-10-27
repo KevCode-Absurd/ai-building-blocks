@@ -9,7 +9,9 @@ subhead: Images and short videos from Google Gemini, started by a plain descript
 explain: |
   Images and short videos from Google Gemini, started by a plain description. Hand over a picture idea and, if you have them, reference images such as a logo, a face or a product shot. It picks the right model for the job: a fast draft, a standard image, a high quality image, or video.
 
-  You can link a folder of references once and reuse it for on-brand results. A still image can also be animated. Each run saves a small log file next to the result so you know how it was made. It needs a Gemini API key, and usage is billed by Google.
+  You can link a folder of references once and reuse it for on-brand results. A still image can also be animated. Each run saves a small log file next to the result so you know how it was made. It needs a Gemini API key, and usage is billed by Google. Google's prices change, so the skill quotes the current price before every call and you approve each one. Check Google's price page and set a spend limit on your key before you start.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The skill file's own header says MIT. Credit goes to the author, antonio, and the collection maintainer, sickn33.
 when:
   - You need a thumbnail or hero image that matches your brand look.
   - You want to animate a still product photo into a short clip.
@@ -30,7 +32,7 @@ you_get:
   - A saved log of each run
   - Reusable reference sets for later
 how_to_use:
-  - Get a Gemini API key from Google AI Studio. Billing must be on, because every image and video costs money.
+  - Get a Gemini API key from Google AI Studio. Billing must be on, because every image and video costs money, and videos cost more than images. Look up Google's current prices first and set a monthly spend limit, so one long session cannot run up a large bill. Keep the key private and out of any shared folder.
   - Use an AI that can run code and save files, such as Claude Code or Gemini in a coding tool. Chat-only windows will not work.
   - Give your AI this skill. Let it install the google-genai package if it is missing, and set GEMINI_API_KEY in a .env file.
   - Describe the image or video. Name your reference images or reference set if you want an on-brand look.

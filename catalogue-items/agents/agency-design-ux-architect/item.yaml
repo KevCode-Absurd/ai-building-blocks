@@ -12,9 +12,13 @@ inputs:
     required: true
   - type: source_text
     required: false
+  - type: brand_brain
+    required: false
 outputs:
   - type: plan
-  - type: code_change
+  - type: page_layout_spec
+  - type: design_tokens
+    required: true
 uses: []
 steps: []
 origin: imported

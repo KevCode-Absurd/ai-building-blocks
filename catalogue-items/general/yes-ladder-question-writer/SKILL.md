@@ -57,8 +57,8 @@ The request and what must be true. The starting point. The ladder of questions w
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Disagreement response writer](https://useaiblocks.com/skills/disagreement-calming-line-writer). It takes the plan.
-- The [Sales argument planner](https://useaiblocks.com/skills/buyer-matched-argument-planner).
 - The [Sales call question planner](https://useaiblocks.com/skills/sales-call-question-planner). It takes the plan.
+- The [Partner profit tester](https://useaiblocks.com/skills/partner-profit-tester). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

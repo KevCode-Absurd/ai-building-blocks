@@ -12,6 +12,7 @@ inputs:
   - {type: image_plan, required: true}
   - {type: product_data, required: false}
   - {type: brand_brain, required: false}
+  - {type: product_photos, required: false}
 outputs:
   - {type: image_prompt}
 uses: [image-upscale-checker]

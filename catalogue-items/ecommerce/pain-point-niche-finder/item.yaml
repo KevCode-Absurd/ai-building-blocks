@@ -12,6 +12,7 @@ inputs:
 outputs:
   - {type: shortlist}
   - {type: competitor_set}
+  - {type: customer_needs, required: true}
 uses: []
 origin: rebuilt
 example_pending: true

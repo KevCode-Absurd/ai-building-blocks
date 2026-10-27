@@ -1,6 +1,6 @@
-# Evidence: product-visuals
+# Evidence: product shoot brief
 
-Peer-reviewed findings behind the `product-visuals` procedure. Effects are as reported in the studies, in the context they were measured.
+Findings behind the shoot brief procedure. Effects are as reported in the studies, in the context they were measured.
 
 ## Video, slideshows, or GIFs for hedonic products; stills for utilitarian
 

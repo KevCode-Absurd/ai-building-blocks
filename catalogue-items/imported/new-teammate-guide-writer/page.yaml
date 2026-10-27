@@ -32,10 +32,12 @@ how_to_use:
   - Open an AI that can run code and read files. Python must be installed on your computer.
   - Give it this skill and the path to your repository. The AI reads your code, so check your company policy first if the code is confidential. The template files and the scan script come with the skill folder. If you paste only the text, also paste references/onboarding-template.md.
   - "Say who the guide is for: a junior, a senior, a tech lead or a contractor."
-  - Let it scan the project, then read the guide it writes from the template.
-  - Ask a new hire to run the setup steps on a clean machine and fix anything that fails.
+  - Let it scan the project, then read the guide it writes from the template. The guide follows the template order: what the project is, quick start, architecture, key files, common developer tasks, debugging, contribution rules and notes for each reader. The scan results fill the stack and key file parts.
+  - Check the guide for secrets and private details copied from config files, such as passwords, keys, internal hostnames and customer data. Remove them before you share it.
+  - The AI writes the setup commands from code it has only read, so do not trust them yet. Ask a new hire to run the setup steps on a clean machine and fix anything that fails.
   - Send the guide to your tech lead for review before you share it.
   - "The template has these parts: what the project is, quick start, architecture, key files, common developer tasks and a debugging guide."
+next: [readme-first-run-tester]
 output_sample:
   input:
     - The path to your repository

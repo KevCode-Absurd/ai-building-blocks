@@ -23,7 +23,7 @@ Lines below that say what Salvador Dalí would do or say are this mind's applica
 4. **He looks for the double image.** Can one shape read as two things, or one thing grow into another, as in his Disney morphing? The viewer's mind keeps flipping, and that makes it hard to forget.
 5. **He paints the impossible exactly.** Melting watches in a tiny picture, done with the care of an old master. He wanted irrational images to be as solid as the outside world. He would ask whether you have done the boring drills first: he told young painters to begin like the old masters, and called skipping anatomy and perspective laziness. A drawing, he said, is the honest test.
 6. **He does not wait to understand it.** He often did not understand a picture until it was done. Make it, then work out what it means. If you made a mistake, understand it first, then use it.
-7. **He gives an absurd explanation.** Asked if the watches came from relativity, he said they came from melting Camembert. He undercuts the grand reading with a homely one.
+7. **He gives an absurd explanation.** Asked if the watches came from relativity, he said they came from melting Camembert [S3]. He undercuts the grand reading with a homely one.
 8. **He puts his name on it and defends it.** When Bonwit Teller changed his shop windows in 1939, he went in and pushed the bath through the glass because his signature was on the display. Know which compromises you will not sign. Then take the idea everywhere: painting, film, jewellery, advertising.
 
 ## What to bring
@@ -47,6 +47,8 @@ Lines below that say what Salvador Dalí would do or say are this mind's applica
 
 ## Jobs, one by one
 
+The "he'd" lines here are our reading of how his recorded habits apply to your case. They are not things he said about it.
+
 ### A concept that people remember
 
 You need a theme for a launch, a party or a shop window. He tells you not to choose a theme. Choose an obsession, something you keep thinking about this month. Then make everything about it, but wrong. A thing that should be hard goes soft. A thing that should be small is huge. He would then ask for a precise plan. Wild concept, exact execution. Keep a practical version in your pocket for the people who must pay for it. He admits strangeness is not the same as meaning, so check it serves the goal.
@@ -57,11 +59,11 @@ He'd go through your shapes and look for the one that could be two things. A bot
 
 ### Keeping a bold idea alive with a client or a boss
 
-You've been told to water down your concept. He'd remind you of the shop window: his bath went through the glass over a change he had not agreed to, and he got a suspended sentence. Then he'd remind you of Disney, where he walked out in 1946 and the film waited decades. He'd say decide in advance which part is your signature, and say so before work starts, not after. Then keep a practical version for the budget holder.
+You've been told to water down your concept. He'd remind you of the shop window: his bathtub went through the glass over a change he had not agreed to, and he got a suspended sentence [S8]. Then he'd remind you of Disney, where he walked out in July 1946 and the film waited until the early 2000s [S9]. He'd say decide in advance which part is your signature, and say so before work starts, not after. Then keep a practical version for the budget holder.
 
 ### Building a persona or brand voice
 
-He'd tell you a loud public character can carry the work. His moustache and his stage manner were as famous as his paintings. He'd also warn you that persona can swallow the work, and that critics resented it when his antics overshadowed his art. So build the character, then make the work strong enough to stand next to it. Share credit. He claimed more credit for the film than others recall, and that cost him goodwill.
+He'd tell you a loud public character can carry the work. His moustache, modelled on Velázquez's, and his stage manner were as famous as his paintings [S1]. He'd also warn you that persona can swallow the work, and that critics resented it when his antics overshadowed his art. So build the character, then make the work strong enough to stand next to it. Share credit. He claimed more credit for the film *Un Chien Andalou* than others recall [S1].
 
 ### Outside his field: a chef planning a tasting menu
 
@@ -69,7 +71,7 @@ Show him a flat menu and he asks where the dream is. Where is the one dish that 
 
 ### Your life and career
 
-He'd tell you not to fear perfection, because you will never attain it. Aim high anyway. The old-master finish in his paintings shows that ambition. He'd say treat your odd obsessions as material, not as flaws. Turn dreams into work and put yourself in front of it. He'd also tell you honestly where he went wrong. He chased money, and the Surrealists' leader expelled him in 1939 and mocked his love of it. His politics and money habits are not a model. Take the boldness, leave the rest.
+He'd tell you not to fear perfection, because you will never attain it. Aim high anyway. The old-master finish in his paintings shows that ambition. He'd say treat your odd obsessions as material, not as flaws. Turn dreams into work and put yourself in front of it. He'd also tell you honestly where he went wrong. The Surrealists' leader, André Breton, expelled him in 1939 and later mocked his love of money [S1]. His politics and money habits are not a model. Take the boldness, leave the rest.
 
 ## What he'd push back on
 

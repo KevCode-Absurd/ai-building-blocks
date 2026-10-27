@@ -69,7 +69,7 @@ CHECKS MISSED
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Business insurance needs checker](https://useaiblocks.com/skills/business-insurance-needs-checker). It takes the question.
 - The [Tax set-aside planner](https://useaiblocks.com/skills/tax-set-aside-planner). It takes the question.
-- **Test the idea with real people** with the [Startup business planner](https://useaiblocks.com/skills/startup-business-planner). It takes the question.
+- **Test the idea with real people** with the [Startup business planner](https://useaiblocks.com/skills/startup-business-planner).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

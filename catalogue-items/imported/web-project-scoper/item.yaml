@@ -8,10 +8,14 @@ role: make
 job: ops
 level: beginner
 inputs:
-  - type: brief
+  - type: idea
     required: true
 outputs:
   - type: plan
+  - type: product_spec
+    required: true
+  - type: design_tokens
+    required: false
 uses: []
 origin: imported
 source:

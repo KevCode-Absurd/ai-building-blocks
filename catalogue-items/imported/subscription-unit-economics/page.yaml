@@ -34,6 +34,7 @@ how_to_use:
     the instructions into a chat.
   - Ask your AI to follow this skill. Include the files and details listed on
     this page.
+  - "Gather first: customer-level or cohort revenue by year, sales and marketing spend by year, your fiscal year and currency."
   - The skill mentions two helper skills (india-market-conventions and india-market-data) and a NOT-ADAPTABLE.md file. They are not included here. Without them, your AI still follows the fiscal year and lakh and crore rules written at the top of the skill.
   - The benchmark ranges in step 3 (for example LTV to CAC above 3 is good) are common rules of thumb with no source. Check them against your own sector before you quote them.
   - Next, list the red flags as questions to send the target, using the due diligence checklist builder. To check payback alone, use the subscription payback checker.

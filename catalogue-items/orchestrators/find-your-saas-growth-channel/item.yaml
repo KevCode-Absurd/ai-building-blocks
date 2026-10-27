@@ -13,7 +13,7 @@ level: intermediate
 inputs:
   - type: web_page
     required: false
-  - type: brief
+  - type: question
     required: false
   - type: experiment_results
     required: false

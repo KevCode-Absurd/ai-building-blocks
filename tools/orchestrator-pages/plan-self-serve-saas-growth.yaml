@@ -7,9 +7,9 @@ thinking: high
 thinking_why: It checks evidence, missing facts and the order of the work.
 subhead: Share your funnel and product. Get self serve growth tests and an onboarding plan tied to customer value. Bring the facts and files you already have. Your AI follows the steps below, marks gaps and returns work you can review before acting.
 explain: |-
-  Share your funnel and product. Get self serve growth tests and an onboarding plan tied to customer value.
+  Self serve growth works when people can sign up, reach first value and pay without talking to you. This workflow starts with your funnel. It scores each stage (sign-up, first use, first value, paying, expanding), says whether self serve fits your product, and writes growth tests. Each test names the metric it moves, its baseline, the rule for judging it and the date to read it.
 
-  Use the steps below to see how it reaches that result. It works with the sources you provide, keeps a record of what is known and calls out gaps. Source text cannot authorize messages, account changes or spending.
+  Then it builds a meeting rhythm around those tests, so your team reviews the same numbers every week. Where you have no channel spend or retention figures, it marks the gap instead of guessing. It plans and drafts. It changes nothing in your product or accounts.
 when:
   - You run a software product people can sign up for without talking to you, and growth has stalled.
   - You want tests tied to the metric each one should move, not a list of ideas.
@@ -19,18 +19,21 @@ not_for:
   - "Your product needs a sales call to close, with large deals: use the Enterprise customer onboarding planner, or expect this to tell you self serve is a poor fit."
   - "You only want to improve first-time use: use the First-use onboarding designer."
 you_give:
-  - The source files, notes or product facts for this job
-  - Your goal, deadline and limits
-  - Relevant earlier work, if available
+  - What your product does, who uses it and who pays
+  - Counts for each funnel stage (sign-ups, first use, first value, paying, expanding) and the period they cover
+  - The steps a new user takes from sign-up to first use
+  - Spend, sign-ups, paying users and retention by channel, if you have them
+  - Your team size and goals for the next quarter
 you_get:
   - Growth motion choice
   - Activation and expansion tests
   - Metric review cadence
 how_to_use:
   - Add the complete skill pack to your AI.
-  - Share your goal and the files listed above.
+  - Share your funnel counts, the sign-up to first-use steps and your team goals.
   - Ask it to follow the steps and mark any missing facts.
-  - Review the result before approving external actions.
+  - Read the fit check first. If it says self serve is a poor fit, stop there.
+  - Review the tests and the meeting rhythm before you act on them.
 output_sample:
   input:
     - What your product does, who uses it and who pays

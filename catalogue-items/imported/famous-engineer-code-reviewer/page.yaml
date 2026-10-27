@@ -30,7 +30,7 @@ you_get:
   - A product-angle check
   - A final verdict
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Paste the skill text and the file references/persona_principles.md together, or upload the whole skill folder. The review needs that file to ground each engineer's view.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text and the file references/persona_principles.md together, or upload the whole skill folder. The file references/persona_principles.md must sit in the same folder as the skill, because the review needs it to ground each engineer's view.
   - Paste your diff, code or pull request text. Say which language it is and what it should do.
   - Name the engineers you want, or say you want the skill to pick them. It always adds one product view.
   - Read the findings from the top. Fix blockers and critical items first.

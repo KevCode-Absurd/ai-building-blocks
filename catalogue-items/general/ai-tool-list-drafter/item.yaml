@@ -7,7 +7,7 @@ role: make
 job: design
 level: intermediate
 inputs:
-  - {type: brief, required: true}
+  - {type: question, required: true}
 outputs:
   - {type: plan}
 uses: []

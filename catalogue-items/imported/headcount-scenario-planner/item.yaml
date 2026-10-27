@@ -10,6 +10,8 @@ level: advanced
 inputs:
   - type: question
     required: true
+  - type: plan
+    required: false
 outputs:
   - type: plan
     required: true

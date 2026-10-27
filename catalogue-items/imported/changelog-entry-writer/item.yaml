@@ -10,6 +10,8 @@ level: beginner
 inputs:
   - type: codebase
     required: true
+  - type: code_change
+    required: false
 outputs:
   - type: document
 uses: []

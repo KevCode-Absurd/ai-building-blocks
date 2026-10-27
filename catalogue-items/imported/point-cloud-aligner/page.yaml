@@ -34,6 +34,7 @@ how_to_use:
   - Make sure your AI can run MATLAB with the Computer Vision and Lidar Toolboxes. If not, run the code it writes yourself.
   - Check the RMSE value. If it is high, ask for another method or a cleaner input.
   - Use the merge step to join the aligned scans into one cloud or a map.
+  - To save the merged cloud as another file type, or to pull out part of it, use the Point cloud file handler next.
 output_sample:
   input:
     - Two or more 3D point clouds as MATLAB point cloud objects
@@ -56,3 +57,20 @@ output_sample:
       contains: Your moving scan placed onto the first scan, using the align step.
     - name: Merged point cloud
       contains: The aligned scans joined into one cloud, or built up scan by scan into a map.
+output_shape: |-
+  Method: <the registration method chosen, and why>
+  Settings: <cleaning and tuning values used>
+  RMSE: <fit error, in your scan's units>
+  Aligned cloud: <moving scan placed on the first scan>
+  Merged cloud: <all scans joined into one cloud or map>
+  MATLAB code: <code that runs the steps above>
+terms:
+  - term: ICP
+    meaning: Iterative closest point. A method that nudges one scan until it sits on the other.
+  - term: RMSE
+    meaning: The average gap between the two scans after alignment, in your scan's units. Lower is better.
+  - term: FGR
+    meaning: Fast global registration. A method that lines up scans that start far apart.
+  - term: LOAM
+    meaning: A method for lidar scans that are stored in rows and columns (organised). It builds a map as the sensor moves.
+next: [point-cloud-file-handler]

@@ -7,7 +7,7 @@ role: compress
 job: research
 level: beginner
 inputs:
-  - {type: brief, required: true}
+  - {type: idea, required: true}
   - {type: persona, required: false}
 outputs:
   - {type: shortlist}

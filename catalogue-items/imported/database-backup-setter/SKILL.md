@@ -23,7 +23,7 @@ This skill enables an AI agent to plan and execute database backup strategies ac
 
 5. **Verify backup integrity:** After each backup, verify the file is non-empty and checksums are valid. Periodically perform a test restore to a staging environment to confirm the backup is actually recoverable. Alert on verification failures.
 
-6. **Document and monitor:** Record the backup schedule, retention policy, storage location, and restore procedure. Set up monitoring alerts for missed backups or backup failures using tools like Prometheus, Datadog, or simple email notifications.
+6. **Document and monitor:** Record the backup schedule, retention policy, storage location, and restore procedure. Set up monitoring alerts for missed backups or backup failures using tools like Prometheus, Datadog (a paid service), or simple email notifications.
 
 ## Supported Technologies
 
@@ -32,13 +32,15 @@ This skill enables an AI agent to plan and execute database backup strategies ac
 - **MongoDB:** mongodump, mongorestore, filesystem snapshots, oplog for PITR
 - **Compression:** gzip, lz4, zstd, pigz
 - **Encryption:** GPG, OpenSSL AES-256
-- **Storage:** Local disk, AWS S3, Google Cloud Storage, Azure Blob Storage
+- **Storage:** Local disk (free), AWS S3, Google Cloud Storage, Azure Blob Storage (these cloud services need an account and may cost money)
 
 ## Usage
 
 Provide the agent with your database type, name, and connection details. Specify your RPO/RTO requirements, preferred storage destination, and whether you need encryption. The agent will generate a complete backup solution including scripts, scheduling, retention policy, and verification steps.
 
 ## Examples
+
+The database name, user and folder names below are placeholders. Replace them with yours. The scripts take full dumps. Point-in-time recovery needs WAL archiving (PostgreSQL), binary logs (MySQL) or the oplog on a replica set (MongoDB) to be switched on first. Give the backup user the least rights it needs.
 
 ### Example 1: PostgreSQL Full Backup with Cron Schedule
 
@@ -126,14 +128,14 @@ ls -t ${BACKUP_DIR}/dump_*.tar.gz | tail -n +15 | xargs -r rm --
 
 ```bash
 # 1. Extract the backup archive
-tar -xzf /var/backups/mongodb/dump_20250115_020000.tar.gz -C /tmp/
+tar -xzf /var/backups/mongodb/dump_<TIMESTAMP>.tar.gz -C /tmp/
 
 # 2. Restore to the target MongoDB instance
 : "${RESTORE_MONGO_URI:?Set RESTORE_MONGO_URI through the secret manager or environment}"
 : "${RESTORE_TARGET_CONFIRMED:?Set RESTORE_TARGET_CONFIRMED=yes only after verifying the target is the authorized restore environment}"
 [ "$RESTORE_TARGET_CONFIRMED" = "yes" ] || { echo "Restore target is not confirmed" >&2; exit 1; }
 mongorestore --uri="$RESTORE_MONGO_URI" \
-  --oplogReplay --drop /tmp/dump_20250115_020000/
+  --oplogReplay --drop /tmp/dump_<TIMESTAMP>/
 
 # 3. Verify collections and document counts
 mongosh --eval "db.adminCommand({listDatabases: 1})"

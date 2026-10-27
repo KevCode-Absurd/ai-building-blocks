@@ -10,6 +10,8 @@ explain: |
   The frequency content of your signal, with peaks, band power and bandwidth worked out using a method that fits your data. It avoids the usual FFT traps that give misleading plots.
 
   It asks whether data is saved or streaming in live. For saved data it runs quick diagnostics, checks for gaps and trend, and picks the output type: power spectral density, power spectrum or amplitude spectrum. Then it chooses the estimator, such as Welch, periodogram or a parametric method, computes with a stated sample rate, and plots with labelled axes. It pulls out peaks, band power and bandwidth with built-in functions. It needs MATLAB with the Signal Processing Toolbox.
+
+  This is MathWorks' skill. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE.md file.
 when:
   - You need the main frequencies in a recording.
   - Your FFT plot looks noisy and you do not know why.
@@ -17,7 +19,7 @@ when:
   - You want to compare two signals with coherence or a cross-spectrum.
 not_for:
   - You want to use this code outside MATLAB or other MathWorks products. The licence (BSD 2-Clause plus MathWorks terms) does not allow it.
-  - "You want to design or apply a filter: use the matlab-design-digital-filter skill."
+  - "You want to design or apply a filter: use the digital filter designer."
   - "You want a spectrogram or time-frequency view of a signal that changes over time: use a time-frequency tool, since this skill does not cover it yet."
   - "You want audio features such as pitch, or Bode and Nyquist plots: use Audio Toolbox or Control System Toolbox."
 you_give:
@@ -31,7 +33,7 @@ you_get:
   - A table of peak frequencies
   - Band power and bandwidth figures
 how_to_use:
-  - Open MATLAB with the Signal Processing Toolbox. Your AI needs to run MATLAB code, so use an AI that can do that.
+  - Open MATLAB with the Signal Processing Toolbox (paid). For live, frame-by-frame data you also need the DSP System Toolbox (also paid). Your AI needs to run MATLAB code, so use an AI that can do that. The licence lets you use this skill only with MathWorks products.
   - Paste the skill into your AI chat, or add the skill folder to your AI tool.
   - Load your signal into MATLAB as a variable, or save it as a CSV file.
   - "Tell your AI the sample rate in Hz and the measurement you want: peaks, band power or bandwidth."
@@ -45,7 +47,8 @@ output_sample:
     - "The measurement you want: peaks, band power or bandwidth"
     - The band edges in Hz, if you want band power (optional)
   prerequisites:
-    - MATLAB with the Signal Processing Toolbox
+    - MATLAB with the Signal Processing Toolbox (paid)
+    - The DSP System Toolbox (paid), only for live, frame-by-frame analysis
     - An AI that can write and run MATLAB code
   output:
     - name: Preliminary analysis

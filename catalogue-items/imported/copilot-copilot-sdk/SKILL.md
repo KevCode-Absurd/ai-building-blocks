@@ -32,6 +32,9 @@ npm install @github/copilot-sdk tsx
 ```bash
 pip install github-copilot-sdk
 
+# The custom tool examples below also need pydantic
+pip install pydantic
+
 # Optional: pre-download the bundled runtime instead of downloading it on first use
 python -m copilot download-runtime
 ```
@@ -201,6 +204,7 @@ asyncio.run(main())
 
 ### Go
 ```go
+// This snippet needs the import "fmt" at the top of the file, and a client set up as in the Quick Start.
 session, err := client.CreateSession(&copilot.SessionConfig{
 	OnPermissionRequest: copilot.PermissionHandler.ApproveAll,
     Model:     "gpt-4.1",
@@ -560,15 +564,14 @@ async with await client.create_session(
 ```
 
 ### Go
-This is a sketch. The string keys `"type"` and `"url"` below are not valid Go struct fields. Check the `copilot.MCPServerConfig` type in the SDK and set its real fields before you build.
+The SDK's Go struct fields for an MCP server are not shown here, so the struct below is left empty on purpose and does nothing yet. Look up the real fields of `copilot.MCPServerConfig` in the SDK's Go documentation (pkg.go.dev/github.com/github/copilot-sdk/go) and fill them in. The server type is `http` and the address is `https://api.githubcopilot.com/mcp/`. Do not guess field names.
 ```go
 session, _ := client.CreateSession(&copilot.SessionConfig{
 	OnPermissionRequest: copilot.PermissionHandler.ApproveAll,
     Model: "gpt-4.1",
     MCPServers: map[string]copilot.MCPServerConfig{
         "github": {
-            "type": "http",
-            "url": "https://api.githubcopilot.com/mcp/",
+            // Set the real copilot.MCPServerConfig fields here (type http, address above).
         },
     },
 })

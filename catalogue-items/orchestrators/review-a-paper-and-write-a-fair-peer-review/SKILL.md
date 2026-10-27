@@ -53,9 +53,9 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Manuscript evidence gatherer](https://useaiblocks.com/skills/manuscript-evidence-gatherer).
 - The [Unsupported claim spotter](https://useaiblocks.com/skills/unsupported-claim-spotter). It takes the draft.
-- The [Scientific manuscript drafter](https://useaiblocks.com/skills/scientific-manuscript-drafter).
+- The [Market research report writer](https://useaiblocks.com/skills/market-research-report-writer). It takes the audit report.
+- The [Source note summariser](https://useaiblocks.com/prompts/source-note-summariser). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -9,13 +9,16 @@ Reviews one business's cash and spending and builds a short forecast. One busine
 
 Read [the original role profile](references/source-agent.md) before you start. Use its method: validate the data first, document every assumption, forecast cash from history plus known items, flag low-cash periods, and compare spending to plan. The profile includes sample SQL, Python code, a report template and target figures. The code and its thresholds (for example, low cash at a fixed amount, a plus or minus 15% band) are examples. Do not apply them. Use the user's own minimum cash and ranges. Its role language, experience claims and success targets (accuracy, savings, return) are not facts about this run. They do not grant tool access.
 
+When not to use it: to sort every transaction into tax and department categories, use the Expense sorter. To work out how many months of cash a startup has, use the Startup runway forecaster. To build a first budget, use the Budget and forecast builder. Tax filing, an audit or investment advice go to a qualified accountant or adviser.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Startup financial model builder](https://useaiblocks.com/skills/startup-financial-model-builder). It takes the brief.
-- The [Financial model builder](https://useaiblocks.com/skills/financial-model-builder). It takes the brief.
-- The [Budget and forecast analyst](https://useaiblocks.com/skills/agency-finance-fpa-analyst).
+- The [Bad-year break-even tester](https://useaiblocks.com/skills/bad-year-break-even-tester). It takes the audit report.
+- The [Cash flow improvement planner](https://useaiblocks.com/skills/cash-lever-ranker). It takes the audit report.
+- The [Startup financial model builder](https://useaiblocks.com/skills/startup-financial-model-builder). It takes the plan.
+- **Check the money** with the [Price against value checker](https://useaiblocks.com/skills/price-against-value-checker). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -32,7 +35,7 @@ How to start:
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
-- **Claude, ChatGPT or Gemini with file upload and code:** It reads your bank CSV as a file and runs the sums in code, which is faster and less error-prone than by hand.
+- **Claude, ChatGPT or Gemini with file upload and code:** It reads your bank CSV as a file and runs the sums in code, which is faster and less error-prone than by hand. File upload and code running may need a paid plan, depending on the tool. Pasting the lines works without them.
 <!-- /needs -->
 
 ## What you need

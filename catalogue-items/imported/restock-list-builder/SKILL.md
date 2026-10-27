@@ -25,7 +25,7 @@ Queries all tracked product variants at or below a configurable stock threshold 
 | format | string | no | human | Output format: `human` or `json` |
 | dry_run | bool | no | false | Preview operations without executing mutations |
 | threshold | integer | no | 10 | Variants at or below this quantity are included |
-| include_zero_stock | bool | no | true | Include variants with 0 quantity |
+| include_zero_stock | bool | no | true | Include variants with 0 quantity. If false, variants with 0 are dropped in Step 2 |
 
 ## Workflow Steps
 
@@ -33,7 +33,7 @@ Queries all tracked product variants at or below a configurable stock threshold 
    **Inputs:** `first: 250`, `query: "inventory_quantity:<= <threshold>"`, pagination cursor
    **Expected output:** List of variant objects with inventoryQuantity, product title, vendor, SKU; paginate until `hasNextPage: false`
 
-2. Keep only variants where `inventoryItem.tracked` is true. Drop untracked variants, because their count is not meaningful. Then sort by vendor, then product title, and write the CSV.
+2. Keep only variants where `inventoryItem.tracked` is true. Drop untracked variants, because their count is not meaningful. If `include_zero_stock` is false, also drop variants whose `inventoryQuantity` is 0 (equivalent to adding `inventory_quantity:>0` to the query). Then sort by vendor, then product title, and write the CSV.
 
 ## GraphQL Operations
 
@@ -132,7 +132,7 @@ CSV file `restock_list_<YYYY-MM-DD>.csv` grouped by vendor, sorted by vendor nam
 
 ## Best Practices
 1. Counts are store-wide totals. This skill cannot filter by location, so use your inventory app for per-warehouse counts.
-2. Only variants with `inventoryItem.tracked: true` have meaningful stock counts — untracked variants always appear as 0.
+2. Only variants with `inventoryItem.tracked: true` have meaningful stock counts. Untracked variants may show as 0, so Step 2 drops them. Check those by hand.
 3. The restock CSV is sorted by vendor — share the vendor-grouped output directly with your procurement team without reformatting.
-4. Set `include_zero_stock: false` to skip variants already on back-order to focus on nearly-depleted items.
+4. Set `include_zero_stock: false` to drop variants with a count of 0 and focus on nearly-depleted items. This does not look at back-orders.
 5. Schedule this skill to run weekly via cron and pipe the CSV to your purchasing workflow.

@@ -66,7 +66,7 @@ Check the five death-traps below and flag any that apply.
 
 ### Step 4: Calculate next runs and annual fire count
 
-Compute the next 5 fire times as concrete dates so the user can verify the
+If code can run, use `node scripts/cli.js next "<expression>" 5` for exact dates. If code cannot run, work the dates out by hand and label them "estimate, check in your scheduler". Compute the next 5 fire times as concrete dates so the user can verify the
 schedule behaves as expected. Estimate annual fire count — a schedule that fires
 365×/year vs. 12×/year is a ~30× cost and load difference.
 

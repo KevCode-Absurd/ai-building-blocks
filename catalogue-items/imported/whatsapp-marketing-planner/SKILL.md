@@ -144,13 +144,13 @@ WhatsApp requires pre-approved templates for outbound messages. Template categor
 **Post-purchase flow:**
 - Message 1: Order confirmation (utility)
 - Message 2 (shipping): Dispatch notification with tracking (utility)
-- Message 3 (day 7): How are you liking it? + review request
+- Message 3 (day 7): How are you liking it? + review request. Review requests must follow WhatsApp's policy and your local review rules. In many countries it is not allowed to pay or reward people for positive reviews, or to ask only the happy customers. Ask every buyer, offer no reward for a good rating, and check the rules where you sell. This message is promotional, so send it only to opted-in contacts and confirm its template category with your provider.
 - Message 4 (day 30): Replenishment reminder (consumable products)
 
 **Abandoned cart flow:**
 - Message 1 (1 hr): "You left something behind" — cart reminder
 - Message 2 (24 hrs): Add social proof or answer objection
-- Message 3 (48 hrs): Offer incentive (10% off, free shipping)
+- Message 3 (48 hrs): Offer an incentive only if you have one to give (for example a discount or free shipping). Marketing template, opted-in contacts only.
 
 **Win-back flow** (inactive customers, 60+ days):
 - Message 1: "We miss you" — genuine, not pushy
@@ -233,6 +233,8 @@ WhatsApp content is different from email or social. Rules:
 ---
 
 ### 07 — PLATFORM RECOMMENDATIONS BY SCALE
+
+*Monthly costs below are rough estimates from the original author. Check each provider's current price before you decide.*
 
 | Business size | Platform | Monthly cost |
 |--------------|----------|-------------|

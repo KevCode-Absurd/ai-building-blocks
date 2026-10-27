@@ -85,7 +85,7 @@ The teacher must provide:
 - **Reading purpose:** Why students are reading. *e.g. "To identify how Sachar uses the dual timeline to create suspense" / "To extract the key stages of photosynthesis for a summary diagram" / "To infer what life was like in the trenches from a primary source"*
 
 Optional (injected by context engine if available):
-- **Text extract:** A short extract for more precise analysis
+- **Text extract:** A short extract for more precise analysis. A script or draft written by an earlier step can be used here.
 - **Student profiles:** Reading levels, EAL status, background knowledge
 - **Subject area:** Curriculum subject
 - **Known challenges:** Anticipated difficulties

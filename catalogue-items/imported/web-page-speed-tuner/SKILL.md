@@ -17,6 +17,14 @@ A systematic approach to web performance grounded in how browsers, protocols, an
 
 **The foundation:** Every request passes through DNS resolution, TCP handshake, TLS negotiation, and HTTP exchange before a single byte of content arrives — each step adding round-trip latency. High-performance applications minimize round trips, parallelize requests, and eliminate unnecessary network hops. Understanding the protocol stack is the prerequisite for meaningful optimization.
 
+## Run Order
+
+1. Gather what the user can paste: the page HTML, the response headers (for example from `curl -I`), and a PageSpeed Insights or Lighthouse report. Ask what feels slow and which pages matter most.
+2. Score the eight Quick Diagnostic rows. Mark any row you cannot check as "unknown" and say what to paste to check it.
+3. Rank the failed rows by expected gain, biggest first, with the reason each fix helps.
+4. Hand off by owner: page code changes go to the developer, and caching and compression changes go to the host or CDN admin.
+5. Ask the user to run the same speed test again after each fix and compare.
+
 ## Scoring
 
 **Goal: 10/10.** Score by how many of the eight Quick Diagnostic rows pass, weighted toward the field metrics: **9-10** = all eight pass (the four field-metric rows in the green plus content-hashing, HTTP/2+, minimized render-blocking, and compression); **5-6** = the four field-metric rows pass but one or more transport/caching/compression rows fail; **<=3** = any field-metric row is in the red. Always report the score, which diagnostic rows failed, and the specific fix for each. If you cannot check a row (no field data, no headers, no report), mark it "unknown" and do not guess a pass or a fail. Say what the user must paste to check it.

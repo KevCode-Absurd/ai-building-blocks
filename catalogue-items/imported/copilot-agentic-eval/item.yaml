@@ -8,12 +8,14 @@ role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
+  - type: question
     required: true
   - type: audit_report
     required: false
 outputs:
   - type: plan
+  - type: prompt
+    required: true
 uses: []
 origin: imported
 source:

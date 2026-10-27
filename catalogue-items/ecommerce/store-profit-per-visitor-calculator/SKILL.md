@@ -69,10 +69,11 @@ MISSING: <what was not given>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Shopify dashboard reader](https://useaiblocks.com/skills/shopify-dashboard-reader).
 - The [Heatmap and session recording analyst](https://useaiblocks.com/skills/heatmap-and-recording-reader). It takes the audit report.
-- The [Break-even ad cost calculator](https://useaiblocks.com/prompts/break-even-ad-target-finder).
-- The [Store analytics report comparison reviewer](https://useaiblocks.com/skills/weekly-store-numbers-watcher).
+- The [New-customer profit dashboard builder](https://useaiblocks.com/skills/new-customer-profit-dashboard-builder). It takes the audit report.
+- The [Shopify campaign link planner](https://useaiblocks.com/skills/campaign-link-tracker). It takes the audit report.
+- The [Meta server tracking checker](https://useaiblocks.com/skills/meta-server-tracking-checker). It takes the audit report.
+- The [Store experiment results reviewer](https://useaiblocks.com/skills/store-test-program-runner).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

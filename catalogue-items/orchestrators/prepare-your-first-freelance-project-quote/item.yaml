@@ -9,12 +9,16 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: question
+    required: true
+  - type: idea
     required: true
 outputs:
   - type: plan
   - type: document
   - type: audit_report
+  - type: deal_terms
+    required: true
 uses:
   - web-project-scoper
   - contract-and-proposal-drafter

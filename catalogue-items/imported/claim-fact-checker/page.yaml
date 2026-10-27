@@ -9,7 +9,7 @@ subhead: Paste a text and get a verdict on each claim in it, with a confidence s
 explain: |
   Paste a text and get a verdict on each claim in it, with a confidence score and the sources behind it. Instead of one true or false for the whole piece, you see exactly which sentence holds up and which does not.
 
-  It first splits the text into single checkable statements and drops opinions. It labels each as a number, a date, a science finding or a definition, then looks for the best source type: official data for statistics, journals for research, records for history. Each claim is compared against at least two independent sources. Verdicts run from true to false, with unverifiable as its own result.
+  It first splits the text into single checkable statements and drops opinions. It labels each as a number, a date, a science finding or a definition, then looks for the best source type: official data for statistics, journals for research, records for history. Each claim is compared against at least two independent sources. Verdicts run from true to false, with unverifiable as its own result. It only cites pages it actually opened. It is a first check, not a ruling: open the sources for any claim you will rely on.
 when:
   - You are about to publish a post and want its facts checked.
   - A colleague sent a statistic and you doubt it.
@@ -36,6 +36,7 @@ how_to_use:
   - Paste the text you want checked. Add any claims to focus on, or a report format (optional).
   - Read the verdicts and confidence scores. Check that the chat lists the pages it searched, and open the source links for any claim you plan to rely on.
   - Fix or remove claims marked False, Mostly False or Unverifiable before you publish.
+  - For claims cleared as True, have an editor or subject expert read the final piece before it goes out.
 output_sample:
   input:
     - The text or statement to check

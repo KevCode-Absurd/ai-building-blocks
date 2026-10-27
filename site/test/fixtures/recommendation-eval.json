@@ -179,7 +179,8 @@
    "audience": "owner",
    "area": "ads",
    "expect": [
-    "ad-test-budget-setter"
+    "ad-test-budget-calculator",
+    "small-budget-ad-test-planner"
    ]
   },
   {
@@ -317,7 +318,8 @@
    "audience": "owner",
    "area": "email",
    "expect": [
-    "win-back-flow-builder"
+    "win-back-flow-builder",
+    "win-back-lapsed-buyers-and-clean-out-the-rest"
    ]
   },
   {
@@ -326,9 +328,9 @@
    "audience": "freelancer",
    "area": "finance",
    "expect": [
-    "late-invoice-reminder-writer",
     "payment-reminder-letter-writer",
-    "get-a-late-invoice-paid-and-keep-the-customer"
+    "get-a-late-invoice-paid-and-keep-the-customer",
+    "unpaid-invoice-chaser"
    ]
   },
   {
@@ -337,9 +339,9 @@
    "audience": "freelancer",
    "area": "finance",
    "expect": [
-    "late-invoice-reminder-writer",
     "payment-reminder-letter-writer",
-    "get-a-late-invoice-paid-and-keep-the-customer"
+    "get-a-late-invoice-paid-and-keep-the-customer",
+    "unpaid-invoice-chaser"
    ]
   },
   {
@@ -934,7 +936,7 @@
     "negotiation-call-prep-planner",
     "weak-position-negotiation",
     "win-win-stance-planner",
-    "negotiation-call-opening-planner"
+    "negotiation-prep-coach"
    ]
   },
   {
@@ -1406,7 +1408,8 @@
    "audience": "freelancer",
    "area": "legal",
    "expect": [
-    "nda-traffic-light-checker"
+    "nda-traffic-light-checker",
+    "nda-quick-checker"
    ]
   },
   {
@@ -1489,7 +1492,8 @@
     "bug-and-security-code-reviewer",
     "agency-security-appsec-engineer",
     "diff-security-skimmer",
-    "agency-security-ai-generated-code-auditor"
+    "agency-security-ai-generated-code-auditor",
+    "code-security-reviewer"
    ]
   },
   {
@@ -1668,7 +1672,8 @@
    "audience": "manager",
    "area": "strategy",
    "expect": [
-    "okr-goal-writer"
+    "okr-goal-writer",
+    "okr-writer"
    ]
   },
   {
@@ -2814,7 +2819,9 @@
     "interview-question-set-maker",
     "inclusive-job-post-writer",
     "applicant-shortlist-builder",
-    "job-ad-campaign-planner"
+    "job-ad-campaign-planner",
+    "hiring-interview-designer",
+    "30-60-90-day-onboarding-planner"
    ],
    "goodTasks": [
     "hire-people"
@@ -2828,7 +2835,9 @@
     "interview-question-set-maker",
     "structured-interview-guide",
     "job-ad-campaign-planner",
-    "candidate-sourcing-planner"
+    "candidate-sourcing-planner",
+    "hiring-interview-designer",
+    "30-60-90-day-onboarding-planner"
    ],
    "goodTasks": [
     "hire-people"

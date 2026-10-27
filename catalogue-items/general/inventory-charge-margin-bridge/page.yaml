@@ -1,19 +1,19 @@
 new_slug: inventory-charge-margin-bridge
 name: Inventory charge margin bridge
 headline: Inventory charge margin bridge
-summary: Find how much inventory write-downs and reversals moved your gross margin. Get a reported-to-charge-excluded margin bridge you can trace to its sources.
+summary: See your gross margin before and after inventory write-downs and reversals, with each figure traced to the notes.
 job: track-numbers
 thinking: high
 thinking_why: "A charge must sit inside the cost line you adjust, and repeating charges stay a real cost, so each needs reading against the notes."
-subhead: A reported-to-charge-excluded gross-margin bridge with recurring-cost cautions. Share reported revenue/COGS, inventory write-downs and reversals included in that COGS, plus accounting basis and notes.
+subhead: Share reported revenue and cost of goods sold (COGS), the inventory write-downs and reversals inside that COGS, and the accounting basis. You get your gross margin as reported and with the net charge taken out, with a warning that repeat write-downs are a real cost.
 explain: |-
-  A reported-to-charge-excluded gross-margin bridge with recurring-cost cautions.
+  Inventory write-downs sit inside cost of goods sold and pull gross margin down. A reversal pushes it back up. This finds those lines in the notes, nets them, and shows the margin with and without the net charge. Reported margin always stays on the page next to the adjusted one.
 
   Issuer accounting and earnings. Illustrative figures. Reported margin is (1,000 - 700) / 1,000 = 30%. A charge of 30 less a reversal of 10 is a net charge of 20, or 2 percentage points, so the charge-excluded margin is 32%. With a zero reversal, the charge is 30 and the charge-excluded margin is 33%.
 when:
-  - You need a reported-to-charge-excluded gross-margin bridge with recurring-cost cautions.
-  - You work on issuer accounting and earnings and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A company reports a big inventory write-down and you want to see the margin without it.
+  - You are comparing gross margin across periods and one period has a write-down or reversal.
+  - A reviewer needs to trace each figure back to the note it came from.
 not_for:
   - "You need to value inventory or decide how big a reserve should be: ask your accountant or auditor, because this only shows what past charges did to margin."
   - "You want to treat all write-downs as one-off costs: do not use this to hide them, because repeat obsolescence is a real cost of doing business."
@@ -53,12 +53,14 @@ output_sample:
     - name: "MISSING: and CHECKS MISSED"
       contains: Inputs that could not be found and checks that failed or did not run, or none.
 how_it_works:
-  - title: 1. Locate disclosed write-downs and reversals and verify both sit inside the selected COGS line rather than elsewhere
-    text: Locate disclosed write-downs and reversals and verify both sit inside the selected COGS line rather than elsewhere.
-  - title: 2. Net current charges and permitted reversals, remove the signed net charge from COGS and reconcile gross-profit and margin effects
-    text: Net current charges and permitted reversals, remove the signed net charge from COGS and reconcile gross-profit and margin effects.
-  - title: 3. Keep reported margin primary; explain that recurring obsolescence remains an economic cost and do not relabel all charges as nonrecurring
-    text: Keep reported margin primary; explain that recurring obsolescence remains an economic cost and do not relabel all charges as nonrecurring.
+  - title: Find the lines
+    text: Finds the write-down and reversal lines in the cost-of-sales note and checks each sits inside the COGS line you chose.
+  - title: Net them
+    text: Net charge is the write-down less the reversal. It comes out of COGS once, with its sign kept.
+  - title: Rebuild the margin
+    text: Recomputes gross profit and gross margin without the net charge and ties both back to the income statement.
+  - title: Add the warning
+    text: Reported margin stays first. Repeat write-downs are a real cost of doing business, so they are not relabelled as one-off.
 output_shape: |-
   A reported-to-charge-excluded gross-margin bridge with recurring-cost cautions.
   Scope and dated sources

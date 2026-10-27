@@ -35,7 +35,8 @@ how_to_use:
   - Ask your AI to list any imports or app web addresses you must add before the code runs.
   - Run the setup and preview commands yourself, or use an AI that can run code. You need the Shopify CLI for this.
   - Preview the extension in your checkout editor and test it on a phone before you deploy.
-  - The sample offers (such as 20% off and the upsell product) are placeholders. Swap in your own offer and product. When the test passes, deploy with the Shopify CLI and check the result in your Shopify admin.
+  - Check Shopify's current docs for the API version before you deploy. The skill is written for version 2025-01, which may be out of date.
+  - The sample upsell product and the fetchUpsellProduct function are placeholders you must write. The sample shows no discount unless you add one to the order change. The age example is only a tick box, not a legal age check. When the test passes, deploy with the Shopify CLI and check the result in your Shopify admin.
 output_sample:
   input:
     - The change you want at checkout, such as a gift note field

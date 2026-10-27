@@ -8,7 +8,7 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: question
     required: true
   - type: offer
     required: false
@@ -17,6 +17,8 @@ inputs:
 outputs:
   - type: document
     required: true
+  - type: deal_terms
+    required: false
 uses: []
 origin: imported
 source:

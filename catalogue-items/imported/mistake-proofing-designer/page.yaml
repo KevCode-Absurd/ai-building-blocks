@@ -10,6 +10,8 @@ explain: |
   Changes to your code, form or process that make the wrong move impossible, or make it loud the moment it happens. Point it at something that keeps going wrong and you get fixes that do not rely on anyone remembering.
 
   It uses mistake-proofing from Toyota. A comment, a wiki page or a review checklist is only training, and training fades. A real fix is a device: a type, a database constraint, a lint rule, a state machine. It ranks fixes on a ladder. Best is control, where the mistake cannot happen. Next is warning, where it is flagged at once. Then detection, where something finds it later. Docs rank at zero.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (rainmanjam) says MIT. Credit goes to rainmanjam and sickn33.
 when:
   - The same bug has bitten your team for the third time.
   - You handle money, permissions or deletion and failures are silent.

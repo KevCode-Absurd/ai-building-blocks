@@ -11,7 +11,7 @@ inputs:
   - type: feedback_notes
     required: true
 outputs:
-  - type: document
+  - type: customer_needs
 uses: []
 origin: imported
 source:

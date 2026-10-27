@@ -13,8 +13,13 @@ inputs:
     required: true
   - type: source_text
     required: false
+  - type: incident_record
+    required: false
 outputs:
   - type: plan
+  - type: document
+  - type: incident_record
+    required: true
 uses: []
 steps: []
 origin: imported

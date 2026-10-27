@@ -95,6 +95,8 @@ If **any of the following are not explicitly stated**, you MUST ask before proce
 
 Ask all open questions in one message. If the user cannot answer one, state your assumption, mark it ASSUMED in the output, and score the affected MFRI dimension as if the answer were unknown. Never default to your favorite stack or pattern.
 
+If the user shares feedback notes from a design check, treat each note as a fix to make in the new design.
+
 ---
 
 ## 3. Mandatory Reference Reading (Enforced)

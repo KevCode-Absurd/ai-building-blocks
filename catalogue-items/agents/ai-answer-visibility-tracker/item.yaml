@@ -23,7 +23,7 @@ steps:
   - {uses: ai-citation-source-finder, note: "Only when the gap is marked build or influence: which sites the assistants quote instead of you. Uses the shopper questions from step 1 and the cited sources in step 2's panel sheet."}
   - {uses: ai-shortlist-readiness-checker, note: "Only when the gap is marked fix: whether your public pages can be found, matched and chosen. Uses your store address and key product pages, not step 5's source list. Hands step 7 the pages that fail."}
   - {uses: ai-ready-product-page-editor, note: "Only for up to two pages the readiness check fails: the page rewritten from your facts. Uses your product facts and the shopper questions from step 1, on the pages step 6 failed."}
-schedule: "On the first Monday of each month, with the same questions as last month"
+schedule: "On the first Monday of each month, with the same questions as last month, once the owner has re-confirmed the assistants' terms for that run"
 asks_before: [publishing page changes, editing theme files or robots.txt, contacting sites or journalists for a mention, posting on forums or Reddit, paying for placements or reviews]
 origin: own
 version: 1.0.0

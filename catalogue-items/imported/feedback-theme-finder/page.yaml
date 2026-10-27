@@ -36,10 +36,12 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text, or add it to your AI.
   - Upload your survey export. It helps to have the columns score, comment, date and segment. No paid tool or API key is needed. If the file has no comment column, the skill reports the scores only and says so.
+  - If your feedback also sits on review sites or social posts, copy or export it by hand. The skill uses only what you paste or upload and does not scrape those sites.
   - Say what you want to know, such as "why did detractors score us low this quarter".
   - Check the scorecard first. Count the responses yourself in your file and compare.
   - Check two quotes against your file. They must match word for word.
   - Read the actions as ideas to test. The skill does not predict how much a fix will move your score.
+  - Actions are ranked by how often a theme comes up. To rank by business impact, include revenue or account size for each response. Without it, the ranking is by frequency only.
   - Pick the top theme and plan one fix. To read tickets and calls together with surveys, use the feedback pile sorter.
 how_it_works:
   - title: Collect and tag

@@ -58,7 +58,7 @@ Outputs three numbers — **commit**, **best-case**, **pipe-only** — each with
 scripts/cohort_arr_projector.py --input intake.json --output markdown
 ```
 
-Computes per-cohort NRR + GRR over the projection horizon. Flags any cohort whose NRR is declining vs. the trailing-cohort average — these are the leaky cohorts that the consolidated number will hide for 2-3 quarters before the leak surfaces in the topline.
+Computes per-cohort NRR + GRR over the projection horizon. Flags any cohort whose NRR is declining vs. the trailing-cohort average — these are the leaky cohorts that the consolidated number can hide for a while before the leak surfaces in the topline (a rule of thumb of 2-3 quarters, not a measured figure).
 
 Output includes the consolidated NRR/GRR trajectory + the cohort heatmap + a leaky-cohort callout.
 
@@ -84,6 +84,8 @@ All scripts: stdlib only. `--help` and `--sample` work on all three.
 
 ## References
 
+The three files below are the author's reading lists. They name authors and firms but do not prove any figure. Check any claim at its source before you quote it, and do not present a claim as sourced unless you have checked it.
+
 - `references/saas_forecasting_canon.md` — Skok, Tunguz, OpenView, BVP, Pacific Crest/KeyBanc, ProfitWell, Patrick Campbell
 - `references/cohort_analysis_canon.md` — Andrew Chen (a16z), Brian Balfour, Skok, Ramanujam, OpenView, Lenny Rachitsky, Reforge
 - `references/forecast_anti_patterns.md` — McKinsey, Tunguz, OpenView, MIT Sloan, Bain, Forrester, Pacific Crest
@@ -92,7 +94,7 @@ All scripts: stdlib only. `--help` and `--sample` work on all three.
 
 - **Historical conversion is the prior, not the truth.** Last 4Q is weighted 70%, last 12Q is weighted 30%. These weights and the CoV bands (10/25/50%) are this skill's own starting defaults, not industry benchmarks. The blend captures regime change (recent slowdown) without overfitting to a single bad quarter. Window + weighting are surfaced in every output.
 - **A forecast without a disclosed assumption block is theatre.** This is the skill's hard rule. The CLI refuses to omit the assumption block.
-- **Cohort decomposition reveals leaks 2-3 quarters before the consolidated number does.** Reporting NRR without per-cohort breakdown hides the leak.
+- **Cohort decomposition tends to reveal leaks sooner than the consolidated number does (a rule of thumb of 2-3 quarters, not a measured lead time).** Reporting NRR without per-cohort breakdown hides the leak.
 - **CoV (coefficient of variation) is the right discipline for stage confidence.** A stage with mean conversion 40% and stdev 4% (CoV 10%) is HIGH confidence; mean 40% stdev 20% (CoV 50%) is VERY LOW. The same average masks very different reliability.
 - **Industry profile tunes priors, not truth.** Profile shifts default stage-conversion rates by industry; your historical data overrides.
 - **The skill emits three numbers and an assumption block.** The CRO picks the commit number, owns the trade-off, and walks the board through the variance.
@@ -101,7 +103,7 @@ All scripts: stdlib only. `--help` and `--sample` work on all three.
 
 - **Single-number forecast with no confidence band.** The board asks for "the number"; the discipline is to present three with named assumptions. See `forecast_anti_patterns.md`.
 - **Using last-12-quarter conversion blindly.** Hides recent slowdown. The 70/30 blend on last-4Q vs. last-12Q corrects this.
-- **Reporting NRR without cohort decomposition.** The consolidated number can be flat while a recent cohort is leaking 15 pp; the leak surfaces in the topline 2-3 quarters later. Always decompose.
+- **Reporting NRR without cohort decomposition.** The consolidated number can be flat while a recent cohort is leaking 15 pp; the leak can surface in the topline a few quarters later (a rule of thumb). Always decompose.
 - **Treating best-case as commit.** The CFO will eat you. Best-case includes weighted-stage opps that have a < 50% time-to-close probability; commit only includes commit-grade stages.
 - **Hiding the assumption block.** The skill refuses; if you remove it manually, you own the theatre.
 - **No leaky-cohort callout.** If `cohort_arr_projector.py` flags a cohort and you suppress the flag in the deck, the leak owns you next quarter.

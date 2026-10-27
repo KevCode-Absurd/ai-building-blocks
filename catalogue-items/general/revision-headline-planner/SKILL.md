@@ -5,7 +5,9 @@ description: Use when a review has produced a long list of notes or causes and t
 
 # Revision headline planner
 
-After a good review the owner is holding twenty notes and a heavy feeling. A long list is hard to act on, and it is easy to fix the three easiest items and call it done. This skill reduces the review to a few headlines the owner can keep in their head, asks the questions that decide the next version, and sets the date when the work gets looked at again. The owner keeps every decision. The approach comes from how Ed Catmull describes Pixar's story reviews, where a producer boils a long session down to its main points and asks the director what they love.
+After a good review the owner is holding twenty notes and a heavy feeling. A long list is hard to act on, and it is easy to fix the three easiest items and call it done. This skill reduces the review to a few headlines the owner can keep in their head, asks the questions that decide the next version, and sets the date when the work gets looked at again. The owner keeps every decision. The approach comes from how Ed Catmull describes Pixar's story reviews, where a producer boils a long session down to its main points and asks the director what they love. Ed Catmull has not reviewed this skill.
+
+**Not for:** a first draft with no review notes yet (get notes first), a pile of raw notes with no ranked causes (run `problem-root-cause-tracer` first, then paste its result here), or planning the review session itself (use `peer-feedback-session-planner`).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -57,7 +59,7 @@ The goal in one line. The headlines, each with its notes. The three questions an
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Long-term partner screener](https://useaiblocks.com/skills/long-term-partner-screener). It takes the plan.
 - The [Repeatable standards sheet writer](https://useaiblocks.com/skills/standards-sheet-writer). It takes the plan.
-- The [Listening conversation planner](https://useaiblocks.com/skills/listen-first-talk-planner). It takes the plan.
+- The [Sales pay plan checker](https://useaiblocks.com/skills/sales-pay-plan-checker). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -69,6 +71,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Each Act or Test first line has a first move for this week.
 - The next review has a date and three questions.
 - The stuck test names what to ask and the options that follow.
+
+## If something is missing
+
+Write `MISSING: <what>`. Never invent a note, a cause or an owner decision. If the list has fewer than three distinct problems, say so and give fewer headlines.
 
 ## Avoid
 

@@ -7,6 +7,12 @@ description: "Review a fixed income portfolio: aggregate market-value-weighted y
 
 You are an expert fixed income portfolio analyst. Combine bond pricing, reference data, cashflow projections, and scenario stress testing into a portfolio review. Focus on aggregating bond-level numbers into portfolio-level metrics and risk exposures.
 
+## Chat setup and order of work
+
+Setup: a chat where you can paste or attach a holdings list. Code running helps with the sums. Web access is optional and only for extra free curve data.
+
+Order of work: 1. get the holdings list and the user's own prices, 2. work out the weighted measures, 3. project the cash flows, 4. run the rate shocks, 5. write the data notes and the next steps. Details are below.
+
 ## Before you start: what you need and what this skill can and cannot do
 
 **You need a holdings list from the user.** For each bond: name or ID, face or market value, price, coupon, maturity date, and, where known, rating, sector and currency. Yield and duration are used if given. If missing, work them out from price, coupon and maturity, and label them `computed`.
@@ -47,7 +53,7 @@ Not covered: batch bond-level pricing, call provisions, and cashflow projections
 
 ## Workflow
 
-1. **Price All Bonds:** Take prices from the user's holdings file, or via `yfinance` for listed bonds. Get yield, duration, DV01, convexity and spread per bond. Mark each as `supplied`, `computed` or `n/a`.
+1. **Price All Bonds:** Take prices from the user's holdings file first. Use `yfinance` for listed bonds only if the user asks for it (optional; see the Yahoo warning under Data sources). Get yield, duration, DV01, convexity and spread per bond. Mark each as `supplied`, `computed` or `n/a`.
 2. **Aggregate Portfolio Metrics:** Compute market-value weighted portfolio yield, duration, DV01, convexity.
 3. **Enrich with Reference Data:** Derive composition from the holdings file for each bond. Build sector, rating, maturity, and currency breakdowns.
 4. **Project Cashflows:** Derive the cashflow waterfall from coupon/maturity data for the portfolio. Aggregate into a quarterly cashflow waterfall. Flag concentration periods.

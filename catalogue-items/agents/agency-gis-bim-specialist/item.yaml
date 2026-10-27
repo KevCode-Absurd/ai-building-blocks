@@ -10,7 +10,7 @@ level: intermediate
 inputs:
   - type: question
     required: true
-  - type: document
+  - type: design_file
     required: false
 outputs:
   - type: plan

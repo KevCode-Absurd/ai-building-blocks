@@ -13,7 +13,7 @@ explain: |
 when:
   - A client asks whether your site meets accessibility rules.
   - You need to know which fixes to do first with limited time.
-  - You must write an accessibility statement for your site.
+  - You want draft notes for an accessibility statement, to finish after a full test.
   - You want to see which laws apply to your product.
 not_for:
   - "You need a legal opinion or a formal audit: ask an accredited accessibility assessor, since this gives general guidance only."
@@ -36,7 +36,8 @@ how_to_use:
   - Paste your page HTML or add screenshots. The skill cannot open a link, so do not rely on a URL.
   - Read the gap table first. Check that each criterion number matches what you see on the page.
   - Pass the ranked fixes to your developer. Run the check again after the fixes.
-  - For a legal or formal claim, ask an accredited assessor to confirm.
+  - Treat the statement notes as a draft. Do not publish a claim such as "meets AA" until a full test is done and an accredited assessor has checked it.
+  - Laws and deadlines in the map were last checked by the original author on 3 October 2026. Confirm them with an assessor or lawyer before you rely on them.
 output_sample:
   input:
     - A description of your site or app

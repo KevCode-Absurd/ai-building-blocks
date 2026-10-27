@@ -10,8 +10,11 @@ level: advanced
 inputs:
   - type: spreadsheet
     required: true
+  - type: document
+    required: false
 outputs:
   - type: spreadsheet
+  - type: code_change
 uses: []
 origin: imported
 source:

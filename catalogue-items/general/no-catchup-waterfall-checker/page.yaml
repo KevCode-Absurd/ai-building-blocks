@@ -5,13 +5,13 @@ summary: Check how one fund payout splits across capital, preference and carry w
 job: money-and-investing
 thinking: high
 thinking_why: "Each tier is paid in order and only from cash left after the tier above, so the order and the amounts must come from the agreement."
-subhead: Capital returned, preference paid, GP carry, LP cash and remaining first-tier shortfall. Share available distributable cash, eligible unreturned LP capital, separately verified accrued preference and residual GP carry fraction under a no-catchup LPA.
+subhead: Give it the cash available to distribute, eligible unreturned LP capital, separately verified accrued preference and residual GP carry fraction under a no-catchup LPA.
 explain: |-
-  Capital returned, preference paid, GP carry, LP cash and remaining first-tier shortfall.
+  In many private funds, a payout runs through tiers in order. First investors get their capital back, then their preferred return, and only then is the rest split as carry. With no GP catch-up, the manager gets nothing until the first two tiers are paid in full. This skill works through those tiers for one distribution.
 
-  Private fund distributions. Illustrative figures only. A distribution of 150 first returns 100 of capital, then pays 20 of preference. The remaining 30 splits 6 to the GP and 24 to the LP (a 20% carry), so LP cash totals 144. A distribution of 110 returns 100 of capital, pays 10 of preference, leaves 10 of preference unpaid and pays zero carry.
+  Illustrative figures only, not a real fund. A distribution of 150 first returns 100 of capital, then pays 20 of preference. The remaining 30 splits 6 to the GP and 24 to the LP (a 20% carry), so LP cash totals 144. A distribution of 110 returns 100 of capital, pays 10 of preference, leaves 10 of preference unpaid and pays zero carry.
 when:
-  - You need capital returned, preference paid, GP carry, LP cash and remaining first-tier shortfall.
+  - You need to see how one distribution splits across capital, preference and carry.
   - You work on private fund distributions and need traceable calculations.
   - A reviewer needs to trace the result back to inputs and assumptions.
 not_for:
@@ -56,12 +56,12 @@ output_sample:
     - name: MISSING and CHECKS MISSED
       contains: Inputs you did not supply and checks that failed or could not run, or none.
 how_it_works:
-  - title: 1. Confirm whole-fund return-of-capital priority and explicitly no GP catch-up or GP co-investment in this schedule
-    text: Confirm whole-fund return-of-capital priority and explicitly no GP catch-up or GP co-investment in this schedule.
-  - title: 2. Pay the lesser of available cash and unreturned capital, then preference only from remaining cash
-    text: Pay the lesser of available cash and unreturned capital, then preference only from remaining cash.
-  - title: 3. Split only cash left after both senior tiers by residual carry fraction; reconcile LP plus GP cash and unpaid senior claims
-    text: Split only cash left after both senior tiers by residual carry fraction; reconcile LP plus GP cash and unpaid senior claims.
+  - title: Checks the terms
+    text: Confirms capital is returned first for the whole fund and that the schedule has no GP catch-up or GP co-investment.
+  - title: Pays the tiers in order
+    text: Pays the lesser of cash and unreturned capital, then the lesser of the cash left and the verified preference.
+  - title: Splits the rest and reconciles
+    text: Splits only the cash left after both tiers by the carry fraction. LP cash plus GP cash must equal the distribution, with unpaid claims listed.
 output_shape: |-
   Capital returned, preference paid, GP carry, LP cash and remaining first-tier shortfall.
   Scope and dated sources

@@ -57,6 +57,7 @@ Do NOT use this skill when:
 
 5. **Strict Air-Gap & Zero Exfiltration**:
    - The entire analysis executes locally and offline. No network requests, no external telemetry, no remote LLM proxying of raw message contents.
+   - Never ask the user to upload or paste a raw export into a web chat. Exports hold other people's messages and identifiers. Before any snippet or quote is shown to the AI, remove names, phone numbers and usernames. If the user cannot send even redacted text to the AI provider, stop and say so.
    - The coverage check ("existing_coverage") uses only what you already know about existing tools, not a lookup. Mark anything you cannot verify `I cannot confirm this`.
 
 ## Named Sins & Anti-Patterns (Что категорически ЗАПРЕЩЕНО)

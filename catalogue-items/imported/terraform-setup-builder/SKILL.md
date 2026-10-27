@@ -19,11 +19,11 @@ Do not say you read or ran them. Do those steps by hand, or ask the user for the
 
 # Terraform Patterns
 
-> Predictable infrastructure. Secure state. Modules that compose. No drift.
+> Predictable infrastructure. Secure state. Modules that compose. Drift risks flagged.
 
 Opinionated Terraform workflow that turns sprawling HCL into well-structured, secure, production-grade infrastructure code. Covers module design, state management, provider patterns, security hardening, and CI/CD integration.
 
-Not a Terraform tutorial — a set of concrete decisions about how to write infrastructure code that doesn't break at 3 AM.
+Not a Terraform tutorial — a set of concrete decisions about how to write infrastructure code that is easier to review and less likely to fail. A review cannot guarantee your live setup will never break, so always read the plan.
 
 ---
 
@@ -51,7 +51,7 @@ Recognize these patterns from the user:
 - "Terraform CI/CD pipeline"
 - Any request involving: `.tf` files, HCL, Terraform modules, state management, provider configuration, infrastructure-as-code
 
-If the user has `.tf` files or wants to provision infrastructure with Terraform → this skill applies.
+If the user has `.tf` files or wants to provision infrastructure with Terraform → this skill applies. Existing Terraform, whether it is the project folder or code written by an earlier step, is read first and treated as the code to review or extend.
 
 ---
 
@@ -408,11 +408,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: hashicorp/setup-terraform@v3
+      # Log in to your cloud before init. Use your provider's login action,
+      # preferably short-lived OIDC credentials, not stored keys.
       - run: terraform init
       - run: terraform validate
       - run: terraform plan -out=tfplan
       - run: terraform show -json tfplan > plan.json
-      # Post plan as PR comment
+      # Optional: post the plan to the pull request as a comment
+      # (add your own step for this, it is not included here)
 
   apply:
     runs-on: ubuntu-latest
@@ -423,6 +426,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: hashicorp/setup-terraform@v3
+      # Log in to your cloud here too (OIDC), before init.
       - run: terraform init
       - run: terraform plan -input=false -out=tfplan
       - run: terraform apply -input=false tfplan   # applies the saved plan only, no -auto-approve
@@ -443,6 +447,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: hashicorp/setup-terraform@v3
+      # Log in to your cloud here too (OIDC), before init.
       - run: terraform init
       - run: |
           set +e

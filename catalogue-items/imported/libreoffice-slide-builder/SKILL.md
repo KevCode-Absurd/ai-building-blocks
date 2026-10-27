@@ -129,10 +129,13 @@ soffice --headless --convert-to pdf presentation.odp
 # PPTX to ODP
 soffice --headless --convert-to odp presentation.pptx
 
-# Batch convert
+# Batch convert, and list any file that failed
+failed=()
 for file in *.odp; do
-    soffice --headless --convert-to pdf "$file"
+    soffice --headless --convert-to pdf "$file" || failed+=("$file")
 done
+echo "Failed: ${#failed[@]}"
+printf '%s\n' "${failed[@]}"
 ```
 
 ### Template-Based Generation

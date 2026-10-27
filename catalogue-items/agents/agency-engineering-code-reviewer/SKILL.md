@@ -13,8 +13,9 @@ Read [the original role profile](references/source-agent.md) before you start. U
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Bug and security code reviewer](https://useaiblocks.com/skills/bug-and-security-code-reviewer).
 - The [Web accessibility checker](https://useaiblocks.com/skills/accessibility-checker). It takes the audit report.
+- The [Bug root cause finder](https://useaiblocks.com/skills/bug-root-cause-finder). It takes the audit report.
+- The [Live code debugger](https://useaiblocks.com/skills/live-code-debugger). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

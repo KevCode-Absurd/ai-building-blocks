@@ -71,9 +71,9 @@ If the team approves a specific change in clear words, make only that change, on
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Tech leadership advisor](https://useaiblocks.com/skills/tech-leadership-advisor).
 - The [README and decision interviewer](https://useaiblocks.com/skills/readme-and-decision-interviewer). It takes the audit report.
-- The [Software developer from specifications](https://useaiblocks.com/skills/spec-builder). It takes the plan.
+- The [Plan-to-ticket writer](https://useaiblocks.com/skills/ticket-planner). It takes the plan.
+- The [Decision record writer](https://useaiblocks.com/skills/decision-record-writer). It takes the plan.
 - The [Web accessibility checker](https://useaiblocks.com/skills/accessibility-checker). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

@@ -41,7 +41,7 @@ output_sample:
     - The people you can reach this week (optional)
     - After the test, a note of what each person did and said
   prerequisites:
-    - An AI that can read the skill files in the handoff pack, such as Claude Code or a Claude Project
+    - An AI that can read the skill files in the handoff pack, such as Claude Code or a Claude Project. Both need an account and can need a paid plan, so check yours first. A free chat AI can also work if you paste each skill in turn.
   output:
     - name: "Step 1: Four risks"
       contains: Value, ease of use, feasibility and viability each scored by how strong the proof is, with the riskiest named.

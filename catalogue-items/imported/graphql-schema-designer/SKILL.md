@@ -273,24 +273,28 @@ function decodeCursor(cursor) { return Buffer.from(cursor, "base64").toString().
  */
 async function paginatedQuery(db, { table, first = 10, after, where = {} }) {
   const limit = Math.min(first, 100); // Cap at 100 per page
-  const conditions = [];
-  const params = [];
+  const filterConditions = [];
+  const filterParams = [];
 
-  // Apply cursor (decode to original ID)
+  // Apply additional filters (only fixed, known column names, never user input)
+  for (const [key, value] of Object.entries(where)) {
+    if (value !== undefined) {
+      filterConditions.push(`${key} = $${filterParams.length + 1}`);
+      filterParams.push(value);
+    }
+  }
+
+  // The count uses the filters only, so totalCount covers every matching row
+  const countWhere = filterConditions.length > 0 ? `WHERE ${filterConditions.join(" AND ")}` : "";
+
+  // The page query adds the cursor on top of the filters
+  const conditions = [...filterConditions];
+  const params = [...filterParams];
   if (after) {
     const cursorId = Buffer.from(after, "base64").toString().split(":")[1];
     conditions.push(`id < $${params.length + 1}`);
     params.push(cursorId);
   }
-
-  // Apply additional filters
-  for (const [key, value] of Object.entries(where)) {
-    if (value !== undefined) {
-      conditions.push(`${key} = $${params.length + 1}`);
-      params.push(value);
-    }
-  }
-
   const whereClause = conditions.length > 0 ? `WHERE ${conditions.join(" AND ")}` : "";
 
   // Fetch one extra row to determine hasNextPage
@@ -298,8 +302,8 @@ async function paginatedQuery(db, { table, first = 10, after, where = {} }) {
   const rows = await db.query(query, params);
 
   // Count total matching rows
-  const countQuery = `SELECT COUNT(*) as total FROM ${table} ${whereClause}`;
-  const [{ total: totalCount }] = await db.query(countQuery, params);
+  const countQuery = `SELECT COUNT(*) as total FROM ${table} ${countWhere}`;
+  const [{ total: totalCount }] = await db.query(countQuery, filterParams);
 
   const hasNextPage = rows.length > limit;
   const nodes = rows.slice(0, limit);

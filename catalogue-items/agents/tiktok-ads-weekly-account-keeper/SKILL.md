@@ -17,6 +17,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
+- **The contract** (yours): the full agreement or terms, with dates and any changes.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
@@ -84,10 +85,9 @@ If you are connected to the account and the owner approves a change in clear wor
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [TikTok starter campaign builder](https://useaiblocks.com/skills/tiktok-starter-campaign-builder). It takes the audit report.
-- The [Meta Ads weekly account reviewer](https://useaiblocks.com/skills/meta-ads-weekly-account-keeper).
+- **Read your ad results** with the [Ad change decision checker](https://useaiblocks.com/skills/campaign-keep-or-change-checker). It takes the audit report.
 - The [Meta campaign growth planner](https://useaiblocks.com/skills/meta-scaling-campaign-planner). It takes the audit report.
 - **Read your ad results** with the [Cost per customer calculator](https://useaiblocks.com/skills/cost-per-customer-calculator). It takes the audit report.
-- **Read your ad results** with the [Ad change decision checker](https://useaiblocks.com/skills/campaign-keep-or-change-checker). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

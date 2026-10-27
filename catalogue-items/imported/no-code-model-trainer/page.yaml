@@ -9,7 +9,9 @@ subhead: Give your AI a data table in MATLAB and the column to predict. It train
 explain: |
   Machine learning models trained and compared in MATLAB's Classification Learner and Regression Learner apps, with the best one exported. You do it by code, so you do not click through the apps by hand.
 
-  The skill drives the apps by code. It opens a session on your data table, creates models, trains them and selects them. It reads their accuracy figures and options such as feature selection and PCA, and opens the standard plots. For explanation, it can run partial dependence, permutation importance, Shapley and LIME. Finally it exports the chosen model, or code to rebuild it. You need MATLAB with the Statistics and Machine Learning Toolbox. This is a MathWorks skill, copied under a licence that lets you use it only with MathWorks products.
+  The skill drives the apps by code. It opens a session on your data table, creates models, trains them and selects them. It reads their accuracy figures and options such as feature selection and PCA, and opens the standard plots. For explanation, it can run partial dependence, permutation importance, Shapley and LIME. Finally it exports the chosen model, or code to rebuild it. You need MATLAB with the Statistics and Machine Learning Toolbox. This is a MathWorks skill.
+
+  Licence: we share this copy under the BSD 2-Clause licence in the LICENSE.md file, which adds that you may use it only with MathWorks products such as MATLAB. The skill file header links MathWorks' own reuse licence as well. The skill also ships MathWorks' compiled helper files (.p files), which you cannot read.
 when:
   - You have a table and want to try many model types quickly.
   - You want to compare models without clicking through the app.
@@ -34,7 +36,8 @@ how_to_use:
   - Load your data into MATLAB as a table, with one column to predict.
   - "Give your AI the skill folder and say: Follow this skill. Add your table name, the column to predict and any model types you want."
   - Read the comparison of model scores. Ask for explanation plots if you want to know which features matter.
-  - Ask your AI to export the best model, or the code to rebuild it.
+  - Check the score on held-out test data before you trust the best model. Then ask for explanation plots, and ask your AI to export the best model, or the code to rebuild it.
+next: [model-decision-explainer, neural-network-trainer]
 output_sample:
   input:
     - Your data table, loaded in MATLAB

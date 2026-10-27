@@ -8,10 +8,14 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - source_text
-  - brief
+  - type: source_text
+    required: true
+  - type: question
+    required: false
+  - type: spreadsheet
+    required: false
 outputs:
-  - slide_deck
+  - type: slide_deck
 uses: []
 origin: imported
 source:

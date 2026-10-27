@@ -11,7 +11,7 @@ job: ops
 level: intermediate
 execution: coordinator
 inputs:
-  - type: brief
+  - type: question
     required: true
   - type: plan
     required: false

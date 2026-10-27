@@ -12,6 +12,7 @@ inputs:
   - {type: document, required: false}
 outputs:
   - {type: document}
+  - {type: policy, required: true}
 uses: []
 origin: rebuilt
 example_pending: true

@@ -207,7 +207,7 @@ Before introducing the tools to students, the teacher models their own emotional
 
 **Step 4: Regulate — The Meta-Moment (5 minutes)**
 - **Activity:** Introduce the Meta-Moment: "When you feel that wave of anxiety — the sick feeling, the 'I can't do this' thought — here's what I want you to practise. PAUSE. Don't try to force the feeling away. Instead, three steps: (1) Notice it: 'I feel anxious right now.' (2) Ask: 'What would my best self do right now?' Not your panicking self, not your avoidant self — your best self. The version of you that handles things well. (3) Choose a strategy." Provide a strategy menu:
-  - **Breathing:** 4-7-8 breathing (in for 4, hold for 7, out for 8). Activates the parasympathetic nervous system.
+  - **Breathing:** 4-7-8 breathing (in for 4, hold for 7, out for 8). A slow-breathing habit some teachers use to help students settle. It is a classroom routine, not a health treatment, and this skill does not cite a study for it. Let any student stop or breathe normally if the count feels uncomfortable.
   - **Chunking:** "I can't revise everything — but I can revise ONE topic for 25 minutes right now."
   - **Reframing:** "Exams show me what I know — they don't define who I am."
   - **Connection:** "I'm going to talk to someone about how I feel — not to fix it, but to not feel alone."
@@ -218,7 +218,7 @@ Before introducing the tools to students, the teacher models their own emotional
 
 - **English:** When studying characters under pressure (Macbeth before the murder, Romeo after the banishment), place the character on the Mood Meter. "Where is Macbeth right now? What's causing it? What would the Meta-Moment look like for him?" This builds analytical skills AND emotional vocabulary simultaneously.
 
-- **Science:** Before a practical assessment: "Let's check in with the Mood Meter. Where are you? If you're in the Red zone, try one round of 4-7-8 breathing before you start. Research shows that anxiety narrows attention — which means you'll miss things in the experiment. Calming your breathing literally helps you observe better."
+- **Science:** Before a practical assessment: "Let's check in with the Mood Meter. Where are you? If you're in the Red zone, try one round of 4-7-8 breathing before you start. Feeling anxious can make it harder to focus, which means you might miss things in the experiment. Slowing your breathing can help you settle and focus."
 
 - **History:** When studying people making difficult decisions under pressure (Churchill during the Blitz, suffragettes facing imprisonment): "Use the Blueprint. What were they feeling? What caused those feelings? How did their emotions influence their decisions?"
 

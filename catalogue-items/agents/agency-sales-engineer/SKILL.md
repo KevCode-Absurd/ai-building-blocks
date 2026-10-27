@@ -13,9 +13,9 @@ Read [the original role profile](references/source-agent.md) before you start. I
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Sales discovery question writer](https://useaiblocks.com/prompts/problem-cost-question-writer). It takes the brief.
-- The [Stalled deal indecision checker](https://useaiblocks.com/skills/stalled-deal-indecision-checker). It takes the audit report.
-- The [Audit sales presentation planner](https://useaiblocks.com/skills/audit-to-sales-presentation-planner). It takes the audit report.
+- The [Sales agreement question planner](https://useaiblocks.com/skills/yes-ladder-question-writer). It takes the plan.
+- The [Deal payment checker](https://useaiblocks.com/skills/can-they-pay-deal-checker). It takes the plan.
+- The [Disagreement response writer](https://useaiblocks.com/skills/disagreement-calming-line-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

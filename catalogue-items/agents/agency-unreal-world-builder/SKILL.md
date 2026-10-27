@@ -11,9 +11,9 @@ Plans the world setup of one Unreal Engine 5 open-world project: streaming grid,
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Unreal technical artist](https://useaiblocks.com/skills/agency-unreal-technical-artist).
-- The [Visual system rules writer](https://useaiblocks.com/skills/visual-system-rules-writer). It takes the brief.
-- The [Real-world texture style guide writer](https://useaiblocks.com/skills/texture-style-guide). It takes the brief.
+- The [Small usability test planner](https://useaiblocks.com/skills/small-usability-test-planner). It takes the audit report and plan.
+- The [Design feedback reviewer](https://useaiblocks.com/skills/design-feedback-giver). It takes the audit report.
+- The [Forms and instructions rewriter](https://useaiblocks.com/skills/plain-words-interface-rewriter). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

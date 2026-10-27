@@ -58,11 +58,11 @@ This measures whether content contains clear, quotable answer passages that AI s
 ```
 Content delivery networks (CDNs) are distributed server systems that cache and serve
 web content from locations geographically close to end users. A CDN reduces latency
-by 50-70% on average by serving assets from edge servers rather than a single origin
-server. The three largest CDN providers as of 2025 are Cloudflare (serving approximately
-20% of all websites), Amazon CloudFront, and Akamai Technologies.
+by [PERCENTAGE, WITH A NAMED SOURCE] by serving assets from edge servers rather than a single origin
+server. The three largest CDN providers as of [YEAR] are [PROVIDER 1] (serving approximately
+[SHARE OF WEBSITES, WITH SOURCE]), [PROVIDER 2], and [PROVIDER 3].
 ```
-Word count: 58. Self-contained: Yes. Facts: 3 specific data points. Definition pattern: Yes.
+The brackets stand for facts you must fill from a real source. Self-contained: Yes. Facts: 3 specific data points. Definition pattern: Yes.
 
 **Low-citability example:**
 ```
@@ -94,7 +94,7 @@ This measures whether individual passages can be extracted and understood withou
 1. Does the passage explicitly name the subject (not "it," "this," "they")?
 2. Can someone understand the main point reading ONLY this passage?
 3. Does the passage contain at least one specific fact, statistic, or named entity?
-4. Is the passage between 50-200 words (the optimal extraction length)?
+4. Is the passage close to 134-167 words (the target length; 50-200 words is acceptable)?
 5. Does the passage avoid starting with conjunctions ("But," "However," "And") that imply prior context?
 
 ---
@@ -224,14 +224,14 @@ For each content block, calculate:
 For each block scoring below 60, generate a specific rewrite suggestion:
 1. Identify the primary weakness (buried answer, lack of facts, poor structure, etc.).
 2. Propose a rewritten opening sentence using a definition or answer-first pattern.
-3. Suggest specific statistics or facts that could be added.
+3. Say what kind of fact would help (a count, a date, a named study). Never write a statistic, quote or source into a rewrite unless the user gave it to you. Use a placeholder such as [YOUR VERIFIED FIGURE, WITH SOURCE] instead.
 4. Recommend structural improvements (add list, add table, split paragraph).
 
 ---
 
 ## Output Format
 
-Generate a file called `GEO-CITABILITY-SCORE.md`:
+Write the report as text in the chat. If your AI can save files, also save it as `GEO-CITABILITY-SCORE.md`:
 
 ```markdown
 # AI Citability Analysis: [Page Title]
@@ -323,12 +323,14 @@ These figures are the cited studies' own claims. We have not checked them and th
 
 ### AI System Citation Preferences
 
+These are the original author's claims. They have no sources here. Do not state them as fact. Call them "reported by the author", or leave them out.
+
 | AI System | Citation Preference |
 |---|---|
 | **ChatGPT (Search)** | Prefers passages with explicit definitions, named sources, and recent dates. Tends to cite 2-4 sources per response. |
 | **Perplexity** | Heavily favors fact-dense passages with statistics. Cites 4-8 sources per response. Values recency highly. |
 | **Claude** | Prefers well-structured, comprehensive passages. Values nuance and accuracy over brevity. |
-| **Gemini (AI Overviews)** | Prefers concise answer blocks (40-60 words). Values content already ranking in top 10 organic results. |
+| **Gemini (AI Overviews)** | Prefers concise opening answers (40-60 words) at the start of a passage. Values content already ranking in top 10 organic results. |
 | **Copilot (Bing)** | Similar to Gemini. Prefers passages from high-authority domains with clear factual claims. |
 
 ## When to Use

@@ -9,7 +9,7 @@ level: intermediate
 inputs:
   - {type: question, required: true}
 outputs:
-  - {type: plan}
+  - {type: story_outline}
   - {type: audit_report}
 origin: rebuilt
 version: 1.0.0

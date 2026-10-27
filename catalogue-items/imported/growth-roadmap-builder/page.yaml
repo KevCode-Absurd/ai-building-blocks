@@ -7,6 +7,8 @@ job: run-your-store
 headline: Growth roadmap builder
 subhead: "Tell it your platforms, monthly revenue, margin, and what you know about customer cost and order size. It checks the health of those numbers, then scores five growth levers: traffic, conversion, bigger orders, repeat buyers and expansion. You get the lever that pays most right now, a verdict on new channels or products, and a 90 day roadmap."
 explain: |
+  In plain words: cost to win a customer (CAC) is what you spend to get one new buyer. Lifetime value (LTV) is what one buyer spends with you over time. Average order size (AOV) is what a buyer spends per order. Margin is what is left of each sale after the cost of the goods.
+
   If your online shop has stalled, you probably do not need more of everything. You need the one fix that pays most right now. This skill checks your numbers first: cost to win a customer, lifetime value, average order size and margin per sale. Then it scores five growth levers: more traffic, better conversion, bigger orders, more repeat buyers, and expansion.
 
   It also uses the Ansoff Matrix, adjusted for shops, to compare selling more on your current channel, adding channels like Amazon or TikTok Shop, adding products, or entering new markets. The result is a ranked list of moves and a 90 day roadmap with steps in order. No code or API key is needed.
@@ -36,6 +38,7 @@ how_to_use:
   - Add your cost to win a customer, average order size, email list and social following if you know them. Skip what you don't know.
   - Read the health check first. Check that the numbers match your own records, and fix any that are wrong.
   - Ask your AI to redo the plan if you change a number. Your own numbers matter more than any benchmark in the result.
+  - The benchmark figures in the skill come from public sources dated 2025 to 2026. Treat them as examples and check them against your own records before you rely on them.
   - Start with Priority 1 and work through the 90 day roadmap in order.
 output_sample:
   input:

@@ -35,7 +35,7 @@ how_to_use:
   - "Paste this skill into your AI. Give it the folder path and say how to sort: by type, by date or by your rules."
   - Add a naming style or a rules file if you have one.
   - Read the move plan and the duplicate list. Reply yes, no, or ask for changes. Nothing moves until you say yes.
-  - After it runs, open _organization-log.json and check you can undo the moves. Then run the archive step if you want old files set aside.
+  - After it runs, open _organization-log.json and check you can undo the moves. Look through the _duplicates folder and delete from it only when you are sure. Then run the archive step if you want old files set aside. Keep a backup of any folder that matters.
 output_sample:
   input:
     - The path to your folder

@@ -10,10 +10,10 @@ level: intermediate
 inputs:
   - type: document
     required: true
-  - type: brief
-    required: false
   - type: question
     required: false
+  - type: brief
+    required: true
 outputs:
   - type: audit_report
   - type: plan

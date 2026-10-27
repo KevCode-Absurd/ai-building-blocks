@@ -33,7 +33,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
-3. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and your offer and buying reasons.
+3. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and offer and buying reasons.
 4. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `market.md`, `business.md`, `customers.md`. Take the options buyers weigh, the competitor table and the open ground. Source notes and rejected ideas never go into the result.
@@ -45,7 +45,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-- **Competitor ads you saved by hand from the public Meta Ad Library** (required). For each ad: the library ID, the brand, the start date, whether it is still live, its text and a screenshot. Ads without a screenshot are listed as not looked at. These ads block the run if they are missing.
+- **Competitor ads you saved by hand from the public Meta Ad Library** (required). For each ad: the library ID, the brand, the start date, whether it is still live, its text and a screenshot (a PNG or JPG file, or a pasted image). A short list in a note or spreadsheet is fine for the text details. Save them by hand: this workflow does not need a scraping tool or a paid ad-spy service, and it does not read the Ad Library for you. Ads without a screenshot are listed as not looked at. These ads block the run if they are missing.
 - **Who the ads are for and where** (asked for in step 2): how much the buyer already knows you (new, warm or ready to buy), and the country. If you leave these out, the gap step asks once, then carries on and marks the gap.
 - **Your brand file** (optional, but the copy is only as good as the proof in it): your facts, claims you may make with their proof, offers with dates, and your voice. Without it, step 2 marks each gap as a candidate and says what proof it needs, and step 3 writes only claims you give it and marks the rest `MISSING:`.
 - **The competitors that matter to you** (optional). If you give none, step 2 picks three to six and marks the list as inferred.
@@ -64,7 +64,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 1. **Build the swipe file.** Use the skill `competitor-ad-swipe-file-builder`. It reads the saved competitor ads. It files each ad under one of nine ad types, keeps up to three per type from at least two brands, adds a note on what to study in each and lists the gaps still to fill. It returns a board of ads with their library IDs. Save it as `outputs/step-01-competitor-ad-swipe-file-builder.md`.
 2. **Find the gaps.** Use the skill `competitor-ad-gap-finder`. It reads the board from `outputs/step-01-competitor-ad-swipe-file-builder.md`, plus your brand file and reviews if you have them. It counts brands per type, marks each type crowded, thin or open, lists claims two or more brands repeat, and finds buyer wants and doubts no ad speaks to. It returns three to five ranked gaps, each with a brief for your version: the ad type, what the picture shows, a short headline, the proof and what to avoid. Save it as `outputs/step-02-competitor-ad-gap-finder.md`.
 3. **Write the image ad copy.** Use the skill `image-ad-copy-writer`. It reads each gap brief from `outputs/step-02-competitor-ad-gap-finder.md`, with your proof, offer terms and voice. For each gap it returns versions with a headline on the image, a support line, main text, a headline under the image, a description and a button, each within its limit. Each version tests one appeal. It uses only claims you hold proof for. Save it as `outputs/step-03-image-ad-copy-writer.md`.
-4. **Check it against Meta rules.** Use the skill `meta-ads-compliance-checker`. It reads the copy from `outputs/step-03-image-ad-copy-writer.md`, and your landing page text if you have it. It checks the copy against the Meta rule groups that apply, rates each finding would reject, needs a restriction or warning, and scores the copy out of 100. It rewrites each line that fails with your own claims only, and marks anything only you can decide as `MISSING:`. Save it as `outputs/step-04-meta-ads-compliance-checker.md`.
+4. **Check it against Meta rules.** Use the skill `meta-ads-compliance-checker`. It reads the copy from `outputs/step-03-image-ad-copy-writer.md`, and your landing page text if you have it. It checks the copy against the Meta rule groups that apply, rates each finding would reject, needs a restriction or warning, and scores the copy out of 100. The score and the verdict are an AI estimate, not Meta's approval, and "ready to run" means no rule problem was found in the text. It rewrites each line that fails with your own claims only, and marks anything only you can decide as `MISSING:`. Save it as `outputs/step-04-meta-ads-compliance-checker.md`.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back
@@ -72,15 +72,22 @@ Four step files and the summary. The last step file holds the Meta rules report.
 - **Step 1, swipe file:** ads sorted by type, with library ID, brand and start date.
 - **Step 2, gaps:** crowded and open types, repeated claims, and a brief for each ranked gap.
 - **Step 3, image ad copy:** versions for each gap, with the one appeal each tests.
-- **Step 4, Meta check:** a verdict (ready to run, fix first or likely rejected), a score out of 100, each finding with its rule, where it appears and the fix, and the rewritten lines.
+- **Step 4, Meta check:** a verdict (ready to run, fix first or likely rejected; an AI estimate, so preview the ad in Meta before you run it), a score out of 100, each finding with its rule, where it appears and the fix, and the rewritten lines.
 - **Hand-back summary:** each step's file, and every `MISSING:` line in one list.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Competitor ad theme and gap mapper](https://useaiblocks.com/skills/competitor-ad-theme-and-gap-mapper).
+- The [Market opportunity finder](https://useaiblocks.com/skills/competitor-white-space-mapper). It takes the audit report.
+- The [Competitive disruption risk reviewer](https://useaiblocks.com/skills/disruption-risk-checker). It takes the audit report.
+- The [Rival weakness message finder](https://useaiblocks.com/skills/rival-weakness-message-finder). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
+
+## After this (for this job)
+Use these first. Suggest one next step as a short question:
+- Turn the best gap into a video script with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring the gap brief from step 2.
+- Check the page those ads send people to. Bring the landing page link and the final copy from step 3.
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.

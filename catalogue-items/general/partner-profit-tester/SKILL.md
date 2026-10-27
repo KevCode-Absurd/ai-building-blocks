@@ -59,7 +59,7 @@ The partner's year at your forecast. The weaker-sales case. Pay per hour against
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Franchise and reseller terms writer](https://useaiblocks.com/skills/partner-deal-terms-writer). It takes the audit report.
-- The [Supplier partner terms planner](https://useaiblocks.com/skills/supplier-partner-terms-planner).
+- The [Mutual action plan builder](https://useaiblocks.com/skills/mutual-action-plan-builder). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

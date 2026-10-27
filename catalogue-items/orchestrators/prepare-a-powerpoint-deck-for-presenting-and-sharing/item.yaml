@@ -9,6 +9,8 @@ level: intermediate
 inputs:
   - type: slide_deck
     required: true
+  - type: question
+    required: true
 outputs:
   - type: slide_deck
     required: true

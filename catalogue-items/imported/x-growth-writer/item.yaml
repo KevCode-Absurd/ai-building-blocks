@@ -8,10 +8,14 @@ role: make
 job: ops
 level: beginner
 inputs:
-  - type: brief
+  - type: question
     required: true
+  - type: source_text
+    required: false
 outputs:
   - type: copy_draft
+  - type: audit_report
+  - type: plan
 uses: []
 origin: imported
 source:

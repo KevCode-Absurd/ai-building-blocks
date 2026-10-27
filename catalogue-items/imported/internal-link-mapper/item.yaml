@@ -9,10 +9,12 @@ job: ops
 level: intermediate
 inputs:
   - type: web_page
-    required: true
-  - type: plan
     required: false
   - type: brief
+    required: false
+  - type: plan
+    required: false
+  - type: question
     required: false
 outputs:
   - type: plan

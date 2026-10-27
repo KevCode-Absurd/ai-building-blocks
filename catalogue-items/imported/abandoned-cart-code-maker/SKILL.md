@@ -6,6 +6,7 @@ toolkit: shopify-admin, shopify-admin-execution
 api_version: "2025-01"
 graphql_operations:
   - abandonedCheckouts:query
+  - priceRuleCreate:mutation
   - discountCodeBulkCreate:mutation
   - tagsAdd:mutation
 status: stable
@@ -17,7 +18,7 @@ Identifies customers who started checkout but did not complete their purchase, g
 
 ## Prerequisites
 - Authenticated Shopify CLI session: `shopify auth login --store <domain>`
-- Use one `api_version` for all three operations: the one in the header above (2025-01). The query comment below says 2025-04. If your store rejects 2025-01 on the query, use 2025-04 for all of them.
+- Use one `api_version` for all four operations: the one in the header above (2025-01). If your store rejects it, use 2025-04 for all of them. Do not mix versions. The GraphQL blocks below are written from the Shopify docs and have not been run against your store, so check field names against the docs for your version.
 - API scopes: `read_checkouts`, `write_price_rules`, `write_discount_codes`, `write_customers`
 
 ## Parameters
@@ -35,7 +36,7 @@ Identifies customers who started checkout but did not complete their purchase, g
 
 ## Safety
 
-> ⚠️ Steps 2 and 3 execute mutations (discount code creation, customer tagging). Discount codes created via `discountCodeBulkCreate` cannot be bulk-deleted via the Admin API — they must be removed individually or via the price rule. Run with `dry_run: true` to verify eligible customer count before committing.
+> ⚠️ Steps 1b, 2 and 3 execute live changes (a price rule, discount codes, customer tags). To undo a run, delete the price rule it made in Shopify Admin under Discounts. That removes its codes. The tags stay on the customers until you remove them. Run with `dry_run: true` to verify eligible customer count before committing.
 
 ## Workflow Steps
 
@@ -43,14 +44,14 @@ Identifies customers who started checkout but did not complete their purchase, g
    **Inputs:** `first: 250`, `query: "created_at:>='<NOW - days_back days>'"`, pagination cursor
    **Expected output:** List of checkout objects with `customer.id`, `email`, `totalPrice`, `createdAt`, `lineItems`; paginate until `hasNextPage: false`
 
-1a. **FILTER (no API call):** Drop checkouts with no email, and any checkout whose total is below `min_cart_value`. The rest are the eligible customers. In `dry_run`, stop after this step and report the count.
+1a. **FILTER (no API call):** Drop checkouts with no email, and any checkout whose total is below `min_cart_value`. The rest are the eligible customers. If one email has more than one eligible checkout, keep only the most recent, so each shopper gets exactly one code. In `dry_run`, stop after this step and report the count.
 
 1b. **OPERATION:** `priceRuleCreate` — mutation (live; needs `write_price_rules`)
-   **Inputs:** One price rule for the whole run: percentage value `discount_pct`, 30-day expiry, one use per code. Keep the returned price rule `id`; step 2 needs it as `priceRuleId`.
+   **Inputs:** One price rule for the whole run: percentage value `discount_pct`, 30-day expiry, once per customer. Do not set a rule-wide usage limit, because it would cap all codes together. Keep the returned price rule `id`; step 2 needs it as `priceRuleId`.
    **Expected output:** The new price rule `id`; collect `userErrors`. If it fails, stop. Do not run step 2.
 
 2. **OPERATION:** `discountCodeBulkCreate` — mutation
-   **Inputs:** The `priceRuleId` from step 1b. For each eligible customer email: a unique code `{code_prefix}-{UUID[:8].toUpperCase()}`, percentage discount `discount_pct`, usage limit 1, expiry 30 days
+   **Inputs:** The `priceRuleId` from step 1b. For each eligible customer email: a unique code `{code_prefix}-{UUID[:8].toUpperCase()}`. The discount and expiry come from the price rule
    **Expected output:** Confirmation of code creation with `code` and `priceRule.id`; collect `userErrors`
 
 3. **OPERATION:** `tagsAdd` — mutation
@@ -60,7 +61,7 @@ Identifies customers who started checkout but did not complete their purchase, g
 ## GraphQL Operations
 
 ```graphql
-# abandonedCheckouts:query — validated against api_version 2025-04
+# abandonedCheckouts:query — use the api_version from the header
 query AbandonedCheckouts($first: Int!, $after: String, $query: String) {
   abandonedCheckouts(first: $first, after: $after, query: $query) {
     edges {
@@ -101,7 +102,25 @@ query AbandonedCheckouts($first: Int!, $after: String, $query: String) {
 ```
 
 ```graphql
-# discountCodeBulkCreate:mutation — validated against api_version 2025-01
+# priceRuleCreate:mutation — use the api_version from the header
+# Variables: title, target LINE_ITEM, allocationMethod ACROSS, itemEntitlements { targetAllLineItems: true },
+# customerSelection { forAllCustomers: true }, oncePerCustomer true,
+# value { percentageValue: -<discount_pct> }, validityPeriod { start: <now>, end: <now + 30 days> }
+mutation PriceRuleCreate($priceRule: PriceRuleInput!) {
+  priceRuleCreate(priceRule: $priceRule) {
+    priceRule {
+      id
+    }
+    priceRuleUserErrors {
+      field
+      message
+    }
+  }
+}
+```
+
+```graphql
+# discountCodeBulkCreate:mutation — use the api_version from the header
 mutation DiscountCodeBulkCreate($priceRuleId: ID!, $codes: [DiscountCodeInput!]!) {
   discountCodeBulkCreate(priceRuleId: $priceRuleId, codes: $codes) {
     bulkCreations {
@@ -117,7 +136,7 @@ mutation DiscountCodeBulkCreate($priceRuleId: ID!, $codes: [DiscountCodeInput!]!
 ```
 
 ```graphql
-# tagsAdd:mutation — validated against api_version 2025-01
+# tagsAdd:mutation — use the api_version from the header
 mutation TagsAdd($id: ID!, $tags: [String!]!) {
   tagsAdd(id: $id, tags: $tags) {
     node {
@@ -205,7 +224,7 @@ CSV file `recovery_list_<YYYY-MM-DD>.csv` with columns:
 | No email on checkout | Guest checkout without email | Skip checkout, do not count as eligible |
 
 ## Best Practices
-- Run with `dry_run: true` first and confirm eligible customer count — discount codes cannot be bulk-deleted via API and will persist in your price rules until manually removed.
+- Run with `dry_run: true` first and confirm eligible customer count. To undo a run, delete its price rule in Shopify Admin (Discounts).
 - Set `min_cart_value` to focus recovery effort on higher-value carts (e.g., 50 for $50+). Small carts often have lower recovery intent and may not justify a discount.
 - Use a unique `tag` per run (e.g., `cart-recovery-2026-04-11`) so you can identify exactly which customers were targeted in each campaign and avoid re-targeting them in subsequent runs.
 - The `code_prefix` should be meaningful to operators reviewing discount codes in Shopify Admin (e.g., `CART10` for a 10% cart recovery discount).

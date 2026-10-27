@@ -315,6 +315,15 @@ mlflow.register_model(model_uri, "my-classifier")
 
 Transition models between stages: **None** → **Staging** → **Production** → **Archived**
 
+AI Blocks note: model stages are deprecated in recent MLflow releases. The stage commands below may warn or fail on a current install. Newer MLflow uses aliases instead (for example an alias named `champion` on the version you trust):
+
+```python
+client.set_registered_model_alias("my-classifier", "champion", 3)
+model = mlflow.pyfunc.load_model("models:/my-classifier@champion")
+```
+
+Ask which MLflow version the user has (`pip show mlflow`). Use aliases on a recent version, and the stage commands only on an older one. Check the MLflow docs for your version before you rely on either.
+
 ```python
 from mlflow.tracking import MlflowClient
 
@@ -499,7 +508,7 @@ training_args = TrainingArguments(
     output_dir="./results",
     num_train_epochs=3,
     per_device_train_batch_size=16,
-    evaluation_strategy="epoch",
+    evaluation_strategy="epoch",  # newer transformers releases call this eval_strategy; use the name your installed version accepts
     save_strategy="epoch",
     load_best_model_at_end=True
 )

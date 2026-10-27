@@ -9,7 +9,11 @@ job: ops
 level: intermediate
 inputs:
   - type: plan
-    required: true
+    required: false
+  - type: document
+    required: false
+  - type: codebase
+    required: false
 outputs:
   - type: document
 uses: []

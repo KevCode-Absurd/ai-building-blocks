@@ -9,6 +9,7 @@ job: copy
 level: beginner
 inputs:
   - {type: question, required: true}
+  - {type: policy, required: true}
 outputs:
   - {type: copy_draft}
 uses: []

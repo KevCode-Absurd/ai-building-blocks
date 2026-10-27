@@ -7,8 +7,10 @@ role: orchestrate
 job: research
 level: intermediate
 inputs:
-  - {type: brief, required: true}
+  - {type: business_plan, required: true}
   - {type: question, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: idea, required: true}
 outputs:
   - {type: plan}
 uses: [business-model-guess-tester, customer-discovery-plan, mvp-experiment-planner]

@@ -10,6 +10,8 @@ explain: |
   A plan for splitting a big job across several AI agents, with clear handoffs, failure handling and a cost cap for each step. Many jobs do not need this. The skill tells you when one good prompt is enough.
 
   It picks the smallest of five patterns that fits. Sequential suits a strict chain. Parallel splits independent parts and merges them. A router sends each request to the right specialist. An orchestrator plans and coordinates. An evaluator pairs a maker with a quality checker in a loop. Every handoff passes only what the next agent needs. Each step has a timeout, a retry rule and a budget, and outputs are checked before they are combined.
+
+  This is an imported MIT skill from alirezarezvani/claude-skills (source link on this page). Its scripts and reference file are in the downloadable folder. The plan does not run the workflow.
 when:
   - One prompt cannot handle the job and you need specialist steps.
   - You want to see the workflow on paper before building it.
@@ -20,10 +22,10 @@ not_for:
   - "You want a finished, running system: hand the plan to a developer or build it in an automation tool."
   - "You need advice on picking an AI tool or model: compare the tools on their own sites first."
 you_give:
-  - "This is an imported MIT skill from alirezarezvani/claude-skills (source link on this page). Its scripts and reference file are in the downloadable folder."
   - The job to be done
   - The steps or specialists you imagine (optional)
-  - Cost and time limits
+  - How many items one run handles
+  - Cost and time limits, such as the most you will pay per run and the longest wait per step
   - Quality or safety checks you need (optional)
 you_get:
   - A chosen workflow pattern with reasons
@@ -37,7 +39,7 @@ how_to_use:
   - Paste the skill text into the chat, then describe the job. In a plain chat the AI writes the plan as text and does not run the scaffolding script. To use the script and the pattern reference file, give an AI that can run code the whole folder instead.
   - Add your quality checks if you have any.
   - Read the plan. Check that the pattern is the smallest one that works. If it says one prompt is enough, stop there.
-  - Hand the plan to a developer, or use it to build the workflow in an automation tool.
+  - Hand the Pattern, Handoffs and Failure rules to a developer, or paste them into an automation tool to build the workflow. The plan does not run anything by itself.
 output_sample:
   input:
     - The job you want done, in plain words

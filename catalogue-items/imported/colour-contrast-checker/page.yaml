@@ -11,7 +11,7 @@ explain: |
 
   A small Node script, shipped as text in the skill's references folder, reads your --color-* CSS variables. It pairs text colours with backgrounds by name, and measures each pair in the light theme and in dark mode. Normal text needs 4.5 to 1. Large text, borders, icons and focus rings need 3 to 1. For a failing pair it keeps the hue and moves the lightness the least it can. It also suggests one value that passes on every background that token sits on.
 
-  It measures tokens, not pixels. Text on photos or gradients, and colours with opacity, need a look on screen. The script prints in Spanish, so the page below shows what the words mean.
+  It measures tokens, not pixels. Text on photos or gradients, and colours with opacity, need a look on screen. The script prints in Spanish, so the page below shows what the words mean. Licence: this copy is from sickn33's collection, whose written content is CC BY 4.0 (see LICENSE-CONTENT). The skill file's own header says MIT, set by the original author Clagoss. Both let you reuse it if you keep the credit.
 when:
   - You are about to approve a new colour palette.
   - Your dark mode text is hard to read.
@@ -20,8 +20,8 @@ when:
 not_for:
   - "Your text sits on photos, gradients or see-through colours: check those by eye on the screen, because this reads tokens only."
   - "You need a full accessibility audit: contrast is only one part of WCAG, so ask an accessibility specialist to sign off before you publish."
-  - "You have one brand colour and no tokens yet: use the Design token builder first, then check the result here."
-  - "You want to check a whole page, not just colours: use the Page design standards checker."
+  - "You have one brand colour and no tokens yet: use design-token-builder first, then check the result here."
+  - "You want to check a whole page, not just colours: use page-design-standards-checker."
 you_give:
   - Your CSS file with colour variables, such as src/styles/tokens.css
   - Your dark mode colours, in the same file (optional)

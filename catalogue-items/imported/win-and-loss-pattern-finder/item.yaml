@@ -12,6 +12,8 @@ inputs:
     required: false
   - type: transcript
     required: false
+  - type: lead_list
+    required: false
 outputs:
   - type: audit_report
 uses: []

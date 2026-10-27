@@ -10,6 +10,8 @@ explain: |
   Your AI app checked for hijacked instructions and given layers of defence. Prompt injection happens when text from a user, web page or document tells the AI to ignore its real rules.
 
   The skill maps where untrusted text enters: chat input, retrieved documents, tool results, shared context and displayed markup. Then it adds layers. System rules rank above user text, and tool output is treated as data only. Untrusted text is kept apart from control instructions. Each tool gets an allow-list for the task. Replies are checked for format, secrets and unsafe actions. High-impact steps need human approval. Starter Python code screens for common attack phrases, and you test it with sample attacks.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (BagelHole) says MIT. Credit goes to BagelHole and sickn33.
 when:
   - Your app reads web pages or documents and you worry about hidden instructions.
   - Someone reported that your bot can be tricked.
@@ -36,7 +38,7 @@ how_to_use:
   - Ask your AI to list the entry points where untrusted text can get in. Check the list against what you know.
   - Ask it to pick the defence layers that fit, then add the screening and output check code.
   - Run the red-team tests on a test copy. The skill gives the test cases as a list with the expected result for each, but no runner. Ask your AI to write a small Python script that sends each test input to your test copy and marks pass or fail against the expected result. Or go through them by hand.
-  - Fix any test that fails and run the tests again before you launch.
+  - Fix any test that fails and run the tests again before you launch. The attack phrases in the starter code are a sample. A new attack can slip past them, so keep the other layers on.
   - Treat any failing test as a hole to close. For a wider review, pair this with the Code security reviewer.
 output_sample:
   input:

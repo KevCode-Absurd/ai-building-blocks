@@ -8,9 +8,9 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: question
-    required: true
   - type: document
+    required: true
+  - type: question
     required: false
 outputs:
   - type: plan

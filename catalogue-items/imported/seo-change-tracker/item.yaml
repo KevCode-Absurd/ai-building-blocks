@@ -10,6 +10,10 @@ level: advanced
 inputs:
   - type: web_page
     required: true
+  - type: tool_connection
+    required: false
+  - type: search_query_report
+    required: false
 outputs:
   - type: audit_report
 uses: []

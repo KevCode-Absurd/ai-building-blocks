@@ -10,6 +10,8 @@ explain: |
   Describe the data you want in plain words and get a working SQL query for your database, with a short note on how it runs. It saves you from remembering each system's quirks.
 
   The skill pulls out the columns, filters, totals, joins, order and limits from your description. If it does not know your database, it asks: Postgres, Snowflake, BigQuery, Redshift, Databricks, MySQL, SQL Server, DuckDB, SQLite or another. If a warehouse is connected, it looks up tables, columns and partitions first. It then writes the query in your dialect and explains the logic and any speed concerns.
+
+  This is Anthropic's write-query skill, renamed. Licence: Apache 2.0 (see the LICENSE file).
 when:
   - You know what data you want but not the SQL to get it.
   - You moved from one database to another and the syntax is different.
@@ -35,7 +37,7 @@ how_to_use:
   - Paste your description of the data you need. Add table and column names if you know them.
   - Read the explanation and performance notes, then copy the query into your database tool.
   - If your AI is connected to your warehouse, ask it to run the query and check the results. Without that link, it cannot run the query for you.
-  - The file mentions a sql-queries skill and a CONNECTORS.md file. Neither is included. Your AI writes the dialect syntax from its own knowledge, so test the query on a small sample first.
+  - If no warehouse is connected, name your own tables and columns, because your AI cannot look them up. It writes the dialect syntax from its own knowledge, so test the query on a small sample or a read-only copy before you run it on live data.
   - For a large table, first run the query on a small date range or add a LIMIT. Check the cost and the result before a full run.
 output_sample:
   input:

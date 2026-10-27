@@ -4,7 +4,7 @@ summary: Share your own ads and real product photos. Get a new set in your brand
 job: make-image-ads
 headline: Own-ad style remix builder
 subhead: Make new ads that still look like your brand.
-explain: Continues a style analysis into concept selection, image production and traceable revisions. Uses only the brand’s own ads as the source of its visual DNA; results are considered separately.
+explain: Turns your own ads into a written guide to your look (called visual DNA here, meaning type, colours, layouts, photo style, copy habits and devices), then makes new ads in that look. Only your own ads feed the guide. Results are judged separately.
 when:
   - You want new ads that look consistent with your own existing work.
   - You have a style analysis and want finished variations with a replay record.
@@ -25,9 +25,9 @@ how_it_works:
   - title: Read your existing ads
     text: Sample owned ads and distinguish visual patterns from actual performance evidence.
   - title: Map style to concepts
-    text: Write down six things about your look. Then choose a simple way to make each ad type, either an AI image or your real photos placed on a template.
+    text: Write down six things about your look. Group your ads by layout type (the archetype map). Then choose a simple way to make each layout, either an AI image or your real photos placed on a template.
   - title: Build and log
-    text: Inspect a pilot, make the set and retain every prompt, anchor and revision in a replay manifest.
+    text: Inspect a pilot, make the set and keep every prompt, real photo used and revision in a replay manifest, a list that lets you change one ad later.
 thinking: high
 thinking_why: It compares supplied evidence and follows a specific method.
 not_for:

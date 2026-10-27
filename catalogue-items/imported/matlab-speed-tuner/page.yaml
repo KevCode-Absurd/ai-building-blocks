@@ -10,6 +10,8 @@ explain: |
   Slow MATLAB code made faster by fixing the real bottleneck, with measured proof and no invented speed claims. You hand over slow code and get the cause, the fix and the numbers.
 
   The skill follows seven steps. It times a baseline, then runs the profiler and reads self-time and call counts per line to find where time goes. It checks whether the target is worth optimising before it touches anything. Common fixes include moving unchanging work out of loops, vectorising, preallocating and using the GPU where it helps. After each change it times the code again and checks that the result is unchanged. Claims of speedup come only from measurements. A short report covers what was tried and what worked.
+
+  This is MathWorks' skill. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE.md file.
 when:
   - A loop takes minutes and you think it should take seconds.
   - You do not know which line of your code is the slow one.
@@ -37,8 +39,9 @@ how_to_use:
   - Paste your slow code and say how to run it with typical data.
   - Run the timing and profiler commands it gives you in MATLAB, then paste the results back. An AI that can run MATLAB does this for you.
   - Check the profiler finding before you accept any change.
-  - Check that the results match and that the speedup is at least 1.2x.
+  - Check that the results match. A speedup of 1.2x or more counts as real. Below 1.2x, measurement noise can hide the truth, so report "no clear gain" and keep the change only if the code is also simpler. Do not call it a win.
   - Rerun the timing on full-size data, then keep the report.
+  - Keep your baseline timing script. Run it again after later edits to catch slowdowns. To make repeatable speed tests, use the MATLAB speed test writer.
 output_sample:
   input:
     - Your slow MATLAB function or script

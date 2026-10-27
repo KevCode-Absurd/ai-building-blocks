@@ -8,10 +8,13 @@ role: source
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: question
     required: true
+  - type: audit_report
+    required: false
 outputs:
-  - type: shortlist
+  - type: keyword_list
+  - type: plan
 uses: []
 origin: imported
 source:

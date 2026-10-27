@@ -10,6 +10,8 @@ explain: |
   Turn sentences or documents into lists of numbers that capture their meaning, so a computer can find text that says similar things even when the words differ. That powers meaning-based search, grouping of similar items and question answering over your own files.
 
   The skill uses the Sentence Transformers library in Python. It picks a pre-trained model that fits your language and size needs, encodes your text in batches, and compares results with cosine similarity. It covers semantic search, clustering and reranking, and shows how to run it locally with no paid API. You need Python, and a graphics card helps for large sets.
+
+  Licence: MIT, as the LICENSE file in this item says. The Sentence Transformers library the code uses has its own licence, Apache 2.0. Credit goes to Orchestra Research.
 when:
   - You want search that finds matches by meaning, not exact words.
   - You have thousands of support tickets and want to group similar ones.
@@ -30,6 +32,7 @@ you_get:
   - Similarity scores between texts
   - A working search or clustering example
 how_to_use:
+  - Before you start, you need Python 3 and the install command pip install sentence-transformers. If you do not code, use an AI that can run Python, or a hosted notebook such as Google Colab.
   - Open Claude, ChatGPT or Gemini and paste in the skill text. The code needs Python, so use an AI that can run it, or run the code yourself on your own computer.
   - Paste your sentences or documents. Say which languages they use.
   - "Say what you want: search, group or compare similar text."

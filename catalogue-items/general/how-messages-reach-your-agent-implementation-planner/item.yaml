@@ -7,9 +7,11 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: source_text
+  - type: question
     required: true
   - type: codebase
+    required: false
+  - type: code_change
     required: false
 outputs:
   - type: plan

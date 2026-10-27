@@ -70,7 +70,7 @@ Pause here: Send the pre-read, hold the meeting and record it.
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Action item tracker](https://useaiblocks.com/skills/executive-action-register). It takes the meeting notes and plan.
 - The [Internal meeting minutes writer](https://useaiblocks.com/skills/copilot-meeting-minutes). It takes the meeting notes.
-- The [Executive meeting brief writer](https://useaiblocks.com/skills/executive-meeting-brief). It takes the meeting notes.
+- The [Meeting and written update planner](https://useaiblocks.com/prompts/meeting-to-written-update-converter). It takes the meeting notes.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

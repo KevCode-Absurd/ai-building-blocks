@@ -1,0 +1,3218 @@
+{
+ "version": "https://jsonfeed.org/version/1.1",
+ "title": "AI Blocks: new and changed skills, workflows and minds",
+ "home_page_url": "https://useaiblocks.com/",
+ "feed_url": "https://useaiblocks.com/feed.json",
+ "description": "The newest free AI skills, workflows, prompts, agents and minds on AI Blocks, and the ones that changed most recently.",
+ "icon": "https://useaiblocks.com/icon-512.png",
+ "favicon": "https://useaiblocks.com/favicon-96.png",
+ "language": "en",
+ "authors": [
+  {
+   "name": "AI Blocks",
+   "url": "https://useaiblocks.com/"
+  }
+ ],
+ "items": [
+  {
+   "id": "https://useaiblocks.com/skills/ai-tool-picker",
+   "url": "https://useaiblocks.com/skills/ai-tool-picker",
+   "title": "AI tool picker",
+   "summary": "Describe the job you want done. Get the kind of AI tool that fits, tools to try first and a backup.",
+   "content_text": "Describe the job you want done. Get the kind of AI tool that fits, tools to try first and a backup.",
+   "date_published": "2026-10-27T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "new",
+    "skill",
+    "Set up AI to work for you"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/ai-tool-picker.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/ai-tool-picker/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/ai-tool-picker.md",
+    "json": "https://useaiblocks.com/skills/ai-tool-picker.json",
+    "skill": "https://useaiblocks.com/skills/ai-tool-picker/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/apology-email-writer",
+   "url": "https://useaiblocks.com/skills/apology-email-writer",
+   "title": "Apology email writer",
+   "summary": "Say what went wrong and what you will do. Get a short apology email that owns the mistake and states the fix.",
+   "content_text": "Say what went wrong and what you will do. Get a short apology email that owns the mistake and states the fix.",
+   "date_published": "2026-10-27T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "new",
+    "skill",
+    "Help your customers"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/apology-email-writer.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/apology-email-writer/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/apology-email-writer.md",
+    "json": "https://useaiblocks.com/skills/apology-email-writer.json",
+    "skill": "https://useaiblocks.com/skills/apology-email-writer/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/prompts/me-md-from-ai-memory",
+   "url": "https://useaiblocks.com/prompts/me-md-from-ai-memory",
+   "title": "Ask your AI what it knows about you",
+   "summary": "Paste one prompt. Your AI asks first, then turns what it remembers about you into a me.md for you to check.",
+   "content_text": "Paste one prompt. Your AI asks first, then turns what it remembers about you into a me.md for you to check.",
+   "date_published": "2026-10-27T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "new",
+    "prompt",
+    "Set up AI to work for you"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/prompts/me-md-from-ai-memory.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/me-md-from-ai-memory/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "prompt",
+    "markdown": "https://useaiblocks.com/prompts/me-md-from-ai-memory.md",
+    "json": "https://useaiblocks.com/prompts/me-md-from-ai-memory.json",
+    "skill": "https://useaiblocks.com/skills/me-md-from-ai-memory/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/beginner-workout-planner",
+   "url": "https://useaiblocks.com/skills/beginner-workout-planner",
+   "title": "Beginner workout planner",
+   "summary": "Share your goal, days and kit. Get a four-week beginner workout plan with warm-ups, rest days and a gentle step up.",
+   "content_text": "Share your goal, days and kit. Get a four-week beginner workout plan with warm-ups, rest days and a gentle step up.",
+   "date_published": "2026-10-27T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "new",
+    "skill",
+    "Look after your health and fitness"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/beginner-workout-planner.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/beginner-workout-planner/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/beginner-workout-planner.md",
+    "json": "https://useaiblocks.com/skills/beginner-workout-planner.json",
+    "skill": "https://useaiblocks.com/skills/beginner-workout-planner/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/business-insurance-needs-checker",
+   "url": "https://useaiblocks.com/skills/business-insurance-needs-checker",
+   "title": "Business insurance needs checker",
+   "summary": "Describe your business. Get its risks, the usual cover for each, what may be required where you are, and broker questions.",
+   "content_text": "Describe your business. Get its risks, the usual cover for each, what may be required where you are, and broker questions.",
+   "date_published": "2026-10-27T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "new",
+    "skill",
+    "Check contracts and rules"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/business-insurance-needs-checker.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/business-insurance-needs-checker/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/business-insurance-needs-checker.md",
+    "json": "https://useaiblocks.com/skills/business-insurance-needs-checker.json",
+    "skill": "https://useaiblocks.com/skills/business-insurance-needs-checker/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/business-structure-chooser",
+   "url": "https://useaiblocks.com/skills/business-structure-chooser",
+   "title": "Business structure chooser",
+   "summary": "Share your country, plans and owners. Get business structures compared on risk, tax and paperwork, plus questions for an accountant.",
+   "content_text": "Share your country, plans and owners. Get business structures compared on risk, tax and paperwork, plus questions for an accountant.",
+   "date_published": "2026-10-27T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "new",
+    "skill",
+    "Plan your strategy"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/business-structure-chooser.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/business-structure-chooser/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/business-structure-chooser.md",
+    "json": "https://useaiblocks.com/skills/business-structure-chooser.json",
+    "skill": "https://useaiblocks.com/skills/business-structure-chooser/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/cold-call-script-writer",
+   "url": "https://useaiblocks.com/skills/cold-call-script-writer",
+   "title": "Cold call script writer",
+   "summary": "Tell it what you sell and who you call. Get a cold call script: opener, questions, replies to brush-offs and a voicemail.",
+   "content_text": "Tell it what you sell and who you call. Get a cold call script: opener, questions, replies to brush-offs and a voicemail.",
+   "date_published": "2026-10-27T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "new",
+    "skill",
+    "Sell and negotiate"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/cold-call-script-writer.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/cold-call-script-writer/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/cold-call-script-writer.md",
+    "json": "https://useaiblocks.com/skills/cold-call-script-writer.json",
+    "skill": "https://useaiblocks.com/skills/cold-call-script-writer/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/elevator-pitch-writer",
+   "url": "https://useaiblocks.com/skills/elevator-pitch-writer",
+   "title": "Elevator pitch writer",
+   "summary": "Say what you do, for whom and the result. Get 10, 30 and 60 second pitches and an opening question.",
+   "content_text": "Say what you do, for whom and the result. Get 10, 30 and 60 second pitches and an opening question.",
+   "date_published": "2026-10-27T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "new",
+    "skill",
+    "Speak and persuade"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/elevator-pitch-writer.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/elevator-pitch-writer/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/elevator-pitch-writer.md",
+    "json": "https://useaiblocks.com/skills/elevator-pitch-writer.json",
+    "skill": "https://useaiblocks.com/skills/elevator-pitch-writer/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/etsy-shop-opening-planner",
+   "url": "https://useaiblocks.com/skills/etsy-shop-opening-planner",
+   "title": "Etsy shop opening planner",
+   "summary": "Say what you make and who buys it. Get a plan for your Etsy shop: listings, photos, price check and launch steps.",
+   "content_text": "Say what you make and who buys it. Get a plan for your Etsy shop: listings, photos, price check and launch steps.",
+   "date_published": "2026-10-27T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "new",
+    "skill",
+    "Set up your online store"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/etsy-shop-opening-planner.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/etsy-shop-opening-planner/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/etsy-shop-opening-planner.md",
+    "json": "https://useaiblocks.com/skills/etsy-shop-opening-planner.json",
+    "skill": "https://useaiblocks.com/skills/etsy-shop-opening-planner/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/expense-report-builder",
+   "url": "https://useaiblocks.com/skills/expense-report-builder",
+   "title": "Expense report builder",
+   "summary": "Paste receipts and notes. Get an expense report with totals by category, a reason for each line and gaps to fix.",
+   "content_text": "Paste receipts and notes. Get an expense report with totals by category, a reason for each line and gaps to fix.",
+   "date_published": "2026-10-27T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "new",
+    "skill",
+    "Track your numbers"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/expense-report-builder.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/expense-report-builder/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/expense-report-builder.md",
+    "json": "https://useaiblocks.com/skills/expense-report-builder.json",
+    "skill": "https://useaiblocks.com/skills/expense-report-builder/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/first-employee-payroll-setup-planner",
+   "url": "https://useaiblocks.com/skills/first-employee-payroll-setup-planner",
+   "title": "First-employee payroll set-up planner",
+   "summary": "Say where you are and when your first hire starts. Get a dated payroll set-up plan and questions for your accountant.",
+   "content_text": "Say where you are and when your first hire starts. Get a dated payroll set-up plan and questions for your accountant.",
+   "date_published": "2026-10-27T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "new",
+    "skill",
+    "Hire and look after your people"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/first-employee-payroll-setup-planner.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/first-employee-payroll-setup-planner/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/first-employee-payroll-setup-planner.md",
+    "json": "https://useaiblocks.com/skills/first-employee-payroll-setup-planner.json",
+    "skill": "https://useaiblocks.com/skills/first-employee-payroll-setup-planner/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/flashcard-maker",
+   "url": "https://useaiblocks.com/skills/flashcard-maker",
+   "title": "Flashcard maker",
+   "summary": "Paste your notes or a chapter. Get flashcards with one question and one short answer each, grouped by topic.",
+   "content_text": "Paste your notes or a chapter. Get flashcards with one question and one short answer each, grouped by topic.",
+   "date_published": "2026-10-27T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "new",
+    "skill",
+    "Study and check your understanding"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/flashcard-maker.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/flashcard-maker/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/flashcard-maker.md",
+    "json": "https://useaiblocks.com/skills/flashcard-maker.json",
+    "skill": "https://useaiblocks.com/skills/flashcard-maker/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/hourly-rate-calculator",
+   "url": "https://useaiblocks.com/skills/hourly-rate-calculator",
+   "title": "Hourly rate calculator",
+   "summary": "Give it your target pay, costs and billable hours. Get an hourly rate, a day rate and a project price.",
+   "content_text": "Give it your target pay, costs and billable hours. Get an hourly rate, a day rate and a project price.",
+   "date_published": "2026-10-27T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "new",
+    "skill",
+    "Set your prices"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/hourly-rate-calculator.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/hourly-rate-calculator/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/hourly-rate-calculator.md",
+    "json": "https://useaiblocks.com/skills/hourly-rate-calculator.json",
+    "skill": "https://useaiblocks.com/skills/hourly-rate-calculator/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/invoice-maker",
+   "url": "https://useaiblocks.com/skills/invoice-maker",
+   "title": "Invoice maker",
+   "summary": "Give it your details, your client and your work. Get an invoice with the totals added up and checked.",
+   "content_text": "Give it your details, your client and your work. Get an invoice with the totals added up and checked.",
+   "date_published": "2026-10-27T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "new",
+    "skill",
+    "Make documents, sheets and slides"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/invoice-maker.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/invoice-maker/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/invoice-maker.md",
+    "json": "https://useaiblocks.com/skills/invoice-maker.json",
+    "skill": "https://useaiblocks.com/skills/invoice-maker/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/workflows/make-your-me-md-and-set-it-up-in-every-ai",
+   "url": "https://useaiblocks.com/workflows/make-your-me-md-and-set-it-up-in-every-ai",
+   "title": "Make your me.md and set it up in every AI you use",
+   "summary": "Answer a few questions or let your AI use what it remembers. Get your me.md and a short version set up in each AI.",
+   "content_text": "Answer a few questions or let your AI use what it remembers. Get your me.md and a short version set up in each AI.",
+   "date_published": "2026-10-27T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "new",
+    "workflow",
+    "Set up AI to work for you"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/workflows/make-your-me-md-and-set-it-up-in-every-ai.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/make-your-me-md-and-set-it-up-in-every-ai/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "workflow",
+    "markdown": "https://useaiblocks.com/workflows/make-your-me-md-and-set-it-up-in-every-ai.md",
+    "json": "https://useaiblocks.com/workflows/make-your-me-md-and-set-it-up-in-every-ai.json",
+    "skill": "https://useaiblocks.com/skills/make-your-me-md-and-set-it-up-in-every-ai/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/me-md-builder",
+   "url": "https://useaiblocks.com/skills/me-md-builder",
+   "title": "me.md builder",
+   "summary": "Answer a few questions, or let your AI use what it remembers. Get one private file that tells any AI who you are.",
+   "content_text": "Answer a few questions, or let your AI use what it remembers. Get one private file that tells any AI who you are.",
+   "date_published": "2026-10-27T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "new",
+    "skill",
+    "Set up AI to work for you"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/me-md-builder.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/me-md-builder/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/me-md-builder.md",
+    "json": "https://useaiblocks.com/skills/me-md-builder.json",
+    "skill": "https://useaiblocks.com/skills/me-md-builder/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/me-md-refresher",
+   "url": "https://useaiblocks.com/skills/me-md-refresher",
+   "title": "me.md refresher",
+   "summary": "Give it your me.md and recent chats or a chat export. Get dated edits to approve and a list of stale sections.",
+   "content_text": "Give it your me.md and recent chats or a chat export. Get dated edits to approve and a list of stale sections.",
+   "date_published": "2026-10-27T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "new",
+    "skill",
+    "Set up AI to work for you"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/me-md-refresher.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/me-md-refresher/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/me-md-refresher.md",
+    "json": "https://useaiblocks.com/skills/me-md-refresher.json",
+    "skill": "https://useaiblocks.com/skills/me-md-refresher/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/me-md-short-core-writer",
+   "url": "https://useaiblocks.com/skills/me-md-short-core-writer",
+   "title": "me.md short-core writer",
+   "summary": "Give it your me.md. Get a short version for your AI's settings box and where to put it in each AI you use.",
+   "content_text": "Give it your me.md. Get a short version for your AI's settings box and where to put it in each AI you use.",
+   "date_published": "2026-10-27T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "new",
+    "skill",
+    "Set up AI to work for you"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/me-md-short-core-writer.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/me-md-short-core-writer/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/me-md-short-core-writer.md",
+    "json": "https://useaiblocks.com/skills/me-md-short-core-writer.json",
+    "skill": "https://useaiblocks.com/skills/me-md-short-core-writer/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/mortgage-affordability-checker",
+   "url": "https://useaiblocks.com/skills/mortgage-affordability-checker",
+   "title": "Mortgage affordability checker",
+   "summary": "Share your pay, costs, deposit and quoted rates. Get monthly payments, a higher-rate stress test and questions for your lender.",
+   "content_text": "Share your pay, costs, deposit and quoted rates. Get monthly payments, a higher-rate stress test and questions for your lender.",
+   "date_published": "2026-10-27T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "new",
+    "skill",
+    "Plan personal spending and savings"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/mortgage-affordability-checker.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/mortgage-affordability-checker/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/mortgage-affordability-checker.md",
+    "json": "https://useaiblocks.com/skills/mortgage-affordability-checker.json",
+    "skill": "https://useaiblocks.com/skills/mortgage-affordability-checker/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/pay-raise-case-builder",
+   "url": "https://useaiblocks.com/skills/pay-raise-case-builder",
+   "title": "Pay raise case builder",
+   "summary": "Share your results and the pay raise you want. Get your case, a script and replies to likely answers.",
+   "content_text": "Share your results and the pay raise you want. Get your case, a script and replies to likely answers.",
+   "date_published": "2026-10-27T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "new",
+    "skill",
+    "Sell and negotiate"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/pay-raise-case-builder.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/pay-raise-case-builder/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/pay-raise-case-builder.md",
+    "json": "https://useaiblocks.com/skills/pay-raise-case-builder.json",
+    "skill": "https://useaiblocks.com/skills/pay-raise-case-builder/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/podcast-show-notes-writer",
+   "url": "https://useaiblocks.com/skills/podcast-show-notes-writer",
+   "title": "Podcast show notes writer",
+   "summary": "Paste your transcript or notes. Get show notes: title, summary, key points, links mentioned and a call to action.",
+   "content_text": "Paste your transcript or notes. Get show notes: title, summary, key points, links mentioned and a call to action.",
+   "date_published": "2026-10-27T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "new",
+    "skill",
+    "Write and tell stories"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/podcast-show-notes-writer.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/podcast-show-notes-writer/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/podcast-show-notes-writer.md",
+    "json": "https://useaiblocks.com/skills/podcast-show-notes-writer.json",
+    "skill": "https://useaiblocks.com/skills/podcast-show-notes-writer/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/remote-work-policy-writer",
+   "url": "https://useaiblocks.com/skills/remote-work-policy-writer",
+   "title": "Remote work policy writer",
+   "summary": "Say how your team works from home. Get a plain remote work policy and a list of choices left to make.",
+   "content_text": "Say how your team works from home. Get a plain remote work policy and a list of choices left to make.",
+   "date_published": "2026-10-27T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "new",
+    "skill",
+    "Hire and look after your people"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/remote-work-policy-writer.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/remote-work-policy-writer/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/remote-work-policy-writer.md",
+    "json": "https://useaiblocks.com/skills/remote-work-policy-writer.json",
+    "skill": "https://useaiblocks.com/skills/remote-work-policy-writer/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/resignation-letter-writer",
+   "url": "https://useaiblocks.com/skills/resignation-letter-writer",
+   "title": "Resignation letter writer",
+   "summary": "Share your role, last day and tone. Get a short resignation letter, what to say first and a handover list.",
+   "content_text": "Share your role, last day and tone. Get a short resignation letter, what to say first and a handover list.",
+   "date_published": "2026-10-27T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "new",
+    "skill",
+    "Write emails that get read"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/resignation-letter-writer.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/resignation-letter-writer/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/resignation-letter-writer.md",
+    "json": "https://useaiblocks.com/skills/resignation-letter-writer.json",
+    "skill": "https://useaiblocks.com/skills/resignation-letter-writer/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/self-assessment-tax-return-checklist",
+   "url": "https://useaiblocks.com/skills/self-assessment-tax-return-checklist",
+   "title": "Self-assessment tax return checklist",
+   "summary": "Say how you earned money. Get records to gather, totals to work out, an order of work and questions for your accountant.",
+   "content_text": "Say how you earned money. Get records to gather, totals to work out, an order of work and questions for your accountant.",
+   "date_published": "2026-10-27T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "new",
+    "skill",
+    "Prepare tax calculations and reviews"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/self-assessment-tax-return-checklist.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/self-assessment-tax-return-checklist/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/self-assessment-tax-return-checklist.md",
+    "json": "https://useaiblocks.com/skills/self-assessment-tax-return-checklist.json",
+    "skill": "https://useaiblocks.com/skills/self-assessment-tax-return-checklist/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/side-hustle-idea-finder",
+   "url": "https://useaiblocks.com/skills/side-hustle-idea-finder",
+   "title": "Side hustle idea finder",
+   "summary": "Share your skills, spare hours and budget. Get three to five side hustle ideas, each with a first customer and a cheap test.",
+   "content_text": "Share your skills, spare hours and budget. Get three to five side hustle ideas, each with a first customer and a cheap test.",
+   "date_published": "2026-10-27T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "new",
+    "skill",
+    "Plan your strategy"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/side-hustle-idea-finder.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/side-hustle-idea-finder/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/side-hustle-idea-finder.md",
+    "json": "https://useaiblocks.com/skills/side-hustle-idea-finder.json",
+    "skill": "https://useaiblocks.com/skills/side-hustle-idea-finder/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/tax-set-aside-planner",
+   "url": "https://useaiblocks.com/skills/tax-set-aside-planner",
+   "title": "Tax set-aside planner",
+   "summary": "Give the tax share your accountant quotes. Get a rule for each payment, a place to keep it and dates to check.",
+   "content_text": "Give the tax share your accountant quotes. Get a rule for each payment, a place to keep it and dates to check.",
+   "date_published": "2026-10-27T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "new",
+    "skill",
+    "Prepare tax calculations and reviews"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/tax-set-aside-planner.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/tax-set-aside-planner/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/tax-set-aside-planner.md",
+    "json": "https://useaiblocks.com/skills/tax-set-aside-planner.json",
+    "skill": "https://useaiblocks.com/skills/tax-set-aside-planner/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/testimonial-request-writer",
+   "url": "https://useaiblocks.com/skills/testimonial-request-writer",
+   "title": "Testimonial request writer",
+   "summary": "Share who you served and what you did. Get a short testimonial request with three easy questions and a follow-up.",
+   "content_text": "Share who you served and what you did. Get a short testimonial request with three easy questions and a follow-up.",
+   "date_published": "2026-10-27T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "new",
+    "skill",
+    "Write emails that get read"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/testimonial-request-writer.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/testimonial-request-writer/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/testimonial-request-writer.md",
+    "json": "https://useaiblocks.com/skills/testimonial-request-writer.json",
+    "skill": "https://useaiblocks.com/skills/testimonial-request-writer/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/workflow-diagram-and-change-planner",
+   "url": "https://useaiblocks.com/skills/workflow-diagram-and-change-planner",
+   "title": "Workflow diagram and change planner",
+   "summary": "Share a workflow or goal. Get it drawn as a diagram, each hand-off checked, and changes with reasons.",
+   "content_text": "Share a workflow or goal. Get it drawn as a diagram, each hand-off checked, and changes with reasons.",
+   "date_published": "2026-10-27T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "new",
+    "skill",
+    "Set up AI to work for you"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/workflow-diagram-and-change-planner.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/workflow-diagram-and-change-planner/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/workflow-diagram-and-change-planner.md",
+    "json": "https://useaiblocks.com/skills/workflow-diagram-and-change-planner.json",
+    "skill": "https://useaiblocks.com/skills/workflow-diagram-and-change-planner/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-gis-3d-scene-developer",
+   "url": "https://useaiblocks.com/agents/agency-gis-3d-scene-developer",
+   "title": "3D map scene developer",
+   "summary": "Plan a 3D web map scene with terrain, buildings or LiDAR, lighting, camera and speed checks for Cesium or ArcGIS. Get a build plan you can follow.",
+   "content_text": "Plan a 3D web map scene with terrain, buildings or LiDAR, lighting, camera and speed checks for Cesium or ArcGIS. Get a build plan you can follow. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Research a topic properly"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-gis-3d-scene-developer.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-gis-3d-scene-developer/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-gis-3d-scene-developer.md",
+    "json": "https://useaiblocks.com/agents/agency-gis-3d-scene-developer.json",
+    "skill": "https://useaiblocks.com/skills/agency-gis-3d-scene-developer/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-testing-accessibility-auditor",
+   "url": "https://useaiblocks.com/agents/agency-testing-accessibility-auditor",
+   "title": "Accessibility auditor",
+   "summary": "Audit a web page or app for accessibility barriers. Get findings tied to WCAG 2.2, a test plan for keyboard and screen readers, and a fix list.",
+   "content_text": "Audit a web page or app for accessibility barriers. Get findings tied to WCAG 2.2, a test plan for keyboard and screen readers, and a fix list. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Test and fix code"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-testing-accessibility-auditor.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-testing-accessibility-auditor/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-testing-accessibility-auditor.md",
+    "json": "https://useaiblocks.com/agents/agency-testing-accessibility-auditor.json",
+    "skill": "https://useaiblocks.com/skills/agency-testing-accessibility-auditor/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-accounts-payable-agent",
+   "url": "https://useaiblocks.com/agents/agency-accounts-payable-agent",
+   "title": "Accounts payable reviewer",
+   "summary": "Paste invoices, approved vendors and your approval rule. Get each invoice checked for duplicates and mismatches, plus a payment proposal to approve.",
+   "content_text": "Paste invoices, approved vendors and your approval rule. Get each invoice checked for duplicates and mismatches, plus a payment proposal to approve. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Reconcile accounts and close the books"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-accounts-payable-agent.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-accounts-payable-agent/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-accounts-payable-agent.md",
+    "json": "https://useaiblocks.com/agents/agency-accounts-payable-agent.json",
+    "skill": "https://useaiblocks.com/skills/agency-accounts-payable-agent/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-paid-media-creative-strategist",
+   "url": "https://useaiblocks.com/agents/agency-paid-media-creative-strategist",
+   "title": "Ad creative strategist agent",
+   "summary": "Get Google search ad headlines, Meta ad text and a test plan from your offer and buyer. Draft ads for Google, Meta and Performance Max to review.",
+   "content_text": "Get Google search ad headlines, Meta ad text and a test plan from your offer and buyer. Draft ads for Google, Meta and Performance Max to review. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Write ad copy"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-paid-media-creative-strategist.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-paid-media-creative-strategist/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-paid-media-creative-strategist.md",
+    "json": "https://useaiblocks.com/agents/agency-paid-media-creative-strategist.json",
+    "skill": "https://useaiblocks.com/skills/agency-paid-media-creative-strategist/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-healthcare-aging-parent-care-companion",
+   "url": "https://useaiblocks.com/agents/agency-healthcare-aging-parent-care-companion",
+   "title": "Aging parent care coordinator",
+   "summary": "Keep an aging parent's medicines, appointments and care team straight. Get a care plan, who to tell about what, and questions for the doctor.",
+   "content_text": "Keep an aging parent's medicines, appointments and care team straight. Get a care plan, who to tell about what, and questions for the doctor. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Run meetings, notes and plans"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-healthcare-aging-parent-care-companion.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-healthcare-aging-parent-care-companion/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-healthcare-aging-parent-care-companion.md",
+    "json": "https://useaiblocks.com/agents/agency-healthcare-aging-parent-care-companion.json",
+    "skill": "https://useaiblocks.com/skills/agency-healthcare-aging-parent-care-companion/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-agentic-identity-trust",
+   "url": "https://useaiblocks.com/agents/agency-agentic-identity-trust",
+   "title": "AI agent identity designer",
+   "summary": "Design how your AI agents prove who they are, what they may do and what they did, with a threat list, permission map and tamper-proof log.",
+   "content_text": "Design how your AI agents prove who they are, what they may do and what they did, with a threat list, permission map and tamper-proof log. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Keep your code secure"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-agentic-identity-trust.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-agentic-identity-trust/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-agentic-identity-trust.md",
+    "json": "https://useaiblocks.com/agents/agency-agentic-identity-trust.json",
+    "skill": "https://useaiblocks.com/skills/agency-agentic-identity-trust/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-agents-orchestrator",
+   "url": "https://useaiblocks.com/agents/agency-agents-orchestrator",
+   "title": "AI agent team planner",
+   "summary": "Plan a software build run by a team of AI agents: the phases, who hands what to whom, pass or fail quality checks and when to stop and ask you.",
+   "content_text": "Plan a software build run by a team of AI agents: the phases, who hands what to whom, pass or fail quality checks and when to stop and ask you. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Set up AI to work for you"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-agents-orchestrator.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-agents-orchestrator/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-agents-orchestrator.md",
+    "json": "https://useaiblocks.com/agents/agency-agents-orchestrator.json",
+    "skill": "https://useaiblocks.com/skills/agency-agents-orchestrator/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-marketing-aeo-foundations",
+   "url": "https://useaiblocks.com/agents/agency-marketing-aeo-foundations",
+   "title": "AI answer visibility architect",
+   "summary": "Check if AI crawlers can find and read your site. Get a scorecard, a robots.txt for AI bots and an llms.txt file. Paste your robots.txt.",
+   "content_text": "Check if AI crawlers can find and read your site. Get a scorecard, a robots.txt for AI bots and an llms.txt file. Paste your robots.txt. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Get found in search and AI answers"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-marketing-aeo-foundations.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-marketing-aeo-foundations/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-marketing-aeo-foundations.md",
+    "json": "https://useaiblocks.com/agents/agency-marketing-aeo-foundations.json",
+    "skill": "https://useaiblocks.com/skills/agency-marketing-aeo-foundations/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-marketing-ai-citation-strategist",
+   "url": "https://useaiblocks.com/agents/agency-marketing-ai-citation-strategist",
+   "title": "AI citation visibility planner",
+   "summary": "Find out if ChatGPT, Claude, Gemini and Perplexity name you or a rival. Get a citation table, lost questions and a ranked fix plan.",
+   "content_text": "Find out if ChatGPT, Claude, Gemini and Perplexity name you or a rival. Get a citation table, lost questions and a ranked fix plan. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Get found in search and AI answers"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-marketing-ai-citation-strategist.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-marketing-ai-citation-strategist/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-marketing-ai-citation-strategist.md",
+    "json": "https://useaiblocks.com/agents/agency-marketing-ai-citation-strategist.json",
+    "skill": "https://useaiblocks.com/skills/agency-marketing-ai-citation-strategist/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-engineering-ai-data-remediation-engineer",
+   "url": "https://useaiblocks.com/agents/agency-engineering-ai-data-remediation-engineer",
+   "title": "AI data repair engineer",
+   "summary": "Fix messy data with a few tested rules, not row-by-row. You get fix formulas, a change log and a review list of risky rows.",
+   "content_text": "Fix messy data with a few tested rules, not row-by-row. You get fix formulas, a change log and a review list of risky rows. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Analyse data and explain the results"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-engineering-ai-data-remediation-engineer.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-engineering-ai-data-remediation-engineer/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-engineering-ai-data-remediation-engineer.md",
+    "json": "https://useaiblocks.com/agents/agency-engineering-ai-data-remediation-engineer.json",
+    "skill": "https://useaiblocks.com/skills/agency-engineering-ai-data-remediation-engineer/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-engineering-ai-engineer",
+   "url": "https://useaiblocks.com/agents/agency-engineering-ai-engineer",
+   "title": "AI feature planner",
+   "summary": "Get a plan to add an AI feature to your product, from data check to launch, with bias tests, monitoring and a retraining trigger.",
+   "content_text": "Get a plan to add an AI feature to your product, from data check to launch, with bias tests, monitoring and a retraining trigger. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Build and ship software"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-engineering-ai-engineer.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-engineering-ai-engineer/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-engineering-ai-engineer.md",
+    "json": "https://useaiblocks.com/agents/agency-engineering-ai-engineer.json",
+    "skill": "https://useaiblocks.com/skills/agency-engineering-ai-engineer/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-engineering-autonomous-optimization-architect",
+   "url": "https://useaiblocks.com/agents/agency-engineering-autonomous-optimization-architect",
+   "title": "AI model routing planner",
+   "summary": "Plan which AI model handles each task in your app, with a spend cap, a backup model and a safe trial before any switch. Bring your setup.",
+   "content_text": "Plan which AI model handles each task in your app, with a spend cap, a backup model and a safe trial before any switch. Bring your setup. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Set up AI to work for you"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-engineering-autonomous-optimization-architect.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-engineering-autonomous-optimization-architect/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-engineering-autonomous-optimization-architect.md",
+    "json": "https://useaiblocks.com/agents/agency-engineering-autonomous-optimization-architect.json",
+    "skill": "https://useaiblocks.com/skills/agency-engineering-autonomous-optimization-architect/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-marketing-agentic-search-optimizer",
+   "url": "https://useaiblocks.com/agents/agency-marketing-agentic-search-optimizer",
+   "title": "AI search visibility reviewer",
+   "summary": "Check if an AI browsing agent can book, buy or sign up on your site. Get a task scorecard, the steps where it gets stuck and fixes.",
+   "content_text": "Check if an AI browsing agent can book, buy or sign up on your site. Get a task scorecard, the steps where it gets stuck and fixes. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Get found in search and AI answers"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-marketing-agentic-search-optimizer.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-marketing-agentic-search-optimizer/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-marketing-agentic-search-optimizer.md",
+    "json": "https://useaiblocks.com/agents/agency-marketing-agentic-search-optimizer.json",
+    "skill": "https://useaiblocks.com/skills/agency-marketing-agentic-search-optimizer/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-security-ai-generated-code-auditor",
+   "url": "https://useaiblocks.com/agents/agency-security-ai-generated-code-auditor",
+   "title": "AI-written code security reviewer",
+   "summary": "Paste AI-written app code. Get a ranked list of leaked keys, open database rules and prompt injection holes, each with the fix and a rescan list.",
+   "content_text": "Paste AI-written app code. Get a ranked list of leaked keys, open database rules and prompt injection holes, each with the fix and a rescan list. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Keep your code secure"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-security-ai-generated-code-auditor.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-security-ai-generated-code-auditor/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-security-ai-generated-code-auditor.md",
+    "json": "https://useaiblocks.com/agents/agency-security-ai-generated-code-auditor.json",
+    "skill": "https://useaiblocks.com/skills/agency-security-ai-generated-code-auditor/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-support-analytics-reporter",
+   "url": "https://useaiblocks.com/agents/agency-support-analytics-reporter",
+   "title": "Analytics report writer",
+   "summary": "Turn your sales, ad or customer export into a plain analytics report with trends, customer groups, ad returns and what to do next.",
+   "content_text": "Turn your sales, ad or customer export into a plain analytics report with trends, customer groups, ad returns and what to do next. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Analyse data and explain the results"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-support-analytics-reporter.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-support-analytics-reporter/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-support-analytics-reporter.md",
+    "json": "https://useaiblocks.com/agents/agency-support-analytics-reporter.json",
+    "skill": "https://useaiblocks.com/skills/agency-support-analytics-reporter/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-academic-anthropologist",
+   "url": "https://useaiblocks.com/agents/agency-academic-anthropologist",
+   "title": "Anthropologist",
+   "summary": "Design a believable culture for your story or game, or check one for clichés. Get kinship, rituals, beliefs and tensions that fit together.",
+   "content_text": "Design a believable culture for your story or game, or check one for clichés. Get kinship, rituals, beliefs and tensions that fit together. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Research a topic properly"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-academic-anthropologist.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-academic-anthropologist/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-academic-anthropologist.md",
+    "json": "https://useaiblocks.com/agents/agency-academic-anthropologist.json",
+    "skill": "https://useaiblocks.com/skills/agency-academic-anthropologist/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-engineering-api-platform-engineer",
+   "url": "https://useaiblocks.com/agents/agency-engineering-api-platform-engineer",
+   "title": "API platform engineer agent",
+   "summary": "Get a plan for a public or partner API with contract rules, a breaking-change list, a versioning policy, rate limits and an SDK plan.",
+   "content_text": "Get a plan for a public or partner API with contract rules, a breaking-change list, a versioning policy, rate limits and an SDK plan. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Build and ship software"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-engineering-api-platform-engineer.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-engineering-api-platform-engineer/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-engineering-api-platform-engineer.md",
+    "json": "https://useaiblocks.com/agents/agency-engineering-api-platform-engineer.json",
+    "skill": "https://useaiblocks.com/skills/agency-engineering-api-platform-engineer/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-testing-api-tester",
+   "url": "https://useaiblocks.com/agents/agency-testing-api-tester",
+   "title": "API test planner",
+   "summary": "Turn your API spec into a test plan with edge cases, auth checks and failure cases, plus starter test code to run on a test server.",
+   "content_text": "Turn your API spec into a test plan with edge cases, auth checks and failure cases, plus starter test code to run on a test server. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Test and fix code"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-testing-api-tester.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-testing-api-tester/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-testing-api-tester.md",
+    "json": "https://useaiblocks.com/agents/agency-testing-api-tester.json",
+    "skill": "https://useaiblocks.com/skills/agency-testing-api-tester/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-marketing-app-store-optimizer",
+   "url": "https://useaiblocks.com/agents/agency-marketing-app-store-optimizer",
+   "title": "App store optimizer agent",
+   "summary": "Plan your app store listing for more installs. Get keywords, new title and description, a screenshot plan and a test order. Share your listing.",
+   "content_text": "Plan your app store listing for more installs. Get keywords, new title and description, a screenshot plan and a test order. Share your listing. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Get found in search and AI answers"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-marketing-app-store-optimizer.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-marketing-app-store-optimizer/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-marketing-app-store-optimizer.md",
+    "json": "https://useaiblocks.com/agents/agency-marketing-app-store-optimizer.json",
+    "skill": "https://useaiblocks.com/skills/agency-marketing-app-store-optimizer/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-engineering-i18n-engineer",
+   "url": "https://useaiblocks.com/agents/agency-engineering-i18n-engineer",
+   "title": "App translation readiness reviewer",
+   "summary": "Find what stops your app working in other languages: hardcoded text, plurals, dates and right-to-left layout. Get ranked fixes.",
+   "content_text": "Find what stops your app working in other languages: hardcoded text, plurals, dates and right-to-left layout. Get ranked fixes. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Build and ship software"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-engineering-i18n-engineer.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-engineering-i18n-engineer/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-engineering-i18n-engineer.md",
+    "json": "https://useaiblocks.com/agents/agency-engineering-i18n-engineer.json",
+    "skill": "https://useaiblocks.com/skills/agency-engineering-i18n-engineer/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-security-appsec-engineer",
+   "url": "https://useaiblocks.com/agents/agency-security-appsec-engineer",
+   "title": "Application security reviewer",
+   "summary": "Get a threat model and secure code review for your feature, with bugs to fix before merge, hardening tips and security requirements you can test.",
+   "content_text": "Get a threat model and secure code review for your feature, with bugs to fix before merge, hardening tips and security requirements you can test. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Keep your code secure"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-security-appsec-engineer.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-security-appsec-engineer/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-security-appsec-engineer.md",
+    "json": "https://useaiblocks.com/agents/agency-security-appsec-engineer.json",
+    "skill": "https://useaiblocks.com/skills/agency-security-appsec-engineer/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-technical-artist",
+   "url": "https://useaiblocks.com/agents/agency-technical-artist",
+   "title": "Art pipeline planner",
+   "summary": "Plan a game art pipeline with budgets for models, textures and effects, LOD and import rules, and a review routine, for any engine or platform.",
+   "content_text": "Plan a game art pipeline with budgets for models, textures and effects, LOD and import rules, and a review routine, for any engine or platform. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Design things people love"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-technical-artist.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-technical-artist/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-technical-artist.md",
+    "json": "https://useaiblocks.com/agents/agency-technical-artist.json",
+    "skill": "https://useaiblocks.com/skills/agency-technical-artist/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-automation-governance-architect",
+   "url": "https://useaiblocks.com/agents/agency-automation-governance-architect",
+   "title": "Automation governance planner",
+   "summary": "Decide if a business process should be automated. Get a verdict, the risks, a safe design with fallback and the tests to pass before go-live.",
+   "content_text": "Decide if a business process should be automated. Get a verdict, the risks, a safe design with fallback and the tests to pass before go-live. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Set up AI to work for you"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-automation-governance-architect.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-automation-governance-architect/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-automation-governance-architect.md",
+    "json": "https://useaiblocks.com/agents/agency-automation-governance-architect.json",
+    "skill": "https://useaiblocks.com/skills/agency-automation-governance-architect/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-engineering-backend-architect",
+   "url": "https://useaiblocks.com/agents/agency-engineering-backend-architect",
+   "title": "Backend architect agent",
+   "summary": "Get a backend design with a right-sized setup, data tables, an API outline, a failure plan and a safe way to change the database.",
+   "content_text": "Get a backend design with a right-sized setup, data tables, an API outline, a failure plan and a safe way to change the database. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Build and ship software"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-engineering-backend-architect.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-engineering-backend-architect/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-engineering-backend-architect.md",
+    "json": "https://useaiblocks.com/agents/agency-engineering-backend-architect.json",
+    "skill": "https://useaiblocks.com/skills/agency-engineering-backend-architect/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-marketing-baidu-seo-specialist",
+   "url": "https://useaiblocks.com/agents/agency-marketing-baidu-seo-specialist",
+   "title": "Baidu SEO specialist",
+   "summary": "Get a Baidu SEO plan for China: setup checks, Chinese keyword groups and content fixes, with the first steps to take. Bring your site and goal.",
+   "content_text": "Get a Baidu SEO plan for China: setup checks, Chinese keyword groups and content fixes, with the first steps to take. Bring your site and goal. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Get found in search and AI answers"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-marketing-baidu-seo-specialist.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-marketing-baidu-seo-specialist/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-marketing-baidu-seo-specialist.md",
+    "json": "https://useaiblocks.com/agents/agency-marketing-baidu-seo-specialist.json",
+    "skill": "https://useaiblocks.com/skills/agency-marketing-baidu-seo-specialist/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-academic-psychologist",
+   "url": "https://useaiblocks.com/agents/agency-academic-psychologist",
+   "title": "Behavior evidence reviewer",
+   "summary": "Get a psychology profile of a character or relationship, built on named theories, so their choices and clashes feel real and hold together.",
+   "content_text": "Get a psychology profile of a character or relationship, built on named theories, so their choices and clashes feel real and hold together. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Research a topic properly"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-academic-psychologist.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-academic-psychologist/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-academic-psychologist.md",
+    "json": "https://useaiblocks.com/agents/agency-academic-psychologist.json",
+    "skill": "https://useaiblocks.com/skills/agency-academic-psychologist/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-marketing-bilibili-content-strategist",
+   "url": "https://useaiblocks.com/agents/agency-marketing-bilibili-content-strategist",
+   "title": "Bilibili content planner",
+   "summary": "Get a Bilibili content plan: channel positioning, video series, titles and covers, danmaku moments and a launch checklist. Bring your channel or brand.",
+   "content_text": "Get a Bilibili content plan: channel positioning, video series, titles and covers, danmaku moments and a launch checklist. Bring your channel or brand. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Grow on social"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-marketing-bilibili-content-strategist.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-marketing-bilibili-content-strategist/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-marketing-bilibili-content-strategist.md",
+    "json": "https://useaiblocks.com/agents/agency-marketing-bilibili-content-strategist.json",
+    "skill": "https://useaiblocks.com/skills/agency-marketing-bilibili-content-strategist/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-gis-bim-specialist",
+   "url": "https://useaiblocks.com/agents/agency-gis-bim-specialist",
+   "title": "BIM and GIS integration planner",
+   "summary": "Plan how to bring a Revit or IFC model into GIS. Get a coordinate plan, attribute map, checks and an indoor or twin plan.",
+   "content_text": "Plan how to bring a Revit or IFC model into GIS. Get a coordinate plan, attribute map, checks and an indoor or twin plan. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Connect AI to your tools"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-gis-bim-specialist.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-gis-bim-specialist/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-gis-bim-specialist.md",
+    "json": "https://useaiblocks.com/agents/agency-gis-bim-specialist.json",
+    "skill": "https://useaiblocks.com/skills/agency-gis-bim-specialist/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-blender-addon-engineer",
+   "url": "https://useaiblocks.com/agents/agency-blender-addon-engineer",
+   "title": "Blender add-on developer",
+   "summary": "Turn a repeated Blender chore into a Blender add-on plan and starter Python code. Check asset names, scale and materials before export.",
+   "content_text": "Turn a repeated Blender chore into a Blender add-on plan and starter Python code. Check asset names, scale and materials before export. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Build and ship software"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-blender-addon-engineer.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-blender-addon-engineer/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-blender-addon-engineer.md",
+    "json": "https://useaiblocks.com/agents/agency-blender-addon-engineer.json",
+    "skill": "https://useaiblocks.com/skills/agency-blender-addon-engineer/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-security-blockchain-security-auditor",
+   "url": "https://useaiblocks.com/agents/agency-security-blockchain-security-auditor",
+   "title": "Blockchain security reviewer",
+   "summary": "Paste your smart contract scope. Get an audit plan with reentrancy, oracle and access-control checks, ranked by how much user money is at risk.",
+   "content_text": "Paste your smart contract scope. Get an audit plan with reentrancy, oracle and access-control checks, ranked by how much user money is at risk. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Keep your code secure"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-security-blockchain-security-auditor.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-security-blockchain-security-auditor/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-security-blockchain-security-auditor.md",
+    "json": "https://useaiblocks.com/agents/agency-security-blockchain-security-auditor.json",
+    "skill": "https://useaiblocks.com/skills/agency-security-blockchain-security-auditor/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-marketing-book-co-author",
+   "url": "https://useaiblocks.com/agents/agency-marketing-book-co-author",
+   "title": "Book co-author agent",
+   "summary": "Turn your voice notes and rough ideas into a book chapter in your own voice. Get a chapter blueprint, a versioned draft and notes on weak spots.",
+   "content_text": "Turn your voice notes and rough ideas into a book chapter in your own voice. Get a chapter blueprint, a versioned draft and notes on weak spots. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Write and tell stories"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-marketing-book-co-author.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-marketing-book-co-author/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-marketing-book-co-author.md",
+    "json": "https://useaiblocks.com/agents/agency-marketing-book-co-author.json",
+    "skill": "https://useaiblocks.com/skills/agency-marketing-book-co-author/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-design-brand-guardian",
+   "url": "https://useaiblocks.com/agents/agency-design-brand-guardian",
+   "title": "Brand consistency reviewer",
+   "summary": "Get a brand foundation document or a brand consistency check. See your purpose, voice and look in writing, or where your materials drift from them.",
+   "content_text": "Get a brand foundation document or a brand consistency check. See your purpose, voice and look in writing, or where your materials drift from them. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Set up your brand file"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-design-brand-guardian.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-design-brand-guardian/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-design-brand-guardian.md",
+    "json": "https://useaiblocks.com/agents/agency-design-brand-guardian.json",
+    "skill": "https://useaiblocks.com/skills/agency-design-brand-guardian/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-finance-fpa-analyst",
+   "url": "https://useaiblocks.com/agents/agency-finance-fpa-analyst",
+   "title": "Budget and forecast analyst",
+   "summary": "Get a budget versus actual review with the reason behind each big gap, an updated full-year forecast and an action for each budget owner.",
+   "content_text": "Get a budget versus actual review with the reason behind each big gap, an updated full-year forecast and an action for each budget owner. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Plan budgets, costs and cash flow"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-finance-fpa-analyst.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-finance-fpa-analyst/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-finance-fpa-analyst.md",
+    "json": "https://useaiblocks.com/agents/agency-finance-fpa-analyst.json",
+    "skill": "https://useaiblocks.com/skills/agency-finance-fpa-analyst/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-business-strategist",
+   "url": "https://useaiblocks.com/agents/agency-business-strategist",
+   "title": "Business strategist agent",
+   "summary": "Make one big business choice. Get a strategy brief with the problem, three options, risks, a clear pick and what you will not do.",
+   "content_text": "Make one big business choice. Get a strategy brief with the problem, three options, risks, a clear pick and what you will not do. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Plan your strategy"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-business-strategist.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-business-strategist/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-business-strategist.md",
+    "json": "https://useaiblocks.com/agents/agency-business-strategist.json",
+    "skill": "https://useaiblocks.com/skills/agency-business-strategist/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-marketing-carousel-growth-engine",
+   "url": "https://useaiblocks.com/agents/agency-marketing-carousel-growth-engine",
+   "title": "Carousel content planner",
+   "summary": "Get a six-slide TikTok and Instagram carousel plan from your site: three hooks, slide text, image prompts and a caption. Bring your link.",
+   "content_text": "Get a six-slide TikTok and Instagram carousel plan from your site: three hooks, slide text, image prompts and a caption. Bring your link. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Grow on social"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-marketing-carousel-growth-engine.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-marketing-carousel-growth-engine/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-marketing-carousel-growth-engine.md",
+    "json": "https://useaiblocks.com/agents/agency-marketing-carousel-growth-engine.json",
+    "skill": "https://useaiblocks.com/skills/agency-marketing-carousel-growth-engine/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-support-finance-tracker",
+   "url": "https://useaiblocks.com/agents/agency-support-finance-tracker",
+   "title": "Cash flow and expense analyst",
+   "summary": "Get a cash and expense review from your bank and card exports, with a cash forecast, the assumptions behind it and the weeks cash runs low.",
+   "content_text": "Get a cash and expense review from your bank and card exports, with a cash forecast, the assumptions behind it and the weeks cash runs low. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Plan budgets, costs and cash flow"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-support-finance-tracker.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-support-finance-tracker/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-support-finance-tracker.md",
+    "json": "https://useaiblocks.com/agents/agency-support-finance-tracker.json",
+    "skill": "https://useaiblocks.com/skills/agency-support-finance-tracker/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-change-management-consultant",
+   "url": "https://useaiblocks.com/agents/agency-change-management-consultant",
+   "title": "Change management consultant",
+   "summary": "Plan the people side of a new tool, process or re-org, with a stakeholder map, message plan and adoption checks. Describe the change and who it hits.",
+   "content_text": "Plan the people side of a new tool, process or re-org, with a stakeholder map, message plan and adoption checks. Describe the change and who it hits. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Lead and manage people"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-change-management-consultant.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-change-management-consultant/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-change-management-consultant.md",
+    "json": "https://useaiblocks.com/agents/agency-change-management-consultant.json",
+    "skill": "https://useaiblocks.com/skills/agency-change-management-consultant/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-specialized-chief-of-staff",
+   "url": "https://useaiblocks.com/agents/agency-specialized-chief-of-staff",
+   "title": "Chief of staff",
+   "summary": "Turn your task list and notes into a one-page state of play. Get what needs you now, the decisions waiting, the open hand-offs and one top priority.",
+   "content_text": "Turn your task list and notes into a one-page state of play. Get what needs you now, the decisions waiting, the open hand-offs and one top priority. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Lead and manage people"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-specialized-chief-of-staff.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-specialized-chief-of-staff/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-specialized-chief-of-staff.md",
+    "json": "https://useaiblocks.com/agents/agency-specialized-chief-of-staff.json",
+    "skill": "https://useaiblocks.com/skills/agency-specialized-chief-of-staff/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-marketing-china-ecommerce-operator",
+   "url": "https://useaiblocks.com/agents/agency-marketing-china-ecommerce-operator",
+   "title": "China ecommerce operations planner",
+   "summary": "Get a China ecommerce plan for Taobao, Tmall, JD, Pinduoduo or Douyin Shop, with margin checks, ad plans and a 618 or Double 11 countdown.",
+   "content_text": "Get a China ecommerce plan for Taobao, Tmall, JD, Pinduoduo or Douyin Shop, with margin checks, ad plans and a 618 or Double 11 countdown. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Run your online store"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-marketing-china-ecommerce-operator.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-marketing-china-ecommerce-operator/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-marketing-china-ecommerce-operator.md",
+    "json": "https://useaiblocks.com/agents/agency-marketing-china-ecommerce-operator.json",
+    "skill": "https://useaiblocks.com/skills/agency-marketing-china-ecommerce-operator/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-healthcare-marketing-compliance",
+   "url": "https://useaiblocks.com/agents/agency-healthcare-marketing-compliance",
+   "title": "China healthcare marketing reviewer",
+   "summary": "Check China healthcare ads and posts for banned claims before you publish. Get flagged lines, risk levels and safer rewrites. Not legal advice.",
+   "content_text": "Check China healthcare ads and posts for banned claims before you publish. Get flagged lines, risk levels and safer rewrites. Not legal advice. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Check ads before they go live"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-healthcare-marketing-compliance.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-healthcare-marketing-compliance/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-healthcare-marketing-compliance.md",
+    "json": "https://useaiblocks.com/agents/agency-healthcare-marketing-compliance.json",
+    "skill": "https://useaiblocks.com/skills/agency-healthcare-marketing-compliance/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-marketing-china-market-localization-strategist",
+   "url": "https://useaiblocks.com/agents/agency-marketing-china-market-localization-strategist",
+   "title": "China market localization planner",
+   "summary": "Turn China trend data into a market entry brief with platform picks, content templates and a week-by-week launch checklist for a small team.",
+   "content_text": "Turn China trend data into a market entry brief with platform picks, content templates and a week-by-week launch checklist for a small team. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Plan your strategy"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-marketing-china-market-localization-strategist.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-marketing-china-market-localization-strategist/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-marketing-china-market-localization-strategist.md",
+    "json": "https://useaiblocks.com/agents/agency-marketing-china-market-localization-strategist.json",
+    "skill": "https://useaiblocks.com/skills/agency-marketing-china-market-localization-strategist/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-engineering-china-network-engineer",
+   "url": "https://useaiblocks.com/agents/agency-engineering-china-network-engineer",
+   "title": "China network engineer",
+   "summary": "Get a change plan for Huawei, H3C, Ruijie or Hillstone gear with pre-checks, exact commands, checks, rollback and MLPS 2.0 network notes.",
+   "content_text": "Get a change plan for Huawei, H3C, Ruijie or Hillstone gear with pre-checks, exact commands, checks, rollback and MLPS 2.0 network notes. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Build and ship software"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-engineering-china-network-engineer.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-engineering-china-network-engineer/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-engineering-china-network-engineer.md",
+    "json": "https://useaiblocks.com/agents/agency-engineering-china-network-engineer.json",
+    "skill": "https://useaiblocks.com/skills/agency-engineering-china-network-engineer/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-recruitment-specialist",
+   "url": "https://useaiblocks.com/agents/agency-recruitment-specialist",
+   "title": "China recruitment planner",
+   "summary": "Plan hiring in China, from job post and Boss Zhipin or Liepin channels to interviews, offer and a labour law check. Give it the role, city and budget.",
+   "content_text": "Plan hiring in China, from job post and Boss Zhipin or Liepin channels to interviews, offer and a labour law check. Give it the role, city and budget. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Hire and look after your people"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-recruitment-specialist.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-recruitment-specialist/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-recruitment-specialist.md",
+    "json": "https://useaiblocks.com/agents/agency-recruitment-specialist.json",
+    "skill": "https://useaiblocks.com/skills/agency-recruitment-specialist/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-supply-chain-strategist",
+   "url": "https://useaiblocks.com/agents/agency-supply-chain-strategist",
+   "title": "China supply chain planner",
+   "summary": "Plan how to buy from Chinese factories. Get a sourcing plan with supplier checks, total cost, an order split and a risk register with backups.",
+   "content_text": "Plan how to buy from Chinese factories. Get a sourcing plan with supplier checks, total cost, an order split and a risk register with backups. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Plan stock, shipping and suppliers"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-supply-chain-strategist.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-supply-chain-strategist/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-supply-chain-strategist.md",
+    "json": "https://useaiblocks.com/agents/agency-supply-chain-strategist.json",
+    "skill": "https://useaiblocks.com/skills/agency-supply-chain-strategist/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-government-digital-presales-consultant",
+   "url": "https://useaiblocks.com/agents/agency-government-digital-presales-consultant",
+   "title": "Chinese government bid planner",
+   "summary": "Check a Chinese government tender. Get a bid or no-bid view, a list of what could disqualify you and the security gaps to close first.",
+   "content_text": "Check a Chinese government tender. Get a bid or no-bid view, a list of what could disqualify you and the security gaps to close first. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Sell and negotiate"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-government-digital-presales-consultant.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-government-digital-presales-consultant/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-government-digital-presales-consultant.md",
+    "json": "https://useaiblocks.com/agents/agency-government-digital-presales-consultant.json",
+    "skill": "https://useaiblocks.com/skills/agency-government-digital-presales-consultant/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-specialized-civil-engineer",
+   "url": "https://useaiblocks.com/agents/agency-specialized-civil-engineer",
+   "title": "Civil design reviewer",
+   "summary": "Get a second look at a structural or foundation idea. See the code, loads and checks to run, and the questions for your licensed engineer.",
+   "content_text": "Get a second look at a structural or foundation idea. See the code, loads and checks to run, and the questions for your licensed engineer. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Research a topic properly"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-specialized-civil-engineer.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-specialized-civil-engineer/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-specialized-civil-engineer.md",
+    "json": "https://useaiblocks.com/agents/agency-specialized-civil-engineer.json",
+    "skill": "https://useaiblocks.com/skills/agency-specialized-civil-engineer/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/claude-code-learning-coach",
+   "url": "https://useaiblocks.com/skills/claude-code-learning-coach",
+   "title": "Claude Code learning coach",
+   "summary": "Check what you have tried in Claude Code and find your gaps. Get a short practice plan from a quick or deeper experience check.",
+   "content_text": "Check what you have tried in Claude Code and find your gaps. Get a short practice plan from a quick or deeper experience check. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "skill",
+    "Study and check your understanding"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/claude-code-learning-coach.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/claude-code-learning-coach/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/claude-code-learning-coach.md",
+    "json": "https://useaiblocks.com/skills/claude-code-learning-coach.json",
+    "skill": "https://useaiblocks.com/skills/claude-code-learning-coach/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/claude-code-quiz-coach",
+   "url": "https://useaiblocks.com/skills/claude-code-quiz-coach",
+   "title": "Claude Code quiz coach",
+   "summary": "Take a scored Claude Code quiz on one lesson. You get feedback on each answer and a list of what to review. Ten questions per lesson.",
+   "content_text": "Take a scored Claude Code quiz on one lesson. You get feedback on each answer and a list of what to review. Ten questions per lesson. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "skill",
+    "Study and check your understanding"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/claude-code-quiz-coach.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/claude-code-quiz-coach/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/claude-code-quiz-coach.md",
+    "json": "https://useaiblocks.com/skills/claude-code-quiz-coach.json",
+    "skill": "https://useaiblocks.com/skills/claude-code-quiz-coach/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-healthcare-clinical-evidence-agent",
+   "url": "https://useaiblocks.com/agents/agency-healthcare-clinical-evidence-agent",
+   "title": "Clinical evidence reviewer",
+   "summary": "Check every health claim in your deck, paper or product page. Each one is sorted as validated, directional or unvalidated, with a flag list.",
+   "content_text": "Check every health claim in your deck, paper or product page. Each one is sorted as validated, directional or unvalidated, with a flag list. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Research a topic properly"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-healthcare-clinical-evidence-agent.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-healthcare-clinical-evidence-agent/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-healthcare-clinical-evidence-agent.md",
+    "json": "https://useaiblocks.com/agents/agency-healthcare-clinical-evidence-agent.json",
+    "skill": "https://useaiblocks.com/skills/agency-healthcare-clinical-evidence-agent/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-engineering-finops-engineer",
+   "url": "https://useaiblocks.com/agents/agency-engineering-finops-engineer",
+   "title": "Cloud cost analyst",
+   "summary": "Find where your cloud bill goes and what to cut safely. Get spend by owner, ranked savings with their risk, and what to commit to last.",
+   "content_text": "Find where your cloud bill goes and what to cut safely. Get spend by owner, ranked savings with their risk, and what to commit to last. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Ship and host your app"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-engineering-finops-engineer.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-engineering-finops-engineer/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-engineering-finops-engineer.md",
+    "json": "https://useaiblocks.com/agents/agency-engineering-finops-engineer.json",
+    "skill": "https://useaiblocks.com/skills/agency-engineering-finops-engineer/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-security-cloud-security-architect",
+   "url": "https://useaiblocks.com/agents/agency-security-cloud-security-architect",
+   "title": "Cloud security designer",
+   "summary": "Describe your AWS, Azure or GCP setup. Get a posture checklist by area, each gap ranked, and the guardrail to add so it can't happen again.",
+   "content_text": "Describe your AWS, Azure or GCP setup. Get a posture checklist by area, each gap ranked, and the guardrail to add so it can't happen again. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Keep your code secure"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-security-cloud-security-architect.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-security-cloud-security-architect/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-security-cloud-security-architect.md",
+    "json": "https://useaiblocks.com/agents/agency-security-cloud-security-architect.json",
+    "skill": "https://useaiblocks.com/skills/agency-security-cloud-security-architect/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-engineering-code-reviewer",
+   "url": "https://useaiblocks.com/agents/agency-engineering-code-reviewer",
+   "title": "Code reviewer agent",
+   "summary": "Paste a code change and get a review of bugs, security, tests and clarity. Each point has the reason and a fix, ranked blocker, suggestion or nit.",
+   "content_text": "Paste a code change and get a review of bugs, security, tests and clarity. Each point has the reason and a fix, ranked blocker, suggestion or nit. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Test and fix code"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-engineering-code-reviewer.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-engineering-code-reviewer/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-engineering-code-reviewer.md",
+    "json": "https://useaiblocks.com/agents/agency-engineering-code-reviewer.json",
+    "skill": "https://useaiblocks.com/skills/agency-engineering-code-reviewer/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-specialized-codebase-archaeologist",
+   "url": "https://useaiblocks.com/agents/agency-specialized-codebase-archaeologist",
+   "title": "Codebase history researcher",
+   "summary": "Find silent mismatches in code built over many AI sessions, such as reversed fallbacks, duplicate logic and stale docs, ranked by risk with files named.",
+   "content_text": "Find silent mismatches in code built over many AI sessions, such as reversed fallbacks, duplicate logic and stale docs, ranked by risk with files named. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Write down how work gets done"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-specialized-codebase-archaeologist.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-specialized-codebase-archaeologist/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-specialized-codebase-archaeologist.md",
+    "json": "https://useaiblocks.com/agents/agency-specialized-codebase-archaeologist.json",
+    "skill": "https://useaiblocks.com/skills/agency-specialized-codebase-archaeologist/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-engineering-codebase-onboarding-engineer",
+   "url": "https://useaiblocks.com/agents/agency-engineering-codebase-onboarding-engineer",
+   "title": "Codebase onboarding planner",
+   "summary": "Get a codebase onboarding map for any repo, with entry points, key files and how requests flow, built only from the code. Facts, no advice.",
+   "content_text": "Get a codebase onboarding map for any repo, with entry points, key files and how requests flow, built only from the code. Facts, no advice. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Write down how work gets done"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-engineering-codebase-onboarding-engineer.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-engineering-codebase-onboarding-engineer/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-engineering-codebase-onboarding-engineer.md",
+    "json": "https://useaiblocks.com/agents/agency-engineering-codebase-onboarding-engineer.json",
+    "skill": "https://useaiblocks.com/skills/agency-engineering-codebase-onboarding-engineer/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-security-compliance-auditor",
+   "url": "https://useaiblocks.com/agents/agency-security-compliance-auditor",
+   "title": "Compliance auditor agent",
+   "summary": "Check your security setup against SOC 2, ISO 27001, HIPAA or PCI-DSS. Get a gap table, an auditor proof list and a fix order.",
+   "content_text": "Check your security setup against SOC 2, ISO 27001, HIPAA or PCI-DSS. Get a gap table, an auditor proof list and a fix order. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Check contracts and rules"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-security-compliance-auditor.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-security-compliance-auditor/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-security-compliance-auditor.md",
+    "json": "https://useaiblocks.com/agents/agency-security-compliance-auditor.json",
+    "skill": "https://useaiblocks.com/skills/agency-security-compliance-auditor/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-zk-steward",
+   "url": "https://useaiblocks.com/agents/agency-zk-steward",
+   "title": "Connected notes planner",
+   "summary": "Turn loose notes into a linked knowledge base. Get a four-rule check, link suggestions, index entries and a daily log line. Paste a note.",
+   "content_text": "Turn loose notes into a linked knowledge base. Get a four-rule check, link suggestions, index entries and a daily log line. Paste a note. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Write down how work gets done"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-zk-steward.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-zk-steward/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-zk-steward.md",
+    "json": "https://useaiblocks.com/agents/agency-zk-steward.json",
+    "skill": "https://useaiblocks.com/skills/agency-zk-steward/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-marketing-content-creator",
+   "url": "https://useaiblocks.com/agents/agency-marketing-content-creator",
+   "title": "Content writer",
+   "summary": "Get a content plan and channel drafts from one idea: blog, video and social posts, each with its audience goal and facts to check. Bring your topic.",
+   "content_text": "Get a content plan and channel drafts from one idea: blog, video and social posts, each with its audience goal and facts to check. Bring your topic. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Grow on social"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-marketing-content-creator.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-marketing-content-creator/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-marketing-content-creator.md",
+    "json": "https://useaiblocks.com/agents/agency-marketing-content-creator.json",
+    "skill": "https://useaiblocks.com/skills/agency-marketing-content-creator/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-paid-media-tracking-specialist",
+   "url": "https://useaiblocks.com/agents/agency-paid-media-tracking-specialist",
+   "title": "Conversion tracking planner",
+   "summary": "Plan or fix your ad conversion tracking across GA4, Google Ads and Meta. Get an event list, a double-count check and a step-by-step test plan.",
+   "content_text": "Plan or fix your ad conversion tracking across GA4, Google Ads and Meta. Get an event list, a double-count check and a step-by-step test plan. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Track your numbers"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-paid-media-tracking-specialist.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-paid-media-tracking-specialist/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-paid-media-tracking-specialist.md",
+    "json": "https://useaiblocks.com/agents/agency-paid-media-tracking-specialist.json",
+    "skill": "https://useaiblocks.com/skills/agency-paid-media-tracking-specialist/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-corporate-training-designer",
+   "url": "https://useaiblocks.com/agents/agency-corporate-training-designer",
+   "title": "Corporate training designer agent",
+   "summary": "Plan staff training from a real work problem. Get measurable goals, a module outline, practice exercises and a way to check behavior changed.",
+   "content_text": "Plan staff training from a real work problem. Get measurable goals, a module outline, practice exercises and a way to check behavior changed. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Teach and train people"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-corporate-training-designer.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-corporate-training-designer/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-corporate-training-designer.md",
+    "json": "https://useaiblocks.com/agents/agency-corporate-training-designer.json",
+    "skill": "https://useaiblocks.com/skills/agency-corporate-training-designer/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-security-secrets-credential-engineer",
+   "url": "https://useaiblocks.com/agents/agency-security-secrets-credential-engineer",
+   "title": "Credential storage and rotation reviewer",
+   "summary": "List where your secrets live. Get each one's risk, a rotation date and the storage fix, plus a leak-response runbook for when one gets out.",
+   "content_text": "List where your secrets live. Get each one's risk, a rotation date and the storage fix, plus a leak-response runbook for when one gets out. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Keep your code secure"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-security-secrets-credential-engineer.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-security-secrets-credential-engineer/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-security-secrets-credential-engineer.md",
+    "json": "https://useaiblocks.com/agents/agency-security-secrets-credential-engineer.json",
+    "skill": "https://useaiblocks.com/skills/agency-security-secrets-credential-engineer/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-marketing-cross-border-ecommerce",
+   "url": "https://useaiblocks.com/agents/agency-marketing-cross-border-ecommerce",
+   "title": "Cross-border ecommerce planner",
+   "summary": "Get a cross-border ecommerce plan for Amazon, Shopee, Temu or TikTok Shop with margin per product, compliance to-dos and a launch order.",
+   "content_text": "Get a cross-border ecommerce plan for Amazon, Shopee, Temu or TikTok Shop with margin per product, compliance to-dos and a launch order. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Run your online store"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-marketing-cross-border-ecommerce.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-marketing-cross-border-ecommerce/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-marketing-cross-border-ecommerce.md",
+    "json": "https://useaiblocks.com/agents/agency-marketing-cross-border-ecommerce.json",
+    "skill": "https://useaiblocks.com/skills/agency-marketing-cross-border-ecommerce/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-specialized-cultural-intelligence-strategist",
+   "url": "https://useaiblocks.com/agents/agency-specialized-cultural-intelligence-strategist",
+   "title": "Cultural fit reviewer",
+   "summary": "Review your forms, copy or image prompts for cultural blind spots. Get ranked exclusion risks and copy-ready fixes for the markets you serve.",
+   "content_text": "Review your forms, copy or image prompts for cultural blind spots. Get ranked exclusion risks and copy-ready fixes for the markets you serve. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Design things people love"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-specialized-cultural-intelligence-strategist.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-specialized-cultural-intelligence-strategist/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-specialized-cultural-intelligence-strategist.md",
+    "json": "https://useaiblocks.com/agents/agency-specialized-cultural-intelligence-strategist.json",
+    "skill": "https://useaiblocks.com/skills/agency-specialized-cultural-intelligence-strategist/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-marketing-private-domain-operator",
+   "url": "https://useaiblocks.com/agents/agency-marketing-private-domain-operator",
+   "title": "Customer community planner",
+   "summary": "Plan a WeChat or WeCom customer community, from first contact to repeat purchase. Give it your brand, customer base and goal.",
+   "content_text": "Plan a WeChat or WeCom customer community, from first contact to repeat purchase. Give it your brand, customer base and goal. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Keep customers coming back"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-marketing-private-domain-operator.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-marketing-private-domain-operator/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-marketing-private-domain-operator.md",
+    "json": "https://useaiblocks.com/agents/agency-marketing-private-domain-operator.json",
+    "skill": "https://useaiblocks.com/skills/agency-marketing-private-domain-operator/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-customer-service",
+   "url": "https://useaiblocks.com/agents/agency-customer-service",
+   "title": "Customer service writer",
+   "summary": "Get a customer service reply draft, the steps to fix the issue and a clear call on when to escalate. Paste the message and your policy.",
+   "content_text": "Get a customer service reply draft, the steps to fix the issue and a clear call on when to escalate. Paste the message and your policy. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Help your customers"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-customer-service.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-customer-service/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-customer-service.md",
+    "json": "https://useaiblocks.com/agents/agency-customer-service.json",
+    "skill": "https://useaiblocks.com/skills/agency-customer-service/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-customer-success-manager",
+   "url": "https://useaiblocks.com/agents/agency-customer-success-manager",
+   "title": "Customer success planner",
+   "summary": "Get an account health read, churn risks and a plan to keep one customer, from onboarding to renewal. Give it the account facts and what happens next.",
+   "content_text": "Get an account health read, churn risks and a plan to keep one customer, from onboarding to renewal. Give it the account facts and what happens next. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Keep customers coming back"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-customer-success-manager.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-customer-success-manager/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-customer-success-manager.md",
+    "json": "https://useaiblocks.com/agents/agency-customer-success-manager.json",
+    "skill": "https://useaiblocks.com/skills/agency-customer-success-manager/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-support-support-responder",
+   "url": "https://useaiblocks.com/agents/agency-support-support-responder",
+   "title": "Customer support response writer",
+   "summary": "Turn a customer support ticket into a reply, a likely cause, an escalate-or-not call and a help-article note. Paste the ticket and what you know.",
+   "content_text": "Turn a customer support ticket into a reply, a likely cause, an escalate-or-not call and a help-article note. Paste the ticket and what you know. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Help your customers"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-support-support-responder.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-support-support-responder/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-support-support-responder.md",
+    "json": "https://useaiblocks.com/agents/agency-support-support-responder.json",
+    "skill": "https://useaiblocks.com/skills/agency-support-support-responder/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-engineering-data-engineer",
+   "url": "https://useaiblocks.com/agents/agency-engineering-data-engineer",
+   "title": "Data pipeline designer",
+   "summary": "Get a data pipeline design with raw, cleaned and report-ready layers, quality checks, freshness targets, alerts and a plan for when loads fail.",
+   "content_text": "Get a data pipeline design with raw, cleaned and report-ready layers, quality checks, freshness targets, alerts and a plan for when loads fail. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Build and ship software"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-engineering-data-engineer.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-engineering-data-engineer/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-engineering-data-engineer.md",
+    "json": "https://useaiblocks.com/agents/agency-engineering-data-engineer.json",
+    "skill": "https://useaiblocks.com/skills/agency-engineering-data-engineer/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-data-privacy-officer",
+   "url": "https://useaiblocks.com/agents/agency-data-privacy-officer",
+   "title": "Data privacy officer",
+   "summary": "Review one way you use customer data under GDPR or CCPA. Get the duties that apply, the proof you lack and what to fix first.",
+   "content_text": "Review one way you use customer data under GDPR or CCPA. Get the duties that apply, the proof you lack and what to fix first. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Check contracts and rules"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-data-privacy-officer.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-data-privacy-officer/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-data-privacy-officer.md",
+    "json": "https://useaiblocks.com/agents/agency-data-privacy-officer.json",
+    "skill": "https://useaiblocks.com/skills/agency-data-privacy-officer/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-engineering-data-visualization-engineer",
+   "url": "https://useaiblocks.com/agents/agency-engineering-data-visualization-engineer",
+   "title": "Data visualization engineer agent",
+   "summary": "Pick the right chart for your data and check it does not mislead. Get a plan with axes, colours and a pass or fail check.",
+   "content_text": "Pick the right chart for your data and check it does not mislead. Get a plan with axes, colours and a pass or fail check. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Analyse data and explain the results"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-engineering-data-visualization-engineer.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-engineering-data-visualization-engineer/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-engineering-data-visualization-engineer.md",
+    "json": "https://useaiblocks.com/agents/agency-engineering-data-visualization-engineer.json",
+    "skill": "https://useaiblocks.com/skills/agency-engineering-data-visualization-engineer/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-engineering-database-optimizer",
+   "url": "https://useaiblocks.com/agents/agency-engineering-database-optimizer",
+   "title": "Database performance analyst",
+   "summary": "Get a ranked list of slow database queries, missing indexes and risky schema choices, with safe fixes you can test on a copy first.",
+   "content_text": "Get a ranked list of slow database queries, missing indexes and risky schema choices, with safe fixes you can test on a copy first. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Build and ship software"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-engineering-database-optimizer.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-engineering-database-optimizer/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-engineering-database-optimizer.md",
+    "json": "https://useaiblocks.com/agents/agency-engineering-database-optimizer.json",
+    "skill": "https://useaiblocks.com/skills/agency-engineering-database-optimizer/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-engineering-database-reliability-engineer",
+   "url": "https://useaiblocks.com/agents/agency-engineering-database-reliability-engineer",
+   "title": "Database recovery planner",
+   "summary": "Check that your database can be restored and will fail over safely. Get a backup test plan, a failover drill and a safe way to change tables.",
+   "content_text": "Check that your database can be restored and will fail over safely. Get a backup test plan, a failover drill and a safe way to change tables. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Ship and host your app"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-engineering-database-reliability-engineer.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-engineering-database-reliability-engineer/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-engineering-database-reliability-engineer.md",
+    "json": "https://useaiblocks.com/agents/agency-engineering-database-reliability-engineer.json",
+    "skill": "https://useaiblocks.com/skills/agency-engineering-database-reliability-engineer/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/agents/agency-engineering-devops-automator",
+   "url": "https://useaiblocks.com/agents/agency-engineering-devops-automator",
+   "title": "Deployment pipeline designer",
+   "summary": "Turn manual deploys into an automated pipeline that tests, ships and rolls back, with alerts and a rollout order. Bring your stack and current steps.",
+   "content_text": "Turn manual deploys into an automated pipeline that tests, ships and rolls back, with alerts and a rollout order. Bring your stack and current steps. Updated 2026-10-27.",
+   "date_published": "2026-10-26T00:00:00Z",
+   "date_modified": "2026-10-27T00:00:00Z",
+   "tags": [
+    "updated",
+    "agent",
+    "Ship and host your app"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/agents/agency-engineering-devops-automator.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/agency-engineering-devops-automator/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "agent",
+    "markdown": "https://useaiblocks.com/agents/agency-engineering-devops-automator.md",
+    "json": "https://useaiblocks.com/agents/agency-engineering-devops-automator.json",
+    "skill": "https://useaiblocks.com/skills/agency-engineering-devops-automator/SKILL.md"
+   }
+  }
+ ]
+}

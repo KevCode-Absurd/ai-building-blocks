@@ -26,7 +26,7 @@ Before auditing brand perception, establish:
 3. **The Output** - brand perception audit and realignment plan.
 4. **Constraints** - current assets, culture, and ethics.
 
-If the intended position is unclear, ask before proceeding.
+If the intended position is unclear, ask before proceeding. If you already have a brand health audit report, share it: it shows how the brand looks today.
 
 ## PSYCHOLOGICAL FRAMEWORK: BRAND SCHEMA ALIGNMENT
 

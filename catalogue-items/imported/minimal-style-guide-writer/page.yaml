@@ -12,6 +12,8 @@ explain: |
   Your AI starts with one sentence on the design idea. The defaults are Open Sans for text, Inter for display type, Inconsolata for code, near-black text on a warm off-white surface, one indigo accent and spacing steps of 4, 8, 12, 16, 24 and 32. It then writes rules for each part and its states. The source gives no type sizes, only the words "expressive scale", so the skill sets exact sizes for you.
 
   The guide also checks contrast. Near-black text on the off-white surface is easy to read, but the green and orange status colours are not. They come out near 3 to 1, below the 4.5 to 1 normal text needs. The guide tells you to use them for icons and fills, or to darken them.
+
+  How it differs from the Retro throwback style guide writer: this one uses plain type, one accent colour and a lot of empty space. The retro one uses vintage type and bold colour pairs. The steps are the same, but the choices and the look are different.
 when:
   - You are starting a product and have no design rules yet.
   - Your screens use random spacing and several near-identical greys.

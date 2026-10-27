@@ -21,7 +21,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and your offer and buying reasons.
+2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and offer and buying reasons.
 3. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
 4. This one.
 
@@ -93,7 +93,7 @@ Keep where it happens, how it's framed, what happens, the props and where the pr
 - Post words: the original's post text, unchanged. Carousel card headline fields stay empty unless the original has a line for them.
 
 ### 7. Run the checks
-Go through "Check before you hand it back" and fix any check that fails. A locked line that breaks an image-ad rule and is flagged counts as passed, because the rules say to flag it, not fix it. List any check still missed on a `CHECKS MISSED:` line, one line each, or write "none".
+Go through "Check before you hand it back". Fix only what is yours to change: the layout, the picture prompts and the edit step. Never change a locked line. A failed claim or image-ad check on a locked line is reported on the `CHECKS MISSED:` line and flagged for the owner, and the line is left as it is. A locked line that breaks an image-ad rule and is flagged counts as passed, because the rules say to flag it, not fix it. List every other check still missed, one line each, or write "none".
 
 ### Rules that don't bend
 1. The words are locked: each line keeps its wording and its order. No line is dropped, added, polished or moved.
@@ -116,10 +116,10 @@ Go through "Check before you hand it back" and fix any check that fails. A locke
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Handwritten warning image ad maker](https://useaiblocks.com/skills/dont-buy-warning-image-ad-maker). It takes the ad copy.
-- The [Carousel ad writer](https://useaiblocks.com/skills/carousel-ad-writer).
-- The [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker). It takes the ad copy.
 - **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy and image prompt.
+- The [Handwritten warning image ad maker](https://useaiblocks.com/skills/dont-buy-warning-image-ad-maker). It takes the ad copy.
+- The [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker). It takes the ad copy.
+- The [Chat screenshot image ad maker](https://useaiblocks.com/skills/chat-screenshot-image-ad-maker). It takes the ad copy.
 - **Check it before it goes live** with the [Headline promise checker](https://useaiblocks.com/skills/headline-promise-checker). It takes the ad copy.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

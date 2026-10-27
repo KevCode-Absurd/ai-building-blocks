@@ -36,26 +36,28 @@ Queries open fulfillment orders assigned to a source location and moves them to 
 
 ## Workflow Steps
 
-**Confirm before moving.** Never set `dry_run` to false on your own. After the preview in step 1, show the user the list of orders and the destination, and wait for the user to type an explicit yes. Only then run step 2.
+**Confirm before moving.** Never set `dry_run` to false on your own. After the preview in step 1 and the stock check in step 2, show the user the list of orders and the destination, and wait for the user to type an explicit yes. Only then run step 3.
 
-1. **OPERATION:** `fulfillmentOrders` — query
-   **Inputs:** `assignedLocationId: <source_location_id>`, `status: OPEN`, `first: 250`, pagination cursor
-   **Expected output:** List of open fulfillment orders; paginate until `hasNextPage: false`
+1. **Preview (always first).** `fulfillmentOrders` — query
+   **Inputs:** the search string `status:open assigned_location_id:<numeric part of source_location_id>`, `first: 250`, pagination cursor
+   **Expected output:** List of open fulfillment orders; paginate until `hasNextPage: false`. If `order_filter` is set, keep only the orders whose name matches.
+   **If the store rejects this filter:** do not guess. Tell the user, and offer to fetch open fulfillment orders and keep only those whose `assignedLocation.location.id` equals the source. This query was not run against a live store when this page was written, which is why the preview comes first.
 
-2. **OPERATION:** `fulfillmentOrderMove` — mutation
+2. **Stock check (required).** Before the confirm prompt, ask the user to confirm that the destination holds stock for every item in the previewed orders. If you can read inventory levels with the user's access, list any item that is short. Do not go on to step 3 while a shortage is unresolved.
+
+3. **Move (only after an explicit yes).** `fulfillmentOrderMove` — mutation
    **Inputs:** `id: <fulfillment_order_id>`, `newLocationId: <destination_location_id>`
    **Expected output:** `movedFulfillmentOrder { id, assignedLocation { name } }`, `userErrors`
 
 ## GraphQL Operations
 
 ```graphql
-# fulfillmentOrders:query — validated against api_version 2025-01
-query FulfillmentOrdersByLocation($locationId: ID!, $after: String) {
+# fulfillmentOrders:query — api_version 2025-01. The search filter was not run against a live store here, so check the preview.
+query FulfillmentOrdersByLocation($query: String!, $after: String) {
   fulfillmentOrders(
-    assignedLocationId: $locationId
     first: 250
     after: $after
-    query: "status:open"
+    query: $query
   ) {
     edges {
       node {

@@ -9,6 +9,8 @@ Paste your holdings and what you paid. Get the market's mood read, each holding 
 
 The result is a one-page rule card for falls and jumps, with the half-value test and fixed look dates. It is a plan, not a trade, and it names no security to buy or sell. It is inspired by the Mr. Market idea in The Intelligent Investor by Benjamin Graham. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
+**When not to use it:** a one-day dip with no change in your business or your money (do nothing, or note it). You are deciding whether to buy a new holding. You want to be told what to buy or sell (this names no security and is not investment advice, so ask a licensed adviser).
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -23,7 +25,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-Gather these before step 1:
+This list replaces the general one above. Gather these before step 1:
 - **Your holdings** (required): what you hold, what you paid and when you bought.
 - **Your own written value for each holding** (required), even a rough range, and the reason: earnings, assets or dividends. Without it the gap to the price cannot be read.
 - **Sizes of fall that would hurt you** (required): for example a tenth, a quarter, a half.
@@ -40,10 +42,10 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Read what the market is offering you.** Use the skill `market-mood-reader` on your holdings and written values. For each holding it sets today's price beside your value, sorts the move as business change, mood or unknown, and marks take, ignore or wait. Saves the market read. A plain read of what the price is telling you and what it is not.
-2. **Check whether the business itself has changed.** Use the skill `holding-value-change-checker`. Give it the step 1 market read and, for each holding, why you bought it and the latest profit, debt, share count and rival facts. It lists what changed, answers whether you would buy it today with the price hidden, and marks keep, watch or weak. Saves the holding notes. A holding by holding note that separates a price scare from a real problem.
-3. **Write your rules for price drops.** Use the skill `price-drop-rules-writer`. Give it your holdings plan, the step 2 holding notes, the money you need soon and your sizes of fall. It saves a one-page rule card: the half-value test, rules for each size of fall, a rule for a jump, and fixed look dates. The written plan, ready before the fall.
-4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+1. **Read what the market is offering you.** Use the skill `market-mood-reader` on your holdings and written values. For each holding it sets today's price beside your value, sorts the move as business change, mood or unknown, and marks take, ignore or wait. Saves the market read as `outputs/step-01-market-mood-reader.md`, with one row per holding: price, your value, the sort (business change, mood or unknown) and the call (take, ignore or wait). A plain read of what the price is telling you and what it is not.
+2. **Check whether the business itself has changed.** Use the skill `holding-value-change-checker`. Give it the step 1 market read and, for each holding, why you bought it and the latest profit, debt, share count and rival facts. It lists what changed, answers whether you would buy it today with the price hidden, and marks keep, watch or weak. Saves the holding notes as `outputs/step-02-holding-value-change-checker.md`, with one entry per holding: what changed, the buy-today answer and the mark (keep, watch or weak). A holding by holding note that separates a price scare from a real problem.
+3. **Write your rules for price drops.** Use the skill `price-drop-rules-writer`. Give it your holdings plan, the step 2 holding notes, the money you need soon and your sizes of fall. It saves a one-page rule card: the half-value test, rules for each size of fall, a rule for a jump, and fixed look dates. Save it as `outputs/step-03-price-drop-rules-writer.md`. The written plan, ready before the fall.
+4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then a `CHECKS MISSED` list (or "none"). State that this is a plan the person wrote with help, not investment advice.
 
 ## What you hand back
 3 step files and the summary. The last file is the rule card, with the half-value test and look dates.
@@ -51,7 +53,9 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Business plan risk buffer reviewer](https://useaiblocks.com/skills/room-for-error-plan-checker). It takes the plan.
 - The [Investment holding rule writer](https://useaiblocks.com/skills/sit-still-rule-writer). It takes the plan.
+- The [Bond type and maturity chooser](https://useaiblocks.com/skills/bond-type-and-maturity-chooser). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -11,9 +11,8 @@ Plans one game level at a time from the user's brief. It follows the Level Desig
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [User flow designer](https://useaiblocks.com/skills/user-flow-designer). It takes the brief.
-- The [Power BI report layout planner](https://useaiblocks.com/skills/design-a-power-bi-report-layout). It takes the brief.
-- The [Creative shoot brief writer](https://useaiblocks.com/skills/creative-shoot-briefer). It takes the brief.
+- The [Slide and page style designer](https://useaiblocks.com/skills/slide-and-page-styler). It takes the document.
+- The [Design handoff completeness reviewer](https://useaiblocks.com/skills/design-handoff-completeness-assistant). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -36,6 +35,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+
+These are the inputs that count. If the generic "Before you start" list above asks for something else, such as a question or source text, ignore that part.
 
 Ask once for anything below that is missing. If it is still missing, write `MISSING: <what>`, say which part it limits, and carry on with the rest. Never guess a value.
 
@@ -82,7 +83,9 @@ Return these sections in order, each with its own heading. If your AI can save f
 - **Navigation checklist**: each check marked Pass, Risk or Can't tell.
 - **Playtest plan**: measures, testers, what counts as trouble.
 
-Finish with the assumptions made, the open questions, and `CHECKS NOT RUN:` listing any check that could not run (or "none").
+Finish with the assumptions made, the open questions, and `CHECKS NOT RUN:` listing any check that could not run (or "none"). This is also your CHECKS MISSED list.
+
+Next: after the grey box is playtested, bring the results back for a revised plan. For the core rules or loop, use the [Game Designer agent](https://useaiblocks.com/skills/agency-game-designer). For story and dialogue, use the [Narrative Designer agent](https://useaiblocks.com/skills/agency-narrative-designer).
 
 ## Avoid
 

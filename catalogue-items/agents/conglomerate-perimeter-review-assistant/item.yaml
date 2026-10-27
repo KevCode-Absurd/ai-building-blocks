@@ -11,7 +11,10 @@ inputs:
     required: true
   - type: spreadsheet
     required: false
-outputs: []
+outputs:
+  - type: audit_report
+  - type: spreadsheet
+    required: false
 needs_mode: manual
 uses:
   - reconcile-conglomerate-valuation-perimeters

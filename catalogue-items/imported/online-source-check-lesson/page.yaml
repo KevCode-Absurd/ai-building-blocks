@@ -10,6 +10,8 @@ explain: |
   A lesson that teaches students to judge a website or post by leaving it and checking what others say, the way professional fact checkers do. Reading the page harder does not work. Looking across other sources does.
 
   You describe your learners and the kind of source, such as a news site, a social post or a health page. The skill builds a protocol around lateral reading: stop and ask who is behind it, investigate the source in a new tab, find better coverage, and trace claims back to the original. It adds practice examples, prompts for students to explain their reasoning, and a checklist students use on their own. It draws on published research on how students evaluate online information.
+
+  This is a copy of Gareth Manning's source-credibility-evaluation-protocol (CC BY-SA 4.0, see the LICENSE file), with a plain name and a note that its sample source is made up. The method is his.
 when:
   - Your students trust the first search result they see.
   - You teach media literacy and need a hands-on activity.
@@ -22,7 +24,6 @@ not_for:
 you_give:
   - Age or level of your learners
   - The type of source to study
-  - Lesson length
   - Topics that matter to your class (optional)
 you_get:
   - A lesson plan on lateral reading
@@ -35,6 +36,7 @@ how_to_use:
   - Type your three details. Add the topic and any mistakes you have seen, if you like (optional).
   - "Read what comes back: the steps, a script for you to model, red and green flags, and a student checklist."
   - Check the example source in the script. The sample in the skill uses a made-up website, trade body and study. Do not teach them as facts. Replace them with a source you have checked yourself.
+  - Check the lesson against the four moves: Stop, Investigate the source, Find better coverage, Trace claims. If the AI's version drifts from them, ask it to rewrite the lesson around those four moves.
   - Print the checklist. Model the steps on one source, then let learners try it on their own.
   - Next, teach learners to check AI answers with the AI claim fact-check lesson builder.
 output_sample:

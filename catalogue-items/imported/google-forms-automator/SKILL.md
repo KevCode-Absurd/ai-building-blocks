@@ -96,8 +96,7 @@ const MANAGER_EMAIL = "PASTE_THE_EMAIL_TO_ALERT_HERE";
 function itemResponsesText(e) {
   return e.response.getItemResponses()
     .map(r => r.getItem().getTitle() + ": " + r.getResponse())
-    .join("
-");
+    .join("\n");
 }
 
 function onFormSubmit(e) {

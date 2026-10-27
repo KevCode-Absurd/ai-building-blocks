@@ -9,10 +9,10 @@ description: "Share an email thread and your goal. Get a reply draft with clear 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Task follow-up writer](https://useaiblocks.com/skills/executive-due-task-drafts).
-- **Check it before it goes live** with the [Brand voice editor](https://useaiblocks.com/skills/brand-voice-editor). It takes the draft.
 - The [Email draft reviewer](https://useaiblocks.com/skills/email-draft-reviewer). It takes the draft.
 - The [Email draft readiness checker](https://useaiblocks.com/prompts/email-send-readiness-scorer). It takes the draft.
+- The [Cold email claim checker](https://useaiblocks.com/prompts/cold-email-claim-checker). It takes the draft.
+- **Check it before it goes live** with the [Brand voice editor](https://useaiblocks.com/skills/brand-voice-editor). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -27,6 +27,14 @@ How to start:
 2. **Check what's missing.** Look for source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
+
+## Required inputs
+- The full email thread, pasted in. Newest message first helps.
+- Your goal for the reply.
+- Your writing style or an example email (optional).
+- Your time zone and free dates, if the reply suggests times (optional).
+
+If the "What you need" list above names a different input, use this list.
 
 ## The job
 

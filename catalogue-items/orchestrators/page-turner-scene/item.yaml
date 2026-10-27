@@ -10,7 +10,7 @@ inputs:
   - {type: question, required: true}
 outputs:
   - {type: audit_report}
-  - {type: feedback_notes}
+  - {type: copy_draft}
 uses: [next-page-hook-planner, fair-escape-checker, page-turner-scene-drafter, page-pull-scene-checker]
 steps:
   - {uses: next-page-hook-planner, note: "One open question, one stopping point and a planned answer."}

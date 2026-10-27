@@ -10,6 +10,8 @@ explain: |
   Repeatable MATLAB speed tests that tell you how long code really takes, with enough runs to trust the number. Give it the code to time and get a test class ready to run.
 
   It uses MATLAB's performance test framework. You choose where the timer starts and stops. Fast code under ten milliseconds needs a repeat loop, precise cases need start and stop calls, and the default times the whole method. It shows how to test several input sizes with parameters, and warns about a classic mistake: using the wrong kind of parameter for values that setup needs, which causes an error. It keeps setup lean so only the code under test is measured.
+
+  This is MathWorks' skill. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE.md file.
 when:
   - You changed an algorithm and want to prove it got faster.
   - A function seems fast on small input and slow on large input.
@@ -33,8 +35,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in this skill's instructions.
   - Paste the MATLAB code you want to time. Say which input sizes to try and which MATLAB release you use.
   - Ask for a performance test class. Read it to check setup sits outside the timed part.
-  - You can run the class yourself. Save it in MATLAB and run it with runperf. Your AI does not need to run MATLAB. Paste any errors back to it.
-  - Save the class as a .m file in MATLAB and run it with runperf. This needs a paid MATLAB licence.
+  - Save the class as a .m file in MATLAB and run it with runperf. This needs a paid MATLAB licence. Your AI does not need to run MATLAB: you can run the class yourself and paste any errors back to it, or use an AI that can run MATLAB.
   - Save the first results as a baseline. After you change your code, run again and compare against the baseline.
   - If the results look noisy, ask your AI to fix the setup or raise the input size, then run again.
 next:

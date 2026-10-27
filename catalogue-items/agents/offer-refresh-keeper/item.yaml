@@ -12,6 +12,7 @@ inputs:
   - {type: performance_sheet, required: true}
   - {type: voc_reviews, required: false}
   - {type: competitor_set, required: false}
+  - {type: customer_list, required: true}
 outputs:
   - {type: plan}
   - {type: audit_report}

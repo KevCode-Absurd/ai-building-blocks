@@ -66,8 +66,8 @@ Pause here: Spend an hour in the forums and review threads where the chosen grou
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Buyer profile reviewer](https://useaiblocks.com/skills/avatar-fit-checker). It takes the brief.
-- The [Buyer motivation and proof mapper](https://useaiblocks.com/skills/buyer-trigger-and-proof-mapper). It takes the brief.
-- The [Interview and research planner](https://useaiblocks.com/skills/interview-and-research-planner). It takes the brief.
+- The [Buyer awareness stage mapper](https://useaiblocks.com/skills/buyer-awareness-stage-mapper). It takes the brief.
+- The [Customer identity messaging mapper](https://useaiblocks.com/skills/customer-identity-messaging). It takes the brief.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

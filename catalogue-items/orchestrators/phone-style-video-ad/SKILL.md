@@ -88,10 +88,9 @@ Six step files and the summary. The step 6 file holds the edit plan.
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker).
-- The [Selfie-style video clip prompt writer](https://useaiblocks.com/skills/selfie-style-video-prompts).
-- The [Video ad production plan builder](https://useaiblocks.com/skills/video-ad-production-plan-builder).
-- **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the video ads.
+- The [Video caption maker in your brand font](https://useaiblocks.com/skills/branded-video-captions). It takes the edit plan.
+- The [Wordless video ad opening writer](https://useaiblocks.com/skills/wordless-video-ad-opening-writer).
+- The [Spoken video ad opening writer](https://useaiblocks.com/skills/spoken-video-ad-opening-writer).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

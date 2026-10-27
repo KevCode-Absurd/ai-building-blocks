@@ -6,7 +6,8 @@ import { ArrowIcon, KitMenu } from "./ui";
 import { type Block, type Catalogue, type Page, cap, formatOf, kindInfo, rendersOf, kindOf, loadPage, loadSkillText, paidService, pathOf, taskOf, wireSteps } from "./lib/data";
 import { markViewed } from "./lib/store";
 import { buildHandoffZip, buildSkillZip, download, finalOutputs, needsOf, orderFlow, zipName } from "./lib/handoff";
-import { businessText, getBusiness, hasBusiness, useBusiness, withBusiness } from "./lib/business";
+import { getBusiness, hasBusiness, meFor, useBusiness, withBusiness } from "./lib/business";
+import type { TaskLike } from "./lib/me-file";
 import { openTailor } from "./Tailor";
 import { BusinessNote, openBusiness } from "./Business";
 import { DownloadDialog, TransferGuide } from "./DownloadDialog";
@@ -16,7 +17,7 @@ import { Link, libraryReturnTo } from "./lib/router";
 import AddToFlow from "./AddToFlow";
 import Install from "./Install";
 import { Before, Next } from "./Needs";
-import RunInAi from "./RunInAi";
+import RunInAi, { PullFromAi } from "./RunInAi";
 import { Gauge } from "./Gauge";
 import PixelFace from "./PixelFace";
 import { HelpedBy, MindSkills, WorkflowList, flowsUsing } from "./MindPack";
@@ -158,7 +159,7 @@ function DetailsPanel({ children, watch }: { children: ReactNode; watch?: unknow
   );
 }
 
-type ComposerProps = { slug: string; skill: string | null; give: string[]; toast: (m: string) => void; example?: string; exampleLabel?: string; onTransfer: () => void };
+type ComposerProps = { slug: string; task?: TaskLike; skill: string | null; give: string[]; toast: (m: string) => void; example?: string; exampleLabel?: string; onTransfer: () => void };
 
 /** Public task pages can stay mounted while account state changes. Never render an old owner's draft. */
 function Composer(props: ComposerProps) {
@@ -172,7 +173,7 @@ function Composer(props: ComposerProps) {
 }
 
 /** One account-scoped local draft, one complete request, then the transfer step. */
-function ScopedComposer({ slug, skill, give, toast, example, exampleLabel, onTransfer, storageKey: key }: ComposerProps & { storageKey: string }) {
+function ScopedComposer({ slug, task, skill, give, toast, example, exampleLabel, onTransfer, storageKey: key }: ComposerProps & { storageKey: string }) {
   const [text, setText] = useState(() => { try { return localStorage.getItem(key) ?? ""; } catch { return ""; } });
   const backupKey = `${key}:before-example`;
   const [savedText, setSavedText] = useState<string | null>(() => { try { return localStorage.getItem(backupKey); } catch { return null; } });
@@ -181,7 +182,7 @@ function ScopedComposer({ slug, skill, give, toast, example, exampleLabel, onTra
   const [failed, setFailed] = useState(false);
   const [copied, setCopied] = useState(false);
   const biz = useBusiness();
-  const about = includeBusiness ? businessText(biz) : "";
+  const about = includeBusiness ? meFor(biz, task ? [task] : []) : "";
   const ready = !!skill && (give.length === 0 || !!text.trim());
   const request = skill ? `${skill.trim()}\n\n---\n\n${[about, text.trim()].filter(Boolean).join("\n")}\n` : "";
   useEffect(() => { try { if (text) localStorage.setItem(key, text); else localStorage.removeItem(key); } catch { /* storage unavailable; keep this draft in memory */ } }, [key, text]);
@@ -214,7 +215,7 @@ function ScopedComposer({ slug, skill, give, toast, example, exampleLabel, onTra
     {!ready && <p id="task-input-help" className="small task-input-help" role="status" data-testid="task-input-help">{skill ? "Add the requested details above to enable Copy the request." : "Waiting for the instructions to load. If loading fails, choose Try again above."}</p>}
     {example && <div className="task-example-actions"><button className="link-btn" onClick={useExample} data-testid="use-task-example">{exampleLabel ? `Use ${exampleLabel.toLowerCase()}` : "Use example material"}</button>{savedText !== null && exampleLabel && <span className="small">{exampleLabel}: made-up material to show what to add.</span>}{savedText !== null && <button className="link-btn" onClick={restoreText}>Restore my text</button>}</div>}
     {exampleError && <p role="alert">{exampleError}</p>}
-    <details className="task-extras"><summary>Add business details (optional)</summary><p className="small">Only add these if they help this task.</p>{businessText(biz) ? <label className="task-check"><input type="checkbox" checked={includeBusiness} onChange={e => { setIncludeBusiness(e.currentTarget.checked); setCopied(false); }} />Include my saved business details in this request</label> : <button className="link-btn" onClick={openBusiness}>Add business details</button>}</details>
+    <details className="task-extras"><summary>Add your me.md (optional)</summary><p className="small">Only the parts this task needs are added.</p>{hasBusiness(biz) ? <label className="task-check"><input type="checkbox" checked={includeBusiness} onChange={e => { setIncludeBusiness(e.currentTarget.checked); setCopied(false); }} />Include my me.md in this request</label> : <button className="link-btn" onClick={openBusiness}>Add your me.md</button>}</details>
     <div className="composer-bar"><span id="task-local-note" className="small">Your draft stays on this device. Copying does not send it to an AI.</span><button className="btn btn-primary btn-sm" disabled={!ready} onClick={() => void copy()} data-testid="composer-copy">{copied ? "Request copied" : "Copy the request"}</button></div>
     {failed && <div className="task-copy-fallback"><p role="alert">Copy did not work. Select the complete request below and copy it.</p><textarea aria-label="Copy the complete request manually" readOnly value={request} rows={7} onFocus={e => e.currentTarget.select()} /></div>}
     {(copied || failed) && <div className="task-transfer" data-testid="task-text-transfer"><h3>Use it in your AI</h3><ol><li>Open a new chat in your AI.</li><li>Paste the complete request and send it.</li><li>Check the result against the checks below before you use it.</li></ol><p className="small">This site prepares the request. Your AI does the work.</p></div>}
@@ -295,7 +296,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
     const scope = currentTransfer.current;
     setDownloading(true); setDownloadError(""); trackUxEvent("pack_download_requested");
     try {
-      const result = isFlow ? await buildHandoffZip(c, workflowFlow(), getBusiness()) : { blob: await buildSkillZip(b.slug, skill, b.hasFiles, getBusiness()), filename: `${b.slug}.zip` };
+      const result = isFlow ? await buildHandoffZip(c, workflowFlow(), getBusiness()) : { blob: await buildSkillZip(b.slug, skill, b.hasFiles, getBusiness(), b), filename: `${b.slug}.zip` };
       if (currentTransfer.current !== scope) return;
       if ("error" in result) throw Error(result.error);
       download(result.blob, result.filename); setTransferred(true);
@@ -314,7 +315,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
   };
   const copySkill = async () => {
     if (!skill) return;
-    try { await navigator.clipboard.writeText(withBusiness(skill, getBusiness())); setCopyFailed(false); trackUxEvent("request_copied"); toast(biz ? "Instructions copied with your business details. Paste them into your AI." : "Instructions copied. Paste them into your AI."); }
+    try { await navigator.clipboard.writeText(withBusiness(skill, getBusiness(), [b])); setCopyFailed(false); trackUxEvent("request_copied"); toast(biz ? "Instructions copied with your me.md. Paste them into your AI." : "Instructions copied. Paste them into your AI."); }
     catch { setCopyFailed(true); }
   };
 
@@ -470,8 +471,8 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
             <h2 className="bp-h2" id="fill-h">{num()}Fill it in</h2>
             <p className="bp-note">{textTask ? "Add what this task works from, then copy the request. Your details are optional but make the result yours." : bring.length > 0 ? "Gather these first. You add them in your AI after you download." : "Add these for a better result."}</p>
             {bring.length > 0 && !textTask && <div><b>What to bring</b><ul className="task-materials">{bring.map((x, i) => <li key={i}>{txt(x)}</li>)}</ul></div>}
-            {textTask && <Composer key={b.slug} slug={b.slug} skill={skill} give={required.length ? give.filter(x => !/\boptional\b/i.test(txt(x))) : []} toast={toast} example={p?.example?.input || starter?.example} exampleLabel={!p?.example?.input ? starter?.exampleLabel : undefined} onTransfer={() => setTransferred(true)} />}
-            {hasCopyable && <CopyableTask key={b.slug} c={c} b={b} recipe={p!.copyable!} skill={skill} toast={toast} />}
+            {textTask && <Composer key={`composer-${b.slug}`} slug={b.slug} task={b} skill={skill} give={required.length ? give.filter(x => !/\boptional\b/i.test(txt(x))) : []} toast={toast} example={p?.example?.input || starter?.example} exampleLabel={!p?.example?.input ? starter?.exampleLabel : undefined} onTransfer={() => setTransferred(true)} />}
+            {hasCopyable && <CopyableTask key={`copyable-${b.slug}`} c={c} b={b} recipe={p!.copyable!} skill={skill} toast={toast} />}
             {(betterWith.length > 0 || betterTools.length > 0) && (
               <p className="small task-better" data-testid="better-with"><b>Better with: </b>
                 {[...betterWith.map(i => i.maker ? <Link key={i.key} to={local(i.maker.url)}>{i.label}</Link> : <span key={i.key}>{i.label}</span>), ...betterTools.map(t => <span key={t.name} title={t.why}>{t.name}</span>)]
@@ -492,8 +493,8 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
             {isFlow && <button className="btn btn-line" onClick={() => toBuilder(keepCoordinator ? [b.slug] : b.steps.map(s => s.uses), b.name)} data-testid="view-in-builder">View in builder</button>}
           </div>
           {downloadError && <p role="alert">{downloadError} <button className="link-btn" onClick={() => void downloadTask()}>Try again</button></p>}
-          {copyFailed && <div className="task-copy-fallback"><p role="alert">Copy did not work. Select and copy the instructions below.</p><textarea aria-label="Copy instructions manually" readOnly value={skill ? withBusiness(skill, getBusiness()) : ""} rows={6} onFocus={e => e.currentTarget.select()} /></div>}
-          {!isFlow && <RunInAi noun={noun} hasFiles={!!b.hasFiles} />}
+          {copyFailed && <div className="task-copy-fallback"><p role="alert">Copy did not work. Select and copy the instructions below.</p><textarea aria-label="Copy instructions manually" readOnly value={skill ? withBusiness(skill, getBusiness(), [b]) : ""} rows={6} onFocus={e => e.currentTarget.select()} /></div>}
+          {isFlow ? <PullFromAi slug={b.slug} plan={!isAgent} toast={toast} /> : <RunInAi noun={noun} hasFiles={!!b.hasFiles} slug={b.slug} toast={toast} />}
           <div className="task-start-extras">
             <details className="task-action-help" data-testid="task-action-help"><summary>Where will I get the result?</summary><p>{textTask ? "Copy the request puts the instructions and your details on your clipboard. Paste the complete request into a new AI chat and send it." : "Download the complete files, unzip them and give them to your AI. Keep the instructions and supporting files together. Copying instructions alone leaves out the files."}</p><p>Your AI makes the result in your chat or workspace. Add any material it asks for, then check the result before using it.</p><a href="/how-it-works#use-in-ai" target="_blank" rel="noopener noreferrer">Read the steps in a new tab</a></details>
             {isMind && has(p?.seats) && <div className="bp-actions"><button className="btn btn-line" data-testid="start-council" onClick={() => {

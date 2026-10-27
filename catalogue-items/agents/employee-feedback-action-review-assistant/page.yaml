@@ -40,7 +40,7 @@ you_get:
   - A short record with no quotes and no names
 how_to_use:
   - Add the agent with the pieces it uses, the Turn employee feedback into owned actions workflow and the Executive action register keeper. If your AI cannot open them, paste both in with the agent.
-  - Before you paste anything, remove names and any detail that points to one person. Tell the AI your minimum group size. Say what staff were told about how feedback would be used.
+  - Before you paste anything, check that your AI tool's data terms and your HR policy allow staff feedback to go into it. Staff feedback leaves your organisation when you paste it. Paste group-level summaries, not raw comments. Remove names and any detail that points to one person. Tell the AI your minimum group size. Say what staff were told about how feedback would be used.
   - Paste the feedback, the action list and the proof. If this is a repeat, paste last time's record.
   - Read "Held back" first. Then check each action marked done against its proof.
   - Edit the staff update and send it yourself. In plain chat it cannot save files, so keep the record it hands back.

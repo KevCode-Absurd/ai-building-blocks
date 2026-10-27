@@ -9,6 +9,7 @@ level: intermediate
 inputs:
   - {type: question, required: true}
 outputs:
+  - {type: plan}
   - {type: copy_draft}
 uses: [reversible-decision-sorter, math-or-judgment-call-sorter, decision-evidence-bar-setter, disagree-and-commit-note-writer]
 steps:

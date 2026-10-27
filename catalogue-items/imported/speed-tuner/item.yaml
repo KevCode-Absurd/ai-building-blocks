@@ -10,6 +10,8 @@ level: advanced
 inputs:
   - type: codebase
     required: true
+  - type: page_speed_report
+    required: false
 outputs:
   - type: code_change
 uses: []

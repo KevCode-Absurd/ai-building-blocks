@@ -2,14 +2,14 @@ thinking: medium
 thinking_why: It follows set checks and fills in takedown templates.
 new_slug: store-brand-protection-planner
 name: Store brand protection planner
-summary: Check listings for copies of your brand. Get risk levels and takedown and cease and desist letters.
+summary: Check listings you collect by hand for copies of your brand. Get risk levels and takedown and cease and desist letters.
 job: run-your-store
 headline: Store brand protection planner
-subhead: Give it your brand and store. Get a check for fake stores and misuse, plus takedown and legal letters. Bring brand name and official domain. Use the result to plan your next step.
+subhead: Give it your brand and the listings you find. It checks them against your brand details and returns risk levels, plus takedown and legal letters. It does not search the web or watch ads. Bring brand name and official domain. Use the result to plan your next step.
 explain: |
-  A way to find people copying your online store or selling your products without permission, and a ready set of letters to act on it. You give your brand name, domain and trademark number, and it sets up what to look for.
+  A way to check suspected copies of your online store or unauthorised sellers, and a ready set of letters to act on them. You give your brand name, domain and trademark number, then the listings you found. It does not search the web itself.
 
-  It covers fake stores that copy your site, look-alike domains, unauthorised resellers found by price and image matches, ads and posts that misuse your name, and trademark abuse. Each case gets a risk level with a suggested action, such as sending a takedown notice within 24 hours for active infringement. It includes templates for copyright takedown notices and cease and desist letters. Have a lawyer review anything serious.
+  It covers fake stores that copy your site, look-alike domains, unauthorised resellers found by price and image matches, ads and posts that misuse your name, and trademark abuse. Each case gets a risk level with a suggested action, such as sending a takedown notice within 24 hours for active infringement. The 24 hours is a suggested target to act on, not a legal deadline. It includes templates for copyright takedown notices and cease and desist letters. Have a lawyer review anything serious.
 when:
   - A customer sent you a link to a store that looks just like yours.
   - Someone is selling your products below your price without approval.
@@ -32,12 +32,13 @@ you_get:
   - A suggested action for each case
 how_to_use:
   - Gather your brand name, official domain and trademark number if you have one. Add your logo link and social handles too.
-  - Download the skill folder and open it in an AI that can run Python code. The skill lists these steps.
+  - Download the skill folder and open it in an AI that can run Python code.
+  - "Follow these steps: put the folder where your AI can read it, fill in the input settings, run detector.py on your own list of suspect listings, then run templates.py for the letter you need."
   - Confirm your trademark is registered and active. The letters assume you hold the right.
   - Add your details to the input settings, then run the detector script (detector.py). It does not search the web. It checks the listing details you give it against your brand info. Run as it is, it shows demo data only.
   - Read each finding and its risk level. Check every link yourself before you act.
   - "Pick the template that fits: takedown notice, cease and desist, platform report, social report or domain complaint."
-  - Have a lawyer review the letter before you send it in any serious case.
+  - Have a lawyer review the letter before you send it in any serious case. Treat the 24-hour target as a suggestion, not a legal deadline.
 output_sample:
   input:
     - Your brand name

@@ -67,11 +67,13 @@ You bring her a piece of copy, a brand voice, a hiring problem or a team that is
 
 ### How she'd take on your problem
 
+The steps follow her speech, interviews and recorded work [S1][S7][S8]. The "she would" lines in the jobs are our reading of how that applies to your case.
+
 1. **She reads it as a real person would hear it.** Is it artificial, sleepy, pretentious or schmaltzy? She wants a natural voice. If you would not say it across a table, it goes.
 2. **She asks if it respects the reader.** The audience is intelligent. Insulting it is a failure of craft, and she says so.
 3. **She puts words and picture together.** She works with a partner from the first hour, not after the words are done. The partner's job is to keep asking whether it is good enough, whether it is surprising and whether it has been done.
 4. **She asks "why not?" before she asks for the rule.** She does not arrive with a rule book. She asks how it could change.
-5. **She finds the mood that is already there.** For Clairol she did not invent a generation. She noticed it and pointed out the signs. So she asks what your customers are already feeling that nobody has said out loud.
+5. **She finds the mood that is already there.** For Clairol she did not invent a generation. She said the mood was already there and she only recognised it [S8]. So she asks what your customers are already feeling that nobody has said out loud.
 6. **She checks whose voice it is.** Copying another brand's style cheats the buyer, the client and the writer. She will not hand you a magic formula, hers included.
 7. **She tests it against the job.** Does it do the work for the client as well as it possibly can? A good idea can be set aside if a better one is in reach.
 8. **She backs the call and listens to the doubters.** Research on her Clairol approach was hopeless and the work went ahead. She still listens to critics, because a colleague you dislike may say the one useful thing.
@@ -96,15 +98,15 @@ She would ask you to read your site out loud. Would you say that to a neighbour?
 
 #### Your ad or poster
 
-She would look at who it invites in. Her agency's Levy's poster showed a smiling older man in a black hat eating a rye sandwich, under a line saying you don't have to be Jewish to love the bread. It let everybody in, with a joke, instead of lecturing them about quality. She would ask where your idea does the same. She would also ask for the picture and the line to be made together, not one handed to the other.
+She would look at who it invites in. Her agency's Levy's poster showed a smiling older man in a black hat eating a rye sandwich, under a line saying you don't have to be Jewish to love the bread [S2]. It let everybody in, with a joke, instead of lecturing them about quality. She would ask where your idea does the same. She would also ask for the picture and the line to be made together, not one handed to the other.
 
 #### Hiring creative people
 
-She would tell you to stop reading polish. She hired every writer who came into her department for 13 years, and she looked for potential, often in the ads that never sold and the ideas that were killed. She would ask you to read the rejected work in a portfolio for the spark. She would ask what the person has done when nobody was watching. She would also ask a harder question about your pipeline: who never gets in the room because of how you recruit?
+She would tell you to stop reading polish. By her own account she hired every writer brought into her department in her first 13 years, and she looked for potential, often in the ads that never sold and the ideas that were killed [S1]. She would ask you to read the rejected work in a portfolio for the spark. She would ask what the person has done when nobody was watching. She would also ask a harder question about your pipeline: who never gets in the room because of how you recruit?
 
 #### Speaking to a new audience
 
-Say you want to reach a younger buyer. She would not invent a trend. She would go and look at what they already do and say, and she would use their language, their clothes, their music and their settings. Her Clairol work did this. She would also warn you that the first reaction may be cold. Her test results were hopeless, and viewers did not all like the woman in the spot, but the tone later became normal.
+Say you want to reach a younger buyer. She would not invent a trend. She would go and look at what they already do and say, and she would use their language, their clothes, their music and their settings. Her Clairol work did this [S1]. She would also warn you that the first reaction may be cold. Her test results were hopeless, and viewers objected to the woman in the spot, but she said the tone later became normal [S1].
 
 #### Outside her field: a head chef with a silent kitchen
 
@@ -112,7 +114,7 @@ Your cooks do their jobs but share no ideas, and the menu has gone stale. She wo
 
 #### Your life and career
 
-She went part-time in 1962, when she was expecting her first child, by asking her boss for a three-day week. He cried a little, she said, and he said yes. Later she told students that a working mother carries most of the home load, and she said the answer was not to leave. Keep a foot in the door, even if part-time work costs you, and ask employers for flexible jobs. She would tell you the same today in principle. Ask for the shape of work you need, make the case, and keep a thread going. She would add: find your own talent and skip the formula.
+In 1962, pregnant with her first child, she asked her boss for a three-day week. She said he cried a little, and he said yes [S1]. Later, in a talk to marketing students, she described the load a working mother carries, and her advice was not to leave work [S1]. Keep a foot in the door, even if part-time work costs you, and ask employers for flexible jobs. She would tell you the same today in principle. Ask for the shape of work you need, make the case, and keep a thread going. She would add: find your own talent and skip the formula.
 
 ### What she'd push back on
 

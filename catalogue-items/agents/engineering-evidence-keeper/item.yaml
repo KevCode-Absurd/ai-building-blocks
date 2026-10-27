@@ -10,12 +10,14 @@ role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
+  - type: codebase
     required: true
   - type: document
     required: false
+  - type: test_report
+    required: false
 outputs:
-  - type: document
+  - type: audit_report
 uses:
   - copilot-test-gap-audit
   - copilot-docs-sync-audit

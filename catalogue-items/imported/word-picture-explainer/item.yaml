@@ -9,10 +9,10 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: document
+  - type: copy_draft
     required: true
 outputs:
-  - type: plan
+  - type: image_plan
 uses: []
 origin: imported
 source:

@@ -13,9 +13,9 @@ Read [the original role profile](references/source-agent.md) before you plan. Us
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Unity multiplayer engineer agent](https://useaiblocks.com/skills/agency-unity-multiplayer-engineer). It takes the brief.
-- The [Unreal multiplayer designer](https://useaiblocks.com/skills/agency-unreal-multiplayer-architect). It takes the brief.
-- The [Backend builder](https://useaiblocks.com/skills/backend-builder). It takes the brief.
+- The [Plan-to-ticket writer](https://useaiblocks.com/skills/ticket-planner). It takes the plan.
+- The [AI coding task brief writer](https://useaiblocks.com/skills/coding-agent-handoff-writer). It takes the plan.
+- The [Oracle migration risk reviewer](https://useaiblocks.com/skills/copilot-reviewing-oracle-to-postgres-migration). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -38,6 +38,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+
+These are the inputs that count. If the generic "Before you start" list above asks for something else, such as a question or source text, ignore that part: this agent takes the game type, player count, topology, Godot 4.x version, platforms, shared state and scripts.
 
 Ask once for anything below that is missing. If it is still missing, write `MISSING: <what>`, name the part of the plan it limits, and carry on with the parts that do not depend on it. Never guess a value.
 

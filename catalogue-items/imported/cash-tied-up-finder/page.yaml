@@ -35,7 +35,8 @@ how_to_use:
   - Paste the full text of the skill into a new chat.
   - "Send your spreadsheet first: monthly receivables, stock, payables, revenue and cost of goods for about 24 months."
   - Add your agings and your payment terms list (optional), and say if your sales are seasonal.
-  - Read the Diagnosis before the Action Plan. Check that the day counts match your own books.
+  - Check that your AI ran the calculation script and did not work the numbers in its head. Compare the day counts for one month with your own books before you read the Diagnosis.
+  - Read the Diagnosis before the Action Plan.
   - Pick one fix to try first, then run it again after a few months to see the change.
 output_sample:
   input:
@@ -47,7 +48,7 @@ output_sample:
     - An AI that can run code, so the day counts are worked out by script and not by guesswork
   output:
     - name: Dashboard
-      contains: Your cash conversion cycle trend, the days for each part, and how much cash is tied up against peers.
+      contains: Your cash conversion cycle trend, the days for each part, and how much cash is tied up compared with your own past months. Peer comparison appears only if you give peer figures.
     - name: Diagnosis
       contains: Why each part moved, split into volume, terms or discipline, with the evidence for each.
     - name: Opportunity Sizing

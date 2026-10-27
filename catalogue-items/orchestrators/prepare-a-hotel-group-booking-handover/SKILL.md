@@ -12,23 +12,27 @@ Hand one confirmed group booking to the next person. Two component skills run in
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
-
-**Makes it better (optional):**
+- **The contract** (yours): the full agreement or terms, with dates and any changes.
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
 - **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a brief, document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for the contract, your question, document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **A chat AI that reads files:** It reads the booking, the emails and the rooming list together.
 <!-- /needs -->
 
-## Before you start
+## When not to use
+- To see what each booking site paid you after commission, use the Hotel channel revenue reconciler (`hotel-channel-revenue-reconciler`).
+- To set room prices, use the Hotel room pricing planner (`hotel-room-pricing-planner`).
+- To hand over general work that is not a booking, use the Handover note writer (`handover-note-writer`).
 
-Use what is attached or pasted first. Ask once, in one short message, for only what you cannot work without.
+## What to gather first
+
+These replace the generic list above. Use what is attached or pasted first. Ask once, in one short message, for only what you cannot work without.
 
 **You need:**
 - The confirmed booking or contract: room types, nights, dates, rates, fees.
@@ -63,7 +67,7 @@ If a component skill is missing, tell the user which one and ask them to add it 
 2. **Handover note writer** (`handover-note-writer`). Give it the step 1 file, the booking, the request list and the contacts. Ask for the incoming person to see time-critical dates first, then payments due, accepted requests, open requests, contacts and where the files live. Save `outputs/step-02-handover-note-writer.md`.
    **Gate before step 3:** every accepted request cites the hotel's written acceptance. Everything else sits under open.
 
-3. **Check and hand back.** Build the result below.
+3. **Check and hand back.** Fill each heading of the result below from the step 1 and step 2 files. Compare room counts on the booking with the rooming list for the ROOMS line. Write `MISSING` for any item you cannot fill.
 
 ## What you hand back
 
@@ -84,9 +88,9 @@ Add a HAND-BACK SUMMARY: each saved file, each step run or skipped and why, and 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Action item tracker](https://useaiblocks.com/skills/executive-action-register). It takes the document and audit report.
 - The [Catering order change reviewer](https://useaiblocks.com/skills/catering-order-change-review-assistant). It takes the document.
 - The [Capstone team agreement and handover reviewer](https://useaiblocks.com/skills/capstone-commitment-review-assistant). It takes the document.
-- The [Construction variation cost and approval tracker](https://useaiblocks.com/skills/construction-variation-review-assistant). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -98,9 +102,9 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every figure shows its currency.
 - End with `CHECKS MISSED:` and the checks that failed or could not run, or `none`.
 
-## After this
+## What to do with the result
 
-Offer one next step in a short question, and say the user can type their own:
+Offer one next step in a short question, and say the user can type their own. Ignore the generic suggestions above that do not fit a hotel booking:
 - **Reconcile what the booking earned** with the Hotel channel revenue reconciler.
 - **Draft a message to the hotel** about one open request. It stays a draft until you send it.
 - **Run the handover again** after the hotel answers, with the new emails.

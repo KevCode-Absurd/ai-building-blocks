@@ -10,6 +10,8 @@ explain: |
   Ideas and meeting notes captured as tidy files you can find again. You say what happened, and the skill writes it down in the right shape, tags it and files it.
 
   It picks a template by note type. Meeting notes get attendees, discussion and action items with checkboxes. Research notes get the source and key findings. Others suit daily logs, ideas and project notes. Files are plain Markdown with date-first names, such as 2026-02-12-sprint-planning.md, and tags and links at the top. Before creating anything, it searches for an existing note on the topic and adds to that instead. It can also search your notes and write a summary across several of them.
+
+  Licence: this is a copy of a skill from Burhan Sebin's collection, shared under the MIT licence (see the LICENSE file), with small safety notes added by us. Keep the LICENSE file with it if you share it.
 when:
   - You leave meetings with scraps of text and lose the action items.
   - You want one place for ideas that is not a messy pile.
@@ -36,7 +38,7 @@ how_to_use:
   - Check the note. Make sure names, dates and action items are right. Do not include passwords or keys.
   - "To find things later, ask a question like: what did we decide about the dashboard this month?"
   - Then copy the action items into your task list. Once a month, ask for a summary of a topic to spot decisions that were later replaced.
-  - The skill writes down only what you tell it. Anything it adds on its own is marked to verify.
+  - The skill writes down only what you tell it. Anything it adds on its own is marked to verify, with a source. It never invents a source title or link.
 output_sample:
   input:
     - Your notes, ideas or what was said in a meeting

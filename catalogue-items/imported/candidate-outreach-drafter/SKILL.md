@@ -11,19 +11,19 @@ Transform sourcing intelligence (personas, talent maps, JDs) into compelling, pe
 
 ## Outreach Principles
 
-The percentages and rates in this skill (here and in the tables below) are the author's, taken from LinkedIn and Gem data. They are not checked here. Use them as rough guides. Never repeat them to a candidate as fact.
+The percentages and rates in this skill (here and in the tables below) are the author's, taken from LinkedIn and Gem data. They are not checked here, and each one is marked "(author's figure, unchecked)". The same goes for the five files in `references/`. Use them as rough guides. Never repeat them to a candidate as fact, and never put one in an outreach message.
 
 1. **Candidate-centric value prop** - Lead with what matters to THEM, not what the company needs
 2. **Specific > generic** - Reference something concrete about their background, never "I came across your profile"
-3. **Shorter wins** - InMail: under 400 characters (~50-70 words) gets 22% higher response. Email: 101-150 words is the sweet spot. Respect their time.
+3. **Shorter wins** - InMail: under 400 characters (~50-70 words) gets 22% higher response (author's figure, unchecked). Email: 101-150 words is the sweet spot. Respect their time.
 4. **One CTA** - Single, low-commitment ask. "15-min chat" not "apply now"
-5. **Multi-channel compounds** - Combining channels increases engagement by up to 287% (LinkedIn data)
-6. **Follow-up is where deals happen** - A 4-stage sequence gets 2x more replies and 68% higher interested rates vs one-off messages (Gem, 4M emails)
+5. **Multi-channel compounds** - Combining channels increases engagement by up to 287% (author's figure from LinkedIn data, unchecked)
+6. **Follow-up is where deals happen** - A 4-stage sequence gets 2x more replies and 68% higher interested rates vs one-off messages (author's figure from Gem data, unchecked)
 7. **Tone matches channel** - LinkedIn = professional, GitHub = developer-authentic, Twitter = casual
 8. **Know when to stop** - 4 touches per sequence, then pause. Data flattens after stage 4-5.
 9. **Sound Human** - Make it sound human, authentic and conversational. Don't be overly formal. Don't use staccato prose
-10. **Leverage the hiring manager** - SOBO (Send On Behalf Of) improves reply rates by 50%+. Only 22% of recruiters use it. Send first touch from the hiring manager or team lead for leadership hires and key ICs.
-11. **Measure what matters** - Track *interested* rate, not just reply rate. Gem data: 21.3% reply but only 7.9% interested — only 37% of replies are positive. Optimize for interested replies.
+10. **Leverage the hiring manager** - SOBO (Send On Behalf Of) improves reply rates by 50%+. Only 22% of recruiters use it (both are the author's figures, unchecked). Send first touch from the hiring manager or team lead for leadership hires and key ICs.
+11. **Measure what matters** - Track *interested* rate, not just reply rate. Author's Gem figures, unchecked: 21.3% reply but only 7.9% interested. Optimize for interested replies.
 12. **Guard sensitive information** - Outreach is semi-public (candidates forward messages, screenshot them, post them). Never include: exact revenue/ARR, deal sizes/ACV, pricing, internal targets, headcount plans not yet announced, customer contract values, or strategic timelines (fundraising, M&A). Use the *signal* ("mid-market SaaS", "Series A stage", "growing fast") without the *number*.
 
 ## Message Anatomy
@@ -81,7 +81,7 @@ Personalizing subject lines with candidate-specific tokens measurably increases 
 | GTM — President's Club winner | LinkedIn InMail (reference achievement) | Top performers respond to recognition |
 | No online signal | LinkedIn InMail → email | Standard professional channels |
 | Executive/VP+ | Warm intro (SOBO) → email | Skip LinkedIn noise, HM credibility |
-| Past candidate in ATS/CRM | Email (Boomerang sequence) | 46% of sourced hires are rediscovered candidates (Gem 2026) |
+| Past candidate in ATS/CRM | Email (Boomerang sequence) | Rediscovered candidates are a source of hires (the author's Gem figure is unchecked) |
 
 ## Sequence Design Principles
 
@@ -99,7 +99,7 @@ Touch 4 (Day 14)   → Breakup message, create soft urgency
 - **Between touches:** 3-5 business days minimum
 - **Best send times:** Tuesday-Thursday, 8-10am or 5-7pm candidate's timezone
 - **Avoid:** Monday mornings (inbox flood), Friday afternoons, holidays, same day as company layoff announcements
-- **Test weekends:** Gem data shows ~66% open rates on weekends due to less inbox competition. Schedule sends for Sunday evening / Monday 6am to land at top of inbox.
+- **Test weekends:** The author reports higher open rates on weekends (unchecked). Schedule sends for Sunday evening / Monday 6am to land at top of inbox.
 - **Best months:** January (professionals return refreshed), April (post-Q1 momentum). Q4 is weakest.
 - **Seasonal:** Avoid late December, first week of January, major conference weeks
 
@@ -113,7 +113,7 @@ Each touch should add new value, not repeat:
 
 ### SOBO Strategy (Send On Behalf Of)
 
-For leadership hires and key ICs, send the first touch from the hiring manager or team lead instead of the recruiter. Gem data (4M emails): **50%+ higher reply rates**, with some teams seeing 3-4x lifts.
+For leadership hires and key ICs, send the first touch from the hiring manager or team lead instead of the recruiter. The author's Gem figures (unchecked) claim higher reply rates.
 
 **When to use SOBO:**
 - Director+ and executive roles (always)
@@ -122,7 +122,7 @@ For leadership hires and key ICs, send the first touch from the hiring manager o
 - When the hiring manager has strong industry credibility
 
 **How to implement:**
-- Recruiter drafts the message, HM reviews/approves
+- Recruiter drafts the message. The hiring manager must read it, edit it until it is true to what they would say, and agree to it before it goes out. Never send a message in someone's name without that yes.
 - Send from HM's email with recruiter CC'd (or use SOBO tooling)
 - HM handles the first reply; recruiter manages follow-ups
 - Works for both email and LinkedIn (if HM sends the InMail)

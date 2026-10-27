@@ -5,28 +5,33 @@ summary: Build a research asset and amortization schedule from your dated R&D ex
 job: track-numbers
 thinking: high
 thinking_why: "The result depends on the life you choose, so the choice needs a stated reason and a clear line from statutory accounting."
-subhead: A cohort research-asset schedule and operating-profit adjustment, separate from statutory accounting. Share current and prior R&D expense cohorts, reported EBIT, chosen economic life and evidence for the amortization convention.
+subhead: Give it your yearly R&D expense, reported EBIT, the economic life you choose and why. It builds a research asset and an amortization schedule by year of spend, and shows adjusted EBIT beside reported EBIT. This is an analyst restatement, not statutory accounting.
 explain: |-
-  A cohort research-asset schedule and operating-profit adjustment, separate from statutory accounting.
+  Accounting rules often expense research as it is spent. An analyst may instead treat each year's research as an asset that wears out over its useful life. This skill does that for you, one year of spend at a time (a "cohort"), and shows how operating profit (EBIT) changes.
 
-  Issuer accounting and earnings. Illustrative figures. Research asset: 30 + 24 x 2/3 + 18 x 1/3 = 30 + 16 + 6 = 52. Amortization: (24 + 18 + 12) / 3 = 18. Adjusted EBIT: 100 + 30 - 18 = 112. If current research expense is 36 instead of 30, the year-end asset and the EBIT adjustment each rise by 6 under the stated convention.
+  It adds this year's research expense back to EBIT, takes off the amortization of the earlier years' cohorts, and shows the research asset left. This year's spend is counted at full cost and is not amortized in its first year. It keeps development costs you already capitalized separate so nothing is counted twice. It does not change taxes and it does not say what your statutory accounts may recognize.
+
+  Illustrative figures: research asset 30 + 24 x 2/3 + 18 x 1/3 = 52. Amortization (24 + 18 + 12) / 3 = 18. Adjusted EBIT 100 + 30 - 18 = 112.
 when:
-  - You need a cohort research-asset schedule and operating-profit adjustment, separate from statutory accounting.
-  - You work on issuer accounting and earnings and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - You want to restate EBIT as if research spend were an asset, using dated R&D expense by year.
+  - You compare companies that spend different amounts on research and want a like-for-like profit view.
+  - A reviewer needs to trace the research asset and the amortization back to each year of spend.
 not_for:
   - "You need to recognize an asset under IAS 38 for your statutory accounts: use your accountant or auditor."
   - "You want to forecast whether research will succeed: use a person who knows the product and market."
   - "You only want a quick view of reported profit: read the income statement directly, with no adjustment."
   - "You need EPS with acquired-intangible amortization added back: use the Purchased amortization EPS bridge instead."
 you_give:
-  - Current and prior R&D expense cohorts, reported EBIT, chosen economic life and evidence for the amortization convention.
-  - "The fiscal year end, plus the currency and scale used for the research asset schedule."
-  - "Your spreadsheet tool, if you want the research asset schedule as a workbook."
+  - R&D expense for the current year and each prior year, dated
+  - Reported EBIT
+  - The economic life you choose, and why
+  - The amortization convention (for example, spend counted at year end) and evidence for it
+  - Any development costs already capitalized, kept separate
+  - The fiscal year end, currency and scale; and your spreadsheet tool if you want a workbook
 you_get:
-  - A cohort research-asset schedule and operating-profit adjustment, separate from statutory accounting.
-  - "An editable workbook of the research asset schedule, with its inputs, formulas and test cases to rerun."
-  - "A tie-out of the research asset and the amortization, the inputs still missing and the checks that ran."
+  - A research asset and amortization schedule by year of spend, and adjusted EBIT beside reported EBIT
+  - An editable workbook with inputs, formulas and test cases to rerun
+  - A tie-out of the asset to the amortization, the inputs still missing and the checks that ran
 how_to_use:
   - "Download the pack and give your AI its SKILL.md. Then add the yearly R&D expense and the reported EBIT."
   - "Tell it what you need: the research asset, the yearly amortization and the change to operating profit."
@@ -61,19 +66,21 @@ how_it_works:
   - title: 3. Add current expensed research back to EBIT and deduct cohort amortization; carry the research asset consistently into any adjusted capital-return calculation without changing cash taxes automatically
     text: Add current expensed research back to EBIT and deduct cohort amortization; carry the research asset consistently into any adjusted capital-return calculation without changing cash taxes automatically.
 output_shape: |-
-  A cohort research-asset schedule and operating-profit adjustment, separate from statutory accounting.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  SCOPE AND DATED SOURCES
+  INPUTS AND ASSUMPTIONS (life, convention, evidence)
+  COHORT TABLE: year of spend, cost, amortization this year, unamortized balance
+  RESEARCH ASSET, AMORTIZATION AND ADJUSTED EBIT beside reported EBIT
+  RECONCILIATIONS
+  FILE CHECKS: what ran
+  MISSING:
+  CHECKS MISSED:
 tweaks:
-  - what: "Fiscal year end"
-    how: "Take the fiscal year end from the yearly R&D expense and the reported EBIT. Use one currency and scale on every line."
-  - what: "Economic life"
-    how: "Change the economic life and have your AI recalculate. Keep the actual figures you supplied."
-  - what: Acceptance
-    how: No already-capitalized development expenditure is counted again.
+  - what: Fiscal year end
+    how: Take the fiscal year end from the yearly R&D expense and the reported EBIT. Use one currency and scale on every line.
+  - what: Economic life
+    how: Change the economic life and have your AI recalculate. Keep the actual figures you supplied.
+  - what: Abandoned projects
+    how: Name projects that were stopped and give evidence. They are removed from the asset.
 judge:
   - No already-capitalized development expenditure is counted again.
   - Asset cohorts roll forward and the expense/amortization adjustment is applied consistently to profit and capital.
@@ -87,7 +94,7 @@ improve:
   - "Save one research asset schedule you have already checked as an approved example, so your AI copies its layout."
   - "Write how your documents define economic life into SKILL.md, so every run uses your wording."
 before: []
-next: [purchased-amortization-eps-bridge, roe-margin-check]
+next: [ purchased-amortization-eps-bridge, roe-margin-check ]
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI

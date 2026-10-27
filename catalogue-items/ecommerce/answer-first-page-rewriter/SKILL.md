@@ -39,7 +39,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-- **The page text** (required). A refresh plan from an earlier step, saying how deep the update goes, tells you which sections to rewrite.
+- **The page text** (required): paste it in the chat. If the person gives only a page address, ask them to paste the text, because you cannot rely on opening the page. A refresh plan from an earlier step, saying how deep the update goes, tells you which sections to rewrite.
 - **The questions it should answer** (advised).
 - **Own data, experience and sources** (advised): a test, a customer count, a lesson, a quote from a real expert.
 - **A tone sample and an avoid-word list** (optional).
@@ -66,7 +66,7 @@ The claims below come from studies as reported by courses in 2025 to 2026. None 
 8. **FAQ.** Add 3 to 5 FAQ questions from People Also Ask at the bottom. Keep a transactional page light on information text.
 9. **Label your ideas.** Give your own ideas the brand name ("the Brand X sizing rule") and repeat it across channels so AI does not absorb it as generic.
 10. **Ignore word count.** One data set found almost no link between page length and AI citation, and many cited pages were short.
-11. **Course rules to add.** Cite named data with a link. Write at about an eighth-grade level. Cut filler openers. Keep your own voice and first-hand experience. Add a visual. Link to your own pages. Keep an avoid-word list. One academic study reported a rise in AI appearance from edits like these. That is one study, so do not promise it.
+11. **Style rules, stated once.** Rules you apply in the rewrite: write at about an eighth-grade level, cut filler openers, keep the avoid-word list, keep the person's own voice and first-hand experience. Advice only, not checked by you: add a visual and link to your own pages. One academic study reported a rise in AI appearance from edits like these. That is one study, so do not promise it.
 12. **Rank first.** AI search tools pull from page-one results, so ranking in normal search still comes first.
 13. **List what is still missing.** Every vague claim without a number or source goes on the "facts that still need a source" list.
 14. **Health, money and legal advice.** If a section gives it, keep to what the person can support and add a short "check with a qualified person" line.
@@ -75,6 +75,7 @@ The claims below come from studies as reported by courses in 2025 to 2026. None 
 - AI-written pages with no human edit do not hold up. One study found that few of the pages cited by Google and ChatGPT were AI-written. The person must edit with real facts.
 - It needs real data or experience from the store. It cannot be invented.
 - Course rules are an educator's summary and were not tested on stores.
+- The rewrite needs a human editor to check every fact, number and quote before it is published. The list of facts that still need a source shows the gaps you found, such as a claim with no number or no link.
 
 ## What you hand back
 ```
@@ -109,7 +110,7 @@ MISSING: <what was not given>
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Content traffic decline reviewer](https://useaiblocks.com/skills/monthly-content-decay-keeper).
 - The [Title and meta tag writer](https://useaiblocks.com/skills/title-and-meta-tag-writer). It takes the draft.
-- The [AI citation scorer](https://useaiblocks.com/skills/ai-citation-scorer).
+- The [Search Console content planner](https://useaiblocks.com/skills/monthly-search-console-keeper).
 - **Fill the gaps in your brand brain** with the [Draft brand voice checker](https://useaiblocks.com/skills/draft-brand-voice-checker). It takes the draft.
 - **Tell it as a story** with the [Article evidence and copy editor](https://useaiblocks.com/skills/blog-post-publish-check-loop). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.

@@ -9,7 +9,9 @@ subhead: Describe how your team uses AI. Get a first-draft AI use policy based o
 explain: |
   A first draft of your team's AI use policy, built from published model policies and current guidance, ready to take to the person who decides.
 
-  The skill runs a short interview about which sections you need, who will read the policy and where AI is used. It then searches for current public sources and drafts each section from them. Every choice point is marked for review, with open questions at the end of each section. The draft carries a header saying it is for internal legal review, a list of sources and an adoption checklist. Not legal advice, so have a lawyer review it.
+  The skill runs a short interview about which sections you need, who will read the policy and where AI is used. It then searches for current public sources and drafts each section from them. Every choice point is marked for review, with open questions at the end of each section. The draft carries a header saying it is for internal legal review, a list of sources and an adoption checklist. Not legal advice, so have a lawyer review it. Rules on AI differ by country and change often. A source with no live web check is labelled as training knowledge, so check every cited source for its current version before you rely on it.
+
+  Licence: Apache 2.0, as the LICENSE file in this item says. We gave it a plain name and added a note for use without the original plugin.
 when:
   - Your team uses AI every day and nothing is written down.
   - Your current policy is old and ignores recent laws.
@@ -31,10 +33,12 @@ you_get:
   - A list of sources used
   - An adoption checklist and next steps
 how_to_use:
+  - Have ready: whether you build or use AI, your countries and sector, who approves policy, and any policy you already have. The original plugin commands and its CLAUDE.md file are not included, so you paste this profile instead.
   - Use an AI that can search the web. The skill needs it to find current public AI policies.
   - Open the skill folder and paste the skill text into a new chat, or upload the folder if your AI takes files.
   - Paste a short company profile: whether you build or use AI, your countries and sector, who approves policy, and any policy you already have. Or answer the setup interview in the setup-interview folder.
   - "Answer the short interview: which sections you need, who reads the policy, and where your team uses AI."
+  - First pick the sections you want. Sections 1 to 5 and 9 in the checklist are a good start. You then get the draft header, the sources list and the first section.
   - Read the draft and check every review flag. Answer the open questions at the end of each section.
   - Send the draft and the sources list to your lawyer before anyone adopts it.
 output_sample:

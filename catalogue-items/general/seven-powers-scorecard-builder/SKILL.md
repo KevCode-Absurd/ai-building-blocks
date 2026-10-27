@@ -73,7 +73,7 @@ The business in three lines. The scorecard with seven rows, each with benefit, b
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Competitive advantage tester](https://useaiblocks.com/skills/business-power-tester). It takes the audit report.
 - The [Competitive advantage development planner](https://useaiblocks.com/skills/power-stage-build-planner). It takes the audit report.
-- The [Brand differentiation statement writer](https://useaiblocks.com/skills/onliness-statement-writer). It takes the audit report.
+- The [Product pivot decision reviewer](https://useaiblocks.com/skills/pivot-or-persevere-decider). It takes the audit report.
 - **Test the idea with real people** with the [Ten-year durability checker](https://useaiblocks.com/skills/ten-year-durability-checker). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

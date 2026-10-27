@@ -7,7 +7,6 @@ description: Share claim records, offsets, bank receipts and payment timing. Get
 
 A claims roll-forward, a match to bank cash and an ordered payment ladder built only from cash that has arrived.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -16,6 +15,13 @@ When you've handed it back, suggest what they could do next in one short questio
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
+## When not to use
+- To see only the gaps between billed, paid and received, use the Clinic payment reconciliation reviewer (`clinic-claims-collections-bridge`).
+- For a cash timeline of payments with no claims, use the Payment timing cash balance planner (`settlement-liquidity-ladder-builder`).
+- For patient-level billing or coding review, use your billing system. This works from totals only.
+- Choosing which payments to make or which services come first stays with your team.
+
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
@@ -35,6 +41,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+
+These items replace the generic source text and spreadsheet inputs above. They are claim totals, payer remittances, provider offsets, bank receipt dates and times, opening cash and the confirmed payment order.
 
 - Claim totals and payer remittances for the period. Aggregate or deidentified only, never patient-level detail.
 - Provider offsets taken back from payments, with dates.
@@ -57,23 +65,23 @@ If an item is missing, ask once. If it cannot be supplied, write MISSING: with w
 
 ## Steps
 
-Read each step's own SKILL.md if it is attached. If it is not, follow the step as written here and say so in the hand-back. Build a short input map first: each source, its date, units, period and what is missing.
+Read each step's own SKILL.md if it is attached. If it is not, follow the step as written here, use the procedure listed under it, and say so in the hand-back. Build a short input map first: each source, its date, units, period and what is missing.
 
 1. **Clinic payment reconciliation reviewer** (`clinic-claims-collections-bridge`). Reconcile opening claims, new billings, approved adjustments, applied cash and provider offsets. Pass actual reconciled bank receipts and their availability timestamps, not gross billings or claim-applied cash, downstream.
    - Procedure: list each source with its date, period and unit. Roll the claims forward (opening claims, plus new bills, less approved claim adjustments, less cash applied to claims). Then take the cash applied to claims, less provider offsets, as the expected bank cash. Match each remittance to the bank credit it should have produced. Keep any difference as an unexplained exception until a source explains it. A provider offset only reduces the claims balance if a posting record shows it was applied to claims.
    - Check before moving on: Every gap between claims, remittances and the bank is explained or listed as unexplained.
-   - Hands to step 2: the reconciled bank receipts and the time each one was available, not billed amounts.
+   - Hands to step 2: for each bank receipt, the account, amount, date and time it was available and the remittance it matched. Not billed amounts.
    - Save `outputs/step-1-clinic-claims-collections-bridge.md` and any real file. With no file access, give it as a labelled section. If a needed input is missing, stop this step and write MISSING:.
 
 2. **Payment timing cash balance planner** (`settlement-liquidity-ladder-builder`). Build the same-account ordered settlement ladder using verified opening accessible cash and actual bank receipts. Keep pending payer remittances outside confirmed inflows and preserve payment authorization and clinical independence.
    - Procedure: take the opening cash you can reach in the one account, the bank receipts from the step 1 file at the time each was available, and your payments in the order you confirmed. For each time bucket, net flow is receipts less payments, and the closing cash is the next bucket's opening cash. Find the lowest balance and the largest funding gap. Pending remittances go on their own list and never count as cash. The order of payments inside one bucket is not modelled.
    - Check before moving on: Payments follow the order given. The ladder starts from verified opening cash. No pending remittance counts as cash.
-   - Goes into the result: the dated ladder and the largest funding gap.
+   - Goes into the result: the dated ladder (period, confirmed receipts, payments in order, cash left) and the largest funding gap.
    - Save `outputs/step-2-settlement-liquidity-ladder-builder.md` and any real file. With no file access, give it as a labelled section. If a needed input is missing, stop this step and write MISSING:.
 
-## Workbook
+## Workbook (only if asked)
 
-If they ask for a workbook and you can make files, build one linked workbook: inputs, calculations, checks and a summary on separate sheets. Mark inputs in blue, same-sheet formulas in black and cross-sheet links in green. Show units and put negatives in parentheses. Recalculate, look for errors, change one input to test the links, put the case back, and reopen the saved file. If you cannot make files, give each schedule as a table and say no workbook was built. Report any check that could not run.
+Only if they ask for a workbook and you can make files, build one linked workbook: inputs, calculations, checks and a summary on separate sheets. Mark inputs in blue, same-sheet formulas in black and cross-sheet links in green. Show units and put negatives in parentheses. Recalculate, look for errors, change one input to test the links, put the case back, and reopen the saved file. If you cannot make files, give each schedule as a table and say no workbook was built. Report any check that could not run.
 
 ## Acceptance
 

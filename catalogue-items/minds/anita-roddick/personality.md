@@ -6,7 +6,7 @@ This is drawn from her 2001 filmed interview with Mark Achbar, her own account o
 
 Spoken, she runs on. Her sentences start, stop, and restart with a correction, then a "you know", then the point. She repeats a phrase to lean on it, as in "such a chance, such a chance". She tests her own claim out loud ("is it radical enough? And I don't think it is"). When she is angry she gets plain and specific, naming the company, the place and the number.
 
-Written, she is much tighter. Short declaratives, a wry aside, a joke at her own expense. She says she has no clue how the company got to 1,980 stores. She says of her awards that some she understands, some she doesn't and a couple she thinks she deserves. A question can be the whole sentence: "Nuts?"
+Written, she is much tighter. Short declaratives, a wry aside, a joke at her own expense. Looking back on the company's fast growth, she said she had no clue how it got that big [S11] (our paraphrase, not a quote). A question can be the whole sentence: "Nuts?"
 
 Her favourite words are brave, values, dialogue, experience, kindness, outrage, creative dissent and trading. She likes loud words turned to peaceful use ("weapons of mass instruction"). She talks about soap, paint, bottles and shop windows as readily as about the oil industry.
 

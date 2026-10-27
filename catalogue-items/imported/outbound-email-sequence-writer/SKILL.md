@@ -19,9 +19,9 @@ Design end-to-end outbound email sequences that move prospects from cold outreac
 
 3. **Write the Email Sequence** — Build a multi-touch sequence: an opening email that earns attention with a relevant hook, follow-ups that introduce new angles or proof points, a value-add email offering a resource, and a breakup email that creates urgency through finality. Each email should be 50–120 words in the body.
 
-4. **Add Personalization Tokens** — Insert dynamic fields for prospect name, company, industry, recent trigger events (funding rounds, job changes, earnings calls), and any known tech stack details. Personalization beyond `{{first_name}}` dramatically lifts reply rates.
+4. **Add Personalization Tokens** — Insert dynamic fields for prospect name, company, industry, recent trigger events (funding rounds, job changes, earnings calls), and any known tech stack details. Personalization beyond `{{first_name}}` often helps reply rates, so test it on your own list.
 
-5. **Set Timing and Cadence** — Define send days, times, and intervals between touches. B2B sequences typically perform best with Tuesday–Thursday sends between 8–10 AM local time, with 2–4 day gaps between early touches and longer gaps (5–7 days) before the breakup.
+5. **Set Timing and Cadence** — Define send days, times, and intervals between touches. A common rule of thumb for B2B is Tuesday–Thursday sends between 8–10 AM local time, with 2–4 day gaps between early touches and longer gaps (5–7 days) before the breakup. These are starting points to test, not proven results.
 
 6. **Add the compliance lines** — Every email carries an opt-out line and the sender's real name and company. Confirm you have a lawful basis to contact this person before sending (for example consent or a clear business interest under your local law). Remove aggressive urgency from regulated industries.
 
@@ -65,7 +65,7 @@ Best,
 
 **Email 2 — Social Proof (Day 3, Thursday 8:30 AM)**
 
-Subject: `How {{similar_company}} ships 2x faster`
+Subject: `How {{similar_company}} [your verified result]`
 
 {{first_name}}, quick follow-up.
 
@@ -137,7 +137,7 @@ Subject: `A lot's changed since {{webinar_name}}`
 
 Hi {{first_name}},
 
-You joined our {{webinar_name}} session back in {{month}} — since then, we've launched three features our marketing customers specifically asked for: multi-touch attribution, AI-powered content scoring, and Salesforce bi-directional sync.
+You joined our {{webinar_name}} session back in {{month}} — since then, we've launched [your real new features, only ones that exist today].
 
 Any of those hit a current pain point? Happy to do a 15-minute walkthrough tailored to {{company}}'s stack.
 
@@ -145,13 +145,13 @@ Any of those hit a current pain point? Happy to do a 15-minute walkthrough tailo
 
 **Email 2 — Peer Success Story (Day 5)**
 
-Subject: `{{peer_company}} just hit 140% of pipeline target`
+Subject: `{{peer_company}}: [your verified result]`
 
 {{first_name}},
 
 Since we last connected, {{peer_company}} (similar size and vertical to {{company}}) rolled out our attribution model. Result: [a real, approved customer result].
 
-Their director of demand gen did a 3-minute video case study — want me to send it over?
+[Offer a real case study or video only if you have one] — want me to send it over?
 
 {{sender_name}}
 
@@ -173,10 +173,12 @@ Either way, wishing {{company}} a strong quarter.
 
 ## Best Practices
 
-- Keep body copy under 120 words — every extra sentence drops reply rates measurably.
+These are rules of thumb, not proven results. Test them on your own list.
+
+- Keep body copy under 120 words. Shorter emails are usually easier to answer.
 - Personalize beyond first name; reference company news, tech stack, or a recent trigger event.
 - Each email should introduce a new angle (social proof, data, empathy, resource) rather than repeating the same pitch.
-- Write subject lines under 6 words — shorter subjects outperform in B2B outreach.
+- Try subject lines under 6 words, and compare them with longer ones.
 - Send from a real person's address, never a generic team alias.
 - A/B test the first email's subject line and opening line before scaling the sequence.
 

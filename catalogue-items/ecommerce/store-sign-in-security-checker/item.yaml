@@ -12,6 +12,7 @@ inputs:
 outputs:
   - {type: audit_report}
   - {type: document}
+  - {type: policy, required: true}
 uses: []
 origin: rebuilt
 example_pending: true

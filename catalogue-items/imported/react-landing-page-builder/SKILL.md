@@ -43,7 +43,7 @@ Follow these steps in order for every landing page request:
 4. **Apply copy framework** — write all headline and body copy using the chosen framework (PAS / AIDA / BAB) before generating components. Match the voice profile's formality and tone throughout.
 5. **Generate sections in order** — Hero → Features → Pricing → FAQ → Testimonials → CTA → Footer. Skip sections not relevant to the product.
 6. **Validate against SEO checklist** — run through every item in the SEO Checklist before outputting final code. Fix any gaps inline.
-7. **Output final components** — deliver complete, copy-paste-ready TSX files with all Tailwind classes, SEO meta, and structured data included.
+7. **Output final components** — deliver one TSX file per section (Hero, Features, Pricing, FAQ, Testimonials, CTA, Footer), one page file that imports them in order, and one SEO file with meta tags and structured data. Say which file goes where in the Next.js project. Leave every placeholder in square brackets for the user to fill with true facts.
 
 ---
 
@@ -81,7 +81,7 @@ Copy framework: PAS | AIDA | BAB
 - H1: Painful state they're in
 - Sub: What happens if they don't fix it
 - CTA: What you offer
-- *Example — H1:* "Your team wastes 3 hours a day on manual reporting" / *Sub:* "Every hour spent on spreadsheets is an hour not closing deals. Your competitors are already automated." / *CTA:* "Automate your reports in 10 minutes →"
+- *Example — H1:* "Your team wastes [X HOURS] a day on [THE TASK]" / *Sub:* "Every hour spent on spreadsheets is an hour not closing deals. [A TRUE CONSEQUENCE FOR YOUR BUYER]." / *CTA:* "[YOUR OFFER AND A TRUE TIME OR EFFORT CLAIM] →"
 
 **AIDA (Attention → Interest → Desire → Action)**
 - H1: Bold attention-grabbing statement → Sub: Interesting fact or benefit → Features: Desire-building proof points → CTA: Clear action
@@ -104,27 +104,26 @@ export function HeroCentered() {
       <div className="relative z-10 max-w-4xl">
         <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-violet-500/30 bg-violet-500/10 px-4 py-1.5 text-sm text-violet-300">
           <span className="h-1.5 w-1.5 rounded-full bg-violet-400" />
-          Now in public beta
+          [YOUR LAUNCH STATUS, if true]
         </div>
         <h1 className="mb-6 text-5xl font-bold tracking-tight text-white md:text-7xl">
-          Ship faster.<br />
+          [YOUR HEADLINE LINE ONE]<br />
           <span className="bg-gradient-to-r from-violet-400 to-pink-400 bg-clip-text text-transparent">
-            Break less.
+            [YOUR HEADLINE LINE TWO]
           </span>
         </h1>
         <p className="mx-auto mb-10 max-w-2xl text-xl text-gray-400">
-          The deployment platform that catches errors before your users do.
-          Zero config. Instant rollbacks. Real-time monitoring.
+          [ONE TRUE SENTENCE ABOUT WHAT YOUR PRODUCT DOES FOR YOUR BUYER]
         </p>
         <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <Button size="lg" className="bg-violet-600 text-white hover:bg-violet-500 px-8">
-            Start free trial
+            [YOUR MAIN BUTTON TEXT]
           </Button>
           <Button size="lg" variant="outline" className="border-gray-700 text-gray-300">
             See how it works →
           </Button>
         </div>
-        <p className="mt-4 text-sm text-gray-500">No credit card required · 14-day free trial</p>
+        <p className="mt-4 text-sm text-gray-500">[YOUR TRIAL OR PAYMENT TERMS, only if true]</p>
       </div>
     </section>
   )

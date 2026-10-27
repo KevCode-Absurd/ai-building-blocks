@@ -35,6 +35,8 @@ Opportunity (name, ID, or "[account]'s deal"); output - business case,
 mutual action plan, or both (default both); target signature date -
 defaults to the opp's close date.
 
+If you have an account plan from an earlier step, use its goals, key people and risks as deal context.
+
 ## Step 1 - Ground
 
 Check which tools are connected (plus any org facts the user or the project instructions already gave). Ground value prop, differentiators, required

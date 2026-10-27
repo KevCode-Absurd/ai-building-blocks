@@ -11,7 +11,9 @@ inputs:
     required: true
   - type: document
     required: false
-outputs: []
+outputs:
+  - type: audit_report
+  - type: spreadsheet
 needs_mode: manual
 uses:
   - connect-production-yield-to-mix-contribution

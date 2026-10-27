@@ -12,7 +12,6 @@ inputs:
     required: true
 outputs:
   - type: skill_files
-  - type: codebase
 uses: []
 origin: imported
 source:

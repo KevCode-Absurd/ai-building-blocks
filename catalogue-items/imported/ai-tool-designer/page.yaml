@@ -10,6 +10,8 @@ explain: |
   Tools the model understands and uses correctly, instead of guessing, failing silently or burning tokens. Your AI never sees your code. It sees only the name, the schema and the description, so those are what get designed here.
 
   Start from what the AI needs to do. The skill proposes the set of tools, writes JSON Schema for each, and writes descriptions that tell the model when the tool applies. It adds input checks and clear error messages that say what to try next. It covers the MCP standard for sharing tools across apps, with working Python examples. Pair it with the tool definition writer when you need a strict safety review of one tool.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header names vibeship-spawner-skills under Apache 2.0. Credit goes to vibeship-spawner-skills and sickn33.
 when:
   - Your agent hallucinates arguments or ignores the tools it has.
   - You are about to build a set of tools for an agent from scratch.
@@ -34,6 +36,8 @@ how_to_use:
   - Say what your AI should be able to do. Name the systems or APIs behind it.
   - Add examples of calls that went wrong (optional).
   - Check the tool list. Make sure each description says when to use the tool and when not to.
+  - Mark any tool that sends messages, changes data or spends money. Add input checks to it, and require a person to approve it before the agent runs it.
+  - The full procedure sits in references/detailed-guide.md inside the skill folder. Upload the whole folder so your AI can read it.
   - Only the Python example needs code running. It also needs an Anthropic API key and a paid model. The design work needs neither.
 output_sample:
   input:

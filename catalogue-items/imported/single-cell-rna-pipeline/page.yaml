@@ -10,6 +10,8 @@ explain: |
   Cleaned single-cell data, cell clusters, marker genes and plots, from raw counts to a finished analysis. You run one chain instead of stitching steps together.
 
   It uses Scanpy. It confirms the input holds raw counts, then runs quality control, normalisation, and picks highly variable genes. Next come PCA, UMAP or t-SNE and clustering. It ranks marker genes per cluster, and prepares sample-level sums for differential expression between conditions. Batch tools like Harmony or BBKNN are available. R objects must first be converted to h5ad. You need Python 3.12 or newer and Scanpy installed.
+
+  Licence: we share this copy under MIT, as the LICENSE.md file says (K-Dense Inc.). The skill file header names BSD-3-Clause instead. Follow the LICENSE.md file. Credit goes to K-Dense Inc.
 when:
   - You have a raw count matrix and want clusters and markers.
   - You need a standard QC and normalisation run you can repeat.
@@ -33,6 +35,7 @@ how_to_use:
   - Open an AI that can run code and has Python 3.12 or newer with Scanpy installed.
   - Paste this skill into the chat, or upload its folder.
   - Add your counts file. Say which samples and conditions you have, if you know them.
+  - First ask your AI to run scripts/inspect_data.py on the file. It shows what the file holds, so you can confirm the values are raw counts before run_pipeline.py starts.
   - Ask your AI to run the whole pipeline in one go, or one step at a time so you can check each.
   - Open the marker gene tables. Choose cell type names and ask your AI to add them to the data.
   - If your data is a Seurat or SingleCellExperiment file, ask your AI to convert it to h5ad first. The conversion script is in references/r_interop.md and needs R.

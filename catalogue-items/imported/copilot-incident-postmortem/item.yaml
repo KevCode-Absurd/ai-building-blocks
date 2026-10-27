@@ -8,13 +8,16 @@ role: make
 job: ops
 level: advanced
 inputs:
-  - type: codebase
+  - type: incident_record
     required: true
   - type: audit_report
     required: false
   - type: plan
     required: false
+  - type: document
+    required: false
 outputs:
+  - type: document
   - type: plan
 uses: []
 origin: imported

@@ -20,7 +20,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Spreadsheet** with the [Unbilled work to cash tracker](https://useaiblocks.com/skills/contract-asset-billing-cash-bridge). Bring a brief, source text, spreadsheet (optional).
+1. **Spreadsheet** with the [Unbilled work to cash tracker](https://useaiblocks.com/skills/contract-asset-billing-cash-bridge). Bring your question, financial statements, spreadsheet (optional).
 2. This one.
 
 How to start:

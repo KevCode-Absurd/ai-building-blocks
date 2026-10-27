@@ -64,8 +64,8 @@ The claim, four scores with evidence, the index, the weakest part, three fixes w
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Pricing decision planner](https://useaiblocks.com/skills/pricing-decision-planner). It takes the audit report.
-- The [Offer limits and deadline planner](https://useaiblocks.com/skills/honest-urgency-planner).
-- The [Guarantee and refund plan writer](https://useaiblocks.com/skills/guarantee-designer).
+- The [Market demand scorer](https://useaiblocks.com/skills/starving-crowd-market-scorer). It takes the audit report.
+- The [Offer profit-per-session checker](https://useaiblocks.com/skills/offer-profit-per-session-checker). It takes the audit report.
 - **Check the money** with the [Price against value checker](https://useaiblocks.com/skills/price-against-value-checker). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

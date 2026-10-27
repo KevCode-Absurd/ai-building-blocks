@@ -18,7 +18,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Audit report** with the [Reported earnings adjustment reviewer](https://useaiblocks.com/skills/earnings-padding-detector). Bring audit report, source text (optional).
+1. **Audit report** with the [Reported earnings adjustment reviewer](https://useaiblocks.com/skills/earnings-padding-detector). Bring audit report, financial statements (optional).
 2. This one.
 
 How to start:
@@ -68,8 +68,8 @@ The record and its scatter. A line on each of the six tests with the finding. Th
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Normal earnings estimator](https://useaiblocks.com/skills/normal-earnings-estimator). It takes the audit report.
-- The [Business track record checker](https://useaiblocks.com/skills/steady-track-record-checker). It takes the audit report.
 - The [Business value range calculator](https://useaiblocks.com/skills/business-value-range-calculator). It takes the audit report.
+- The [Business track record checker](https://useaiblocks.com/skills/steady-track-record-checker). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -71,6 +71,7 @@ If an image tool is connected, offer to make the picture with it, and ask before
    - The verbs are the source's: "rose in a study" stays that, never "boosts" or "proves".
    - It says what was measured, and nothing beyond it.
    - Say the year. Flag any source older than five years.
+   - Health, nutrition or supplement fact: check its wording against the ad rules for your market and platform before you write the caption. Say only what was measured. Never claim it treats, cures or prevents anything. If it fails, change the wording or drop the fact.
    No source on file: ask once for it. Without one, keep the fact off the image, since an unsourced number would mislead, and hand back what's in "If something is missing".
 4. **Write the caption:** one fact, five to twelve words, plain sentence case.
 5. **Write the source line:** who and how, in a few words ("2025 study, 120 adults, placebo-controlled"). Small, but readable.
@@ -95,9 +96,6 @@ If an image tool is connected, offer to make the picture with it, and ask before
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Tracker chart image ad maker](https://useaiblocks.com/skills/tracker-chart-image-ad-maker).
-- The [Problem moment image ad maker](https://useaiblocks.com/skills/problem-moment-image-ad-maker).
-- The [Empty-room photo ad brief writer](https://useaiblocks.com/skills/empty-room-image-ad-maker).
 - **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image prompt.
 - **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the image prompt.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
@@ -109,7 +107,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 - **Follow:** the story's first lines say why the fact matters, and the page repeats it with the full source.
 - No invented figure. No "study finds" or "experts say" without that study or expert on file.
 - Nothing a viewer could take for a real outlet's report, and no event that didn't happen.
-- No health scare. The house rules hold.
+- No health scare. A health or nutrition fact passed the ad-rules check in step 3. The house rules hold.
 
 ## If something is missing
 Write `MISSING: <what>` instead of guessing.

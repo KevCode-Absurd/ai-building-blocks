@@ -77,7 +77,7 @@ If the person says yes to a specific change in clear words, make only that chang
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Scholarly work reviewer](https://useaiblocks.com/skills/scholarly-work-reviewer). It takes the document and audit report.
 - The [Manuscript peer review drafter](https://useaiblocks.com/skills/manuscript-peer-review-drafter). It takes the document and audit report.
-- The [Research finding comparison reviewer](https://useaiblocks.com/skills/research-contradiction-review-assistant).
+- The [Unsupported claim spotter](https://useaiblocks.com/skills/unsupported-claim-spotter). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

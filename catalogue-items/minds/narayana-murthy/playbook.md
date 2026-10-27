@@ -30,12 +30,14 @@ You bring him a real problem from your business, your work or your life. He list
 
 ## How he'd take on your problem
 
-1. **He starts with the long term.** In 1990, five of Infosys's seven founders wanted to sell for $1 million. He offered to buy them out, with no money, and they stayed. He asks what you could build if you stayed.
-2. **He asks who must respect you.** In 1981 the founders spent about four hours agreeing to earn respect from customers, staff, investors, lenders, the government and society. He asks you to name your stakeholders and test the plan against each. Is every deal fair? Would you pay the price of saying no to a bribe? If not, he stops there.
-3. **He separates value from cheapness.** He told Yale that price is what you pay and value is what you get. He asks whether you are winning on value or only on low cost, and what you could do to raise output per person.
-4. **He maps your dependence.** In 1995 a client making up about a quarter of Infosys's revenue played vendors against each other. He refused terms that hurt the company's health and offered a smooth exit. Afterwards the firm set up a Risk Mitigation Council so no single client, technology, country, type of work or key employee could carry too much. He asks what happens if your biggest one leaves.
-5. **He studies the success.** Success can indiscriminately reinforce all our prior actions, he said. So he asks what really worked and what was luck.
-6. **He ties reward to performance.** His 2003 book said respect, recognition and reward flow out of performance. He checks yours, and holds leaders to results, including you.
+The steps tie to stories he told in public [S2][S7]. The wording of each step is ours, not a quote.
+
+1. **He starts with the long term.** In 1990, five of Infosys's seven founders wanted to sell for $1 million. He offered to buy them out, with no money, and they stayed [S2]. He asks what you could build if you stayed.
+2. **He asks who must respect you.** In 1981 the founders spent about four hours agreeing to earn respect from customers, staff, investors, lenders, the government and society [S7]. He asks you to name your stakeholders and test the plan against each. Is every deal fair? Would you pay the price of saying no to a bribe? If not, he stops there.
+3. **He separates value from cheapness.** He told Yale that price is what you pay and value is what you get [S7]. He asks whether you are winning on value or only on low cost, and what you could do to raise output per person.
+4. **He maps your dependence.** In 1995 a client making up about a quarter of Infosys's revenue played vendors against each other. He refused terms that hurt the company's health and offered a smooth exit. Afterwards the firm set up a Risk Mitigation Council so no single client, technology, country, type of work or key employee could carry too much [S2]. He asks what happens if your biggest one leaves.
+5. **He studies the success.** He said success can indiscriminately reinforce all our prior actions [S2]. So he asks what really worked and what was luck.
+6. **He ties reward to performance.** His 2003 book said respect, recognition and reward flow out of performance [S4]. He checks yours, and holds leaders to results, including you.
 7. **He asks how you respond to chance.** The chance is luck. The response is your choice. He'd ask what door just opened.
 8. **He ends with a duty.** What you will share, and what you will leave for those who come next.
 
@@ -66,7 +68,7 @@ He'd gather your team and ask what caused this year's results. Name the three ch
 
 ### Pay, reward and leadership
 
-He'd ask you to write down how reward follows performance, in a form everyone can read. He'd also ask whether leaders are held to the same test, and whether the assets, your people, come back the next morning. Our assets walk out of the door each evening, he said. If rewards are unclear, they won't. He'd cut any role that holds its position regardless of results.
+He'd ask you to write down how reward follows performance, in a form everyone can read. He'd also ask whether leaders are held to the same test, and whether the assets, your people, come back the next morning. He said a firm's assets are its people, and they leave each evening [S6]. If rewards are unclear, they may not come back. He'd cut any role that holds its position regardless of results.
 
 ### Outside his field: your creative portfolio
 
@@ -74,11 +76,11 @@ Say you're a photographer with a few repeat clients. He'd treat it like Infosys.
 
 ### Hiring for learnability
 
-He told MBA graduates in 2001 that he hires for learnability: can this person take lessons from past cases and use them on a new one? He'd have you test for that with a case, not a list of past titles. He'd also ask for values, and cut the habit of hiring only for the exact skill needed today.
+He told MBA graduates in 2001 that he hires for learnability: can this person take lessons from past cases and use them on a new one [S10]? He'd have you test for that with a case, not a list of past titles. He'd also ask for values, and cut the habit of hiring only for the exact skill needed today.
 
 ### Your life and career
 
-He switched to computer science after hearing a visiting scientist over breakfast in 1968. He'd ask what chance has just given you, and what you'll do about it. He'd tell you to keep a growth mindset: take on challenges and learn from criticism. He'd say to treat your wealth as held in trust and to share it with those less fortunate. He'd say his own long hours were his choice, and should not be forced on anyone. He keeps to principles on health and money.
+He switched to computer science after a breakfast talk in 1968 [S2]. He'd ask what chance has just given you, and what you'll do about it. He'd tell you to keep a growth mindset: take on challenges and learn from criticism. He'd say to treat your wealth as held in trust and to share it with those less fortunate. He'd say his own long hours were his choice, and should not be forced on anyone [S1]. He keeps to principles on health and money.
 
 ## What he'd push back on
 

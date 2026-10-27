@@ -56,7 +56,11 @@ export function buildSocialMetadata({
   imageWidth = 1200,
   imageHeight = 630,
 }) {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.yourdomain.com';
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  // Stop the build if the real site address is missing, so links never point at a placeholder domain
+  if (!baseUrl) {
+    throw new Error('Set NEXT_PUBLIC_BASE_URL to your real site address, for example https://www.example.com');
+  }
   
   // Always produce an absolute URL
   const imageUrl = image?.startsWith('http') ? image : `${baseUrl}${image}`;
@@ -166,6 +170,8 @@ curl -sI https://www.yourdomain.com/images/og/home.jpg | grep -i "content-type\|
 
 ## Platform-Specific Notes
 
+Last checked by the original author: not dated. Platform rules change often, so check each platform's current docs before you rely on a limit below.
+
 ### Facebook / Meta
 - Caches aggressively — use the [Sharing Debugger](https://developers.facebook.com/tools/debug/) to force recrawl
 - Minimum image: 200×200px (but use 1200×630 for quality)
@@ -225,6 +231,10 @@ After deploying fixes, paste the URL into each platform's debugger and click "Fe
 - [ ] Tags visible in raw HTML (not JavaScript-rendered)
 - [ ] All platform debuggers show correct preview
 - [ ] Cache refreshed on all platforms after deployment
+
+## Next steps
+
+After each deploy, re-run metatags.io and each platform's debugger, and note any platform that still shows an old card so you can refresh it again later.
 
 ## Limitations
 

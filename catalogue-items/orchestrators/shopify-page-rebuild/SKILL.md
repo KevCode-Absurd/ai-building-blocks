@@ -45,12 +45,12 @@ How to start:
 
 ## What you need
 
-Three things are required: your brand file, the screenshot of the page you admire, and a Shopify theme you can upload to. Ignore any line above that says none of it is required. The run stops without them. Step 4 also needs your live page screenshots.
+Three things are required: your brand file, the screenshot of the page you admire, and a Shopify theme you can upload to. The run stops without them. Step 4 also needs your live page screenshots. In the "Before you start" list above, "Reference ads" means the full-page screenshot of the page you admire, and "Store capture" means screenshots of your own store.
 
 - **A Shopify store and a theme you can upload files to** (required). Shopify is a paid service. Name your theme and its version if you can.
 - **A full-page screenshot of the page you admire** (required): the whole page, not a cropped one. Only its layout is borrowed, never its words or pictures.
 - **Your brand file** (required): your facts, voice and colours.
-- **Your product facts** (optional): price, variants and what it is made of. Real product photos at full size help.
+- **Your product facts** (optional): price, variants and what it is made of. Real product photos at full size help. Step 3 reads price and variant facts from your store, so it needs read access to your Shopify store (for example a connected Shopify tool). If your AI has none, paste these facts instead.
 - **Your offer** (optional).
 - **Screenshots of your live page on a phone and a computer** (required for step 4, after you install the files).
 
@@ -84,8 +84,8 @@ Pause here: Upload the files to your theme, publish the page and save screenshot
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Conversion landing page designer](https://useaiblocks.com/skills/conversion-landing-page-designer).
 - The [Competitor comparison page writer](https://useaiblocks.com/skills/alternative-page-writer). It takes the audit report.
+- The [Conversion landing page designer](https://useaiblocks.com/skills/conversion-landing-page-designer).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -13,6 +13,8 @@ explain: |
 
   This skill asks what the learner must be able to do and what they already know. It cuts the mechanism down to one or two values, names every in-between result, and writes the trace so it can be followed with a pencil. It then adds predictions the learner makes before reading the answer. It runs the same numbers through a trusted source, or a second route, to check the example is right, and ends by saying what the small version leaves out.
 
+  The method is inspired by Andrej Karpathy's public micrograd project, which teaches by tracing tiny examples. He has not reviewed or endorsed this skill.
+
 when:
   - "You are writing a lesson, guide or onboarding note and the real example is too big."
   - "A team member keeps asking how a formula or process works and slides are not helping."

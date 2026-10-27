@@ -9,7 +9,9 @@ subhead: A checklist of the import, export and product rules that apply to you, 
 explain: |
   A checklist of the import, export and product rules that apply to you, each with an owner and a due check. You can hand it to your team and see at a glance what is covered and what is not.
 
-  The skill first asks what you make, where you sell, how many suppliers and countries you use, and how you classify products. Then it sorts rules into groups such as customs and HS codes, country of origin, trade agreements, sanctions, export controls, product safety and supplier standards. It rates your risk, points out gaps in your current process, and sets how often each item needs a review. It does not replace advice from a licensed customs or trade lawyer.
+  The skill first asks what you make, where you sell, how many suppliers and countries you use, and how you classify products. Then it sorts rules into groups such as customs and HS codes, country of origin, trade agreements, sanctions, export controls, product safety and supplier standards. It rates your risk, points out gaps in your current process, and sets how often each item needs a review. It does not replace advice from a licensed customs or trade lawyer. It looks up no HS codes or duty rates for you. Take those from your country's official tariff database, and mark anything unchecked as Not verified.
+
+  Licence: MIT, as the LICENSE file in this item says. Credit goes to the original author.
 when:
   - You are starting to import or export and need to know what rules apply.
   - An audit or customer asks for proof of trade compliance.
@@ -32,10 +34,11 @@ you_get:
   - Suggested next steps
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Have ready: a product list with the materials in each, a supplier list with their countries, and your current compliance steps.
   - Answer its questions about what you make, where you sell, and how many suppliers and countries you use.
   - Add your current compliance steps and any past issues if you have them.
   - Read the report. Check each rule, HS code and duty rate against official government sources before you act.
-  - Give each action item to a named person and set the review dates.
+  - Give each action item to a named person and set the review dates. Then confirm the trade-rule items with a licensed customs broker. For UAE rules, use the UAE rules finder.
   - Confirm the trade-rule items with a licensed customs broker before you act. Any status marked "Not verified" has not been checked against an official source. Every HS code, duty rate, supplier name and certificate number in the skill's examples is a placeholder, so replace them with your own checked data.
 output_sample:
   input:

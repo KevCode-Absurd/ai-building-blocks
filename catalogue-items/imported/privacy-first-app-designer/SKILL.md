@@ -20,6 +20,7 @@ Integrate privacy protections into software architecture from the beginning, not
 - Use when designing database schemas, APIs, or authentication flows
 - Use when the user mentions forms, user accounts, analytics, or third-party integrations
 - Use when deploying to production—verify privacy controls before launch
+- If you have a privacy audit report from an earlier step, use its findings to decide what to design first.
 
 ## Legal Frameworks
 

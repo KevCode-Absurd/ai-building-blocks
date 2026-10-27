@@ -35,7 +35,7 @@ how_to_use:
   - Paste the skill text into the chat. Where it shows {{feedback_text}} and {{task_context}}, paste your feedback and the task context in their place, or add them in your next message.
   - Add what the learner was asked to do and the goal of the task. Add your rubric or the learner's level if you have them.
   - Read the Level Analysis and Key Problems first. Check that they match your own view of the work.
-  - Read the Rewritten Feedback. Change any detail that is not true of the student's work, then send it.
+  - Read the Rewritten Feedback. Check it against the student's real work and change any detail that is not true of it, then send it. The example in the skill uses an invented student and invented quotations, so none of it comes from a real essay.
   - Next, in the learner's following piece of work, check whether they acted on the next step you gave.
 output_sample:
   input:

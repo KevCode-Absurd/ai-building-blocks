@@ -12,7 +12,7 @@ Gives every page problem one next step, then puts them in order.
 Use it when you already have a list of page problems and need to know what to do with each. Do not use it for a full landing page audit with every check (use the [Page issue sorter](https://useaiblocks.com/skills/page-issue-sorter), which is the fuller version of this sort), when you have a traffic problem and no page to check (look at your ad or search reports first), or when you have no list yet (run an audit first, then bring the report here).
 
 ## What you need
-- **Your list of problems** (required): one per line, from an audit, a tool or your own notes.
+- **Your list of problems** (required): one per line, from an audit report, a tool or your own notes. A plain list is enough; it does not need to be a formal report.
 - **Proof for each** (strongly advised): a number, a customer quote or what you saw.
 - **Your goal for the page** (optional): more orders, more sign-ups.
 

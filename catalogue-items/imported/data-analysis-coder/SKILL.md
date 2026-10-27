@@ -1,7 +1,7 @@
 ---
 name: matlab-analyze-data
 description: Analyze data using MATLAB. Use when the task involves tables, timetables, time-series data, numeric arrays, sensor matrices, or gridded data — including but not limited to exploring, row filtering, sorting, cleaning, transforming, aggregating, smoothing, padding, trimming, and answering questions about data. MATLAB provides extensive, easy-to-use built-in functions for these workflows with no additional products required.
-license: https://www.mathworks.com/content/dam/mathworks/license/pmrl/license.md
+license: BSD-2-Clause plus MathWorks products-only clause (see LICENSE.md in this folder)
 metadata:
   author: MathWorks
   version: "1.5"
@@ -31,6 +31,8 @@ Generate idiomatic MATLAB code for tabular data analysis tasks using tables and 
 - Training classifiers or comparing ML model accuracy on tabular data (use `matlab-classify-tabular-data` instead)
 - Engineering or selecting features to optimize a supervised ML model (use `matlab-engineer-tabular-features` instead)
 - Code migration or replacing deprecated APIs (use `matlab-modernize-code` instead)
+
+In the AI Blocks library those skills are named: `matlab-build-chart` is the MATLAB chart maker, `matlab-import-export-data` is the Data file reader and writer, `matlab-choose-big-data-solution` is the Big data tool chooser, `matlab-secure-credentials` is the MATLAB secret keeper, `matlab-use-database` is the MATLAB database helper, `matlab-use-duckdb` is the DuckDB big file query helper, `matlab-prepare-signal-data` is the Signal data cleaner, `matlab-classify-tabular-data` is the Data classifier comparer, `matlab-engineer-tabular-features` is the Prediction feature picker, and `matlab-modernize-code` is the Old MATLAB code updater.
 
 ## Routing: Read references on all relevant topics
 

@@ -59,8 +59,8 @@ The funnel table with sums, the call and why, the outside factors, the offer as 
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Lead magnet reviewer](https://useaiblocks.com/skills/lead-offer-tuner). It takes the audit report.
-- The [A/B test results reader](https://useaiblocks.com/skills/split-run-result-reader).
 - The [Ad results report writer](https://useaiblocks.com/skills/ad-results-report-writer). It takes the audit report.
+- The [Meta delivery troubleshooter](https://useaiblocks.com/skills/meta-delivery-troubleshooter). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -8,11 +8,13 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: question
     required: true
   - type: design_file
     required: false
   - type: codebase
+    required: false
+  - type: design_tokens
     required: false
 outputs:
   - type: audit_report

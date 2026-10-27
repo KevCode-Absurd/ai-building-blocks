@@ -8,8 +8,10 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: contract
     required: true
+  - type: spreadsheet
+    required: false
   - type: question
     required: false
 outputs:

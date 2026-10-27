@@ -8,7 +8,6 @@ job: analysis
 level: intermediate
 inputs:
   - {type: product_data, required: true}
-  - {type: spreadsheet, required: false}
 outputs:
   - {type: audit_report}
 uses: []

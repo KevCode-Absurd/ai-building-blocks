@@ -77,8 +77,8 @@ output_shape: |-
   Actual file verification
   MISSING: and CHECKS MISSED
 tweaks:
-  - what: "Reinvestment date"
-    how: "Take the reinvestment date from your share holding, the dividend and the reinvestment price. Use one currency and scale on every line."
+  - what: "Ending price"
+    how: "Change the ending price in your inputs and ask your AI to recalculate the schedule. You see at which price reinvesting beats keeping the cash. Use one currency and scale on every line."
   - what: "Reinvestment price"
     how: "Change the reinvestment price and have your AI recalculate. Keep the actual figures you supplied."
   - what: Acceptance

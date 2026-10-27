@@ -99,8 +99,7 @@ example:
     Every day at 3pm I'd push my chair back from my desk and wait
     for my stomach to settle.
     I'd tried fiber powders. I'd tried probiotics. Nothing stuck.
-    Sprout is a daily pack of gummies with 6 g prebiotic fiber. It
-    supports digestion and gut health.
+    Sprout is a daily pack of gummies with 6 g prebiotic fiber.
 
     Buyer: the gut-fix seeker, 25 to 55, mostly women, office jobs.
     Body limits: never show the stomach.
@@ -124,7 +123,9 @@ example:
     LINE UNDER IMAGE  Same desk. Same 3pm. (plain caption, 20)
     FLAGS             The stomach never appears, as the brand asks.
                       The tub and bottle are plain shapes with no
-                      labels, kinds of product only.
+                      labels, kinds of product only. Any claim about
+                      digestion or gut health needs an ad policy check
+                      before the ad runs.
     IMAGE PROMPT      Square 1:1 phone photo of a page of lined
                       notebook paper lying on a wooden table, a pen
                       beside it. On the page, three panels in a row,
@@ -170,7 +171,8 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Nano Banana", why: "Google recommends it for sequential art such as comic panels."}
+    - {name: "Nano Banana", why: "Google's image model inside Gemini. Google recommends it for sequential art such as comic panels. Free plans have daily limits and paid plans get more."}
+    - {name: "Higgsfield", why: "A paid image and video service that needs an account. Paste the prompt into its image tool."}
     - {name: "Pen, paper and your phone camera", why: "A drawing you or a paid illustrator make, shot on a table, looks the most like a real notebook page."}
     - {name: "Any good chat AI", why: "Planning the panels is reading the story closely, which Claude, ChatGPT and Gemini all do well."}
   inputs:

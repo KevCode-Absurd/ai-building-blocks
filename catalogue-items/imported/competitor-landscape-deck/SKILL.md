@@ -7,7 +7,9 @@ description: Framework for building competitive landscape decks — market posit
 
 > Modified by AI Blocks on 2026-10-24: method/copy repair.
 
-Every number in the templates below (for example $4.96B, $25.1B, ●●● $160B and the 30/50/20 scenario odds) is a placeholder that shows the layout. None of it is real data. Replace each one with a sourced figure for the companies the user chose, or write "not available". The user sets any scenario odds. Never assume them.
+Every value in the templates below is a bracketed placeholder that shows the layout. None of it is real data. Replace each one with a sourced figure for the companies the user chose, or write "not available". The user sets any scenario odds. Never assume them.
+
+If your AI has no `ask_user_question` tool, ask the same questions in plain chat, in one message, and wait for the answers.
 
 ## Environment check
 
@@ -47,7 +49,7 @@ When the user specifies something, that's a requirement, not a suggestion:
 - **Slide titles and section names** — exact wording. If they say "Overview and Competitive Scope," don't swap in "FY2024 Competitive Landscape."
 - **Chart vs. table** — not interchangeable. "Embedded chart" means a real chart object with data labels on the bars/slices, not a formatted table.
 - **Complete data series** — if they list 7 competitors, include all 7. If they show 2015-2025, include every year.
-- **Exact values and ratios** — "surpasses DoorDash 4:1, Lyft 8:1" means those ratios, not "7.6x Lyft."
+- **Exact values and ratios** — if the user gives a ratio, use that ratio, not a recalculated one.
 
 ### Source quality, when sources conflict
 
@@ -68,8 +70,8 @@ When the user specifies something, that's a requirement, not a suggestion:
 ### Design
 
 - **Slide titles are insights, not labels.** "Scale leaders pulling away from niche players" — not "Competitive Analysis."
-- **Signposts are quantified.** "Margin below 40%" — not "margins decline."
-- **Ratings show the actual.** "●●● $160B" — not just "●●●."
+- **Signposts are quantified.** "Margin below [threshold]%" — not "margins decline."
+- **Ratings show the actual.** "●●● [sourced amount]" — not just "●●●."
 - **Charts are real chart objects** — not text tables dressed up to look like charts.
 
 **Typography** — set explicitly, don't rely on defaults:
@@ -126,7 +128,7 @@ Industry not listed — pick the metrics investors and operators benchmark on.
 
 Size, growth, drivers, headwinds. With sources.
 
-Correct (layout only; the figures and source are placeholders): "[Market] is $[X]B in [year], growing [Y]% CAGR ([source, year])"
+Correct (layout only): "[Market] is [AMOUNT] in [year], growing [PERCENT] CAGR ([source, year])"
 Wrong: "The market is large and growing rapidly"
 
 ### Step 2 — Industry economics
@@ -141,13 +143,13 @@ Map how value flows. Approach depends on industry structure:
 ```
 | Metric | Value |
 |---|---|
-| Revenue | $4.96B |
-| Growth | +26% YoY |
-| Gross Margin | 45% |
-| Profitability | $373M Adj. EBITDA |
-| Customers | 134K |
-| Retention | 92% |
-| Market Share | ~15% |
+| Revenue | [AMOUNT] |
+| Growth | [PERCENT] YoY |
+| Gross Margin | [PERCENT] |
+| Profitability | [AMOUNT] Adj. EBITDA |
+| Customers | [COUNT] |
+| Retention | [PERCENT] |
+| Market Share | [PERCENT, sourced] |
 ```
 
 Multi-segment companies add a breakdown:
@@ -155,10 +157,10 @@ Multi-segment companies add a breakdown:
 ```
 | Segment | Revenue | Rev YoY | Rev % | EBITDA | EBITDA YoY | Margin |
 |---|---|---|---|---|---|---|
-| Seg A | $25.1B | +26% | 57% | $6.5B | +31% | 26% |
-| Seg B | $13.8B | +31% | 31% | $2.5B | +64% | 18% |
-| Seg C | $5.1B | -2% | 12% | -$74M | -16% | -1% |
-| Total | $44.0B | +18% | 100% | $6.5B* | - | 15% |
+| Seg A | [AMOUNT] | [PERCENT] | [PERCENT] | [AMOUNT] | [PERCENT] | [PERCENT] |
+| Seg B | [AMOUNT] | [PERCENT] | [PERCENT] | [AMOUNT] | [PERCENT] | [PERCENT] |
+| Seg C | [AMOUNT] | [PERCENT] | [PERCENT] | [AMOUNT] | [PERCENT] | [PERCENT] |
+| Total | [AMOUNT] | [PERCENT] | 100% | [AMOUNT]* | - | [PERCENT] |
 ```
 *Note corporate costs if applicable
 
@@ -215,9 +217,9 @@ Two tables per competitor.
 ```
 | Dimension | Company A | Company B | Company C |
 |---|---|---|---|
-| Scale | ●●● $160B | ●●○ $45B | ●○○ $8B |
-| Growth | ●●○ +26% | ●●● +35% | ●●○ +22% |
-| Margins | ●●○ 7.5% | ●○○ 3.2% | ●●● 15% |
+| Scale | [●●●/●●○/●○○] [AMOUNT] | [rating] [AMOUNT] | [rating] [AMOUNT] |
+| Growth | [rating] [PERCENT] | [rating] [PERCENT] | [rating] [PERCENT] |
+| Margins | [rating] [PERCENT] | [rating] [PERCENT] | [rating] [PERCENT] |
 ```
 
 ### Step 8 — Strategic context
@@ -245,9 +247,9 @@ M&A transactions (multiples, rationale), partnership trends, capital raising pat
 ```
 | Scenario | Probability | Key driver |
 |---|---|---|
-| Bull | 30% | Market share gains, margin expansion |
-| Base | 50% | Current trajectory continues |
-| Bear | 20% | Competitive pressure, margin compression |
+| Bull | [user-set odds] | Market share gains, margin expansion |
+| Base | [user-set odds] | Current trajectory continues |
+| Bear | [user-set odds] | Competitive pressure, margin compression |
 ```
 
 ---

@@ -35,6 +35,7 @@ how_to_use:
   - List each secret, its owner, what uses it and which environment it is in. Never paste the secret values.
   - Read the plan. Check that each environment has its own access and that rotation has a rollback step.
   - Run the test list in staging first, before you change anything in production.
+  - Next, once the staging tests pass, schedule the first real rotation. Write down the owner and the date for each secret. If a key has already leaked, use the exposed secrets finder first.
 output_sample:
   input:
     - Names and owners of your secrets
@@ -54,3 +55,4 @@ output_sample:
       contains: Checks for allowed access, denied access, missing credentials and failed rotation, to run in staging.
     - name: Limits and risks
       contains: Places secrets can still linger, such as backups or subprocess environments, and what to review.
+next: [exposed-secrets-finder]

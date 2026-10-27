@@ -12,6 +12,8 @@ inputs:
     required: true
   - type: audit_report
     required: false
+  - type: search_query_report
+    required: false
 outputs:
   - type: audit_report
 uses: []

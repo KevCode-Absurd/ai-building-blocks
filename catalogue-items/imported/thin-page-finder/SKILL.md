@@ -162,4 +162,4 @@ CSV file `content_audit_<YYYY-MM-DD>.csv` with columns:
 - The default `min_body_length` is 100 characters, which catches near-empty pages. Many SEO guides call a page under about 300 words thin; that is about 1,500 characters. This is a rule of thumb, not a search-engine rule. Set `min_body_length: 1500` for a stricter check.
 - The About, FAQ, and Contact pages are high-trust pages that should never be empty — prioritize these.
 - Run after any CMS migration or theme change that may have wiped page content.
-- Pair with `seo-metadata-audit` for a complete SEO audit covering products, collections, pages, and blog articles in one workflow.
+- Pair with `seo-metadata-audit` (on AI Blocks, the Store SEO gap finder) for a complete SEO audit covering products, collections, pages, and blog articles in one workflow.

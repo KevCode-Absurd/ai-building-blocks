@@ -20,7 +20,7 @@ When to use this skill: choosing a platform from scratch, evaluating whether to 
 
 ## What this skill is for
 
-This skill spans platform selection, multi-platform decisions, migration planning, and governance setup. It does not cover experiment design (use `experiment-design`), result interpretation (use `experimentation-analytics`), or feature flag operations (use `feature-flagging`). Pair this skill with the relevant integrations microsite when you need platform-specific MCP details.
+This skill spans platform selection, multi-platform decisions, migration planning, and governance setup. It does not cover experiment design (use the Experiment designer), result interpretation (use the Experiment result analyst), or feature flag operations (use the Feature flag planner). Pair this skill with the relevant integrations microsite when you need platform-specific MCP details.
 
 The audience is a PM, engineering leader, or data lead who is making the decision or recovering from a previous one. The voice is decisive. There is no "it depends, evaluate them all yourself." The decision space has real shape, and a senior advisor can map your situation to a defensible answer in an afternoon.
 
@@ -163,6 +163,8 @@ When multi-platform is genuine, three coordination patterns are non-negotiable. 
 
 ## Migration patterns
 
+> The engineer-week figures below are rough estimates from May 2026, not measured facts. Say so when you quote them.
+
 Migration is the unglamorous engineering work that makes the platform decision recoverable. Five common paths.
 
 **Statsig to PostHog.** Typical when a company outgrows pure experimentation and wants analytics plus experiments combined. Effort: 3 to 5 engineer-weeks. Parallel-run for 4 to 8 weeks, validate experiments produce the same results on both, cut over once trust is established.
@@ -180,6 +182,8 @@ The migration discipline is in [`references/migration-playbook.md`](references/m
 ---
 
 ## The cost reality
+
+> All dollar ranges, free-tier sizes and engineer-week estimates in this skill are rough, unsourced and dated May 2026. Say that next to each figure you quote, and send the user to each vendor's pricing page.
 
 Plain talk. Vendor-native (Statsig, Optimizely) bills on events, typically $0.10 to $0.50 per million events. Easy to predict at small scale, painful at very high scale. Warehouse-native (Eppo, GrowthBook paid) bills on seats and warehouse compute; $5K to $50K per year is the typical range for paid tiers, with warehouse compute showing up on a different finance line. Product-suite (PostHog, Amplitude) bills on combined event volume across all features; often the most cost-effective when used heavily and the most expensive when only experiments are needed.
 

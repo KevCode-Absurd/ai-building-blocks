@@ -15,6 +15,7 @@ outputs:
   - {type: spreadsheet}
   - {type: copy_draft}
   - {type: plan}
+  - {type: lead_list, required: true}
 uses: [prospect-list-builder, lead-prioritizer, stranger-first-message-writer, cold-email-pre-send-checker, prospecting-block-planner]
 steps:
   - {uses: prospect-list-builder, note: "A qualified list of accounts that match your ideal customer, with the reason each one fits and the right person to contact. Hands the list to the ranking step."}

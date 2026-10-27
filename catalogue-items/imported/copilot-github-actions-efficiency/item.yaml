@@ -11,6 +11,7 @@ inputs:
   - type: codebase
     required: true
 outputs:
+  - type: audit_report
   - type: plan
 uses: []
 origin: imported

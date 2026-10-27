@@ -13,6 +13,10 @@ metadata:
 
 # Writing Audio Plugins in MATLAB
 
+## What you need
+
+A description of the effect or sound. If you already have MATLAB audio code, such as streaming code from an earlier step, give it and the plugin is built around it.
+
 ## When To Use
 
 - Creating audio effect or generator plugins (classdef inheriting from `audioPlugin` or `audioPluginSource`)

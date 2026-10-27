@@ -52,7 +52,7 @@ If hours are missing, ask once, then plan for one day a month and mark it `[infe
 9. **One cluster at a time.** Finish one cluster before starting another.
 10. **Monthly review.** Ask if each keyword is still worth ranking. Revisit a term after 6 months to decide on more content. Compare organic revenue with the baseline.
 11. **Pace.** Do not publish hundreds of pages at once. A slow ramp, such as one post a day and then a few a week, avoids a spike that looks like spam. This ramp comes from one source and is a safety habit, not an official limit.
-12. **Set expectations.** Results lag. One wine store example saw movement only after 12 to 13 months. Plan for 6 to 12 months before you judge, and say that one example is not a promise.
+12. **Set expectations.** Results lag. One unnamed source describes a store that saw movement only after more than a year. That is an unverified anecdote. Plan for 6 to 12 months before you judge, and say that no timing is a promise.
 13. **Say when it does not fit.** With less than a few hours a month, or no way to see organic revenue, say so and set up measurement first. A store with almost no products may need product pages before content.
 
 ## What you hand back
@@ -85,8 +85,8 @@ MISSING: <what was not given>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Store SEO results reviewer](https://useaiblocks.com/skills/monthly-store-seo-keeper).
-- The [Organic search report builder](https://useaiblocks.com/skills/organic-search-report-builder).
-- The [Store SEO fix prioritiser](https://useaiblocks.com/skills/store-seo-fix-prioritiser).
+- The [AI search visibility tester](https://useaiblocks.com/skills/ai-recommendation-panel-runner). It takes the plan.
+- The [Collection page SEO builder](https://useaiblocks.com/skills/collection-page-seo-builder). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -95,7 +95,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Week 2 is one page.
 - One cluster is active at a time.
 - Nothing asks for a burst of many pages.
-- The plan states the 6 to 12 month range and the wine-store caveat.
+- The plan states the 6 to 12 month range and says it is not a promise.
 - A "change course" rule is written, such as "if impressions are flat after 3 months, review the keywords and page quality before adding more posts". This rule is this skill's own suggestion.
 
 Fix any failed check before handing back, and list any you could not run under `CHECKS MISSED:`.

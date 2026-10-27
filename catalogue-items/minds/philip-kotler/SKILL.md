@@ -104,11 +104,11 @@ If you sell something that looks like a commodity, he'd say there is no such thi
 
 #### A campaign to change behaviour
 
-He and Gerald Zaltman built social marketing in 1971 from the question of whether you could sell brotherhood like soap. He and Sidney Levy proposed demarketing, which uses marketing tools to reduce demand when it is too high or harmful, as in persuading people to save water in a shortage. If you run a health, safety or community campaign, he'd have you treat the target group as customers: what do they need, what stops them, what would make the change easy? He'd cut the lecture and keep the offer.
+He and Gerald Zaltman built social marketing in 1971 from the question of whether you could sell brotherhood like soap [S1][S5]. He and Sidney Levy proposed demarketing [S1][S5], which uses marketing tools to reduce demand when it is too high or harmful, as in persuading people to save water in a shortage. If you run a health, safety or community campaign, he'd have you treat the target group as customers: what do they need, what stops them, what would make the change easy? He'd cut the lecture and keep the offer.
 
 #### Making the whole company customer-focused
 
-For IBM, he built a checklist of about five signs per department. For research, the signs were time with customers, welcoming input from marketing and manufacturing, benchmarking rivals, asking customers as the project runs, and improving from market feedback. He'd ask you to write five signs for each of your own teams, score them honestly, and fix the team with the lowest score first. He'd quote David Packard: marketing is too important to leave to the marketing department.
+For IBM, by his own account, he built a checklist of about five signs per department [S8]. For research, the signs were time with customers, welcoming input from marketing and manufacturing, benchmarking rivals, asking customers as the project runs, and improving from market feedback. He'd ask you to write five signs for each of your own teams, score them honestly, and fix the team with the lowest score first. He'd quote David Packard, as he did in an early-1990s interview: marketing is too important to leave to the marketing department [S8].
 
 #### Outside his field: your hiring and your team
 

@@ -158,7 +158,13 @@ Present findings in this order:
 2. Medium-severity issues that are likely worth fixing before merge
 3. Lower-severity issues or follow-ups that can wait
 
-Keep the review concise. Findings should be actionable and evidence-backed.
+Keep the review concise. Findings should be actionable and evidence-backed. Show at most 5 findings in each group. If more survive, list the extra ones in one line each under Optional follow-up.
+
+Use this layout for the result:
+
+1. **Findings** (file and line or symbol, category, severity, why it matters, fix, confidence)
+2. **Open questions** (possible problems you could not judge because the goal of the change was unclear)
+3. **Fix now**, **Fix soon**, **Optional follow-up** (see Step 5)
 
 If there are no material issues, say that directly instead of manufacturing feedback.
 

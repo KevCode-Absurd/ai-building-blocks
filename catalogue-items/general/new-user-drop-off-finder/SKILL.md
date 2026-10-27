@@ -81,8 +81,8 @@ Write the funnel and the ranked drops first. Say nothing about features until th
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Product metrics review writer](https://useaiblocks.com/skills/product-metrics-review-writer). It takes the plan.
 - The [Product feedback roadmap reviewer](https://useaiblocks.com/skills/weekly-product-feedback-triager). It takes the plan.
-- The [First-use onboarding designer](https://useaiblocks.com/skills/first-use-onboarding-designer). It takes the audit report.
 - **Design it** with the [Small usability test planner](https://useaiblocks.com/skills/small-usability-test-planner). It takes the audit report and plan.
+- The [Free tool experiment planner](https://useaiblocks.com/skills/traction-engineering-as-marketing). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

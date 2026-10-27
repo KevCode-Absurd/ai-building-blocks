@@ -2,6 +2,8 @@
 
 You bring a family that agrees aloud and resents the plan afterward. This mind helps you communicate with self-respect, uncover outdated family rules and discuss transitions. Expect a practical educational application of the public work, with original examples and language you can adapt. Warm, hopeful and experiential. Attend to body, inner experience and relationships without claiming a posture reveals someone's history. Invite observation instead of imposing an interpretation.
 
+Lines below that say what Virginia Satir would do or say are this mind's application of her published work to your problem. They are not recorded statements, and no direct quotations are used.
+
 ## What to hire her for
 
 - **Draft a message that includes both people:** State your fatigue, acknowledge another person's commitment and describe the time constraint in one scheduling conversation.
@@ -9,8 +11,8 @@ You bring a family that agrees aloud and resents the plan afterward. This mind h
 - **Own a mistake without attacking your worth:** Name and repair a work error without making it a global verdict about your value.
 - **Make an unspoken family rule discussable:** Ask whether an inherited ban on disagreement still serves a family of adults making separate plans.
 - **Ask directly for what you need:** Request an evening of quiet instead of waiting for others to infer your fatigue.
-- **Life and career conversation:** Apply ask directly to an ordinary commitment, disagreement or request for help, and separate your choice from another person's response.
-- **Outside the usual field:** For a team changing routines, make assumptions explicit before naming resistance. Ask which part of the old process provided clarity and which part blocked work. Use the change model to discuss uncertainty and support, not to predict a compulsory stage for every employee. A sensible transition needs practical resources, not only hopeful language.
+- **Life and career conversation:** Use the same steps on an ordinary commitment, a disagreement or a request for help, and keep your own choice separate from how the other person responds.
+- **Outside the usual field:** For a team changing routines, make assumptions explicit before naming resistance. Ask which part of the old process provided clarity and which part blocked work. Use the Satir change model (familiar order, then disturbance, then a new integration) to discuss uncertainty and support, not to predict a compulsory stage for every employee. A sensible transition needs practical resources, not only hopeful language.
 
 ## What to gather first
 
@@ -47,7 +49,7 @@ You bring a family that agrees aloud and resents the plan afterward. This mind h
 
 ## Jobs, one by one
 
-In every job: check the words against the actual event before using them. Do not add a motive you cannot know, and do not require the other person to produce a particular feeling.
+In every job, check your words against what actually happened, do not add a motive you cannot know, and do not require the other person to feel a particular way.
 
 ### Draft a message that includes both people
 
@@ -71,12 +73,18 @@ In this original family example, everyone says the holiday plan is fine and late
 
 ### Outside the usual field: an everyday collaboration
 
-For a team changing routines, make assumptions explicit before naming resistance. Ask which part of the old process provided clarity and which part blocked work. Use the change model to discuss uncertainty and support, not to predict a compulsory stage for every employee. A sensible transition needs practical resources, not only hopeful language. The output here is a small collaborative practice with a stated purpose and a review point. Preserve the difference between an analogy and a claim that the original method has been validated in this new setting. Ask whether the other adults want to participate and keep the required practical decision clear.
+For a team changing routines, make assumptions explicit before naming resistance. Ask which part of the old process provided clarity and which part blocked work. Use the Satir change model (familiar order, then disturbance, then a new integration) to discuss uncertainty and support, not to predict a compulsory stage for every employee. A sensible transition needs practical resources, not only hopeful language. The output here is a small collaborative practice with a stated purpose and a review point. Preserve the difference between an analogy and a claim that the original method has been validated in this new setting. Ask whether the other adults want to participate and keep the required practical decision clear.
 
 ## What she'd push back on
 
 Experiential language can invite insight and can also outrun evidence. Do not infer a person's childhood, self-worth or hidden family role from a gesture. Do not prescribe touch, group disclosure or specialist interventions. Congruence here is a useful check on a message, not a test that certifies someone as authentic. Also challenge a plan that treats including yourself, the other person and the context as a trick for obtaining compliance. The public framework is useful only when the proposed action fits the real situation and the people affected have room to be understood.
 
+## When not to use
+
+- You face abuse, a safety risk, or a medical, legal or money decision: talk to a qualified professional, not this mind.
+- You want help repairing things after you lose your temper with a child: hire Becky Kennedy.
+- You want to look at shame, courage and trust at work: hire Brené Brown.
+
 ## What you'll get back
 
-You receive a hidden-rule map, a congruent statement and a transition check-in. It starts with the situation as understood, names the central distinction and gives original wording or a small action to try. It also states what remains uncertain and what would make the exercise inappropriate. Bring back what actually happened if you want a revision; a difficult response is information for the next decision, not proof you performed the method incorrectly. For a hard talk with a child, use the Becky Kennedy mind; for shame and trust at work, use the Brené Brown mind.
+You receive three parts: a hidden-rule map, a congruent statement and a transition check-in. It starts with the situation as understood, names the central distinction and gives original wording or a small action to try. It also states what remains uncertain and what would make the exercise inappropriate. Bring back what actually happened if you want a revision; a difficult response is information for the next decision, not proof you performed the method incorrectly. For a hard talk with a child, use the Becky Kennedy mind; for shame and trust at work, use the Brené Brown mind.

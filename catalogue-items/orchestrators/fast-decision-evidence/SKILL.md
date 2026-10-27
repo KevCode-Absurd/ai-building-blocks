@@ -62,9 +62,9 @@ Four step files and the summary: the door sort, the math or judgment verdict, th
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Decision undo-cost checker](https://useaiblocks.com/prompts/one-way-or-two-way-choice-sorter).
-- The [Disagreement evidence test planner](https://useaiblocks.com/skills/fair-disagreement-test-planner).
-- The [Forecast disagreement reviewer](https://useaiblocks.com/skills/estimate-gap-auditor).
+- The [Plan risk reviewer](https://useaiblocks.com/skills/plan-pre-mortem-runner). It takes the plan.
+- The [Design decision interview planner](https://useaiblocks.com/skills/design-interviewer). It takes the plan.
+- The [Decision checklist runner](https://useaiblocks.com/skills/decision-checklist-runner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

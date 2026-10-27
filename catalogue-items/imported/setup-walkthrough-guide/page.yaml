@@ -10,6 +10,8 @@ explain: |
   A guided setup where you see only one small step at a time, with the steps left shown below. Setups feel long because the whole list lands at once. Here each reply holds a single action, such as one click, field or command, then a divider and a numbered list of what remains.
 
   Before step one, Claude builds a full checklist from your outline, the docs, your screen and any prerequisites. The remaining list never shows more than eight items. If more are left, later steps merge into broader ones, but none are dropped. A new required step is added in the right place. When done, Claude says setup is complete.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (davidondrej) says MIT. Credit goes to davidondrej and sickn33.
 when:
   - You are installing a tool and the instructions are overwhelming.
   - You are connecting several services and keep losing your place.
@@ -29,6 +31,7 @@ you_get:
   - An updated list after each step
   - A completion message
 how_to_use:
+  - Before you start, write down the tool name and your operating system. Have the docs link or the first screen of the tool ready. Do not paste passwords or keys into the chat. Type them straight into the tool when a step asks.
   - Open a chat in Claude, ChatGPT or Gemini and paste the skill text from this page.
   - Tell your AI what you want to set up, such as a tool to install or services to connect.
   - Paste any docs or steps you have (optional). You can also describe what is on your screen now.

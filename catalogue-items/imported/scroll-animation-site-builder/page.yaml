@@ -30,13 +30,15 @@ you_get:
   - Effects matched to each section
   - A performance and reduced-motion check
 how_to_use:
-  - "Open a chat with your AI and paste the skill text. Say which mode you want: build a new page, add effects to a page you have, or fix slow animation."
+  - "Open a chat with your AI and paste the skill text. Say which mode you want: build a new page, add effects to a page you have, or fix slow animation. Before you start, have a browser, a way to save a file ending in .html, and some front-end know-how or a developer to review the code. This skill needs no paid tool or API key."
+  - The ready-made hero section files are not in this copy. Your AI builds the hero from the markup pattern in SKILL.md and should say so.
   - Paste your brief and add your images. Add your brand colours and copy if you have them.
   - If your AI cannot run scripts, it checks your images and the page by eye instead, and tells you it did.
   - Read the asset audit and depth plan first. Ask for changes before the code is written.
   - Copy the HTML file your AI gives you, save it as a file ending in .html and open it in your browser.
   - Scroll the page and check it runs smoothly. Turn on reduced motion in your device settings to check the page still works.
   - Tell your AI what to change, such as which section feels flat or which effect stutters.
+  - Once the page is final, check how well it converts with the landing page auditor, and check full accessibility with the accessibility checker. This skill only handles basic reduced motion.
 output_sample:
   input:
     - Your brief for the site
@@ -57,3 +59,4 @@ output_sample:
       contains: The full page with inline CSS and JavaScript, GSAP loaded from a CDN, and comments on each section.
     - name: Accessibility and performance checks
       contains: Reduced-motion handling and speed-friendly animation rules applied to the page.
+next: [landing-page-auditor, accessibility-checker]

@@ -193,7 +193,7 @@ For 2–3 lessons, provide specific interleaved practice tasks that force discri
 
 ### Interleaving Rationale
 
-These four topics are ideal for interleaving because they share a surface structure (2D shapes, base, height, area formula) but require different solution strategies. The core discrimination challenge is: given a shape, which formula applies? In blocked practice, students never face this decision — they know every problem uses the same formula because they're "in the parallelograms chapter." Interleaving forces the decision on every single problem, which is exactly the challenge they'll face on any assessment or real-world application. Rohrer et al. (2015) found this specific type of mathematical interleaving produced a 25% improvement on delayed tests.
+These four topics are ideal for interleaving because they share a surface structure (2D shapes, base, height, area formula) but require different solution strategies. The core discrimination challenge is: given a shape, which formula applies? In blocked practice, students never face this decision — they know every problem uses the same formula because they're "in the parallelograms chapter." Interleaving forces the decision on every single problem, which is exactly the challenge they'll face on any assessment or real-world application. Rohrer et al. (2015) studied interleaving in a real mathematics classroom and reported better scores on a delayed test. The size of the gain depends on the study, so check the paper before you quote a figure.
 
 ### Student Briefing Script
 

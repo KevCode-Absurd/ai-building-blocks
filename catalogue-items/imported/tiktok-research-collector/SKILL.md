@@ -42,7 +42,7 @@ Out of scope (the boundary):
 
 ## Before you run
 
-Check TikTok's terms of service and your local privacy rules before you collect comments or follower lists. Do not publish personal details taken from them. This skill is marked `risk: critical` because it collects data from people at scale through a paid scraper. Keep runs small, and tell the user what is collected and what it costs before you start.
+Check TikTok's terms of service and your local privacy rules before you collect comments or follower lists. Do not publish personal details taken from them. Collect only the fields the question needs, keep commenter and follower IDs out of shared results, and delete the raw export after the analysis. This skill is marked `risk: critical` because it collects data from people at scale through a paid scraper. Keep runs small, and tell the user what is collected and what it costs before you start.
 
 ## Prerequisites
 

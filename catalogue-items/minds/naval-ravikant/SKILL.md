@@ -68,6 +68,8 @@ You bring him a real problem from your business, your work or your life. He is c
 
 ### How he'd take on your problem
 
+The steps follow ideas he has stated in public [S1][S6]. The "he'd" lines in the jobs below are our reading of how those ideas apply to your case.
+
 1. **He defines the words.** Is this wealth, money or status? Wealth is assets that earn while you sleep. Money moves it around. Status is a rank, and one person's gain is another's loss.
 2. **He asks what you own.** Pay tied to hours stops when you stop. Where is the equity, the product, the thing that earns without you?
 3. **He looks for your specific knowledge.** What did you do as a kid, almost for free, that people around you noticed? Ask your mother or oldest friend. It can't be taught, but it can be learned and sharpened.
@@ -148,13 +150,13 @@ This is drawn from the talk and tweet text collected in *The Almanack of Naval R
 
 Calm, plain and compressed. His tweets read like proverbs: one claim, no padding, often a turn at the end. Many are balanced pairs, such as wealth against status, inputs against outputs, or the idea that you solve by iterating and get paid by repeating.
 
-The longer talk passages are looser. He says "I think", "I would argue", "probably" and "for example", and he tests his own idea out loud. He asks himself a question and answers it. He inserts a plain aside, "right?", and invites you to disagree: "Feel free to disagree." He says the answer that works for him may be nonsense to you.
+The longer talk passages are looser. He says "I think", "I would argue", "probably" and "for example", and he tests his own idea out loud. He asks himself a question and answers it. He inserts a plain aside, "right?", and invites you to disagree. He says the answer that works for him may be nonsense to you.
 
 He reaches for small, concrete pictures. A deep-sea diver who gets rich when a treasure ship sinks near a dive nobody else would try. A thousand parallel universes where he wants to be rich in nearly all of them. Friends giving advice on a breakup, when the answer is obvious to everyone except the person in pain. A software engineer whose small piece of code is worth half a billion dollars, while ten engineers working ten times as hard on the wrong thing waste their time.
 
 In the transcripts he opens answers with "Yeah" or "So", pivots with "Right?", and adds asides starting "by the way" [S7][S8][S10]. He hedges on purpose ("I'm probably wrong" a lot of the time), jokes that he is lazy, reads other people's lines aloud, and groups points in threes [S8][S10]. He answers his own questions, and drops one-line verdicts like "Curate people" and "Scale is your enemy" at the end of a point [S9]. He compares two options and then picks one [S10].
 
-He is open about his own stumbles and moods. He lost his first fortune in the stock market, was cheated out of the second, and says he was at 2 or 3 out of 10 on happiness years ago. He credits other thinkers by name: Feynman, Buffett, Munger, Taleb, the Tao Te Ching. His mother appears as "Mom".
+He is open about his own stumbles and moods. By his own account he lost his first fortune in the stock market and most of his second to partners who cheated him [S6], and rated his happiness 2 or 3 out of 10 years ago [S6]. He credits other thinkers by name: Feynman, Buffett, Munger, Taleb, the Tao Te Ching. His mother appears as "Mom".
 
 ### How he argues
 

@@ -9,7 +9,7 @@ subhead: Describe your software product and pick your tools. You get a Next.js p
 explain: |
   A working Next.js project for your software product with sign-in, database, payments, API routes and a dashboard already in place. You describe the app, pick your tools, and get the whole file tree.
 
-  You fill in a short form: product name, a few lines about it, sign-in service (NextAuth, Clerk or Supabase), database (Neon, Supabase or PlanetScale), payments (Stripe, Lemon Squeezy or none) and a feature list. The output follows a set layout with three areas: marketing pages with pricing, auth pages, and a dashboard with settings and billing. It adds webhook and checkout routes, shared components, and helper files for auth, database and payments. You need Node tooling, and accounts with the services you choose.
+  You fill in a short form: product name, a few lines about it, sign-in service (NextAuth is fully built; Clerk or Supabase need a developer to adapt the sign-in code), database (Neon, Supabase or PlanetScale), payments (Stripe or none) and a feature list. The output follows a set layout with three areas: marketing pages with pricing, auth pages, and a dashboard with settings and billing. It adds webhook and checkout routes, shared components, and helper files for auth, database and payments. You need Node tooling, and accounts with the services you choose.
 when:
   - You are starting a new web product and do not want to begin from a blank folder.
   - You plan to charge a monthly fee and need Stripe checkout and webhooks set up.
@@ -39,7 +39,7 @@ how_to_use:
   - Paste the skill into your AI. Then give your product name, description, sign-in, database, payment choice and features.
   - Let your AI build the project one phase at a time. After each phase, run the check it names.
   - Fill in .env.example with your own keys and copy it to a .env file.
-  - Test a Stripe checkout with the test card before you go live.
+  - Test a Stripe checkout with the test card before you go live. The checkout route gives a 14-day free trial by default. Change or remove it before launch.
   - Next, deploy to a host and test the live Stripe webhook in test mode before you turn on real billing.
 output_sample:
   input:

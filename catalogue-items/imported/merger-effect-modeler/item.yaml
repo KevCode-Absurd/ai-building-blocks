@@ -8,8 +8,10 @@ role: make
 job: ops
 level: expert
 inputs:
-  - type: spreadsheet
+  - type: deal_terms
     required: true
+  - type: financial_statements
+    required: false
 outputs:
   - type: spreadsheet
 uses: []

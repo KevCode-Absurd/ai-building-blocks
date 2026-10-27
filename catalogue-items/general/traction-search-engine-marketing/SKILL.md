@@ -14,9 +14,7 @@ Not for a business with no buying searches, such as a local shop that sells by w
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Social and display ad experiment planner](https://useaiblocks.com/skills/traction-social-and-display-ads).
-- The [Problem-aware Google Search campaign planner](https://useaiblocks.com/skills/problem-aware-search-campaign-builder).
-- The [Search content experiment planner](https://useaiblocks.com/skills/traction-search-engine-optimization).
-- **Grow on social** with the [Niche publication experiment planner](https://useaiblocks.com/skills/traction-targeting-blogs).
+- **Plan your strategy** with the [Growth channel shortlist planner](https://useaiblocks.com/skills/traction-channel-ranker).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -10,6 +10,8 @@ explain: |
   MATLAB code that finds an industrial OPC UA server, connects to it securely, and lets you browse what it offers. You name the server and get working steps instead of trial and error with certificates.
 
   It starts with discovery through the local discovery service and reads the server's endpoints and security policies. It then connects as a client, with a username and password or with certificates, and sets the security mode. It handles the common stumbling blocks, such as untrusted certificates and host name mismatches, and inspects certificate files. Once connected, it walks the node tree, finds nodes by name or ID, calls methods, and processes large namespaces in batches.
+
+  This is MathWorks' skill. The licence that applies is the LICENSE file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE file. The AI Blocks note in step 5 of the skill file is our own addition.
 when:
   - You need to read data from a factory machine into MATLAB.
   - Your connection fails with a certificate trust error.
@@ -32,7 +34,8 @@ you_get:
 how_to_use:
   - Open MATLAB with the Industrial Communication Toolbox. This is a paid add-on. Make sure you can reach the server and its discovery service.
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. Add your server name or address and how you log in.
-  - Ask your AI to find the server, connect and browse its nodes.
+  - Ask your AI to find the server, connect and browse its nodes. Names such as myserver and myuser in the code are placeholders. Swap in your own.
+  - Do not trust a server certificate by hand, or turn security off, until the plant owner or IT agrees. Both lower protection on live equipment.
   - Copy the code into MATLAB and run it. If your AI can run MATLAB, it can do this step for you. A good run prints "Connected to" and the server address, then lists the names of the nodes under the one you browse.
   - If the connection fails with a trust or host name error, paste the error back into the chat and ask for the fix.
   - Before you call any method, check with the plant owner. A method can change how equipment runs.

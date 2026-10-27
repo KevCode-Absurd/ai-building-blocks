@@ -30,7 +30,7 @@ when:
   - You want a standard for quality checks and alerts before more teams depend on the data.
 not_for:
   - You want working pipeline code for a smaller job. Use the Data pipeline builder.
-  - You need dashboards or charts. Use the Data Visualization Engineer agent.
+  - You need dashboards or charts. Use the Honest chart design agent.
   - You are reviewing a business question or a SQL query on a warehouse. Use the Data warehouse query reviewer.
   - One query is slow. Use the Database Optimizer agent.
   - You have a single messy file to clean once. Ask your AI to clean it directly. A full pipeline design is more than you need.

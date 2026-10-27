@@ -1,0 +1,105 @@
+new_slug: me-md-short-core-writer
+name: me.md short-core writer
+summary: Give it your me.md. Get a short version for your AI's settings box and where to put it in each AI you use.
+job: set-up-ai
+thinking: low
+thinking_why: It picks and shortens facts from one file and follows a fixed guide.
+headline: me.md short-core writer
+subhead: Paste your me.md. It writes a short core of about 1,200 characters that fits the settings box in your AI. Then it tells you where the short core and the full file go in ChatGPT, Claude, Claude Code, Gemini and Cursor.
+explain: |
+  Your AI reads its settings box before every chat, but the box is small. Paste your whole me.md in and it gets cut off, or it buries what matters.
+
+  This skill picks what every AI should always know: who you are, what you do, your goals, how you like answers and what to avoid. It leaves out projects, because a settings box is rarely updated, and points to where your current projects live instead. It counts the characters so the core fits. Then it gives you a short guide for each AI you use: where the core goes and where the full file goes.
+when:
+  - You just made your me.md and want every AI you use to know it.
+  - Your AI's settings box is full or out of date.
+  - You use Claude Code or Cursor and want them to know you in every project.
+not_for:
+  - "You don't have a me.md yet: use the me.md builder."
+  - "Your me.md itself is out of date: run the me.md refresher first."
+you_give:
+  - Your me.md
+  - The AI apps you use (optional)
+you_get:
+  - A short core of about 1,200 characters, with its count
+  - Where to put the short core and the full file in each AI
+  - The same text, to use as the Core section of your me.md
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your me.md and name the AI apps you use.
+  - Check the short core. Every line should be true and still current.
+  - Follow the guide for each AI. If a menu has moved, search the app's help for custom instructions.
+next:
+  - me-md-refresher
+output_sample:
+  input:
+    - Your me.md
+    - The AI apps you use (optional)
+  output:
+    - name: SHORT CORE
+      contains: About 1,200 characters on who you are, your goals, how you like answers and what to avoid, with the count.
+    - name: WHERE TO PUT IT
+      contains: For ChatGPT, Claude, Claude Code, Gemini and Cursor, where the short core and the full file go.
+    - name: CORE FOR YOUR me.md
+      contains: The same text, to replace the Core section if you want.
+    - name: LEFT OUT
+      contains: Live facts and anything cut for length.
+how_it_works:
+  - title: Picks the facts
+    text: Takes who you are, what you do, your goals, how you like answers and what to avoid.
+  - title: Leaves out live facts
+    text: Projects change too often for a settings box. It points to where they live instead.
+  - title: Writes and counts
+    text: Writes plain first-person lines, most important first, and keeps them near 1,200 characters.
+  - title: Adds the voice rule
+    text: One line on how you write, used only for things sent as you.
+  - title: Gives the guide
+    text: Says where the short core and the full file go in each AI you use.
+output_shape: |
+  SHORT CORE (<n> characters)
+  <the short core, ready to paste>
+
+  WHERE TO PUT IT
+  ChatGPT: short core -> <where>. Full me.md -> <where>.
+  Claude: short core -> <where>. Full me.md -> <where>.
+  Claude Code: <~/.claude/CLAUDE.md line>
+  Gemini: <Gem instructions and file>
+  Cursor: <user rules>
+
+  CORE FOR YOUR me.md
+  <the same text>
+
+  LEFT OUT: <live facts, anything cut>
+  CHECKS MISSED: <one line each, or none>
+tweaks:
+  - what: Which apps
+    how: Name only the AI apps you use, and the guide stays short.
+  - what: Length
+    how: If an app's box is smaller, ask for a shorter core. It cuts from the bottom, so the most important lines stay.
+  - what: Voice line
+    how: Keep it if most of what you write with AI is sent as you. Drop it if most of it is for a brand.
+judge:
+  - The short core is about 1,200 characters or less, and the count is shown.
+  - Every line is in your me.md. Nothing is added or made to sound grander.
+  - No projects or this month's priorities in the short core.
+  - The guide covers each AI you use.
+test:
+  - Paste it into one AI's settings, then ask that AI "What do you know about me?" Its answer should match the core.
+  - Give it a me.md with an expired project. The project should not reach the short core.
+  - Ask for a 600-character version. The top lines should stay the same.
+improve:
+  - Add the AI tools your team uses to the guide table, with where their settings live.
+  - If your work needs a fact in every chat, such as your time zone, move it to the top of Core.
+  - Rerun it after each me.md refresh, so your settings match the file.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: The job is short and the same in Claude, ChatGPT or Gemini, so use the one you have open.
+  inputs:
+    - The text already in your AI's settings box, so nothing you rely on is lost
+    - The character limit of any other AI tool you use
+terms:
+  - term: Short core
+    meaning: The few lines from your me.md that every AI should read before every task. About 1,200 characters.
+  - term: Custom instructions
+    meaning: A settings box in your AI where you tell it about yourself once. Each app names it a little differently.

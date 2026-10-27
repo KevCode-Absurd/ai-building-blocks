@@ -110,3 +110,4 @@ terms:
     meaning: Stock you hold more of than you will use, or parts that are out of date.
   - term: Last-time buy
     meaning: A final large order of a part before the maker stops making it.
+next: [production-schedule-planner, sourcing-plan-builder, supplier-order-splitter]

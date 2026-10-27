@@ -17,6 +17,7 @@ when:
   - You need to explain a big price move to a client.
 not_for:
   - "You want to prepare for a report that has not happened yet: use the Earnings preview writer."
+  - "The company is private or listed outside the US: Yahoo data may be missing and the reaction window assumes US Eastern times. Read the company's own filing instead."
   - "You need what management said on the call, such as guidance or segment detail: read the company's own filing or call transcript."
   - "You want advice on whether to buy or sell: talk to a licensed financial adviser, as this gives facts only."
 you_give:

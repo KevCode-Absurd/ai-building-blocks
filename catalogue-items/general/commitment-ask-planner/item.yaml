@@ -7,7 +7,7 @@ role: make
 job: research
 level: intermediate
 inputs:
-  - {type: brief, required: true}
+  - {type: idea, required: true}
   - {type: audit_report, required: false}
 outputs:
   - {type: plan}

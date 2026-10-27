@@ -27,6 +27,8 @@ If the mode is ambiguous, ask in one shot using the context questions below. Onl
 
 ## Context You Need
 
+If you have a spend or usage export, or the code that calls the AI, share it. If not, describe the numbers.
+
 **Current State**
 - Which LLM providers and models are in use?
 - Monthly spend? Which features/endpoints drive it?
@@ -76,7 +78,7 @@ apply this.
 
 Apply techniques in ROI order. Don't skip ahead -- measure impact at each step before moving to the next.
 
-### 1. Model Routing (60–80% cost reduction on routed traffic)
+### 1. Model Routing (author's rough estimate: 60–80% on routed traffic (rough estimate with no source: measure your own baseline))
 
 Route by task complexity, not by default. Use a lightweight classifier or rule engine.
 
@@ -86,17 +88,17 @@ Route by task complexity, not by default. Use a lightweight classifier or rule e
 
 Even routing 20% of traffic to a cheaper model produces meaningful savings. Start there.
 
-### 2. Prompt Caching (40–90% reduction on cacheable traffic)
+### 2. Prompt Caching (author's rough estimate: 40–90% on cacheable traffic (rough estimate with no source: measure your own baseline))
 
 Supported by Anthropic (`cache_control`), OpenAI (automatic on some models), Google (context caching).
 
 Cache-eligible content: system prompts, static context, document chunks, few-shot examples.
 
-Target hit rates: >60% for document Q&A, >40% for chatbots with static system prompts.
+Target hit rates (the author's rules of thumb, not measured): >60% for document Q&A, >40% for chatbots with static system prompts.
 
 **Flag immediately** if a system prompt exceeds ~2,000 tokens and is sent on every request -- this is a high-value caching target.
 
-### 3. Output Length Control (20–40% reduction)
+### 3. Output Length Control (author's rough estimate: 20–40% (rough estimate with no source: measure your own baseline))
 
 LLMs over-generate by default. Force conciseness:
 
@@ -107,7 +109,7 @@ LLMs over-generate by default. Force conciseness:
 
 **Flag immediately** if `max_tokens` is not set per endpoint -- every uncapped endpoint is a cost leak.
 
-### 4. Prompt Compression (15–30% input token reduction)
+### 4. Prompt Compression (author's rough estimate: 15–30% fewer input tokens (rough estimate with no source: measure your own baseline))
 
 Remove filler without losing meaning. Audit each prompt for token efficiency.
 
@@ -120,7 +122,7 @@ Remove filler without losing meaning. Audit each prompt for token efficiency.
 
 **Caution:** Over-compression causes hallucination and low-quality outputs, triggering retries that erase the savings. Compress filler; preserve task-critical instructions.
 
-### 5. Semantic Caching (30–60% hit rate on repeated queries)
+### 5. Semantic Caching (author's rough estimate: 30–60% hit rate on repeated queries (rough estimate with no source: measure your own baseline))
 
 Cache LLM responses keyed by embedding similarity, not exact match. Serve cached responses for semantically equivalent questions.
 
@@ -128,7 +130,7 @@ Tools: GPTCache, LangChain cache, custom Redis + embedding lookup.
 
 Threshold guidance (a rule of thumb from the author, not a tested limit; test it on your own data): cosine similarity >0.95 = safe to serve cached response.
 
-### 6. Request Batching (10–25% reduction via amortized overhead)
+### 6. Request Batching (author's rough estimate: 10–25% (rough estimate with no source: measure your own baseline))
 
 Batch non-latency-sensitive requests. Process async queues off-peak.
 
@@ -215,7 +217,7 @@ If the conversation shifts to one of these, pause and invoke the relevant skill 
 
 | Anti-Pattern | Why It Fails | Better Approach |
 |---|---|---|
-| Using the largest model for every request | 80%+ of requests are simple tasks a smaller model handles equally well, wasting 5–10x on cost | Implement a routing layer that classifies complexity and selects the cheapest adequate model |
+| Using the largest model for every request | many requests may be simple tasks a smaller model handles equally well (the author guesses 80%+ and a 5–10x cost gap; check your own logs) | Implement a routing layer that classifies complexity and selects the cheapest adequate model |
 | Optimizing prompts without measuring first | You cannot know what to optimize without per-feature spend visibility | Instrument token logging and cost-per-request before any changes |
 | Caching by exact string match only | Minor phrasing differences cause cache misses on semantically identical queries | Use embedding-based semantic caching with a cosine similarity threshold |
 | Setting a single global max_tokens | Some endpoints need 2,000 tokens, others need 50 -- a global cap either wastes or truncates | Set max_tokens per endpoint based on measured p95 output length |

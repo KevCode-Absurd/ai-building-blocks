@@ -42,6 +42,10 @@ npx skills add nexscope-ai/eCommerce-Skills --skill amazon-review-checker -g
 | Review Length | 5% | Entropy analysis |
 | Suspicious Keywords | 5% | Keyword pattern matching |
 
+The weights are relative, and they do not need to add up to 100%. The score is the weighted average of the checks that could run with the data given, divided by the total weight of those checks. A check with no data is left out.
+
+A high-risk result is a signal, not proof. Check the reviews yourself before you report a rival or a store, and do not say in public that a seller bought reviews on the strength of this score alone.
+
 ## Risk Levels
 
 | Score | Level | Description |
@@ -113,7 +117,7 @@ High-Risk Reviews (Top 3)
    Reason: Too short, non-VP, templated 5-star
 
 🔍 Want more accurate analysis? Add:
-• Reviewer info → Unlock "Account Profile Analysis"
+• Review dates, star ratings or verified-purchase marks → Unlock the time, rating and verified-buyer checks
 ```
 
 ## Interaction Flow

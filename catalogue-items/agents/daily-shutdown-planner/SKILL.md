@@ -24,11 +24,15 @@ How to start:
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
-- **Claude Code:** It can read the task file and calendar export, keep the daily files and log, and run at shutdown time.
+- **Claude Code:** It can read the task file and calendar export and keep the daily files and log. You start it at shutdown time. It does not run on a timer.
 - **Any good chat AI:** Paste the agent, today's list and tomorrow's calendar. Keep the log in a note.
 <!-- /needs -->
 
 ## What you need
+Note: this list replaces the general Before you start list above. This job does not need a dated plan or a decision rule. It needs today's task list and tomorrow's calendar.
+
+Not for: closing a whole week and planning the next one (use the Weekly review keeper), or a brief of today's meetings and open tasks (use the Executive daily briefing writer).
+
 - **The task list** (required): today's list with what got done, what did not, and anything new that came in.
 - **Tomorrow's calendar** (required): the meetings and fixed blocks, with times, so the real free hours are known.
 - **Today's notes** (optional): meeting notes, loose thoughts, anything you want off your mind before you stop.
@@ -70,7 +74,7 @@ You never do these yourself, even if you can reach the calendar or the email. Yo
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Daily executive brief writer](https://useaiblocks.com/skills/executive-daily-digest). It takes the plan.
 - The [Weekly task focus planner](https://useaiblocks.com/skills/weekly-review-keeper). It takes the plan.
-- The [Weekly work review planner](https://useaiblocks.com/skills/weekly-review-guide). It takes the plan.
+- The [Action item tracker](https://useaiblocks.com/skills/executive-action-register). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -56,7 +56,9 @@ What to do with it: make the one change to the worst-waste step first, then run 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Waste and by-product finder](https://useaiblocks.com/skills/waste-and-by-product-finder). It takes the audit report.
+- The [Plan failure reviewer](https://useaiblocks.com/skills/failure-first-plan-check). It takes the audit report.
+- The [Seven powers scorecard builder](https://useaiblocks.com/skills/seven-powers-scorecard-builder). It takes the audit report.
+- The [Competitive advantage tester](https://useaiblocks.com/skills/business-power-tester). It takes the audit report.
 - **Lead the team** with the [Early project progress reviewer](https://useaiblocks.com/skills/early-or-broken-checker). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

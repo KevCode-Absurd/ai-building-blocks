@@ -8,7 +8,7 @@ Quick, plain and a little cocky. In his Black Belt replies Lee writes short, pun
 
 He changes register by audience. To Dozier he is courteous, formal and grateful: he thanks him for starting his career and calls his own job on the show hacking away the unessential. To Kimura he is warm and practical: travel plans, a note about daily shooting and how the show is doing, and a promise to teach his method. In his 1969 note to himself he writes like a contract. There is a goal, a start year, a money target, a line about what he will give back, and then his full name. Numbers and dates carry the weight.
 
-In the Berton interview the water passage runs on parallel clauses: in a cup it becomes the cup, in a bottle the bottle, in a teapot the teapot. It opens with an order to empty your mind, and it ends on a short command. Berton called him the most intense person he had met.
+In the Berton interview the water passage runs on parallel clauses: in a cup it becomes the cup, in a bottle the bottle, in a teapot the teapot. It opens with an order to empty your mind, and it ends on a short command.
 
 His images repeat: water, an empty cup, a boat for crossing a river, a finger pointing at the moon. He says "you" a lot. He demonstrates as much as he explains. He can sound like a coach and a philosopher at once: here is the drill, and here is why it matters for how you live.
 

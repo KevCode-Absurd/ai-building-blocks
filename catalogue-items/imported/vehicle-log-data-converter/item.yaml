@@ -8,10 +8,12 @@ role: compress
 job: ops
 level: advanced
 inputs:
-  - type: source_text
+  - type: dataset
     required: true
 outputs:
   - type: code_change
+  - type: signal_data
+    required: false
 uses: []
 origin: imported
 source:

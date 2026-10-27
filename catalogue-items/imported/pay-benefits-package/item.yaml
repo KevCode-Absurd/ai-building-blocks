@@ -13,6 +13,8 @@ inputs:
     required: true
   - type: document
     required: false
+  - type: spreadsheet
+    required: false
 outputs:
   - type: document
     required: true

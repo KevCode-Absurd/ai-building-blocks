@@ -59,9 +59,9 @@ The theme and feeling. The headline pile sorted by lead type. The section outlin
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Shopify theme code writer](https://useaiblocks.com/skills/shopify-theme-code-writer).
 - The [Direct response copywriter](https://useaiblocks.com/skills/direct-response-copywriter). It takes the brief.
 - The [Page copywriter](https://useaiblocks.com/skills/page-copywriter). It takes the brief.
+- The [Evidence-based sales copy writer](https://useaiblocks.com/skills/proof-backed-sales-copy-writer). It takes the brief.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

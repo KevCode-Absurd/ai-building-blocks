@@ -13,9 +13,9 @@ Read [the original role profile](references/source-agent.md) before you start. I
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Customer renewal risk reviewer](https://useaiblocks.com/skills/weekly-customer-health-watcher).
 - The [New customer onboarding sequence writer](https://useaiblocks.com/skills/new-customer-onboarding-sequence-writer). It takes the plan.
-- The [Customer contract renewal reviewer](https://useaiblocks.com/skills/monthly-renewal-watcher).
+- The [Top-customer outreach planner](https://useaiblocks.com/skills/top-customer-touch-planner). It takes the plan.
+- The [Subscription cancel flow builder](https://useaiblocks.com/skills/subscription-cancel-flow-builder). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -27,10 +27,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, source text, audit report. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -40,6 +41,8 @@ How to start:
 
 ## What to collect first
 
+These are the inputs that count. If the generic "Before you start" list above asks for something else, such as a question or source text, ignore that part. This skill has no tool access, so it cannot pull CRM data. The user pastes the facts.
+
 Ask once for anything missing. Never invent it. Mark each gap `MISSING:` in the answer, or label a stand-in `ASSUMED:` and say what to replace it with.
 
 1. The job for this run: onboarding plan, health read, quarterly review agenda, save plan, expansion check, or renewal plan. If more than one is asked, do them in the order the user gave, and keep each short. If none is asked, do a health read.
@@ -48,6 +51,7 @@ Ask once for anything missing. Never invent it. Mark each gap `MISSING:` in the 
 4. What the user knows about usage (logins, features, seats), support tickets, survey or NPS scores, meeting attendance and payments.
 5. Recent changes: a new or departed contact, a layoff, a merger, a missed meeting, a late invoice.
 6. The user's own score weights, if they have them.
+7. A weekly health report from an earlier step, if it covers this account. Use its usage and risk facts.
 
 ## How you work
 
@@ -75,6 +79,8 @@ Use these headings, in this order:
 5. Expansion check
 6. Ask the customer
 7. To confirm
+
+End with `CHECKS MISSED:` and list any check below that failed or could not run, or write "none". Keep it short.
 
 ## Checks
 

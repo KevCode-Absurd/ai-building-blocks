@@ -1,0 +1,112 @@
+new_slug: me-md-refresher
+name: me.md refresher
+summary: Give it your me.md and recent chats or a chat export. Get dated edits to approve and a list of stale sections.
+job: set-up-ai
+thinking: medium
+thinking_why: It compares dated facts from several sources and keeps only lasting changes.
+headline: me.md refresher
+subhead: Paste your me.md and, if you like, attach a ChatGPT or Claude chat export. It flags old and expired sections, finds what changed in your recent chats, and proposes dated edits. You approve each one and get the updated file.
+explain: |
+  People change, and a me.md that still lists last quarter's projects makes every answer a little wrong. Each AI you use will trust it.
+
+  Run this once a month. It reads the dates in your file and flags any section past its expiry date or not checked in 90 days. It asks before it uses what your AI remembers. Then it looks at this chat, your memory, any chat export you attach and the live sources you listed. It keeps only lasting changes, like a finished project or a new client, and shows each one with its source and date. Nothing changes until you say which edits to apply.
+when:
+  - It's been a month since you last updated your me.md.
+  - A project finished, you took on a new client, or your role changed.
+  - Your AI keeps using an old fact about you.
+not_for:
+  - "You don't have a me.md yet: use the me.md builder."
+  - "You only want the short version for your AI's settings box: use the me.md short-core writer."
+you_give:
+  - Your me.md
+  - A yes or no to using what your AI remembers
+  - A ChatGPT or Claude chat export (optional)
+you_get:
+  - Each section with its date, marked ok, stale or expired
+  - A list of proposed edits, each with its source and date
+  - Any facts where two sources disagree
+  - The updated me.md, after you approve the edits
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your me.md. Attach a chat export if you have one.
+  - Say yes or no when it asks to use what it remembers.
+  - Read the proposed edits and say which to apply.
+  - Paste the updated file into Your me.md in AI Blocks.
+next:
+  - me-md-short-core-writer
+output_sample:
+  input:
+    - Your me.md
+    - A yes or no to using what your AI remembers
+    - A ChatGPT or Claude chat export (optional)
+  output:
+    - name: DATES
+      contains: Each section with its as-of and expiry dates, marked ok, stale or expired.
+    - name: PROPOSED EDITS
+      contains: What each section says now, what it should say, and where the change came from.
+    - name: CONFLICTS
+      contains: Facts where two sources disagree, shown side by side.
+    - name: Updated me.md
+      contains: The whole file with your approved edits and new dates.
+how_it_works:
+  - title: Reads the dates
+    text: Marks live sections past their expiry date and stable ones not checked in 90 days.
+  - title: Asks first
+    text: Waits for your yes before it uses anything it remembers.
+  - title: Finds what changed
+    text: Looks in this chat, its memory, your export and the live sources you listed. Keeps only lasting changes.
+  - title: Proposes edits
+    text: One line per change, with its source and date. Shows both sides when sources disagree.
+  - title: Waits for you
+    text: Applies only the edits you approve, then hands back the file with new dates.
+output_shape: |
+  DATES
+  <section> | as of <date> | expires <date> | ok, stale or expired
+
+  PROPOSED EDITS
+  <section> | now: <text> | new: <text> | source: <where>, <date>
+
+  CONFLICTS
+  <fact> | <source A> | <source B>
+
+  UPDATED me.md (after your approval)
+  <the whole file, with new dates>
+
+  MISSING: <gaps>
+  CHECKS MISSED: <one line each, or none>
+tweaks:
+  - what: Chat export
+    how: Attach the export file from ChatGPT or Claude. It sees what changed even in chats your AI can't search.
+  - what: Where to look
+    how: List a live notes page in your me.md. The refresher checks it before it trusts the file.
+  - what: How often
+    how: Monthly suits most people. If your projects change weekly, run it weekly and shorten the expiry dates.
+judge:
+  - Every proposed edit names a source and a date.
+  - Nothing in the file changed before you approved it.
+  - Expired and stale sections are listed, even with nothing new to add.
+  - One-off requests from a single chat did not become lasting facts.
+test:
+  - Give it a me.md with a project that expired last month. It should flag it before anything else.
+  - Say no to memory and attach nothing. It should use only this chat and say what it could not check.
+  - Mention a new client in the chat, then run it. The client should appear as a proposed edit with today's date.
+improve:
+  - Change the 90-day limit for stable sections if your work changes faster or slower.
+  - Add your own lasting-change types to step 3, such as new prices or a new service area.
+  - Keep the edit list. It is a record of how your work changed.
+works_best_with:
+  tools:
+    - name: ChatGPT
+      why: With memory turned on, it can find changes across your past chats after you say yes.
+    - name: Claude
+      why: Reads a large chat export and compares dates carefully.
+  inputs:
+    - Your calendar or notes page, if your AI can open it in this chat
+    - A list of what you finished this month
+terms:
+  - term: Stale
+    meaning: A stable section not checked in 90 days.
+  - term: Expired
+    meaning: A live section, like Projects, past its expiry date. Your AI should not use it without asking.
+  - term: Chat export
+    meaning: A file with your past chats that ChatGPT or Claude lets you download from your account settings.

@@ -5,11 +5,13 @@ name: Technical writer
 summary: Write technical documentation your readers can follow. Give it a feature or API. You get an API reference, guide, tutorial or changelog.
 job: write-and-tell-stories
 headline: Technical writer
-subhead: Give it a feature or API. Get clear docs, guides, tutorials or changelogs for your readers. Bring the feature, API or tool to document. Use the result to plan your next step.
+subhead: Give it a feature or API. Get clear docs, guides, tutorials or changelogs for your readers. Bring the feature, API or tool to document. You get a draft to check with your team before you publish.
 explain: |
   Clear documentation your readers can follow: API references, user guides, tutorials, changelogs or decision records, written for the right audience. People get the answer and run the example without writing to you.
 
-  The skill starts by fixing the document type and who reads it. It gathers your sources, such as code, schemas, design notes and commit history. It plans an outline that suits the format. API docs use one template per endpoint, and tutorials move step by step. It writes in active voice and short sentences, puts the key point first and includes complete examples. It adds links between pages and next steps, then checks every example and path against the real code.
+  The skill starts by fixing the document type and who reads it. It gathers your sources, such as code, schemas, design notes and commit history. It plans an outline that suits the format. API docs use one template per endpoint, and tutorials move step by step. It writes in active voice and short sentences, puts the key point first and includes complete examples. It adds links between pages and next steps, then compares every example and path with the code you gave it and lists what it could not check.
+
+  Licence: MIT, as the LICENSE file in this item says. Credit goes to the original author.
 when:
   - You shipped a feature and nobody knows how to use it.
   - Your API has no reference beyond the code.
@@ -33,7 +35,7 @@ you_get:
   - Links and next steps
   - A list of facts to confirm
 how_to_use:
-  - Before you start, gather: the feature, the reader, the document type, and the code or schema. Your AI only sees what you give it.
+  - Before you start, gather: the feature, the reader and their skill level, the document type, and the code or schema. For an API, also gather the endpoint list, the sign-in method and the version number. Your AI only sees what you give it.
   - Open Claude, ChatGPT or Gemini and paste in the skill text.
   - Say which document you want and who will read it, for example an API reference for outside developers.
   - Paste your source material, such as code, a schema or design notes. Attach files if your AI accepts them.

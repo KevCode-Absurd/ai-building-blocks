@@ -140,7 +140,7 @@ improve:
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Any current chat AI can draft the three structures once it has your story and facts. You edit for your own voice."}
-    - {name: "Klaviyo", why: "It sends plain-text emails and handles a manual 50/50 split to compare a story email with a promo."}
+    - {name: "Klaviyo", why: "Paid email service that needs an account. It sends plain-text emails and handles a manual 50/50 split to compare a story email with a promo."}
   inputs:
     - "Customer reviews or messages that show the doubt in their own words"
     - "A founder story or customer result you can prove"

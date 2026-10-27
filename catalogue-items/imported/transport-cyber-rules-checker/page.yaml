@@ -9,7 +9,9 @@ subhead: Share your US transport type and TSA status; check current directives, 
 explain: |
   Share your operator type and TSA status. The skill checks current directives, maps supported requirements and flags open questions.
 
-  It asks which sector and directive series you fall under, then matches your operation to the rules. It supports gap tables with status, evidence needed and priority. It drafts the plans the rules call for, such as the cybersecurity implementation plan, operational plan and assessment plan, and lays out the steps and timing for reporting incidents to CISA. It also reviews how your office and operational networks are separated. It is guidance, so check final decisions with counsel or TSA.
+  It asks which sector and directive series you fall under, then matches your operation to the rules. It supports gap tables with status, evidence needed and priority. It drafts the plans the rules call for, such as the cybersecurity implementation plan, operational plan and assessment plan, and lays out the steps and timing for reporting incidents to CISA. It also reviews how your office and operational networks are separated. It is guidance, so check final decisions with counsel or TSA. Directive revision letters and dates change, and the skill's own tables are the author's last check, so it verifies them against TSA's pages first.
+
+  Licence: MIT, as the LICENSE file in this item says. Credit goes to the original author.
 when:
   - You run a pipeline or railroad and are not sure TSA directives apply.
   - You must write a cybersecurity implementation plan.
@@ -19,6 +21,7 @@ not_for:
   - "You run an airline or airport: ask TSA directly, because this skill does not cover aviation rules."
   - "You need a legal reading of a directive or a decision on fines: ask a lawyer who knows TSA rules, or ask TSA."
   - "You have no TSA letter naming you as covered: confirm your status with TSA first, then come back."
+  - "You want to submit the plans to TSA: do not send any plan drafted here (the implementation plan, assessment plan or incident response plan) until counsel or TSA has reviewed it."
 you_give:
   - Your sector, such as pipeline, freight rail or transit
   - What your critical systems are

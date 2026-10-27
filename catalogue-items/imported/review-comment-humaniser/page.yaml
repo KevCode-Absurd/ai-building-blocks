@@ -9,7 +9,9 @@ subhead: Paste a wordy code review comment. You get a short version that names t
 explain: |
   Code review comments rewritten to sound like a teammate: short, direct and with a fix. They get read and acted on, not skimmed past.
 
-  Feed it a wordy comment. The skill cuts the padding, such as I noticed, I was wondering if perhaps, or small suggestion. It removes praise stuck onto every note and stops the comment from retelling the code. Each one becomes a line in the shape line number, label, problem, fix. The labels are bug, risk, nit and question, so the reader knows how urgent it is. A comment with an opinion and no fix gets a fix added. Kind words stay when aimed at the person, not as padding.
+  Feed it a wordy comment. The skill cuts the padding, such as I noticed, I was wondering if perhaps, or small suggestion. It removes praise stuck onto every note and stops the comment from retelling the code. Each one becomes a line in the shape line number, label, problem, fix. The labels are bug, risk, nit and question, so the reader knows how urgent it is. A comment with an opinion and no fix gets a fix added. Kind words stay when aimed at the person, not as padding. It only rewrites the wording. It does not check that the bug is real.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (MohamedAbdallah-14) says MIT. Credit goes to MohamedAbdallah-14 and sickn33.
 when:
   - Your review comments read like a polite robot wrote them.
   - Teammates ignore your long feedback.
@@ -29,6 +31,7 @@ you_get:
   - A shorter review that is easier to act on
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste the skill text into the chat. No code running, files or paid tools are needed.
+  - Check the finding is real before you paste. The skill only rewrites wording and never checks whether the bug exists.
   - Paste one review comment. Add its file name and line number if you have them.
   - Add the code snippet if the fix is not clear from the comment (optional).
   - "Read the reply. Each comment should look like: L42: bug: problem. Fix."

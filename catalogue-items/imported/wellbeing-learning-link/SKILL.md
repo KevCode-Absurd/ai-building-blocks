@@ -174,6 +174,8 @@ Return your output in this exact format:
 
 ## Example Output
 
+**This example shows the layout only.** Its wording, citations and figures come from the original author and were not checked here. In a real run, follow the prompt's sourcing rule: cite only sources the user can verify, and mark every number or effect size "unverified" unless a source is given.
+
 **Scenario:** *Wellbeing intervention: "Introducing a whole-school restorative practice approach to replace the current detention-based behaviour system" / School context: "Urban secondary school, 900 students, 45% Pupil Premium, above-average fixed-term exclusion rate, behaviour is the top concern in staff surveys, significant number of students with ACEs (adverse childhood experiences)" / Target outcomes: "Reduce exclusions, improve attendance, improve classroom learning environment" / Stakeholder audience: "School governors — several of whom are sceptical that 'being soft on behaviour' will improve outcomes"*
 
 ---
@@ -189,7 +191,7 @@ Return your output in this exact format:
 Restorative practice replaces punitive responses to behaviour
     ↓
 Students experience: being heard, understanding impact, repairing harm
-(Mechanism: relatedness need met — Deci & Ryan; emotional regulation practised — Brackett)
+(Mechanism: relatedness need met; emotional regulation practised. The original example named Deci & Ryan and Brackett here: unverified, name a source you have checked)
     ↓
 Short-term: fewer repeat behaviour incidents (harm is repaired, not just punished)
 Fewer exclusions → more time in classroom → more learning time
@@ -206,11 +208,11 @@ Long-term: improved engagement, attendance, and academic outcomes
 
 ### Mechanism Analysis
 
-**Mechanism 1: Reduced exclusion time increases learning time.** This is the most direct pathway. A student who is excluded for 10 days loses 10 days of teaching. If restorative practice reduces exclusions, students spend more time in classrooms being taught. This is not a wellbeing argument — it is a basic instructional time argument. Research consistently shows that exclusion does not improve behaviour (it often worsens it by damaging the student's relationship with school) and removes the student from the only environment where they can learn.
+**Mechanism 1: Reduced exclusion time increases learning time.** This is the most direct pathway. A student who is excluded for 10 days loses 10 days of teaching. If restorative practice reduces exclusions, students spend more time in classrooms being taught. This is not a wellbeing argument — it is a basic instructional time argument. Some research suggests that exclusion does not improve behaviour and can worsen it by damaging the student's relationship with school (unverified here: name a source before you use this). It also removes the student from the classroom, where teaching happens.
 
-**Mechanism 2: Relationship quality predicts learning.** Hattie (2009) found teacher-student relationships have an effect size of 0.72 on achievement — one of the highest influences in his meta-analysis. Restorative practice, by replacing punishment with dialogue, builds rather than damages these relationships. A student who has been listened to in a restorative conversation is more likely to engage in that teacher's lessons than a student who has been given a detention and feels resentful.
+**Mechanism 2: Relationship quality predicts learning.** Hattie (2009) is cited by the original author as finding that teacher-student relationships have a large effect on achievement (the original example gave an effect size of 0.72, unverified here: check the book before you quote it). Restorative practice, by replacing punishment with dialogue, builds rather than damages these relationships. A student who has been listened to in a restorative conversation is more likely to engage in that teacher's lessons than a student who has been given a detention and feels resentful.
 
-**Mechanism 3: Emotional safety enables cognitive function.** Students with high ACE scores often have elevated stress responses (van der Kolk, 2014). A punitive environment activates threat responses, narrowing cognitive capacity to survival-mode thinking. A restorative environment, where harm is addressed through dialogue rather than punishment, reduces chronic stress and allows cognitive resources to be directed toward learning rather than self-protection (Fredrickson, 2001).
+**Mechanism 3: Emotional safety enables cognitive function.** Students with high ACE scores may have elevated stress responses (the original example cited van der Kolk, 2014, unverified here: check the source before you use it). A punitive environment activates threat responses, narrowing cognitive capacity to survival-mode thinking. A restorative environment, where harm is addressed through dialogue rather than punishment, reduces chronic stress and allows cognitive resources to be directed toward learning rather than self-protection (Fredrickson, 2001).
 
 **Mechanism 4: Restorative skills are transferable life skills.** Restorative practice teaches students to identify emotions, understand impact, take responsibility, and repair harm. These are social-emotional skills that support academic collaboration, conflict resolution, and self-regulation — all of which improve classroom learning (Durlak et al., 2011).
 
@@ -236,7 +238,7 @@ Long-term: improved engagement, attendance, and academic outcomes
 
 1. **Whole-school implementation.** Restorative practice only works when it is the consistent approach across the school, not an add-on used by some staff. If students experience restorative responses from one teacher and punitive responses from another, the approach is undermined. This requires full staff training (minimum 2 days initial, with ongoing practice sessions).
 
-2. **Senior leadership commitment.** The leadership team must model restorative approaches and must not revert to punitive measures when under pressure (e.g., when a governor asks "Why haven't you excluded that student?"). Leadership consistency is the single strongest predictor of implementation success.
+2. **Senior leadership commitment.** The leadership team must model restorative approaches and must not revert to punitive measures when under pressure (e.g., when a governor asks "Why haven't you excluded that student?"). Leadership consistency is widely seen as important for implementation (unverified here: name a source before you claim more).
 
 3. **Staff training and ongoing support.** Restorative conversations are a skill, not a disposition. Staff need training in facilitation, active listening, and managing their own emotional responses. Without training, "restorative practice" becomes "letting students off" — which is neither restorative nor effective.
 
@@ -246,9 +248,9 @@ Long-term: improved engagement, attendance, and academic outcomes
 
 ### Leadership Rationale
 
-"Our current behaviour system relies primarily on detentions and exclusions. The data shows this is not working: our exclusion rate is above average and repeat behaviour incidents have increased for three consecutive years. Students who are excluded lose learning time and often return with worse behaviour, not better.
+"Our current behaviour system relies primarily on detentions and exclusions. The data shows this is not working: [OUR EXCLUSION RATE AND HOW IT COMPARES] and [OUR REPEAT INCIDENT TREND], from our own records. Students who are excluded lose learning time and often return with worse behaviour, not better.
 
-We are proposing to move to a whole-school restorative practice approach. This is not 'being soft on behaviour.' It is a structured approach where students are held accountable for their actions — but through dialogue that requires them to understand the impact of their behaviour and take steps to repair the harm, rather than sitting in a room for an hour (which research shows does not change behaviour).
+We are proposing to move to a whole-school restorative practice approach. This is not 'being soft on behaviour.' It is a structured approach where students are held accountable for their actions — but through dialogue that requires them to understand the impact of their behaviour and take steps to repair the harm, rather than sitting in a room for an hour (which the original example said does not change behaviour: unverified, name a source or remove it).
 
 The evidence supports this approach. A meta-analysis of 213 schools implementing social-emotional approaches found an average 11-percentile gain in academic achievement (Durlak et al., 2011). Research on teacher-student relationships shows they are one of the strongest predictors of student achievement (Hattie, 2009, effect size 0.72). And the basic logic is straightforward: students who are in the classroom learn more than students who are excluded from it.
 

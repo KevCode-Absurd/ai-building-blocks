@@ -7,7 +7,7 @@ role: make
 job: creative
 level: intermediate
 inputs:
-  - {type: brief, required: true}
+  - {type: story_outline, required: true}
   - {type: plan, required: false}
 outputs:
   - {type: copy_draft}
